@@ -10,12 +10,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 7d70f1e95ce2dd5163eb017684620c403a77f74a
-ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
+ms.openlocfilehash: bfd019848e62abf4e6f25913d29d26d1a1bde6a5
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90740027"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91927895"
 ---
 # <a name="compile-typescript-code-nodejs"></a>编译 TypeScript 代码 (Node.js)
 
@@ -112,6 +112,10 @@ ms.locfileid: "90740027"
    如果生成了源映射，请打开在“outDir”选项中指定的文件夹，并找到生成的 \*.js 文件以及生成的 \*js.map 文件。
 
    [调试](../javascript/debug-nodejs.md)需要源映射文件。
+
+### <a name="run-the-application"></a>运行应用程序
+
+有关在编译后运行应用程序的说明，请参阅[创建第一个 Node.js 应用](/visualstudio/ide/quickstart-nodejs?toc=%2Fvisualstudio%2Fjavascript%2Ftoc.json#run-the-application)。
 
 ## <a name="automate-build-tasks"></a>自动化生成任务
 

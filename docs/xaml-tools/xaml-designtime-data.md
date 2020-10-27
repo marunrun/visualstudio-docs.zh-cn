@@ -7,12 +7,12 @@ author: alihamie
 ms.author: tglee
 manager: jillfra
 monikerRange: vs-2019
-ms.openlocfilehash: 6957c1c7d64918e91a95bf569c210c146fec1339
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: b9477868d265e9ad8b927d9e13b67112c0ea14f7
+ms.sourcegitcommit: 6b62e09026b6f1446187c905b789645f967a371c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91659454"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92298476"
 ---
 # <a name="use-design-time-data-with-the-xaml-designer-in-visual-studio"></a>在 Visual Studio 中通过 XAML 设计器使用设计时数据
 
@@ -135,6 +135,43 @@ xmlns:models="clr-namespace:Cities.Models"
 [![具有 ListView 的实际模型设计时数据](media\xaml-design-time-listview-models.png "具有 ListView 的实际模型设计时数据")](media\xaml-design-time-listview-models.png#lightbox)
 
 这样做的好处是，你可将控件绑定到模型的设计时静态版本。
+
+## <a name="use-design-time-data-with-custom-types-and-properties"></a>将设计时数据与自定义类型和属性一起使用
+
+默认情况下，此功能仅适用于平台控件和属性。 在本部分中，我们将执行所需的步骤，使你能够将自己的自定义控件用作设计时控件，这是面向使用 Visual Studio 2019 预览版本 [16.8](/visualstudio/releases/2019/preview-notes) 或更高版本的客户提供的新功能。 要实现此操作，需要满足三个要求：
+
+- 一个自定义 xmlns 命名空间 
+
+    ```xml
+    xmlns:myControls="http://MyCustomControls"
+    ```
+
+- 一个命名空间的设计时版本。 只需在末尾追加/设计即可实现。
+
+     ```xml
+    xmlns:myDesignTimeControls="http://MyCustomControls/design"
+    ```
+
+- 将设计时前缀添加到 mc:Ignorable
+
+    ```xml
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d myDesignTimeControls"
+    ```
+
+完成所有这些步骤后，可以使用 `myDesignTimeControls` 前缀来创建设计时控件。
+
+```xml
+<myDesignTimeControls:MyButton>I am a design time Button</myDesignTimeControls:MyButton>
+```
+
+### <a name="creating-a-custom-xmlns-namespace"></a>创建自定义 xmlns 命名空间
+
+若要在 WPF .NET Core 中创建自定义 xmlns 命名空间，需要将自定义 XML 命名空间映射到控件所在的 CLR 命名空间。 可通过在 `AssemblyInfo.cs` 文件中添加 `XmlnsDefinition` 程序集级别属性来实现此操作。 可在项目的根层次结构中找到该文件。
+
+   ```C#
+[assembly: XmlnsDefinition("http://MyCustomControls", "MyViews.MyButtons")]
+   ```
 
 ## <a name="troubleshooting"></a>疑难解答
 

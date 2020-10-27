@@ -1,5 +1,6 @@
 ---
 title: 更改日志（Visual Studio Tools for Unity、Mac）| Microsoft Docs
+description: 查看 Visual Studio Tools for Unity、Mac 的更改日志。 查看版本 1.0.0.0 到 2.7.0.0 及更高版本的版本变化。
 ms.custom: ''
 ms.date: 5/19/2020
 ms.technology: vs-unity-tools
@@ -10,12 +11,12 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: e817318f7b16040ed598ac4dce8f1c6017bdf83e
-ms.sourcegitcommit: 43df639b2cd99200f725a8ebb941477481a6f0ff
+ms.openlocfilehash: 50462d4464bd55376e1aceda3f4f5e8e3cbe1f87
+ms.sourcegitcommit: 01c1b040b12d9d43e3e8ccadee20d6282154faad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87471527"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039893"
 ---
 # <a name="change-log-visual-studio-tools-for-unity-mac"></a>更改日志（Visual Studio Tools for Unity、Mac）
 

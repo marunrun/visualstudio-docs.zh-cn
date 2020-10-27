@@ -1,5 +1,7 @@
 ---
 title: 如何：更改生成输出目录
+description: 了解如何在预配置的基础上指定项目生成的输出的位置（用于调试、发布或两者）。
+ms.custom: SEO-VS-2020
 ms.date: 05/15/2019
 ms.technology: vs-ide-compile
 ms.topic: how-to
@@ -11,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e4c2f2445bc7139c5bbc80a35905e24c319c9dfa
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2512836781b0bf8c269f296066b25722b58be1fb
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85284641"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136883"
 ---
 # <a name="how-to-change-the-build-output-directory"></a>如何：更改生成输出目录
 
@@ -24,7 +26,7 @@ ms.locfileid: "85284641"
 
 ## <a name="change-the-build-output-directory"></a>更改生成输出目录
 
-1. 要打开项目的属性页面，右键单击“解决方案资源管理器”中的项目节点，然后选择“属性”   。
+1. 要打开项目的属性页面，右键单击“解决方案资源管理器”中的项目节点，然后选择“属性”  。
 
 2. 根据项目类型选择相应的选项卡：
 
@@ -32,7 +34,7 @@ ms.locfileid: "85284641"
    - 对于 Visual Basic，选择“编译”选项卡  。
    - 对于 C++ 或 JavaScript，选择“常规”选项卡  。
 
-3. 在顶部的配置下拉列表中，选择你想要更改其输出文件位置的配置（“调试”、“发布”或“所有配置”）    。
+3. 在顶部的配置下拉列表中，选择你想要更改其输出文件位置的配置（“调试”、“发布”或“所有配置”）  。
 
 4. 在页面上找到输出路径条目，路径条目根据项目类型而有所不同：
 
@@ -45,7 +47,7 @@ ms.locfileid: "85284641"
    ![Visual Studio C# 项目的输出路径属性](media/output-path.png)
    
    > [!NOTE]
-   > 某些项目会默认在生成路径中包括框架和运行时。 若要更改这一点，请在解决方案资源管理器中右键单击项目节点，选择“编辑项目文件”并添加以下内容   ：
+   > 某些项目会默认在生成路径中包括框架和运行时。 若要更改这一点，请在解决方案资源管理器中右键单击项目节点，选择“编辑项目文件”并添加以下内容  ：
    > ```xml
    > <PropertyGroup>
    >   <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
@@ -54,7 +56,7 @@ ms.locfileid: "85284641"
    > ```
 
 > [!TIP]
-> 如果系统未将输出生成到指定位置，请在 Visual Studio 的菜单栏上选择该位置，确保构建相应的配置（例如“调试”或“发布”）   。
+> 如果系统未将输出生成到指定位置，请在 Visual Studio 的菜单栏上选择该位置，确保构建相应的配置（例如“调试”或“发布”）  。
 >
 > ![在 Visual Studio 2019 中生成配置选取器](media/build-configuration-chooser.png)
 

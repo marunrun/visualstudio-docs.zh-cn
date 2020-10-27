@@ -1,6 +1,5 @@
 ---
-title: 分析 CPU 使用率 | Microsoft Docs
-ms.custom: seodec18
+title: 分析性能探查器中的 CPU 使用情况
 ms.date: 04/02/2020
 ms.topic: how-to
 ms.assetid: 7501a20d-04a1-480f-a69c-201524aa709d
@@ -9,24 +8,22 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e5ab97f3db8e5d44aa649455c313a5681ed93c8c
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: 706ffa8d17974894403c22a559edad4c2e4b4ef8
+ms.sourcegitcommit: 172aaf05596a9d8ded298b7b104569c1cce6160e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85543385"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92007094"
 ---
-# <a name="analyze-cpu-usage"></a>分析 CPU 使用情况
+# <a name="analyze-cpu-usage-without-debugging-in-the-performance-profiler"></a>在不进行调试的情况下分析性能探查器中的 CPU 使用情况
 
 开始调查应用中的性能问题的好方法之一是了解其 CPU 使用情况。 “CPU 使用情况”性能工具显示 C++、C#/Visual Basic 以及 JavaScript 应用中执行代码所花费的 CPU 时间和百分比。
 
-“CPU 使用情况”工具可以在打开的 Visual Studio 项目、在已安装的 Microsoft Store 应用上运行，也可以附加到正在运行的应用或进程。 有关详细信息，请参阅[运行带或不带调试器的分析工具](../profiling/running-profiling-tools-with-or-without-the-debugger.md)。
+“CPU 使用情况”工具可以在打开的 Visual Studio 项目、在已安装的 Microsoft Store 应用上运行，也可以附加到正在运行的应用或进程。 无论是否进行调试，都可以运行“CPU 使用情况”工具。 有关详细信息，请参阅[运行带或不带调试器的分析工具](../profiling/running-profiling-tools-with-or-without-the-debugger.md)。
 
-无论是否进行调试，都可以运行“CPU 使用情况”工具。 在调试器中，可以打开和关闭 CPU 分析，并查看 CPU 使用情况的每个细分功能。 可以在暂停执行时（例如在断点处）查看 CPU 使用情况结果。
+以下说明介绍如何使用不带调试器的“CPU 使用情况”工具以及 Visual Studio“性能探查器” 。 示例使用本地计算机上的发布版本。 发布版本提供了实际应用性能的最佳视图。 要使用调试版本（附加调试器）分析 CPU 使用情况，请参阅[性能分析初学者指南](../profiling/beginners-guide-to-performance-profiling.md)。
 
-以下说明介绍如何使用不带调试器的“CPU 使用情况”工具以及 Visual Studio“性能探查器” 。 示例使用本地计算机上的发布版本。 发布版本提供了实际应用性能的最佳视图。 要使用调试版本分析 CPU 使用情况，请参阅[性能分析初学者指南](../profiling/beginners-guide-to-performance-profiling.md)。
-
-通常，本地计算机最好复制已安装的应用执行。 对于 Windows Phone 应用，直接从设备收集数据这种方式提供的数据最准确。 要从远程设备收集数据，请直接在该设备上运行应用，而不通过使用远程桌面连接运行。
+通常，本地计算机最好复制已安装的应用执行。 要从远程设备收集数据，请直接在该设备上运行应用，而不通过使用远程桌面连接运行。
 
 >[!NOTE]
 >需要 Windows 7 或更高版本才能使用[性能探查器](../profiling/profiling-feature-tour.md)。

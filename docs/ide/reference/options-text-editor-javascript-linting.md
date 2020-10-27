@@ -1,5 +1,7 @@
 ---
 title: “选项”>“文本编辑器”>“JavaScript”>“Lint”
+description: 了解如何使用“选项”对话框中的“Lint”页设置代码编辑器中的代码分析选项。
+ms.custom: SEO-VS-2020
 ms.date: 1/15/2019
 ms.technology: vs-javascript
 ms.topic: reference
@@ -13,16 +15,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1f8a194f3848b0737fc33af2b9948102987a5923
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: f56586843bd95585581f29fd44af16c1ef2c892f
+ms.sourcegitcommit: a7944c325bedd8efbb244452741864089a02f5db
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "68605966"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91947708"
 ---
 # <a name="options-dialog-box-text-editor--javascripttypescript--linting"></a>“选项”对话框：“文本编辑器”\>“JavaScript/TypeScript”\>“Linting”
 
-使用“选项”  对话框中的“Lint”  页，可以设置代码编辑器中的代码分析选项。 要访问此页，请先依次选择菜单栏中的“工具” > “选项”，再依次展开“文本编辑器” > “JavaScript/TypeScript” > “Linting”      。
+使用“选项”  对话框中的“Lint”  页，可以设置代码编辑器中的代码分析选项。 要访问此页，请先依次选择菜单栏中的“工具” > “选项”，再依次展开“文本编辑器” > “JavaScript/TypeScript” > “Linting”    。
 
 ## <a name="eslint-settings"></a>ESLint 设置
 
@@ -30,7 +32,7 @@ ms.locfileid: "68605966"
 
 ### <a name="uielement-list"></a>UIElement 列表
 
-|选项|描述|
+|选项|说明|
 |------------|-----------------|
 |**启用 ESLint**|如果你选中此选项，代码编辑器就会允许对代码进行静态分析。|
 |**对项目中的所有文件(甚至包括已关闭文件)执行 Lint**|如果你选中此选项，代码编辑器就会分析已关闭文件，除非仅报告已打开文件的诊断信息。|

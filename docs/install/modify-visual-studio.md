@@ -2,8 +2,9 @@
 title: 修改 Visual Studio
 titleSuffix: ''
 description: 了解如何逐步修改 Visual Studio。
-ms.date: 02/10/2019
+ms.date: 10/12/2020
 ms.topic: how-to
+ms.custom: contperfq2
 helpviewer_keywords:
 - modify Visual Studio
 - change visual studio
@@ -17,12 +18,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 2ec3ae3f253997b86c2403ce57d5e8db6e9920b4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dad71e4f52350357106ee9a9ef9ce90d18204bfb
+ms.sourcegitcommit: 4eb8fe6eb7f1dc639f1d213db05a7a3007e8087e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85419180"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92157370"
 ---
 # <a name="modify-visual-studio-by-adding-or-removing-workloads-and-components"></a>通过添加或删除工作负载和组件修改 Visual Studio
 
@@ -59,7 +60,7 @@ ms.locfileid: "85419180"
      ![Visual Studio 安装程序](media/locate-the-visual-studio-installer.png "找到 Microsoft Visual Studio 安装程序")
 
      >[!TIP]
-     >对于某些计算机，Visual Studio 安装程序可能列在字母 **“M”** 下，即 **Microsoft Visual Studio 安装程序**。<br/><br/> 或者，可以在以下位置找到 Visual Studio 安装程序：`C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe`
+     >对于某些计算机，Visual Studio 安装程序可能列在字母 **“M”** 下，即 **Microsoft Visual Studio 安装程序** 。<br/><br/> 或者，可以在以下位置找到 Visual Studio 安装程序：`C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe`
 
 1. 打开安装程序，然后选择“修改”  。
 
@@ -76,9 +77,9 @@ ms.locfileid: "85419180"
 
 1. 在计算机上找到 Visual Studio 安装程序。
 
-     例如，在运行 Windows 10 的计算机上，选择“开始”，然后滚动到字母“V”，它作为“Visual Studio 安装程序”在那里列出    。
+     在 Windows“开始”菜单中，可以搜索“安装程序”。
 
-     ![在 Windows 中打开 Visual Studio 安装程序](media/vs-2019/vs-installer-windows-start.png "打开 Visual Studio 安装程序")
+     ![Visual Studio 安装程序](media/vs-2019/visual-studio-installer.png "搜索 Visual Studio 安装程序")
 
      > [!NOTE]
      > 还可以在以下位置中找到 Visual Studio 安装程序：
@@ -89,7 +90,7 @@ ms.locfileid: "85419180"
 
 1. 在安装程序中，查找已安装的 Visual Studio 版本，然后选择“修改”  。
 
-     ![更新或修改 Visual Studio](media/vs-2019/vs-installer-modify.png "更新或修改 Visual Studio 2019")
+     ![选择 Visual Studio 版本，然后进行修改](media/vs-2019/vs-installer-modify.png "选择 Visual Studio 2019 版本，然后进行修改")
 
      > [!IMPORTANT]
      > 如果还有更新挂起，则“修改”按钮会出现在其他位置。 这样一来，如果需要的话，可以在不更新的情况下修改 Visual Studio。 选择“更多”  ，然后选择“修改”  。
@@ -148,7 +149,7 @@ ms.locfileid: "85419180"
 如果不想使用工作负载来自定义 Visual Studio 安装，请从 Visual Studio 安装程序中选择“单个组件”  选项卡，选择所需组件，然后按提示操作。
 
 >[!TIP]
-> 有关 SQL Server Data Tools (SSDT) 组件的信息，请参阅[下载并安装 SSDT for Visual Studio](/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-ver15)。
+> 有关 SQL Server Data Tools (SSDT) 组件的信息，请参阅[下载并安装 SSDT for Visual Studio](/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-ver15&preserve-view=true)。
 
 ## <a name="modify-language-packs"></a>修改语言包
 

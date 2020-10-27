@@ -1,5 +1,6 @@
 ---
 title: 使用 Visual Studio Tools for Unity 和 Azure 编程 | Microsoft Docs
+description: 使用 Visual Studio Tools for Unity 和 Azure 进行编程。 Azure 提供可缩放的解决方案，用于将遥测和其他游戏数据存储在云中。
 ms.custom: ''
 ms.date: 12/18/2017
 ms.reviewer: crdun
@@ -12,12 +13,12 @@ manager: crdun
 ms.workload:
 - azure
 - unity
-ms.openlocfilehash: e9a07a7f04cae433803d012302555821fc851075
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 5be430b4a59dd4aa36945555f6553f321b9d50c0
+ms.sourcegitcommit: 01c1b040b12d9d43e3e8ccadee20d6282154faad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75916828"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039815"
 ---
 # <a name="program-with-unity-and-azure"></a>使用 Unity 和 Azure 进行编程
 

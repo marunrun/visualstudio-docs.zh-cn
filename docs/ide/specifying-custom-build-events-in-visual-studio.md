@@ -1,5 +1,7 @@
 ---
 title: 指定自定义生成事件
+description: 了解如何在生成开始之前或完成之后自动在 Visual Studio 中运行命令。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-compile
 ms.topic: conceptual
@@ -11,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fda60ffb97ecb44bd4a881cb42e4d9199cc958b8
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: f1d339f9bbf170d2df545e69c698f786198695ad
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76115344"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136779"
 ---
 # <a name="specify-custom-build-events-in-visual-studio"></a>在 Visual Studio 中指定自定义生成事件
 
@@ -60,4 +62,4 @@ ms.locfileid: "76115344"
 - [编译和生成](../ide/compiling-and-building-in-visual-studio.md)
 - [预生成事件/生成后事件命令行对话框](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)
 - [MSBuild 特殊字符](../msbuild/msbuild-special-characters.md)
-- [演练：生成应用程序](../ide/walkthrough-building-an-application.md)
+- [演练：构建应用程序](../ide/walkthrough-building-an-application.md)

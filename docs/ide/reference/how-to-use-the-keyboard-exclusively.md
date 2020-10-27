@@ -2,7 +2,7 @@
 title: 不借助鼠标使用 Visual Studio
 titleSuffix: ''
 description: 通过使用键盘，了解如何在 Visual Studio 集成开发环境 (IDE) 中导航和编写代码。
-ms.date: 05/10/2019
+ms.date: 10/16/2020
 ms.topic: how-to
 helpviewer_keywords:
 - Toolbox, shortcut keys
@@ -16,12 +16,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5a8c14f59b87be1e59b5d115ea84b555677cda32
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 52d6bda98ee01dad4faf4a51412e810e1f5e4fa7
+ms.sourcegitcommit: 4eb8fe6eb7f1dc639f1d213db05a7a3007e8087e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770227"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92156556"
 ---
 # <a name="how-to-use-the-keyboard-exclusively"></a>如何以独占方式使用键盘
 
@@ -37,13 +37,13 @@ ms.locfileid: "85770227"
 ::: moniker-end
 
 > [!NOTE]
-> 根据所使用的设置或 Visual Studio 版本，看到的对话框和菜单命令可能与“帮助”中描述的有所不同。 若要更改设置，请在“工具”菜单上选择“导入和导出设置”。 有关详细信息，请参阅[重置设置](../environment-settings.md#reset-settings)。
+> 根据所使用的设置或 Visual Studio 版本，看到的对话框和菜单命令可能与“帮助”中描述的有所不同。 若要更改设置，请在“工具”菜单上选择“导入和导出设置” 。 有关详细信息，请参阅[重置设置](../environment-settings.md#reset-settings)。
 
 ## <a name="toolbox-controls"></a>工具箱控件
 
 不使用鼠标，将工具箱上的控件添加到表单或设计器中：
 
-1. 在菜单栏上，依次选择“视图” > “工具箱”。
+1. 在菜单栏上，选择“视图” > “工具箱” 。
 
 2. 使用 Ctrl+向上键或 Ctrl+向下键，在“工具箱”选项卡的各部分间移动。
 
@@ -71,9 +71,9 @@ ms.locfileid: "85770227"
 
 ## <a name="navigate-between-windows-and-files"></a>在窗口和文件之间导航
 
-- 要在编辑器或设计器中的文件间移动，请选择 Ctrl+Tab 键盘快捷方式以显示 IDE 导航器，并选中“活动文件”。 选择 Enter 键，导航到突出显示的文件  。
+- 要在编辑器或设计器中的文件间移动，请使用 Ctrl+Tab 键盘快捷方式以显示 IDE 导航器，并选中“活动文件”  。 选择 Enter 键，导航到突出显示的文件  。
 
-- 要在停靠的工具窗口间移动，请选择 Alt+F7 键盘快捷方式以显示 IDE 导航器，并选中“活动工具窗口”。 选择 Enter 键，导航到突出显示的窗口  。
+- 要在停靠的工具窗口间移动，请使用 Alt+F7 键盘快捷方式以显示 IDE 导航器，并选中“活动工具窗口”  。 选择 Enter 键，导航到突出显示的窗口  。
 
 ## <a name="move-and-dock-tool-windows"></a>移动并停靠工具窗口
 
@@ -81,7 +81,7 @@ ms.locfileid: "85770227"
 
 2. 在“窗口”菜单上，选择“可停靠”选项   。
 
-3. 按 Alt+空格键，然后选择“移动”。
+3. 按 Alt+空格键，然后选择“移动”  。
 
    随即显示停靠菱形引导标记。
 
@@ -93,7 +93,7 @@ ms.locfileid: "85770227"
 
    新的停靠位置便出现工具窗口的边框。
 
-6. 按 **Enter**。
+6. 按 **Enter** 。
 
    工具窗口随即进入新的停靠位置。
 

@@ -9,12 +9,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 74ccc29417cdee7a9f93c39509c0f7d06a5c72ff
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: fdcfc9daf2e1e64d61e2f699e0295826894b1920
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76826466"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136831"
 ---
 # <a name="how-to-use-msbuild-project-sdks"></a>如何：使用 MSBuild 项目 SDK
 
@@ -66,9 +66,6 @@ MSBuild 15.0 引入了“项目 SDK”的概念，它可让你更轻松地使用
     </Project>
     ```
 
-    > [!NOTE]
-    > 这是目前在 Visual Studio for Mac 中引用项目 SDK 的唯一受支持的方式。
-
 - 使用顶级 `<Sdk/>` 元素：
 
     ```xml
@@ -107,7 +104,7 @@ MSBuild 15.0 引入了“项目 SDK”的概念，它可让你更轻松地使用
 
    仅当指定了可选版本时，此解析程序才处于活动状态。 它可用于任何自定义项目 SDK。
    
-- .NET CLI 解析程序，用于解析随 [.NET CLI](/dotnet/core/tools/) 一起安装的 SDK。
+- .NET SDK 解析程序，用于解析随 [.NET SDK](/dotnet/core/sdk/) 一起安装的 MSBuild SDK。
 
    此解析程序查找项目 SDK，如 `Microsoft.NET.Sdk` 和 `Microsoft.NET.Sdk.Web`，这些项目是该产品的一部分。
    
@@ -124,9 +121,9 @@ MSBuild 15.0 引入了“项目 SDK”的概念，它可让你更轻松地使用
 }
 ```
 
-在生成期间，只能使用每个项目 SDK 的一个版本。 如果你引用同一项目 SDK 的两个不同版本，MSBuild 会发出警告。 如果在 global.json 文件中指定了版本，则不建议在项目中指定版本   。
+在生成期间，只能使用每个项目 SDK 的一个版本。 如果你引用同一项目 SDK 的两个不同版本，MSBuild 会发出警告。 如果在 global.json 文件中指定了版本，则不建议在项目中指定版本  。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [MSBuild 概念](../msbuild/msbuild-concepts.md)
 - [自定义生成](../msbuild/customize-your-build.md)

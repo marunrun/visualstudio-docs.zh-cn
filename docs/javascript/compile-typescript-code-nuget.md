@@ -10,12 +10,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: ac917248915129b8d93dc776ac7d35a2ed227069
-ms.sourcegitcommit: b8ec700fc4c14c68c6ce280f29c19870261990d8
+ms.openlocfilehash: 16ff335fdf8ca76889562cfd94807ec1adc516d2
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87454615"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91927921"
 ---
 # <a name="compile-typescript-code-aspnet-core"></a>编译 TypeScript 代码 (ASP.NET Core)
 
@@ -107,6 +107,10 @@ ms.locfileid: "87454615"
 有关将 gulp 与任务运行程序结合使用来生成应用的示例，请参阅 [ASP.NET Core 和 TypeScript](https://www.typescriptlang.org/docs/handbook/asp-net-core.html)。
 
 如果遇到 Visual Studio 使用的 Node.js 或第三方工具的版本不同于所需版本的问题，则可能需要设置 Visual Studio 要使用的路径。 选择“工具” > “选项”。 在“项目和解决方案”下，选择“Web 包管理” > “外部 Web 工具”。
+
+### <a name="run-the-application"></a>运行应用程序
+
+有关在编译后运行应用程序的说明，请参阅[创建第一个 Node.js 应用](/visualstudio/ide/quickstart-nodejs?toc=%2Fvisualstudio%2Fjavascript%2Ftoc.json#run-the-application)。
 
 ### <a name="nuget-package-structure-details"></a>NuGet 包结构详细信息
 

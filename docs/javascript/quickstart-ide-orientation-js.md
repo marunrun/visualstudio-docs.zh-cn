@@ -1,5 +1,7 @@
 ---
 title: 初步了解 Visual Studio IDE
+description: 了解 Visual Studio 集成开发环境 (IDE)，包括最常用的窗口、菜单和其他 UI 功能。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/05/2019
 ms.topic: quickstart
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 41d5d40cc7951f09a8106426f603d42628c61846
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f80dd85e1cc8f93784ed938ef1788730b3c926e8
+ms.sourcegitcommit: a7944c325bedd8efbb244452741864089a02f5db
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238863"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91947812"
 ---
 # <a name="first-look-at-the-visual-studio-ide"></a>初步了解 Visual Studio IDE
 
@@ -156,7 +158,7 @@ Visual Studio 顶部的菜单栏将命令分组成不同的类别。 例如，�
 > [!div class="nextstepaction"]
 > [了解项目和解决方案](../get-started/tutorial-projects-solutions.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio IDE 概述](../get-started/visual-studio-ide.md)
 - [Visual Studio 2017 的更多功能](../ide/advanced-feature-overview.md)

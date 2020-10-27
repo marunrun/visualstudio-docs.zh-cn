@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 28f382e8d20f3aa623ea241702e4795854e12f9a
-ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
+ms.openlocfilehash: cb9de05b7e57e4ebc4e7ea76c688a7203774404a
+ms.sourcegitcommit: 172aaf05596a9d8ded298b7b104569c1cce6160e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90100769"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92007185"
 ---
 # <a name="first-look-at-profiling-tools"></a>首先了解分析工具
 
@@ -101,15 +101,15 @@ CPU 使用率工具很适合用于开始分析应用的性能。 它将向你详
 
 ![诊断工具“CPU 使用率”视图](../profiling/media/prof-tour-cpu-usage.png "诊断工具“CPU 使用率”")
 
-双击感兴趣的函数，然后将看到更加详细的三窗格“蝶形”视图，其中所选函数位于窗口中央，调用函数位于左侧，而被调用函数位于右侧。 **函数体**部分显示函数体中所用的时间总量（及百分比），其中不包括调用和被调用函数中所用的时间。 此数据可以帮助评估函数本身是否属于性能瓶颈。
+双击感兴趣的函数，然后将看到更加详细的三窗格“蝶形”视图，其中所选函数位于窗口中央，调用函数位于左侧，而被调用函数位于右侧。 **函数体** 部分显示函数体中所用的时间总量（及百分比），其中不包括调用和被调用函数中所用的时间。 此数据可以帮助评估函数本身是否属于性能瓶颈。
 
 ![诊断工具调用方和被调用方“蝶形”视图](../profiling/media/prof-tour-cpu-usage-caller-callee.png "诊断工具“调用方和被调用方”视图")
 
 ## <a name="analyze-memory-usage"></a>分析内存使用情况
 
-借助“诊断工具”窗口，你还可以使用“内存使用情况”工具来评估应用中的内存使用情况 。 例如，你可以查看堆上对象的数量和大小。 可以使用[集成了调试器的内存使用率工具](../profiling/memory-usage.md)或[性能探查器](#post_mortem)中的事后分析内存使用率工具。 另一种内存分析工具 [.NET 对象分配工具](../profiling/dotnet-alloc-tool.md)可帮助确定 .NET 代码中的分配模式和异常。
+借助“诊断工具”窗口，你还可以使用“内存使用情况”工具来评估应用中的内存使用情况 。 例如，你可以查看堆上对象的数量和大小。 可以使用[集成了调试器的内存使用率工具](../profiling/memory-usage.md)或[性能探查器](../profiling/memory-usage-without-debugging2.md)中的事后分析内存使用率工具。 另一种内存分析工具 [.NET 对象分配工具](../profiling/dotnet-alloc-tool.md)可帮助确定 .NET 代码中的分配模式和异常。
 
-若要分析内存使用率，需要拍摄至少一张内存快照。 通常，分析内存的最好方法是拍摄两张快照；一张正好拍摄于发生可疑内存问题之前，另一张拍摄于发生可疑内存问题之后。 然后可以查看两张快照的差异，并发现实际更改的内容。 下图显示了如何使用集成了调试器的工具拍摄快照。
+若要使用 **内存使用情况** 工具分析内存使用情况，需要拍摄至少一张内存快照。 通常，分析内存的最好方法是拍摄两张快照；一张正好拍摄于发生可疑内存问题之前，另一张拍摄于发生可疑内存问题之后。 然后可以查看两张快照的差异，并发现实际更改的内容。 下图显示了如何使用集成了调试器的工具拍摄快照。
 
 ![诊断工具中的“获取快照”](../profiling/media/prof-tour-take-snapshots.gif "诊断工具“获取快照”")
 
@@ -123,11 +123,11 @@ CPU 使用率工具很适合用于开始分析应用的性能。 它将向你详
 
 在 XAML 应用（例如 Windows 桌面 WPF 应用和 UWP 应用）中，可以使用应用程序时间线工具分析资源消耗情况。 例如，你可以分析应用程序准备 UI 框架（布局和呈现）以及为网络和磁盘请求提供服务所花费的时间，以及在应用程序启动、页面加载以及调整窗口大小等应用场景中花费的时间。 若要使用该工具，请在性能探查器中选择“应用程序时间线”，然后选择“开始”。 在应用中，浏览资源消耗存在可疑问题的应用场景，然后选择“停止收集”生成报表。
 
-**可视吞吐量**关系图中的帧速率低可能对应运行应用时看到的视觉问题。 与此类似，**UI 线程使用率**关系图中的高数值也可能对应 UI 响应能力问题。 在报表中，你可以选择出现可疑性能问题的时间段，然后在“时间线”详细信息视图（下方窗格）中检查详细的 UI 线程活动。
+**可视吞吐量** 关系图中的帧速率低可能对应运行应用时看到的视觉问题。 与此类似， **UI 线程使用率** 关系图中的高数值也可能对应 UI 响应能力问题。 在报表中，你可以选择出现可疑性能问题的时间段，然后在“时间线”详细信息视图（下方窗格）中检查详细的 UI 线程活动。
 
 ![应用程序时间线分析工具](../profiling/media/prof-tour-application-timeline.gif "分析简介应用程序时间线")
 
-在时间线详细信息视图中，可以找到活动类型（或涉及的 UI 元素）以及活动持续时间等信息。 例如，在图中，网格控件的**布局**事件需要 57.53 毫秒。
+在时间线详细信息视图中，可以找到活动类型（或涉及的 UI 元素）以及活动持续时间等信息。 例如，在图中，网格控件的 **布局** 事件需要 57.53 毫秒。
 
 有关详细信息，请参阅[应用程序时间线](../profiling/application-timeline.md)。
 
@@ -226,7 +226,7 @@ JavaScript 内存工具类似于适用于其他应用类型的内存使用量工
 |[CPU 使用率](../profiling/beginners-guide-to-performance-profiling.md)|是|是|是|
 |[内存使用率](../profiling/memory-usage.md)|是|是|是|
 |[.NET 对象分配](../profiling/dotnet-alloc-tool.md)|是（仅用于 .NET）|是|是|
-|[GPU 使用情况](/visualstudio/debugger/graphics/gpu-usage)|是|是|否|
+|[GPU 使用情况](./gpu-usage.md)|是|是|否|
 |[应用程序时间线](../profiling/application-timeline.md)|是 (XAML)|是|否|
 |[事件查看器](../profiling/events-viewer.md)|是|是|是|
 |[.NET Async](../profiling/analyze-async.md)|是（仅用于 .NET）|是|是|
@@ -240,7 +240,7 @@ JavaScript 内存工具类似于适用于其他应用类型的内存使用量工
 |----------------------|---------------------|-------------|-------------|
 |[CPU 使用率](../profiling/beginners-guide-to-performance-profiling.md)|是|是|是|
 |[内存使用率](../profiling/memory-usage.md)|是|是|是|
-|[GPU 使用情况](/visualstudio/debugger/graphics/gpu-usage)|是|是|否|
+|[GPU 使用情况](./gpu-usage.md)|是|是|否|
 |[应用程序时间线](../profiling/application-timeline.md)|是 (XAML)|是|否|
 |[性能提示](../profiling/perftips.md)|是|XAML 适用，HTML 不适用|是|
 |[性能资源管理器](../profiling/performance-explorer.md)|是|否|是|

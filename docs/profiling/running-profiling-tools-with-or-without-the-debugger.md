@@ -1,5 +1,6 @@
 ---
 title: 运行带或不带调试器的分析工具 | Microsoft Docs
+description: 了解可用于分析工具的不同模式之间的差异
 ms.date: 5/26/2020
 ms.topic: conceptual
 ms.assetid: 3fcdccad-c1bd-4c67-bcec-bf33a8fb5d63
@@ -8,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7db7e704eab7f5d00b20051811c503b143608e2f
-ms.sourcegitcommit: 14637be49401f56341c93043eab560a4ff6b57f6
+ms.openlocfilehash: 13fd616e9ec596bfcdeb3718a62dc1a3a1bc8137
+ms.sourcegitcommit: 172aaf05596a9d8ded298b7b104569c1cce6160e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90074951"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92007159"
 ---
 # <a name="run-profiling-tools-with-or-without-the-debugger"></a>运行带/不带调试器的分析工具
 
@@ -29,7 +30,7 @@ Visual Studio 提供了性能测量值和分析工具选择。 某些工具（�
 - 调试器集成工具与非调试器工具
   - 外部性能问题（如文件 I/O 或网络响应能力问题）在调试器或非调试器工具中看起来并没有太大差异。
   - 调试器本身会更改性能时间，因为它会执行截获异常和模块加载事件等必要的调试操作。
-  - 性能探查器工具中的发布版本性能数字是最精准的。 调试器集成的工具结果对于与其他调试相关的度量值进行比较或使用调试器功能非常有用。
+  - 性能探查器中的发布版本性能数字是最精准的。 调试器集成的工具结果对于与其他调试相关的度量值进行比较或使用调试器功能非常有用。
 - 调试版本与发布版本
   - 对于 CPU 密集型调用引起的问题，发布版本和调试版本之间可能存在相当大的性能差异。 检查发布版本中是否存在该问题。
   - 如果仅在调试版本期间出现此问题，则可能不需要运行非调试器工具。 对于发布生成问题，确定由调试器集成工具提供的功能是否有助于查明问题。
@@ -98,7 +99,7 @@ Visual Studio 提供了性能测量值和分析工具选择。 某些工具（�
 
 - [分析 CPU 使用情况](../profiling/cpu-usage.md)
 - [分析 .NET 代码的内存使用情况](../profiling/dotnet-alloc-tool.md)
-- [分析内存使用情况](../profiling/analyze-memory-usage.md)
+- [分析内存使用情况](../profiling/memory-usage-without-debugging2.md)
 - [分析 .NET 异步代码的性能](../profiling/analyze-async.md)
 - [分析数据库性能](../profiling/analyze-database.md)
 - [分析 GPU 使用情况](../profiling/gpu-usage.md)

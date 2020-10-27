@@ -15,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 99ed79b1654057c4114ceb171b5cb1e1dfdb439f
-ms.sourcegitcommit: dda98068c0f62ccd1a19fdfde4bdb822428d0125
+ms.openlocfilehash: 5cf32bdf56f75ded7d193082f1072b79c3d16b3c
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87425389"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136909"
 ---
 # <a name="common-msbuild-project-items"></a>常用的 MSBuild 项目项
 
@@ -81,9 +81,15 @@ ms.locfileid: "87425389"
 |项元数据名称|描述|
 |---------------|-----------------|
 |“属性”|可选的字符串。 引用的显示名称。|
+|GlobalPropertiesToRemove|可选的 `string[]`。 在生成引用项目时要删除的属性的名称，例如 `RuntimeIdentifier;PackOnBuild`。 默认为空。|
 |项目|可选的字符串。 引用的 GUID，形式为 {12345678-1234-1234-1234-1234567891234}。|
-|Package|可选的字符串。 所引用的项目文件的路径。|
+|OutputItemType|可选的字符串。 要将目标输出发到的项类型。 默认为空。 如果“引用元数据”设置为“true”（默认），那么目标输出将成为编译器的引用。|
 |ReferenceOutputAssembly|可选的布尔值。 如果设置为 `false`，则不包括引用项目的输出作为此项目的[引用](#reference)，但仍可确保在此项目之前生成其他项目。 默认为 `true`。|
+|SetConfiguration|可选的字符串。 为引用的项目设置全局属性 `Configuration`，例如 `Configuration=Release`。|
+|SetPlatform|可选的字符串。 为引用的项目设置全局属性 `Platform`，例如 `Platform=AnyCPU`。|
+|SetTargetFramework|可选的字符串。 为引用的项目设置全局属性 `TargetFramework`，例如 `TargetFramework=netstandard2.0`。|
+|SkipGetTargetFrameworkProperties|可选的布尔值。 如果为 `true`，则在不协商最兼容的 `TargetFramework` 值的情况下生成引用的项目。 默认为 `false`。|
+|目标|可选的 `string[]`。 应生成的引用项目中的目标的列表，以分号分隔。 默认值为 `$(ProjectReferenceBuildTargets)` 的值，该值默认为空，指示默认目标。|
 
 ### <a name="compile"></a>Compile
 

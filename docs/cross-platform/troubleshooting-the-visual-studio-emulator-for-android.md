@@ -1,6 +1,7 @@
 ---
 title: 适用于 Android 的 Visual Studio 模拟器疑难解答 | Microsoft Docs
-ms.custom: ''
+description: 了解有助于解决使用适用于 Android 的 Visual Studio 仿真程序时可能会遇到的一些问题的信息。
+ms.custom: SEO-VS-2020
 ms.prod: visual-studio-dev15
 ms.date: 11/04/2016
 ms.technology: vs-ide-mobile
@@ -12,12 +13,12 @@ manager: crdun
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: cfcae9ac15292a52a79c97b5b67e758b9dc0dcde
-ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.openlocfilehash: 24af3c279115322b0592faa3b9fa6049bc0c0b62
+ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86386298"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91878912"
 ---
 # <a name="troubleshoot-the-visual-studio-emulator-for-android"></a>适用于 Android 的 Visual Studio 模拟器疑难解答
 本主题包含的信息有助于解决使用适用于 Android 的 Visual Studio 仿真程序时可能会遇到的一些问题。

@@ -2,7 +2,7 @@
 title: 更新 Visual Studio
 titleSuffix: ''
 description: 了解如何逐步将 Visual Studio 更新到最新版本。
-ms.date: 07/31/2019
+ms.date: 10/12/2020
 ms.custom: seodec18
 ms.topic: how-to
 ms.prod: visual-studio-windows
@@ -17,12 +17,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5d101ee2a4ce3d7a97382d829188a9902ccbd0c0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 01bc8fe18ff32d5da3f56eb39465b3fc696239b4
+ms.sourcegitcommit: 172aaf05596a9d8ded298b7b104569c1cce6160e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85419141"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92007175"
 ---
 # <a name="update-visual-studio-to-the-most-recent-release"></a>请将 Visual Studio 更新到最新版本
 
@@ -112,22 +112,22 @@ ms.locfileid: "85419141"
 
 1. 当有更新时，Visual Studio 中会有相应的“通知”标志。
 
-   ![使用通知中心更新 Visual Studio 2017](media/notification-flag.png "Visual Studio 中的更新通知标志")
+   ![更新 Visual Studio 2017 通知标志](media/notification-flag.png "Visual Studio 中的更新通知标志")
 
    选择通知标志，打开“通知”  中心。
 
-   ![使用通知中心更新 Visual Studio 2017](media/notifications-hub.png "Visual Studio 中的通知中心")
+   ![通知中心中的 Visual Studio 2017 更新](media/notifications-hub.png "通知中心中的 Visual Studio 2017 更新")
 
       > [!TIP]
       > Visual Studio 2017 版本的更新是累积的，因此始终选择安装具有最新版本号的版本。
 
 1. 选择“有‘Visual Studio 更新’”  ，随即会打开“扩展和更新”  对话框。
 
-   ![使用通知中心更新 Visual Studio 2017](media/notifications-hub-select.png "Visual Studio 中的通知中心")
+   ![选择 Visual Studio 更新](media/notifications-hub-select.png "选择 Visual Studio 更新")
 
 1. 在“扩展和更新”  对话框中，选择“更新”  按钮。
 
-   ![使用通知中心更新 Visual Studio 2017](media/notifications-extensions-and-updates.png "Visual Studio 中的“扩展和更新”对话框")
+   ![在“扩展和更新”对话框中选择“更新”](media/notifications-extensions-and-updates.png "Visual Studio 中的“扩展和更新”对话框")
 
 #### <a name="more-about-visual-studio-notifications"></a>Visual Studio 通知的详细信息
 
@@ -178,9 +178,11 @@ Visual Studio 自身或安装的任何组件有更新时，以及 Visual Studio 
 
 ## <a name="use-the-visual-studio-installer"></a>使用 Visual Studio 安装程序
 
-1. 打开安装程序。
+1. 在计算机上找到 Visual Studio 安装程序。
 
-     ![在 Windows 中打开 Visual Studio 安装程序](media/vs-2019/vs-installer-windows-start.png "打开 Visual Studio 安装程序")
+   在 Windows“开始”菜单中，可以搜索“安装程序”。
+
+   ![Visual Studio 安装程序](media/vs-2019/visual-studio-installer.png "搜索 Visual Studio 安装程序")
 
    可能需要先更新安装程序，然后才能继续操作。 如果是这样，请按照提示操作。
 
@@ -218,11 +220,11 @@ Visual Studio 自身或安装的任何组件有更新时，以及 Visual Studio 
 
     ![IDE 中的“Visual Studio 2019 更新”消息](media/vs-2019/update-visual-studio-ide-message.png "IDE 中的“Visual Studio 2019 更新”消息")
 
-1. 在“Visual Studio 2019 更新”消息中，选择“查看详细信息”   。
+1. 在“Visual Studio 2019 更新”消息中，选择“查看详细信息”  。
 
    ![在“Visual Studio 2019 IDE 更新”消息中，选择“查看详细信息”按钮](media/vs-2019/update-visual-studio-ide-view-details.png "在“Visual Studio 2019 更新”消息中，选择“查看详细信息”按钮")
 
-1. 在“已下载更新并准备安装”对话框中，选择“更新”   。
+1. 在“已下载更新并准备安装”对话框中，选择“更新”  。
 
      ![在“已下载更新并准备安装”对话框中，选择“更新”按钮](media/vs-2019/update-ready-install-visual-studio-community-from-ide.png "在“已下载更新并准备安装”对话框中，选择“更新”按钮")
 
@@ -235,11 +237,11 @@ Visual Studio 自身或安装的任何组件有更新时，以及 Visual Studio 
      ![从“帮助”菜单中选择“检查更新”](media/vs-2019/vs-ide-check-updates-help-menu.png "从“帮助”菜单中选择“检查更新”")
 
     > [!NOTE]
-    > 还可以使用 IDE 中的搜索框来检查更新。 按 Ctrl  +Q  ，键入“检查更新”，然后选择匹配的搜索结果。
+    > 还可以使用 IDE 中的搜索框来检查更新。 按 Ctrl+Q，键入“检查更新”，然后选择匹配的搜索结果。
 
 1. 在“更新可用”  对话框中，选择“更新”  。
 
-     ![在“已下载更新并准备安装”对话框中，选择“更新”按钮](media/vs-2019/update-visual-studio-community-from-ide.png "在“已下载更新并准备安装”对话框中，选择“更新”按钮")
+     ![在“可用更新”对话框中选择“更新”按钮](media/vs-2019/update-visual-studio-community-from-ide.png "在“可用更新”对话框中选择“更新”按钮")
 
    Visual Studio 将更新、关闭然后重新打开。
 
@@ -273,9 +275,9 @@ Visual Studio 自身或安装的任何组件有更新时，以及 Visual Studio 
 
 还可以选择“自动下载更新”  设置，该设置允许在计算机处于空闲状态时下载更新。
 
-操作方法如下：
+以下是操作方法：
 
-1. 在菜单栏上，依次选择“工具”  >“选项”  。
+1. 在菜单栏上，依次选择“工具”>“选项”。
 
 2. 展开“环境”  ，然后选择“生产更新”  。
 

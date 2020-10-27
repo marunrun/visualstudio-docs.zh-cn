@@ -1,6 +1,7 @@
 ---
 title: 使用任务列表
-ms.date: 11/04/2016
+description: 了解 Visual Studio 中的“任务列表”如何帮助你更有效地跟踪并使用代码注释。
+ms.date: 10/12/2020
 ms.topic: how-to
 f1_keywords:
 - TaskListWindow
@@ -14,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1a3e1c43e9813bce664a63f3675b0fed6e14e3c7
-ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
+ms.openlocfilehash: 8d19794b4fce3e4a1388f864cecf408e0f7e9c53
+ms.sourcegitcommit: 3e05bd4bfac6f0b8b3534d8c013388f67e288651
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91780997"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91959797"
 ---
 # <a name="use-the-task-list"></a>使用任务列表
 
@@ -64,41 +65,41 @@ Visual Studio 2015 中已删除用户任务功能。 若打开的解决方案具
 
 因为 `TODO` 是预定义令牌，该注释将在列表中显示为 `TODO` 任务。
 
-> [!NOTE]
-> 默认令牌仅适用于 C/C++、C# 和 VB 语言。
-
 ### <a name="custom-tokens"></a>自定义令牌
 
 默认情况下，Visual Studio 包含以下令牌：`HACK`、`TODO`、`UNDONE` 和 `UnresolvedMergeConflict`。 令牌不区分大小写。 你也可以创建自己的自定义令牌。
+
+> [!NOTE]
+> 默认令牌仅适用于 C/C++、C# 和 VB 语言。 要为其他编程语言创建自己的令牌，请使用以下步骤。
 
 创建自定义令牌：
 
 1. 在 **“工具”** 菜单上，选择 **“选项”** 。
 
-2. 打开 **“环境”** 文件夹，然后选择 **“任务列表”**。
+2. 打开 **“环境”** 文件夹，然后选择 **“任务列表”** 。
 
    将显示[“任务列表”选项页](../ide/reference/task-list-environment-options-dialog-box.md)。
 
    ![Visual Studio 任务列表](../ide/media/vs2015_task_list_options.png)
 
-3. 在****“名称”**** 文本框中，输入令牌名称，如“BUG”。
+3. 在  “名称”  文本框中，输入令牌名称，如“BUG”。
 
 4. 在 **“优先级别”** 下拉列表中，为新令牌选择默认优先级别。
 
 5. 选择“添加”。
 
 > [!TIP]
-> 输入名称后将启用****“添加”按钮。 必须先输入名称，然后再单击“添加”****。
+> 输入名称后将启用  “添加”按钮。 必须先输入名称，然后再单击“添加”  。
 
 ### <a name="c-todo-comments"></a>C++ TODO 注释
 
-默认情况下，C++ TODO 注释显示在“任务列表”**** 中。
+默认情况下，C++ TODO 注释显示在“任务列表”  中。
 
-要关闭 C++ TODO 命令，在“工具”**** 菜单上，依次选择“选项”**** > “文本编辑器”**** > “C/C++”**** > “视图”**** > “枚举注释任务”****，然后将值设置为 false****。
+要关闭 C++ TODO 命令，在“工具”  菜单上，依次选择“选项”  > “文本编辑器”  > “C/C++”  > “视图”  > “枚举注释任务”  ，然后将值设置为 false  。
 
 ## <a name="shortcuts"></a>快捷方式
 
-快捷方式** 是在“任务列表”**** 中跟踪的代码中的书签。 它具有与常规书签不同的图标。 双击****“任务列表”中的快捷方式可转到代码中的对应位置。
+快捷方式  是在“任务列表”  中跟踪的代码中的书签。 它具有与常规书签不同的图标。 双击  “任务列表”中的快捷方式可转到代码中的对应位置。
 
 ![Visual Studio 任务列表快捷方式图标](../ide/media/vs2015_task_list_bookmark.png)
 
@@ -106,7 +107,7 @@ Visual Studio 2015 中已删除用户任务功能。 若打开的解决方案具
 
 若要创建快捷方式，请将指针插入到代码中你想要放置快捷方式的位置。 选择“编辑” > “书签” > “添加任务列表快捷方式”或按 Ctrl+K，Ctrl+H      。
 
-若要在代码中浏览快捷方式，在列表中选择一个快捷方式，然后从快捷菜单中选择“下一任务” **** 或“上一任务” **** 。
+若要在代码中浏览快捷方式，在列表中选择一个快捷方式，然后从快捷菜单中选择“下一任务”  或“上一任务”  。
 
 ## <a name="see-also"></a>请参阅
 

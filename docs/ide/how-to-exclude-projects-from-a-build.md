@@ -1,5 +1,7 @@
 ---
 title: 如何：从生成中排除项目
+description: 了解如何使用 Visual Studio 生成解决方案，但不生成其包含的所有项目。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-compile
 ms.topic: how-to
@@ -9,12 +11,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c30dd912378fd933d29bff1d8828f31de58f9afa
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 5b0e164c24770048495d16da852523b3dd50a43a
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85284316"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136896"
 ---
 # <a name="how-to-exclude-projects-from-a-build"></a>如何：从生成中排除项目
 

@@ -1,5 +1,7 @@
 ---
 title: 演练：生成应用程序
+description: 更熟悉使用 Visual Studio 生成应用程序时可配置的多个选项。
+ms.custom: SEO-VS-2020
 ms.date: 09/25/2017
 ms.technology: vs-ide-compile
 ms.topic: conceptual
@@ -8,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d94a525f9938b6845584b6d5872bd486e947025d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 76a281b90b3dabe2b1d91c43a27ee5f9c858f96c
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76115409"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136610"
 ---
 # <a name="walkthrough-build-an-application"></a>演练：生成应用程序
 

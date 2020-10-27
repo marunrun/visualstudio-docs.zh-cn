@@ -9,16 +9,17 @@ ms.topic: how-to
 ms.workload: multiple
 ms.date: 07/25/2019
 ms.technology: vs-azure
-ms.openlocfilehash: 26562268167abdfc5ee643618ec1610da231f9f0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 32f6535e92f41d8030b6e060960940339da91fc9
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85283159"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92298216"
 ---
 # <a name="debug-apps-in-a-local-docker-container"></a>在本地 Docker 容器中调试应用
 
-Visual Studio 提供了一种一致方法来开发 Docker 容器，并在本地验证应用程序。 可以在安装了 Docker 的本地 Windows 桌面上运行的 Linux 或 Windows 容器中运行和调试应用，且每次更改代码时都无需重新启动容器。
+Visual Studio 提供了一种一致方法来开发 Docker 容器，并在本地验证应用程序。
+可以在安装了 Docker 的本地 Windows 桌面上运行的 Linux 或 Windows 容器中运行和调试应用，且每次更改代码时都无需重新启动容器。
 
 本文介绍了如何使用 Visual Studio 在本地 Docker 容器中启动应用、进行更改，并刷新浏览器以查看所做的更改。 本文还介绍了如何为容器化的应用设置用于调试的断点。 支持的项目类型包括 .NET Framework 和 .NET Core Web 及控制台应用。 本文使用 ASP.NET Core Web 应用和 .NET Framework 控制台应用。
 
@@ -40,7 +41,7 @@ Visual Studio 提供了一种一致方法来开发 Docker 容器，并在本地�
 
 ::: moniker-end
 
-若要在本地运行 Docker 容器，必须安装本地 Docker 客户端。 你可以使用 [Docker 工具箱](https://www.docker.com/products/docker-toolbox)，这需要禁用 Hyper-V。 也可以使用[用于 Windows 的 Docker](https://www.docker.com/get-docker)，它使用 Hyper-V 并要求安装 Windows 10。
+若要在本地运行 Docker 容器，必须安装本地 Docker 客户端。 你可以使用[用于 Windows 的 Docker](https://www.docker.com/get-docker)，它使用 Hyper-V 并要求安装 Windows 10。
 
 Docker 容器可用于 .NET Framework 和 .NET Core 项目。 请看以下两个示例。 首先，我们来了解一下 .NET Core Web 应用。 接下来，我们来了解 .NET Framework 控制台应用。
 
@@ -65,18 +66,18 @@ Docker 容器可用于 .NET Framework 和 .NET Core 项目。 请看以下两个
 
     ```csharp
     public IWebHostEnvironment Env { get; set; }
-    
+
     public void ConfigureServices(IServiceCollection services)
     {
         IMvcBuilder builder = services.AddRazorPages();
-    
+
     #if DEBUG
         if (Env.IsDevelopment())
         {
             builder.AddRazorRuntimeCompilation();
         }
     #endif
-    
+
         // code omitted for brevity
     }
     ```
@@ -91,7 +92,7 @@ Docker 容器可用于 .NET Framework 和 .NET Core 项目。 请看以下两个
     }
     ```
 
-   有关详细信息，请参阅 [ASP.NET Core 中的 Razor 文件编译](/aspnet/core/mvc/views/view-compilation?view=aspnetcore-3.1)。
+   有关详细信息，请参阅 [ASP.NET Core 中的 Razor 文件编译](/aspnet/core/mvc/views/view-compilation?view=aspnetcore-3.1&preserve-view=true)。
 
 1. 将“解决方案配置”设置为“调试” 。 然后，按 Ctrl+F5 以生成 Docker 映像并在本地运行该映像 。
 
@@ -169,7 +170,7 @@ Docker 容器可用于 .NET Framework 和 .NET Core 项目。 请看以下两个
 
 ## <a name="more-about-docker-with-visual-studio-windows-and-azure"></a>有关 Visual Studio、Windows 和 Azure 中 Docker 的详细信息
 
-* 详细了解[使用 Visual Studio 进行容器开发](/visualstudio/containers)。
+* 详细了解[使用 Visual Studio 进行容器开发](./index.yml)。
 * 要生成和部署 Docker 容器，请参阅 [Azure Pipelines 的 Docker 集成](https://marketplace.visualstudio.com/items?itemName=ms-vscs-rm.docker)。
 * 有关 Windows Server 和 Nano Server 文章的索引，请参阅 [Windows 容器信息](/virtualization/windowscontainers/)。
 * 详细了解 [Azure Kubernetes 服务](https://azure.microsoft.com/services/kubernetes-service/)并查看 [Azure Kubernetes 服务文档](/azure/aks)。

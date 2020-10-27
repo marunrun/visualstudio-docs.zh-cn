@@ -1,5 +1,7 @@
 ---
 title: 如何：将项目配置为面向平台
+description: 了解如何使用 Visual Studio 将应用程序设置为面向不同平台（包括 64 位平台）。
+ms.custom: SEO-VS-2020
 ms.date: 08/16/2019
 ms.technology: vs-ide-compile
 ms.topic: how-to
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a58b60e23bf08fb86a8dd7bc09d760085b6ea25f
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 323d118b73649c8c23d9b4a2e3ace2fd2fc6fdea
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85284591"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136753"
 ---
 # <a name="how-to-configure-projects-to-target-platforms"></a>如何：将项目配置为面向平台
 

@@ -8,12 +8,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7da5a229ec345a4f360aeb6051dc33130fa3d99a
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: dfcdcfc309fb951b2f7e490f0d03dcfe9d381b83
+ms.sourcegitcommit: 54ec951bcfa87fd80a42e3ab4539084634a5ceb4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810114"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92116145"
 ---
 # <a name="developer-community-guidelines"></a>开发者社区指南
 
@@ -59,11 +59,13 @@ ms.locfileid: "90810114"
 
 报告问题后，可通过状态了解你的提交在其生命周期中所处的位置。 Visual Studio 产品团队在评审你的反馈时，会将它设为适当的状态。 可查看[问题状态和常见问题解答](./report-a-problem.md)来跟踪问题报告的进度。
 
+### <a name="prioritizing-which-issues-to-fix"></a>确定要修复的问题的优先级
+
+无法修复已报告的所有问题。 有些修复成本太高，有些可能会影响其他功能区域，而有些的影响并不大。 我们了解，如果你花了不少时间向我们发送问题报告，这个结果可能会令你失望。 我们都在这里，要不在这个项目中，要不在我们参与的其他项目中。 如果问题已关闭，而你认为我们给出的原因不满意，那么你可以阐明你的用例，请求重新激活该问题，发起新一轮提交。 此时，我们可能会要求你提供其他信息。
+
+### <a name="missing-important-information"></a>缺少重要信息
+
 如果问题缺少重要信息，我们将分配“需要更多信息”状态。 我们将在问题上评论称我们需要该特定信息，你也将收到电子邮件通知。 如果我们在 7 天内未收到该信息，将向你发送提醒。 之后，如果你 14 天内未操作，我们将关闭该票证。
-
-### <a name="wont-fix-bugs"></a>不修复 bug
-
-如果某些 bug 所耗的成本大于效益，我们将关闭它们。 例如，如果修复太复杂，可能导致很多用户的性能下降，则修复可能就不合理。 当我们关闭这类 bug 时，会解释原因。
 
 ### <a name="other-product"></a>其他产品
 
