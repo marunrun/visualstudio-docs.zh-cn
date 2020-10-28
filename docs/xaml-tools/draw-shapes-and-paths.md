@@ -1,6 +1,7 @@
 ---
 title: 绘制形状和路径
-description: 使用 Blend for Visual Studio 向形状和路径添加更多详细信息
+description: 使用 Blend for Visual Studio 中 XAML 设计器的功能绘制路径和形状，对其进行修改，然后将它们组合在一起。
+ms.custom: SEO-VS-2020
 titleSuffix: Blend for Visual Studio
 ms.date: 09/22/2020
 ms.topic: conceptual
@@ -10,24 +11,24 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 368619a55316e0af59fc5351e187ced8892a6116
-ms.sourcegitcommit: 4affcf2830337e6aba84621c3eda5faf5d0d4a01
+ms.openlocfilehash: 6c29e2a4718a10193a4c86d1485549ded6ae2c0e
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91022498"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796792"
 ---
 # <a name="draw-shapes-and-paths"></a>绘制形状和路径
 
-在 XAML 设计器中，“形状”** 正是你所期望的内容。 例如：矩形、圆或椭圆。 *路径* 是更加灵活的形状版本。 你可以执行某些操作，如重新调整它们的形状，或将它们合并在一起以形成新形状。
+在 XAML 设计器中，“形状”  正是你所期望的内容。 例如：矩形、圆或椭圆。 *路径* 是更加灵活的形状版本。 你可以执行某些操作，如重新调整它们的形状，或将它们合并在一起以形成新形状。
 
 形状和路径使用矢量图形，因此它们可很好地按高分辨率显示进行缩放。
 
 ## <a name="draw-a-shape"></a>绘制形状
 
-在“资产”**** 窗口中查找形状。
+在“资产”  窗口中查找形状。
 
-:::image type="content" source="media/blend-shapes.png" alt-text="Blend for Visual Studio 中 "资产" 窗口的 "形状" 类别的屏幕截图":::
+:::image type="content" source="media/blend-shapes.png" alt-text="Blend for Visual Studio 中 &quot;资产&quot; 窗口的 &quot;形状&quot; 类别的屏幕截图":::
 
 将所需的任何形状拖到美工板上。 然后，使用形状的图柄缩放、旋转、移动或扭曲形状。
 
@@ -35,13 +36,13 @@ ms.locfileid: "91022498"
 
 ## <a name="draw-a-path"></a>绘制路径
 
-路径是一系列连接的直线和曲线。 使用路径可创建“资产”**** 窗口中未提供的有趣形状。
+路径是一系列连接的直线和曲线。 使用路径可创建“资产”  窗口中未提供的有趣形状。
 
-可以使用线条、笔或铅笔绘制路径。 可以在“工具”**** 窗口中找到这些工具。
+可以使用线条、笔或铅笔绘制路径。 可以在“工具”  窗口中找到这些工具。
 
 ### <a name="draw-a-straight-line"></a>绘制直线
 
-使用“笔”**** 工具或“线条”**** 工具。
+使用“笔”  工具或“线条”  工具。
 
 **使用“笔”工具**
 
@@ -53,7 +54,7 @@ ms.locfileid: "91022498"
 
 ### <a name="draw-a-curve"></a>绘制曲线
 
-使用“笔”**** 工具。
+使用“笔”  工具。
 
 在美工板上，单击一次以定义线条的起点，然后单击并拖动指针以创建所需的曲线。
 
@@ -61,38 +62,38 @@ ms.locfileid: "91022498"
 
 ### <a name="change-the-shape-of-a-curve"></a>更改曲线的形状
 
-使用“路径选择”**** 工具。
+使用“路径选择”  工具。
 
 单击形状，然后拖动形状上的任何点以更改曲线形状。
 
 ### <a name="draw-a-free-form-path"></a>绘制任意形状的路径
 
-使用“铅笔”**** 工具。
+使用“铅笔”  工具。
 
 在美工板上，如同使用真正的铅笔一样绘制任意形状的路径。
 
 ### <a name="remove-part-of-a-path"></a>删除路径的一部分
 
-使用“路径选择”**** 工具。
+使用“路径选择”  工具。
 
-选择包含要删除的段的路径，然后单击“删除” **** 按钮。
+选择包含要删除的段的路径，然后单击“删除”  按钮。
 
 ### <a name="remove-a-point-in-a-path"></a>删除路径中的点
 
-使用“选择”**** 工具，以选中路径。 然后，使用 " **笔** " 工具单击你要删除的点。
+使用“选择”  工具，以选中路径。 然后，使用 " **笔** " 工具单击你要删除的点。
 
 ### <a name="add-a-point-to-a-path"></a>向路径添加点
 
-使用“选择”**** 工具，以选中路径。 使用 " **笔** " 工具单击路径上要添加点的任何位置。
+使用“选择”  工具，以选中路径。 使用 " **笔** " 工具单击路径上要添加点的任何位置。
 
 ## <a name="convert-a-shape-to-a-path"></a>将形状转换为路径
 
-若要采用与修改路径相同的方式来修改形状，请将形状转换为路径。 选择形状，然后选择 "**格式化**  >  **路径**" "  >  **转换为路径**"。
+若要采用与修改路径相同的方式来修改形状，请将形状转换为路径。 选择形状，然后选择 " **格式化**  >  **路径** " "  >  **转换为路径** "。
 
 **观看短片：** ![配置已安装的功能](../designers/media/bldadminconsoleinitialconfigicon.png) [使用路径：将形状转换为路径](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=147)。
 
 > [!NOTE]
-> ****“转换为路径”当前不适用于 `TargetPlatformVersion` 至少为 10.0.16299.0 或更高版本的 UWP 应用。
+>  “转换为路径”当前不适用于 `TargetPlatformVersion` 至少为 10.0.16299.0 或更高版本的 UWP 应用。
 
 ## <a name="combine-paths"></a>合并路径
 
@@ -100,7 +101,7 @@ ms.locfileid: "91022498"
 
 ![合并路径](../designers/media/2df17a5d-a338-4ef4-96c5-dae51cc1ca8a.png)
 
-|Number|操作|
+|数字|操作|
 |-|-|
 |![合并之前的两个形状](../designers/media/b1_1.png)|合并之前的两个形状|
 |![相并](../designers/media/b1_2.png)|相并|
