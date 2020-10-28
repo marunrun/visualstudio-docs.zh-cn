@@ -8,10 +8,10 @@ ms.date: 09/08/2020
 ms.topic: how-to
 description: 了解如何与订阅管理员联系以获取有关问题的帮助。
 ms.openlocfilehash: 6e2192f81a7003c3c3dcbbc9583ae537ac60cb4b
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
+ms.lasthandoff: 10/22/2020
 ms.locfileid: "91005683"
 ---
 # <a name="get-assistance-from-your-subscriptions-administrator"></a>获取订阅管理员的帮助
@@ -30,7 +30,7 @@ ms.locfileid: "91005683"
 6. 最后，选择“发送”。
 
 > [!NOTE]
-> **超级管理员：** 要设置发送“与管理员联系”请求的电子邮件地址，请在[协议首选项](admin-prefs.md#contact-email-address)中指定该地址。
+> **超级管理员：** 要设置发送“与管理员联系”请求的电子邮件地址，请在 [协议首选项](admin-prefs.md#contact-email-address)中指定该地址。
 
 ## <a name="resources"></a>资源
 - [Visual Studio 管理和订阅支持](https://visualstudio.microsoft.com/support/support-overview-vs)

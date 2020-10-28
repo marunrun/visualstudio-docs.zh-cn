@@ -30,15 +30,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: eceffab5b8c179734b1abb5f1005c240912115f1
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2020
+ms.lasthandoff: 10/22/2020
 ms.locfileid: "89599585"
 ---
 # <a name="specify-symbol-pdb-and-source-files-in-the-visual-studio-debugger-c-c-visual-basic-f"></a>在 Visual Studio 调试器（C#、C++、Visual Basic、F#）中指定符号 (.pdb) 和源文件
 
-程序数据库 ( *.pdb*) 文件（也称为符号文件）将项目源代码中的标识符和语句映射到已编译应用中的相应标识符和说明。 这些映射文件将调试器链接到源代码，以进行调试。
+程序数据库 ( *.pdb* ) 文件（也称为符号文件）将项目源代码中的标识符和语句映射到已编译应用中的相应标识符和说明。 这些映射文件将调试器链接到源代码，以进行调试。
 
 使用标准调试生成配置从 Visual Studio IDE 生成项目时，编译器会创建相应的符号文件。 本文介绍如何在 IDE 中管理符号文件，例如，如何[在调试器选项中指定符号的位置](#BKMK_Specify_symbol_locations_and_loading_behavior)，如何在调试时[检查符号加载状态](#work-with-symbols-in-the-modules-window)，以及如何[在代码中设置符号选项](#compiler-symbol-options)。
 
@@ -85,11 +85,11 @@ ms.locfileid: "89599585"
 
      可能会用到的符号服务器包括：
 
-     **公共 Microsoft 符号服务器**：要调试在调用系统 DLL 或第三方库时出现的故障，通常需要系统 .pdb 文件。 系统 .pdb 文件包含 Windows DL、.exe 文件和设备驱动程序的符号 。 你可以从公共 Microsoft 符号服务器获取 Windows 操作系统、MDAC、IIS、ISA 和 .NET 的符号。
+     **公共 Microsoft 符号服务器** ：要调试在调用系统 DLL 或第三方库时出现的故障，通常需要系统 .pdb 文件。 系统 .pdb 文件包含 Windows DL、.exe 文件和设备驱动程序的符号 。 你可以从公共 Microsoft 符号服务器获取 Windows 操作系统、MDAC、IIS、ISA 和 .NET 的符号。
 
-     **内部网络或本地计算机上的符号服务器**：你的团队或公司可为你自己的产品创建符号服务器，并作为外部源符号的缓存。 你自己的计算机上可能具有符号服务器。
+     **内部网络或本地计算机上的符号服务器** ：你的团队或公司可为你自己的产品创建符号服务器，并作为外部源符号的缓存。 你自己的计算机上可能具有符号服务器。
 
-     **第三方符号服务器**：Windows 应用程序和库的第三方提供程序可提供对 Internet 上的符号服务器的访问。
+     **第三方符号服务器** ：Windows 应用程序和库的第三方提供程序可提供对 Internet 上的符号服务器的访问。
 
      > [!WARNING]
      > 如果使用公共 Microsoft 符号服务器以外的符号服务器，请确保该符号服务器及其路径是可信任的。 由于符号文件可以包含任意可执行代码，因此你可能面临安全威胁。
@@ -151,7 +151,7 @@ ms.locfileid: "89599585"
 
   加载适用于 C/C++ 的 DLL 导出表。 有关详细信息，请参阅 [DLL 导出表](#use-dumpbin-exports)。 读取 DLL 导出信息会产生一些开销，因此默认情况下会关闭加载导出表的功能。 你还可以在 C/ C++ 生成命令行中使用 `dumpbin /exports`。
 
-- **启用地址级调试**和**无可用源时显示反汇编**
+- **启用地址级调试** 和 **无可用源时显示反汇编**
 
   无法找到源或符号文件时，始终显示反汇编。
 
@@ -178,7 +178,7 @@ ms.locfileid: "89599585"
 
 ### <a name="net-options"></a>.NET 选项
 
-使用 /debug 进行生成以创建 .pdb 文件。 可以使用 **/debug:full** 或 **/debug:pdbonly**生成应用程序。 使用 **/debug:full** 进行生成可以生成可调试的代码。 使用 /debug:pdbonly 进行生成可以生成 .pdb 文件，但不会生成通知 JIT 编译器调试信息可用的 `DebuggableAttribute`。 如果想为不希望其成为可调试的发布版本生成 .pdb文件，请使用 /debug:pdbonly。 有关详细信息，请参阅 [/debug（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/debug-compiler-option)或 [/debug (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/debug)。
+使用 /debug 进行生成以创建 .pdb 文件。 可以使用 **/debug:full** 或 **/debug:pdbonly** 生成应用程序。 使用 **/debug:full** 进行生成可以生成可调试的代码。 使用 /debug:pdbonly 进行生成可以生成 .pdb 文件，但不会生成通知 JIT 编译器调试信息可用的 `DebuggableAttribute`。 如果想为不希望其成为可调试的发布版本生成 .pdb文件，请使用 /debug:pdbonly。 有关详细信息，请参阅 [/debug（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/debug-compiler-option)或 [/debug (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/debug)。
 
 ### <a name="cc-options"></a>C/C++ 选项
 

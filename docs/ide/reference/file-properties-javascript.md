@@ -1,5 +1,7 @@
 ---
 title: 文件属性，JavaScript
+description: 了解如何使用文件属性来指示项目系统应对文件执行的操作。
+ms.custom: SEO-VS-2020
 ms.date: 06/21/2017
 ms.technology: vs-javascript
 ms.topic: reference
@@ -26,18 +28,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b27f103b2431914efbd22c119e11221b5814dae4
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: efe1486cf8ac2b64965ed157abbb47dc2d8c7b6c
+ms.sourcegitcommit: a7944c325bedd8efbb244452741864089a02f5db
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "68926237"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91947786"
 ---
 # <a name="file-properties-javascript"></a>文件属性，JavaScript
 
 文件属性可用于指示项目系统应对文件执行的操作。 例如，可以设置文件属性，指示是否应将文件作为资源文件添加到包。
 
-可以在解决方案资源管理器中选择任何文件，然后在“属性”窗口中检查其属性。 JavaScript 文件具有四个属性：复制到输出目录、包操作、文件名和文件路径     。
+可以在解决方案资源管理器中选择任何文件，然后在“属性”窗口中检查其属性。 JavaScript 文件具有四个属性：复制到输出目录、包操作、文件名和文件路径  。
 
 ## <a name="file-properties"></a>文件属性
 本部分介绍 JavaScript 文件的共同属性。
@@ -52,7 +54,7 @@ ms.locfileid: "68926237"
 
 - 内容 - 文件包含在程序包清单中  。 例如，此设置为 .htm、.js、.css、图像、音频或视频文件的默认值。
 
-- 清单 - 文件未包含在程序包清单中  。 相反，文件用于生成程序包清单时的输入。 这是 package.appxmanifest 文件的默认值。
+- 清单 - 文件未包含在程序包清单中。 相反，文件用于生成程序包清单时的输入。 这是 package.appxmanifest 文件的默认值。
 
 - 资源 - 文件未包含在程序包清单中  。 但是，文件的内容在程序包清单的包资源索引 (PRI) 中建立了索引。 通常用于资源文件。
 
@@ -67,7 +69,7 @@ ms.locfileid: "68926237"
 ## <a name="reference-file-properties"></a>“引用文件”属性
 本部分介绍从使用 JavaScript 生成的 UWP 应用引用的文件的共同属性。 在解决方案资源管理器中选择 .winmd 文件、SDK 引用、项目到项目的引用或程序集引用等引用时，其他属性会根据文件类型显示在“属性”窗口中。
 
-### <a name="culture"></a>culture
+### <a name="culture"></a>环境
 显示与引用相关联的语言。
 
 ### <a name="file-type"></a>文件类型
@@ -79,7 +81,7 @@ ms.locfileid: "68926237"
 ### <a name="identity"></a>标识
 显示用于存储在项目文件中的项目的引用标识。
 
-### <a name="package"></a>包
+### <a name="package"></a>程序包
 显示与引用相关联的程序包清单的名称。
 
 ### <a name="resolved-path"></a>已解析的路径
@@ -88,10 +90,10 @@ ms.locfileid: "68926237"
 ### <a name="sdk-path"></a>SDK 路径
 显示已引用 SDK 文件的路径。
 
-### <a name="uri"></a>URI
+### <a name="uri"></a>Uri
 显示必须包含在项目的 HTML 或 JavaScript 文件中才能将文件作为源文件包含在内的 URI。
 
-### <a name="version"></a>Version
+### <a name="version"></a>版本
 显示引用的版本。
 
 ## <a name="see-also"></a>另请参阅

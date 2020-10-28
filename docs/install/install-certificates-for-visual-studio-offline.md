@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: fbc68d232816899d84cc2aead14208b009c933b2
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: ae91cc1982fa41022981c940df5436c5ea5e8e5b
+ms.sourcegitcommit: 8efe6b45d65f9db23f5575c15155fe363fa12cdb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037297"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92750171"
 ---
 # <a name="install-certificates-required-for-visual-studio-offline-installation"></a>安装 Visual Studio 脱机安装所需的证书
 
@@ -117,9 +117,9 @@ Visual Studio 安装程序引擎仅安装受信任的内容。 为此，它会�
    或者，通过以下命令创建批处理文件，该文件使用 Windows 中随附的 certutil.exe：
    
       ```cmd
-   certutil.exe -addstore -f "Root" "[layout path]\certificates\manifestRootCertificate.cer
+   certutil.exe -addstore -f "Root" "[layout path]\certificates\manifestRootCertificate.cer"
 
-   certutil.exe -addstore -f "Root" [layout path]\certificates\manifestCounterSignRootCertificate.cer"
+   certutil.exe -addstore -f "Root" "[layout path]\certificates\manifestCounterSignRootCertificate.cer"
 
    certutil.exe -addstore -f "Root" "[layout path]\certificates\vs_installer_opc.RootCertificate.cer"
    ```
@@ -178,7 +178,7 @@ Visual Studio 安装程序只需要在系统上安装根证书。
 
 检查安装系统的一种方法是按以下步骤操作：
 
-1. 运行 **mmc.exe**。<br/>
+1. 运行 **mmc.exe** 。<br/>
   a. 单击“文件”，然后选择“添加/删除管理单元”   。<br/>
   b. 双击“证书”，选择“计算机帐户”，然后单击“下一步”    。<br/>
   c. 选择“本地计算机”，依次单击“完成”和“确定”    。<br/>
