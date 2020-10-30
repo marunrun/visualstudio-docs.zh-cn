@@ -1,5 +1,7 @@
 ---
 title: CPPClean 任务 | Microsoft Docs
+description: 本文介绍 CPPClean 任务，该任务用于删除生成 C++ 项目时 MSBuild 创建的临时文件。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,12 +21,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 331a96c7cd67b933e521e3fe5f2d7a909ffa5d03
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: b8f59b66ab1fc117a29d7ed8db2d380b4b11b437
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77634339"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796103"
 ---
 # <a name="cppclean-task"></a>CPPClean 任务
 

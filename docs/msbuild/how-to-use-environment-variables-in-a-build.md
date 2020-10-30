@@ -1,5 +1,7 @@
 ---
 title: 如何：在生成中使用环境变量 | Microsoft Docs
+description: 了解如何在 MSBuild 项目文件中访问环境变量，并使用环境变量设置生成选项，而无需修改项目文件。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: afc679f9b782b8bc9ed3e04a2b8fb684cdbc1a20
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ac100427c653a785d1e562b807f7bd4a001ae6ff
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633780"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436178"
 ---
 # <a name="how-to-use-environment-variables-in-a-build"></a>如何：在生成中使用环境变量
 
@@ -65,7 +67,7 @@ ms.locfileid: "77633780"
 </Project>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [MSBuild](../msbuild/msbuild.md)
 - [MSBuild 属性](../msbuild/msbuild-properties.md)

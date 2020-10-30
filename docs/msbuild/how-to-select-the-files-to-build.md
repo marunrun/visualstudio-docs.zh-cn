@@ -1,5 +1,7 @@
 ---
 title: 如何：选择要生成的文件 | Microsoft Docs
+description: 了解如何通过单独列出每个文件或使用通配符来选择要在 MSBuild 项目文件中生成的文件。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0566078c7f90faf204c35024e2c308b5ef881c01
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 4593fff50feb0176ea81f70dc297bc39d8dd1936
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633806"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436205"
 ---
 # <a name="how-to-select-the-files-to-build"></a>如何：选择要生成的文件
 
@@ -35,7 +37,7 @@ ms.locfileid: "77633806"
 
     `<CSFile Include="form1.cs"/>`
 
-    or
+    或
 
     `<VBFile Include="form1.vb"/>`
 
@@ -48,7 +50,7 @@ ms.locfileid: "77633806"
 
     `<CSFile Include="form1.cs;form2.cs"/>`
 
-    or
+    或
 
     `<VBFile Include="form1.vb;form2.vb"/>`
 
@@ -56,33 +58,33 @@ ms.locfileid: "77633806"
 
 还可以使用通配符以递归方式将子目录中的所有文件或某些特定文件包括在某个生成的输入中。 有关通配符的详细信息，请参阅[通配符](../msbuild/msbuild-items.md)
 
-下面的示例基于一个项目，该项目包含下列目录和子目录中的图形文件，项目文件位于 Project 目录中  ：
+下面的示例基于一个项目，该项目包含下列目录和子目录中的图形文件，项目文件位于 Project 目录中：
 
-Project\Images\BestJpgs 
+*Project\Images\BestJpgs*
 
-Project\Images\ImgJpgs 
+*Project\Images\ImgJpgs*
 
-Project\Images\ImgJpgs\Img1 
+*Project\Images\ImgJpgs\Img1*
 
-#### <a name="to-include-all-jpg-files-in-the-images-directory-and-subdirectories"></a>包括 Images 目录和子目录中的所有 .jpg 文件  
+#### <a name="to-include-all-jpg-files-in-the-images-directory-and-subdirectories"></a>包括 Images 目录和子目录中的所有 .jpg 文件 
 
 - 使用下面的 `Include` 属性：
 
     `Include="Images\**\*.jpg"`
 
-#### <a name="to-include-all-jpg-files-starting-with-img"></a>包括所有以“img”开头的 .jpg 文件  
+#### <a name="to-include-all-jpg-files-starting-with-img"></a>包括所有以“img”开头的 .jpg 文件 
 
 - 使用下面的 `Include` 属性：
 
     `Include="Images\**\img*.jpg"`
 
-#### <a name="to-include-all-files-in-directories-with-names-ending-in-jpgs"></a>包括目录中名称以“jpgs”结尾的所有文件 
+#### <a name="to-include-all-files-in-directories-with-names-ending-in-jpgs"></a>包括目录中名称以“jpgs”结尾的所有文件
 
 - 使用以下 `Include` 属性之一：
 
     `Include="Images\**\*jpgs\*.*"`
 
-    or
+    或
 
     `Include="Images\**\*jpgs\*"`
 
@@ -96,7 +98,7 @@ Project\Images\ImgJpgs\Img1
 
     `<CSC Sources="@(CSFile)">...</CSC>`
 
-    or
+    或
 
     `<VBC Sources="@(VBFile)">...</VBC>`
 
@@ -105,7 +107,7 @@ Project\Images\ImgJpgs\Img1
 >
 > `<CSC Sources="*.cs">...</CSC>`
 
-## <a name="example"></a>示例
+## <a name="example-1"></a>示例 1
 
 以下代码示例演示的项目单独包括所有输入文件。
 
@@ -140,9 +142,9 @@ Project\Images\ImgJpgs\Img1
 </Project>
 ```
 
-## <a name="example"></a>示例
+## <a name="example-2"></a>示例 2
 
-以下代码示例使用通配符来包括所有 .cs 文件  。
+以下代码示例使用通配符来包括所有 .cs 文件。
 
 ```xml
 <Project DefaultTargets="Compile"
@@ -175,7 +177,7 @@ Project\Images\ImgJpgs\Img1
 </Project>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：从生成中排除文件](../msbuild/how-to-exclude-files-from-the-build.md)
 - [项](../msbuild/msbuild-items.md)

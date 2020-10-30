@@ -7,12 +7,12 @@ ms.assetid: fe826200-9600-4b29-a64e-0d66ba3caf3d
 ms.date: 07/22/2020
 ms.topic: conceptual
 description: 了解如何以 Visual Studio 订阅者身份使用 Azure DevOps。
-ms.openlocfilehash: f449d39866cb5891f2b378acffdd84b38b6408c7
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 536941d02b790349d126257e61164d2b0b98d794
+ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005081"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92352948"
 ---
 # <a name="azure-devops-benefits-for-visual-studio-subscribers"></a>Visual Studio 订阅者的 Azure DevOps 权益
 作为权益，有效 Visual Studio 订阅者可使用订阅随附的一系列 Azure DevOps 功能。 可以在所属的每个 Azure DevOps 组织中使用这些相同的功能，无论你是创建了组织，还是被其他人添加到组织中。
@@ -20,7 +20,7 @@ ms.locfileid: "91005081"
 ## <a name="sign-in"></a>登录
 
    > [!div class="mx-imgBorder"]
-   > ![Azure DevOps 磁贴](_img/vs-azure-devops/vs-azure-devops-tile.png)
+   > ![Azure DevOps 磁贴](_img/vs-azure-devops/vs-azure-devops-tile.png "单击“开始”以登录到 Azure DevOps。")
 
    
 如果你使用激活 Visual Studio 订阅所用的标识或[备用标识](vs-alternate-identity.md)登录 Azure DevOps，我们会自动识别这一点。  这样，你还能添加工作或学校帐户（登录 Visual Studio、Microsoft 365 或公司/学校网络时使用的帐户），以使用个人帐户和工作或学校帐户访问 Azure DevOps。
@@ -30,17 +30,17 @@ ms.locfileid: "91005081"
 ## <a name="eligibility"></a>资格
 | 订阅级别                                                 |     信道                                            | 好处                                                          | 是否续订？    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise（标准、月度云）   | VL、Azure、零售、所选 NFR<sup>1</sup>  | Azure Boards 和 Azure Repos（基本计划<sup>2</sup>）、Azure Test Plans、自托管并行作业[了解详细信息](/azure/devops/organizations/security/access-levels?view=azure-devops)     |  是          |
-| 带有 GitHub Enterprise 的 Visual Studio Enterprise   | VL| Azure Boards 和 Azure Repos（基本计划<sup>2</sup>）、Azure Test Plans、自托管并行作业[了解详细信息](/azure/devops/organizations/security/access-levels?view=azure-devops) |  是          |
-| Visual Studio Professional（标准、月度云） | VL、Azure、零售                                        | Azure Boards 和 Azure Repos（基本计划<sup>2</sup>）[了解详细信息](/azure/devops/organizations/security/access-levels?view=azure-devops)                                                            |  是          |
-| 带有 GitHub Enterprise 的 Visual Studio Professional | VL| Azure Boards 和 Azure Repos（基本计划<sup>2</sup>）[了解详细信息](/azure/devops/organizations/security/access-levels?view=azure-devops)                                                            |  是          |
-| Visual Studio Test Professional（标准）                         | VL、零售                                              | Azure Boards 和 Azure Repos（基本计划<sup>2</sup>）、Azure Test Plans[了解详细信息](/azure/devops/organizations/security/access-levels?view=azure-devops)                                             |  是          |
-| MSDN 平台（标准）                                          | VL、零售                                              | Azure Boards 和 Azure Repos（基本计划<sup>2</sup>）、Azure Test Plans[了解详细信息](/azure/devops/organizations/security/access-levels?view=azure-devops)                                             |  是          |
+| Visual Studio Enterprise（标准、月度云）   | VL、Azure、零售、所选 NFR<sup>1</sup>  | Azure Boards 和 Azure Repos（基本计划<sup>2</sup>）、Azure Test Plans、自托管并行作业 |  是          |
+| 带有 GitHub Enterprise 的 Visual Studio Enterprise   | VL| Azure Boards 和 Azure Repos（基本计划<sup>2</sup>）、Azure Test Plans、自托管并行作业 |  是          |
+| Visual Studio Professional（标准、月度云） | VL、Azure、零售                                        | Azure Boards 和 Azure Repos（基本计划<sup>2</sup>）                                                             |  是          |
+| 带有 GitHub Enterprise 的 Visual Studio Professional | VL| Azure Boards 和 Azure Repos（基本计划<sup>2</sup>）                                                             |  是          |
+| Visual Studio Test Professional（标准）                         | VL、零售                                              | Azure Boards 和 Azure Repos（基本计划<sup>2</sup>）、Azure Test Plans                                              |  是          |
+| MSDN 平台（标准）                                          | VL、零售                                              | Azure Boards 和 Azure Repos（基本计划<sup>2</sup>）、Azure Test Plans                                             |  是          |
 ||
 
 <sup>1</sup>  包括：*不得转售 (NFR)、最有价值专家 (MVP)、区域总监 (RD)、Visual Studio 行业合作伙伴 (VSIP)、Microsoft 合作伙伴网络 (Enterprise)、BizSpark、MCT 软件和服务开发人员、FTE。不包括：MCT 软件和服务、Imagine。
 
-<sup>2</sup>基本计划包括定义发布管道和多阶段持续部署 (CD) 管道，以及使用审批和入口来控制部署；在启用了对 Pipelines 预览功能的免费访问之后，利益干系人将获得对所有 Azure Pipelines 功能的访问权限。有关计划中所含功能的详细信息，请访问 Azure 的[关于访问级别页面](/azure/devops/organizations/security/access-levels?view=azure-devops)。
+<sup>2</sup> *基本计划包括定义发布管道和多阶段持续部署 (CD) 管道，以及使用审批和入口来控制部署；在启用了对 Pipelines 预览功能的免费访问之后，利益干系人将获得对所有 Azure Pipelines 功能的访问权限。 *
 
 > [!NOTE]
 > Microsoft 不再在云订阅中提供 Visual Studio Professional 年度订阅和 Visual Studio Enterprise 年度订阅。 现有客户体验以及续订、增加、减少或取消订阅的能力不会发生变化。 建议新客户访问 [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/)，查看各 Visual Studio 购买选项。

@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: badd1d4a-90a6-46de-a037-945a91e6019b
-ms.date: 04/20/2020
+ms.date: 10/22/2020
 ms.topic: how-to
 description: 了解有关 Visual Studio 订阅中包含的 Visual Studio App Center 权益。
-ms.openlocfilehash: 69d010afddca1f8fc51f77d806c75dc1b7b34256
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 6b1fc94d596f3b771f8354c0857ef533c00e1449
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005722"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92435735"
 ---
 # <a name="visual-studio-app-center-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 Visual Studio App Center
 
@@ -28,15 +28,15 @@ Visual Studio App Center 入门十分简单。
 
 2. 找到“Visual Studio App Center”磁贴，并单击“开始”  。
     > [!div class="mx-imgBorder"]
-    > ![VS App Center 磁贴](_img/vs-app-center/vs-app-center-tile.png)
+    > ![VS App Center 磁贴](_img/vs-app-center/vs-app-center-tile.png "单击“Visual Studio App Center”磁贴上的“开始”。")
 
 3. 下一步，创建帐户。  通过提供你的用户名、电子邮件和密码，你可以使用现有的 Microsoft、Google、GitHub 或 Facebook 帐户进行登录。  单击“创建帐户”  ，然后继续。
     > [!div class="mx-imgBorder"]
-    > ![VS App Center 创建帐户](_img/vs-app-center/vs-app-center-create-account.png)
+    > ![VS App Center 创建帐户](_img/vs-app-center/vs-app-center-create-account.png "选择要如何登录。")
 
 4. 就这么简单。  只需单击“添加新组织”  或“添加新应用”  即可开始使用！
     > [!div class="mx-imgBorder"]
-    > ![VS App Center 门户](_img/vs-app-center/vs-app-center-portal.png)
+    > ![VS App Center 门户](_img/vs-app-center/vs-app-center-portal.png "一切都已就绪。单击“添加新组织”或“添加新应用”即可开始使用。")
 
 ## <a name="eligibility"></a>资格
 
@@ -63,7 +63,7 @@ Visual Studio App Center 入门十分简单。
 答：某些较旧的浏览器可能无法提供 App Center 需要的一些新功能。  如果你的浏览器不受支持，请按照下列步骤进行操作：
 1. 打开其他浏览器，如 Microsoft Edge 或最新版本的 Google Chrome 或 Firefox 或 Safari。
 2. 连接到 Visual Studio [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)并登录。
-3. 现在单击 Visual Studio App Center 磁贴上的**入门**链接。
+3. 现在单击 Visual Studio App Center 磁贴上的 **入门** 链接。
 
 你现在应该能够访问 App Center 门户并创建你的帐户。
 

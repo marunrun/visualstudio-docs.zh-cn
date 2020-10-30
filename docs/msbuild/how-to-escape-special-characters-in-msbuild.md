@@ -1,5 +1,7 @@
 ---
 title: 如何：转义 MSBuild 中的特殊字符 | Microsoft Docs
+description: 了解如何对特殊字符进行转义，以便可以在 MSBuild 项目文件中将这些字符作为文本使用。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f9958ae93e2605ad3c89decb4ac9fabc18102148
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 923c517653c42dd0362b398c420c99454ccf4034
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633871"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436406"
 ---
 # <a name="how-to-escape-special-characters-in-msbuild"></a>如何：转义 MSBuild 中的特殊字符
 
@@ -28,7 +30,7 @@ ms.locfileid: "77633871"
 
 ## <a name="msbuild-special-characters"></a>MSBuild 特殊字符
 
-一个使用特殊字符的例子便是项列表的 `Include` 属性。 例如，以下项列表声明两个项：MyFile.cs 和 MyClass.cs   。
+一个使用特殊字符的例子便是项列表的 `Include` 属性。 例如，以下项列表声明两个项：MyFile.cs 和 MyClass.cs  。
 
 ```xml
 <Compile Include="MyFile.cs;MyClass.cs"/>

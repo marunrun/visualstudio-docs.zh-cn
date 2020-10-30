@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 2249b32a-46d7-4e29-b543-4769c71ceda6
-ms.date: 09/28/2020
+ms.date: 10/22/2020
 ms.topic: conceptual
 description: 了解如何访问作为 Visual Studio 订阅的一部分的 GitHub Enterprise
-ms.openlocfilehash: 4c3943c9a6229e865bf90a24d12ecbc8b91d2fd5
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: fc4c36e72affb94f0707389d219284cc2a652bfd
+ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584138"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92467513"
 ---
 # <a name="visual-studio-with-github-enterprise-subscriptions"></a>包含 GitHub Enterprise 订阅的 Visual Studio
 
@@ -39,7 +39,7 @@ Visual Studio Enterprise、Visual Studio Professional 和 GitHub Enterprise 仍�
 1. Visual Studio 订阅（Enterprise 或 Professional）
 2. GitHub Enterprise 
 
-向你分配了带有 GitHub Enterprise 的 Visual Studio 订阅后，你将收到一封电子邮件，其中指出 Visual Studio 订阅管理员已向你分配了一个订阅。  此时，你将能在 <https://my.visualstudio.com/benefits> 上查看可用订阅权益。  这包括 GitHub Enterprise 权益，如下所示。
+向你分配了带有 GitHub 的 Visual Studio 订阅后，你将收到一封电子邮件，其中指出 Visual Studio 订阅管理员已向你分配了一个订阅。  此时，你将能在 <https://my.visualstudio.com/benefits> 上查看可用订阅权益。  这包括 GitHub Enterprise 权益，如下所示。
 
    > [!div class="mx-imgBorder"]
    > ![GitHub Enterprise 挂起 Enterprise 帐户设置](_img/access-github/pending-account-setup.png "组织必须首先设置 Enterprise 帐户。")  
@@ -75,7 +75,7 @@ GitHub Enterprise 由 GitHub 管理员管理（独立于 Visual Studio 订阅）
 ## <a name="frequently-asked-questions"></a>常见问题
 
 ### <a name="q--where-is-my-github-subscription"></a>问：我的 GitHub 订阅在哪里？
-答：设置 GitHub Enterprise 帐户的过程可能需要一段时间。  如果你等待了很久但未收到任何消息，则可能需要与 GitHub 管理员联系。  可能是你的管理员仍在进行处理，或者选择不创建 GitHub Enterprise 帐户。 
+答：设置 GitHub Enterprise 帐户的过程可能需要一段时间。  如果你等待了很久但未收到任何消息，则可能需要与 GitHub 管理员联系。可能是你的管理员仍在进行处理，或者选择不创建 GitHub Enterprise 帐户。 
 
 ### <a name="q-do-i-get-the-full-visual-studio-subscription-benefits"></a>问：我能否获得完整的 Visual Studio 订阅权益？
 答：与单独购买订阅时一样，带 GitHub Enterprise 的订阅仍提供标准 Visual Studio 订阅的各项权益，包括软件下载、云服务、技术支持以及合作伙伴权益。

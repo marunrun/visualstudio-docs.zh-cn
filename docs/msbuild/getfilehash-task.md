@@ -1,5 +1,7 @@
 ---
 title: GetFileHash 任务 | Microsoft Docs
+description: 了解如何使用 MSBuild GetFileHash 任务计算一个文件或一组文件的内容的校验和。
+ms.custom: SEO-VS-2020
 ms.date: 01/28/2019
 ms.topic: reference
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a8f3de9a4f2fe848e1cbd41e14e82498845ca2cf
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 5e9e6e30cf8a224bfdfbde2c728545092bd1494b
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77578659"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436856"
 ---
 # <a name="getfilehash-task"></a>GetFileHash 任务
 

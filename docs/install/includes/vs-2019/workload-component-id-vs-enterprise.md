@@ -10,12 +10,12 @@ ms.date: 08/05/2020
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: 204777b0209b2ca0b1c88717e9908828743087d9
-ms.sourcegitcommit: 78face15e71c305a2146358df51f8f1fefe3388f
+ms.openlocfilehash: bd31c04569b373591647cf3601d9afa4e63be882
+ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87805771"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92470757"
 ---
 ## <a name="visual-studio-core-editor-included-with-visual-studio-enterprise-2019"></a>Visual Studio 核心编辑器（Visual Studio Enterprise 2019 随附）
 
@@ -640,7 +640,7 @@ Microsoft.VisualStudio.ComponentGroup.IISDevelopment | 开发时 IIS 支持 | 16
 
 **ID：** Microsoft.VisualStudio.Workload.Node
 
-**描述：** 使用 Node.js（一个由异步事件驱动的 JavaScript 运行时）生成可缩放的网络应用程序。 
+**描述：** 使用 Node.js（一个由异步事件驱动的 JavaScript 运行时）生成可缩放的网络应用程序。
 
 ### <a name="components-included-by-this-workload"></a>此工作负载所包含的组件
 
@@ -888,7 +888,7 @@ Microsoft.Net.Core.Component.SDK.3.0 | .NET Core 3.0 运行时（不受支持）
 Microsoft.NetCore.ComponentGroup.DevelopmentTools.2.1 | 开发工具和 .NET Core 2.1 | 16.3.29207.166
 Microsoft.NetCore.ComponentGroup.Web.2.1 | Web 开发工具和 .NET Core 2.1 | 16.3.29207.166
 Microsoft.VisualStudio.Component.AzureDevOps.OfficeIntegration | Azure DevOps Office 集成 | 16.0.28625.61
-Microsoft.VisualStudio.Component.Debugger.VSOnline | 用于 Visual Studio Codespaces 的调试程序 | 16.7.30310.162
+Microsoft.VisualStudio.Component.Debugger.VSOnline | 用于 GitHub Codespaces 的调试程序 | 16.7.30310.162
 Microsoft.VisualStudio.Component.Git | 用于 Windows 的 Git | 16.0.28625.61
 Microsoft.VisualStudio.Component.LinqToSql | LINQ to SQL 工具 | 16.0.28625.61
 Microsoft.VisualStudio.Component.TestTools.CodedUITest | 编码的 UI 测试 | 16.0.28327.66

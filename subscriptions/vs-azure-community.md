@@ -7,12 +7,12 @@ ms.assetid: c15f7e18-b280-4902-a60d-2c2598653207
 ms.date: 07/29/2019
 ms.topic: conceptual
 description: 了解有关所选 Visual Studio 订阅中包含的 Azure 社区支持权益。
-ms.openlocfilehash: 8c048103d3ecc2aa21f771e88fa8f9b75ad94b4c
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 000732d2c46d777c68451153dc5965d45087abce
+ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91006236"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92353208"
 ---
 # <a name="azure-community-support-forum-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 Azure 社区支持论坛
 在选定的支持论坛中通过 Azure 社区直接从 Azure 团队获得帮助。  Azure 社区权益提供访问专注于 Azure 相关主题的一系列论坛的权限。
@@ -21,7 +21,7 @@ ms.locfileid: "91006236"
 
 :::row:::
     :::column:::
-        - [Azure Active Directory](https://social.msdn.microsoft.com/forums/home?forum=WindowsAzureAD&filter=alltypes&sort=lastpostdesc)  
+        - Azure Active Directory  
         - [Azure API 管理](https://social.msdn.microsoft.com/Forums/home?forum=azureapimgmt&filter=alltypes&sort=lastpostdesc)  
         - [Azure 应用服务 - Web 应用](https://social.msdn.microsoft.com/forums/home?forum=windowsazurewebsitespreview&filter=alltypes&sort=lastpostdesc)  
         - [Azure 备份](https://social.msdn.microsoft.com/forums/home?forum=windowsazureonlinebackup&filter=alltypes&sort=lastpostdesc)  
@@ -55,15 +55,15 @@ Azure 社区入门很简单。
 
 2. 在支持部分中，找到“Azure 社区”磁贴，然后单击“获取帮助”  链接。
     > [!div class="mx-imgBorder"]
-    >![“Azure 社区”磁贴](_img/vs-azure-community/vs-azure-community-tile.png)
+    >![“Azure 社区”磁贴](_img/vs-azure-community/vs-azure-community-tile.png "单击“Azure 社区”磁贴上的“获取帮助”按钮即可开始使用。")
 
 3. 你将看到可用的论坛列表。  只需单击你选择的论坛。
     > [!div class="mx-imgBorder"]
-    > ![Azure 社区论坛](_img/vs-azure-community/vs-azure-community-forums.png)
+    > ![Azure 社区论坛](_img/vs-azure-community/vs-azure-community-forums.png "在“Azure 社区支持”页上，选择你所选的论坛。")
 
 4. 在论坛中，你可以查看主题和回复，搜索问题的答案或发布新问题。
     > [!div class="mx-imgBorder"]
-    > ![Azure 社区示例](_img/vs-azure-community/vs-azure-community-example.png)
+    > ![Azure 社区示例](_img/vs-azure-community/vs-azure-community-example.png "在论坛中，可以查看主题、搜索答案或发布新问题。")
 
 ## <a name="eligibility"></a>资格
 Azure 社区权益的可用性取决于订阅级别，如下所示：

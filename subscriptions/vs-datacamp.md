@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: fc33d419-78cf-485e-b558-5b7efa900f14
-ms.date: 04/17/2020
+ms.date: 10/22/2020
 ms.topic: how-to
 description: 了解有关所选 Visual Studio 订阅中随附的 DataCamp 培训订阅。
-ms.openlocfilehash: 67fa9a68a22ee909c4c483246be7dc26c789c5f0
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 54f2cf98d6e726e8abf8a0a863a54cc891c12523
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91006327"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92435888"
 ---
 # <a name="the-datacamp-training-benefit-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 DataCamp 培训权益
 符合条件的 Visual Studio 订阅包括 DataCamp 订阅。  借助 DataCamp，可以通过浏览器舒适地学习需要的所有数据科学技能。 可以选择学习的时间和内容。 无需安装任何软件并且没有任何特殊硬件要求，学习数据科学比以往更加简单。
@@ -22,12 +22,12 @@ ms.locfileid: "91006327"
 
 2. 在“专业开发”类别中找到 DataCamp 权益磁贴，然后单击“激活”  。
    > [!div class="mx-imgBorder"]
-   > ![DataCamp 权益磁贴](_img/vs-datacamp/vs-datacamp-tile-2.png)
+   > ![DataCamp 权益磁贴](_img/vs-datacamp/vs-datacamp-tile-2.png "单击“激活”即可开始使用。")
 
 3. 在 DataCamp 页面上，可以创建新帐户。  可以选择输入电子邮件地址和密码，或使用来自 Facebook、LinkedIn 或 Google 的现有帐户登录。  提供了登录信息之后，单击“开始”  。
 
    > [!NOTE]
-   > 开始创建帐户时，可能会收到以下错误消息：“抱歉！  促销代码无效或已过期。”  发生这种情况是因为促销代码创建后会在几分钟后过期。  如果收到此消息，只需返回到[“权益”](https://my.visualstudio.com/benefits)页，然后单击“DataCamp 权益”磁贴上的 **“激活”** 链接。
+   > 开始创建帐户时，可能会收到以下错误消息：“抱歉！  促销代码无效或已过期。”  发生这种情况是因为促销代码创建后会在几分钟后过期。  如果收到此消息，只需返回到 [“权益”](https://my.visualstudio.com/benefits)页，然后单击“DataCamp 权益”磁贴上的 **“激活”** 链接。
 
 4. 创建了帐户之后，你便可以选择学习路径。  选项包括：
     - 学习适用于数据科学的 R
@@ -36,25 +36,25 @@ ms.locfileid: "91006327"
 
    只需单击所选路径即可开始学习。
    > [!div class="mx-imgBorder"]
-   > ![DataCamp 选择路径](_img/vs-datacamp/vs-datacamp-choose-path.png)
+   > ![DataCamp 选择路径](_img/vs-datacamp/vs-datacamp-choose-path.png "选择你感兴趣的学习路径。")
 
 5. 选择了路径之后，可以通过选择目标来进一步细化学习路径。  例如，如果选择“发展数据科学技能组合”路径，则会看到以下选项。 选择一个选项，或单击“我不确定。  向我显示职业路径”以创建更广泛的路径。
    > [!div class="mx-imgBorder"]
-   > ![DataCamp 数据科学技能组合](_img/vs-datacamp/vs-datacamp-datascience.png)
+   > ![DataCamp 数据科学技能组合](_img/vs-datacamp/vs-datacamp-datascience.png "单击“我不确定”。向我显示所有职业路径以显示完整列表。")
 
 6. 基于所选的路径和选项，你会看到一组精选的职业路线。  单击所选路线的“注册”  按钮。
    > [!div class="mx-imgBorder"]
-   > ![DataCamp 职业路线](_img/vs-datacamp/vs-datacamp-all-tracks.png)
+   > ![DataCamp 职业路线](_img/vs-datacamp/vs-datacamp-all-tracks.png "单击所选路径上的“注册”按钮即可开始使用。")
 
 7. 在路线中注册之后，该路线中的第一个课程会打开。  你会看到一个说明如何与课程交互的教程，包括导航和完成课程练习。
 
    > [!div class="mx-imgBorder"]
-   > ![DataCamp 入门](_img/vs-datacamp/vs-datacamp-getting-started.png)
+   > ![DataCamp 入门](_img/vs-datacamp/vs-datacamp-getting-started.png "观看教程，了解如何在课程中导航。")
 
 可以随时停止，并在下一个会话中恢复培训。  只需访问 [https://www.datacamp.com](https://www.datacamp.com)，并登录。  你会看到仪表板，可以直接从暂停的位置继续培训。 只需单击“继续路线”  。
 
 > [!div class="mx-imgBorder"]
-> ![DataCamp 继续培训](_img/vs-datacamp/vs-datacamp-continue-training.png)
+> ![DataCamp 继续培训](_img/vs-datacamp/vs-datacamp-continue-training.png "单击“继续跟踪”以随时恢复培训。")
 
 ## <a name="eligibility"></a>资格
 | 订阅级别                                                 |     信道                                            | 好处                                                          | 是否续订？    |

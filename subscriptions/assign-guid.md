@@ -3,15 +3,15 @@ title: 向 Visual Studio 订阅者分配特定 GUID | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
-ms.date: 09/21/2020
+ms.date: 10/22/2020
 ms.topic: conceptual
 description: 了解管理员如何将特定订阅 GUID 分配给订阅者
-ms.openlocfilehash: 31544718683b10a186d4c38486bf0cd7923cd4cf
-ms.sourcegitcommit: 4affcf2830337e6aba84621c3eda5faf5d0d4a01
+ms.openlocfilehash: 1097743d1640fbadba550f3c2ee6908ac694436d
+ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91022471"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92467474"
 ---
 # <a name="assign-specific-subscriptions-in-the-visual-studio-subscriptions-administration-portal"></a>在 Visual Studio 订阅管理门户中分配特定订阅
 
@@ -40,14 +40,14 @@ ms.locfileid: "91022471"
 
 如果以前使用过“导出”工具，你就会发现新字段已添加到生成的电子表格中。  这些字段将有助于你确定每个订阅的状态以及要分配给用户的订阅的状态。  
 
-- **订阅状态**：此字段将指示“已分配”或“未分配”。  如果订阅的状态为“已分配”，则该订阅还将具有与其关联的用户信息，如姓名、电子邮件等。 
-- **使用状态**：使用状态将指示“新”和“已使用”，前者指示它从未分配给用户，后者指示它已在某个时间点分配给了用户。  
+- **订阅状态** ：此字段将指示“已分配”或“未分配”。  如果订阅的状态为“已分配”，则该订阅还将具有与其关联的用户信息，如姓名、电子邮件等。 
+- **使用状态** ：使用状态将指示“新”和“已使用”，前者指示它从未分配给用户，后者指示它已在某个时间点分配给了用户。  
 
 你可以使用这些字段中的值以及电子表格中的其他信息来确定要分配给单个用户的订阅。 可以在 Excel 中应用筛选器，以帮助按状态、订阅级别、到期日期等缩小列表范围。 
 
 ### <a name="upload-your-new-assignments"></a>上传新分配
 
-最后一步是下载**批量添加**模板，填写要分配的订阅所需的信息，然后上传模板。  有关该过程的完整说明，请参阅[添加多个用户](assign-license-bulk.md)一文。  
+最后一步是下载 **批量添加** 模板，填写要分配的订阅所需的信息，然后上传模板。  有关该过程的完整说明，请参阅[添加多个用户](assign-license-bulk.md)一文。  
 
 > [!IMPORTANT]
 > 为确保成功上传，请确保：

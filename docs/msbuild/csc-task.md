@@ -1,5 +1,7 @@
 ---
 title: Csc 任务 | Microsoft Docs
+description: 本文介绍 MSBuild Csc 任务，该任务包装 C# 编译器、csc.exe，并生成 .exe、.dll 或 .netmodule 文件。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6f77a2ab5bfa137ffbab13f92b15707f73c7869e
-ms.sourcegitcommit: 93859158465eab3423a0c0435f06490f0a456a57
+ms.openlocfilehash: 16cf1c2505ad61a8c53d18d8981b8c08f9e6e02c
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82167418"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796558"
 ---
 # <a name="csc-task"></a>Csc 任务
 
@@ -33,7 +35,7 @@ ms.locfileid: "82167418"
 
 下表描述了 `Csc` 任务的参数。
 
-| 参数 | 描述 |
+| 参数 | 说明 |
 |------------------------------| - |
 | `AdditionalLibPaths` | 可选 `String[]` 参数。<br /><br /> 指定要在其中搜索引用的其他目录。 有关详细信息，请参阅 [-lib（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/lib-compiler-option)。 |
 | `AddModules` | 可选 `String` 参数。<br /><br /> 指定将构成程序集一部分的一个或多个模块。 有关详细信息，请参阅 [（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/addmodule-compiler-option)。 |

@@ -1,18 +1,18 @@
 ---
-title: Parasoft Virtualize/SOAtest Professional 桌面权益 | Microsoft 文档
+title: Visual Studio 订阅中的 Parasoft Virtualize/SOAtest Professional | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: 00c1f300-d04e-4695-815e-775ffbf0f931
-ms.date: 04/20/2020
+ms.date: 10/22/2020
 ms.topic: how-to
 description: 了解如何激活 Visual Studio 订阅中包含的 Parasoft Virtualize/SOA Test Professional 订阅。
-ms.openlocfilehash: f5f32a15b0c2ab292f55c5ec5153161f03598ef4
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 6209be915d3744e13aad674ea893e77e0b276044
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91006262"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436036"
 ---
 # <a name="parasoft-virtualizesoatest-professional-desktop-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 Parasoft Virtualize/SOAtest Professional 桌面
 
@@ -24,11 +24,11 @@ ms.locfileid: "91006262"
 
 2. 在“工具”部分中找到“Parasoft”磁贴，然后单击“权益”磁贴底部的“获取代码”  链接。   你将收到一条通知消息，指示已成功检索到代码。  单击“激活”  。
    > [!div class="mx-imgBorder"]
-   > ![Parasoft 权益磁贴](_img/vs-parasoft/vs-parasoft-tile.png)
+   > ![Parasoft 权益磁贴](_img/vs-parasoft/vs-parasoft-tile.png "单击“Parasoft”磁贴上的“获取代码”，然后单击“激活”即可开始使用。")
 
 3. 将重定向到 Parasoft 网站，可在此处创建帐户。  只需提供联系信息，然后单击“提交”  。
    > [!div class="mx-imgBorder"]
-   > ![Parasoft 权益：创建帐户](_img/vs-parasoft/vs-parasoft-new-account.png)
+   > ![Parasoft 权益：创建帐户](_img/vs-parasoft/vs-parasoft-new-account.png "提供联系信息，然后单击“提交”以创建帐户。")
 
    > [!Note]
    > 页面上的表将显示全年的定价以及 Visual Studio 折扣。 此定价将在使用了六个月的订阅后适用。  
@@ -39,7 +39,7 @@ ms.locfileid: "91006262"
 
 6. 单击对应于操作系统的链接。
    > [!div class="mx-imgBorder"]
-   > ![Parasoft 权益：欢迎使用电子邮件](_img/vs-parasoft/vs-parasoft-email.png)
+   > ![Parasoft 权益：欢迎使用电子邮件](_img/vs-parasoft/vs-parasoft-email.png "选择与你的操作系统相匹配的下载链接。")
 
 7. 根据所使用的浏览器，可能会看到不同的对话框，让你能够运行安装程序。  例如，在 Internet Explorer 中，你将看到最近的下载列表，其中 parasoft_soavirt_9.10.2_win32_x86_64.exe 列于顶部。 单击“运行”，启动安装程序  。
 
@@ -49,7 +49,7 @@ ms.locfileid: "91006262"
 
 10. Parasoft SOAtest 和 Virtualize 安装向导随即启动。  单击 **“下一步”** 。
     > [!div class="mx-imgBorder"]
-    > ![Parasoft 权益：安装开始](_img/vs-parasoft/vs-parasoft-start-install.png)
+    > ![Parasoft 权益：安装开始](_img/vs-parasoft/vs-parasoft-start-install.png "单击“下一步”以开始安装 Parasoft SOAtest 和 Virtualize。")
 
 11. 单击“我接受协议”  ，然后单击“下一步”  。
 
@@ -82,7 +82,7 @@ ms.locfileid: "91006262"
 | Visual Studio Enterprise、Visual Studio Professional（月度云） | Azure                                       | 不可用                                                           |NA|
 ||
 
-<sup>1</sup>  *包括：Microsoft 合作伙伴网络 (Enterprise)。不包括：不得转售 (NFR)、Visual Studio 行业合作伙伴 (VSIP)、FTE、MCT 软件和服务开发人员、BizSpark、Imagine、最有价值专家 (MVP)、区域总监 (RD)。MCT 软件和服务*。
+<sup>1</sup>  *包括：Microsoft 合作伙伴网络 (Enterprise)。不包括：不得转售 (NFR)、Visual Studio 行业合作伙伴 (VSIP)、FTE、MCT 软件和服务开发人员、BizSpark、Imagine、最有价值专家 (MVP)、区域总监 (RD)。MCT 软件和服务* 。
 
 > [!NOTE]
 > Microsoft 不再在云订阅中提供 Visual Studio Professional 年度订阅和 Visual Studio Enterprise 年度订阅。 现有客户体验以及续订、增加、减少或取消订阅的能力不会发生变化。 建议新客户访问 [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/)，查看各 Visual Studio 购买选项。

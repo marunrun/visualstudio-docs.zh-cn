@@ -1,5 +1,6 @@
 ---
 title: 使用 AspNetCompiler 任务预编译 ASP.NET
+description: 使用 MSBuild AspNetCompiler 任务可包装 aspnet_compiler.exe，它是预编译 ASP.NET 应用程序的实用工具。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -19,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - aspnet
-ms.openlocfilehash: 43b7ccc11e8d265c0b1490e7e8de0bd33d903904
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 328c5d91767054b3ad4516838f95769ca6d848d0
+ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036179"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92353403"
 ---
 # <a name="aspnetcompiler-task"></a>AspNetCompiler 任务
 
@@ -34,7 +35,7 @@ ms.locfileid: "90036179"
 
 下表描述了 `AspNetCompiler` 任务的参数。
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |`AllowPartiallyTrustedCallers`|可选 `Boolean` 参数。<br /><br /> 如果此参数为 `true`，则具有强名称的程序集将允许部分信任的调用方。|
 |`Clean`|可选的 `Boolean` 参数<br /><br /> 如果此参数为 `true`，则将以全新方式生成预编译的应用程序。 将重新编译任何之前编译的组件。 默认值为 `false`。 此参数对应于 aspnet_compiler.exe 上的 -c 开关   。|

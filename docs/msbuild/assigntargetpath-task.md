@@ -1,5 +1,7 @@
 ---
 title: AssignTargetPath 任务 | Microsoft Docs
+description: 使用 MSBuild AssignTargetPath 任务可接受文件列表，并添加 TargetPath 属性（如果尚未指定）。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e2d825c0c08ffeba1449954ed310644dd4437840
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 5e56bb8817551e24d1b5aceef2f571e35f1db43e
+ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77634534"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92353325"
 ---
 # <a name="assigntargetpath-task"></a>AssignTargetPath 任务
 
@@ -32,7 +34,7 @@ ms.locfileid: "77634534"
 |---------------|-----------------|
 |`RootFolder`|可选的 `string` 输入参数。<br /><br /> 包含文件夹的路径，该文件夹包含目标链接。|
 |`Files`|可选的 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 输入参数。<br /><br /> 包含传入的文件列表。|
-|`AssignedFiles`|Optional<br /><br /> <xref:Microsoft.Build.Framework.ITaskItem> `[]` 输出参数。<br /><br /> 包含生成的文件列表。|
+|`AssignedFiles`|可选<br /><br /> <xref:Microsoft.Build.Framework.ITaskItem> `[]` 输出参数。<br /><br /> 包含生成的文件列表。|
 
 ## <a name="remarks"></a>备注
 

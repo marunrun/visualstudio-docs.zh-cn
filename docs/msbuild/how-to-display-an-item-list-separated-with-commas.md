@@ -1,5 +1,7 @@
 ---
 title: 如何：显示用逗号分隔的项列表 | Microsoft Docs
+description: 了解如何使用 MSBuild 显示用逗号分隔的项列表，或为项列表指定其他分隔符字符串。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5493d3b95f7e9c0aa08ed3b06a99108e15697349
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: da2a38041a8fa4092e0167e60b00e35a7187866b
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633897"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436426"
 ---
 # <a name="how-to-display-an-item-list-separated-with-commas"></a>如何：显示用逗号分隔的项列表
 
@@ -28,7 +30,7 @@ ms.locfileid: "77633897"
 
 `<Message Text="This is my list of TXT files: @(TXTFile)"/>`
 
-当 `@(TXTFile)` 项列表包含项 App1.txt、App2.txt 和 App3.txt 时，消息为    ：
+当 `@(TXTFile)` 项列表包含项 App1.txt、App2.txt 和 App3.txt 时，消息为  ：
 
 `This is my list of TXT files: App1.txt;App2.txt;App3.txt`
 
@@ -46,7 +48,7 @@ ms.locfileid: "77633897"
 
 ## <a name="example"></a>示例
 
-在此示例中，[Exec](../msbuild/exec-task.md) 任务会运行 findstr 工具，在文件 Phrases.txt 中查找指定的文本字符串  。 在 findstr 命令中，文本搜索字符串由 -c:  开关指示，因此 `@(Phrase)` 项列表中各项之间插入的是项分隔符 `-c:`。
+在此示例中，  。 在 findstr 命令中，文本搜索字符串由 -c:  开关指示，因此 `@(Phrase)` 项列表中各项之间插入的是项分隔符 `-c:`。
 
 对于此示例，等效的命令行命令为：
 

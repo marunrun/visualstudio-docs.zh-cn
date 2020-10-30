@@ -1,5 +1,7 @@
 ---
 title: 常用的 MSBuild 项目属性 | Microsoft Docs
+description: 了解可在项目文件中定义或使用或在 MSBuild 提供的 .targets 文件中包括的常用 MSBuild 项目属性。
+ms.custom: SEO-VS-2020
 ms.date: 01/18/2018
 ms.topic: reference
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 08c790af5504c902bf5fe37d2cddba9b9f63aa40
-ms.sourcegitcommit: dda98068c0f62ccd1a19fdfde4bdb822428d0125
+ms.openlocfilehash: 208bb463b99fd8835329e86a88d20aabb94a544d
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87425363"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796805"
 ---
 # <a name="common-msbuild-project-properties"></a>常用的 MSBuild 项目属性
 

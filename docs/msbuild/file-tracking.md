@@ -1,5 +1,7 @@
 ---
 title: 文件跟踪 | Microsoft Docs
+description: 使用 MSBuild 文件跟踪功能记录对某个进程及其子进程的 Windows 文件系统的调用。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9335ca6608d36edbd17e47a441e13aecaa41c890
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: a2fafae7cce22cc41fdd51a4bc727ac6bfb791b9
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77634196"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436626"
 ---
 # <a name="file-tracking"></a>文件跟踪
 

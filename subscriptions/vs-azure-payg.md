@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: 5dc7f57e-883a-4cc1-a914-06245a8cb1ff
-ms.date: 04/15/2020
+ms.date: 10/21/2020
 ms.topic: how-to
 description: 了解如何设置 Azure 即用即付帐户。
-ms.openlocfilehash: 111733fb6950e602528fac9ae5b39bba04870d01
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 4071b16c56e67bdd86ba95f2ff982758cd23e150
+ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005068"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92353175"
 ---
 # <a name="azure-devtest-pay-as-you-go-subscriptions"></a>Azure 开发测试即用即付订阅
 与团队在云中协作。  创建多个开发和测试即用即付订阅，这样可与其他订阅者进行协作，并将团队与环境隔离。  可享受针对开发/测试的专享优惠小时费率，还可获得 Azure 上订阅软件的云使用权限。
@@ -20,7 +20,7 @@ ms.locfileid: "91005068"
 ## <a name="set-up-a-subscription"></a>设置订阅
 1. 要使用 Azure 即用即付订阅权益，请登录到 [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) 并单击权益磁贴底部的“激活”链接  。
    > [!div class="mx-imgBorder"]
-   > ![Azure PAYG 磁贴](_img/vs-azure-payg/vs-azure-payg-tile.png)
+   > ![Azure PAYG 磁贴](_img/vs-azure-payg/vs-azure-payg-tile.png "单击“DevTest 即用即付订阅”磁贴上的“激活”即可开始使用。")
 
 2. 如果已经激活 Azure 帐户享受订阅权益（例如，如果已具有企业订阅并且已经激活每月 150 美元的 Azure 开发测试个人额度），请跳到步骤 5。
 

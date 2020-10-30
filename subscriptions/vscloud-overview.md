@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: af1f7888-6942-4515-9475-0928ecf49dab
-ms.date: 03/24/2020
+ms.date: 10/21/2020
 ms.topic: overview
 description: 按月或按年租赁 Visual Studio Professional 或 Visual Studio Enterprise，无需任何长期协定。
-ms.openlocfilehash: d92d11321529e7ab8053ea657b2b5f4688c55aa0
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 29dd6be56441fd833c56eaea89286bb3d418ec78
+ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005311"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92353442"
 ---
 # <a name="buy-visual-studio-professional-and-visual-studio-enterprise-cloud-subscriptions"></a>购买 Visual Studio Professional 和 Visual Studio Enterprise 云订阅
 可从 [Visual Studio Marketplace](https://marketplace.visualstudio.com) 购买 [Visual Studio Professional 和 Visual Studio Enterprise 订阅](https://visualstudio.microsoft.com/subscriptions/)。 这些称为“云订阅”。
@@ -36,7 +36,7 @@ ms.locfileid: "91005311"
 
 3. 选择用于计费的 Azure 订阅。 如果没有 Azure 订阅，可新建一个。
     > [!div class="mx-imgBorder"]
-    > ![选择 Azure 订阅以进行结算](_img/buy-vs-subscriptions/buy-vs-sub-Azure-sub.png)
+    > ![选择 Azure 订阅以进行结算](_img/buy-vs-subscriptions/buy-vs-sub-Azure-sub.png "选择用于购买订阅的 Azure 订阅。")
 
 4. 选择要购买的订阅数。
     > [!div class="mx-imgBorder"]
@@ -47,18 +47,21 @@ ms.locfileid: "91005311"
 5. 确认并完成购买。 如果为自己分配了订阅，则可访问 [Visual Studio 订阅者门户](https://my.visualstudio.com)，开始下载软件并使用其他订阅者权益。
 
 > [!div class="mx-imgBorder"]
-> ![成功完成购买](_img/buy-vs-subscriptions/buy-vs-sub-success.png)
+> ![成功完成购买](_img/buy-vs-subscriptions/buy-vs-sub-success.png "你将收到成功购买的确认。")
+
+0. 单击“查看我的订阅”以打开订阅者门户并开始使用订阅。
 
 > [!div class="mx-imgBorder"]
-> ![转到 Visual Studio 订阅者门户](_img/buy-vs-subscriptions/view-subscription-benefits-subscriptions-portal.png)
+> ![转到 Visual Studio 订阅者门户](_img/buy-vs-subscriptions/view-subscription-benefits-subscriptions-portal.png "在 Visual Studio 订阅门户中，你可以浏览订阅并使用可用权益。")
 
 如果购买了多个订阅，请转到 [Visual Studio 订阅管理门户](https://manage.visualstudio.com)，将订阅分配给其他人。  如果是首次购买新订阅，你可能需要[将新订阅添加](add-monthly-subs.md)到管理门户。
 
 > [!div class="mx-imgBorder"]
-> ![将订阅分配给其他人](_img/buy-vs-subscriptions/buy-vs-sub-success-many.png)
+> ![将订阅分配给其他人](_img/buy-vs-subscriptions/buy-vs-sub-success-many.png "单击“分配给用户”以向你的用户提供订阅。")
+
 
 > [!div class="mx-imgBorder"]
-> ![查看订阅](_img/buy-vs-subscriptions/assign-subscriptions.png)
+> ![查看订阅](_img/buy-vs-subscriptions/assign-subscriptions.png "单击“添加”以将订阅分配给用户")
 
 ## <a name="cancel-renewals-of-cloud-subscriptions-youve-purchased"></a><a name="manage-subscriptions"></a>取消续订已购买的云订阅
 

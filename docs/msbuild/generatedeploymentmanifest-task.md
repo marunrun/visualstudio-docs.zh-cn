@@ -1,5 +1,7 @@
 ---
 title: GenerateDeploymentManifest 任务 | Microsoft Docs
+description: 了解如何使用 MSBuild GenerateDeploymentManifest 任务生成 ClickOnce 部署清单。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,12 +19,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ca55f3eeb9b3119b27e67dcb0255f8386c521af6
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 68a35804a1523b3387061b4666cd483a9c3b0476
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77634066"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436454"
 ---
 # <a name="generatedeploymentmanifest-task"></a>GenerateDeploymentManifest 任务
 
@@ -32,7 +34,7 @@ ms.locfileid: "77634066"
 
 下表描述了 `GenerateDeploymentManifest` 任务的参数。
 
-| 参数 | 描述 |
+| 参数 | 说明 |
 |--------------------------| - |
 | `AssemblyName` | 可选 `String` 参数。<br /><br /> 指定生成的清单的程序集标识的 `Name` 字段。 如果未指定此参数，则从 `EntryPoint` 或 `InputManifest` 参数中推断名称。 如果无法推断名称，则任务将引发错误。 |
 | `AssemblyVersion` | 可选 `String` 参数。<br /><br /> 指定生成的清单的程序集标识的 `Version` 字段。 如果未指定此参数，则任务使用值“1.0.0.0”。 |
@@ -43,14 +45,14 @@ ms.locfileid: "77634066"
 | `EntryPoint` | 可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指示生成的清单程序集的入口点。 对于 ClickOnce 部署清单，此输入指定了 ClickOnce 应用程序清单。<br /><br />如果未指定 `EntryPoint` 任务参数，将 `<customHostSpecified>` 标记作为 `<entryPoint>` 标记的子标记插入，例如：<br /><br /> `<entryPoint xmlns="urn:schemas-microsoft-com:asm.v2">`<br /><br /> `<co.v1:customHostSpecified />`<br /><br /> `</entryPoint>`<br /><br /> 通过执行以下步骤，可将 DDL 依赖项添加到应用程序清单：<br /><br /> 1.通过调用 <xref:Microsoft.Build.Tasks.ResolveAssemblyReference> 解析程序集引用。<br />2.将上一个任务的输出和程序集本身传递给 <xref:Microsoft.Build.Tasks.ResolveManifestFiles>。<br />3.使用 `Dependencies` 参数将依赖项传递给 <xref:Microsoft.Build.Tasks.GenerateApplicationManifest>。 |
 | `ErrorReportUrl` | 可选 <xref:System.String?displayProperty=fullName> 参数。<br /><br /> 指定安装 ClickOnce 过程中显示在对话框中的网页 URL。 |
 | `InputManifest` | 可选 <xref:Microsoft.Build.Framework.ITaskItem> 参数。<br /><br /> 指示输入 XML 文档，使其充当清单生成器的基础。 这使得结构化数据（如自定义清单定义）可反映在输出清单中。 XML 文档中的根元素必须是 asmv1 命名空间中的程序集节点。 |
-| `Install` | 可选 `Boolean` 参数。<br /><br /> 指定应用程序是已安装应用程序还是仅联机应用程序。 如果此参数为 `true`，则应用程序将安装在用户的“开始”菜单中，并可通过“添加或删除程序”对话框将其删除   。 如果此参数为 `false`，则应用程序适用于在网页上联机使用。 此参数的默认值为 `true`。 |
+| `Install` | 可选 `Boolean` 参数。<br /><br /> 指定应用程序是已安装应用程序还是仅联机应用程序。 如果此参数为 `true`，则应用程序将安装在用户的“开始”菜单中，并可通过“添加或删除程序”对话框将其删除  。 如果此参数为 `false`，则应用程序适用于在网页上联机使用。 此参数的默认值为 `true`。 |
 | `MapFileExtensions` | 可选 `Boolean` 参数。<br /><br /> 指定是否使用 .deploy 文件扩展名映射  。 如果此参数为 `true`，则每个程序文件都使用 .deploy 文件扩展名发布  。 此选项限制文件扩展名的数量（必须取消阻止这些文件扩展名，才能启用 ClickOnce 应用程序部署），有助于提升 Web 服务器安全性。 此参数的默认值为 `false`。 |
 | `MaxTargetPath` | 可选 `String` 参数。<br /><br /> 指定 ClickOnce 应用程序部署中允许的最大文件路径长度。 如果指定此参数，则将针对此限制检查应用程序中每个文件路径的长度。 超出该限制的任何项都会导致一条生成警告。 如果此输入未指定或为零，则不会执行任何检查。 |
 | `MinimumRequiredVersion` | 可选 `String` 参数。<br /><br /> 指定用户是否可以跳过更新。 如果用户的版本低于所需的最低版本，则用户将无法选择跳过更新。 仅当 `Install` 参数的值为 `true` 时才应用此输入。 |
 | `OutputManifest` | 可选 <xref:Microsoft.Build.Framework.ITaskItem> 参数。<br /><br /> 指定所生成的输出清单文件的名称。 如果未指定此参数，则将从生成的清单的标识中推断输出文件的名称。 |
 | `Platform` | 可选 `String` 参数。<br /><br /> 指定应用程序的目标平台。 此参数可以具有下列值：<br /><br /> -   `AnyCPU`<br />-   `x86`<br />-   `x64`<br />-   `Itanium`<br /><br /> 默认值为 `AnyCPU`。 |
-| `Product` | 可选 `String` 参数。<br /><br /> 指定应用程序的名称。 如果未指定此参数，则将从生成的清单的标识中推断该名称。 该名称将用作“开始”菜单上的快捷名称，且将作为“添加或删除程序”对话框中显示的名称的一部分   。 |
-| `Publisher` | 可选 `String` 参数。<br /><br /> 指定应用程序的发布者。 如果未指定此参数，则将从注册的用户或生成的清单的标识中推断该名称。 该名称将用作“开始”菜单上的文件夹名称，且将作为“添加或删除程序”对话框中显示的名称的一部分   。 |
+| `Product` | 可选 `String` 参数。<br /><br /> 指定应用程序的名称。 如果未指定此参数，则将从生成的清单的标识中推断该名称。 该名称将用作“开始”菜单上的快捷名称，且将作为“添加或删除程序”对话框中显示的名称的一部分 。 |
+| `Publisher` | 可选 `String` 参数。<br /><br /> 指定应用程序的发布者。 如果未指定此参数，则将从注册的用户或生成的清单的标识中推断该名称。 该名称将用作“开始”菜单上的文件夹名称，且将作为“添加或删除程序”对话框中显示的名称的一部分 。 |
 | `SuiteNamel` | 可选 `String` 参数。<br /><br /> 指定在完成 ClickOnce 部署后，“开始”菜单上应用程序所在文件夹的名称  。 |
 | `SupportUrl` | 可选 `String` 参数。<br /><br /> 指定在“添加或删除程序”对话框中为应用程序显示的链接  。 指定的值应为完全限定的 URL 或 UNC 路径。 |
 | `TargetCulture` | 可选 `String` 参数。<br /><br /> 标识应用程序的区域性，并指定生成的清单的程序集标识的 `Language` 字段。 如果未指定此参数，则会假定该应用程序的区域性是固定的。 |
@@ -64,7 +66,7 @@ ms.locfileid: "77634066"
 
 除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.GenerateManifestBase> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.Task> 类。 有关任务类的参数列表，请参阅[任务基类](../msbuild/task-base-class.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [任务](../msbuild/msbuild-tasks.md)
 - [GenerateApplicationManifest 任务](../msbuild/generateapplicationmanifest-task.md)

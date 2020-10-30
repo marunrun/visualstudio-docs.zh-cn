@@ -1,5 +1,7 @@
 ---
 title: GetWinFXPath 任务 | Microsoft Docs
+description: 了解如何使用 MSBuild GetWinFXPath 任务，该任务返回当前 .NET 运行时的目录。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ab8e15cef722e935dde322072f6834ba00be8bc5
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 820ca103d88cde941fe558e59ed1c78622adccd4
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633962"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436775"
 ---
 # <a name="getwinfxpath-task"></a>GetWinFXPath 任务
 
@@ -31,19 +33,19 @@ ms.locfileid: "77633962"
 
 ## <a name="task-parameters"></a>任务参数
 
-| 参数 | 描述 |
+| 参数 | 说明 |
 |-------------------| - |
 | `WinFXPath` | 可选的 **String** 输出参数。<br /><br /> 指定 .NET 运行时的实际路径。 |
 | `WinFXNativePath` | 必需的 **String** 参数。<br /><br /> 指定本机 .NET 运行时的路径。 |
-| `WinFXWowPath` | 必需的 **String** 参数。<br /><br /> 指定 64 位系统上 32 位 Windows on Windows  模块中的 .NET 程序集的路径。 |
+| `WinFXWowPath` | 必需的 **String** 参数。<br /><br /> 指定 64 位系统上 32 位 Windows on Windows 模块中的 .NET 程序集的路径。 |
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
  如果在 64 位处理器上执行 <xref:Microsoft.Build.Tasks.Windows.GetWinFXPath> 任务，则 WinFXPath  参数会设置为 WinFXWowPath  参数中存储的路径；否则，WinFXPath  参数会设置为 WinFXNativePath  参数中存储的路径。
 
 ## <a name="example"></a>示例
 
- 如下示例演示了如何使用 GetWinFXPath  任务来检测 .NET 运行时的本机路径。
+ 如下示例演示了如何使用 GetWinFXPath 任务来检测 .NET 运行时的本机路径。
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

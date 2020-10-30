@@ -1,5 +1,5 @@
 ---
-title: 将许可证分配给 Visual Studio 订阅 | Microsoft Docs
+title: 将 Visual Studio 订阅分配给用户 | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
@@ -7,12 +7,12 @@ ms.assetid: 4e529a43-7aed-4eee-895d-862a631952df
 ms.date: 09/21/2020
 ms.topic: conceptual
 description: 了解管理员如何将许可证分配给订阅者
-ms.openlocfilehash: cd64aa058ab5c0518fc27bf1ee64acef3b5b79a2
-ms.sourcegitcommit: 4affcf2830337e6aba84621c3eda5faf5d0d4a01
+ms.openlocfilehash: 044cf4e9df3eb2ebf1d10aa8c08be804ca98f393
+ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91022187"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92467526"
 ---
 # <a name="assign-licenses-in-the-visual-studio-subscriptions-administration-portal"></a>在 Visual Studio 订阅管理门户中分配许可证
 作为 Visual Studio 订阅管理员，你可以使用管理门户为个人用户和用户组分配订阅。
@@ -31,7 +31,7 @@ ms.locfileid: "91022187"
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4vpPh]
 
 
-1. 登录[管理门户](https://manage.visualstudio.com)。
+1. 登录到[管理门户](https://manage.visualstudio.com)。
 2. 要为单个 Visual Studio 订阅者分配许可证，请在表的顶部选择“添加”，然后选择“单个订阅者”。
    > [!div class="mx-imgBorder"]
    > ![添加单个订阅者](_img/assign-license-add/add-subscriber-individual.png "选择“添加”，然后选择要分配单个订阅的单个订阅者。")

@@ -1,5 +1,7 @@
 ---
 title: Copy 任务 | Microsoft Docs
+description: 了解如何使用 MSBuild Copy 任务将文件复制到文件系统中的新文件或文件夹位置。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -21,12 +23,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1c298658c7e9f385e5140ea46f8069512c0bf278
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 00544b6d1e797a1fd8a7a197197480cae5620f10
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89508036"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796220"
 ---
 # <a name="copy-task"></a>Copy 任务
 
@@ -74,7 +76,7 @@ ms.locfileid: "89508036"
 
 除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.TaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.Task> 类。 有关这些其他参数的列表及其说明的信息，请参阅 [TaskExtension 基类](../msbuild/taskextension-base-class.md)。
 
-## <a name="example"></a>示例
+## <a name="example-1"></a>示例 1
 
 以下示例将 `MySourceFiles` 项集合中的项复制到文件夹 c:\MyProject\Destination。
 
@@ -95,7 +97,7 @@ ms.locfileid: "89508036"
 </Project>
 ```
 
-## <a name="example"></a>示例
+## <a name="example-2"></a>示例 2
 
 以下示例演示如何执行递归复制。 此项目以递归方式将所有文件从 c:\MySourceTree 复制到 c:\MyDestinationTree，同时保留目录结构 。
 

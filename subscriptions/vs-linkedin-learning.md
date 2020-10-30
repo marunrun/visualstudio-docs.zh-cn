@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 5bba2205-d32f-413d-9b58-724a24993842
-ms.date: 10/06/2020
+ms.date: 10/21/2020
 ms.topic: how-to
 description: 了解有关所选 Visual Studio 订阅中包含的作为 LinkedIn Premium 订阅一部分的 LinkedIn Learning 权益。
-ms.openlocfilehash: f71510b7d77ce79c1697848d505623c8994d8301
-ms.sourcegitcommit: a9fcf189aebe16234919421f2ad73e395e1ab8be
+ms.openlocfilehash: 7a5e15ad5d1101123a03b98da30d48895410313b
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91805885"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92435843"
 ---
 # <a name="the-linkedin-learning-benefit-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 LinkedIn Learning 权益
 
@@ -27,7 +27,7 @@ ms.locfileid: "91805885"
 
 2. 在教育类别中找到 LinkedIn 学习磁贴，然后单击“获取代码”链接。
    > [!div class="mx-imgBorder"]
-   > ![LinkedIn Learning：权益磁贴](_img/vs-linkedin/vs-linkedin-6-month-tile.png)
+   > ![LinkedIn Learning：权益磁贴](_img/vs-linkedin/vs-linkedin-6-month-tile.png "单击“获取代码”以索取代码即可开始使用。")
 
 3. 如果你已拥有 LinkedIn 帐户并且已自动登录，则会立即进入 LinkedIn 学习权益激活页。  如果你拥有 LinkedIn 帐户但是未自动登录，则只需输入用户名和密码，然后单击“登录”。  请跳到[此步骤](#activate-your-offer)以激活产品/服务。
 
@@ -57,15 +57,15 @@ ms.locfileid: "91805885"
 ### <a name="activate-your-offer"></a>激活产品/服务
 15. 现在你已登录了 LinkedIn 帐户或创建了一个新帐户，已准备就绪，可激活 Premium 订阅并开始享用 LinkedIn 学习。  单击“激活产品/服务”。
    > [!div class="mx-imgBorder"]
-   > ![LinkedIn Learning：激活](_img/vs-linkedin/vs-linkedin-Activate1.png)
+   > ![LinkedIn Learning：激活](_img/vs-linkedin/vs-linkedin-Activate1.png "单击“激活产品/服务”以开始学习。")
 
 16. 可以开始浏览感兴趣的技能。  从建议列表中进行选择，搜索其他技能，或单击“跳过”以继续进行而不选择技能。
    > [!div class="mx-imgBorder"]
-   > ![LinkedIn Learning：技能](_img/vs-linkedin/vs-linkedin-skills.png)
+   > ![LinkedIn Learning：技能](_img/vs-linkedin/vs-linkedin-skills.png "选择想要查看的技能。")
 
 17. 你已成功激活 Premium 订阅套餐，现在可以开始使用 LinkedIn 学习和 Premium 的所有其他权益！
    > [!div class="mx-imgBorder"]
-   > ![LinkedIn Learning：主页](_img/vs-linkedin/vs-linkedin-learning-home.png)
+   > ![LinkedIn Learning：主页](_img/vs-linkedin/vs-linkedin-learning-home.png "欢迎使用包含 LinkedIn Learning 的 LinkedIn Premium！")
 
 ## <a name="eligibility"></a>资格
 

@@ -1,5 +1,7 @@
 ---
 title: FormatUrl 任务 | Microsoft Docs
+description: 了解如何使用 MSBuild FormatUrl 任务将输入 URL 转换为正确的输出 URL 格式。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5fcd4ed0c60d615f0c213e1af5099c5e94a9b485
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 0e38a0f1aea6999e30d2ab2493873f66cd907878
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77634118"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436887"
 ---
 # <a name="formaturl-task"></a>FormatUrl 任务
 

@@ -1,5 +1,7 @@
 ---
 title: 自定义生成 | Microsoft Docs
+description: 了解多个可用于对使用标准生成过程的 MSBuild 项目进行自定义的扩展性挂钩。
+ms.custom: SEO-VS-2020
 ms.date: 06/13/2019
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6c52c6b584db94ff3cbe8dc041c00ebe969c9faf
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 708b6bc57b53ab2c52f9e8fda51db5b5c60225f3
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85288931"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796519"
 ---
 # <a name="customize-your-build"></a>自定义生成
 

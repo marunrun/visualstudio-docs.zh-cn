@@ -1,5 +1,7 @@
 ---
 title: GetAssemblyIdentity 任务 | Microsoft Docs
+description: 使用 MSBuild GetAssemblyIdentity 任务可从指定的文件中检索程序集标识并输出标识信息。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2a09bd4955cee6e50368f7155fb2e03c2c1758bf
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: d8e242864ca68e0d84ace5f8ebeefd02881a394f
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77634014"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436867"
 ---
 # <a name="getassemblyidentity-task"></a>GetAssemblyIdentity 任务
 
@@ -38,7 +40,7 @@ ms.locfileid: "77634014"
 |`Assemblies`|可选的 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 输出参数。<br /><br /> 包含检索到的程序集标识。|
 |`AssemblyFiles`|必选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定要从中检索标识的文件。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 由 `Assemblies` 参数输出的项包含名为 `Version`、`PublicKeyToken` 和 `Culture` 的项元数据条目。
 

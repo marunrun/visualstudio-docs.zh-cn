@@ -1,5 +1,7 @@
 ---
 title: 通用 MSBuild 项元数据 | Microsoft Docs
+description: 了解对某些 MSBuild SDK 或目标具有意义的可选项元数据，默认情况下未针对每个项进行设置。
+ms.custom: SEO-VS-2020
 ms.date: 07/13/2020
 ms.topic: reference
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1c715c16782733a08bb617a464c1aa9510d35b54
-ms.sourcegitcommit: dda98068c0f62ccd1a19fdfde4bdb822428d0125
+ms.openlocfilehash: 152967fb99442b58d96016e10d8899b57ef35bf6
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87425964"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796585"
 ---
 # <a name="common-msbuild-item-metadata"></a>通用 MSBuild 项元数据
 

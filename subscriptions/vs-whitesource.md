@@ -1,18 +1,18 @@
 ---
-title: WhiteSource Bolt 权益 | Microsoft 文档
+title: Visual Studio 订阅中的 WhiteSource Bolt | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: 5e5d3f1a-533d-42eb-960e-01bb6bc7ca16
-ms.date: 04/20/2020
+ms.date: 10/22/2020
 ms.topic: how-to
 description: 了解如何激活 Visual Studio 订阅中包含的 WhiteSource Bolt 订阅。
-ms.openlocfilehash: 7be5ba29c2243396ae8c510b33d928364163059c
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 7d0e95bf82f31b92ef5b581a0b7d8b7d082d3237
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005696"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92435993"
 ---
 # <a name="whitesource-bolt-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 WhiteSource Bolt
 
@@ -24,11 +24,11 @@ ms.locfileid: "91005696"
 
 2. 在“工具”部分中找到“WhiteSource Bolt”磁贴，然后单击“权益”磁贴底部的“获取代码”  链接。
    > [!div class="mx-imgBorder"]
-   > ![WhiteSource 权益磁贴](_img/vs-whitesource/vs-whitesource-tile.png)
+   > ![WhiteSource 权益磁贴](_img/vs-whitesource/vs-whitesource-tile.png "单击“WhiteSource Bolt”磁贴上的“获取代码”即可开始使用。")
 
 3. 你将收到一条显示激活代码的通知。  将代码复制到剪贴板，然后单击“激活”   。
    > [!div class="mx-imgBorder"]
-   > ![WhiteSource 权益代码](_img/vs-whitesource/vs-whitesource-code.png)
+   > ![WhiteSource 权益代码](_img/vs-whitesource/vs-whitesource-code.png "将代码复制到剪贴板，然后单击“激活”。")
 
 4. 在“激活帐户”页上  ，单击步骤 1 中的“安装”  链接。
 5. 在 Visual Studio Marketplace 中单击“免费获取”  。
@@ -51,7 +51,7 @@ ms.locfileid: "91005696"
 | Visual Studio Enterprise、Visual Studio Professional（月度云） | Azure                                       | 不可用                                                           |NA|
 ||
 
-<sup>1</sup>  *包括：Microsoft 合作伙伴网络 (Enterprise)。不包括：不得转售 (NFR)、Visual Studio 行业合作伙伴 (VSIP)、FTE、MCT 软件和服务开发人员、BizSpark、Imagine、最有价值专家 (MVP)、区域总监 (RD)。MCT 软件和服务*。
+<sup>1</sup>  *包括：Microsoft 合作伙伴网络 (Enterprise)。不包括：不得转售 (NFR)、Visual Studio 行业合作伙伴 (VSIP)、FTE、MCT 软件和服务开发人员、BizSpark、Imagine、最有价值专家 (MVP)、区域总监 (RD)。MCT 软件和服务* 。
 
 > [!NOTE]
 > Microsoft 不再在云订阅中提供 Visual Studio Professional 年度订阅和 Visual Studio Enterprise 年度订阅。 现有客户体验以及续订、增加、减少或取消订阅的能力不会发生变化。 建议新客户访问 [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/)，查看各 Visual Studio 购买选项。

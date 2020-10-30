@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: dcd99e32-c9f3-4e19-8428-319dfa220463
-ms.date: 03/25/2020
+ms.date: 10/21/2020
 ms.topic: how-to
 description: 了解有关 Visual Studio 订阅中包含的接待聊天室权益。
-ms.openlocfilehash: d7ed217e551057ff12ed4abecedf717c9f3f6ced
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 0aab627d7c870720c0cc0d043ffb6ce556568703
+ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91006314"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92353377"
 ---
 # <a name="concierge-chat-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的接待聊天室
 接待聊天室服务可帮助你查找产品信息和技术文档，以及帮你使用 Visual Studio 订阅权益。
@@ -25,7 +25,7 @@ ms.locfileid: "91006314"
 
 2. 在“权益”页上的“支持”部分中找到“接待聊天室”磁贴，然后单击“立即聊天”  。
     > [!div class="mx-imgBorder"]
-    > ![接待聊天室磁贴](_img/vs-concierge-chat/vs-concierge-chat-tile.png)
+    > ![接待聊天室磁贴](_img/vs-concierge-chat/vs-concierge-chat-tile.png "单击“立即聊天”以启动新的聊天会话。")
 
 3. 单击 **“继续”** 。
 
@@ -33,7 +33,7 @@ ms.locfileid: "91006314"
 
 5. 代理空出时，聊天就会开始。
     > [!div class="mx-imgBorder"]
-    > ![接待聊天室会话](_img/vs-concierge-chat/vs-concierge-chat-session.png)
+    > ![接待聊天室会话](_img/vs-concierge-chat/vs-concierge-chat-session.png "当代理加入会话时，将显示“聊天会话”窗口。")
 
 ## <a name="eligibility"></a>资格
 | 订阅级别                                                 |     信道                                            | 好处                                                          | 是否续订？    |

@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: c4b13464-76be-40f1-ad60-ed79ee264b12
-ms.date: 04/17/2020
+ms.date: 10/22/2020
 ms.topic: how-to
 description: 了解如何下载并安装包含在 Visual Studio 订阅中的 Visual Studio IDE。
-ms.openlocfilehash: e955cc0c9e2437da07e48fc7db1c1b4df9e168e7
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 2baf2e452e86d44d814e3f4a511ebb5442b83578
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91006301"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92435763"
 ---
 # <a name="the-visual-studio-2019-benefit"></a>Visual Studio 2019 权益
 
@@ -26,7 +26,7 @@ ms.locfileid: "91006301"
 1. 登录到 [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)。
 2. 在“工具”部分中找到“Visual Studio IDE”磁贴，然后单击“权益”磁贴底部的“下载”  链接。  也可从[下载](https://my.visualstudio.com/downloads?wt.mc_id=o~msft~docs)页下载。
    > [!div class="mx-imgBorder"]
-   > ![Visual Studio Enterprise 磁贴](_img/vs-ide-experience/vs-ide-tile.png)
+   > ![Visual Studio Enterprise 磁贴]（_img/vs-ide-experience/vs-ide-tile.png“单击“Visual Studio”磁贴上的“下载”以安装 Visual Studio”。）
 
 3. 你将被重定向到 Visual Studio 的“下载结果”页，可在此处下载 IDE 并获取产品密钥以激活产品。 也可通过单击蓝色的“获取密钥”链接索取产品密钥，或稍后在[产品密钥](https://my.visualstudio.com/productkeys)页上索取产品密钥  。
 4. 在“下载结果”页的“详细信息”选项卡上：
@@ -34,19 +34,19 @@ ms.locfileid: "91006301"
    - 选择语言首选项。
 5. 单击蓝色的“下载”按钮。
    > [!div class="mx-imgBorder"]
-   > ![Visual Studio Enterprise 下载详情](_img/vs-ide-experience/vs-ide-download-details.png)
+   > ![Visual Studio Enterprise 下载详情](_img/vs-ide-experience/vs-ide-download-details.png "单击“下载”按钮开始下载。")
 6. 单击下载的安装程序包。  如果提示立即安装，请单击“运行”  。
 7. 在“用户帐户控制”对话框中，单击“是”  。
 8. 单击“继续”接受许可条款  。
 9. 安装程序启动时，在相应的选项卡上选择所需的工作负荷、各个组件和语言包。
    > [!div class="mx-imgBorder"]
-   > ![自定义 Visual Studio Enterprise](_img/vs-ide-experience/vs-ide-customize-install-cropped.png)
+   > ![自定义 Visual Studio Enterprise](_img/vs-ide-experience/vs-ide-customize-install-cropped.png "针对工作负载和其他组件做出选择。")
 
 10. 单击“安装”  。
 
 11. 安装完成后，可以选择修改安装或启动 Visual Studio。  单击“启动”开始操作  。  如果安装了多个版本，则会列出这些版本。
     > [!div class="mx-imgBorder"]
-    > ![启动 Visual Studio Enterprise](_img/vs-ide-experience/vs-ide-versions.png)
+    > ![启动 Visual Studio Enterprise](_img/vs-ide-experience/vs-ide-versions.png "单击“启动”以启动 Visual Studio。")
 
 12. 使用与 Visual Studio 订阅关联的帐户登录。
 
@@ -55,7 +55,7 @@ ms.locfileid: "91006301"
 14. Visual Studio 随即打开。 现在就可以使用 Visual Studio 了！
 
     > [!div class="mx-imgBorder"]
-    > ![开始使用 Visual Studio Enterprise](_img/vs-ide-experience/vs-ide-start-cropped.png)
+    > ![开始使用 Visual Studio Enterprise](_img/vs-ide-experience/vs-ide-start-cropped.png "欢迎使用 Visual Studio！")
 
 
 ## <a name="eligibility"></a>资格
