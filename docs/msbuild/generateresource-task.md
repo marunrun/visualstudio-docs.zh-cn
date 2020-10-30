@@ -1,5 +1,7 @@
 ---
 title: GenerateResource 任务 | Microsoft Docs
+description: 使用 MSBuild GenerateResource 任务可在 .txt 或 .resx 文件与公共语言运行时二进制 .resources 文件之间进行转换。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dd5946612889e98b3b90f2ee3cb8665c43827a5e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 124e5dcc3666698dd71927e15c3686038233c317
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77634053"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436876"
 ---
 # <a name="generateresource-task"></a>GenerateResource 任务
 

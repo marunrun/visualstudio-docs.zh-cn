@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 23bc0fa990a79b1855ec382f42248a0f847c3c9c
-ms.sourcegitcommit: 3d64bfb9bf85395357effe054db9a9afaa0be5ea
+ms.openlocfilehash: 2d66181f5e6720348e18c34b735ef29e24c0111a
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/29/2020
-ms.locfileid: "78200865"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796298"
 ---
 # <a name="remote-debug-net-core-on-linux-using-ssh"></a>使用 SSH 远程调试 Linux 上的 .NET Core
 
@@ -42,7 +42,7 @@ sudo apt-get install openssh-server unzip curl
 
 - 将源复制到目标计算机，并在 Linux 计算机上使用 ```dotnet build``` 进行生成。
 
-- 在 Windows 上生成应用，并将生成项目传输到 Linux 计算机。 （生成工件包含应用程序本身、它可能依赖的任何运行时库和 .deps.json 文件。）
+- 在 Windows 上生成应用，然后将生成项目传输到 Linux 计算机。 （生成工件包含应用程序本身、它可能依赖的任何运行时库和 .deps.json 文件。）
 
 ## <a name="attach-the-debugger"></a>附加调试器
 

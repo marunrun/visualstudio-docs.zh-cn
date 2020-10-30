@@ -4,18 +4,18 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: e49242bc-e9f2-49e8-8caa-f574d508aba6
-ms.date: 09/21/2020
+ms.date: 10/21/2020
 ms.topic: how-to
 description: 了解管理员如何在 Visual Studio 订阅管理门户中删除订阅分配
-ms.openlocfilehash: 0ce0235d75946f46d39c78084121ce295067d74e
-ms.sourcegitcommit: 4affcf2830337e6aba84621c3eda5faf5d0d4a01
+ms.openlocfilehash: e1c5395bc2cd2002d8eed62d69697ec61d9c0829
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91022252"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436926"
 ---
 # <a name="delete-assignments-in-visual-studio-subscriptions"></a>删除 Visual Studio 订阅中的分配
-当订阅者不再需要 Visual Studio 订阅时，比如当他们离开公司、完成项目或转换为新的作业角色时，你可以删除他们的订阅，并将订阅分配给其他人。 请注意，重新分配订阅时，并非所有订阅者权益都将重置。  新用户将能够认领任何无人认领的密钥并查看以前认领过的密钥，但认领限制**不**会重置。  组织若具有企业协议 (EA)，将重置供原始用户使用的任何权益（如 Pluralsight 培训）。 
+当订阅者不再需要 Visual Studio 订阅时，比如当他们离开公司、完成项目或转换为新的作业角色时，你可以删除他们的订阅，并将订阅分配给其他人。 请注意，重新分配订阅时，并非所有订阅者权益都将重置。  新用户将能够认领任何无人认领的密钥并查看以前认领过的密钥，但认领限制 **不** 会重置。  组织若具有企业协议 (EA)，将重置供原始用户使用的任何权益（如 Pluralsight 培训）。 
 
 观看此视频或继续阅读，了解如何删除分配。  
 
@@ -29,9 +29,11 @@ ms.locfileid: "91022252"
    > ![删除订阅者](_img/delete-license/delete-subscribers.png "选择要删除的用户，然后单击“删除”。可以使用 CTRL 和 Shift 键来选择多个订阅者。")
 
    > [!NOTE]
-   > 使用模板进行批量删除的功能不可用。 对于通过 Azure Active Directory 安全组来管理订阅分配的组织，请参阅[我们的文章](assign-license-bulk.md#use-azure-active-directory-groups-to-assign-subscriptions)，详细了解如何进行删除。  
+   > 使用模板进行批量删除的功能不可用。 
+   >
+   > 如果通过 Azure Active Directory 安全组添加了订阅分配，则最长可能需要 24 小时才能在管理门户中删除更新。  有关使用 Azure Active Directory 组管理订阅的详细信息，请参阅[我们的文章](assign-license-bulk.md#use-azure-active-directory-groups-to-assign-subscriptions)。 
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [Visual Studio 文档](/visualstudio/)
 - [Azure DevOps 文档](/azure/devops/)
 - [Azure 文档](/azure/)

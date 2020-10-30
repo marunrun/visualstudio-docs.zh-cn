@@ -1,5 +1,7 @@
 ---
 title: Error 任务 | Microsoft Docs
+description: 使用 MSBuild Error 任务可基于评估的条件语句，停止生成操作并记录错误。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bd5dd3214c9575a34e9265c33061b024648a221c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: a2b451f9c3074af7d621576336ea3bf0e05ebea3
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77634222"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436636"
 ---
 # <a name="error-task"></a>Error 任务
 
@@ -33,14 +35,14 @@ ms.locfileid: "77634222"
 
 下表描述了 `Error` 任务的参数。
 
-| 参数 | 描述 |
+| 参数 | 说明 |
 |---------------| - |
 | `Code` | 可选 `String` 参数。<br /><br /> 与错误关联的错误代码。 |
 | `File` | 可选 `String` 参数。<br /><br /> 包含错误的文件的名称。 如果未提供任何文件名称，将使用包含 Error 任务的文件。 |
 | `HelpKeyword` | 可选 `String` 参数。<br /><br /> 与错误关联的 Help 关键字。 |
 | `Text` | 可选 `String` 参数。<br /><br /> 如果 `Condition` 参数计算结果为 `true`，则为 MSBuild 记录的错误文本。 |
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 `Error` 任务允许 MSBuild 项目将错误文本上报给记录器并停止执行生成。
 
@@ -66,7 +68,7 @@ ms.locfileid: "77634222"
 </Project>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [任务参考](../msbuild/msbuild-task-reference.md)
 - [获取生成日志](../msbuild/obtaining-build-logs-with-msbuild.md)

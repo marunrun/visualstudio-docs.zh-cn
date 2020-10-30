@@ -1,5 +1,7 @@
 ---
 title: ConvertToAbsolutePath 任务 | Microsoft Docs
+description: 使用 MSBuild ConvertToAbsolutePath 任务可将相对路径或引用转换为绝对路径。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 32ce6fcad3897443f178c45d84e16f4cff44ab03
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ecf9695b36f341fa350abf53062e70095c03c374
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77634378"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796155"
 ---
 # <a name="converttoabsolutepath-task"></a>ConvertToAbsolutePath 任务
 

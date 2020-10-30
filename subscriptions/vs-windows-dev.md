@@ -2,17 +2,17 @@
 title: Visual Studio 订阅中的 Windows 开发者帐户权益 | Microsoft 文档
 author: evanwindom
 ms.author: v-evwin
-manager: lank
+manager: cabuschl
 ms.assetid: 588480a3-8806-4ea5-9915-c25974770069
-ms.date: 04/20/2020
+ms.date: 10/22/2020
 ms.topic: how-to
 description: 了解有关 Visual Studio 订阅中包含的 Windows 开发者帐户。
-ms.openlocfilehash: 2686034d95c8faf8caed25b6b2fb4cb7ad83d8fe
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 46cb22becd8a5ac852c7fddbd2cf8b473cef47bc
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005377"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92435823"
 ---
 # <a name="windows-developer-account-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 Windows 开发者帐户
 通过所选 Visual Studio 订阅包含的 Windows 开发者帐户，可以将免费和付费的 Windows 应用提交到 Windows 应用商店。
@@ -25,10 +25,10 @@ ms.locfileid: "91005377"
 1. 登录到 [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)。
 2. 在“工具”部分中找到“Windows 开发人员帐户”磁贴，然后单击“权益”磁贴底部的“获取代码”  链接。  将代码复制到剪贴板，然后单击“激活”  。
    > [!div class="mx-imgBorder"]
-   > ![Windows 开发者权益磁贴](_img/vs-windows-dev/vs-windows-dev-tile.png)
+   > ![Windows 开发者权益磁贴](_img/vs-windows-dev/vs-windows-dev-tile.png "单击“Windows 开发人员帐户”磁贴上的“获取代码”，然后单击“激活”。")
 3. 在 [https://developer.microsoft.com/store/register/](https://developer.microsoft.com/store/register/) 站点上可以开始注册过程。  单击“注册”以继续  。
    > [!div class="mx-imgBorder"]
-   > ![Windows 开发者权益注册](_img/vs-windows-dev/vs-windows-dev-register1-cropped.png)
+   > ![Windows 开发者权益注册](_img/vs-windows-dev/vs-windows-dev-register1-cropped.png "单击“注册”以创建帐户。")
 4. 登录到你的订阅。  如果有多个帐户，请选择与你的企业订阅相关联的帐户。
 0. 输入你的电子邮件地址，选择首选语言，然后单击“保存”  。
 5. 在下一页中，选择居住地或业务所在地的国家/地区，然后单击“下一步”  。
@@ -52,7 +52,7 @@ ms.locfileid: "91005377"
 | Visual Studio Enterprise、Visual Studio Professional（月度云） | Azure                                       | 不可用                                                           |NA|
 ||
 
-<sup>1</sup>  包括：*不得转售 (NFR)、FTE、Visual Studio 行业合作伙伴 (VSIP)、BizSpark、MCT 软件和服务开发人员、最有价值专家 (MVP)、区域主管 (RD)。不包括：Microsoft 合作伙伴网络 (MPN)、Imagine、MCT 软件和服务。*
+<sup>1</sup>  包括： *不得转售 (NFR)、FTE、Visual Studio 行业合作伙伴 (VSIP)、BizSpark、MCT 软件和服务开发人员、最有价值专家 (MVP)、区域主管 (RD)。不包括：Microsoft 合作伙伴网络 (MPN)、Imagine、MCT 软件和服务。*
 
 > [!NOTE]
 > Microsoft 不再在云订阅中提供 Visual Studio Professional 年度订阅和 Visual Studio Enterprise 年度订阅。 现有客户体验以及续订、增加、减少或取消订阅的能力不会发生变化。 建议新客户访问 [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/)，查看各 Visual Studio 购买选项。

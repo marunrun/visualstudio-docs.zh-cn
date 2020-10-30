@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: d2ab13ed-ef79-4ef0-8736-eccd04bc6020
-ms.date: 03/24/2020
+ms.date: 10/21/2020
 ms.topic: conceptual
 description: 有关云解决方案提供商如何为客户购买和管理 Visual Studio 云订阅的信息。
-ms.openlocfilehash: 9c263486259529e7eb4e19ea4cc3f8ad8520b039
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 632e407aa4455b7c2a87299cc8811bc996c8d5b6
+ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91006223"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92353260"
 ---
 # <a name="buy-and-manage-visual-studio-cloud-subscriptions-for-your-customers"></a>为客户购买和管理 Visual Studio 云订阅
 [云解决方案提供商 (CSP)](https://partner.microsoft.com/cloud-solution-provider) 计划中的合作伙伴可为其客户购买 Visual Studio Enterprise 和 Visual Studio Professional 云订阅。
@@ -47,7 +47,7 @@ ms.locfileid: "91006223"
 >[!NOTE]
 > 每次作为 CSP 购买 Visual Studio 订阅时，都需要执行这些步骤。 目前尚无自动完成采购的 API。
 
-确认购买后，可以选择“管理”，将订阅分配给客户的最终用户  。  还可以通过选择“服务管理”，从合作伙伴中心访问订阅管理门户  。  在其中可看到以下步骤或视频。
+确认购买后，可以选择“管理”，将订阅分配给客户的最终用户  。  还可以通过选择“服务管理”，从合作伙伴中心访问订阅管理门户。  在其中可看到以下步骤或视频。
 
 ## <a name="how-to-manage-visual-studio-cloud-subscriptions-for-your-customer"></a>如何为客户管理 Visual Studio 云订阅
 

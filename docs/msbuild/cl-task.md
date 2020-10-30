@@ -1,5 +1,7 @@
 ---
 title: CL 任务 | Microsoft Docs
+description: 描述 MSBuild CL 任务的目的和参数，该任务会包装 Microsoft C++ 编译器工具（cl.exe）。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -21,12 +23,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bb0e1feee1f7e1d271dd436a1879731354cbd8bb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7d930ed8d918a08503a6eaa6b60848abeec7683a
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "78865331"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796831"
 ---
 # <a name="cl-task"></a>CL 任务
 
@@ -64,7 +66,7 @@ ms.locfileid: "78865331"
 
    可选 String 参数。
 
-   一个始终在命令行上发出的字符串。 其默认值为“ **/c**”。
+   一个始终在命令行上发出的字符串。 其默认值为“ **/c** ”。
 
 - **AssemblerListingLocation**
 
@@ -138,7 +140,7 @@ ms.locfileid: "78865331"
 
    可选的布尔参数。
 
-   如果为 `true`，则指示 **MSBuild** 由 IDE 调用。 否则，在命令行上调用 **MSBuild**。
+   如果为 `true`，则指示 **MSBuild** 由 IDE 调用。 否则，在命令行上调用 **MSBuild** 。
 
 - **CallingConvention**
 
@@ -196,7 +198,7 @@ ms.locfileid: "78865331"
 
    可选的布尔参数。
 
-   如果为 `true`，则告知编译器准备用于*热修补*的映像。 此参数确保每个函数的第一个指令为两个字节，这是进行热修补所要求的。
+   如果为 `true`，则告知编译器准备用于 *热修补* 的映像。 此参数确保每个函数的第一个指令为两个字节，这是进行热修补所要求的。
 
    有关详细信息，请参阅 [/hotpatch（创建可热修补的映像）](/cpp/build/reference/hotpatch-create-hotpatchable-image)。
 
@@ -220,7 +222,7 @@ ms.locfileid: "78865331"
 
    可选的布尔参数。
 
-   如果为 **true**，则告知编译器发出不与 ANSI C 或 ANSI C++ 兼容的语言构造错误。
+   如果为 **true** ，则告知编译器发出不与 ANSI C 或 ANSI C++ 兼容的语言构造错误。
 
    有关详细信息，请参阅 [/Za、/Ze（禁用语言扩展）](/cpp/build/reference/za-ze-disable-language-extensions)的 /Za 选项  。
 
@@ -782,7 +784,7 @@ ms.locfileid: "78865331"
 
    可选 `ITaskItem[]` 参数。
 
-   指定表示*读取文件跟踪日志*的项的数组。
+   指定表示 *读取文件跟踪日志* 的项的数组。
 
    读取文件跟踪日志 (.tlog) 包含由任务读取的输入文件的名称，并由项目生成系统来使用以支持增量生成  。 有关详细信息，请参阅此表中的 **TrackerLogDirectory** 和 **TrackFileAccess** 参数。
 
@@ -790,7 +792,7 @@ ms.locfileid: "78865331"
 
    可选 `ITaskItem[]` 参数。
 
-   指定表示*写入文件跟踪日志*的项的数组。
+   指定表示 *写入文件跟踪日志* 的项的数组。
 
    写入文件跟踪日志 (.tlog) 包含由任务写入的输出文件的名称，并由项目生成系统来使用以支持增量生成  。 有关详细信息，请参阅此表中的 **TrackerLogDirectory** 和 **TrackFileAccess** 参数。
 

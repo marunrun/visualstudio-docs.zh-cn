@@ -1,5 +1,7 @@
 ---
 title: AL（程序集链接器）任务 | Microsoft Docs
+description: 使用 MSBuild 程序集链接器 (AL) 任务可包装 AL.exe（一种随 Windows 软件开发工具包一起分发的工具）。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5c7964c6654d1f6996d1acc44542e3a7bf093a52
-ms.sourcegitcommit: 93859158465eab3423a0c0435f06490f0a456a57
+ms.openlocfilehash: d59251240abc7ca39b3819adf2324bf5bb9cef0a
+ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82167450"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92353351"
 ---
 # <a name="al-assembly-linker-task"></a>AL（程序集链接器）任务
 
@@ -33,7 +35,7 @@ AL 任务包装 AL.exe  （一种随 Windows 软件开发工具包 (SDK) 一起�
 
  下表描述了 `AL` 任务的参数。
 
-| 参数 | 描述 |
+| 参数 | 说明 |
 |---------------------| - |
 | `AlgorithmID` | 可选 `String` 参数。<br /><br /> 指定一种算法来对多文件程序集中的所有文件（包含程序集清单的文件除外）进行哈希处理。 有关详细信息，请参阅 [Al.exe（程序集链接器）](/dotnet/framework/tools/al-exe-assembly-linker)中 `/algid` 选项的文档。 |
 | `BaseAddress` | 可选 `String` 参数。<br /><br /> 指定一个地址，运行时在用户计算机上在该地址加载 DLL。 如果指定 DLL 的基址，而不是让操作系统在进程空间内重新定位 DLL，则应用程序的加载速度会更快。 此参数对应于 /base[address](/dotnet/framework/tools/al-exe-assembly-linker)。 |
@@ -52,7 +54,7 @@ AL 任务包装 AL.exe  （一种随 Windows 软件开发工具包 (SDK) 一起�
 | `KeyContainer` | 可选 `String` 参数。<br /><br /> 指定保存密钥对的容器。 这样将会通过将公钥插入程序集清单来对程序集签名（为它指定一个强名称）。 然后，此任务使用私钥对最终程序集进行签名。 有关详细信息，请参阅 [Al.exe（程序集链接器）](/dotnet/framework/tools/al-exe-assembly-linker)中 `/keyn[ame]` 选项的文档。 |
 | `KeyFile` | 可选 `String` 参数。<br /><br /> 指定一个文件，该文件包含密钥对或只包含用于对程序集进行签名的公钥。 编译器在程序集清单中插入公钥，然后使用私钥对最终的程序集进行签名。 有关详细信息，请参阅 [Al.exe（程序集链接器）](/dotnet/framework/tools/al-exe-assembly-linker)中 `/keyf[ile]` 选项的文档。 |
 | `LinkResources` | 可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 将指定的资源文件链接至某个程序集。 该资源成为程序集的组成部分，但不复制该文件。 传递给此参数的项可能附加名为 `LogicalName``Target` 和 `Access` 的可选元数据。 `LogicalName` 元数据用于指定资源的内部标识符。 `Target` 元数据可以指定任务将文件复制到的路径和文件名，然后将此新文件编译到程序集。 `Access` 元数据可以设置为 `private`，以使该资源对其他程序集不可见。 有关详细信息，请参阅 [Al.exe（程序集链接器）](/dotnet/framework/tools/al-exe-assembly-linker)中 `/link[resource]` 选项的文档。 |
-| `MainEntryPoint` | 可选 `String` 参数。<br /><br /> 指定用作将模块转换为可执行文件时的入口点的方法的完全限定名称 (*class.method*)。 此参数对应于 [Al.exe（程序集链接器）](/dotnet/framework/tools/al-exe-assembly-linker)中的 `/main` 选项。 |
+| `MainEntryPoint` | 可选 `String` 参数。<br /><br /> 指定用作将模块转换为可执行文件时的入口点的方法的完全限定名称 ( *class.method* )。 此参数对应于 [Al.exe（程序集链接器）](/dotnet/framework/tools/al-exe-assembly-linker)中的 `/main` 选项。 |
 | `OutputAssembly` | 必需的 <xref:Microsoft.Build.Framework.ITaskItem> 输出参数。<br /><br /> 指定此任务生成的文件的名称。 此参数对应于 [Al.exe（程序集链接器）](/dotnet/framework/tools/al-exe-assembly-linker)中的 `/out` 选项。 |
 | `Platform` | 可选 `String` 参数。<br /><br /> 限制可运行此代码的平台；必须是下面中的某一项：`x86`、`Itanium`、`x64` 或 `anycpu`。 默认值为 `anycpu`。 此参数对应于 [Al.exe（程序集链接器）](/dotnet/framework/tools/al-exe-assembly-linker)中的 `/platform` 选项。 |
 | `ProductName` | 可选 `String` 参数。<br /><br /> 为程序集中的 `Product` 字段指定字符串。 有关详细信息，请参阅 [Al.exe（程序集链接器）](/dotnet/framework/tools/al-exe-assembly-linker)中 `/prod[uct]` 选项的文档。 |
@@ -66,7 +68,7 @@ AL 任务包装 AL.exe  （一种随 Windows 软件开发工具包 (SDK) 一起�
 | `Title` | 可选 `String` 参数。<br /><br /> 为程序集中的 `Title` 字段指定字符串。 有关详细信息，请参阅 [Al.exe（程序集链接器）](/dotnet/framework/tools/al-exe-assembly-linker)中 `/title` 选项的文档。 |
 | `ToolPath` | 可选 `String` 参数。<br /><br /> 指定任务从中加载基础可执行文件 (Al.exe) 的位置。 如果未指定此参数，则任务会使用与运行 MSBuild 的框架版本对应的 SDK 安装路径。 |
 | `Trademark` | 可选 `String` 参数。<br /><br /> 为程序集中的 `Trademark` 字段指定字符串。 有关详细信息，请参阅 [Al.exe（程序集链接器）](/dotnet/framework/tools/al-exe-assembly-linker)中 `/trade[mark]` 选项的文档。 |
-| `Version` | 可选 `String` 参数。<br /><br /> 指定此程序集的版本信息。 此字符串的格式是 *major.minor.build.revision*。 默认值为 0。 有关详细信息，请参阅 [Al.exe（程序集链接器）](/dotnet/framework/tools/al-exe-assembly-linker)中 `/v[ersion]` 选项的文档。 |
+| `Version` | 可选 `String` 参数。<br /><br /> 指定此程序集的版本信息。 此字符串的格式是 *major.minor.build.revision* 。 默认值为 0。 有关详细信息，请参阅 [Al.exe（程序集链接器）](/dotnet/framework/tools/al-exe-assembly-linker)中 `/v[ersion]` 选项的文档。 |
 | `Win32Icon` | 可选 `String` 参数。<br /><br /> 在程序集中插入 .ico 文件  。 .ico 文件在文件资源管理器中赋予输出文件所需的外观  。 此参数对应于 [Al.exe（程序集链接器）](/dotnet/framework/tools/al-exe-assembly-linker)中的 `/win32icon` 选项。 |
 | `Win32Resource` | 可选 `String` 参数。<br /><br /> 在输出文件中插入 Win32 资源（.res 文件）  。 有关详细信息，请参阅 [Al.exe（程序集链接器）](/dotnet/framework/tools/al-exe-assembly-linker)中 `/win32res` 选项的文档。 |
 

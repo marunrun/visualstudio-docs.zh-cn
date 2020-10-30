@@ -1,5 +1,7 @@
 ---
 title: 创建转发记录器 | Microsoft Docs
+description: 创建 MSBuild 转发记录器，以便在生成项目时，通过允许选择要监视的事件来提高日志记录效率。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 852b783129f130316de88580020e0139925ffb37
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 25f8a876ddd4c5c222b608dcea51f98816679181
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77634300"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796571"
 ---
 # <a name="create-forwarding-loggers"></a>创建转发记录器
 
@@ -36,13 +38,13 @@ ms.locfileid: "77634300"
 
 ## <a name="specify-a-forwarding-logger"></a>指定转发记录器
 
- 转发记录器编译为程序集后，必须告知 MSBuild 在生成过程中使用该程序集。 为此，请使用 `-FileLogger`、`-FileLoggerParameters` 和 `-DistributedFileLogger` 开关，以及 MSBuild.exe  。 `-FileLogger` 开关会告知 MSBuild.exe 已直接附加记录器  。 `-DistributedFileLogger` 开关表示每个节点都存在一个日志文件。 要在转发记录器上设置参数，请使用 `-FileLoggerParameters` 开关。 有关以上开关和其他 MSBuild.exe 开关的详细信息，请参阅[命令行参考](../msbuild/msbuild-command-line-reference.md)  。
+ 转发记录器编译为程序集后，必须告知 MSBuild 在生成过程中使用该程序集。 为此，请使用 `-FileLogger`、`-FileLoggerParameters` 和 `-DistributedFileLogger` 开关，以及 MSBuild.exe  。 `-FileLogger` 开关会告知 MSBuild.exe 已直接附加记录器  。 `-DistributedFileLogger` 开关表示每个节点都存在一个日志文件。 要在转发记录器上设置参数，请使用 `-FileLoggerParameters` 开关。 有关以上开关和其他 MSBuild.exe 开关的详细信息，请参阅  。
 
 ## <a name="multi-processor-aware-loggers"></a>可识别多处理器的记录器
 
  在多处理器系统上生成项目时，来自每个处理器的生成消息并不会按统一的顺序自动交错。 因此，必须使用附加到每条消息上的 <xref:Microsoft.Build.Framework.BuildEventContext> 类建立消息分组优先级。 有关多处理器生成的详细信息，请参阅[多处理器环境下的日志记录](../msbuild/logging-in-a-multi-processor-environment.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [获取生成日志](../msbuild/obtaining-build-logs-with-msbuild.md)
 - [生成记录器](../msbuild/build-loggers.md)

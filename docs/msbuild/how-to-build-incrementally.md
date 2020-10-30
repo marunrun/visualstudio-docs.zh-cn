@@ -1,5 +1,7 @@
 ---
 title: 如何：增量生成 | Microsoft Docs
+description: 了解如何使用 MSBuild 增量生成，因此，不会重新生成以前生成过但仍然为最新状态的组件。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e4911bb131f5c5c878b82865b3dee61fd7bedbe1
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 9b7d54db50b4f28277a81d149b4c0c5140b002b0
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77634157"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436011"
 ---
 # <a name="how-to-build-incrementally"></a>如何：增量生成
 
@@ -37,7 +39,7 @@ ms.locfileid: "77634157"
       Outputs="hello.exe">
   ```
 
-MSBuild 可将输入文件的时间戳和输出文件的时间戳进行比较，并确定是跳过、生成还是部分重新生成某个目标。 在下面的示例中，如果 `@(CSFile)` 项列表中有任何文件比 hello.exe  文件新，则 MSBuild 将运行该目标；否则将跳过它：
+MSBuild 可将输入文件的时间戳和输出文件的时间戳进行比较，并确定是跳过、生成还是部分重新生成某个目标。 在下面的示例中，如果 `@(CSFile)` 项列表中有任何文件比 hello.exe 文件新，则 MSBuild 将运行该目标；否则将跳过它：
 
 ```xml
 <Target Name="Build"
@@ -50,7 +52,7 @@ MSBuild 可将输入文件的时间戳和输出文件的时间戳进行比较，
 </Target>
 ```
 
-当目标中指定了输入和输出时，要么每个输出只能映射到一个输入，要么在输出和输入之间不能有任何直接映射。 例如，在前面的 [Csc 任务](../msbuild/csc-task.md)中，输出 hello.exe 不能映射到任何单一输入，因为它依赖于所有输入  。
+当目标中指定了输入和输出时，要么每个输出只能映射到一个输入，要么在输出和输入之间不能有任何直接映射。 例如，在前面的  。
 
 > [!NOTE]
 > 对于输入和输出之间不存在直接映射的目标，它的生成频率总是比每个输出只能映射到一个输入的目标高，因为如果某些输入发生了更改，MSBuild 无法确定需要重新生成哪些输出。
@@ -59,11 +61,11 @@ MSBuild 可将输入文件的时间戳和输出文件的时间戳进行比较，
 
 ## <a name="example"></a>示例
 
-以下示例使用的项目为假设的帮助系统生成帮助文件。 执行该项目时，会将 .txt 源文件转换为 .content 中间文件，随后，.content 中间文件与 XML 元数据文件合并，生成帮助系统使用的 .help 最终文件    。 该项目使用以下假设任务：
+以下示例使用的项目为假设的帮助系统生成帮助文件。 执行该项目时，会将 .txt 源文件转换为 .content 中间文件，随后，.content 中间文件与 XML 元数据文件合并，生成帮助系统使用的 .help 最终文件  。 该项目使用以下假设任务：
 
-- `GenerateContentFiles`：将 .txt 文件转换成 .content 文件   。
+- `GenerateContentFiles`：将 .txt 文件转换成 .content 文件  。
 
-- `BuildHelp`：将 .content 文件与 XML 元数据文件合并，生成 .help 最终文件   。
+- `BuildHelp`：将 .content 文件与 XML 元数据文件合并，生成 .help 最终文件  。
 
 该项目通过转换过程来建立 `GenerateContentFiles` 任务中输入和输出之间的一一映射。 有关详细信息，请参阅[转换](../msbuild/msbuild-transforms.md)。 此外，设置了 `Output` 元素，以便自动将 `GenerateContentFiles` 任务的输出用作 `BuildHelp` 任务的输入。
 

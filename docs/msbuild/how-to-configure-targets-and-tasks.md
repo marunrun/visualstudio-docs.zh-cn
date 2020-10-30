@@ -1,5 +1,7 @@
 ---
 title: 如何：配置目标和任务 | Microsoft Docs
+description: 了解如何将所选的 MSBuild 任务设置为在其目标环境中运行，而不考虑开发计算机的环境。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 92814100-392a-471d-96fd-e26f637d6cc2
@@ -8,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3ccb29f0ea6322a3f6bbfac5c3c0817892f74644
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 31537ea44e5c49a4fd98229a5886ca99a1464409
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85288892"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92435769"
 ---
 # <a name="how-to-configure-targets-and-tasks"></a>如何：配置目标和任务
 

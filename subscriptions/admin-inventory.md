@@ -1,23 +1,23 @@
 ---
-title: 清点预生产环境 | Visual Studio Marketplace
+title: Visual Studio 订阅中的预生产库存 | Visual Studio Marketplace
 author: evanwindom
-ms.author: lank
-manager: lank
+ms.author: v-evwin
+manager: cabuschl
 ms.assetid: 7d74e113-8fb2-490e-8502-48cce7b1327a
-ms.date: 03/06/2020
+ms.date: 10/22/2020
 ms.topic: conceptual
 description: 了解管理员管理预生产库存的职责
-ms.openlocfilehash: 1abc3c15a7bd9e47b0f449c5a49fdbbc8e7bb590
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: b464a7d9cfa8c802cd2367c5c7d0e76141583f3a
+ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91004152"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92467422"
 ---
 # <a name="inventory-of-pre-production-environment"></a>清点预生产环境
 Visual Studio 订阅对用户而非设备计数，从而简化了资产管理。
 
-Visual Studio 管理员必须将 Visual Studio 订阅分配给**特定的指定人员**。 不允许使用诸如 Dev1、Dev2 之类的命名约定，也不允许使用诸如“FeatureTeam”之类的团队名称  。
+Visual Studio 管理员必须将 Visual Studio 订阅分配给特定的指定人员。 不允许使用诸如 Dev1、Dev2 之类的命名约定，也不允许使用诸如“FeatureTeam”之类的团队名称  。
 
 下面是一些简化预生产环境清点过程的方法：
 - 检查用户分配。 Microsoft 提供名为 [Visual Studio 管理门户](https://manage.visualstudio.com/)的网站，帮助你跟踪 Visual Studio 订阅分配。

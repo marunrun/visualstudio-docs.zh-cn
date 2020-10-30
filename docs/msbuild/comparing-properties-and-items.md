@@ -1,5 +1,7 @@
 ---
 title: 比较属性和项 | Microsoft Docs
+description: 了解 MSBuild 属性和项如何将信息传递给任务、评估条件，以及存储项目文件可引用的值。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6a86365ffe839b45fcd09862040fb88f0d4148bc
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 0f00de870986cf020e91ff992dabb2681469ae5b
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77634404"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796766"
 ---
 # <a name="compare-properties-and-items"></a>比较属性和项
 
@@ -27,7 +29,7 @@ MSBuild 属性和项都用于将信息传递给任务、评估条件，以及存
 
 ## <a name="scalars-and-vectors"></a>标量和矢量
 
-由于 MSBuild 属性是只有一个字符串值的名称/值对，所以它们通常被描述为*标量*。 由于 MSBuild 项类型是项列表，所以它们通常被描述为*矢量*。 但是实际上，属性可以表示多个值，而项类型可以有零个或一个项。
+由于 MSBuild 属性是只有一个字符串值的名称/值对，所以它们通常被描述为 *标量* 。 由于 MSBuild 项类型是项列表，所以它们通常被描述为 *矢量* 。 但是实际上，属性可以表示多个值，而项类型可以有零个或一个项。
 
 ### <a name="target-dependency-injection"></a>目标依赖关系注入
 
@@ -43,7 +45,7 @@ MSBuild 属性和项都用于将信息传递给任务、评估条件，以及存
 </PropertyGroup>
 ```
 
-`BuildDependsOn` 属性通常用作目标 `DependsOnTargets` 特性的参数，可有效地将该特性转换为项列表。 可以重写此属性，以添加目标或更改目标执行顺序。 例如，应用于对象的
+`BuildDependsOn` 属性通常用作目标 `DependsOnTargets` 特性的参数，可有效地将该特性转换为项列表。 可以重写此属性，以添加目标或更改目标执行顺序。 例如，
 
 ```xml
 <PropertyGroup>
@@ -185,6 +187,6 @@ KeyFileVersion:
 KeyFileVersion: 1.0.0.3
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [高级概念](../msbuild/msbuild-advanced-concepts.md)

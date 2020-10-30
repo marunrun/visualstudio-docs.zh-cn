@@ -1,5 +1,7 @@
 ---
 title: 如何：清理生成 | Microsoft Docs
+description: 了解如何在删除所有中间文件和输出文件，仅保留项目和组件文件的情况下，使用 MSBuild 清理生成。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b7848189c866481e6e97d05d95b5fb97a3d4893
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 989bcd560c2c5cd9a7d8c571208bfab84adbd493
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633910"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436720"
 ---
 # <a name="how-to-clean-a-build"></a>如何：清理生成
 
@@ -26,7 +28,7 @@ ms.locfileid: "77633910"
 
 ## <a name="create-a-directory-for-output-items"></a>创建输出项目录
 
- 默认情况下，编译项目时创建的 .exe 文件与项目文件和源文件位于同一目录中  。 但是，输出项通常在单独的目录中创建。
+ 默认情况下，编译项目时创建的 .exe 文件与项目文件和源文件位于同一目录中。 但是，输出项通常在单独的目录中创建。
 
 ### <a name="to-create-a-directory-for-output-items"></a>创建输出项目录
 
@@ -34,7 +36,7 @@ ms.locfileid: "77633910"
 
      `<builtdir>BuiltApp</builtdir>`
 
-2. 如果目录不存在，使用 [MakeDir](../msbuild/makedir-task.md) 任务创建目录。 例如:
+2. 如果目录不存在，使用 [MakeDir](../msbuild/makedir-task.md) 任务创建目录。 例如：
 
      ```xml
      <MakeDir Directories = "$(builtdir)"
@@ -47,7 +49,7 @@ ms.locfileid: "77633910"
 
 #### <a name="to-remove-a-directory-and-all-files-contained-in-the-directory"></a>删除目录和目录中包含的所有文件
 
-- 使用 `RemoveDir` 任务删除目录。 例如:
+- 使用 `RemoveDir` 任务删除目录。 例如：
 
      `<RemoveDir Directories="$(builtdir)" />`
 
@@ -55,7 +57,7 @@ ms.locfileid: "77633910"
 
  以下代码示例项目包含一个新目标 `Clean`，该目标使用 `RemoveDir` 任务删除目录和该目录中包含的所有文件和目录。 此外，在此示例中，`Compile` 目标还将为清理生成时删除的输出项创建一个单独的目录。
 
- 由于 `Compile` 被定义为默认目标，因此，除非另外指定一个或多个目标，否则会自动使用该默认目标。 使用命令行开关 -target  指定其他目标。 例如:
+ 由于 `Compile` 被定义为默认目标，因此，除非另外指定一个或多个目标，否则会自动使用该默认目标。 使用命令行开关 -target  指定其他目标。 例如：
 
  `msbuild <file name>.proj -target:Clean`
 

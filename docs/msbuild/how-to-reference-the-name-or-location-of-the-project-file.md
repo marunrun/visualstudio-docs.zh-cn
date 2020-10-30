@@ -1,5 +1,6 @@
 ---
 title: 引用项目文件的名称或位置
+description: 了解如何使用 MSBuild 保留属性引用项目文件的名称或位置，而无需创建你自己的属性。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -17,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 29960de09b512a419a56a61f493702485c287475
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: ccc356e1859f447db1ac18a437b8fc2317925b0f
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036452"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436349"
 ---
 # <a name="how-to-reference-the-name-or-location-of-the-project-file"></a>如何：引用项目文件的名称或位置
 
@@ -49,7 +50,7 @@ ms.locfileid: "90036452"
 > [!NOTE]
 > 无法在项目文件中重新定义保留属性。
 
-## <a name="example"></a>示例
+## <a name="example-1"></a>示例 1
 
  以下示例项目文件将项目名称作为保留属性引用，以指定输出的名称。
 
@@ -78,7 +79,7 @@ ms.locfileid: "90036452"
 </Project>
 ```
 
-## <a name="example"></a>示例
+## <a name="example-2"></a>示例 2
 
  以下示例项目文件使用 `MSBuildProjectDirectory` 保留属性来创建项目文件位置中文件的完整路径。
 
@@ -94,7 +95,7 @@ ms.locfileid: "90036452"
 
 该示例使用[属性函数](property-functions.md)语法来调用静态 .NET Framework 方法 <xref:System.IO.Path.Combine*?displayProperty=fullName>。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [MSBuild](../msbuild/msbuild.md)
 - [MSBuild 保留属性和已知属性](../msbuild/msbuild-reserved-and-well-known-properties.md)

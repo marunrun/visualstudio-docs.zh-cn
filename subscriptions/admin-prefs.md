@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 0fe9eaa4-f589-429e-a443-13bf86637d5a
-ms.date: 09/21/2020
+ms.date: 10/22/2020
 ms.topic: conceptual
 description: 了解如何在管理门户中设置语言、联系人、订阅级别等的首选项
-ms.openlocfilehash: 58819995966f5cdf17335de474e83d2a77eccc37
-ms.sourcegitcommit: 4affcf2830337e6aba84621c3eda5faf5d0d4a01
+ms.openlocfilehash: e044db92a318114cd2f159b859843db354fac6c7
+ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91022601"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92467435"
 ---
 # <a name="set-preferences-for-your-agreements-in-the-administration-portal"></a>在管理门户中设置协议的首选项
 超级管理员可以在管理门户中设置某些首选项，这些首选项将全局应用于每个协议。  这些首选项将在管理员添加订阅者时为管理员自动填充订阅详细信息，并且只能由超级管理员进行全局修改。  
@@ -60,7 +60,7 @@ ms.locfileid: "91022601"
 
 
 ## <a name="frequently-asked-questions"></a>常见问题
-### <a name="q--can-i-disable-the-contact-email-address-so-subscribers-cannot-contact-administrators"></a>问：是否可以禁用“联系人电子邮件地址”，让订阅者无法联系到管理员？
+### <a name="q--can-i-disable-the-contact-email-address-so-subscribers-cannot-contact-admins"></a>问：是否可以禁用“联系人电子邮件地址”，让订阅者无法联系到管理员？
 答：否 - 虽然你可以使用安全组、组电子邮件别名或单个电子邮件地址来确定与哪些管理员联系，但不能禁用此功能。
 
 ### <a name="q-if-i-answer-a-subscribers-email-will-they-have-my-email-address"></a>问：如果我回复订阅者的电子邮件，他们会知道我的电子邮件地址么？

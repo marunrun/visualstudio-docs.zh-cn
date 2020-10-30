@@ -1,5 +1,7 @@
 ---
 title: CreateProperty 任务 | Microsoft Docs
+description: 使用 MSBuild CreateProperty 任务可为属性填充传入的值，通过该操作可以将值从一个属性或字符串复制到另一个属性或字符串。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,22 +20,22 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 155e8e6b57cc388e8c2981297be8b26ef5444c1b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 7d7dd8d7f5a50998832a8fac6f47bf66e9a6bbe9
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77634313"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796182"
 ---
 # <a name="createproperty-task"></a>CreateProperty 任务
 
 使用传入的值填充属性。 通过该操作可以将值从一个属性或字符串复制到另一个属性或字符串。
 
-## <a name="attributes"></a>特性
+## <a name="attributes"></a>属性
 
 下表描述了 `CreateProperty` 任务的参数。
 
-| 参数 | 描述 |
+| 参数 | 说明 |
 |------------------| - |
 | `Value` | 可选 `String` 输出参数。<br /><br /> 指定要复制到新属性的值。 |
 | `ValueSetByTask` | 可选 `String` 输出参数。<br /><br /> 包含与 `Value` 参数相同的值。 在由于输出是最新的而跳过封闭目标的情况下，仅当需要避免由 MSBuild 设置输出属性时，使用此参数。 |
@@ -70,7 +72,7 @@ ms.locfileid: "77634313"
 
 运行项目后，`NewFile` 属性的值为 Module1.vb  。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [任务参考](../msbuild/msbuild-task-reference.md)
 - [任务](../msbuild/msbuild-tasks.md)

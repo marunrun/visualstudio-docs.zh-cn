@@ -1,5 +1,7 @@
 ---
 title: FileClassifier 任务 | Microsoft Docs
+description: 使用 MSBuild FileClassifier 任务可对将嵌入到程序集的一组源资源进行分类。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 46ed1b1f94cd2ef23ff0704912cb2a2194ba7dab
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 5f4a57d60c6e1dae0c42e30dce856a147fda0226
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77634183"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436896"
 ---
 # <a name="fileclassifier-task"></a>FileClassifier 任务
 
@@ -35,13 +37,13 @@ ms.locfileid: "77634183"
 |`CLREmbeddedResource`|未使用。|
 |`CLRResourceFiles`|未使用。|
 |`CLRSatelliteEmbeddedResource`|未使用。|
-|`Culture`|可选 **String** 参数。<br /><br /> 指定生成的区域性。 如果生成不可本地化，则此值可能为 **Null**。 如果为 **Null**，默认值是 **CultureInfo.InvariantCulture** 返回的小写值。|
+|`Culture`|可选 **String** 参数。<br /><br /> 指定生成的区域性。 如果生成不可本地化，则此值可能为 **Null** 。 如果为 **Null** ，默认值是 **CultureInfo.InvariantCulture** 返回的小写值。|
 |`MainEmbeddedFiles`|可选的 **ITaskItem[]** 输出参数。<br /><br /> 指定嵌入到主程序集中的非本地化资源。|
-|`OutputType`|必需的 **String** 参数。<br /><br /> 指定要将指定源文件嵌入的文件类型。 有效值为 **exe**、**winexe** 或 **library**。|
+|`OutputType`|必需的 **String** 参数。<br /><br /> 指定要将指定源文件嵌入的文件类型。 有效值为 **exe** 、 **winexe** 或 **library** 。|
 |`SatelliteEmbeddedFiles`|可选的 **ITaskItem[]** 输出参数。<br /><br /> 指定嵌入区域性附属程序集中的可本地化文件，该区域性由 **Culture** 参数指定。|
 |`SourceFiles`|必需的 **ITaskItem[]** 参数。<br /><br /> 指定要分类的文件的列表。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 如果未设置 **Culture** 参数，则所有通过 **SourceFiles** 参数指定的资源都不可本地化；反之都可本地化（除非它们与设置为 **false** 的 **Localizable** 属性相关联）。
 
@@ -66,7 +68,7 @@ ms.locfileid: "77634183"
 </Project>
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [WPF MSBuild 参考](../msbuild/wpf-msbuild-reference.md)
 - [任务参考](../msbuild/wpf-msbuild-task-reference.md)

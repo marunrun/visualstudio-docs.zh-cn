@@ -1,5 +1,7 @@
 ---
 title: 如何：将文件排除在生成过程外 | Microsoft Docs
+description: 了解如何在 MSBuild 项目文件中将文件排除在生成过程外，或有条件地将文件包含在生成过程中。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1914f709a69dbb120e4439ddceeda8b70ad570b4
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 48578edd6c7911e858f32b1961b4ef361748788d
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633858"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436370"
 ---
 # <a name="how-to-exclude-files-from-the-build"></a>如何：将文件排除在生成过程外
 
@@ -25,7 +27,7 @@ ms.locfileid: "77633858"
 
 ## <a name="exclude-a-file-or-directory-from-the-inputs-for-a-build"></a>从生成的输入中排除文件或目录
 
- 项列表是生成的输入文件。 要包括的项是使用 `Include` 属性单独或作为组声明的。 例如:
+ 项列表是生成的输入文件。 要包括的项是使用 `Include` 属性单独或作为组声明的。 例如：
 
 ```xml
 <CSFile Include="Form1.cs"/>
@@ -36,7 +38,7 @@ ms.locfileid: "77633858"
 
  如果你已使用通配符将所有文件包括在一个目录或一组嵌套的目录中以作为生成的输入，但对于目录中的某个文件或嵌套目录中的某个目录，你可能并不希望将其包括在内。 若要从项列表中排除某个项，可使用 `Exclude` 属性。
 
-#### <a name="to-include-all-cs-or-vb-files-except-form2"></a>包括除 Form2 以外的所有.cs 或.vb 文件   
+#### <a name="to-include-all-cs-or-vb-files-except-form2"></a>包括除 Form2 以外的所有.cs 或.vb 文件  
 
 - 使用以下 `Include` 和 `Exclude` 属性之一：
 
@@ -50,7 +52,7 @@ ms.locfileid: "77633858"
     <VBFile Include="*.vb" Exclude="Form2.vb"/>
     ```
 
-#### <a name="to-include-all-cs-or-vb-files-except-form2-and-form3"></a>包括除 Form2 和 Form3 以外的所有.cs 或.vb 文件    
+#### <a name="to-include-all-cs-or-vb-files-except-form2-and-form3"></a>包括除 Form2 和 Form3 以外的所有.cs 或.vb 文件   
 
 - 使用以下 `Include` 和 `Exclude` 属性之一：
 
@@ -64,7 +66,7 @@ ms.locfileid: "77633858"
     <VBFile Include="*.vb" Exclude="Form2.vb;Form3.vb"/>
     ```
 
-#### <a name="to-include-all-jpg-files-in-subdirectories-of-the-images-directory-except-those-in-the-version2-directory"></a>包括除 Version2 目录中的 .jpg 文件以外，图像目录子目录中的所有 .jpg 文件   
+#### <a name="to-include-all-jpg-files-in-subdirectories-of-the-images-directory-except-those-in-the-version2-directory"></a>包括除 Version2 目录中的 .jpg 文件以外，图像目录子目录中的所有 .jpg 文件  
 
 - 使用以下 `Include` 和 `Exclude` 属性：
 
@@ -81,7 +83,7 @@ ms.locfileid: "77633858"
 
  如果你希望在调试生成中包括某些项，而不希望在发布生成中包括这些项，则可以使用 `Condition` 属性来指定包括该项的条件。
 
-#### <a name="to-include-the-file-formulavb-only-in-release-builds"></a>仅在发布生成中包括文件 Formula.vb 
+#### <a name="to-include-the-file-formulavb-only-in-release-builds"></a>仅在发布生成中包括文件 Formula.vb
 
 - 使用类似于如下的 `Condition` 属性：
 
@@ -93,7 +95,7 @@ ms.locfileid: "77633858"
 
 ## <a name="example"></a>示例
 
- 以下代码示例生成一个项目，其中包括除 Form2.cs 以外目录中的所有 .cs 文件   。
+ 以下代码示例生成一个项目，其中包括除 Form2.cs 以外目录中的所有 .cs 文件 。
 
 ```xml
 <Project DefaultTargets="Compile"
@@ -126,7 +128,7 @@ ms.locfileid: "77633858"
 </Project>
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [项](../msbuild/msbuild-items.md)
 - [MSBuild](../msbuild/msbuild.md)

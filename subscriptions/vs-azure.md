@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: lank
 manager: lank
 ms.assetid: 872c5746-5357-4764-949b-aa525a0adf1a
-ms.date: 04/28/2020
+ms.date: 10/21/2020
 ms.topic: how-to
 description: 了解如何激活 Visual Studio 订阅中包含的 Azure 开发测试个人额度权益。
-ms.openlocfilehash: 41d85c939c05a9d29c80c15d1702258ff5b7d5e5
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: de1bfa9591a0dae409ec526429fa0496f3408703
+ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91003841"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92353091"
 ---
 # <a name="use-microsoft-azure-in-visual-studio-subscriptions"></a>在 Visual Studio 订阅中使用 Microsoft Azure
 Visual Studio 订阅者无需额外付费即可使用 Microsoft Azure。  通过[每月 Azure 开发测试个人额度](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/)，可将 Azure 用作开发/测试的个人沙盒。  你可以预配虚拟机、云服务和其他 Azure 资源。  信用额度因订阅级别而异。
@@ -22,23 +22,23 @@ Visual Studio 订阅者无需额外付费即可使用 Microsoft Azure。  通过
 
 2. 在“权益”页上的“工具”部分中找到“Azure”磁贴，然后选择“权益”磁贴底部的“激活”链接。
    > [!div class="mx-imgBorder"]
-   > ![Azure 磁贴](_img/vs-azure/vs-azure-tile.png)
+   > ![Azure 磁贴](_img/vs-azure/vs-azure-tile.png "单击 Azure 磁贴上的“激活”按钮即可开始使用。")
 
 3. 如果没有现有的 Azure 订阅，系统将要求你填写所需信息以创建 Azure 订阅。  第一步是提供个人信息，然后选择“下一步”。
    > [!div class="mx-imgBorder"]
-   > ![Azure 注册](_img/vs-azure/vs-azure-about-you.png)
+   > ![Azure 注册](_img/vs-azure/vs-azure-about-you.png "将你的个人联系信息添加到 Azure 订阅。")
 
 4. 接下来，需要使用简单的验证码验证身份。 提供电话号码，并选择是通过短信还是电话接收代码。  输入收到的代码，选择“验证代码”。   
    > [!div class="mx-imgBorder"]
-   > ![Azure 准备工作](_img/vs-azure/vs-azure-identity.png)
+   > ![Azure 准备工作](_img/vs-azure/vs-azure-identity.png "请求验证码，然后输入该验证码以继续。")
 
 5. 最后一步，选中复选框以接受条款，然后选择“注册”。  就这么简单！
    > [!div class="mx-imgBorder"]
-   > ![Azure 准备工作](_img/vs-azure/vs-azure-agreement.png)
+   > ![Azure 注册](_img/vs-azure/vs-azure-agreement.png "单击“注册”按钮，完成 Azure 订阅的创建。")
 
 0. Azure 仪表板快速入门中心将加载。  
    > [!div class="mx-imgBorder"]
-   > ![Azure 仪表板](_img/vs-azure/vs-azure-quick-start.png) 
+   > ![Azure 仪表板](_img/vs-azure/vs-azure-quick-start.png "创建 Azure 订阅后，将重定向到 Azure 门户。") 
 
 0. 可将 [Azure 门户](https://portal.azure.com)收藏为书签，方便日后访问。
 

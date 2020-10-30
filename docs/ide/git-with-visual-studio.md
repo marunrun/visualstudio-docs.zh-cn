@@ -2,18 +2,18 @@
 title: Visual Studio 中的 Git 新体验（预览版）
 titleSuffix: ''
 description: 了解 Visual Studio 2019 中新的集成 Git 体验
-ms.date: 09/22/2020
+ms.date: 10/13/2020
 ms.topic: conceptual
 ms.author: tglee
 author: prnadago
 ms.manager: jillfra
 monikerRange: vs-2019
-ms.openlocfilehash: 1f9dc891219e5563ad6ea72085b0ad28469c7171
-ms.sourcegitcommit: a876fcc75321f9c30729121cae83f400973f9d9d
+ms.openlocfilehash: ad75fcff26365afdbc4fb4b02975d7c3211fa79b
+ms.sourcegitcommit: 4450abc99453ccaf8936449bbff437c5b9efa022
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92082052"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92334202"
 ---
 # <a name="new-git-experience-in-visual-studio-preview"></a>Visual Studio 中的 Git 新体验（预览版）
 
@@ -98,7 +98,7 @@ Visual Studio 将根据你在解决方案资源管理器中加载的视图文件
 :::image type="content" source="media/git-file-version-compare.png" alt-text="Visual Studio 中“选项”对话框的“预览功能”部分的屏幕截图":::
 
 > [!TIP]
-> 如果已连接到 Azure DevOps 存储库，可使用“#”字符将 Azure DevOps 工作项和提交相关联。 可通过“团队资源管理器”>“管理连接”连接 Azure DevOps 存储库
+> 如果已连接到 Azure DevOps 存储库，可使用“#”字符将 Azure DevOps 工作项和提交相关联。 可通过“团队资源管理器” > “管理连接”连接 Azure DevOps 存储库。
 
 ### <a name="select-an-existing-branch"></a>选择一个现有分支
 

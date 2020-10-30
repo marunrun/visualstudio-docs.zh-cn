@@ -1,5 +1,6 @@
 ---
 title: 使用不同选项生成相同的源文件
+description: 了解如何创建不同的 MSBuild 生成配置，以使用不同选项生成相同的源文件。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -14,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 23e76145df0fdf3f4cc3a3dfa8e14c6826b0dbdf
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: a2c6a2b27aa08780d440c0e961c9a091c2b2fdb2
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037590"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436912"
 ---
 # <a name="how-to-build-the-same-source-files-with-different-options"></a>如何：使用不同选项生成相同的源文件
 
@@ -52,7 +53,7 @@ ms.locfileid: "90037590"
 
 ## <a name="specify-properties-on-the-command-line"></a>在命令行上指定属性
 
-你的项目文件编写为接受多个配置后，你需要能够在生成项目时更改这些配置。 MSBuild 可以提供此功能，具体是通过允许使用 -property  或 -p  开关在命令行中指定属性。
+你的项目文件编写为接受多个配置后，你需要能够在生成项目时更改这些配置。 MSBuild 可以提供此功能，具体是通过允许使用 -property 或 -p 开关在命令行中指定属性。
 
 ### <a name="to-set-a-project-property-at-the-command-line"></a>在命令行中设置项目属性
 
@@ -62,7 +63,7 @@ ms.locfileid: "90037590"
   msbuild file.proj -property:Flavor=Debug
   ```
 
-  or
+  或
 
   ```cmd
   Msbuild file.proj -p:Flavor=Debug
@@ -76,7 +77,7 @@ ms.locfileid: "90037590"
   msbuild file.proj -p:Flavor=Debug;Platform=x86
   ```
 
-  or
+  或
 
   ```cmd
   msbuild file.proj -p:Flavor=Debug -p:Platform=x86
@@ -88,7 +89,7 @@ ms.locfileid: "90037590"
 
   你可以通过使用项目标记中的 `TreatAsLocalProperty` 属性更改此行为。 对于列出具有该特性的属性名称，在命令行上指定的属性值并不优先于项目文件中的值。 你在本主题后面找到示例。
 
-## <a name="example"></a>示例
+## <a name="example-1"></a>示例 1
 
 以下代码示例“Hello World”项目，包含两个可用于创建调试版本和发布版本的新属性组。
 
@@ -156,7 +157,7 @@ msbuild consolehwcs1.proj -p:flavor=retail
 </Project>
 ```
 
-## <a name="example"></a>示例
+## <a name="example-2"></a>示例 2
 
 以下示例介绍如何使用 `TreatAsLocalProperty` 属性。 `Color` 属性在项目文件中的值为 `Blue`，在命令行中的值为 `Green`。 借助项目标记中的 `TreatAsLocalProperty="Color"`，命令行属性 (`Green`) 不会替代项目文件中定义的属性 (`Blue`)。
 
@@ -188,7 +189,7 @@ ToolsVersion="4.0" TreatAsLocalProperty="Color">
 -->
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [MSBuild](../msbuild/msbuild.md)
 - [MSBuild 概念](../msbuild/msbuild-concepts.md)

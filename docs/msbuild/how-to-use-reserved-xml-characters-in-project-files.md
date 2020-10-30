@@ -1,5 +1,7 @@
 ---
 title: 如何：在项目文件中使用保留的 XML 字符 | Microsoft Docs
+description: 了解如何在 MSBuild 项目文件中将保留的 XML 字符替换为相应的命名实体。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a041802af1c2fe8cfa195990e6eda3e9b49d773a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: f98044378b717536c42f25f5033b072ac3680675
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633767"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436084"
 ---
 # <a name="how-to-use-reserved-xml-characters-in-project-files"></a>如何：在项目文件中使用保留的 XML 字符
 
@@ -32,7 +34,7 @@ ms.locfileid: "77633767"
 |>|&amp;gt;|
 |&|&amp;amp;|
 |"|&amp;quot;|
-|“|&amp;apos;|
+|'|&amp;apos;|
 
 #### <a name="to-use-double-quotes-in-a-project-file"></a>在项目文件中使用双引号
 
@@ -73,7 +75,7 @@ ms.locfileid: "77633767"
 </Project>
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [MSBuild 参考](../msbuild/msbuild-reference.md)
 - [MSBuild](../msbuild/msbuild.md)

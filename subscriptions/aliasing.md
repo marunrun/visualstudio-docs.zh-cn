@@ -1,18 +1,18 @@
 ---
 title: 使用别名登录 Visual Studio 订阅可能会失败 | Microsoft Docs
 author: evanwindom
-ms.author: lank
-manager: lank
+ms.author: v-evwin
+manager: cabuschl
 ms.assetid: 97bf7474-c6c2-49b3-b2c9-f1b2808eed1a
-ms.date: 10/20/2020
+ms.date: 10/22/2020
 ms.topic: conceptual
 description: 如果别名或友好名称已被使用，登录可能会失败
-ms.openlocfilehash: c5c211cd674e86edc4528e6e2c5e75bd5b02132d
-ms.sourcegitcommit: 6b62e09026b6f1446187c905b789645f967a371c
+ms.openlocfilehash: 4d9b3194cf7636106740e35b230cc02aaab7eded
+ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92298190"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92467604"
 ---
 # <a name="signing-into-visual-studio-subscriptions-may-fail-when-using-aliases"></a>使用别名登录 Visual Studio 订阅可能会失败
 根据用于登录的帐户类型，登录 [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) 时，可用订阅可能无法正确显示。 一个潜在的原因是使用了“别名”或“友好名称”来代替订阅所分配到的登录标识。 这就是所谓的“别名”。
@@ -77,7 +77,7 @@ Visual Studio 平台会排定主要别名的优先级，以显示订阅详细信
 
 ## <a name="preventing-aliasing-issues"></a>防止出现别名问题
 
-作为管理员，有两种选择可确保你的订阅者在 [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) 上成功登录。
+作为管理员，可选择两种方式来确保你的订阅者在 [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) 上成功登录。
 - 第一种选择（推荐）是将目录帐户用作 Visual Studio 订阅门户 (https://my.visualstudio.com ) 的登录名。  
 - 第二种选择（较不安全）是允许订阅者使用目录电子邮件地址以外的电子邮件地址登录。
 

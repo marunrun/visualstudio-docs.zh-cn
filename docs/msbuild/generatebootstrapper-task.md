@@ -1,5 +1,7 @@
 ---
 title: GenerateBootstrapper 任务 | Microsoft Docs
+description: 使用 MSBuild GenerateBootstrapper 任务可通过自动化方式来检测、下载和安装应用程序及其必备组件。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6da773fdf6cd84819ea0e73083995f60e3c17e2d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 83bb6b44713ba61d14c508c0db2a51391a350015
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77634079"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436476"
 ---
 # <a name="generatebootstrapper-task"></a>GenerateBootstrapper 任务
 
@@ -94,11 +96,11 @@ ms.locfileid: "77634079"
 
    指定一个位置，以供引导程序查找要安装的安装必备组件。 此参数可以具有下列值：
 
-  - `HomeSite`：指示必备组件正由组件供应商托管。
+  - `HomeSite`：指示必备组件正由组件供应商联系托管。
 
   - `Relative`：指示必备组件位于应用程序的同一位置。
 
-  - `Absolute`：指示所有组件都可在集中式 URL 处找到。 此值应与 `ComponentsUrl` 输入参数结合使用。
+  - `Absolute`：指示所有组件在集中式 URL 处找到。 此值应与 `ComponentsUrl` 输入参数结合使用。
 
     如果未指定 `ComponentsLocation`，则默认情况下使用 `HomeSite`。
 
@@ -130,7 +132,7 @@ ms.locfileid: "77634079"
 
    可选 `String` 参数。
 
-   指定用于复制 setup.exe 和所有包文件的位置  。
+   指定用于复制 setup.exe 和所有包文件的位置。
 
 - `Path`
 
@@ -179,7 +181,7 @@ ms.locfileid: "77634079"
 </Project>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [任务](../msbuild/msbuild-tasks.md)
 - [任务参考](../msbuild/msbuild-task-reference.md)

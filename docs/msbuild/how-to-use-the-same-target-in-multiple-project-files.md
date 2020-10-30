@@ -1,5 +1,7 @@
 ---
 title: 如何：在多个项目文件中使用同一目标 | Microsoft Docs
+description: 了解如何将目标保存在 MSBuild 项目文件中，然后将该项目导入任何需要使用该目标的其他项目。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4bc8f3c95c687244162cb3bd977ca40031cd8f39
-ms.sourcegitcommit: ddd99f64a3f86508892a6d61e8a33c88fb911cc4
+ms.openlocfilehash: d81328ecf17117500a5f686a45f934e451bb5809
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82255569"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436056"
 ---
 # <a name="how-to-use-the-same-target-in-multiple-project-files"></a>如何：在多个项目文件中使用同一目标
 
@@ -83,7 +85,7 @@ ms.locfileid: "82255569"
 
 3. 在项目文件中定义所有属性和项，它们必须替代已导入项目中属性和项的默认定义。
 
-## <a name="example"></a>示例
+## <a name="example-1"></a>示例 1
 
  下面的代码示例演示了第二个代码示例所导入的 MyCommon.targets 文件  。 .targets 文件将评估正在导入的项目中的属性，以配置生成  。
 
@@ -102,7 +104,7 @@ ms.locfileid: "82255569"
 </Project>
 ```
 
-## <a name="example"></a>示例
+## <a name="example-2"></a>示例 2
 
  下面的代码示例将导入 MyCommon.targets 文件  。
 

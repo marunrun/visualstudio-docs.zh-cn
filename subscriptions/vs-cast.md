@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: 92e8957f-c690-46bd-a812-3efd06a2bc6b
-ms.date: 03/02/2020
+ms.date: 10/21/2020
 ms.topic: how-to
 description: 了解有关所选 Visual Studio 订阅中包含的可用 CAST Highlight 权益
-ms.openlocfilehash: 3273ffb718249a0503531d20b882334cb76f9428
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: a6c1836724f05255c5120a336b8976ccae3cadbd
+ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005945"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92353364"
 ---
 # <a name="the-cast-highlight-benefit-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 CAST Highlight 权益
 迁移到云时，开发者需要对其软件具有深入的了解。 借助 CAST Highlight，Visual Studio 订阅者可以快速扫描其应用程序源代码，以确定其应用程序的云就绪状态，以便迁移到 Azure 并在迁移期间和迁移后监控其应用的进度。
@@ -26,14 +26,14 @@ ms.locfileid: "91005945"
 2. 在“工具”类别中找到 CAST Highlight 权益磁贴，并单击“获取代码”  。
 
    > [!div class="mx-imgBorder"]
-   > ![CAST Highlight 权益磁贴](_img/vs-cast-highlight/vs-cast-highlight-tile.png)
+   > ![CAST Highlight 权益磁贴](_img/vs-cast-highlight/vs-cast-highlight-tile.png "单击“CAST Highlight 权益”磁贴上的“获取代码”即可开始使用。")
 
 0. 你将看到一条消息，告知你已成功检索到你的代码。  单击“激活”  。 （如果不选择立即激活，则可以随时返回订阅门户中的 CAST Highlight 磁贴。  “获取代码”链接将更改为“激活”，单击它即可继续下一步激活过程。）
 
 0. 你将被重定向到 CAST Highlight 页，可在其中浏览订阅的功能。  当准备好创建帐户时，只需在 Web 窗体中提供联系信息，然后点击“提交”  。
 
     > [!div class="mx-imgBorder"]
-    > ![CAST Highlight 登录页](_img/vs-cast-highlight/vs-cast-highlight-landing.png)
+    > ![CAST Highlight 登录页](_img/vs-cast-highlight/vs-cast-highlight-landing.png "提供个人信息以激活 CAST 订阅。")
 
    > [!NOTE]
    > CAST Highlight 权益的激活限制为每个组织 10 次。  如果组织已使用了 10 次激活，你将无法激活 CAST Highlight 权益，且你将收到一封包含更多信息的电子邮件。

@@ -1,5 +1,7 @@
 ---
 title: GetOutputFileName 任务 | Microsoft Docs
+description: 使用 MSBuild GetOutputFileName 帮助程序任务可指定 cl.exe 和其他工具的输出文件名选项。
+ms.custom: SEO-VS-2020
 ms.date: 03/10/2019
 ms.topic: reference
 f1_keywords:
@@ -17,12 +19,12 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: d66a7be3751e74ff75787ef194f90da1dcd1d3ce
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: cb4670bb84b151332951608f7b20ef5ea44e59a3
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75593286"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436784"
 ---
 # <a name="getoutputfilename-task"></a>GetOutputFileName 任务
 
@@ -35,9 +37,9 @@ ms.locfileid: "75593286"
 |参数|说明|
 |---------------|-----------------|
 |**OutputExtension**|必需的 **String** 参数。|
-|**OutputFile**|可选的 string  输出参数。|
+|**OutputFile**|可选的 string 输出参数。|
 |**OutputPath**|可选的 string  参数。|
-|SourceFile |必需的 **String** 参数。|
+|SourceFile|必需的 **String** 参数。|
 
 ## <a name="see-also"></a>另请参阅
 

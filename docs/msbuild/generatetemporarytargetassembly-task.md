@@ -1,5 +1,7 @@
 ---
 title: GenerateTemporaryTargetAssembly 任务 | Microsoft Docs
+description: 使用 MSBuild GenerateTemporaryTargetAssembly 任务可在项目引用本地声明的类型时生成程序集。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 69333b87720513244e90c131f052d11099b62e35
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 0a100ad8a3be57288e49a858d6f87851269df303
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77634040"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436763"
 ---
 # <a name="generatetemporarytargetassembly-task"></a>GenerateTemporaryTargetAssembly 任务
 
@@ -31,23 +33,23 @@ ms.locfileid: "77634040"
 
 ## <a name="task-parameters"></a>任务参数
 
-| 参数 | 描述 |
+| 参数 | 说明 |
 |--------------------------| - |
-| `AssemblyName` | 必需的 **String** 参数。<br /><br /> 指定为项目生成的程序集的短名称，该名称同时也是临时生成的目标程序集的名称。 例如，如果项目生成一个名为 WinExeAssembly.exe 的 Windows 可执行文件，则 AssemblyName 参数的值为 WinExeAssembly    。 |
-| `CompileTargetName` | 必需的 **String** 参数。<br /><br /> 指定用于从源代码文件生成程序集的 MSBuild 目标的名称。 **CompileTargetName** 的典型值为 **CoreCompile**。 |
-| `CompileTypeName` | 必需的 **String** 参数。<br /><br /> 指定由 **CompileTargetName** 参数所指定目标执行的编译的类型。 对于 **CoreCompile** 目标，此值为 **Compile**。 |
+| `AssemblyName` | 必需的 **String** 参数。<br /><br /> 指定为项目生成的程序集的短名称，该名称同时也是临时生成的目标程序集的名称。 例如，如果项目生成一个名为 WinExeAssembly.exe 的 Windows 可执行文件，则 AssemblyName 参数的值为 WinExeAssembly 。 |
+| `CompileTargetName` | 必需的 **String** 参数。<br /><br /> 指定用于从源代码文件生成程序集的 MSBuild 目标的名称。 **CompileTargetName** 的典型值为 **CoreCompile** 。 |
+| `CompileTypeName` | 必需的 **String** 参数。<br /><br /> 指定由 **CompileTargetName** 参数所指定目标执行的编译的类型。 对于 **CoreCompile** 目标，此值为 **Compile** 。 |
 | `CurrentProject` | 必需的 **String** 参数。<br /><br /> 为需要临时目标程序集的项目指定 MSBuild 项目文件的完整路径。 |
 | `GeneratedCodeFiles` | 可选的 **ITaskItem[]** 参数。<br /><br /> 指定由 [MarkupCompilePass1](../msbuild/markupcompilepass1-task.md) 任务生成的语言特定托管代码文件列表。 |
 | `IntermediateOutputPath` | 必需的 **String** 参数。<br /><br /> 指定在其中生成临时目标程序集的目录。 |
 | `MSBuildBinPath` | 必需的 **String** 参数。<br /><br /> 指定编译临时目标程序集所需的 *MSBuild.exe* 的位置。 |
 | `ReferencePath` | 可选的 **ITaskItem[]** 参数。<br /><br /> 按路径和文件名指定一列由编译到临时目标程序集中的类型所引用的程序集。 |
-| `ReferencePathTypeName` | 必需的 **String** 参数。<br /><br /> 指定编译目标 (**CompileTargetName**) 参数用于指定程序集引用列表 (**ReferencePath**) 的参数。 相应的值为 **ReferencePath**。 |
+| `ReferencePathTypeName` | 必需的 **String** 参数。<br /><br /> 指定编译目标 ( **CompileTargetName** ) 参数用于指定程序集引用列表 ( **ReferencePath** ) 的参数。 相应的值为 **ReferencePath** 。 |
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 第一个标记编译传递过程（由 [MarkupCompilePass1](../msbuild/markupcompilepass1-task.md) 运行）会将 XAML 文件编译为二进制格式。 因此，编译器需要一列其中包含 XAML 文件所使用的类型的引用程序集。 但是，如果 XAML 文件使用在同一项目中定义的类型，则直到该项目生成时才会创建该项目对应的程序集。 因此，在第一个标记编译传递期间无法提供程序集引用。
 
-但是，MarkupCompilePass1  会将包含对同一项目中类型的引用的=XAML 文件转换推迟到由 [MarkupCompilePass2](../msbuild/markupcompilepass2-task.md) 执行的第二个标记编译传递。 **MarkupCompilePass2** 执行前会生成一个临时程序集。 此程序集包含推迟了标记编译传递的 XAML 文件所使用的类型。 在其运行以允许被推迟的编译 XAML 文件转换为二进制格式时，会向 MarkupCompilePass2  提供一个对已生成程序集的引用。
+但是，MarkupCompilePass1 会将包含对同一项目中类型的引用的=XAML 文件转换推迟到由 [MarkupCompilePass2](../msbuild/markupcompilepass2-task.md) 执行的第二个标记编译传递。 **MarkupCompilePass2** 执行前会生成一个临时程序集。 此程序集包含推迟了标记编译传递的 XAML 文件所使用的类型。 在其运行以允许被推迟的编译 XAML 文件转换为二进制格式时，会向 MarkupCompilePass2 提供一个对已生成程序集的引用。
 
 ## <a name="example"></a>示例
 

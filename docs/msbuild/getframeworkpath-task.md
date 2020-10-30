@@ -1,5 +1,7 @@
 ---
 title: GetFrameworkPath 任务 | Microsoft Docs
+description: 了解如何使用 MSBuild GetFrameworkPath 任务检索 .NET Framework 程序集的路径。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b907194c4818ff6b867e9d15b795506ef3b77476
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 8d54a1029805066f5477cb552f5fcf3f2e09598b
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77634001"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436843"
 ---
 # <a name="getframeworkpath-task"></a>GetFrameworkPath 任务
 
@@ -34,7 +36,7 @@ ms.locfileid: "77634001"
 
 下表描述了 `GetFrameworkPath` 任务的参数。
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |`FrameworkVersion11Path`|可选 `String` 输出参数。<br /><br /> 包含 framework 1.1 版程序集的路径（如存在）。 否则返回 `null`。|
 |`FrameworkVersion20Path`|可选 `String` 输出参数。<br /><br /> 包含 framework 2.0 版程序集的路径（如存在）。 否则返回 `null`。|
@@ -43,7 +45,7 @@ ms.locfileid: "77634001"
 |`FrameworkVersion40Path`|可选 `String` 输出参数。<br /><br /> 包含 framework 4.0 版程序集的路径（如存在）。 否则返回 `null`。|
 |`Path`|可选 `String` 输出参数。<br /><br /> 包含最新 framework 程序集的路径（如存在）。 否则返回 `null`。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 如果安装了多个版本的 .NET Framework，则此任务会返回运行 MSBuild 所需的版本。
 
@@ -65,7 +67,7 @@ ms.locfileid: "77634001"
 </Project>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [任务](../msbuild/msbuild-tasks.md)
 - [任务参考](../msbuild/msbuild-task-reference.md)
