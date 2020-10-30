@@ -1,5 +1,7 @@
 ---
 title: XAML 错误和警告
+description: 了解 Visual Studio 中的 XAML 错误和警告，包括如何对错误进行分类，如何获取错误信息，以及如何找到用于修复这些错误的选项。
+ms.custom: SEO-VS-2020
 ms.date: 03/06/2018
 ms.topic: error-reference
 ms.assetid: 34eac8a0-7ec5-4c40-b97a-0126ed367931
@@ -8,16 +10,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 968e4167da1f8fd9bce21784a011d970014e1b4e
-ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
+ms.openlocfilehash: 83a68273f4fbb2f66986c18c692b91b6e1829a4c
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92467552"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93049226"
 ---
 # <a name="xaml-errors-and-warnings"></a>XAML 错误和警告
 
-创作 XAML 时，Visual Studio 会分析键入的代码。 检测到错误时，代码行上会出现波浪线。 光标悬停在波浪线上可获取错误或警告的详细信息。 对于某些错误和警告，将显示快速操作灯泡，并使用**Ctrl** + **。** 键盘快捷方式可问题修复选项。
+创作 XAML 时，Visual Studio 会分析键入的代码。 检测到错误时，代码行上会出现波浪线。 光标悬停在波浪线上可获取错误或警告的详细信息。 对于某些错误和警告，将显示快速操作灯泡，并使用 **Ctrl** + **。** 键盘快捷方式可问题修复选项。
 
 ## <a name="error-types"></a>错误类型
 
@@ -37,8 +39,8 @@ ms.locfileid: "92467552"
 
 ## <a name="suppress-xaml-designer-errors"></a>取消显示 XAML 设计器错误
 
-选择“工具”和“选项”，再选择“文本编辑器”和“XAML”>“其他”，即可打开“选项”对话框************。
+选择“工具”和“选项”，再选择“文本编辑器”和“XAML”>“其他”，即可打开“选项”对话框  。
 
-取消选中“显示 XAML 设计器检测到的错误”复选框****。
+取消选中“显示 XAML 设计器检测到的错误”复选框  。
 
 ![取消显示 XAML 设计器错误](media/suppress_xaml_designer_errors.png)
