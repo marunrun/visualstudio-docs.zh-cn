@@ -1,16 +1,18 @@
 ---
 title: XAML 概述
+description: 了解 Visual Studio 中的 XAML 和 XAML 代码编辑器及 XAML 设计器工具的基本信息。
+ms.custom: SEO-VS-2020
 ms.date: 06/23/2020
 ms.topic: overview
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: e14e23f9820301374bd435484ba784edf50294bb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 997a35414f38af16d028770044c28652e13149be
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85331941"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93049188"
 ---
 # <a name="overview-of-xaml"></a>XAML 概述
 
