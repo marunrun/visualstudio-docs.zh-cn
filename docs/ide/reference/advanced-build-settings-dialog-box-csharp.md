@@ -1,5 +1,7 @@
 ---
 title: “高级生成设置”对话框 (C#)
+description: 了解如何使用 Visual Studio 指定项目的高级生成配置属性。
+ms.custom: SEO-VS-2020
 ms.date: 08/05/2019
 ms.technology: vs-ide-compile
 ms.topic: reference
@@ -13,16 +15,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 917ef4ff685c243fa271a0966a931151cb12ed2b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 145fc1ad1dddfa4d0648e2ecc7a8d85263744d49
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85418842"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136740"
 ---
 # <a name="advanced-build-settings-dialog-box-c"></a>“高级生成设置”对话框 (C#)
 
-使用“项目设计器”的“高级生成设置”对话框可指定项目的高级生成配置属性   。 此对话框仅适用于 C# 项目。
+使用“项目设计器”的“高级生成设置”对话框可指定项目的高级生成配置属性。 此对话框仅适用于 C# 项目。
 
 ## <a name="general"></a>常规
 
@@ -46,7 +48,7 @@ ms.locfileid: "85418842"
 
 **内部编译器错误报告**
 
-指定是否向 Microsoft 报告编译器错误。 如果设置为“提示”  （默认），则在发生内部编译器错误时将收到提示，可以选择向 Microsoft 发送电子版错误报告。 如果设置为“发送”  ，则将自动发送错误报告。 如果设置为“队列”  ，则错误报告将排入队列。 如果设置为“无”  ，将仅在编译器的文本输出中报告错误。 有关详细信息，请参阅 [/errorreport（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/errorreport-compiler-option)。
+指定是否向 Microsoft 报告编译器错误。 如果设置为“提示”（默认），则在发生内部编译器错误时将收到提示，可以选择向 Microsoft 发送电子版错误报告。 如果设置为“发送”，则将自动发送错误报告。 如果设置为“队列”，则错误报告将排入队列。 如果设置为“无”，将仅在编译器的文本输出中报告错误。 有关详细信息，请参阅 [/errorreport（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/errorreport-compiler-option)。
 
 **检查运算上溢/下溢**
 
@@ -64,7 +66,7 @@ ms.locfileid: "85418842"
 
 指定编译器生成的调试信息的类型。 有关如何配置应用程序的调试性能的信息，请参阅[令映像更易于调试](/dotnet/framework/debug-trace-profile/making-an-image-easier-to-debug)。 此设置具有以下选项：
 
-- **none**
+- **无**
 
    指定不会生成任何调试信息。
 
@@ -88,7 +90,7 @@ ms.locfileid: "85418842"
 
 **文件对齐**
 
-指定输出文件中各节的大小。 有效值为 **512**、**1024**、**2048**、**4096** 和 **8192**。 这些值以字节为单位。 每一节都在边界（此值的倍数）上对齐，这会影响输出文件的大小。 有关详细信息，请参阅 [/filealign（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/filealign-compiler-option)。
+指定输出文件中各节的大小。 有效值为 **512** 、 **1024** 、 **2048** 、 **4096** 和 **8192** 。 这些值以字节为单位。 每一节都在边界（此值的倍数）上对齐，这会影响输出文件的大小。 有关详细信息，请参阅 [/filealign（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/filealign-compiler-option)。
 
 **库基址**
 

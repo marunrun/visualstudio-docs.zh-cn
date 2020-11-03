@@ -1492,3 +1492,8 @@
       href: ide/developer-community-guidelines.md
     - name: 开发人员社区数据隐私
       href: ide/developer-community-privacy.md
+- name: Visual Studio 2015
+  expanded: true
+  items:
+    - name: Visual Studio 2015 文档
+      href: vs-2015-archive.md
