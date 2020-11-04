@@ -8,10 +8,10 @@ ms.date: 07/30/2020
 ms.topic: conceptual
 description: 了解如何在 Visual Studio 订阅中查找、声明和导出产品密钥
 ms.openlocfilehash: a246f66e429b78647f217468c7c19b703b419062
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
+ms.lasthandoff: 11/01/2020
 ms.locfileid: "91004962"
 ---
 # <a name="finding-and-claiming-product-keys-in-visual-studio-subscriptions"></a>在 Visual Studio 订阅中查找和声明产品密钥

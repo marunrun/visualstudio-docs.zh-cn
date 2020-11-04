@@ -8,10 +8,10 @@ ms.date: 09/03/2020
 ms.topic: how-to
 description: 了解如何向订阅管理门户添加新购买的每月 Visual Studio 订阅
 ms.openlocfilehash: f6b835969fff3a8316a2b46c6e15217ebe3e33b1
-ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2020
+ms.lasthandoff: 11/01/2020
 ms.locfileid: "92467591"
 ---
 # <a name="add-new-monthly-visual-studio-subscriptions-to-the-subscriptions-administration-portal"></a>向订阅管理门户添加新的每月 Visual Studio 订阅

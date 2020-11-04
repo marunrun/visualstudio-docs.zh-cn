@@ -1,5 +1,6 @@
 ---
-title: 常用命令的默认键盘快捷键
+title: 常用命令的键盘快捷方式
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 author: TerryGLee
@@ -7,12 +8,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c7aebdc4c734f6831dc6ec1315aa7263b73cd30b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 64c3a163f706898dfb358b15279e62729f40cf84
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75596718"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93045663"
 ---
 # <a name="popular-keyboard-shortcuts-for-visual-studio"></a>Visual Studio 的常用键盘快捷方式
 
@@ -57,9 +58,9 @@ ms.locfileid: "75596718"
 |命令|键盘快捷方式 [上下文]|
 |--------------| - |
 |编辑.分行|**Enter** [文本编辑器、报表设计器、Windows 窗体设计器]<br /><br />或 **Shift+Enter** [文本编辑器]|
-|Edit.CollapseToDefinitions|**Ctrl+M**、**Ctrl+O** [文本编辑器]|
-|编辑.注释选定内容|**Ctrl+K**、**Ctrl+C** [文本编辑器]|
-|编辑.完成单词|**Alt+向右键** [文本编辑器、工作流设计器]<br /><br />或 **Ctrl+空格键** [文本编辑器、工作流设计器]<br /><br />或 **Ctrl+K**、**W** [工作流设计器]<br /><br />或 **Ctrl+K、Ctrl+W** [工作流设计器]|
+|Edit.CollapseToDefinitions|**Ctrl+M** 、 **Ctrl+O** [文本编辑器]|
+|编辑.注释选定内容|**Ctrl+K** 、 **Ctrl+C** [文本编辑器]|
+|编辑.完成单词|**Alt+向右键** [文本编辑器、工作流设计器]<br /><br />或 **Ctrl+空格键** [文本编辑器、工作流设计器]<br /><br />或 **Ctrl+K** 、 **W** [工作流设计器]<br /><br />或 **Ctrl+K、Ctrl+W** [工作流设计器]|
 |编辑.复制|**Ctrl+C** [全局]<br /><br />或 **Ctrl+Insert** [全局]|
 |编辑.剪切|**Ctrl+X** [全局]<br /><br />或 **Shift+Delete** [全局]|
 |编辑.删除|**Delete** [全局、团队资源管理器]<br /><br />或 **Shift+Delete** [序列图、UML 活动图、层关系图]<br /><br />或 **Ctrl+Delete** [类图]|
@@ -75,7 +76,7 @@ ms.locfileid: "75596718"
 |编辑.转到定义|**F12**|
 |编辑.转到查找组合框|**Ctrl+D** [全局]|
 |编辑.转到下一个位置|**F8** [全局]|
-|编辑.插入代码片段|**Ctrl+K**、**Ctrl+X** [全局]|
+|编辑.插入代码片段|**Ctrl+K** 、 **Ctrl+X** [全局]|
 |编辑.插入制表符|**Tab** [报表设计器、Windows 窗体设计器、文本编辑器]|
 |编辑.剪切行|**Ctrl+L** [文本编辑器]|
 |编辑.向下扩展列|**Shift+Alt+向下箭** [文本编辑器]|
