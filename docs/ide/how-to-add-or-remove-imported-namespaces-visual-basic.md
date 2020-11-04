@@ -1,5 +1,6 @@
 ---
-title: 如何：添加或移除导入的命名空间 (Visual Basic)
+title: 添加或删除导入的命名空间 (Visual Basic)
+ms.custom: SEO-VS-2020
 ms.date: 06/21/2017
 ms.topic: how-to
 helpviewer_keywords:
@@ -14,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a50fdb643029bed8a44ce6999d4a8ce062ba3dcf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ff6b63db07d515e85c4c756f8d302d292c62dd50
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85284734"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047099"
 ---
 # <a name="how-to-add-or-remove-imported-namespaces-visual-basic"></a>如何：添加或移除导入的命名空间 (Visual Basic)
 
