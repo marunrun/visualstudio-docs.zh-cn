@@ -4,17 +4,16 @@ description: 了解如何根据你对该项目的要求在 Visual Studio 中配�
 author: ghogen
 manager: jillfra
 assetId: 609d6965-05cc-47b1-82dc-c76a92d4f295
-ms.custom: vs-azure
 ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 03/06/2017
 ms.author: ghogen
-ms.openlocfilehash: 7f207afc600402924969e4d2eee6df229c3d6f09
-ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
+ms.openlocfilehash: 388cd20468624c6441342267f6545dfaf0e21901
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89426715"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93399141"
 ---
 # <a name="configure-an-azure-cloud-service-project-with-visual-studio"></a>使用 Visual Studio 配置 Azure 云服务项目
 可根据你对 Azure 云服务项目的要求来对其进行配置。 可针对以下类别设置项目的属性：
@@ -26,23 +25,23 @@ ms.locfileid: "89426715"
 ## <a name="steps-to-configure-an-azure-cloud-service-project"></a>配置 Azure 云服务项目的步骤
 1. 在 Visual Studio 中打开或创建 Azure 云服务项目
 
-1. 在“解决方案资源管理器”中右键单击项目，并从上下文菜单中选择“属性”。********
+1. 在“解决方案资源管理器”中右键单击项目，并从上下文菜单中选择“属性”。
 
-1. 在项目的属性页中，选择“开发”选项卡。****
+1. 在项目的属性页中，选择“开发”选项卡。
 
     ![“项目属性”菜单](./media/vs-azure-tools-configuring-an-azure-project/solution-explorer-project-properties-menu.png)
 
-1. 将“删除现有部署前提示”**** 设为“True”****。 此设置有助于确保不会意外删除 Azure 中的现有部署
+1. 将“删除现有部署前提示”设为“True”。 此设置有助于确保不会意外删除 Azure 中的现有部署
 
-1. 若要指示在本地运行或调试云服务时要使用的服务配置，请选择所需**服务配置**。 有关如何修改角色的服务配置的详细信息，请参阅[如何使用 Visual Studio 配置 Azure 云服务的角色](./vs-azure-tools-configure-roles-for-cloud-service.md)。
+1. 若要指示在本地运行或调试云服务时要使用的服务配置，请选择所需 **服务配置** 。 有关如何修改角色的服务配置的详细信息，请参阅[如何使用 Visual Studio 配置 Azure 云服务的角色](./vs-azure-tools-configure-roles-for-cloud-service.md)。
 
 1. 若要在本地运行或调试云服务时启动 Azure 存储模拟器，请将 " **启动 Azure 存储模拟器** " 设置为 " **True** "。
 
-1. 要确保在出现包验证错误时无法发布，请将“将警告视为错误”**** 设为“True”****。
+1. 要确保在出现包验证错误时无法发布，请将“将警告视为错误”设为“True”。
 
-1. 要确保 Web 角色每次在 IIS Express 中本地启动时都使用同一端口，请将“使用 Web 项目端口”**** 设为“True”****。
+1. 要确保 Web 角色每次在 IIS Express 中本地启动时都使用同一端口，请将“使用 Web 项目端口”设为“True”。
 
-1. 从 Visual Studio 工具栏中，选择“保存”****。
+1. 从 Visual Studio 工具栏中，选择“保存”。
 
 ## <a name="next-steps"></a>后续步骤
 - [使用多种服务配置来配置 Azure 项目](vs-azure-tools-multiple-services-project-configurations.md)

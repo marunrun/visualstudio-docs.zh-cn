@@ -5,17 +5,16 @@ author: mikejo5000
 manager: jillfra
 ms.assetid: 945e06e0-2100-41af-b218-72347367ddab
 ms.topic: how-to
-ms.custom: vs-azure
 ms.workload: azure-vs
 ms.date: 11/11/2016
 ms.author: mikejo
 ms.technology: vs-ide-debug
-ms.openlocfilehash: 00b6d001a8764d3519f0584de88a55a000447054
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: cd55ebd9171a7f9cd2157194da8876f47aa22ece
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89508478"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93398691"
 ---
 # <a name="debugging-an-azure-cloud-service-or-virtual-machine-in-visual-studio"></a>在 Visual Studio 中调试云服务或虚拟机
 
@@ -29,11 +28,11 @@ Visual Studio 提供了不同的选项来调试 Azure 云服务和虚拟机。
 
 ### <a name="to-debug-your-cloud-service-on-your-local-computer"></a>在本地计算机上调试云服务
 
-1. 在菜单栏上，选择 "**调试**" "  >  **开始调试**" 以运行 Azure 云服务项目。 或者，可以按 F5。 会看到一条消息，计算模拟器正在启动。 当该模拟器启动时，系统托盘图标会对其进行确认。
+1. 在菜单栏上，选择 " **调试** " "  >  **开始调试** " 以运行 Azure 云服务项目。 或者，可以按 F5。 会看到一条消息，计算模拟器正在启动。 当该模拟器启动时，系统托盘图标会对其进行确认。
 
     ![系统托盘中的 Azure 模拟器](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC783828.png)
 
-2. 打开通知区域中的 Azure 图标快捷菜单，并选择“显示计算模拟器 UI”，从而显示计算模拟器的用户界面。****
+2. 打开通知区域中的 Azure 图标快捷菜单，并选择“显示计算模拟器 UI”，从而显示计算模拟器的用户界面。
 
     UI 的左窗格显示了当前部署到计算模拟器的服务以及每项服务正在运行的角色实例。 可选择服务或角色，以便在右窗格中显示生命周期、日志记录和诊断信息。 如果将焦点置于包括窗口的上边距中，则该窗口将展开以填写右侧窗格。
 
@@ -49,19 +48,19 @@ Visual Studio 提供了不同的选项来调试 Azure 云服务和虚拟机。
 为云服务启用远程调试不会导致性能下降或费用增加。 请勿在生产服务上使用远程调试，因为使用该服务的客户端可能会受到不利影响。
 
 > [!NOTE]
-> 当从 Visual Studio 中发布云服务时，可以为该服务中所有以 .NET Framework 4 或 .NET Framework 4.5 为目标的角色启用 **IntelliTrace**。 使用 **IntelliTrace** 可以检查过去发生在某个角色实例中的事件，并重现当时的上下文。 请参阅[使用 IntelliTrace 和 Visual Studio 调试已发布的云服务](vs-azure-tools-IntelliTrace-debug-published-cloud-services.md)和[使用 IntelliTrace 进行调试](../debugger/intellitrace.md)。
+> 当从 Visual Studio 中发布云服务时，可以为该服务中所有以 .NET Framework 4 或 .NET Framework 4.5 为目标的角色启用 **IntelliTrace** 。 使用 **IntelliTrace** 可以检查过去发生在某个角色实例中的事件，并重现当时的上下文。 请参阅[使用 IntelliTrace 和 Visual Studio 调试已发布的云服务](vs-azure-tools-IntelliTrace-debug-published-cloud-services.md)和[使用 IntelliTrace 进行调试](../debugger/intellitrace.md)。
 
 ### <a name="to-enable-remote-debugging-for-a-cloud-service"></a>为云服务启用远程调试
 
-1. 打开 Azure 项目的快捷菜单，并选择“发布”。****
+1. 打开 Azure 项目的快捷菜单，并选择“发布”。
 
-2. 选择“过渡”环境和“调试”配置。********
+2. 选择“过渡”环境和“调试”配置。
 
     这些内容仅供指导。 可以选择在生产环境中运行测试环境。 但是，如果在生产环境中启用远程调试，则可能会对用户造成不利影响。 可以选择“发布”配置，但是，“调试”配置能使调试变得更轻松。
 
     ![选择调试配置](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC746717.gif)
 
-3. 请按照一般步骤进行操作，但在“高级设置”选项卡上选中“为所有角色启用远程调试器”复选框。********
+3. 请按照一般步骤进行操作，但在“高级设置”选项卡上选中“为所有角色启用远程调试器”复选框。
 
     ![调试配置](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC746718.gif)
 
@@ -69,7 +68,7 @@ Visual Studio 提供了不同的选项来调试 Azure 云服务和虚拟机。
 
 1. 在“服务器资源管理器”中，展开云服务的节点。
 
-2. 打开要附加的角色或角色实例的快捷菜单，并选择“附加调试器”。****
+2. 打开要附加的角色或角色实例的快捷菜单，并选择“附加调试器”。
 
     如果要调试某个角色，Visual Studio 调试器将附加到该角色的每个实例中。 对于运行某个断点所在的代码行并符合该断点的所有条件的第一个角色实例，调试器会在该断点位置中断。 如果调试某个实例，调试器将只附加到该实例，并且仅当该特定实例运行某个断点所在的代码行并符合该断点的条件时，调试器才在该断点位置中断。
 
@@ -79,14 +78,14 @@ Visual Studio 提供了不同的选项来调试 Azure 云服务和虚拟机。
 
     ![选择代码类型对话框](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC718346.png)
 
-4. 若要确定调试器附加到的进程，请在菜单栏上选择 "**调试**  >  **Windows**  >  **进程**"，并打开 "**进程**" 对话框。 （键盘操作：Ctrl+Alt+Z）要分离特定的进程，请打开其快捷菜单，然后选择“分离进程”****。 或者，在“服务器资源管理器”中找到实例节点，找到该进程，打开其快捷菜单，并选择“分离进程”。****
+4. 若要确定调试器附加到的进程，请在菜单栏上选择 " **调试**  >  **Windows**  >  **进程** "，并打开 " **进程** " 对话框。 （键盘操作：Ctrl+Alt+Z）要分离特定的进程，请打开其快捷菜单，然后选择“分离进程”。 或者，在“服务器资源管理器”中找到实例节点，找到该进程，打开其快捷菜单，并选择“分离进程”。
 
     ![调试进程](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC690787.gif)
 
 > [!WARNING]
 > 远程调试时避免长时间停止在断点处。 Azure 会将停止时间超过数分钟的进程视为无响应，并停止向相应的实例发送流量。 如果停止时间太长，msvsmon.exe 将与进程分离。
 
-要将调试器与实例或角色中的所有进程分离，请打开要调试的角色或实例的快捷菜单，然后选择“分离调试器”。****
+要将调试器与实例或角色中的所有进程分离，请打开要调试的角色或实例的快捷菜单，然后选择“分离调试器”。
 
 ## <a name="limitations-of-remote-debugging-in-azure"></a>在 Azure 中进行远程调试的限制
 
@@ -110,7 +109,7 @@ Visual Studio 提供了不同的选项来调试 Azure 云服务和虚拟机。
 
 1. 在“服务器资源管理器”中，展开“虚拟机”节点并选择要调试的虚拟机的节点。
 
-2. 打开上下文菜单，并选择“启用调试”。**** 当系统询问是否确定要在虚拟机上启用调试时，请选择“是”。****
+2. 打开上下文菜单，并选择“启用调试”。 当系统询问是否确定要在虚拟机上启用调试时，请选择“是”。
 
     Azure 会在该虚拟机上安装远程调试扩展以启用调试。
 
@@ -118,17 +117,17 @@ Visual Studio 提供了不同的选项来调试 Azure 云服务和虚拟机。
 
     ![Azure 活动日志](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC746721.png)
 
-3. 远程调试扩展安装完毕后，打开虚拟机的上下文菜单，并选择“附加调试器...”****
+3. 远程调试扩展安装完毕后，打开虚拟机的上下文菜单，并选择“附加调试器...”
 
     Azure 将获取虚拟机上的进程的列表，并在 **“附加到进程”** 对话框中显示这些进程。
 
     ![附加调试器命令](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC746722.png)
 
-4. 在“附加到进程”对话框中，选择“选择”以将结果列表限制为仅显示要调试的代码类型。******** 可以调试 32 位或 64 位托管代码和/或本机代码。
+4. 在“附加到进程”对话框中，选择“选择”以将结果列表限制为仅显示要调试的代码类型。 可以调试 32 位或 64 位托管代码和/或本机代码。
 
     ![选择代码类型对话框](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC718346.png)
 
-5. 选择要在虚拟机上调试的进程，然后选择 " **附加**"。 例如，如果要调试虚拟机上的某个 Web 应用，则可以选择 w3wp.exe 进程。 有关详细信息，请参阅[在 Visual Studio 中调试一个或多个进程](../debugger/debug-multiple-processes.md)和 [Azure 角色体系结构](/archive/blogs/kwill/windows-azure-role-architecture)。
+5. 选择要在虚拟机上调试的进程，然后选择 " **附加** "。 例如，如果要调试虚拟机上的某个 Web 应用，则可以选择 w3wp.exe 进程。 有关详细信息，请参阅[在 Visual Studio 中调试一个或多个进程](../debugger/debug-multiple-processes.md)和 [Azure 角色体系结构](/archive/blogs/kwill/windows-azure-role-architecture)。
 
 ## <a name="create-a-web-project-and-a-virtual-machine-for-debugging"></a>创建用于调试的 Web 项目和虚拟机
 
@@ -140,7 +139,7 @@ Visual Studio ASP.NET 项目提供了一个选项，可创建用于应用程序�
 
 1. 在 Visual Studio 中创建一个新的 ASP.NET Web 应用程序。
 
-2. 在 "新建 ASP.NET 项目" 对话框的 "Azure" 部分中，在下拉列表框中选择 " **虚拟机** "。 保留 **“创建远程资源”** 复选框的选中状态。 选择“确定”以继续。****
+2. 在 "新建 ASP.NET 项目" 对话框的 "Azure" 部分中，在下拉列表框中选择 " **虚拟机** "。 保留 **“创建远程资源”** 复选框的选中状态。 选择“确定”以继续。
 
     此时将出现 **“在 Azure 上创建虚拟机”** 对话框。
 
@@ -149,7 +148,7 @@ Visual Studio ASP.NET 项目提供了一个选项，可创建用于应用程序�
     > [!NOTE]
     > 如果尚未登录到 Azure 帐户，系统将要求登录。
 
-3. 选择虚拟机的各种设置，然后选择 **"确定"**。 有关详细信息，请参阅[虚拟机](/azure/virtual-machines/)。
+3. 选择虚拟机的各种设置，然后选择 **"确定"** 。 有关详细信息，请参阅[虚拟机](/azure/virtual-machines/)。
 
     为 DNS 名称输入的名称也就是虚拟机的名称。
 
@@ -159,7 +158,7 @@ Visual Studio ASP.NET 项目提供了一个选项，可创建用于应用程序�
 
 4. 完全配置好虚拟机后，请在“服务器资源管理器”中选择该虚拟机的节点。
 
-5. 打开上下文菜单，并选择“启用调试”。**** 当系统询问是否确定要在虚拟机上启用调试时，请选择“是”。****
+5. 打开上下文菜单，并选择“启用调试”。 当系统询问是否确定要在虚拟机上启用调试时，请选择“是”。
 
     Azure 会在该虚拟机上安装远程调试扩展以启用调试。
 
@@ -171,22 +170,22 @@ Visual Studio ASP.NET 项目提供了一个选项，可创建用于应用程序�
 
     ![发布设置](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC718349.png)
 
-7. 如果以前已经部署了该项目，请在 **“文件发布选项”** 中，选择 **“删除目标位置的其他文件”**。
+7. 如果以前已经部署了该项目，请在 **“文件发布选项”** 中，选择 **“删除目标位置的其他文件”** 。
 
-8. 发布项目之后，在服务器资源管理器中该虚拟机的上下文菜单上，选择“附加调试器...”****
+8. 发布项目之后，在服务器资源管理器中该虚拟机的上下文菜单上，选择“附加调试器...”
 
     Azure 将获取虚拟机上的进程的列表，并在 **“附加到进程”** 对话框中显示这些进程。
 
     ![附加调试器命令](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC746722.png)
 
-9. 在“附加到进程”对话框中，选择“选择”以将结果列表限制为仅显示要调试的代码类型。******** 可以调试 32 位或 64 位托管代码和/或本机代码。
+9. 在“附加到进程”对话框中，选择“选择”以将结果列表限制为仅显示要调试的代码类型。 可以调试 32 位或 64 位托管代码和/或本机代码。
 
     ![选择代码类型对话框](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC718346.png)
 
-10. 选择要在虚拟机上调试的进程，然后选择 " **附加**"。 例如，如果要调试虚拟机上的某个 Web 应用，则可以选择 w3wp.exe 进程。 有关详细信息，请参阅[在 Visual Studio 中调试一个或多个进程](../debugger/debug-multiple-processes.md)。
+10. 选择要在虚拟机上调试的进程，然后选择 " **附加** "。 例如，如果要调试虚拟机上的某个 Web 应用，则可以选择 w3wp.exe 进程。 有关详细信息，请参阅[在 Visual Studio 中调试一个或多个进程](../debugger/debug-multiple-processes.md)。
 
 ## <a name="next-steps"></a>后续步骤
 
 * 使用 **IntelliTrace** 从发布服务器中收集调用和事件的日志。 请参阅[使用 IntelliTrace 和 Visual Studio 调试已发布的云服务](vs-azure-tools-IntelliTrace-debug-published-cloud-services.md)。
 
-* 使用“Azure 诊断”以记录在角色内运行的代码的详细信息，角色是否在开发环境或 Azure 中运行。**** 请参阅[使用 Azure 诊断收集日志记录数据](/azure/cloud-services/cloud-services-dotnet-diagnostics)。
+* 使用“Azure 诊断”以记录在角色内运行的代码的详细信息，角色是否在开发环境或 Azure 中运行。 请参阅[使用 Azure 诊断收集日志记录数据](/azure/cloud-services/cloud-services-dotnet-diagnostics)。
