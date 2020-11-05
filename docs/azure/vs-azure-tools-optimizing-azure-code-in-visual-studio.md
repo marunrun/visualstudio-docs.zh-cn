@@ -5,16 +5,15 @@ author: ghogen
 manager: jillfra
 ms.assetid: ed48ee06-e2d2-4322-af22-07200fb16987
 ms.topic: conceptual
-ms.custom: vs-azure
 ms.workload: azure-vs
 ms.date: 11/11/2016
 ms.author: ghogen
-ms.openlocfilehash: 3ee226aac0d705da29333260966781d5b9b627ed
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 853b51fb5990d74a79f76cc55743ff9ba50f282e
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89508452"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93399774"
 ---
 # <a name="optimizing-your-azure-code"></a>优化 Azure 代码
 对使用 Microsoft Azure 的应用程序进行编程时，应遵循某些编码做法，以免在云环境中应用程序的伸缩性、行为和性能出现问题。 Microsoft 提供了 Azure 代码分析工具，该工具可识别并确定部分常见问题并帮助你解决这些问题。 可以通过 NuGet 在 Visual Studio 中下载该工具。
@@ -122,7 +121,7 @@ AP2002
 ### <a name="reason"></a>原因
 当调用 **OnMessage** 时，客户端将启动一个内部消息泵，该消息泵不断轮询队列或订阅。 此消息泵包含发出消息接收调用的无限循环。 如果调用超时，它将发出新的调用。 超时间隔由所用的 [MessagingFactory](/dotnet/api/microsoft.servicebus.messaging.messagingfactory) 的 [OperationTimeout](/dotnet/api/microsoft.servicebus.messaging.messagingfactorysettings) 属性值确定。
 
-相比于 **Receive**，使用 **OnMessage** 的优点是用户不必手动轮询消息、处理异常、并行处理多个消息和完成消息。
+相比于 **Receive** ，使用 **OnMessage** 的优点是用户不必手动轮询消息、处理异常、并行处理多个消息和完成消息。
 
 如果调用 **Receive** 时而未使用其默认值，请确保 *ServerWaitTime* 值大于一分钟。 将 *ServerWaitTime* 设置为大于一分钟可防止服务器在未接收完消息时就已超时。
 

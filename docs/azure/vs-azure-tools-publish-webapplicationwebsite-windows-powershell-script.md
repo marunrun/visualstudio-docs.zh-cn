@@ -1,7 +1,7 @@
 ---
 title: 使用 PowerShell 脚本发布 web 应用
 description: 了解如何将 Web 项目发布到 Azure 网站。 此脚本会在 Azure 订阅中创建所需的资源（如果这些资源不存在）。
-ms.custom: vs-azure
+ms.custom: SEO-VS-2020
 author: ghogen
 manager: jillfra
 assetId: 63cfaa2d-f04d-40dc-8677-345385c278d5
@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
-ms.openlocfilehash: e91fed105ce61dfc7e1cd2779ebcca0b33a06c97
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: c487084a276be31730f1e268527f4c10a2f7b747
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036491"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93398821"
 ---
 # <a name="publish-webapplicationwebsite-windows-powershell-script"></a>Publish-WebApplicationWebSite（Windows PowerShell 脚本）
 ## <a name="syntax"></a>语法
@@ -36,7 +36,7 @@ Publish-WebApplicationWebSite
 | 参数 | 默认值 |
 | --- | --- |
 | 别名 |无 |
-| 必需？ |true |
+| 必需？ |是 |
 | 位置 |所指定位置 |
 | 默认值 |无 |
 | 接受管道输入？ |false |

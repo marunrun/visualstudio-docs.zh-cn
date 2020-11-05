@@ -1,7 +1,7 @@
 ---
 title: 将 web 应用程序迁移和发布到云服务
 description: 了解如何使用 Visual Studio 将 Web 应用程序迁移和发布到 Azure 云服务
-ms.custom: vs-azure
+ms.custom: SEO-VS-2020
 author: ghogen
 manager: jillfra
 ms.assetid: 9394adfd-a645-4664-9354-dd5df08e8c91
@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 11/10/2017
 ms.author: ghogen
-ms.openlocfilehash: d5c2ae5e395f63d0c6c4fb6ac827c89daa7e3dc0
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: eb87aff7bf4ca1e3eac359b27a4280877eaefc50
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036530"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93399814"
 ---
 # <a name="how-to-migrate-and-publish-a-web-application-to-an-azure-cloud-service-from-visual-studio"></a>如何：从 Visual Studio 将 web 应用程序迁移和发布到 Azure 云服务
 
@@ -25,9 +25,9 @@ ms.locfileid: "90036530"
 
 ## <a name="migrate-a-project-to-cloud-services"></a>将项目迁移到云服务
 
-1. 右键单击 "解决方案" 节点，然后选择 " **添加 > 新建项目 ...** "，并将新的 **Azure 云服务 (经典) ** 项目添加到现有解决方案。
-1. 在 " **新建 Microsoft Azure 云服务 (经典) ** " 对话框中，单击 "确定"，而不向项目添加任何角色。
-1. 右键单击新添加的 "云服务" 项目下的 "角色" 节点，然后选择 " **在解决方案中添加 Web 角色项目 ..."**。
+1. 右键单击 "解决方案" 节点，然后选择 " **添加 > 新建项目 ...** "，并将新的 **Azure 云服务 (经典)** 项目添加到现有解决方案。
+1. 在 " **新建 Microsoft Azure 云服务 (经典)** " 对话框中，单击 "确定"，而不向项目添加任何角色。
+1. 右键单击新添加的 "云服务" 项目下的 "角色" 节点，然后选择 " **在解决方案中添加 Web 角色项目 ..."** 。
 1. 在 " **与角色项目关联** " 对话框中，选择想要关联为 web 角色的项目。
 
    > [!Important]
@@ -43,8 +43,8 @@ ms.locfileid: "90036530"
 
 ### <a name="test-the-migration-locally"></a>在本地测试迁移
 
-1. 在 Visual Studio 的“解决方案资源管理器”**** 中，右键单击添加的云服务项目，然后选择“设为启动项目”****。
-1. 选择“调试 > 启动调试”**** (F5) 以启动 Azure 调试环境。 该环境专门提供了各种 Azure 服务的仿真。
+1. 在 Visual Studio 的“解决方案资源管理器”中，右键单击添加的云服务项目，然后选择“设为启动项目”。
+1. 选择“调试 > 启动调试” (F5) 以启动 Azure 调试环境。 该环境专门提供了各种 Azure 服务的仿真。
 
 ### <a name="use-an-azure-sql-database-for-your-application"></a>为你的应用程序使用 Azure SQL 数据库
 
@@ -56,30 +56,30 @@ ms.locfileid: "90036530"
 ## <a name="publish-the-application-to-azure-cloud-service"></a>将应用程序发布到 Azure 云服务
 
 1. 如[准备从 Visual Studio 发布或部署 Azure 应用程序](vs-azure-tools-cloud-service-publish-set-up-required-services-in-visual-studio.md)中所述，在 Azure 订阅中创建必需的云服务和存储帐户。
-1. 在 Visual Studio 中，右键单击应用程序项目，然后选择“发布到 Microsoft Azure...”****（与“发布...”命令不同）。
-1. 在出现的“发布 Azure 应用程序”**** 中，使用你的 Azure 订阅帐户登录，然后选择“下一步 >”****。
-1. 在“设置 > 通用设置”**** 选项卡中，从****“云服务”下拉列表中选择目标云服务以及你选择的环境和配置。
-1. 在“设置 > 高级设置”中，**** 选择要使用的存储帐户，然后选择“下一步 >”****。
-1. 在****“诊断”中，选择是否将信息发送至 Application Insights。
-1. 选择“下一步 >”**** 以查看摘要，然后选择****“发布”以开始部署。
+1. 在 Visual Studio 中，右键单击应用程序项目，然后选择“发布到 Microsoft Azure...”（与“发布...”命令不同）。
+1. 在出现的“发布 Azure 应用程序”中，使用你的 Azure 订阅帐户登录，然后选择“下一步 >”。
+1. 在“设置 > 通用设置”选项卡中，从“云服务”下拉列表中选择目标云服务以及你选择的环境和配置。
+1. 在“设置 > 高级设置”中，选择要使用的存储帐户，然后选择“下一步 >”。
+1. 在“诊断”中，选择是否将信息发送至 Application Insights。
+1. 选择“下一步 >”以查看摘要，然后选择“发布”以开始部署。
 1. Visual Studio 将打开一个活动日志窗口，你可以在其中跟踪进度：
 
     ![VST_AzureActivityLog](./media/vs-azure-tools-migrate-publish-web-app-to-cloud-service/IC744149.png)
 
-1. （可选）要取消部署过程，请右键单击活动日志中的行项目，然后选择“取消并删除”****。 此命令会停止部署过程，并从 Azure 中删除部署环境。 注意：要在部署后删除这个部署环境，必须使用 [Azure门户](https://portal.azure.com)。
-1. （可选）角色实例启动后，Visual Studio 会自动在****“服务器资源管理器 > 云服务”节点中显示部署环境。 可以从此位置查看单个角色实例的状态。
-1. 要在部署后访问你的应用程序，当 Azure 活动日志中显示“已完成”状态以及 URL 时，请选择部署旁边的箭头。******** 有关如何从 Azure 启动特定类型的 Web 应用程序的详细信息，请参阅下表。
+1. （可选）要取消部署过程，请右键单击活动日志中的行项目，然后选择“取消并删除”。 此命令会停止部署过程，并从 Azure 中删除部署环境。 注意：要在部署后删除这个部署环境，必须使用 [Azure门户](https://portal.azure.com)。
+1. （可选）角色实例启动后，Visual Studio 会自动在“服务器资源管理器 > 云服务”节点中显示部署环境。 可以从此位置查看单个角色实例的状态。
+1. 要在部署后访问你的应用程序，当 Azure 活动日志中显示“已完成”状态以及 URL 时，请选择部署旁边的箭头。 有关如何从 Azure 启动特定类型的 Web 应用程序的详细信息，请参阅下表。
 
 ## <a name="using-the-compute-emulator-and-starting-application-in-azure"></a>在 Azure 中使用计算模拟器并启动应用程序
 
-通过选择“调试 > 启动调试”****(F5)，可以在连接到 Visual Studio 调试程序的浏览器中启动所有应用程序类型。 通过 ASP.NET 的空白 Web 应用程序项目，必须先在应用程序中添加一个 `.aspx` 页面，并将其设置为 Web 项目的起始页。
+通过选择“调试 > 启动调试”(F5)，可以在连接到 Visual Studio 调试程序的浏览器中启动所有应用程序类型。 通过 ASP.NET 的空白 Web 应用程序项目，必须先在应用程序中添加一个 `.aspx` 页面，并将其设置为 Web 项目的起始页。
 
 下表提供了有关在 Azure 中启动应用程序的详细信息：
 
 | Web 应用程序类型 | 在 Azure 中运行 |
 | --- | --- |
-| ASP.NET Web 应用程序<br/>（包括 MVC 2、MVC 3、MVC 4） | 选择 Azure 活动日志的“部署”选项卡中的 URL。******** |
-| ASP.NET 空 Web 应用程序 | 如果你的应用程序中有默认的 `.aspx` 页面，请选择 Azure 活动日志的“部署”选项卡中的 URL。******** 要导航到其他页面，请在浏览器中输入以下窗体的 URL：`<deployment_url>/<page_name>.aspx` |
+| ASP.NET Web 应用程序<br/>（包括 MVC 2、MVC 3、MVC 4） | 选择 Azure 活动日志的“部署”选项卡中的 URL。 |
+| ASP.NET 空 Web 应用程序 | 如果你的应用程序中有默认的 `.aspx` 页面，请选择 Azure 活动日志的“部署”选项卡中的 URL。 要导航到其他页面，请在浏览器中输入以下窗体的 URL：`<deployment_url>/<page_name>.aspx` |
 | WCF 服务应用程序<br/>WCF 工作流服务应用程序 | 将 `.svc` 文件设置为 WCF 服务项目的起始页。 然后导航到 `<deployment_url>/<service_file>.svc`。 |
 | ASP.NET 动态实体<br/>ASP.NET 动态数据 Linq to SQL | 如下一部分所述更新连接字符串。 然后导航到 `<deployment_url>/<page_name>.aspx`。 对于 Linq to SQL，你必须使用 Azure SQL 数据库。 |
 
