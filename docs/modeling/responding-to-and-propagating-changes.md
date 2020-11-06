@@ -9,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 96342abce736f18d79f89b9441d9b53c068cbecf
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 7c51aeea4a1637e5b1b9d2de0d8b92920334e2fc
+ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91583887"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93414511"
 ---
 # <a name="respond-to-and-propagate-changes"></a>响应并传播更改
 
@@ -32,7 +32,7 @@ ms.locfileid: "91583887"
 |规则|可以定义在发生更改的事务结束之前，排队等待执行的规则。 它们不会在撤消或重做时执行。 使用它们来使存储区的一部分与另一部分保持同步。|[规则在模型内部传播更改](../modeling/rules-propagate-changes-within-the-model.md)|
 |存储事件|建模应用商店提供事件通知，如添加或删除元素或链接，或更改属性的值。 此事件也会在撤消和重做时执行。 使用存储事件更新不在存储中的值。|[事件处理程序在模型外部传播更改](../modeling/event-handlers-propagate-changes-outside-the-model.md)|
 |.NET 事件|形状具有响应鼠标单击和其他笔势的事件处理程序。 必须为每个对象注册这些事件。 注册通常是在 InitializeInstanceResources 的重写中完成的，并且必须为每个元素完成。<br /><br /> 这些事件通常发生在事务外。|[如何：截获对形状或修饰器的单击](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md)|
-|边界规则|边界规则专用于限制形状的边界。|[BoundsRules 约束形状位置和大小](../vs-2015/modeling/boundsrules-constrain-shape-location-and-size.md?view=vs-2015&preserve-view=true)|
+|边界规则|边界规则专用于限制形状的边界。|[BoundsRules 约束形状位置和大小](/previous-versions/visualstudio/visual-studio-2015/modeling/boundsrules-constrain-shape-location-and-size?preserve-view=true&view=vs-2015)|
 |选择规则|选择规则专门限制用户可以选择的内容。|[如何：访问和约束当前所选内容](../modeling/how-to-access-and-constrain-the-current-selection.md)|
 |OnAssocatedPropertyChanged|使用形状和连接线的功能（如阴影、箭头、颜色、线条宽度和样式）指示模型元素的状态。|[更新形状和连接线以反映模型](../modeling/updating-shapes-and-connectors-to-reflect-the-model.md)|
 
@@ -55,4 +55,4 @@ ms.locfileid: "91583887"
 ## <a name="see-also"></a>另请参阅
 
 - [如何：截获对形状或修饰器的单击](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md)
-- [编写代码以自定义域特定语言](../modeling/writing-code-to-customise-a-domain-specific-language.md)
+- [编写代码以自定义 Domain-Specific 语言](../modeling/writing-code-to-customise-a-domain-specific-language.md)

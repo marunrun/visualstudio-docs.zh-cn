@@ -12,28 +12,28 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f32b7de4d3e62c2f1d9de5126217ccede48dfca8
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 7cc2eee209129867696955eb22c9e851c17973c1
+ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91583692"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93414095"
 ---
 # <a name="add-a-command-to-the-solution-explorer-toolbar"></a>将命令添加到解决方案资源管理器工具栏
 本演练演示如何将按钮添加到 **解决方案资源管理器** 工具栏中。
 
- 工具栏或菜单上的任何命令均称为 Visual Studio 中的按钮。 单击该按钮时，将执行命令处理程序中的代码。 通常，相关命令组合在一起形成一个组。 菜单或工具栏充当组的容器。 优先级确定组中的单个命令在菜单或工具栏上出现的顺序。 您可以通过控制按钮的可见性来阻止工具栏或菜单上的按钮显示。 在 .vsct 文件的部分中列出的命令 `<VisibilityConstraints>` 仅 *.vsct*显示在关联的上下文中。 可见性不能应用于组。
+ 工具栏或菜单上的任何命令均称为 Visual Studio 中的按钮。 单击该按钮时，将执行命令处理程序中的代码。 通常，相关命令组合在一起形成一个组。 菜单或工具栏充当组的容器。 优先级确定组中的单个命令在菜单或工具栏上出现的顺序。 您可以通过控制按钮的可见性来阻止工具栏或菜单上的按钮显示。 在 .vsct 文件的部分中列出的命令 `<VisibilityConstraints>` 仅 *.vsct* 显示在关联的上下文中。 可见性不能应用于组。
 
  有关菜单、工具栏命令和 *.vsct* 文件的详细信息，请参阅 [命令、菜单和工具栏](../extensibility/internals/commands-menus-and-toolbars.md)。
 
 > [!NOTE]
-> 使用 XML 命令表 (*. .vsct*) 文件而不是命令表配置 * () * 文件来定义菜单和命令在 vspackage 中的显示方式。 有关详细信息，请参阅 [Visual Studio 命令表 (。.Vsct) 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)。
+> 使用 XML 命令表 ( *. .vsct* ) 文件而不是命令表配置 *()* 文件来定义菜单和命令在 vspackage 中的显示方式。 有关详细信息，请参阅 [Visual Studio 命令表 (。.Vsct) 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)。
 
 ## <a name="prerequisites"></a>先决条件
  从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 也可稍后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
 ## <a name="create-an-extension-with-a-menu-command"></a>使用菜单命令创建扩展
- 创建一个名为的 VSIX 项目 `SolutionToolbar` 。 添加一个名为 **ToolbarButton**的菜单命令项模板。 有关如何执行此操作的信息，请参阅 [使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)。
+ 创建一个名为的 VSIX 项目 `SolutionToolbar` 。 添加一个名为 **ToolbarButton** 的菜单命令项模板。 有关如何执行此操作的信息，请参阅 [使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)。
 
 ## <a name="add-a-button-to-the-solution-explorer-toolbar"></a>将按钮添加到解决方案资源管理器工具栏
  本演练的此部分演示如何将按钮添加到 **解决方案资源管理器** 工具栏中。 单击该按钮时，将运行回调方法中的代码。
@@ -69,18 +69,18 @@ ms.locfileid: "91583692"
 
 4. 生成项目并启动调试。 这将显示实验实例。
 
-     **解决方案资源管理器**工具栏应在现有按钮右侧显示 "新建命令" 按钮。 按钮图标是删除线。
+     **解决方案资源管理器** 工具栏应在现有按钮右侧显示 "新建命令" 按钮。 按钮图标是删除线。
 
 5. 单击 "新建" 按钮。
 
-     应显示一个对话框，该对话框 **中的消息 ToolbarButtonPackage 位于 SolutionToolbar. ToolbarButton. MenuItemCallback ( # B1 ** 。
+     应显示一个对话框，该对话框 **中的消息 ToolbarButtonPackage 位于 SolutionToolbar. ToolbarButton. MenuItemCallback ( # B1** 。
 
 ## <a name="control-the-visibility-of-a-button"></a>控制按钮的可见性
  本演练的此部分演示如何控制工具栏上的按钮的可见性。 通过将上下文设置为 `<VisibilityConstraints>` *SolutionToolbar. .vsct* 文件的节中的一个或多个项目，可将按钮限制为仅在项目打开时才显示。
 
 ### <a name="to-display-a-button-when-one-or-more-projects-are-open"></a>打开一个或多个项目时显示按钮
 
-1. 在 `<Buttons>` *ToolbarButtonPackage*的节中，将两个命令标志添加到现有元素中 `<Button>` 的 `<Strings>` 和标记之间 `<Icons>` 。
+1. 在 `<Buttons>` *ToolbarButtonPackage* 的节中，将两个命令标志添加到现有元素中 `<Button>` 的 `<Strings>` 和标记之间 `<Icons>` 。
 
    ```xml
    <CommandFlag>DefaultInvisible</CommandFlag>
@@ -106,7 +106,7 @@ ms.locfileid: "91583692"
 
 3. 生成项目并启动调试。 这将显示实验实例。
 
-    **解决方案资源管理器**工具栏不包含删除线按钮。
+    **解决方案资源管理器** 工具栏不包含删除线按钮。
 
 4. 打开包含项目的任何解决方案。
 
@@ -114,7 +114,7 @@ ms.locfileid: "91583692"
 
 5. 在 **“文件”** 菜单上，单击 **“关闭解决方案”** 。 该按钮将从工具栏中消失。
 
-   在加载 VSPackage 之前，按钮的可见性受控制 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 。 加载 VSPackage 后，该按钮的可见性由 VSPackage 控制。  有关详细信息，请参阅 [menucommand 与 OleMenuCommands](../vs-2015/misc/menucommands-vs-olemenucommands.md?view=vs-2015&preserve-view=true)。
+   在加载 VSPackage 之前，按钮的可见性受控制 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 。 加载 VSPackage 后，该按钮的可见性由 VSPackage 控制。  有关详细信息，请参阅 [menucommand 与 OleMenuCommands](/previous-versions/visualstudio/visual-studio-2015/misc/menucommands-vs-olemenucommands?preserve-view=true&view=vs-2015)。
 
 ## <a name="see-also"></a>另请参阅
 - [命令、菜单和工具栏](../extensibility/internals/commands-menus-and-toolbars.md)

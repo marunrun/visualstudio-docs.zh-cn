@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5d3b125737162146af954ad8561eb41e5ee8f2e8
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 7d0cc0dcf40ab9231e3af6208ab2f844c69f3398
+ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584524"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93414550"
 ---
 # <a name="syntax-coloring-in-a-legacy-language-service"></a>在旧版语言服务中进行语法着色
 
@@ -28,7 +28,7 @@ Visual Studio 使用着色服务来识别语言的元素，并在编辑器中用
  ![SVC 着色程序图](../../extensibility/internals/media/figlgsvccolorizer.gif)
 
 > [!NOTE]
-> 语法着色服务独立于着色文本的通用 Visual Studio 机制。 有关支持着色的常规机制的详细信息 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] ，请参阅 [使用字体和颜色](../../vs-2015/extensibility/using-fonts-and-colors.md?view=vs-2015&preserve-view=true)。
+> 语法着色服务独立于着色文本的通用 Visual Studio 机制。 有关支持着色的常规机制的详细信息 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] ，请参阅 [使用字体和颜色](/previous-versions/visualstudio/visual-studio-2015/extensibility/using-fonts-and-colors?preserve-view=true&view=vs-2015)。
 
  除 colorizer 外，语言服务还可以提供由编辑器使用的自定义可着色项，方法是公布它提供自定义可着色项。 为此，可以 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems> 在实现接口的同一对象上实现接口 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo> 。 当编辑器调用方法时，它会返回自定义可着色项的数目 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems.GetItemCount%2A> ，当编辑器调用方法时，它将返回单个自定义可着色项 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems.GetColorableItem%2A> 。
 
@@ -60,7 +60,7 @@ Visual Studio 使用着色服务来识别语言的元素，并在编辑器中用
     3. 使用方法返回的着色信息 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.ColorizeLine%2A> 显示选定的文本。
 
 > [!NOTE]
-> 除了使用 language service colorizer 外，VSPackage 还可以使用一般用途的 Visual Studio 文本着色机制。 有关此机制的详细信息，请参阅 [使用字体和颜色](../../vs-2015/extensibility/using-fonts-and-colors.md?view=vs-2015&preserve-view=true)。
+> 除了使用 language service colorizer 外，VSPackage 还可以使用一般用途的 Visual Studio 文本着色机制。 有关此机制的详细信息，请参阅 [使用字体和颜色](/previous-versions/visualstudio/visual-studio-2015/extensibility/using-fonts-and-colors?preserve-view=true&view=vs-2015)。
 
 ## <a name="in-this-section"></a>本节内容
 - [实现语法着色](../../extensibility/internals/implementing-syntax-coloring.md)

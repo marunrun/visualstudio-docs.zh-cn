@@ -7,12 +7,12 @@ author: ghogen
 ms.author: ghogen
 manager: jillfra
 monikerRange: '>=vs-2017'
-ms.openlocfilehash: 9882497fec78c6560dcb40e636cb8323c1b249b3
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: f8affd426593754f77760e4f924cd401167078e5
+ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93049437"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93414147"
 ---
 # <a name="visual-studio-2015-documentation"></a>Visual Studio 2015 文档
 
@@ -28,9 +28,9 @@ ms.locfileid: "93049437"
 
 在 Visual Studio 2015 IDE 中，F1 帮助功能应继续工作。 如果遇到任何问题，请使用此页底部的文档反馈链接来创建我们的 GitHub 存储库问题。
 
-如果经常使用 Visual Studio 2015 文档，则可能需要浏览使用帮助查看器和下载该版本的脱机帮助书籍的选项。 请参阅 [Microsoft Help viewer](/visualstudio/help-viewer/overview)。
+如果经常使用 Visual Studio 2015 文档，则可能需要浏览使用帮助查看器和下载该版本的脱机帮助书籍的选项。 请参阅 [Microsoft Help viewer](./help-viewer/overview.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [适用于 Visual Studio 的较旧版本的文档](/previous-versions/visualstudio/)
 - [Visual Studio 2015 版本](/visualstudio/releasenotes/vs2015-version-history)

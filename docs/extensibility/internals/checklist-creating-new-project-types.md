@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0aa4ad83428120c68adb89937afc46f51700dbfe
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 111eb74d388682ff3cf97d5e0aa7e7e5a91cbaf3
+ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91583666"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93414186"
 ---
 # <a name="checklist-create-new-project-types"></a>清单：创建新的项目类型
 若要创建新的项目类型，必须完成多个任务。 以下清单提供了这些任务的指南：
@@ -25,7 +25,7 @@ ms.locfileid: "91583666"
 
 2. 确定哪些编辑器用于代码和其他项目元素。 您可以使用核心或标准编辑器，也可以创建和使用特定于项目的编辑器。 有关详细信息，请参阅 [创建自定义编辑器和设计器](../../extensibility/creating-custom-editors-and-designers.md) 和 [如何：打开项目特定的编辑器](../../extensibility/how-to-open-project-specific-editors.md)。
 
-3. 确定项目项在 **类视图** 和 **对象浏览器**中的参与程度。 有关详细信息，请参阅 [支持符号浏览工具](../../extensibility/internals/supporting-symbol-browsing-tools.md)。
+3. 确定项目项在 **类视图** 和 **对象浏览器** 中的参与程度。 有关详细信息，请参阅 [支持符号浏览工具](../../extensibility/internals/supporting-symbol-browsing-tools.md)。
 
 4. 基于你之前为项目和项目项所做的设计决策派生新类。
 
@@ -33,7 +33,7 @@ ms.locfileid: "91583666"
 
     - 项目工厂，用于管理创建新项目和打开现有项目。 有关详细信息，请参阅 [使用项目工厂创建项目实例](../../extensibility/internals/creating-project-instances-by-using-project-factories.md)。
 
-    - 项目层次结构和命令处理。 有关详细信息，请参阅 [使用 HierUtil7 项目类实现项目类型 (c + +) ](/previous-versions/bb166212(v=vs.100))、 [项目模型的元素](../../extensibility/internals/elements-of-a-project-model.md)、 [项目模型核心组件](../../extensibility/internals/project-model-core-components.md)、 [menucommand 与 OleMenuCommands](../../vs-2015/misc/menucommands-vs-olemenucommands.md?view=vs-2015&preserve-view=true)。
+    - 项目层次结构和命令处理。 有关详细信息，请参阅 [使用 HierUtil7 项目类实现项目类型 (c + +) ](/previous-versions/bb166212(v=vs.100))、 [项目模型的元素](../../extensibility/internals/elements-of-a-project-model.md)、 [项目模型核心组件](../../extensibility/internals/project-model-core-components.md)、 [menucommand 与 OleMenuCommands](/previous-versions/visualstudio/visual-studio-2015/misc/menucommands-vs-olemenucommands?preserve-view=true&view=vs-2015)。
 
     - 项目项管理，包括将项目添加到 " **新建项目** " 对话框。 有关详细信息，请参阅 [添加项目和项目项模板](../../extensibility/internals/adding-project-and-project-item-templates.md) 和 [注册项目和项模板](../../extensibility/internals/registering-project-and-item-templates.md)。
 
@@ -49,13 +49,13 @@ ms.locfileid: "91583666"
 
     - 对象或从派生的类 `IDispatch` 可用于实现自动化。
 
-    - XML 命令表 (*.vsct*) 文件。 有关详细信息，请参阅 [Visual Studio 命令表 ( .vsct) 文件](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)。
+    - XML 命令表 ( *.vsct* ) 文件。 有关详细信息，请参阅 [Visual Studio 命令表 ( .vsct) 文件](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)。
 
 6. 测试、调试和启动项目类型。
 
-7. 通过将设置为的值，在 "**添加引用**" 对话框的 "**项目**" 选项卡中显示你的项目 `VARIANT_TRUE` `VSHPROPID_ShowProjInSolutionPage` 。 有关详细信息，请参阅 <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID> 和 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A>。
+7. 通过将设置为的值，在 " **添加引用** " 对话框的 " **项目** " 选项卡中显示你的项目 `VARIANT_TRUE` `VSHPROPID_ShowProjInSolutionPage` 。 有关详细信息，请参阅 <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID> 和 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A>。
 
-8. 创建 Microsoft Installer (*.msi*) 文件以安装 vspackage。 有关详细信息，请参阅 [使用 Windows Installer 安装 vspackage](../../extensibility/internals/installing-vspackages-with-windows-installer.md)、 [注册项目类型](../../extensibility/internals/registering-a-project-type.md)和 [vspackage](../../extensibility/internals/vspackages.md)。
+8. 创建 Microsoft Installer ( *.msi* ) 文件以安装 vspackage。 有关详细信息，请参阅 [使用 Windows Installer 安装 vspackage](../../extensibility/internals/installing-vspackages-with-windows-installer.md)、 [注册项目类型](../../extensibility/internals/registering-a-project-type.md)和 [vspackage](../../extensibility/internals/vspackages.md)。
 
 ## <a name="see-also"></a>另请参阅
 - [Visual Studio 中的层次结构](../../extensibility/internals/hierarchies-in-visual-studio.md)
