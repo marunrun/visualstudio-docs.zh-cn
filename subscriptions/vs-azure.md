@@ -1,18 +1,18 @@
 ---
-title: Microsoft Azure 权益 | Microsoft Docs
+title: Visual Studio 订阅中的 Microsoft Azure 权益 | Microsoft Docs
 author: evanwindom
-ms.author: lank
-manager: lank
+ms.author: v-evwin
+manager: cabuschl
 ms.assetid: 872c5746-5357-4764-949b-aa525a0adf1a
-ms.date: 10/21/2020
+ms.date: 10/28/2020
 ms.topic: how-to
 description: 了解如何激活 Visual Studio 订阅中包含的 Azure 开发测试个人额度权益。
-ms.openlocfilehash: de1bfa9591a0dae409ec526429fa0496f3408703
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.openlocfilehash: f524f0933d067d0c62c184d54c441edc7b15739d
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92353091"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92903647"
 ---
 # <a name="use-microsoft-azure-in-visual-studio-subscriptions"></a>在 Visual Studio 订阅中使用 Microsoft Azure
 Visual Studio 订阅者无需额外付费即可使用 Microsoft Azure。  通过[每月 Azure 开发测试个人额度](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/)，可将 Azure 用作开发/测试的个人沙盒。  你可以预配虚拟机、云服务和其他 Azure 资源。  信用额度因订阅级别而异。
@@ -54,7 +54,7 @@ Visual Studio 订阅者无需额外付费即可使用 Microsoft Azure。  通过
     - [Visual Studio Enterprise](https://www.microsoft.com/p/visual-studio-enterprise-subscription/dg7gmgf0dst4?activetab=pivot%3aoverviewtab)
     - [Visual Studio Professional](https://www.microsoft.com/p/visual-studio-professional-subscription/dg7gmgf0dst3?activetab=pivot%3aoverviewtab)
     - [Visual Studio Test Professional](https://www.microsoft.com/p/visual-studio-test-professional-subscription/dg7gmgf0dst6?activetab=pivot%3aoverviewtab)
-- 如果组织中的某个人代表你购买了订阅，请[联系组织的 Visual Studio 订阅管理员](./contact-my-admin.md)，并请求提供所需每月额度的订阅。  
+- 如果组织中的某个人代表组织购买订阅，请[联系组织的 Visual Studio 订阅管理员](./contact-my-admin.md)，并申请包含所需每月额度的订阅。  
 - 如果在与其他 Microsoft 帐户关联的同一订阅级别有其他活动 Visual Studio 订阅，则可以通过在 Visual Studio [订阅门户](https://my.visualstudio.com/subscriptions)中[添加备用帐户](./manage-vs-subscriptions.md#managing-my-profile)，将 Azure 权益转移到另一个活动 Visual Studio 订阅。  
 
 请通过以下资格表来确定各订阅类型包含多少额度。  

@@ -1,25 +1,25 @@
 ---
 title: Azure 企业协议开发测试套餐
 author: evanwindom
-ms.author: lank
-manager: lank
+ms.author: v-evwin
+manager: cabuschl
 ms.assetid: a335ed23-34ee-40cb-83c6-6c93dee57424
-ms.date: 02/23/2020
+ms.date: 10/26/2020
 ms.topic: how-to
 description: 了解如何利用适用于具有企业协议的客户的特殊 Azure 开发测试定价
-ms.openlocfilehash: 70f7b9877dcc973d2f649eb0cad53599ff6023f3
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: a4da6356c250b3c07cb19fb8bf4c5e260e9d3e29
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005735"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904462"
 ---
 # <a name="azure-enterprise-agreement-devtest-offer"></a>Azure 企业协议开发测试套餐
 
 此套餐是企业协议的一部分，适用于活动 Visual Studio 订阅者团队，可供其在 Microsoft Azure 上运行开发/测试工作负载。套餐为 Windows 虚拟机上提供折扣价，并提供对 Azure 库中的独占图像的访问权限。 此套餐仅限开发和测试用途，不能用于生产。  
 
 使用套餐的过程分为两个步骤：
-1. 套餐必须由 EA 门户中的管理员启用。
+1. 必须由管理员在 EA 门户中启用套餐。
 2. 单个订阅者需要创建订阅以供其使用。 
 
 为演示该过程，还提供了一个[教程视频](https://channel9.msdn.com/blogs/EA.Azure.com/Enabling-and-Creating-EA-DevTest-Subscriptions-through-the-EA-Portal)。  
@@ -32,7 +32,7 @@ ms.locfileid: "91005735"
 0. 将鼠标悬停在该帐户的名称上。 
 0. 单击最右侧的“编辑”图标（铅笔）  。 
 0. 单击“开发/测试”复选框  。
-0. 单击“ **保存**”。
+0. 单击“ **保存** ”。
 
 ## <a name="create-individual-subscriptions-within-the-account"></a>在帐户中创建单个订阅
 帐户上的每个订阅者都可以通过执行以下步骤来创建订阅：
