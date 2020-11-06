@@ -10,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 11e55da5f2eb1d8b4671543672a79b508e20a929
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 54e67a28d59cb739abbeab188ff1f100751f2aa8
+ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91583679"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93413901"
 ---
 # <a name="author-vsct-files"></a>创作 .vsct 文件
 本文档演示如何创作 *.vsct* 文件，以将 (UI) 元素添加到 Visual Studio 集成开发环境 (IDE) 中的菜单项、工具栏和其他用户界面。 将 UI 元素添加到 Visual Studio 包时，请使用以下步骤 (VSPackage) ，该文件还没有 *.vsct* 文件。
@@ -26,11 +26,11 @@ ms.locfileid: "91583679"
  在以下阶段创作 *.vsct* 文件：创建文件和资源的结构，声明 ui 元素，将 ui 元素放入 IDE，并添加任何专用行为。
 
 ### <a name="file-structure"></a>文件结构
- *.Vsct*文件的基本结构是一个[CommandTable](../../extensibility/commandtable-element.md)根元素，其中包含[命令](../../extensibility/commands-element.md)元素和[符号](../../extensibility/symbols-element.md)元素。
+ *.Vsct* 文件的基本结构是一个 [CommandTable](../../extensibility/commandtable-element.md)根元素，其中包含 [命令](../../extensibility/commands-element.md)元素和 [符号](../../extensibility/symbols-element.md)元素。
 
 #### <a name="to-create-the-file-structure"></a>创建文件结构
 
-1. 按照[如何：创建 .vsct 文件](../../extensibility/internals/how-to-create-a-dot-vsct-file.md)中的步骤，将 *.vsct*文件添加到你的项目中。
+1. 按照 [如何：创建 .vsct 文件](../../extensibility/internals/how-to-create-a-dot-vsct-file.md)中的步骤，将 *.vsct* 文件添加到你的项目中。
 
 2. 向元素添加所需的命名空间 `CommandTable` ，如以下示例中所示：
 
@@ -51,9 +51,9 @@ ms.locfileid: "91583679"
 
 1. 在元素顶部，为 `CommandTable` `Extern` 要引用的每个外部文件添加一个元素，并将 `href` 属性设置为该文件的名称。 可以引用以下头文件来访问 Visual Studio 资源：
 
-   - *Stdidcmd*：定义 Visual Studio 公开的所有命令的 id。
+   - *Stdidcmd* ：定义 Visual Studio 公开的所有命令的 id。
 
-   - *Vsshlids*：包含 Visual Studio 菜单的命令 id。
+   - *Vsshlids* ：包含 Visual Studio 菜单的命令 id。
 
 2. 如果你的包调用由 Visual Studio 或其他包定义的任何命令，请在 `UsedCommands` 元素后面添加元素 `Commands` 。 对于您调用的不属于包的每个命令，使用 [UsedCommand](../../extensibility/usedcommand-element.md) 元素填充此元素。 将 `guid` 元素的和 `id` 特性设置 `UsedCommand` 为要调用的命令的 GUID 和 ID 值。
 
@@ -64,7 +64,7 @@ ms.locfileid: "91583679"
 
 #### <a name="to-declare-ui-elements"></a>声明 UI 元素
 
-1. 在 `Symbols` 元素中，添加三个 [GuidSymbol](../../extensibility/guidsymbol-element.md) 元素。 每个 `GuidSymbol` 元素都有一个 `name` 属性和一个 `value` 属性。 设置 `name` 属性，使其反映元素的用途。 `value`属性采用 GUID。  (生成 GUID，请在 " **工具** " 菜单上选择 " **创建 guid**"，然后选择 " **注册表格式**"。 ) 
+1. 在 `Symbols` 元素中，添加三个 [GuidSymbol](../../extensibility/guidsymbol-element.md) 元素。 每个 `GuidSymbol` 元素都有一个 `name` 属性和一个 `value` 属性。 设置 `name` 属性，使其反映元素的用途。 `value`属性采用 GUID。  (生成 GUID，请在 " **工具** " 菜单上选择 " **创建 guid** "，然后选择 " **注册表格式** "。 ) 
 
      第一个 `GuidSymbol` 元素表示包，并且通常没有子级。 第二个 `GuidSymbol` 元素表示命令集，并将包含定义菜单、组和命令的所有符号。 第三个 `GuidSymbol` 元素表示映像存储，并包含命令的所有图标的符号。 如果你没有使用图标的命令，则可以省略第三个 `GuidSymbol` 元素。
 
@@ -108,7 +108,7 @@ ms.locfileid: "91583679"
        > [!NOTE]
        > 工具栏按钮必须具有图标。
 
-   有关详细信息，请参阅 [menucommand 与 OleMenuCommands](../../vs-2015/misc/menucommands-vs-olemenucommands.md?view=vs-2015&preserve-view=true)。
+   有关详细信息，请参阅 [menucommand 与 OleMenuCommands](/previous-versions/visualstudio/visual-studio-2015/misc/menucommands-vs-olemenucommands?preserve-view=true&view=vs-2015)。
 
 4. 如果你的任何命令需要图标，请将一个 [位图](../../extensibility/bitmaps-element.md) 元素添加到 `Commands` 元素。 然后，对于每个图标，将 [位图](../../extensibility/bitmap-element.md) 元素添加到 `Bitmaps` 元素。 此处为指定位图资源位置的位置。 有关详细信息，请参阅 [将图标添加到菜单命令](../../extensibility/adding-icons-to-menu-commands.md)。
 

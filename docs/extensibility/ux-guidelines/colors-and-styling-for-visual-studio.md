@@ -8,12 +8,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c43281e52d5a56fd7a888e42ba0bae66f9ac0bd9
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 2f9123117144d12babd97264090f16899f392954
+ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584264"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93414264"
 ---
 # <a name="colors-and-styling-for-visual-studio"></a>Visual Studio 的颜色和样式
 
@@ -49,7 +49,7 @@ ms.locfileid: "91584264"
 | 您具有嵌入的或独立的对话框。 | **系统颜色** | 允许操作系统定义 UI 元素的颜色和外观的系统名称，如通用对话框控件。 |
 | 你具有要与整个 VS 环境一致的自定义 UI，并且你具有与共享令牌的类别和语义含义相匹配的 UI 元素。 | **公共共享颜色** | 特定 UI 元素的现有预定义颜色标记名称 |
 | 您有一项功能或一组功能，但对于类似元素没有共享的颜色。 | **自定义颜色** | 特定于区域的颜色标记名称，不应与其他 UI 共享 |
-| 您希望允许最终用户自定义 UI 或内容 (例如，对于文本编辑器或专用设计器 windows) 。 | **最终用户自定义**<br /><br />** (工具 &gt; 选项 "对话框) ** | " **工具 &gt; 选项** " 对话框的 "字体和颜色" 页中定义的设置，或特定于一个 UI 功能的专用页面。 |
+| 您希望允许最终用户自定义 UI 或内容 (例如，对于文本编辑器或专用设计器 windows) 。 | **最终用户自定义**<br /><br />**(工具 &gt; 选项 "对话框)** | " **工具 &gt; 选项** " 对话框的 "字体和颜色" 页中定义的设置，或特定于一个 UI 功能的专用页面。 |
 
 ### <a name="visual-studio-themes"></a>Visual Studio 主题
 
@@ -81,7 +81,7 @@ Visual Studio 源代码包含多个包定义文件，其中包含每个主题的
 
 请参阅： [公开最终用户的颜色](../../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_ExposingColorsForEndUsers)
 
-有时，您需要允许最终用户自定义您的 UI，就像您创建代码编辑器或设计图面一样。 可以在 "**工具 &gt; 选项**" 对话框的 "**字体和颜色**" 部分中找到可自定义的 UI 组件，用户可以在其中选择更改前景色、背景色或同时更改两者。
+有时，您需要允许最终用户自定义您的 UI，就像您创建代码编辑器或设计图面一样。 可以在 " **工具 &gt; 选项** " 对话框的 " **字体和颜色** " 部分中找到可自定义的 UI 组件，用户可以在其中选择更改前景色、背景色或同时更改两者。
 
 !["工具 &gt; 选项" 对话框](../../extensibility/ux-guidelines/media/0301-a_toolsoptionsdialog.png "0301-a_ToolsOptionsDialog")<br />"工具 &gt; 选项" 对话框
 
@@ -275,9 +275,9 @@ Windows 使用多个高对比度系统级主题，这些主题提高了文本、
 
 只有少量的系统颜色可用于高对比度主题。 选择系统颜色名称时，请记住以下提示：
 
-- 选择与您要着色的元素**具有相同语义含义的系统颜色**。 例如，如果为窗口中的文本选择高对比度的颜色，请使用 WindowText 而不是 ControlText。
+- 选择与您要着色的元素 **具有相同语义含义的系统颜色** 。 例如，如果为窗口中的文本选择高对比度的颜色，请使用 WindowText 而不是 ControlText。
 
-- 同时**选择前景/背景对**，也不会确信您的颜色选择在所有高对比度主题中都有效。
+- 同时 **选择前景/背景对** ，也不会确信您的颜色选择在所有高对比度主题中都有效。
 
 - **确定 UI 的哪些部分是最重要的部分，并确保内容区域将会突出。** 您将会丢失很多详细信息，颜色色相的细微差异通常会区分开来，因此使用强边框颜色是定义内容区域的常用方法，因为不同的内容区域没有任何颜色变体。
 
@@ -285,7 +285,7 @@ Windows 使用多个高对比度系统级主题，这些主题提高了文本、
 
 [WPF 团队博客上的表： SystemColors 引用](/archive/blogs/wpf/systemcolors-reference)指示一组完整的系统颜色名称，以及每个主题中显示的相应色相。
 
-将此有限的一组颜色应用于您的 UI 时， *您将会丢失 "正常" 主题中存在的细微细节*。 下面是一个使用细小灰色颜色的 UI 示例，用于区分工具窗口内的区域。 当与高对比度模式下显示的同一窗口配对时，您可以看到所有背景都具有相同的色调，并且这些区域的边框仅由边框表示：
+将此有限的一组颜色应用于您的 UI 时， *您将会丢失 "正常" 主题中存在的细微细节* 。 下面是一个使用细小灰色颜色的 UI 示例，用于区分工具窗口内的区域。 当与高对比度模式下显示的同一窗口配对时，您可以看到所有背景都具有相同的色调，并且这些区域的边框仅由边框表示：
 
 ![如何在高对比度中丢失微妙细节的示例](../../extensibility/ux-guidelines/media/030303-a_propertieswindow.png "030303-a_PropertiesWindow")<br />如何在高对比度中丢失微妙细节的示例
 
@@ -334,13 +334,13 @@ Windows 使用多个高对比度系统级主题，这些主题提高了文本、
 
 ### <a name="overview"></a>概述
 
-有时，您需要允许最终用户自定义您的 UI，就像您在创建代码编辑器或设计图面时。 要执行此操作，最常见的方法是使用 " **工具 &gt; 选项** " 对话框。 除非您的 UI 需要特殊的控件，否则提供自定义的最简单方法是通过对话框的 "**环境**" 部分中的 "**字体和颜色**" 页。 对于为自定义公开的每个元素，用户都可以选择更改前景色、背景色或同时更改两者。
+有时，您需要允许最终用户自定义您的 UI，就像您在创建代码编辑器或设计图面时。 要执行此操作，最常见的方法是使用 " **工具 &gt; 选项** " 对话框。 除非您的 UI 需要特殊的控件，否则提供自定义的最简单方法是通过对话框的 " **环境** " 部分中的 " **字体和颜色** " 页。 对于为自定义公开的每个元素，用户都可以选择更改前景色、背景色或同时更改两者。
 
 ### <a name="building-a-vspackage-for-your-customizable-colors"></a>为可自定义的颜色生成 VSPackage
 
 VSPackage 可以通过自定义类别和 "字体和颜色" 属性页上的 "显示项目" 来控制字体和颜色。 使用此机制时，Vspackage 必须实现 [IVsFontAndColorDefaultsProvider](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaultsprovider) 接口及其关联接口。
 
-原则上，此机制可用于修改所有现有显示项以及包含它们的类别。 但是，它不应用于修改 "文本编辑器" 类别或其显示项。 有关 "文本编辑器" 类别的详细信息，请参阅 " [字体和颜色概述](../../vs-2015/extensibility/font-and-color-overview.md?view=vs-2015&preserve-view=true)"。
+原则上，此机制可用于修改所有现有显示项以及包含它们的类别。 但是，它不应用于修改 "文本编辑器" 类别或其显示项。 有关 "文本编辑器" 类别的详细信息，请参阅 " [字体和颜色概述](/previous-versions/visualstudio/visual-studio-2015/extensibility/font-and-color-overview?preserve-view=true&view=vs-2015)"。
 
 若要实现自定义类别或显示项，VSPackage 必须：
 
@@ -360,7 +360,7 @@ VSPackage 可以通过自定义类别和 "字体和颜色" 属性页上的 "显�
 
 | 名称 | 类型 | 数据 | 说明 |
 | --- | --- | --- | --- |
-| 类别 | REG_SZ | GUID | 为标识类别而创建的 GUID |
+| Category | REG_SZ | GUID | 为标识类别而创建的 GUID |
 | 程序包 | REG_SZ | GUID | 支持该类别的 VSPackage 服务的 GUID |
 
  注册表中指定的服务必须为相应的类别提供 [IVsFontAndColorDefaults](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults) 的实现。
@@ -373,7 +373,7 @@ VSPackage 可以通过自定义类别和 "字体和颜色" 属性页上的 "显�
 
 | 名称 | 类型 | 数据 | 说明 |
 |--- | --- | --- | --- |
-| 类别 | REG_SZ | GUID | 为标识类别而创建的 GUID |
+| Category | REG_SZ | GUID | 为标识类别而创建的 GUID |
 | 程序包 | REG_SZ | GUID | 支持该类别的 VSPackage 服务的 GUID |
 
 注册表中指定的服务必须 <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup> 为相应组提供的实现。
@@ -419,11 +419,11 @@ IDE 缓存有关字体和颜色设置的信息。 因此，在对 IDE 字体和�
 
 为此，VSPackage 必须：
 
-- 通过实现[IVsFontAndColorEvents](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorevents)接口**处理 IDE 生成的事件**。 在用户修改 "字体和颜色" 页后，IDE 将调用相应的方法。 例如，如果选择新字体，它将调用 [OnFontChanged](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorevents.onfontchanged) 方法。
+- 通过实现 [IVsFontAndColorEvents](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorevents)接口 **处理 IDE 生成的事件** 。 在用户修改 "字体和颜色" 页后，IDE 将调用相应的方法。 例如，如果选择新字体，它将调用 [OnFontChanged](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorevents.onfontchanged) 方法。
 
   **或者**
 
-- **轮询 IDE 中的更改**。 可以通过系统实现的 [以下](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage) 接口完成此操作。 尽管主要是为了支持暂留，但 [GetItem](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.getitem) 方法可以获取显示项的字体和颜色信息。 有关字体和颜色设置的详细信息，请参阅 MSDN 文章 [访问存储的字体和颜色设置](../../vs-2015/extensibility/accessing-stored-font-and-color-settings.md?view=vs-2015&preserve-view=true)。
+- **轮询 IDE 中的更改** 。 可以通过系统实现的 [以下](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage) 接口完成此操作。 尽管主要是为了支持暂留，但 [GetItem](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.getitem) 方法可以获取显示项的字体和颜色信息。 有关字体和颜色设置的详细信息，请参阅 MSDN 文章 [访问存储的字体和颜色设置](/previous-versions/visualstudio/visual-studio-2015/extensibility/accessing-stored-font-and-color-settings?preserve-view=true&view=vs-2015)。
 
 > [!NOTE]
 > 若要确保轮询结果正确，请使用 [IVsFontAndColorCacheManager](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorcachemanager) 接口来确定是否需要缓存刷新和更新，然后再调用 [以下](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage) 接口的检索方法。

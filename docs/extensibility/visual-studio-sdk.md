@@ -14,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: aceed2833d0083beccf197c4c681f92270a1f9a4
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 2dbe2832d52d17047795d1898f0e0bfd8a275bb9
+ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91583653"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93414379"
 ---
 # <a name="visual-studio-sdk"></a>Visual Studio SDK
 Visual Studio SDK 可帮助你扩展 Visual Studio 的功能，或将新功能集成到 Visual Studio 中。 可以将扩展分发给其他用户以及 Visual Studio Marketplace。 以下是一些扩展 Visual Studio 的方式：
@@ -54,7 +54,7 @@ Visual Studio SDK 可帮助你扩展 Visual Studio 的功能，或将新功能�
  利用 [映像服务和目录](../extensibility/image-service-and-catalog.md) 获得极佳的图像管理，并提供高 DPI 和主题的支持。
 
 ## <a name="find-and-install-existing-visual-studio-extensions"></a>查找并安装现有的 Visual Studio 扩展
- 可以在 "**工具**" 菜单上的 "**扩展和更新**" 对话框中找到 Visual Studio 扩展。 有关详细信息，请参阅 [查找和使用 Visual Studio 扩展](../ide/finding-and-using-visual-studio-extensions.md)。 你还可以在[Visual Studio Marketplace](https://marketplace.visualstudio.com/)中找到扩展
+ 可以在 " **工具** " 菜单上的 " **扩展和更新** " 对话框中找到 Visual Studio 扩展。 有关详细信息，请参阅 [查找和使用 Visual Studio 扩展](../ide/finding-and-using-visual-studio-extensions.md)。 你还可以在[Visual Studio Marketplace](https://marketplace.visualstudio.com/)中找到扩展
 
 ## <a name="visual-studio-sdk-reference"></a>Visual Studio SDK 参考
  可在 [Visual STUDIO Sdk 参考](../extensibility/visual-studio-sdk-reference.md)中找到 VISUAL STUDIO sdk API 参考。
@@ -77,7 +77,7 @@ Visual Studio SDK 可帮助你扩展 Visual Studio 的功能，或将新功能�
 
 - [使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)
 - [如何：将扩展性项目迁移到 Visual Studio 2017](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md)
-- [常见问题解答：将外接程序转换为 VSPackage 扩展](../vs-2015/extensibility/faq-converting-add-ins-to-vspackage-extensions.md?view=vs-2015&preserve-view=true)
+- [常见问题解答：将外接程序转换为 VSPackage 扩展](/previous-versions/visualstudio/visual-studio-2015/extensibility/faq-converting-add-ins-to-vspackage-extensions?preserve-view=true&view=vs-2015)
 - [在托管代码中管理多个线程](../extensibility/managing-multiple-threads-in-managed-code.md)
 - [扩展菜单和命令](../extensibility/extending-menus-and-commands.md)
 - [将命令添加到工具栏](../extensibility/adding-commands-to-toolbars.md)
