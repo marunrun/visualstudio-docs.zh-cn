@@ -1,5 +1,7 @@
 ---
 title: 对应用程序和部署清单进行重新签名 |Microsoft Docs
+description: 了解在对部署属性进行更改后，如何使用证书对应用程序清单和部署清单进行重新签名。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2a221eea7314ad79020437208bdba4fcb6b6972e
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 0a17902451c931bd37a92158a3b5c3838ed91ed4
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851679"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351123"
 ---
 # <a name="how-to-re-sign-application-and-deployment-manifests"></a>如何：为应用程序和部署清单重新签名
 对 Windows 窗体应用程序的应用程序清单中的部署属性进行更改后，Windows Presentation Foundation 应用程序 (xbap) 或 Office 解决方案，则必须使用证书对应用程序清单和部署清单进行重新签名。 此过程有助于确保不会在最终用户计算机上安装经过篡改的文件。
@@ -31,7 +33,7 @@ ms.locfileid: "90851679"
  如果你的客户想要将应用程序和部署清单签名为自己的证书，则可以对清单进行重新签名的另一种情况。
 
 ## <a name="re-sign-the-application-and-deployment-manifests"></a>对应用程序清单和部署清单重新签名
- 此过程假定您已对应用程序清单 *文件 () * 进行了更改。 有关详细信息，请参阅 [如何：更改部署属性](/previous-versions/cc442869(v=vs.110))。
+ 此过程假定您已对应用程序清单 *文件 ()* 进行了更改。 有关详细信息，请参阅 [如何：更改部署属性](/previous-versions/cc442869(v=vs.110))。
 
 #### <a name="to-re-sign-the-application-and-deployment-manifests-with-mageexe"></a>用 Mage.exe 对应用程序清单和部署清单进行重新签名
 
@@ -67,10 +69,10 @@ ms.locfileid: "90851679"
     mage -update WpfBrowserApplication1.xbap -appmanifest WpfBrowserApplication1.exe.manifest -CertFile ..\WpfBrowserApplication1_TemporaryKey.pfx
     ```
 
-5. （可选）将主部署清单 (*publish \\ \<appname> *) 复制到版本部署目录 (*publish\Application Files \\ \<appname> _ \<version> *) 。
+5. （可选）将主部署清单 ( *publish \\ \<appname>* ) 复制到版本部署目录 ( *publish\Application Files \\ \<appname> _ \<version>* ) 。
 
 ## <a name="update-and-re-sign-the-application-and-deployment-manifests"></a>更新和重新签名应用程序和部署清单
- 此过程假定你已对应用程序清单 *文件 () * 进行了更改，但有其他已更新的文件。 更新文件后，还必须更新表示该文件的哈希。
+ 此过程假定你已对应用程序清单 *文件 ()* 进行了更改，但有其他已更新的文件。 更新文件后，还必须更新表示该文件的哈希。
 
 #### <a name="to-update-and-re-sign-the-application-and-deployment-manifests-with-mageexe"></a>更新应用程序和部署清单并将其重新签名 Mage.exe
 
@@ -110,7 +112,7 @@ ms.locfileid: "90851679"
 
 6. 将 *.deploy* 文件扩展名添加回文件（应用程序和部署清单文件除外）。
 
-7. （可选）将主部署清单 (*publish \\ \<appname> *) 复制到版本部署目录 (*publish\Application Files \\ \<appname> _ \<version> *) 。
+7. （可选）将主部署清单 ( *publish \\ \<appname>* ) 复制到版本部署目录 ( *publish\Application Files \\ \<appname> _ \<version>* ) 。
 
 ## <a name="see-also"></a>请参阅
 - [保护 ClickOnce 应用程序](../deployment/securing-clickonce-applications.md)

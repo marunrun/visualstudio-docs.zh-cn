@@ -1,5 +1,6 @@
 ---
 title: 使用 SignTool.exe (ClickOnce) 对安装文件进行签名
+description: 了解如何使用 SignTool.exe 对 ClickOnce 应用程序的安装程序进行签名，这有助于确保未安装篡改的文件。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -19,15 +20,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 138e84637acb123c445839dc4810547ed8bc2ed3
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: d8907018c7f5b131747e802902d88a02ca95c2cc
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809500"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350967"
 ---
 # <a name="how-to-sign-setup-files-with-signtoolexe-clickonce"></a>如何：使用 SignTool.exe (ClickOnce) 对安装文件进行签名
-您可以使用 *SignTool.exe* *setup.exe*)  (对安装程序进行签名。 此过程有助于确保不会在最终用户计算机上安装经过篡改的文件。
+您可以使用 *SignTool.exe* *setup.exe* )  (对安装程序进行签名。 此过程有助于确保不会在最终用户计算机上安装经过篡改的文件。
 
  默认情况下，ClickOnce 具有签名的清单和一个签名的安装程序。 但是，如果想在以后更改安装程序的参数，则以后必须对该安装程序进行签名。 如果对安装程序签名后更改参数，则签名将会损坏。
 
@@ -37,25 +38,25 @@ ms.locfileid: "90809500"
 
 1. 在开发计算机上，安装想要用于对清单进行签名的证书。
 
-2. 选择 **解决方案资源管理器**中的项目。
+2. 选择 **解决方案资源管理器** 中的项目。
 
-3. 在“项目”菜单上，单击“ProjectName”属性****** ****。
+3. 在“项目”菜单上，单击“ProjectName”属性 。
 
-4. 在“签名”页中，清除“为 ClickOnce 清单签名”********。
+4. 在“签名”页中，清除“为 ClickOnce 清单签名”。
 
-5. 在“发布”页中，单击“系统必备”********。
+5. 在“发布”页中，单击“系统必备”。
 
-6. 验证是否选中了所有系统必备，然后单击“确定”****。
+6. 验证是否选中了所有系统必备，然后单击“确定”。
 
-7. 在“发布”页中，验证发布设置，然后单击“立即发布”********。
+7. 在“发布”页中，验证发布设置，然后单击“立即发布”。
 
      该解决方案会将未签名的应用程序清单、未签名的部署清单、特定于版本的文件以及未签名的安装程序发布到发布文件夹位置。
 
-8. 在“发布”页中，单击“系统必备”********。
+8. 在“发布”页中，单击“系统必备”。
 
-9. 在“系统必备”对话框中，清除“创建用于安装系统必备组件的安装程序”********。
+9. 在“系统必备”对话框中，清除“创建用于安装系统必备组件的安装程序”。
 
-10. 在“发布”页中，验证发布设置，然后单击“立即发布”********。
+10. 在“发布”页中，验证发布设置，然后单击“立即发布”。
 
      该解决方案会将签名的应用程序清单、签名的部署清单和特定于版本的文件发布到发布文件夹位置。 发布过程不会覆盖未签名的安装程序。
 
@@ -77,5 +78,5 @@ ms.locfileid: "90809500"
     signtool sign /f CertFileName Setup.exe
     ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [如何：对应用程序和部署清单进行重新签名](../deployment/how-to-re-sign-application-and-deployment-manifests.md)

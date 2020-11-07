@@ -1,5 +1,7 @@
 ---
 title: 创建产品清单 |Microsoft Docs
+description: 了解如何使用包含单个产品清单的包和每个区域设置的包清单，为 ClickOnce 应用程序部署必备组件。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 97ec49438ce2382336b1b8a6f8355bd092486c2d
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: ab7156635914d46dfc1849717d29ac0416e2d9fa
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852213"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351214"
 ---
 # <a name="how-to-create-a-product-manifest"></a>如何：创建产品清单
 若要为应用程序部署必备组件，可以创建一个引导程序包。 引导程序包包含单个产品清单文件，但每个区域设置都包含包清单。 包清单包含包的特定于本地化的方面。 这包括字符串、最终用户许可协议和语言包。
@@ -36,7 +38,7 @@ ms.locfileid: "90852213"
 
 1. 为引导程序包创建目录。 此示例使用 C:\package。
 
-2. 在 Visual Studio 中，创建一个名为 *product.xml*的新 XML 文件，并将其保存到 *C:\package* 文件夹中。
+2. 在 Visual Studio 中，创建一个名为 *product.xml* 的新 XML 文件，并将其保存到 *C:\package* 文件夹中。
 
 3. 添加以下 XML，以描述包的 XML 命名空间和产品代码。 将产品代码替换为包的唯一标识符。
 
@@ -54,7 +56,7 @@ ms.locfileid: "90852213"
       </RelatedProducts>
     ```
 
-5. 添加 XML 以列出引导程序包中的所有文件。 此示例使用包文件名 *CorePackage.msi*。
+5. 添加 XML 以列出引导程序包中的所有文件。 此示例使用包文件名 *CorePackage.msi* 。
 
     ```xml
     <PackageFiles>
@@ -64,7 +66,7 @@ ms.locfileid: "90852213"
 
 6. 将 *CorePackage.msi* 文件复制或移动到 *C:\package* 文件夹。
 
-7. 添加 XML 以便使用引导程序命令安装包。 引导程序自动将 **/qn** 标志添加到 *.msi* 文件中，该文件将以无提示方式进行安装。 如果文件是 *.exe*，则引导程序将使用 shell 运行 *.exe* 文件。 以下 XML 不显示 *CorePackage.msi*的任何参数，但你可以将命令行参数放入 `Arguments` 属性。
+7. 添加 XML 以便使用引导程序命令安装包。 引导程序自动将 **/qn** 标志添加到 *.msi* 文件中，该文件将以无提示方式进行安装。 如果文件是 *.exe* ，则引导程序将使用 shell 运行 *.exe* 文件。 以下 XML 不显示 *CorePackage.msi* 的任何参数，但你可以将命令行参数放入 `Arguments` 属性。
 
     ```xml
     <Commands>

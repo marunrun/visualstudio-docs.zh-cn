@@ -1,5 +1,7 @@
 ---
 title: 使用 ClickOnce 部署 API 自动进行的应用更新
+description: 了解如何使用 Microsoft.biztalk.applicationdeployment.engine.dll 类在 ClickOnce 中编写代码，以根据事件（例如用户请求）检查更新。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6aee738d972b7c6e8c857ae87bb25758d871fe28
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f00bd8aaa5db8ab72e6b6286763fd89fc900599f
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85382570"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351253"
 ---
 # <a name="how-to-check-for-application-updates-programmatically-using-the-clickonce-deployment-api"></a>如何：使用 ClickOnce 部署 API 以编程方式检查应用程序更新
 ClickOnce 提供了两种方法，用于在部署应用程序后对其进行更新。 在第一种方法中，可以将 ClickOnce 部署配置为在特定的时间间隔自动检查更新。 在第二种方法中，可以编写使用类的代码 <xref:System.Deployment.Application.ApplicationDeployment> ，以根据事件（例如用户请求）检查更新。
@@ -59,7 +61,7 @@ ClickOnce 提供了两种方法，用于在部署应用程序后对其进行更�
 ## <a name="net-framework-security"></a>.NET Framework 安全性
  应用程序必须具有完全信任权限才能使用编程更新。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [如何：指定部署更新的备用位置](../deployment/how-to-specify-an-alternate-location-for-deployment-updates.md)
 - [选择 ClickOnce 更新策略](../deployment/choosing-a-clickonce-update-strategy.md)
 - [发布 ClickOnce 应用程序](../deployment/publishing-clickonce-applications.md)

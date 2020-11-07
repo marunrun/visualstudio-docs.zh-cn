@@ -1,5 +1,7 @@
 ---
 title: '&lt;&gt; (引导程序) 的 RelatedProducts 元素 |Microsoft Docs'
+description: RelatedProducts 元素定义其他产品，这些产品依赖于或包含在当前产品中。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -21,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 42756b21e631ec14e9c590833f6f0e95a317cc22
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9ac9f84fa22526ed03d7a2e9b201cc9afc2f476d
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "66747459"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350564"
 ---
 # <a name="ltrelatedproductsgt-element-bootstrapper"></a>&lt;RelatedProducts &gt; 元素 (引导程序) 
 `RelatedProducts`元素定义其他产品，这些产品依赖于或包含在当前产品中。
@@ -82,5 +84,5 @@ ms.locfileid: "66747459"
 </RelatedProducts>
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [\<Product> element](../deployment/product-element-bootstrapper.md)

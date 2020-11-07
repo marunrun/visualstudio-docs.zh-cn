@@ -1,5 +1,7 @@
 ---
 title: 产品和包架构参考 |Microsoft Docs
+description: 了解产品文件，该 XML 清单描述 ClickOnce 应用程序所需的外部依赖项。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -25,30 +27,30 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1570aa3d4ea72dc1d133ce3096e1726fa1ffb782
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ac5810fa3bdd6d479c1df4c484960fd923b0ed59
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "66745618"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350707"
 ---
 # <a name="product-and-package-schema-reference"></a>产品和包架构引用
-*产品文件*是 XML 清单，描述应用程序所需的所有外部依赖项 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 。 外部依赖项的示例包括 .NET Framework 和 Microsoft 数据访问组件 (MDAC) 。 包文件类似于产品文件，但用于安装依赖项的区域性相关组件，如本地化程序集、许可协议和文档。
+*产品文件* 是 XML 清单，描述应用程序所需的所有外部依赖项 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 。 外部依赖项的示例包括 .NET Framework 和 Microsoft 数据访问组件 (MDAC) 。 包文件类似于产品文件，但用于安装依赖项的区域性相关组件，如本地化程序集、许可协议和文档。
 
  Product 和包文件包含顶级 `Product` 或 `Package` 元素，其中每个元素都包含下列元素。
 
 |元素|说明|属性|
 |-------------|-----------------|----------------|
-|[\<Product> 元素](../deployment/product-element-bootstrapper.md)|产品文件必需的顶级元素。|无|
+|[\<Product> 元素](../deployment/product-element-bootstrapper.md)|产品文件必需的顶级元素。|None|
 |[\<Package> 元素](../deployment/package-element-bootstrapper.md)|包文件所需的顶级元素。|`Culture`<br /><br /> `Name`<br /><br /> `EULA`|
-|[\<RelatedProducts> 元素](../deployment/relatedproducts-element-bootstrapper.md)|产品文件的可选元素。 此产品安装或依赖的其他产品。|无|
-|[\<InstallChecks> 元素](../deployment/installchecks-element-bootstrapper.md)|必需的元素。 列出要在安装过程中在本地计算机上执行的依赖项检查。|无|
-|[\<Commands> 元素](../deployment/commands-element-bootstrapper.md)|必需的元素。  执行一个或多个安装检查（如所述 `InstallChecks` ），并指示在检查失败时要安装的程序包。|无|
-|[\<PackageFiles> 元素](../deployment/packagefiles-element-bootstrapper.md)|必需的元素。 列出此安装过程可能安装的包。|无|
+|[\<RelatedProducts> 元素](../deployment/relatedproducts-element-bootstrapper.md)|产品文件的可选元素。 此产品安装或依赖的其他产品。|None|
+|[\<InstallChecks> 元素](../deployment/installchecks-element-bootstrapper.md)|必需的元素。 列出要在安装过程中在本地计算机上执行的依赖项检查。|None|
+|[\<Commands> 元素](../deployment/commands-element-bootstrapper.md)|必需的元素。  执行一个或多个安装检查（如所述 `InstallChecks` ），并指示在检查失败时要安装的程序包。|None|
+|[\<PackageFiles> 元素](../deployment/packagefiles-element-bootstrapper.md)|必需的元素。 列出此安装过程可能安装的包。|None|
 |[\<Strings> 元素](../deployment/strings-element-bootstrapper.md)|必需的元素。 存储产品名称和错误字符串的本地化版本。|无|
 
 ## <a name="remarks"></a>备注
- 包架构由由 MS Build 引导任务生成的存根程序 *Setup.exe*使用，该程序包含自身的硬编码逻辑。 架构驱动了安装过程的各个方面。
+ 包架构由由 MS Build 引导任务生成的存根程序 *Setup.exe* 使用，该程序包含自身的硬编码逻辑。 架构驱动了安装过程的各个方面。
 
  `InstallChecks` setup.exe 应对给定包的存在而执行的测试。 `PackageFiles` 列出在给定的测试失败的情况下，安装过程可能必须安装的所有包。 命令下的每个命令条目都执行所述的一个测试 `InstallChecks` ，并指定 `PackageFile` 测试失败时要运行的测试。 您可以使用 `Strings` 元素来本地化产品名称和错误消息，以便您可以使用单个安装二进制文件为任意数量的语言安装应用程序。
 
@@ -157,6 +159,6 @@ ms.locfileid: "66745618"
 </Product>
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [ClickOnce 部署清单](../deployment/clickonce-deployment-manifest.md)
 - [ClickOnce 应用程序清单](../deployment/clickonce-application-manifest.md)
