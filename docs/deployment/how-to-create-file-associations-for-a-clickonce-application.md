@@ -1,5 +1,6 @@
 ---
 title: " (ClickOnce 应用创建文件关联) "
+description: 了解如何将 ClickOnce 应用程序与一个或多个文件扩展名相关联，以便在用户打开此类文件时启动应用程序。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -16,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fcca57415eae6480286f457755b996f22cb6507a
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 21f6923185dbfa79fbe18b7b5c6a5d824a5a2cfe
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809776"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350031"
 ---
 # <a name="how-to-create-file-associations-for-a-clickonce-application"></a>如何：为 ClickOnce 应用程序创建文件关联
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序可以与一个或多个文件扩展名相关联，这样当用户打开这些类型的文件时，应用程序将自动启动。 向应用程序添加文件扩展名支持 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 非常简单。
@@ -48,13 +49,13 @@ ms.locfileid: "90809776"
 
 5. 如果要将多个文件类型与应用程序关联，请添加其他 `fileAssociation` 元素。 请注意， `progid` 每个属性的属性应不同。
 
-6. 使用完应用程序清单后，对清单重新签名。 可以通过使用 *Mage.exe*从命令行执行此操作。
+6. 使用完应用程序清单后，对清单重新签名。 可以通过使用 *Mage.exe* 从命令行执行此操作。
 
     `mage -Sign WindowsFormsApp1.exe.manifest -CertFile mycert.pfx`
 
     有关详细信息，请参阅 [Mage.exe（清单生成和编辑工具）](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [\<fileAssociation> element](../deployment/fileassociation-element-clickonce-application.md)
 - [ClickOnce 应用程序清单](../deployment/clickonce-application-manifest.md)
 - [Mage.exe（清单生成和编辑工具）](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)

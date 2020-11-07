@@ -1,5 +1,6 @@
 ---
 title: 发布启用了视觉样式的 WPF 应用
+description: 了解如何发布启用了视觉样式的 WPF 应用程序，这允许根据用户选择的主题更改控件的外观。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -9,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cd463fa5253d204ad4025958025235c9b75aa29e
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: e372d3163dcef84d76d77e54c66cf9f7c788e213
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810453"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349849"
 ---
 # <a name="how-to-publish-a-wpf-application-with-visual-styles-enabled"></a>如何：发布启用了视觉样式的 WPF 应用程序
 
@@ -50,17 +51,17 @@ ms.locfileid: "90810453"
 
     **在 Visual Basic 项目中打开清单文件**
 
-    1. 在菜单栏上，依次选择 "项目"、"**项目***名称***属性**"，其中，*项目*名称是您的 WPF 项目的名称。
+    1. 在菜单栏上，依次选择 "项目"、" **项目***名称***属性** "，其中， *项目* 名称是您的 WPF 项目的名称。
 
          显示 WPF 项目的属性页。
 
-    2. 在 " **应用程序** " 选项卡上，选择 " **查看 Windows 设置**"。
+    2. 在 " **应用程序** " 选项卡上，选择 " **查看 Windows 设置** "。
 
-         App.config 文件将在 **代码编辑器**中打开。
+         App.config 文件将在 **代码编辑器** 中打开。
 
     **在 c # 项目中打开清单文件**
 
-    1. 在菜单栏上，依次选择 "项目"、"**项目***名称***属性**"，其中，*项目*名称是您的 WPF 项目的名称。
+    1. 在菜单栏上，依次选择 "项目"、" **项目***名称***属性** "，其中， *项目* 名称是您的 WPF 项目的名称。
 
          显示 WPF 项目的属性页。
 
@@ -69,7 +70,7 @@ ms.locfileid: "90810453"
         > [!NOTE]
         > 如果 "清单" 字段中显示 **带有默认设置的嵌入清单** ，或 " **创建不带清单的应用程序** "，则不会启用视觉样式。 如果清单文件的名称出现在清单字段中，则继续执行此过程中的下一步。
 
-    3. 在“解决方案资源管理器”中，选择“显示所有文件”********。
+    3. 在“解决方案资源管理器”中，选择“显示所有文件”。
 
          此按钮显示所有项目项，包括已排除的项目项和通常隐藏的项目项。 清单文件显示为项目项。
 
@@ -96,27 +97,27 @@ ms.locfileid: "90810453"
     </asmv1:assembly>
     ```
 
-2. 在记事本中，单击 " **文件**"，然后单击 " **另存为**"。
+2. 在记事本中，单击 " **文件** "，然后单击 " **另存为** "。
 
-3. 在 " **另存为** " 对话框的 " **保存类型** " 下拉列表中，选择 " **所有文件**"。
+3. 在 " **另存为** " 对话框的 " **保存类型** " 下拉列表中，选择 " **所有文件** "。
 
-4. 在 " **文件名" 框中** ，将文件命名为，并将 *.manifest* 附加到文件名的末尾。 例如： *themes*。
+4. 在 " **文件名" 框中** ，将文件命名为，并将 *.manifest* 附加到文件名的末尾。 例如： *themes* 。
 
-5. 选择 " **浏览文件夹** " 按钮，选择任意文件夹，然后单击 " **保存**"。
+5. 选择 " **浏览文件夹** " 按钮，选择任意文件夹，然后单击 " **保存** "。
 
     > [!NOTE]
     > 其余过程假设此文件的名称为 *themes* ，并将文件保存到计算机上的 *C：\temp* 目录。
 
 ## <a name="embed-the-manifest-file-into-the-executable-file-of-the-published-solution"></a>将清单文件嵌入到已发布解决方案的可执行文件中
 
-1. 打开 **Visual Studio 命令提示符**。
+1. 打开 **Visual Studio 命令提示符** 。
 
-    有关如何打开 **Visual Studio 命令提示符**的详细信息，请参阅 [命令](/dotnet/framework/tools/developer-command-prompt-for-vs)提示符。
+    有关如何打开 **Visual Studio 命令提示符** 的详细信息，请参阅 [命令](/dotnet/framework/tools/developer-command-prompt-for-vs)提示符。
 
    > [!NOTE]
    > 其余步骤对您的解决方案进行了以下假设：
    >
-   > - 解决方案的名称为 **MyWPFProject**。
+   > - 解决方案的名称为 **MyWPFProject** 。
    > - 此解决方案位于以下目录中： `%UserProfile%\Documents\Visual Studio 2010\Projects\` 。
    >
    > - 解决方案发布到以下目录： `%UserProfile%\Documents\Visual Studio 2010\Projects\publish` 。
@@ -176,7 +177,7 @@ ms.locfileid: "90810453"
 
    执行这些步骤后，可以将已发布的文件移动到希望最终用户安装应用程序的位置。 如果你打算经常更新解决方案，则可以将这些命令移动到脚本中，并在每次发布新版本时运行该脚本。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 -[ClickOnce 部署中的特定错误的疑难解答](../deployment/troubleshooting-specific-errors-in-clickonce-deployments.md)
 - [视觉样式概述](/windows/desktop/Controls/visual-styles-overview)

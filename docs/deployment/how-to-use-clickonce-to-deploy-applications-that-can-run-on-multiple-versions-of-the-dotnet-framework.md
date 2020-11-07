@@ -1,5 +1,7 @@
 ---
 title: 使用 ClickOnce 部署设定多目标应用
+description: 了解如何使用 ClickOnce 部署技术部署面向 .NET Framework 的多个版本的应用程序。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7ede1cb4faa437d9cff8bd1239f9c271112ccf72
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 67dcee1fac0b5ec082a7f92285c6c0ac2523800a
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85381699"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349511"
 ---
 # <a name="how-to-use-clickonce-to-deploy-applications-that-can-run-on-multiple-versions-of-the-net-framework"></a>如何：使用 ClickOnce 部署可在多个版本的 .NET Framework 上运行的应用程序
 你可以使用 ClickOnce 部署技术部署面向 .NET Framework 的多个版本的应用程序。 这需要生成和更新应用程序清单和部署清单。
@@ -102,7 +104,7 @@ ms.locfileid: "85381699"
 
 - 更新并重新签署应用程序和部署清单。 有关详细信息，请参阅[如何：对应用程序和部署清单重新签名](../deployment/how-to-re-sign-application-and-deployment-manifests.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [发布 ClickOnce 应用程序](../deployment/publishing-clickonce-applications.md)
 - [\<compatibleFrameworks> element](../deployment/compatibleframeworks-element-clickonce-deployment.md)
 - [\<dependency> element](../deployment/dependency-element-clickonce-application.md)

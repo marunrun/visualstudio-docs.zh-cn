@@ -1,5 +1,7 @@
 ---
 title: 指定技术支持链接 |Microsoft Docs
+description: 了解用于发布 ClickOnce 应用程序的 "支持 URL" 属性，该属性标识用户获取信息的网页或文件共享。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -20,17 +22,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c4474845d4a3f13a404773a6c8b572ff5194e033
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 0c0f0a1c6bda564367497306a572f7e9f4012031
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851744"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349758"
 ---
 # <a name="how-to-specify-a-link-for-technical-support"></a>如何：指定技术支持链接
 发布 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序时，" **支持 URL** " 属性标识一个网页或文件共享，用户可在其中获取有关应用程序的信息。 此属性是可选的;如果提供，URL 将显示在应用程序的 " **添加或删除程序** " 对话框中。
 
- 可以在 "**项目设计器**" 的 "**发布**" 页上设置 "**支持 URL** " 属性。
+ 可以在 " **项目设计器** " 的 " **发布** " 页上设置 " **支持 URL** " 属性。
 
 ### <a name="to-specify-a-support-url"></a>指定支持 URL
 
@@ -40,7 +42,7 @@ ms.locfileid: "90851744"
 
 3. 单击 " **选项** " 按钮打开 " **发布选项** " 对话框。
 
-4. 单击 " **说明**"。
+4. 单击 " **说明** "。
 
 5. 在 " **支持 URL** " 字段中，输入网站、网页或 UNC 共享的完全限定路径。
 

@@ -1,6 +1,8 @@
 ---
 title: 禁止显示代码分析违规情况
 ms.date: 08/27/2020
+description: 了解如何在 Visual Studio 中取消显示代码分析冲突。 了解如何使用 SuppressMessageAttribute 属性进行源内禁止显示。
+ms.custom: SEO-VS-2020
 ms.topic: conceptual
 helpviewer_keywords:
 - source suppression, code analysis
@@ -14,12 +16,12 @@ dev_langs:
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ef64528d8686267677020458374ef96143f6e34
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: b7a0820404047d123350a27950c5aee254af306f
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91658511"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94348692"
 ---
 # <a name="suppress-code-analysis-violations"></a>禁止显示代码分析违规情况
 
@@ -35,7 +37,7 @@ ms.locfileid: "91658511"
 ::: moniker range="vs-2017"
 
 > [!NOTE]
-> 如果将项目迁移到 Visual Studio 2017，可能会突然遇到大量代码分析警告。 如果尚未准备好修复警告，则可以通过选择 "**分析**" "  >  **运行代码分析" 并取消 "活动问题**" 来取消所有这些警告。
+> 如果将项目迁移到 Visual Studio 2017，可能会突然遇到大量代码分析警告。 如果尚未准备好修复警告，则可以通过选择 " **分析** " "  >  **运行代码分析" 并取消 "活动问题** " 来取消所有这些警告。
 >
 > ![在 Visual Studio 中运行代码分析并取消问题](media/suppress-active-issues.png)
 
@@ -44,13 +46,13 @@ ms.locfileid: "91658511"
 ::: moniker range=">=vs-2019"
 
 > [!NOTE]
-> 如果将项目迁移到 Visual Studio 2019，可能会突然遇到大量代码分析警告。 如果尚未准备好修复警告，则可以通过选择 "**分析**  >  **生成并取消活动问题**" 来禁止显示这些警告。
+> 如果将项目迁移到 Visual Studio 2019，可能会突然遇到大量代码分析警告。 如果尚未准备好修复警告，则可以通过选择 " **分析**  >  **生成并取消活动问题** " 来禁止显示这些警告。
 
 ::: moniker-end
 
 ## <a name="suppressmessage-attribute"></a>SuppressMessage 特性
 
-如果从**错误列表**中的 "代码分析" 警告的上下文或右键单击菜单中选择 "**隐藏**"，则 <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> 会在代码或项目的全局禁止显示文件中添加特性。
+如果从 **错误列表** 中的 "代码分析" 警告的上下文或右键单击菜单中选择 " **隐藏** "，则 <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> 会在代码或项目的全局禁止显示文件中添加特性。
 
 该 <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> 属性具有以下格式：
 
@@ -169,7 +171,7 @@ public class Animal
 
 ### <a name="global-suppression-file"></a>全局禁止显示文件
 
-全局禁止显示文件维护全局级禁止显示或未指定目标的禁止显示的禁止显示。 例如，程序集级别的冲突的禁止显示存储在此文件中。 此外，某些 ASP.NET 禁止显示文件存储在此文件中，因为项目级设置不适用于窗体的代码。 第一次在 "**错误列表**" 窗口中的 "**禁止显示**" 命令的 "**项目禁止显示文件**" 选项中，会创建全局禁止显示文件并将其添加到项目。
+全局禁止显示文件维护全局级禁止显示或未指定目标的禁止显示的禁止显示。 例如，程序集级别的冲突的禁止显示存储在此文件中。 此外，某些 ASP.NET 禁止显示文件存储在此文件中，因为项目级设置不适用于窗体的代码。 第一次在 " **错误列表** " 窗口中的 " **禁止显示** " 命令的 " **项目禁止显示文件** " 选项中，会创建全局禁止显示文件并将其添加到项目。
 
 ### <a name="module-suppression-scope"></a>模块禁止显示范围
 

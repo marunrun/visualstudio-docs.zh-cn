@@ -1,18 +1,20 @@
 ---
 title: “所有规则”规则集
 ms.date: 11/04/2016
+description: 了解 "所有规则" 规则集，其中包含 Visual Studio 中的本机代码和托管代码的所有规则。 查看在此集中描述规则的资源。
+ms.custom: SEO-VS-2020
 ms.topic: reference
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c6c8004c57b949c7df9d7250567222dbc1352b2d
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: c1d4881cbc2cf6cde6c9316f547b5b2aabb31b01
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91659148"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94348419"
 ---
 # <a name="all-rules-rule-set"></a>“所有规则”规则集
 

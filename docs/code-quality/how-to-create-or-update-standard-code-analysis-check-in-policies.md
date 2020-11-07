@@ -1,5 +1,6 @@
 ---
 title: 创建/更新标准代码分析签入策略
+description: 了解如何确保在 Azure DevOps 项目中的所有代码项目上运行代码分析。 请参阅如何配置项目代码分析签入策略。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ad889ba106c288c07111857be965ef8d6c8295df
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: d5f03cbd78944d49301362c07d01497abb22734c
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808621"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94348757"
 ---
 # <a name="how-to-create-or-update-standard-code-analysis-check-in-policies"></a>如何：创建或更新标准代码分析签入策略
 
@@ -36,7 +37,7 @@ ms.locfileid: "90808621"
 
 ## <a name="to-open-the-check-in-policy-editor"></a>打开签入策略编辑器
 
-1. 在团队资源管理器中，右键单击项目名称，指向 " **项目设置**"，然后单击 " **源代码管理**"。
+1. 在团队资源管理器中，右键单击项目名称，指向 " **项目设置** "，然后单击 " **源代码管理** "。
 
 1. 在 " **源代码管理** " 对话框中，选择 " **签入策略** " 选项卡。
 
@@ -44,7 +45,7 @@ ms.locfileid: "90808621"
 
     - 单击 " **添加** " 以创建新的签入策略。
 
-    - 双击 "**策略类型**" 列表中的 "现有**代码分析**" 项来更改策略。
+    - 双击 " **策略类型** " 列表中的 "现有 **代码分析** " 项来更改策略。
 
 ## <a name="to-set-policy-options"></a>设置策略选项
 
@@ -53,7 +54,7 @@ ms.locfileid: "90808621"
 |选项|说明|
 |------------|-----------------|
 |**强制签入只包含属于当前解决方案的文件。**|代码分析只能对在解决方案和项目配置文件中指定的文件运行。 此策略可保证分析作为解决方案一部分的所有代码。|
-|**强制执行 C/c + + 代码分析 (/analyze) **|要求所有 C 或 c + + 项目都用 "/analyze 编译器" 选项生成，以便在签入之前运行代码分析。|
+|**强制执行 C/c + + 代码分析 (/analyze)**|要求所有 C 或 c + + 项目都用 "/analyze 编译器" 选项生成，以便在签入之前运行代码分析。|
 |**强制执行托管代码的代码分析**|要求所有托管项目运行代码分析和生成，然后才能将其签入。|
 
 ## <a name="to-specify-a-managed-rule-set"></a>指定托管规则集
@@ -68,6 +69,6 @@ ms.locfileid: "90808621"
 
 有关如何创建和实现自定义签入策略规则集的详细信息，请参阅 [为托管代码实现自定义签入策略](../code-quality/implementing-custom-code-analysis-check-in-policies-for-managed-code.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [实现托管代码的自定义代码分析签入策略](../code-quality/implementing-custom-code-analysis-check-in-policies-for-managed-code.md)

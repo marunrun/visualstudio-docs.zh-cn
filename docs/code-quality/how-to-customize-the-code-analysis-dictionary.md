@@ -1,6 +1,8 @@
 ---
 title: 如何：自定义代码分析字典
 ms.date: 11/04/2016
+description: 了解用于标识拼写和命名约定错误的代码分析字典。 请参阅如何创建自定义字典并将其应用于项目。
+ms.custom: SEO-VS-2020
 ms.topic: how-to
 helpviewer_keywords:
 - code analysis dictionary
@@ -12,22 +14,22 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e1a50374a2603153cc7f4770a9aaf5ba72fbe007
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 33a552cfe918ef75257a4d23391535622560661c
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87453647"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94348731"
 ---
 # <a name="how-to-customize-the-code-analysis-dictionary"></a>如何：自定义代码分析字典
 
 代码分析使用内置字典检查代码中的标识符，以了解 .NET 设计准则的拼写、语法用例和其他命名约定中的错误。 您可以创建自定义字典 Xml 文件，以添加、删除或修改内置字典的术语、缩写和首字母缩写词。
 
-例如，假设代码包含一个名为 **DoorKnokker**的类。 代码分析会将名称标识为两个词的组合： **门** 和 **knokker**。 然后，它会发出警告，指出 **knokker** 拼写不正确。 若要强制代码分析识别拼写，可以将字词 **knokker** 添加到自定义字典中。
+例如，假设代码包含一个名为 **DoorKnokker** 的类。 代码分析会将名称标识为两个词的组合： **门** 和 **knokker** 。 然后，它会发出警告，指出 **knokker** 拼写不正确。 若要强制代码分析识别拼写，可以将字词 **knokker** 添加到自定义字典中。
 
 ## <a name="to-create-a-custom-dictionary"></a>创建自定义字典
 
-创建一个名为 **CustomDictionary.xml**的文件。
+创建一个名为 **CustomDictionary.xml** 的文件。
 
 使用以下 XML 结构定义自定义字词：
 
@@ -264,14 +266,14 @@ ms.locfileid: "87453647"
 
 ## <a name="to-apply-a-custom-dictionary-to-a-project"></a><a name="BKMK_ToApplyACustomDictionaryToAProject"></a> 向项目应用自定义字典
 
-1. 在 **解决方案资源管理器**中，使用以下过程之一：
+1. 在 **解决方案资源管理器** 中，使用以下过程之一：
 
-    - 若要将字典添加到单个项目中，请右键单击项目名称，然后单击 " **添加现有项**"。 在 " **添加现有项** " 对话框中指定该文件。
+    - 若要将字典添加到单个项目中，请右键单击项目名称，然后单击 " **添加现有项** "。 在 " **添加现有项** " 对话框中指定该文件。
   
-    - 若要添加两个或多个项目之间共享的字典，请在 " **添加现有项** " 对话框中找到要共享的文件，单击 " **添加** " 按钮上的向下箭头，然后单击 " **添加为链接**"。
+    - 若要添加两个或多个项目之间共享的字典，请在 " **添加现有项** " 对话框中找到要共享的文件，单击 " **添加** " 按钮上的向下箭头，然后单击 " **添加为链接** "。
 
-2. 在 **解决方案资源管理器**中，右键单击 **CustomDictionary.xml** 的文件名，然后单击 " **属性**"。
+2. 在 **解决方案资源管理器** 中，右键单击 **CustomDictionary.xml** 的文件名，然后单击 " **属性** "。
 
-3. 从 " **生成操作** " 列表中，选择 " **CodeAnalysisDictionary**"。
+3. 从 " **生成操作** " 列表中，选择 " **CodeAnalysisDictionary** "。
 
-4. 从 " **复制到输出目录** " 列表中，选择 "不 **复制**"。
+4. 从 " **复制到输出目录** " 列表中，选择 "不 **复制** "。

@@ -1,5 +1,7 @@
 ---
 title: 使用设计器禁用 ClickOnce 应用程序的 URL 激活
+description: 了解如何使用 Visual Studio 在 ClickOnce 应用程序的安装中禁用自动启动，使用户必须从 "开始" 菜单启动该应用程序。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 818ab634d48fb666ecab5d89464ea017040bd250
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c243b0e0565c082e05fd15a1e02aa0507120e16b
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85382479"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350005"
 ---
 # <a name="how-to-disable-url-activation-of-clickonce-applications-by-using-the-designer"></a>如何：使用设计器禁用 ClickOnce 应用程序的 URL 激活
 通常，在 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 从 Web 服务器安装应用程序后，该应用程序将立即自动启动。 出于安全原因，你可以决定禁用此行为，并告诉用户从 " **开始** " 菜单启动应用程序。 以下过程描述了如何禁用 URL 激活。
@@ -34,15 +36,15 @@ ms.locfileid: "85382479"
 
 #### <a name="to-disable-url-activation-for-your-application"></a>禁用应用程序的 URL 激活的步骤
 
-1. 在 **解决方案资源管理器**中右键单击项目名称，然后单击 " **属性**"。
+1. 在 **解决方案资源管理器** 中右键单击项目名称，然后单击 " **属性** "。
 
 2. 在 " **属性** " 页上，单击 " **发布** " 选项卡。
 
 3. 单击“选项”。
 
-4. 单击 " **清单**"。
+4. 单击 " **清单** "。
 
-5. 选中标签为 " **阻止应用程序通过 URL 激活**" 的复选框。
+5. 选中标签为 " **阻止应用程序通过 URL 激活** " 的复选框。
 
 6. 部署应用程序。
 

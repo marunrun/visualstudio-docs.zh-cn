@@ -1,6 +1,8 @@
 ---
 title: FxCop 规则端口状态
 ms.date: 05/21/2019
+description: 了解已经移植到 Visual Studio 中的 FxCop 分析器的静态代码分析规则。 查看移植规则和移植更新的资源。
+ms.custom: SEO-VS-2020
 ms.topic: reference
 helpviewer_keywords:
 - fxcop rules
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 945b26158da4c4c7788570db0c565ebbcfc2b460
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: cedd96036a6d0725dbde5f0b11400a20360a20ec
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91658576"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94348940"
 ---
 # <a name="fxcop-rule-port-status"></a>Fxcop 规则端口状态
 
@@ -23,11 +25,11 @@ ms.locfileid: "91658576"
 
 ## <a name="ported-rules"></a>移植的规则
 
-Roslyn 存储库中自动 [生成的文档页面](https://github.com/dotnet/roslyn-analyzers/blob/master/src/Microsoft.CodeAnalysis.FxCopAnalyzers/Microsoft.CodeAnalysis.FxCopAnalyzers.md) 具有已移植到 FxCop 分析器的最新规则列表。 该页还包含其他信息，例如是否默认启用规则，以及是否有关联的 *代码修复*。  ([代码修补程序](../ide/quick-actions.md) 是 Visual Studio 的灯泡图标菜单中提供的单击一次修复。 ) 
+Roslyn 存储库中自动 [生成的文档页面](https://github.com/dotnet/roslyn-analyzers/blob/master/src/Microsoft.CodeAnalysis.FxCopAnalyzers/Microsoft.CodeAnalysis.FxCopAnalyzers.md) 具有已移植到 FxCop 分析器的最新规则列表。 该页还包含其他信息，例如是否默认启用规则，以及是否有关联的 *代码修复* 。  ([代码修补程序](../ide/quick-actions.md) 是 Visual Studio 的灯泡图标菜单中提供的单击一次修复。 ) 
 
 截止到此页上的日期，已移植到 [fxcop 分析器](install-fxcop-analyzers.md) 的 fxcop 规则列表包括：
 
-规则 ID | Title
+规则 ID | 标题
 --------|---------
 [CA1000](/dotnet/fundamentals/code-analysis/quality-rules/ca1000) | 不要在泛型类型中声明静态成员
 [CA1001](/dotnet/fundamentals/code-analysis/quality-rules/ca1001) | 具有可释放字段的类型应该是可释放的

@@ -1,5 +1,6 @@
 ---
 title: " (ClickOnce 应用程序设置安全区域) "
+description: 了解如何设置 ClickOnce 应用程序的代码访问安全权限，该应用程序以项目设计器中的基本权限集开头。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -17,33 +18,33 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 59b099a406f31bf2a1c1266d76bb037ac3e85e19
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: d2e8b49f833b5dd91dc6379d2a015d41a9679afe
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809724"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349771"
 ---
 # <a name="how-to-set-a-security-zone-for-a-clickonce-application"></a>如何：为 ClickOnce 应用程序设置安全区域
-为 ClickOnce 应用程序设置代码访问安全权限时，需要在“项目设计器” **** 的“安全” **** 页上从基本权限集开始。
+为 ClickOnce 应用程序设置代码访问安全权限时，需要在“项目设计器”  的“安全” 页上从基本权限集开始。
 
- 在大多数情况下，还可以选择包含受限权限集的“Internet” **** 区域，或选择包含较大权限集的“本地 Intranet” **** 区域。 如果应用程序需要自定义权限，则可以通过选择“自定义” **** 安全区域实现该操作。 有关设置自定义权限的详细信息，请参阅 [如何：设置 ClickOnce 应用程序的自定义权限](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)。
+ 在大多数情况下，还可以选择包含受限权限集的“Internet”  区域，或选择包含较大权限集的“本地 Intranet”  区域。 如果应用程序需要自定义权限，则可以通过选择“自定义”  安全区域实现该操作。 有关设置自定义权限的详细信息，请参阅 [如何：设置 ClickOnce 应用程序的自定义权限](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)。
 
 ### <a name="to-set-a-security-zone"></a>设置安全区域
 
-1. 在 **解决方案资源管理器**中选择一个项目后，在 " **项目** " 菜单上单击 " **属性**"。
+1. 在 **解决方案资源管理器** 中选择一个项目后，在 " **项目** " 菜单上单击 " **属性** "。
 
-2. 单击“安全”选项卡。
+2. 单击“安全”选项卡。 
 
-3. 选中“启用 ClickOnce 安全设置” **** 复选框。
+3. 选中“启用 ClickOnce 安全设置”  复选框。
 
-4. 选择“这是部分可信的应用程序” **** 选项按钮。
+4. 选择“这是部分可信的应用程序”  选项按钮。
 
-     “ClickOnce 安全权限” **** 部分中的控件已启用。
+     “ClickOnce 安全权限”  部分中的控件已启用。
 
-5. 在“将要从中安装应用程序的区域” **** 下拉列表中，选择一个安全区域。
+5. 在“将要从中安装应用程序的区域”  下拉列表中，选择一个安全区域。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [如何：为 ClickOnce 应用程序设置自定义权限](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)
 - [保护 ClickOnce 应用程序](../deployment/securing-clickonce-applications.md)
 - [ClickOnce 应用程序的代码访问安全性](../deployment/code-access-security-for-clickonce-applications.md)

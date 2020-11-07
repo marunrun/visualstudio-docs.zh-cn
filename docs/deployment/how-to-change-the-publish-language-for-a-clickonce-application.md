@@ -1,5 +1,7 @@
 ---
 title: 更改 ClickOnce 应用程序的发布语言
+description: 了解如何在 ClickOnce 中为本地化应用程序指定语言/区域性，而不是默认为开发计算机的语言/区域性。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -16,18 +18,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0252cf39f8f5ee268adbf625f03a9b5a305b903a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7fed8c137b5bce225d8a231bb5a263b87c2bf361
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85382583"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350161"
 ---
 # <a name="how-to-change-the-publish-language-for-a-clickonce-application"></a>如何：更改 ClickOnce 应用程序的发布语言
 
 在发布 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序时，在安装过程中显示的用户界面默认为开发计算机的语言和区域性。 如果要发布本地化的应用程序，则需要指定与本地化版本匹配的语言和区域性。 这取决于你的 `Publish language` 项目的属性。
 
-`Publish language`可以在 "**发布选项**" 对话框中设置属性，该对话框可从 "**项目设计器**" 的 "**发布**" 页访问。
+`Publish language`可以在 " **发布选项** " 对话框中设置属性，该对话框可从 " **项目设计器** " 的 " **发布** " 页访问。
 
 > [!NOTE]
 > 显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[重置设置](../ide/environment-settings.md#reset-settings)。
@@ -40,11 +42,11 @@ ms.locfileid: "85382583"
 
 3. 单击 " **选项** " 按钮打开 " **发布选项** " 对话框。
 
-4. 单击 " **说明**"。
+4. 单击 " **说明** "。
 
-5. 在 " **发布选项** " 对话框中，从 " **发布语言** " 下拉列表中选择语言和区域性，然后单击 **"确定"**。
+5. 在 " **发布选项** " 对话框中，从 " **发布语言** " 下拉列表中选择语言和区域性，然后单击 **"确定"** 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [发布 ClickOnce 应用程序](../deployment/publishing-clickonce-applications.md)
 - [如何：使用发布向导发布 ClickOnce 应用程序](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

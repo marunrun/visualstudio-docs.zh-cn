@@ -1,16 +1,18 @@
 ---
 title: 禁用旧代码分析
 ms.date: 10/04/2019
+description: 了解如何在 Visual Studio 中打开和关闭二进制代码分析。 请参阅如何在托管代码项目中配置此功能。
+ms.custom: SEO-VS-2020
 ms.topic: how-to
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: eb4422a12620d7650b4fe150313b10fe59835064
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 582d0e0d86909b266bbb18f83745b1b2261f0d10
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801017"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94348744"
 ---
 # <a name="how-to-enable-and-disable-binary-code-analysis-for-managed-code"></a>如何：启用和禁用托管代码的二进制代码分析
 
@@ -21,11 +23,11 @@ ms.locfileid: "88801017"
 
 启用或禁用旧代码分析：
 
-1. 在 **解决方案资源管理器**中，选择并按住 (或右键单击项目) ，然后选择 " **属性**"。
+1. 在 **解决方案资源管理器** 中，选择并按住 (或右键单击项目) ，然后选择 " **属性** "。
 
 2. 在项目的 "属性" 对话框中，请参阅 " **代码分析** " 选项卡。
 
-3. 在 **配置** 中指定生成类型，并在 **平台**中指定目标平台。 仅 (Non-.NET Core/.NET Standard 项目。 ) 
+3. 在 **配置** 中指定生成类型，并在 **平台** 中指定目标平台。 仅 (Non-.NET Core/.NET Standard 项目。 ) 
 
 ::: moniker range="vs-2017"
 
@@ -35,7 +37,7 @@ ms.locfileid: "88801017"
 
 ::: moniker range=">=vs-2019"
 
-4. 若要启用或禁用自动代码分析，请在**二进制分析器**部分中选中或清除 "**生成时运行**" 复选框。
+4. 若要启用或禁用自动代码分析，请在 **二进制分析器** 部分中选中或清除 " **生成时运行** " 复选框。
 
    ![在 Visual Studio 中对生成选项运行二进制代码分析](media/run-on-build-binary-analyzers.png)
 

@@ -1,6 +1,8 @@
 ---
 title: 配置代码分析
 ms.date: 04/04/2018
+description: 了解如何配置 Visual Studio 旧版代码分析所使用的规则集。 请参阅如何将规则集应用于解决方案中的一个或多个项目。
+ms.custom: SEO-VS-2020
 ms.topic: how-to
 f1_keywords:
 - vs.codeanalysis.propertypages.csvb
@@ -18,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: c94742b452bfd665dc35c59ef831bca2cdacf1f5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8c14a72ff0d797f2fcab8e4ac62d0e0a3fb1001f
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801043"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94348796"
 ---
 # <a name="how-to-configure-legacy-analysis-for-managed-code"></a>如何：为托管代码配置旧分析
 
@@ -36,21 +38,21 @@ ms.locfileid: "88801043"
 
 1. 在项目的属性页上打开 " **代码分析** " 选项卡。 可以通过下列任一方法完成此操作：
 
-   - 在 **解决方案资源管理器**中，选择项目。 在菜单栏上，选择 "**分析**  >  **为**  >  ** \<projectname> **配置代码分析"。
+   - 在 **解决方案资源管理器** 中，选择项目。 在菜单栏上，选择 " **分析**  >  **为**  >  **\<projectname>** 配置代码分析"。
 
-   - 右键单击 " **解决方案资源管理器** 中的项目，选择" **属性**"，然后选择" **代码分析** "选项卡。
+   - 右键单击 " **解决方案资源管理器** 中的项目，选择" **属性** "，然后选择" **代码分析** "选项卡。
 
 2. 在 " **配置** " 和 " **平台** " 列表中，选择生成配置和目标平台。
 
 ::: moniker range="vs-2017"
 
-3. 若要在每次使用所选配置生成项目时运行代码分析，请选择 " **生成时启用代码分析**"。 您还可以通过选择 "**分析**  >  **运行代码分析**  >  **" "运行代码分析" \<projectname> **来手动运行代码分析。
+3. 若要在每次使用所选配置生成项目时运行代码分析，请选择 " **生成时启用代码分析** "。 您还可以通过选择 " **分析**  >  **运行代码分析**  >  **" "运行代码分析" \<projectname>** 来手动运行代码分析。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-3. 若要在每次使用所选配置生成项目时运行代码分析，请在**二进制分析器**部分中选择 "**生成时运行**"。 还可以手动运行旧版代码分析，请参阅 [如何：手动运行托管代码的旧版代码分析](how-to-run-legacy-code-analysis-manually-for-managed-code.md) 了解更多详细信息。
+3. 若要在每次使用所选配置生成项目时运行代码分析，请在 **二进制分析器** 部分中选择 " **生成时运行** "。 还可以手动运行旧版代码分析，请参阅 [如何：手动运行托管代码的旧版代码分析](how-to-run-legacy-code-analysis-manually-for-managed-code.md) 了解更多详细信息。
 
 ::: moniker-end
 
@@ -83,9 +85,9 @@ ms.locfileid: "88801043"
 
 1. 在 Visual Studio 中打开解决方案。
 
-2. 在 " **分析** " 菜单上，选择 " **为解决方案配置代码分析**"。
+2. 在 " **分析** " 菜单上，选择 " **为解决方案配置代码分析** "。
 
-3. 如有必要，展开 " **通用属性**"，然后选择 " **代码分析设置**"。
+3. 如有必要，展开 " **通用属性** "，然后选择 " **代码分析设置** "。
 
 4. 你可以为一个或多个项目指定规则集：
 

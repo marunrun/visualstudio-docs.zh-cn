@@ -1,5 +1,7 @@
 ---
 title: '&lt;&gt; (引导程序) 计划元素 |Microsoft Docs'
+description: Schedule 元素包含 Schedule 元素，这些元素定义命令元素定义的命令的运行时间。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a2f6e4ae90dbd36dab4f4df7f72d5ecf57ee04b1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4f84727647f198c25175139412d3e8509e73fe1c
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62927327"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349355"
 ---
 # <a name="ltschedulesgt-element-bootstrapper"></a>&lt;计划 &gt; 元素 (引导程序) 
 `Schedules`元素包含 `Schedule` 元素，这些元素定义应在哪些特定时间运行元素定义的命令 `Command` 。
@@ -62,6 +64,6 @@ ms.locfileid: "62927327"
 ## <a name="afterpackage"></a>AfterPackage
  `AfterPackage`元素指示安装程序在安装指定的包后执行命令。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [\<Product> element](../deployment/product-element-bootstrapper.md)
 - [产品和包架构引用](../deployment/product-and-package-schema-reference.md)

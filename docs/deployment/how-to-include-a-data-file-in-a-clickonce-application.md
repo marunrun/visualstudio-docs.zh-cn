@@ -1,5 +1,6 @@
 ---
 title: 在 ClickOnce 应用程序中包含数据文件
+description: 了解如何在 ClickOnce 应用程序中添加任何类型的数据文件，以将其存储在目标计算机本地磁盘上的数据目录中。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -17,15 +18,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cdc2154876724feb5c6a0329a2acc5df7ac80fbc
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: cb9e346022871a3aa25363aa717f1bf15a3d42a6
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809141"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349940"
 ---
 # <a name="how-to-include-a-data-file-in-a-clickonce-application"></a>如何：将数据文件包括到 ClickOnce 应用程序中
-安装的每个 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序在目标计算机的本地磁盘上都分配有一个数据目录，应用程序可以在其中管理自己的数据。 数据文件可以包含任何类型的文件：文本文件、XML 文件，甚至 Microsoft Access*数据库 () 文件。* 下面的过程演示如何向应用程序中添加任何类型的数据文件 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 。
+安装的每个 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序在目标计算机的本地磁盘上都分配有一个数据目录，应用程序可以在其中管理自己的数据。 数据文件可以包含任何类型的文件：文本文件、XML 文件，甚至 Microsoft Access *数据库 () 文件。* 下面的过程演示如何向应用程序中添加任何类型的数据文件 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 。
 
 ### <a name="to-include-a-data-file-by-using-mageexe"></a>使用 Mage.exe 包含数据文件
 
@@ -69,11 +70,11 @@ ms.locfileid: "90809141"
 
 4. 选择 " **文件** " 选项卡。
 
-5. 在选项卡顶部的文本框中，输入包含应用程序文件的目录，然后单击 " **填充**"。
+5. 在选项卡顶部的文本框中，输入包含应用程序文件的目录，然后单击 " **填充** "。
 
      数据文件将显示在网格中。
 
-6. 将数据文件的 " **文件类型** " 值设置为 " **数据**"。
+6. 将数据文件的 " **文件类型** " 值设置为 " **数据** "。
 
 7. 保存应用程序清单，然后对文件重新签名。
 
@@ -83,5 +84,5 @@ ms.locfileid: "90809141"
 
      必须对部署清单进行重新签名，因为其应用程序清单的哈希已更改。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [在 ClickOnce 应用程序中访问本地数据和远程数据](../deployment/accessing-local-and-remote-data-in-clickonce-applications.md)
