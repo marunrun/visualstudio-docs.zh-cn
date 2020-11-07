@@ -1,5 +1,6 @@
 ---
 title: ClickOnce)  (安全/版本控制/清单问题
+description: 了解 ClickOnce 安全性、应用程序版本控制和清单语法和语义的问题，这些问题会导致 ClickOnce 部署不会成功。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -23,12 +24,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 881a0f9d5062e335fb7e03653bde11e032f89aca
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 5fb13f8720bced2baa118dda1e55da3f52f1b9ee
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90811242"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349368"
 ---
 # <a name="security-versioning-and-manifest-issues-in-clickonce-deployments"></a>ClickOnce 部署中的安全、版本控制和清单问题
 
@@ -68,7 +69,7 @@ ms.locfileid: "90811242"
 
 在清单文件中可能会导致问题的原因是为应用程序选择的名称包含特殊字符，如单引号或双引号。 应用程序的名称是其标识的一部分 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 当前不分析包含特殊字符的标识。 如果你的应用程序无法激活，请确保该名称只使用字母和数字字符，然后再次尝试部署。
 
-如果你已手动编辑了你的部署清单或应用程序清单，可能会无意中损坏它们。 损坏的清单将阻止正确的 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 安装。 可以通过单击 " **ClickOnce 错误**" 对话框中的 "**详细信息**"，然后在日志中读取错误消息，在运行时调试此类错误。 日志将列出以下消息之一：
+如果你已手动编辑了你的部署清单或应用程序清单，可能会无意中损坏它们。 损坏的清单将阻止正确的 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 安装。 可以通过单击 " **ClickOnce 错误** " 对话框中的 " **详细信息** "，然后在日志中读取错误消息，在运行时调试此类错误。 日志将列出以下消息之一：
 
 - 语法错误的说明，以及发生错误的行号和字符位置。
 
@@ -95,7 +96,7 @@ ms.locfileid: "90811242"
 > [!NOTE]
 > 每次更新清单时，还必须对其进行重新签名。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [ClickOnce 部署疑难解答](../deployment/troubleshooting-clickonce-deployments.md) 
 [保护 ClickOnce 应用程序](../deployment/securing-clickonce-applications.md) 

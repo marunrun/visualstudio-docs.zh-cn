@@ -1,6 +1,8 @@
 ---
 title: 分析托管代码的代码缺陷演练 |Microsoft Docs
 ms.date: 01/29/2018
+description: 了解如何使用旧代码分析来分析 .NET 托管代码程序集。 请参阅如何检查缺陷以及是否符合 .NET 设计准则。
+ms.custom: SEO-VS-2020
 ms.topic: conceptual
 helpviewer_keywords:
 - code analysis [Visual Studio]
@@ -10,12 +12,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: ab8a834de307cf7803b93f025a68b95defe12466
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: 7e862b176ab396999d3504e19c4de9a5c407b266
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91659187"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349017"
 ---
 # <a name="walkthrough-use-static-code-analysis-to-find-code-defects"></a>演练：使用静态代码分析查找代码缺陷
 
@@ -25,9 +27,9 @@ ms.locfileid: "91659187"
 
 ## <a name="create-a-class-library"></a>创建类库
 
-1. 打开 Visual Studio，并从类库 ** ( .NET Framework) ** 模板创建一个新项目。
+1. 打开 Visual Studio，并从类库 **( .NET Framework)** 模板创建一个新项目。
 
-1. 将项目命名为 **CodeAnalysisManagedDemo**。
+1. 将项目命名为 **CodeAnalysisManagedDemo** 。
 
 1. 创建项目后，打开 *Class1.cs* 文件。
 
@@ -51,7 +53,7 @@ ms.locfileid: "91659187"
 
 ## <a name="analyze-the-project-for-code-defects"></a>对项目进行代码缺陷分析
 
-1. 在 **解决方案资源管理器**中选择 "CodeAnalysisManagedDemo" 项目。
+1. 在 **解决方案资源管理器** 中选择 "CodeAnalysisManagedDemo" 项目。
 
 2. 在 **“项目”** 菜单上，单击 **“属性”** 。
 
@@ -63,31 +65,31 @@ ms.locfileid: "91659187"
 
 4. 请确保选中 **"生成时启用代码分析"** 。
 
-5. 从 " **运行此规则集** " 下拉列表中，选择 " **Microsoft 所有规则**"。
+5. 从 " **运行此规则集** " 下拉列表中，选择 " **Microsoft 所有规则** "。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-4. 请确保在**二进制分析器**部分中选择了 **"生成时运行"** 。
+4. 请确保在 **二进制分析器** 部分中选择了 **"生成时运行"** 。
 
-5. 从 " **活动规则** " 下拉列表中，选择 " **Microsoft 所有规则**"。
+5. 从 " **活动规则** " 下拉列表中，选择 " **Microsoft 所有规则** "。
 
 ::: moniker-end
 
-6. 在 " **文件** " 菜单上，单击 " **保存选定项**"，然后关闭 "属性" 页。
+6. 在 " **文件** " 菜单上，单击 " **保存选定项** "，然后关闭 "属性" 页。
 
-7. 在 " **生成** " 菜单上，单击 " **生成 CodeAnalysisManagedDemo**"。
+7. 在 " **生成** " 菜单上，单击 " **生成 CodeAnalysisManagedDemo** "。
 
     " **错误列表** " 和 " **输出** " 窗口中显示 CodeAnalysisManagedDemo 项目生成警告。
 
 ## <a name="correct-the-code-analysis-issues"></a>更正代码分析问题
 
-1. 在 " **视图** " 菜单上，选择 " **错误列表**"。
+1. 在 " **视图** " 菜单上，选择 " **错误列表** "。
 
-    根据所选的开发人员配置文件，可能需要指向 "**视图**" 菜单上的 "**其他窗口**"，然后选择 "**错误列表**"。
+    根据所选的开发人员配置文件，可能需要指向 " **视图** " 菜单上的 " **其他窗口** "，然后选择 " **错误列表** "。
 
-1. 在“解决方案资源管理器”中，选择“显示所有文件”********。
+1. 在“解决方案资源管理器”中，选择“显示所有文件”。
 
 1. 展开 "属性" 节点，然后打开 *AssemblyInfo.cs* 文件。
 
@@ -115,7 +117,7 @@ ms.locfileid: "91659187"
 
    [CA2210：程序集应具有有效的强名称](../code-quality/ca2210.md)：使用强名称密钥签名 "CodeAnalysisManagedDemo"：
 
-   1. 在 " **项目** " 菜单上，选择 " **CodeAnalysisManagedDemo 属性**"。
+   1. 在 " **项目** " 菜单上，选择 " **CodeAnalysisManagedDemo 属性** "。
 
       项目属性随即出现。
 
@@ -127,11 +129,11 @@ ms.locfileid: "91659187"
 
       “创建强名称密钥”对话框随即出现。
 
-   1. 对于 " **密钥文件名称**"，请输入 **为 testkey**。
+   1. 对于 " **密钥文件名称** "，请输入 **为 testkey** 。
 
-   1. 输入密码，然后选择 **"确定"**。
+   1. 输入密码，然后选择 **"确定"** 。
 
-   1. 在 " **文件** " 菜单上，选择 " **保存选定项**"，然后关闭属性页。
+   1. 在 " **文件** " 菜单上，选择 " **保存选定项** "，然后关闭属性页。
 
    完成所有更改后，Class1.cs 文件应如下所示：
 
@@ -162,9 +164,9 @@ ms.locfileid: "91659187"
 
 1. 对于每一个剩余警告，请执行以下操作：
 
-    1. 选择 **错误列表**中的警告。
+    1. 选择 **错误列表** 中的警告。
 
-    1. 从右键单击菜单 (上下文菜单) 上，选择 " **Suppress**  >  **在禁止显示文件中**取消"。
+    1. 从右键单击菜单 (上下文菜单) 上，选择 " **Suppress**  >  **在禁止显示文件中** 取消"。
 
 1. 重新生成项目。
 

@@ -1,6 +1,8 @@
 ---
 title: Code Analysis Policy Errors
 ms.date: 11/04/2016
+description: 了解 Visual Studio 中的代码分析策略错误。 查看在签入代码时不满足策略时发生的错误的说明。
+ms.custom: SEO-VS-2020
 ms.topic: reference
 f1_keywords:
 - vs.codeanalysis.policyfailures
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ac7a949b3f8a1e0c9d44c6194f87745b4e3f17a8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 43dae5ec9ca68c746b914ad0a75b792f2a6e6b43
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75587740"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349095"
 ---
 # <a name="code-analysis-policy-errors"></a>Code Analysis Policy Errors
 
@@ -29,7 +31,7 @@ ms.locfileid: "75587740"
 
 - 未对解决方案中所有项目的生成版本启用代码分析。
 
-- Visual studio 中项目的本地规则集的**操作**设置与项目规则集的限制更小，例如，服务器上设置为**操作** = **错误**的规则的**操作**设置为 "**警告**" 或 "**无**" （在 Visual studio 中运行的规则集）) 中。
+- Visual studio 中项目的本地规则集的 **操作** 设置与项目规则集的限制更小，例如，服务器上设置为 **操作** = **错误** 的规则的 **操作** 设置为 " **警告** " 或 " **无** " （在 Visual studio 中运行的规则集）) 中。
 
 - 在 Visual Studio 中指定的规则集不包含在项目的代码分析签入策略中指定的规则集中指定的所有规则。
 
@@ -47,11 +49,11 @@ ms.locfileid: "75587740"
 
 **"" 的版本 {0} 不正确。策略中指定的强名称为 " {1} "。**
 
-此错误适用于 .NET 项目。 代码分析策略所需的规则 .dll 存在于本地计算机上，但版本/公钥不匹配。 若要更正此错误，策略创建者必须在其计算机上更新*C:\Program Files\Microsoft Visual Studio 8 \ Team Tools\Static Analysis \\ Tools\FxCop\Rules*目录中的 .dll。
+此错误适用于 .NET 项目。 代码分析策略所需的规则 .dll 存在于本地计算机上，但版本/公钥不匹配。 若要更正此错误，策略创建者必须在其计算机上更新 *C:\Program Files\Microsoft Visual Studio 8 \ Team Tools\Static Analysis \\ Tools\FxCop\Rules* 目录中的 .dll。
 
 **{0}策略中指定的 "" 程序集不存在。**
 
-此错误适用于 .NET 项目。 代码分析策略所需的规则未在客户端计算机上安装相应的 dll。 若要更正此错误，策略创建者必须在其计算机上更新*C:\Program Files\Microsoft Visual Studio 8 \ Team Tools\Static \\ Analysis Tools\FxCop\Rules*目录中的 dll。
+此错误适用于 .NET 项目。 代码分析策略所需的规则未在客户端计算机上安装相应的 dll。 若要更正此错误，策略创建者必须在其计算机上更新 *C:\Program Files\Microsoft Visual Studio 8 \ Team Tools\Static \\ Analysis Tools\FxCop\Rules* 目录中的 dll。
 
 **项目 {0} 规则设置不符合代码分析策略。**
 
@@ -73,6 +75,6 @@ ms.locfileid: "75587740"
 
 此错误适用于非托管项目。 代码分析策略需要适用于 C/c + + 的代码分析，但在客户端上的当前项目中未启用它。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [代码分析应用程序错误](../code-quality/code-analysis-application-errors.md)

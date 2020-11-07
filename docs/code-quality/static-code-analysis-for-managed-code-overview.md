@@ -1,6 +1,8 @@
 ---
 title: 托管代码的传统分析
 ms.date: 06/12/2019
+description: 了解 Visual Studio 中的传统分析。 请参阅如何禁止显示警告以及如何在签入和生成过程中手动、自动和运行分析。
+ms.custom: SEO-VS-2020
 ms.topic: conceptual
 helpviewer_keywords:
 - code analysis, managed code
@@ -10,12 +12,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: b6ab8171d2317549beabe2d8e552eeeefccd02cf
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: c6f1f12fa7fca964c857e534c1ffae50efe70b27
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91927986"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94348653"
 ---
 # <a name="overview-of-legacy-analysis-for-managed-code-in-visual-studio"></a>Visual Studio 中托管代码的传统分析概述
 
@@ -26,7 +28,7 @@ Visual Studio 可以通过以下两种方式对托管代码执行代码分析：
 分析工具将它在分析期间执行的检查表示为警告消息。 警告消息标识任何相关的编程和设计问题，如有可能，还提供有关如何修复问题的信息。
 
 > [!NOTE]
-> 在 Visual Studio 中，.NET Core 和 .NET Standard 项目不支持旧分析 (静态代码分析) 。 如果在作为 msbuild 的一部分的 .NET Core 或 .NET Standard 项目上运行代码分析，则会看到类似于错误的错误 **： CA0055：无法识别的 \<your.dll> 平台**。 若要分析 .NET Core 或 .NET Standard 项目中的代码，请改用 [代码分析器](../code-quality/roslyn-analyzers-overview.md) 。
+> 在 Visual Studio 中，.NET Core 和 .NET Standard 项目不支持旧分析 (静态代码分析) 。 如果在作为 msbuild 的一部分的 .NET Core 或 .NET Standard 项目上运行代码分析，则会看到类似于错误的错误 **： CA0055：无法识别的 \<your.dll> 平台** 。 若要分析 .NET Core 或 .NET Standard 项目中的代码，请改用 [代码分析器](../code-quality/roslyn-analyzers-overview.md) 。
 
 ## <a name="ide-integrated-development-environment-integration"></a>IDE (集成开发环境) 集成
 
@@ -34,7 +36,7 @@ Visual Studio 可以通过以下两种方式对托管代码执行代码分析：
 
 若要在每次生成项目时运行代码分析，请选择项目的 " **代码分析** " 属性页上的选项。 有关详细信息，请参阅 [如何：启用和禁用自动代码分析](../code-quality/how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md)。
 
-若要在项目上手动运行代码分析，请从菜单栏中选择 "**分析**  >  **运行代码分析**  >  **" \<project> "运行代码分析" **。
+若要在项目上手动运行代码分析，请从菜单栏中选择 " **分析**  >  **运行代码分析**  >  **" \<project> "运行代码分析"** 。
 
 ## <a name="rule-sets"></a>规则集
 
@@ -54,12 +56,12 @@ Public class MyClass
 }
 ```
 
-有关详细信息，请参阅 [禁止显示警告](../code-quality/in-source-suppression-overview.md)。
+有关详细信息，请参阅[取消警告](../code-quality/in-source-suppression-overview.md)。
 
 ::: moniker range="vs-2017"
 
 > [!NOTE]
-> 如果将项目迁移到 Visual Studio 2017，可能会突然遇到大量代码分析警告。 如果你尚未准备好修复警告，则可以通过选择 "**分析**" "  >  **运行代码分析" 和 "取消活动问题**" 来取消所有这些警告。
+> 如果将项目迁移到 Visual Studio 2017，可能会突然遇到大量代码分析警告。 如果你尚未准备好修复警告，则可以通过选择 " **分析** " "  >  **运行代码分析" 和 "取消活动问题** " 来取消所有这些警告。
 >
 > ![在 Visual Studio 中运行代码分析并取消问题](media/suppress-active-issues.png)
 
@@ -68,7 +70,7 @@ Public class MyClass
 ::: moniker range=">=vs-2019"
 
 > [!NOTE]
-> 如果将项目迁移到 Visual Studio 2019，可能会突然遇到大量代码分析警告。 如果尚未准备好修复警告，可以通过选择 "**分析**  >  **生成并取消活动问题**" 来取消所有这些警告。
+> 如果将项目迁移到 Visual Studio 2019，可能会突然遇到大量代码分析警告。 如果尚未准备好修复警告，可以通过选择 " **分析**  >  **生成并取消活动问题** " 来取消所有这些警告。
 
 ::: moniker-end
 

@@ -1,6 +1,8 @@
 ---
 title: 托管代码的“扩展的设计准则规则”规则集
 ms.date: 11/04/2016
+description: 了解 Visual Studio 中的 "扩展的设计准则规则" 规则集，其中重点介绍可用性和可维护性。 请参阅规则说明。
+ms.custom: SEO-VS-2020
 ms.topic: reference
 ms.assetid: a338caf2-b75d-4f23-a0f9-3024fa0bceac
 author: mikejo5000
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8062ef99d3c1ad43b633e896617e95851a40930a
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: 0da23a533ca7667ba946299a3197dd487999afec
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91658589"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94348978"
 ---
 # <a name="extended-design-guidelines-rules-rule-set-for-managed-code"></a>托管代码的“扩展的设计准则规则”规则集
 

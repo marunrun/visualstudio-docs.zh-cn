@@ -1,6 +1,8 @@
 ---
 title: 托管代码分析
 ms.date: 08/27/2020
+description: 了解 Visual Studio 中基于 .NET Compiler Platform 的代码分析器。 了解这些分析器为何替换托管程序集的 FxCop 静态分析。
+ms.custom: SEO-VS-2020
 ms.topic: conceptual
 helpviewer_keywords:
 - code analysis, managed code
@@ -10,12 +12,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: d13a8afdfcbeb6ae9f91e39779af8b82b2461000
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 643e8457dbbe838d593a7bad38064537b6cbe57d
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89091391"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94348523"
 ---
 # <a name="overview-of-code-analysis-for-net-in-visual-studio"></a>Visual Studio 中的 .NET 代码分析概述
 

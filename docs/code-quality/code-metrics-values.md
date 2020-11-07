@@ -1,6 +1,8 @@
 ---
 title: 计算代码度量值
 ms.date: 11/02/2018
+description: 了解圈复杂度、类耦合和其他 Visual Studio code 指标。 了解度量值如何跟踪开发进度并确定风险。
+ms.custom: SEO-VS-2020
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.codemetrics.toolwindow
@@ -15,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 796d8aa15aa3612b140917ccfa9db7663c0b0ad3
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: a5e7ee628f5a48f573afed9753f4fad17f85e33a
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599462"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94348640"
 ---
 # <a name="code-metrics-values"></a>代码度量值
 
@@ -34,7 +36,7 @@ ms.locfileid: "89599462"
 
 以下列表显示了 Visual Studio 计算的代码度量结果：
 
-- 可**维护性索引**-计算0到100之间的索引值，它表示维护代码的相对轻松程度。 较高的值表示更好的可维护性。 颜色编码分级可用于快速标识代码中的问题点。 绿色评级介于20和100之间，表示代码具有良好的可维护性。 黄色评分介于10和19之间，表示代码适度维护。 红色评分是0到9之间的评分，表示可维护性低。 有关详细信息，请参阅可 [维护性索引范围和含义](/archive/blogs/codeanalysis/maintainability-index-range-and-meaning) 博客文章。
+- 可 **维护性索引** -计算0到100之间的索引值，它表示维护代码的相对轻松程度。 较高的值表示更好的可维护性。 颜色编码分级可用于快速标识代码中的问题点。 绿色评级介于20和100之间，表示代码具有良好的可维护性。 黄色评分介于10和19之间，表示代码适度维护。 红色评分是0到9之间的评分，表示可维护性低。 有关详细信息，请参阅可 [维护性索引范围和含义](/archive/blogs/codeanalysis/maintainability-index-range-and-meaning) 博客文章。
 
 - **圈复杂度** -度量代码的结构复杂性。 它通过计算程序流中的不同代码路径的数目来创建。 具有复杂控制流的程序需要进行更多测试才能实现良好的代码覆盖率，并且维护性更少。 有关详细信息，请参阅 [圈复杂度的维基百科条目](https://wikipedia.org/wiki/Cyclomatic_complexity)。
 
@@ -46,7 +48,7 @@ ms.locfileid: "89599462"
 
 - **源代码行** 数-表示源文件中存在的源代码行的确切数目，包括空行。 从 Visual Studio 2019 版本16.4 和 CodeAnalysis (2.9.5) 开始提供此指标。
 
-- **可执行代码的行** 数-表示可执行代码行或操作的大致数目。 这是可执行代码中的操作数。 从 Visual Studio 2019 版本16.4 和 CodeAnalysis (2.9.5) 开始提供此指标。 值通常与上一个度量值（即在旧模式下使用的基于 MSIL 指令的度量值的 **行**）接近。
+- **可执行代码的行** 数-表示可执行代码行或操作的大致数目。 这是可执行代码中的操作数。 从 Visual Studio 2019 版本16.4 和 CodeAnalysis (2.9.5) 开始提供此指标。 值通常与上一个度量值（即在旧模式下使用的基于 MSIL 指令的度量值的 **行** ）接近。
 ::: moniker-end
 ::: moniker range="vs-2017"
 
@@ -58,7 +60,7 @@ ms.locfileid: "89599462"
 
 ## <a name="anonymous-methods"></a>匿名方法
 
-*匿名方法*只是没有名称的方法。 匿名方法经常用于将代码块作为委托参数进行传递。 在成员中声明的匿名方法（如方法或访问器）的代码度量结果与声明该方法的成员相关联。 它们不与调用方法的成员相关联。
+*匿名方法* 只是没有名称的方法。 匿名方法经常用于将代码块作为委托参数进行传递。 在成员中声明的匿名方法（如方法或访问器）的代码度量结果与声明该方法的成员相关联。 它们不与调用方法的成员相关联。
 
 ## <a name="generated-code"></a>生成的代码
 

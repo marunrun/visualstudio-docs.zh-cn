@@ -1,5 +1,6 @@
 ---
 title: 指定最终用户安装的位置
+description: 了解如何设置 "安装 URL" 属性，该属性是用于安装的已发布 ClickOnce 应用程序的宿主。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -18,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1ba02b1cf8947fa2d1907d6316e36af8f8f54a77
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 3518a2eef331414e5c73c0cebb36681ad2b72d61
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808719"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349615"
 ---
 # <a name="how-to-specify-the-location-where-end-users-will-install-from"></a>如何：指定最终用户将从中进行安装的位置
 
@@ -31,10 +32,10 @@ ms.locfileid: "90808719"
 
 在这种情况下，可以使用 `Installation URL` 属性来指定用户下载应用程序时将使用的 Web 服务器。 这是必需的，以便应用程序清单知道在何处查找更新。
 
-`Installation URL`可以在 "**项目设计器**" 的 "**发布**" 页上设置属性。
+`Installation URL`可以在 " **项目设计器** " 的 " **发布** " 页上设置属性。
 
 > [!NOTE]
-> `Installation URL`还可以使用**发布向导**来设置属性。 有关详细信息，请参阅 [如何：使用发布向导发布 ClickOnce 应用程序](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)。
+> `Installation URL`还可以使用 **发布向导** 来设置属性。 有关详细信息，请参阅 [如何：使用发布向导发布 ClickOnce 应用程序](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)。
 
 ### <a name="to-specify-an-installation-url"></a>指定安装 URL
 
@@ -44,7 +45,7 @@ ms.locfileid: "90808719"
 
 3. 在 "安装 URL" 字段中，使用格式输入完全限定的 URL `https://www.contoso.com/ApplicationName` ，或使用格式的 UNC 路径输入安装位置 `\Server\ApplicationName` 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [如何：指定 Visual Studio 复制文件的位置](../deployment/how-to-specify-where-visual-studio-copies-the-files.md)
 - [发布 ClickOnce 应用程序](../deployment/publishing-clickonce-applications.md)
 - [如何：使用发布向导发布 ClickOnce 应用程序](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

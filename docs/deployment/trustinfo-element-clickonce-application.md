@@ -1,5 +1,7 @@
 ---
 title: '&lt;&gt; (ClickOnce 应用程序) 的 trustInfo 元素 |Microsoft Docs'
+description: TrustInfo 元素描述了在客户端计算机上运行应用程序所需的最低安全权限。 TrustInfo 元素是必需的。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -22,12 +24,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5873eb18b2f803acfd5aba9444657884b1a24581
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6779471edc25435f14511cc2ebcc34e6247225ee
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84184427"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349212"
 ---
 # <a name="lttrustinfogt-element-clickonce-application"></a>&lt;trustInfo&gt; 元素（ClickOnce 应用程序）
 描述应用程序要在客户端计算机上运行所需的最低安全权限。
@@ -267,6 +269,6 @@ ms.locfileid: "84184427"
 </trustInfo>
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [受信任的应用程序部署概述](../deployment/trusted-application-deployment-overview.md)
 - [ClickOnce 应用程序清单](../deployment/clickonce-application-manifest.md)

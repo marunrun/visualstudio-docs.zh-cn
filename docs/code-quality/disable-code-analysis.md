@@ -1,6 +1,8 @@
 ---
 title: 关闭代码分析
 ms.date: 09/01/2020
+description: 了解如何在 .NET Core、.NET Standard 和 .NET Framework 项目中关闭 Visual Studio 源代码分析。
+ms.custom: SEO-VS-2020
 ms.topic: how-to
 helpviewer_keywords:
 - code analysis, disable
@@ -8,12 +10,12 @@ helpviewer_keywords:
 author: mikadumont
 ms.author: midumont
 manager: jillfra
-ms.openlocfilehash: 28a95038db83e2a03975b0a5baccdabdd18452d9
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: e808cb623fa47c9971e1cdceb15a02b5bf46e901
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037141"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94348549"
 ---
 # <a name="disable-source-code-analysis-for-net"></a>禁用 .NET 源代码分析
 
@@ -35,7 +37,7 @@ ms.locfileid: "90037141"
 
 ![在 Visual Studio 中启用或禁用实时代码分析或生成](media/run-on-build-run-live-analysis.png)
 
-若要打开此页，请在 **解决方案资源管理器** 中右键单击项目节点，然后选择 " **属性**"。 选择 " **代码分析** " 选项卡。
+若要打开此页，请在 **解决方案资源管理器** 中右键单击项目节点，然后选择 " **属性** "。 选择 " **代码分析** " 选项卡。
 
 - 若要在生成时禁用源分析，请取消选中 " **在生成上运行** " 选项。
 - 若要禁用实时源分析，请取消选中 " **在实时分析上运行** " 选项。
@@ -67,7 +69,7 @@ ms.locfileid: "90037141"
 
 ## <a name="source-analysis"></a>源分析
 
-你无法在 Visual Studio 2017 中关闭 [源分析](roslyn-analyzers-overview.md) 。 如果要从**错误列表**中清除分析器错误，则可以通过**Analyze**  >  在菜单栏上选择 "分析**运行代码分析" 和 "取消活动问题**" 来取消所有当前冲突。 有关详细信息，请参阅 [取消冲突](use-roslyn-analyzers.md#suppress-violations)。
+你无法在 Visual Studio 2017 中关闭 [源分析](roslyn-analyzers-overview.md) 。 如果要从 **错误列表** 中清除分析器错误，则可以通过 **Analyze**  >  在菜单栏上选择 "分析 **运行代码分析" 和 "取消活动问题** " 来取消所有当前冲突。 有关详细信息，请参阅 [取消冲突](use-roslyn-analyzers.md#suppress-violations)。
 
 从 Visual Studio 2019 版本16.3 开始，你可以关闭源代码分析或按需执行。 请考虑升级到 Visual Studio 2019。
 
@@ -77,7 +79,7 @@ ms.locfileid: "90037141"
 
 ::: moniker-end
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [禁止冲突](use-roslyn-analyzers.md#suppress-violations)
 - [如何：启用和禁用旧代码分析](how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md)

@@ -1,5 +1,7 @@
 ---
 title: '&lt;&gt; (ClickOnce 部署) 的签名元素 |Microsoft Docs'
+description: 签名元素包含用于对此部署清单进行数字签名所需的信息。 对部署清单进行签名是可选的，但建议这样做。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b6f07e2649d6f41e77f453f64c5838c746f22ad0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b7a86236087bdbff8cf82ca4821573f9f799d019
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85835415"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349277"
 ---
 # <a name="ltsignaturegt-element-clickonce-deployment"></a>&lt;&gt;ClickOnce 部署 (签名元素) 
 包含对此部署清单进行数字签名所需的信息。
@@ -28,8 +30,8 @@ ms.locfileid: "85835415"
 
 ```xml
 
-<Signature> 
-   XML signature information 
+<Signature> 
+   XML signature information 
 </Signature>
 ```
 
@@ -70,5 +72,5 @@ MIIHnTCCBoWgAwIBAgIKJY9+nwAHAAB...
 </Signature>
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [ClickOnce 部署清单](../deployment/clickonce-deployment-manifest.md)

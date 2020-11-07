@@ -1,5 +1,6 @@
 ---
 title: 使用 ClickOnce 应用安装必备组件
+description: 了解如何选择要在安装 ClickOnce 应用程序时将其与 ClickOnce 应用程序一起打包的系统必备组件。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -17,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 52e815c45f776635d811c073114e22c3bd002de0
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: e4a2f2b951881208d3995aeb1f5f1f655b80674f
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809115"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349927"
 ---
 # <a name="how-to-install-prerequisites-with-a-clickonce-application"></a>如何：与 ClickOnce 应用程序一起安装系统必备组件
 所有 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序都需要在计算机上安装 .NET Framework 的正确版本，然后才能运行该计算机; 许多应用程序也有其他必备组件。 发布 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序时，可以选择要与应用程序一起打包的一组系统必备组件。 在安装时，将针对每个先决条件执行检查，以确定它是否已存在;如果不是，则会在安装应用程序之前安装该 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序。
@@ -32,14 +33,14 @@ ms.locfileid: "90809115"
 > [!IMPORTANT]
 > 在发布第一个应用程序之前，应将必备安装程序包添加到开发计算机 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 。 有关详细信息，请参阅 [如何：将必备组件与 ClickOnce 应用程序结合使用](../deployment/how-to-include-prerequisites-with-a-clickonce-application.md)。
 
- 系统必备组件在 "**必备组件**" 对话框中管理，可从 "**项目设计器**" 的 "**发布**" 窗格访问。
+ 系统必备组件在 " **必备组件** " 对话框中管理，可从 " **项目设计器** " 的 " **发布** " 窗格访问。
 
 > [!NOTE]
 > 除了预先确定的先决条件列表，你还可以将你自己的组件添加到该列表中。 有关详细信息，请参阅 [创建引导程序包](../deployment/creating-bootstrapper-packages.md)。
 
 ### <a name="to-specify-prerequisites-to-install-with-a-clickonce-application"></a>指定要与 ClickOnce 应用程序一起安装的先决条件
 
-1. 在 **解决方案资源管理器**中选择一个项目后，在 " **项目** " 菜单上单击 " **属性**"。
+1. 在 **解决方案资源管理器** 中选择一个项目后，在 " **项目** " 菜单上单击 " **属性** "。
 
 2. 选择 " **发布** " 窗格。
 
@@ -47,13 +48,13 @@ ms.locfileid: "90809115"
 
 4. 在 **“系统必备”** 对话框中，确保选中 **“创建用于安装系统必备组件的安装程序”** 复选框。
 
-5. 在 " **必备项** " 列表中，检查要安装的组件，然后单击 **"确定"**。
+5. 在 " **必备项** " 列表中，检查要安装的组件，然后单击 **"确定"** 。
 
      选定的组件将与您的应用程序一起打包和发布。
 
 ### <a name="to-specify-a-different-download-location-for-prerequisites"></a>为必备组件指定不同的下载位置
 
-1. 在 **解决方案资源管理器**中选择一个项目后，在 " **项目** " 菜单上单击 " **属性**"。
+1. 在 **解决方案资源管理器** 中选择一个项目后，在 " **项目** " 菜单上单击 " **属性** "。
 
 2. 选择 " **发布** " 窗格。
 
@@ -61,13 +62,13 @@ ms.locfileid: "90809115"
 
 4. 在 **“系统必备”** 对话框中，确保选中 **“创建用于安装系统必备组件的安装程序”** 复选框。
 
-5. 在 " **指定系统必备组件的安装位置** " 部分中，选择 **"从以下位置下载系统必备组件**"。
+5. 在 " **指定系统必备组件的安装位置** " 部分中，选择 **"从以下位置下载系统必备组件** "。
 
 6. 从下拉列表中选择一个位置，或者输入 URL、文件路径或 FTP 位置，然后单击 **"确定"。**
 
     > [!NOTE]
     > 必须确保指定组件的安装程序存在于指定位置。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [发布 ClickOnce 应用程序](../deployment/publishing-clickonce-applications.md)
 - [如何：使用发布向导发布 ClickOnce 应用程序](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

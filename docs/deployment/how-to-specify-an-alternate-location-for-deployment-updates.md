@@ -1,5 +1,6 @@
 ---
 title: 为部署更新指定替代位置
+description: 了解如何在部署清单中为 ClickOnce 应用程序的更新指定备用位置。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -16,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 096e962f9e334b3db9819973a0fbd82d636f7d6f
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 698ca2c97bcc4699d2c836eff9fefa371481c9cc
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808745"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349641"
 ---
 # <a name="how-to-specify-an-alternate-location-for-deployment-updates"></a>如何：指定部署更新的备用位置
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]最初可以通过 CD 或文件共享安装应用程序，但应用程序必须在 Web 上检查定期更新。 您可以在部署清单中指定更新的备用位置，以便您的应用程序在初始安装后可以从 Web 进行自我更新。
@@ -37,9 +38,9 @@ ms.locfileid: "90808745"
 
 2. 在 " **文件** " 菜单上，选择 " **打开** " 以打开应用程序的部署清单。
 
-3. 选择“部署选项”选项卡****。
+3. 选择“部署选项”选项卡。
 
-4. 在名为 " **启动位置**" 的文本框中，输入将包含应用程序更新的部署清单的目录的 URL。
+4. 在名为 " **启动位置** " 的文本框中，输入将包含应用程序更新的部署清单的目录的 URL。
 
 5. 保存部署清单。
 
@@ -51,17 +52,17 @@ ms.locfileid: "90808745"
 
     **Mage-Update HelloWorld.exe ProviderUrl http： \/ /adatum.com/Update/Path**
 
-3. 保存文件。
+3. 保存该文件。
 
    > [!NOTE]
-   > 你现在需要用 *Mage.exe*对文件进行重新签名。 有关详细信息，请参阅 [演练：手动部署 ClickOnce 应用程序](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)。
+   > 你现在需要用 *Mage.exe* 对文件进行重新签名。 有关详细信息，请参阅 [演练：手动部署 ClickOnce 应用程序](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)。
 
 ## <a name="net-framework-security"></a>.NET Framework 安全性
  如果从脱机媒体（如 CD）安装应用程序，并且计算机处于联机状态，则 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 首先会检查部署清单中的标记所指定的 URL， `<deploymentProvider>` 以确定更新位置是否包含应用程序的更新版本。 如果这样做， [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 将直接从该应用程序中安装应用程序，而不是从初始安装目录中安装，而公共语言运行时 (CLR) 使用确定应用程序的信任级别 `<deploymentProvider>` 。 如果计算机处于脱机状态或 `<deploymentProvider>` 无法访问，则会 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 从 CD 安装，并且 CLR 将根据安装点授予信任; 对于 CD 安装，这意味着应用程序将获得完全信任。 所有后续更新都将继承该信任级别。
 
  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]使用的所有应用程序 `<deploymentProvider>` 应在其应用程序清单中显式声明所需的权限，以便应用程序不会在不同的计算机上收到不同的信任级别。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [演练：手动部署 ClickOnce 应用程序](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)
 - [ClickOnce 部署清单](../deployment/clickonce-deployment-manifest.md)
 - [保护 ClickOnce 应用程序](../deployment/securing-clickonce-applications.md)

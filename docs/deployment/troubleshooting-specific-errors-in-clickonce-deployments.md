@@ -1,5 +1,6 @@
 ---
 title: '排查 ClickOnce 部署 (的错误) '
+description: 本文介绍了在部署 ClickOnce 应用程序时可能发生的常见错误，并提供解决每个问题的步骤。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: troubleshooting
@@ -20,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 351aad83fe28251fcb769c76dd3d63b61b108b6b
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: af462178cf18d57afa6b51aedaba0004615ebb6f
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809448"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349240"
 ---
 # <a name="troubleshoot-specific-errors-in-clickonce-deployments"></a>ClickOnce 部署中特定错误的疑难解答
 本文列出了在部署应用程序时可能出现的以下常见错误 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] ，并提供解决每个问题的步骤。
@@ -53,7 +54,7 @@ ms.locfileid: "90809448"
 - 查看是否存在网络连接问题;如果客户端计算机在下载过程中处于脱机状态，则可以收到此消息。
 
 #### <a name="download-error-when-you-try-to-install-a-clickonce-application-that-has-a-config-file"></a>尝试安装包含 .config 文件的 ClickOnce 应用程序时出现下载错误
- 默认情况下，基于 Windows 的应用程序 Visual Basic 包括 App.config 文件。 当用户尝试从使用 Windows Server 2003 的 Web 服务器进行安装时，将会出现问题，因为出于安全原因，操作系统会阻止安装 *.config* 文件。 若要启用要安装的 *.config*文件，请单击 "**发布选项**" 对话框中的 **"使用部署" 文件扩展名**。
+ 默认情况下，基于 Windows 的应用程序 Visual Basic 包括 App.config 文件。 当用户尝试从使用 Windows Server 2003 的 Web 服务器进行安装时，将会出现问题，因为出于安全原因，操作系统会阻止安装 *.config* 文件。 若要启用要安装的 *.config* 文件，请单击 " **发布选项** " 对话框中的 **"使用部署" 文件扩展名** 。
 
  还必须将内容类型 (也称为 MIME 类型）设置为适用于. application、.manifest 和 .deploy 文件) 。 有关详细信息，请参阅 Web 服务器文档。
 
@@ -90,7 +91,7 @@ ms.locfileid: "90809448"
  若要使用 PrivatePath (合成探测路径) ，应用程序必须请求完全信任权限。 尝试将应用程序清单更改为请求完全信任，然后重试。
 
 #### <a name="during-uninstall-a-message-appears-saying-failed-to-uninstall-application"></a>在卸载过程中，会显示一条消息，指出 "未能卸载应用程序"
- 此消息通常表示应用程序已删除或存储已损坏。 单击 **"确定**" 后，将删除 " **添加/删除程序** " 项。
+ 此消息通常表示应用程序已删除或存储已损坏。 单击 **"确定** " 后，将删除 " **添加/删除程序** " 项。
 
 #### <a name="during-installation-a-message-appears-that-says-that-the-platform-dependencies-are-not-installed"></a>在安装过程中，会出现一条消息，指出未安装平台依赖项
  GAC (全局程序集缓存中缺少一个必备组件) 应用程序需要该程序才能运行。
@@ -113,12 +114,12 @@ ms.locfileid: "90809448"
 #### <a name="you-tried-to-sign-with-a-certificate-in-your-certificate-store-and-a-received-blank-message-box"></a>尝试使用证书存储区中的证书进行签名，并收到一个空消息框
  在 " **签名** " 对话框中，您必须：
 
-- 选择 " **使用存储的证书签名**"，然后
+- 选择 " **使用存储的证书签名** "，然后
 
 - 从列表中选择一个证书;第一个证书不是默认选项。
 
 #### <a name="clicking-the-dont-sign-button-causes-an-exception"></a>单击 "不签名" 按钮会引发异常
- 此问题是已知的 bug。 所有 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 清单都需要签名。 只需选择一个签名选项，然后单击 **"确定"**。
+ 此问题是已知的 bug。 所有 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 清单都需要签名。 只需选择一个签名选项，然后单击 **"确定"** 。
 
 ## <a name="additional-errors"></a>其他错误
  下表显示了客户端计算机用户在安装应用程序时可能会收到的一些常见错误消息 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 。 每个错误消息都列在错误的最可能原因的说明旁。
@@ -137,7 +138,7 @@ ms.locfileid: "90809448"
 | 快捷方式无法通过网络激活。 | [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]只能在本地硬盘上启动应用程序的快捷方式。 无法通过打开指向远程服务器上的快捷方式文件的 URL 来启动它们。 |
 | 应用程序太大，无法在部分信任环境中联机运行。 请与应用程序供应商或系统管理员联系以获得帮助。 | 在部分信任环境中运行的应用程序不能大于联机应用程序配额大小的一半，默认值为 250 MB。 |
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [ClickOnce 安全和部署](../deployment/clickonce-security-and-deployment.md)
 - [ClickOnce 部署疑难解答](../deployment/troubleshooting-clickonce-deployments.md)
 - [Visual Studio 故障排除](/troubleshoot/visualstudio/welcome-visual-studio/)

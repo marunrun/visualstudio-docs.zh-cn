@@ -1,5 +1,7 @@
 ---
 title: '&lt;&gt; (引导程序) 的 PackageFiles 元素 |Microsoft Docs'
+description: 了解 PackageFiles 元素，它包含 PackageFile 元素，这些元素定义作为 Command 元素的结果而执行的安装包。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 81a12f400ee870798759237e202d2ca358fefa69
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 60d6491101bef33f1d8c91d4f7640be9d7277da0
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "66747516"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349537"
 ---
 # <a name="ltpackagefilesgt-element-bootstrapper"></a>&lt;PackageFiles &gt; 元素 (引导程序) 
 `PackageFiles`元素包含 `PackageFile` 元素，这些元素定义作为元素的结果执行的安装包 `Command` 。
@@ -73,7 +75,7 @@ ms.locfileid: "66747516"
 </PackageFiles>
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [\<Product> element](../deployment/product-element-bootstrapper.md)
 - [\<Package> element](../deployment/package-element-bootstrapper.md)
 - [产品和包架构引用](../deployment/product-and-package-schema-reference.md)

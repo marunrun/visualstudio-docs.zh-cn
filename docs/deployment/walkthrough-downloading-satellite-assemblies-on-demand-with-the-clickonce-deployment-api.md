@@ -1,5 +1,6 @@
 ---
 title: '按需下载附属程序集 (ClickOnce API) '
+description: 了解如何将附属程序集标记为可选，并且只下载客户端计算机的当前区域性设置需要的程序集。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -22,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cda69b1aad8e70dce14bb3f25e6bf935103642bf
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 54deb51714183497173c7df4e346bb65613366a2
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809232"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349290"
 ---
 # <a name="walkthrough-download-satellite-assemblies-on-demand-with-the-clickonce-deployment-api"></a>演练：通过 ClickOnce 部署 API 按需下载附属程序集
 通过使用附属程序集，可以为多个区域性配置 Windows 窗体应用程序。 *附属程序集* 是一种包含除应用程序默认区域性以外区域性的应用程序资源的程序集。
@@ -51,20 +52,20 @@ ms.locfileid: "90809232"
 
 2. 使用 [Resgen.exe (资源文件生成器) ](/dotnet/framework/tools/resgen-exe-resource-file-generator) 或生成应用程序的附属程序集 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 。
 
-3. 使用 MageUI.exe 生成应用程序清单，或打开现有的应用程序清单**。 有关此工具的详细信息，请参阅[MageUI.exe（图形化客户端中的清单生成和编辑工具）](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)。
+3. 使用 MageUI.exe 生成应用程序清单，或打开现有的应用程序清单。 有关此工具的详细信息，请参阅[MageUI.exe（图形化客户端中的清单生成和编辑工具）](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)。
 
-4. 单击“文件” **** 选项卡。
+4. 单击“文件”  选项卡。
 
-5. 单击“省略号”按钮 (...)，然后选择包含所有应用程序的程序集和文件（包括使用 Resgen.exe 生成的附属程序集）的目录**********。 附属程序集 (* \<isoCode>\ApplicationName.resources.dll*格式的名称，其中 \<isoCode> 是 RFC 1766 格式的语言标识符。 ) 
+5. 单击“省略号”按钮 (...)，然后选择包含所有应用程序的程序集和文件（包括使用 Resgen.exe 生成的附属程序集）的目录。 附属程序集 ( *\<isoCode>\ApplicationName.resources.dll* 格式的名称，其中 \<isoCode> 是 RFC 1766 格式的语言标识符。 ) 
 
-6. 单击“填充” **** 将文件添加到部署。
+6. 单击“填充”  将文件添加到部署。
 
-7. 选择每个附属程序集的“可选” **** 复选框。
+7. 选择每个附属程序集的“可选”  复选框。
 
 8. 将每个附属程序集的组字段设置为它的 ISO 语言标识符。 例如，对于日语附属程序集，可以指定 `ja-JP`中可用的工具。 这将使在步骤 1 添加的代码能够下载适当的附属程序集，这取决于用户的 <xref:System.Threading.Thread.CurrentUICulture%2A> 属性设置。
 
 ## <a name="next-steps"></a>后续步骤
  在生产环境中，可能需要删除将 <xref:System.Threading.Thread.CurrentUICulture%2A> 设置为特定值的代码示例中的行，因为客户端计算机将以默认方式设置正确值。 例如，当在日语客户端计算机上运行应用程序时，默认情况下， <xref:System.Threading.Thread.CurrentUICulture%2A> 将设置为 `ja-JP` 。 以编程方式设置此值是在部署应用程序之前测试附属程序集的一个很好的方法。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [本地化 ClickOnce 应用程序](../deployment/localizing-clickonce-applications.md)

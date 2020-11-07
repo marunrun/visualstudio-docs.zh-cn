@@ -1,6 +1,8 @@
 ---
 title: 自动功能挂起
 ms.date: 11/04/2016
+description: 了解 Visual Studio 如何减少分析范围、关闭垃圾回收低延迟模式，以及在系统内存有限时刷新缓存。
+ms.custom: SEO-VS-2020
 ms.topic: conceptual
 helpviewer_keywords:
 - live code analysis
@@ -15,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 976e676cda09d50e34acb88a12551b1531595888
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 12b15ed8aa02e53841b85245350735258e7ec11d
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89508374"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94348536"
 ---
 # <a name="automatic-feature-suspension"></a>自动功能挂起
 
@@ -65,7 +67,7 @@ ms.locfileid: "89508374"
 > [!NOTE]
 > 自动功能暂停警告只会针对每个解决方案出现一次，而不会在每个会话的基础上出现一次。 这意味着，如果从 Visual Basic 切换到 Visual c # (，反之亦然) 并遇到另一个内存不足的情况，则可能会出现另一个自动功能暂停警告。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [如何：配置托管代码的实时代码分析范围](./configure-live-code-analysis-scope-managed-code.md)
 - [垃圾回收基础](/dotnet/standard/garbage-collection/fundamentals)
