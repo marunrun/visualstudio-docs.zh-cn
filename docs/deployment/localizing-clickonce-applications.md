@@ -1,5 +1,7 @@
 ---
 title: 本地化 ClickOnce 应用程序 |Microsoft Docs
+description: 了解将 ClickOnce 应用程序本地化为适用于特定区域性的版本的三种方法。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -21,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 81ee263b3bb908daace4bf27f86cff710ae90684
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 97c4fe8d72cc8e2216ee8f5057d032c071974bf3
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "90840498"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350798"
 ---
 # <a name="localize-clickonce-applications"></a>本地化 ClickOnce 应用程序
 本地化是使你的应用程序适用于特定区域性的过程。 此过程涉及使用正确的日期和货币格式、调整窗体上控件的大小以及根据需要从右到左镜像处理控件，从而将用户界面 (UI) 文本转换为特定于区域的语言。
@@ -46,7 +48,7 @@ ms.locfileid: "90840498"
 
  此方法在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中为默认。 若要在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中使用此方法，则无需进行任何其他工作。
 
- 若要与 MageUI.exe 一起使用此方法，则必须在 MageUI.exe 中将应用程序的区域性设置为“非特定语言”********。 接下来，必须手动将所有附属程序集包括在你的部署中。 在 MageUI.exe 中，可以通过使用应用程序清单“文件”选项卡上的“填充”按钮添加附属程序集**********。
+ 若要与 MageUI.exe 一起使用此方法，则必须在 MageUI.exe 中将应用程序的区域性设置为“非特定语言”。 接下来，必须手动将所有附属程序集包括在你的部署中。 在 MageUI.exe 中，可以通过使用应用程序清单“文件”选项卡上的“填充”按钮添加附属程序集。
 
  此方法的好处在于它可创建单个部署，并简化已本地化的部署。 在运行时，将根据用户 Windows 操作系统的默认区域性使用适当的附属程序集。 此方法的缺点为只要客户端计算机上安装或更新了应用程序，此方法就会下载所有附属程序集。 如果你的应用程序具有大量字符串，或客户的网络连接速度慢，则此过程在应用程序更新期间会影响性能。
 
@@ -56,9 +58,9 @@ ms.locfileid: "90840498"
 ## <a name="generate-one-deployment-for-each-culture"></a>为每种区域性生成一个部署
  在此部署策略中，可以生成多个部署。 在每个部署中，仅包括特定区域性所需的附属程序集，并将该部署标记为特定于该区域性。
 
- 若要在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中使用此方法，请在“发布”选项卡上将“发布语言”属性设置为所需的区域********。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 将自动包括所选区域所需的附属程序集，并将排除部署中的所有其他附属程序集。
+ 若要在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中使用此方法，请在“发布”选项卡上将“发布语言”属性设置为所需的区域。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 将自动包括所选区域所需的附属程序集，并将排除部署中的所有其他附属程序集。
 
- 您可以通过使用 Microsoft 中的 *MageUI.exe* 工具来完成相同的任务 [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)] 。 使用应用程序清单“文件”选项卡上的“填充”按钮排除应用程序目录中的所有其他附属程序集，然后为 MageUI.exe 中的部署清单设置“名称”选项卡上的“区域性”字段******************。 这些步骤不仅包括正确的附属程序集，同时也将部署清单中 `assemblyIdentity` 元素上的 `language` 属性设置为相应的区域性。
+ 您可以通过使用 Microsoft 中的 *MageUI.exe* 工具来完成相同的任务 [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)] 。 使用应用程序清单“文件”选项卡上的“填充”按钮排除应用程序目录中的所有其他附属程序集，然后为 MageUI.exe 中的部署清单设置“名称”选项卡上的“区域性”字段。 这些步骤不仅包括正确的附属程序集，同时也将部署清单中 `assemblyIdentity` 元素上的 `language` 属性设置为相应的区域性。
 
  发布应用程序后，必须为应用程序支持的每种其他区域性重复此步骤。 必须确保每次发布到不同的 Web 服务器目录或文件共享目录，因为每个应用程序清单将引用不同的附属程序集，并且每个部署清单将具有不同的 `language` 属性值。
 

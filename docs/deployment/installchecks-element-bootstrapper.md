@@ -1,5 +1,7 @@
 ---
 title: '&lt;&gt; (引导程序) 的 InstallChecks 元素 |Microsoft Docs'
+description: InstallChecks 元素支持在本地计算机上启动各种测试，以确保已安装应用程序的所有先决条件。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c7ba4da072a586bdc09993b77200a769be3940ab
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 660fc893eb22d0c40805a8bf7b2efc86fd83c3b1
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85536300"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350863"
 ---
 # <a name="ltinstallchecksgt-element-bootstrapper"></a>&lt;InstallChecks &gt; 元素 (引导程序) 
 `InstallChecks`元素支持对本地计算机启动各种测试，以确保已安装应用程序的所有适当的先决条件。
@@ -179,6 +181,6 @@ ms.locfileid: "85536300"
     <FailIf Property="Version9X" Compare="VersionLessThan" Value="4.10" String="InvalidPlatform"/>
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [\<Commands> element](../deployment/commands-element-bootstrapper.md)
 - [产品和包架构引用](../deployment/product-and-package-schema-reference.md)

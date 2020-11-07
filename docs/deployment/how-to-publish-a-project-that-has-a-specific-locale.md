@@ -1,5 +1,7 @@
 ---
 title: 发布有特定区域设置的项目
+description: 了解如何使用宏在包含多个不同区域设置的项目的解决方案中发布第一个项目。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -20,26 +22,26 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 38be27ca9873d662fd4839590f50c9788b5ae7ea
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 3cb63d217249cd24d6777fb4d87ae4fe4d00c755
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851692"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351136"
 ---
 # <a name="how-to-publish-a-project-that-has-a-specific-locale"></a>如何：发布具有特定区域设置的项目
 一个应用程序包含多个具有不同区域设置的组件的现象并不少见。 在本方案中，你将创建一个包含若干个项目的解决方案，然后为每个区域设置发布不同的项目。 本过程演示如何使用宏，用“en”区域设置发布解决方案中第一个项目。 如果希望使用“en”之外的其他区域设置来尝试此过程，请务必将宏中的 `localeString` 设置为与所用区域设置（例如，“de”或“de-DE”）相匹配的值。
 
 > [!NOTE]
-> 在使用此宏时，“发布位置”应当是一个有效的 URL 或通用命名约定 (UNC) 共享。 此外，还必须在你的计算机上安装 Internet 信息服务 (IIS)。 若要安装 IIS，请在“开始”菜单上单击“控制面板”********。 双击“添加或删除程序”****。 在“添加或删除程序”中单击“添加/删除 Windows 组件”********。 在“Windows 组件向导”中，从“组件”列表中选中“Internet Information Services (IIS)”复选框************。 然后，单击“完成”**** 以关闭向导。
+> 在使用此宏时，“发布位置”应当是一个有效的 URL 或通用命名约定 (UNC) 共享。 此外，还必须在你的计算机上安装 Internet 信息服务 (IIS)。 若要安装 IIS，请在“开始”菜单上单击“控制面板”。 双击“添加或删除程序”。 在“添加或删除程序”中单击“添加/删除 Windows 组件”。 在“Windows 组件向导”中，从“组件”列表中选中“Internet Information Services (IIS)”复选框。 然后，单击“完成”以关闭向导。
 
 ### <a name="to-create-the-publishing-macro"></a>创建发布宏
 
-1. 若要打开 Macro 资源管理器，请在“工具”菜单上指向“宏”，然后单击“Macro 资源管理器”************。
+1. 若要打开 Macro 资源管理器，请在“工具”菜单上指向“宏”，然后单击“Macro 资源管理器”。
 
-2. 创建一个新的宏模块。 在 Macro 资源管理器中选择“MyMacros”****。 在“工具”菜单上指向“宏”，然后单击“新建宏模块”************。 将该模块命名为 PublishSpecificCulture****。
+2. 创建一个新的宏模块。 在 Macro 资源管理器中选择“MyMacros”。 在“工具”菜单上指向“宏”，然后单击“新建宏模块”。 将该模块命名为 PublishSpecificCulture。
 
-3. 在 Macro 资源管理器中展开“MyMacros”节点，然后通过双击“PublishAllProjects”模块打开该模块（或从“工具”菜单中指向“宏”，然后单击“宏 IDE”）********************。
+3. 在 Macro 资源管理器中展开“MyMacros”节点，然后通过双击“PublishAllProjects”模块打开该模块（或从“工具”菜单中指向“宏”，然后单击“宏 IDE”）。
 
 4. 在“宏 IDE”中，将以下代码添加到该模块中 `Import` 语句的后面：
 
@@ -139,27 +141,27 @@ ms.locfileid: "90851692"
 
 ### <a name="to-publish-a-project-for-a-specific-locale"></a>发布针对特定区域设置的项目
 
-1. 若要创建 Visual Basic Windows 应用程序项目，请在“文件”菜单上指向“新建”，然后单击“项目”************。
+1. 若要创建 Visual Basic Windows 应用程序项目，请在“文件”菜单上指向“新建”，然后单击“项目”。
 
-2. 在“新建项目”对话框中，从“Visual Basic”节点选择“Windows 应用程序”************。 将该项目命名为 PublishLocales**。
+2. 在“新建项目”对话框中，从“Visual Basic”节点选择“Windows 应用程序”。 将该项目命名为 PublishLocales。
 
-3. 单击 Form1。 在“设计”下的“属性”窗口中，将“Language”属性从“(Default)”更改为“English”********************。 将窗体的“Text”属性更改为“MyForm”********。
+3. 单击 Form1。 在“设计”下的“属性”窗口中，将“Language”属性从“(Default)”更改为“English”。 将窗体的“Text”属性更改为“MyForm”。
 
      请注意，只在需要时才会创建本地化的资源 DLL。 例如，在指定了新的区域设置后，如果更改窗体的文本或它的某个控件，便会创建本地化的资源 DLL。
 
-4. 使用 Visual Studio IDE 发布 PublishLocales**。
+4. 使用 Visual Studio IDE 发布 PublishLocales。
 
-     在“解决方案资源管理器”中选择 PublishLocales******。 在“项目”菜单上选择“属性”********。 在 "项目设计器" 的 " **发布** " 页上，指定的发布位置 **http://localhost/PublishLocales** ，然后单击 " **立即发布**"。
+     在“解决方案资源管理器”中选择 PublishLocales。 在“项目”菜单上选择“属性”。 在 "项目设计器" 的 " **发布** " 页上，指定的发布位置 **http://localhost/PublishLocales** ，然后单击 " **立即发布** "。
 
      当出现发布网页时，关闭它。 （对于此步骤，你只需发布该项目，而不必安装它。）
 
-5. 通过在 Visual Studio 命令提示符窗口中调用宏，再次发布 PublishLocales**。 若要查看 "命令提示符" 窗口，请在 "**视图**" 菜单上，指向 "**其他窗口**"，再单击 "**命令窗口**"，或按**Ctrl** + **Alt** + **A**。 在 "命令提示符" 窗口中，键入 `macros` ; "自动完成" 将提供可用宏的列表。 选择以下宏并按 Enter：
+5. 通过在 Visual Studio 命令提示符窗口中调用宏，再次发布 PublishLocales。 若要查看 "命令提示符" 窗口，请在 " **视图** " 菜单上，指向 " **其他窗口** "，再单击 " **命令窗口** "，或按 **Ctrl** + **Alt** + **A** 。 在 "命令提示符" 窗口中，键入 `macros` ; "自动完成" 将提供可用宏的列表。 选择以下宏并按 Enter：
 
      `Macros.MyMacros.PublishSpecificCulture.PublishProjectFirstProjectWithEnLocale`
 
-6. 发布过程成功后，将生成一条消息，其中显示 " *PublishLocales\PublishLocales.vbproj*的发布已成功。 发布语言为 "en"。在消息框中单击 **"确定"** 。 当发布网页出现时，单击“安装”****。
+6. 发布过程成功后，将生成一条消息，其中显示 " *PublishLocales\PublishLocales.vbproj* 的发布已成功。 发布语言为 "en"。在消息框中单击 **"确定"** 。 当发布网页出现时，单击“安装”。
 
-7. 在 *C:\Inetpub\wwwroot\PublishLocales\en*中查找。 除了已本地化的资源 DLL 外，还应看到已安装的文件，例如，清单、setup.exe 和发布网页文件**。 默认情况下，ClickOnce 在 Exe 和 Dll 上追加了 *.deploy* 扩展名; (可以在部署后删除此扩展。 ) 
+7. 在 *C:\Inetpub\wwwroot\PublishLocales\en* 中查找。 除了已本地化的资源 DLL 外，还应看到已安装的文件，例如，清单、setup.exe 和发布网页文件。 默认情况下，ClickOnce 在 Exe 和 Dll 上追加了 *.deploy* 扩展名; (可以在部署后删除此扩展。 ) 
 
 ## <a name="see-also"></a>请参阅
 - [发布 ClickOnce 应用程序](../deployment/publishing-clickonce-applications.md)

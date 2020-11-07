@@ -1,5 +1,6 @@
 ---
 title: 创建带有隐私提示的自定义引导程序
+description: 了解如何将 ClickOnce 应用程序配置为在具有更新文件版本和程序集版本的程序集可用时自动更新。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -20,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a8fbb05fcfdb1a639855ca31e9574d3037559610
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 06effb313dc2b8a247eeeab99290a289717bc960
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809271"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350460"
 ---
 # <a name="walkthrough-create-a-custom-bootstrapper-with-a-privacy-prompt"></a>演练：创建带有隐私提示的自定义引导程序
 可以将 ClickOnce 应用程序配置为在具有更新的文件版本和程序集版本的程序集可用时自动更新。 若要确保你的客户同意此行为，你可以向他们显示隐私提示。 然后，他们可以选择是否向应用程序授予自动更新的权限。 如果不允许应用程序自动更新，则不会安装该应用程序。
@@ -44,37 +45,37 @@ ms.locfileid: "90809271"
 
 1. 在 **“文件”** 菜单上，指向 **“新建”** ，再单击 **“项目”** 。
 
-2. 在 " **新建项目** " 对话框中，单击 " **Windows**"，然后单击 " **WindowsFormsApplication**"。
+2. 在 " **新建项目** " 对话框中，单击 " **Windows** "，然后单击 " **WindowsFormsApplication** "。
 
-3. 对于 " **名称**"，请键入 **ConsentDialog**，然后单击 **"确定"**。
+3. 对于 " **名称** "，请键入 **ConsentDialog** ，然后单击 **"确定"** 。
 
 4. 在设计器中，单击窗体。
 
-5. 在 " **属性** " 窗口中，将 " **文本** " 属性更改为 " **更新许可" 对话框**。
+5. 在 " **属性** " 窗口中，将 " **文本** " 属性更改为 " **更新许可" 对话框** 。
 
-6. 在 " **工具箱**" 中，展开 " **所有 Windows 窗体**"，然后将 " **标签** " 控件拖动到窗体上。
+6. 在 " **工具箱** " 中，展开 " **所有 Windows 窗体** "，然后将 " **标签** " 控件拖动到窗体上。
 
 7. 在设计器中，单击 "标签" 控件。
 
-8. 在 "**属性**" 窗口中，将 "**外观**" 下的 "**文本**" 属性更改为以下内容：
+8. 在 " **属性** " 窗口中，将 " **外观** " 下的 " **文本** " 属性更改为以下内容：
 
     要安装的应用程序会在 Web 上检查最新更新。 单击 "我同意" 即可授权应用程序自动从 Internet 检查和安装更新。
 
-9. 在 " **工具箱**" 中，将 " **Checkbox** " 控件拖到窗体的中间。
+9. 在 " **工具箱** " 中，将 " **Checkbox** " 控件拖到窗体的中间。
 
-10. 在 "**属性**" 窗口中，将 "**布局**" 下的 "**文本**" 属性更改为 "**同意**"。
+10. 在 " **属性** " 窗口中，将 " **布局** " 下的 " **文本** " 属性更改为 " **同意** "。
 
-11. 在 " **工具箱**" 中，将 " **按钮** " 控件拖动到窗体的左下角。
+11. 在 " **工具箱** " 中，将 " **按钮** " 控件拖动到窗体的左下角。
 
-12. 在 "**属性**" 窗口中，更改 "**布局**" 下的 "**文本**" 属性以**继续**。
+12. 在 " **属性** " 窗口中，更改 " **布局** " 下的 " **文本** " 属性以 **继续** 。
 
-13. 在 "**属性**" 窗口中，**将 "ProceedButton" 下的**" ** () 名称**" 属性更改为 " **ProceedButton**"。
+13. 在 " **属性** " 窗口中， **将 "ProceedButton" 下的** " **() 名称** " 属性更改为 " **ProceedButton** "。
 
-14. 在 " **工具箱**" 中，将 " **按钮** " 控件拖动到窗体的右下方。
+14. 在 " **工具箱** " 中，将 " **按钮** " 控件拖动到窗体的右下方。
 
-15. 在 "**属性**" 窗口中，将 "**布局**" 下的**Text**属性更改为 "**取消**"。
+15. 在 " **属性** " 窗口中，将 " **布局** " 下的 **Text** 属性更改为 " **取消** "。
 
-16. 在 "**属性**" 窗口中，**将 "CancelButton" 下的**" ** () 名称**" 属性更改为 " **CancelButton**"。
+16. 在 " **属性** " 窗口中， **将 "CancelButton" 下的** " **() 名称** " 属性更改为 " **CancelButton** "。
 
 17. 在设计器中，双击 " **我同意** " 复选框以生成 CheckedChanged 事件处理程序。
 
@@ -111,19 +112,19 @@ ms.locfileid: "90809271"
 
      仅适用于 Visual Basic 开发人员：
 
-    1. 在 **解决方案资源管理器**中，单击 **ConsentDialog**。
+    1. 在 **解决方案资源管理器** 中，单击 **ConsentDialog** 。
 
-    2. 在 " **项目** " 菜单上，单击 " **添加模块**"，然后单击 " **添加**"。
+    2. 在 " **项目** " 菜单上，单击 " **添加模块** "，然后单击 " **添加** "。
 
     3. 在 *Module1* 代码文件中，添加以下代码。
 
         [!code-vb[ConsentDialog#7](../deployment/codesnippet/VisualBasic/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_6.vb)]
 
-    4. 在 " **项目** " 菜单上，单击 " **ConsentDialog 属性**"，然后单击 " **应用程序** " 选项卡。
+    4. 在 " **项目** " 菜单上，单击 " **ConsentDialog 属性** "，然后单击 " **应用程序** " 选项卡。
 
-    5. 取消选中 " **启用应用程序框架**"。
+    5. 取消选中 " **启用应用程序框架** "。
 
-    6. 在 " **启动对象** " 下拉菜单中，选择 " **Module1**"。
+    6. 在 " **启动对象** " 下拉菜单中，选择 " **Module1** "。
 
        > [!NOTE]
        > 禁用应用程序框架将禁用 Windows XP 视觉样式、应用程序事件、初始屏幕、单个实例应用程序等功能。 有关详细信息，请参阅 [Application Page, Project Designer (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md)（应用程序页、项目设计器 (Visual Basic)。
@@ -134,7 +135,7 @@ ms.locfileid: "90809271"
 
        [!code-csharp[ConsentDialog#5](../deployment/codesnippet/CSharp/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_7.cs)]
 
-26. 在 " **生成** " 菜单上，单击 " **依次**"。
+26. 在 " **生成** " 菜单上，单击 " **依次** "。
 
 ## <a name="create-the-custom-bootstrapper-package"></a>创建自定义引导程序包
  若要向最终用户显示隐私提示，你可以为 "更新许可" 对话框应用程序创建自定义引导程序包，并在所有 ClickOnce 应用程序中将其包含为必备组件。
@@ -149,19 +150,19 @@ ms.locfileid: "90809271"
 
 #### <a name="step-1-to-create-the-bootstrapper-directory"></a>步骤1：创建引导程序目录
 
-1. 在 *%PROGRAMFILES%\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages*中创建名为**UpdateConsentDialog**的目录。
+1. 在 *%PROGRAMFILES%\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages* 中创建名为 **UpdateConsentDialog** 的目录。
 
     > [!NOTE]
     > 若要创建此文件夹，可能需要管理权限。
 
-2. 在 *UpdateConsentDialog* 目录中，创建一个名为 *en*的子目录。
+2. 在 *UpdateConsentDialog* 目录中，创建一个名为 *en* 的子目录。
 
     > [!NOTE]
     > 为每个区域设置创建一个新目录。 例如，可以为 fr 和 de 区域设置添加子目录。 如有必要，这些目录将包含法语和德语字符串和语言包。
 
 #### <a name="step-2-to-create-the-productxml-manifest-file"></a>步骤2：创建 product.xml 清单文件
 
-1. 创建名为 *product.xml*的文本文件。
+1. 创建名为 *product.xml* 的文本文件。
 
 2. 在 *product.xml* 文件中，添加以下 XML 代码。 请确保不会覆盖现有的 XML 代码。
 
@@ -193,7 +194,7 @@ ms.locfileid: "90809271"
 
 #### <a name="step-3-to-create-the-packagexml-manifest-file-and-the-software-license-terms"></a>步骤3：创建 package.xml 清单文件和软件许可条款
 
-1. 创建名为 *package.xml*的文本文件。
+1. 创建名为 *package.xml* 的文本文件。
 
 2. 在 *package.xml* 文件中，添加以下 XML 代码以定义区域设置并包括软件许可条款。 请确保不会覆盖现有的 XML 代码。
 
@@ -233,29 +234,29 @@ ms.locfileid: "90809271"
 
 #### <a name="to-set-the-update-consent-application-as-a-prerequisite"></a>将更新许可应用程序设置为必备组件
 
-1. 在 **解决方案资源管理器**中，单击要部署的应用程序的名称。
+1. 在 **解决方案资源管理器** 中，单击要部署的应用程序的名称。
 
-2. 在“项目”菜单上，单击“ProjectName”属性****** ****。
+2. 在“项目”菜单上，单击“ProjectName”属性 。
 
-3. 单击 " **发布** " 页，然后单击 " **必备组件**"。
+3. 单击 " **发布** " 页，然后单击 " **必备组件** "。
 
-4. 选择 " **更新许可" 对话框**。
+4. 选择 " **更新许可" 对话框** 。
 
     > [!NOTE]
     > 可能需要关闭并重新打开 Visual Studio，才能在 "系统必备" 对话框中看到 "更新许可" 对话框。
 
-5. 单击“确定”。 
+5. 单击“确定”  。
 
 ## <a name="create-and-test-the-setup-program"></a>创建和测试安装程序
  将更新许可应用程序设置为必备项后，你可以为应用程序生成安装程序和引导程序。
 
 #### <a name="to-create-and-test-the-setup-program-by-not-clicking-i-agree"></a>若要创建和测试安装程序，请不要单击 "我同意"
 
-1. 在 **解决方案资源管理器**中，单击要部署的应用程序的名称。
+1. 在 **解决方案资源管理器** 中，单击要部署的应用程序的名称。
 
-2. 在“项目”菜单上，单击“ProjectName”属性****** ****。
+2. 在“项目”菜单上，单击“ProjectName”属性 。
 
-3. 单击 " **发布** " 页，然后单击 " **立即发布**"。
+3. 单击 " **发布** " 页，然后单击 " **立即发布** "。
 
 4. 如果 "发布" 输出未自动打开，请导航到 "发布输出"。
 
@@ -263,25 +264,25 @@ ms.locfileid: "90809271"
 
      安装程序显示 "更新许可" 对话框软件许可协议。
 
-6. 阅读软件许可协议，然后单击 " **接受**"。
+6. 阅读软件许可协议，然后单击 " **接受** "。
 
      此时将显示 "更新许可" 对话框应用程序并显示以下文本：你要安装的应用程序在 Web 上检查最新更新。 单击 "我同意" 即表示授权应用程序在 Internet 上自动检查更新。
 
 7. 关闭应用程序，或单击 "取消"。
 
-     应用程序显示错误：安装适用于 *ApplicationName*的系统组件时出错。 在成功安装所有系统组件之前，安装程序无法继续。
+     应用程序显示错误：安装适用于 *ApplicationName* 的系统组件时出错。 在成功安装所有系统组件之前，安装程序无法继续。
 
 8. 单击 "详细信息" 以显示以下错误消息：组件更新许可对话框安装失败，并显示以下错误消息： "不接受自动更新协议。 以下组件安装失败：-更新许可对话框
 
-9. 单击“关闭”。
+9. 单击“关闭”  。
 
 #### <a name="to-create-and-test-the-setup-program-by-clicking-i-agree"></a>通过单击 "我同意" 来创建和测试安装程序
 
-1. 在 **解决方案资源管理器**中，单击要部署的应用程序的名称。
+1. 在 **解决方案资源管理器** 中，单击要部署的应用程序的名称。
 
-2. 在“项目”菜单上，单击“ProjectName”属性****** ****。
+2. 在“项目”菜单上，单击“ProjectName”属性 。
 
-3. 单击 " **发布** " 页，然后单击 " **立即发布**"。
+3. 单击 " **发布** " 页，然后单击 " **立即发布** "。
 
 4. 如果 "发布" 输出未自动打开，请导航到 "发布输出"。
 
@@ -289,17 +290,17 @@ ms.locfileid: "90809271"
 
      安装程序显示 "更新许可" 对话框软件许可协议。
 
-6. 阅读软件许可协议，然后单击 " **接受**"。
+6. 阅读软件许可协议，然后单击 " **接受** "。
 
      此时将显示 "更新许可" 对话框应用程序并显示以下文本：你要安装的应用程序在 Web 上检查最新更新。 单击 "我同意" 即表示授权应用程序在 Internet 上自动检查更新。
 
-7. 单击 " **我同意**"，然后单击 " **继续**"。
+7. 单击 " **我同意** "，然后单击 " **继续** "。
 
      应用程序将开始安装。
 
-8. 如果出现 "应用程序安装" 对话框，请单击 " **安装**"。
+8. 如果出现 "应用程序安装" 对话框，请单击 " **安装** "。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [应用程序部署必备](../deployment/application-deployment-prerequisites.md)
 - [创建引导程序包](../deployment/creating-bootstrapper-packages.md)
 - [如何：创建产品清单](../deployment/how-to-create-a-product-manifest.md)

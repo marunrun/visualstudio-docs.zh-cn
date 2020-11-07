@@ -1,5 +1,7 @@
 ---
 title: 受信任的应用程序部署概述 |Microsoft Docs
+description: 了解如何使用受信任的应用程序部署技术部署具有提升权限的 ClickOnce 应用程序。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8b3fca6db978eefc5af751d793ad299d89688cba
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 96dfb98b468782f771d866b33b94b2c18de6276f
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72806826"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350486"
 ---
 # <a name="trusted-application-deployment-overview"></a>受信任的应用程序部署概述
 本主题概述了如何通过使用受信任的应用程序部署技术部署具有提升权限的 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序。
@@ -77,10 +79,10 @@ ms.locfileid: "72806826"
 
 - <xref:System.Security.Cryptography?displayProperty=fullName> 命名空间。
 
-- CertMgr.exe，这是 Internet Explorer 的一个组件，因此存在于 Windows 98 及所有更高版本中**。 有关详细信息，请参阅 [ (证书管理器工具)Certmgr.exe ](/dotnet/framework/tools/certmgr-exe-certificate-manager-tool)。
+- CertMgr.exe，这是 Internet Explorer 的一个组件，因此存在于 Windows 98 及所有更高版本中。 有关详细信息，请参阅 [ (证书管理器工具)Certmgr.exe ](/dotnet/framework/tools/certmgr-exe-certificate-manager-tool)。
 
 ### <a name="create-a-clickonce-application"></a>创建 ClickOnce 应用程序
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]应用程序是与描述应用程序并提供安装参数的清单文件组合在一起的 .NET Framework 客户端应用程序。 可以使用 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 中的“发布” **** 命令将你的程序转换成 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]应用程序。 或者，可以使用 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 附带的工具生成 [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)]部署所需的所有文件。 有关详细步骤[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]部署，请参阅[演练：手动部署 ClickOnce 应用程序](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)。
+ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]应用程序是与描述应用程序并提供安装参数的清单文件组合在一起的 .NET Framework 客户端应用程序。 可以使用 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 中的“发布”  命令将你的程序转换成 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]应用程序。 或者，可以使用 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 附带的工具生成 [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)]部署所需的所有文件。 有关详细步骤[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]部署，请参阅[演练：手动部署 ClickOnce 应用程序](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)。
 
  受信任的应用程序部署特定于 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]且只能与 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序一起使用。
 
@@ -90,7 +92,7 @@ ms.locfileid: "72806826"
 > [!CAUTION]
 > 我们不建议使用测试证书来部署应用程序。
 
- 还可以使用 Mage.exe 或 MageUI.exe SDK 工具来对应用程序进行签名****。 有关详细信息，请参阅 [演练：手动部署 ClickOnce 应用程序](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)。 有关与部署签名相关的命令行选项的完整列表，请参阅 [Mage.exe (清单生成和编辑工具) ](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)。
+ 还可以使用 Mage.exe 或 MageUI.exe SDK 工具来对应用程序进行签名。 有关详细信息，请参阅 [演练：手动部署 ClickOnce 应用程序](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)。 有关与部署签名相关的命令行选项的完整列表，请参阅 [Mage.exe (清单生成和编辑工具) ](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)。
 
 ### <a name="publish-the-application"></a>发布应用程序
  一旦签名了 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 清单，应用程序即准备好发布到安装位置。 安装位置可以是 Web 服务器、文件共享或本地磁盘。 当客户端首次访问部署清单时，信任关系管理器必须选择安装的受信任发布者是否已授予 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序在更高级别的信任运行的权限。 信任关系管理器通过将用于对签名部署的证书和客户端受信任的发布者存储区中存储的证书进行比较来做出选择。 如果信任关系管理器找到匹配项，则应用程序以高信任级别运行。

@@ -1,5 +1,7 @@
 ---
 title: 管理 ClickOnce 应用程序的更新 |Microsoft Docs
+description: 了解如何为 ClickOnce 应用程序自动或以编程方式检查更新。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -19,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6f4ebe4d04aa585d9129587fe3c250c46516c824
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: bc2fd7b9e58cac0b013c511e17a6a9744e87ca39
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851601"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351175"
 ---
 # <a name="how-to-manage-updates-for-a-clickonce-application"></a>如何：管理 ClickOnce 应用程序的更新
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序可以自动或以编程方式检查更新。 作为开发人员，您可以很灵活地指定何时以及如何执行更新检查、是否需要更新以及应用程序应检查更新的位置。
@@ -37,7 +39,7 @@ ms.locfileid: "90851601"
 
  有关详细信息，请参阅 [选择 ClickOnce 更新策略](../deployment/choosing-a-clickonce-update-strategy.md)。
 
- 在 "**应用程序更新**" 对话框（可从 "**项目设计器**" 的 "**发布**" 页获得）中管理更新行为。
+ 在 " **应用程序更新** " 对话框（可从 " **项目设计器** " 的 " **发布** " 页获得）中管理更新行为。
 
 ### <a name="to-check-for-updates-before-the-application-starts"></a>在应用程序启动前检查更新
 
@@ -49,7 +51,7 @@ ms.locfileid: "90851601"
 
 4. 在 " **应用程序更新** " 对话框中，确保选中 " **应用程序应检查更新"** 复选框。
 
-5. 在 " **选择应用程序何时应该检查更新** " 部分中，选择 **"在应用程序启动之前**"。 这可确保连接到网络的用户始终运行包含最新更新的应用程序。
+5. 在 " **选择应用程序何时应该检查更新** " 部分中，选择 **"在应用程序启动之前** "。 这可确保连接到网络的用户始终运行包含最新更新的应用程序。
 
 ### <a name="to-check-for-updates-in-the-background-after-the-application-starts"></a>在应用程序启动后在后台检查更新
 
@@ -61,7 +63,7 @@ ms.locfileid: "90851601"
 
 4. 在 " **应用程序更新** " 对话框中，确保选中 " **应用程序应该检查更新** " 复选框。
 
-5. 在 " **选择应用程序何时应该检查更新" 部分**中，选择 **"在应用程序启动后**"。 应用程序将以这种方式开始更快速地启动，然后它将在后台检查更新，并且仅在更新可用时通知用户。 安装后，在应用程序重新启动之前，更新将不会生效。
+5. 在 " **选择应用程序何时应该检查更新" 部分** 中，选择 **"在应用程序启动后** "。 应用程序将以这种方式开始更快速地启动，然后它将在后台检查更新，并且仅在更新可用时通知用户。 安装后，在应用程序重新启动之前，更新将不会生效。
 
 6. 在 " **指定应用程序检查更新的频率** " 部分中，选择 " **每次运行应用程序时检查** (默认) " 或 " **检查每个** " 并输入一个数字和时间间隔。
 
@@ -75,7 +77,7 @@ ms.locfileid: "90851601"
 
 4. 在 " **应用程序更新** " 对话框中，确保选中 " **应用程序应检查更新"** 复选框。
 
-5. 选中 " **指定此应用程序所需的最低版本** " 复选框，然后输入应用程序的 **主**版本号、 **次**版本号、 **内部**版本号和 **修订** 号。
+5. 选中 " **指定此应用程序所需的最低版本** " 复选框，然后输入应用程序的 **主** 版本号、 **次** 版本号、 **内部** 版本号和 **修订** 号。
 
 ### <a name="to-specify-a-different-update-location"></a>指定其他更新位置
 
@@ -87,7 +89,7 @@ ms.locfileid: "90851601"
 
 4. 在 " **应用程序更新** " 对话框中，确保选中 " **应用程序应检查更新"** 复选框。
 
-5. 在 "**更新位置**" 字段中，使用 \Server\ApplicationName 格式输入完全限定的 URL，使用格式 *http://Hostname/ApplicationName* 或 UNC 路径输入更新位置，或* \\ *单击 "**浏览**" 按钮浏览更新位置。
+5. 在 " **更新位置** " 字段中，使用 \Server\ApplicationName 格式输入完全限定的 URL，使用格式 *http://Hostname/ApplicationName* 或 UNC 路径输入更新位置，或 *\\* 单击 " **浏览** " 按钮浏览更新位置。
 
 ### <a name="to-check-for-updates-programmatically"></a>以编程方式检查更新
 
@@ -99,7 +101,7 @@ ms.locfileid: "90851601"
 
 4. 在 " **应用程序更新** " 对话框中，确保清除了 **"应用程序应检查更新"** 复选框。  (可以选择此复选框以编程方式检查更新，也可以让 ClickOnce 运行时自动检查更新。 ) 
 
-5. 在 "**更新位置**" 字段中，使用 \Server\ApplicationName 格式输入完全限定的 URL，使用格式 *http://Hostname/ApplicationName* 或 UNC 路径输入更新位置，或* \\ *单击 "**浏览**" 按钮浏览更新位置。 应用程序将在此更新位置查找其自身的更新版本。
+5. 在 " **更新位置** " 字段中，使用 \Server\ApplicationName 格式输入完全限定的 URL，使用格式 *http://Hostname/ApplicationName* 或 UNC 路径输入更新位置，或 *\\* 单击 " **浏览** " 按钮浏览更新位置。 应用程序将在此更新位置查找其自身的更新版本。
 
 6. 在 Windows 窗体上创建一个按钮、菜单项或其他用户界面项，用户将选择这些项来检查更新。 从该项的事件处理程序中，调用方法以检查和安装更新。 可以在 [如何：使用 ClickOnce 部署 API 以编程方式检查应用程序更新](../deployment/how-to-check-for-application-updates-programmatically-using-the-clickonce-deployment-api.md)中找到此类方法的 Visual Basic 和 Visual c # 代码的示例。
 

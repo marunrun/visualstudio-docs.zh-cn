@@ -1,5 +1,6 @@
 ---
 title: ClickOnce)  (服务器/客户端配置问题
+description: 了解可能会影响 ClickOnce 应用程序部署的服务器和客户端配置问题。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -18,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9af8b864092f56150ff71d0e23b0bf59280aeb6c
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 9e5cebadb35ae5d4cddcd0d4bfb4763979937318
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90811229"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350541"
 ---
 # <a name="server-and-client-configuration-issues-in-clickonce-deployments"></a>ClickOnce 部署中的服务器和客户端配置问题
 如果你在 Windows Server 上使用 Internet Information Services (IIS) ，并且你的部署包含 Windows 无法识别的文件类型（如 Microsoft Word 文件），则 IIS 将拒绝传输该文件，并且你的部署将不会成功。
@@ -32,7 +33,7 @@ ms.locfileid: "90811229"
 
  尽管此限制对于下载核心 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 文件（如清单和程序集）没有问题，但此限制可能会阻止你下载作为应用程序一部分包含的数据文件 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 。 在中 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ，可以通过删除阻止从 IIS 配置管理器下载此类文件的处理程序来解决此错误。 请参阅 IIS 服务器文档了解更多详细信息。
 
- 某些 Web 服务器可能会阻止扩展名为 *.dll*、 *.config*和 *.mdf*的文件。 基于 Windows 的应用程序通常包含具有其中一些扩展的文件。 如果用户尝试运行的 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序访问 Web 服务器上的被阻止文件，将产生错误。 默认情况下，不是取消阻止所有文件扩展名 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] *。* 因此，管理员只需将 Web 服务器配置为取消阻止以下三个文件扩展名：
+ 某些 Web 服务器可能会阻止扩展名为 *.dll* 、 *.config* 和 *.mdf* 的文件。 基于 Windows 的应用程序通常包含具有其中一些扩展的文件。 如果用户尝试运行的 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序访问 Web 服务器上的被阻止文件，将产生错误。 默认情况下，不是取消阻止所有文件扩展名 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] *。* 因此，管理员只需将 Web 服务器配置为取消阻止以下三个文件扩展名：
 
 - *。应用程序*
 
@@ -40,9 +41,9 @@ ms.locfileid: "90811229"
 
 - *.deploy*
 
-  但是，你可以通过清除 "[发布选项" 对话框](/previous-versions/visualstudio/visual-studio-2010/7z83t16a(v=vs.100))中的 **"使用 ' .deploy ' 文件扩展名**" 选项来禁用此选项，在这种情况下，你必须将 Web 服务器配置为取消阻止应用程序中使用的所有文件扩展名。
+  但是，你可以通过清除 " [发布选项" 对话框](/previous-versions/visualstudio/visual-studio-2010/7z83t16a(v=vs.100))中的 **"使用 ' .deploy ' 文件扩展名** " 选项来禁用此选项，在这种情况下，你必须将 Web 服务器配置为取消阻止应用程序中使用的所有文件扩展名。
 
-  例如，如果使用的是未安装 .NET Framework 的 IIS，或者使用的是其他 Web 服务器 (例如 Apache) ，则必须配置 *.manifest*、 *. application*和 *.deploy。*
+  例如，如果使用的是未安装 .NET Framework 的 IIS，或者使用的是其他 Web 服务器 (例如 Apache) ，则必须配置 *.manifest* 、 *. application* 和 *.deploy。*
 
 ## <a name="clickonce-and-secure-sockets-layer-ssl"></a>ClickOnce 和安全套接字层 (SSL) 
  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]应用程序将在 ssl 上正常运行，但 Internet Explorer 会引发有关 ssl 证书的提示。 当证书出现问题时，可能会引发提示，例如，当站点名称不匹配或证书已过期时。 若要 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 通过 SSL 连接进行操作，请确保证书是最新的，并且证书数据与站点数据匹配。
@@ -61,7 +62,7 @@ ms.locfileid: "90811229"
 > 如果部署提供程序不为空或者已安装 Microsoft .NET Framework 助手扩展，则支持 Mozilla Firefox。 此扩展与 .NET Framework 3.5 SP1 一起打包。 对于 XBAP 支持，NPWPF 插件将在需要时激活。
 
 ## <a name="activate-clickonce-applications-through-browser-scripting"></a>通过浏览器脚本激活 ClickOnce 应用程序
- 如果您开发了一个 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 使用活动脚本启动应用程序的自定义网页，则您可能会发现该应用程序将不会在某些计算机上启动。 Internet Explorer 包含一个称为 " **自动提示文件下载**" 的设置，这会影响此行为。 此设置在其 "**选项**" 菜单中的 "**安全**" 选项卡上可影响此行为。 它被称为 **自动提示进行文件下载**，并在 " **下载** " 类别下面列出。 默认情况下，此属性设置为 "为 intranet Web pages **启用** "，默认情况下为 "默认 **禁用** "。 如果此设置设置为 " **禁用**"，则 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 以编程方式激活应用程序的任何尝试 (例如，通过将其 URL 分配给 `document.location` 属性) 将被阻止。 在这种情况下，用户只能通过用户启动的下载来启动应用程序，例如，通过单击超链接设置为应用程序的 URL。
+ 如果您开发了一个 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 使用活动脚本启动应用程序的自定义网页，则您可能会发现该应用程序将不会在某些计算机上启动。 Internet Explorer 包含一个称为 " **自动提示文件下载** " 的设置，这会影响此行为。 此设置在其 " **选项** " 菜单中的 " **安全** " 选项卡上可影响此行为。 它被称为 **自动提示进行文件下载** ，并在 " **下载** " 类别下面列出。 默认情况下，此属性设置为 "为 intranet Web pages **启用** "，默认情况下为 "默认 **禁用** "。 如果此设置设置为 " **禁用** "，则 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 以编程方式激活应用程序的任何尝试 (例如，通过将其 URL 分配给 `document.location` 属性) 将被阻止。 在这种情况下，用户只能通过用户启动的下载来启动应用程序，例如，通过单击超链接设置为应用程序的 URL。
 
 ## <a name="additional-server-configuration-issues"></a>其他服务器配置问题
 
@@ -111,13 +112,13 @@ ms.locfileid: "90811229"
  默认情况下，Windows Server 未安装 FrontPage 服务器扩展。 如果要使用 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 发布到使用 HTTP 与 FrontPage 服务器扩展的 Windows Server Web 服务器，则必须先安装 FrontPage 服务器扩展。 您可以使用 Windows Server 中的 "管理您的服务器管理工具" 执行安装。
 
 ## <a name="windows-server-locked-down-content-types"></a>Windows Server：锁定的内容类型
- IIS on [!INCLUDE[WinXPSvr](../debugger/includes/winxpsvr_md.md)] 锁定除某些已知内容类型之外的所有文件类型 (例如， *.htm*、 *.html*、 *.txt*等) 。 若要 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 使用此服务器启用应用程序的部署，需要更改 IIS 设置，以允许下载类型为 *. application*、 *.manifest*和应用程序使用的任何其他自定义文件类型的文件。
+ IIS on [!INCLUDE[WinXPSvr](../debugger/includes/winxpsvr_md.md)] 锁定除某些已知内容类型之外的所有文件类型 (例如， *.htm* 、 *.html* 、 *.txt* 等) 。 若要 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 使用此服务器启用应用程序的部署，需要更改 IIS 设置，以允许下载类型为 *. application* 、 *.manifest* 和应用程序使用的任何其他自定义文件类型的文件。
 
  如果使用 IIS 服务器进行部署，请运行 *inetmgr.exe* 并为默认网页添加新的文件类型：
 
 - 对于 *应用程序* 和 *清单* 扩展，MIME 类型应为 "应用程序/x 应用程序"。 对于其他文件类型，MIME 类型应为 "application/八进制流"。
 
-- 如果创建扩展名为 " \<em> " 且 mime 类型为 "application/八进制流" 的 mime 类型，则将允许下载不受阻止的文件类型的文件。 但 (不能下载被阻止的文件类型，如* \* .aspx*和* \* .asmx* 。 ) 
+- 如果创建扩展名为 " \<em> " 且 mime 类型为 "application/八进制流" 的 mime 类型，则将允许下载不受阻止的文件类型的文件。 但 (不能下载被阻止的文件类型，如 *\* .aspx* 和 *\* .asmx* 。 ) 
 
   有关在 Windows Server 上配置 MIME 类型的具体说明，请参阅如何向网站 [或应用程序添加 mime 类型](/iis/configuration/system.webserver/staticcontent/mimemap#how-to-add-a-mime-type-to-a-web-site-or-application)。
 
@@ -129,11 +130,11 @@ ms.locfileid: "90811229"
 ## <a name="http-compression-issues"></a>HTTP 压缩问题
  利用 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] ，你可以执行使用 HTTP 压缩的下载，这是使用 GZIP 算法在将流发送到客户端之前压缩数据流的 Web 服务器技术。 在此示例中，客户端（在此示例中）将在 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 读取文件之前对其进行解压缩。
 
- 如果使用的是 IIS，则可以轻松启用 HTTP 压缩。 但是，当启用 HTTP 压缩时，仅对某些文件类型（即 HTML 和文本文件）启用它。 若要为程序 *集 () * 、xml (*xml*) 、部署 *清单 ()  (和* 应用 *程序清单启用* 压缩，则必须将这些文件类型添加到要压缩的 IIS 类型列表中。 将文件类型添加到部署之前，只会压缩文本和 HTML 文件。
+ 如果使用的是 IIS，则可以轻松启用 HTTP 压缩。 但是，当启用 HTTP 压缩时，仅对某些文件类型（即 HTML 和文本文件）启用它。 若要为程序 *集 ()* 、xml ( *xml* ) 、部署 *清单 ()  (和* 应用 *程序清单启用* 压缩，则必须将这些文件类型添加到要压缩的 IIS 类型列表中。 将文件类型添加到部署之前，只会压缩文本和 HTML 文件。
 
  有关 IIS 的详细说明，请参阅 [如何为 HTTP 压缩指定其他文档类型](https://support.microsoft.com/help/234497)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [ClickOnce 部署疑难解答](../deployment/troubleshooting-clickonce-deployments.md)
 - [选择 ClickOnce 部署策略](../deployment/choosing-a-clickonce-deployment-strategy.md)
 - [应用程序部署必备](../deployment/application-deployment-prerequisites.md)
