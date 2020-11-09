@@ -1,5 +1,7 @@
 ---
 title: Target 的 Task 元素 (MSBuild) | Microsoft Docs
+description: 了解 MSBuild 目标的 Task 元素，它创建并执行 MSBuild 任务的实例。
+ms.custom: SEO-VS-2020
 ms.date: 03/13/2017
 ms.topic: reference
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8a4ec2203430045c083b46b2eea8d3e884a4b794
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 58ac6b02424da40ba1130d8a1b549886c9efd718
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "78263163"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047954"
 ---
 # <a name="task-element-of-target-msbuild"></a>Target 的 Task 元素 (MSBuild)
 
@@ -45,25 +47,25 @@ ms.locfileid: "78263163"
 
 ### <a name="attributes"></a>特性
 
-|特性|描述|
+|属性|描述|
 |---------------|-----------------|
 |`Condition`|可选特性。 要计算的条件。 有关详细信息，请参阅[条件](../msbuild/msbuild-conditions.md)。|
-|`ContinueOnError`|可选特性。 可以包含下列值之一：<br /><br /> -   **WarnAndContinue** 或 **true**。 当任务失败时，[Target](../msbuild/target-element-msbuild.md) 元素中的后续任务和生成将继续执行，并且来自该任务的所有错误都被视为警告。<br />-   **ErrorAndContinue**。 当任务失败时，`Target` 元素中的后续任务和生成将继续执行，并且来自该任务的所有错误都被视为错误。<br />-   **ErrorAndStop** 或 **false**（默认值）。 当任务失败时，将不会执行 `Target` 元素中的剩余任务和生成，并且整个 `Target` 元素和生成都被视为已失败。<br /><br /> 4\.5 之前的 .NET Framework 版本仅支持 `true` 和 `false` 值。<br /><br /> 有关详细信息，请参阅[如何：忽略任务中的错误](../msbuild/how-to-ignore-errors-in-tasks.md)。|
+|`ContinueOnError`|可选特性。 可以包含下列值之一：<br /><br /> -   **WarnAndContinue** 或 **true** 。 当任务失败时，[Target](../msbuild/target-element-msbuild.md) 元素中的后续任务和生成将继续执行，并且来自该任务的所有错误都被视为警告。<br />-   **ErrorAndContinue** 。 当任务失败时，`Target` 元素中的后续任务和生成将继续执行，并且来自该任务的所有错误都被视为错误。<br />-   **ErrorAndStop** 或 **false** （默认值）。 当任务失败时，将不会执行 `Target` 元素中的剩余任务和生成，并且整个 `Target` 元素和生成都被视为已失败。<br /><br /> 4.5 之前的 .NET Framework 版本仅支持 `true` 和 `false` 值。<br /><br /> 有关详细信息，请参阅[如何：忽略任务中的错误](../msbuild/how-to-ignore-errors-in-tasks.md)。|
 |`Parameter`|如果任务类包含一个或多个标记有 `[Required]` 特性的属性时，它为必需。<br /><br /> 用户定义的任务参数，其中包含作为其值的参数值。 `Task` 元素中可以有任意数量的参数，其中每个特性均映射到任务类中的 .NET 属性。|
 
 ### <a name="child-elements"></a>子元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
 |[输出](../msbuild/output-element-msbuild.md)|将任务的输出存储于项目文件中。 任务中可能有零个或零个以上 `Output` 元素。|
 
 ### <a name="parent-elements"></a>父元素
 
-| 元素 | 描述 |
+| 元素 | 说明 |
 | - | - |
 | [Target](../msbuild/target-element-msbuild.md) | MSBuild 任务的容器元素。 |
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
  MSBuild 项目文件中的 `Task` 元素创建任务实例、在其中设置属性并执行它。 `Output` 元素存储属性或项中用于项目文件中其他位置的输出参数。
 
@@ -87,7 +89,7 @@ ms.locfileid: "78263163"
 </Target>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [任务](../msbuild/msbuild-tasks.md)
 - [任务参考](../msbuild/msbuild-task-reference.md)

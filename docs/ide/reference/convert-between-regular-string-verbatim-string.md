@@ -1,5 +1,6 @@
 ---
-title: 在正则字符串文本和逐字字符串文本之间转换
+title: 在正则和逐字字符串字面量之间转换
+ms.custom: SEO-VS-2020
 ms.date: 06/08/2020
 ms.topic: reference
 author: mikadumont
@@ -9,12 +10,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7e8e239f53f92727072a2fcd6573d6957b7cd3ec
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: f411c0ac56adeb30370cbfc6f0f908ffd25bed05
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85290771"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93045903"
 ---
 # <a name="convert-between-regular-string-and-verbatim-string-literals-refactoring"></a>在正则字符串文本和逐字字符串文本重构之间转换
 
@@ -34,7 +35,7 @@ ms.locfileid: "85290771"
 
 2. 按“Ctrl”+ **。** 触发“快速操作和重构”菜单。
 
-3. 选择以下选项之一： 
+3. 选择以下选项之一：
 
     选择“转换为规则字符串”。
 

@@ -1,5 +1,7 @@
 ---
 title: VerifyFileHash 任务 | Microsoft Docs
+description: 了解 MSBuild 如何使用 VerifyFileHash 任务来验证文件是否与预期的文件哈希匹配；如果不匹配，则失败。
+ms.custom: SEO-VS-2020
 ms.date: 01/28/2019
 ms.topic: reference
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 53819a642edcdf0419dd445ac32dbde8d14ffb22
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: d76c7de1fcf6857cbc32709490e54d5bdf3b8988
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77579520"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93046095"
 ---
 # <a name="verifyfilehash-task"></a>VerifyFileHash 任务
 
@@ -32,7 +34,7 @@ ms.locfileid: "77579520"
 
  下表描述了 `VerifyFileHash` 任务的参数。
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |`File`|必选 `String` 参数。<br /><br />要进行哈希处理和验证的文件。|
 |`Hash`|必选 `String` 参数。<br /><br />预期的文件哈希。|

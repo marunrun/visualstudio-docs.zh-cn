@@ -1,5 +1,7 @@
 ---
 title: WPF MSBuild 任务引用 | Microsoft Docs
+description: 请参阅通过额外的任务来扩展 MSBuild 的 Windows Presentation Foundation (WPF) 生成过程的任务引用。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 70d994e32b717ff566a2e38acee732c7525d1bb0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 395f50db4159e8ace1b317f5926ed676c7462fe3
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77630842"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047514"
 ---
 # <a name="wpf-msbuild-task-reference"></a>WPF MSBuild 任务参考
 

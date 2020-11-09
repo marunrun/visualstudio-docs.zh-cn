@@ -1,5 +1,7 @@
 ---
 title: PropertyGroup 元素 (MSBuild) | Microsoft Docs
+description: 了解 MSBuild PropertyGroup 元素，它包含一组由用户定义的 Property 元素。
+ms.custom: SEO-VS-2020
 ms.date: 03/13/2017
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b94cf266be81b81aca9c83fe8d29b9777ee9114b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 9d276cdfa997bb02cfa44037d8ebe758a4d2704e
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77632922"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048799"
 ---
 # <a name="propertygroup-element-msbuild"></a>PropertyGroup 元素 (MSBuild)
 
@@ -46,15 +48,15 @@ ms.locfileid: "77632922"
 
 ### <a name="attributes"></a>特性
 
-|特性|描述|
+|属性|说明|
 |---------------|-----------------|
 |条件|可选特性。<br /><br /> 要计算的条件。 有关详细信息，请参阅[条件](../msbuild/msbuild-conditions.md)。|
 
 ### <a name="child-elements"></a>子元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[Property](../msbuild/property-element-msbuild.md)|可选元素。<br /><br /> 用户定义的属性名称，其中包含属性值。 `PropertyGroup` 元素中可能有零个或零个以上的 *Property* 元素。|
+|[属性](../msbuild/property-element-msbuild.md)|可选元素。<br /><br /> 用户定义的属性名称，其中包含属性值。 `PropertyGroup` 元素中可能有零个或零个以上的 *Property* 元素。|
 
 ### <a name="parent-elements"></a>父元素
 

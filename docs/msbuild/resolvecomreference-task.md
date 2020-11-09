@@ -1,5 +1,7 @@
 ---
 title: ResolveComReference 任务 | Microsoft Docs
+description: 了解 MSBuild 如何使用 ResolveComReference 任务来获取包含一个或多个类型库名称或 .tlb 文件的列表，并将它们解析到磁盘上的位置。
+ms.custom: SEO-VS-2020
 ms.date: 07/25/2019
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b99e743cf5bc9e3e634a8738e30d17c8e5517191
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 6e98d0d64a8df1dac29127ffcf76fe8b6cc39a43
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85286175"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048627"
 ---
 # <a name="resolvecomreference-task"></a>ResolveComReference 任务
 
@@ -33,7 +35,7 @@ ms.locfileid: "85286175"
 
  下表描述了 `ResolveCOMReference` 任务的参数。
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |`DelaySign`|可选 `Boolean` 参数。<br /><br /> 如果为 `true`，任务会在程序集中放入公钥。 如果为 `false`，任务会对程序集进行完全签名。|
 |`EnvironmentVariables`|可选 `String[]` 参数。<br /><br /> 环境变量对的数组（使用等号分隔）。 这些变量会传递给生成的 tlbimp.exe 和 aximp.exe 以及常规环境块，或有选择地重写常规环境块。 |

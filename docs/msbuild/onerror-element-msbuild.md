@@ -1,5 +1,7 @@
 ---
 title: OnError 元素 (MSBuild) | Microsoft Docs
+description: 了解 MSBuild 如何在 ContinueOnError 特性对失败的任务设置为 false 时使用 OnError 元素让一个或多个目标执行。
+ms.custom: SEO-VS-2020
 ms.date: 03/13/2017
 ms.topic: reference
 f1_keywords:
@@ -18,18 +20,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 18edfe06a4f2cb98fcb41e93c920b03c53daea8c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: c3793dddf62f67d1c2ff75d8df863dadfdadb7a1
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633078"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048952"
 ---
 # <a name="onerror-element-msbuild"></a>OnError 元素 (MSBuild)
 
 对于某失败的任务，如果 `ContinueOnError` 属性为 `false`，则会出现一个或多个要执行的目标。
 
- \<Project> \<Target> \<OnError>
+ \<Project> \<Target>
  \<OnError>
 
 ## <a name="syntax"></a>语法
@@ -45,7 +47,7 @@ ms.locfileid: "77633078"
 
 ### <a name="attributes"></a>特性
 
-|特性|描述|
+|属性|描述|
 |---------------|-----------------|
 |`Condition`|可选特性。<br /><br /> 要计算的条件。 有关详细信息，请参阅[条件](../msbuild/msbuild-conditions.md)。|
 |`ExecuteTargets`|必需的特性。<br /><br /> 任务失败时要执行的目标。 用分号分隔多个目标。 以指定顺序执行多个目标。|
@@ -56,11 +58,11 @@ ms.locfileid: "77633078"
 
 ### <a name="parent-elements"></a>父元素
 
-| 元素 | 描述 |
+| 元素 | 说明 |
 | - | - |
 | [Target](../msbuild/target-element-msbuild.md) | MSBuild 任务的容器元素。 |
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
  MSBuild 执行 `OnError` 元素，前提是 `Target` 元素的一个任务失败且 `ContinueOnError` 属性设置为 `ErrorAndStop`（或 `false`）。 任务失败时，执行在 `ExecuteTargets` 属性中指定的目标。 如果目标中存在多个 `OnError` 元素，则在任务失败时将按顺序执行 `OnError` 元素。
 

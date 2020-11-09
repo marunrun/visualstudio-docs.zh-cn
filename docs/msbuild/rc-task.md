@@ -1,5 +1,7 @@
 ---
 title: RC 任务 | Microsoft Docs
+description: 了解 MSBuild 如何使用 RC 任务来包装 Microsoft Windows 资源编译器工具 rc.exe，此工具将资源编译为 .res 文件。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -22,12 +24,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 13ae844759cb73de6dc7bcce6c8898c21132f9d7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 94a1babf518a3579246903f6479f999d8912dfe5
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77632909"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048796"
 ---
 # <a name="rc-task"></a>RC 任务
 

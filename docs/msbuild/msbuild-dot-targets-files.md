@@ -1,5 +1,7 @@
 ---
 title: MSBuild .targets 文件 | Microsoft Docs
+description: 了解包含用于常见方案的项、属性、目标和任务的 MSBuild .targets 文件。
+ms.custom: SEO-VS-2020
 ms.date: 02/24/2017
 ms.topic: reference
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3faa9ca73592722a950f9914437884c33122070e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d25605c83126c41a24f55775d9633e6e4212909c
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633351"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93046354"
 ---
 # <a name="msbuild-targets-files"></a>MSBuild .targets 文件
 

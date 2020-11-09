@@ -1,5 +1,6 @@
 ---
-title: 重构代码以将 for 循环转换为 foreach 语句
+title: 重构以将 for 循环转换为 foreach 语句
+ms.custom: SEO-VS-2020
 ms.date: 03/10/2020
 ms.topic: reference
 author: mikadumont
@@ -10,12 +11,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 47aa5a328f158d890908bf1ddcb69a838ad1ed66
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: 68ed736a1e3a07c7cd3f67ea9c936821cf4ac78c
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91659376"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93045916"
 ---
 # <a name="refactoring-to-convert-between-a-for-loop-and-a-foreach-statement"></a>重构，以便在 for 循环和 foreach 语句之间进行转换
 

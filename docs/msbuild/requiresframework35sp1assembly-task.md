@@ -1,5 +1,7 @@
 ---
 title: RequiresFramework35SP1Assembly 任务 | Microsoft Docs
+description: 了解 MSBuild 如何使用 RequiresFramework35SP1Assembly 任务来确定应用程序是否需要 .NET Framework 3.5 SP1。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: caefe0887ca23cd4cee60c3a4ba2a6133e9893df
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: d1819f72cc0eef389a3ef46148d4462fbd610e1a
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77632766"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048687"
 ---
 # <a name="requiresframework35sp1assembly-task"></a>RequiresFramework35SP1Assembly 任务
 
@@ -31,7 +33,7 @@ ms.locfileid: "77632766"
 
  下表描述了 `RequiresFramework35SP1Assembly` 任务的参数。
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |`Assemblies`|可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定在应用程序中引用的程序集。|
 |`CreateDesktopShortcut`|可选 `Boolean` 参数。<br /><br /> 如果为 `true`，安装期间会在桌面上创建一个快捷方式图标。|
@@ -42,7 +44,7 @@ ms.locfileid: "77632766"
 |`ReferencedAssemblies`|可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定在项目中引用的程序集。|
 |`RequiresMinimumFramework35SP1`|可选 `Boolean` 输出参数。<br /><br /> 如果为 `true`，应用程序需要 .NET Framework 3.5 SP1。|
 |`SigningManifests`|可选 `Boolean` 输出参数。<br /><br /> 如果为 `true`，ClickOnce 清单已签名。|
-|`SuiteName`|可选 `String` 参数。<br /><br /> 指定  “开始”菜单上，应用程序的安装文件夹的名称。|
+|`SuiteName`|可选 `String` 参数。<br /><br /> 指定“开始”菜单上，应用程序的安装文件夹的名称。|
 |`TargetFrameworkVersion`|可选 `String` 参数。<br /><br /> 指定应用程序面向的 .NET Framework 版本。|
 
 ## <a name="remarks"></a>备注
