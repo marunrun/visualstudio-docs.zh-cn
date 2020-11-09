@@ -1,5 +1,7 @@
 ---
 title: MSBuild 词汇表
+description: 了解描述生成引擎及其组件的 Microsoft 生成引擎 (MSBuild) 术语表词汇。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: f767d8e4-24d8-4803-80eb-e857202dbe2c
@@ -8,36 +10,36 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8f20fdb4cd809e422bc33535f3143b45db99842f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: f42d7945656a3f0e3cfbe11f80db26b7e5c124d3
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633338"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93046319"
 ---
 # <a name="msbuild-glossary"></a>MSBuild 词汇表
 
 这些术语用于描述 Microsoft 生成引擎 (MSBuild) 及其组件。
 
-## <a name="glossary"></a>词汇表
+## <a name="glossary"></a>术语表
 
 AssemblyFoldersEx\
 注册表位置，第三方供应商将其支持的每个框架版本的路径存储在此，设计时解析可在此处查找参考程序集。
 
 批处理\
-批处理是指根据项元数据，将项划分为不同类别（称为批次  ），然后使用每个批次运行目标或任务。 批处理相当于 MSBuild for 循环构造。 有关详细信息，请参阅[批处理](../msbuild/msbuild-batching.md)。
+批处理是指根据项元数据，将项划分为不同类别（称为批次），然后使用每个批次运行目标或任务。 批处理相当于 MSBuild for 循环构造。 有关详细信息，请参阅[批处理](../msbuild/msbuild-batching.md)。
 
 生成范围\
 生成范围描述全局属性等 MSBuild 对象，该对象对项目和在多项目生成中创建的任何子项目都可见。
 
 子项目\
-请参阅*项目，子项目*。
+请参阅 *项目，子项目* 。
 
 条件\
 可根据条件定义多个 MSBuild 元素；也就是说，元素中会出现 `Condition` 属性。 除非条件的计算结果为 `true`，否则会忽略条件元素的内容。 有关详细信息，请参阅[条件](../msbuild/msbuild-conditions.md)。
 
 定义，项\
-请参阅*项定义*。
+请参阅 *项定义* 。
 
 发出项\
 在生成的执行阶段，可通过具有 `Output` 子元素（具有 `ItemName` 属性）的任务来创建或修改项。 该任务会“发出”新项。
@@ -52,13 +54,13 @@ AssemblyFoldersEx\
 执行是项目生成的第二个阶段。 会生成所选目标并运行任务。 与其评估值相比，属性和项可进行创建或修改。
 
 函数，属性\
-请参阅*属性函数*。
+请参阅 *属性函数* 。
 
 函数，项\
 请参阅项函数。
 
 项\
-项是生成系统的输入，并基于其元素名组成不同的项类型。 项通常表示文件。 由于项根据其所属项类型命名，因此术语*项*和*项值*可互换使用。 有关详细信息，请参阅[项](../msbuild/msbuild-items.md)。
+项是生成系统的输入，并基于其元素名组成不同的项类型。 项通常表示文件。 由于项根据其所属项类型命名，因此术语 *项* 和 *项值* 可互换使用。 有关详细信息，请参阅[项](../msbuild/msbuild-items.md)。
 
 项定义\
 项定义组包含将默认元数据添加到任何项类型的项定义。 与已知元数据一样，默认元数据与指定项类型的所有项关联。 可在项定义中显式重写默认元数据。 有关详细信息，请参阅[项定义](../msbuild/item-definitions.md)。
@@ -67,7 +69,7 @@ AssemblyFoldersEx\
 项函数可获取项目中项的相关信息。 这些函数简化 Distinct() 项的获取过程，并且比循环遍历项的速度更快。 有的函数可操纵项路径和字符串。 有关详细信息，请参阅[项函数](../msbuild/item-functions.md)。
 
 项元数据\
-请参阅*元数据，项*。
+请参阅 *元数据，项* 。
 
 项类型\
 项类型是项的命名列表，可用作任务参数。 任务使用项值来执行生成过程。 有关详细信息，请参阅[项](../msbuild/msbuild-items.md)。
@@ -85,7 +87,7 @@ AssemblyFoldersEx\
 完整框架的子集。 用于最大程度减少需下载到计算机的量。
 
 项目文件\
-项目文件包含控制生成的 MSBuild 脚本。 项目文件通常具有以“proj”结尾的文件扩展名（如 .csproj 或 .vbproj）    。 项目文件可能会导入属性文件和目标文件。
+项目文件包含控制生成的 MSBuild 脚本。 项目文件通常具有以“proj”结尾的文件扩展名（如 .csproj 或 .vbproj）  。 项目文件可能会导入属性文件和目标文件。
 
 属性\
 属性是用来控制生成过程的键值对。 详情请参阅 [MSBuild 属性](../msbuild/msbuild-properties.md)。
@@ -94,13 +96,13 @@ AssemblyFoldersEx\
 环境属性是自动初始化为同名系统环境变量值的属性。 详情请参阅 [MSBuild 属性](../msbuild/msbuild-properties.md)。
 
 属性文件\
-属性文件是包含大部分指导生成的属性组和项组的项目文件。 按照约定，其文件扩展名为 .props  。 通常在关联的项目文件的开头导入属性文件。
+属性文件是包含大部分指导生成的属性组和项组的项目文件。 按照约定，其文件扩展名为 .props。 通常在关联的项目文件的开头导入属性文件。
 
 属性，函数\
 属性函数是可用于评估 MSBuild 脚本的系统属性或方法。 可使用属性方法读取系统时间、比较字符串、匹配正则表达式以及执行其他操作。 有关详细信息，请参阅[属性函数](../msbuild/property-functions.md)。
 
 属性函数，嵌套\
-可将属性函数组合成更复杂的函数。 例如，应用于对象的
+可将属性函数组合成更复杂的函数。 例如，
 
  `$([MSBuild]::BitwiseAnd(32,   $([System.IO.File]::GetAttributes(tempFile))))`
 
@@ -131,7 +133,7 @@ redist 列表\
 设计时期间用于创建应用程序的程序集。 可从引用程序集删除实际代码和私有接口，仅留下元数据和公共接口。
 
 注册表属性\
-请参阅*属性，注册表*。
+请参阅 *属性，注册表* 。
 
 目标\
 目标按特定的顺序将任务组合到一起，并将项目文件的各个部分作为生成过程入口点公开。 有关详细信息，请参阅[目标](../msbuild/msbuild-targets.md)。
@@ -158,7 +160,7 @@ redist 列表\
 随给定框架和该框架的引用程序集一起分发的程序集列表。
 
 目标文件\
-目标文件是包含大部分指导生成的目标和任务的项目文件。 按照约定，其文件扩展名为 .targets  。 通常在关联的项目文件的结尾导入目标文件。
+目标文件是包含大部分指导生成的目标和任务的项目文件。 按照约定，其文件扩展名为 .targets。 通常在关联的项目文件的结尾导入目标文件。
 
 任务\
 任务是 MSBuild 项目用于执行生成操作的可执行代码单元。 例如，任务可能编译输入文件或运行外部工具。 有关详细信息，请参阅[任务](../msbuild/msbuild-tasks.md)。
@@ -167,8 +169,8 @@ redist 列表\
 转换是指采用一对一的方式将一个项集合转换为另一集合。 除了使项目转换项集合外，转换也可让目标在其输入和输出间标识直接映射。 有关详细信息，请参阅[转换](../msbuild/msbuild-transforms.md)。
 
 已知元数据\
-请参阅*元数据，已知*。
+请参阅 *元数据，已知* 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [MSBuild](../msbuild/msbuild.md)

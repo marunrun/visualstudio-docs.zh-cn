@@ -1,5 +1,7 @@
 ---
 title: Sdk 元素 (MSBuild) | Microsoft 文档
+description: 了解引用 MSBuild 项目 SDK 的 MSBuild Sdk 元素的语法、特性和元素。
+ms.custom: SEO-VS-2020
 ms.date: 01/25/2018
 ms.topic: reference
 f1_keywords:
@@ -17,12 +19,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8a704744032c5dea70246463a816ba8e1f5c84e8
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: b348cf2af76c439a28bbb58c0050cc3d458d5457
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77632467"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048367"
 ---
 # <a name="sdk-element-msbuild"></a>Sdk 元素 (MSBuild)
 
@@ -43,7 +45,7 @@ ms.locfileid: "77632467"
 
 ### <a name="attributes"></a>特性
 
-|特性|描述|
+|属性|描述|
 |---------------|-----------------|
 |`Name`|必需的特性。<br /><br /> 项目 SDK 的名称。|
 |`Version`|可选特性。<br /><br /> 项目 SDK 的版本|
@@ -58,7 +60,7 @@ ms.locfileid: "77632467"
 | - | - |
 | [Project](../msbuild/project-element-msbuild.md) | MSBuild 项目文件必需的根元素。 |
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：引用 MSBuild 项目 SDK](../msbuild/how-to-use-project-sdk.md)
 - [项目文件架构参考](../msbuild/msbuild-project-file-schema-reference.md)

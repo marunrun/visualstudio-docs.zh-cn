@@ -1,5 +1,7 @@
 ---
 title: 处理游戏和应用的三维资产
+description: 了解可用来为基于 DirectX 的游戏和应用创建或修改 3D 模型、纹理和着色器的 Visual Studio 工具。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aa9fc04df3e817730492353e54d74c1e46c3775e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 11f031aa3e3767af3132e68f92c492dc7e3fae6f
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75589794"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93134545"
 ---
 # <a name="work-with-3d-assets-for-games-and-apps"></a>处理游戏和应用的 3D 资产
 
@@ -23,7 +25,7 @@ ms.locfileid: "75589794"
 
 ## <a name="directx-app-development-in-visual-studio"></a>Visual Studio 中的 DirectX 应用开发
 
-DirectX 应用通常将编程逻辑、DirectX API、高级别着色语言 (HLSL) 程序与音频和三维可视化资产合并在一起，以提供丰富的交互式多媒体体验。 Visual Studio 包括可用于处理图像和纹理、三维模型和着色器的工具，无需离开 IDE 使用其他工具。 Visual Studio 工具尤其适用于创建占位符资产，该资产可用于添加生产就绪资产前测试代码或生成原型，还可用于调试应用前，检查和修改生产就绪资产  。
+DirectX 应用通常将编程逻辑、DirectX API、高级别着色语言 (HLSL) 程序与音频和三维可视化资产合并在一起，以提供丰富的交互式多媒体体验。 Visual Studio 包括可用于处理图像和纹理、三维模型和着色器的工具，无需离开 IDE 使用其他工具。 Visual Studio 工具尤其适用于创建占位符资产，该资产可用于添加生产就绪资产前测试代码或生成原型，还可用于调试应用前，检查和修改生产就绪资产。
 
 以下是关于可在 Visual Studio 中处理的各种资产的详细信息。
 
@@ -35,7 +37,7 @@ DirectX 应用通常将编程逻辑、DirectX API、高级别着色语言 (HLSL)
 
 ### <a name="3d-models"></a>三维模型
 
-三维模型创建游戏和应用中的空间和形状。 按最小的方式，模型将三维空间中点的位置（称为顶点）和索引数据一起编码，以定义表示模型形状的线或三角形  。 其他可以与这些顶点关联的数据，例如：颜色信息、常规矢量或应用程序特定的属性。 每个模型还可以定义对象范围的属性，例如，哪一个着色器用于计算对象图面的外观，哪一个纹理应用于它。
+三维模型创建游戏和应用中的空间和形状。 按最小的方式，模型将三维空间中点的位置（称为顶点）和索引数据一起编码，以定义表示模型形状的线或三角形。 其他可以与这些顶点关联的数据，例如：颜色信息、常规矢量或应用程序特定的属性。 每个模型还可以定义对象范围的属性，例如，哪一个着色器用于计算对象图面的外观，哪一个纹理应用于它。
 
 使用 Visual Studio 模型编辑器可以处理多种常用格式的三维模型。
 
@@ -54,7 +56,7 @@ Visual Studio 使用 DirectX 呈现二维和三维资产。 可以选择 DirectX
 
 ## <a name="related-topics"></a>相关主题
 
-|标题|说明|
+|Title|说明|
 |-----------|-----------------|
 |[使用纹理和图像](../designers/working-with-textures-and-images.md)|介绍如何使用 Visual Studio 处理图像和纹理。|
 |[使用三维模型](../designers/working-with-3-d-models.md)|介绍如何使用 Visual Studio 处理三维模型。|

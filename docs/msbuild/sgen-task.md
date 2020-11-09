@@ -1,5 +1,7 @@
 ---
 title: SGen 任务 | Microsoft Docs
+description: 了解 MSBuild 如何使用 SGen 任务通过包装 XML 序列化程序生成器工具 Sgen.exe 来为类型创建 XML 序列化程序集。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cbf18c4477a164ec2e25a5ed4b2105f6fdad9130
-ms.sourcegitcommit: 93859158465eab3423a0c0435f06490f0a456a57
+ms.openlocfilehash: de2437306dba50a1f93b0b94d86af6351b17c0b6
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82167431"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048347"
 ---
 # <a name="sgen-task"></a>SGen 任务
 

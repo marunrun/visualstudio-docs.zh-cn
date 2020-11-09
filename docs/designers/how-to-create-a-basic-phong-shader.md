@@ -1,5 +1,7 @@
 ---
 title: 如何：创建基本冯氏着色器
+description: 了解如何使用着色器设计器和有向图着色器语言来创建实现经典 Phong 光照模型的光照着色器。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: c7c69da8-142b-4d3b-9be9-4be0d5970b25
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 718607d74be1a74a799f8de9f4883e1df9fb7ef5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c158453421d9e4f899a7cfed7118be8e5871356c
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85769180"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93134127"
 ---
 # <a name="how-to-create-a-basic-phong-shader"></a>如何：创建基本 Phong 着色器
 
@@ -25,15 +27,15 @@ ms.locfileid: "85769180"
 
 有关朗伯照明模型的详细信息，请参阅[如何：创建基本朗伯着色器](../designers/how-to-create-a-basic-lambert-shader.md)。
 
-开始前，请确保显示“属性”  窗口和“工具箱”  。
+开始前，请确保显示“属性”窗口和“工具箱”。
 
 1. 按[如何：创建基本朗伯着色器](../designers/how-to-create-a-basic-lambert-shader.md)中所述创建朗伯着色器。
 
 2. 从“最终颜色”节点断开“朗伯”节点。 选择“朗伯”节点的“RGB”终端，然后选择“断开链接”。 这为在下一步中添加的节点腾出空间。
 
-3. 向关系图添加“添加”  节点。 在“工具箱”  中的“数学”  下选择“添加”  ，然后将其移到设计图面。
+3. 向关系图添加“添加”节点。 在“工具箱”中的“数学”下选择“添加”，然后将其移到设计图面。
 
-4. 向关系图添加“反射”  节点。 在“工具箱”  中的“实用工具”  下，选择“反射”  ，然后将其移到设计图面。
+4. 向关系图添加“反射”节点。 在“工具箱”中的“实用工具”下，选择“反射”，然后将其移到设计图面。
 
 5. 添加反射比例。 将“反射”节点的“输出”终端移到“添加”节点的“X”终端，然后将“朗伯”节点的“输出”终端移到“添加”节点的“Y”终端。 这些连接会组合像素的总漫射比例和总反射颜色比例。
 
@@ -42,7 +44,7 @@ ms.locfileid: "85769180"
    下图显示了已完成的着色器关系图和应用于茶壶体的着色器预览。
 
 > [!NOTE]
-> 为了更好地演示该图中着色器的效果，使用着色器的 **MaterialDiffuse** 参数指定了橙色，并使用  **MaterialSpecular** 和 **MaterialSpecularPower**  参数指定了金属外观。 有关材质参数的信息，请参阅[着色器设计器](../designers/shader-designer.md)中的“预览着色器”部分。
+> 为了更好地演示该图中着色器的效果，使用着色器的 **MaterialDiffuse** 参数指定了橙色，并使用 **MaterialSpecular** 和 **MaterialSpecularPower** 参数指定了金属外观。 有关材质参数的信息，请参阅[着色器设计器](../designers/shader-designer.md)中的“预览着色器”部分。
 
 ![着色器图及其效果预览](../designers/media/digit-lighting-graph.png)
 
@@ -61,7 +63,7 @@ ms.locfileid: "85769180"
 
 ## <a name="see-also"></a>另请参阅
 
-- [如何：向 3D 模型应用着色器](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
+- [如何：向三维模型应用着色器](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
 - [如何：导出着色器](../designers/how-to-export-a-shader.md)
 - [如何：创建基本朗伯着色器](../designers/how-to-create-a-basic-lambert-shader.md)
 - [着色器设计器](../designers/shader-designer.md)

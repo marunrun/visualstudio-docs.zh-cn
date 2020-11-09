@@ -1,5 +1,7 @@
 ---
 title: MSBuild 任务参考 | Microsoft Docs
+description: 了解 MSBuild 随附的任务，它们提供在生成过程中运行的代码。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cbec3c7c020bae0e94bc16bdb1fe9740a36a93ae
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 58e247dc242fcacd7ea94f9f078af05dd56299e0
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "78865318"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93049074"
 ---
 # <a name="msbuild-task-reference"></a>MSBuild 任务参考
 
@@ -28,12 +30,12 @@ ms.locfileid: "78865318"
 
 除了此部分各主题中列出的参数外，每项任务还有下列参数：
 
-| 参数 | 描述 |
+| 参数 | 说明 |
 |-------------------| - |
 | `Condition` | 可选 `String` 参数。<br /><br /> MSBuild 引擎使用 `Boolean` 表达式来确定是否执行此任务。 有关 MSBuild 支持的条件的信息，请参阅[条件](../msbuild/msbuild-conditions.md)。 |
-| `ContinueOnError` | 可选参数。 可以包含下列值之一：<br /><br /> -   **WarnAndContinue** 或 **true**。 当任务失败时，[Target](../msbuild/target-element-msbuild.md) 元素中的后续任务和生成将继续执行，并且来自该任务的所有错误都被视为警告。<br />-   **ErrorAndContinue**。 当任务失败时，`Target` 元素中的后续任务和生成将继续执行，并且来自该任务的所有错误都被视为错误。<br />-   **ErrorAndStop** 或 **false**（默认值）。 当任务失败时，将不会执行 `Target` 元素中的剩余任务和生成，并且整个 `Target` 元素和生成都被视为已失败。<br /><br /> 4\.5 之前的 .NET Framework 版本仅支持 `true` 和 `false` 值。<br /><br /> 有关详细信息，请参阅[如何：忽略任务中的错误](../msbuild/how-to-ignore-errors-in-tasks.md)。 |
+| `ContinueOnError` | 可选参数。 可以包含下列值之一：<br /><br /> -   **WarnAndContinue** 或 **true** 。 当任务失败时，[Target](../msbuild/target-element-msbuild.md) 元素中的后续任务和生成将继续执行，并且来自该任务的所有错误都被视为警告。<br />-   **ErrorAndContinue** 。 当任务失败时，`Target` 元素中的后续任务和生成将继续执行，并且来自该任务的所有错误都被视为错误。<br />-   **ErrorAndStop** 或 **false** （默认值）。 当任务失败时，将不会执行 `Target` 元素中的剩余任务和生成，并且整个 `Target` 元素和生成都被视为已失败。<br /><br /> 4.5 之前的 .NET Framework 版本仅支持 `true` 和 `false` 值。<br /><br /> 有关详细信息，请参阅[如何：忽略任务中的错误](../msbuild/how-to-ignore-errors-in-tasks.md)。 |
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
 
 - [任务基类](../msbuild/task-base-class.md)
 
@@ -53,7 +55,7 @@ ms.locfileid: "78865318"
 
 - [AspNetCompiler 任务](../msbuild/aspnetcompiler-task.md)
 
- 包装 aspnet_compiler.exe，它是预编译 ASP.NET 应用程序的实用工具。 
+ 包装 aspnet_compiler.exe，它是预编译 ASP.NET 应用程序的实用工具。
 
 - [AssignCulture 任务](../msbuild/assignculture-task.md)
 
@@ -85,7 +87,7 @@ ms.locfileid: "78865318"
 
 - [CreateCSharpManifestResourceName 任务](../msbuild/createcsharpmanifestresourcename-task.md)
 
- 根据给定的 .resx  文件名或其他资源创建 C# 样式的清单名称。
+ 根据给定的 .resx 文件名或其他资源创建 C# 样式的清单名称。
 
 - [CreateItem 任务](../msbuild/createitem-task.md)
 
@@ -97,7 +99,7 @@ ms.locfileid: "78865318"
 
 - [CreateVisualBasicManifestResourceName 任务](../msbuild/createvisualbasicmanifestresourcename-task.md)
 
- 根据给定的 .resx  文件名或其他资源创建 Visual Basic 样式的清单名称。
+ 根据给定的 .resx 文件名或其他资源创建 Visual Basic 样式的清单名称。
 
 - [Csc 任务](../msbuild/csc-task.md)
 
@@ -121,7 +123,7 @@ ms.locfileid: "78865318"
 
 - [FindAppConfigFile 任务](../msbuild/findappconfigfile-task.md)
 
- 在提供的列表中查找 app.config 文件（若有）  。
+ 在提供的列表中查找 app.config 文件（若有）。
 
 - [FindInList 任务](../msbuild/findinlist-task.md)
 
@@ -153,7 +155,7 @@ ms.locfileid: "78865318"
 
 - [GenerateResource 任务](../msbuild/generateresource-task.md)
 
- 将 .txt 和 .resx 文件转换为公共语言运行时二进制 .resources 文件。   
+ 将 .txt 和 .resx 文件转换为公共语言运行时二进制 .resources 文件。  
 
 - [GenerateTrustInfo 任务](../msbuild/generatetrustinfo-task.md)
 
@@ -181,7 +183,7 @@ ms.locfileid: "78865318"
 
 - [LC 任务](../msbuild/lc-task.md)
 
- 从 .licx 文件生成 .license 文件。  
+ 从 .licx 文件生成 .license 文件。 
 
 - [MakeDir 任务](../msbuild/makedir-task.md)
 
@@ -221,7 +223,7 @@ ms.locfileid: "78865318"
 
 - ResGen 任务
 
- 已过时。 使用 [GenerateResource 任务](../msbuild/generateresource-task.md)可以将 .txt 和 .resx 文件转换成公共语言运行时二进制 .resources 文件，反之亦然。   
+ 已过时。 使用 [GenerateResource 任务](../msbuild/generateresource-task.md)可以将 .txt 和 .resx 文件转换成公共语言运行时二进制 .resources 文件，反之亦然。  
 
 - [ResolveAssemblyReference 任务](../msbuild/resolveassemblyreference-task.md)
 
@@ -229,7 +231,7 @@ ms.locfileid: "78865318"
 
 - [ResolveComReference 任务](../msbuild/resolvecomreference-task.md)
 
- 获取一个或多个类型库名称或 .tlb 文件的列表，将这些类型库解析为磁盘上的位置。 
+ 获取一个或多个类型库名称或 .tlb 文件的列表，将这些类型库解析为磁盘上的位置。
 
 - [ResolveKeySource 任务](../msbuild/resolvekeysource-task.md)
 
@@ -265,7 +267,7 @@ ms.locfileid: "78865318"
 
 - [Unzip 任务](../msbuild/unzip-task.md)
 
- 将 .zip 存档解压缩到指定位置。 
+ 将 .zip 存档解压缩到指定位置。
 
 - [UpdateManifest 任务](../msbuild/updatemanifest-task.md)
 
@@ -301,11 +303,11 @@ ms.locfileid: "78865318"
 
 - [XslTransformation 任务](../msbuild/xsltransformation-task.md)
 
- 使用可扩展样式表语言转换 (XSLT)  或编译的 XSLT 转换 XML 输入，并将其输出到一台输出设备或一个文件。
+ 使用可扩展样式表语言转换 (XSLT) 或编译的 XSLT 转换 XML 输入，并将其输出到一台输出设备或一个文件。
 
 - [ZipDirectory 任务](../msbuild/zipdirectory-task.md)
 
- 根据目录内容创建 .zip 存档。 
+ 根据目录内容创建 .zip 存档。
 
 ## <a name="see-also"></a>请参阅
 

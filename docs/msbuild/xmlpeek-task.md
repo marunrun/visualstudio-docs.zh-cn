@@ -1,5 +1,7 @@
 ---
 title: XmlPeek 任务 | Microsoft Docs
+description: 了解 MSBuild 如何使用 XmlPeek 任务从 XML 文件返回由 XPath 查询指定的值。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 27b535af260d205c74ef87d0325680389d1dbe58
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 5d9a3c03e1301bddf4cc26c76dac9e0381ec726b
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85286113"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047256"
 ---
 # <a name="xmlpeek-task"></a>XmlPeek 任务
 
@@ -31,7 +33,7 @@ ms.locfileid: "85286113"
 
  下表描述了 `XmlPeek` 任务的参数。
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |`Namespaces`|可选 `String` 参数。<br /><br /> 指定 XPath 查询前缀的命名空间。|
 |`Query`|可选 `String` 参数。<br /><br /> 指定 XPath 查询。|

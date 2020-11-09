@@ -1,5 +1,7 @@
 ---
 title: Link 任务 | Microsoft Docs
+description: 了解 MSBuild 如何使用 Link 任务来包装 Microsoft C++ 链接器工具 link.exe，此工具链接 COFF 对象文件和库。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -30,12 +32,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 01105e3fd4c86d57077df7804e66592e32ebae07
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 160d4fa3a1058e0cb81e5d25720d9194d90fdc39
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "78865344"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904057"
 ---
 # <a name="link-task"></a>Link 任务
 
@@ -219,7 +221,7 @@ ms.locfileid: "78865344"
 
   可选 **String []** 参数。
 
-  此参数导致 DLL *延迟加载*。 指定要延迟加载的 DLL 的名称。
+  此参数导致 DLL *延迟加载* 。 指定要延迟加载的 DLL 的名称。
 
   有关详细信息，请参阅 [/DELAYLOAD（延迟加载导入）](/cpp/build/reference/delayload-delay-load-import)。
 
@@ -341,7 +343,7 @@ ms.locfileid: "78865344"
 
   可选 **Boolean** 参数。
 
-  如果为 `true`，则创建*映射文件*。 映射文件的文件扩展名为 .map  。
+  如果为 `true`，则创建 *映射文件* 。 映射文件的文件扩展名为 .map  。
 
   有关详细信息，请参阅 [/MAP（生成映射文件）](/cpp/build/reference/map-generate-mapfile)。
 
@@ -605,7 +607,7 @@ ms.locfileid: "78865344"
 
   可选 **Boolean** 参数。
 
-  如果为 `true`，且启用了“注册输出”，则强制注册表向 **HKEY_CLASSES_ROOT** 写入内容以重定向到 **HKEY_CURRENT_USER**。
+  如果为 `true`，且启用了“注册输出”，则强制注册表向 **HKEY_CLASSES_ROOT** 写入内容以重定向到 **HKEY_CURRENT_USER** 。
 
 - **PreprocessOutput**
 
@@ -649,7 +651,7 @@ ms.locfileid: "78865344"
 
   可选 **Boolean** 参数。
 
-  如果为 `true`，则使用 Windows 的*地址空间布局随机化* (ASLR) 功能，生成可在加载时随机变基的可执行映像。
+  如果为 `true`，则使用 Windows 的 *地址空间布局随机化* (ASLR) 功能，生成可在加载时随机变基的可执行映像。
 
   有关详细信息，请参阅 [/DYNAMICBASE（使用地址空间布局随机化）](/cpp/build/reference/dynamicbase-use-address-space-layout-randomization)。
 

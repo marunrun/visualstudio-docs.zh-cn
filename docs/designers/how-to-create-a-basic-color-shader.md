@@ -1,5 +1,7 @@
 ---
 title: 如何：创建基本颜色着色器
+description: 了解如何使用着色器设计器和有向图着色器语言来创建将最终颜色设置为恒定 RGB 颜色值的平面颜色着色器。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: c301328a-079a-49e8-b688-4749c01657c0
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0fe0fc31f3be758e16042de6133399b2df6b65c5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d966a8fdc565eae5254d21dba4ab9dfaa440de94
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85769165"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93134101"
 ---
 # <a name="how-to-create-a-basic-color-shader"></a>如何：创建基本颜色着色器
 
@@ -23,15 +25,15 @@ ms.locfileid: "85769165"
 
 可将 RGB 颜色常量的颜色值写入最终输出颜色来实现平面颜色着色器。
 
-开始前，请确保显示“属性”  窗口和“工具箱”  。
+开始前，请确保显示“属性”窗口和“工具箱”。
 
 1. 创建要使用的 DGSL 着色器。 若要了解如何向项目添加 DGSL 着色器，请参阅[着色器设计器](../designers/shader-designer.md)中的“入门”部分。
 
-2. 删除“点颜色”  节点。 使用“选择”工具选择“点颜色”节点，然后在菜单栏上选择“编辑” > “删除”。
+2. 删除“点颜色”节点。 使用“选择”工具选择“点颜色”节点，然后在菜单栏上选择“编辑” > “删除”。
 
-3. 将“颜色常量”  节点添加到关系图。 在“常量”的“工具箱”中，选择“颜色常量”，然后将其移到设计图面。
+3. 将“颜色常量”节点添加到关系图。 在“常量”的“工具箱”中，选择“颜色常量”，然后将其移到设计图面。
 
-4. 为“颜色常量”  节点指定颜色值。 使用“选择”  工具选择“颜色常量”  节点，然后在“属性”  窗口的“输出”  属性中指定颜色值。 为橙色指定 (1.0, 0.5, 0.2, 1.0) 中的值。
+4. 为“颜色常量”节点指定颜色值。 使用“选择”工具选择“颜色常量”节点，然后在“属性”窗口的“输出”属性中指定颜色值。 为橙色指定 (1.0, 0.5, 0.2, 1.0) 中的值。
 
 5. 将颜色常量连接到最终颜色。 若要创建连接，请将“颜色常量”节点的“RGB”终端移到“最终颜色”节点的“RGB”终端，然后将“颜色常量”节点的“Alpha”终端移到“最终颜色”节点的“Alpha”终端。 这些连接将最终颜色设置为上一步中定义的颜色常量。
 
@@ -46,7 +48,7 @@ ms.locfileid: "85769165"
 
 ## <a name="see-also"></a>另请参阅
 
-- [如何：向 3D 模型应用着色器](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
+- [如何：向三维模型应用着色器](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
 - [如何：导出着色器](../designers/how-to-export-a-shader.md)
 - [着色器设计器](../designers/shader-designer.md)
 - [着色器设计器节点](../designers/shader-designer-nodes.md)

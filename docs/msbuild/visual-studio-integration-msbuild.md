@@ -1,7 +1,8 @@
 ---
 title: Visual Studio 集成 (MSBuild)
 titleSuffix: ''
-ms.custom: seodec18
+description: 了解 Visual Studio 如何以 MSBuild 格式托管项目，即使它们是由不同的工具编写的，并且有自定义的生成过程。
+ms.custom: seodec18, SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +21,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3468ab5a6a185a759ab43229758c0ff4e9d00e35
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 17cb665d1b5ae399647868652f2b1e73fcd4543e
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77631193"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93046690"
 ---
 # <a name="visual-studio-integration-msbuild"></a>Visual Studio 集成 (MSBuild)
 
@@ -51,7 +52,7 @@ Visual Studio 托管 MSBuild 以加载和生成托管项目。 由于 MSBuild �
 
 ```xml
 Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' "
-Condition=" '$(Configuration)' == 'Release' " 
+Condition=" '$(Configuration)' == 'Release' " 
 Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' "
 ```
 

@@ -1,18 +1,18 @@
 ---
-title: 处理过期许可证 | Microsoft 文档
+title: 处理 Visual Studio 订阅中到期的许可证 | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
 ms.assetid: 2b8a4ad5-e5b3-48a3-bb65-23a5cd3f22e9
 ms.date: 03/03/2020
 ms.topic: conceptual
-description: 了解管理员如何处理过期的 Visual Studio 订阅
-ms.openlocfilehash: c0cfa87b0adcbc417ba7fdaed9f3da619a522d27
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+description: 了解管理员如何处理到期的 Visual Studio 订阅
+ms.openlocfilehash: cea4f33d884b75b885f2d6dd09d779470ab84c5d
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91004884"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904006"
 ---
 # <a name="expired-subscriptions"></a>过期订阅
 如果用户的订阅已过期，则会在门户中通过在订阅者列表中其名称旁显示一个红条来指示这一点。 对于那些继续使用其 Visual Studio 订阅权益的订阅者，你需要续订其许可证。

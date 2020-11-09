@@ -1,5 +1,7 @@
 ---
 title: MSBuild | Microsoft Docs
+description: 了解 Microsoft 生成引擎 (MSBuild) 平台如何为项目文件提供用于控制生成的 XML 架构。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7e9f4614967f1307bc1faaaaba12a2dde1e8cad0
-ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
+ms.openlocfilehash: d7e42452d8ee59142c4f906d928378d1fb44bf67
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099266"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904510"
 ---
 # <a name="msbuild"></a>MSBuild
 
@@ -168,7 +170,7 @@ MSBuild.exe MyProj.proj -property:Configuration=Debug
 
 - 你可以将 .NET Framework 之外的框架作为目标，例如 Silverlight。
 
-- 可以一个*框架配置文件*为目标，该文件是目标框架的预定义子集。
+- 可以一个 *框架配置文件* 为目标，该文件是目标框架的预定义子集。
 
 - 如果已发布 .NET Framework 当前版本的服务包，则可以将其作为目标。
 

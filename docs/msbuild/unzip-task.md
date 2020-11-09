@@ -1,5 +1,7 @@
 ---
 title: Unzip 任务 | Microsoft Docs
+description: 了解将 .zip 存档解压缩到指定位置的 MSBuild Unzip 任务的参数和用法。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.reviewer: ''
 ms.suite: ''
@@ -22,16 +24,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d331fda05e8655be0536a1e83d8309ae8c060b1f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: d701f70950bb5a5cb2338007db129ca15d194b77
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77631505"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93046903"
 ---
 # <a name="unzip-task"></a>Unzip 任务
 
-将 .zip 存档解压缩到指定位置。 
+将 .zip 存档解压缩到指定位置。
 
 >[!NOTE]
 >仅在 MSBuild 15.8 及更高版本中提供 `Unzip` 任务。
@@ -40,7 +42,7 @@ ms.locfileid: "77631505"
 
  下表描述了 `Unzip` 任务的参数。
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |`DestinationFolder`|<xref:Microsoft.Build.Framework.ITaskItem> 参数（必选）<br /><br /> 指定文件要解压到的目的文件夹。|
 |`OverwriteReadOnlyFiles`|可选 `Boolean` 参数。<br /><br /> 如果为 `true`，则覆盖只读文件。 默认为 `false`。|

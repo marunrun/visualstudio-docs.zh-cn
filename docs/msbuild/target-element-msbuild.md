@@ -1,5 +1,7 @@
 ---
 title: Target 元素 (MSBuild) | Microsoft Docs
+description: 了解 MSBuild Target 元素，它包含 MSBuild 要按顺序执行的一组任务。
+ms.custom: SEO-VS-2020
 ms.date: 06/13/2019
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 472d4c9c4c44176048a1bfd8c0791a1a406b95bd
-ms.sourcegitcommit: 8ff6c6975148ce43bdac21c8995fbab910c312fe
+ms.openlocfilehash: 16b8533bed128199a4eb0b6e7171ed9c674d62f4
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2020
-ms.locfileid: "80375554"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048053"
 ---
 # <a name="target-element-msbuild"></a>Target 元素 (MSBuild)
 
@@ -57,7 +59,7 @@ ms.locfileid: "80375554"
 
 ### <a name="attributes"></a>特性
 
-|特性|描述|
+|属性|描述|
 |---------------|-----------------|
 |`Name`|必需的特性。<br /><br /> 目标的名称。 目标名称可以包含除 `$@()%*?.` 之外的任何字符。|
 |`Condition`|可选特性。<br /><br /> 要评估的条件。 如果该条件评估结果为 `false`，那么目标不会执行目标主体或任何在 `DependsOnTargets` 属性中设置的目标。 有关条件的详细信息，请参阅[条件](../msbuild/msbuild-conditions.md)。|

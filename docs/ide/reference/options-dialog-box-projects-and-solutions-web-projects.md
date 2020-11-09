@@ -1,5 +1,6 @@
 ---
-title: 选项对话框、项目和解决方案、Web 项目
+title: “选项”对话框中的 Web 项目
+ms.custom: SEO-VS-2020
 ms.date: 07/14/2017
 ms.topic: reference
 f1_keywords:
@@ -10,12 +11,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b393291ccb316b62b2a056b55ca902781196b637
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: efff521076b2d4a4b091ebf30b42f0d3ea4daa1f
+ms.sourcegitcommit: f1bb1b66ed141837e992b3352ce68ff24c11f53e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76114481"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93102631"
 ---
 # <a name="options-dialog-box-projects-and-solutions-web-projects"></a>选项对话框、项目和解决方案、Web 项目
 

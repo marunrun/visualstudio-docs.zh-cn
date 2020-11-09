@@ -1,5 +1,7 @@
 ---
 title: Touch 任务 | Microsoft Docs
+description: 了解设置文件的访问时间和修改时间的 MSBuild Touch 任务的参数和用法。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 873783196a3eebdaca9cc4278b091e084c1488b0
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 82dbd31edfa72368a85361032e9875b234585a07
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77631648"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047012"
 ---
 # <a name="touch-task"></a>Touch 任务
 

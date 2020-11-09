@@ -1,5 +1,7 @@
 ---
 title: 使用多个处理器生成项目 | Microsoft Docs
+description: 了解 MSBuild 如何通过为每个可用的处理器创建单独的生成过程来利用具有多个处理器或核心的系统。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f5dc62112324f7ad19c47b346ac8c1e3f86570b0
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: e6c523d21a194626805168d6fee3054e77586b19
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77631297"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047587"
 ---
 # <a name="use-multiple-processors-to-build-projects"></a>使用多个处理器生成项目
 
@@ -36,7 +38,7 @@ MSBuild 可以利用具有多个处理器或多核处理器的系统。 为每�
 
 ## <a name="c-project-vcxproj-and-solution-sln-files"></a>C++ 项目 (.vcproj) 和解决方案 (.sln) 文件
 
- 可将 C++ 项目 (.vcxproj) 和解决方案 (.sln) 文件传递给 [MSBuild 任务](../msbuild/msbuild-task.md)   。 对于 C++ 项目，已调用 VCWrapperProject，然后创建了内部 MSBuild 项目。 对于 C++ 解决方案，已创建 SolutionWrapperProject，然后创建了内部 MSBuild 项目。 在这两种情况下，将生成的项目与任何其他 MSBuild 项目视为相同。
+ 可将 C++ 项目 (.vcxproj) 和解决方案 (.sln) 文件传递给 [MSBuild 任务](../msbuild/msbuild-task.md) 。 对于 C++ 项目，已调用 VCWrapperProject，然后创建了内部 MSBuild 项目。 对于 C++ 解决方案，已创建 SolutionWrapperProject，然后创建了内部 MSBuild 项目。 在这两种情况下，将生成的项目与任何其他 MSBuild 项目视为相同。
 
 ## <a name="multi-process-execution"></a>多进程执行
 
@@ -44,7 +46,7 @@ MSBuild 可以利用具有多个处理器或多核处理器的系统。 为每�
 
  为了避免此问题但仍启用多处理器生成，MSBuild 可使用“进程隔离”。 通过使用进程隔离，MSBuild 可以创建最多 `n` 个进程，其中 `n` 为系统上可用的处理器数。 例如，如果 MSBuild 在具有两个处理器的系统上生成解决方案，则仅创建两个生成进程。 重复使用这两个进程可生成解决方案中的所有项目。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [并行生成多个项目](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md)
 - [任务](../msbuild/msbuild-tasks.md)

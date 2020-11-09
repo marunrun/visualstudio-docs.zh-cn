@@ -1,5 +1,7 @@
 ---
 title: Property 元素 (MSBuild) | Microsoft Docs
+description: 了解 MSBuild Property 元素，它包含用户定义的属性名和值，必须将这些属性名和值指定为 PropertyGroup 元素的子元素。
+ms.custom: SEO-VS-2020
 ms.date: 03/13/2017
 ms.topic: reference
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e50a6dd66c2dca7fa4159c578ccd334ed1d26cae
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 8c17906467579e8fc532372371df8be76b40e7f0
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77632948"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048827"
 ---
 # <a name="property-element-msbuild"></a>Property 元素 (MSBuild)
 
@@ -43,7 +45,7 @@ ms.locfileid: "77632948"
 
 ### <a name="attributes"></a>特性
 
-|特性|描述|
+|属性|描述|
 |---------------|-----------------|
 |`Condition`|可选特性。<br /><br /> 要计算的条件。 有关详细信息，请参阅[条件](../msbuild/msbuild-conditions.md)。|
 
@@ -53,7 +55,7 @@ ms.locfileid: "77632948"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
 |[PropertyGroup](../msbuild/propertygroup-element-msbuild.md)|对属性进行分组。|
 
@@ -65,7 +67,7 @@ ms.locfileid: "77632948"
 
 ## <a name="remarks"></a>备注
 
- 属性名称被限制为仅 ASCII 字符。 将属性名放置在“`$(`”和“`)`”之间，从而在项目中引用属性值。 例如，如果 `builddir` 属性具有值 `build`，则 `$(builddir)\classes` 将解析为“build\classes”  。 有关属性的详细信息，请参阅 [MSBuild 属性](../msbuild/msbuild-properties.md)。
+ 属性名称被限制为仅 ASCII 字符。 将属性名放置在“`$(`”和“`)`”之间，从而在项目中引用属性值。 例如，如果 `builddir` 属性具有值 `build`，则 `$(builddir)\classes` 将解析为“build\classes”。 有关属性的详细信息，请参阅 [MSBuild 属性](../msbuild/msbuild-properties.md)。
 
 ## <a name="example"></a>示例
 

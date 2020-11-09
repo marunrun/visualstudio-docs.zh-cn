@@ -1,5 +1,7 @@
 ---
 title: UpdateManifest 任务 | Microsoft Docs
+description: 了解 MSBuild 如何使用 UpdateManifest 任务来更新清单中的选定属性并重新签名。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 25e410ba3122e0065f92186195ee5a82d6a55c2f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 4fab3844b21e12edceb83da310e9069199578ef6
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77631337"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93046857"
 ---
 # <a name="updatemanifest-task"></a>UpdateManifest 任务
 
@@ -31,14 +33,14 @@ ms.locfileid: "77631337"
 
  下表描述了 `UpdateManifest` 任务的参数。
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |`ApplicationManifest`|必选 <xref:Microsoft.Build.Framework.ITaskItem> 参数。<br /><br /> 指定应用程序清单。|
 |`ApplicationPath`|必选 `String` 参数。<br /><br /> 指定应用程序清单的路径。|
 |`InputManifest`|必选 <xref:Microsoft.Build.Framework.ITaskItem> 参数。<br /><br /> 指定要更新的清单。|
 |`OutputManifest`|可选 <xref:Microsoft.Build.Framework.ITaskItem> 输出参数。<br /><br /> 指定包含更新的属性的清单。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
  除了具有表中列出的参数外，此任务还将从 <xref:Microsoft.Build.Utilities.Task> 类继承参数。 有关这些其他参数的列表及其说明，请参阅[任务基类](../msbuild/task-base-class.md)。
 

@@ -1,5 +1,7 @@
 ---
 title: 演练：创建内联任务 | Microsoft Docs
+description: 逐步介绍了如何在项目文件中创建 MSBuild 内联任务，而不必创建单独的程序集来托管任务。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d345d532c29931577edbe0441003cc80b069e335
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: d2d72745aebedb5dad5efc86d33804a51e36b762
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85289139"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93046627"
 ---
 # <a name="walkthrough-create-an-inline-task"></a>演练：创建内联任务
 
@@ -32,13 +34,13 @@ ms.locfileid: "85289139"
 
 - 具有两个输入参数且具有一个返回 MSBuild 项的输出参数的任务。
 
-若要创建并运行这些任务，请使用 Visual Studio 和 **Visual Studio 命令提示符窗口**，如下所示：
+若要创建并运行这些任务，请使用 Visual Studio 和 **Visual Studio 命令提示符窗口** ，如下所示：
 
 1. 使用 Visual Studio 创建一个 MSBuild 项目文件。
 
 2. 在 Visual Studio 中修改此项目文件来创建内联任务。
 
-3. 使用**命令提示符窗口**生成项目并检查结果。
+3. 使用 **命令提示符窗口** 生成项目并检查结果。
 
 ## <a name="create-and-modify-an-msbuild-project"></a>创建和修改 MSBuild 项目
 

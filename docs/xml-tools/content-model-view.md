@@ -1,5 +1,7 @@
 ---
 title: XML 架构设计器内容模型视图
+description: 了解 XAML 架构设计器中的内容模型视图，此视图提供局部和全局架构节点及其组件的图形表示。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: e8db7c7d-31cf-479e-9dcc-299759891795
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 830dbdda0027551a25747235e6ad9dffbbc11b23
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 8a3aee0129516b6c7d377fcfff454f949e199eb5
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592908"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93049206"
 ---
 # <a name="content-model-view"></a>内容模型视图
 

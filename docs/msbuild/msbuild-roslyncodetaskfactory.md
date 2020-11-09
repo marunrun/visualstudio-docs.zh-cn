@@ -1,5 +1,7 @@
 ---
 title: 使用 RoslynCodeTaskFactory 创建 MSBuild 内联任务 | Microsoft Docs
+description: 了解 MSBuild RoslynCodeTaskFactory，它使用跨平台 Roslyn 编译器来生成用作内联任务的内存中任务程序集。
+ms.custom: SEO-VS-2020
 ms.date: 09/21/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9a1f606ed9e3d42d9f57cb941ee9518c1abfbc47
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 336c23a5e1357e8e425a74c0954d3c0e28f8a930
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85289204"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93049126"
 ---
 # <a name="msbuild-inline-tasks-with-roslyncodetaskfactory"></a>使用 RoslynCodeTaskFactory 创建 MSBuild 内联任务
 
@@ -92,7 +94,7 @@ RoslynCodeTaskFactory 与 [CodeTaskFactory](../msbuild/msbuild-inline-tasks.md) 
 
 ## <a name="hello-world"></a>Hello World
 
- 下面是使用 RoslynCodeTaskFactory 创建的内联任务，它的性能更可靠。 HelloWorld 任务 在默认错误日志记录设备上显示“Hello, World!”，该设备通常为系统控制台或 Visual Studio **输出**窗口。 示例中包含了 `Reference` 元素，这仅用于阐释目的。
+ 下面是使用 RoslynCodeTaskFactory 创建的内联任务，它的性能更可靠。 HelloWorld 任务 在默认错误日志记录设备上显示“Hello, World!”，该设备通常为系统控制台或 Visual Studio **输出** 窗口。 示例中包含了 `Reference` 元素，这仅用于阐释目的。
 
 ```xml
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

@@ -1,5 +1,7 @@
 ---
 title: 如何：创建基本纹理着色器
+description: 使用着色器设计器和有向图着色器语言来创建将最终颜色设置为纹理中的 RGB 和 alpha 值的单纹理着色器。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 5af113fb-6415-4be0-8b23-10fddb10e80a
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 30925a9b1814bd636258696fef817be9903f8006
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 93696dfe9fbf3b8db1d4be137ced6798b3a60aae
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85769080"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93134493"
 ---
 # <a name="how-to-create-a-basic-texture-shader"></a>如何：创建基本纹理着色器
 
@@ -23,19 +25,19 @@ ms.locfileid: "85769080"
 
 可通过将纹理样本的颜色和 alpha 值直接写入最终输出颜色，实现基本的单纹理着色器。
 
-开始前，请确保显示“属性”  窗口和“工具箱”  。
+开始前，请确保显示“属性”窗口和“工具箱”。
 
 1. 创建要使用的 DGSL 着色器。 若要了解如何向项目添加 DGSL 着色器，请参阅[着色器设计器](../designers/shader-designer.md)中的“入门”部分。
 
-2. 删除“点颜色”  节点。 在“选择”模式下，选择“点颜色”节点，然后在菜单栏上选择“编辑” > “删除”。 这为在下一步中添加的节点腾出空间。
+2. 删除“点颜色”节点。 在“选择”模式下，选择“点颜色”节点，然后在菜单栏上选择“编辑” > “删除”。 这为在下一步中添加的节点腾出空间。
 
-3. 将“纹理样本”  节点添加到关系图。 在“工具箱”  中的“纹理”  下选择“纹理样本”  ，然后将其移到设计图面。
+3. 将“纹理样本”节点添加到关系图。 在“工具箱”中的“纹理”下选择“纹理样本”，然后将其移到设计图面。
 
-4. 将“纹理坐标”  节点添加到关系图。 在“工具箱”  中的“纹理”  下选择“纹理坐标”  ，然后将其移到设计图面。
+4. 将“纹理坐标”节点添加到关系图。 在“工具箱”中的“纹理”下选择“纹理坐标”，然后将其移到设计图面。
 
-5. 选择要应用的纹理。 在“选择”  模式中，选择“纹理样本”  节点，然后在“属性”  窗口中通过“文件名”  属性指定要使用的纹理。
+5. 选择要应用的纹理。 在“选择”模式中，选择“纹理样本”节点，然后在“属性”窗口中通过“文件名”属性指定要使用的纹理。
 
-6. 使纹理可公开访问。 选择“纹理样本”  节点，然后在“属性”  窗口中将“访问”  属性设置为“公共”  。 现可利用其他工具（如**模型编辑器**）设置纹理。
+6. 使纹理可公开访问。 选择“纹理样本”节点，然后在“属性”窗口中将“访问”属性设置为“公共”。 现可利用其他工具（如 **模型编辑器** ）设置纹理。
 
 7. 将纹理坐标连接到纹理样本。 在“选择”模式下，将“纹理坐标”节点的“输出”终端移到“纹理样本”节点的“UV”终端。 此连接在指定坐标处对纹理进行采样。
 
@@ -52,7 +54,7 @@ ms.locfileid: "85769080"
 
 ## <a name="see-also"></a>另请参阅
 
-- [如何：向 3D 模型应用着色器](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
+- [如何：向三维模型应用着色器](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
 - [图像编辑器](../designers/image-editor.md)
 - [着色器设计器](../designers/shader-designer.md)
 - [着色器设计器节点](../designers/shader-designer-nodes.md)

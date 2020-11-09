@@ -1,5 +1,7 @@
 ---
 title: VCMessage 任务 | Microsoft Docs
+description: 了解 MSBuild 如何使用 VCMessage 任务来记录 C++ 项目生成期间的警告和错误消息。
+ms.custom: SEO-VS-2020
 ms.date: 06/27/2018
 ms.topic: reference
 f1_keywords:
@@ -19,12 +21,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a2247240ae0992c8275520ec5d7bf94d98ae1053
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 8c01c86a5374c14ac27de1535020c5deed29a89f
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77631206"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93046755"
 ---
 # <a name="vcmessage-task"></a>VCMessage 任务
 
@@ -36,13 +38,13 @@ ms.locfileid: "77631206"
 
 ## <a name="parameters"></a>参数
 
- 下表描述了 VCMessage 任务的参数  。
+ 下表描述了 VCMessage 任务的参数。
 
 |参数|说明|
 |---------------|-----------------|
 |**参数**|可选 **String** 参数。<br /><br /> 要显示的消息列表（以分号分隔）。|
 |**代码**|必需的 **String** 参数。<br /><br /> 限定消息的错误号。|
-|类型 |可选 **String** 参数。<br /><br /> 指定要发出的消息类型。 指定“Warning”发出一条警告消息，或指定“Error”发出一条错误消息。|
+|类型|可选 **String** 参数。<br /><br /> 指定要发出的消息类型。 指定“Warning”发出一条警告消息，或指定“Error”发出一条错误消息。|
 
 ## <a name="see-also"></a>另请参阅
 

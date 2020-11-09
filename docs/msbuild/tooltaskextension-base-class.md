@@ -1,5 +1,7 @@
 ---
 title: ToolTaskExtension 基类 | Microsoft Docs
+description: 了解 Microsoft.Build.Tasks.ToolTaskExtension 基类向继承自它的任务添加的参数。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9aa052a0fd2216d5f3d85e99794d9ac883a09e2d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: e4b0148a7c42b359906cd316b45dfdf2898e6313
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77631687"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047834"
 ---
 # <a name="tooltaskextension-base-class"></a>ToolTaskExtension 基类
 
@@ -28,7 +30,7 @@ ms.locfileid: "77631687"
 
  下表介绍基类的参数。
 
-| 参数 | 描述 |
+| 参数 | 说明 |
 | - | - |
 | <xref:Microsoft.Build.Utilities.Task.BuildEngine%2A> | 可选 <xref:Microsoft.Build.Framework.IBuildEngine> 参数。<br /><br /> 指定可供任务使用的生成引擎接口。 生成引擎会自动设置此参数，以允许任务回调到其中。 |
 | <xref:Microsoft.Build.Utilities.Task.BuildEngine2%2A> | 可选 <xref:Microsoft.Build.Framework.IBuildEngine2> 参数。<br /><br /> 指定可供任务使用的生成引擎接口。 生成引擎会自动设置此参数，以允许任务回调到其中。<br /><br /> 这是一个便捷属性，使从此类继承的任务作者不必将值从 `IBuildEngine` 强制转换为 `IBuildEngine2`。 |
@@ -47,7 +49,7 @@ ms.locfileid: "77631687"
 | <xref:Microsoft.Build.Utilities.ToolTask.UseCommandProcessor%2A> | 可选 `bool` 参数。<br /><br /> 设置为 `true` 时，此任务会为命令行创建一个批处理文件，并使用命令处理器执行它（而不是直接执行命令）。 |
 | <xref:Microsoft.Build.Utilities.ToolTask.YieldDuringToolExecution%2A> | 可选 `bool` 参数。<br /><br /> 设置为 `true` 时，此任务会在其任务执行时生成节点。 |
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [任务参考](../msbuild/msbuild-task-reference.md)
 - [任务](../msbuild/msbuild-tasks.md)

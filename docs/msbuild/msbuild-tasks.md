@@ -1,5 +1,7 @@
 ---
 title: MSBuild 任务 | Microsoft Docs
+description: 了解 MSBuild 如何在生成过程中使用任务或执行原子生成操作的可执行代码单元。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,16 +13,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b065ea8cdaea2e2b39aa78a666ea0348f7b254ae
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 76b359eebe0f4a22bef3ff6c6742a5134aa4520c
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633130"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93049046"
 ---
 # <a name="msbuild-tasks"></a>MSBuild 任务
 
-生成平台需要能够在生成过程中执行任意数量的操作。 MSBuild 使用任务  执行这些操作。 任务是由 MSBuild 用于执行原子生成操作的可执行代码单元。
+生成平台需要能够在生成过程中执行任意数量的操作。 MSBuild 使用任务执行这些操作。 任务是由 MSBuild 用于执行原子生成操作的可执行代码单元。
 
 ## <a name="task-logic"></a>任务逻辑
 
@@ -67,7 +69,7 @@ ms.locfileid: "77633130"
 
 ## <a name="overridden-tasks"></a>覆盖的任务
 
- MSBuild 在多个位置查找任务。 第一个位置位于存储在 .NET Framework 目录中扩展名为 .OverrideTasks 的文件中。  这些文件中的任务会覆盖具有相同名称的其他任何任务，包括项目文件中的任务。 第二个位置位于 .NET Framework 目录中扩展名为 .Tasks 的文件中。  如果在这些位置中找不到任务，则会使用项目文件中的任务。
+ MSBuild 在多个位置查找任务。 第一个位置位于存储在 .NET Framework 目录中扩展名为 .OverrideTasks 的文件中。 这些文件中的任务会覆盖具有相同名称的其他任何任务，包括项目文件中的任务。 第二个位置位于 .NET Framework 目录中扩展名为 .Tasks 的文件中。 如果在这些位置中找不到任务，则会使用项目文件中的任务。
 
 ## <a name="see-also"></a>请参阅
 

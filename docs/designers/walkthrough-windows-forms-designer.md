@@ -1,5 +1,7 @@
 ---
 title: Windows 窗体设计器教程
+description: 了解如何使用 Windows 窗体设计器提供的各种工具来生成应用。 应用是使用许多可用的布局功能的自定义控件。
+ms.custom: SEO-VS-2020
 ms.date: 08/09/2019
 ms.topic: tutorial
 helpviewer_keywords:
@@ -7,12 +9,12 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 831e0216bcecff2e9ac6551184ddbfda56a4b525
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.openlocfilehash: f3dfdecb28254e5b9683cd1e9640c5a45b728a6c
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88801290"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93134689"
 ---
 # <a name="tutorial-get-started-with-windows-forms-designer"></a>教程：Windows 窗体设计器入门
 
@@ -89,7 +91,7 @@ DemoCalculator 控件包含多个 Windows 窗体控件。 在此过程中，将�
 
 11. 在智能标记面板中，选择“在父容器中停靠” ，然后选择智能标记字形来关闭智能标记面板。
 
-12. 从“容器”节点**工具箱**，将 `TableLayoutPanel` 控件拖动到 `SplitContainer` 控件的左面板中。
+12. 从“容器”节点 **工具箱** ，将 `TableLayoutPanel` 控件拖动到 `SplitContainer` 控件的左面板中。
 
     `TableLayoutPanel` 控件显示在设计器图面上，并打开其智能标记面板。 `TableLayoutPanel` 控件在网格中排列其子控件。 `TableLayoutPanel` 控件将保留 DemoCalculator 控件的显示和按钮。 有关详细信息，请参见[演练：使用 TableLayoutPanel 排列控件](/dotnet/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel)。
 
@@ -219,9 +221,9 @@ DemoCalculator 控件包含多个 Windows 窗体控件。 在此过程中，将�
 
    - 将 sixButton 控件文本属性更改为“6”
 
-   - 将 multiplicationButton 控件文本属性更改为“\*”（星号）
+   - 将 multiplicationButton 控件文本属性更改为 * *\** _（星号）
 
-   - 将 oneButton 控件文本属性更改为“1”
+   - 将 oneButton 控件文本属性更改为 _ *1**
 
    - 将 twoButton 控件文本属性更改为“2”
 

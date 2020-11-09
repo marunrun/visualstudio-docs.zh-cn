@@ -1,5 +1,7 @@
 ---
 title: MarkupCompilePass1 任务 | Microsoft Docs
+description: 了解 MSBuild 如何使用 MarkupCompilePass1 任务将不可本地化的 XAML 项目文件转换为已编译的二进制格式。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a847f096edf5e42623cb2cb32cf4fd871a89aad7
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 775884692963da226947a8fac524a8bd440d6c8d
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633507"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904272"
 ---
 # <a name="markupcompilepass1-task"></a>MarkupCompilePass1 任务
 
@@ -30,13 +32,13 @@ ms.locfileid: "77633507"
 
 ## <a name="task-parameters"></a>任务参数
 
-| 参数 | 描述 |
+| 参数 | 说明 |
 | - | - |
 | `AllGeneratedFiles` | 可选的 **ITaskItem[]** 输出参数。<br /><br /> 包含由 <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1> 任务生成的文件的完整列表。 |
-| `AlwaysCompileMarkupFilesInSeparateDomain` | 可选 **Boolean** 参数。<br /><br /> 指定是否在单独的 <xref:System.AppDomain> 下运行该任务。 如果此参数返回 false，则任务将在与 MSBuild 相同的 <xref:System.AppDomain> 中运行，且运行速度更快  。 如果该参数返回 true，则任务将在独立于 MSBuild 的另一个 <xref:System.AppDomain> 中运行，且运行速度更慢  。 |
+| `AlwaysCompileMarkupFilesInSeparateDomain` | 可选 **Boolean** 参数。<br /><br /> 指定是否在单独的 <xref:System.AppDomain> 下运行该任务。 如果此参数返回 false，则任务将在与 MSBuild 相同的 <xref:System.AppDomain> 中运行，且运行速度更快。 如果该参数返回 true，则任务将在独立于 MSBuild 的另一个 <xref:System.AppDomain> 中运行，且运行速度更慢。 |
 | `ApplicationMarkup` | 可选的 **ITaskItem[]** 参数。<br /><br /> 指定应用程序定义 XAML 文件的名称。 |
-| `AssembliesGeneratedDuringBuild` | 可选 **String []** 参数。<br /><br /> 指定在生成过程中对更改的程序集的引用。 例如，Visual Studio 解决方案可能包含一个引用了另一个项目的已编译输出的项目。 在这种情况下，可以将第二个项目的已编译输出添加到 **AssembliesGeneratedDuringBuild** 参数。<br /><br /> 注意：“AssembliesGeneratedDuringBuild”参数必须包含对生成解决方案所生成的一组完整程序集的引用  。 |
-| `AssemblyName` | 必需的 **String** 参数。<br /><br /> 指定为项目生成的程序集的简称。 例如，如果项目生成一个名为 WinExeAssembly.exe 的 Windows 可执行文件，则 AssemblyName 参数的值为 WinExeAssembly    。 |
+| `AssembliesGeneratedDuringBuild` | 可选 **String []** 参数。<br /><br /> 指定在生成过程中对更改的程序集的引用。 例如，Visual Studio 解决方案可能包含一个引用了另一个项目的已编译输出的项目。 在这种情况下，可以将第二个项目的已编译输出添加到 **AssembliesGeneratedDuringBuild** 参数。<br /><br /> 注意： **AssembliesGeneratedDuringBuild** 参数必须包含对生成解决方案所生成的一组完整程序集的引用。 |
+| `AssemblyName` | 必需的 **String** 参数。<br /><br /> 指定为项目生成的程序集的简称。 例如，如果项目生成一个名为 WinExeAssembly.exe 的 Windows 可执行文件，则 AssemblyName 参数的值为 WinExeAssembly 。 |
 | `AssemblyPublicKeyToken` | 可选 **String** 参数。<br /><br /> 指定程序集的公钥标记。 |
 | `AssemblyVersion` | 可选 **String** 参数。<br /><br /> 指定程序集的版本号。 |
 | `ContentFiles` | 可选的 **ITaskItem[]** 参数。<br /><br /> 指定松散的内容文件列表。 |
@@ -45,25 +47,25 @@ ms.locfileid: "77633507"
 | `GeneratedBamlFiles` | 可选的 **ITaskItem[]** 输出参数。<br /><br /> 包含已生成的 XAML 二进制格式文件的列表。 |
 | `GeneratedCodeFiles` | 可选的 **ITaskItem[]** 输出参数。<br /><br /> 包含生成的托管代码文件的列表。 |
 | `GeneratedLocalizationFiles` | 可选的 **ITaskItem[]** 输出参数。<br /><br /> 包含为每个可本地化的 XAML 文件生成的本地化文件的列表。 |
-| `HostInBrowser` | 可选 **String** 参数。<br /><br /> 指定生成的程序集是否为 XAML 浏览器应用程序 (XBAP)。 有效的选项为“true”  和“false”  。 如果为“true”  ，则生成代码以支持浏览器承载。 |
+| `HostInBrowser` | 可选 **String** 参数。<br /><br /> 指定生成的程序集是否为 XAML 浏览器应用程序 (XBAP)。 有效的选项为“true”和“false”。 如果为“true”，则生成代码以支持浏览器承载。 |
 | `KnownReferencePaths` | 可选 **String []** 参数。<br /><br /> 指定对在生成过程中不更改的程序集的引用。 包括位于全局程序集缓存 (GAC)、.NET 安装目录等位置中的程序集。 |
-| `Language` | 必需的 **String** 参数。<br /><br /> 指定编译器支持的托管语言。 有效的选项有 **C#** 、**VB**、**JScript** 和 **C++** 。 |
-| `LanguageSourceExtension` | 可选 **String** 参数。<br /><br /> 指定追加到所生成的托管代码文件扩展名的扩展名：<br /><br /> `<Filename>.g<LanguageSourceExtension>`<br /><br /> 如果未采用特定的值来设置 LanguageSourceExtension  参数，则使用语言的默认源文件扩展名：.vb  （适用于 Visual Basic）和 .csharp  （适用于 C#）。 |
-| `LocalizationDirectivesToLocFile` | 可选 **String** 参数。<br /><br /> 指定如何针对每个源 XAML 文件生成本地化信息。 有效选项有“无”  、“仅注释”  和“全部”  。 |
+| `Language` | 必需的 **String** 参数。<br /><br /> 指定编译器支持的托管语言。 有效的选项有 **C#** 、 **VB** 、 **JScript** 和 **C++** 。 |
+| `LanguageSourceExtension` | 可选 **String** 参数。<br /><br /> 指定追加到所生成的托管代码文件扩展名的扩展名：<br /><br /> `<Filename>.g<LanguageSourceExtension>`<br /><br /> 如果未采用特定的值来设置 LanguageSourceExtension 参数，则使用语言的默认源文件扩展名：.vb（适用于 Visual Basic）和 .csharp（适用于 C#）。 |
+| `LocalizationDirectivesToLocFile` | 可选 **String** 参数。<br /><br /> 指定如何针对每个源 XAML 文件生成本地化信息。 有效选项有“无”、“仅注释”和“全部”。 |
 | `OutputPath` | 必需的 **String** 参数。<br /><br /> 指定在其中生成托管代码文件和 XAML 二进制格式文件的目录。 |
-| `OutputType` | 必需的 **String** 参数。<br /><br /> 指定项目生成的程序集的类型。 有效选项有 **winexe**、**exe**、**library** 和 **netmodule**。 |
+| `OutputType` | 必需的 **String** 参数。<br /><br /> 指定项目生成的程序集的类型。 有效选项有 **winexe** 、 **exe** 、 **library** 和 **netmodule** 。 |
 | `PageMarkup` | 可选的 **ITaskItem[]** 参数。<br /><br /> 指定要处理的 XAML 文件的列表。 |
 | `References` | 可选的 **ITaskItem[]** 参数。<br /><br /> 指定引用列表，范围从文件到程序集，它们包含 XAML 文件中所使用的类型。 |
 | `RequirePass2ForMainAssembly` | 可选 **Boolean** 输出参数。<br /><br /> 指示项目是否包含不可本地化的 XAML 文件（这些文件引用嵌入到主程序集中的本地类型）。 |
 | `RequirePass2ForSatelliteAssembly` | 可选 **Boolean** 输出参数。<br /><br /> 指示项目是否包含可本地化的 XAML 文件（这些文件引用主程序集中嵌入的本地类型）。 |
-| `RootNamespace` | 可选 **String** 参数。<br /><br /> 指定项目内部的类的根命名空间。 当对应的 XAML 文件不包括 `x:Class` 属性时，RootNamespace  也将用作生成的托管代码文件的默认命名空间。 |
+| `RootNamespace` | 可选 **String** 参数。<br /><br /> 指定项目内部的类的根命名空间。 当对应的 XAML 文件不包括 `x:Class` 属性时，RootNamespace 也将用作生成的托管代码文件的默认命名空间。 |
 | `SourceCodeFiles` | 可选的 **ITaskItem[]** 参数。<br /><br /> 指定当前项目的代码文件列表。 此列表不包括所生成的特定于语言的托管代码文件。 |
-| `UICulture` | 可选 **String** 参数。<br /><br /> 为在其中嵌入所生成的 XAML 二进制格式文件的 UI 区域性指定附属程序集。 如果未设置 UICulture  ，则生成的 XAML 二进制格式文件将嵌入主程序集中。 |
-| `XAMLDebuggingInformation` | 可选 **Boolean** 参数。<br /><br /> 如果为 true  ，则会生成诊断信息并将其包括在编译的 XAML 中，以辅助调试。 |
+| `UICulture` | 可选 **String** 参数。<br /><br /> 为在其中嵌入所生成的 XAML 二进制格式文件的 UI 区域性指定附属程序集。 如果未设置 UICulture，则生成的 XAML 二进制格式文件将嵌入主程序集中。 |
+| `XAMLDebuggingInformation` | 可选 **Boolean** 参数。<br /><br /> 如果为 true，则会生成诊断信息并将其包括在编译的 XAML 中，以辅助调试。 |
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-<xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1> 任务通常将 XAML 编译成二进制格式并生成代码文件。 如果 XAML 文件包含对在相同项目中定义的类型的引用，则将此文件编译为二进制格式的任务会被 MarkupCompilePass1 推迟到第二个标记编译阶段 (MarkupCompilePass2)   。 必须将此类文件的编译推迟，因为必须等到所引用的以本地方式定义的类型编译完后，才会对其进行编译。 但如果 XAML 文件具有 `x:Class` 属性，<xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1> 会为其生成特定于语言的代码文件。
+<xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1> 任务通常将 XAML 编译成二进制格式并生成代码文件。 如果 XAML 文件包含对在相同项目中定义的类型的引用，则将此文件编译为二进制格式的任务会被 MarkupCompilePass1 推迟到第二个标记编译阶段 (MarkupCompilePass2) 。 必须将此类文件的编译推迟，因为必须等到所引用的以本地方式定义的类型编译完后，才会对其进行编译。 但如果 XAML 文件具有 `x:Class` 属性，<xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1> 会为其生成特定于语言的代码文件。
 
 如果 XAML 文件包含使用 `x:Uid` 属性的元素，则此文件是可本地化的文件：
 
@@ -98,7 +100,7 @@ XAML 文件在声明 XML 命名空间（该命名空间使用 `clr-namespace` �
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何将三个 Page XAML 文件转换为二进制格式文件  。 Page1 包含对位于项目的根命名空间的类型 `Class1` 的引用，因此在此标记编译阶段不会转换为二进制格式文件  。 改为执行 [GenerateTemporaryTargetAssembly](../msbuild/generatetemporarytargetassembly-task.md)，然后再执行 [MarkupCompilePass2](../msbuild/markupcompilepass2-task.md)。
+下面的示例演示如何将三个 Page XAML 文件转换为二进制格式文件。 Page1 包含对位于项目的根命名空间的类型 `Class1` 的引用，因此在此标记编译阶段不会转换为二进制格式文件。 改为执行 [GenerateTemporaryTargetAssembly](../msbuild/generatetemporarytargetassembly-task.md)，然后再执行 [MarkupCompilePass2](../msbuild/markupcompilepass2-task.md)。
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

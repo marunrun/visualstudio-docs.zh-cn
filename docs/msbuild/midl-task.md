@@ -1,5 +1,7 @@
 ---
 title: MIDL 任务 | Microsoft Docs
+description: 了解 MSBuild MIDL 任务，它包装 Microsoft 接口定义语言 (MIDL) 编译器工具 midl.exe。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -26,12 +28,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a43975244eaf064c9ed7608fa41c16854ca140f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 884cecdcbdbef3320516dd67c43cedd72bc25076
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633468"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92903848"
 ---
 # <a name="midl-task"></a>MIDL 任务
 
@@ -89,7 +91,7 @@ ms.locfileid: "77633468"
 
      指定以下值之一，其中每个值对应于一个命令行选项。
 
-    |“值”|命令行选项|
+    |值|命令行选项|
     |-----------|--------------------------|
     |**Signed**|**/char signed**|
     |**Unsigned**|**/char unsigned**|
@@ -113,7 +115,7 @@ ms.locfileid: "77633468"
 
      指定以下值之一，其中每个值对应于一个命令行选项。
 
-    |“值”|命令行选项|
+    |值|命令行选项|
     |-----------|--------------------------|
     |**无**|**/error none**|
     |**EnableCustom**|**/error**|
@@ -169,7 +171,7 @@ ms.locfileid: "77633468"
 
      指定以下值之一，其中每个值对应于一个命令行选项。
 
-    |“值”|命令行选项|
+    |值|命令行选项|
     |-----------|--------------------------|
     |**无**|**/client none**|
     |**Stub**|**/client stub**|
@@ -184,7 +186,7 @@ ms.locfileid: "77633468"
 
      指定以下值之一，其中每个值对应于一个命令行选项。
 
-    |“值”|命令行选项|
+    |值|命令行选项|
     |-----------|--------------------------|
     |**无**|**/server none**|
     |**Stub**|**/server stub**|
@@ -227,7 +229,7 @@ ms.locfileid: "77633468"
 
      可选 **String** 参数。
 
-     指定 COM 接口的*接口标识符文件*的名称。 这会覆盖通过将“_i.c”添加到 IDL 文件名所获取的默认名称。
+     指定 COM 接口的 *接口标识符文件* 的名称。 这会覆盖通过将“_i.c”添加到 IDL 文件名所获取的默认名称。
 
      有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /iid 选项。
 
@@ -235,7 +237,7 @@ ms.locfileid: "77633468"
 
      可选 **int** 参数。
 
-     指定在输入文件、文件名和目录路径中启用国际字符的*区域设置标识符*。 指定十进制区域设置标识符。
+     指定在输入文件、文件名和目录路径中启用国际字符的 *区域设置标识符* 。 指定十进制区域设置标识符。
 
      有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /lcid 选项。 另请参阅 [Locale identifiers（区域设置标识符）](/windows/desktop/intl/locale-identifiers)。
 
@@ -259,7 +261,7 @@ ms.locfileid: "77633468"
 
      可选 **String []** 参数。
 
-     指定一个或多个*定义*，即要传递给 C 预处理器的名称和可选值，就如通过 `#define` 指令所指示那样。 每个定义的形式为 *name[=value]* 。
+     指定一个或多个 *定义* ，即要传递给 C 预处理器的名称和可选值，就如通过 `#define` 指令所指示那样。 每个定义的形式为 *name[=value]* 。
 
      有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /D 选项。 另请参阅此表中的 **UndefinePreprocessorDefinitions** 参数。
 
@@ -297,11 +299,11 @@ ms.locfileid: "77633468"
 
      可选 **String** 参数。
 
-     指定目标系统中结构的对齐方式（*封装级别*）。
+     指定目标系统中结构的对齐方式（ *封装级别* ）。
 
      指定以下值之一，其中每个值对应于一个命令行选项。
 
-    |“值”|命令行选项|
+    |值|命令行选项|
     |-----------|--------------------------|
     |**NotSet**|*\<none>*|
     |**1**|**/Zp1**|
@@ -309,7 +311,7 @@ ms.locfileid: "77633468"
     |**4**|**/Zp4**|
     |**8**|**/Zp8**|
 
-     有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /Zp 选项****。 **/Zp** 选项相当于 **/pack** 选项以及较早的 **/align** 选项。
+     有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /Zp 选项。 **/Zp** 选项相当于 **/pack** 选项以及较早的 **/align** 选项。
 
 - **SuppressCompilerWarnings**
 
@@ -317,7 +319,7 @@ ms.locfileid: "77633468"
 
      如果为 `true`，则禁止 MIDL 任务的警告消息。
 
-     有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /no_warn 选项****。
+     有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /no_warn 选项。
 
 - **SuppressStartupBanner**
 
@@ -325,7 +327,7 @@ ms.locfileid: "77633468"
 
      如果为 `true`，则在任务开始时阻止显示版权和版本号消息。
 
-     有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /nologo 选项****。
+     有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /nologo 选项。
 
 - **TargetEnvironment**
 
@@ -342,7 +344,7 @@ ms.locfileid: "77633468"
     |**Itanium**|**/env ia64**|
     |**X64**|**/env x64**|
 
-     有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /env 选项****。
+     有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /env 选项。
 
 - **TrackerLogDirectory**
 
@@ -363,7 +365,7 @@ ms.locfileid: "77633468"
     |**NewFormat**|**/newtlb**|
     |**OldFormat**|**/oldtlb**|
 
-     有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /newtlb 选项********。
+     有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /newtlb 选项。
 
 - **TypeLibraryName**
 
@@ -371,7 +373,7 @@ ms.locfileid: "77633468"
 
      指定类型库文件的名称。
 
-     有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /tlb 选项****。
+     有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /tlb 选项。
 
 - **UndefinePreprocessorDefinitions**
 
@@ -379,7 +381,7 @@ ms.locfileid: "77633468"
 
      通过将名称传递到 C 预处理器，删除任何之前的名称定义，就如通过 `#undefine` 所指示那样。 指定一个或多个以前定义的名称。
 
-     有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /U 选项****。 另请参阅此表中的 **PreprocessorDefinitions** 参数。
+     有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /U 选项。 另请参阅此表中的 **PreprocessorDefinitions** 参数。
 
 - **ValidateAllParameters**
 
@@ -387,7 +389,7 @@ ms.locfileid: "77633468"
 
      如果为 `true`，则生成用于在运行时执行完整性检查的其他错误检查信息。 如果为 `false`，则不会生成错误检查信息。
 
-     有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /robust 和 /no_robust 选项********。
+     有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /robust 和 /no_robust 选项。
 
 - **WarnAsError**
 
@@ -397,13 +399,13 @@ ms.locfileid: "77633468"
 
      如果未指定 **WarningLevel** MIDL 任务参数，则将默认级别和级别 1 的警告视为错误。
 
-     有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /WX 选项****。 另请参阅此表格中的 **WarningLevel** 参数。
+     有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /WX 选项。 另请参阅此表格中的 **WarningLevel** 参数。
 
 - **WarningLevel**
 
      可选 **String** 参数。
 
-     指定要发出的警告的严重性（*警告等级*）。 若值为 0，则不发出任何警告。 否则，如果警告等级数小于或等于指定的值，将发出警告。
+     指定要发出的警告的严重性（ *警告等级* ）。 若值为 0，则不发出任何警告。 否则，如果警告等级数小于或等于指定的值，将发出警告。
 
      指定以下值之一，其中每个值对应于一个命令行选项。
 
@@ -415,7 +417,7 @@ ms.locfileid: "77633468"
     |**3**|**/W3**|
     |**4**|**/W4**|
 
-     有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /W 选项****。 另请参阅此表格中的 **WarnAsError** 参数。
+     有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /W 选项。 另请参阅此表格中的 **WarnAsError** 参数。
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,7 +1,7 @@
 ---
 title: 启用 ASP.NET 应用调试 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/21/2018
+ms.date: 10/29/2020
 ms.topic: how-to
 dev_langs:
 - CSharp
@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - aspnet
-ms.openlocfilehash: f23f5bb2588c179f47593b1ecbcf5d6cd7fa9f0d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3755489332bcc174e70e193a836db05e672907e1
+ms.sourcegitcommit: f1bb1b66ed141837e992b3352ce68ff24c11f53e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85349752"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93102566"
 ---
 # <a name="debug-aspnet-or-aspnet-core-apps-in-visual-studio"></a>在 Visual Studio 中调试 ASP.NET 或 ASP.NET Core 应用
 
@@ -37,9 +37,13 @@ Visual Studio 中内置了 IIS Express 服务器。 IIS Express 是 ASP.NET 和 
 你还可以在配置为运行该应用的本地 IIS 服务器（8.0 或更高版本）上调试 ASP.NET 或 ASP.NET Core 应用。 要在本地 IIS 上调试，必须满足以下要求：
 
 <a name="iis"></a>
-- 安装 Visual Studio 时，请选择“开发时 IIS 支持”。 （如有必要，请重新运行 Visual Studio 安装程序，选择“修改”，然后添加此组件。）
+- 如果未安装，请安装“ASP.NET 和 Web 开发”工作负载。 （重新运行 Visual Studio 安装程序，选择“修改”，然后添加此工作负载。）
+
+   ::: moniker range="vs-2017"
+   在 Visual Studio 2017 中，查找“开发时 IIS 支持”组件。 请确保在添加工作负载时选择了此选项。
+   ::: moniker-end
 - 以管理员身份运行 Visual Studio。
-- 使用适当版本的 ASP.NET 和/或 ASP.NET Core 安装并正确配置 IIS。 有关详细信息和说明，请参阅[使用 ASP.NET 3.5 和 ASP.NET 4.5 的 IIS 8.0](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45) 或[使用 IIS 在 Windows 上托管 ASP.NET Core](/aspnet/core/host-and-deploy/iis/index)。
+- 使用适当版本的 ASP.NET 和/或 ASP.NET Core 安装并正确配置 IIS。 若要详细了解如何结合使用 IIS 和 ASP.NET Core，请参阅[使用 IIS 在 Windows 上托管 ASP.NET Core](/aspnet/core/host-and-deploy/iis/index)。 有关 ASP.NET，请参阅[安装 IIS 和 ASP.NET 模块](/iis/application-frameworks/scenario-build-an-aspnet-website-on-iis/configuring-step-1-install-iis-and-asp-net-modules)。
 - 请确保应用在 IIS 上运行且未出现错误。
 
 ## <a name="debug-aspnet-apps"></a>调试 ASP.NET 应用

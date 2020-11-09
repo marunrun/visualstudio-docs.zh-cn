@@ -1,5 +1,7 @@
 ---
 title: Message 任务 | Microsoft Docs
+description: 了解在生成期间记录消息的 MSBuild Message 任务的参数和设置。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 264ff3a5e64b756020648e888f7817e12702659f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 1b7a2854220a7ee85fd680cedd8c8e0c5c3ada89
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "78865357"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92903844"
 ---
 # <a name="message-task"></a>Message 任务
 
@@ -33,12 +35,12 @@ ms.locfileid: "78865357"
 
  下表描述了 `Message` 任务的参数。
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |`Importance`|可选 `String` 参数。<br /><br /> 指定消息的重要性。 此参数的值可以是 `high`、`normal` 或 `low`。 默认值为 `normal`。|
 |`Text`|可选 `String` 参数。<br /><br /> 要记录的错误文本。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
  通过 `Message` 任务，MSBuild 项目可以在生成过程中的不同阶段将消息发送到记录器中。
 
@@ -62,7 +64,7 @@ ms.locfileid: "78865357"
 </Project>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [任务参考](../msbuild/msbuild-task-reference.md)
 - [获取生成日志](../msbuild/obtaining-build-logs-with-msbuild.md)

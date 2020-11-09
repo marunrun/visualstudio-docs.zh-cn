@@ -1,5 +1,7 @@
 ---
 title: 在设计时解析程序集 | Microsoft Docs
+description: 了解 MSBuild 如何在设计时使用目标包中的引用程序集来解析对程序集的引用。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,16 +12,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 69f5ba2627e2d659665fa0bd3fbf706f9cad5573
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 515c99a4d73abcb3a287f3f4026723bd8050b360
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77632558"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048495"
 ---
 # <a name="resolve-assemblies-at-design-time"></a>在设计时解析程序集
 
-当通过“添加引用”  对话框的“.NET”  选项卡添加对程序集的引用时，引用将指向一个中间引用程序集；所谓中间引用程序集，是指包含所有类型和签名信息但不一定包含任何代码的程序集。 “.NET”  选项卡列出 .NET Framework 中运行时程序集对应的引用程序集。 此外，它还列出第三方使用的注册 AssemblyFoldersEx 文件夹中运行时程序集所对应的引用程序集。
+当通过“添加引用”对话框的“.NET”选项卡添加对程序集的引用时，引用将指向一个中间引用程序集；所谓中间引用程序集，是指包含所有类型和签名信息但不一定包含任何代码的程序集。 “.NET”选项卡列出 .NET Framework 中运行时程序集对应的引用程序集。 此外，它还列出第三方使用的注册 AssemblyFoldersEx 文件夹中运行时程序集所对应的引用程序集。
 
 ## <a name="multi-targeting"></a>多目标
 
@@ -27,7 +29,7 @@ ms.locfileid: "77632558"
 
 ## <a name="how-type-resolution-works"></a>类型解析的工作原理
 
- 在运行时，CLR 通过查找 GAC、bin 目录和任何探测路径来解析程序集中的类型  。 这由融合加载程序处理。 但是，融合加载程序如何知道其要查找的内容？ 这取决于设计时（生成应用程序时）创建的解决方案。
+ 在运行时，CLR 通过查找 GAC、bin 目录和任何探测路径来解析程序集中的类型。 这由融合加载程序处理。 但是，融合加载程序如何知道其要查找的内容？ 这取决于设计时（生成应用程序时）创建的解决方案。
 
  在生成期间，编译器使用引用程序集解析应用程序类型。 在 .NET Framework 2.0、3.0、3.5、4、4.5 和 4.5.1 版中，引用程序集将随 .NET Framework 一起安装。
 

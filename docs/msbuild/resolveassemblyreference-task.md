@@ -1,5 +1,7 @@
 ---
 title: ResolveAssemblyReference 任务 | Microsoft Docs
+description: 了解 MSBuild 如何使用 ResolveAssemblyReference 任务来确定所有依赖指定程序集的程序集。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -21,12 +23,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b79bd8eb3f7d813e3acd091ce5f2ffbc7b3eeb49
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bccdc376079c4d9e0efb2a2724831e0fd2d0ae14
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77632753"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048658"
 ---
 # <a name="resolveassemblyreference-task"></a>ResolveAssemblyReference 任务
 
@@ -36,7 +38,7 @@ ms.locfileid: "77632753"
 
  下表描述了 `ResolveAssemblyReference` 任务的参数。
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |`AllowedAssemblyExtensions`|可选 `String[]` 参数。<br /><br /> 将在解析引用时使用的程序集文件扩展名。 默认文件扩展名为 .exe 和 .dll。  |
 |`AllowedRelatedFileExtensions`|可选 `String[]` 参数。<br /><br /> 要用于搜索彼此相互关联的文件的文件扩展名。 默认扩展名是 .pdb 和 .xml。  |
@@ -62,7 +64,7 @@ ms.locfileid: "77632753"
 |`LatestTargetFrameworkDirectories`|可选 `String[]` 参数。<br /><br /> 指定目录列表，其中包含该计算机上可将其作为目标的最新框架的 redist 列表。 如果未设置此项，则使用安装在给定目标框架标识符的计算机上的最高框架。|
 |`ProfileName`|可选 `String` 参数。<br /><br /> -   指定要设定为目标的框架配置文件的名称。 例如，客户端、Web 或网络。|
 |`RelatedFiles`|可选的 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 只读输出参数。<br /><br /> 包含与引用具有相同基名称的相关文件，如 XML 和 .pdb 文件。 <br /><br /> 此参数中列出的文件可选择性地包含以下项的元数据：<br /><br /> -   `Primary`： `Boolean` 值。 如果为 `true`，则文件项已通过使用 `Assemblies` 参数。 默认值是 `false`。<br />-   `CopyLocal`： `Boolean` 值。 指示给定引用是否应复制到输出目录。|
-|`ResolvedDependencyFiles`|可选的 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 只读输出参数。<br /><br /> 包含第 *n*级依赖项路径。 此参数不包括第一级主引用，其包含在 `ResolvedFiles` 参数中。<br /><br /> 此参数中的项选择性地包含以下项的元数据：<br /><br /> -   `CopyLocal`： `Boolean` 值。 指示给定引用是否应复制到输出目录。<br />-   `FusionName`： `String` 值。 指定此依赖项的名称。<br />-   `ResolvedFrom`： `String` 值。 指定已从中解析此文件的文字搜索路径。|
+|`ResolvedDependencyFiles`|可选的 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 只读输出参数。<br /><br /> 包含第 *n* 级依赖项路径。 此参数不包括第一级主引用，其包含在 `ResolvedFiles` 参数中。<br /><br /> 此参数中的项选择性地包含以下项的元数据：<br /><br /> -   `CopyLocal`： `Boolean` 值。 指示给定引用是否应复制到输出目录。<br />-   `FusionName`： `String` 值。 指定此依赖项的名称。<br />-   `ResolvedFrom`： `String` 值。 指定已从中解析此文件的文字搜索路径。|
 |`ResolvedFiles`|可选的 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 只读输出参数。<br /><br /> 包含已解析为完整路径的所有主引用列表。<br /><br /> 此参数中的项选择性地包含以下项的元数据：<br /><br /> -   `CopyLocal`： `Boolean` 值。 指示给定引用是否应复制到输出目录。<br />-   `FusionName`： `String` 值。 指定此依赖项的名称。<br />-   `ResolvedFrom`： `String` 值。 指定已从中解析此文件的文字搜索路径。|
 |`SatelliteFiles`|可选的 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 只读输出参数。<br /><br /> 指定找到的任何附属文件。 如果导致此项存在的引用或依赖项是 CopyLocal=true，则这些将为 CopyLocal=true。<br /><br /> 此参数中的项选择性地包含以下项的元数据：<br /><br /> -   `CopyLocal`： `Boolean` 值。 指示给定引用是否应复制到输出目录。 如果导致此项存在的引用或依赖项具有为 `true` 的 `CopyLocal` 值，则这个值为 `true`。<br />-   `DestinationSubDirectory`： `String` 值。 指定要复制此项到的相对目标目录。|
 |`ScatterFiles`|可选的 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 只读输出参数。<br /><br /> 包含与某个给定的程序集关联的散点文件。<br /><br /> 此参数中的项选择性地包含以下项的元数据：<br /><br /> -   `CopyLocal`： `Boolean` 值。 指示给定引用是否应复制到输出目录。|
@@ -107,7 +109,7 @@ ms.locfileid: "77632753"
 
  除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.TaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.Task> 类。 有关这些其他参数的列表及其说明的信息，请参阅 [TaskExtension 基类](../msbuild/taskextension-base-class.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [任务](../msbuild/msbuild-tasks.md)
 - [任务参考](../msbuild/msbuild-task-reference.md)

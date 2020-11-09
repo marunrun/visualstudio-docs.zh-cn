@@ -1,5 +1,7 @@
 ---
 title: XDCMake 任务 | Microsoft Docs
+description: 了解 MSBuild 如何使用 XDCMake 任务来包装 XML 文档工具 xdcmake.exe，此工具将 XML 文档注释文件合并到 .xml 文件中。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,12 +21,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c41bfc2015f29cbb73b33df3594b3a3430af3f3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 62d1717acee9b8935f176bc10191f044b28a660d
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77630647"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047266"
 ---
 # <a name="xdcmake-task"></a>XDCMake 任务
 
@@ -42,9 +44,9 @@ ms.locfileid: "77630647"
 
 |参数|描述|
 |---------------|-----------------|
-|**AdditionalDocumentFile**|可选 **String []** 参数。<br /><br /> 指定还要合并的一个或多个 .xdc  文件。<br /><br /> 有关详细信息，请参阅 [XML 文档生成器工具属性页](/cpp/build/reference/xml-document-generator-tool-property-pages)中的**附加文档文件**说明。 另请参阅 xdcmake.exe 的“/old”和“/Fs”命令行选项。|
+|**AdditionalDocumentFile**|可选 **String []** 参数。<br /><br /> 指定还要合并的一个或多个 .xdc  文件。<br /><br /> 有关详细信息，请参阅 [XML 文档生成器工具属性页](/cpp/build/reference/xml-document-generator-tool-property-pages)中的 **附加文档文件** 说明。 另请参阅 xdcmake.exe 的“/old”和“/Fs”命令行选项。|
 |**AdditionalOptions**|可选 **String** 参数。<br /><br /> 在命令行上指定的选项列表。 例如 /\<option1> /\<option2> /\<option#>。 此参数用于指定无法由其他任何 **XDCMake** 任务参数表示的选项。<br /><br /> 有关详细信息，请参阅 [XDCMake 参考](/cpp/build/reference/xdcmake-reference)、[XML 文档生成器工具属性页](/cpp/build/reference/xml-document-generator-tool-property-pages)和 xdcmake.exe 的命令行帮助 (/?)。|
-|**DocumentLibraryDependencies**|可选 **Boolean** 参数。<br /><br /> 若为 `true` 且当前项目与解决方案中的静态库 (.lib) 项目有依赖关系，那么当前项目的 .xml 文件输出中就会包含此库项目的 .xdc 文件。<br /><br /> 有关详细信息，请参阅 [XML 文档生成器工具属性页](/cpp/build/reference/xml-document-generator-tool-property-pages)中的**文档库依赖项**说明。|
+|**DocumentLibraryDependencies**|可选 **Boolean** 参数。<br /><br /> 若为 `true` 且当前项目与解决方案中的静态库 (.lib) 项目有依赖关系，那么当前项目的 .xml 文件输出中就会包含此库项目的 .xdc 文件。<br /><br /> 有关详细信息，请参阅 [XML 文档生成器工具属性页](/cpp/build/reference/xml-document-generator-tool-property-pages)中的 **文档库依赖项** 说明。|
 |**OutputFile**|可选 **String** 参数。<br /><br /> 替代默认输出文件名。 默认名称派生自处理的第一个 .xdc  文件的名称。<br /><br /> 有关详细信息，请参阅 [XDCMake 参考](/cpp/build/reference/xdcmake-reference)中的 /out:\<filename> 选项。 另请参阅 xdcmake.exe 的“/old”和“/Fo”命令行选项。|
 |**ProjectName**|可选 **String** 参数。<br /><br /> 当前项目的名称。|
 |**SlashOld**|可选 **Boolean** 参数。<br /><br /> 若为 `true`，将启用其他 xdcmake.exe  选项。<br /><br /> 有关详细信息，请参阅 xdcmake.exe 的“/old”命令行选项。|
@@ -52,6 +54,6 @@ ms.locfileid: "77630647"
 |**SuppressStartupBanner**|可选 **Boolean** 参数。<br /><br /> 如果为 `true`，则在任务开始时阻止显示版权和版本号消息。<br /><br /> 有关详细信息，请参阅 [XDCMake 参考](/cpp/build/reference/xdcmake-reference)中的“/nologo”选项。|
 |**TrackerLogDirectory**|可选 **String** 参数。<br /><br /> 指定跟踪器日志目录。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [任务参考](../msbuild/msbuild-task-reference.md)

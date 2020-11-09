@@ -1,5 +1,7 @@
 ---
 title: MSBuild 条件 | Microsoft Docs
+description: 了解 MSBuild 如何支持一组特定的条件，这些条件可以应用于允许 Condition 特性的任何地方。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5994e3f5b17f50d707c4c5a00666d60c2efd3184
-ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
+ms.openlocfilehash: 62031255daca971345b2dd3dbc7c37eb7f4003c9
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88711698"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93046377"
 ---
 # <a name="msbuild-conditions"></a>MSBuild 条件
 

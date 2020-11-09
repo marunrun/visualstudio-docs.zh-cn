@@ -1,5 +1,7 @@
 ---
 title: MSBuild 参考 | Microsoft Docs
+description: 访问指向包含 MSBuild（Visual Studio 的生成系统）参考信息的文章的链接。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,18 +17,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b164d3d141c66817afd0eb88054fd9220656c0f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: e5b7bb9287f26825ad1a90c3f339d7308fd6def1
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633260"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93046566"
 ---
 # <a name="msbuild-reference"></a>MSBuild 参考
 
 MSBuild 是 Visual Studio 的生成系统。 可通过以下链接查看包含 MSBuild 参考信息的主题。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
 
 - [项目文件架构参考](../msbuild/msbuild-project-file-schema-reference.md)\
  介绍组成 MSBuild 文件格式的 XML 元素。
@@ -53,13 +55,13 @@ MSBuild 是 Visual Studio 的生成系统。 可通过以下链接查看包含 M
  描述可与 MSBuild.exe 配合使用的参数和开关。
 
 - [.Targets 文件](../msbuild/msbuild-dot-targets-files.md)\
- 描述包含在 MSBuild 中的 .Targets  文件。
+ 描述包含在 MSBuild 中的 .Targets 文件。
 
 - [常见项元数据](../msbuild/msbuild-well-known-item-metadata.md)\
  列出每个与项一起创建的元数据。
 
 - [响应文件](../msbuild/msbuild-response-files.md)\
- 介绍包含命令行开关的 .rsp 文件  。
+ 介绍包含命令行开关的 .rsp 文件。
 
 - [其他资源](https://social.msdn.microsoft.com/forums/vstudio/home?forum=msbuild)\
  提供指向 MSBuild 网站和新闻组的链接。

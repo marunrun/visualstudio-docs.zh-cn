@@ -1,5 +1,7 @@
 ---
 title: ResourcesGenerator 任务 | Microsoft Docs
+description: 了解 MSBuild 如何使用 ResourcesGenerator 任务将一个或多个资源嵌入 .resources 文件中。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -17,28 +19,28 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b5aba45292aaa55a719eb19d6f0f6f115e8b477
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 288d83cd16b9faebc9c6826a08da7c11811663d5
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77632506"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048485"
 ---
 # <a name="resourcesgenerator-task"></a>ResourcesGenerator 任务
 
-<xref:Microsoft.Build.Tasks.Windows.ResourcesGenerator> 任务将一个或多个资源（二进制格式的 .jpg  、.ico  、.bmp  、XAML 以及其他扩展名类型）嵌入 .resources  文件中。
+<xref:Microsoft.Build.Tasks.Windows.ResourcesGenerator> 任务将一个或多个资源（二进制格式的 .jpg、.ico、.bmp、XAML 以及其他扩展名类型）嵌入 .resources 文件中。
 
 ## <a name="task-parameters"></a>任务参数
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |`OutputPath`|必需的 **String** 参数。<br /><br /> 指定输出目录的路径。 如果路径不是绝对路径，则将它视为相对于根项目目录的路径。|
-|`OutputResourcesFile`|必需的 **ITaskItem[]** 输出参数。<br /><br /> 指定生成的 .resources  文件的路径和名称。 如果该路径不是绝对路径，则生成根项目目录的相对 .resources  文件。|
-|`ResourcesFiles`|必需的 **ITaskItem[]** 参数。<br /><br /> 指定一个或多个资源，以嵌入生成的 .resources  文件中。|
+|`OutputResourcesFile`|必需的 **ITaskItem[]** 输出参数。<br /><br /> 指定生成的 .resources 文件的路径和名称。 如果该路径不是绝对路径，则生成根项目目录的相对 .resources 文件。|
+|`ResourcesFiles`|必需的 **ITaskItem[]** 参数。<br /><br /> 指定一个或多个资源，以嵌入生成的 .resources 文件中。|
 
 ## <a name="example"></a>示例
 
- 以下示例使用单个 .bmp  资源生成 .resources  文件。 向项目根目录的相对目录生成 .bmp  资源。
+ 以下示例使用单个 .bmp 资源生成 .resources 文件。 向项目根目录的相对目录生成 .bmp 资源。
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

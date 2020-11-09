@@ -1,5 +1,7 @@
 ---
 title: 替代 ToolsVersion 设置 | Microsoft Docs
+description: 了解多种可用于为项目和解决方案更改或重写 MSBuild 工具集的值的方法。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 13c33f0ef43707390aa32d4c26c0380a8a32883e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 29fed063d4c223cf0b1862384612ea5aa84b52b0
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633013"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048905"
 ---
 # <a name="override-toolsversion-settings"></a>重写 ToolsVersion 设置
 
@@ -30,7 +32,7 @@ ms.locfileid: "77633013"
 
 ## <a name="override-the-toolsversion-settings-of-projects-and-solutions-on-command-line-builds"></a>在命令行生成上替代项目和解决方案的 ToolsVersion 设置
 
- 虽然 Visual Studio 项目通常使用在项目文件中指定的 ToolsVersion 生成，但也可以使用命令行上的 `-ToolsVersion`（或 `-tv`）开关来替代该值，并用不同的工具集来生成所有项目及其项目到项目依赖项。 例如:
+ 虽然 Visual Studio 项目通常使用在项目文件中指定的 ToolsVersion 生成，但也可以使用命令行上的 `-ToolsVersion`（或 `-tv`）开关来替代该值，并用不同的工具集来生成所有项目及其项目到项目依赖项。 例如：
 
 ```cmd
 msbuild.exe someproj.proj -tv:12.0 -p:Configuration=Debug
@@ -44,7 +46,7 @@ msbuild.exe someproj.proj -tv:12.0 -p:Configuration=Debug
 
  MSBuild 任务是一个项目生成另一个项目的主要方式。 为了使 MSBuild 任务能够使用与项目中指定的值不同的 ToolsVersion 来生成项目，它提供了名为 `ToolsVersion` 的可选任务参数。 下面的示例演示如何使用此参数：
 
-1. 创建一个名为“projectA.proj”  的文件，在其中包含以下代码：
+1. 创建一个名为“projectA.proj”的文件，在其中包含以下代码：
 
     ```xml
     <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
@@ -62,7 +64,7 @@ msbuild.exe someproj.proj -tv:12.0 -p:Configuration=Debug
     </Project>
     ```
 
-2. 创建另一个名为“projectB.proj”  的文件，在其中包含以下代码：
+2. 创建另一个名为“projectB.proj”的文件，在其中包含以下代码：
 
     ```xml
     <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
@@ -113,7 +115,7 @@ msbuild.exe someproj.proj -tv:12.0 -p:Configuration=Debug
 
     1. 项目文件的 [Project](../msbuild/project-element-msbuild.md) 元素的 `ToolsVersion` 属性。 如果此属性不存在，则假定是当前版本。
 
-    2. MSBuild.exe.config  文件中的默认工具版本。
+    2. MSBuild.exe.config 文件中的默认工具版本。
 
     3. 注册表中的默认工具版本。 有关详细信息，请参阅[标准和自定义工具集配置](../msbuild/standard-and-custom-toolset-configurations.md)。
 
@@ -127,7 +129,7 @@ msbuild.exe someproj.proj -tv:12.0 -p:Configuration=Debug
 
     4. 否则，使用当前 `ToolsVersion`。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [多定向](../msbuild/msbuild-multitargeting-overview.md)
 - [MSBuild 概念](../msbuild/msbuild-concepts.md)

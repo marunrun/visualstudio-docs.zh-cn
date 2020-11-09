@@ -17,12 +17,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6448b553c1da9e697bca3860cb8507727c99cc08
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6634a0b2715fb83a397b5e8cd0c8c68274771e2a
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75588585"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93045589"
 ---
 # <a name="encodings-and-line-endings"></a>编码和行尾
 
@@ -49,9 +49,14 @@ ms.locfileid: "75588585"
 ![“高级保存选项”对话框](media/line_endings.png)
 
 > [!NOTE]
-> 如果在“文件”  菜单上看不到“高级保存选项”  ，则可以添加它。 选择“工具”、“自定义”，然后选择“命令”选项卡    。在“菜单栏”下拉列表中，选择“文件”，然后选择“添加命令”按钮    。 在“添加命令”对话框中的“类别”，选择“文件”，然后在“命令”列表中，选择“高级保存选项”      。 选择“确定”  ，然后选择“下移”  按钮以将命令移动到菜单中的任何位置。 选择“关闭”  以关闭“自定义”  对话框。 有关详细信息，请参阅[自定义菜单和工具栏](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md#customizing_menu)。
+> 如果在“文件”  菜单上看不到“高级保存选项”  ，则可以添加它。 
+> 1. 依次选择“工具”和“自定义”。 
+> 1. 依次选择“命令”选项卡和“菜单栏”单选按钮，然后从相应的下拉列表中选择“文件”。 选择“添加命令”按钮。 
+> 1. 在“添加命令”对话框中的“类别”，选择“文件”，然后在“命令”列表中，选择“高级保存选项”      。 选择“确定”按钮。
+> 1. 使用“上移”和“下移”按钮，以将命令移动到菜单中的任意位置。 选择“关闭”  以关闭“自定义”  对话框。 
+> 有关详细信息，请参阅[自定义菜单和工具栏](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md#customizing_menu)。
 >
-> 或者，可以通过选择“文件” > “将 \<file\> 另存为”来访问“高级保存选项”对话框  。 在“将文件另存为”对话框中，选择“保存”按钮旁的下拉三角形，然后选择“保存时使用编码”    。
+> 或者，可以通过选择“文件” > “将 \<file\> 另存为”来访问“高级保存选项”对话框  。 在“将文件另存为”对话框中，选择“保存”按钮旁边的下拉三角形，然后选择“以编码方式保持”。
 
 ## <a name="see-also"></a>请参阅
 

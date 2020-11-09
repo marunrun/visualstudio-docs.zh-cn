@@ -13,18 +13,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e4e99652e343510962959830b327237ee018c8fa
-ms.sourcegitcommit: 172aaf05596a9d8ded298b7b104569c1cce6160e
+ms.openlocfilehash: e6e1bd3d38e6303f11ec5da0e88816d56dd43d98
+ms.sourcegitcommit: ae9145b32fc8e1e663e504c315a5df5dd302fee9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92007205"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92918222"
 ---
 # <a name="analyze-memory-usage-without-debugging-in-the-performance-profiler"></a>在进行调试的情况下分析性能探查器中的内存使用情况
 
 “内存使用情况”工具监视应用的内存使用情况。 可以使用该工具来研究在 Visual Studio 中正在积极开发的场景的实时内存效果。 可以获取应用内存状态的详细情况快照，并比较快照以找出内存问题的根本原因。 “内存使用”工具支持在 .NET、ASP.NET、C++ 或混合模式（.NET 和本机）应用上使用。
 
-“内存使用情况”工具在带或不带调试器的情况下都可以运行。 本文介绍如何在 Visual Studio“性能探查器”中使用不带调试器的“内存使用情况”工具。
+“内存使用情况”工具在带或不带调试器的情况下都可以运行。 本文介绍了如何使用 Visual Studio 性能探查器中不含调试器的内存使用工具，这是推荐用于“发布”版本的工具。
 
 ## <a name="memory-usage-diagnostic-sessions"></a>内存使用情况诊断会话
 

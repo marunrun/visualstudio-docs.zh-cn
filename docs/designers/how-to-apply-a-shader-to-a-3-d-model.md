@@ -1,5 +1,7 @@
 ---
 title: 如何：向三维模型应用着色器
+description: 了解如何使用模型编辑器向 3D 模型应用有向图着色器语言着色器，给模型设置引人关注的外观。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: a3877bd6-abd8-4a9d-842c-6848b6c2f335
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1f1ae981704287a74bb4e37117190b8b6111d0a9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7b31e9002a97decf699ffbd589a1e0e656e3e403
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85769241"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93134114"
 ---
 # <a name="how-to-apply-a-shader-to-a-3d-model"></a>如何：向三维模型应用着色器
 
@@ -23,11 +25,11 @@ ms.locfileid: "85769241"
 
 可对三维模型应用着色效果，使其具有有趣的外观。
 
-开始前，请确保显示“属性”  窗口”。
+开始前，请确保显示“属性”窗口”。
 
 1. 从包含一个或多个模型的三维场景开始。 如果没有合适的三维场景，请按照[如何：创建基本三维模型](../designers/how-to-create-a-basic-3-d-model.md)中所述进行创建。 还必须具有可应用于模型的 DGSL 着色器。 如果没有合适的着色器，请按照[如何：创建基本颜色着色器](../designers/how-to-create-a-basic-color-shader.md)中所述进行创建，并在继续操作前确保已将其保存至文件中。
 
-2. 在“选择”模式中，选择要应用着色器的模型，然后在“属性”窗口的“效果”属性组中的“文件名”属性中，指定要应用到模型的 DGSL 着色器     。
+2. 在“选择”模式中，选择要应用着色器的模型，然后在“属性”窗口的“效果”属性组中的“文件名”属性中，指定要应用到模型的 DGSL 着色器。
 
 以下模型应用了基本颜色效果：
 
@@ -37,7 +39,7 @@ ms.locfileid: "85769241"
 
 ## <a name="see-also"></a>另请参阅
 
-- [如何：创建基本 3D 模型](../designers/how-to-create-a-basic-3-d-model.md)
+- [如何：创建基本三维模型](../designers/how-to-create-a-basic-3-d-model.md)
 - [如何：创建基本颜色着色器](../designers/how-to-create-a-basic-color-shader.md)
 - [模型编辑器](../designers/model-editor.md)
 - [着色器设计器](../designers/shader-designer.md)

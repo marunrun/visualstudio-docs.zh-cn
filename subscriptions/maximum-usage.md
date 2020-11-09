@@ -1,21 +1,21 @@
 ---
-title: 在管理门户中使用最大用量功能
+title: 使用 Visual Studio 订阅中的“最大使用量”功能
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: c473b01f-2dfe-4cc2-ad29-bb5e2a268123
-ms.date: 09/21/2020
+ms.date: 10/28/2020
 ms.topic: conceptual
 description: 了解如何在管理门户中查看分配的最大订阅数
-ms.openlocfilehash: b9ff33623311e4bfeff6b6067d5631d4e65efda9
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.openlocfilehash: e8ea9aa9001312c792e6f9d356dbc5f7cf58dfb8
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "91022161"
+ms.lasthandoff: 11/01/2020
+ms.locfileid: "92904495"
 ---
 # <a name="use-the-maximum-usage-feature-to-track-the-number-of-assigned-subscriptions"></a>使用最大用量功能跟踪分配的订阅数
-Visual Studio 订阅管理门户中的新功能有助于跟踪已购买和分配的订阅数量，并确定在过去一年和整个协议期间分配的每个级别的峰值订阅数。 
+Visual Studio 订阅管理门户中的新功能有助于跟踪已购买和分配的订阅数量，并确定在过去一年和整个协议有效期内分配的每个级别的订阅峰值数量。 
 
 ## <a name="maximum-usage-overview"></a>最大用量概述
 观看视频或继续阅读，了解如何使用最大用量功能。 
@@ -55,5 +55,5 @@ Visual Studio 订阅管理门户中的新功能有助于跟踪已购买和分配
 - [Microsoft 365 文档](/microsoft-365/)
 
 ## <a name="next-steps"></a>后续步骤
-- 如果对订阅分配或门户管理的其他方面有任何疑问，请联系 https://visualstudio.microsoft.com/subscriptions/support/ 获取帮助。 
+- 如果对订阅分配或管理门户的其他方面有任何疑问，请联系 https://visualstudio.microsoft.com/subscriptions/support/ 获取帮助。 
 - 详细了解如果分配的订阅数超过了所购买的订阅数（称为[超额分配](handle-overclaimed-license.md)）应该怎么办。

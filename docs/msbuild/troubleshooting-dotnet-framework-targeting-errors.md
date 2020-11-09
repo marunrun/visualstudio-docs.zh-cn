@@ -1,5 +1,7 @@
 ---
 title: .NET Framework 目标错误疑难解答 | Microsoft Docs
+description: 了解可能由于引用问题而出现的 MSBuild 错误，以及如何解决这些错误。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: troubleshooting
 f1_keywords:
@@ -17,12 +19,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1c496fd457e80220bb2ea4a2f032cef9508d9dcb
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 98c3ba64454ca25b62dc5dbe0964db64b010a7ec
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77631596"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93046987"
 ---
 # <a name="troubleshoot-net-framework-targeting-errors"></a>.NET Framework 目标错误疑难解答
 
@@ -36,9 +38,9 @@ ms.locfileid: "77631596"
 
  如果更改应用程序的 .NET Framework 的目标版本，则 Visual Studio 将更改某些引用，并可能需要手动更新某些引用。 例如，如果将应用程序更改为面向 .NET Framework 3.5 Service Pack 1，并且该应用程序具有依赖于 .NET Framework 4 的客户端配置文件的资源或设置，则可能出现先前提到的某个错误。
 
- 若要解决应用程序设置，请打开“解决方案资源管理器”  ，选择“显示所有文件”  ，然后在 Visual Studio 的 XML 编辑器中编辑“app.config”  文件。 在设置中更改版本，以匹配相应版本的 .NET Framework。 例如，可以将版本设置从 4.0.0.0 更改为 2.0.0.0。 同样，对于已添加资源的应用程序，打开“解决方案资源管理器”  ，选择“显示所有文件”  按钮，展开“我的项目”  (Visual Basic) 或“属性”  (C#)，然后在 Visual Studio 的 XML 编辑器中编辑“Resources.resx”  文件。 将版本设置从 4.0.0.0 更改为 2.0.0.0。
+ 若要解决应用程序设置，请打开“解决方案资源管理器”，选择“显示所有文件”，然后在 Visual Studio 的 XML 编辑器中编辑“app.config”文件。 在设置中更改版本，以匹配相应版本的 .NET Framework。 例如，可以将版本设置从 4.0.0.0 更改为 2.0.0.0。 同样，对于已添加资源的应用程序，打开“解决方案资源管理器”，选择“显示所有文件”按钮，展开“我的项目”(Visual Basic) 或“属性”(C#)，然后在 Visual Studio 的 XML 编辑器中编辑“Resources.resx”文件。 将版本设置从 4.0.0.0 更改为 2.0.0.0。
 
- 如果应用程序具有资源，例如图标、位图或设置（如数据连接字符串），则还可以通过移除“项目设计器”  的“设置”  页上的所有项，然后重新添加所需设置来解决此错误。
+ 如果应用程序具有资源，例如图标、位图或设置（如数据连接字符串），则还可以通过移除“项目设计器”的“设置”页上的所有项，然后重新添加所需设置来解决此错误。
 
 ## <a name="you-have-re-targeted-a-project-to-a-different-version-of-the-net-framework-and-references-do-not-resolve"></a>已将项目重新面向其他版本的 .NET Framework 并且引用不能解析
 
@@ -57,7 +59,7 @@ ms.locfileid: "77631596"
 > [!NOTE]
 > 关闭并重新打开项目后，还应重新生成该项目以确保所有引用正确解析。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：面向 .NET Framework 的某个版本](../ide/visual-studio-multi-targeting-overview.md)
 - [.NET Framework 客户端配置文件](/dotnet/framework/deployment/client-profile)

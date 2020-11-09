@@ -1,5 +1,7 @@
 ---
 title: 编写多处理器可识别的记录器 | Microsoft Docs
+description: 了解 MSBuild 如何提供多处理器识别的记录器和日志记录模型，并让你创建自定义“转发记录器”。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 886e012b026ef17b512a7e134d080382744783ef
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: fd90cb92dd56d3e7ff9eb43bad1086e8a8fb548f
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77630742"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047305"
 ---
 # <a name="write-multi-processor-aware-loggers"></a>编写可识别多处理器的记录器
 
@@ -35,7 +37,7 @@ MSBuild 利用多个处理器的能力可以缩短项目生成时间，但同时
 
 ### <a name="central-logging-model"></a>集中式日志记录模型
 
- 在集中式日志记录模型中，MSBuild.exe 的一个实例充当“中心节点”，该中心节点的子实例（“辅助节点”）附加至中心节点，以帮助它执行生成任务。 
+ 在集中式日志记录模型中，MSBuild.exe 的一个实例充当“中心节点”，该中心节点的子实例（“辅助节点”）附加至中心节点，以帮助它执行生成任务。
 
  ![中心记录器模型](../msbuild/media/centralnode.png "CentralNode")
 
@@ -72,13 +74,13 @@ public interface INodeLogger: ILogger
 
 - 编写自己的自定义转发记录器。
 
-可根据你的需要，对 ConfigurableForwardingLogger 进行修改。 为此，请使用 MSBuild.exe 在命令行中调用记录器，并列出希望记录器转发至中心节点的生成事件。 
+可根据你的需要，对 ConfigurableForwardingLogger 进行修改。 为此，请使用 MSBuild.exe 在命令行中调用记录器，并列出希望记录器转发至中心节点的生成事件。
 
 或者，也可以创建自定义转发记录器。 通过创建自定义转发记录器，可以微调记录器的行为。 但是，创建自定义转发记录器比仅自定义 ConfigurableForwardingLogger 更复杂。 有关详细信息，请参阅[创建转发记录器](../msbuild/creating-forwarding-loggers.md)。
 
 ## <a name="using-the-configurableforwardinglogger-for-simple-distributed-logging"></a>将 ConfigurableForwardingLogger 用于简单分布式日志记录
 
- 若要附加 ConfigurableForwardingLogger 或自定义转发记录器，请在 MSBuild.exe 命令行生成中使用 `-distributedlogger` 开关（缩写形式为 `-dl`）。  用于指定记录器类型名称和类的格式与 `-logger` 开关对应的格式相同，只是分布式记录器始终有以下两个（而不是一个）日志记录类：转发记录器和中心记录器。 下面是有关如何附加名为 XMLForwardingLogger 的自定义转发记录器的示例。
+ 若要附加 ConfigurableForwardingLogger 或自定义转发记录器，请在 MSBuild.exe 命令行生成中使用 `-distributedlogger` 开关（缩写形式为 `-dl`）。 用于指定记录器类型名称和类的格式与 `-logger` 开关对应的格式相同，只是分布式记录器始终有以下两个（而不是一个）日志记录类：转发记录器和中心记录器。 下面是有关如何附加名为 XMLForwardingLogger 的自定义转发记录器的示例。
 
 ```cmd
 msbuild.exe myproj.proj -distributedlogger:XMLCentralLogger,MyLogger,Version=1.0.2,Culture=neutral*XMLForwardingLogger,MyLogger,Version=1.0.2,Culture=neutral
@@ -118,6 +120,6 @@ msbuild.exe myproj.proj -distributedlogger:XMLCentralLogger,MyLogger,Version=1.0
 |NOSUMMARY|
 |SHOWCOMMANDLINE|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [创建转发记录器](../msbuild/creating-forwarding-loggers.md)

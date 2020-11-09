@@ -1,5 +1,6 @@
 ---
-title: 如何：向项目中添加类图（类设计器）
+title: 向项目添加类图（类设计器）
+ms.custom: SEO-VS-2020
 ms.date: 05/08/2018
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a54b01f718c2faab8d36cc8e44805707fd0cc35f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4aa336672dce538c5bfe07cd8ae7b1a4c5771cbd
+ms.sourcegitcommit: f1bb1b66ed141837e992b3352ce68ff24c11f53e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85771033"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93102546"
 ---
 # <a name="how-to-add-class-diagrams-to-projects"></a>如何：向项目添加类图
 

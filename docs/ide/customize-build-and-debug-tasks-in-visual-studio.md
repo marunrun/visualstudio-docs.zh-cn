@@ -1,5 +1,6 @@
 ---
-title: 使用 tasks.vs.json launch.vs.json 自定义生成调试任务
+title: 使用 JSON 文件来自定义生成调试任务
+ms.custom: SEO-VS-2020
 ms.date: 02/21/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ffd0f7378893b52e93480272c73acc2aa413320d
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: 795fbb099654c8b947c1c8e2941fad015a574717
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85533714"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93046233"
 ---
 # <a name="customize-build-and-debug-tasks-for-open-folder-development"></a>自定义“打开文件夹”开发的生成和调试任务
 

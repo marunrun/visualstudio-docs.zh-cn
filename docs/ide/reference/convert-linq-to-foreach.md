@@ -1,6 +1,7 @@
 ---
-title: 重构代码以将 LINQ 查询转换为 foreach 语句
-description: 将以查询语法编写的任何 LINQ 查询转换为 foreach 语句。
+title: 将 LINQ 查询转换为 foreach 语句
+ms.custom: SEO-VS-2020
+description: 重构代码，以将任何用查询语法编写的 LINQ 查询转换为 foreach 语句。
 ms.date: 03/10/2020
 ms.topic: reference
 author: mikadumont
@@ -11,12 +12,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7abdebf36ab075dfd289069671cf3b6851a72b75
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: 832c4160d743ca35dbe41eb0f0cbafd81d60dd26
+ms.sourcegitcommit: f1bb1b66ed141837e992b3352ce68ff24c11f53e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91659363"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93102540"
 ---
 # <a name="refactoring-to-convert-linq-to-a-foreach-statement"></a>重构以将 LINQ 转换为 foreach 语句
 
