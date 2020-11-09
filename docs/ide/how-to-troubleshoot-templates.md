@@ -1,5 +1,6 @@
 ---
-title: 对项目模板和项模板加载进行故障排除
+title: 对项目模板和项模板进行故障排除
+ms.custom: SEO-VS-2020
 ms.date: 01/02/2018
 ms.topic: troubleshooting
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 1bef6a460f1a59823930597565b955b591ab48a0
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ddb164dbd43d1d2276fce66641ba6e647b49143e
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75591380"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93045703"
 ---
 # <a name="how-to-troubleshoot-templates"></a>如何：对模板进行故障排除
 

@@ -1,5 +1,7 @@
 ---
 title: SignFile 任务 | Microsoft Docs
+description: 了解 MSBuild 如何使用 SignFile 任务通过指定的证书来为指定的文件签名。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 319afb810ba755d0201d3edaebcb06a493b59047
-ms.sourcegitcommit: c2b3bf0de44cd379fd1ad5110385021d0ec950ed
+ms.openlocfilehash: 41fc320034ef5ea86006abf6f19079e8b0a45a82
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301442"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048287"
 ---
 # <a name="signfile-task"></a>SignFile 任务
 

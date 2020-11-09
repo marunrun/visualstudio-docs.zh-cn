@@ -1,5 +1,7 @@
 ---
 title: 用 MSBuild 获取生成日志 | Microsoft Docs
+description: 了解如何结合使用开关和 MSBuild 指定要审阅多少生成数据，以及是否将生成数据保存到一个或多个文件中。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e3dad3a9b157989ecf993cf951f91fc6296ecdf7
-ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
+ms.openlocfilehash: cf13e23d69dfeba967e8e971ad2463cef4546567
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88238603"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048954"
 ---
 # <a name="obtain-build-logs-with-msbuild"></a>用 MSBuild 获取生成日志
 

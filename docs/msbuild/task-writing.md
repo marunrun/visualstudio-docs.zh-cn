@@ -1,5 +1,7 @@
 ---
 title: 任务写入 | Microsoft Docs
+description: 了解如何创建你自己的任务来提供在 MSBuild 生成过程中运行的代码。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8cbcf47ec83e1b900ba94ab3842c2cfa63fdcc5d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 1b614fd1705491e676bb89a9527c75cf86bdd36c
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77631831"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047920"
 ---
 # <a name="task-writing"></a>任务写入
 
@@ -25,13 +27,13 @@ ms.locfileid: "77631831"
 
 ## <a name="tasks"></a>任务
 
- 任务的示例包括用于复制一个或多个文件的 [Copy](../msbuild/copy-task.md)、用于创建目录的 [MakeDir](../msbuild/makedir-task.md) 以及用于编译 C# 源代码文件的 [Csc](../msbuild/csc-task.md)。 每个任务作为 .NET 类实现，此类实现 Microsoft.Build.Framework.dll  程序集中定义的 <xref:Microsoft.Build.Framework.ITask> 接口。
+ 任务的示例包括用于复制一个或多个文件的 [Copy](../msbuild/copy-task.md)、用于创建目录的 [MakeDir](../msbuild/makedir-task.md) 以及用于编译 C# 源代码文件的 [Csc](../msbuild/csc-task.md)。 每个任务作为 .NET 类实现，此类实现 Microsoft.Build.Framework.dll 程序集中定义的 <xref:Microsoft.Build.Framework.ITask> 接口。
 
  实现任务时，有两种方法可供选择：
 
 - 直接实现 <xref:Microsoft.Build.Framework.ITask> 接口。
 
-- 从 Microsoft.Build.Utilities.dll 程序集中定义的帮助程序类 <xref:Microsoft.Build.Utilities.Task> 中派生类  。 任务实现 ITask，并提供了一些 ITask 成员的默认实现。 此外，日志记录更为简单。
+- 从 Microsoft.Build.Utilities.dll 程序集中定义的帮助程序类 <xref:Microsoft.Build.Utilities.Task> 中派生类。 任务实现 ITask，并提供了一些 ITask 成员的默认实现。 此外，日志记录更为简单。
 
 在这两种情况下，都必须向类添加一个名为 `Execute` 的方法，也就是在任务运行时调用的方法。 该方法不带任何参数并返回一个 `Boolean` 值：如果任务成功，则返回 `true`；如果失败，则返回 `false`。 以下示例显示一个不执行任何操作并返回 `true` 的任务。
 
@@ -97,10 +99,10 @@ namespace MyTasks
 
  如果项目将要运行任务，MSBuild 必须知道如何找到包含任务类的程序集。 任务是使用 [UsingTask 元素 (MSBuild)](../msbuild/usingtask-element-msbuild.md) 注册的。
 
- MSBuild 文件 Microsoft.Common.Task  是一个包含 `UsingTask` 元素列表的项目文件，这些元素注册随 MSBuild 一起提供的所有任务。 生成每个项目时会自动包括该文件。 如果在 Microsoft.Common.Tasks  中注册的任务也在当前项目文件中进行了注册，则当前项目文件具有优先权；也就是说，可以使用自己的同名任务重写默认任务。
+ MSBuild 文件 Microsoft.Common.Task 是一个包含 `UsingTask` 元素列表的项目文件，这些元素注册随 MSBuild 一起提供的所有任务。 生成每个项目时会自动包括该文件。 如果在 Microsoft.Common.Tasks 中注册的任务也在当前项目文件中进行了注册，则当前项目文件具有优先权；也就是说，可以使用自己的同名任务重写默认任务。
 
 > [!TIP]
-> 通过查看 Microsoft.Common.Tasks  的内容，可以看到随 MSBuild 一起提供的任务列表。
+> 通过查看 Microsoft.Common.Tasks 的内容，可以看到随 MSBuild 一起提供的任务列表。
 
 ## <a name="raise-events-from-a-task"></a>从任务引发事件
 
@@ -170,7 +172,7 @@ public string RequiredProperty { get; set; }
 
 MSBuild 本机处理类型为 `string`、`bool`、`ITaskItem` 和 `ITaskItem[]` 的属性。 如果任务接受其他类型的参数，MSBuild 会调用 <xref:System.Convert.ChangeType%2A> 以从 `string`（所有属性和项引用均已展开）转换为目标类型。 如果针对任何输入参数的转换失败，则 MSBuild 会发出错误，并且不会调用任务的 `Execute()` 方法。
 
-## <a name="example"></a>示例
+## <a name="example-1"></a>示例 1
 
 ### <a name="description"></a>描述
 
@@ -195,7 +197,7 @@ namespace SimpleTask1
 }
 ```
 
-## <a name="example"></a>示例
+## <a name="example-2"></a>示例 2
 
 ### <a name="description"></a>描述
 
@@ -231,9 +233,9 @@ namespace SimpleTask2
 }
 ```
 
-## <a name="example"></a>示例
+## <a name="example-3"></a>示例 3
 
-### <a name="description"></a>描述
+### <a name="description"></a>说明
 
 此 C# 类演示一个从 <xref:Microsoft.Build.Utilities.Task> 帮助器类派生的任务。 它有一个必需的字符串属性，并引发一个由所有注册的记录器显示的事件。
 
@@ -241,9 +243,9 @@ namespace SimpleTask2
 
 [!code-csharp[msbuild_SimpleTask3#1](../msbuild/codesnippet/CSharp/task-writing_1.cs)]
 
-## <a name="example"></a>示例
+## <a name="example-4"></a>示例 4
 
-### <a name="description"></a>描述
+### <a name="description"></a>说明
 
 以下示例显示一个调用上一示例任务 SimpleTask3 的项目文件。
 

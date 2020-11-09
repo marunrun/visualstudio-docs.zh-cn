@@ -1,5 +1,7 @@
 ---
 title: XSD 任务 | Microsoft Docs
+description: 了解 MSBuild 如何使用 XSD 任务来包装 XML 架构定义工具 xsd.exe，此工具从源生成架构或类文件。
+ms.custom: SEO-VS-2020
 ms.date: 06/27/2018
 ms.topic: reference
 f1_keywords:
@@ -20,12 +22,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 217e045a731efa1fe3ba1dda63e89eca685d4b75
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5aef78460197796767ec1429179e5598d0f12dbc
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77630777"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047204"
 ---
 # <a name="xsd-task"></a>XSD 任务
 
@@ -62,7 +64,7 @@ ms.locfileid: "77630777"
 
      指定要用于生成的代码的编程语言。
 
-     从 **CS**（默认情况下为 C#）、**VB** (Visual Basic) 或 **JS** (JScript) 中进行选择。 也可指定实现 `System.CodeDom.Compiler.CodeDomProvider Class` 的类的完全限定名。
+     从 **CS** （默认情况下为 C#）、 **VB** (Visual Basic) 或 **JS** (JScript) 中进行选择。 也可指定实现 `System.CodeDom.Compiler.CodeDomProvider Class` 的类的完全限定名。
 
 - **命名空间**
 

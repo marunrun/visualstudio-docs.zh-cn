@@ -1,5 +1,7 @@
 ---
 title: MSBuild 工具集 (ToolsVersion) | Microsoft Docs
+description: 了解如何使用 MSBuild 项目文件中的 ToolsVersion 特性来指定任务、目标和工具的工具集以生成应用程序。
+ms.custom: SEO-VS-2020
 ms.date: 01/31/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b77ea7f04377a1c531efeff780e9303f0bd3eb79
-ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
+ms.openlocfilehash: e0b27a1914d85f5fde8ef6c5c467d73197c084ce
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89426958"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93049027"
 ---
 # <a name="msbuild-toolset-toolsversion"></a>MSBuild 工具集 (ToolsVersion)
 

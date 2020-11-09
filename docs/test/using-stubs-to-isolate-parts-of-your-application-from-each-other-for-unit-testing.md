@@ -10,16 +10,16 @@ author: mikejo5000
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 1d66dcd0a59edfbfb199a68f81ecebe608afccb1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 268cfaa0a5df458ae529f5f2d369dc157ef64548
+ms.sourcegitcommit: f2bb3286028546cbd7f54863b3156bd3d65c55c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85289048"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93325964"
 ---
 # <a name="use-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing"></a>使用存根隔离应用程序的各个部分以进行单元测试
 
-*存根类型*是 Microsoft Fakes 框架提供的两种技术之一，方便你轻松地将受测组件与它调用的其他组件隔离开来。 存根是一小段代码，用来在测试期间替代另一个组件。 使用存根的好处在于它能返回一致的结果，使测试更易于编写。 而且，即使在其他组件无法工作的情况下，你也可以运行这些测试。
+*存根类型* 是 Microsoft Fakes 框架提供的两种技术之一，方便你轻松地将受测组件与它调用的其他组件隔离开来。 存根是一小段代码，用来在测试期间替代另一个组件。 使用存根的好处在于它能返回一致的结果，使测试更易于编写。 而且，即使在其他组件无法工作的情况下，你也可以运行这些测试。
 
 有关 Fakes 的概述和快速入门指南，请参阅[使用 Microsoft Fakes 隔离受测代码](../test/isolating-code-under-test-with-microsoft-fakes.md)。
 
@@ -147,11 +147,14 @@ analyzer = new StockAnalyzer(new StockFeed());
 
 #### <a name="add-a-fakes-assembly"></a>添加 Fakes 程序集
 
-1. 在解决方案资源管理器中，展开单元测试项目的“引用”   。
+1. 在“解决方案资源管理器”中： 
+    - 对于旧版 .NET Framework 项目（非 SDK 样式），展开单元测试项目的“引用”节点。
+    ::: moniker range=">=vs-2019"
+    - 对于定目标到 .NET Framework 或 .NET Core 的 SDK 样式项目，展开“依赖项”节点，以在“程序集”、“项目”或“包”下找到要虚设的程序集。
+    ::: moniker-end
+    - 如果使用的是 Visual Basic，请选择“解决方案资源管理器”工具栏中的“显示所有文件”，以查看“引用”节点。
 
-   如果使用的是 Visual Basic，请选择解决方案资源管理器的工具栏中的“显示所有文件”以便查看“引用”节点    。
-
-2. 选择包含要为其创建存根的接口定义的程序集。
+2. 选择包含要为其创建填充码的类定义的程序集。 例如，如果要填充 DateTime，请选择 System.dll   。
 
 3. 选择快捷菜单中的“添加 Fakes 程序集”  。
 
@@ -218,7 +221,7 @@ End Class
 
 ### <a name="verify-parameter-values"></a>验证参数值
 
-你可以验证，当你的组件对另一个组件进行调用时，它是否传递正确的值。 你可以在存根中放置一个断言，或者也可以存储值并在测试的主体中验证它。 例如:
+你可以验证，当你的组件对另一个组件进行调用时，它是否传递正确的值。 你可以在存根中放置一个断言，或者也可以存储值并在测试的主体中验证它。 例如：
 
 ```csharp
 [TestClass]
@@ -388,9 +391,9 @@ public void TestGetValue()
 
 如果代码是为了调用具有任何其他实例化的 `GetValue<T>`，存根将只调用行为。
 
-### <a name="stubs-of-virtual-classes"></a>虚拟类的存根
+### <a name="stubs-of-virtual-classes"></a>虚拟类的存根 
 
-在前面的示例中，已从接口生成存根。 还可以从具有虚拟或抽象成员的类生成存根。 例如:
+在前面的示例中，已从接口生成存根。 还可以从具有虚拟或抽象成员的类生成存根。 例如：
 
 ```csharp
 // Base class in application under test

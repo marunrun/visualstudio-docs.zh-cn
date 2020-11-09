@@ -1,5 +1,7 @@
 ---
 title: 使用纹理和图像
+description: 了解如何使用 Visual Studio 中的图像编辑器来创建和修改纹理和图像，它们的格式就像在 DirectX 应用开发中使用的一样。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: b9fbc8fa-66d1-4055-8460-24d8b8fbe43e
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 110cbbb01f5b86d462a9a5f196735fd4d477fb10
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: cc2f459fa3455d3f02953c42ad06e7f2647c79c6
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75589859"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93134715"
 ---
 # <a name="work-with-textures-and-images"></a>使用纹理和图像
 
@@ -46,11 +48,11 @@ ms.locfileid: "75589859"
 
 ### <a name="cube-maps"></a>立方体图
 
-立方体图可能包含不同类型的数据（例如，颜色或法线），但是已在立方体的表面组织成六个纹理。 因此，对立方体图进行采样的方式不是通过提供纹理坐标，而是提供原点在立方体中心的向量；样本是取自向量与立方体交集的点。 使用立方体图可以提供用于计算反射的环境近似值（称为 *环境映射*），或者提供失真度比基本、二维纹理低的纹理给球面对象。
+立方体图可能包含不同类型的数据（例如，颜色或法线），但是已在立方体的表面组织成六个纹理。 因此，对立方体图进行采样的方式不是通过提供纹理坐标，而是提供原点在立方体中心的向量；样本是取自向量与立方体交集的点。 使用立方体图可以提供用于计算反射的环境近似值（称为 *环境映射* ），或者提供失真度比基本、二维纹理低的纹理给球面对象。
 
 ## <a name="related-topics"></a>相关主题
 
-|标题|说明|
+|Title|说明|
 |-----------|-----------------|
 |[图像编辑器](../designers/image-editor.md)|介绍如何使用图像编辑器处理纹理和图像。|
 |[图像编辑器示例](../designers/how-to-create-a-basic-texture.md)|提供演示如何使用图像编辑器执行常见图像处理任务的主题的链接。|

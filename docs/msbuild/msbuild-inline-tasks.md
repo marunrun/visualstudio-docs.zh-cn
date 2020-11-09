@@ -1,5 +1,7 @@
 ---
 title: MSBuild 内联任务 | Microsoft Docs
+description: 了解如何通过编译实现 Microsoft.Build.Framework.ITask 接口的类来创建 MSBuild 内联任务。
+ms.custom: SEO-VS-2020
 ms.date: 09/21/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ab46aef69bd6356eda0925c492a029b43cc57295
-ms.sourcegitcommit: 98421670ed0b8170aaa32d3d6f8681298f401a1d
+ms.openlocfilehash: 848e9c8c4e3dcc7d364f2001393730fbcc56be7e
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2020
-ms.locfileid: "81638035"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93046332"
 ---
 # <a name="msbuild-inline-tasks"></a>MSBuild 内联任务
 
@@ -83,7 +85,7 @@ ms.locfileid: "81638035"
 
 - 如果 `Type` 的值为 `Fragment`，则代码将定义 `Execute` 方法的内容，但不定义签名和 `return` 语句。
 
-通常，该代码本身会出现在 `<![CDATA[` 标记和 `]]>` 标记之间。 由于代码位于 CDATA 部分中，因此你不必担心转义保留字符（例如，“\<”或“>”）。
+通常，该代码本身会出现在 `<![CDATA[` 标记和 `]]>` 标记之间。 由于代码位于 CDATA 部分中，因此你不必担心转义保留字符（例如，“\<" or ">”）。
 
 或者，可以使用 `Code` 元素的 `Source` 属性来指定包含任务代码的文件的位置。 源文件中的代码的类型必须为由 `Type` 属性所指定的类型。 如果存在 `Source` 属性，则 `Type` 的默认值为 `Class`。 如果 `Source` 不存在，则默认值为 `Fragment`。
 
@@ -92,7 +94,7 @@ ms.locfileid: "81638035"
 
 ## <a name="helloworld"></a>HelloWorld
 
- 下面是一个更全面的内联任务。 HelloWorld 任务 在默认错误日志记录设备上显示“Hello, World!”，该设备通常为系统控制台或 Visual Studio **输出**窗口。 示例中包含了 `Reference` 元素，这仅用于阐释目的。
+ 下面是一个更全面的内联任务。 HelloWorld 任务 在默认错误日志记录设备上显示“Hello, World!”，该设备通常为系统控制台或 Visual Studio **输出** 窗口。 示例中包含了 `Reference` 元素，这仅用于阐释目的。
 
 ```xml
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -117,7 +119,7 @@ Log.LogError("Hello, world!");
 </Project>
 ```
 
- 可以将 HelloWorld 任务保存在名为 HelloWorld.targets 的文件中，然后按照如下所示从项目中调用它  。
+ 可以将 HelloWorld 任务保存在名为 HelloWorld.targets 的文件中，然后按照如下所示从项目中调用它。
 
 ```xml
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

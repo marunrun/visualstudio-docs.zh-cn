@@ -34,12 +34,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 57b2ea6a0c69387043057bc07957a757ed351f99
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.openlocfilehash: 9ae9ba7618416ae6db71861eebbff41d32035eb0
+ms.sourcegitcommit: f1bb1b66ed141837e992b3352ce68ff24c11f53e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85769413"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93102579"
 ---
 # <a name="use-breakpoints-in-the-visual-studio-debugger"></a>在 Visual Studio 调试器中使用断点
 
@@ -112,9 +112,7 @@ ms.locfileid: "85769413"
 如果使用无效语法设置断点条件，则会显示警告消息。 如果在指定断点条件时使用的语法有效但语义无效，则在第一次命中断点将出现警告消息。 在这两种情况下，调试器都会在遇到无效断点时中断。 仅在条件有效且计算结果为 `false`时才会跳过断点。
 
 >[!NOTE]
->不同编程语言的“更改时”字段的行为不同。
->- 对于本机代码，调试器不会将条件的第一次计算当作一次更改，所以第一次计算时不会命中断点。
->- 对于托管代码，当选择了“更改时”，调试器将在之后的第一次计算时命中断点。
+> 对于“更改时”字段，调试器不会将条件的第一次计算视为更改，所以第一次计算时不会命中断点。
 
 <a name="using-object-ids-in-breakpoint-conditions-c-and-f"></a>
 ### <a name="use-object-ids-in-conditional-expressions-c-and-f-only"></a>在条件表达式中使用对象 ID（仅限 C# 和 F#）
@@ -198,7 +196,7 @@ ms.locfileid: "85769413"
 
 1. 在“语言”下拉列表中，选择函数的语言。
 
-1. 选择“确定”。
+1. 选择“确定”  。
 
 ### <a name="set-a-function-breakpoint-using-a-memory-address-native-c-only"></a>使用内存地址设置函数断点（仅限本机 C++）
  你还可以使用对象的地址在类的特定实例调用的方法上设置函数断点。  例如，给定一个类型为 `my_class` 的可寻址对象，可以在实例调用的 `my_method` 方法上设置函数断点。
@@ -250,7 +248,7 @@ ms.locfileid: "85769413"
 
 2. 在“地址”框中，键入内存地址或计算结果为内存地址的表达式。 例如，键入 `&avar` 以在变量 `avar` 的内容更改时执行中断操作。
 
-3. 在 **“字节计数”** 下拉菜单中，选择你想要调试程序监视的字节数。 例如，如果选择 **4**，则调试程序将监视从 `&avar` 开始的四个字节，并在其中任何字节的值发生更改时执行中断操作。
+3. 在 **“字节计数”** 下拉菜单中，选择你想要调试程序监视的字节数。 例如，如果选择 **4** ，则调试程序将监视从 `&avar` 开始的四个字节，并在其中任何字节的值发生更改时执行中断操作。
 
 数据断点在下列情况下无效：
 - 将未经调试的进程写入内存位置。

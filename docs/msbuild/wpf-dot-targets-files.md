@@ -1,5 +1,7 @@
 ---
 title: WPF .Targets 文件 | Microsoft Docs
+description: 了解 Windows Presentation Foundation (WPF) 如何通过添加特殊的 .targets 文件（即 Microsoft.WinFX.targets）中的一组特定于 WPF 的任务来扩展 MSBuild。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -17,18 +19,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d3225777c020272a24ac124bf6d039c2154e2ff3
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 5a81caf88798f1b02c212b6ee5a802e6ea824758
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77630946"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047524"
 ---
 # <a name="wpf-targets-files"></a>WPF .targets 文件
 
-Windows Presentation Foundation (WPF) 通过添加一组特定于 WPF 的任务（任务被合并到一个特殊的 .targets  文件 Microsoft.WinFX.targets  ）来扩展 MSBuild。 此文件合并了在 WP 中生成 MSBuild 项目所需的一组 MSBuild 任务。
+Windows Presentation Foundation (WPF) 通过添加一组特定于 WPF 的任务（任务被合并到一个特殊的 .targets 文件 Microsoft.WinFX.targets）来扩展 MSBuild。 此文件合并了在 WP 中生成 MSBuild 项目所需的一组 MSBuild 任务。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [MSBuild .targets 文件](../msbuild/msbuild-dot-targets-files.md)
 - [MSBuild 参考](../msbuild/msbuild-reference.md)

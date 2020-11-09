@@ -1,18 +1,18 @@
 ---
-title: Azure PAYG 权益
+title: Visual Studio 订阅中的 Azure 即用即付权益
 author: evanwindom
 ms.author: v-evwin
-manager: lank
+manager: cabuschl
 ms.assetid: 5dc7f57e-883a-4cc1-a914-06245a8cb1ff
 ms.date: 10/21/2020
 ms.topic: how-to
 description: 了解如何设置 Azure 即用即付帐户。
-ms.openlocfilehash: 4071b16c56e67bdd86ba95f2ff982758cd23e150
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.openlocfilehash: cb9d89cc704c8d072e0807189f88ba757d9aad78
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92353175"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904572"
 ---
 # <a name="azure-devtest-pay-as-you-go-subscriptions"></a>Azure 开发测试即用即付订阅
 与团队在云中协作。  创建多个开发和测试即用即付订阅，这样可与其他订阅者进行协作，并将团队与环境隔离。  可享受针对开发/测试的专享优惠小时费率，还可获得 Azure 上订阅软件的云使用权限。

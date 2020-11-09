@@ -1,5 +1,7 @@
 ---
 title: ResolveNonMSBuildProjectOutput 任务 | Microsoft Docs
+description: 了解 MSBuild 如何使用 ResolveNonMSBuildProjectOutput 任务来确定非 MSBuild 项目引用的输出文件。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 604ed91d32140c3b037e6ddef21e996f72ef8439
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 3486788331574aa70874c0deeefa3c553404c166
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77632571"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048516"
 ---
 # <a name="resolvenonmsbuildprojectoutput-task"></a>ResolveNonMSBuildProjectOutput 任务
 

@@ -1,21 +1,21 @@
 ---
-title: 管理大型团队和外部承包商 | Visual Studio Marketplace
+title: 在 Visual Studio 订阅中管理大型团队和承包商 | Visual Studio Marketplace
 author: evanwindom
 ms.author: lank
 manager: lank
 ms.assetid: 3fc57f5f-2446-4774-9f8f-98ea1340f6b2
 ms.date: 03/09/2020
 ms.topic: conceptual
-description: 了解管理员管理大型团队和外部承包商订阅的职责。
-ms.openlocfilehash: 86848fc7b5c9507c1e5df5bd043ee21217afe313
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+description: 了解管理员管理大型团队和外部承包商的订阅的职责。
+ms.openlocfilehash: 55d2ac2eacaf523503c2593349abbcf561aed3b1
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005556"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904667"
 ---
 # <a name="large-teams-and-external-contractors"></a>大型团队和外部承包商
-Visual Studio 订阅管理员负责确保与 Visual Studio 授权软件交互的每个用户都获得自己的 Visual Studio 订阅的适当授权。
+Visual Studio 订阅管理员负责确保每个与 Visual Studio 许可软件交互的用户都适当地获得自己的 Visual Studio 订阅的许可。
 
 ## <a name="internal-teams"></a>内部团队
 现代软件组织通常包括来自多个群体的利益干系人。 确定每个群体的联系人，这些联系人可帮助你跟踪用户清单和变更。

@@ -1,5 +1,7 @@
 ---
 title: 设计 Windows 窗体应用
+description: 了解 Visual Studio 中的 Windows 窗体设计器，它为创建基于 Windows 窗体的应用程序提供了快速开发解决方案。
+ms.custom: SEO-VS-2020
 ms.date: 08/09/2019
 ms.topic: overview
 helpviewer_keywords:
@@ -7,12 +9,12 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 03619582a30893c161c44c880a0d9cf6c9766d0b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f43b3e529d7e56af7639df1118baa64f0d594e6c
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85768764"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93134650"
 ---
 # <a name="windows-forms-designer-overview"></a>Windows 窗体设计器概述
 
@@ -30,10 +32,10 @@ Visual Studio 中的 Windows 窗体设计器为创建基于 Windows 窗体的应
 
 - 通过使用鼠标或箭头键移动所选控件来调整其位置。 同样，使用 Ctrl 和箭头键来更精确地调整位置。 最后，通过使用 Shift 和箭头键来调整控件的大小。
 
-- 通过在单击的同时选择“Shift”或“Ctrl”   来选择多个控件。 使用 Shift  +单击时，选择的第一个控件是对齐或操纵大小时的主导控件。 使用 Ctrl  +单击时，选择的最后一个控件是主导控件，因此主导控件会随着每添加一个新控件而更改。 或者，可以通过拖动要选择的控件周围的选择矩形来选择多个控件。
+- 通过在单击的同时选择“Shift”或“Ctrl”来选择多个控件。 使用 Shift+单击时，选择的第一个控件是对齐或操纵大小时的主导控件。 使用 Ctrl+单击时，选择的最后一个控件是主导控件，因此主导控件会随着每添加一个新控件而更改。 或者，可以通过拖动要选择的控件周围的选择矩形来选择多个控件。
 
 > [!NOTE]
-> 使用 Windows 窗体设计器（而不是“资源编辑器”）更改窗体的资源 (.resx  ) 文件。 如果编辑基于窗体的 .resx 文件，将会看到一个警告，说明在“资源编辑器”中所做的更改可能会丢失。 这是因为 Windows 窗体设计器会生成 .resx 文件。
+> 使用 Windows 窗体设计器（而不是“资源编辑器”）更改窗体的资源 (.resx) 文件。 如果编辑基于窗体的 .resx 文件，将会看到一个警告，说明在“资源编辑器”中所做的更改可能会丢失。 这是因为 Windows 窗体设计器会生成 .resx 文件。
 
 ## <a name="see-also"></a>另请参阅
 

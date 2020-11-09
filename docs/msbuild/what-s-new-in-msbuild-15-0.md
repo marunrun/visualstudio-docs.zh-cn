@@ -1,5 +1,7 @@
 ---
 title: MSBuild 15 中的新增功能 | Microsoft Docs
+description: 请参阅 MSBuild 15 的已更改功能、已更新功能和新功能，这些功能可用于 .NET Core SDK 以及用于在 Windows、macOS 和 Linux 上生成 .NET Core 项目。
+ms.custom: SEO-VS-2020
 ms.date: 03/01/2017
 ms.topic: conceptual
 ms.assetid: 9976b6fd-d052-4017-b848-35b5bf4b2f66
@@ -9,12 +11,12 @@ manager: jillfra
 ms.workload:
 - multiple
 monikerRange: '>=vs-2017'
-ms.openlocfilehash: 733c3253245e293a6e52953bc93fc35a1281a616
-ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
+ms.openlocfilehash: 3ab22ac92cdf995c56d8244225a45fc350e9d360
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88711672"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047797"
 ---
 # <a name="whats-new-in-msbuild-15"></a>MSBuild 15 中的新增功能
 

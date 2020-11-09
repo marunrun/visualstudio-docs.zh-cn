@@ -1,25 +1,25 @@
 ---
 title: 下载 Visual Studio 订阅中的软件标题 | Microsoft Docs
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: cabuschl
 ms.assetid: e2f2619c-7736-47e5-a066-5940d5994db9
-ms.date: 07/29/2020
+ms.date: 10/26/2020
 ms.topic: conceptual
 description: 了解如何在 Visual Studio 订阅中查找和下载 Microsoft 软件标题
-ms.openlocfilehash: 4a267db59f1efc4912748846e61774966f0f6abe
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.openlocfilehash: e6a5b6a1caab199ec2b67108f539c1d68d545551
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "91005595"
+ms.lasthandoff: 11/01/2020
+ms.locfileid: "92903628"
 ---
 # <a name="downloading-software-titles-in-visual-studio-subscriptions"></a>下载 Visual Studio 订阅中的软件标题
 根据你所订阅的 Visual Studio，你可以获得各种各样的 Microsoft 软件标题。  本文将概述如何查找和下载所需的软件，以便最大限度地利用订阅。 
 
 [下载](https://my.visualstudio.com/downloads/featured)页仅显示订阅中包含的下载内容。  如果具有多个订阅或计划成员身份，即使目前正在查看其它订阅，也会显示你所具有的最高订阅的下载内容。  例如，如果你的 Visual Studio Enterprise 订阅和 Visual Studio Professional 订阅都关联了同一个登录 ID，即使你目前正在查看 Professional 订阅权益，也会显示 Enterprise 订阅中包含的下载内容。  
 
-如果你的订阅是由工作或学校提供的，则订阅管理员将控制你是否有权访问下载。 如果禁用对下载的访问权限，则还会禁用对产品密钥的访问权限。 如果你无权访问但却需要访问下载和产品密钥，请[联系管理员](contact-my-admin.md)。
+如果订阅是由你的工作单位或学校提供给你的，则订阅管理员将控制你是否有权访问下载内容。 如果禁用对下载的访问权限，则还会禁用对产品密钥的访问权限。 如果你无权访问下载内容和产品密钥，但又需要访问，请[联系你的管理员](contact-my-admin.md)。
 
 > [!NOTE]
 > 我们注意到一个有关 Microsoft 365 产品密钥可用性的问题。  我们正在调查其原因，并将在问题解决后更新本文。 

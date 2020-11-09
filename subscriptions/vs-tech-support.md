@@ -1,18 +1,18 @@
 ---
-title: 技术支持权益
+title: Visual Studio 订阅中的技术支持权益
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 2e0fd8bb-8f20-487c-b350-b8fde405ea5e
-ms.date: 09/02/2020
+ms.date: 10/28/2020
 ms.topic: how-to
 description: 了解如何激活 Visual Studio 订阅中包含的技术支持权益。
-ms.openlocfilehash: 6f22273d578c6e1bc30d588fff30c945846a5d8f
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 30b47646c26e5bc9fbf9045e2acf59a670aa5e9d
+ms.sourcegitcommit: ae9145b32fc8e1e663e504c315a5df5dd302fee9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91004541"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92918118"
 ---
 # <a name="activate-and-use-the-technical-support-benefit-in-visual-studio-subscriptions"></a>激活并使用 Visual Studio 订阅中的技术支持权益
 Visual Studio 订阅中的技术支持权益用于解决仍处于[支持生命周期](https://support.microsoft.com/lifecycle/search)的主流支持阶段产品的“非生产环境”中的中断修复问题。 Visual Studio Enterprise 标准版和年度云订阅接收四个事件，但 Visual Studio Professional 标准版和年度云订阅接收两个事件，从权益激活开始最多一年。 权益激活必须在订阅为最新状态时进行。
@@ -92,7 +92,7 @@ Visual Studio 订阅中的技术支持权益用于解决仍处于[支持生命�
    > [!div class="mx-imgBorder"]
    > ![技术支持权益事件提交 - 添加合同](_img/vs-tech-support/vs-tech-support-add-contract.png)
 
-4. 输入“访问 ID”和“合同 ID” 。  单击 **添加**。
+4. 输入“访问 ID”和“合同 ID” 。  单击 **添加** 。
 
    > [!div class="mx-imgBorder"]
    > ![技术支持权益事件提交 - 添加合同 ID](_img/vs-tech-support/vs-tech-support-add-contract-id.png)

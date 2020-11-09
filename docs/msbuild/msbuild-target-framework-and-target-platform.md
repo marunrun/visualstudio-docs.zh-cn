@@ -1,5 +1,7 @@
 ---
 title: MSBuild 目标 Framework 和目标平台 | Microsoft Docs
+description: 了解如何生成 MSBuild 项目以在目标 .NET Framework 版本和目标平台或软件体系结构上运行。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: df6517c5-edd6-4cc4-97ad-b3cdfc78e799
@@ -8,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c55ce57adb5b86941b5953732d57a642eb4f943
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d29c4e4659e8e6a5564e3fb41f54615bf29171d2
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350831"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93049103"
 ---
 # <a name="msbuild-target-framework-and-target-platform"></a>MSBuild 目标框架和目标平台
 
@@ -80,7 +82,7 @@ ms.locfileid: "85350831"
 
 - `Xbox` 指定 Microsoft Xbox 360 平台。
 
-目标平台是指将在其上运行生成项目的特定平台。 目标平台是在项目文件中的 `PlatformTarget` 生成属性中指定的。 可通过在 IDE 中使用项目属性页或**配置管理器**来更改目标平台。
+目标平台是指将在其上运行生成项目的特定平台。 目标平台是在项目文件中的 `PlatformTarget` 生成属性中指定的。 可通过在 IDE 中使用项目属性页或 **配置管理器** 来更改目标平台。
 
 ```xml
 <PropertyGroup>
@@ -89,7 +91,7 @@ ms.locfileid: "85350831"
 
 ```
 
-目标配置是目标平台的一个子集。 例如，`x86` `Debug` 配置不包括大多数代码优化项。 目标配置是在项目文件中的 `Configuration` 生成属性中指定的。 可通过使用项目属性页或**配置管理器**来更改目标配置。
+目标配置是目标平台的一个子集。 例如，`x86` `Debug` 配置不包括大多数代码优化项。 目标配置是在项目文件中的 `Configuration` 生成属性中指定的。 可通过使用项目属性页或 **配置管理器** 来更改目标配置。
 
 ```xml
 <PropertyGroup>

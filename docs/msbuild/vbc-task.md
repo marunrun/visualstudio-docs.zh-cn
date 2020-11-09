@@ -1,5 +1,7 @@
 ---
 title: Vbc 任务 | Microsoft Docs
+description: 了解 MSBuild 如何使用 Vbc 任务来包装 vbc.exe，此工具生成可执行文件、动态链接库或代码模块。
+ms.custom: SEO-VS-2020
 ms.date: 04/12/2018
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 30f1a45c384495ccd02c624ea42f91a4379226df
-ms.sourcegitcommit: 93859158465eab3423a0c0435f06490f0a456a57
+ms.openlocfilehash: 0177467677c9aef1f41b006bb9b1ddfaed408e40
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82167444"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93046761"
 ---
 # <a name="vbc-task"></a>Vbc 任务
 
@@ -33,7 +35,7 @@ ms.locfileid: "82167444"
 
  下表描述了 `Vbc` 任务的参数。
 
-| 参数 | 描述 |
+| 参数 | 说明 |
 |------------------------------| - |
 | `AdditionalLibPaths` | 可选 `String[]` 参数。<br /><br /> 指定要在其中查找 References 属性中指定的程序集的其他文件夹。 |
 | `AddModules` | 可选 `String[]` 参数。<br /><br /> 使编译器让指定文件中的所有类型信息可供当前正在编译的项目使用。 此参数对应于 vbc.exe 编译器的 [-addmodule](/dotnet/visual-basic/reference/command-line-compiler/addmodule) 开关  。 |

@@ -1,5 +1,7 @@
 ---
 title: XML 架构设计器关系图视图
+description: 了解 XML 架构设计器中的图形视图，它提供了有关全局架构节点以及节点之间关系的图形表示。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 5881afde-3f24-4eb9-bff8-6cb3fc8aade7
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cb71196dfbaf371e66131bf1e4b22584d3dbf0c3
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: ee6abff7accf5e1990792b52f1fdf6a013edd0f9
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592862"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93045995"
 ---
 # <a name="graph-view"></a>图形视图
 

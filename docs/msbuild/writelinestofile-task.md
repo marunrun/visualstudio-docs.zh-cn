@@ -1,5 +1,7 @@
 ---
 title: WriteLinesToFile 任务 | Microsoft Docs
+description: 了解 MSBuild 如何使用 WriteLinesToFile 任务将指定项的路径写入到指定的文本文件。
+ms.custom: SEO-VS-2020
 ms.date: 09/20/2018
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 27673ba3691e53540bce2249700c4453cb56c166
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: a504f4329c9e7b15eb8fbe1b756d682f0de44907
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85286097"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047372"
 ---
 # <a name="writelinestofile-task"></a>WriteLinesToFile 任务
 

@@ -1,5 +1,7 @@
 ---
 title: XmlPoke 任务 | Microsoft Docs
+description: 了解 MSBuild 如何使用 XmlPoke 任务将由 XPath 查询指定的值设置到 XML 文件中。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b69afc20d15802ad79b201ca38e2d69f1d473b1e
-ms.sourcegitcommit: 0b8497b720eb06bed8ce2194731177161b65eb84
+ms.openlocfilehash: 35e29004116807092452a08d3835ba3e5e1dabcd
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82072486"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047235"
 ---
 # <a name="xmlpoke-task"></a>XmlPoke 任务
 
@@ -31,7 +33,7 @@ ms.locfileid: "82072486"
 
  下表描述了 `XmlPoke` 任务的参数。
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |`Namespaces`|可选 `String` 参数。<br /><br /> 指定 XPath 查询前缀的命名空间。 `Namespaces` 是 XML 代码片段，由 `Namespace` 元素组成，包含 `Prefix` 和 `Uri` 属性。 属性 `Prefix` 指定与 `Uri` 属性中指定的命名空间关联的前缀。 不要使用空的 `Prefix`。|
 |`Query`|可选 `String` 参数。<br /><br /> 指定 XPath 查询。|

@@ -1,5 +1,7 @@
 ---
 title: MSBuild 保留属性和已知属性 | Microsoft Docs
+description: 了解 MSBuild 保留的已知属性，这些预定义的属性存储项目文件和 MSBuild 二进制文件的相关信息。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5c3d97185446560343b36b22f73e0b320b5a28d6
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 0480b427b92ca43603deedf84e5fd7cb39e6e065
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85289217"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93049161"
 ---
 # <a name="msbuild-reserved-and-well-known-properties"></a>MSBuild 保留属性和已知属性
 

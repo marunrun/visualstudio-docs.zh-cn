@@ -1,5 +1,7 @@
 ---
 title: 目标生成顺序 | Microsoft Docs
+description: 了解如何在一个目标的输入依赖另一个目标的输出时指定 MSBuild 目标的运行顺序。
+ms.custom: SEO-VS-2020
 ms.date: 05/02/2019
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,22 +12,22 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 607584b4b41bdfde224bdb35d30eec1c6c8a4197
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 955c8c496df45bbfce28bdac1571f84649621024
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75585452"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048066"
 ---
 # <a name="target-build-order"></a>目标生成顺序
 
 如果目标的输入取决于另一目标的输出，那么必须将目标排序。 可使用这些属性指定目标运行的顺序：
 
-- `InitialTargets`。 `Project` 属性指定将首先运行的目标，即使在命令行或 `DefaultTargets` 属性中指定了目标。
+- `InitialTargets`. `Project` 属性指定将首先运行的目标，即使在命令行或 `DefaultTargets` 属性中指定了目标。
 
-- `DefaultTargets`。 如果未在命令行上显示指定目标，则此 `Project` 属性可指定要运行的目标。
+- `DefaultTargets`. 如果未在命令行上显示指定目标，则此 `Project` 属性可指定要运行的目标。
 
-- `DependsOnTargets`。 此 `Target` 属性指定必须运行的目标后才能运行此目标。
+- `DependsOnTargets`. 此 `Target` 属性指定必须运行的目标后才能运行此目标。
 
 - `BeforeTargets` 和 `AfterTargets`。 这些 `Target` 属性指定应在指定的目标运行前或后 (MSBuild 4.0) 运行此目标。
 
@@ -57,7 +59,7 @@ ms.locfileid: "75585452"
 <Project DefaultTargets="Clean;Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 ```
 
-若要重写默认目标，可以在命令行中使用 -target  开关。 以下示例指定运行的 `Build` 目标，然后指定运行的 `Report` 目标。 以此方式指定目标时，将忽略所有默认目标。
+若要重写默认目标，可以在命令行中使用 -target 开关。 以下示例指定运行的 `Build` 目标，然后指定运行的 `Report` 目标。 以此方式指定目标时，将忽略所有默认目标。
 
  `msbuild -target:Build;Report`
 
@@ -73,7 +75,7 @@ ms.locfileid: "75585452"
 
 ## <a name="target-dependencies"></a>目标依赖项
 
-目标可描述相互依赖关系。 `DependsOnTargets` 属性表示目标依赖于其他目标。 例如，应用于对象的
+目标可描述相互依赖关系。 `DependsOnTargets` 属性表示目标依赖于其他目标。 例如，
 
 ```xml
 <Target Name="Serve" DependsOnTargets="Chop;Cook" />
@@ -113,7 +115,7 @@ MSBuild 按以下方式确定目标生成顺序：
 
 1. 运行 `InitialTargets` 目标。
 
-2. 运行的是在命令行中使用 -target  开关指定的目标。 如果未在命令行上指定目标，则运行 `DefaultTargets` 目标。 如果都不存在，则运行出现的第一个目标。
+2. 运行的是在命令行中使用 -target 开关指定的目标。 如果未在命令行上指定目标，则运行 `DefaultTargets` 目标。 如果都不存在，则运行出现的第一个目标。
 
 3. 评估目标的 `Condition` 属性。 如果出现 `Condition` 属性且评估结果为 `false`，那么不会运行该目标，且目标不会对生成造成进一步影响。
 
@@ -130,6 +132,6 @@ MSBuild 按以下方式确定目标生成顺序：
 
 7. 执行或跳过目标后，运行 `AfterTargets` 属性中列出目标的任何其他目标。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [目标](../msbuild/msbuild-targets.md)

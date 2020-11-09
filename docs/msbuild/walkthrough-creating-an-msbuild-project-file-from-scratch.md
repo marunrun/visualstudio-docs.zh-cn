@@ -1,5 +1,6 @@
 ---
 title: 从头开始创建 MSBuild 项目文件
+description: 逐步介绍了如何从头开始创建 MSBuild 项目文件，以了解 XML 是如何组织的，以及如何更改它来控制生成。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 35b05410c1a9ac36273a43481929a3be463d8af1
-ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
+ms.openlocfilehash: 3ebe3c60e4061a66bb77f41bf165fb16e0c427c2
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92136688"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93046058"
 ---
 # <a name="walkthrough-create-an-msbuild-project-file-from-scratch"></a>演练：从头开始创建 MSBuild 项目文件
 
@@ -143,10 +144,10 @@ ms.locfileid: "92136688"
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Include="helloworld.cs" />
+    <Compile Include="helloworld.cs" />
   </ItemGroup>
   <Target Name="Build">
-    <Csc Sources="@(Compile)"/>  
+    <Csc Sources="@(Compile)"/>  
   </Target>
 </Project>
 ```
@@ -225,7 +226,7 @@ Build 目标中的任务按顺序执行。 在本例中，Visual C# 编译器 `C
     <OutputPath>Bin\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="helloworld.cs" />
+    <Compile Include="helloworld.cs" />
   </ItemGroup>
   <Target Name="Build">
     <MakeDir Directories="$(OutputPath)" Condition="!Exists('$(OutputPath)')" />
@@ -301,7 +302,7 @@ Build 目标中的任务按顺序执行。 在本例中，Visual C# 编译器 `C
     <OutputPath>Bin\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="helloworld.cs" />
+    <Compile Include="helloworld.cs" />
   </ItemGroup>
   <Target Name="Build">
     <MakeDir Directories="$(OutputPath)" Condition="!Exists('$(OutputPath)')" />
@@ -348,7 +349,7 @@ Build 目标中的任务按顺序执行。 在本例中，Visual C# 编译器 `C
 
 6. 要验证“\Bin\\”文件夹现在是否为空，请键入“dir Bin”。
 
-7. 键入 **msbuild**。
+7. 键入 **msbuild** 。
 
      尽管未指定项目文件，但 MSBuild 会生成 helloworld.csproj 文件，因为当前文件夹中只有一个项目文件。 这将导致在“\Bin\\”文件夹中创建 MSBuildSample 应用程序。
 

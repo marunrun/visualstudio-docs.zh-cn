@@ -1,5 +1,7 @@
 ---
 title: 如何：创建灰度纹理着色器
+description: 了解如何使用着色器设计器和有向图着色器语言来创建修改纹理样本的 RGB 颜色值的灰度纹理着色器。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 79181d81-44af-445e-9a18-03483dd70260
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2a311456fd3f8eab12c24e26c32349f208e0a723
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 737c74c5d58bb15724827f15be029d3a84e21977
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85769070"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93134048"
 ---
 # <a name="how-to-create-a-grayscale-texture-shader"></a>如何：创建灰度纹理着色器
 
@@ -23,18 +25,18 @@ ms.locfileid: "85769070"
 
 可以通过在将纹理样本写入最终输出颜色之前修改纹理样本的颜色值来实现灰度纹理着色器。
 
-开始前，请确保显示“属性”  窗口和“工具箱”  。
+开始前，请确保显示“属性”窗口和“工具箱”。
 
 1. 按[如何：创建基本纹理着色器](../designers/how-to-create-a-basic-texture-shader.md)中所述创建基本纹理着色器。
 
 2. 从“最终颜色”节点的“RGB”终端断开“纹理示例”节点的“RGB”终端。 在“选择”模式中，选择“纹理示例”节点的“RGB”终端，然后选择“断开链接”。 这为在下一步中添加的节点腾出空间。
 
-3. 向图添加“去除饱和度”  节点。 在“工具箱”  中的“文件”  ，选择“去除饱和度”  ，然后将其移到设计图面。
+3. 向图添加“去除饱和度”节点。 在“工具箱”中的“文件”，选择“去除饱和度”，然后将其移到设计图面。
 
-4. 使用“去除饱和度”  节点计算灰度值。 在“选择”模式中，将“纹理样示例”节点的“RGB”终端移到“去除饱和度”节点的“RGB”终端。
+4. 使用“去除饱和度”节点计算灰度值。 在“选择”模式中，将“纹理样示例”节点的“RGB”终端移到“去除饱和度”节点的“RGB”终端。
 
     > [!NOTE]
-    > 默认情况下，“去除饱和度”  节点完全去除输入颜色的饱和度，并使用标准亮度权重进行灰度转换。 可以通过更改“亮度”属性的值或仅部分去除输入颜色的饱和度来更改“去除饱和度”节点的行为方式。 若要部分去除输入颜色的饱和度，请向“去除饱和度”节点的“百分比”终端提供 [0,1) 范围中的标量值。
+    > 默认情况下，“去除饱和度”节点完全去除输入颜色的饱和度，并使用标准亮度权重进行灰度转换。 可以通过更改“亮度”属性的值或仅部分去除输入颜色的饱和度来更改“去除饱和度”节点的行为方式。 若要部分去除输入颜色的饱和度，请向“去除饱和度”节点的“百分比”终端提供 [0,1) 范围中的标量值。
 
 5. 将灰度颜色值连接到最终颜色。 将“去除饱和度”节点的“输出”终端移到“最终颜色”节点的“RGB”终端。
 
@@ -49,7 +51,7 @@ ms.locfileid: "85769070"
 
 ## <a name="see-also"></a>另请参阅
 
-- [如何：向 3D 模型应用着色器](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
+- [如何：向三维模型应用着色器](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
 - [如何：导出着色器](../designers/how-to-export-a-shader.md)
 - [图像编辑器](../designers/image-editor.md)
 - [着色器设计器](../designers/shader-designer.md)

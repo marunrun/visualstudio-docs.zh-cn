@@ -1,5 +1,7 @@
 ---
 title: ParameterGroup 元素 | Microsoft Docs
+description: 了解 MSBuild ParameterGroup 元素，它包含可选的参数列表，这些参数显示在由 UsingTask TaskFactory 生成的任务上。
+ms.custom: SEO-VS-2020
 ms.date: 03/13/2017
 ms.topic: reference
 dev_langs:
@@ -16,18 +18,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8c06b9c530d3fff0fdfa429df633daaa4dde8c52
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 104a7313104e194a85d9eb4fee00e84a8facb5b5
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "78263067"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048874"
 ---
 # <a name="parametergroup-element"></a>ParameterGroup 元素
 
 包含一系列可选参数，这些参数将显示在通过使用 `UsingTask` `TaskFactory` 生成的任务上。 有关详细信息，请参阅 [UsingTask 元素 (MSBuild)](../msbuild/usingtask-element-msbuild.md)。
 
- \<Project> \<UsingTask> \<ParameterGroup>
+ \<Project> \<UsingTask>
  \<ParameterGroup>
 
 ## <a name="syntax"></a>语法
@@ -46,13 +48,13 @@ ms.locfileid: "78263067"
 
 ### <a name="child-elements"></a>子元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[Parameter](../msbuild/parameter-element.md)|包含某个任务的特定参数信息，该任务可通过使用 `UsingTask` `TaskFactory` 生成。 元素的名称就是该参数的名称。|
+|[参数](../msbuild/parameter-element.md)|包含某个任务的特定参数信息，该任务可通过使用 `UsingTask` `TaskFactory` 生成。 元素的名称就是该参数的名称。|
 
 ### <a name="parent-elements"></a>父元素
 
-| 元素 | 描述 |
+| 元素 | 说明 |
 | - | - |
 | [UsingTask](../msbuild/usingtask-element-msbuild.md) | 提供在 MSBuild 中注册任务的方法。 项目中可能有零个或零个以上的 `UsingTask` 元素。 |
 
@@ -73,7 +75,7 @@ ms.locfileid: "78263067"
 </UsingTask>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [任务](../msbuild/msbuild-tasks.md)
 - [任务参考](../msbuild/msbuild-task-reference.md)

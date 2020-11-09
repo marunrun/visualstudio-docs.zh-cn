@@ -1,5 +1,7 @@
 ---
 title: MT 任务 | Microsoft Docs
+description: 了解包装 Microsoft 清单工具 mt.exe 的 MSBuild MT 任务的参数和命令行选项。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -24,12 +26,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5fe0ce106fc471431d3aac088eb3f45cfb28c564
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d5ce7e602c3f95766fdade297c2ee235cebba24c
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633052"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048982"
 ---
 # <a name="mt-task"></a>MT 任务
 

@@ -1,5 +1,7 @@
 ---
 title: XslTransformation 任务 | Microsoft Docs
+description: 了解 MSBuild 如何使用 XslTransformation 任务通过 XSLT 转换 XML 输入，并输出到输出设备或文件。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d23799e5ce5bf391915ac459c69c27b990211f0a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: da983f6dc215a5afd651733ecea6b62846ca95cc
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79094551"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047189"
 ---
 # <a name="xsltransformation-task"></a>XslTransformation 任务
 
@@ -31,7 +33,7 @@ ms.locfileid: "79094551"
 
  下表描述了 `XslTransformation` 任务的参数。
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |`OutputPaths`|必选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定 XML 转换的输出文件。|
 |`Parameters`|可选 `String` 参数。<br /><br /> 指定 XSLT 输入文档的参数。  提供将每个参数作为 `<Parameter Name="" Value="" Namespace="" />` 的原始 XML。|
@@ -47,7 +49,7 @@ ms.locfileid: "79094551"
 
 ## <a name="example"></a>示例
 
-在下面的示例中，XSL 转换文件 transform.xslt 用于修改 xml 文件 `$(XmlInputFileName)`  。 转换后的 XML 将写入 `$(IntermediateOutputPath)output.xml`。 XSL 转换采用 `$(Parameter1)` 作为输入参数。
+在下面的示例中，XSL 转换文件 transform.xslt 用于修改 xml 文件 `$(XmlInputFileName)`。 转换后的 XML 将写入 `$(IntermediateOutputPath)output.xml`。 XSL 转换采用 `$(Parameter1)` 作为输入参数。
 
 ```xml
     <XslTransformation XslInputPath="transform.xslt"
@@ -56,7 +58,7 @@ ms.locfileid: "79094551"
                        Parameters="&lt;Parameter Name='Parameter1' Value='$(Parameter1)'/&gt;"/>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XSLT 参数](/dotnet/standard/data/xml/xslt-parameters)
 - [任务](../msbuild/msbuild-tasks.md)

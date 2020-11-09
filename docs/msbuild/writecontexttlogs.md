@@ -1,5 +1,7 @@
 ---
 title: WriteContextTLogs | Microsoft Docs
+description: 了解为当前上下文写入日志文件的 WriteContextTLogs 的语法、要求和返回值。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 apiname:
@@ -15,12 +17,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cf34ff63b00cf523ba9ef704f4417be4d5cdbf77
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 622cbebdb4073dfd9b4237e9dfbcb8bbf4a506de
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77630700"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047386"
 ---
 # <a name="writecontexttlogs"></a>WriteContextTLogs
 
@@ -44,12 +46,12 @@ HRESULT WINAPI WriteContextTLogs(LPCTSTR intermediateDirectory, LPCTSTR tlogRoot
 
 ## <a name="return-value"></a>返回值
 
- 如果跟踪上下文创建完成，则返回带 SUCCEEDED 位集的 HRESULT   。
+ 如果跟踪上下文创建完成，则返回带 SUCCEEDED 位集的 HRESULT 。
 
 ## <a name="requirements"></a>要求
 
- **标头：** FileTracker.h 
+ **标头：FileTracker.h** 
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [WriteAllTLogs](../msbuild/writealltlogs.md)

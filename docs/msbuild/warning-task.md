@@ -1,5 +1,7 @@
 ---
 title: Warning 任务 | Microsoft Docs
+description: 了解 MSBuild 如何使用 Warning 任务在生成期间根据已评估的条件语句记录警告。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e95b59b4ccc0bd2df89e45512a5bdd05c027556
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ce7104c08ce8f18672bf4d2df93debc3c1d19983
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77631089"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047814"
 ---
 # <a name="warning-task"></a>Warning 任务
 
@@ -33,14 +35,14 @@ ms.locfileid: "77631089"
 
  下表描述了 `Warning` 任务的参数。
 
-| 参数 | 描述 |
+| 参数 | 说明 |
 |---------------| - |
 | `Code` | 可选 `String` 参数。<br /><br /> 与警告相关联的警告代码。 |
 | `File` | 可选 `String` 参数。<br /><br /> 指定相关文件（如果有）。 如果未提供任何文件，则使用包含 Warning 任务的文件。 |
 | `HelpKeyword` | 可选 `String` 参数。<br /><br /> 与警告关联的 Help 关键字。 |
 | `Text` | 可选 `String` 参数。<br /><br /> 如果 `Condition` 参数计算结果为 `true`，则为 MSBuild 记录的警告文本。 |
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
  `Warning` 任务使 MSBuild 项目可以在继续下一个生成步骤之前，先检查必需的配置或属性是否存在。
 
@@ -66,7 +68,7 @@ ms.locfileid: "77631089"
 </Project>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [获取生成日志](../msbuild/obtaining-build-logs-with-msbuild.md)
 - [项目文件架构参考](../msbuild/msbuild-project-file-schema-reference.md)
