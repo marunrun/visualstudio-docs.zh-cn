@@ -1,5 +1,7 @@
 ---
 title: '&lt;&gt; (ClickOnce 部署) 的 assembly 元素 |Microsoft Docs'
+description: Assembly 元素是根元素，在 ClickOnce 部署中是必需的。 其第一个包含的元素必须是 assemblyIdentity 元素。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b639a7f95cfb59844fa37963730e22ead450482
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dde3bdb5fc0e9c6ea256aaa4368623a8e8af18d6
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62929080"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94383230"
 ---
 # <a name="ltassemblygt-element-clickonce-deployment"></a>&lt;&gt; (ClickOnce 部署的 assembly 元素) 
 部署清单的顶级元素。
@@ -30,7 +32,7 @@ ms.locfileid: "62929080"
 
 ```xml
 
-      <assembly  
+      <assembly  
    manifestVersion
 />
 ```
@@ -40,7 +42,7 @@ ms.locfileid: "62929080"
 
  `assembly` 元素具有以下属性。
 
-|特性|说明|
+|属性|说明|
 |---------------|-----------------|
 |`manifestVersion`|必需。 此特性必须设置为 `1.0` 。|
 
@@ -62,6 +64,6 @@ ms.locfileid: "62929080"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [ClickOnce 部署清单](../deployment/clickonce-deployment-manifest.md)
 - [\<assembly> element](../deployment/assembly-element-clickonce-application.md)

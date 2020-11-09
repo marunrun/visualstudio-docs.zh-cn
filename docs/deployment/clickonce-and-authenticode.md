@@ -1,5 +1,7 @@
 ---
 title: ClickOnce 和 Authenticode |Microsoft Docs
+description: 了解证书 Authenticode 用于验证应用程序的真实性。 了解如何验证和存储证书。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ed7945dac94527df51dcdd601113f8874cd36142
-ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
+ms.openlocfilehash: 07b40cb9c4e1d79390bb4a0541e1cb5bd8862d3a
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89641631"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94383139"
 ---
 # <a name="clickonce-and-authenticode"></a>ClickOnce 和 Authenticode
 *验证码* 是使用行业标准加密，通过验证应用程序发行者真实性的数字证书对应用程序代码进行签名的 Microsoft 技术。 通过对应用程序部署使用验证码， [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 可以降低遭受特洛伊木马程序攻击的风险。 特洛伊木马程序是一种病毒或其他有害的程序，恶意的第三方将其伪装成来自已确认且可信任的源的合法程序。 用数字证书为 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 部署签名是用于验证程序集和文件是否经过篡改的可选步骤。
@@ -41,10 +43,10 @@ ms.locfileid: "89641631"
 
 - 从组织中负责创建数字证书的组中接收证书。
 
-- 使用 New-selfsignedcertificate PowerShell cmdlet 生成自己的证书，或通过使用附带的 *MakeCert.exe*来生成自己的证书 [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)] 。
+- 使用 New-SelfSignedCertificate PowerShell cmdlet 或随附的 *MakeCert.exe* 生成自己的证书 [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)] 。
 
 ### <a name="how-using-certificate-authorities-helps-users"></a>使用证书颁发机构对用户的好处
- 使用 New-selfsignedcertificate 生成的证书或*MakeCert.exe*通常称为实用工具*自发证书*或*测试证书*。这种证书的工作方式与.NET Framework 中 *.snk* 文件的工作方式大致相同。 它只包含公钥/私钥加密密钥对，不包含有关发行者的可验证信息。 可以使用自发证书在 Intranet 上部署具有高信任级别的 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序。 但是，当这些应用程序在客户端计算机上运行时， [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 会将它们标识为来自未知发行者。 默认情况下，使用自发证书签名并在 Internet 上部署的 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序不能使用受信任的应用程序部署。
+ 使用 New-selfsignedcertificate 生成的证书或 *MakeCert.exe* 通常称为实用工具 *自发证书* 或 *测试证书* 。这种证书的工作方式与.NET Framework 中 *.snk* 文件的工作方式大致相同。 它只包含公钥/私钥加密密钥对，不包含有关发行者的可验证信息。 可以使用自发证书在 Intranet 上部署具有高信任级别的 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序。 但是，当这些应用程序在客户端计算机上运行时， [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 会将它们标识为来自未知发行者。 默认情况下，使用自发证书签名并在 Internet 上部署的 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序不能使用受信任的应用程序部署。
 
  相反，从 CA（如证书供应商或企业内部部门）收到的证书可以为你的用户提供更高的安全性。 该证书不仅会标识已签名软件的发行者，还会通过与签发该证书的 CA 进行核实来验证发行者的身份。 如果 CA 不是根证书颁发机构，验证码还会沿证书链回溯到根颁发机构来验证该 CA 是否有权颁发证书。 为了提高安全性，应尽量使用 CA 颁发的证书。
 
@@ -64,7 +66,7 @@ ms.locfileid: "89641631"
 
 ### <a name="store-certificates"></a>存储证书
 
-- 可以在文件系统上将证书存储为.pfx 文件，或将其存储在密钥容器中**。 Windows 域上的用户可拥有若干数目的密钥容器。 默认情况下，MakeCert.exe 会将证书存储在个人密钥容器中，除非指定将其保存为 .pfx****。 用于创建 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 部署的 [!INCLUDE[winsdkshort](../debugger/debug-interface-access/includes/winsdkshort_md.md)] 工具 Mage.exe 和 MageUI.exe，借助这些工具可以使用上述任一方式中存储的证书****。
+- 可以在文件系统上将证书存储为.pfx 文件，或将其存储在密钥容器中。 Windows 域上的用户可拥有若干数目的密钥容器。 默认情况下，MakeCert.exe 会将证书存储在个人密钥容器中，除非指定将其保存为 .pfx。 用于创建 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 部署的 [!INCLUDE[winsdkshort](../debugger/debug-interface-access/includes/winsdkshort_md.md)] 工具 Mage.exe 和 MageUI.exe，借助这些工具可以使用上述任一方式中存储的证书。
 
 ## <a name="see-also"></a>请参阅
 - [ClickOnce 安全和部署](../deployment/clickonce-security-and-deployment.md)

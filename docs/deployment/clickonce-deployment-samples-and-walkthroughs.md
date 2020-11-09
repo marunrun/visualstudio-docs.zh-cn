@@ -1,5 +1,7 @@
 ---
 title: ClickOnce 部署示例和演练 |Microsoft Docs
+description: 使用这些示例应用程序、示例代码和演练来了解用于部署 Windows 窗体、WPF 和控制台应用程序的技术。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8083ed11537975bfd05f546843264881fe7a7aa0
-ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
+ms.openlocfilehash: 419fa9f917358ae19a073b5f864ee76d92c33e75
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89641473"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94383035"
 ---
 # <a name="clickonce-deployment-samples-and-walkthroughs"></a>ClickOnce 部署示例和演练
 本部分包含示例应用程序、示例代码和分步演练，它们阐释了用于部署 Windows 窗体、WPF 和控制台应用程序的语法、结构和方法。

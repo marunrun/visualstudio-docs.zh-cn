@@ -1,5 +1,7 @@
 ---
 title: '&lt;&gt; (ClickOnce 部署) 的部署元素 |Microsoft Docs'
+description: Deployment 元素标识用于部署更新和向系统公开的属性。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -21,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 988ce0859ab24377395cc4077f9e6fa42e0487a5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3252c8f305b97564b8fb19affa83cc7dd837c97d
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "70887853"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382853"
 ---
 # <a name="ltdeploymentgt-element-clickonce-deployment"></a>&lt;&gt;ClickOnce 部署 (部署元素) 
 标识用于部署更新并向系统公开的特性。
@@ -60,7 +62,7 @@ ms.locfileid: "70887853"
 ## <a name="elements-and-attributes"></a>元素和属性
  `deployment` 元素是必需的，它位于 `urn:schemas-microsoft-com:asm.v2` 命名空间中。 元素具有以下属性。
 
-| 特性 | 说明 |
+| 属性 | 说明 |
 |--------------------------| - |
 | `install` | 必需。 指定此应用程序是否在 Windows " **开始** " 菜单和 "控制面板" 的 " **添加或删除程序** " 应用程序中定义状态。 有效值为 `true` 和 `false`。 如果为 `false` ， [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 将始终从网络中运行此应用程序的最新版本，并且将无法识别 `subscription` 元素。 |
 | `minimumRequiredVersion` | 可选。 指定可在客户端上运行的此应用程序的最低版本。 如果应用程序的版本号小于部署清单中提供的版本号，则应用程序将不会运行。 版本号必须以格式指定 `N.N.N.N` ，其中 `N` 是无符号整数。 如果 `install` 特性为 `false` ，则 `minimumRequiredVersion` 不得设置。 |
@@ -86,7 +88,7 @@ ms.locfileid: "70887853"
 
  `expiration`元素支持以下特性。
 
-|特性|说明|
+|属性|说明|
 |---------------|-----------------|
 |`maximumAge`|必需。 标识当前更新在应用程序执行更新检查之前应如何发生。 时间单位由 `unit` 属性确定。|
 |`unit`|必需。 标识的时间单位 `maximumAge` 。 有效单位为 `hours` 、 `days` 和 `weeks` 。|
@@ -96,11 +98,11 @@ ms.locfileid: "70887853"
 
  此元素是 `deployment` 元素的子元素，并且包含以下元素。
 
-| 特性 | 说明 |
+| 属性 | 说明 |
 |------------| - |
 | `codebase` | 必需。 标识用于更新应用程序的部署清单的位置，作为统一资源标识符 (URI) [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 。 此元素还允许将更新位置转发到基于 CD 的安装。 必须是有效的 URI。 |
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
  你可以将 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序配置为在启动时扫描更新、在启动后扫描更新或从不检查更新。 若要在启动时扫描更新，请确保元素 `beforeApplicationStartup` 下存在元素 `update` 。 若要在启动后扫描更新，请确保元素 `expiration` 下存在元素 `update` ，并提供更新间隔。
 
  若要禁用检查更新，请删除 `subscription` 元素。 当你在部署清单中指定从不扫描更新时，你仍可以使用方法手动检查更新 <xref:System.Deployment.Application.ApplicationDeployment.CheckForUpdate%2A> 。
@@ -121,5 +123,5 @@ ms.locfileid: "70887853"
   </deployment>
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [ClickOnce 部署清单](../deployment/clickonce-deployment-manifest.md)

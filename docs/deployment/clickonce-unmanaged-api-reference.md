@@ -1,5 +1,7 @@
 ---
 title: ClickOnce 非托管 API 参考 |Microsoft Docs
+description: 了解来自 dfshim.dll 的 ClickOnce 非托管公共 Api，包括 CleanOnlineAppCache、GetDeploymentDataFromManifest 和 LaunchApplication。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 api_name:
 - CleanOnlineAppCache
@@ -28,12 +30,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b536a17df4f54158aa6f157a0d9795cf359ddc0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b5ca8c18c0ed69080a14ba31d4da6d80fa9ae6d4
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62900264"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382606"
 ---
 # <a name="clickonce-unmanaged-api-reference"></a>ClickOnce 非托管 API 参考
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] dfshim.dll 中的非托管公共 Api。
@@ -44,7 +46,7 @@ ms.locfileid: "62900264"
 ### <a name="return-value"></a>返回值
  如果成功，将返回 S_OK;否则，将返回表示失败的 HRESULT。 如果发生托管异常，则返回 0x80020009 (DISP_E_EXCEPTION) 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
  如果调用 CleanOnlineAppCache，将启动该 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 服务（如果尚未运行）。
 
 ## <a name="getdeploymentdatafrommanifest"></a>GetDeploymentDataFromManifest
@@ -68,7 +70,7 @@ ms.locfileid: "62900264"
 ### <a name="return-value"></a>返回值
  如果成功，将返回 S_OK;否则，将返回表示失败的 HRESULT。 如果缓冲区太小，则返回 HRESULTFROMWIN32 (ERROR_INSUFFICIENT_BUFFER) 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
  指针不能为 null。 `pcwzActivationUrl` 和 `pcwzPathToDeploymentManifest` 不得为空。
 
  调用方负责清理激活 URL。 例如，在需要时添加转义符或删除查询字符串。
@@ -89,5 +91,5 @@ ms.locfileid: "62900264"
 ### <a name="return-value"></a>返回值
  如果成功，将返回 S_OK;否则，将返回表示失败的 HRESULT。 如果发生托管异常，则返回 0x80020009 (DISP_E_EXCEPTION) 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - <xref:System.Deployment.Application.DeploymentServiceCom.CleanOnlineAppCache%2A>

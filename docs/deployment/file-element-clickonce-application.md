@@ -1,5 +1,7 @@
 ---
 title: '&lt;&gt; (ClickOnce 应用程序) 的文件元素 |Microsoft Docs'
+description: File 元素标识应用程序下载和使用的所有 nonassembly 文件。 File 元素是可选的。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -22,12 +24,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9345f3f094e1c48204892cd40cca71a7e28eba7c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9a4d09d4a0e141359b066f2af31c158f36c96522
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62900265"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382736"
 ---
 # <a name="ltfilegt-element-clickonce-application"></a>&lt;&gt; (ClickOnce 应用程序) 的文件元素
 标识应用程序下载和使用的所有 nonassembly 文件。
@@ -86,7 +88,7 @@ ms.locfileid: "62900265"
 ## <a name="elements-and-attributes"></a>元素和属性
  `file` 元素是可选的。 元素具有以下属性。
 
-|特性|说明|
+|属性|说明|
 |---------------|-----------------|
 |`name`|必需。 标识文件的名称。|
 |`size`|必需。 指定文件的大小（以字节为单位）。|
@@ -97,7 +99,7 @@ ms.locfileid: "62900265"
 ## <a name="typelib"></a>typelib
  `typelib`元素是 file 元素的可选子元素。 元素描述属于 COM 组件的类型库。 元素具有以下属性。
 
-|特性|说明|
+|属性|说明|
 |---------------|-----------------|
 |`tlbid`|必需。 分配给类型库的 GUID。|
 |`version`|必需。 类型库的版本号。|
@@ -108,7 +110,7 @@ ms.locfileid: "62900265"
 ## <a name="comclass"></a>comClass
  `comClass`元素是元素的一个可选子级 `file` ，但如果 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序包含它打算使用无需注册的 com 进行部署的 COM 组件，则此元素是必需的。 元素具有以下属性。
 
-|特性|说明|
+|属性|说明|
 |---------------|-----------------|
 |`clsid`|必需。 以 GUID 表示的 COM 组件的类 ID。|
 |`description`|可选。 类名。|
@@ -124,7 +126,7 @@ ms.locfileid: "62900265"
 ## <a name="cominterfaceexternalproxystub"></a>comInterfaceExternalProxyStub
  `comInterfaceExternalProxyStub`元素是元素的一个可选子级 `file` ，但如果 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序包含它打算使用免注册 COM 部署的 COM 组件，则可能需要该元素。 元素包含以下属性。
 
-|特性|说明|
+|属性|说明|
 |---------------|-----------------|
 |`iid`|必需。 接口 ID (IID) 此代理提供此接口。 IID 上必须有大括号。|
 |`baseInterface`|可选。 所引用的接口派生自的接口的 IID `iid` 。|
@@ -136,7 +138,7 @@ ms.locfileid: "62900265"
 ## <a name="cominterfaceproxystub"></a>comInterfaceProxyStub
  `comInterfaceProxyStub`元素是元素的一个可选子级 `file` ，但如果 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序包含它打算使用免注册 COM 部署的 COM 组件，则可能需要该元素。 元素包含以下属性。
 
-|特性|说明|
+|属性|说明|
 |---------------|-----------------|
 |`iid`|必需。 接口 ID (IID) 此代理提供此接口。 IID 上必须有大括号。|
 |`baseInterface`|可选。 所引用的接口派生自的接口的 IID `iid` 。|
@@ -149,7 +151,7 @@ ms.locfileid: "62900265"
 ## <a name="windowclass"></a>windowClass
  `windowClass`元素是元素的一个可选子级 `file` ，但如果 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序包含它打算使用免注册 COM 部署的 COM 组件，则可能需要该元素。 元素引用由必须应用了版本的 COM 组件定义的窗口类。 元素包含以下属性。
 
-|特性|说明|
+|属性|说明|
 |---------------|-----------------|
 |`versioned`|可选。 控制在注册中使用的内部窗口类名称是否包含该窗口类的程序集的版本。 此属性的值可以是 `yes` 或 `no` 。 默认值为 `yes`。 `no`仅当并行组件和等效的非并行组件定义了同一窗口类，并且你希望将它们视为同一个窗口类时，才应使用此值。 请注意，适用于窗口类注册的常用规则是：只有注册了 window 类的第一个组件可以注册它，因为它没有应用于它的版本。|
 
@@ -166,21 +168,21 @@ ms.locfileid: "62900265"
 ## <a name="dsigtransform"></a>dsig:Transform
  `dsig:Transform`元素是元素的必需子元素 `dsig:Transforms` 。 `dsig:Transform` 元素具有以下属性。
 
-| 特性 | 说明 |
+| 属性 | 说明 |
 |-------------| - |
 | `Algorithm` | 用于计算此文件摘要的算法。 目前使用的唯一值 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 是 `urn:schemas-microsoft-com:HashTransforms.Identity` 。 |
 
 ## <a name="dsigdigestmethod"></a>dsig:DigestMethod
  `dsig:DigestMethod`元素是元素的必需子元素 `hash` 。 `dsig:DigestMethod` 元素具有以下属性。
 
-| 特性 | 说明 |
+| 属性 | 说明 |
 |-------------| - |
 | `Algorithm` | 用于计算此文件摘要的算法。 目前使用的唯一值 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 是 `http://www.w3.org/2000/09/xmldsig#sha1` 。 |
 
 ## <a name="dsigdigestvalue"></a>dsig:DigestValue
  `dsig:DigestValue`元素是元素的必需子元素 `hash` 。 `dsig:DigestValue` 元素没有属性。 它的文本值为指定文件的计算所得的哈希值。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
  此元素标识构成应用程序的所有 nonassembly 文件，尤其是文件验证的哈希值。 此元素还可以包括组件对象模型 (COM) 与该文件关联的隔离数据。 如果文件发生更改，则还必须更新应用程序清单文件以反映所做的更改。
 
 ## <a name="example"></a>示例
@@ -198,5 +200,5 @@ ms.locfileid: "62900265"
 </file>
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [ClickOnce 应用程序清单](../deployment/clickonce-application-manifest.md)

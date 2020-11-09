@@ -1,5 +1,7 @@
 ---
 title: '&lt;&gt; (ClickOnce 部署) 的 compatibleFrameworks 元素 |Microsoft Docs'
+description: CompatibleFrameworks 元素标识可以安装和运行此应用程序的 .NET Framework 的版本。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,29 +16,29 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 99db3d51414197df469aaa2eabe97e0967c31b05
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5da9819cd3df667be5e8fa04372684f82762c037
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "66746029"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94383061"
 ---
 # <a name="ltcompatibleframeworksgt-element-clickonce-deployment"></a>&lt;&gt; (ClickOnce 部署的 compatibleFrameworks 元素) 
 标识此应用程序可在其上安装和运行的 .NET Framework 版本。
 
 > [!NOTE]
-> [*MageUI.exe*](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client) `compatibleFrameworks` 使用[*MageUI.exe*](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)保存已使用证书签名的应用程序清单时，MageUI.exe不支持元素。 相反，您必须使用 [*Mage.exe*](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)。
+> [*MageUI.exe*](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client) `compatibleFrameworks` 使用 [*MageUI.exe*](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)保存已使用证书签名的应用程序清单时，MageUI.exe不支持元素。 相反，您必须使用 [*Mage.exe*](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)。
 
 ## <a name="syntax"></a>语法
 
 ```xml
 <compatibleFrameworks
-      SupportUrl> 
+      SupportUrl> 
    <framework
       targetVersion
       profile
       supportedRuntime
-   /> 
+   /> 
 </ compatibleFrameworks>
 ```
 
@@ -45,14 +47,14 @@ ms.locfileid: "66746029"
 
  下表列出了元素支持的属性 `compatibleFrameworks` 。
 
-|特性|说明|
+|属性|说明|
 |---------------|-----------------|
 |`S` `upportUrl`|可选。 指定可在其中下载首选兼容 .NET Framework 版本的 URL。|
 
 ## <a name="framework"></a>框架
  必需。 下表列出了元素支持的属性 `framework` 。
 
-|特性|说明|
+|属性|说明|
 |---------------|-----------------|
 |`targetVersion`|必需。 指定目标 .NET Framework 的版本号。|
 |`profile`|必需。 指定目标 .NET Framework 的配置文件。|
@@ -72,5 +74,5 @@ ms.locfileid: "66746029"
 </compatibleFrameworks>
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [ClickOnce 部署清单](../deployment/clickonce-deployment-manifest.md)

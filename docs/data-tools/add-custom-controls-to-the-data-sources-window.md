@@ -1,5 +1,6 @@
 ---
 title: 向“数据源”窗口添加自定义控件
+description: 向 Visual Studio 中的 "数据源" 窗口添加自定义控件。 自定义可绑定控件列表。 添加关联控件。
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -15,12 +16,12 @@ ms.assetid: 8c43e7d2-ba94-4d9b-96de-3aa971955afd
 author: ghogen
 ms.author: ghogen
 manager: jillfra
-ms.openlocfilehash: 39ff272581793be9b456bbc404119a488850b3c4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 004004a420374f3b0ce9504098ac5836cb307f1d
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85283068"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382060"
 ---
 # <a name="add-custom-controls-to-the-data-sources-window"></a>向“数据源”窗口添加自定义控件
 
@@ -39,21 +40,21 @@ ms.locfileid: "85283068"
 2. 在 " **数据源** " 窗口中，单击作为添加到窗口的数据源的一部分的项，然后单击该项的下拉菜单。
 
    > [!TIP]
-   > 如果 "数据源" 窗口未打开，请选择 "**查看**  >  **其他 Windows**  >  **数据源**" 将其打开。
+   > 如果 "数据源" 窗口未打开，请选择 " **查看**  >  **其他 Windows**  >  **数据源** " 将其打开。
 
-3. 在下拉菜单中，单击 " **自定义**"。 此时将打开下列对话框之一：
+3. 在下拉菜单中，单击 " **自定义** "。 此时将打开下列对话框之一：
 
-    - 如果**Windows 窗体设计器**处于打开状态，则会打开 "**选项**" 对话框的 "**数据 UI 自定义**" 页。 有关详细信息，请参阅 " [数据 UI 自定义选项" 对话框](../ide/reference/options-windows-forms-designer-data-ui-customization.md)。
+    - 如果 **Windows 窗体设计器** 处于打开状态，则会打开 " **选项** " 对话框的 " **数据 UI 自定义** " 页。 有关详细信息，请参阅 " [数据 UI 自定义选项" 对话框](../ide/reference/options-windows-forms-designer-data-ui-customization.md)。
 
     - 如果 **WPF 设计器** 处于打开状态，则 " **自定义控件绑定** " 对话框将打开。
 
 4. 在对话框中，从 " **数据类型** " 下拉列表中选择一种数据类型。
 
-    - 若要自定义表或对象的控件列表，请选择 " **列表**"。
+    - 若要自定义表或对象的控件列表，请选择 " **列表** "。
 
     - 若要为表的列或对象的属性自定义控件列表，请选择基础数据存储区中的列或属性的数据类型。
 
-    - 若要自定义控件列表以显示具有用户定义的形状的数据对象，请选择 " **[其他]**"。 例如，如果您的应用程序具有可显示特定对象的多个属性的数据的自定义控件，则选择 " **[其他]** "。
+    - 若要自定义控件列表以显示具有用户定义的形状的数据对象，请选择 " **[其他]** "。 例如，如果您的应用程序具有可显示特定对象的多个属性的数据的自定义控件，则选择 " **[其他]** "。
 
 5. 在 " **关联的控件** " 框中，选择要用于所选数据类型的每个控件，或取消选择要从列表中删除的任何控件。
 
@@ -72,11 +73,11 @@ ms.locfileid: "85283068"
 
 若要将控件添加到关联控件列表：
 
-1. 右键单击**工具箱**并选择 "**选择项**"，将所需的控件添加到 "**工具箱**"。
+1. 右键单击 **工具箱** 并选择 " **选择项** "，将所需的控件添加到 " **工具箱** "。
 
      控件必须具有以下属性之一：
 
-    |特性|说明|
+    |属性|说明|
     |---------------|-----------------|
     |<xref:System.ComponentModel.DefaultBindingPropertyAttribute>|在显示单列 (或属性) 数据的简单控件上实现此特性，例如 <xref:System.Windows.Forms.TextBox> 。|
     |<xref:System.ComponentModel.ComplexBindingPropertiesAttribute>|在显示列表 (或表) 数据的控件（如）中实现此特性 <xref:System.Windows.Forms.DataGridView> 。|
@@ -89,7 +90,7 @@ ms.locfileid: "85283068"
     > [!NOTE]
     > 只有位于当前解决方案或被引用程序集中的控件才能添加到关联控件列表中。  (控件还必须实现上一个表中的一个数据绑定属性。 ) 要将数据绑定到 "数据源" 窗口中不可用的自定义控件，请将该控件从 " **工具箱** " 拖到设计图面上，然后从 " **数据源** " 窗口中将该项拖到控件上。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [在 Visual Studio 中将控件绑定到数据](../data-tools/bind-controls-to-data-in-visual-studio.md)
 - ["数据 UI 自定义选项" 对话框](../ide/reference/options-windows-forms-designer-data-ui-customization.md)

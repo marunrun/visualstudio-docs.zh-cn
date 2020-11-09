@@ -1,5 +1,6 @@
 ---
 title: 将 Windows 窗体控件绑定到数据
+description: 将 Windows 窗体控件绑定到 Visual Studio 中的数据，以便您可以向应用程序的用户显示数据。
 ms.date: 11/03/2017
 ms.topic: how-to
 helpviewer_keywords:
@@ -17,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 9af6c503b34d00ea88e74b8af40cd9e7ded643ff
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 48697fb5a031496b5e69c4dd8d6821ad243d3874
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89508543"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382372"
 ---
 # <a name="bind-windows-forms-controls-to-data-in-visual-studio"></a>在 Visual Studio 中将 Windows 窗体控件绑定到数据
 
@@ -31,7 +32,7 @@ ms.locfileid: "89508543"
 ![数据源拖动操作](../data-tools/media/raddata-data-source-drag-operation.png)
 
 > [!TIP]
-> 如果 "**数据源**" 窗口不可见，可以通过选择 "**查看**  >  **其他 Windows**  >  **数据源**" 或按**Shift** + **Alt** + **D**打开它。 若要查看 " **数据源** " 窗口，必须在 Visual Studio 中打开一个项目。
+> 如果 " **数据源** " 窗口不可见，可以通过选择 " **查看**  >  **其他 Windows**  >  **数据源** " 或按 **Shift** + **Alt** + **D** 打开它。 若要查看 " **数据源** " 窗口，必须在 Visual Studio 中打开一个项目。
 
 在拖动项之前，您可以设置要绑定到的控件的类型。 显示不同的值，具体取决于您选择的是表本身还是单独的列。  还可以设置自定义值。 对于表， **详细信息** 意味着每个列绑定到一个单独的控件。
 
@@ -53,7 +54,7 @@ ms.locfileid: "89508543"
 
 ## <a name="bind-to-data-in-a-datagridview-control"></a>绑定到 DataGridView 控件中的数据
 
-对于 [DataGridView 控件](/dotnet/framework/winforms/controls/datagridview-control-overview-windows-forms)，整个表将绑定到该单个控件。 将 **DataGridView** 拖到窗体时，还会出现用于导航记录 () 的工具条 <xref:System.Windows.Forms.BindingNavigator> 。 [数据集](../data-tools/dataset-tools-in-visual-studio.md)、 [TableAdapter](../data-tools/create-and-configure-tableadapters.md)、 <xref:System.Windows.Forms.BindingSource> 和 <xref:System.Windows.Forms.BindingNavigator> 显示在组件栏中。 在下图中，还添加了一个 [TableAdapterManager](/previous-versions/bb384426(v=vs.140)) ，因为 Customers 表与 Orders 表有一个关系。 这些变量都在自动生成的代码中声明为 form 类中的私有成员。 用于填充 **DataGridView** 的自动生成的代码位于 `Form_Load` 事件处理程序中。 用于保存用于更新数据库的数据的代码位于 `Save` **BindingNavigator**的事件处理程序中。 您可以根据需要移动或修改此代码。
+对于 [DataGridView 控件](/dotnet/framework/winforms/controls/datagridview-control-overview-windows-forms)，整个表将绑定到该单个控件。 将 **DataGridView** 拖到窗体时，还会出现用于导航记录 () 的工具条 <xref:System.Windows.Forms.BindingNavigator> 。 [数据集](../data-tools/dataset-tools-in-visual-studio.md)、 [TableAdapter](../data-tools/create-and-configure-tableadapters.md)、 <xref:System.Windows.Forms.BindingSource> 和 <xref:System.Windows.Forms.BindingNavigator> 显示在组件栏中。 在下图中，还添加了一个 [TableAdapterManager](/previous-versions/bb384426(v=vs.140)) ，因为 Customers 表与 Orders 表有一个关系。 这些变量都在自动生成的代码中声明为 form 类中的私有成员。 用于填充 **DataGridView** 的自动生成的代码位于 `Form_Load` 事件处理程序中。 用于保存用于更新数据库的数据的代码位于 `Save` **BindingNavigator** 的事件处理程序中。 您可以根据需要移动或修改此代码。
 
 ![BindingNavigator 与 BindingNavigator](../data-tools/media/raddata-gridview-with-bindingnavigator.png)
 
@@ -67,20 +68,20 @@ ms.locfileid: "89508543"
 
 ## <a name="bind-to-data-in-individual-controls"></a>绑定到各个控件中的数据
 
-将数据源绑定到 **详细信息**时，数据集中的每一列都将绑定到一个单独的控件。
+将数据源绑定到 **详细信息** 时，数据集中的每一列都将绑定到一个单独的控件。
 
 ![将数据源绑定到详细信息](../data-tools/media/raddata-bind-data-source-to-details.png)
 
 > [!IMPORTANT]
-> 请注意，在上图中，从 Customers 表的 Orders 属性中进行拖动，而不是从 Orders 表中进行拖动。 绑定到 `Customer.Orders` 属性后， **DataGridView** 中生成的导航命令会立即反映在详细信息控件中。 如果从 Orders 表中拖动，控件仍将绑定到数据集，但不会与 **DataGridView**同步。
+> 请注意，在上图中，从 Customers 表的 Orders 属性中进行拖动，而不是从 Orders 表中进行拖动。 绑定到 `Customer.Orders` 属性后， **DataGridView** 中生成的导航命令会立即反映在详细信息控件中。 如果从 Orders 表中拖动，控件仍将绑定到数据集，但不会与 **DataGridView** 同步。
 
-下图显示了在 Customers 表中的 Orders 属性绑定到 "**数据源**" 窗口中的 "**详细信息**" 之后，添加到窗体中的默认数据绑定控件。
+下图显示了在 Customers 表中的 Orders 属性绑定到 " **数据源** " 窗口中的 " **详细信息** " 之后，添加到窗体中的默认数据绑定控件。
 
 ![绑定到详细信息的订单表](../data-tools/media/raddata-orders-table-bound-to-details.png)
 
 另请注意，每个控件都有一个智能标记。 此标记启用仅适用于该控件的自定义项。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [在 Visual Studio 中将控件绑定到数据](../data-tools/bind-controls-to-data-in-visual-studio.md)
 - [Windows 窗体 ( .NET Framework 中的数据绑定) ](/dotnet/framework/winforms/windows-forms-data-binding)

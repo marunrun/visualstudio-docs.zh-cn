@@ -1,5 +1,6 @@
 ---
 title: 自动递增 ClickOnce 发布版本
+description: 了解如何使用 Visual Studio 禁用 ClickOnce 应用程序的修订号自动递增。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -18,18 +19,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f6267e75db2e2a23d01368cdaa822d835cb8b844
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: b4d39654134177f3936bd2fbe72b6786ca9cf03c
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809789"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382619"
 ---
 # <a name="how-to-automatically-increment-the-clickonce-publish-version"></a>如何：自动递增 ClickOnce 发布版本
 
 发布 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序时，更改 `Publish Version` 属性将导致应用程序作为更新发布。 默认情况下， `Revision` `Publish Version` 每次发布应用程序时，Visual Studio 都会自动递增。
 
-您可以在 "**项目设计器**" 的 "**发布**" 页上禁用此行为。
+您可以在 " **项目设计器** " 的 " **发布** " 页上禁用此行为。
 
 > [!NOTE]
 > 显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[重置设置](../ide/environment-settings.md#reset-settings)。
@@ -42,7 +43,7 @@ ms.locfileid: "90809789"
 
 3. 在 " **发布版本** " 部分中，清除 " **自动递增每个版本的修订版本** " 复选框。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [如何：设置 ClickOnce 发布版本](../deployment/how-to-set-the-clickonce-publish-version.md)
 - [发布 ClickOnce 应用程序](../deployment/publishing-clickonce-applications.md)

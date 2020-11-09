@@ -1,5 +1,7 @@
 ---
 title: '&lt;&gt; (ClickOnce 部署) 的依赖关系元素 |Microsoft Docs'
+description: 依赖关系元素标识要安装的应用程序的版本以及应用程序清单的位置。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -25,12 +27,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 84e26a2d7dae70e0029817d4e6bb6e70dd53bce4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8e77f115eb4014f16107ae167576ed0d923bffe8
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62928953"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382957"
 ---
 # <a name="ltdependencygt-element-clickonce-deployment"></a>&lt;&gt;ClickOnce 部署 (依赖关系元素) 
 标识要安装的应用程序的版本以及应用程序清单的位置。
@@ -78,7 +80,7 @@ ms.locfileid: "62928953"
 ## <a name="dependentassembly"></a>dependentAssembly
  必需。 此元素包含 `assemblyIdentity` 元素。 下表显示了支持的属性 `dependentAssembly` 。
 
-| 特性 | 说明 |
+| 属性 | 说明 |
 |------------------| - |
 | `preRequisite` | 可选。 指定此程序集应已存在于 GAC 中。 有效值为 `true` 和 `false`。 如果 `true` 和 GAC 中不存在指定的程序集，则该应用程序将无法运行。 |
 | `visible` | 可选。 标识顶级应用程序标识，包括其依赖项。 供内部使用， [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 以管理应用程序存储和激活。 |
@@ -89,7 +91,7 @@ ms.locfileid: "62928953"
 ## <a name="assemblyidentity"></a>assemblyIdentity
  必需。 此元素是 `dependentAssembly` 元素的子元素。 的内容 `assemblyIdentity` 必须与应用程序清单中所述相同 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 。 下表显示了元素的属性 `assemblyIdentity` 。
 
-|特性|说明|
+|属性|说明|
 |---------------|-----------------|
 |`Name`|必需。 标识应用程序的名称。|
 |`Version`|必需。 指定应用程序的版本号，格式如下： `major.minor.build.revision`|
@@ -109,21 +111,21 @@ ms.locfileid: "62928953"
 ## <a name="dsigtransform"></a>dsig:Transform
  `dsig:Transform`元素是元素的必需子元素 `dsig:Transforms` 。 下表显示了元素的属性 `dsig:Transform` 。
 
-| 特性 | 说明 |
+| 属性 | 说明 |
 |-------------| - |
 | `Algorithm` | 用于计算此文件摘要的算法。 目前使用的唯一值 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 是 `urn:schemas-microsoft-com:HashTransforms.Identity` 。 |
 
 ## <a name="dsigdigestmethod"></a>dsig:DigestMethod
  `dsig:DigestMethod`元素是元素的必需子元素 `hash` 。 下表显示了元素的属性 `dsig:DigestMethod` 。
 
-| 特性 | 说明 |
+| 属性 | 说明 |
 |-------------| - |
 | `Algorithm` | 用于计算此文件摘要的算法。 目前使用的唯一值 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 是 `http://www.w3.org/2000/09/xmldsig#sha1` 。 |
 
 ## <a name="dsigdigestvalue"></a>dsig:DigestValue
  `dsig:DigestValue`元素是元素的必需子元素 `hash` 。 `dsig:DigestValue` 元素没有属性。 它的文本值为指定文件的计算所得的哈希值。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
  部署清单通常具有单个 `assemblyIdentity` 元素，用于标识应用程序清单的名称和版本。
 
 ## <a name="example"></a>示例
@@ -180,6 +182,6 @@ ms.locfileid: "62928953"
 </dependency>
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [ClickOnce 部署清单](../deployment/clickonce-deployment-manifest.md)
 - [\<dependency> element](../deployment/dependency-element-clickonce-application.md)

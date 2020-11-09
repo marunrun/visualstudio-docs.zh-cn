@@ -1,5 +1,7 @@
 ---
 title: '&lt;&gt; (ClickOnce 应用程序) 的 assemblyIdentity 元素 |Microsoft Docs'
+description: 在 ClickOnce 应用程序中，assemblyIdentity 元素是必需的。 它不包含任何子元素，并且包含本文中所述的属性。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7870fcf644103ec7f048a809e439cb962f63bd07
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c86d5d1fd1e25b498405197b68efd9553ed64f16
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62900662"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94383204"
 ---
 # <a name="ltassemblyidentitygt-element-clickonce-application"></a>&lt;&gt; (ClickOnce 应用程序的 assemblyIdentity 元素) 
 标识部署中部署的应用程序 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 。
@@ -42,7 +44,7 @@ ms.locfileid: "62900662"
 ## <a name="elements-and-attributes"></a>元素和属性
  `assemblyIdentity` 元素是必需的。 它不包含任何子元素，并且具有以下属性。
 
-|特性|说明|
+|属性|说明|
 |---------------|-----------------|
 |`Name`|必需。 标识应用程序的名称。<br /><br /> 如果 `Name` 包含特殊字符（如单引号或双引号），则应用程序可能无法激活。|
 |`Version`|必需。 按以下格式指定应用程序的版本号： `major.minor.build.revision`|

@@ -1,5 +1,6 @@
 ---
 title: '将受信任的发布者添加到客户端 box (ClickOnce) '
+description: 了解如何将证书添加到客户端计算机，以便在不提示用户的情况下以更高的信任级别运行 ClickOnce 应用程序。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -16,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4146efe0790e2bfd4abfa9e30897811aba182916
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: cef5eb1df80c7fffcc4a938504e82cac2aa3ae46
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809802"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382697"
 ---
 # <a name="how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications"></a>如何：为 ClickOnce 应用程序向客户端计算机添加一个受信任的发行者
 借助受信任的应用程序部署，可以配置客户端计算机，以便 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序在不提示用户的情况下以更高信任级别运行。 下面的过程演示如何使用命令行工具 CertMgr.exe 将发布者的证书添加到客户端计算机上的“受信任的发布者”存储。
@@ -39,7 +40,7 @@ ms.locfileid: "90809802"
 
 1. 从 CA 获取数字证书。
 
-2. 将证书导出为 Base64 x.509 (*.cer*) 格式。 有关证书格式的详细信息，请参阅 [导出证书](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730988(v=ws.10))。
+2. 将证书导出为 Base64 x.509 ( *.cer* ) 格式。 有关证书格式的详细信息，请参阅 [导出证书](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730988(v=ws.10))。
 
 3. 从客户端计算机上的命令提示符处，运行以下命令：
 
@@ -49,7 +50,7 @@ ms.locfileid: "90809802"
 
 1. 从 CA 获取数字证书。
 
-2. 将证书导出为 Base64 x.509 (*.cer*) 格式。 有关证书格式的详细信息，请参阅 [导出证书](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730988(v=ws.10))。
+2. 将证书导出为 Base64 x.509 ( *.cer* ) 格式。 有关证书格式的详细信息，请参阅 [导出证书](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730988(v=ws.10))。
 
 3. 从客户端计算机上的命令提示符处，运行以下命令：
 
@@ -57,7 +58,7 @@ ms.locfileid: "90809802"
 
      **certmgr.exe -add good.cer -c -s -r localMachine TrustedPublisher**
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [演练：手动部署 ClickOnce 应用程序](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)
 - [保护 ClickOnce 应用程序](../deployment/securing-clickonce-applications.md)
 - [ClickOnce 应用程序的代码访问安全性](../deployment/code-access-security-for-clickonce-applications.md)

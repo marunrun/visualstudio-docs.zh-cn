@@ -1,6 +1,6 @@
 ---
 title: 属性列出了两次
-description: 无法创建关联 - 属性被列出了两次
+description: 无法创建一次列出的关联属性。 查看有关此 Visual Studio 的信息，对象关系设计器 (O/R 设计器) 消息。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: error-reference
@@ -11,28 +11,28 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: d0e3475896c937f247fc64a0750da25c2d6edac9
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: d4cb795a5d608e31c26ccec0b96f359a5c63cee7
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036478"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94381774"
 ---
 # <a name="cannot-create-an-association-ltassociation-namegt---property-listed-twice"></a>无法创建关联 &lt;关联名称&gt; - 属性已列出两次
 
 无法创建关联 \<association name> 。 多次列出相同的属性： \<property name> 。
 
-关联由在“关联编辑器”对话框中选择的“关联属性”定义********。 对于关联中的每个类，属性只能列出一次。
+关联由在“关联编辑器”对话框中选择的“关联属性”定义。 对于关联中的每个类，属性只能列出一次。
 
-消息中的属性在 Parent 类或 Child 类的“关联属性”中出现了多次****。
+消息中的属性在 Parent 类或 Child 类的“关联属性”中出现了多次。
 
 ## <a name="to-resolve-this-condition"></a>解决此问题的方法
 
 - 检查消息并记下消息中指定的属性。
 
-- 单击“确定”，关闭该消息框****。
+- 单击“确定”，关闭该消息框。
 
-- 检查“关联属性”并移除重复项****。
+- 检查“关联属性”并移除重复项。
 
 - 单击 **“确定”** 。
 

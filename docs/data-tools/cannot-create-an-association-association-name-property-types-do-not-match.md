@@ -1,6 +1,6 @@
 ---
 title: 属性类型不匹配
-description: 无法创建关联 - 属性类型不匹配
+description: 无法创建关联-属性类型不匹配。 查看有关此 Visual Studio 的信息，对象关系设计器 (O/R 设计器) 消息。
 ms.date: 11/04/2016
 ms.topic: error-reference
 ms.assetid: 97ec5a04-6e23-45a2-9226-d77ead854392
@@ -9,18 +9,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 76d61361677923afda6125db1ae819a460a567f4
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: bce5a285f3bccdc2be8004f0eba4546bb7964a42
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89743187"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382047"
 ---
 # <a name="cannot-create-an-association-ltassociation-namegt---property-types-do-not-match"></a>无法创建关联&lt;关联名称&gt; - 属性类型不匹配
 
 无法创建关联 \<association name> -属性类型不匹配。 属性没有匹配的类型： \<property names> 。
 
-关联由在“关联编辑器”对话框中选择的“关联属性”定义********。 关联双方的属性必须具有相同的数据类型。
+关联由在“关联编辑器”对话框中选择的“关联属性”定义。 关联双方的属性必须具有相同的数据类型。
 
 消息中列出的属性不具有相同的数据类型。
 
@@ -28,9 +28,9 @@ ms.locfileid: "89743187"
 
 1. 检查消息并记下消息中报告的属性。
 
-2. 单击“确定”关闭对话框****。
+2. 单击“确定”关闭对话框。
 
-3. 检查“关联属性”并选择数据类型相同的属性****。
+3. 检查“关联属性”并选择数据类型相同的属性。
 
 4. 单击 **“确定”** 。
 

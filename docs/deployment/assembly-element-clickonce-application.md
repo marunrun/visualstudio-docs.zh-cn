@@ -1,5 +1,7 @@
 ---
 title: '&lt;&gt; (ClickOnce 应用程序) 的 assembly 元素 |Microsoft Docs'
+description: Assembly 元素是根元素，在 ClickOnce 应用程序中是必需的。 其第一个包含的元素必须是 assemblyIdentity 元素。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b629243920021adc3833f43f268f05638029dc7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0c3614cd2d4fc0e6a5eebfb8dc6911e6eb183c01
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62900755"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94383217"
 ---
 # <a name="ltassemblygt-element-clickonce-application"></a>&lt;&gt; (ClickOnce 应用程序的 assembly 元素) 
 应用程序清单的顶级元素。
@@ -48,7 +50,7 @@ ms.locfileid: "62900755"
 
  `assembly` 元素具有以下属性。
 
-|特性|说明|
+|属性|说明|
 |---------------|-----------------|
 |`manifestVersion`|必需。 `manifestVersion`特性必须设置为 `1.0` 。|
 
@@ -69,6 +71,6 @@ ms.locfileid: "62900755"
   xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1">
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [ClickOnce 应用程序清单](../deployment/clickonce-application-manifest.md)
 - [\<assembly> element](../deployment/assembly-element-clickonce-deployment.md)

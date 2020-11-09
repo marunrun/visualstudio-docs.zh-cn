@@ -1,5 +1,6 @@
 ---
 title: 在 Visual Studio 中处理数据
+description: 在 Visual Studio 中处理数据。 通过本地计算机、Lan 或公有云或私有云创建连接到其他数据库产品或服务中的数据的应用。
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: d1a82cc5fc5ea34f007750a08c0e8140421a9f41
-ms.sourcegitcommit: 3e05bd4bfac6f0b8b3534d8c013388f67e288651
+ms.openlocfilehash: 846898c1cf93d0f90ce04e77ee93bd8802e22ec2
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91959817"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382086"
 ---
 # <a name="work-with-data-in-visual-studio"></a>在 Visual Studio 中处理数据
 
@@ -26,10 +27,10 @@ ms.locfileid: "91959817"
 对于 JavaScript、Python、PHP、Ruby 或 c + + 中的应用程序，你可以通过获取库和编写代码来连接到你执行任何其他操作等数据。 对于 .NET 应用程序，Visual Studio 提供的工具可用于浏览数据源、创建对象模型以便在内存中存储和处理数据，以及将数据绑定到用户界面。 Microsoft Azure 提供适用于 .NET、Java、Node.js、PHP、Python、Ruby 和移动应用的 Sdk 以及 Visual Studio 中用于连接到 Azure 存储的工具。
 
 ::: moniker range="vs-2017"
-以下列表仅显示了可从 Visual Studio 中使用的多个数据库和存储系统中的几个。 [Microsoft Azure](https://azure.microsoft.com/)产品是数据服务，其中包括基础数据存储的所有预配和管理。 利用[Visual studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)中的**azure 开发**工作负载，你可以直接从 Visual studio 使用 azure 数据存储。
+以下列表仅显示了可从 Visual Studio 中使用的多个数据库和存储系统中的几个。 [Microsoft Azure](https://azure.microsoft.com/)产品是数据服务，其中包括基础数据存储的所有预配和管理。 利用 [Visual studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)中的 **azure 开发** 工作负载，你可以直接从 Visual studio 使用 azure 数据存储。
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-以下列表仅显示了可从 Visual Studio 中使用的多个数据库和存储系统中的几个。 [Microsoft Azure](https://azure.microsoft.com/)产品是数据服务，其中包括基础数据存储的所有预配和管理。 利用[Visual studio 2019](https://visualstudio.microsoft.com/downloads)中的**azure 开发**工作负载，你可以直接从 Visual studio 使用 azure 数据存储。
+以下列表仅显示了可从 Visual Studio 中使用的多个数据库和存储系统中的几个。 [Microsoft Azure](https://azure.microsoft.com/)产品是数据服务，其中包括基础数据存储的所有预配和管理。 利用 [Visual studio 2019](https://visualstudio.microsoft.com/downloads)中的 **azure 开发** 工作负载，你可以直接从 Visual studio 使用 azure 数据存储。
 ::: moniker-end
 
 ![Azure 开发工作负载](media/azure-development-workload.png)
@@ -70,13 +71,13 @@ ms.locfileid: "91959817"
 
 ::: moniker range="vs-2017"
 
-许多数据库供应商和第三方支持通过 NuGet 包与 Visual Studio 集成。 你可以在 nuget.org 上浏览产品或通过 Visual Studio 中的 nuget 包管理器 (**工具**"  >  **nuget 包管理器**"  >  **管理解决方案) 的 nuget 包**。 其他数据库产品与 Visual Studio 集成以作为扩展。 可以在[Visual Studio Marketplace](https://marketplace.visualstudio.com/)中浏览这些产品/服务，或者导航到 "**工具**"  >  "**扩展和更新**"，然后在对话框的左窗格中选择 "**联机**"。 有关详细信息，请参阅 [Visual Studio 的兼容数据库系统](../data-tools/installing-database-systems-tools-and-samples.md)。
+许多数据库供应商和第三方支持通过 NuGet 包与 Visual Studio 集成。 你可以在 nuget.org 上浏览产品或通过 Visual Studio 中的 nuget 包管理器 ( **工具** "  >  **nuget 包管理器** "  >  **管理解决方案) 的 nuget 包** 。 其他数据库产品与 Visual Studio 集成以作为扩展。 可以在 [Visual Studio Marketplace](https://marketplace.visualstudio.com/)中浏览这些产品/服务，或者导航到 " **工具** "  >  " **扩展和更新** "，然后在对话框的左窗格中选择 " **联机** "。 有关详细信息，请参阅 [Visual Studio 的兼容数据库系统](../data-tools/installing-database-systems-tools-and-samples.md)。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-许多数据库供应商和第三方支持通过 NuGet 包与 Visual Studio 集成。 你可以在 nuget.org 上浏览产品或通过 Visual Studio 中的 nuget 包管理器 (**工具**"  >  **nuget 包管理器**"  >  **管理解决方案) 的 nuget 包**。 其他数据库产品与 Visual Studio 集成以作为扩展。 你可以在[Visual Studio Marketplace](https://marketplace.visualstudio.com/)中浏览这些产品，或者导航到 "**扩展**" "  >  **管理扩展**"，然后在对话框的左窗格中选择 "**联机**"。 有关详细信息，请参阅 [Visual Studio 的兼容数据库系统](../data-tools/installing-database-systems-tools-and-samples.md)。
+许多数据库供应商和第三方支持通过 NuGet 包与 Visual Studio 集成。 你可以在 nuget.org 上浏览产品或通过 Visual Studio 中的 nuget 包管理器 ( **工具** "  >  **nuget 包管理器** "  >  **管理解决方案) 的 nuget 包** 。 其他数据库产品与 Visual Studio 集成以作为扩展。 你可以在 [Visual Studio Marketplace](https://marketplace.visualstudio.com/)中浏览这些产品，或者导航到 " **扩展** " "  >  **管理扩展** "，然后在对话框的左窗格中选择 " **联机** "。 有关详细信息，请参阅 [Visual Studio 的兼容数据库系统](../data-tools/installing-database-systems-tools-and-samples.md)。
 
 ::: moniker-end
 
@@ -123,7 +124,7 @@ ms.locfileid: "91959817"
 
 若要详细了解如何从 c + + 应用程序连接到数据库，请参阅 [Visual Studio data tools For c + +](../data-tools/visual-studio-data-tools-for-cpp.md)。 有关旧 Visual C++ 数据访问技术的详细信息，请参阅 [数据访问](/cpp/data/data-access-in-cpp)。
 
-## <a name="javascript"></a>JavaScript
+## <a name="javascript"></a>Javascript
 
 [Visual Studio 中的 JavaScript](/scripting/javascript/javascript-language-reference) 是一种用于构建跨平台应用、UWP 应用、云服务、网站和 web 应用的一流语言。 你可以从 Visual Studio 中使用 Bower、Grunt、Gulp、npm 和 NuGet 来安装你最喜欢的 JavaScript 库和数据库产品。 通过从 [azure 网站](https://azure.microsoft.com/)下载 sdk 来连接到 azure 存储和服务。 Edge.js 是将服务器端 JavaScript ( # A1) 连接到 ADO.NET 数据源的库。
 
