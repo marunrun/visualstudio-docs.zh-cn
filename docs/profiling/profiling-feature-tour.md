@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cb9de05b7e57e4ebc4e7ea76c688a7203774404a
-ms.sourcegitcommit: 172aaf05596a9d8ded298b7b104569c1cce6160e
+ms.openlocfilehash: 849b9d7bd6aca3fa56cb0106bea844ce1fa56b73
+ms.sourcegitcommit: ae9145b32fc8e1e663e504c315a5df5dd302fee9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92007185"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92918235"
 ---
 # <a name="first-look-at-profiling-tools"></a>首先了解分析工具
 
@@ -62,8 +62,8 @@ Visual Studio 提供了各种分析工具，可依据你的应用类型帮助你
 性能探查器中提供的工具包括：
 
 - [CPU 使用率](../profiling/cpu-usage.md)
-- [.NET 代码的内存使用率](../profiling/dotnet-alloc-tool.md)
-- [内存使用率](#analyze-memory-usage)
+- [.NET 对象分配](../profiling/dotnet-alloc-tool.md)
+- [内存使用率](../profiling/memory-usage-without-debugging2.md)
 - [.NET Async 工具](../profiling/analyze-async.md)
 - [数据库工具](../profiling/analyze-database.md)
 - [GPU 使用情况](../profiling/gpu-usage.md)
@@ -107,7 +107,12 @@ CPU 使用率工具很适合用于开始分析应用的性能。 它将向你详
 
 ## <a name="analyze-memory-usage"></a>分析内存使用情况
 
-借助“诊断工具”窗口，你还可以使用“内存使用情况”工具来评估应用中的内存使用情况 。 例如，你可以查看堆上对象的数量和大小。 可以使用[集成了调试器的内存使用率工具](../profiling/memory-usage.md)或[性能探查器](../profiling/memory-usage-without-debugging2.md)中的事后分析内存使用率工具。 另一种内存分析工具 [.NET 对象分配工具](../profiling/dotnet-alloc-tool.md)可帮助确定 .NET 代码中的分配模式和异常。
+借助“诊断工具”窗口，你还可以使用“内存使用情况”工具来评估应用中的内存使用情况 。 例如，你可以查看堆上对象的数量和大小。 可以使用[集成了调试器的内存使用率工具](../profiling/memory-usage.md)或[性能探查器](../profiling/memory-usage-without-debugging2.md)中的事后分析内存使用率工具。
+
+.NET 开发人员可以在 [.NET 对象分配工具](../profiling/dotnet-alloc-tool.md)或[内存使用](../profiling/memory-usage.md)工具之间进行选择。
+
+- .NET 对象分配工具可帮助确定 .NET 代码中的分配模式和异常，并帮助确认垃圾回收的常见问题。 此工具仅作为事后分析工具运行。 可以在本地或远程计算机上运行此工具。
+- “内存使用”工具可帮助识别内存泄漏，这在 .NET 应用中通常不常见。 如果需要在检查内存时使用调试器功能，如单步执行代码，则建议使用[集成了调试器的内存使用](../profiling/beginners-guide-to-performance-profiling.md)工具。
 
 若要使用 **内存使用情况** 工具分析内存使用情况，需要拍摄至少一张内存快照。 通常，分析内存的最好方法是拍摄两张快照；一张正好拍摄于发生可疑内存问题之前，另一张拍摄于发生可疑内存问题之后。 然后可以查看两张快照的差异，并发现实际更改的内容。 下图显示了如何使用集成了调试器的工具拍摄快照。
 
@@ -169,7 +174,7 @@ Allocation![](./media/db-gotosource.png "分配")
 
 在 Direct3D 应用（Direct3D 组件必须使用 C++）中，你可以检查关于 GPU 的活动并分析性能问题。 有关详细信息，请参阅 [GPU 使用情况](./gpu-usage.md)。 若要使用该工具，请在性能探查器中选择“GPU 使用情况”，然后选择“开始”。 在应用中，浏览你对分析感兴趣的应用场景，然后选择“停止收集”生成报表。
 
-在关系图中选择一个时间段，并选择“查看详细信息”后，下方窗格中将出现详细信息视图。 在详细信息视图中，你可以检查每个 CPU 和 GPU 上发生活动的数量。 选择底部窗格中的事件可在时间线中获得弹出窗口。 例如，选择 **Present** 事件可查看 **Present** 调用弹出窗口。 （浅灰色垂直 Vsync 线条可以作为参考，用于了解某些 **Present** 是否调用缺少的 Vsync。 为了让应用稳定达到 60 FPS，每两个 Vsync 之间必须有一个 **Present** 调用。）
+在关系图中选择一个时间段，并选择“查看详细信息”后，下方窗格中将出现详细信息视图。 在详细信息视图中，你可以检查每个 CPU 和 GPU 上发生活动的数量。 选择底部窗格中的事件可在时间线中获得弹出窗口。 例如，选择 **Present** 事件可查看 **Present** 调用弹出窗口。 （浅灰色垂直 VSync 线可以作为参考，用于了解某些 Present 调用是否缺少 VSync。 每两个 VSync 之间必须有一个 Present 调用，这样应用才能稳定达到 60 FPS。）
 
 ![GPU 使用情况分析工具](../profiling/media/prof-tour-gpu-usage.png "诊断 GPU 使用情况")
 

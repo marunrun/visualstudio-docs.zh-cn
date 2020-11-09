@@ -1,5 +1,7 @@
 ---
 title: MSBuild 多定向概述 | Microsoft Docs
+description: 了解如何使用 MSBuild 将应用程序编译为在若干 .NET Framework 版本之一和若干系统平台之一上运行。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: eecbcd65-9fbc-4307-a321-46d3c3b79b12
@@ -8,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 609c764192673e4d3f9fbd99a1bc572e9d78db7f
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 47b4ba2c27e130580af961216739289c6c7e9585
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183517"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93046303"
 ---
 # <a name="msbuild-multitargeting-overview"></a>MSBuild 多定向概述
 
@@ -28,7 +30,7 @@ ms.locfileid: "84183517"
 
 - 可以面向 .NET Framework 之外的框架，例如 Silverlight Framework。
 
-- 可以一个*框架配置文件*为目标，该文件是目标框架的预定义子集。
+- 可以一个 *框架配置文件* 为目标，该文件是目标框架的预定义子集。
 
 - 如果已发布 .NET Framework 当前版本的 Service Pack，则可以将其作为目标。
 

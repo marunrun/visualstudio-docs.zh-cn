@@ -1,5 +1,7 @@
 ---
 title: Parameter 元素 | Microsoft Docs
+description: 了解 MSBuild Parameter 元素，它包含 UsingTask TaskFactory 生成的任务的特定参数的相关信息。
+ms.custom: SEO-VS-2020
 ms.date: 03/13/2017
 ms.topic: reference
 dev_langs:
@@ -17,18 +19,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dbf0c25967d84e930ee97a84709c808d3541e733
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: e7aa8809cbce8f07e18666afb1734026fdc9694b
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "78263083"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048885"
 ---
 # <a name="parameter-element"></a>Parameter 元素
 
 包含某个任务的特定参数信息，该任务可通过使用 `UsingTask` `TaskFactory` 生成。  元素的名称就是该参数的名称。  有关详细信息，请参阅 [UsingTask 元素 (MSBuild)](../msbuild/usingtask-element-msbuild.md)。
 
- \<Project> \<UsingTask> \<ParameterGroup> \<Parameter>
+ \<Project> \<UsingTask>
  \<ParameterGroup>
  \<Parameter>
 
@@ -46,7 +48,7 @@ ms.locfileid: "78263083"
 
 ### <a name="attributes"></a>特性
 
-|特性|说明|
+|属性|描述|
 |---------------|-----------------|
 |`ParameterType`|可选特性。<br /><br /> 参数的 .NET 类型，例如，`System.String`。|
 |`Output`|可选布尔属性。<br /><br /> 如果值为 `true`，该参数是任务的输出参数。 默认情况下，该值为 `false`。|
@@ -58,7 +60,7 @@ ms.locfileid: "78263083"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[ParameterGroup](../msbuild/parametergroup-element.md)|包含一系列可选参数，这些参数将显示在通过使用 `UsingTask` `TaskFactory` 生成的任务上。|
 

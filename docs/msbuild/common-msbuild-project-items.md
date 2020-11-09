@@ -2,7 +2,7 @@
 title: 常用的 MSBuild 项目项 | Microsoft Docs
 description: 了解常用的 MSBuild 项目项。 项是对一个或多个文件的命名引用，具有文件名、路径和版本号等元数据。
 ms.custom: SEO-VS-2020
-ms.date: 11/04/2016
+ms.date: 10/29/2020
 ms.topic: reference
 dev_langs:
 - VB
@@ -17,12 +17,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b42ba80365b8aedd9527490235efb1228bc2a61d
-ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
+ms.openlocfilehash: 638f67575a7214047cdb917c994179ac144e60b2
+ms.sourcegitcommit: 49c959911128a733ed2858db7c0e3b565f934b1a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92796389"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93238618"
 ---
 # <a name="common-msbuild-project-items"></a>常用的 MSBuild 项目项
 
@@ -160,7 +160,19 @@ ms.locfileid: "92796389"
 | “值” | 必选字符串。 成为 `AssemblyMetadataAttribute` 特性构造函数中的第二个参数（值）。 |
 
 > [!NOTE]
-> 这仅适用于使用 .NET Core SDK 的项目。
+> 此项适用于使用 SDK for .NET 5（和 .NET Core）及更高版本的项目。
+
+### <a name="internalsvisibleto"></a>InternalsVisibleTo
+
+指定要作为 `[InternalsVisibleTo(..)]` 程序集特性发出的程序集。
+
+| 项元数据名称 | 描述 |
+|-----------------------| - |
+| 包括 | 程序集名称。 |
+| Key | 可选的字符串。 程序集的公钥。 |
+
+> [!NOTE]
+> 此项适用于使用 SDK for .NET 5（和 .NET Core）及更高版本的项目。
 
 ### <a name="baseapplicationmanifest"></a>BaseApplicationManifest
 

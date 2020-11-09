@@ -7,12 +7,12 @@ ms.assetid: 196c6d04-9a33-47d5-b0f1-038e7c3a7ac9
 ms.date: 03/09/2020
 ms.topic: conceptual
 description: 了解如何充分利用 Visual Studio 订阅
-ms.openlocfilehash: 59bfac51eb7888bbad4cc07bf2df25b8c35980fd
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.openlocfilehash: a865bfa5cf7d55504e022efb1b134bddde7d231c
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "91005893"
+ms.lasthandoff: 11/01/2020
+ms.locfileid: "92904683"
 ---
 # <a name="managing-subscriptions"></a>管理订阅
 
@@ -57,7 +57,7 @@ Visual Studio 订阅门户将所有 Visual Studio 订阅和程序汇集到一个
 
 ## <a name="transferring-subscriptions"></a>转让订阅
 
-如果订阅是通过 Microsoft 批量许可购买的，而你需要将其重新分配给组织内的其他人，则管理员则需要为你执行此操作。
+如果订阅是通过 Microsoft 批量许可购买的，而你需要将它重新分配给组织内的其他人，则管理员需要为你执行此操作。
 可以通过联系客户服务将零售订阅转让给其他用户。 免费订阅或“限制转售”订阅不可转让。
 
 ## <a name="managing-my-profile"></a>管理我的个人资料

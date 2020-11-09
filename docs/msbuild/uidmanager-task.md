@@ -1,5 +1,7 @@
 ---
 title: UidManager 任务 | Microsoft Docs
+description: 了解 MSBuild UidManager 任务如何检查、更新或删除唯一标识符 (UID)，以对源 XAML 文件中的所有 XAML 元素进行本地化。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -19,12 +21,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 37692c541fb2a6e9b2ccf61083dd383e56a79766
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 852b910de742676e1fe7dd0c85129640eb37a9ae
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77631518"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93046929"
 ---
 # <a name="uidmanager-task"></a>UidManager 任务
 
@@ -32,11 +34,11 @@ ms.locfileid: "77631518"
 
 ## <a name="task-parameters"></a>任务参数
 
-| 参数 | 描述 |
+| 参数 | 说明 |
 |-------------------------| - |
-| `IntermediateDirectory` | 可选 **String** 参数。<br /><br /> 指定用于备份由 MarkupFiles  参数指定的源 XAML 文件的目录。 |
+| `IntermediateDirectory` | 可选 **String** 参数。<br /><br /> 指定用于备份由 MarkupFiles 参数指定的源 XAML 文件的目录。 |
 | `MarkupFiles` | 必需的 **ITaskItem[]** 参数。<br /><br /> 指定要包含的源 XAML 文件，以用于 UID 检查、更新或删除。 |
-| `Task` | 必需的 **String** 参数。<br /><br /> 指定想要执行的 UID 管理任务。 有效选项为“检查”  、“更新”  或“删除”  。 |
+| `Task` | 必需的 **String** 参数。<br /><br /> 指定想要执行的 UID 管理任务。 有效选项为“检查”、“更新”或“删除”。 |
 
 ## <a name="example"></a>示例
 

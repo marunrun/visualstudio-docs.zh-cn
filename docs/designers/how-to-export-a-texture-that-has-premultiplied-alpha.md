@@ -1,5 +1,7 @@
 ---
 title: 如何：导出包含自左乘的 Alpha 的纹理
+description: 了解图像内容管道如何从源图像生成更易于使用且更可靠的预乘 Alpha 纹理。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 05348afa-f079-4f53-a05b-ecd91d13adab
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a1325b5bc0009ba0c022d37be70ca6aab7cc8084
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d8dd554ed8f3b1664f889909d5d5ae7a30e9889a
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85768911"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93134813"
 ---
 # <a name="how-to-export-a-texture-that-has-premultiplied-alpha"></a>如何：导出包含自左乘的 Alpha 的纹理
 
@@ -40,9 +42,9 @@ ms.locfileid: "85768911"
 
 1. 从基本纹理开始。 加载现有图像文件，或根据[如何：创建基本纹理](../designers/how-to-create-a-basic-texture.md)所述，创建一个纹理。
 
-2. 配置纹理文件，使其由图像内容管道进行处理。 在“解决方案资源管理器”  中，打开纹理文件的快捷菜单，然后选择“属性”  。 在“配置属性” > “常规”页上，将“项目类型”属性设置为“图像内容管道”。 请确保将“内容”  属性设置为“是”  ，并且将“从生成中排除”  设置为“否”  ，然后选择“应用”  按钮。 将出现“图像内容管道”  配置属性页。
+2. 配置纹理文件，使其由图像内容管道进行处理。 在“解决方案资源管理器”中，打开纹理文件的快捷菜单，然后选择“属性”。 在“配置属性” > “常规”页上，将“项目类型”属性设置为“图像内容管道”   。 请确保将“内容”属性设置为“是”，并且将“从生成中排除”设置为“否”，然后选择“应用”按钮。 将出现“图像内容管道”配置属性页。
 
-3. 配置图像内容管道，生成预乘 Alpha。 在“配置属性” > “图像内容管道” > “常规”页上，将“转换为预乘 Alpha 格式”属性设置为“是 (/generatepremultipliedalpha)”。
+3. 配置图像内容管道，生成预乘 Alpha。 在“配置属性” > “图像内容管道” > “常规”页上，将“转换为预乘 Alpha 格式”属性设置为“是 (/generatepremultipliedalpha)”    。
 
 4. 选择 **“确定”** 按钮。
 

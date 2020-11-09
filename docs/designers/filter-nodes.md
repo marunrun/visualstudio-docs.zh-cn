@@ -1,5 +1,7 @@
 ---
 title: 筛选节点
+description: 了解着色器设计器中的筛选节点，它们将输入（如颜色或纹理样本）转换为形象的颜色值。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: f7cae2dc-e9a7-49d4-8be5-58b79868624e
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bfc74287706976f96a5e565bef3da1493cd44866
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 97f81a51248f548ea26283dc193645ff7216eb0f
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85769274"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93134160"
 ---
 # <a name="filter-nodes"></a>筛选节点
 

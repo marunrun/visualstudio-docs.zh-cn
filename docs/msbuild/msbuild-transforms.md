@@ -1,5 +1,7 @@
 ---
 title: MSBuild 转换 | Microsoft Docs
+description: 了解 MSBuild 如何使用转换（从一个项列表到另一个项列表的一对一转换）更高效地生成项目。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 34394ba35a349a1564f6c3fdd43052be3e1fdf03
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4eb35554c61c532e0d004e5c974345564e17d4ae
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633104"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048998"
 ---
 # <a name="msbuild-transforms"></a>MSBuild 转换
 

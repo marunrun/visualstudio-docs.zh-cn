@@ -1,5 +1,7 @@
 ---
 title: When 元素 (MSBuild) | Microsoft Docs
+description: 了解 MSBuild When 元素，它为 Choose 元素指定可供选择的代码块。
+ms.custom: SEO-VS-2020
 ms.date: 03/13/2017
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bcb9404b8c68171f0695b33c285582f5e4c5b4ec
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e373c6491f8f174aba372c9a600e1b5c823dfb00
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77630920"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93046041"
 ---
 # <a name="when-element-msbuild"></a>When 元素 (MSBuild)
 
@@ -52,7 +54,7 @@ ms.locfileid: "77630920"
 
 ### <a name="attributes"></a>特性
 
-|特性|说明|
+|属性|说明|
 |---------------|-----------------|
 |条件|必需的特性。<br /><br /> 要评估的条件。 有关详细信息，请参阅[条件](../msbuild/msbuild-conditions.md)。|
 

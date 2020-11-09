@@ -1,5 +1,7 @@
 ---
 title: MSBuild 属性 | Microsoft Docs
+description: 了解 MSBuild 名称/值属性对如何将值传递给任务、评估条件并存储值。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 39f1f612244fedcc707475d067e67500dc76e1d9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 61cff0bfa1db43b196d7f6403b5140f9af2947ba
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633286"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93046139"
 ---
 # <a name="msbuild-properties"></a>MSBuild 属性
 

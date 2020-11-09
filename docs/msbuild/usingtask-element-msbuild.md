@@ -1,5 +1,7 @@
 ---
 title: UsingTask 元素 (MSBuild) | Microsoft Docs
+description: 了解 MSBuild UsingTask 元素，它将 Task 元素中引用的任务映射到包含任务实现的程序集。
+ms.custom: SEO-VS-2020
 ms.date: 03/13/2017
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 14556467e0907818333695b3388b2d11f3467ed7
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 5d09f266f5bf51b870dbbbc0f80aa8282e91faa9
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85289152"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93046112"
 ---
 # <a name="usingtask-element-msbuild"></a>UsingTask 元素 (MSBuild)
 
@@ -49,7 +51,7 @@ ms.locfileid: "85289152"
 
 ### <a name="attributes"></a>特性
 
-|特性|描述|
+|属性|描述|
 |---------------|-----------------|
 |`Architecture`|可选特性。<br /><br /> 指定任务必须在指定位数的进程中运行。 如果当前进程不满足要求，则任务将在满足要求的任务主机进程中运行。<br /><br /> 支持的值为 `x86`（32 位）、`x64`（64 位）、`CurrentArchitecture` 和 `*`（任何体系结构）。|  
 |`AssemblyName`|`AssemblyName` 属性或 `AssemblyFile` 属性是必需的。<br /><br /> 要加载的程序集的名称。 尽管强命名不是必需的，但是 `AssemblyName` 属性可以接受强名称程序集。 使用此属性等效于使用 .NET 中的 <xref:System.Reflection.Assembly.Load%2A> 方法加载程序集。<br /><br /> 如果使用了 `AssemblyFile` 属性，则不能使用此属性。|
@@ -83,7 +85,7 @@ ms.locfileid: "85289152"
 
 第一次使用 `Task` 时，将加载包含自定义任务的程序集。
 
-## <a name="example"></a>示例
+## <a name="example-1"></a>示例 1
 
  下面的示例演示如何将 `UsingTask` 元素和 `AssemblyName` 属性结合使用。
 
@@ -100,7 +102,7 @@ ms.locfileid: "85289152"
 </UsingTask>
 ```
 
-## <a name="example"></a>示例
+## <a name="example-2"></a>示例 2
 
  下面的示例演示如何将 `UsingTask` 元素和 `AssemblyFile` 属性结合使用。
 

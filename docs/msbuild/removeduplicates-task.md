@@ -1,5 +1,7 @@
 ---
 title: RemoveDuplicates 任务 | Microsoft Docs
+description: 了解 MSBuild 如何使用 RemoveDuplicates 任务从指定的项集合中删除重复的项。
+ms.custom: SEO-VS-2020
 ms.date: 03/01/2018
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 90366bab14eefd1be4edac81d6b09b3f57aa3332
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 269499153c4be228503d6bd5b22e91e63dd5b5dd
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77632779"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048672"
 ---
 # <a name="removeduplicates-task"></a>RemoveDuplicates 任务
 
@@ -38,7 +40,7 @@ ms.locfileid: "77632779"
 |`Filtered`|可选的 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 输出参数。<br /><br /> 包含删除了所有重复项的项集合。 输入项的顺序被保留，保留每个复制项的第一个实例。|
 |`Inputs`|可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 要从中删除重复项的项集合。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
  此任务不区分大小写，并且在确定重复项时不比较项元数据。
 
@@ -70,7 +72,7 @@ ms.locfileid: "77632779"
 </Project>
 ```
 
- 下面的示例显示 `RemoveDuplicates` 任务保留其输入顺序。 任务完成后，`FilteredItems` 项集合以该顺序包含项 MyFile2.cs、MyFile1.cs 和 MyFile3.cs。   
+ 下面的示例显示 `RemoveDuplicates` 任务保留其输入顺序。 任务完成后，`FilteredItems` 项集合以该顺序包含项 MyFile2.cs、MyFile1.cs 和 MyFile3.cs。  
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

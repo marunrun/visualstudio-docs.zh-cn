@@ -1,5 +1,7 @@
 ---
 title: 任务基类 | Microsoft Docs
+description: 了解 Microsoft.Build.Utilities.Task 基类向继承自它的任务添加的参数。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d7d6e0870f809a30bc3feb7ecb7a7302b7729124
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 41557eb7df3da8a6322a3951520918ffb158b57a
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77631947"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047995"
 ---
 # <a name="task-base-class"></a>任务基类
 

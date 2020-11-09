@@ -1,5 +1,7 @@
 ---
 title: MSBuild 任务 | Microsoft Docs
+description: 了解 MSBuild 任务如何使用相同的 MSBuild 过程从另一个 MSBuild 项目生成子项目。
+ms.custom: SEO-VS-2020
 ms.date: 07/30/2019
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ab54c5c523c833be60ef4b5d5088b6217a3111a5
-ms.sourcegitcommit: 0b8497b720eb06bed8ce2194731177161b65eb84
+ms.openlocfilehash: a4d1f9fe79ae5092992ff66ddaf5e10729e8b19a
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82072575"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93049058"
 ---
 # <a name="msbuild-task"></a>MSBuild 任务
 
@@ -33,7 +35,7 @@ ms.locfileid: "82072575"
 
  下表描述了 `MSBuild` 任务的参数。
 
-| 参数 | 描述 |
+| 参数 | 说明 |
 |-----------------------------------| - |
 | `BuildInParallel` | 可选 `Boolean` 参数。<br /><br /> 如果为 `true`，会并行生成 `Projects` 参数中指定的项目（如有可能）。 默认值为 `false`。 |
 | `Projects` | 必选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定要生成的项目文件。 |
