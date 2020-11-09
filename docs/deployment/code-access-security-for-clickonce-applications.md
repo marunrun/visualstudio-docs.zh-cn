@@ -1,5 +1,7 @@
 ---
 title: ClickOnce 应用程序的代码访问安全性 |Microsoft Docs
+description: 了解 ClickOnce 应用程序的代码访问安全性以及如何配置代码访问安全权限。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -23,12 +25,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9fd2d9b6792cae002967c9000474a825bd3a0651
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 256a41138a3918dd61d8fd496465bb0230fb9362
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81649281"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382567"
 ---
 # <a name="code-access-security-for-clickonce-applications"></a>ClickOnce 应用程序的代码访问安全性
 ClickOnce 应用程序基于 .NET Framework，需遵从代码访问安全性约束。 因此，了解代码访问安全性的含义并且相应地编写 ClickOnce 应用程序是十分重要的。

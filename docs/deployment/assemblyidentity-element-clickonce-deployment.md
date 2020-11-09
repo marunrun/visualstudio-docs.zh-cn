@@ -1,5 +1,7 @@
 ---
 title: '&lt;&gt; (ClickOnce 部署) 的 assemblyIdentity 元素 |Microsoft Docs'
+description: 在 ClickOnce 部署中，assemblyIdentity 元素是必需的。 它不包含任何子元素，并且包含本文中所述的属性。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 56525cc0c0c754a7fa3a1f4c2c5b6cf2e941e9b0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5a692d37771070f1835fc791515d5dbc24ce6b1b
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62929057"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94383178"
 ---
 # <a name="ltassemblyidentitygt-element-clickonce-deployment"></a>&lt;&gt; (ClickOnce 部署的 assemblyIdentity 元素) 
 标识应用程序的主要程序集 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 。
@@ -30,8 +32,8 @@ ms.locfileid: "62929057"
 
 ```xml
 
-      <assemblyIdentity  
-   name 
+      <assemblyIdentity  
+   name 
    version
    publicKeyToken
    processorArchitecture
@@ -42,7 +44,7 @@ ms.locfileid: "62929057"
 ## <a name="elements-and-attributes"></a>元素和属性
  `assemblyIdentity` 元素是必需的。 它不包含任何子元素，并且具有以下属性。
 
-|特性|说明|
+|属性|说明|
 |---------------|-----------------|
 |`name`|必需。 标识用于提供信息的部署的用户可读名称。<br /><br /> 如果 `name` 包含特殊字符（如单引号或双引号），则应用程序可能无法激活。|
 |`version`|必需。 用以下格式指定程序集的版本号： `major.minor.build.revision` 。<br /><br /> 此值必须在更新的清单中递增才能触发应用程序更新。|
@@ -66,6 +68,6 @@ ms.locfileid: "62929057"
   xmlns="urn:schemas-microsoft-com:asm.v1" />
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [ClickOnce 部署清单](../deployment/clickonce-deployment-manifest.md)
 - [\<assemblyIdentity> element](../deployment/assemblyidentity-element-clickonce-application.md)

@@ -1,5 +1,7 @@
 ---
 title: '&lt;命令 &gt; 元素 (引导程序) |Microsoft Docs'
+description: 命令元素在 InstallChecks 下的元素中实现测试，并在 ClickOnce 引导程序测试失败时声明要安装的包。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f52c862adcdaf7a95de6a90c2c330c39edcea13
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 65c63d52290962d8c9878edf025bbc05487103da
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62900339"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94383048"
 ---
 # <a name="ltcommandsgt-element-bootstrapper"></a>&lt;命令 &gt; 元素 (引导程序) 
 `Commands`元素实现元素下的元素所描述的测试 `InstallChecks` ，并在 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 测试失败时声明要安装引导程序的包。
@@ -68,14 +70,14 @@ ms.locfileid: "62900339"
 ## <a name="elements-and-attributes"></a>元素和属性
  `Commands` 元素是必需的。 元素具有以下属性。
 
-|特性|说明|
+|属性|说明|
 |---------------|-----------------|
 |`Reboot`|可选。 确定在任何包返回重新启动退出代码时是否应重新启动系统。 以下列表显示了有效值：<br /><br /> `Defer`. 重新启动将推迟到将来的某个时间。<br /><br /> `Immediate`. 如果其中一个包返回了重新启动退出代码，则会立即重新启动。<br /><br /> `None`. 导致忽略任何重新启动请求。<br /><br /> 默认值为 `Immediate`。|
 
 ## <a name="command"></a>命令
  `Command` 元素是 `Commands` 元素的一个子元素。 `Commands`元素可以有一个或多个 `Command` 元素。 元素具有以下属性。
 
-|特性|说明|
+|属性|说明|
 |---------------|-----------------|
 |`PackageFile`|必需。 要安装的包的名称应为指定的一个或多个条件 `InstallConditions` 返回 false。 必须使用元素在同一文件中定义包 `PackageFile` 。|
 |`Arguments`|可选。 要传递到包文件中的一组命令行参数。|
@@ -92,7 +94,7 @@ ms.locfileid: "62900339"
 
  `BypassIf` 具有以下属性。
 
-|特性|说明|
+|属性|说明|
 |---------------|-----------------|
 |`Property`|必需。 要测试的属性的名称。 属性之前必须已由元素的子 `InstallChecks` 元素定义。 有关详细信息，请参阅 [\<InstallChecks> 元素](../deployment/installchecks-element-bootstrapper.md)。|
 |`Compare`|必需。 要执行的比较的类型。 以下列表显示了有效值：<br /><br /> `ValueEqualTo`, `ValueNotEqualTo`, `ValueGreaterThan`, `ValueGreaterThanOrEqualTo`, `ValueLessThan`, `ValueLessThanOrEqualTo`, `VersionEqualTo`, `VersionNotEqualTo`, `VersionGreaterThan`, `VersionGreaterThanOrEqualTo`, `VersionLessThan`, `VersionLessThanOrEqualTo`, `ValueExists`, `ValueNotExists`|
@@ -104,7 +106,7 @@ ms.locfileid: "62900339"
 
  `FailIf` 具有以下属性。
 
-|特性|说明|
+|属性|说明|
 |---------------|-----------------|
 |`Property`|必需。 要测试的属性的名称。 属性之前必须已由元素的子 `InstallChecks` 元素定义。 有关详细信息，请参阅 [\<InstallChecks> 元素](../deployment/installchecks-element-bootstrapper.md)。|
 |`Compare`|必需。 要执行的比较的类型。 以下列表显示了有效值：<br /><br /> `ValueEqualTo`, `ValueNotEqualTo`, `ValueGreaterThan`, `ValueGreaterThanOrEqualTo`, `ValueLessThan`, `ValueLessThanOrEqualTo`, `VersionEqualTo`, `VersionNotEqualTo`, `VersionGreaterThan`, `VersionGreaterThanOrEqualTo`, `VersionLessThan`, `VersionLessThanOrEqualTo`, `ValueExists`, `ValueNotExists`|
@@ -118,7 +120,7 @@ ms.locfileid: "62900339"
 ## <a name="exitcode"></a>ExitCode
  `ExitCode`元素是元素的子元素 `ExitCodes` 。 `ExitCode`元素确定安装应执行的操作，以响应包中的退出代码。 `ExitCode` 不包含任何子元素，并且具有以下属性。
 
-|特性|说明|
+|属性|说明|
 |---------------|-----------------|
 |`Value`|必需。 此元素应用到的退出代码值 `ExitCode` 。|
 |`Result`|必需。 安装应如何应对此退出代码。 以下列表显示了有效值：<br /><br /> `Success`. 将包标记为已成功安装。<br /><br /> `SuccessReboot`. 将包标记为已成功安装，并指示系统重启。<br /><br /> `Fail`. 将包标记为失败。<br /><br /> `FailReboot`. 将包标记为失败，并指示系统重启。|
@@ -203,6 +205,6 @@ ms.locfileid: "62900339"
 </Commands>
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [产品和包架构引用](../deployment/product-and-package-schema-reference.md)
 - [\<InstallChecks> element](../deployment/installchecks-element-bootstrapper.md)

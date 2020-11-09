@@ -1,5 +1,7 @@
 ---
 title: 通过命令行生成 ClickOnce 应用程序 |Microsoft Docs
+description: 了解如何从命令行生成 Visual Studio 项目，这允许你使用自动化过程再现生成。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 065eea058ffa78c84428e031832e24837eb81d08
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8423c2820aaf7daf479df6c14dd2e8de9e0e6e5a
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74797199"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94383191"
 ---
 # <a name="build-clickonce-applications-from-the-command-line"></a>从命令行生成 ClickOnce 应用程序
 在中 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] ，你可以从命令行生成项目，即使它们是在集成开发环境 (IDE) 中创建的。 事实上，你可以 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] 在仅安装了 .NET Framework 的另一台计算机上重新生成使用创建的项目。 这样一来，您就可以使用自动化进程（例如，在中央生成实验室中）或使用超出生成项目本身范围的高级脚本技术来重现生成。
@@ -29,7 +31,7 @@ ms.locfileid: "74797199"
 ## <a name="use-msbuild-to-reproduce-clickonce-application-deployments"></a>使用 MSBuild 重现 ClickOnce 应用程序部署
  调用 msbuild/target：在命令行中发布时，它会告知 MSBuild 系统生成项目并 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 在 "发布" 文件夹中创建应用程序。 这等效于在 IDE 中选择 " **发布** " 命令。
 
- 此命令执行 *msbuild.exe*，该路径位于 Visual Studio 命令提示符环境的路径中。
+ 此命令执行 *msbuild.exe* ，该路径位于 Visual Studio 命令提示符环境的路径中。
 
  "目标" 是有关如何处理命令的 MSBuild 的指示器。 键目标为 "生成" 目标和 "发布" 目标。 生成目标等效于在 IDE 中选择 "生成" 命令 (或按 F5) 。 如果只想生成项目，则可以通过键入来实现 `msbuild` 。 此命令有效，因为生成目标是生成的所有项目的默认目标 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] 。 这意味着你不需要显式指定生成目标。 因此，键入与 `msbuild` 键入内容相同 `msbuild /target:build` 。
 
@@ -51,9 +53,9 @@ ms.locfileid: "74797199"
 
     出现“发布向导”。
 
-1. 在发布向导中，单击 " **完成**"。
+1. 在发布向导中，单击 " **完成** "。
 
-    Visual Studio 将生成并显示名为 *Publish.htm*的默认网页。
+    Visual Studio 将生成并显示名为 *Publish.htm* 的默认网页。
 
 1. 保存项目，并记下存储项目的文件夹位置。
 
@@ -63,9 +65,9 @@ ms.locfileid: "74797199"
 
 1. 退出 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]。
 
-2. 在 Windows 的 " **开始** " 菜单中，依次单击 " **所有程序**"、 **Microsoft Visual Studio**"、" **Visual Studio Tools**"、" **Visual Studio 命令提示**"。 这应该会在当前用户的根文件夹中打开一个命令提示符。
+2. 在 Windows 的 " **开始** " 菜单中，依次单击 " **所有程序** "、 **Microsoft Visual Studio** "、" **Visual Studio Tools** "、" **Visual Studio 命令提示** "。 这应该会在当前用户的根文件夹中打开一个命令提示符。
 
-3. 在 **Visual Studio 命令提示符下**，将当前目录更改为刚才生成的项目的位置。 例如，键入 `chdir My Documents\Visual Studio\Projects\CmdLineDemo`。
+3. 在 **Visual Studio 命令提示符下** ，将当前目录更改为刚才生成的项目的位置。 例如，键入 `chdir My Documents\Visual Studio\Projects\CmdLineDemo`。
 
 4. 若要删除 "创建和发布项目" 中生成的现有文件 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] ，请键入 `rmdir /s publish` 。
 
@@ -73,7 +75,7 @@ ms.locfileid: "74797199"
 
 5. 键入 `msbuild /target:publish`。
 
-   以上步骤会 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 在名为 **Publish**的项目的子文件夹中生成完整的应用程序部署。 *CmdLineDemo* 是 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 部署清单。 文件夹*CmdLineDemo_1*包含应用程序清单*CmdLineDemo.exe*和*CmdLineDemo.exe。* [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] *Setup.exe* 是引导程序，默认情况下配置为安装 .NET Framework。 Dotnetfx.exe 文件夹包含 .NET Framework 的可再发行组件。 这是通过 Web 或 UNC 或 CD/DVD 部署应用程序所需的整个文件集。
+   以上步骤会 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 在名为 **Publish** 的项目的子文件夹中生成完整的应用程序部署。 *CmdLineDemo* 是 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 部署清单。 文件夹 *CmdLineDemo_1* 包含应用程序清单 *CmdLineDemo.exe* 和 *CmdLineDemo.exe。* [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] *Setup.exe* 是引导程序，默认情况下配置为安装 .NET Framework。 Dotnetfx.exe 文件夹包含 .NET Framework 的可再发行组件。 这是通过 Web 或 UNC 或 CD/DVD 部署应用程序所需的整个文件集。
    
 > [!NOTE]
 > MSBuild 系统使用 **PublishDir** 选项来指定输出的位置，例如 `msbuild /t:publish /p:PublishDir="<specific location>"` 。
@@ -81,7 +83,7 @@ ms.locfileid: "74797199"
 ## <a name="publish-properties"></a>发布属性
  在上述过程中发布应用程序时，发布向导会将以下属性插入项目文件中。 这些属性会直接影响 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序的生成方式。
 
- *CmdLineDemo. .vbproj*  /  *CmdLineDemo*：
+ *CmdLineDemo. .vbproj*  /  *CmdLineDemo* ：
 
 ```xml
 <AssemblyOriginatorKeyFile>WindowsApplication3.snk</AssemblyOriginatorKeyFile>
@@ -109,15 +111,15 @@ ms.locfileid: "74797199"
 msbuild /target:publish /property:BootstrapperEnabled=false
 ```
 
- 发布属性在 " [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] **项目设计器**" 的 "**发布**"、"**安全性**" 和 "**签名**" 属性页中进行控制。 下面是发布属性的说明，以及如何在应用程序设计器的各种属性页中设置每个属性的说明：
+ 发布属性在 " [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] **项目设计器** " 的 " **发布** "、" **安全性** " 和 " **签名** " 属性页中进行控制。 下面是发布属性的说明，以及如何在应用程序设计器的各种属性页中设置每个属性的说明：
 
-- `AssemblyOriginatorKeyFile` 确定用于对应用程序清单进行签名的密钥文件 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 。 此相同键还可用于为程序集分配强名称。 此属性在 "**项目设计器**" 的 "**签名**" 页上设置。
+- `AssemblyOriginatorKeyFile` 确定用于对应用程序清单进行签名的密钥文件 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 。 此相同键还可用于为程序集分配强名称。 此属性在 " **项目设计器** " 的 " **签名** " 页上设置。
 
   在 " **安全** " 页上设置以下属性：
 
 - **启用 ClickOnce 安全设置** 确定是否 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 生成清单。 最初创建项目时， [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 默认情况下，清单生成是关闭的。 首次发布时，向导将自动打开此标志。
 
-- **TargetZone** 确定要发送到应用程序清单中的信任级别 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 。 可能的值包括 "Internet"、"LocalIntranet" 和 "Custom"。 Internet 和 LocalIntranet 会将默认权限集发出到你的 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序清单中。 LocalIntranet 是默认设置，基本上意味着完全信任。 Custom 指定仅在基本 *app.config* 文件中显式指定的权限将发送到 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序清单中。 *App.config*文件是部分清单文件，只包含信任信息定义。 它是一个隐藏的文件，当你在 " **安全** " 页上配置权限时，会自动将其添加到你的项目。
+- **TargetZone** 确定要发送到应用程序清单中的信任级别 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 。 可能的值包括 "Internet"、"LocalIntranet" 和 "Custom"。 Internet 和 LocalIntranet 会将默认权限集发出到你的 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序清单中。 LocalIntranet 是默认设置，基本上意味着完全信任。 Custom 指定仅在基本 *app.config* 文件中显式指定的权限将发送到 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序清单中。 *App.config* 文件是部分清单文件，只包含信任信息定义。 它是一个隐藏的文件，当你在 " **安全** " 页上配置权限时，会自动将其添加到你的项目。
 
   以下属性是在 " **发布** " 页上设置的：
 
@@ -167,7 +169,7 @@ msbuild /target:publish /property:BootstrapperEnabled=false
 |`SupportURL`|可选。 如果支持站点与不同，请设置此 URL 选项 `PublishURL` 。 例如，你可以将设置 `SupportURL` 为你公司的客户支持网站。|
 |`UpdateURL`|可选。 如果更新位置与不同，请设置此 URL 选项 `InstallURL` 。 例如，可以将设置 `PublishURL` 为 FTP 路径，并将设置 `UpdateURL` 为 Web URL。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - <xref:Microsoft.Build.Tasks.GenerateBootstrapper>
 - <xref:Microsoft.Build.Tasks.GenerateApplicationManifest>
 - <xref:Microsoft.Build.Tasks.GenerateDeploymentManifest>

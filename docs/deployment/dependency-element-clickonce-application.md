@@ -1,5 +1,7 @@
 ---
 title: '&lt;&gt; (ClickOnce 应用程序) 的依赖项元素 |Microsoft Docs'
+description: 依赖关系元素标识应用程序所需的平台或程序集依赖项。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -26,12 +28,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3aa949aa2f8e718ab0209c54a0ea2160c042a4eb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e7896fa2d39bafc793c5fd74f66f4991cf5e8461
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71252484"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382944"
 ---
 # <a name="ltdependencygt-element-clickonce-application"></a>&lt;&gt; (ClickOnce 应用程序的依赖关系元素) 
 标识应用程序所需的平台或程序集依赖项。
@@ -96,7 +98,7 @@ ms.locfileid: "71252484"
 
  `dependentOS` 支持下列特性。
 
-|特性|说明|
+|属性|说明|
 |---------------|-----------------|
 |`supportUrl`|可选。 指定依赖平台的支持 URL。 如果找到所需平台，则向用户显示此 URL。|
 |`description`|可选。 以用户可读的形式描述元素描述的操作系统 `dependentOS` 。|
@@ -107,7 +109,7 @@ ms.locfileid: "71252484"
 ### <a name="os"></a>os
  必需。 此元素是 `osVersionInfo` 元素的子元素。 此元素具有以下属性。
 
-|特性|说明|
+|属性|说明|
 |---------------|-----------------|
 |`majorVersion`|必需。 指定操作系统的主版本号。|
 |`minorVersion`|必需。 指定操作系统的次版本号。|
@@ -122,7 +124,7 @@ ms.locfileid: "71252484"
 
  `dependentAssembly` 具有以下属性。
 
-| 特性 | 说明 |
+| 属性 | 说明 |
 |-----------------------| - |
 | `dependencyType` | 必需。 指定依赖项类型。 有效值为 `preprequisite` 和 `install`。 程序 `install` 集作为应用程序的一部分进行安装 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 。 程序 `prerequisite` 集必须存在于全局程序集缓存中 (GAC) ，然后才能 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 安装应用程序。 |
 | `allowDelayedBinding` | 必需。 指定是否可以在运行时以编程方式加载程序集。 |
@@ -133,7 +135,7 @@ ms.locfileid: "71252484"
 ### <a name="assemblyidentity"></a>assemblyIdentity
  必需。 此元素是 `dependentAssembly` 元素的子元素，并且包含下列元素。
 
-|特性|说明|
+|属性|说明|
 |---------------|-----------------|
 |`name`|必需。 标识应用程序的名称。|
 |`version`|必需。 按以下格式指定应用程序的版本号： `major.minor.build.revision`|
@@ -152,21 +154,21 @@ ms.locfileid: "71252484"
 ### <a name="dsigtransform"></a>dsig:Transform
  `dsig:Transform`元素是元素的必需子元素 `dsig:Transforms` 。 `dsig:Transform` 元素具有以下属性。
 
-| 特性 | 说明 |
+| 属性 | 说明 |
 |-------------| - |
 | `Algorithm` | 用于计算此文件摘要的算法。 目前使用的唯一值 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 是 `urn:schemas-microsoft-com:HashTransforms.Identity` 。 |
 
 ### <a name="dsigdigestmethod"></a>dsig:DigestMethod
  `dsig:DigestMethod`元素是元素的必需子元素 `hash` 。 `dsig:DigestMethod` 元素具有以下属性。
 
-| 特性 | 说明 |
+| 属性 | 说明 |
 |-------------| - |
 | `Algorithm` | 用于计算此文件摘要的算法。 目前使用的唯一值 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 是 `http://www.w3.org/2000/09/xmldsig#sha1` 。 |
 
 ### <a name="dsigdigestvalue"></a>dsig:DigestValue
  `dsig:DigestValue`元素是元素的必需子元素 `hash` 。 `dsig:DigestValue` 元素没有属性。 它的文本值为指定文件的计算所得的哈希值。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
  应用程序使用的所有程序集都必须具有相应的 `dependency` 元素。 依赖程序集不包括必须在全局程序集缓存中预安装为平台程序集的程序集。
 
 ## <a name="example"></a>示例
@@ -216,6 +218,6 @@ ms.locfileid: "71252484"
 </dependency>
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [ClickOnce 应用程序清单](../deployment/clickonce-application-manifest.md)
 - [\<dependency> element](../deployment/dependency-element-clickonce-deployment.md)

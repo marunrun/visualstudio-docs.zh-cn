@@ -1,5 +1,7 @@
 ---
 title: ClickOnce 应用程序清单 |Microsoft Docs
+description: 了解 ClickOnce 应用程序清单，这是一个 XML 文件，描述使用 ClickOnce 部署的应用程序。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,19 +17,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: be9bfe19b92740d6be6c91802d193bf2fc401847
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 13b84a256bfc9d13f8c17b92385df2106dc0a47d
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62928958"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94383113"
 ---
 # <a name="clickonce-application-manifest"></a>ClickOnce 应用程序清单
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]应用程序清单是一个 XML 文件，描述使用部署的应用程序 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 。
 
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序清单具有以下元素和属性。
 
-| 元素 | 说明 | 属性 |
+| 元素 | 说明 | 特性 |
 | - | - | - |
 | [\<assembly> 元素](../deployment/assembly-element-clickonce-application.md) | 必需。 顶级元素。 | `manifestVersion` |
 | [\<assemblyIdentity> 元素](../deployment/assemblyidentity-element-clickonce-application.md) | 必需。 标识应用程序的主要程序集 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 。 | `name`<br /><br /> `version`<br /><br /> `publicKeyToken`<br /><br /> `processorArchitecture`<br /><br /> `language` |
@@ -37,7 +39,7 @@ ms.locfileid: "62928958"
 | [\<file> 元素](../deployment/file-element-clickonce-application.md) | 可选。 标识应用程序使用的每个 nonassembly 文件。 可以包括与文件关联的组件对象模型 (COM) 隔离数据。 | `name`<br /><br /> `size`<br /><br /> `group`<br /><br /> `optional`<br /><br /> `writeableType` |
 | [\<fileAssociation> 元素](../deployment/fileassociation-element-clickonce-application.md) | 可选。 标识与应用程序关联的文件扩展名。 | `extension`<br /><br /> `description`<br /><br /> `progid`<br /><br /> `defaultIcon` |
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]应用程序清单文件标识使用部署的应用程序 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 。 有关 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 的详细信息，请参阅 [ClickOnce 安全和部署](../deployment/clickonce-security-and-deployment.md)。
 
 ## <a name="file-location"></a>文件位置
@@ -46,7 +48,7 @@ ms.locfileid: "62928958"
  应用程序清单必须在部署之前进行签名。 如果手动更改应用程序清单，则必须使用 *mage.exe* 对应用程序清单进行重新签名、更新部署清单，然后对部署清单进行重新签名。 有关详细信息，请参阅 [演练：手动部署 ClickOnce 应用程序](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)。
 
 ## <a name="file-name-syntax"></a>文件名语法
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序清单文件的名称应为应用程序的完整名称和扩展名，如 `assemblyIdentity` 元素中所标识的那样，后跟扩展名 .manifest**。 例如，引用 *Example.exe* 应用程序的应用程序清单将使用以下文件名语法。
+ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序清单文件的名称应为应用程序的完整名称和扩展名，如 `assemblyIdentity` 元素中所标识的那样，后跟扩展名 .manifest。 例如，引用 *Example.exe* 应用程序的应用程序清单将使用以下文件名语法。
 
  `example.exe.manifest`
 
@@ -114,5 +116,5 @@ ms.locfileid: "62928958"
 </Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [发布 ClickOnce 应用程序](../deployment/publishing-clickonce-applications.md)

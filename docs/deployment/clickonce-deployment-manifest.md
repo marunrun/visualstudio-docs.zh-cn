@@ -1,5 +1,7 @@
 ---
 title: ClickOnce 部署清单 |Microsoft Docs
+description: 了解部署清单，它是描述 ClickOnce 部署的 XML 文件，包括要部署的当前 ClickOnce 应用程序版本。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,23 +17,23 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d2f3383731fcfa314c3b936cd42002186012439
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 47589b909ee2b7ee367c81684ac53e2b5e4e7d70
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62900474"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94383087"
 ---
 # <a name="clickonce-deployment-manifest"></a>ClickOnce 部署清单
 部署清单是一个 XML 文件，用于描述 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 部署，包括要部署的当前 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序版本的标识。
 
  部署清单具有下列元素和特性。
 
-| 元素 | 说明 | 属性 |
+| 元素 | 说明 | 特性 |
 | - | - | - |
 | [\<assembly> 元素](../deployment/assembly-element-clickonce-deployment.md) | 必需。 顶级元素。 | `manifestVersion` |
 | [\<assemblyIdentity> 元素](../deployment/assemblyidentity-element-clickonce-deployment.md) | 必需。 标识 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序的应用程序清单。 | `name`<br /><br /> `version`<br /><br /> `publicKeyToken`<br /><br /> `processorArchitecture`<br /><br /> `culture` |
-| [\<description> 元素](../deployment/description-element-clickonce-deployment.md) | 必需。 标识用于在控制面板中创建 shell 表示和“添加/删除程序”项的应用程序信息****。 | `publisher`<br /><br /> `product`<br /><br /> `supportUrl` |
+| [\<description> 元素](../deployment/description-element-clickonce-deployment.md) | 必需。 标识用于在控制面板中创建 shell 表示和“添加/删除程序”项的应用程序信息。 | `publisher`<br /><br /> `product`<br /><br /> `supportUrl` |
 | [\<deployment> 元素](../deployment/deployment-element-clickonce-deployment.md) | 可选。 标识用于部署更新并向系统公开的特性。 | `install`<br /><br /> `minimumRequiredVersion`<br /><br /> `mapFileExtensions`<br /><br /> `disallowUrlActivation`<br /><br /> `trustUrlParameters` |
 | [\<compatibleFrameworks> 元素](../deployment/compatibleframeworks-element-clickonce-deployment.md) | 必需。 标识此应用程序可在其上安装和运行的 .NET Framework 版本。 | `SupportUrl` |
 | [\<dependency> 元素](../deployment/dependency-element-clickonce-deployment.md) | 必需。 标识要为部署而安装的应用程序版本以及应用程序清单的位置。 | `preRequisite`<br /><br /> `visible`<br /><br /> `dependencyType`<br /><br /> `codebase`<br /><br /> `size` |
@@ -39,7 +41,7 @@ ms.locfileid: "62900474"
 | [\<Signature> 元素](../deployment/signature-element-clickonce-deployment.md) | 可选。 包含对此部署清单进行数字签名所需的信息。 | 无 |
 | [\<customErrorReporting> 元素](../deployment/customerrorreporting-element-clickonce-deployment.md) | 可选。 指定发生错误时所显示的 URI。 | Uri |
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
  部署清单文件标识 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序部署，包括当前版本和其他部署设置。 该文件引用应用程序清单，该清单描述了应用程序的当前版本以及部署中包含的所有文件。
 
  有关详细信息，请参阅 [ClickOnce Security and Deployment](../deployment/clickonce-security-and-deployment.md)。
@@ -50,7 +52,7 @@ ms.locfileid: "62900474"
  该部署清单文件必须使用强名称，并且还可以包含用于验证发布者的证书。
 
 ## <a name="file-name-syntax"></a>文件名语法
- 部署清单文件的名称必须以 .application 扩展名结尾**。
+ 部署清单文件的名称必须以 .application 扩展名结尾。
 
 ## <a name="examples"></a>示例
  下面的代码示例阐释了部署清单。
@@ -117,5 +119,5 @@ ms.locfileid: "62900474"
 </Signature></asmv1:assembly>
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [发布 ClickOnce 应用程序](../deployment/publishing-clickonce-applications.md)

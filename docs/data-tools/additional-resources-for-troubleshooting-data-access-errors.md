@@ -1,5 +1,6 @@
 ---
 title: 数据访问论坛
+description: 查找有关排查公共论坛中的错误和警告的帮助。 查看与数据相关的论坛列表。
 ms.date: 06/27/2018
 ms.topic: troubleshooting
 f1_keywords:
@@ -224,12 +225,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 0383de73992b96f6a458b389573e252b39d624b6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8555a67bf9173767584c2bf37c1ed470548c4157
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75587038"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382476"
 ---
 # <a name="troubleshoot-data-access-errors-on-the-forums"></a>排查论坛上的数据访问错误
 
@@ -251,6 +252,6 @@ ms.locfileid: "75587038"
 
 有关如何解决与 SQL Server 的连接问题的信息，请参阅 [连接到 SQL Server 数据库引擎的疑难解答](https://social.technet.microsoft.com/wiki/contents/articles/2102.how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [适用于 NET 的 Visual Studio Data Tools](../data-tools/visual-studio-data-tools-for-dotnet.md)

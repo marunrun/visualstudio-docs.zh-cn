@@ -1,5 +1,6 @@
 ---
 title: 将控件绑定到数据库中的图片
+description: 使用 "数据源" 窗口可以将数据库中的图像绑定到 Visual Studio 应用程序中的控件。
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -17,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: e9093c2a2d7cec95e4fdd08ff4273ae8f8126a36
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6a2033bfe6719ccd325a2409d20fbb0e77d92926
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282979"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382294"
 ---
 # <a name="bind-controls-to-pictures-from-a-database"></a>将控件绑定到数据库中的图片
 
@@ -39,16 +40,16 @@ ms.locfileid: "85282979"
 2. 在 " **数据源** " 窗口中，展开所需的表或对象以显示其列或属性。
 
    > [!TIP]
-   > 如果 "**数据源**" 窗口未打开，请选择 "**查看**  >  **其他 Windows**  >  **数据源**" 将其打开。
+   > 如果 " **数据源** " 窗口未打开，请选择 " **查看**  >  **其他 Windows**  >  **数据源** " 将其打开。
 
 3. 选择包含图像数据的列或属性，并从其下拉控件列表中选择以下控件之一：
 
-    - 如果 WPF 设计器处于打开状态，请选择 " **图像**"。
+    - 如果 WPF 设计器处于打开状态，请选择 " **图像** "。
 
-    - 如果 Windows 窗体设计器处于打开状态，请选择 **PictureBox**。
+    - 如果 Windows 窗体设计器处于打开状态，请选择 **PictureBox** 。
 
     - 此外，还可以选择支持数据绑定的其他控件，并可以显示图像。 如果要使用的控件不在可用控件列表中，则可以将其添加到列表中，然后选择它。 有关详细信息，请参阅 [将自定义控件添加到 "数据源" 窗口](../data-tools/add-custom-controls-to-the-data-sources-window.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [在 Visual Studio 中将 WPF 控件绑定到数据](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)

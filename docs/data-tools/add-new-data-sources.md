@@ -1,5 +1,6 @@
 ---
 title: 添加新数据源
+description: 在 Visual Studio 中添加新的数据源。 数据源是一个 .NET 对象，它连接到数据存储并使数据可用于 .NET 应用程序。
 ms.date: 11/21/2018
 ms.topic: how-to
 f1_keywords:
@@ -13,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 2e8ad5bf65ad25d197785c3e720ec01c7bdc6f9d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 51d7d2bb7a7037d3fbcf307c620e9aca702ac370
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85283042"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382112"
 ---
 # <a name="add-new-data-sources"></a>添加新数据源
 
@@ -42,7 +43,7 @@ ms.locfileid: "85283042"
 > [!NOTE]
 > 如果未使用数据绑定功能、数据集、实体框架、LINQ to SQL、WCF 或 SharePoint，则 "数据源" 的概念不适用。 只需使用 SQLCommand 对象直接连接到数据库，并直接与数据库进行通信。
 
-您可以使用 Windows 窗体或 Windows Presentation Foundation 应用程序中的 " **数据源配置向导** " 来创建和编辑数据源。 对于实体框架，请先创建实体类，然后选择 "项目" "添加新数据源"，然后选择 "**项目**" "  >  **添加新数据源**" (将在本文的后面部分中详细介绍) 。
+您可以使用 Windows 窗体或 Windows Presentation Foundation 应用程序中的 " **数据源配置向导** " 来创建和编辑数据源。 对于实体框架，请先创建实体类，然后选择 "项目" "添加新数据源"，然后选择 " **项目** " "  >  **添加新数据源** " (将在本文的后面部分中详细介绍) 。
 
 ![数据源配置向导](../data-tools/media/data-source-configuration-wizard.png)
 
@@ -51,7 +52,7 @@ ms.locfileid: "85283042"
 创建数据源后，它将显示在 " **数据源** " 工具窗口中。
 
 > [!TIP]
-> 若要打开 "**数据源**" 窗口，请确保您的项目已打开，然后按**Shift** + **Alt** + **D**或选择 "**查看**  >  **其他 Windows**  >  **数据源**"。
+> 若要打开 " **数据源** " 窗口，请确保您的项目已打开，然后按 **Shift** + **Alt** + **D** 或选择 " **查看**  >  **其他 Windows**  >  **数据源** "。
 
 您可以将数据源从 " **数据源** " 窗口拖到窗体设计图面或控件上。 这将导致生成用于显示来自数据存储的数据的样板代码。
 
@@ -65,13 +66,13 @@ ms.locfileid: "85283042"
 
 ### <a name="dataset"></a>数据集
 
-若要创建数据集作为数据源，请通过选择 "**项目**" "添加新数据源" 运行**数据源配置向导**  >  **Add New Data Source**。 选择 **数据库** 数据源类型，然后按照提示指定新的或现有的数据库连接或数据库文件。
+若要创建数据集作为数据源，请通过选择 " **项目** " "添加新数据源" 运行 **数据源配置向导**  >  **Add New Data Source** 。 选择 **数据库** 数据源类型，然后按照提示指定新的或现有的数据库连接或数据库文件。
 
 ### <a name="entity-classes"></a>实体类
 
 若要创建实体框架模型作为数据源：
 
-1. 运行 **实体数据模型向导** 创建实体类。 选择 "**项目**" "  >  **添加新项**"  >  **ADO.NET 实体数据模型**。
+1. 运行 **实体数据模型向导** 创建实体类。 选择 " **项目** " "  >  **添加新项** "  >  **ADO.NET 实体数据模型** 。
 
    ![新建实体框架模型项目项](../data-tools/media/raddata-new-entity-framework-model-project-item.png)
 
@@ -79,13 +80,13 @@ ms.locfileid: "85283042"
 
    ![实体数据模型向导](../data-tools/media/raddata-entity-data-model-wizard.png)
 
-1. 添加模型作为数据源。 当您选择 "**对象**" 类别时，生成的类将出现在 "**数据源配置向导**" 中。
+1. 添加模型作为数据源。 当您选择 " **对象** " 类别时，生成的类将出现在 " **数据源配置向导** " 中。
 
    ![具有实体类的数据源配置向导](../data-tools/media/raddata-data-source-configuration-wizard-with-entity-classes.png)
 
 ## <a name="data-source-for-a-service"></a>服务的数据源
 
-若要从服务创建数据源，请运行 " **数据源配置向导** " 并选择 " **服务** 数据源类型"。 这只是 **添加服务引用** 对话框的快捷方式，您还可以通过右键单击 **解决方案资源管理器** 中的项目并选择 " **添加服务引用**" 来访问该对话框。
+若要从服务创建数据源，请运行 " **数据源配置向导** " 并选择 " **服务** 数据源类型"。 这只是 **添加服务引用** 对话框的快捷方式，您还可以通过右键单击 **解决方案资源管理器** 中的项目并选择 " **添加服务引用** " 来访问该对话框。
 
 当您从服务创建数据源时，Visual Studio 会向您的项目中添加一个服务引用。 Visual Studio 还会创建与服务返回的对象相对应的代理对象。 例如，返回数据集的服务在项目中表示为数据集;返回特定类型的服务在项目中表示为返回的类型。
 
@@ -98,7 +99,7 @@ ms.locfileid: "85283042"
 - Web 服务
 
     > [!NOTE]
-    > " **数据源** " 窗口中显示的项取决于服务返回的数据。 某些服务可能没有为“数据源配置”向导创建可绑定的对象提供足够的信息****。 例如，如果服务返回非类型化数据集，则在完成该向导时，" **数据源** " 窗口中将不会显示任何项。 这是因为非类型化数据集不提供架构，因此该向导没有足够的信息来创建数据源。
+    > " **数据源** " 窗口中显示的项取决于服务返回的数据。 某些服务可能没有为“数据源配置”向导创建可绑定的对象提供足够的信息。 例如，如果服务返回非类型化数据集，则在完成该向导时，" **数据源** " 窗口中将不会显示任何项。 这是因为非类型化数据集不提供架构，因此该向导没有足够的信息来创建数据源。
 
 ## <a name="data-source-for-an-object"></a>对象的数据源
 
@@ -116,8 +117,8 @@ ms.locfileid: "85283042"
 
 ## <a name="data-source-for-a-sharepoint-list"></a>SharePoint 列表的数据源
 
-通过运行 " **数据源配置向导** " 并选择 " **sharepoint** 数据源类型"，可以从 SharePoint 列表创建数据源。 SharePoint 通过 WCF 数据服务公开数据，因此创建 SharePoint 数据源与从服务创建数据源相同。 在 "**数据源配置向导**" 中选择**SharePoint**项将打开 "**添加服务引用**" 对话框，在该对话框中，您可以通过指向 sharepoint 服务器来连接到 sharepoint 数据服务。 这需要 SharePoint SDK。
+通过运行 " **数据源配置向导** " 并选择 " **sharepoint** 数据源类型"，可以从 SharePoint 列表创建数据源。 SharePoint 通过 WCF 数据服务公开数据，因此创建 SharePoint 数据源与从服务创建数据源相同。 在 " **数据源配置向导** " 中选择 **SharePoint** 项将打开 " **添加服务引用** " 对话框，在该对话框中，您可以通过指向 sharepoint 服务器来连接到 sharepoint 数据服务。 这需要 SharePoint SDK。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [适用于 NET 的 Visual Studio Data Tools](../data-tools/visual-studio-data-tools-for-dotnet.md)

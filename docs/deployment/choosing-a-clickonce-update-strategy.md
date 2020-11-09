@@ -1,5 +1,7 @@
 ---
 title: 选择 ClickOnce 更新策略 |Microsoft Docs
+description: 了解 ClickOnce 应用程序如何支持自动更新以及可使用哪些更新策略。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cbddf759841dbe9626868d6c00f42a0849d70520
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5618a8996b9858f0799f2a359573d5b7b9da1ce9
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "90840495"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94383152"
 ---
 # <a name="choose-a-clickonce-update-strategy"></a>选择 ClickOnce 更新策略
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 可以提供应用程序自动更新。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序会定期读取其部署清单文件，以查看是否有可用的应用程序更新。 如果有，则会下载并运行应用程序的新版本。 为提高效率，仅下载那些已更改的文件。
@@ -34,16 +36,16 @@ ms.locfileid: "90840495"
 > 应用程序更新需要网络连接。 如果不存在网络连接，则应用程序会在不检查更新的情况下运行，而无论选择的是何种更新策略。
 
 > [!NOTE]
-> 在 .NET Framework 2.0 和 .NET Framework 3.0 中，任何时候应用程序检查更新（无论在启动应用程序之前、之后，还是使用 \<xref:System.Deployment.Application> API 时），都必须在部署清单中设置 `deploymentProvider`。 `deploymentProvider`元素对应于 Visual Studio 中 "**发布**" 选项卡的 "**更新**" 对话框上的 "**更新位置**" 字段。此规则在 .NET Framework 3.5 中非常宽松。 有关详细信息，请参阅 [部署 ClickOnce 应用程序用于测试和生产服务器而无需让步](../deployment/deploying-clickonce-applications-for-testing-and-production-without-resigning.md)。
+> 在 .NET Framework 2.0 和 .NET Framework 3.0 中，任何时候应用程序检查更新（无论在启动应用程序之前、之后，还是使用 \<xref:System.Deployment.Application> API 时），都必须在部署清单中设置 `deploymentProvider`。 `deploymentProvider`元素对应于 Visual Studio 中 " **发布** " 选项卡的 " **更新** " 对话框上的 " **更新位置** " 字段。此规则在 .NET Framework 3.5 中非常宽松。 有关详细信息，请参阅 [部署 ClickOnce 应用程序用于测试和生产服务器而无需让步](../deployment/deploying-clickonce-applications-for-testing-and-production-without-resigning.md)。
 
 ## <a name="check-for-updates-after-application-startup"></a>在应用程序启动后检查更新
  通过使用此策略，应用程序会在运行期间尝试在后台查找并读取部署清单文件。 如果有某个更新可用，则当用户下一次运行应用程序时，会提示用户下载并安装该更新。
 
  此策略最适用于低带宽的网络连接或可能需要长时间下载的较大应用程序。
 
- 若要启用此更新策略，请在“应用程序更新”对话框的“选择应用程序何时应该检查更新”部分中单击“在应用程序启动后”************。 然后在“指定应用程序检查更新的频率”部分中指定一个更新时间间隔****。
+ 若要启用此更新策略，请在“应用程序更新”对话框的“选择应用程序何时应该检查更新”部分中单击“在应用程序启动后”。 然后在“指定应用程序检查更新的频率”部分中指定一个更新时间间隔。
 
- 这种方式的效果与下面更改部署清单中“Update”元素的效果相同****：
+ 这种方式的效果与下面更改部署清单中“Update”元素的效果相同：
 
 ```xml
 <!-- When to check for updates -->
@@ -59,9 +61,9 @@ ms.locfileid: "90840495"
 
  此策略最适用于高带宽的网络连接；在低带宽连接上启动应用程序时的长时间延迟可能令人无法接受。
 
- 若要启用此更新策略，请在“应用程序更新”对话框的“选择应用程序何时应该检查更新”部分中单击“在应用程序启动前”************。
+ 若要启用此更新策略，请在“应用程序更新”对话框的“选择应用程序何时应该检查更新”部分中单击“在应用程序启动前”。
 
- 这种方式的效果与下面更改部署清单中“Update”元素的效果相同****：
+ 这种方式的效果与下面更改部署清单中“Update”元素的效果相同：
 
 ```xml
 <!-- When to check for updates -->
@@ -76,11 +78,11 @@ ms.locfileid: "90840495"
  在有些情况下，您可能需要要求用户运行更新版本的应用程序。 例如，你可能对诸如 Web 服务等外部资源进行了某种更改，而这种更改会使得较早版本的应用程序不能正常工作。 在这种情况下，您需要将更新标记为“必需”，并阻止用户运行较早的版本。
 
 > [!NOTE]
-> 虽然使用其他更新策略也可以强制进行更新，但是“在应用程序启动前”进行检查是保证不运行较早版本的应用程序的唯一方法****。 如果在启动时检测到强制更新，则用户必须要么接受更新，要么关闭应用程序。
+> 虽然使用其他更新策略也可以强制进行更新，但是“在应用程序启动前”进行检查是保证不运行较早版本的应用程序的唯一方法。 如果在启动时检测到强制更新，则用户必须要么接受更新，要么关闭应用程序。
 
- 若要将更新标记为“必需”，请单击“应用程序更新”对话框中的“指定该应用程序需要的最低版本”，然后指定发布版本（“主版本”、“次版本”、“内部版本”、“修订版本”），该发布版本指定可以安装的应用程序的最低版本号************************。
+ 若要将更新标记为“必需”，请单击“应用程序更新”对话框中的“指定该应用程序需要的最低版本”，然后指定发布版本（“主版本”、“次版本”、“内部版本”、“修订版本”），该发布版本指定可以安装的应用程序的最低版本号。
 
- 这种方式的效果与设置部署清单中“Deployment”元素的“minimumRequiredVersion”属性的效果相同；例如********：
+ 这种方式的效果与设置部署清单中“Deployment”元素的“minimumRequiredVersion”属性的效果相同；例如：
 
 ```xml
 <deployment install="true" minimumRequiredVersion="1.0.0.0">
@@ -89,9 +91,9 @@ ms.locfileid: "90840495"
 ## <a name="specify-update-intervals"></a>指定更新间隔
  还可以指定应用程序检查更新的频率。 若要执行此操作，请指定应用程序在启动后检查是否有更新，如本主题前面的“在应用程序启动后检查是否有更新”中所述。
 
- 若要指定更新时间间隔，请在“应用程序更新”对话框中设置“指定应用程序检查更新的频率”属性********。
+ 若要指定更新时间间隔，请在“应用程序更新”对话框中设置“指定应用程序检查更新的频率”属性。
 
- 这种方式的效果与设置部署清单中“Update”元素的“maximumAge”和“unit”属性的效果相同************。
+ 这种方式的效果与设置部署清单中“Update”元素的“maximumAge”和“unit”属性的效果相同。
 
  例如，您可能希望在应用程序每次运行时都进行检查，或是一周检查一次，或一个月检查一次。 如果在指定时间不存在网络连接，则更新检查会在应用程序下一次运行时执行。
 
@@ -107,7 +109,7 @@ ms.locfileid: "90840495"
 
  如果你的应用程序使用部署 Api 来执行其自己的更新，还应阻止更新检查;请参阅本主题前面的 "为更新提供用户界面"。
 
- 若要阻止更新检查，请清除“应用程序更新”对话框中的“应用程序应该检查更新”复选框****。
+ 若要阻止更新检查，请清除“应用程序更新”对话框中的“应用程序应该检查更新”复选框。
 
  也可以通过从部署清单中移除 `<Subscription>` 标记来阻止更新检查。
 

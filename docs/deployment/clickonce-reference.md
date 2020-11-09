@@ -1,5 +1,7 @@
 ---
 title: ClickOnce 引用 |Microsoft Docs
+description: 使用这些参考文章来了解用于表示 ClickOnce 应用程序的 XML 文件的结构。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,18 +17,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f3b22dacdb0192df70f9fcb13b8a228188f129d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3f852182baec22915f412a3753755b129053e0ad
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62900321"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94383022"
 ---
 # <a name="clickonce-reference"></a>ClickOnce 参考
 以下页面描述用于表示 ClickOnce 应用程序的 XML 文件的结构。
 
 ## <a name="in-this-section"></a>本节内容
- [ClickOnce 应用程序清单](../deployment/clickonce-application-manifest.md)
+ [ndptecclick](../deployment/clickonce-application-manifest.md)
 
  列出并描述组成应用程序清单的元素和属性。
 

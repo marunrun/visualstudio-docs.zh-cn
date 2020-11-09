@@ -1,5 +1,6 @@
 ---
 title: 添加新连接
+description: 在 Visual Studio 中将连接添加到 DB 或服务，并使用服务器资源管理器、Cloud Explorer 或 SQL Server 对象资源管理器浏览数据库内容和架构。
 ms.date: 11/04/2016
 ms.topic: how-to
 author: ghogen
@@ -7,22 +8,22 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 5f6f34c28a6bbba236a4d90e2f936fad0b2a3f60
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 34f3ef6823ddfae806de11b85cc5bfe6b14c9b19
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85283055"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382411"
 ---
 # <a name="add-new-connections"></a>添加新连接
 
-您可以使用 **服务器资源管理器**、 **Cloud Explorer**或 **SQL Server 对象资源管理器**测试与数据库或服务的连接，并浏览数据库内容和架构。 这些窗口的功能与某个范围重叠。 基本差异如下：
+您可以使用 **服务器资源管理器** 、 **Cloud Explorer** 或 **SQL Server 对象资源管理器** 测试与数据库或服务的连接，并浏览数据库内容和架构。 这些窗口的功能与某个范围重叠。 基本差异如下：
 
 - 服务器资源管理器
 
    默认情况下安装在 Visual Studio 中。 可用于测试连接并查看 SQL Server 数据库、安装了 ADO.NET 提供程序的任何其他数据库以及某些 Azure 服务。 还显示低级别对象，如系统性能计数器、事件日志和消息队列。 如果数据源没有 ADO.NET 提供程序，则它将不会显示在此处，但仍可通过编程方式连接从 Visual Studio 中使用它。
 
-- Cloud Explorer
+- 云资源管理器
 
    作为 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.CloudExplorerForVS)的 Visual Studio 扩展，手动安装此窗口。 为浏览和连接到 Azure 服务提供了专用功能。
 
@@ -32,7 +33,7 @@ ms.locfileid: "85283055"
 
 ## <a name="add-a-connection-in-server-explorer"></a>在服务器资源管理器中添加连接
 
-若要创建与数据库的连接，请单击 "**服务器资源管理器**中的"**添加连接**"图标，或在"**数据连接**"节点上右键单击**服务器资源管理器**，然后选择"**添加连接**"。 在这里，你还可以连接到另一台服务器、SharePoint 服务或 Azure 服务上的数据库。
+若要创建与数据库的连接，请单击 " **服务器资源管理器** 中的" **添加连接** "图标，或在" **数据连接** "节点上右键单击 **服务器资源管理器** ，然后选择" **添加连接** "。 在这里，你还可以连接到另一台服务器、SharePoint 服务或 Azure 服务上的数据库。
 
 ![服务器资源管理器新建连接 "图标](../data-tools/media/raddata-server-explorer-new-connection-icon.png)
 
@@ -48,12 +49,12 @@ ms.locfileid: "85283055"
 
 ## <a name="test-the-connection"></a>测试连接
 
-选择数据源后，单击 " **测试连接**"。 如果未成功，你将需要根据供应商的文档进行故障排除。
+选择数据源后，单击 " **测试连接** "。 如果未成功，你将需要根据供应商的文档进行故障排除。
 
 ![测试连接](../data-tools/media/raddata-test-connection.png)
 
-如果测试成功，您就可以创建一个 *数据源，该数据源*是一个 Visual Studio 术语，它真正表示基于基础数据库或服务的 *数据模型* 。
+如果测试成功，您就可以创建一个 *数据源，该数据源* 是一个 Visual Studio 术语，它真正表示基于基础数据库或服务的 *数据模型* 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [适用于 NET 的 Visual Studio Data Tools](../data-tools/visual-studio-data-tools-for-dotnet.md)

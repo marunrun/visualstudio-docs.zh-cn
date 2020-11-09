@@ -1,5 +1,7 @@
 ---
 title: '&lt;&gt; (ClickOnce 应用程序) 的 fileAssociation 元素 |Microsoft Docs'
+description: FileAssociation 元素标识要与应用程序关联的文件扩展名。 FileAssociation 元素是可选的。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d3a43af5b2c7d50034cbed9d7da16e65b402f70
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f1908b4f63edcf90643c28523c0c6ed0d0e11a97
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62928528"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382723"
 ---
 # <a name="ltfileassociationgt-element-clickonce-application"></a>&lt;&gt; (ClickOnce 应用程序的 fileAssociation 元素) 
 标识与应用程序关联的文件扩展名。
@@ -40,14 +42,14 @@ ms.locfileid: "62928528"
 ## <a name="elements-and-attributes"></a>元素和属性
  `fileAssociation` 元素是可选的。 元素具有以下属性。
 
-|特性|说明|
+|属性|说明|
 |---------------|-----------------|
 |`extension`|必需。 要与应用程序关联的文件扩展名。|
 |`description`|必需。 Shell 使用的文件类型的说明。|
 |`progid`|必需。 唯一标识文件类型的名称。|
 |`defaultIcon`|必需。 指定用于具有此扩展的文件的图标。 必须在包含此元素的[ \<assembly> 元素](../deployment/assembly-element-clickonce-application.md)内使用[ \<file> 元素](../deployment/file-element-clickonce-application.md)指定图标文件。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
  此元素必须包含对 "urn：架构-microsoft com： clickonce. v1" 的 XML 命名空间引用。 如果 `<fileAssociation>` 使用了元素，则它必须位于 `<application>` 其父[ \<assembly> 元素](../deployment/assembly-element-clickonce-application.md)中的元素之后。
 
  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 不会覆盖现有文件关联。 但是，ClickOnce 应用程序只能重写当前用户的文件扩展名。 卸载 ClickOnce 应用程序之后，ClickOnce 将删除该用户的文件关联，并再次激活每台计算机的关联。
@@ -78,5 +80,5 @@ ms.locfileid: "62928528"
 <fileAssociation xmlns="urn:schemas-microsoft-com:clickonce.v1" extension=".writing" description="Writings (ClickOnce)" progid="Writing.Document" defaultIcon="writing.ico" />
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [ClickOnce 应用程序清单](../deployment/clickonce-application-manifest.md)

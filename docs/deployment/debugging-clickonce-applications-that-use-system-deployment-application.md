@@ -1,5 +1,7 @@
 ---
 title: 调试使用 System.web 的 ClickOnce 应用程序
+description: 了解如何通过访问由 System.web 提供的部署对象模型，使用和自定义高级 ClickOnce 部署功能。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 203f1edc2e29bbbc34fb39e6aa01c1b56bf20e91
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5e79b6a64eff9eab92a05624f6ca71ae7a242ad2
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85382648"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382983"
 ---
 # <a name="debug-clickonce-applications-that-use-systemdeploymentapplication"></a>调试使用 System.Deployment.Application 的 ClickOnce 应用程序
 在中 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] ， [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 部署允许你配置应用程序的更新方式。 但是，如果你需要使用和自定义高级 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 部署功能，你将需要访问提供的部署对象模型 <xref:System.Deployment.Application> 。 可以将 <xref:System.Deployment.Application> api 用于高级任务，例如：
@@ -43,11 +45,11 @@ ms.locfileid: "85382648"
 
 2. 部署应用程序的版本1。
 
-3. 创建新的空白解决方案。 在“文件”菜单中，单击“新建”，然后单击“项目”************。 在 " **新建项目** " 对话框中，打开 " **其他项目类型** " 节点，然后选择 " **Visual Studio 解决方案** " 文件夹。 在 " **模板** " 窗格中选择 " **空白解决方案**"。
+3. 创建新的空白解决方案。 在“文件”菜单中，单击“新建”，然后单击“项目”。 在 " **新建项目** " 对话框中，打开 " **其他项目类型** " 节点，然后选择 " **Visual Studio 解决方案** " 文件夹。 在 " **模板** " 窗格中选择 " **空白解决方案** "。
 
-4. 将存档的源位置添加到此新解决方案的属性中。 在 **解决方案资源管理器**中，右键单击 "解决方案" 节点，然后单击 " **属性**"。 在 " **属性页** " 对话框中，选择 " **调试源文件**"，然后添加存档源代码的目录。 否则，调试器会找到过期的源文件，因为源文件路径记录在 .pdb 文件中。 如果调试器使用过期的源文件，则会看到一条消息，告知您源不匹配。
+4. 将存档的源位置添加到此新解决方案的属性中。 在 **解决方案资源管理器** 中，右键单击 "解决方案" 节点，然后单击 " **属性** "。 在 " **属性页** " 对话框中，选择 " **调试源文件** "，然后添加存档源代码的目录。 否则，调试器会找到过期的源文件，因为源文件路径记录在 .pdb 文件中。 如果调试器使用过期的源文件，则会看到一条消息，告知您源不匹配。
 
-5. 请确保调试器能够找到 *.pdb* 文件。 如果已将这些应用程序与应用程序一起部署，则调试器会自动找到它们。 它始终显示在相关程序集的旁边。 否则，你将需要将存档路径添加到 ** ( .pdb) 位置** (，若要访问此选项，请从 " **工具** " 菜单中单击 " **选项**"，打开 " **调试** " 节点，然后单击 " **符号** ") 。
+5. 请确保调试器能够找到 *.pdb* 文件。 如果已将这些应用程序与应用程序一起部署，则调试器会自动找到它们。 它始终显示在相关程序集的旁边。 否则，你将需要将存档路径添加到 **( .pdb) 位置** (，若要访问此选项，请从 " **工具** " 菜单中单击 " **选项** "，打开 " **调试** " 节点，然后单击 " **符号** ") 。
 
 6. 调试 `CheckForUpdate` 和 `Download` / `Update` 方法调用之间发生的情况。
 
@@ -76,5 +78,5 @@ ms.locfileid: "85382648"
 
    <xref:System.Deployment.Application.ApplicationDeployment.IsNetworkDeployed%2A> <xref:System.Deployment.Application> 仅在部署应用程序时使用属性来调用 api; 不应在中的调试过程中调用 api [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - <xref:System.Deployment.Application>
