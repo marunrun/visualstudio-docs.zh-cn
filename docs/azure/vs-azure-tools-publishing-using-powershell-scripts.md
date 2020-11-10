@@ -1,7 +1,7 @@
 ---
 title: 使用 PowerShell 发布到开发和测试环境
 description: 了解如何使用 Windows PowerShell 脚本通过 Visual Studio 发布到开发和测试环境。
-ms.custom: vs-azure
+ms.custom: SEO-VS-2020
 author: ghogen
 manager: jillfra
 assetId: 5fff1301-5469-4d97-be88-c85c30f837c1
@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
-ms.openlocfilehash: 68b6075ab53fac8b5ac88bc3a15e591081c010da
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 0fafcd0042fce6d3f9eece8e493ee01a9a6923e5
+ms.sourcegitcommit: 023f52f10fb91850824558478cbfd2ec965054f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037167"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94407583"
 ---
 # <a name="using-windows-powershell-scripts-to-publish-to-dev-and-test-environments"></a>使用 Windows PowerShell 脚本发布到开发和测试环境
 
@@ -22,9 +22,9 @@ ms.locfileid: "90037167"
 
 使用这些脚本，可以设置站点的自定义版本（又称为开发与测试环境）供临时使用。 例如，可以在 Azure 虚拟机中或者 Azure 网站的过渡槽中设置网站的特定版本，以运行测试套件、再现 bug、测试 bug 修复程序、试验建议的更改，或者设置自定义环境用于演示或展示。 创建用于发布项目的脚本后，可以根据需要通过重新运行该脚本来重新创建相同的环境，或者结合自己的 Web 应用版本运行该脚本，以创建自定义环境用于测试。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备知识
 
-* 安装有 Azure 工作负载**** 的 Visual Studio 2015 或更高版本，或 Visual Studio 2013 和 Azure SDK 2.3 或更高版本。 请参阅 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads)。 （无需使用 Azure SDK 就能为 Web 项目生成脚本。 此功能适用于 Web 项目，而不适用于云服务中的 Web 角色。）
+* 安装有 Azure 工作负载的 Visual Studio 2015 或更高版本，或 Visual Studio 2013 和 Azure SDK 2.3 或更高版本。 请参阅 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads)。 （无需使用 Azure SDK 就能为 Web 项目生成脚本。 此功能适用于 Web 项目，而不适用于云服务中的 Web 角色。）
 * Azure PowerShell 0.7.4 或更高版本。 请参阅 [如何安装和配置 Azure PowerShell](/powershell/azure/overview)。
 * [Windows PowerShell 3.0](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770458(v=ws.10)) 或更高版本。
 
@@ -142,7 +142,7 @@ JSON 文件是在 **Configurations** 文件夹中创建的，其中包含的配�
 
 可以编辑 JSON 配置，以更改运行发布脚本时的行为。 `cloudService` 和 `virtualMachine` 节是必需的，但是，如果不需要 `databases` 节，则可以将它删除。 在 Visual Studio 生成的默认配置文件中为空的属性是可选的；在默认配置文件中具有值的这些属性是必需的。
 
-如果网站具有多个部署环境（称为槽），而并非仅在 Azure 中有单个生产站点，则可将槽位名称包括在 JSON 配置文件的网站名称中。 例如，如果你的网站的名称为 **mysite**，该网站的一个槽位的名称为 **test**，则 URI 为 `mysite-test.cloudapp.net`，但在配置文件中使用的正确名称为 mysite(test)。 只有当网站和槽已在订阅中存在时，才能这样做。 如果它们不存在，请运行脚本来创建网站，而不指定槽位，然后在 [Azure 门户](https://portal.azure.com/)中创建槽位，再使用修改的网站名称来运行脚本。 有关网站的部署槽的详细信息，请参阅[为 Azure 应用服务中的网站设置过渡环境](/azure/app-service/web-sites-staged-publishing)。
+如果网站具有多个部署环境（称为槽），而并非仅在 Azure 中有单个生产站点，则可将槽位名称包括在 JSON 配置文件的网站名称中。 例如，如果你的网站的名称为 **mysite** ，该网站的一个槽位的名称为 **test** ，则 URI 为 `mysite-test.cloudapp.net`，但在配置文件中使用的正确名称为 mysite(test)。 只有当网站和槽已在订阅中存在时，才能这样做。 如果它们不存在，请运行脚本来创建网站，而不指定槽位，然后在 [Azure 门户](https://portal.azure.com/)中创建槽位，再使用修改的网站名称来运行脚本。 有关网站的部署槽的详细信息，请参阅[为 Azure 应用服务中的网站设置过渡环境](/azure/app-service/web-sites-staged-publishing)。
 
 ## <a name="how-to-run-the-publish-scripts"></a>如何运行发布脚本
 
@@ -156,7 +156,7 @@ JSON 文件是在 **Configurations** 文件夹中创建的，其中包含的配�
 
    有关详细信息，请参阅[如何：在 Visual Studio 中创建 Web 部署包](/previous-versions/aspnet/dd465323(v=vs.110))。 也可以自动创建 Web 部署包，如[自定义和扩展发布脚本](#customizing-and-extending-the-publish-scripts)中所述。
 
-1. 在“解决方案资源管理器”中打开脚本的上下文菜单，并选择“使用 PowerShell ISE 打开”。********
+1. 在“解决方案资源管理器”中打开脚本的上下文菜单，并选择“使用 PowerShell ISE 打开”。
 1. 如果首次在此计算机上运行 Windows PowerShell 脚本，请使用管理员权限打开命令提示窗口并键入以下命令：
 
     ```powershell
@@ -242,7 +242,7 @@ JSON 文件是在 **Configurations** 文件夹中创建的，其中包含的配�
     }
     ```
 
-1. 将 `New-WebDeployPackage` 替换为以下代码，并替换构造 `$msbuildCmd` 的行中的占位符。 此代码适用于 Visual Studio 2019。 如果使用的是 Visual Studio 2017，请将 VisualStudioVersion**** 属性更改为 `15.0`（Visual Studio 2015 为“14.0”，Visual Studio 2013 为 `12.0`）。
+1. 将 `New-WebDeployPackage` 替换为以下代码，并替换构造 `$msbuildCmd` 的行中的占位符。 此代码适用于 Visual Studio 2019。 如果使用的是 Visual Studio 2017，请将 VisualStudioVersion 属性更改为 `15.0`（Visual Studio 2015 为“14.0”，Visual Studio 2013 为 `12.0`）。
 
     ```powershell
     function New-WebDeployPackage
@@ -250,7 +250,7 @@ JSON 文件是在 **Configurations** 文件夹中创建的，其中包含的配�
         #Write a function to build and package your web application
     ```
 
-    若要生成 Web 应用程序，请使用 MsBuild.exe。 有关帮助，请参阅 [MSBuild 命令行参考](../msbuild/msbuild-command-line-reference.md)
+    若要生成 Web 应用程序，请使用 MsBuild.exe。 有关帮助，请参阅 [MSBuild Command-Line 引用](../msbuild/msbuild-command-line-reference.md)
 
     ```powershell
     Write-VerboseWithTime 'Build-WebDeployPackage: Start'
@@ -306,7 +306,7 @@ return $WebDeployPackage
     若要自动测试应用程序，请向 `Test-WebApplication` 添加代码。 请务必取消注释 **Publish-WebApplication.ps1** 中调用这些函数的行。 如果不提供实现，则可以使用 Visual Studio 手动生成项目，并运行发布脚本来发布到 Azure。
 
 ## <a name="publishing-function-summary"></a>发布函数摘要
-若要获取可在 Windows PowerShell 命令提示符处使用的函数的相关帮助，请使用 `Get-Help function-name` 命令。 帮助中包含参数帮助和示例。 同一帮助文本还在脚本源文件 **azurewebapppublishmodule.psm1. hbase-runner.psm1** 和 **Publish-WebApplication.ps1**中。 脚本和帮助已使用 Visual Studio 语言本地化。
+若要获取可在 Windows PowerShell 命令提示符处使用的函数的相关帮助，请使用 `Get-Help function-name` 命令。 帮助中包含参数帮助和示例。 同一帮助文本还在脚本源文件 **azurewebapppublishmodule.psm1. hbase-runner.psm1** 和 **Publish-WebApplication.ps1** 中。 脚本和帮助已使用 Visual Studio 语言本地化。
 
 **AzureWebAppPublishModule**
 
@@ -317,12 +317,12 @@ return $WebDeployPackage
 | Add-AzureVM |创建 Azure 虚拟机并返回所部署 VM 的 URL。 该函数将设置先决条件，然后调用 **New-AzureVM** 函数（Azure 模块）来创建新的虚拟机。 |
 | Add-AzureVMEndpoints |将新的输入终结点添加到虚拟机，然后返回包含新终结点的虚拟机。 |
 | Add-AzureVMStorage |在当前订阅中创建新的 Azure 存储帐户。 该帐户的名称以“devtest”开头，后接一个唯一的字母数字字符串。 该函数将返回新存储帐户的名称。 为新的存储帐户指定位置或地缘组。 |
-| Add-AzureWebsite |使用特定的名称和位置创建网站。 此函数将调用 Azure 模块中的 **New-AzureWebsite** 函数。 如果订阅中尚未包括具有指定名称的网站，则此函数将创建该网站并返回一个网站对象。 否则，将返回 `$null`。 |
+| Add-AzureWebsite |使用特定的名称和位置创建网站。 此函数将调用 Azure 模块中的 **New-AzureWebsite** 函数。 如果订阅中尚未包括具有指定名称的网站，则此函数将创建该网站并返回一个网站对象。 否则，它将返回 `$null`。 |
 | Backup-Subscription |将当前 Azure 订阅保存在脚本作用域中的 `$Script:originalSubscription` 变量中。 此函数在脚本作用域中保存当前 Azure 订阅（通过 `Get-AzureSubscription -Current` 获取）及其存储帐户，以及此脚本更改的订阅（存储在变量 `$UserSpecifiedSubscription` 中）及其存储帐户。 保存这些值后，如果当前状态发生更改，可以使用 `Restore-Subscription` 等函数将当前原始订阅和存储帐户还原到当前状态。 |
 | Find-AzureVM |获取指定的 Azure 虚拟机。 |
 | Format-DevTestMessageWithTime |在消息的前面添加日期和时间。 此函数适用于写入到错误流和详细流的消息。 |
 | Get-AzureSQLDatabaseConnectionString |汇编一个连接字符串以连接到 Azure SQL 数据库。 |
-| Get-AzureVMStorage |返回*指定的位置或地缘组中名称模式为 "开发测试" () 不区分大小写的第一个存储帐户的名称。如果 "开发测试*" 存储帐户与该位置或地缘组不匹配，该函数将忽略该帐户。 指定一个位置或地缘组。 |
+| Get-AzureVMStorage |返回 *指定的位置或地缘组中名称模式为 "开发测试" () 不区分大小写的第一个存储帐户的名称。如果 "开发测试* " 存储帐户与该位置或地缘组不匹配，该函数将忽略该帐户。 指定一个位置或地缘组。 |
 | Get-MSDeployCmd |返回一个用于运行 MsDeploy.exe 工具的命令。 |
 | New-AzureVMEnvironment |在订阅中查找或创建与 JSON 配置文件中的值匹配的虚拟机。 |
 | Publish-WebPackage |使用 MsDeploy.exe 和 Web 发布包 .Zip 文件将资源部署到网站。 此函数不生成任何输出。 如果调用 MSDeploy.exe 失败，该函数将引发异常。 若要获取更详细的输出，请使用 **-Verbose** 选项。 |
@@ -334,8 +334,8 @@ return $WebDeployPackage
 | Test-HttpsUrl |将输入 URL 转换为 System.Uri 对象。 如果 URL 是绝对的并且其方案为 https，则返回 `$True`。 如果 URL 是相对的并且其方案不是 HTTPS，或者无法将输入字符串转换为 URL，则返回 `$false`。 |
 | Test-Member |如果某个属性或方法是对象的成员，则返回 `$true`。 否则返回 `$false`。 |
 | Write-ErrorWithTime |写入以当前时间作为前缀的错误消息。 将该消息写入错误流之前，此函数将调用 **Format-DevTestMessageWithTime** 函数来添加时间前缀。 |
-| Write-HostWithTime |将以当前时间作为前缀的消息写入主机程序 (**Write-Host**)。 写入主机程序的效果各不相同。 大多数托管 Windows PowerShell 的程序会将这些消息写入标准输出。 |
-| Write-VerboseWithTime |写入以当前时间作为前缀的详细消息。 由于该函数调用 **Write-Verbose**，因此，仅当使用 **Verbose** 参数运行脚本，或者将 **VerbosePreference** 首选项设置为 **Continue** 时，才显示该消息。 |
+| Write-HostWithTime |将以当前时间作为前缀的消息写入主机程序 ( **Write-Host** )。 写入主机程序的效果各不相同。 大多数托管 Windows PowerShell 的程序会将这些消息写入标准输出。 |
+| Write-VerboseWithTime |写入以当前时间作为前缀的详细消息。 由于该函数调用 **Write-Verbose** ，因此，仅当使用 **Verbose** 参数运行脚本，或者将 **VerbosePreference** 首选项设置为 **Continue** 时，才显示该消息。 |
 
 **Publish-WebApplication**
 
