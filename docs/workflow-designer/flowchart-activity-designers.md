@@ -1,5 +1,7 @@
 ---
 title: 工作流设计器流程图活动设计器
+description: 了解 Flowchart 活动设计器，其中包含可用于管理工作流中的流程图的系统提供的活动。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 8b7b4aa6-d27d-45c8-87c2-641440d38afc
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a4503a9653123bf0b0668f5686b9fdb94c97a7bb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5a9aad147f0d8f47a64b6d083cf3e008dec8f6a2
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75597017"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94435803"
 ---
 # <a name="flowchart-activity-designers"></a>流程图活动设计器
 

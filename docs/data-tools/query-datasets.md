@@ -1,5 +1,7 @@
 ---
 title: 查询数据集
+description: 了解查询数据集。 了解 dataset 区分大小写。 查找数据表中的特定行，按列值查找行，并访问相关记录。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -11,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 4ef1c806914b0f134702e010b58229ee3fc15c7a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8ccf228b147301eb9fccf41da98f8cc5204971a9
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85281859"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436063"
 ---
 # <a name="query-datasets"></a>查询数据集
 若要搜索数据集中的特定记录，请使用 `FindBy` DataTable 上的方法，编写自己的 foreach 语句来循环遍历表的 Rows 集合，或使用 [LINQ to DataSet](/dotnet/framework/data/adonet/linq-to-dataset)。
@@ -70,7 +72,7 @@ ms.locfileid: "85281859"
 > [!NOTE]
 > 如果使用的是 Windows 窗体应用程序并使用数据绑定功能显示数据，则设计器生成的窗体可能会为应用程序提供足够的功能。 有关详细信息，请参阅 [在 Visual Studio 中将控件绑定到数据](../data-tools/bind-controls-to-data-in-visual-studio.md)。 具体而言，请参阅 [数据集中的关系](relationships-in-datasets.md)。
 
-下面的代码示例演示如何在类型化的数据集中向上和向下导航关系。 此代码示例使用类型化 <xref:System.Data.DataRow> `NorthwindDataSet.OrdersRow` 的 () ，生成的 FindBy*PrimaryKey* (`FindByCustomerID`) 方法查找所需行并返回相关记录。 仅当有以下情况时，才会正确编译和运行示例：
+下面的代码示例演示如何在类型化的数据集中向上和向下导航关系。 此代码示例使用类型化 <xref:System.Data.DataRow> `NorthwindDataSet.OrdersRow` 的 () ，生成的 FindBy *PrimaryKey* (`FindByCustomerID`) 方法查找所需行并返回相关记录。 仅当有以下情况时，才会正确编译和运行示例：
 
 - 使用表命名的数据集的实例 `NorthwindDataSet` `Customers` 。
 
@@ -94,6 +96,6 @@ ms.locfileid: "85281859"
      [!code-csharp[VbRaddataDatasets#7](../data-tools/codesnippet/CSharp/query-datasets_5.cs)]
      [!code-vb[VbRaddataDatasets#7](../data-tools/codesnippet/VisualBasic/query-datasets_5.vb)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 中的数据集工具](../data-tools/dataset-tools-in-visual-studio.md)

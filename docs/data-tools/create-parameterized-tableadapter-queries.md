@@ -1,5 +1,7 @@
 ---
 title: 创建参数化 TableAdapter 查询
+description: 了解如何创建参数化 TableAdapter 查询。 参数化查询将返回满足查询内的 WHERE 子句条件的数据。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -18,18 +20,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: a2b94e10dd09d26a17a7574db97880567f7725cd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e6eb2f6e1358c91a1103615aca67ede4a3561fae
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282600"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436662"
 ---
 # <a name="create-parameterized-tableadapter-queries"></a>创建参数化 TableAdapter 查询
 
 参数化查询将返回满足查询内的 WHERE 子句条件的数据。 例如，通过在返回客户列表的 SQL 语句的末尾添加 `WHERE City = @City`，可以参数化客户列表，使之只显示某个城市的客户。
 
-在**数据集设计器**中创建参数化 TableAdapter 查询。你还可以在 Windows 应用程序中使用 "**数据**" 菜单上的 "**参数化数据源**" 命令来创建它们。 " **参数化数据源** " 命令创建窗体上的控件，您可以在其中输入参数值和运行查询。
+在 **数据集设计器** 中创建参数化 TableAdapter 查询。你还可以在 Windows 应用程序中使用 " **数据** " 菜单上的 " **参数化数据源** " 命令来创建它们。 " **参数化数据源** " 命令创建窗体上的控件，您可以在其中输入参数值和运行查询。
 
 > [!NOTE]
 > 构造参数化查询时，请使用特定于要编码的数据库的参数表示法。 例如，Access 和 OleDb 数据源使用问号“?”表示参数，所以 WHERE 子句将类似于：`WHERE City = ?`。
@@ -48,32 +50,32 @@ ms.locfileid: "85282600"
 
 1. 在窗体中选择已绑定到数据集的控件。 有关详细信息，请参阅 [将 Windows 窗体控件绑定到 Visual Studio 中的数据](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)。
 
-2. 在 " **数据** " 菜单上，选择 " **添加查询**"。
+2. 在 " **数据** " 菜单上，选择 " **添加查询** "。
 
-3. 将 WHERE 语句和所需参数添加到 SQL 语句中，以完成“搜索标准生成器”对话框****。
+3. 将 WHERE 语句和所需参数添加到 SQL 语句中，以完成“搜索标准生成器”对话框。
 
 ### <a name="to-add-a-query-to-an-existing-data-bound-form"></a>将查询添加到现有数据绑定窗体
 
-1. 在 **Windows 窗体设计器**中打开窗体。
+1. 在 **Windows 窗体设计器** 中打开窗体。
 
-2. 在 " **数据** " 菜单上，选择 " **添加查询** " 或 " **数据智能标记**"。
+2. 在 " **数据** " 菜单上，选择 " **添加查询** " 或 " **数据智能标记** "。
 
     > [!NOTE]
-    > 如果“添加查询”在“数据”菜单上不可用，请在窗体上选择一个控件，该窗体将显示你希望参数化功能添加到的数据源********。 例如，如果窗体在 <xref:System.Windows.Forms.DataGridView> 控件中显示数据，则选择该控件。 如果窗体在各个控件中显示数据，则选择任意数据绑定控件。
+    > 如果“添加查询”在“数据”菜单上不可用，请在窗体上选择一个控件，该窗体将显示你希望参数化功能添加到的数据源。 例如，如果窗体在 <xref:System.Windows.Forms.DataGridView> 控件中显示数据，则选择该控件。 如果窗体在各个控件中显示数据，则选择任意数据绑定控件。
 
 3. 在 " **选择数据源表** " 区域中，选择要向其添加参数化的表。
 
-4. 如果要创建新查询，请在“新建查询名称”框中键入名称****。
+4. 如果要创建新查询，请在“新建查询名称”框中键入名称。
 
      - 或 -
 
-     在“现有查询名称”框中选择查询****。
+     在“现有查询名称”框中选择查询。
 
 5. 在 " **查询" 文本框** 中，键入采用参数的查询。
 
 6. 选择“确定”。
 
-     用于输入参数的控件和“加载”按钮将添加到 <xref:System.Windows.Forms.ToolStrip> 控件的窗体中****。
+     用于输入参数的控件和“加载”按钮将添加到 <xref:System.Windows.Forms.ToolStrip> 控件的窗体中。
 
 ### <a name="query-for-null-values"></a>查询 null 值
 
@@ -92,9 +94,9 @@ WHERE (ShippedDate = @ShippedDate) OR (ShippedDate IS NULL)
 
 使查询能够接受空值：
 
-1. 在 **数据集设计器**中，选择需要接受 null 参数值的 TableAdapter 查询。
+1. 在 **数据集设计器** 中，选择需要接受 null 参数值的 TableAdapter 查询。
 
-2. 在 " **属性** " 窗口中，选择 " **参数**"，然后单击省略号 (**...** ") 按钮，打开" **参数集合编辑器**"。
+2. 在 " **属性** " 窗口中，选择 " **参数** "，然后单击省略号 ( **...** ") 按钮，打开" **参数集合编辑器** "。
 
 3. 选择允许空值的参数，并将 **AllowDbNull** 属性设置为 `true` 。
 

@@ -1,6 +1,8 @@
 ---
 title: 使用代码分析规则集编辑器
 ms.date: 04/04/2018
+description: 了解如何在 Visual Studio 中编辑和查看规则集。 请参阅如何设置规则严重性，在自定义集中指定规则，并调整规则集网格中的数据。
+ms.custom: SEO-VS-2020
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.ruleseteditor
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ffaf964b24fea41d8e364d610806ba92980b1dc7
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: 4d2703972658aace438ab235d469eed3e0644c06
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91659174"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436818"
 ---
 # <a name="use-the-code-analysis-rule-set-editor"></a>使用代码分析规则集编辑器
 
@@ -27,7 +29,7 @@ ms.locfileid: "91659174"
 |-|-|
 |警告|在 **错误列表** 中和生成时生成警告。|
 |错误|在 **错误列表** 中和生成时生成错误。|
-|信息|在 **错误列表**中生成一条消息。|
+|信息|在 **错误列表** 中生成一条消息。|
 |Hidden|冲突对用户不可见。 但会通知 IDE 冲突。|
 |无|规则被抑制。 行为与从规则集中删除规则的行为相同。|
 
@@ -71,10 +73,10 @@ ms.locfileid: "91659174"
 |-----------|-----------------|
 |**ID**|规则的标识符。|
 |**类别**|除了规则集中的成员身份外，代码分析规则还按类别分组。 有关详细信息，请参阅 [代码分析警告](/dotnet/fundamentals/code-analysis/quality-rules/index)。|
-|**Name**|规则的标题。|
-|**Namespace**|规则的命名空间。|
+|**名称**|规则的标题。|
+|**命名空间**|规则的命名空间。|
 |**目标类型**|指示规则是适用于本机、托管代码还是数据库代码。|
-|**操作**|代码分析运行中违反规则时执行的操作。 可以编辑 " **操作** " 字段。|
+|**Action**|代码分析运行中违反规则时执行的操作。 可以编辑 " **操作** " 字段。|
 |**源规则集**|包含规则的规则集。|
 
 ## <a name="sort-and-filter-rule-sets"></a>排序和筛选规则集
@@ -85,6 +87,6 @@ ms.locfileid: "91659174"
 
 - 若要按字段的值筛选规则集，请在要筛选的字段的列标题上选择 "筛选器" 按钮。 选中要显示的值的复选框，并清除要隐藏的值的复选框。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [创建自定义规则集](../code-quality/how-to-create-a-custom-rule-set.md)

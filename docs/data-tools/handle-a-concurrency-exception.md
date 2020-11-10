@@ -1,5 +1,7 @@
 ---
 title: 处理并发异常
+description: 处理并发异常 (System.data.dbconcurrencyexception) ，当两个用户尝试同时更改数据库中的相同数据时，将引发此异常。
+ms.custom: SEO-VS-2020
 ms.date: 09/11/2017
 ms.topic: how-to
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 57820a7532255c0084bafc5134cf7793b8c88ab6
-ms.sourcegitcommit: 023f52f10fb91850824558478cbfd2ec965054f0
+ms.openlocfilehash: 5fcd8bb06cf9c88466b4dfa3cfaf2dfd8093bd3d
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/10/2020
-ms.locfileid: "94407661"
+ms.locfileid: "94436441"
 ---
 # <a name="handle-a-concurrency-exception"></a>处理并发异常
 
@@ -45,7 +47,7 @@ ms.locfileid: "94407661"
 
 7. 捕获错误，然后显示记录的不同版本，使用户能够确定是继续更新数据库，还是取消更新。
 
-## <a name="prerequisites"></a>必备知识
+## <a name="prerequisites"></a>先决条件
 
 本演练使用 SQL Server Express LocalDB 和 Northwind 示例数据库。
 
@@ -212,6 +214,6 @@ ms.locfileid: "94407661"
 
    选择 " **否** " 将取消更新并用数据库中当前的值更新数据集。 选择 **"是"** 将建议的值写入数据库。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [将数据保存回数据库](../data-tools/save-data-back-to-the-database.md)

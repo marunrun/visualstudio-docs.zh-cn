@@ -1,5 +1,7 @@
 ---
 title: 在 WPF 应用程序中创建查找表
+description: 在 WPF 应用程序中创建查找表。 查找表是一个控件，该控件显示数据表中基于另一个表中的外键字段值的信息。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -16,16 +18,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 7485c63d358bc6f6fe7030e589fbdf7286ded3fd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 293f04ca111fe88c905a288885f7e4763ec1cdc3
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282613"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436688"
 ---
 # <a name="create-lookup-tables-in-wpf-applications"></a>在 WPF 应用程序中创建查找表
 
-术语 *查找表* (有时称作 *查找绑定*) 描述了一个控件，该控件基于另一个表中的外键字段的值显示一个数据表中的信息。 您可以通过将父表或对象在 " **数据源** " 窗口中的主节点拖到已绑定到相关子表中的列或属性的控件来创建查找表。
+术语 *查找表* (有时称作 *查找绑定* ) 描述了一个控件，该控件基于另一个表中的外键字段的值显示一个数据表中的信息。 您可以通过将父表或对象在 " **数据源** " 窗口中的主节点拖到已绑定到相关子表中的列或属性的控件来创建查找表。
 
 例如，假设有一个 `Orders` sales 数据库中的表。 表中的每条记录 `Orders` 都包括一个 `CustomerID` ，指示下订单的客户。 `CustomerID`是一个外键，它指向表中的客户记录 `Customers` 。 显示表中的订单列表时 `Orders` ，可能需要显示实际的客户名称，而不是 `CustomerID` 。 由于客户名称位于 `Customers` 表中，因此需要创建查找表以显示客户名称。 查找表使用 `CustomerID` 记录中的值 `Orders` 来导航关系，并返回客户名称。
 
@@ -42,18 +44,18 @@ ms.locfileid: "85282613"
     > [!NOTE]
     > 创建查找表之前，必须有两个相关的表或对象作为项目的数据源。
 
-2. 打开 **WPF 设计器**，并确保设计器包含一个容器，该容器是 " **数据源** " 窗口中项的有效拖放目标。
+2. 打开 **WPF 设计器** ，并确保设计器包含一个容器，该容器是 " **数据源** " 窗口中项的有效拖放目标。
 
      有关有效放置目标的详细信息，请参阅 [在 Visual Studio 中将 WPF 控件绑定到数据](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)。
 
-3. 在“数据”菜单上单击“显示数据源”，打开“数据源”窗口************。
+3. 在“数据”菜单上单击“显示数据源”，打开“数据源”窗口。
 
 4. 展开 " **数据源** " 窗口中的节点，直到您可以看到父表或对象以及相关的子表或对象。
 
     > [!NOTE]
     > 相关的子表或对象是显示为父表或对象下的可扩展子节点的节点。
 
-5. 单击子节点的下拉菜单，然后选择 " **详细信息**"。
+5. 单击子节点的下拉菜单，然后选择 " **详细信息** "。
 
 6. 展开子节点。
 
@@ -61,7 +63,7 @@ ms.locfileid: "85282613"
 
     - **ComboBox**
 
-    - **改**
+    - **ListBox**
 
     - **ListView**
 

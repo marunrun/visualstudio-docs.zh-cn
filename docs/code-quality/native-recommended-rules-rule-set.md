@@ -1,18 +1,20 @@
 ---
 title: “本机建议规则”规则集
 ms.date: 11/04/2016
+description: 了解 Visual Studio 本机建议规则集。 请参阅针对安全、可靠性和本机代码中的其他关键问题的规则说明。
+ms.custom: SEO-VS-2020
 ms.topic: reference
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 94fd7ba7b742c2615dc8f161c5ea156b4fd0a7f4
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 1c0515a08d987d8892dd5f252d97ece8d138eb0b
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89600016"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437026"
 ---
 # <a name="native-recommended-rules-rule-set"></a>“本机建议规则”规则集
 
@@ -38,20 +40,20 @@ ms.locfileid: "89600016"
 |[C6201](/cpp/code-quality/c6201)|索引超出最大堆栈缓冲区大小|
 |[C6214](/cpp/code-quality/c6214)|将 HRESULT 转换为 BOOL 无效|
 |[C6215](/cpp/code-quality/c6215)|无效的转换布尔值到 HRESULT|
-|[C6216](/cpp/code-quality/c6216)|编译器插入的强制转换布尔值无效|
+|[C6216](/cpp/code-quality/c6216)|将 BOOL 转换为 HRESULT Compiler-Inserted 无效|
 |[C6217](/cpp/code-quality/c6217)|不包含的 HRESULT 测试无效|
 |[C6220](/cpp/code-quality/c6220)|HRESULT 与-1 的比较无效|
 |[C6226](/cpp/code-quality/c6226)|HRESULT 赋值无效-1|
 |[C6230](/cpp/code-quality/c6230)|HRESULT 用作 Boolean 无效|
-|[C6235](/cpp/code-quality/c6235)|带有逻辑或的非零常量|
-|[C6236](/cpp/code-quality/c6236)|逻辑或与非零常量|
-|[C6237](/cpp/code-quality/c6237)|带有逻辑与失去副作用的零|
+|[C6235](/cpp/code-quality/c6235)|具有 Logical-Or 的非零常量|
+|[C6236](/cpp/code-quality/c6236)|Logical-Or 包含非零常量|
+|[C6237](/cpp/code-quality/c6237)|零，Logical-And 失去副作用|
 |[C6242](/cpp/code-quality/c6242)|强制本地展开|
 |[C6248](/cpp/code-quality/c6248)|创建 Null DACL|
 |[C6250](/cpp/code-quality/c6250)|未发布地址描述符|
 |[C6255](/cpp/code-quality/c6255)|不受保护的 Alloca 使用|
 |[C6258](/cpp/code-quality/c6258)|使用终止线程|
-|[C6259](/cpp/code-quality/c6259)|按位或限制开关中的死代码|
+|[C6259](/cpp/code-quality/c6259)|Bitwise-Or 有限交换机中的死信|
 |[C6260](/cpp/code-quality/c6260)|使用字节算术|
 |[C6262](/cpp/code-quality/c6262)|堆栈使用过多|
 |[C6263](/cpp/code-quality/c6263)|在循环中使用 Alloca|
@@ -64,18 +66,18 @@ ms.locfileid: "89600016"
 |[C6274](/cpp/code-quality/c6274)|Format 函数的非字符自变量|
 |[C6276](/cpp/code-quality/c6276)|无效字符串的强制转换|
 |[C6277](/cpp/code-quality/c6277)|无效 CreateProcess 的调用|
-|[C6278](/cpp/code-quality/c6278)|数组-新的标量删除不匹配|
-|[C6279](/cpp/code-quality/c6279)|标量-新数组删除不匹配|
-|[C6280](/cpp/code-quality/c6280)|内存分配-解除分配不匹配|
+|[C6278](/cpp/code-quality/c6278)|Array-New Scalar-Delete 不匹配|
+|[C6279](/cpp/code-quality/c6279)|Scalar-New Array-Delete 不匹配|
+|[C6280](/cpp/code-quality/c6280)|内存 Allocation-Deallocation 不匹配|
 |[C6281](/cpp/code-quality/c6281)|按位关系优先顺序|
 |[C6282](/cpp/code-quality/c6282)|赋值替换测试|
-|[C6283](/cpp/code-quality/c6283)|基元数组-新的标量删除不匹配|
+|[C6283](/cpp/code-quality/c6283)|基元 Array-New Scalar-Delete 不匹配|
 |[C6284](/cpp/code-quality/c6284)|Format 函数的无效对象自变量|
-|[C6285](/cpp/code-quality/c6285)|常量的逻辑或|
-|[C6286](/cpp/code-quality/c6286)|非零逻辑或丢失副作用|
+|[C6285](/cpp/code-quality/c6285)|常量 Logical-Or|
+|[C6286](/cpp/code-quality/c6286)|非零 Logical-Or 丢失副作用|
 |[C6287](/cpp/code-quality/c6287)|冗余测试|
-|[C6288](/cpp/code-quality/c6288)|通过逻辑与的相互包含并为 False|
-|[C6289](/cpp/code-quality/c6289)|基于逻辑或的互斥运算为 True|
+|[C6288](/cpp/code-quality/c6288)|Logical-And 上的相互包含为 False|
+|[C6289](/cpp/code-quality/c6289)|Logical-Or 的相互排除为 True|
 |[C6290](/cpp/code-quality/c6290)|逻辑非和按位与的优先级|
 |[C6291](/cpp/code-quality/c6291)|逻辑非和按位或的优先级|
 |[C6292](/cpp/code-quality/c6292)|循环从最大值计数|
@@ -92,7 +94,7 @@ ms.locfileid: "89600016"
 |[C6308](/cpp/code-quality/c6308)|Realloc 泄漏|
 |[C6310](/cpp/code-quality/c6310)|非法的异常筛选器常量|
 |[C6312](/cpp/code-quality/c6312)|异常继续执行循环|
-|[C6314](/cpp/code-quality/c6314)|按位或优先顺序|
+|[C6314](/cpp/code-quality/c6314)|Bitwise-Or 优先级|
 |[C6317](/cpp/code-quality/c6317)|不非补充|
 |[C6318](/cpp/code-quality/c6318)|异常继续搜索|
 |[C6319](/cpp/code-quality/c6319)|被逗号忽略|
@@ -103,7 +105,7 @@ ms.locfileid: "89600016"
 |[C6333](/cpp/code-quality/c6333)|VirtualFree 大小无效|
 |[C6335](/cpp/code-quality/c6335)|泄漏进程句柄|
 |[C6381](/cpp/code-quality/c6381)|缺少关闭信息|
-|[C6383](/cpp/code-quality/c6383)|元素计数字节计数缓冲区溢出|
+|[C6383](/cpp/code-quality/c6383)|Element-Count Byte-Count 缓冲区溢出|
 |[C6384](/cpp/code-quality/c6384)|指针大小划分|
 |[C6385](/cpp/code-quality/c6385)|读取溢出|
 |[C6386](/cpp/code-quality/c6386)|写入溢出|

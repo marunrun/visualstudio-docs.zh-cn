@@ -1,5 +1,7 @@
 ---
 title: 工作流设计器 InitializeCorrelation 活动设计器
+description: 了解如何使用 InitializeCorrelation 活动设计器创建和配置 InitializeCorrelation 活动。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aadb526e50351c8344c8b265dca3364637d1ff0c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 82b786277c79a355e1859b337a45ab093e6f2a42
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86875561"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437783"
 ---
 # <a name="initializecorrelation-activity-designer"></a>InitializeCorrelation 活动设计器
 
@@ -27,13 +29,13 @@ ms.locfileid: "86875561"
 
 ### <a name="using-the-initializecorrelation-activity-designer"></a>使用 InitializeCorrelation 活动设计器
 
-访问 "**工具箱**" 的 "**消息传送**" 类别中的 " **InitializeCorrelation** " 活动设计器。
+访问 " **工具箱** " 的 " **消息传送** " 类别中的 " **InitializeCorrelation** " 活动设计器。
 
-可以将 " **InitializeCorrelation** " 活动设计器从 " **工具箱** " 拖放到工作流设计器图面上。 删除活动设计器将创建一个 <xref:System.ServiceModel.Activities.InitializeCorrelation> 活动，其默认值为 <xref:System.Activities.Activity.DisplayName%2A> InitializeCorrelation。 <xref:System.Activities.Activity.DisplayName%2A>可以在 " **InitializeCorrelation** " 活动设计器的标头中或在 "**属性**" 窗口的 " **DisplayName** " 框中编辑。
+可以将 " **InitializeCorrelation** " 活动设计器从 " **工具箱** " 拖放到工作流设计器图面上。 删除活动设计器将创建一个 <xref:System.ServiceModel.Activities.InitializeCorrelation> 活动，其默认值为 <xref:System.Activities.Activity.DisplayName%2A> InitializeCorrelation。 <xref:System.Activities.Activity.DisplayName%2A>可以在 " **InitializeCorrelation** " 活动设计器的标头中或在 " **属性** " 窗口的 " **DisplayName** " 框中编辑。
 
-可以在 " <xref:System.ServiceModel.Activities.CorrelationHandle> **InitializeCorrelation** " 活动设计器图面上的 "**属性**" 窗口中的**相关**字段中指定。
+可以在 " <xref:System.ServiceModel.Activities.CorrelationHandle> **InitializeCorrelation** " 活动设计器图面上的 " **属性** " 窗口中的 **相关** 字段中指定。
 
-若要显示 "**初始化相关**" 对话框，在该对话框中可以指定相关句柄和用于初始化它的键值对，请在 "**属性**" 窗口中选择 " **CorrelationData** " 字段旁边的省略号按钮。 或者，选择 "查看 ..." **InitializeCorrelation** 活动设计器图面上的提示文本。 有关使用此对话框的详细信息，请参阅 " [类型集合编辑器" 对话框](../workflow-designer/type-collection-editor-dialog-box.md) 。
+若要显示 " **初始化相关** " 对话框，在该对话框中可以指定相关句柄和用于初始化它的键值对，请在 " **属性** " 窗口中选择 " **CorrelationData** " 字段旁边的省略号按钮。 或者，选择 "查看 ..." **InitializeCorrelation** 活动设计器图面上的提示文本。 有关使用此对话框的详细信息，请参阅 " [类型集合编辑器" 对话框](../workflow-designer/type-collection-editor-dialog-box.md) 。
 
 ### <a name="the-initializecorrelation-properties"></a>InitializeCorrelation 属性
 

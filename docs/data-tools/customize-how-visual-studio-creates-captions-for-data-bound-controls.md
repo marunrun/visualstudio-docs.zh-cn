@@ -1,5 +1,7 @@
 ---
 title: 为数据绑定控件自定义标题
+description: 自定义 Visual Studio 创建数据绑定控件的标题的方式。 修改 "数据源" 窗口的智能字幕行为。 关闭智能字幕。
+ms.custom: SEO-VS-2020
 ms.date: 11/03/2017
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 085542f912cc5747c2012adb05e6097b5891ed60
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 65c0f1146549dfbee6f84fab06be12053b174aeb
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282574"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436623"
 ---
 # <a name="customize-how-visual-studio-creates-captions-for-data-bound-controls"></a>自定义 Visual Studio 创建数据绑定控件的标题的方式
 
@@ -26,13 +28,13 @@ ms.locfileid: "85282574"
 
 ::: moniker range="vs-2017"
 
-可以通过在**HKEY_CURRENT_USER \Software\microsoft\visualstudio\15.0\data 设计器**注册表项中设置**SmartCaptionExpression**、 **SmartCaptionReplacement**和**SmartCaptionSuffix**值来自定义创建这些标签的方式。
+可以通过在 **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\15.0\Data Designers** 注册表项中设置 **SmartCaptionExpression** 、 **SmartCaptionReplacement** 和 **SmartCaptionSuffix** 值来自定义创建这些标签的方式。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-可以通过在**HKEY_CURRENT_USER \Software\microsoft\visualstudio\16.0\data 设计器**注册表项中设置**SmartCaptionExpression**、 **SmartCaptionReplacement**和**SmartCaptionSuffix**值来自定义创建这些标签的方式。
+可以通过在 **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\16.0\Data Designers** 注册表项中设置 **SmartCaptionExpression** 、 **SmartCaptionReplacement** 和 **SmartCaptionSuffix** 值来自定义创建这些标签的方式。
 
 ::: moniker-end
 
@@ -46,15 +48,15 @@ ms.locfileid: "85282574"
 |注册表项|说明|
 |-------------------|-----------------|
 |**SmartCaptionExpression**|用于匹配模式的正则表达式。|
-|**SmartCaptionReplacement**|用于显示在 **SmartCaptionExpression**中匹配的所有组的格式。|
+|**SmartCaptionReplacement**|用于显示在 **SmartCaptionExpression** 中匹配的所有组的格式。|
 |**SmartCaptionSuffix**|要追加到标题末尾的可选字符串。|
 
 下表列出了这些注册表值的内部默认设置。
 
 |注册表项|默认值|说明|
 |-------------------|-------------------|-----------------|
-|**SmartCaptionExpression**|** (\\ \p{Ll} ) # B2 \\ \p{Lu} ) # A0_ +**|匹配后跟一个大写字符或下划线的小写字符。|
-|**SmartCaptionReplacement**|**$1 $2**|**$1**表示表达式的第一个括号中匹配的任何字符， **$2**表示在第二个括号中匹配的任何字符。 替换为第一个匹配项、一个空格，然后第二个匹配项。|
+|**SmartCaptionExpression**|**(\\ \p{Ll} ) # B2 \\ \p{Lu} ) # A0_ +**|匹配后跟一个大写字符或下划线的小写字符。|
+|**SmartCaptionReplacement**|**$1 $2**|**$1** 表示表达式的第一个括号中匹配的任何字符， **$2** 表示在第二个括号中匹配的任何字符。 替换为第一个匹配项、一个空格，然后第二个匹配项。|
 |**SmartCaptionSuffix**|**:**|表示追加到返回的字符串的字符。 例如，如果标题为 `Company Name` ，则后缀使其 `Company Name:`|
 
 > [!CAUTION]
@@ -64,21 +66,21 @@ ms.locfileid: "85282574"
 
 ## <a name="modify-the-smart-captioning-behavior-of-the-data-sources-window"></a>修改 "数据源" 窗口的智能标题行为
 
-1. 通过单击 " **开始** "，然后单击 " **运行**" 打开命令窗口。
+1. 通过单击 " **开始** "，然后单击 " **运行** " 打开命令窗口。
 
-2. `regedit`在 "**运行**" 对话框中键入，然后单击 **"确定"**。
+2. `regedit`在 " **运行** " 对话框中键入，然后单击 **"确定"** 。
 
 3. 展开 " **HKEY_CURRENT_USER**  >  **Software**  >  **Microsoft**  >  **VisualStudio** " 节点。
 
 ::: moniker range="vs-2017"
 
-4. 右键单击**15.0**节点，并创建一个名为的**Key**新密钥 `Data Designers` 。
+4. 右键单击 **15.0** 节点，并创建一个名为的 **Key** 新密钥 `Data Designers` 。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-4. 右键单击**16.0**节点，并创建一个名为的**Key**新密钥 `Data Designers` 。
+4. 右键单击 **16.0** 节点，并创建一个名为的 **Key** 新密钥 `Data Designers` 。
 
 ::: moniker-end
 
@@ -88,15 +90,15 @@ ms.locfileid: "85282574"
     - `SmartCaptionReplacement`
     - `SmartCaptionSuffix`
 
-6. 右键单击 " **SmartCaptionExpression** " 值，然后选择 " **修改**"。
+6. 右键单击 " **SmartCaptionExpression** " 值，然后选择 " **修改** "。
 
 7. 输入希望 " **数据源** " 窗口使用的正则表达式。
 
-8. 右键单击 " **SmartCaptionReplacement** " 值，然后选择 " **修改**"。
+8. 右键单击 " **SmartCaptionReplacement** " 值，然后选择 " **修改** "。
 
 9. 输入用来显示正则表达式中匹配模式的格式的替换字符串。
 
-10. 右键单击 " **SmartCaptionSuffix** " 值，然后选择 " **修改**"。
+10. 右键单击 " **SmartCaptionSuffix** " 值，然后选择 " **修改** "。
 
 11. 输入要在标题末尾显示的任何字符。
 
@@ -104,21 +106,21 @@ ms.locfileid: "85282574"
 
 ## <a name="turn-off-the-smart-captioning-feature"></a>关闭智能字幕功能
 
-1. 通过单击 " **开始** "，然后单击 " **运行**" 打开命令窗口。
+1. 通过单击 " **开始** "，然后单击 " **运行** " 打开命令窗口。
 
-2. `regedit`在 "**运行**" 对话框中键入，然后单击 **"确定"**。
+2. `regedit`在 " **运行** " 对话框中键入，然后单击 **"确定"** 。
 
 3. 展开 " **HKEY_CURRENT_USER**  >  **Software**  >  **Microsoft**  >  **VisualStudio** " 节点。
 
 ::: moniker range="vs-2017"
 
-4. 右键单击**15.0**节点，并创建一个名为的**Key**新密钥 `Data Designers` 。
+4. 右键单击 **15.0** 节点，并创建一个名为的 **Key** 新密钥 `Data Designers` 。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-4. 右键单击**16.0**节点，并创建一个名为的**Key**新密钥 `Data Designers` 。
+4. 右键单击 **16.0** 节点，并创建一个名为的 **Key** 新密钥 `Data Designers` 。
 
 ::: moniker-end
 
@@ -128,11 +130,11 @@ ms.locfileid: "85282574"
     - `SmartCaptionReplacement`
     - `SmartCaptionSuffix`
 
-6. 右键单击 " **SmartCaptionExpression** " 项，然后选择 " **修改**"。
+6. 右键单击 " **SmartCaptionExpression** " 项，然后选择 " **修改** "。
 
 7. 输入 `(.*)` 作为值。 这将匹配整个字符串。
 
-8. 右键单击 " **SmartCaptionReplacement** " 项，然后选择 " **修改**"。
+8. 右键单击 " **SmartCaptionReplacement** " 项，然后选择 " **修改** "。
 
 9. 输入 `$1` 作为值。 这会将字符串替换为匹配的值，这是整个字符串，因此它将保持不变。
 

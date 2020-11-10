@@ -1,5 +1,7 @@
 ---
 title: 在 WPF 应用程序中显示相关数据
+description: 在 WPF 应用程序中显示相关数据。 处理来自多个表或实体的数据，这些表或实体在父子关系中相互相关。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 6694d3c1521a6a405323edc33adc44dac0e66829
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a9604ac7c0083bc40edb17b19d4de608eb7366b1
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282548"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436493"
 ---
 # <a name="display-related-data-in-wpf-applications"></a>在 WPF 应用程序中显示相关数据
 
@@ -31,9 +33,9 @@ ms.locfileid: "85282548"
 
 ## <a name="to-create-controls-that-display-related-records"></a>创建显示相关记录的控件
 
-1. 在“数据”菜单上单击“显示数据源”，打开“数据源”窗口************。
+1. 在“数据”菜单上单击“显示数据源”，打开“数据源”窗口。
 
-2. 单击“添加新数据源”，然后完成“数据源配置”向导********。
+2. 单击“添加新数据源”，然后完成“数据源配置”向导。
 
 3. 打开 WPF 设计器，确保设计器包含一个容器，该容器是 " **数据源** " 窗口中项的有效拖放目标。
 
@@ -51,7 +53,7 @@ ms.locfileid: "85282548"
 
      Visual Studio 将生成 XAML，为拖动的每个项创建新的数据绑定控件。 XAML 还会将 <xref:System.Windows.Data.CollectionViewSource> 子表或对象的新添加到拖放目标的资源。 此新 <xref:System.Windows.Data.CollectionViewSource> 绑定到刚拖到设计器中的父表或对象的属性。 对于某些数据源，Visual Studio 还会生成代码，以便将数据加载到子表或对象。
 
-     下图演示了 "**数据源**" 窗口中的数据集的 " **Customers** " 表的相关 " **Orders** " 表。
+     下图演示了 " **数据源** " 窗口中的数据集的 " **Customers** " 表的相关 " **Orders** " 表。
 
      ![显示关系的数据源窗口](../data-tools/media/datasources2.gif)
 

@@ -1,5 +1,7 @@
 ---
 title: 将数据保存回数据库
+description: 使用数据集工具将数据保存回数据库。 数据集是数据的内存中副本，如果修改了该数据，则应将其保存回数据库。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -20,12 +22,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 493637f81df15fadf65d6c7d90e980e322919b13
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 77f6a837fcc88c7154978e8031b17febaa0fcd39
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85281742"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436050"
 ---
 # <a name="save-data-back-to-the-database"></a>将数据保存回数据库
 
@@ -272,7 +274,7 @@ ms.locfileid: "85281742"
 > [!NOTE]
 > 你还可以在代码中自行设置集合中的值 `Parameters` ，你通常会在数据适配器事件的事件处理程序中执行此操作 <xref:System.Data.DataTable.RowChanging> 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 中的数据集工具](../data-tools/dataset-tools-in-visual-studio.md)
 - [创建和配置 TableAdapter](create-and-configure-tableadapters.md)

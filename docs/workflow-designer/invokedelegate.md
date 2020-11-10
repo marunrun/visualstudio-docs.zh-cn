@@ -1,5 +1,7 @@
 ---
 title: 工作流设计器-InvokeDelegate
+description: 了解 InvokeDelegate 设计器，以及如何使用 InvokeDelegate 设计器来创建和配置 InvokeDelegate 活动。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,16 +12,16 @@ author: TerryGLee
 ms.author: tglee
 ms.workload:
 - multiple
-ms.openlocfilehash: 9e63fb7a766b79467749cc5181a575e0d35a07b8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a482f23b1df1587e9a1c7e3023bfb0d1737f1fae
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86876068"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437744"
 ---
 # <a name="invokedelegate"></a>InvokeDelegate
 
-**InvokeDelegate**设计器用于创建和配置 <xref:System.Activities.Statements.InvokeDelegate> 活动。
+**InvokeDelegate** 设计器用于创建和配置 <xref:System.Activities.Statements.InvokeDelegate> 活动。
 
 ## <a name="the-invokedelegate-activity"></a>InvokeDelegate 活动
 
@@ -27,7 +29,7 @@ ms.locfileid: "86876068"
 
 ### <a name="use-the-invokedelegate-activity-designer"></a>使用 InvokeDelegate 活动设计器
 
-访问 "**工具箱**" 的 "**基元**" 类别中的 " **InvokeDelegate** " 活动设计器。 可以将 " **InvokeDelegate** " 活动设计器从 " **工具箱** " 拖放到工作流设计器表面上，通常会在其中放置活动，例如在中 <xref:System.Activities.Statements.Sequence> 。 删除活动设计器将创建一个 <xref:System.Activities.Statements.InvokeDelegate> 活动，其默认值为 <xref:System.Activities.Activity.DisplayName%2A> InvokeDelegate。 <xref:System.Activities.Activity.DisplayName%2A>可以在 " **InvokeDelegate** " 活动设计器的标头中或在属性网格的 " **DisplayName** " 框中编辑。
+访问 " **工具箱** " 的 " **基元** " 类别中的 " **InvokeDelegate** " 活动设计器。 可以将 " **InvokeDelegate** " 活动设计器从 " **工具箱** " 拖放到工作流设计器表面上，通常会在其中放置活动，例如在中 <xref:System.Activities.Statements.Sequence> 。 删除活动设计器将创建一个 <xref:System.Activities.Statements.InvokeDelegate> 活动，其默认值为 <xref:System.Activities.Activity.DisplayName%2A> InvokeDelegate。 <xref:System.Activities.Activity.DisplayName%2A>可以在 " **InvokeDelegate** " 活动设计器的标头中或在属性网格的 " **DisplayName** " 框中编辑。
 
 ### <a name="the-invokedelegate-properties"></a>InvokeDelegate 属性
 

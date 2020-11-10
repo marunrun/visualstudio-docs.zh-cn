@@ -1,5 +1,6 @@
 ---
 title: 在 LINQ to SQL 中使用存储过程来更新数据
+description: 使用 LINQ to SQL 对象关系设计器 (O/R 设计器) 中的存储过程来执行数据的更新、插入和删除。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -9,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 3f8b2f783d6ae449a6124afe5d8e25dd836f0f8e
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 5915de290a84429878eccb4eae17821f8ac27f70
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036309"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436408"
 ---
 # <a name="how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-or-designer"></a>如何：分配存储流程来执行更新、插入和删除操作（O/R 设计器）
 
@@ -24,7 +25,7 @@ ms.locfileid: "90036309"
 > 如果存储过程的返回值需要发送回客户端（例如在存储过程中计算出的值），则在存储过程中创建输出参数。 如果无法使用输出参数，则编写分部方法实现，而不是依靠 O/R 设计器生成的重写。 在成功完成 INSERT 或 UPDATE 操作后，需要将映射到数据库生成的值的成员设置为相应的值。 有关详细信息，请参阅 [开发人员在重写默认行为中的责任](/dotnet/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior)。
 
 > [!NOTE]
-> LINQ to SQL 会自动处理数据库生成的值，以使标识 (自动增量) 、rowguidcol (数据库生成的 GUID) 和时间戳列。 在其他列类型中，数据库生成的值将意外导致 Null 值。 若要返回数据库生成的值，应手动将设置 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> 为**true** ，并将设置 <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> 为以下值之一： [AutoSync](<xref:System.Data.Linq.Mapping.AutoSync.Always>)、 [AutoSync](<xref:System.Data.Linq.Mapping.AutoSync.OnInsert>)或[AutoSync。](<xref:System.Data.Linq.Mapping.AutoSync.OnUpdate>)
+> LINQ to SQL 会自动处理数据库生成的值，以使标识 (自动增量) 、rowguidcol (数据库生成的 GUID) 和时间戳列。 在其他列类型中，数据库生成的值将意外导致 Null 值。 若要返回数据库生成的值，应手动将设置 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> 为 **true** ，并将设置 <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> 为以下值之一： [AutoSync](<xref:System.Data.Linq.Mapping.AutoSync.Always>)、 [AutoSync](<xref:System.Data.Linq.Mapping.AutoSync.OnInsert>)或 [AutoSync。](<xref:System.Data.Linq.Mapping.AutoSync.OnUpdate>)
 
 ## <a name="configure-the-update-behavior-of-an-entity-class"></a>配置实体类的更新行为
 
@@ -34,35 +35,35 @@ ms.locfileid: "90036309"
 
 ### <a name="to-assign-stored-procedures-to-override-the-default-behavior-of-an-entity-class"></a>指定存储过程以重写实体类的默认行为
 
-1. 在设计器中打开“LINQ to SQL”文件****。 （在“解决方案资源管理器”中双击“.dbml”文件。********）
+1. 在设计器中打开“LINQ to SQL”文件。 （在“解决方案资源管理器”中双击“.dbml”文件。）
 
-2. 在“服务器资源管理器”或“数据库资源管理器”中，展开“存储过程”，找到要为实体类的 Insert、Update 和/或 Delete 命令使用的存储过程************。
+2. 在“服务器资源管理器”或“数据库资源管理器”中，展开“存储过程”，找到要为实体类的 Insert、Update 和/或 Delete 命令使用的存储过程。
 
-3. 将该存储过程拖到 **O/R 设计器**上。
+3. 将该存储过程拖到 **O/R 设计器** 上。
 
      该存储过程将作为 <xref:System.Data.Linq.DataContext> 方法添加到方法窗格中。 有关详细信息，请参阅 [DataContext 方法 (O/R Designer) ](../data-tools/datacontext-methods-o-r-designer.md)。
 
 4. 选择要使用存储过程对其执行更新的实体类。
 
-5. 在“属性”窗口中选择要替代的命令（“插入”、“更新”或“删除”）****************。
+5. 在“属性”窗口中选择要替代的命令（“插入”、“更新”或“删除”）。
 
-6. 单击“使用运行时”旁边的省略号 (...) 以打开“配置行为”对话框********。
+6. 单击“使用运行时”旁边的省略号 (...) 以打开“配置行为”对话框。
 
 7. 选择“自定义”。
 
-8. 在“自定义”列表中选择所需的存储过程****。
+8. 在“自定义”列表中选择所需的存储过程。
 
-9. 检查“方法自变量”和“类属性”列表以验证“方法自变量”是否映射到相应的“类属性”****************。 将 () 的原始方法参数映射 `Original_<ArgumentName>` 到 `<PropertyName> (Original)` 和命令 () 的原始 `Update` 属性 `Delete` 。
+9. 检查“方法自变量”和“类属性”列表以验证“方法自变量”是否映射到相应的“类属性”。 将 () 的原始方法参数映射 `Original_<ArgumentName>` 到 `<PropertyName> (Original)` 和命令 () 的原始 `Update` 属性 `Delete` 。
 
     > [!NOTE]
     > 默认情况下，名称匹配时方法自变量映射到类属性。 如果更改的属性名称在表和实体类之间不再匹配，而设计器无法确定正确的映射，您可能需要选择等效的类属性进行映射。
 
-10. 单击“**确定**”或“**应用**”。
+10. 单击“ **确定** ”或“ **应用** ”。
 
     > [!NOTE]
-    > 只要在每次更改后单击 " **应用** "，就可以继续为每个类和行为组合配置行为。 如果在单击 " **应用**" 之前更改类或行为，则会出现一个警告对话框，并提供应用更改的机会。
+    > 只要在每次更改后单击 " **应用** "，就可以继续为每个类和行为组合配置行为。 如果在单击 " **应用** " 之前更改类或行为，则会出现一个警告对话框，并提供应用更改的机会。
 
-若要恢复为使用默认运行时更新逻辑，请单击“属性”窗口中“插入”、“更新”或“删除”命令旁边的省略号，然后在“配置行为”对话框中选择“使用运行时”************************。
+若要恢复为使用默认运行时更新逻辑，请单击“属性”窗口中“插入”、“更新”或“删除”命令旁边的省略号，然后在“配置行为”对话框中选择“使用运行时”。
 
 ## <a name="see-also"></a>另请参阅
 

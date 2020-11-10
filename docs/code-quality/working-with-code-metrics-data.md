@@ -1,6 +1,8 @@
 ---
 title: "\"代码度量\" 窗口"
 ms.date: 12/12/2017
+description: 了解如何查看、筛选、重新排列和导出 Visual Studio code 指标分析数据。 请参阅如何基于代码度量结果创建工作项。
+ms.custom: SEO-VS-2020
 ms.topic: reference
 f1_keywords:
 - vs.codemetrics.output
@@ -13,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c01543b290d991a189c0851c64526c9c513068ba
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: d29109811c3dd5f354b510d046b33b0ba31d60e5
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91927973"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436805"
 ---
 # <a name="use-the-code-metrics-results-window"></a>使用 "代码度量结果" 窗口
 
@@ -30,9 +32,9 @@ ms.locfileid: "91927973"
 
 您可以使用以下菜单序列之一显示 "代码度量结果" 窗口：
 
-- 在 "**分析**" 菜单上，选择 " **Windows**  >  **代码度量值结果**"。
+- 在 " **分析** " 菜单上，选择 " **Windows**  >  **代码度量值结果** "。
 
-- 在 "**视图**" 菜单上，选择 "**其他 Windows**  >  **代码度量值结果**"。
+- 在 " **视图** " 菜单上，选择 " **其他 Windows**  >  **代码度量值结果** "。
 
 " **代码度量值" 结果** 窗口将打开，即使它不包含任何结果。
 
@@ -50,9 +52,9 @@ ms.locfileid: "91927973"
 
 1. 从 " **筛选器** " 列表中，选择列名称。
 
-2. 在 " **最**小值" 中，键入要显示的最小值。
+2. 在 " **最** 小值" 中，键入要显示的最小值。
 
-3. 在 " **最**大值" 中，键入要显示的最大值。
+3. 在 " **最** 大值" 中，键入要显示的最大值。
 
 4. 单击 " **应用筛选器** " 按钮。
 
@@ -64,9 +66,9 @@ ms.locfileid: "91927973"
 
 ### <a name="add-or-remove-a-column"></a>添加或删除列
 
-1. 单击 " **添加/删除列** " 按钮，或右键单击任意列标题，然后单击 " **添加/删除列**"。
+1. 单击 " **添加/删除列** " 按钮，或右键单击任意列标题，然后单击 " **添加/删除列** "。
 
-1. 在 " **添加/删除列** " 对话框中，选中或清除要添加或删除的列的复选框，然后选择 **"确定"**。
+1. 在 " **添加/删除列** " 对话框中，选中或清除要添加或删除的列的复选框，然后选择 **"确定"** 。
 
 ### <a name="rearrange-columns"></a>重新排列列
 
@@ -74,7 +76,7 @@ ms.locfileid: "91927973"
 
 1. 在 " **添加/删除列** " 对话框中，选择要移动的列，然后选择向上箭头或向下箭头。
 
-1. 将列定位到所需位置后，选择 **"确定"**。
+1. 将列定位到所需位置后，选择 **"确定"** 。
 
 ## <a name="copy-data-to-the-clipboard-or-excel"></a>将数据复制到剪贴板或 Excel
 
@@ -82,7 +84,7 @@ ms.locfileid: "91927973"
 
 ## <a name="create-a-work-item-based-on-code-metric-results"></a>基于代码度量结果创建工作项
 
-你可以创建基于 "**代码度量结果**" 窗口中的结果的[Azure Boards](/azure/devops/boards/index?view=vsts&preserve-view=true)工作项。 创建工作项后，Visual Studio 会自动在 "**历史记录**" 选项卡下的 "**标题**" 字段和代码度量数据中输入一个标题。
+你可以创建基于 " **代码度量结果** " 窗口中的结果的 [Azure Boards](/azure/devops/boards/index?view=vsts&preserve-view=true)工作项。 创建工作项后，Visual Studio 会自动在 " **历史记录** " 选项卡下的 " **标题** " 字段和代码度量数据中输入一个标题。
 
 有关 Azure Boards 工作项的详细信息，请参阅 [工作项](/azure/devops/boards/work-items/index?view=vsts&preserve-view=true)。
 
@@ -90,7 +92,7 @@ ms.locfileid: "91927973"
 
 1. 右键单击结果。
 
-2. 指向 " **创建工作项**"，然后单击要创建的工作项类型 (**Bug**、 **任务**等) 。
+2. 指向 " **创建工作项** "，然后单击要创建的工作项类型 ( **Bug** 、 **任务** 等) 。
 
 3. 填写所有必填字段，完成工作项窗体。
 
@@ -106,7 +108,7 @@ ms.locfileid: "91927973"
 
 4. 在 " **文件** " 菜单上，单击 " **全部保存** " 以保存工作项。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [代码度量值](../code-quality/code-metrics-values.md)
 - [如何：生成代码度量数据](../code-quality/how-to-generate-code-metrics-data.md)
