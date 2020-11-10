@@ -1,5 +1,7 @@
 ---
 title: MakeDir 任务 | Microsoft Docs
+description: 了解 MSBuild 如何使用 MakeDir 任务来创建目录和（必要时）任何父目录。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3cc2e97a3024d768861a1967705137415a0d3aa2
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 91be7dc2baf7df36d98cd725e8141cfa9cab773f
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633533"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904306"
 ---
 # <a name="makedir-task"></a>MakeDir 任务
 

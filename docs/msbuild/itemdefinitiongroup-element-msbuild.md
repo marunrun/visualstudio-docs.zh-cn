@@ -1,5 +1,7 @@
 ---
 title: ItemDefinitionGroup 元素 (MSBuild) | Microsoft Docs
+description: 了解 MSBuild 如何使用 ItemDefinitionGroup 元素来定义一组项定义 - 它们是应用于项目中的所有项的元数据值。
+ms.custom: SEO-VS-2020
 ms.date: 03/13/2017
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 21e3b6554a9d6e0024cc21fd898962177acfffa7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c3fff9848ac82cd56d1052d135646954527debd5
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633624"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92903710"
 ---
 # <a name="itemdefinitiongroup-element-msbuild"></a>ItemDefinitionGroup 元素 (MSBuild)
 
@@ -47,7 +49,7 @@ ms.locfileid: "77633624"
 
 ### <a name="attributes"></a>特性
 
-|特性|描述|
+|属性|描述|
 |---------------|-----------------|
 |`Condition`|可选特性。 要计算的条件。 有关详细信息，请参阅[条件](../msbuild/msbuild-conditions.md)。|
 

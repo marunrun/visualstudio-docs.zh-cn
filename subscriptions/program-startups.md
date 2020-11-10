@@ -1,18 +1,18 @@
 ---
-title: 通过 Microsoft for Startups 计划向初创企业提供的 Visual Studio 订阅 | Microsoft Docs
+title: 通过 Microsoft for Startups 提供的 Visual Studio 订阅 | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 71af88da-b9fa-4d12-999c-7d461f3df0ec
-ms.date: 03/09/2020
+ms.date: 10/28/2020
 ms.topic: conceptual
 description: 订阅的详细信息通过 Microsoft for Startups 计划提供。
-ms.openlocfilehash: 8e46924d0980eed4eca27eef7766e12c8733d851
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: b1476faec2ea001423ebec139c9ccf4d4dbfa9b4
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005815"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92903416"
 ---
 # <a name="visual-studio-subscriptions-offered-to-startups"></a>向初创企业提供的 Visual Studio 订阅
 加入 Microsoft for Startups 计划的合格初创企业可以获得 5 个 [Visual Studio Enterprise 月度云订阅](https://visualstudio.microsoft.com/vs/pricing/)。 

@@ -1,18 +1,18 @@
 ---
-title: 使用产品密钥 | Microsoft 文档
+title: 使用 Visual Studio 订阅中的产品密钥 | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 89e3fcf9-fe5d-4266-8dd7-5567d05fe869
-ms.date: 09/18/2020
+ms.date: 10/28/2020
 ms.topic: conceptual
 description: 了解如何获取和管理 Visual Studio 订阅中的产品密钥。
-ms.openlocfilehash: 389a57fb2e8fe0ea6ee81ee163fed052c441c209
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.openlocfilehash: a5da818a059709d311b87572f71b78a51dbb7deb
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "91005841"
+ms.lasthandoff: 11/01/2020
+ms.locfileid: "92903990"
 ---
 # <a name="using-product-keys-in-visual-studio-subscriptions"></a>使用 Visual Studio 订阅中的产品密钥
 
@@ -23,7 +23,7 @@ Visual Studio 订阅允许访问一系列 Microsoft 产品来设计、开发、�
 大多数产品密钥都支持产品的每个密钥对其进行多次激活。  许多产品还允许在未激活的情况下安装产品并使用 30 天或更长时间。  对于大多数订阅者来说，这种提供了更多激活次数，以满足他们的需求。  但是，如果已用完产品的可用激活次数，可以通过 Visual Studio [订阅客户服务](https://visualstudio.microsoft.com/subscriptions/support/)提交获取其他密钥的请求。
 
 > [!NOTE]
-> 如果你的订阅是由工作或学校提供的，则订阅管理员将控制你是否有权访问软件下载。  如果在订阅中禁用对下载的访问权限，则还会禁用对产品密钥的访问权限。  如果需要访问下载和/或产品密钥，请[联系管理员](contact-my-admin.md)。
+> 如果你的订阅是由工作或学校提供的，则订阅管理员将控制你是否有权访问软件下载。  如果在订阅中禁用对下载的访问权限，则还会禁用对产品密钥的访问权限。  如需访问下载项和/或产品密钥，请[联系管理员](contact-my-admin.md)。
 
 ## <a name="activating-a-product"></a>激活产品
 某些产品需要激活。  在 Visual Studio 订阅中通常限于 Windows、Windows Server、Microsoft Office 客户端应用程序以及 Expression Studio。 对于需要激活的情况，许多产品（包括 Windows 和 Office）都允许在未激活的情况下安装产品并使用 30 天或更长时间。 如果频繁地（每 30 天至少一次）重建计算机映像，建议不激活产品。 在 Visual Studio 订阅中提供的产品密钥不允许无限次地激活产品。
@@ -33,7 +33,7 @@ Visual Studio 订阅允许访问一系列 Microsoft 产品来设计、开发、�
 ## <a name="retail-and-volume-licensing-versions-of-products"></a>产品的零售版本和批量许可版本
 Visual Studio 订阅提供一系列零售版本和批量许可版本的 Microsoft 产品。 某些由“下载”提供的产品仅有零售版本或批量许可版本；某些则兼具两种版本。 通常，Windows、Windows Server 和 Office 客户端产品等需要激活的产品仅通过“下载”提供零售版本。
 
-批量许可客户也可从批量许可服务中心 (VLSC) 下载软件，从而获得产品的批量许可版本（以及相应的产品密钥）。  客户所在组织的指定管理员负责管理 VLSC 的访问权限。
+批量许可客户也可从批量许可服务中心 (VLSC) 下载软件，从而获得产品的批量许可版本（以及相应的产品密钥）。  对 VLSC 的访问由客户所在组织的指定管理员进行管理。
 
 ## <a name="daily-product-key-claim-limits"></a>每日产品密钥索取上限
 Microsoft 致力于维护 Visual Studio 订阅计划的完整性以及该计划的合法订阅者就其投资获得软件和权益的价值。 为实现此承诺，Microsoft 对 Visual Studio 订阅实施了每日密钥索取上限。 每日密钥索取上限限定了每个订阅每日可索取的密钥数量。

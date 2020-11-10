@@ -1,5 +1,7 @@
 ---
 title: Import 元素 (MSBuild) | Microsoft Docs
+description: 了解 MSBuild 如何使用 Import 元素将一个项目文件的内容导入其他项目文件中。
+ms.custom: SEO-VS-2020
 ms.date: 03/13/2017
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7d9e66934015c7c4a57c7d7c6911b9ebe02ac536
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d5a5650402655f4a5a2a0388ac0e57a0b903bc2e
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "79094495"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92903952"
 ---
 # <a name="import-element-msbuild"></a>Import 元素 (MSBuild)
 
@@ -45,7 +47,7 @@ ms.locfileid: "79094495"
 
 ### <a name="attributes"></a>特性
 
-|特性|描述|
+|属性|描述|
 |---------------|-----------------|
 |`Project`|必需的特性。<br /><br /> 要导入的项目文件的路径。 该路径可以包含通配符。 匹配文件按排序顺序导入。 使用此功能时，只需通过将代码文件添加到目录，即可将代码添加到项目。|
 |`Condition`|可选特性。<br /><br /> 要计算的条件。 有关详细信息，请参阅[条件](../msbuild/msbuild-conditions.md)。|

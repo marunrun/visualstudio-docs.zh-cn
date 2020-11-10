@@ -1,5 +1,7 @@
 ---
 title: 移动任务 | Microsoft Docs
+description: 了解 MSBuild 移动任务的参数和设置，该任务会将文件移动到新位置。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 05b9f83fa7c80769ea3c584e2885c8fb1db24176
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 8714108f7c537d9a50fda453050a54802f14e335
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633455"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92903559"
 ---
 # <a name="move-task"></a>Move 任务
 
@@ -39,7 +41,7 @@ ms.locfileid: "77633455"
 |`OverwriteReadOnlyFiles`|可选 `Boolean` 参数。<br /><br /> 如果为 `true`，则覆盖文件，即使它们标记为只读文件。|
 |`SourceFiles`|必选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定要移动的文件。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
  必须指定 `DestinationFolder` 参数或 `DestinationFiles` 参数，但不能对两者都进行指定。 如果指定了两者，则任务失败并记录一条错误。
 
