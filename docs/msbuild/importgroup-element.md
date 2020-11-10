@@ -1,5 +1,7 @@
 ---
 title: ImportGroup 元素 | Microsoft Docs
+description: 了解 MSBuild 如何使用 ImportGroup 元素来包含分组到可选条件下的一批 Import 元素。
+ms.custom: SEO-VS-2020
 ms.date: 03/13/2017
 ms.topic: reference
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 76dadd1a064a64884e3ff1cd1f2431bc1b94c3c4
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 865ee2b319cc3cd26f6924110fa2976f526ac4f4
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633728"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92903942"
 ---
 # <a name="importgroup-element"></a>ImportGroup 元素
 
@@ -48,15 +50,15 @@ ms.locfileid: "77633728"
 
 ### <a name="attributes"></a>特性
 
-|特性|描述|
+|属性|描述|
 |---------------|-----------------|
 |`Condition`|可选特性。<br /><br /> 要评估的条件。 有关详细信息，请参阅[条件](../msbuild/msbuild-conditions.md)。|
 
 ### <a name="child-elements"></a>子元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[Import](../msbuild/import-element-msbuild.md)|将一个项目文件的内容导入其他项目文件中。|
+|[导入](../msbuild/import-element-msbuild.md)|将一个项目文件的内容导入其他项目文件中。|
 
 ### <a name="parent-elements"></a>父元素
 

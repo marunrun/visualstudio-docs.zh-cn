@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: f39a2672-c283-4755-93d3-31c7c7a032d0
-ms.date: 09/08/2020
+ms.date: 10/28/2020
 ms.topic: how-to
 description: 了解如何使用工作或学校帐户登录到 Visual Studio 订阅。
-ms.openlocfilehash: 96b111c47e753b343d59c89e65f71eaa90132f6f
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 3ac4e9fedae66656d4dee2155c8a8dcbe9325970
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005802"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92903381"
 ---
 # <a name="signing-in-to-visual-studio-subscriptions-with-your-work-or-school-account"></a>使用工作或学校帐户登录到 Visual Studio 订阅 
 
@@ -54,7 +54,7 @@ ms.locfileid: "91005802"
         > [!NOTE]
         > 许多过去曾经使用过 Visual Studio 订阅（以前称为 MSDN）的订阅者就是这种情况。
 
-    - 如果一个通道失败，请尝试其他通道。  订阅管理员可能已经修改了你的订阅。
+    - 如果一个通道失败，请尝试其他通道。  订阅管理员可能修改了你的订阅。
 
 5. 输入密码。
 6. 单击“登录”  。

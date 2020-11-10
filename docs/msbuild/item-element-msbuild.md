@@ -1,5 +1,7 @@
 ---
 title: Item 元素 (MSBuild) | Microsoft Docs
+description: 了解 MSBuild 如何使用 Item 元素来包含用户定义的项及其元数据。 每个项都必须是 ItemGroup 元素的子级。
+ms.custom: SEO-VS-2020
 ms.date: 03/13/2017
 ms.topic: reference
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6f235108c63eb063f0ddcd495385bd3325581332
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 51ecf68cacf0edca90893931642cd7fb6064f972
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85289009"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904651"
 ---
 # <a name="item-element-msbuild"></a>Item 元素 (MSBuild)
 
@@ -70,7 +72,7 @@ ms.locfileid: "85289009"
 
 ### <a name="attributes"></a>特性
 
-|特性|描述|
+|属性|描述|
 |---------------|-----------------|
 |`Include`|可选特性。<br /><br /> 项列表中要包含的文件或通配符。|
 |`Exclude`|可选特性。<br /><br /> 项列表中要排除的文件或通配符。|

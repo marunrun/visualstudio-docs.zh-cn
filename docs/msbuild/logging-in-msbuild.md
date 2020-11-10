@@ -1,5 +1,7 @@
 ---
 title: MSBuild 中的日志记录 | Microsoft Docs
+description: 了解 MSBuild 日志记录如何让你能够通过在日志文件中捕获生成事件、消息、警告和错误来监视生成进度。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,18 +12,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a66164426b760798571fc35e5288158a8dae9943
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 9de830003571f1f648cf06be634d9a773b95269f
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633546"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904331"
 ---
 # <a name="logging-in-msbuild"></a>MSBuild 中的日志记录
 
 通过日志记录可监视生成的进度。 日志记录捕获日志文件中的生成事件、消息、警告和错误。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
 
 - [获取生成日志](../msbuild/obtaining-build-logs-with-msbuild.md)
 
@@ -43,6 +45,6 @@ ms.locfileid: "77633546"
 
  概述如何创建自定义转发记录器。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [并行生成多个项目](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md) 介绍如何通过并行运行多个项目来更快地生成它们。

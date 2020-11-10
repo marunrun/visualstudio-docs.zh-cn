@@ -1,5 +1,7 @@
 ---
 title: LC 任务 | Microsoft Docs
+description: 了解 MSBuild 如何使用 LC 任务来打包 LC.exe，后者会基于 .licx 文件生成一个 .license 文件。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 865167b9182ca1f2264900a3e71ddeb4983e25ef
-ms.sourcegitcommit: 93859158465eab3423a0c0435f06490f0a456a57
+ms.openlocfilehash: 70c996d5a8d1d4bf296a395bfb64ead6eba1bb01
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82167392"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92903581"
 ---
 # <a name="lc-task"></a>LC 任务
 

@@ -1,5 +1,7 @@
 ---
 title: 增量生成 | Microsoft Docs
+description: 了解 MSBuild 增量生成，它们已经过优化，以便不执行最新输出文件。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c7283d67710a3b5b319b2d25a1c5d6535fed83b9
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 4beb6c676fbd66d7e0d11e4ca1fe2a3fa8188bfe
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633715"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904591"
 ---
 # <a name="incremental-builds"></a>增量生成
 
@@ -24,7 +26,7 @@ ms.locfileid: "77633715"
 > [!NOTE]
 > 当 MSBuild 评估输入文件时，只考虑当前执行中列表的内容。 自上次生成后的列表更改不会自动让目标到期。
 
-如果所有输出项均为最新，MSBuild 就跳过目标。 目标的这种增量生成可以显著提高生成速度  。 如果只有部分文件保持为最新，MSBuild 会执行目标，但跳过最新的项，从而使所有项均保持为最新。 此进程称为“部分增量生成”  。
+如果所有输出项均为最新，MSBuild 就跳过目标。 目标的这种增量生成可以显著提高生成速度。 如果只有部分文件保持为最新，MSBuild 会执行目标，但跳过最新的项，从而使所有项均保持为最新。 此进程称为“部分增量生成”。
 
 项转换通常会生成一对一映射。 有关详细信息，请参阅[转换](../msbuild/msbuild-transforms.md)。
 
@@ -38,11 +40,11 @@ ms.locfileid: "77633715"
 </Target>
 ```
 
-由 `Compile` 项目类型表示的文件集会被复制到备份目录。 备份文件的文件扩展名为 .bak  。 如果运行备份目标后未删除或修改由 `Compile` 项目类型表示的文件或相应的备份文件，则后续生成中将跳过备份目标。
+由 `Compile` 项目类型表示的文件集会被复制到备份目录。 备份文件的文件扩展名为 .bak。 如果运行备份目标后未删除或修改由 `Compile` 项目类型表示的文件或相应的备份文件，则后续生成中将跳过备份目标。
 
 ## <a name="output-inference"></a>输出推理
 
-MSBuild 通过比较目标的 `Inputs` 和 `Outputs` 属性来确定是否执行该目标。 理想情况下，无论是否执行相关目标，增量生成完成后存在的文件集应保持不变。 由任务创建或修改的属性和项会影响生成，因此即使跳过会造成影响的目标，MSBuild 也必须推断这些属性或项的值。 此进程称为“输出推理”  。
+MSBuild 通过比较目标的 `Inputs` 和 `Outputs` 属性来确定是否执行该目标。 理想情况下，无论是否执行相关目标，增量生成完成后存在的文件集应保持不变。 由任务创建或修改的属性和项会影响生成，因此即使跳过会造成影响的目标，MSBuild 也必须推断这些属性或项的值。 此进程称为“输出推理”。
 
 共有三种情况：
 
@@ -52,7 +54,7 @@ MSBuild 通过比较目标的 `Inputs` 和 `Outputs` 属性来确定是否执行
 
 - 目标没有过时的输出，将跳过目标。 MSBuild 会像已运行目标一样，计算目标并更改项和属性。
 
-要支持增量编译，任务必须确保所有 `Output` 元素的 `TaskParameter` 属性值与某个任务输入参数相等。 下面是一些可能的恶意活动：
+要支持增量编译，任务必须确保所有 `Output` 元素的 `TaskParameter` 属性值与某个任务输入参数相等。 下面是一些示例：
 
 ```xml
 <CreateProperty Value="123">
@@ -78,6 +80,6 @@ MSBuild 通过比较目标的 `Inputs` 和 `Outputs` 属性来确定是否执行
 
 该代码会创建 CompileRan 属性并为其赋予值 `true`，但仅当执行了目标时才如此操作。 如果跳过目标，则不会创建 CompileRan。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [目标](../msbuild/msbuild-targets.md)

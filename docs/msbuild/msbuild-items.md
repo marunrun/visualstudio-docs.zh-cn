@@ -1,6 +1,6 @@
 ---
 title: MSBuild 项 | Microsoft Docs
-description: 使用 ItemGroup 的 MSBuild Include 属性指定要包含在生成中的文件
+description: 了解如何使用 ItemGroup 的 MSBuild Include 属性指定要包含在生成中的文件。
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +11,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 020983182706bd6d9382f4d0bd4885ffa0f86f52
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a28823a1a492cb1e8d5f434f98248fecc5d84e47
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88247585"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904502"
 ---
 # <a name="msbuild-items"></a>MSBuild 项
 

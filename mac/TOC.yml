@@ -32,8 +32,6 @@
   items:
     - name: 自定义 IDE 的外观
       href: customizing-the-ide.md
-    - name: 扩展 Visual Studio for Mac
-      href: extending-visual-studio-mac.md
 - name: 项目和解决方案
   items:
     - name: 概述

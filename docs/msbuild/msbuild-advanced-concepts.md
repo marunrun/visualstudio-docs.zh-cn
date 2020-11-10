@@ -1,5 +1,7 @@
 ---
 title: MSBuild 高级概念 | Microsoft Docs
+description: 查看文章链接，了解如何使用高级技术来改善使用 MSBuild 运行的版本。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 56d3267e0c96747a9534f390191e9f8a84effdb8
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 58974778be615f2b0455f5b65a1c392035265425
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85289282"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92903481"
 ---
 # <a name="msbuild-advanced-concepts"></a>MSBuild 高级概念
 

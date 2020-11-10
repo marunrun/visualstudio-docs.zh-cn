@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: lank
 manager: lank
 ms.assetid: 176c7f11-b19d-49e9-a6dd-b2e5da5e8480
-ms.date: 03/11/2020
+ms.date: 10/28/2020
 ms.topic: conceptual
 description: 了解登录 Visual Studio 订阅时可能出现的问题
-ms.openlocfilehash: 05d610a9dbfb3ac8afe3d49cecde37320c2c250f
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: cf89d2deff2a5e9e81d065fbb7efda8097102d03
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005272"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92903443"
 ---
 # <a name="issues-signing-in-to-visual-studio-subscriptions"></a>登录 Visual Studio 订阅时遇到的问题
 若要使用 Visual Studio 订阅，必须先登录。  根据订阅，你可能已使用 Microsoft 帐户 (MSA) 或 Azure Active Directory (AAD) 标识进行设置。  本文讨论了在登录订阅时可能遇到的一些问题。
@@ -32,12 +32,12 @@ ms.locfileid: "91005272"
 如果你尝试使用工作或学校电子邮件地址注册 Microsoft 使用者应用，将看到以下消息。
 
    > [!div class="mx-imgBorder"]
-   > ![无法使用工作电子邮件创建帐户](_img/sign-in-issues/cannot-use-work-email.png)
+   > ![无法使用工作电子邮件创建帐户](_img/sign-in-issues/cannot-use-work-email.png "提供用户名和密码来创建帐户。")
 
 但是，如果你尝试注册支持个人和工作/学校帐户的 Microsoft 应用，应看到以下消息：
 
    > [!div class="mx-imgBorder"]
-   > ![支持工作或学校帐户](_img/sign-in-issues/existing-account.png)
+   > ![支持工作或学校帐户](_img/sign-in-issues/existing-account.png "在这里，无法使用工作或学校电子邮件进行注册…")
 
 ### <a name="are-existing-accounts-affected"></a>现有帐户是否受影响？
 此处描述的注册块仅阻止创建新帐户。 它对已拥有工作/学校电子邮件地址的 Microsoft 帐户的用户没有影响。 如果你已处于这种情况，我们已改进，你可以更轻松地重命名个人 Microsoft 帐户。 这篇[支持文章](https://windows.microsoft.com/en-US/Windows/rename-personal-microsoft-account)提供了简单的逐步指导。 重命名个人 Microsoft 帐户意味着更改用户名，不会影响工作电子邮件或登录到业务服务（如 Microsoft 365）的方式。 它也不会影响个人资料 - 只是改变了登录方式。 你可以使用其他（个人）电子邮件地址，从 Microsoft 获取新的 @outlook.com 电子邮件地址，或将电话号码用作新用户名。

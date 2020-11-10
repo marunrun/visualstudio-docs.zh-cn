@@ -1,5 +1,7 @@
 ---
 title: 任务批处理中的项元数据 | Microsoft Docs
+description: 了解 MSBuild 如何使用任务批处理中的项元数据将项列表划分到不同的类别/批次并对每批逐一运行任务。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6152b0e64286c3cadedfcafb0ac530616c4012a6
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: f1d67f740857dc93b997e206c43dd52d9887f3e9
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85288983"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92903721"
 ---
 # <a name="item-metadata-in-task-batching"></a>任务批处理中的项元数据
 
