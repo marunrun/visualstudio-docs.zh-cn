@@ -1,5 +1,7 @@
 ---
 title: 工作流设计器 Shell 功能
+description: 了解工作流设计器 Shell 功能如何包含多个用于管理当前视图的按钮。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5a6b192eae3340c6a3d84bb3ccbcce7cbf8d65b3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 239a879fbffe67bf54149ba29e98edcd3428410d
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85816379"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94433643"
 ---
 # <a name="workflow-designer-shell-features"></a>工作流设计器 Shell 功能
 
@@ -33,7 +35,7 @@ ms.locfileid: "85816379"
 ## <a name="copying-or-saving-workflows-as-images"></a>将工作流复制或另存为图像
  可以用位图格式复制工作流，或者用位图或向量格式保存工作流。 复制或保存图像提供了一种将当前痕迹根处的整个活动的视图（包括该根的所有子级和这些子级的所有已展开子级）导出到其他程序的方法。
 
- 若要复制为图像，请在设计器中右键单击任意位置，然后选择 " **复制为图像**"。 若要另存为图像，请在设计器中右键单击任意位置，然后选择 " **另存为图像**"。 可以采用 JPG、PNG、GIF 或 XPS 格式保存工作流。 该格式在窗口底部的 "**另存为类型：** " 下拉列表框中的 "**另存为**" 对话框中选择。
+ 若要复制为图像，请在设计器中右键单击任意位置，然后选择 " **复制为图像** "。 若要另存为图像，请在设计器中右键单击任意位置，然后选择 " **另存为图像** "。 可以采用 JPG、PNG、GIF 或 XPS 格式保存工作流。 该格式在窗口底部的 " **另存为类型：** " 下拉列表框中的 " **另存为** " 对话框中选择。
 
 ## <a name="fonts-and-colors"></a>字体和颜色
 

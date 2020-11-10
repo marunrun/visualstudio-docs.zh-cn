@@ -1,5 +1,7 @@
 ---
 title: 将数据集另存为 XML
+description: 将数据集另存为 XML。 通过调用数据集上的可用 XML 方法（如 GetXml 或 WriteXml）来访问数据集中的 XML 数据。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: cc8854581903ab58a327ff18be7b3b7c0f860a3b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e454aca47f9bf6425ef2dfd98747869c27523f2c
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85281729"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94434618"
 ---
 # <a name="save-a-dataset-as-xml"></a>将数据集另存为 XML
 
@@ -45,6 +47,6 @@ ms.locfileid: "85281729"
      [!code-vb[VbRaddataSaving#13](../data-tools/codesnippet/VisualBasic/save-a-dataset-as-xml_2.vb)]
      [!code-csharp[VbRaddataSaving#13](../data-tools/codesnippet/CSharp/save-a-dataset-as-xml_2.cs)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [将数据保存回数据库](../data-tools/save-data-back-to-the-database.md)

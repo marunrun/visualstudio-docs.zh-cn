@@ -1,5 +1,7 @@
 ---
 title: 带有 WPF 和实体框架6的简单数据应用
+description: 在本演练中，请参阅如何在 Visual Studio 中创建具有 Windows Presentation Foundation (WPF) 和实体框架6的简单的窗体 over 数据应用。
+ms.custom: SEO-VS-2020
 ms.date: 08/22/2017
 ms.topic: conceptual
 dev_langs:
@@ -9,16 +11,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 078b3eedc9971dfc444e86b9f8d7ce770fcdb966
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 7aad99392db33256e991e731770266c1a53dec50
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89743381"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94435488"
 ---
 # <a name="create-a-simple-data-application-with-wpf-and-entity-framework-6"></a>使用 WPF 和 Entity Framework 6 创建简单的数据应用程序
 
-本演练演示如何在 Visual Studio 中创建基本的 "窗体 over 数据" 应用程序。 应用使用 SQL Server LocalDB、Northwind 数据库、实体框架 6 (不 Entity Framework Core) 和 Windows Presentation Foundation .NET Framework (.NET Core) 。 它演示了如何使用大纲-详细信息视图进行基本数据绑定，还提供了一个自定义绑定导航器，其中包含用于 **移动**的按钮、" **上**移"、"移 **至开头**"、" **结束**"、" **更新** " 和 " **删除**"。
+本演练演示如何在 Visual Studio 中创建基本的 "窗体 over 数据" 应用程序。 应用使用 SQL Server LocalDB、Northwind 数据库、实体框架 6 (不 Entity Framework Core) 和 Windows Presentation Foundation .NET Framework (.NET Core) 。 它演示了如何使用大纲-详细信息视图进行基本数据绑定，还提供了一个自定义绑定导航器，其中包含用于 **移动** 的按钮、" **上** 移"、"移 **至开头** "、" **结束** "、" **更新** " 和 " **删除** "。
 
 本文重点介绍如何在 Visual Studio 中使用数据工具，并且不会尝试深入了解底层技术。 假设您基本熟悉 XAML、实体框架和 SQL。 此示例还不演示模型-视图-ViewModel (MVVM) 体系结构，这是 WPF 应用程序的标准。 不过，你可以将此代码复制到你自己的 MVVM 应用程序中，只需修改少量内容。
 
@@ -26,11 +28,11 @@ ms.locfileid: "89743381"
 
 此示例使用 SQL Server Express LocalDB 和 Northwind 示例数据库。 如果该产品的 ADO.NET 数据提供程序支持实体框架，则它也适用于其他 SQL 数据库产品。
 
-1. 如果没有 SQL Server Express 的 LocalDB，请从 [SQL Server Express 下载 "页](https://www.microsoft.com/sql-server/sql-server-editions-express)或通过 **Visual Studio 安装程序**安装它。 在 Visual Studio 安装程序中，可将 SQL Server Express LocalDB 作为 .NET 桌面开发工作负载的一部分安装，也可作为单独组件安装********。
+1. 如果没有 SQL Server Express 的 LocalDB，请从 [SQL Server Express 下载 "页](https://www.microsoft.com/sql-server/sql-server-editions-express)或通过 **Visual Studio 安装程序** 安装它。 在 Visual Studio 安装程序中，可将 SQL Server Express LocalDB 作为 .NET 桌面开发工作负载的一部分安装，也可作为单独组件安装。
 
 2. 按照以下步骤安装 Northwind 示例数据库：
 
-    1. 在 Visual Studio 中，打开 " **SQL Server 对象资源管理器** " 窗口。  (**SQL Server 对象资源管理器**在**Visual Studio 安装程序**的**数据存储和处理**工作负荷中安装。 ) 展开**SQL Server**节点。 右键单击 LocalDB 实例，然后选择 " **新建查询**"。
+    1. 在 Visual Studio 中，打开 " **SQL Server 对象资源管理器** " 窗口。  ( **SQL Server 对象资源管理器** 在 **Visual Studio 安装程序** 的 **数据存储和处理** 工作负荷中安装。 ) 展开 **SQL Server** 节点。 右键单击 LocalDB 实例，然后选择 " **新建查询** "。
 
        此时将打开查询编辑器窗口。
 
@@ -46,11 +48,11 @@ ms.locfileid: "89743381"
 
 1. 在 Visual Studio 中，创建一个新的 c # **WPF 应用程序** 项目。
 
-2. 为实体框架6添加 NuGet 包。 在 **解决方案资源管理器**中，选择 "项目" 节点。 在主菜单中，选择 "**项目**" "  >  **管理 NuGet 包**"。
+2. 为实体框架6添加 NuGet 包。 在 **解决方案资源管理器** 中，选择 "项目" 节点。 在主菜单中，选择 " **项目** " "  >  **管理 NuGet 包** "。
 
      !["管理 NuGet 包" 菜单项](../data-tools/media/raddata_vs2015_manage_nuget_packages.png)
 
-3. 在 **NuGet 包管理器**中，单击 " **浏览** " 链接。 实体框架可能是列表中的顶层包。 单击右窗格中的 " **安装** "，并按照提示进行操作。 "输出" 窗口将显示安装完成的时间。
+3. 在 **NuGet 包管理器** 中，单击 " **浏览** " 链接。 实体框架可能是列表中的顶层包。 单击右窗格中的 " **安装** "，并按照提示进行操作。 "输出" 窗口将显示安装完成的时间。
 
      ![实体框架 NuGet 包](../data-tools/media/raddata_vs2015_nuget_ef.png)
 
@@ -58,27 +60,27 @@ ms.locfileid: "89743381"
 
 ## <a name="create-the-model"></a>创建模型
 
-1. 右键单击 "**解决方案资源管理器**中的项目节点，然后选择"**添加**  >  **新项**"。 在左窗格中的 "c #" 节点下，选择 " **数据** "，然后在中间窗格中选择 " **ADO.NET 实体数据模型**"。
+1. 右键单击 " **解决方案资源管理器** 中的项目节点，然后选择" **添加**  >  **新项** "。 在左窗格中的 "c #" 节点下，选择 " **数据** "，然后在中间窗格中选择 " **ADO.NET 实体数据模型** "。
 
    ![实体框架为新项建模](../data-tools/media/raddata-ef-new-project-item.png)
 
-2. 调用模型 `Northwind_model` ，然后选择 **"确定"**。 **实体数据模型向导**将打开。 **从数据库中选择 EF 设计器**，然后单击 "**下一步**"。
+2. 调用模型 `Northwind_model` ，然后选择 **"确定"** 。 **实体数据模型向导** 将打开。 **从数据库中选择 EF 设计器** ，然后单击 " **下一步** "。
 
    ![数据库中的 EF 模型](../data-tools/media/raddata-ef-model-from-database.png)
 
-3. 在下一个屏幕中，输入或选择 LocalDB Northwind 连接 (例如， (LocalDB) \MSSQLLocalDB) ，指定 Northwind 数据库，然后单击 " **下一步**"。
+3. 在下一个屏幕中，输入或选择 LocalDB Northwind 连接 (例如， (LocalDB) \MSSQLLocalDB) ，指定 Northwind 数据库，然后单击 " **下一步** "。
 
-4. 在向导的下一页上，选择要包含在实体框架模型中的表、存储过程和其他数据库对象。 展开树视图中的 "dbo" 节点，然后选择 " **客户**"、" **订单**" 和 " **订单详细信息**"。 保留默认选中状态，并单击 " **完成**"。
+4. 在向导的下一页上，选择要包含在实体框架模型中的表、存储过程和其他数据库对象。 展开树视图中的 "dbo" 节点，然后选择 " **客户** "、" **订单** " 和 " **订单详细信息** "。 保留默认选中状态，并单击 " **完成** "。
 
     ![为模型选择数据库对象](../data-tools/media/raddata-choose-ef-objects.png)
 
-5. 向导将生成表示实体框架模型的 c # 类。 类是普通的旧 c # 类，并且是我们在 WPF 用户界面中进行 databind 的。 *.Edmx*文件描述了关联类与数据库中的对象的其他元数据。 *Tt*文件是 T4 模板，用于生成对模型进行操作并将更改保存到数据库的代码。 可以在 "Northwind_model" 节点下 **解决方案资源管理器** 查看所有这些文件：
+5. 向导将生成表示实体框架模型的 c # 类。 类是普通的旧 c # 类，并且是我们在 WPF 用户界面中进行 databind 的。 *.Edmx* 文件描述了关联类与数据库中的对象的其他元数据。 *Tt* 文件是 T4 模板，用于生成对模型进行操作并将更改保存到数据库的代码。 可以在 "Northwind_model" 节点下 **解决方案资源管理器** 查看所有这些文件：
 
       ![解决方案资源管理器 EF 模型文件](../data-tools/media/raddata-solution-explorer-ef-model-files.png)
 
-    *.Edmx*文件的设计器图面使你可以修改模型中的某些属性和关系。 在本演练中，我们不打算使用设计器。
+    *.Edmx* 文件的设计器图面使你可以修改模型中的某些属性和关系。 在本演练中，我们不打算使用设计器。
 
-6. *Tt*文件是常规用途，你需要调整其中一个文件以使用 WPF 数据绑定，这需要 ObservableCollections。 在**解决方案资源管理器**中，展开 "Northwind_model" 节点，直到找到 " *Northwind_model"。*  (确保你不在中 *。Context.tt* 文件，它位于 *.edmx* 文件的正下方。 ) 
+6. *Tt* 文件是常规用途，你需要调整其中一个文件以使用 WPF 数据绑定，这需要 ObservableCollections。 在 **解决方案资源管理器** 中，展开 "Northwind_model" 节点，直到找到 " *Northwind_model"。*  (确保你不在中 *。Context.tt* 文件，它位于 *.edmx* 文件的正下方。 ) 
 
    - 将的两个匹配项替换 <xref:System.Collections.ICollection> 为 <xref:System.Collections.ObjectModel.ObservableCollection%601> 。
 
@@ -86,7 +88,7 @@ ms.locfileid: "89743381"
 
    - 将 <xref:System.Collections.Generic>) 行431的唯一 (替换为 <xref:System.Collections.ObjectModel> 。
 
-7. 按**Ctrl** + **Shift** + **B**生成项目。 当生成完成时，这些模型类对于 "数据源向导" 可见。
+7. 按 **Ctrl** + **Shift** + **B** 生成项目。 当生成完成时，这些模型类对于 "数据源向导" 可见。
 
 现在您已准备好将此模型挂接到 XAML 页，以便您可以查看、导航和修改数据。
 
@@ -94,11 +96,11 @@ ms.locfileid: "89743381"
 
 可以编写自己的数据绑定代码，但使 Visual Studio 可以更轻松地为你执行此操作。
 
-1. 从主菜单中，选择 "**项目**  >  " "**添加新数据源**" 以打开 "**数据源配置向导**"。 选择 " **对象** "，因为您要绑定到模型类，而不是绑定到数据库：
+1. 从主菜单中，选择 " **项目**  >  " " **添加新数据源** " 以打开 " **数据源配置向导** "。 选择 " **对象** "，因为您要绑定到模型类，而不是绑定到数据库：
 
      ![具有对象源的数据源配置向导](../data-tools/media/raddata-data-source-configuration-wizard-with-object-source.png)
 
-2. 展开项目的节点，然后选择 " **客户**"。 订单的 (源自动从 Customer 的 Orders 导航属性生成 ) 
+2. 展开项目的节点，然后选择 " **客户** "。 订单的 (源自动从 Customer 的 Orders 导航属性生成 ) 
 
      ![添加实体类作为数据源](../data-tools/media/raddata-add-entity-classes-as-data-sources.png)
 
@@ -114,11 +116,11 @@ ms.locfileid: "89743381"
         </Grid.RowDefinitions>
     ```
 
-5. 现在打开 *mainwindow.xaml* ，以便在设计器中查看它。 这会导致 " **数据源** " 窗口在 " **工具箱**" 旁边的 Visual Studio 窗口边距中显示为一个选项。 单击该选项卡以打开窗口，或者按**Shift** + **Alt** + **D**或选择 "**查看**  >  **其他 Windows**  >  **数据源**"。 我们会将 Customers 类中的每个属性都显示在单独的文本框中。 首先，单击 " **客户** " 组合框中的箭头，然后选择 " **详细信息**"。 然后，将节点拖动到设计图面的中间部分，以便设计器知道您希望它进入中间行。 如果丢失，则可以在 XAML 中以后手动指定该行。 默认情况下，控件在网格元素中垂直放置，但此时，您可以在窗体上对其进行排列。 例如，将 " **名称** " 文本框放在地址上方时，可能有意义。 本文的示例应用程序将对字段重新排序，并将其重新排列为两列。
+5. 现在打开 *mainwindow.xaml* ，以便在设计器中查看它。 这会导致 " **数据源** " 窗口在 " **工具箱** " 旁边的 Visual Studio 窗口边距中显示为一个选项。 单击该选项卡以打开窗口，或者按 **Shift** + **Alt** + **D** 或选择 " **查看**  >  **其他 Windows**  >  **数据源** "。 我们会将 Customers 类中的每个属性都显示在单独的文本框中。 首先，单击 " **客户** " 组合框中的箭头，然后选择 " **详细信息** "。 然后，将节点拖动到设计图面的中间部分，以便设计器知道您希望它进入中间行。 如果丢失，则可以在 XAML 中以后手动指定该行。 默认情况下，控件在网格元素中垂直放置，但此时，您可以在窗体上对其进行排列。 例如，将 " **名称** " 文本框放在地址上方时，可能有意义。 本文的示例应用程序将对字段重新排序，并将其重新排列为两列。
 
      ![客户数据源绑定到各个控件](../data-tools/media/raddata-customers-data-source-binding-to-individual-controls.png)
 
-     在 "代码" 视图中，现在可以看到 `Grid` 第1行中的新元素 (父网格的中间行) 。 父网格具有一个 `DataContext` 属性，该属性引用已添加到元素中的 CollectionViewSource `Windows.Resources` 。 假设该数据上下文在第一个文本框绑定到 **Address**时，该名称将映射到 `Address` CollectionViewSource 中当前对象的属性 `Customer` 。
+     在 "代码" 视图中，现在可以看到 `Grid` 第1行中的新元素 (父网格的中间行) 。 父网格具有一个 `DataContext` 属性，该属性引用已添加到元素中的 CollectionViewSource `Windows.Resources` 。 假设该数据上下文在第一个文本框绑定到 **Address** 时，该名称将映射到 `Address` CollectionViewSource 中当前对象的属性 `Customer` 。
 
     ```xaml
     <Grid DataContext="{StaticResource customerViewSource}">
@@ -142,13 +144,13 @@ ms.locfileid: "89743381"
 
      [!code-csharp[Window_Loaded#2](../data-tools/codesnippet/CSharp/CreateWPFDataApp/MainWindow.xaml.cs#2)]
 
-8. 按 **F5**。 应会看到检索到 CollectionViewSource 中的第一个客户的详细信息。 还应在数据网格中看到它们的顺序。 格式设置不是很好，因此让我们来解决这个问题。 您还可以创建一种方法来查看其他记录并执行基本的 CRUD 操作。
+8. 按 **F5** 。 应会看到检索到 CollectionViewSource 中的第一个客户的详细信息。 还应在数据网格中看到它们的顺序。 格式设置不是很好，因此让我们来解决这个问题。 您还可以创建一种方法来查看其他记录并执行基本的 CRUD 操作。
 
 ## <a name="adjust-the-page-design-and-add-grids-for-new-customers-and-orders"></a>调整页面设计并为新客户和订单添加网格
 
 Visual Studio 生成的默认布局并非适用于你的应用程序，因此我们将在此处提供最终 XAML 以复制到你的代码中。 还需要一些 "表单" (，它们实际上是网格) ，以使用户能够添加新客户或订单。 为了能够添加新的客户和订单，您需要一组不是数据绑定到的单独的文本框 `CollectionViewSource` 。 通过在处理程序方法中设置 Visible 属性，可以控制用户在任意给定时间看到的网格。 最后，将 "删除" 按钮添加到 "订单" 网格中的每一行，以使用户能够删除单个订单。
 
-首先，将这些样式添加到 `Windows.Resources` *mainwindow.xaml*中的元素：
+首先，将这些样式添加到 `Windows.Resources` *mainwindow.xaml* 中的元素：
 
 ```xaml
 <Style x:Key="Label" TargetType="{x:Type Label}" BasedOn="{x:Null}">
@@ -419,13 +421,13 @@ Visual Studio 生成的默认布局并非适用于你的应用程序，因此我
 
 除 add 和 delete 方法外，代码隐藏是最少的。 通过对 CollectionViewSource 的 View 属性调用方法来执行导航。 `DeleteOrderCommandHandler`演示如何对订单执行级联删除。 我们必须先删除与之关联的 Order_Details。 向 `UpdateCommandHandler` 集合中添加新的客户或订单，或者只是使用用户在文本框中做出的更改来更新现有客户或订单。
 
-将这些处理程序方法添加到 *MainWindow.xaml.cs*中的 mainwindow.xaml 类。 如果 "客户" 表的 CollectionViewSource 具有不同的名称，则需要调整其中每个方法中的名称：
+将这些处理程序方法添加到 *MainWindow.xaml.cs* 中的 mainwindow.xaml 类。 如果 "客户" 表的 CollectionViewSource 具有不同的名称，则需要调整其中每个方法中的名称：
 
 [!code-csharp[CommandHandlers#3](../data-tools/codesnippet/CSharp/CreateWPFDataApp/MainWindow.xaml.cs#3)]
 
 ## <a name="run-the-application"></a>运行此应用程序
 
-若要启用调试，请按 F5****。 应会看到 "客户" 和 "订单" 数据已填充到网格中，导航按钮应按预期方式工作。 在输入数据后，单击 " **提交** " 将新客户或订单添加到模型。 单击 " **取消** " 以从新客户或新订单窗体中返回，而不保存数据。 您可以直接在文本框中编辑现有客户和订单，这些更改会自动写入到模型中。
+若要启用调试，请按 F5。 应会看到 "客户" 和 "订单" 数据已填充到网格中，导航按钮应按预期方式工作。 在输入数据后，单击 " **提交** " 将新客户或订单添加到模型。 单击 " **取消** " 以从新客户或新订单窗体中返回，而不保存数据。 您可以直接在文本框中编辑现有客户和订单，这些更改会自动写入到模型中。
 
 ## <a name="see-also"></a>请参阅
 

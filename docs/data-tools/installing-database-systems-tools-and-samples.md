@@ -1,5 +1,7 @@
 ---
 title: 数据库兼容性
+description: 查看 Visual Studio 的兼容数据库系统，如 Microsoft SQL Server、Oracle、MySQL、PostgreSQL、SQLite 和 Firebird。
+ms.custom: SEO-VS-2020
 ms.date: 09/06/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: cfc3b6c3adc5c51cbbc4bc7d91338fd3595ec372
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 598d48d560db58a40b04e9d7684e98df22291a6a
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75586401"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94434844"
 ---
 # <a name="compatible-database-systems-for-visual-studio"></a>适用于 Visual Studio 的兼容数据库系统
 
@@ -39,21 +41,21 @@ SQL Server 是 Microsoft 旗舰数据库产品/服务。 SQL Server 2016 提供�
 
 ## <a name="mysql"></a>MySQL
 
-MySQL 是一种常用的开源数据库系统，广泛用于企业和网站。 Mysql、Visual Studio 和相关产品的下载在 [Windows 上的 mysql](https://www.mysql.com/why-mysql/windows/)中。 第三方提供各种 Visual Studio 扩展和 MySQL 独立管理应用程序。 可以在 nuget 包管理器中浏览产品 (**工具**"  >  **nuget 包管理器**" "  >  **管理解决方案) 的 NuGet 包**"。
+MySQL 是一种常用的开源数据库系统，广泛用于企业和网站。 Mysql、Visual Studio 和相关产品的下载在 [Windows 上的 mysql](https://www.mysql.com/why-mysql/windows/)中。 第三方提供各种 Visual Studio 扩展和 MySQL 独立管理应用程序。 可以在 nuget 包管理器中浏览产品 ( **工具** "  >  **nuget 包管理器** " "  >  **管理解决方案) 的 NuGet 包** "。
 
 ## <a name="postgresql"></a>PostgreSQL
 
-PostgreSQL 是一个免费的开源对象关系数据库系统。 若要在 Windows 上安装，可以从 [PostgreSQL 下载页](https://www.postgresql.org/download/windows/)下载。 还可以从源代码生成 PostgreSQL。 PostgreSQL 核心系统包含 C 语言接口。 许多第三方提供了用于从 .NET 应用程序使用 PostgreSQL 的 NuGet 包。 可以在 nuget 包管理器中浏览产品 (**工具**"  >  **nuget 包管理器**" "  >  **管理解决方案) 的 NuGet 包**"。 大多数情况下， [npgsql.org](http://www.npgsql.org)提供最常用的包。
+PostgreSQL 是一个免费的开源对象关系数据库系统。 若要在 Windows 上安装，可以从 [PostgreSQL 下载页](https://www.postgresql.org/download/windows/)下载。 还可以从源代码生成 PostgreSQL。 PostgreSQL 核心系统包含 C 语言接口。 许多第三方提供了用于从 .NET 应用程序使用 PostgreSQL 的 NuGet 包。 可以在 nuget 包管理器中浏览产品 ( **工具** "  >  **nuget 包管理器** " "  >  **管理解决方案) 的 NuGet 包** "。 大多数情况下， [npgsql.org](http://www.npgsql.org)提供最常用的包。
 
 ## <a name="sqlite"></a>SQLite
 
-SQLite 是在应用程序自身的进程中运行的嵌入式 SQL 数据库引擎。 可以从 [SQLite 下载页面](https://www.sqlite.org/download.html)下载。 还提供了许多用于 SQLite 的第三方 NuGet 包。 可以在 nuget 包管理器中浏览产品 (**工具**"  >  **nuget 包管理器**" "  >  **管理解决方案) 的 NuGet 包**"。
+SQLite 是在应用程序自身的进程中运行的嵌入式 SQL 数据库引擎。 可以从 [SQLite 下载页面](https://www.sqlite.org/download.html)下载。 还提供了许多用于 SQLite 的第三方 NuGet 包。 可以在 nuget 包管理器中浏览产品 ( **工具** "  >  **nuget 包管理器** " "  >  **管理解决方案) 的 NuGet 包** "。
 
 ## <a name="firebird"></a>Firebird
 
 Firebird 是一个开源 SQL 数据库系统。 可以从 [Firebird 下载页](http://firebirdsql.org/en/downloads/)下载。 可以通过 NuGet 包管理器使用 ADO.NET 数据提供程序。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [在 Visual Studio 中访问数据](../data-tools/accessing-data-in-visual-studio.md)
 - [如何确定 SQL Server 及其组件的版本和版本类别](https://support.microsoft.com/help/321185/how-to-determine-the-version-edition-and-update-level-of-sql-server-an)
