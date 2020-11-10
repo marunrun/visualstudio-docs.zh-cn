@@ -27,12 +27,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8e77f115eb4014f16107ae167576ed0d923bffe8
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: 09e5973b39bae2fbf923cf97ac1bd9cf15e10874
+ms.sourcegitcommit: 023f52f10fb91850824558478cbfd2ec965054f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94382957"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94407674"
 ---
 # <a name="ltdependencygt-element-clickonce-deployment"></a>&lt;&gt;ClickOnce 部署 (依赖关系元素) 
 标识要安装的应用程序的版本以及应用程序清单的位置。
@@ -128,7 +128,7 @@ ms.locfileid: "94382957"
 ## <a name="remarks"></a>注解
  部署清单通常具有单个 `assemblyIdentity` 元素，用于标识应用程序清单的名称和版本。
 
-## <a name="example"></a>示例
+## <a name="example-1"></a>示例 1
  下面的代码示例演示了 `dependency` 部署清单中的元素 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 。
 
 ```xml
@@ -147,7 +147,7 @@ ms.locfileid: "94382957"
 </dependency>
 ```
 
-## <a name="example"></a>示例
+## <a name="example-2"></a>示例 2
  下面的代码示例指定对 GAC 中已安装的程序集的依赖关系。
 
 ```xml
@@ -158,7 +158,7 @@ ms.locfileid: "94382957"
 </dependency>
 ```
 
-## <a name="example"></a>示例
+## <a name="example-3"></a>示例 3
  下面的代码示例指定公共语言运行时特定版本的依赖项。
 
 ```xml
@@ -169,7 +169,7 @@ ms.locfileid: "94382957"
 </dependency>
 ```
 
-## <a name="example"></a>示例
+## <a name="example-4"></a>示例 4
  下面的代码示例指定了一个操作系统依赖项。
 
 ```xml

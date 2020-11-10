@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 9d1c151b7f3afe977786ef3b308eff2de1c0857f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 57820a7532255c0084bafc5134cf7793b8c88ab6
+ms.sourcegitcommit: 023f52f10fb91850824558478cbfd2ec965054f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282353"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94407661"
 ---
 # <a name="handle-a-concurrency-exception"></a>处理并发异常
 
@@ -39,21 +39,21 @@ ms.locfileid: "85282353"
 
 4. 使用 Northwind 数据库的 Customers 表中的数据填充数据集。
 
-5. 使用**服务器资源管理器**中的 "**显示表数据**" 功能可访问客户表的数据和更改记录。
+5. 使用 **服务器资源管理器** 中的 " **显示表数据** " 功能可访问客户表的数据和更改记录。
 
 6. 将相同的记录更改为其他值，更新数据集，并尝试将更改写入数据库，这将导致引发并发错误。
 
 7. 捕获错误，然后显示记录的不同版本，使用户能够确定是继续更新数据库，还是取消更新。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备知识
 
 本演练使用 SQL Server Express LocalDB 和 Northwind 示例数据库。
 
-1. 如果没有 SQL Server Express 的 LocalDB，请从 [SQL Server Express 下载 "页](https://www.microsoft.com/sql-server/sql-server-editions-express)或通过 **Visual Studio 安装程序**安装它。 在 **Visual Studio 安装程序**中，可以将 SQL Server Express LocalDB 作为 **数据存储和处理** 工作负荷的一部分进行安装，也可以作为单个组件安装。
+1. 如果没有 SQL Server Express 的 LocalDB，请从 [SQL Server Express 下载 "页](https://www.microsoft.com/sql-server/sql-server-editions-express)或通过 **Visual Studio 安装程序** 安装它。 在 **Visual Studio 安装程序** 中，可以将 SQL Server Express LocalDB 作为 **数据存储和处理** 工作负荷的一部分进行安装，也可以作为单个组件安装。
 
 2. 按照以下步骤安装 Northwind 示例数据库：
 
-    1. 在 Visual Studio 中，打开 " **SQL Server 对象资源管理器** " 窗口。  (SQL Server 对象资源管理器在 Visual Studio 安装程序的 **数据存储和处理** 工作负荷中安装。 ) 展开 **SQL Server** 节点。 右键单击 LocalDB 实例，然后选择 " **新建查询**"。
+    1. 在 Visual Studio 中，打开 " **SQL Server 对象资源管理器** " 窗口。  (SQL Server 对象资源管理器在 Visual Studio 安装程序的 **数据存储和处理** 工作负荷中安装。 ) 展开 **SQL Server** 节点。 右键单击 LocalDB 实例，然后选择 " **新建查询** "。
 
        此时将打开查询编辑器窗口。
 
@@ -69,34 +69,34 @@ ms.locfileid: "85282353"
 
 1. 在 Visual Studio 的“文件”菜单中，依次选择“新建” > “项目”    。
 
-2. 在左侧窗格中展开 " **Visual c #** " 或 " **Visual Basic** "，然后选择 " **Windows 桌面**"。
+2. 在左侧窗格中展开 " **Visual c #** " 或 " **Visual Basic** "，然后选择 " **Windows 桌面** "。
 
 3. 在中间窗格中，选择 " **Windows 窗体应用程序** " 项目类型。
 
-4. 将项目命名为 **ConcurrencyWalkthrough**，然后选择 **"确定"**。
+4. 将项目命名为 **ConcurrencyWalkthrough** ，然后选择 **"确定"** 。
 
-     将创建 **ConcurrencyWalkthrough** 项目并将其添加到 **解决方案资源管理器**，并在设计器中打开新窗体。
+     将创建 **ConcurrencyWalkthrough** 项目并将其添加到 **解决方案资源管理器** ，并在设计器中打开新窗体。
 
 ## <a name="create-the-northwind-dataset"></a>创建 Northwind 数据集
 
-接下来，创建一个名为 **NorthwindDataSet**的数据集：
+接下来，创建一个名为 **NorthwindDataSet** 的数据集：
 
-1. 在 " **数据** " 菜单上，选择 " **添加新数据源**"。
+1. 在 " **数据** " 菜单上，选择 " **添加新数据源** "。
 
    “数据源配置”向导随即打开。
 
-2. 在 " **选择数据源类型** " 屏幕上，选择 " **数据库**"。
+2. 在 " **选择数据源类型** " 屏幕上，选择 " **数据库** "。
 
    ![Visual Studio 中的数据源配置向导](media/data-source-configuration-wizard.png)
 
-3. 从可用连接的列表中选择与 Northwind 示例数据库的连接。 如果连接列表中的连接不可用，请选择 " **新建连接**"。
+3. 从可用连接的列表中选择与 Northwind 示例数据库的连接。 如果连接列表中的连接不可用，请选择 " **新建连接** "。
 
     > [!NOTE]
     > 如果要连接到本地数据库文件，请在询问是否要将文件添加到项目时，选择 " **否** "。
 
-4. 在 "将 **连接字符串保存到应用程序配置文件** " 屏幕上，选择 " **下一步**"。
+4. 在 "将 **连接字符串保存到应用程序配置文件** " 屏幕上，选择 " **下一步** "。
 
-5. 展开 " **表** " 节点，然后选择 " **Customers** " 表。 数据集的默认名称应为 **NorthwindDataSet**。
+5. 展开 " **表** " 节点，然后选择 " **Customers** " 表。 数据集的默认名称应为 **NorthwindDataSet** 。
 
 6. 选择 " **完成** " 将数据集添加到项目。
 
@@ -104,7 +104,7 @@ ms.locfileid: "85282353"
 
 在本部分中，将 <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> 通过将 " **客户** " 项从 " **数据源** " 窗口拖到 Windows 窗体来创建。
 
-1. 若要打开 " **数据源** " 窗口，请在 " **数据** " 菜单上，选择 " **显示数据源**"。
+1. 若要打开 " **数据源** " 窗口，请在 " **数据** " 菜单上，选择 " **显示数据源** "。
 
 2. 在 " **数据源** " 窗口中，展开 " **NorthwindDataSet** " 节点，然后选择 " **Customers** " 表。
 
@@ -112,7 +112,7 @@ ms.locfileid: "85282353"
 
 4. 将该表拖到窗体的空白区域。
 
-     <xref:System.Windows.Forms.DataGridView>名为**CustomersDataGridView**的控件和一个 <xref:System.Windows.Forms.BindingNavigator> 名为**CustomersBindingNavigator**的控件将添加到绑定到的窗体中 <xref:System.Windows.Forms.BindingSource> 。 这反过来又绑定到 NorthwindDataSet 中的 Customers 表。
+     <xref:System.Windows.Forms.DataGridView>名为 **CustomersDataGridView** 的控件和一个 <xref:System.Windows.Forms.BindingNavigator> 名为 **CustomersBindingNavigator** 的控件将添加到绑定到的窗体中 <xref:System.Windows.Forms.BindingSource> 。 这反过来又绑定到 NorthwindDataSet 中的 Customers 表。
 
 ## <a name="test-the-form"></a>测试窗体
 
@@ -122,7 +122,7 @@ ms.locfileid: "85282353"
 
      窗体上将显示一个 <xref:System.Windows.Forms.DataGridView> 控件，其中填充了 "Customers" 表中的数据。
 
-2. 在“调试”菜单中，选择“停止调试”********。
+2. 在“调试”菜单中，选择“停止调试”。
 
 ## <a name="handle-concurrency-errors"></a>处理并发错误
 
@@ -169,21 +169,21 @@ ms.locfileid: "85282353"
 
 刚编写的代码调用 `CreateMessage` 过程向用户显示错误信息。 对于本演练，您将使用消息框向用户显示该记录的不同版本。 这样，用户就可以选择是用更改覆盖记录还是取消编辑。 一旦用户选择某个选项 (单击消息框上的按钮) ，就会将响应传递到该 `ProcessDialogResult` 方法。
 
-通过将以下代码添加到 **代码编辑器**来创建消息。 在方法下面输入以下代码 `UpdateDatabase` ：
+通过将以下代码添加到 **代码编辑器** 来创建消息。 在方法下面输入以下代码 `UpdateDatabase` ：
 
 [!code-csharp[VbRaddataConcurrency#4](../data-tools/codesnippet/CSharp/handle-a-concurrency-exception_3.cs)]
 [!code-vb[VbRaddataConcurrency#4](../data-tools/codesnippet/VisualBasic/handle-a-concurrency-exception_3.vb)]
 
 ### <a name="process-the-users-response"></a>处理用户的响应
 
-还需要代码来处理用户对消息框的响应。 这些选项可以用建议的更改覆盖数据库中的当前记录，也可以放弃本地更改并刷新包含数据库中当前记录的数据表。 如果用户选择 **"是"**，则 <xref:System.Data.DataTable.Merge%2A> 会调用方法，并将 *preserveChanges* 参数设置为 **true**。 这会导致更新尝试成功，因为原始版本的记录现在与数据库中的记录匹配。
+还需要代码来处理用户对消息框的响应。 这些选项可以用建议的更改覆盖数据库中的当前记录，也可以放弃本地更改并刷新包含数据库中当前记录的数据表。 如果用户选择 **"是"** ，则 <xref:System.Data.DataTable.Merge%2A> 会调用方法，并将 *preserveChanges* 参数设置为 **true** 。 这会导致更新尝试成功，因为原始版本的记录现在与数据库中的记录匹配。
 
 在上一部分中添加的代码下面添加以下代码：
 
 [!code-csharp[VbRaddataConcurrency#3](../data-tools/codesnippet/CSharp/handle-a-concurrency-exception_4.cs)]
 [!code-vb[VbRaddataConcurrency#3](../data-tools/codesnippet/VisualBasic/handle-a-concurrency-exception_4.vb)]
 
-## <a name="test-the-form"></a>测试窗体
+## <a name="test-the-form-behavior"></a>测试窗体行为
 
 你现在可以对窗体进行测试，以确保它按预期方式运行。 若要模拟并发冲突，请在填写 NorthwindDataSet 后更改数据库中的数据。
 
@@ -191,20 +191,20 @@ ms.locfileid: "85282353"
 
 2. 窗体显示后，使其保持运行状态，并切换到 Visual Studio IDE。
 
-3. 在“视图”菜单中，选择“服务器资源管理器”。********
+3. 在“视图”菜单中，选择“服务器资源管理器”。
 
-4. 在 **服务器资源管理器**中，展开应用程序正在使用的连接，然后展开 " **表** " 节点。
+4. 在 **服务器资源管理器** 中，展开应用程序正在使用的连接，然后展开 " **表** " 节点。
 
-5. 右键单击 **Customers** 表，然后选择 " **显示表数据**"。
+5. 右键单击 **Customers** 表，然后选择 " **显示表数据** "。
 
-6. 在第一条记录 (**ALFKI**) 中，将 " **联系人姓名** " 改为 " **Maria Anders2**"。
+6. 在第一条记录 ( **ALFKI** ) 中，将 " **联系人姓名** " 改为 " **Maria Anders2** "。
 
     > [!NOTE]
     > 导航到不同的行以提交更改。
 
 7. 切换到 ConcurrencyWalkthrough 的运行形式。
 
-8. 在表单 (**ALFKI**) 的第一条记录中，将 " **联系人姓名** " 改为 " **Maria Anders1**"。
+8. 在表单 ( **ALFKI** ) 的第一条记录中，将 " **联系人姓名** " 改为 " **Maria Anders1** "。
 
 9. 选择“保存”按钮。
 
@@ -212,6 +212,6 @@ ms.locfileid: "85282353"
 
    选择 " **否** " 将取消更新并用数据库中当前的值更新数据集。 选择 **"是"** 将建议的值写入数据库。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [将数据保存回数据库](../data-tools/save-data-back-to-the-database.md)
