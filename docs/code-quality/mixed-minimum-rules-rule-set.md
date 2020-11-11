@@ -1,6 +1,8 @@
 ---
 title: “混合最少量规则”规则集
 ms.date: 11/04/2016
+description: 了解 Visual Studio 中的 "混合最低规则" 规则集。 请参阅支持公共语言运行时的 c + + 项目规则的说明。
+ms.custom: SEO-VS-2020
 ms.topic: reference
 ms.assetid: bc8df61c-19af-40ab-a871-315807e5f4bf
 author: mikejo5000
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: edacd898cc1deb0382dd8e8b4b048af895c3b579
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: 5bb87da3cc668ba946c6ee607fa3be5a2c79cc32
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91658459"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94435321"
 ---
 # <a name="mixed-minimum-rules-rule-set"></a>“混合最少量规则”规则集
 

@@ -1,5 +1,7 @@
 ---
 title: 工作流设计器-如何：使用参数设计器
+description: 了解参数设计器，以及如何使用参数设计器使数据流入和流出活动。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -11,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6c3c0fe3de3a9ab74ed09c1be45e0d39a71a5b7c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: aca39eaf94e5dca3159a9f3740dae0f87257d9c1
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817445"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437861"
 ---
 # <a name="how-to-use-the-argument-designer"></a>如何：使用自变量设计器
 
@@ -28,7 +30,7 @@ ms.locfileid: "85817445"
 
 2. 通过单击设计画布左下角的 " **参数** " 按钮打开参数设计器。 此时将显示参数设计器。
 
-3. 单击标记为 " **创建参数**" 的行。 这会使用以下默认值添加一个具有新自变量的新行： argumentx 作为 **名称** ，其中 x 是一个整数，其初始值为1，其初始值为1，自动递增以创建唯一的参数名称， **在中** 为 **方向**， **字符串** 用于 **参数类型**。 不会为 **默认值**添加值。 可以在工作流设计过程中随时更改这些值。
+3. 单击标记为 " **创建参数** " 的行。 这会使用以下默认值添加一个具有新自变量的新行： argumentx 作为 **名称** ，其中 x 是一个整数，其初始值为1，其初始值为1，自动递增以创建唯一的参数名称， **在中** 为 **方向** ， **字符串** 用于 **参数类型** 。 不会为 **默认值** 添加值。 可以在工作流设计过程中随时更改这些值。
 
     > [!NOTE]
     > 若要删除某个参数，请单击该参数，然后按 **delete** 键。

@@ -1,5 +1,6 @@
 ---
 title: 使用 ADO.NET 创建简单的数据应用程序
+description: 了解如何使用 Visual Studio 中的 Windows 窗体和 ADO.NET 创建简单的窗体到数据应用程序。
 ms.custom: SEO-VS-2020
 ms.date: 08/23/2017
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: c7db4d0072f217604e7ca163e581cc8fe138ffdb
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 44205f7f8f12d453a7c1d93ec8fee6ed1a3c1765
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037427"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436792"
 ---
 # <a name="create-a-simple-data-application-by-using-adonet"></a>使用 ADO.NET 创建简单的数据应用程序
 
@@ -44,15 +45,15 @@ ms.locfileid: "90037427"
 
 1. 在 Visual Studio 中，打开 " **服务器资源管理器** " 窗口。
 
-2. 右键单击 " **数据连接** "，然后选择 " **新建 SQL Server 数据库**"。
+2. 右键单击 " **数据连接** "，然后选择 " **新建 SQL Server 数据库** "。
 
-3. 在 " **服务器名称** " 文本框中，输入 ** (localdb) \mssqllocaldb**。
+3. 在 " **服务器名称** " 文本框中，输入 **(localdb) \mssqllocaldb** 。
 
-4. 在 " **新数据库名称** " 文本框中，输入 **Sales**，然后选择 **"确定"**。
+4. 在 " **新数据库名称** " 文本框中，输入 **Sales** ，然后选择 **"确定"** 。
 
      将创建空的 **销售** 数据库并将其添加到服务器资源管理器中的 "数据连接" 节点。
 
-5. 右键单击 " **销售** " 数据连接，然后选择 " **新建查询**"。
+5. 右键单击 " **销售** " 数据连接，然后选择 " **新建查询** "。
 
      此时将打开查询编辑器窗口。
 
@@ -64,9 +65,9 @@ ms.locfileid: "90037427"
 
 ## <a name="create-the-forms-and-add-controls"></a>创建窗体并添加控件
 
-1. 创建 Windows 窗体应用程序项目，然后将其命名为“SimpleDataApp”****。
+1. 创建 Windows 窗体应用程序项目，然后将其命名为“SimpleDataApp”。
 
-    Visual Studio 将创建项目以及若干个文件，其中包括名为“Form1”的空 Windows 窗体****。
+    Visual Studio 将创建项目以及若干个文件，其中包括名为“Form1”的空 Windows 窗体。
 
 2. 添加两个 Windows 窗体到项目中，以使其具有三个窗体，然后给予它们下列名称：
 
@@ -87,9 +88,9 @@ ms.locfileid: "90037427"
 
 |Navigation 窗体的控件|属性|
 | - |----------------|
-|Button|Name = btnGoToAdd|
-|Button|Name = btnGoToFillOrCancel|
-|Button|Name = btnExit|
+|按钮|Name = btnGoToAdd|
+|按钮|Name = btnGoToFillOrCancel|
+|按钮|Name = btnExit|
 
 **NewCustomer 窗体**
 
@@ -99,12 +100,12 @@ ms.locfileid: "90037427"
 | - |----------------|
 |TextBox|Name = txtCustomerName|
 |TextBox|Name = txtCustomerID<br /><br /> Readonly = True|
-|Button|Name = btnCreateAccount|
+|按钮|Name = btnCreateAccount|
 |NumericUpdown|DecimalPlaces = 0<br /><br /> Maximum = 5000<br /><br /> Name = numOrderAmount|
 |DateTimePicker|Format = Short<br /><br /> Name = dtpOrderDate|
-|Button|Name = btnPlaceOrder|
-|Button|Name = btnAddAnotherAccount|
-|Button|Name = btnAddFinish|
+|按钮|Name = btnPlaceOrder|
+|按钮|Name = btnAddAnotherAccount|
+|按钮|Name = btnAddFinish|
 
 **FillOrCancel 窗体**
 
@@ -113,26 +114,26 @@ ms.locfileid: "90037427"
 |FillOrCancel 窗体的控件|属性|
 | - |----------------|
 |TextBox|Name = txtOrderID|
-|Button|Name = btnFindByOrderID|
+|按钮|Name = btnFindByOrderID|
 |DateTimePicker|Format = Short<br /><br /> Name = dtpFillDate|
 |DataGridView|Name = dgvCustomerOrders<br /><br /> Readonly = True<br /><br /> RowHeadersVisible = False|
-|Button|Name = btnCancelOrder|
-|Button|Name = btnFillOrder|
-|Button|Name = btnFinishUpdates|
+|按钮|Name = btnCancelOrder|
+|按钮|Name = btnFillOrder|
+|按钮|Name = btnFinishUpdates|
 
 ## <a name="store-the-connection-string"></a>存储连接字符串
 当应用程序尝试打开数据库的连接时，应用程序必须能够访问连接字符串。 若要避免在每个窗体上手动输入字符串，请将该字符串存储在项目中的 *App.config* 文件中，并创建一个方法，该方法在从应用程序中的任何窗体中调用方法时返回字符串。
 
-您可以通过在**服务器资源管理器**中右键单击**Sales**数据连接，然后选择 "**属性**" 来查找连接字符串。 找到**ConnectionString**属性，然后使用**ctrl** + **A**、 **ctrl** + **C**选择字符串并将其复制到剪贴板。
+您可以通过在 **服务器资源管理器** 中右键单击 **Sales** 数据连接，然后选择 " **属性** " 来查找连接字符串。 找到 **ConnectionString** 属性，然后使用 **ctrl** + **A** 、 **ctrl** + **C** 选择字符串并将其复制到剪贴板。
 
-1. 如果使用的是 c #，请在 **解决方案资源管理器**中，展开项目下的 " **属性** " 节点，然后打开 " **设置** " 文件。
-    如果使用的是 Visual Basic，请在 **解决方案资源管理器**中单击 " **显示所有文件**"，展开 " **我的项目** " 节点，然后打开 " **设置** " 文件。
+1. 如果使用的是 c #，请在 **解决方案资源管理器** 中，展开项目下的 " **属性** " 节点，然后打开 " **设置** " 文件。
+    如果使用的是 Visual Basic，请在 **解决方案资源管理器** 中单击 " **显示所有文件** "，展开 " **我的项目** " 节点，然后打开 " **设置** " 文件。
 
 2. 在 " **名称** " 列中，输入 `connString` 。
 
-3. 在 " **类型** " 列表中，选择 ** (连接字符串 ") **。
+3. 在 " **类型** " 列表中，选择 **(连接字符串 ")** 。
 
-4. 在 " **作用域** " 列表中，选择 " **应用程序**"。
+4. 在 " **作用域** " 列表中，选择 " **应用程序** "。
 
 5. 在 " **值** " 列中，输入你的连接字符串， (不) 任何外引号，然后保存所做的更改。
 
@@ -145,13 +146,13 @@ ms.locfileid: "90037427"
 
 ### <a name="navigation-form"></a>Navigation 窗体
 
-运行应用程序时，Navigation 窗体将打开。 按“添加帐户”按钮可以打开 NewCustomer 窗体****。 按“填写或取消订单”按钮可以打开 FillOrCancel 窗体****。 按“退出”按钮可以关闭应用程序****。
+运行应用程序时，Navigation 窗体将打开。 按“添加帐户”按钮可以打开 NewCustomer 窗体。 按“填写或取消订单”按钮可以打开 FillOrCancel 窗体。 按“退出”按钮可以关闭应用程序。
 
 #### <a name="make-the-navigation-form-the-startup-form"></a>使 Navigation 窗体成为启动窗体
 
-如果使用 C#，则在“解决方案资源管理器”中，打开 Program.cs，然后将 `Application.Run` 行更改为 `Application.Run(new Navigation());`********
+如果使用 C#，则在“解决方案资源管理器”中，打开 Program.cs，然后将 `Application.Run` 行更改为 `Application.Run(new Navigation());`
 
-如果使用 Visual Basic，请在**解决方案资源管理器**中打开 "**属性**" 窗口，选择 "**应用程序**" 选项卡，然后在 "**启动窗体**" 列表中选择 " **simpledataapp.navigation** "。
+如果使用 Visual Basic，请在 **解决方案资源管理器** 中打开 " **属性** " 窗口，选择 " **应用程序** " 选项卡，然后在 " **启动窗体** " 列表中选择 " **simpledataapp.navigation** "。
 
 #### <a name="create-auto-generated-event-handlers"></a>创建自动生成的事件处理程序
 
@@ -232,7 +233,7 @@ ms.locfileid: "90037427"
 
 ## <a name="test-your-application"></a>测试应用程序
 
-在对每个 Click 事件处理程序进行编码且完成编码后，请按 F5 键以生成并测试应用程序****。
+在对每个 Click 事件处理程序进行编码且完成编码后，请按 F5 键以生成并测试应用程序。
 
 ## <a name="see-also"></a>请参阅
 

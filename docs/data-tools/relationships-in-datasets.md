@@ -1,5 +1,6 @@
 ---
 title: 创建数据集之间的关系
+description: 在 Visual Studio 中创建数据集之间的关系。 了解 DataRelation 对象和约束。 在数据集管理器中手动创建数据关系。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -16,15 +17,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 93575cb299513dbb0616f3c7ed6f1c7db6d65bb5
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 0a07ca2d30e27cdcbc06e8f90a810982d4410931
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037681"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436089"
 ---
 # <a name="create-relationships-between-datasets"></a>创建数据集之间的关系
-包含相关数据表的数据集使用 <xref:System.Data.DataRelation> 对象来表示表之间的父/子关系，并返回彼此相关的记录。 通过使用 " **数据源配置向导**" 或 **数据集设计器**向数据集添加相关表， <xref:System.Data.DataRelation> 可为您创建和配置对象。
+包含相关数据表的数据集使用 <xref:System.Data.DataRelation> 对象来表示表之间的父/子关系，并返回彼此相关的记录。 通过使用 " **数据源配置向导** " 或 **数据集设计器** 向数据集添加相关表， <xref:System.Data.DataRelation> 可为您创建和配置对象。
 
 <xref:System.Data.DataRelation>对象执行两个函数：
 
@@ -69,15 +70,15 @@ ms.locfileid: "90037681"
 当您创建 <xref:System.Data.DataRelation> 对象时，您可以选择指定该关系仅用于强制约束，也就是说，它也不会用于访问相关记录。 您可以使用此选项生成一个数据集，该数据集的效率略高，且包含的方法比相关记录功能少。 但是，您将无法访问相关记录。 例如，仅限约束关系可防止删除仍具有子记录的父记录，并且不能通过父记录访问子记录。
 
 ## <a name="manually-creating-a-data-relation-in-the-dataset-designer"></a>在数据集设计器中手动创建数据关系
-当你使用 Visual Studio 中的数据设计工具创建数据表时，如果可以从你的数据源收集信息，将自动创建关系。 如果从 "**工具箱**" 的 "**数据集**" 选项卡手动添加数据表，则可能必须手动创建关系。 有关 <xref:System.Data.DataRelation> 以编程方式创建对象的信息，请参阅 [添加 datarelation](/dotnet/framework/data/adonet/dataset-datatable-dataview/adding-datarelations)。
+当你使用 Visual Studio 中的数据设计工具创建数据表时，如果可以从你的数据源收集信息，将自动创建关系。 如果从 " **工具箱** " 的 " **数据集** " 选项卡手动添加数据表，则可能必须手动创建关系。 有关 <xref:System.Data.DataRelation> 以编程方式创建对象的信息，请参阅 [添加 datarelation](/dotnet/framework/data/adonet/dataset-datatable-dataview/adding-datarelations)。
 
-数据表之间的关系在 **数据集设计器**中显示为线条，并具有键和无穷标志符号，用于描述关系的一对多方面。 默认情况下，关系的名称不会显示在设计图面上。
+数据表之间的关系在 **数据集设计器** 中显示为线条，并具有键和无穷标志符号，用于描述关系的一对多方面。 默认情况下，关系的名称不会显示在设计图面上。
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
 #### <a name="to-create-a-relationship-between-two-data-tables"></a>创建两个数据表之间的关系
 
-1. 在“数据集设计器”中打开数据集****。 有关详细信息，请参阅 [演练：在数据集设计器中创建数据集](walkthrough-creating-a-dataset-with-the-dataset-designer.md)。
+1. 在“数据集设计器”中打开数据集。 有关详细信息，请参阅 [演练：在数据集设计器中创建数据集](walkthrough-creating-a-dataset-with-the-dataset-designer.md)。
 
 2. 将 **关系** 对象从 **数据集** 工具箱拖动到关系中的子数据表。
 
@@ -101,7 +102,7 @@ ms.locfileid: "90037681"
 
 #### <a name="to-display-a-relation-name-in-the-dataset-designer"></a>在数据集设计器中显示关系名称
 
-1. 在“数据集设计器”中打开数据集****。 有关详细信息，请参阅 [演练：在数据集设计器中创建数据集](walkthrough-creating-a-dataset-with-the-dataset-designer.md)。
+1. 在“数据集设计器”中打开数据集。 有关详细信息，请参阅 [演练：在数据集设计器中创建数据集](walkthrough-creating-a-dataset-with-the-dataset-designer.md)。
 
 2. 从 " **数据** " 菜单中，选择 " **显示关系标签** " 命令以显示关系名称。 清除该命令以隐藏关系名称。
 

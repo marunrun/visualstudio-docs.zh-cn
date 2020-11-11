@@ -1,6 +1,8 @@
 ---
 title: 代码分析签入策略的版本兼容性
 ms.date: 11/04/2016
+description: 了解团队系统 2008 Team Foundation Server 和 Team Foundation Server 2010 以不同的方式评估 Visual Studio 签入策略。
+ms.custom: SEO-VS-2020
 ms.topic: conceptual
 helpviewer_keywords:
 - version compatibility, code analysis check-in policy
@@ -11,18 +13,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4757b3a105ff02a92944d9b45e645e2c63a8b81c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3a681f510da270bc22ae4bc983103f9a5735a127
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75587155"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436870"
 ---
 # <a name="version-compatibility-for-code-analysis-check-in-policies"></a>代码分析签入策略的版本兼容性
 
 如果你必须使用不同版本的评估和创作代码分析签入策略 [!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)] ，你必须了解如何 [!INCLUDE[vstsTfsOrcasLong](../code-quality/includes/vststfsorcaslong_md.md)] 和 [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] 评估签入策略之间的差异。
 
-## <a name="version-compatibility-for-evaluating-check-in-policies"></a>用于评估签入策略的版本兼容性
+## <a name="version-compatibility-for-evaluating-check-in-policies"></a>用于评估 Check-In 策略的版本兼容性
 
 - 当在中计算代码分析签入策略时 [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] ，中存在 [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] 但在中的任何规则 [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] 都将被忽略。
 
@@ -32,7 +34,7 @@ ms.locfileid: "75587155"
 
 - 如果代码分析签入策略指定了无法识别的规则程序集 [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] ，则将显示一条消息。
 
-## <a name="version-compatibility-for-authoring-check-in-policies"></a>创作签入策略的版本兼容性
+## <a name="version-compatibility-for-authoring-check-in-policies"></a>用于创作 Check-In 策略的版本兼容性
 
 - 如果你使用的版本创建代码分析签入策略 [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] [!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)] ，则不能使用的 [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] 版本 [!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)] 来修改它。 而且， [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] 不能评估策略。
 

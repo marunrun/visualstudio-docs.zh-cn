@@ -1,5 +1,7 @@
 ---
 title: 工作流设计器-如何：使用痕迹导航
+description: 了解如何使用痕迹导航来访问子活动、导航到上级活动或就地展开或折叠活动。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 4a688056-37dc-406a-9071-be2141e192fe
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2a432d7cfc40ad6116f570d0e7beb4bfc5b40493
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a15f44b33e7109b126b091dcbf7102aa86a649a9
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817458"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437887"
 ---
 # <a name="how-to-use-breadcrumb-navigation"></a>如何：使用痕迹导航
 
@@ -42,12 +44,12 @@ ms.locfileid: "85817458"
 
 ## <a name="expanding-all-or-collapsing-all-activities"></a>展开或折叠所有活动
 
-1. 使用用户界面中的 " **全部展开** " 和 " **全部折叠** " 按钮可展开或折叠当前痕迹根下的所有活动。 请注意，全部展开和全部折叠是全局状态。 这意味着，当你使用痕迹导航更改根活动时，"全部展开" 或 "全部折叠" 状态将保持不变，直到你单击 " **还原**"。
+1. 使用用户界面中的 " **全部展开** " 和 " **全部折叠** " 按钮可展开或折叠当前痕迹根下的所有活动。 请注意，全部展开和全部折叠是全局状态。 这意味着，当你使用痕迹导航更改根活动时，"全部展开" 或 "全部折叠" 状态将保持不变，直到你单击 " **还原** "。
 
 2. 应用 "全部展开" 或 "全部折叠" 状态后，可以单击显示的 " **还原** " 按钮，返回到之前应用于每个活动的状态。
 
     > [!WARNING]
-    > 如果某个活动（如 <xref:System.Activities.Statements.Flowchart> ）已取消就地展开，则在**流程图**设计器中将禁用与 "**全部展开**" 和 "**全部折叠**" 按钮相关联的功能。 有关 **流程图** 设计器的详细信息，请参阅 [流程图](../workflow-designer/flowchart-activity-designer.md) 主题。
+    > 如果某个活动（如 <xref:System.Activities.Statements.Flowchart> ）已取消就地展开，则在 **流程图** 设计器中将禁用与 " **全部展开** " 和 " **全部折叠** " 按钮相关联的功能。 有关 **流程图** 设计器的详细信息，请参阅 [流程图](../workflow-designer/flowchart-activity-designer.md) 主题。
 
     > [!WARNING]
-    > 全部展开还会在 **Switch** 和 **TryCatch** 活动设计器中产生特殊影响。 单击 " **全部展开**" 时，将显示所有的开关事例和所有 try/catch/finally 块。 单击 " **还原** " 或 " **全部折叠** " 会将这些设计器恢复为其默认状态，从中可以单击单个 case/块来查看其内容。
+    > 全部展开还会在 **Switch** 和 **TryCatch** 活动设计器中产生特殊影响。 单击 " **全部展开** " 时，将显示所有的开关事例和所有 try/catch/finally 块。 单击 " **还原** " 或 " **全部折叠** " 会将这些设计器恢复为其默认状态，从中可以单击单个 case/块来查看其内容。

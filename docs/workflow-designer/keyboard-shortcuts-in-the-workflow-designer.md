@@ -1,5 +1,7 @@
 ---
 title: 工作流设计器：键盘快捷方式
+description: 了解可以在键盘上键入的各种命令，以便在 Visual Studio 中导航工作流设计器。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a8892f46585179ae5857d48deffd982e1cfc0dee
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f3b2db8eb0bd2f85a052c9c172b33b179382d168
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76115385"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437646"
 ---
 # <a name="keyboard-shortcuts-in-the-workflow-designer"></a>工作流设计器中的键盘快捷键
 
@@ -29,7 +31,7 @@ ms.locfileid: "76115385"
 
 下表汇总了分配给工作流设计器命令的默认键盘快捷方式。
 
-|快捷键|用途|
+|快捷方式|用途|
 |-|-------------|
 |Ctrl+E，A|显示或隐藏自变量设计器。|
 |Ctrl+E，C|就地折叠所选择的活动。|

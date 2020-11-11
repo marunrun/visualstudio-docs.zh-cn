@@ -1,6 +1,8 @@
 ---
 title: 代码分析规则集参考
 ms.date: 04/04/2018
+description: 了解 Visual Studio 旧版代码分析中的内置规则集。 请参阅规则集的资源。 了解如何在自定义规则集中使用这些集。
+ms.custom: SEO-VS-2020
 ms.topic: reference
 helpviewer_keywords:
 - code analysis, rule sets reference
@@ -9,16 +11,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fc025a3ff096e560cc2bd5a135f370e89dba2f9e
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: ce5b7f2ecdc854269288c61eaeee6d46b4a74d91
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91860465"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436974"
 ---
 # <a name="code-analysis-rule-set-reference"></a>代码分析规则集参考
 
-在 Visual Studio 中配置托管代码项目的旧分析时，可以从内置 *规则集*列表中进行选择。 某些规则包含在多个内置规则集中，例如，"基本更正规则" 规则集包含 "托管建议规则" 规则集中的规则。
+在 Visual Studio 中配置托管代码项目的旧分析时，可以从内置 *规则集* 列表中进行选择。 某些规则包含在多个内置规则集中，例如，"基本更正规则" 规则集包含 "托管建议规则" 规则集中的规则。
 
 > [!NOTE]
 > 本部分中的规则集与旧式分析相关。 有关适用于代码分析器包的规则集的信息，请参阅 [将规则集与代码分析器一起使用](/dotnet/fundamentals/code-analysis/code-quality-rule-options)。

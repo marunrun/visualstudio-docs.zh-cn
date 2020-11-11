@@ -1,5 +1,7 @@
 ---
 title: 工作流设计器 TerminateWorkflow 活动设计器
+description: 了解如何使用 TerminateWorkflow 活动设计器创建和配置 TerminateWorkflow 活动。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 078dfb43b5960580327448627a30eec20297d9f3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5af1f8656e796d9551e1d140b07868551d563a90
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76111777"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94433864"
 ---
 # <a name="terminateworkflow-activity-designer"></a>TerminateWorkflow 活动设计器
 
@@ -27,7 +29,7 @@ ms.locfileid: "76111777"
 
 ### <a name="using-the-terminateworkflow-activity-designer"></a>使用 TerminateWorkflow 活动设计器
 
-" **TerminateWorkflow** " 活动设计器可在 "**工具箱**" 的 "**运行时**" 类别中找到，可通过单击 "**工具箱**" 选项卡 (或者，从 "**视图**" 菜单中选择 "**工具箱**" 或按 CTRL + ALT + X。 ) 
+" **TerminateWorkflow** " 活动设计器可在 " **工具箱** " 的 " **运行时** " 类别中找到，可通过单击 " **工具箱** " 选项卡 (或者，从 " **视图** " 菜单中选择 " **工具箱** " 或按 CTRL + ALT + X。 ) 
 
 可以将 " **TerminateWorkflow** " 活动设计器从 " **工具箱** " 拖放到工作流设计器图面上通常放置活动的任何位置，例如中 <xref:System.Activities.Statements.Sequence> 。 这将创建 <xref:System.Activities.Statements.TerminateWorkflow> 具有 TerminateWorkflow 的默认 **DisplayName** 的活动。 <xref:System.Activities.Activity.DisplayName%2A>可以在 " **TerminateWorkflow** " 活动设计器的标头中或在属性网格的 " **DisplayName** " 框中编辑。
 

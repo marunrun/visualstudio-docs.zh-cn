@@ -1,6 +1,8 @@
 ---
 title: 托管代码的“安全规则”规则集
 ms.date: 11/04/2016
+description: 了解 Visual Studio 旧版代码分析的安全规则规则集。 请参阅重点关注潜在安全问题的规则说明。
+ms.custom: SEO-VS-2020
 ms.topic: reference
 ms.assetid: 564aeac6-03fa-41b0-b655-88179f0ab01b
 author: mikejo5000
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5f3205bf3c81bbb9dac19c810e3a89a5fcd2227b
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: 32237eb1229e28d1077b2eec8586f52151d69c2d
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91658394"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436948"
 ---
 # <a name="security-rules-rule-set-for-managed-code"></a>托管代码的“安全规则”规则集
 

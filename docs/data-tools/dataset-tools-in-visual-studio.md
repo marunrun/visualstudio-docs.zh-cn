@@ -1,5 +1,7 @@
 ---
 title: 数据集工具
+description: 查看 Visual Studio 中提供的数据集工具。 了解数据集工作流、数据集和 N 层体系结构、数据集和 XML。
+ms.custom: SEO-VS-2020
 ms.date: 11/21/2018
 ms.topic: conceptual
 f1_keywords:
@@ -47,12 +49,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: cb41a4e3e4ed1c0032c579779a18c7df0bc22477
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b0ccb15d65f021099bb48c26dbdb7c03122049a7
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75586713"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436480"
 ---
 # <a name="dataset-tools-in-visual-studio"></a>Visual Studio 中的数据集工具
 
@@ -95,6 +97,6 @@ Visual Studio 提供了简化数据集处理的工具。 基本的端到端工�
 
 有关将数据集转换为 XML 或从 XML 转换数据集的信息，请参阅将 [xml 数据读入数据集](../data-tools/read-xml-data-into-a-dataset.md) 和 [将数据集另存为 xml](../data-tools/save-a-dataset-as-xml.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [适用于 NET 的 Visual Studio Data Tools](../data-tools/visual-studio-data-tools-for-dotnet.md)

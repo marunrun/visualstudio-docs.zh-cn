@@ -1,5 +1,7 @@
 ---
 title: 在 Windows 窗体应用程序中创建查找表
+description: 阅读如何在 Windows 窗体应用程序中创建查找表。 查找表描述绑定到两个相关数据表的控件。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 9a1ae368b7d2bf8548bf78a6a9795e19206bc277
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3d6ec8860d2c163d16e29d229203bb77abcdf65f
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282652"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94435190"
 ---
 # <a name="create-lookup-tables-in-windows-forms-applications"></a>在 Windows 窗体应用程序中创建查找表
 
@@ -24,11 +26,11 @@ ms.locfileid: "85282652"
 
 您可以通过将父表 (的主节点从 " [数据源](add-new-data-sources.md#data-sources-window) ") 窗口拖到窗体上已绑定到相关子表中的列的控件来创建查找表。
 
-例如，假设有一个 `Orders` sales 数据库中的表。 表中的每条记录都 `Orders` 包括一个 `CustomerID` ，指示下订单的客户。 `CustomerID`是指向表中的客户记录的外键 `Customers` 。 在此方案中，将展开 `Orders` " **数据源** " 窗口中的表，并将主节点设置为 " **详细信息**"。 然后，将 `CustomerID` 列设置为使用 <xref:System.Windows.Forms.ComboBox> (或任何支持查找绑定) 的其他控件，并将该节点拖 `Orders` 到窗体上。 最后，将 `Customers` 节点拖动到绑定到相关列的控件（在此示例中， <xref:System.Windows.Forms.ComboBox> 绑定到 `CustomerID` 列）。
+例如，假设有一个 `Orders` sales 数据库中的表。 表中的每条记录都 `Orders` 包括一个 `CustomerID` ，指示下订单的客户。 `CustomerID`是指向表中的客户记录的外键 `Customers` 。 在此方案中，将展开 `Orders` " **数据源** " 窗口中的表，并将主节点设置为 " **详细信息** "。 然后，将 `CustomerID` 列设置为使用 <xref:System.Windows.Forms.ComboBox> (或任何支持查找绑定) 的其他控件，并将该节点拖 `Orders` 到窗体上。 最后，将 `Customers` 节点拖动到绑定到相关列的控件（在此示例中， <xref:System.Windows.Forms.ComboBox> 绑定到 `CustomerID` 列）。
 
 ## <a name="to-databind-a-lookup-control"></a>对查找控件进行 databind
 
-1. 打开项目后，通过选择 "**查看** **Data Sources**  >  **其他 Windows**  >  **数据源**" 打开 "数据源" 窗口。
+1. 打开项目后，通过选择 " **查看** **Data Sources**  >  **其他 Windows**  >  **数据源** " 打开 "数据源" 窗口。
 
     > [!NOTE]
     > 查找表要求在 " **数据源** " 窗口中提供两个相关的表或对象。 有关详细信息，请参阅 [数据集中的关系](relationships-in-datasets.md)。
@@ -38,9 +40,9 @@ ms.locfileid: "85282652"
     > [!NOTE]
     > 子表节点是在父表中显示为可展开子节点的节点。
 
-3. 通过从子表节点上的控件列表中选择 "**详细信息**"，将子表的 "删除" 类型更改为 "**详细**信息"。 有关详细信息，请参阅 [设置在从 "数据源" 窗口中拖动时要创建的控件](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)。
+3. 通过从子表节点上的控件列表中选择 " **详细信息** "，将子表的 "删除" 类型更改为 " **详细** 信息"。 有关详细信息，请参阅 [设置在从 "数据源" 窗口中拖动时要创建的控件](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)。
 
-4. 找到关联两个表 (`CustomerID`) 上一示例中的节点的节点。 <xref:System.Windows.Forms.ComboBox>从控件列表中选择**ComboBox** ，将其放置类型更改为。
+4. 找到关联两个表 (`CustomerID`) 上一示例中的节点的节点。 <xref:System.Windows.Forms.ComboBox>从控件列表中选择 **ComboBox** ，将其放置类型更改为。
 
 5. 将主子表节点从 " **数据源** " 窗口拖到窗体上。
 

@@ -1,5 +1,6 @@
 ---
 title: " ( .NET) 上手动运行旧版代码分析"
+description: 了解如何检测源代码中可能存在的缺陷。 请参阅如何在 Visual Studio 中的托管代码上手动运行旧版代码分析。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -11,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: ca865b33d59f87453cafc337e1595c9d772b17a2
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: f61f0823c33478b4482f00541bbfe778fe72ed7e
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808608"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94434735"
 ---
 # <a name="how-to-run-legacy-code-analysis-manually-for-managed-code"></a>如何：手动运行托管代码的旧式代码分析
 
@@ -30,6 +31,6 @@ ms.locfileid: "90808608"
 set EnableLegacyCodeAnalysis = true
 ```
 
-2. 在 **解决方案资源管理器**中，单击该项目。
+2. 在 **解决方案资源管理器** 中，单击该项目。
 
-3. 在 "**分析**" 菜单上，单击 "对*项目名称***运行代码分析**"。
+3. 在 " **分析** " 菜单上，单击 "对 *项目名称***运行代码分析** "。

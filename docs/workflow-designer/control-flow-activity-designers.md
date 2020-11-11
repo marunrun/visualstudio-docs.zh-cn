@@ -1,5 +1,7 @@
 ---
 title: 工作流设计器控制流活动设计器
+description: 了解控制流活动设计器，这些设计器是系统提供的用于控制工作流中的流的活动。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: ba74af23-5398-4e62-bd90-c50612e3bfef
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 84f9de21dbf0529823690effb4285b63a3b226fa
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3d7cf2f4f05db2fbc06c6209d5b39b211dd731f6
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76114681"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94438134"
 ---
 # <a name="control-flow-activity-designers"></a>控制流活动设计器
 

@@ -1,5 +1,7 @@
 ---
 title: 编辑数据集中的数据
+description: 了解如何编辑数据集中的数据。 了解如何编辑数据集行，将新行插入到数据集中，确定是否存在已更改的行，并查找有错误的行。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: fe59b30e9af7ee1d98c0aba65339af1d53cba8fb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e547d3a6a07a7881c34462138ffbe708b8d74080
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282457"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94435086"
 ---
 # <a name="edit-data-in-datasets"></a>编辑数据集中的数据
 编辑数据表中的数据与编辑任何数据库的表中的数据非常类似。 此过程可能包括插入、更新和删除表中的记录。 在数据绑定窗体中，可以指定哪些字段是用户可编辑的字段。 在这些情况下，数据绑定基础结构将处理所有更改跟踪，以便以后可以将更改发送回数据库。 如果以编程方式对数据进行编辑，并且想要将这些更改发送回数据库，则必须使用执行更改跟踪的对象和方法。
@@ -40,7 +42,7 @@ ms.locfileid: "85282457"
 [!code-vb[VbRaddataEditing#5](../data-tools/codesnippet/VisualBasic/edit-data-in-datasets_2.vb)]
 
 ## <a name="to-insert-new-rows-into-a-dataset"></a>向数据集插入新行
-使用数据绑定控件的应用程序通常通过[BindingNavigator 控件](/dotnet/framework/winforms/controls/bindingnavigator-control-windows-forms)上的 "**添加新**项" 按钮来添加新记录。
+使用数据绑定控件的应用程序通常通过 [BindingNavigator 控件](/dotnet/framework/winforms/controls/bindingnavigator-control-windows-forms)上的 " **添加新** 项" 按钮来添加新记录。
 
 若要将新记录手动添加到数据集，请通过对 DataTable 调用方法来创建新的数据行。 然后，将该行添加到 <xref:System.Data.DataRow> (的集合 <xref:System.Data.DataTable.Rows%2A>) <xref:System.Data.DataTable> ：
 

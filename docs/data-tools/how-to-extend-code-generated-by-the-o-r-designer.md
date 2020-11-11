@@ -1,5 +1,7 @@
 ---
 title: 如何：扩展由 O-R 设计器生成的代码
+description: 查看如何扩展对象关系设计器 (O/R 设计器) 生成的代码。 将代码添加到实体类。 将代码添加到 DataContext。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: d6d1122e-2f55-4607-8d8b-48c3c22600fb
@@ -8,15 +10,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: b4c0ac8cff82250169171e1d842e64a34a4523ac
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7d3468bbc3e3a1f1250cf2c679087b9606b87a18
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282106"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94434917"
 ---
 # <a name="how-to-extend-code-generated-by-the-or-designer"></a>如何：扩展由 O/R 设计器生成的代码
-当对实体类和设计器图面上的其他对象进行更改时，将重新生成由 **O/R 设计器** 生成的代码。 当设计器重新生成代码时，你添加到生成的代码中的任何代码一般都会被重新声称的代码覆盖。 **O/R 设计器**提供生成分部类文件的功能，在这些文件中，您可以添加不覆盖的代码。 将你自己的代码添加到 **O/R 设计器** 生成的代码的一个示例是将数据验证添加到 LINQ to SQL (实体) 类中。 有关详细信息，请参阅 [如何：向实体类添加验证](../data-tools/how-to-add-validation-to-entity-classes.md)。
+当对实体类和设计器图面上的其他对象进行更改时，将重新生成由 **O/R 设计器** 生成的代码。 当设计器重新生成代码时，你添加到生成的代码中的任何代码一般都会被重新声称的代码覆盖。 **O/R 设计器** 提供生成分部类文件的功能，在这些文件中，您可以添加不覆盖的代码。 将你自己的代码添加到 **O/R 设计器** 生成的代码的一个示例是将数据验证添加到 LINQ to SQL (实体) 类中。 有关详细信息，请参阅 [如何：向实体类添加验证](../data-tools/how-to-add-validation-to-entity-classes.md)。
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
@@ -24,9 +26,9 @@ ms.locfileid: "85282106"
 
 ### <a name="to-create-a-partial-class-and-add-code-to-an-entity-class"></a>创建分部类并向实体类中添加代码
 
-1. 在**O/R 设计器**中打开或创建一个新的 LINQ to SQL 类文件 (**.dbml**文件) 。  (在**解决方案资源管理器**或**数据库资源管理器**中双击 **.dbml**文件。 ) 
+1. 在 **O/R 设计器** 中打开或创建一个新的 LINQ to SQL 类文件 ( **.dbml** 文件) 。  (在 **解决方案资源管理器** 或 **数据库资源管理器** 中双击 **.dbml** 文件。 ) 
 
-2. 在 O/R 设计器中，右键单击要为其添加验证的类，然后单击“查看代码”********。
+2. 在 O/R 设计器中，右键单击要为其添加验证的类，然后单击“查看代码”。
 
      将打开代码编辑器，其中显示所选实体类的分部类。
 
@@ -36,9 +38,9 @@ ms.locfileid: "85282106"
 
 ### <a name="to-create-a-partial-class-and-add-code-to-a-datacontext"></a>创建分部类并向 DataContext 中添加代码
 
-1. 在**O/R 设计器**中打开或创建一个新的 LINQ to SQL 类文件 (**.dbml**文件) 。  (在**解决方案资源管理器**或**数据库资源管理器**中双击 **.dbml**文件。 ) 
+1. 在 **O/R 设计器** 中打开或创建一个新的 LINQ to SQL 类文件 ( **.dbml** 文件) 。  (在 **解决方案资源管理器** 或 **数据库资源管理器** 中双击 **.dbml** 文件。 ) 
 
-2. 在 **O/R 设计器**中，右键单击设计器上的空白区域，然后单击 " **查看代码**"。
+2. 在 **O/R 设计器** 中，右键单击设计器上的空白区域，然后单击 " **查看代码** "。
 
      将打开代码编辑器，其中显示 DataContext 的分部类。
 

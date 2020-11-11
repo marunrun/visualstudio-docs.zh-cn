@@ -1,5 +1,7 @@
 ---
 title: 工作流设计器 CorrelationScope 活动设计器
+description: 了解如何使用 CorrelationScope 活动设计器创建和配置 CorrelationScope 活动。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 135acfbbaf9fdcbbf219fd50a504cf9262fe4d24
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cc85dbb5c774f6afa956f51852ef15d4c7ccebc0
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86876094"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94438108"
 ---
 # <a name="correlationscope-activity-designer"></a>CorrelationScope 活动设计器
 
@@ -27,13 +29,13 @@ ms.locfileid: "86876094"
 
 ### <a name="use-the-correlationscope-activity-designer"></a>使用 CorrelationScope 活动设计器
 
-" **CorrelationScope** " 活动设计器可在 "**工具箱**" 的 "**消息传送**" 类别中找到，可通过单击工作流设计器左侧的 "**工具箱**" 选项卡进行访问。 或者，从 "**视图**" 菜单中选择 **"工具箱**"，或按**Ctrl** + **Alt** + **X**。
+" **CorrelationScope** " 活动设计器可在 " **工具箱** " 的 " **消息传送** " 类别中找到，可通过单击工作流设计器左侧的 " **工具箱** " 选项卡进行访问。 或者，从 " **视图** " 菜单中选择 **"工具箱** "，或按 **Ctrl** + **Alt** + **X** 。
 
-可以将 " **CorrelationScope** " 活动设计器从 " **工具箱** " 拖放到工作流设计器图面上。 这将创建 <xref:System.ServiceModel.Activities.CorrelationScope> 具有 CorrelationScope 的默认 **DisplayName** 的活动。 <xref:System.Activities.Activity.DisplayName%2A>可以在 " **CorrelationScope** " 活动设计器的标头中或在 "**属性**" 窗口的 " **DisplayName** " 框中编辑。
+可以将 " **CorrelationScope** " 活动设计器从 " **工具箱** " 拖放到工作流设计器图面上。 这将创建 <xref:System.ServiceModel.Activities.CorrelationScope> 具有 CorrelationScope 的默认 **DisplayName** 的活动。 <xref:System.Activities.Activity.DisplayName%2A>可以在 " **CorrelationScope** " 活动设计器的标头中或在 " **属性** " 窗口的 " **DisplayName** " 框中编辑。
 
-若要指定 <xref:System.ServiceModel.Activities.CorrelationHandle> 子消息传递活动使用的，请在 "**属性**" 窗口中选择 " **CorrelatesWith** " 字段旁边的省略号按钮，以显示 "**表达式编辑器**" 对话框。 还可以在活动设计器图面上设置此属性。
+若要指定 <xref:System.ServiceModel.Activities.CorrelationHandle> 子消息传递活动使用的，请在 " **属性** " 窗口中选择 " **CorrelatesWith** " 字段旁边的省略号按钮，以显示 " **表达式编辑器** " 对话框。 还可以在活动设计器图面上设置此属性。
 
-在相关范围内的活动是通过在**CorrelationScope**设计器内的 "**正文**" 框中删除其设计器来指定的。
+在相关范围内的活动是通过在 **CorrelationScope** 设计器内的 " **正文** " 框中删除其设计器来指定的。
 
 ### <a name="the-correlationscope-properties"></a>CorrelationScope 属性
 

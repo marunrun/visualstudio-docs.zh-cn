@@ -1,5 +1,7 @@
 ---
 title: 如何：在工作流设计器中使用搜索
+description: 了解如何在工作流设计器中搜索以按关键字查找项，以便你可以轻松创建更大、更复杂的工作流。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: f42d3115-2ed2-4941-8f1e-92dac41c30fa
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 63ad6f8b6d3afd1f30f2e9a02eaa4927fb3608d2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3dadaf6ce4728dfac8d4052804cbed70ee7cefcd
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817471"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437900"
 ---
 # <a name="how-to-use-search-in-the-workflow-designer"></a>如何：在工作流设计器中使用搜索
 
@@ -33,9 +35,9 @@ ms.locfileid: "85817471"
 
 ### <a name="use-quick-find"></a>使用快速查找
 
-1. 打开工作流设计器后，按**Ctrl + F**，或选择 "**编辑**  >  **查找并替换**  >  **快速查找**"。
+1. 打开工作流设计器后，按 **Ctrl + F** ，或选择 " **编辑**  >  **查找并替换**  >  **快速查找** "。
 
-2. 在 " **查找内容** " 文本框中输入搜索词，然后单击 " **查找下一个**"。
+2. 在 " **查找内容** " 文本框中输入搜索词，然后单击 " **查找下一个** "。
 
 3. 搜索词位于当前工作流中。 下图显示了位于设计器中的活动显示名称：
 
@@ -47,8 +49,8 @@ ms.locfileid: "85817471"
 
 ### <a name="use-find-in-files"></a>使用 "在文件中查找"
 
-1. 在 Visual Studio 中，按**Ctrl** + **Shift** + **F**，或选择 "**编辑**  >  **查找并替换**  >  **在文件中查找**"。
+1. 在 Visual Studio 中，按 **Ctrl** + **Shift** + **F** ，或选择 " **编辑**  >  **查找并替换**  >  **在文件中查找** "。
 
-2. 在 " **查找内容** " 文本框中输入搜索项，并单击 " **查找所有**内容"。
+2. 在 " **查找内容** " 文本框中输入搜索项，并单击 " **查找所有** 内容"。
 
 3. 查找结果将显示在 " **查找结果** " 视图中。 双击某一结果项会在工作流设计器中导航到包含匹配项的活动。

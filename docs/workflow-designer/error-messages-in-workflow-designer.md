@@ -1,5 +1,7 @@
 ---
 title: 工作流设计器中的错误消息
+description: 了解处理工作流设计器时可能遇到的错误消息类型。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 72592d21fdaba1ef47a15a113c820dffe0ba71eb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8f3886739cbc6deefd13570ae0f49da7e89ad9b1
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75597043"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94438030"
 ---
 # <a name="error-messages-in-workflow-designer"></a>工作流设计器中的错误消息
 
@@ -37,7 +39,7 @@ ms.locfileid: "75597043"
 
 无效的表达式和未满足的验证约束不会导致工作流无法生成。 生成工作流会成功，但 <xref:System.Activities.InvalidWorkflowException> 会在运行时引发。 如果 XAML 文件中存在错误，生成将失败。
 
-在 Visual Studio 中，加载工作流时，它的错误将显示在 **错误列表**中。 若要导航到作为错误源的活动，请在 **错误列表**中双击错误。
+在 Visual Studio 中，加载工作流时，它的错误将显示在 **错误列表** 中。 若要导航到作为错误源的活动，请在 **错误列表** 中双击错误。
 
 ### <a name="expression-errors"></a>表达式错误
  无效表达式用红色圆圈表示，并且该表达式旁有一个白色感叹号。 悬停在此图标上将显示描述错误来源的工具提示。 在 Visual Studio 中，单击表达式以查看显示错误源的行。 悬停在此加下划线的文本上将显示描述错误来源的工具提示。

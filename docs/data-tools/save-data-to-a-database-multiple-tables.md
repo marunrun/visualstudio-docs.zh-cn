@@ -1,5 +1,7 @@
 ---
 title: 将数据保存到数据库（多个表）
+description: 在本演练中，使用 Visual Studio 中的数据集工具将数据从多个表保存到数据库。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: b512263cd5d0ca8c83b0ba6848fb16feca1a71f6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2f6401fedc3158e2743f08775da93faf2ddfee73
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85281638"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436037"
 ---
 # <a name="save-data-to-a-database-multiple-tables"></a>将数据保存到数据库（多个表）
 
@@ -35,7 +37,7 @@ ms.locfileid: "85281638"
 
 - 设置 " [数据源" 窗口](add-new-data-sources.md#data-sources-window)中项的控件。 有关详细信息，请参阅 [设置在从 "数据源" 窗口中拖动时要创建的控件](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)。
 
-- 通过将某些项从“数据源”窗口拖动到窗体上来创建数据绑定控件****。
+- 通过将某些项从“数据源”窗口拖动到窗体上来创建数据绑定控件。
 
 - 修改数据集的每个表中的几个记录。
 
@@ -45,11 +47,11 @@ ms.locfileid: "85281638"
 
 本演练使用 SQL Server Express LocalDB 和 Northwind 示例数据库。
 
-1. 如果没有 SQL Server Express 的 LocalDB，请从 [SQL Server Express 下载 "页](https://www.microsoft.com/sql-server/sql-server-editions-express)或通过 **Visual Studio 安装程序**安装它。 在 **Visual Studio 安装程序**中，可以将 SQL Server Express LocalDB 作为 **数据存储和处理** 工作负荷的一部分进行安装，也可以作为单个组件安装。
+1. 如果没有 SQL Server Express 的 LocalDB，请从 [SQL Server Express 下载 "页](https://www.microsoft.com/sql-server/sql-server-editions-express)或通过 **Visual Studio 安装程序** 安装它。 在 **Visual Studio 安装程序** 中，可以将 SQL Server Express LocalDB 作为 **数据存储和处理** 工作负荷的一部分进行安装，也可以作为单个组件安装。
 
 2. 按照以下步骤安装 Northwind 示例数据库：
 
-    1. 在 Visual Studio 中，打开 " **SQL Server 对象资源管理器** " 窗口。  (SQL Server 对象资源管理器在 Visual Studio 安装程序的 **数据存储和处理** 工作负荷中安装。 ) 展开 **SQL Server** 节点。 右键单击 LocalDB 实例，然后选择 " **新建查询**"。
+    1. 在 Visual Studio 中，打开 " **SQL Server 对象资源管理器** " 窗口。  (SQL Server 对象资源管理器在 Visual Studio 安装程序的 **数据存储和处理** 工作负荷中安装。 ) 展开 **SQL Server** 节点。 右键单击 LocalDB 实例，然后选择 " **新建查询** "。
 
        此时将打开查询编辑器窗口。
 
@@ -61,19 +63,19 @@ ms.locfileid: "85281638"
 
 ## <a name="create-the-windows-forms-application"></a>创建 Windows 窗体应用程序
 
-为 c # 或 Visual Basic 创建新的 **Windows 窗体应用程序** 项目。 将项目命名为 **UpdateMultipleTablesWalkthrough**。
+为 c # 或 Visual Basic 创建新的 **Windows 窗体应用程序** 项目。 将项目命名为 **UpdateMultipleTablesWalkthrough** 。
 
 ## <a name="create-the-data-source"></a>创建数据源
 
-此步骤使用“数据源配置向导”从 Northwind 数据库创建一个数据源****。 你必须具有对 Northwind 示例数据库的访问权限，才能创建连接。 有关设置 Northwind 示例数据库的信息，请参阅 [如何：安装示例数据库](../data-tools/installing-database-systems-tools-and-samples.md)。
+此步骤使用“数据源配置向导”从 Northwind 数据库创建一个数据源。 你必须具有对 Northwind 示例数据库的访问权限，才能创建连接。 有关设置 Northwind 示例数据库的信息，请参阅 [如何：安装示例数据库](../data-tools/installing-database-systems-tools-and-samples.md)。
 
-1. 在 " **数据** " 菜单上，选择 " **显示数据源**"。
+1. 在“数据”菜单上，选择“显示数据源” 。
 
-   “数据源”窗口随即打开****。
+   “数据源”窗口随即打开。
 
-2. 在“数据源”窗口，选择“添加新数据源”以启动“数据源配置”向导************。
+2. 在“数据源”窗口，选择“添加新数据源”以启动“数据源配置”向导。
 
-3. 在 " **选择数据源类型** " 屏幕上，选择 " **数据库**"，然后选择 " **下一步**"。
+3. 在 " **选择数据源类型** " 屏幕上，选择 " **数据库** "，然后选择 " **下一步** "。
 
 4. 在 " **选择你的数据连接** " 屏幕上，执行以下操作之一：
 
@@ -81,17 +83,17 @@ ms.locfileid: "85281638"
 
          - 或 -
 
-    - 选择“新建连接”，打开“添加/修改连接”对话框********。
+    - 选择“新建连接”，打开“添加/修改连接”对话框。
 
-5. 如果数据库需要密码，请选择该选项以包括敏感数据，然后选择 " **下一步**"。
+5. 如果数据库需要密码，请选择该选项以包括敏感数据，然后选择 " **下一步** "。
 
-6. 在 "将 **连接字符串保存到应用程序配置文件**" 中，选择 " **下一步**"。
+6. 在 "将 **连接字符串保存到应用程序配置文件** " 中，选择 " **下一步** "。
 
 7. 在 " **选择数据库对象** " 屏幕上，展开 " **表** " 节点。
 
-8. 选择 " **Customers** " 和 " **Orders** " 表，然后选择 " **完成**"。
+8. 选择 " **Customers** " 和 " **Orders** " 表，然后选择 " **完成** "。
 
-     “NorthwindDataSet”将添加到项目，这些表将显示在“数据源”窗口中********。
+     “NorthwindDataSet”将添加到项目，这些表将显示在“数据源”窗口中。
 
 ## <a name="set-the-controls-to-be-created"></a>设置要创建的控件
 
@@ -107,20 +109,20 @@ ms.locfileid: "85281638"
 
 可以通过将项从 " **数据源** " 窗口拖到窗体上来创建数据绑定控件。
 
-1. 将主“Customers”节点从“数据源”窗口拖到“Form1”上************。
+1. 将主“Customers”节点从“数据源”窗口拖到“Form1”上。
 
      带有描述性标签的数据绑定控件将显示在窗体上，同时还显示一个工具条 (<xref:System.Windows.Forms.BindingNavigator>)，用于在记录间进行导航。 [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md)、、 `CustomersTableAdapter` <xref:System.Windows.Forms.BindingSource> 和 <xref:System.Windows.Forms.BindingNavigator> 显示在组件栏中。
 
-2. 将相关的“Orders”节点从“数据源”窗口拖到“Form1”上************。
+2. 将相关的“Orders”节点从“数据源”窗口拖到“Form1”上。
 
     > [!NOTE]
-    > 相关的“Orders”节点位于“Fax”列下，该节点是“Customers”节点的子节点************。
+    > 相关的“Orders”节点位于“Fax”列下，该节点是“Customers”节点的子节点。
 
      用于导航记录的 <xref:System.Windows.Forms.DataGridView> 控件和工具栏（<xref:System.Windows.Forms.BindingNavigator>）将显示在窗体上。 `OrdersTableAdapter`并 <xref:System.Windows.Forms.BindingSource> 显示在组件栏中。
 
 ## <a name="add-code-to-update-the-database"></a>添加更新数据库的代码
 
-通过调用“Customers”和“Orders”TableAdapter 的 `Update` 方法，可更新数据库********。 默认情况下，的 " **保存** " 按钮的事件处理程序 <xref:System.Windows.Forms.BindingNavigator> 将添加到窗体的代码中，以将更新发送到数据库。 此过程修改代码以按正确的顺序发送更新。这消除了引发引用完整性错误的可能性。 该代码还将通过在 try-catch 块中包装更新调用来实现错误处理。 可以根据应用程序的需要修改代码。
+通过调用“Customers”和“Orders”TableAdapter 的 `Update` 方法，可更新数据库。 默认情况下，的 " **保存** " 按钮的事件处理程序 <xref:System.Windows.Forms.BindingNavigator> 将添加到窗体的代码中，以将更新发送到数据库。 此过程修改代码以按正确的顺序发送更新。这消除了引发引用完整性错误的可能性。 该代码还将通过在 try-catch 块中包装更新调用来实现错误处理。 可以根据应用程序的需要修改代码。
 
 > [!NOTE]
 > 为清楚起见，本演练不使用事务。 但是，如果要更新两个或多个相关表，请在事务中包含所有的更新逻辑。 事务是确保在提交任何更改之前数据库的所有相关更改都成功的进程。 有关详细信息，请参阅 [事务和并发](/dotnet/framework/data/adonet/transactions-and-concurrency)。
@@ -136,7 +138,7 @@ ms.locfileid: "85281638"
 
 ## <a name="test-the-application"></a>测试应用程序
 
-1. 按 **F5**。
+1. 按 **F5** 。
 
 2. 对每个表中的一条或多条记录的数据执行一些更改。
 

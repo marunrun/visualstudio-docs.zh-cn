@@ -1,5 +1,7 @@
 ---
 title: 将新记录插入数据库
+description: 使用 TableAdapter 方法、TableAdapter 的 DBDirect 方法之一或命令对象将新记录插入到数据库中。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: b703d3ccc6ffbd5e2449a1768071b930f606f37f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3586cf45e152cd8a0149140556916b11544a00bb
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85281989"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436271"
 ---
 # <a name="insert-new-records-into-a-database"></a>将新记录插入数据库
 
@@ -80,7 +82,7 @@ Tableadapter 提供了不同的方法将新记录插入数据库中，具体取�
 [!code-vb[VbRaddataSaving#16](../data-tools/codesnippet/VisualBasic/insert-new-records-into-a-database_3.vb)]
 [!code-csharp[VbRaddataSaving#16](../data-tools/codesnippet/CSharp/insert-new-records-into-a-database_3.cs)]
 
-## <a name="net-security"></a>.NET 安全
+## <a name="net-security"></a>.NET 安全性
 
 您必须具有对您尝试连接到的数据库的访问权限，以及在所需的表中执行插入的权限。
 

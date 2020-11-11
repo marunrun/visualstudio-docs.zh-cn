@@ -18,17 +18,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8423c2820aaf7daf479df6c14dd2e8de9e0e6e5a
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: 4b719f9609dfb2feb432f4692b31e820d806ff92
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94383191"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437718"
 ---
 # <a name="build-clickonce-applications-from-the-command-line"></a>从命令行生成 ClickOnce 应用程序
+
 在中 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] ，你可以从命令行生成项目，即使它们是在集成开发环境 (IDE) 中创建的。 事实上，你可以 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] 在仅安装了 .NET Framework 的另一台计算机上重新生成使用创建的项目。 这样一来，您就可以使用自动化进程（例如，在中央生成实验室中）或使用超出生成项目本身范围的高级脚本技术来重现生成。
 
-## <a name="use-msbuild-to-reproduce-clickonce-application-deployments"></a>使用 MSBuild 重现 ClickOnce 应用程序部署
+## <a name="use-msbuild-to-reproduce-net-framework-clickonce-application-deployments"></a>使用 MSBuild 重现 .NET Framework ClickOnce 应用程序部署
+
  调用 msbuild/target：在命令行中发布时，它会告知 MSBuild 系统生成项目并 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 在 "发布" 文件夹中创建应用程序。 这等效于在 IDE 中选择 " **发布** " 命令。
 
  此命令执行 *msbuild.exe* ，该路径位于 Visual Studio 命令提示符环境的路径中。
@@ -41,7 +43,7 @@ ms.locfileid: "94383191"
 
 ## <a name="create-and-build-a-basic-clickonce-application-with-msbuild"></a>使用 MSBuild 创建并生成基本的 ClickOnce 应用程序
 
-#### <a name="to-create-and-publish-a-clickonce-project"></a>创建和发布 ClickOnce 项目
+### <a name="to-create-and-publish-a-clickonce-project"></a>创建和发布 ClickOnce 项目
 
 1. 打开 Visual Studio 并创建一个新项目。
 
@@ -76,12 +78,26 @@ ms.locfileid: "94383191"
 5. 键入 `msbuild /target:publish`。
 
    以上步骤会 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 在名为 **Publish** 的项目的子文件夹中生成完整的应用程序部署。 *CmdLineDemo* 是 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 部署清单。 文件夹 *CmdLineDemo_1* 包含应用程序清单 *CmdLineDemo.exe* 和 *CmdLineDemo.exe。* [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] *Setup.exe* 是引导程序，默认情况下配置为安装 .NET Framework。 Dotnetfx.exe 文件夹包含 .NET Framework 的可再发行组件。 这是通过 Web 或 UNC 或 CD/DVD 部署应用程序所需的整个文件集。
-   
+
 > [!NOTE]
 > MSBuild 系统使用 **PublishDir** 选项来指定输出的位置，例如 `msbuild /t:publish /p:PublishDir="<specific location>"` 。
 
+::: moniker range=">=vs-2019"
+
+## <a name="build-net-clickonce-applications-from-the-command-line"></a>通过命令行生成 .NET ClickOnce 应用程序
+
+从命令行生成 .NET ClickOnce 应用程序是类似的体验，但你需要在 MSBuild 命令行上为发布配置文件提供附加属性。 创建发布配置文件的最简单方法是使用 Visual Studio。  有关详细信息，请参阅 [使用 ClickOnce 部署 .Net Windows 应用程序](quickstart-deploy-using-clickonce-folder.md) 。
+
+创建发布配置文件后，可以在 msbuild 命令行中提供 .pubxml 文件作为属性。 例如：
+
+```cmd
+    msbuild /t:publish /p:PublishProfile=<pubxml file> /p:PublishDir="<specific location>"
+```
+::: moniker-end
+
 ## <a name="publish-properties"></a>发布属性
- 在上述过程中发布应用程序时，发布向导会将以下属性插入项目文件中。 这些属性会直接影响 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序的生成方式。
+
+ 在上述过程中发布应用程序时，发布向导或 .NET Core 3.1 或更高版本项目的发布配置文件中会将以下属性插入到项目文件中。 这些属性会直接影响 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序的生成方式。
 
  *CmdLineDemo. .vbproj*  /  *CmdLineDemo* ：
 
@@ -105,21 +121,36 @@ ms.locfileid: "94383191"
 <BootstrapperEnabled>true</BootstrapperEnabled>
 ```
 
- 您可以在命令行重写这些属性中的任何属性，而无需更改项目文件本身。 例如，以下内容将在 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 没有引导程序的情况下生成应用程序部署：
+ 对于 .NET Framework 项目，可以在命令行重写这些属性中的任何一个，而无需更改项目文件本身。 例如，以下内容将在 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 没有引导程序的情况下生成应用程序部署：
 
 ```cmd
 msbuild /target:publish /property:BootstrapperEnabled=false
-```
+ ```
+
+::: moniker range=">=vs-2019"
+对于 .NET Core 3.1 或更高版本，将在 .pubxml 文件中提供这些设置。
 
  发布属性在 " [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] **项目设计器** " 的 " **发布** "、" **安全性** " 和 " **签名** " 属性页中进行控制。 下面是发布属性的说明，以及如何在应用程序设计器的各种属性页中设置每个属性的说明：
 
+> [!NOTE]
+> 对于 .NET Windows 桌面项目，这些设置现在位于发布向导中
+::: moniker-end
+
 - `AssemblyOriginatorKeyFile` 确定用于对应用程序清单进行签名的密钥文件 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 。 此相同键还可用于为程序集分配强名称。 此属性在 " **项目设计器** " 的 " **签名** " 页上设置。
+::: moniker range=">=vs-2019"
+对于 .NET windows 应用程序，此设置保留在项目文件中
+::: moniker-end
 
   在 " **安全** " 页上设置以下属性：
 
 - **启用 ClickOnce 安全设置** 确定是否 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 生成清单。 最初创建项目时， [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 默认情况下，清单生成是关闭的。 首次发布时，向导将自动打开此标志。
 
 - **TargetZone** 确定要发送到应用程序清单中的信任级别 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 。 可能的值包括 "Internet"、"LocalIntranet" 和 "Custom"。 Internet 和 LocalIntranet 会将默认权限集发出到你的 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序清单中。 LocalIntranet 是默认设置，基本上意味着完全信任。 Custom 指定仅在基本 *app.config* 文件中显式指定的权限将发送到 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序清单中。 *App.config* 文件是部分清单文件，只包含信任信息定义。 它是一个隐藏的文件，当你在 " **安全** " 页上配置权限时，会自动将其添加到你的项目。
+-
+::: moniker range=">=vs-2019"
+> [!NOTE]
+> 对于 .NET Core 3.1 或更高版本的 Windows 桌面项目，不支持这些安全设置。
+::: moniker-end
 
   以下属性是在 " **发布** " 页上设置的：
 
@@ -140,10 +171,18 @@ msbuild /target:publish /property:BootstrapperEnabled=false
 - `UpdateEnabled` 指示应用程序是否应检查更新。
 
 - `UpdateMode` 指定前台更新或后台更新。
-
+::: moniker range=">=vs-2019"
+   对于 .NET Core 3.1 或更高版本，不支持项目、背景。  
+::: moniker-end
 - `UpdateInterval` 指定应用程序检查更新的频率。
+::: moniker range=">=vs-2019"
+   对于 .NET Core 3.1 或更高版本，不支持此设置。
+::: moniker-end
 
 - `UpdateIntervalUnits` 指定 `UpdateInterval` 值是以小时、日还是周为单位。
+::: moniker range=">=vs-2019"
+   对于 .NET Core 3.1 或更高版本，不支持此设置。
+::: moniker-end
 
 - `UpdateUrl` (未显示) 是应用程序将从其接收更新的位置。 如果指定此值，则会将此值插入应用程序清单中。
 
@@ -160,6 +199,7 @@ msbuild /target:publish /property:BootstrapperEnabled=false
 - `IsWebBootstrapper` 确定 *setup.exe* 引导程序是通过 Web 还是在基于磁盘的模式下工作。
 
 ## <a name="installurl-supporturl-publishurl-and-updateurl"></a>InstallURL、SupportUrl、PublishURL 和 UpdateURL
+
  下表显示了用于 ClickOnce 部署的四个 URL 选项。
 
 |URL 选项|说明|
@@ -169,7 +209,8 @@ msbuild /target:publish /property:BootstrapperEnabled=false
 |`SupportURL`|可选。 如果支持站点与不同，请设置此 URL 选项 `PublishURL` 。 例如，你可以将设置 `SupportURL` 为你公司的客户支持网站。|
 |`UpdateURL`|可选。 如果更新位置与不同，请设置此 URL 选项 `InstallURL` 。 例如，可以将设置 `PublishURL` 为 FTP 路径，并将设置 `UpdateURL` 为 Web URL。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
+
 - <xref:Microsoft.Build.Tasks.GenerateBootstrapper>
 - <xref:Microsoft.Build.Tasks.GenerateApplicationManifest>
 - <xref:Microsoft.Build.Tasks.GenerateDeploymentManifest>

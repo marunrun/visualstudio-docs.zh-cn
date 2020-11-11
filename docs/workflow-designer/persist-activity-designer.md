@@ -1,5 +1,7 @@
 ---
 title: 工作流设计器持久活动设计器
+description: 了解持续活动，以及如何使用 "持久活动设计器" 创建和配置持久活动。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 75236d7955cba6b8c62b9a4504f02c66cebe4062
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3daa7cef76d2448cc7bcda66a967a3406bb2352c
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76114768"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94435568"
 ---
 # <a name="persist-activity-designer"></a>Persist 活动设计器
 
@@ -27,9 +29,9 @@ ms.locfileid: "76114768"
 
 ### <a name="using-the-persist-activity-designer"></a>使用 Persist 活动设计器
 
-"**持久**" 活动设计器可在 "**工具箱**" 的 "**运行时**" 类别中找到，单击 **"工具箱**" 选项卡可访问该设计器 (或者，从 "**视图**" 菜单中选择 "**工具箱**" 或按 CTRL + ALT + X。 ) 
+" **持久** " 活动设计器可在 " **工具箱** " 的 " **运行时** " 类别中找到，单击 **"工具箱** " 选项卡可访问该设计器 (或者，从 " **视图** " 菜单中选择 " **工具箱** " 或按 CTRL + ALT + X。 ) 
 
-可以将 " **持久** " 活动设计器从 " **工具箱** " 拖放到工作流设计器图面上通常放置活动的任何位置，例如中 <xref:System.Activities.Statements.Sequence> 。 这将创建一个 <xref:System.Activities.Statements.Persist> 活动，其中默认 **DisplayName** 为 "持久"。 <xref:System.Activities.Activity.DisplayName%2A>可以在 "**持久**" 活动设计器的标头中或在属性网格的 " **DisplayName** " 框中编辑。
+可以将 " **持久** " 活动设计器从 " **工具箱** " 拖放到工作流设计器图面上通常放置活动的任何位置，例如中 <xref:System.Activities.Statements.Sequence> 。 这将创建一个 <xref:System.Activities.Statements.Persist> 活动，其中默认 **DisplayName** 为 "持久"。 <xref:System.Activities.Activity.DisplayName%2A>可以在 " **持久** " 活动设计器的标头中或在属性网格的 " **DisplayName** " 框中编辑。
 
 ### <a name="the-persist-properties"></a>Persist 属性
 

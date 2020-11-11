@@ -1,5 +1,7 @@
 ---
 title: 工作流设计器-Flowchart 活动设计器
+description: 了解如何使用 Flowchart 活动创建定义和管理复杂流控制的工作流。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d786e9acfa99d2b106b72822a0106e2161724790
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 08c7957d79d51cab93e45adf8f74899ecc59b76d
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75597030"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94438004"
 ---
 # <a name="flowchart-activity-designer"></a>流程图活动设计器
 
@@ -29,9 +31,9 @@ ms.locfileid: "75597030"
 
 ### <a name="using-the-flowchart-activity-designer"></a>使用 Flowchart 活动设计器
 
-" **Flowchart** " 活动设计器可在 "**工具箱**" 的 "**流程图**" 类别中找到，可通过单击工作流设计器上的 "**工具箱**" 选项卡进行访问。 或者，从 "**视图**" 菜单中选择 **"工具箱**"，或按**Ctrl** + **Alt** + **X**。
+" **Flowchart** " 活动设计器可在 " **工具箱** " 的 " **流程图** " 类别中找到，可通过单击工作流设计器上的 " **工具箱** " 选项卡进行访问。 或者，从 " **视图** " 菜单中选择 **"工具箱** "，或按 **Ctrl** + **Alt** + **X** 。
 
-**Flowchart**活动设计器可以从 "**工具箱**" 拖放到工作流设计器图面上通常放置活动设计器的任何位置，要么作为根活动，要么作为另一个控制流活动的子活动。 如果将 " **Flowchart** " 活动设计器放到空白工作流设计器图面上，则它会创建一个 <xref:System.Activities.Statements.Flowchart> 活动，该活动默认显示在展开的视图中，启动执行的开始节点表示为绿色球。 如果将 " **flowchart** " 活动设计器放入另一个控制流活动，则它将显示在可通过双击 **Flowchart** 活动设计器展开的最小化视图中。 **工具箱**中的任何活动都可以直接拖到**Flowchart**活动设计器中，包括其他控制流活动。
+**Flowchart** 活动设计器可以从 " **工具箱** " 拖放到工作流设计器图面上通常放置活动设计器的任何位置，要么作为根活动，要么作为另一个控制流活动的子活动。 如果将 " **Flowchart** " 活动设计器放到空白工作流设计器图面上，则它会创建一个 <xref:System.Activities.Statements.Flowchart> 活动，该活动默认显示在展开的视图中，启动执行的开始节点表示为绿色球。 如果将 " **flowchart** " 活动设计器放入另一个控制流活动，则它将显示在可通过双击 **Flowchart** 活动设计器展开的最小化视图中。 **工具箱** 中的任何活动都可以直接拖到 **Flowchart** 活动设计器中，包括其他控制流活动。
 
 将各种活动设计器拖动到工作流设计器画布上之后， <xref:System.Activities.Activity> 它们所表示的对象可以链接在一起以指定执行顺序。 若要在源活动与目标活动之间创建链接，请将鼠标悬停在源活动的设计器上，此时将在该设计器的每一侧显示正方形处理框。 单击这些正方形处理框之一并按下鼠标按钮将其拖到当鼠标悬停在目标活动上时该活动周围以类似方式显示的处理框之一。 松开鼠标按钮，此时将在这两个活动之间创建一个链接，表示为从源设计器指向目标设计器的箭头。
 

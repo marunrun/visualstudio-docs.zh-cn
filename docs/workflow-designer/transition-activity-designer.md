@@ -1,5 +1,7 @@
 ---
 title: 工作流设计器转换活动设计器
+description: 了解如何使用 "转换" 活动设计器配置两个状态之间的转换。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: TerryGLee
-ms.openlocfilehash: c71f31f4582a60bcfc87e4906a1447e33ffa7bd3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cedc9c7b6f402ad3f5f2c40e21c29e2a0d1ad2e6
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75593078"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94433721"
 ---
 # <a name="transition-activity-designer"></a>事务活动设计器
 
@@ -31,16 +33,16 @@ Transition 活动设计器允许您在两个状态之间配置转换。
 
 |属性名称|必选|使用情况|
 |-|--------------|-|
-|<xref:System.Activities.Statements.Transition.DisplayName%2A>|错误|指定 <xref:System.Activities.Statements.Transition> 活动设计器的友好名称。 默认值为 **T1**。 可在属性网格、扩展转换设计器的标题以及扩展转换设计器内的操作部分的标题中编辑值。 <xref:System.Activities.Activity.DisplayName%2A> 用于痕迹导航，后者显示在工作流设计器顶部。<br /><br /> 虽然 <xref:System.Activities.Activity.DisplayName%2A> 不是绝对必需的，但最好使用该属性。|
-|<xref:System.Activities.Statements.Transition.Condition%2A>|错误|如果存在，则指定在控件传递到目标状态之前必须计算结果为 **True** 的表达式。 可以在属性网格和扩展转换设计器中编辑此条件。 共享转换中的多个条件按显示在转换设计器中的顺序进行评估。 **注意：**  请注意，如果 <xref:System.Activities.Statements.Transition.Condition%2A> 转换的计算结果为 **false** (或共享触发器转换的所有条件的计算结果都为 **false**) ，则将不会发生转换，并将重新计划状态的所有转换的所有触发器。 在本教程中，由于配置条件的方式，这种情况不会发生（我们针对猜测是正确或者错误提供了具体的操作）。|
-|**Source**|正确|指示源自此转换的状态。 单击源状态的名称可将设计器视图切换到状态的扩展视图。 在创建转换时设置此值，并且不能更改它。|
+|<xref:System.Activities.Statements.Transition.DisplayName%2A>|错误|指定 <xref:System.Activities.Statements.Transition> 活动设计器的友好名称。 默认值为 **T1** 。 可在属性网格、扩展转换设计器的标题以及扩展转换设计器内的操作部分的标题中编辑值。 <xref:System.Activities.Activity.DisplayName%2A> 用于痕迹导航，后者显示在工作流设计器顶部。<br /><br /> 虽然 <xref:System.Activities.Activity.DisplayName%2A> 不是绝对必需的，但最好使用该属性。|
+|<xref:System.Activities.Statements.Transition.Condition%2A>|错误|如果存在，则指定在控件传递到目标状态之前必须计算结果为 **True** 的表达式。 可以在属性网格和扩展转换设计器中编辑此条件。 共享转换中的多个条件按显示在转换设计器中的顺序进行评估。 **注意：**  请注意，如果 <xref:System.Activities.Statements.Transition.Condition%2A> 转换的计算结果为 **false** (或共享触发器转换的所有条件的计算结果都为 **false** ) ，则将不会发生转换，并将重新计划状态的所有转换的所有触发器。 在本教程中，由于配置条件的方式，这种情况不会发生（我们针对猜测是正确或者错误提供了具体的操作）。|
+|**源**|正确|指示源自此转换的状态。 单击源状态的名称可将设计器视图切换到状态的扩展视图。 在创建转换时设置此值，并且不能更改它。|
 |<xref:System.Activities.Statements.Transition.Trigger%2A>|错误|指定其完成启动转换的活动。 若要设置此活动，请将活动从 " **工具箱** " 拖放到转换的 " **触发器** " 部分。|
-|<xref:System.Activities.Statements.Transition.Action%2A>|错误|指定在触发器活动完成时执行的活动， <xref:System.Activities.Statements.Transition.Condition%2A> 如果存在，则计算结果为 **true**。 在源状态的 <xref:System.Activities.Statements.State.Exit%2A> 活动后、转换到目标状态时执行此活动，如果存在，则执行。 展开转换设计器后，可以通过将活动从 " **工具箱** " 拖放到转换的 " **操作** " 部分来设置此值。 单个转换可对应多个操作。 可以展开和收缩各个操作，在转换中存在多个操作时可通过单击在操作上显示的向上或向下箭头键进行排序。|
+|<xref:System.Activities.Statements.Transition.Action%2A>|错误|指定在触发器活动完成时执行的活动， <xref:System.Activities.Statements.Transition.Condition%2A> 如果存在，则计算结果为 **true** 。 在源状态的 <xref:System.Activities.Statements.State.Exit%2A> 活动后、转换到目标状态时执行此活动，如果存在，则执行。 展开转换设计器后，可以通过将活动从 " **工具箱** " 拖放到转换的 " **操作** " 部分来设置此值。 单个转换可对应多个操作。 可以展开和收缩各个操作，在转换中存在多个操作时可通过单击在操作上显示的向上或向下箭头键进行排序。|
 |**目标**|正确|指示转换完成后状态计算机转换到的状态。 这与对象模型中转换的 <xref:System.Activities.Statements.Transition.To%2A> 属性相对应。 单击目标状态的名称可将设计器视图切换到状态的扩展视图。 在创建转换时设置此值，并可以通过拖动将转换连接到设计器中的目标状态的箭头进行更改。|
 
 ### <a name="creating-transitions"></a>创建转换
 
-通过将某行从一个状态拖到另一个状态，或在从一个状态拖动到另一个状态时通过将状态拖放到出现的三角形上，来创建转换。 若要通过拖动来创建转换，请将鼠标悬停在源状态的边缘，并将某行从源状态拖到目标状态。 若要通过拖放方式创建转换，请拖动目标状态并将其悬停在源状态，将它拖到源状态周围显示的四个三角形之一。 目标状态可以是从 " **工具箱**" 拖动的新状态，也可以是从工作流设计器中拖动的现有状态。
+通过将某行从一个状态拖到另一个状态，或在从一个状态拖动到另一个状态时通过将状态拖放到出现的三角形上，来创建转换。 若要通过拖动来创建转换，请将鼠标悬停在源状态的边缘，并将某行从源状态拖到目标状态。 若要通过拖放方式创建转换，请拖动目标状态并将其悬停在源状态，将它拖到源状态周围显示的四个三角形之一。 目标状态可以是从 " **工具箱** " 拖动的新状态，也可以是从工作流设计器中拖动的现有状态。
 
 > [!NOTE]
 > 状态机中的单个状态使用工作流设计器可以创建多达 76 个转换。 对在设计器外创建的工作流状态的转换限制只受系统资源限制。

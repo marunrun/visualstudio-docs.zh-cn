@@ -1,5 +1,7 @@
 ---
 title: 工作流设计器 InvokeMethod 活动设计器
+description: 了解 InvokeMethod 活动，以及如何使用 InvokeMethod 活动设计器创建和配置 InvokeMethod 活动。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8660cd82f9d671da3b535ac228e8ce62c875dc07
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 55162def18d2295e0767a3999ffde75d71e1233d
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75593195"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437731"
 ---
 # <a name="invokemethod-activity-designer"></a>InvokeMethod 活动设计器
 
@@ -27,7 +29,7 @@ ms.locfileid: "75593195"
 
 ### <a name="use-the-invokemethod-activity-designer"></a>使用 InvokeMethod 活动设计器
 
-访问 "**工具箱**" 的 "**基元**" 类别中的 " **InvokeMethod** " 活动设计器。 可以将 " **InvokeMethod** " 活动设计器从 " **工具箱** " 拖放到工作流设计器表面上，通常会在其中放置活动，例如在中 <xref:System.Activities.Statements.Sequence> 。 删除活动设计器将创建一个 <xref:System.Activities.Statements.InvokeMethod> 活动，其默认值为 <xref:System.Activities.Activity.DisplayName%2A> InvokeMethod。 <xref:System.Activities.Activity.DisplayName%2A>可以在 " **InvokeMethod** " 活动设计器的标头中或在属性网格的 " **DisplayName** " 框中编辑。
+访问 " **工具箱** " 的 " **基元** " 类别中的 " **InvokeMethod** " 活动设计器。 可以将 " **InvokeMethod** " 活动设计器从 " **工具箱** " 拖放到工作流设计器表面上，通常会在其中放置活动，例如在中 <xref:System.Activities.Statements.Sequence> 。 删除活动设计器将创建一个 <xref:System.Activities.Statements.InvokeMethod> 活动，其默认值为 <xref:System.Activities.Activity.DisplayName%2A> InvokeMethod。 <xref:System.Activities.Activity.DisplayName%2A>可以在 " **InvokeMethod** " 活动设计器的标头中或在属性网格的 " **DisplayName** " 框中编辑。
 
 ### <a name="the-invokemethod-properties"></a>InvokeMethod 属性
 
@@ -36,10 +38,10 @@ ms.locfileid: "75593195"
 |属性名称|必选|使用情况|
 |-|--------------|-|
 |<xref:System.Activities.Activity.DisplayName%2A>|错误|<xref:System.Activities.Statements.InvokeMethod> 活动的友好名称。 默认值为 InvokeMethod。<br /><br /> 尽管 <xref:System.Activities.Activity.DisplayName%2A> 不是严格需要的，但最好使用一个。|
-|<xref:System.Activities.Statements.InvokeMethod.MethodName%2A>|正确|要在执行活动时调用的方法的名称。 调用的方法必须声明为 **公共**的。 此属性可以在设计器图面上进行编辑，并且是必需的。|
+|<xref:System.Activities.Statements.InvokeMethod.MethodName%2A>|正确|要在执行活动时调用的方法的名称。 调用的方法必须声明为 **公共** 的。 此属性可以在设计器图面上进行编辑，并且是必需的。|
 |<xref:System.Activities.Statements.InvokeMethod.Parameters%2A>|错误|所调用方法的参数集合。 将参数添加到集合中的顺序必须与这些参数在方法签名中出现的顺序相同。 若要显示 " **参数** " 对话框，在其中可以设置此属性，请单击 "属性" 网格的 " **参数** " 字段中的省略号按钮。 单击 " **创建自变量** " 按钮以添加参数。|
 |<xref:System.Activities.Statements.InvokeMethod.Result%2A>|错误|方法调用的返回值。|
-|<xref:System.Activities.Statements.InvokeMethod.RunAsynchronously%2A>|正确|指定是否异步调用该方法。 默认值为 **False**。|
+|<xref:System.Activities.Statements.InvokeMethod.RunAsynchronously%2A>|正确|指定是否异步调用该方法。 默认值为 **False** 。|
 |<xref:System.Activities.Statements.InvokeMethod.TargetObject%2A>|错误|包含要调用的方法的对象。 此属性可以在设计器图面上进行编辑。<br /><br /> 必须设置 <xref:System.Activities.Statements.InvokeMethod.TargetObject%2A> 或 <xref:System.Activities.Statements.InvokeMethod.TargetType%2A> 之一。|
 |<xref:System.Activities.Statements.InvokeMethod.TargetType%2A>|错误|<xref:System.Activities.Statements.InvokeMethod.TargetObject%2A> 的类型。 此属性可以在设计器图面上进行编辑。 只有当调用的方法为静态时，才必须设置此属性。|
 

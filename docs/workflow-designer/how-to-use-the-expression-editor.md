@@ -1,5 +1,7 @@
 ---
 title: 工作流设计器-如何：使用表达式编辑器
+description: 了解表达式编辑器是可以在许多工作流活动中用于输入和计算表达式的工作流设计器控件。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -10,20 +12,20 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 04c0fdaab87c88028b8c14ca59e93fa93e74be74
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 855326085a51ec6590bd1b3f0e1e5565c53396cb
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817432"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437848"
 ---
 # <a name="how-to-use-the-expression-editor"></a>如何：使用表达式编辑器
 
 表达式编辑器是在许多工作流活动中用于输入和计算表达式的工作流设计器控件。 表达式编辑器提供了一个完整的 IDE 编辑体验，包括 IntelliSense、着色、ParamInfo、错误波形曲线和其他功能。 编译器在表达式输入后对其进行验证。 如果表达式无效，则显示一个错误图标。 编辑器还可以作为 " **表达式编辑器** " 对话框打开。
 
-表达式是绑定到参数或属性的文本值或 Visual Basic 代码。 它们包含值元素 (例如，变量、常量、文本、属性) ，它们与操作组合以生成新值。 表达式使用 VB.NET 语法编写，即使应用程序使用 C# 编程也如此。 这意味着，大小写并不重要，使用单个等号 ( "=" 而不是 "= =" ) 执行比较，而布尔运算符是单词 "and" 和 "or"，而不是使用符号 "&&" 和 "| |"，而是不使用 **任何** 值（而不是 **null**）。 有关 Visual Basic 和中的表达式和运算符的详细信息，请参阅 [Visual Basic 中的运算符和表达式](/previous-versions/visualstudio/visual-studio-2010/a1w3te48(v=vs.100))。
+表达式是绑定到参数或属性的文本值或 Visual Basic 代码。 它们包含值元素 (例如，变量、常量、文本、属性) ，它们与操作组合以生成新值。 表达式使用 VB.NET 语法编写，即使应用程序使用 C# 编程也如此。 这意味着，大小写并不重要，使用单个等号 ( "=" 而不是 "= =" ) 执行比较，而布尔运算符是单词 "and" 和 "or"，而不是使用符号 "&&" 和 "| |"，而是不使用 **任何** 值（而不是 **null** ）。 有关 Visual Basic 和中的表达式和运算符的详细信息，请参阅 [Visual Basic 中的运算符和表达式](/previous-versions/visualstudio/visual-studio-2010/a1w3te48(v=vs.100))。
 
-**表达式编辑器**的行为如下所示：
+**表达式编辑器** 的行为如下所示：
 
 - 当焦点不在表达式编辑器上时，该编辑器看上去像一个常规 TextBlock 控件。
 
