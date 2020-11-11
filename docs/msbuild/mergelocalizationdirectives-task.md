@@ -1,5 +1,7 @@
 ---
 title: MergeLocalizationDirectives 任务 | Microsoft Docs
+description: 了解 MSBuild 如何使用 MergeLocalizationDirectives 任务将本地化属性和 XAML 二进制格式文件的注释合并到单个文件中。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c7699afeb09604a437aad091f9aaf9ce624d33e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 97d04978a2809a4744f62f27c375efdec1e43dcc
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633494"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92903876"
 ---
 # <a name="mergelocalizationdirectives-task"></a>MergeLocalizationDirectives 任务
 
@@ -36,13 +38,13 @@ ms.locfileid: "77633494"
 | `GeneratedLocalizationFiles` | 必需的 **ITaskItem[]** 参数。<br /><br /> 指定单个 XAML 二进制格式文件的本地化指令文件列表。 |
 | `OutputFile` | 必需的 **String** 输出参数。<br /><br /> 指定编译的本地化指令程序集的输出路径。 |
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-可将本地化属性和注释添加到 XAML 内容中。 借助 Windows Presentation Foundation (WPF) 本地化支持，可以去除本地化属性和注释，并将其放在独立于生成的程序集的 .loc  文件中。 可以通过使用 **LocalizationPropertyStorage** 属性执行此操作。 若要深入了解本地化属性和注释，以及 LocalizationPropertyStorage，请参阅[本地化属性和注释](/dotnet/framework/wpf/advanced/localization-attributes-and-comments)  。
+可将本地化属性和注释添加到 XAML 内容中。 借助 Windows Presentation Foundation (WPF) 本地化支持，可以去除本地化属性和注释，并将其放在独立于生成的程序集的 .loc 文件中。 可以通过使用 **LocalizationPropertyStorage** 属性执行此操作。 若要深入了解本地化属性和注释，以及 LocalizationPropertyStorage，请参阅[本地化属性和注释](/dotnet/framework/wpf/advanced/localization-attributes-and-comments)。
 
 ## <a name="example"></a>示例
 
-下面的示例将多个 XAML 二进制格式化文件的本地化注释合并到单个 .loc  文件中。
+下面的示例将多个 XAML 二进制格式化文件的本地化注释合并到单个 .loc 文件中。
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
