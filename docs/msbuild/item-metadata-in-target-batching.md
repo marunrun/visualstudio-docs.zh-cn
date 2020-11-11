@@ -1,5 +1,7 @@
 ---
 title: 目标批处理中的项元数据 | Microsoft Docs
+description: 了解 MSBuild 如何使用目标批处理中的项元数据对生成目标的输入和输出执行依赖项分析。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 83a5d0c9dec280633d0a39573581c083e6ddd4d8
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 0436402aa4000841a278497af697985c3a50c812
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633663"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904600"
 ---
 # <a name="item-metadata-in-target-batching"></a>目标批处理中的项元数据
 
@@ -67,7 +69,7 @@ MSBuild 可对生成目标的输入和输出执行依赖项分析。 如果确�
 </Project>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：增量生成](../msbuild/how-to-build-incrementally.md)
 - [批处理](../msbuild/msbuild-batching.md)

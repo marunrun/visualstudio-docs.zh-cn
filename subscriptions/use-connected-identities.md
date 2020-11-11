@@ -1,19 +1,19 @@
 ---
-title: 如何使用连接的 Microsoft 帐户和 Azure Active Directory 标识 | Microsoft Docs
+title: 如何在 Visual Studio 订阅中使用连接的标识 | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: 50ce0445-ef1a-4e92-b9d0-aebb2155a111
-ms.date: 03/11/2020
+ms.date: 10/28/2020
 ms.topic: conceptual
 robots: noindex, nofollow
 description: 了解如何使用已连接的 Microsoft 帐户和 Azure Active Directory 标识
-ms.openlocfilehash: 6d67576ab715f3ff8a49287155423a3dd6c20867
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: a4c7b72c91c4c1180a5fd888e3afd0a33fa2d81b
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005233"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904033"
 ---
 # <a name="how-to-use-connected-identities-in-visual-studio-subscriptions"></a>如何在 Visual Studio 订阅中使用连接的标识
 如果你通过工作或学校收到 Visual Studio 订阅，并使用你的 Microsoft 帐户 (MSA) 登录，则你的订阅管理员可能会将你的 MSA 连接到组织的 Azure Active Directory (Azure AD) 中的标识。  这会改变你访问订阅中包含的一些权益的方式。 
@@ -37,7 +37,7 @@ ms.locfileid: "91005233"
 
 ## <a name="frequently-asked-questions"></a>常见问题
 ### <a name="q-how-can-i-contact-my-admin-about-this"></a>问：如何联系管理员以了解这一点？
-答：有关联系管理员的信息，请参阅[联系订阅管理员](contact-my-admin.md)文章。  
+答：有关联系管理员的信息，请参阅[联系订阅管理员](contact-my-admin.md)一文。  
 
 ### <a name="q-im-an-admin--how-do-i-use-this"></a>问：我是管理员。如何使用此功能？
 答：实现连接标识非常简单。  有关详细信息，请查看[此文章](personal-email-sign-ins.md)。 

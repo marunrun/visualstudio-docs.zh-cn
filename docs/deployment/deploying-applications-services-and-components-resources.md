@@ -1,8 +1,10 @@
 ---
 title: 将 Visual Studio 应用部署到文件夹、IIS、Azure 或其他目标
 titleSuffix: ''
-description: 详细了解如何使用发布向导发布应用的选项
-ms.custom: contperfq1
+description: 详细了解如何使用发布工具发布应用的选项。
+ms.custom:
+- SEO-VS-2020
+- contperfq1
 ms.date: 08/21/2020
 ms.topic: troubleshooting
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6bc551a6e9bf4e05db61ddeb2480e218ebb3c925
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: f8c4a1effcf61348d2f2267fb38164fd166f7d48
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91928523"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382966"
 ---
 # <a name="deploy-your-app-to-a-folder-iis-azure-or-another-destination"></a>将应用部署到文件夹、IIS、Azure 或其他目标
 
