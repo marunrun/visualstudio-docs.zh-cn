@@ -1,5 +1,7 @@
 ---
 title: ”项目设计器“ ->“安全”页
+description: “项目设计器”的“安全”页用于配置使用 ClickOnce 部署部署的应用程序的代码访问安全性设置   。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
 ms.topic: reference
@@ -14,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0839adcf0e6c61141d2a14ad8903c532af76804c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7080c1a2ce77d26987f81acaa0a751887f9f574e
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85418894"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350252"
 ---
 # <a name="security-page-project-designer"></a>”项目设计器“ ->“安全”页
 

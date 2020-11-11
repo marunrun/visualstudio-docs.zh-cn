@@ -11,24 +11,24 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 63b44bee152acbf5529acfcadaa49a19e9feb52b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 5639726762359bb8ba2fb374ee8ddc5c78e2f4da
+ms.sourcegitcommit: 023f52f10fb91850824558478cbfd2ec965054f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74778357"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94407570"
 ---
 # <a name="profile_currentid"></a>PROFILE_CURRENTID
 在调用 NameProfile、StartProfile、StopProfile、SuspendProfile 和 ResumeProfile 函数时，PROFILE_CURRENTID 会返回线程 ID 或进程 ID 的伪标记。 使用此属性可使函数在当前线程或进程上运行，而不是在具体指示的线程或进程上运行。
 
-## <a name="example"></a>示例
+## <a name="example-1"></a>示例 1
  PROFILE_CURRENTID 在 VSPerf.h 中定义为  ：
 
 ```cpp
 static const unsigned int PROFILE_CURRENTID = (unsigned int)-1;
 ```
 
-## <a name="example"></a>示例
+## <a name="example-2"></a>示例 2
  下面的示例演示 PROFILE_CURRENTID。 该示例将 PROFILE_CURRENTID 用作 [StartProfile](../profiling/startprofile.md) 函数调用中标识当前线程的参数。
 
 ```cpp

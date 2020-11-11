@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c70195cdc0a6a03395744c63f556ce8c2970aa30
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: e8612bd2423849c61f21a5c184a3e1d39da0302b
+ms.sourcegitcommit: 023f52f10fb91850824558478cbfd2ec965054f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72731511"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94407739"
 ---
 # <a name="limitations-on-wcf-debugging"></a>WCF 调试的限制
 有三种开始 WCF 服务调试的方式：
@@ -76,7 +76,6 @@ ms.locfileid: "72731511"
 ## <a name="self-hosting"></a>自我托管
  “自承载服务”是指不在 IIS、WCF 服务主机或 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 开发服务器内部运行的 WCF 服务。 有关如何调试自我托管服务的信息，请参阅[如何：调试自承载 WCF 服务](../debugger/how-to-debug-a-self-hosted-wcf-service.md)。
 
-## <a name="self-hosting"></a>自我托管
  若要启用 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3.0 或 3.5 应用程序的调试，则必须在安装 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] 之前安装 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3.0 或 3.5。 如果在安装 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3.0 或 3.5 之前安装了 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)]，则在尝试调试 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3.0 或 3.5 应用程序时会出错。 错误消息为：无法自动单步执行服务器。 若要修复此问题，请使用 Windows“控制面板” > “程序和功能”来修复 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] 安装。
 
 ## <a name="see-also"></a>请参阅

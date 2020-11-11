@@ -3,14 +3,14 @@ title: Visual Studio 客户体验改善计划
 description: 了解如何在 Visual Studio for Mac 中管理隐私设置。
 author: therealjohn
 ms.author: johmil
-ms.date: 06/18/2019
+ms.date: 11/05/2020
 ms.assetid: 6F2ECF5A-E195-4890-8399-12A88C7D62FD
-ms.openlocfilehash: 7c2e2dc1cc0171e9e7a8ab81f820ff6be0f389c2
-ms.sourcegitcommit: 26178b116cbf7353fee6ca989b8d872114f7b405
+ms.openlocfilehash: 5cf5670b18aa6840eb3b36e6148cba4834aa709e
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89284260"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94438199"
 ---
 # <a name="visual-studio-customer-experience-improvement-program"></a>Visual Studio 客户体验改善计划
 
@@ -24,7 +24,7 @@ VSCEIP 默认开启。 可以按照下面的说明将其关闭，或重新打开
 
 1. 打开 Visual Studio for Mac。
 
-1. 在菜单栏中，选择“Visual Studio”>“首选项”>“其他”>“反馈”  。
+1. 在菜单栏中，选择“Visual Studio”>“首选项”>“其他”>“反馈”。
 
 1. 选择是否愿意参加：
 
@@ -37,5 +37,5 @@ VSCEIP 默认开启。 可以按照下面的说明将其关闭，或重新打开
 * [客户体验改善计划（Windows 上的 Visual Studio）](/visualstudio/ide/visual-studio-experience-improvement-program)
 * [由 Visual Studio 收集的系统生成的日志 (Windows)](/visualstudio/ide/diagnostic-data-collection)
 * [如何报告 Visual Studio for Mac 的问题](report-a-problem.md)
-* [Visual Studio for Mac 开发者社区](https://developercommunity.visualstudio.com/spaces/41/index.html)
+* [Visual Studio for Mac 开发者社区](https://aka.ms/feedback/vsm-home)
 * [Microsoft 隐私声明](https://privacy.microsoft.com/privacystatement)

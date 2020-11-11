@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 707d63d3ae5fb487f6232321a1d9d3128d379e06
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: e77c0d7b5cbba2faf73fcca85ffcd0db063d618e
+ms.sourcegitcommit: 023f52f10fb91850824558478cbfd2ec965054f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64816533"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94407544"
 ---
 # <a name="0x2x4x-msaa-variants"></a>0x/2x/4x MSAA 变量
 重写所有呈现器目标和交换链上的多重采样抗锯齿 (MSAA) 设置。
@@ -54,7 +54,7 @@ ms.locfileid: "64816533"
 
  当播放检测到这些种类的冲突时，它将尽最大努力尝试复制所需的行为，但是它可能无法准确匹配其结果。 虽然这种情况以歪曲这些变体的作用的方式影响变体性能并不常见，但是它是可能发生的（例如，像素着色器中的流控制由纹理的准确内容确定时），因为复制的纹理包含的内容可能不一致。
 
-## <a name="example"></a>示例
+## <a name="example-1"></a>示例 1
  对于使用 `ID3D11Device::CreateTexture2D` 创建的呈现器目标，可通过使用如下代码重现这些变体：
 
 ```cpp
@@ -65,7 +65,7 @@ target_description.SampleDesc.Quality = 0;
 d3d_device->CreateTexture2D(&target_description, nullptr, &render_target);
 ```
 
-## <a name="example"></a>示例
+## <a name="example-2"></a>示例 2
  或者，对于使用 IDXGISwapChain::CreateSwapChain 或 D3D11CreateDeviceAndSwapChain 创建的交换链，可使用如下代码执行此操作：
 
 ```cpp
