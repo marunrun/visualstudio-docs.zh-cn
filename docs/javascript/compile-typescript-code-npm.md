@@ -10,12 +10,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: bfd019848e62abf4e6f25913d29d26d1a1bde6a5
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: add67535c0c3c9e4a48b95c2b9d5fe0717511797
+ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91927895"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93414368"
 ---
 # <a name="compile-typescript-code-nodejs"></a>编译 TypeScript 代码 (Node.js)
 
@@ -115,7 +115,7 @@ ms.locfileid: "91927895"
 
 ### <a name="run-the-application"></a>运行应用程序
 
-有关在编译后运行应用程序的说明，请参阅[创建第一个 Node.js 应用](/visualstudio/ide/quickstart-nodejs?toc=%2Fvisualstudio%2Fjavascript%2Ftoc.json#run-the-application)。
+有关在编译后运行应用程序的说明，请参阅[创建第一个 Node.js 应用](../ide/quickstart-nodejs.md?toc=%252fvisualstudio%252fjavascript%252ftoc.json#run-the-application)。
 
 ## <a name="automate-build-tasks"></a>自动化生成任务
 

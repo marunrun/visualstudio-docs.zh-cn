@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 314ec61da7ed61cc8bdd573e201d98a53862a32c
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: 075fc9c4be3890ce9a63c1aa79762dbd8ceaeea5
+ms.sourcegitcommit: 023f52f10fb91850824558478cbfd2ec965054f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66262923"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94407557"
 ---
 # <a name="point-bilinear-trilinear-and-anisotropic-texture-filtering-variants"></a>Point、Bilinear、Trilinear 和 Anisotropic 纹理过滤变量
 重写相应纹理取样器上的筛选模式。
@@ -61,7 +61,7 @@ ms.locfileid: "66262923"
 ## <a name="restrictions-and-limitations"></a>限制和约束
  在 Direct3D 中，功能级别 9.1 指定最大各向异性为 2x。 因为“各向异性纹理筛选”变体尝试以独占方式使用 16x 各向异性，所以当帧分析在功能级别 9.1 的设备上运行时播放将失败。 受此约束影响的现代设备包括基于 ARM 的 Surface RT 和 Surface 2 Windows 平板电脑。 仍然可能在某些计算机中找到的较旧 GPU 也可能会受影响，但是将它们普遍视为已过时且它们越来越不常见。
 
-## <a name="example"></a>示例
+## <a name="example-1"></a>示例 1
  通过使用如下代码，可重现“点纹理筛选”变体：
 
 ```cpp
@@ -75,7 +75,7 @@ d3d_device->CreateSamplerState(&sampler_desc, &sampler);
 d3d_context->PSSetSamplers(0, 1, &sampler
 ```
 
-## <a name="example"></a>示例
+## <a name="example-2"></a>示例 2
  通过使用如下代码，可重现“双线性纹理筛选”变体：
 
 ```cpp
@@ -89,7 +89,7 @@ d3d_device->CreateSamplerState(&sampler_desc, &sampler);
 d3d_context->PSSetSamplers(0, 1, &sampler
 ```
 
-## <a name="example"></a>示例
+## <a name="example-3"></a>示例 3
  通过使用如下代码，可重现“三线性纹理筛选”变体：
 
 ```cpp
@@ -103,7 +103,7 @@ d3d_device->CreateSamplerState(&sampler_desc, &sampler);
 d3d_context->PSSetSamplers(0, 1, &sampler
 ```
 
-## <a name="example"></a>示例
+## <a name="example-4"></a>示例 4
  通过使用如下代码，可重现“各向异性问题筛选”变体：
 
 ```cpp

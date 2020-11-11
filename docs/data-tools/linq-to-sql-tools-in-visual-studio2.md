@@ -1,5 +1,7 @@
 ---
 title: LINQ to SQL O/R 设计器概述
+description: 简要了解 Visual Studio 中的 LINQ to SQL 工具。 了解对象关系设计器（O/R 设计器）。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: overview
 ms.assetid: 45e477c0-5c6b-41f9-b2d0-2808fb4f6537
@@ -8,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 55f6fa2ad9eda2d701563d1fa99c76f5cd5c7c1d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: af394318d18244fc6e20e517d0ff985ca5e5ad1f
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282002"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436232"
 ---
 # <a name="linq-to-sql-tools-in-visual-studio"></a>Visual Studio 中的 LINQ to SQL 工具
 
@@ -46,7 +48,7 @@ Visual Studio 会创建 .dbml 文件，并将其添加到解决方案。 这是 
 ![LINQ to SQL 设计器](../data-tools/media/raddata-linq-to-sql-designer.png)
 
 > [!IMPORTANT]
-> O/R 设计器是一个简单的对象关系映射器，因为它仅支持 1:1 映射关系。 换句话说，实体类与数据库表或视图之间只能具有 1:1 映射关系。 不支持复杂映射（例如，将实体类映射到联接表）；对于复杂映射，可使用实体框架。 此外，该设计器还是一个单向代码生成器。 这表示代码文件中只反映对设计器图面所做的更改。 O/R 设计器中不会反映对代码文件的手动更改。 在保存设计器并重新生成代码时，将覆盖在代码文件中手动进行的所有更改。 了解如何添加用户代码和扩展由生成的类**O/R 设计器**，请参阅[如何：扩展 O/R 设计器生成的代码](../data-tools/how-to-extend-code-generated-by-the-o-r-designer.md)。
+> O/R 设计器是一个简单的对象关系映射器，因为它仅支持 1:1 映射关系。 换句话说，实体类与数据库表或视图之间只能具有 1:1 映射关系。 不支持复杂映射（例如，将实体类映射到联接表）；对于复杂映射，可使用实体框架。 此外，该设计器还是一个单向代码生成器。 这表示代码文件中只反映对设计器图面所做的更改。 O/R 设计器中不会反映对代码文件的手动更改。 在保存设计器并重新生成代码时，将覆盖在代码文件中手动进行的所有更改。 了解如何添加用户代码和扩展由生成的类 **O/R 设计器** ，请参阅 [如何：扩展 O/R 设计器生成的代码](../data-tools/how-to-extend-code-generated-by-the-o-r-designer.md)。
 
 ## <a name="create-and-configure-the-datacontext"></a>创建并配置 DataContext
 
@@ -77,7 +79,7 @@ O/R 设计器创建的实体类设计为与[语言集成查询 (LINQ)](/dotnet/c
 
 ## <a name="separate-the-generated-datacontext-and-entity-class-code-into-different-namespaces"></a>将生成的 DataContext 与实体类代码分离到不同的命名空间
 
-O/R 设计器为 <xref:System.Data.Linq.DataContext> 提供了“上下文命名空间”和“实体命名空间”属性  。 这些属性决定 <xref:System.Data.Linq.DataContext> 和实体类代码生成到哪个命名空间。 默认情况下，这些属性为空并且 <xref:System.Data.Linq.DataContext> 和实体类生成到应用程序的命名空间。 若要在除应用程序的命名空间以外的命名空间中生成代码，请在“上下文命名空间”和/或“实体命名空间”属性中输入一个值********。
+O/R 设计器为 <xref:System.Data.Linq.DataContext> 提供了“上下文命名空间”和“实体命名空间”属性  。 这些属性决定 <xref:System.Data.Linq.DataContext> 和实体类代码生成到哪个命名空间。 默认情况下，这些属性为空并且 <xref:System.Data.Linq.DataContext> 和实体类生成到应用程序的命名空间。 若要在除应用程序的命名空间以外的命名空间中生成代码，请在“上下文命名空间”和/或“实体命名空间”属性中输入一个值。
 
 ## <a name="reference-content"></a>参考内容
 

@@ -7,12 +7,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 60f5a5545152b9bf262f652e2fce5ce04e7b71cb
-ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
+ms.openlocfilehash: 04c725e5bcae5d72562e767a06afdee8aa84950b
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099422"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93399248"
 ---
 # <a name="features-of-visual-studio"></a>Visual Studio 的功能
 
@@ -82,7 +82,7 @@ Web 推动着现代社会前进，Visual Studio 可以帮助你编写 Web 应用
 
 - 通过 [Apache Cordova](/visualstudio/cross-platform/tools-for-cordova/)，使用标准 Web 技术 &mdash;HTML、CSS 和 JavaScript&mdash; 生成适用于 iOS、Android 和 Windows 的移动应用。
 
-- 通过使用 [Visual Studio Tools for Unity](../cross-platform/visual-studio-tools-for-unity.md)，在 C# 中生成 2D 和 3D 游戏。
+- 通过使用 [Visual Studio Tools for Unity](/gamedev/unity/get-started/visual-studio-tools-for-unity.md)，在 C# 中生成 2D 和 3D 游戏。
 
 - 生成适用于 iOS、Android 和 Windows 设备的本机 C++ 应用。 通过[适用于跨平台开发的 C++](/cpp/cross-platform/visual-cpp-for-cross-platform-mobile-development)，在专用于 iOS、Android 和 Windows 的库中分享通用代码。
 
@@ -94,7 +94,7 @@ Web 推动着现代社会前进，Visual Studio 可以帮助你编写 Web 应用
 
 [SQL Server Data Tools (SSDT)](/sql/ssdt/download-sql-server-data-tools-ssdt) 是一个适用于 SQL Server、Azure SQL 数据库和 Azure SQL 数据仓库的强大的开发环境。 通过它可以生成、调试、维护和重构数据库。 可使用数据库项目，或直接使用已连接的数据库实例（本地或非本地）。
 
-Visual Studio 中的 **SQL Server 对象资源管理器**提供类似于 SQL Server Management Studio 中的数据库对象。 使用 SQL Server 对象资源管理器可以执行轻负载数据库的管理和设计工作。 工作示例包括使用 SQL Server 对象资源管理器的上下文菜单编辑表数据、对比架构和执行查询等等。
+Visual Studio 中的 **SQL Server 对象资源管理器** 提供类似于 SQL Server Management Studio 中的数据库对象。 使用 SQL Server 对象资源管理器可以执行轻负载数据库的管理和设计工作。 工作示例包括使用 SQL Server 对象资源管理器的上下文菜单编辑表数据、对比架构和执行查询等等。
 
 ![SQL Server 对象资源管理器](../ide/media/vs2015_sqlobjectexplorer.png)
 
