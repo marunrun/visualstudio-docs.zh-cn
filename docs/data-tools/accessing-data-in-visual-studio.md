@@ -1,6 +1,7 @@
 ---
 title: 在 Visual Studio 中处理数据
 description: 在 Visual Studio 中处理数据。 通过本地计算机、Lan 或公有云或私有云创建连接到其他数据库产品或服务中的数据的应用。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 846898c1cf93d0f90ce04e77ee93bd8802e22ec2
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: a5458ffca549026c99c8faedc8f47d3f3285a7ca
+ms.sourcegitcommit: 63ff7cb85b3baeeb713240d17bb2a18497f3741d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94382086"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94518734"
 ---
 # <a name="work-with-data-in-visual-studio"></a>在 Visual Studio 中处理数据
 
@@ -124,7 +125,7 @@ ms.locfileid: "94382086"
 
 若要详细了解如何从 c + + 应用程序连接到数据库，请参阅 [Visual Studio data tools For c + +](../data-tools/visual-studio-data-tools-for-cpp.md)。 有关旧 Visual C++ 数据访问技术的详细信息，请参阅 [数据访问](/cpp/data/data-access-in-cpp)。
 
-## <a name="javascript"></a>Javascript
+## <a name="javascript"></a>JavaScript
 
 [Visual Studio 中的 JavaScript](/scripting/javascript/javascript-language-reference) 是一种用于构建跨平台应用、UWP 应用、云服务、网站和 web 应用的一流语言。 你可以从 Visual Studio 中使用 Bower、Grunt、Gulp、npm 和 NuGet 来安装你最喜欢的 JavaScript 库和数据库产品。 通过从 [azure 网站](https://azure.microsoft.com/)下载 sdk 来连接到 azure 存储和服务。 Edge.js 是将服务器端 JavaScript ( # A1) 连接到 ADO.NET 数据源的库。
 

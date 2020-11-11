@@ -1,6 +1,7 @@
 ---
 title: 将 WPF 控件绑定到数据-第1部分
 description: 将 WPF 控件绑定到数据。 若要创建这些数据绑定控件，请将项从 "数据源" 窗口拖动到 Visual Studio 中的 WPF 设计器。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -17,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 697b5efb172a09f2dcd5512a6301febd7429411f
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: e35171a116272700de676cb03d116210753c599f
+ms.sourcegitcommit: 63ff7cb85b3baeeb713240d17bb2a18497f3741d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94381917"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94518604"
 ---
 # <a name="bind-wpf-controls-to-data-in-visual-studio"></a>在 Visual Studio 中将 WPF 控件绑定到数据
 
@@ -84,7 +85,7 @@ Visual Studio 还将对代码隐藏文件做出以下更改：
 
 - 为包含该控件的 <xref:System.Windows.FrameworkElement.Loaded> 元素创建 [!INCLUDE[TLA2#tla_ui](../data-tools/includes/tla2sharptla_ui_md.md)] 事件处理程序。 该事件处理程序调用 `Get<EntityName>Query` 方法以用数据填充实体， <xref:System.Windows.Data.CollectionViewSource> 从容器的资源中检索，然后使第一个数据项成为当前项。 如果 <xref:System.Windows.FrameworkElement.Loaded> 事件处理程序已存在，则 Visual Studio 会将此代码添加到现有的事件处理程序。
 
-### <a name="services"></a>Services
+### <a name="services"></a>服务
 
 将服务对象或属性从 " **数据源** " 窗口拖到设计器中时，Visual Studio 将生成 [!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlasharptla_titlexaml_md.md)] (或将现有控件绑定到对象或属性) 的数据绑定控件。 但是，Visual Studio 不会生成用数据填充代理服务对象的代码。 你必须自己编写此代码。 有关演示如何执行此操作的示例，请参阅 [将 WPF 控件绑定到 WCF 数据服务](../data-tools/bind-wpf-controls-to-a-wcf-data-service.md)。
 
@@ -107,6 +108,6 @@ Visual Studio 生成 [!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlashar
 
 - 为控件创建数据绑定。 如果将项拖动到设计器中的一个现有控件上，则 XAML 会将该控件绑定到该项。 如果将项拖动到容器中，则 XAML 会创建为拖动项选择的控件，并将该控件绑定到该项。 将在新的 <xref:System.Windows.Controls.Grid> 内创建该控件。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 Visual Studio 中将控件绑定到数据](../data-tools/bind-controls-to-data-in-visual-studio.md)

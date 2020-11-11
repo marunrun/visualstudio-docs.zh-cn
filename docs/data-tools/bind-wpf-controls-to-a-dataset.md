@@ -1,6 +1,7 @@
 ---
 title: 将 WPF 控件绑定到数据集
 description: 在 Visual Studio 中创建一个 WPF 应用程序，该应用程序包含绑定到数据集中封装的产品记录的数据绑定控件。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -16,12 +17,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 1922df10e331627b0695fb6ea03f4a5101ea0fd1
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: de0a155d675f85e10cdf38969dd6eb59a3762770
+ms.sourcegitcommit: 63ff7cb85b3baeeb713240d17bb2a18497f3741d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94382034"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94518513"
 ---
 # <a name="bind-wpf-controls-to-a-dataset"></a>将 WPF 控件绑定到数据集
 
@@ -259,7 +260,7 @@ ms.locfileid: "94382034"
 
 - 了解如何使用 Visual Studio 中的“数据源”窗口在 WPF 控件中显示相关数据（即父-子关系中的数据）。 有关详细信息，请参阅 [演练：在 WPF 应用中显示相关数据](../data-tools/display-related-data-in-wpf-applications.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 Visual Studio 中将 WPF 控件绑定到数据](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)
 - [Visual Studio 中的数据集工具](../data-tools/dataset-tools-in-visual-studio.md)

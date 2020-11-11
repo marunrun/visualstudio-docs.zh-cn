@@ -1,6 +1,7 @@
 ---
 title: 向 n 层应用程序中的数据集添加代码
 description: 向 Visual Studio 中的 n 层应用程序的数据集添加代码。 为数据集创建分部类文件，并将代码添加到 (而不是 DatasetName) 。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -14,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: bdbd6e728ebd4adea1a18d842651e9941098249c
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: a02edd3f0e34b0315e9b583c509cda4eb0287bf1
+ms.sourcegitcommit: 63ff7cb85b3baeeb713240d17bb2a18497f3741d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94382190"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94518682"
 ---
 # <a name="add-code-to-datasets-in-n-tier-applications"></a>向 n 层应用程序中的数据集添加代码
 
@@ -64,7 +65,7 @@ ms.locfileid: "94382190"
     }
     ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [N 层数据应用程序概述](../data-tools/n-tier-data-applications-overview.md)
 - [向 n 层应用程序中的 TableAdapter 添加代码](../data-tools/add-code-to-tableadapters-in-n-tier-applications.md)

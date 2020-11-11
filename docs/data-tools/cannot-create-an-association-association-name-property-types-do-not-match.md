@@ -1,6 +1,7 @@
 ---
 title: 属性类型不匹配
 description: 无法创建关联-属性类型不匹配。 查看有关此 Visual Studio 的信息，对象关系设计器 (O/R 设计器) 消息。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: error-reference
 ms.assetid: 97ec5a04-6e23-45a2-9226-d77ead854392
@@ -9,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: bce5a285f3bccdc2be8004f0eba4546bb7964a42
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: 8413ffd8b5bf2af4c4d7272173a9cb4d0fbf6cbc
+ms.sourcegitcommit: 63ff7cb85b3baeeb713240d17bb2a18497f3741d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94382047"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94518461"
 ---
 # <a name="cannot-create-an-association-ltassociation-namegt---property-types-do-not-match"></a>无法创建关联&lt;关联名称&gt; - 属性类型不匹配
 

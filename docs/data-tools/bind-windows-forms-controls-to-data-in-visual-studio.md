@@ -1,6 +1,7 @@
 ---
 title: 将 Windows 窗体控件绑定到数据
 description: 将 Windows 窗体控件绑定到 Visual Studio 中的数据，以便您可以向应用程序的用户显示数据。
+ms.custom: SEO-VS-2020
 ms.date: 11/03/2017
 ms.topic: how-to
 helpviewer_keywords:
@@ -18,12 +19,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 48697fb5a031496b5e69c4dd8d6821ad243d3874
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: ee50a01093ff83faba17ec6fd59f4ddc1101012a
+ms.sourcegitcommit: 63ff7cb85b3baeeb713240d17bb2a18497f3741d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94382372"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94518643"
 ---
 # <a name="bind-windows-forms-controls-to-data-in-visual-studio"></a>在 Visual Studio 中将 Windows 窗体控件绑定到数据
 
@@ -81,7 +82,7 @@ ms.locfileid: "94382372"
 
 另请注意，每个控件都有一个智能标记。 此标记启用仅适用于该控件的自定义项。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 Visual Studio 中将控件绑定到数据](../data-tools/bind-controls-to-data-in-visual-studio.md)
 - [Windows 窗体 ( .NET Framework 中的数据绑定) ](/dotnet/framework/winforms/windows-forms-data-binding)
