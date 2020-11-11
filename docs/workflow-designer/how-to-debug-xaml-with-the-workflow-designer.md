@@ -1,5 +1,7 @@
 ---
 title: 工作流设计器：调试 XAML
+description: 了解如何根据 XAML 定义工作流，以及如何用工作流设计器调试 XAML。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: d9305dbc-af62-4bdd-b03f-c54e3fe9ecc7
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 9be7c8da251a9698e0fceba64e3941ba8fbdf803
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 24540a6e7a2f99f35edf6018355583b5f9230e1a
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817510"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437926"
 ---
 # <a name="how-to-debug-xaml-with-the-workflow-designer"></a>如何：使用工作流设计器调试 XAML
 
@@ -28,7 +30,7 @@ ms.locfileid: "85817510"
 
 2. 根据 [如何：在工作流中设置断点中](../workflow-designer/how-to-set-breakpoints-in-workflows.md)所述，在要调试的一个或多个活动上设置断点。
 
-3. 右键单击包含工作流定义的 .xaml 文件，然后选择 " **查看代码**"。 您将看到在设计视图中对其设置了断点的活动的 XAML 元素声明所在行中显示了一个断点。
+3. 右键单击包含工作流定义的 .xaml 文件，然后选择 " **查看代码** "。 您将看到在设计视图中对其设置了断点的活动的 XAML 元素声明所在行中显示了一个断点。
 
 4. 调用调试器，如 [调试工作流](debugging-workflows-with-the-workflow-designer.md)中所述。
 

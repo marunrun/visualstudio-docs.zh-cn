@@ -1,5 +1,7 @@
 ---
 title: 工作流设计器：向工作流项目添加新项
+description: 了解在创建工作流项目后，如何将工作流活动、设计器和其他熟悉的 Visual Studio 项添加到项目。
+ms.custom: SEO-VS-2020
 ms.date: 06/25/2018
 ms.topic: how-to
 ms.assetid: 5c6180ca-af10-4513-b0cb-7d478fd84eab
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 53737eb421f4194b00354899e373441ff0a97227
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: af6563d21ce41d54e66f474de126c3bd4070ff8a
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85814611"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437965"
 ---
 # <a name="how-to-add-a-new-item-to-a-workflow-project"></a>如何：向工作流项目添加新项
 
@@ -21,7 +23,7 @@ ms.locfileid: "85814611"
 
 下表列出了可添加到工作流项目的 Windows Workflow Foundation (WF) 项：
 
-| 名称 | 说明 |
+| “属性” | 说明 |
 |-| - |
 | 活动 | 由其他活动组成的活动。 选择此项可将相同的 XAML 文件添加到项目中，就像为新项目选择 " **活动库** " 模板时所获得的那样。 有关此过程的详细信息，请参阅 [创建工作流项目](creating-a-workflow-project.md)。 |
 | 活动设计器 | 用于自定义活动的设计时体验的设计器。 选择此项可将相同文件添加到项目中，就像在为新项目选择 " **活动设计器库** " 模板时所获得的一样。 |

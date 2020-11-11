@@ -1,5 +1,7 @@
 ---
 title: 工作流设计器-如何：向工作流添加注释
+description: 了解 .NET Framework 4.5 如何允许开发人员将批注添加到设计器中的特定类型的项，例如活动、状态和转换项。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -11,12 +13,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: TerryGLee
-ms.openlocfilehash: 77fb43671a45d5d53d2fe23fa3e4e7a9a98c4373
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0fe5b766c0c5545a1cc3839e29d71e3f3b7a1f39
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85815495"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437952"
 ---
 # <a name="how-to-add-comments-to-a-workflow-in-the-workflow-designer"></a>如何：在工作流设计器中给工作流添加备注
 
@@ -39,7 +41,7 @@ ms.locfileid: "85815495"
 
 ## <a name="adding-an-annotation-to-an-activity-in-the-designer"></a>在设计器中将批注添加到活动
 
-1. 在工作流设计器中，右键单击工作流设计器中的项，然后选择 " **批注**"、" **添加批注**"。
+1. 在工作流设计器中，右键单击工作流设计器中的项，然后选择 " **批注** "、" **添加批注** "。
 
 1. 在提供的空白处添加批注的文本。
 
@@ -59,21 +61,21 @@ ms.locfileid: "85815495"
 
 ## <a name="showing-or-hiding-all-annotations"></a>显示或隐藏所有批注
 
-1. 右键单击一个有批注的活动。 选择 " **批注**"， **显示所有批注**。
+1. 右键单击一个有批注的活动。 选择 " **批注** "， **显示所有批注** 。
 
    所有批注都显示在活动的设计器中。
 
-1. 若要显示活动设计器外部的所有批注，请右键单击该活动，然后选择 " **批注**"， **隐藏所有批注**。
+1. 若要显示活动设计器外部的所有批注，请右键单击该活动，然后选择 " **批注** "， **隐藏所有批注** 。
 
 ## <a name="editing-or-deleting-an-annotation-for-an-activity"></a>编辑或删除活动的批注
 
 1. 右键单击一个有批注的活动。
 
-1. 选择 " **批注**"、" **编辑批注** " 或 " **删除批注**"。
+1. 选择 " **批注** "、" **编辑批注** " 或 " **删除批注** "。
 
    将打开批注以进行编辑或删除。
 
-1. 若要一次删除所有批注，请右键单击工作流设计器，然后选择 " **批注**"， **删除所有批注**。
+1. 若要一次删除所有批注，请右键单击工作流设计器，然后选择 " **批注** "， **删除所有批注** 。
 
 ## <a name="adding-editing-and-deleting-an-annotation-for-a-variable-or-argument"></a>添加、编辑和删除变量或参数的批注
 

@@ -1,5 +1,7 @@
 ---
 title: 工作流设计器 DoWhile 活动设计器
+description: 了解 "DoWhile" 活动如何执行其正文中包含的活动至少一次，直到指定条件的计算结果为 false。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,16 +12,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c56a9ab8b46f8f7ee36875dda507cb9f288136cf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8385fe376f56738d76e066dc172e7b6b516f9a08
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86875600"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94438056"
 ---
 # <a name="dowhile-activity-designer"></a>DoWhile 活动设计器
 
-<xref:System.Activities.Statements.DoWhile>活动将至少执行一次包含的活动 <xref:System.Activities.Statements.DoWhile.Body%2A> ，直到指定条件的计算结果为**false**。 如果需要执行循环体中包含的活动零次或多次，请改用 <xref:System.Activities.Statements.While> 活动。
+<xref:System.Activities.Statements.DoWhile>活动将至少执行一次包含的活动 <xref:System.Activities.Statements.DoWhile.Body%2A> ，直到指定条件的计算结果为 **false** 。 如果需要执行循环体中包含的活动零次或多次，请改用 <xref:System.Activities.Statements.While> 活动。
 
 ## <a name="dowhile-properties-in-the-workflow-designer"></a>工作流设计器中的 DoWhile 属性
 
@@ -27,8 +29,8 @@ ms.locfileid: "86875600"
 
 |属性名称|必选|使用情况|
 |-|--------------|-|
-|<xref:System.Activities.Statements.DoWhile.Body%2A>|错误|当条件为 **true**时要执行的活动。 若要添加 <xref:System.Activities.Statements.DoWhile.Body%2A> 活动，请将活动从 "工具箱" 拖放到 " **DoWhile** " 活动设计器上的 "**正文**" 框中，其中包含提示文本 "将活动放在此处"。|
-|<xref:System.Activities.Statements.DoWhile.Condition%2A>|正确|每次循环迭代后要计算的条件。 若要设置 <xref:System.Activities.Statements.DoWhile.Condition%2A> ，请在 " **DoWhile** " 活动设计器或属性网格中的 "**条件**" 框中键入 Visual Basic 表达式。|
+|<xref:System.Activities.Statements.DoWhile.Body%2A>|错误|当条件为 **true** 时要执行的活动。 若要添加 <xref:System.Activities.Statements.DoWhile.Body%2A> 活动，请将活动从 "工具箱" 拖放到 " **DoWhile** " 活动设计器上的 " **正文** " 框中，其中包含提示文本 "将活动放在此处"。|
+|<xref:System.Activities.Statements.DoWhile.Condition%2A>|正确|每次循环迭代后要计算的条件。 若要设置 <xref:System.Activities.Statements.DoWhile.Condition%2A> ，请在 " **DoWhile** " 活动设计器或属性网格中的 " **条件** " 框中键入 Visual Basic 表达式。|
 
 ## <a name="see-also"></a>另请参阅
 

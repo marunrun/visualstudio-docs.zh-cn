@@ -1,5 +1,7 @@
 ---
 title: 工作流设计器-"浏览并选择 .NET 类型" 对话框
+description: 了解如何使用 "浏览并选择 .NET 类型" 对话框从程序集和项目的树视图中选择类型。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -11,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a526bc9504f4f63a7a135978ade02654bbe63ffd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7e887cf339647df9bca7fdc3d07a45dd44901c42
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75597108"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94438173"
 ---
 # <a name="browse-and-select-a-net-type-dialog-box"></a>“浏览并选择 .NET 类型”对话框
 
@@ -51,11 +53,11 @@ ms.locfileid: "75597108"
 
 2. 一旦要使用的类型的名称出现在树中的 " **类型名称** " 框中，请单击相应的类型将其选择为 "导致" 下拉框。
 
-     从下拉框中选择要用于关闭 "常规" 的类型，然后单击 **"确定"**。
+     从下拉框中选择要用于关闭 "常规" 的类型，然后单击 **"确定"** 。
 
 ## <a name="types-displayed-in-the-type-browser"></a>类型浏览器中显示的类型
 
-类型浏览器中显示的类型可能因启动类型浏览器的方式而有所不同。 如果类型浏览器是从 **vs2010**内的工作流项目启动的，则默认情况下将显示引用的程序集中的所有类型和引用的项目。 如果类型浏览器是从 **vs2010** 项目系统的外部启动 (例如，在重新承载工作流应用程序中，或者在独立工作流文件) 中启动的，则会显示在 AppDomain 中加载的所有程序集中的类型。
+类型浏览器中显示的类型可能因启动类型浏览器的方式而有所不同。 如果类型浏览器是从 **vs2010** 内的工作流项目启动的，则默认情况下将显示引用的程序集中的所有类型和引用的项目。 如果类型浏览器是从 **vs2010** 项目系统的外部启动 (例如，在重新承载工作流应用程序中，或者在独立工作流文件) 中启动的，则会显示在 AppDomain 中加载的所有程序集中的类型。
 
 可以按活动设计器开发人员筛选类型浏览器中的类型。 对于任何给定的活动，您可能只看到一个类型子集。 例如，在 <xref:System.Activities.Statements.TryCatch> 活动中，只有从 <xref:System.Exception> 派生的类型显示在类型浏览器中。
 
@@ -67,7 +69,7 @@ ms.locfileid: "75597108"
 
 1. 键入 **操作** 匹配 <xref:System.OperationCanceledException> ，但不匹配 <xref:System.InvalidOperationException> 。 若要匹配 <xref:System.InvalidOperationException>，请开始键入 System.I 或 Invalid。
 
-2. 键入**Generic** <xref:System.GenericUriParser> 命名空间中的泛型匹配项，而不是类型 <xref:System.Collections.Generic> 。 若要在命名空间中搜索类型 <xref:System.Collections.Generic> ，请键入命名空间的完全限定名称。
+2. 键入 **Generic** <xref:System.GenericUriParser> 命名空间中的泛型匹配项，而不是类型 <xref:System.Collections.Generic> 。 若要在命名空间中搜索类型 <xref:System.Collections.Generic> ，请键入命名空间的完全限定名称。
 
 ## <a name="selecting-a-service-contract-using-the-type-browser-dialog"></a>使用类型浏览器对话框选择服务协定
 

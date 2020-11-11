@@ -1,5 +1,7 @@
 ---
 title: 工作流设计器 FlowDecision 活动设计器
+description: 了解 FlowDecision 节点是一个条件节点，该节点为控制流提供分支以作为两种备选方案之一。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 79e405f82bcf33bc01ad07f1092879c17dec5849
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1a70e7e44976df975be721d93e918d7c25d192bf
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76111435"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437991"
 ---
 # <a name="flowdecision-activity-designer"></a>FlowDecision 活动设计器
 
@@ -27,13 +29,13 @@ ms.locfileid: "76111435"
 
 ### <a name="using-the-flowdecision-designer"></a>使用 FlowDecision 设计器
 
-**FlowDecision**设计器可在 "**工具箱**" 的 "**流程图**" 类别中找到，可通过单击工作流设计器上的 "**工具箱**" 选项卡进行访问。 或者，从 "**视图**" 菜单中选择 **"工具箱**"，或按**Ctrl** + **Alt** + **X**。
+**FlowDecision** 设计器可在 " **工具箱** " 的 " **流程图** " 类别中找到，可通过单击工作流设计器上的 " **工具箱** " 选项卡进行访问。 或者，从 " **视图** " 菜单中选择 **"工具箱** "，或按 **Ctrl** + **Alt** + **X** 。
 
 可以将 " **FlowDecision** " 设计器从 " **工具箱** " 拖放到 " **流程图** " 活动设计器内的工作流设计器图面上。 这会在 <xref:System.Activities.Statements.FlowDecision> 活动中创建标记为的 **决策** <xref:System.Activities.Statements.Flowchart> 。 将鼠标悬停在设计器上，将显示两个分支的 **True** 和 **False** 方控点。
 
-将 **FlowDecision** 设计器和其他设计器拖到 **Flowchart**后，可将节点链接在一起以指定执行顺序。 若要在源节点 (**) 和目标**节点之间创建链接**False** ，请将鼠标**FlowDecision**悬停在源节点的设计器上，并在其每一侧显示正方形控点。 单击这些正方形处理框之一并按下鼠标按钮将其拖到当鼠标悬停在目标节点上时该节点周围以类似方式显示的处理框之一。 松开鼠标按钮，此时将在这两个节点之间创建一个链接，表示为从源设计器指向目标设计器的箭头。
+将 **FlowDecision** 设计器和其他设计器拖到 **Flowchart** 后，可将节点链接在一起以指定执行顺序。 若要在源节点 ( **) 和目标** 节点之间创建链接 **False** ，请将鼠标 **FlowDecision** 悬停在源节点的设计器上，并在其每一侧显示正方形控点。 单击这些正方形处理框之一并按下鼠标按钮将其拖到当鼠标悬停在目标节点上时该节点周围以类似方式显示的处理框之一。 松开鼠标按钮，此时将在这两个节点之间创建一个链接，表示为从源设计器指向目标设计器的箭头。
 
-<xref:System.Activities.Statements.FlowDecision.Condition%2A>通过单击提示文本 "输入 VB 表达式" 的位置，可以在 "**属性**" 窗口的 "**条件**" 框中键入指示的表达式。
+<xref:System.Activities.Statements.FlowDecision.Condition%2A>通过单击提示文本 "输入 VB 表达式" 的位置，可以在 " **属性** " 窗口的 " **条件** " 框中键入指示的表达式。
 
 ### <a name="the-flowdecision-properties"></a>FlowDecision 属性
 
