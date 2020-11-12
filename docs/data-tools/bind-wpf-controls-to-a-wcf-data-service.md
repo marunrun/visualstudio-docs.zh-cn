@@ -1,6 +1,7 @@
 ---
 title: 将 WPF 控件绑定到 WCF 数据服务
 description: 在 Visual Studio 中将 WPF 控件绑定到 WCF 数据服务。 这些控件将绑定到 WCF 数据服务中封装的客户记录。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -16,12 +17,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: c627a9f09d5400e321bcc8a141c36ec46cad7958
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: 4368c9134539202b1bde2be7a2d8c39e5ebc3e74
+ms.sourcegitcommit: 63ff7cb85b3baeeb713240d17bb2a18497f3741d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94382203"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94518517"
 ---
 # <a name="bind-wpf-controls-to-a-wcf-data-service"></a>将 WPF 控件绑定到 WCF 数据服务
 
@@ -296,7 +297,7 @@ ms.locfileid: "94382203"
 
 - 了解如何使用 Visual Studio 中的“数据源”窗口在 WPF 控件中显示相关数据（即父-子关系中的数据）。 有关详细信息，请参阅 [演练：在 WPF 应用程序中显示相关数据](../data-tools/display-related-data-in-wpf-applications.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 Visual Studio 中将 WPF 控件绑定到数据](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)
 - [将 WPF 控件绑定到数据集](../data-tools/bind-wpf-controls-to-a-dataset.md)

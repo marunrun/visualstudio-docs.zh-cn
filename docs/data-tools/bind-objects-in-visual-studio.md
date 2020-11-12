@@ -1,6 +1,7 @@
 ---
 title: 数据绑定自定义对象
 description: 在 Visual Studio 中将对象绑定为数据源。 使用设计时工具在您的应用程序中使用自定义对象作为数据源。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -17,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: ea36249ecc0cfc266a650ca24d143e053f7fc0d9
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: ad8b5f502953912e2de7383afa4a86ff749c5724
+ms.sourcegitcommit: 63ff7cb85b3baeeb713240d17bb2a18497f3741d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94382099"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94518588"
 ---
 # <a name="bind-objects-as-data-sources-in-visual-studio"></a>在 Visual Studio 中将对象绑定为数据源
 
@@ -148,6 +149,6 @@ Visual Studio 会创建可直接针对数据库执行的 DBDirect 方法。 这�
 [!code-csharp[VbRaddataSaving#23](../data-tools/codesnippet/CSharp/bind-objects-in-visual-studio_6.cs)]
 [!code-vb[VbRaddataSaving#23](../data-tools/codesnippet/VisualBasic/bind-objects-in-visual-studio_6.vb)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 Visual Studio 中将控件绑定到数据](../data-tools/bind-controls-to-data-in-visual-studio.md)

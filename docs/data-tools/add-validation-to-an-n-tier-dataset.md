@@ -1,6 +1,7 @@
 ---
 title: 向 n 层数据集添加验证
 description: 在 Visual Studio 中将验证添加到 n 层数据集。 验证对个别列或整行所做的更改。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -16,12 +17,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: ecd57066f310886f2941700173d138756f682a0e
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: 4c7891df6de9f12df324c8d79eed5dda0e091d9a
+ms.sourcegitcommit: 63ff7cb85b3baeeb713240d17bb2a18497f3741d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94382125"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94518747"
 ---
 # <a name="add-validation-to-an-n-tier-dataset"></a>向 n 层数据集添加验证
 向分隔到 n 层解决方案中的数据集添加验证与将验证添加到单个项目)  (数据集的方式基本相同。 对数据执行验证的建议位置是在表的 <xref:System.Data.DataTable.ColumnChanging> 和/或 <xref:System.Data.DataTable.RowChanging> 事件中。
@@ -167,7 +168,7 @@ End Sub
     }
     ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [N 层数据应用程序概述](../data-tools/n-tier-data-applications-overview.md)
 - [演练：创建 N 层数据应用程序](../data-tools/walkthrough-creating-an-n-tier-data-application.md)

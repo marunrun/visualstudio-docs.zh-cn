@@ -1,6 +1,7 @@
 ---
 title: 向 n 层应用程序中的 TableAdapter 添加代码
 description: 将代码添加到 n 层应用程序中的表适配器。 为 TableAdapter 创建分部类文件，并将代码添加到 (，而不是添加到 DatasetName) 。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -15,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: ed0664b78408e91eeda5b65c26615e870e2171b6
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: 85e89e9800f35fc6d27346b4ed3d4757f83a8dfc
+ms.sourcegitcommit: 63ff7cb85b3baeeb713240d17bb2a18497f3741d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94382359"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94518695"
 ---
 # <a name="add-code-to-tableadapters-in-n-tier-applications"></a>向 n 层应用程序中的 TableAdapter 添加代码
 可以通过为 TableAdapter 创建分部类文件并向其添加代码 (而不是将代码添加到 *DatasetName* 文件) 来扩展 tableadapter 的功能。 分部类使特定类的代码可以在多个物理文件之间进行分隔。 有关详细信息，请参阅 [部分](/dotnet/visual-basic/language-reference/modifiers/partial) 或 [部分 (类型) ](/dotnet/csharp/language-reference/keywords/partial-type)。
@@ -66,7 +67,7 @@ ms.locfileid: "94382359"
     }
     ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [N 层数据应用程序概述](../data-tools/n-tier-data-applications-overview.md)
 - [向 n 层应用程序中的数据集添加代码](../data-tools/add-code-to-datasets-in-n-tier-applications.md)
