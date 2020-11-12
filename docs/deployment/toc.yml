@@ -24,7 +24,9 @@
           href: /dotnet/core/deploying/deploy-with-vs
         - name: 为 Microsoft Store 打包桌面应用
           href: /windows/msix/desktop/desktop-to-uwp-packaging-dot-net
-        - name: 使用 ClickOnce 部署桌面应用
+        - name: 使用 ClickOnce 部署 .NET Windows 应用程序
+          href: quickstart-deploy-using-clickonce-folder.md
+        - name: 使用 ClickOnce 部署 .NET Framework 桌面应用
           href: how-to-publish-a-clickonce-application-using-the-publish-wizard.md
         - name: 从命令行生成 ClickOnce 应用程序
           href: building-clickonce-applications-from-the-command-line.md
