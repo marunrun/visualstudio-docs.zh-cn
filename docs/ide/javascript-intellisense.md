@@ -73,7 +73,7 @@ nextItem; // now we know nextItem is a string
 
 对于函数，可以从 return 语句中推断返回类型。
 
-当前无法对函数参数进行推理，但是可使用 JSDoc 或 TypeScript .d.ts 文件解决此问题（请参阅后面的部分）  。
+当前无法对函数参数进行推理，但是可使用 JSDoc 或 TypeScript .d.ts 文件解决此问题（请参阅后面的部分）。
 
 此外，还有针对以下内容的专门推导：
 
@@ -123,7 +123,7 @@ function Foo(param1) {
 <a name="TsDeclFiles"></a>
 ### <a name="intellisense-based-on-typescript-declaration-files"></a>基于 TypeScript 声明文件的 IntelliSense
 
-由于 JavaScript 和 TypeScript 现基于同一语言服务，因此它们能够以更丰富的方式进行交互。 例如，可以为在 .d.ts 文件（详细信息）中声明的值提供 JavaScript IntelliSense（请参阅  。
+由于 JavaScript 和 TypeScript 现基于同一语言服务，因此它们能够以更丰富的方式进行交互。 例如，可以为在 .d.ts 文件（详细信息）中声明的值提供 JavaScript IntelliSense（请参阅 [TypeScript 文档](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html)），而且在 TypeScript 中声明的类型（如接口和类）可用作 JsDoc 注释中的类型。
 
 下面是一个简单的示例，其中演示 TypeScript 定义文件通过接口向同一项目的 JavaScript 文件提供此类类型信息（使用 `JsDoc` 标记）。
 
@@ -132,14 +132,14 @@ function Foo(param1) {
 <a name="Auto"></a>
 ### <a name="automatic-acquisition-of-type-definitions"></a>自动获取类型定义
 
-在 TypeScript 世界中，最常用的 JavaScript 库的 API 由 .d.ts 文件描述，此类定义最常见的存储库位于  。
+在 TypeScript 世界中，最常用的 JavaScript 库的 API 由 .d.ts 文件描述，此类定义最常见的存储库位于 [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)。
 
-默认情况下，Salsa 语言服务将尝试检测正在使用的 JavaScript 库，并自动下载和引用用于描述库的对应 .d.ts 文件，以提供更丰富的 IntelliSense  。 文件将下载到用户文件夹下的缓存中，位置为 %LOCALAPPDATA%\Microsoft\TypeScript  。
+默认情况下，Salsa 语言服务将尝试检测正在使用的 JavaScript 库，并自动下载和引用用于描述库的对应 .d.ts 文件，以提供更丰富的 IntelliSense。 文件将下载到用户文件夹下的缓存中，位置为 %LOCALAPPDATA%\Microsoft\TypeScript。
 
 > [!NOTE]
-> 如果使用的是 tsconfig.json 配置文件，此功能在默认情况下为“禁用”，但可将其设置为“启用”，如下所述  。
+> 如果使用的是 tsconfig.json 配置文件，此功能在默认情况下为“禁用”，但可将其设置为“启用”，如下所述。
 
-目前，自动检测适用于从 npm（通过读取 package.json 文件）、Bower（通过读取 bower.json 文件）下载的依赖项，以及项目中与大致前 400 个最常用的 JavaScript 库的列表匹配的松散文件  。 例如，如果项目中有 jquery-1.10.min.js，将提取并加载 jquery.d.ts 文件，从而提供更好的编辑体验  。 .d.ts 文件不会对项目产生任何影响  。
+目前，自动检测适用于从 npm（通过读取 package.json 文件）、Bower（通过读取 bower.json 文件）下载的依赖项，以及项目中与大致前 400 个最常用的 JavaScript 库的列表匹配的松散文件。 例如，如果项目中有 jquery-1.10.min.js，将提取并加载 jquery.d.ts 文件，从而提供更好的编辑体验。 .d.ts 文件不会对项目产生任何影响。
 
 如果不想使用自动获取，可通过添加配置文件来禁用它，如下所述。 仍可直接在项目中手动放置要使用的定义文件。
 

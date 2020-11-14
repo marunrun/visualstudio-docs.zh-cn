@@ -1,18 +1,18 @@
 ---
 title: 取消云订阅需要多长时间？
 description: 当取消 Visual Studio 云订阅时，会同时取消自动续订。 订阅会一直持续到正常的…
-ms.faqid: group4_2
+ms.faqid: group4_3
 ms.topic: include
 ms.assetid: 2c83cd19-2692-4aef-9cd7-b7842639cbce
 author: CaityBuschlen
 ms.author: cabuschl
 ms.date: 3/3/2020
-ms.openlocfilehash: 34cf5e16f8718f407c1f6c698f3a6e917219e6d8
-ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
+ms.openlocfilehash: d8420a48eb4e540d135d821de832b7a7c46bbefd
+ms.sourcegitcommit: f915322d60182143da7036893d2941bc200cf439
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91838357"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94575409"
 ---
 ## <a name="how-long-does-it-take-for-my-cloud-subscription-to-be-canceled"></a>取消云订阅需要多长时间？
 
@@ -22,4 +22,4 @@ ms.locfileid: "91838357"
 
 对于年度云订阅，取消在最初购买日 12 个月后的次月第一天生效，或在上一次年度续订收费后的 12 个月后生效。 例如，如果在 2018 年 1 月 3 日购买了 Visual Studio Professional 年度云订阅，那么它会保持活动状态，直到 2019 年 2 月 1 日自动续订一年。 如果在 2020 年 2 月 1 日之前的任何时间取消订阅，则订阅于 2020 年 2 月 1 日到期。 对于年度云订阅取消后的剩余部分，不会进行退款。
 
-有关云订阅的其他信息，请参阅[如何收费](../../../../vscloud-billing-faq.md#how-charges-are-processed)主题。
+有关云订阅的其他信息，请参阅[如何收费](https://docs.microsoft.com/visualstudio/subscriptions/vscloud-billing-faq#how-charges-are-processed)主题。

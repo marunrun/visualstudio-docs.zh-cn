@@ -27,7 +27,7 @@ ms.locfileid: "92136844"
 ---
 # <a name="build-events-page-project-designer-c"></a>“项目设计器”->“生成事件”页 (C#)
 
-使用“项目设计器”的“生成事件”页指定生成配置说明  。 还可以指定任何生成后事件运行的条件。 有关详细信息，请参阅[如何：指定生成事件 (C#)](../../ide/how-to-specify-build-events-csharp.md) 以及[如何：指定生成事件 (Visual Basic)](../../ide/how-to-specify-build-events-visual-basic.md)。
+使用“项目设计器”的“生成事件”页指定生成配置说明。 还可以指定任何生成后事件运行的条件。 有关详细信息，请参阅[如何：指定生成事件 (C#)](../../ide/how-to-specify-build-events-csharp.md) 以及[如何：指定生成事件 (Visual Basic)](../../ide/how-to-specify-build-events-visual-basic.md)。
 
 ## <a name="uielement-list"></a>UIElement 列表
 
@@ -41,7 +41,7 @@ ms.locfileid: "92136844"
 
 **预生成事件命令行**
 
-在生成开始之前，指定要执行的任何命令。 要键入长命令，单击“编辑预生成”，显示  。
+在生成开始之前，指定要执行的任何命令。 要键入长命令，单击“编辑预生成”，显示[预生成事件/生成后事件命令行对话框](../../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)。
 
 > [!NOTE]
 > 如果项目是最新的且没有触发任何生成，则不会运行预生成事件。
@@ -61,11 +61,11 @@ ms.locfileid: "92136844"
 |------------|------------|
 |**始终**|无论生成是否成功，均运行生成后事件。|
 |**成功生成时**|如果生成成功，则运行生成后事件。 因此，即使项目已为最新状态，但只要生成成功，就会运行该事件。|
-|生成更新项目输出时 |生成后事件仅在编译器的输出文件 (.exe or .dll) 不同于之前的编译器输出文件时才运行。 因此，如果项目为最新状态，则不会运行生成后事件。|
+|生成更新项目输出时|生成后事件仅在编译器的输出文件 (.exe or .dll) 不同于之前的编译器输出文件时才运行。 因此，如果项目为最新状态，则不会运行生成后事件。|
 
 ## <a name="in-the-project-file"></a>在项目文件中
 
-在早期版本的 Visual Studio 中，当你更改 IDE 中的 PreBuildEvent 或 PostBuildEvent 设置时，Visual Studio 会将 `PreBuildEvent` 或 `PostBuildEvent` 属性添加到项目文件  。 例如，如果 IDE 中的 PreBuildEvent 命令行设置如下  ：
+在早期版本的 Visual Studio 中，当你更改 IDE 中的 PreBuildEvent 或 PostBuildEvent 设置时，Visual Studio 会将 `PreBuildEvent` 或 `PostBuildEvent` 属性添加到项目文件。 例如，如果 IDE 中的 PreBuildEvent 命令行设置如下：
 
 ```input
 "$(ProjectDir)PreBuildEvent.bat" "$(ProjectDir)..\" "$(ProjectDir)" "$(TargetDir)"
@@ -79,7 +79,7 @@ ms.locfileid: "92136844"
 </PropertyGroup>
 ```
 
-对于 .NET Core 项目，Visual Studio 2019（以及较新更新中的 Visual Studio 2017）为 PreBuildEvent 和 PostBuildEvent 设置添加了名为 `PreBuild` 或 `PostBuild` 的 MSBuild 目标  。 这些目标使用 BeforeTargets 和 AfterTargets 属性，它们是 MSBuild 可识别的属性  。 例如，对于前面的示例，Visual Studio 现在生成以下代码：
+对于 .NET Core 项目，Visual Studio 2019（以及较新更新中的 Visual Studio 2017）为 PreBuildEvent 和 PostBuildEvent 设置添加了名为 `PreBuild` 或 `PostBuild` 的 MSBuild 目标。 这些目标使用 BeforeTargets 和 AfterTargets 属性，它们是 MSBuild 可识别的属性。 例如，对于前面的示例，Visual Studio 现在生成以下代码：
 
 ```xml
 <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
