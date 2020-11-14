@@ -30,7 +30,7 @@ ms.locfileid: "92436426"
 
 `<Message Text="This is my list of TXT files: @(TXTFile)"/>`
 
-当 `@(TXTFile)` 项列表包含项 App1.txt、App2.txt 和 App3.txt 时，消息为  ：
+当 `@(TXTFile)` 项列表包含项 App1.txt、App2.txt 和 App3.txt 时，消息为：
 
 `This is my list of TXT files: App1.txt;App2.txt;App3.txt`
 
@@ -48,7 +48,7 @@ ms.locfileid: "92436426"
 
 ## <a name="example"></a>示例
 
-在此示例中，  。 在 findstr 命令中，文本搜索字符串由 -c:  开关指示，因此 `@(Phrase)` 项列表中各项之间插入的是项分隔符 `-c:`。
+在此示例中，[Exec](../msbuild/exec-task.md) 任务会运行 findstr 工具，在文件 Phrases.txt 中查找指定的文本字符串。 在 findstr 命令中，文本搜索字符串由 -c: 开关指示，因此 `@(Phrase)` 项列表中各项之间插入的是项分隔符 `-c:`。
 
 对于此示例，等效的命令行命令为：
 

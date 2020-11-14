@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f8c4a1effcf61348d2f2267fb38164fd166f7d48
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: 45fc0a58262a533416f630ede795d0060f9fc909
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94382966"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94434488"
 ---
 # <a name="deploy-your-app-to-a-folder-iis-azure-or-another-destination"></a>将应用部署到文件夹、IIS、Azure 或其他目标
 
@@ -121,7 +121,7 @@ ms.locfileid: "94382966"
 
 缩放虚拟机上托管的应用程序时，需要根据需求起转额外的 VM，然后部署必要的软件。 利用这种额外的控制能力，可以在全球不同区域以不同方式进行缩放。 例如，如果应用程序要为多个地区办事处的员工提供服务，则可以根据这些地区的员工人数来缩放 VM，从而潜在地降低成本。
 
-有关其他信息，请参阅 Azure 应用服务、Azure 虚拟机以及可通过 Visual Studio 中的“自定义”选项设置为部署目标的其他 Azure 服务之间的[详细比较](/azure/architecture/guide/technology-choices/compute-decision-tree)。
+有关更多信息，请参阅 Azure 应用服务、Azure 虚拟机以及可通过 Visual Studio 中的“自定义”选项设置为部署目标的其他 Azure 服务之间的[详细比较](/azure/architecture/guide/technology-choices/compute-decision-tree)。
 
 #### <a name="when-to-choose-azure-virtual-machines"></a>何时选择 Azure 虚拟机
 
@@ -147,19 +147,29 @@ ms.locfileid: "94382966"
 
 ## <a name="folder"></a>文件夹
 
-部署到文件系统意味着只需将应用程序文件复制到你自己的计算机上的特定文件夹中。 这种部署方式最常用于测试目的，如果计算机还运行服务器，则可以通过这种方式将应用程序部署为供数量有限的人员使用。 如果目标文件夹在网络上共享，那么，通过部署到文件系统能够使 Web 应用程序文件可供其他人访问，这些人随后可将其部署到特定服务器。
+部署到文件系统意味着将应用程序文件复制到你自己的计算机上的特定文件夹中。 部署到文件夹最常用于测试目的，如果计算机还运行服务器，则可以通过这种方式将应用程序部署为供数量有限的人员使用。 如果目标文件夹在网络上共享，那么，通过部署到文件系统能够使 Web 应用程序文件可供其他人访问，这些人随后可将其部署到特定服务器。
+::: moniker range=">=vs-2019"
+从 Visual Studio 2019 16.8 开始，文件夹目标包括使用 ClickOnce 发布 .Net Windows 应用程序的功能。
 
+如果你希望使用 ClickOnce 发布 .NET Core 3.1 或更高版本的 Windows 应用程序，请参阅[使用 ClickOnce 部署 .NET Windows 应用程序](quickstart-deploy-using-clickonce-folder.md)。
+::: moniker-end
 任何运行服务器的本地计算机都可以使应用程序能够通过 Internet 或 Intranet（取决于其配置方式和所连接的网络）访问。 （如果将计算机直接连接到 Internet，应特别小心，以免其受到外部安全威胁。）这些计算机由你管理，因此你可以完全控制软件和硬件配置。
 
-请注意，如果出于任何原因（如计算机访问权限）不能使用云服务，例如 Azure 应用服务或 Azure 虚拟机，可以在自己的数据中心使用 [Azure 堆栈](https://azure.microsoft.com/overview/azure-stack/)。 Azure 堆栈可用于通过 Azure 应用服务和 Azure 虚拟机来管理并使用计算资源，并且让所有资源仍然保留在本地。
+如果出于任何原因（如计算机访问权限）不能使用云服务，例如 Azure 应用服务或 Azure 虚拟机，可以在自己的数据中心使用 [Azure Stack](https://azure.microsoft.com/overview/azure-stack/)。 Azure 堆栈可用于通过 Azure 应用服务和 Azure 虚拟机来管理并使用计算资源，并且让所有资源仍然保留在本地。
 
 ### <a name="when-to-choose-file-system-deployment"></a>何时选用文件系统部署
 
 - 仅需要将应用程序部署到文件共享，其他人可从中将其部署到不同的服务器。
+::: moniker range=">=vs-2019"
+- 使用 ClickOnce 部署 .NET Windows 应用程序
+::: moniker-end
 - 仅需要本地测试部署。
 - 在将应用程序文件发送到另一个部署目标之前，想单独对文件进行检查并在必要时进行修改。
 
 有关详细信息，请参阅[快速入门 - 部署到本地文件夹](quickstart-deploy-to-local-folder.md)。
+::: moniker range=">=vs-2019"
+有关使用 ClickOnce 部署 .NET Windows 应用程序的详细信息，请参阅[使用 ClickOnce 部署 .NET Windows 应用程序](quickstart-deploy-using-clickonce-folder.md)。
+::: moniker-end
 
 有关选择设置的更多帮助，请参阅以下内容：
 

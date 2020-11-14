@@ -38,7 +38,7 @@ ms.locfileid: "92796571"
 
 ## <a name="specify-a-forwarding-logger"></a>指定转发记录器
 
- 转发记录器编译为程序集后，必须告知 MSBuild 在生成过程中使用该程序集。 为此，请使用 `-FileLogger`、`-FileLoggerParameters` 和 `-DistributedFileLogger` 开关，以及 MSBuild.exe  。 `-FileLogger` 开关会告知 MSBuild.exe 已直接附加记录器  。 `-DistributedFileLogger` 开关表示每个节点都存在一个日志文件。 要在转发记录器上设置参数，请使用 `-FileLoggerParameters` 开关。 有关以上开关和其他 MSBuild.exe 开关的详细信息，请参阅  。
+ 转发记录器编译为程序集后，必须告知 MSBuild 在生成过程中使用该程序集。 为此，请使用 `-FileLogger`、`-FileLoggerParameters` 和 `-DistributedFileLogger` 开关，以及 MSBuild.exe。 `-FileLogger` 开关会告知 MSBuild.exe 已直接附加记录器。 `-DistributedFileLogger` 开关表示每个节点都存在一个日志文件。 要在转发记录器上设置参数，请使用 `-FileLoggerParameters` 开关。 有关以上开关和其他 MSBuild.exe 开关的详细信息，请参阅[命令行参考](../msbuild/msbuild-command-line-reference.md)。
 
 ## <a name="multi-processor-aware-loggers"></a>可识别多处理器的记录器
 
