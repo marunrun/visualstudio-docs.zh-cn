@@ -1,5 +1,7 @@
 ---
 title: 管理程序集和清单签名
+description: 了解强名称签名的优点，它可为软件组件提供全局唯一标识。
+ms.custom: SEO-VS-2020
 ms.date: 02/17/2017
 ms.technology: vs-ide-deployment
 ms.topic: conceptual
@@ -14,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a17ce633515979ca7a3fd3ac5a7e1d8802996944
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bdd2570f94b0f5577c7c09a696906338245f77a4
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770415"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351383"
 ---
 # <a name="manage-assembly-and-manifest-signing"></a>管理程序集和清单签名
 
@@ -38,13 +40,13 @@ ms.locfileid: "85770415"
 
 可对 .NET 程序集和应用程序清单进行签名：
 
-- 可执行文件 (.exe  )
+- 可执行文件 (.exe)
 
-- 应用程序清单 (.exe.manifest  )
+- 应用程序清单 (.exe.manifest)
 
-- 部署清单 (.application  )
+- 部署清单 (.application)
 
-- 共享组件程序集 (.dll  )
+- 共享组件程序集 (.dll)
 
 对以下类型的资产进行签名：
 
@@ -58,20 +60,20 @@ ms.locfileid: "85770415"
 
 ## <a name="how-to-sign-an-assembly-in-visual-studio"></a>如何对 Visual Studio 中的程序集进行签名
 
-若要对应用程序或组件进行签名，可使用项目属性窗口中的“签名”  选项卡（在“解决方案资源管理器”  中，右键单击项目节点并选择“属性”  ）。 选择“签名”  选项卡，然后选中“为程序集签名”  复选框。
+若要对应用程序或组件进行签名，可使用项目属性窗口中的“签名”选项卡（在“解决方案资源管理器”中，右键单击项目节点并选择“属性”）。 选择“签名”选项卡，然后选中“为程序集签名”复选框。
 
-指定密钥文件。 如果选择新建密钥文件，始终以 .pfx 格式创建新密钥文件  。 需要为新文件设置名称和密码。
+指定密钥文件。 如果选择新建密钥文件，始终以 .pfx 格式创建新密钥文件。 需要为新文件设置名称和密码。
 
 > [!WARNING]
 > 应始终使用密码保护密钥文件，以防他人使用。 还可以使用提供程序或证书存储来保护密钥。
 
 也可以指向已创建的密钥。 有关创建密钥的详细信息，请参阅[创建公钥/私钥对](/dotnet/framework/app-domains/how-to-create-a-public-private-key-pair)。
 
-如果仅对公钥具有访问权限，可以使用延迟签名来推迟分配密钥。 可通过选择“仅延迟签名”  复选框来启用延迟签名。 延迟签名的项目将不会运行，并且无法调试。 但是，可以通过 [Sn.exe 强名称工具](/dotnet/framework/tools/sn-exe-strong-name-tool)及 `-Vr` 选项，在开发过程中跳过验证。
+如果仅对公钥具有访问权限，可以使用延迟签名来推迟分配密钥。 可通过选择“仅延迟签名”复选框来启用延迟签名。 延迟签名的项目将不会运行，并且无法调试。 但是，可以通过 [Sn.exe 强名称工具](/dotnet/framework/tools/sn-exe-strong-name-tool)及 `-Vr` 选项，在开发过程中跳过验证。
 
-有关对清单进行签名的详细信息，请参阅[如何：对应用程序和部署清单进行签名](../ide/how-to-sign-application-and-deployment-manifests.md)。
+有关对清单签名的详细信息，请参阅[如何：对应用程序和部署清单签名](../ide/how-to-sign-application-and-deployment-manifests.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [具有强名称的程序集](/dotnet/framework/app-domains/strong-named-assemblies)
 - [具有强名称的程序集 (C++/CLI)](/cpp/dotnet/strong-name-assemblies-assembly-signing-cpp-cli)

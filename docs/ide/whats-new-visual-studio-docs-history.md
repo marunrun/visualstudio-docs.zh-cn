@@ -2,7 +2,7 @@
 title: 'Visual Studio 文档：新增功能历史记录 '
 titleSuffix: ''
 description: Visual Studio 中的新增功能历史记录文档
-ms.date: 09/30/2020
+ms.date: 10/04/2020
 helpviewer_keywords:
 - Visual Studio, what's new, docs
 - what's new [Visual Studio]
@@ -15,16 +15,80 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: b9aba6b9c4be882498535ab96020461f22722c10
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: 2314965dad6c77e749a62946f3372993813240bb
+ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91659298"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93414498"
 ---
 # <a name="history-of-whats-new-in-visual-studio-docs"></a>Visual Studio 中的新增功能历史记录文档
 
-欢迎了解 Visual Studio 文档中的新增功能历史记录。本主题包含 2020 年 9 月之前（从 2020 年 7 月开始）对文档所做的主要更改。 有关最新的新增功能，请参阅 [Visual Studio 文档：文档中的新增功能](whats-new-visual-studio-docs.md)。
+欢迎了解 Visual Studio 文档中的新增功能历史记录。本文包含 2020 年 10 月之前（从 2020 年 7 月开始）对文档所做的主要更改。 有关最新的新增功能，请参阅 [Visual Studio 文档：文档中的新增功能](whats-new-visual-studio-docs.md)。
+
+## <a name="september-2020"></a>2020 年 9 月
+### <a name="code-quality"></a>代码质量
+
+**新文章**
+
+- [CA1416：验证平台兼容性](/dotnet/fundamentals/code-analysis/quality-rules/ca1416) - 编制 CA1416 文档“验证平台兼容性”
+- [CA1834：对单字符字符串使用 StringBuilder.Append(char)](/dotnet/fundamentals/code-analysis/quality-rules/ca1834) - CA1834 文档
+
+**已更新**
+
+- [源代码分析概述](../code-quality/roslyn-analyzers-overview.md) - 适用于 .NET 重构的代码分析更新
+- [配置代码质量分析](../code-quality/use-roslyn-analyzers.md) - 适用于 .NET 重构的代码分析更新
+
+### <a name="containers"></a>容器
+
+**新文章**
+
+- [使用 Bridge Kubernetes](../containers/bridge-to-kubernetes.md) - Local Process with Kubernetes 更名为 Bridge to Kubernetes
+- [Bridge to Kubernetes 的工作原理](../containers/overview-bridge-to-kubernetes.md) - Local Process with Kubernetes 更名为 Bridge to Kubernetes
+
+### <a name="deployment"></a>部署
+
+**更新的文章**
+
+- [将应用部署到文件夹、IIS、Azure 或其他目标](../deployment/deploying-applications-services-and-components-resources.md) - 部署更新
+- [使用 Visual Studio 将应用部署到文件夹](../deployment/quickstart-deploy-to-local-folder.md) - 部署更新
+
+### <a name="ide"></a>IDE
+
+**新文章**
+
+- [Visual Studio 中的新 Git 体验（预览）](./git-with-visual-studio.md) - 增加新的 Git 体验内容（预览）
+- [C++ EditorConfig 格式设置约定](./cpp-editorconfig-properties.md) - 新文章
+- [什么是 GitHub Codespaces？（预览）](./codespaces/codespaces-overview.md) - 增加 Codespaces（预览）内容
+- [如何自定义 codespace（预览）](./codespaces/customize-codespaces.md) -增加 Codespaces（预览）内容
+- [受支持的 Visual Studio 功能（预览）](./codespaces/supported-features-codespaces.md) - 添加 Codespaces （预览）内容
+- [如何将 Visual Studio 用于 codespace（预览）](./codespaces/use-visual-studio-with-codespaces.md) -增加 Codespaces（预览）内容
+
+**更新的文章**
+
+- [EditorConfig 的 .NET 编码约定设置](/dotnet/fundamentals/code-analysis/code-style-rule-options) - 已更新 editorconfig
+- [语言约定](/dotnet/fundamentals/code-analysis/style-rules/language-rules) - 缺少示例
+
+### <a name="install"></a>安装
+
+**新文章**
+
+- [支持 ARM 的设备上的 Visual Studio](../install/visual-studio-on-arm-devices.md) - 增加 ARM 上的 VS 文档
+
+**更新的文章**
+
+- [安装或使用 Visual Studio 时与网络相关错误的疑难解答](../install/troubleshooting-network-related-errors-in-visual-studio.md) - 增加反馈身份验证代理崩溃的解决方法
+
+### <a name="profiling"></a>分析
+
+**更新的文章**
+
+- [在 Visual Studio 中衡量内存使用率](../profiling/memory-usage.md) - 分析功能导览更新
+- [性能提示](../profiling/perftips.md) - 分析功能导览更新
+- [首先了解分析工具](../profiling/profiling-feature-tour.md) - 分析功能导览更新
+- [运行带/不带调试器的分析工具](../profiling/running-profiling-tools-with-or-without-the-debugger.md)
+  - 分析功能导览更新
+  - 内容性能改进
 
 ## <a name="august-2020"></a>2020 年 8 月
 ### <a name="azure"></a>Azure
@@ -109,7 +173,7 @@ ms.locfileid: "91659298"
 
 **更新的文章**
 
-- [在 Visual Studio 中自定义窗口布局](./customizing-window-layouts-in-visual-studio.md) - 将已标记的竖排文档选项卡信息添加到“自定义窗口布局”主题
+- [在 Visual Studio 中自定义窗口布局](./customizing-window-layouts-in-visual-studio.md) - 将已标记的竖排文档选项卡信息添加到“自定义窗口布局”文章。
 - [如何报告 Visual Studio 或 Visual Studio 安装程序的问题](./how-to-report-a-problem-with-visual-studio.md)
   - 向 NMI 添加详细信息
   - 重做整个“报告问题”页
@@ -157,8 +221,8 @@ ms.locfileid: "91659298"
 
 **更新的文章**
 
-- [更改日志（Visual Studio Tools for Unity、Windows）](../cross-platform/change-log-visual-studio-tools-for-unity.md)- 将 VSTU 更改日志升级到 4.7.1.0
-- [更改日志（Visual Studio Tools for Unity、Mac）](../cross-platform/change-log-visual-studio-tools-for-unity-mac.md)- 将 VSTUM 更改日志升级到 2.7.1.0
+- [更改日志（Visual Studio Tools for Unity、Windows）](/gamedev/unity/change-log-visual-studio-tools-for-unity.md)- 将 VSTU 更改日志升级到 4.7.1.0
+- [更改日志（Visual Studio Tools for Unity、Mac）](/gamedev/unity/change-log-visual-studio-tools-for-unity-mac.md)- 将 VSTUM 更改日志升级到 2.7.1.0
 
 ### <a name="get-started"></a>入门
 

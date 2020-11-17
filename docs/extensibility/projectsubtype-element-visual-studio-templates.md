@@ -1,5 +1,7 @@
 ---
 title: " (Visual Studio 模板) 的 ProjectSubType 元素 |Microsoft Docs"
+description: 了解 ProjectSubType 元素以及它如何将模板分类为 ProjectType 元素中指定的值的子类别。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 27396ad1bcc4e181b2b8cecd6ca863db2412630d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9ceecbf1bfb750244a13c641906f7a8712d01d69
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80701835"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672315"
 ---
 # <a name="projectsubtype-element-visual-studio-templates"></a> (Visual Studio 模板的 ProjectSubType 元素) 
 将模板分类为元素中指定的值的子类别 `ProjectType` 。
@@ -53,7 +55,7 @@ ms.locfileid: "80701835"
 
  此值指定模板的子类别。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
  `ProjectSubType` 是 `TemplateData` 的可选子元素。
 
  `ProjectSubType`元素为[ProjectType](../extensibility/projecttype-element-visual-studio-templates.md)元素提供子类别。 此值可以包括：

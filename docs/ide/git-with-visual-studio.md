@@ -1,34 +1,30 @@
 ---
-title: Visual Studio 中的 Git 新体验（预览版）
+title: Visual Studio 中的 Git 体验
 titleSuffix: ''
-description: 了解 Visual Studio 2019 中新的集成 Git 体验
-ms.date: 10/13/2020
+description: 了解 Visual Studio 2019 中新的集成 Git 体验如何帮助提高工作效率。
+ms.date: 11/10/2020
 ms.topic: conceptual
 ms.author: tglee
 author: prnadago
 ms.manager: jillfra
 monikerRange: vs-2019
-ms.openlocfilehash: ad75fcff26365afdbc4fb4b02975d7c3211fa79b
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: 33606a2b4290735d5c15788a1e6961191d6d92f9
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "92334202"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493551"
 ---
-# <a name="new-git-experience-in-visual-studio-preview"></a>Visual Studio 中的 Git 新体验（预览版）
+# <a name="git-productivity-in-visual-studio"></a>Visual Studio 中的 Git 工作效率
 
-从[版本 16.6](/visualstudio/releases/2019/release-notes-v16.6) 开始，Visual Studio 2019 提供了新的 Git 体验，使你可以轻松地从 IDE 使用 Git。 Git 是使用最广泛的新式版本控制系统，因此，无论你是专业的开发人员，还是正在学习编码的人员，Git 都非常有用。
+Git 现在是 Visual Studio 2019 中的默认版本控制体验。 从[版本 16.6](/visualstudio/releases/2019/release-notes-v16.6) 开始，我们致力于构建功能集，并根据你的反馈对其进行迭代。 默认情况下，对于使用[版本 16.8](/visualstudio/releases/2019/release-notes/) 的所有用户，新 Git 体验处于开启状态。
 
 > [!TIP]
-> 如果不熟悉 Git，那么 https://git-scm.com/ 网站是一个不错的起点。 你可以从该网站找到畅享在线图书、Git 基础知识视频和速查表。
+> Git 是使用最广泛的新式版本控制系统，因此，无论你是专业的开发人员，还是正在学习编码的人员，Git 都非常有用。 如果不熟悉 Git，那么 https://git-scm.com/ 网站是一个不错的起点。 你可以从该网站找到速查表、畅销在线图书和 Git 基础知识视频。
 
-## <a name="how-to-start-using-git-in-visual-studio"></a>如何在 Visual Studio 中开始使用 Git
+## <a name="how-to-use-git-in-visual-studio"></a>如何在 Visual Studio 中使用 Git
 
-要切换新的 Git 体验，请转到“工具” > “选项” > “环境” > “预览功能”，然后选择“新的 Git 用户体验”复选框    。
-
-:::image type="content" source="media/git-opt-new-user-experience.png" alt-text="Visual Studio 中“选项”对话框的“预览功能”部分的屏幕截图":::
-
-可以通过三种方式在 Visual Studio 2019 中使用 Git：
+可以通过三种方式开始将 Git 与 Visual Studio 2019 结合使用来提高工作效率：
 
 - [打开现有 Git 存储库](#open-an-existing-local-repository)。 如果计算机上已有代码，则可以使用“文件” > “打开” > “项目/解决方案”（或“文件夹”）打开代码，Visual Studio 会自动检测其是否具有已初始化的 Git 存储库   。
 - [创建新的 Git 存储库](#create-a-new-git-repository)。 如果你的代码未与 Git 关联，则可以创建一个新的 Git 存储库。
@@ -79,9 +75,9 @@ Visual Studio 将根据你在解决方案资源管理器中加载的视图文件
 
 当你操作时，Git 会跟踪存储库中的文件更改，并将存储库中的文件分为三类。 这些更改等效于在命令行中输入 `git status` 命令时看到的内容：
 
-- **未修改的文件** ：自上次提交以来，这些文件未更改。
-- **已修改的文件** ：自上次提交以来，这些文件已更改，但尚未被暂存以用于下一次提交。
-- **已暂存的文件** ：这些文件已更改并将添加到下一次提交中。
+- **未修改的文件**：自上次提交以来，这些文件未更改。
+- **已修改的文件**：自上次提交以来，这些文件已更改，但尚未被暂存以用于下一次提交。
+- **已暂存的文件**：这些文件已更改并将添加到下一次提交中。
 
 当你执行操作时，Visual Studio 会在“Git 更改”窗口的“更改”部分中跟踪对项目的文件更改 。
 
@@ -184,16 +180,23 @@ Visual Studio 中的合并编辑器是一种三向合并工具，用于显示传
 
 :::image type="content" source="media/git-options-settings.png" alt-text="Visual Studio IDE 中“选项”对话框的屏幕截图，可以在该对话框中选择个性化设置和自定义设置":::
 
+## <a name="how-to-use-the-legacy-team-explorer-experience-in-visual-studio"></a>如何在 Visual Studio 中使用旧的团队资源管理器体验
+
+从[版本 16.8](/visualstudio/releases/2019/release-notes/) 开始，新的 Git 体验是 Visual Studio 2019 中的默认版本控制系统。 但是，可以在需要时将它关闭。 转到“工具” > “选项” > “环境” > “预览功能”，然后切换“新的 Git 用户体验”复选框    ，这会使你切换回旧的团队资源管理器体验。
+
+:::image type="content" source="media/git-opt-new-user-experience.png" alt-text="Visual Studio 中“选项”对话框的“预览功能”部分的屏幕截图":::
+
 ## <a name="whats-next"></a>后续步骤
 
-敬请关注；我们将在继续完善 Visual Studio 2019 中的新 Git 体验的同时更新此页面。
+虽然默认情况下，新 Git 体验目前在 Visual Studio 2019 [版本 16.8](/visualstudio/releases/2019/release-notes/) 中处于开启状态，不过我们会继续添加新功能以增强体验。 如果要在预览版本中查看对 Git 体验的新更新，可以从 [Visual Studio Preview](https://aka.ms/vspreview/) 页面下载并安装它。
 
 > [!IMPORTANT]
 > 如果你对我们有任何建议，请告诉我们！ 我们非常感激能够通过[开发人员社区](https://aka.ms/vs-suggest)门户与你交流设计决策。
 
 ## <a name="see-also"></a>另请参阅
 
-- 第 9 频道和 [YouTube](https://www.youtube.com/watch?v=ZiQ2LXtAJ6I&feature=youtu.be) 上的[全新的 Git 体验](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/The-New-Git-Experience)视频
+- YouTube 上的[启动新 Git 体验](https://www.youtube.com/watch?v=UHrAg3iKoe0&t)
+- [Visual Studio 工具箱系列提供：新 Git 体验](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/The-New-Git-Experience)视频（在第 9 频道和 [YouTube](https://www.youtube.com/watch?v=ZiQ2LXtAJ6I&feature=youtu.be) 上）
 - [Visual Studio 中针对 Git 体验的精彩新更新](https://devblogs.microsoft.com/visualstudio/exciting-new-updates-to-the-git-experience-in-visual-studio/)博客文章
 - [Visual Studio 2019 中的 Git 新体验](https://devblogs.microsoft.com/visualstudio/improved-git-experience-in-visual-studio-2019/)博客文章
 - [Visual Studio 2019 发行说明](/visualstudio/releases/2019/release-notes)

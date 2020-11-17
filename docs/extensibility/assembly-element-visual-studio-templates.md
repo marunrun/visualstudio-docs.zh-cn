@@ -1,5 +1,8 @@
 ---
 title: " (Visual Studio 模板) 的 Assembly 元素 |Microsoft Docs"
+titleSuffix: ''
+description: 了解 Assembly 元素及其如何指定有关程序集的信息，模板使用该元素将该程序集的引用添加到项目。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,12 +17,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c80044657b16448ba4567fff839274226985fa14
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f4115e999cc061be53ba437a090f207046f71ef8
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80740044"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671641"
 ---
 # <a name="assembly-element-visual-studio-templates"></a>Visual Studio 模板 (Assembly 元素) 
 指定有关程序集的信息，模板使用该程序集将该程序集的引用添加到项目。
@@ -72,7 +75,7 @@ ms.locfileid: "80740044"
 ## <a name="remarks"></a>备注
  `Assembly` 是 `Reference` 的必需子元素。
 
- `Reference` `References,` `Assembly` *.vstemplate*只有 `Type` 属性值为的 .vstemplate 文件中才能使用、和元素 `Item` 。
+ `Reference` `References,` `Assembly` *.vstemplate* 只有 `Type` 属性值为的 .vstemplate 文件中才能使用、和元素 `Item` 。
 
 ## <a name="example"></a>示例
  下面的示例演示 `TemplateContent` 项模板的元素。 此 XML 添加对 *System.dll* 和 *System.Data.dll* 程序集的引用。

@@ -1,5 +1,7 @@
 ---
 title: " (Visual Studio 模板) 的 CustomDataSignature 元素 |Microsoft Docs"
+description: 了解 CustomDataSignature 元素及其如何指定文本签名以查找自定义数据。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ec8bae34da0f007bac65f26c4e442c1d03e56d08
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c0b2442e7b254ccaaf9e890b5370f712b5715f18
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739440"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671514"
 ---
 # <a name="customdatasignature-element-visual-studio-templates"></a> (Visual Studio 模板的 CustomDataSignature 元素) 
 指定用于查找自定义数据的文本签名。
@@ -51,7 +53,7 @@ ms.locfileid: "80739440"
 
  文本是具有查找自定义数据所需的文本签名的字符串。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
  `CustomDataSignature` 是可选元素。
 
 ## <a name="see-also"></a>另请参阅

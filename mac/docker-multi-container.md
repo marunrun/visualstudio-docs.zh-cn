@@ -6,12 +6,12 @@ author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 07/03/2020
 ms.topic: tutorial
-ms.openlocfilehash: b883979921b3fa1493188a8d0fe75a1c493d5d97
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: f2c5154e2f35c57b46817c36ea669c6a9d0f5797
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91583991"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493538"
 ---
 # <a name="create-a-multi-container-app-with-docker-compose"></a>使用 Docker Compose 创建多容器应用
 
@@ -28,7 +28,7 @@ ms.locfileid: "91583991"
 1. 在“Web 和控制台”>“应用”下，选择“Web 应用程序”模板：![创建新 ASP.NET 应用程序](media/docker-quickstart-1.png)
 1. 选择目标框架。 本示例将使用 .NET Core 3.1：![设置目标框架](media/docker-quickstart-2.png)
 1. 输入项目详细信息，例如项目名称（在此示例中为 _DockerDemoFrontEnd_）和解决方案名称 (_DockerDemo_)。 创建的项目包含生成并运行 ASP.NET Core Web 站点所需的所有基础知识。
-1. 在 Solution Pad 中，右键单击 DockerDemoFrontEnd 项目，并选择“添加”>“添加 Docker 支持”  ：![添加 docker 支持](media/docker-quickstart-3.png)
+1. 在解决方案窗口中，右键单击 DockerDemoFrontEnd 项目，并选择“添加”>“添加 Docker 支持”：![添加 Docker 支持](media/docker-quickstart-3.png)
 
 Visual Studio for Mac 自动将新项目添加到名为 docker-compose  的解决方案，并将 Dockerfile  添加到现有项目。
 
@@ -40,7 +40,7 @@ Visual Studio for Mac 自动将新项目添加到名为 docker-compose  的解�
 1. 在“Web 和控制台”>“应用”下，选择“API”模板。
 1. 选择目标框架。 本示例将使用 .NET Core 3.1。
 1. 输入项目详细信息，例如项目名称（在本例中为 MyWebAPI）。
-1. 创建后，转到“Solution Pad”，右键单击 MyWebAPI 项目并选择“添加”>“添加 Docker 支持”。
+1. 创建后，转到解决方案窗口，右键单击 MyWebAPI 项目并选择“添加”>“添加 Docker 支持”。
 
 docker-compose  项目中的 docker-compose.yml  文件将自动更新，以包含与现有 Web 应用项目一起的 API 项目。 当生成并运行 docker-compose  项目中，其中每个项目都将部署到单独的 Docker 容器。
 

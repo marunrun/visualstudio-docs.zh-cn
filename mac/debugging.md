@@ -7,16 +7,16 @@ ms.date: 5/13/2020
 ms.technology: vs-ide-debug
 ms.assetid: BB7A084D-9AC2-48B5-8076-6C8518796BBA
 ms.topic: overview
-ms.openlocfilehash: 09a761a8269fa40c3fab49a34b3e43a7f0ec63cd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 04fae5874a4fefcb51bdef8b00c8cb3b7171057e
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85939072"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493252"
 ---
 # <a name="debugging-with-visual-studio-for-mac"></a>使用 Visual Studio for Mac 调试
 
-Visual Studio for Mac 提供支持 .Net Core、.NET Framework、Unity 和 Xamarin 应用程序的调试器。
+Visual Studio for Mac 提供支持 .NET Core、.NET Framework、Unity 和 Xamarin 应用程序的调试器。
 
 Visual Studio for Mac 使用 [Mono 软调试器](https://www.mono-project.com/docs/advanced/runtime/docs/soft-debugger/)，该调试器在 Mono 运行时中实施，以便 Visual Studio for Mac 跨所有平台调试托管代码。
 
@@ -40,7 +40,7 @@ Visual Studio for Mac 使用 Mono 软调试器来调试所有 Xamarin 应用程�
 
 ![在边距中设置断点](media/debugging-image0.png)
 
-可通过转到“断点”面板查看代码中已设置的所有断点：
+可转到“断点”窗口，查看代码中已设置的所有断点：
 
 ![断点列表](media/debugging-image0a.png)
 
@@ -67,9 +67,9 @@ Visual Studio for Mac 使用 Mono 软调试器来调试所有 Xamarin 应用程�
 
  ![断点上下文菜单](media/debugging-image4.png)
 
-* 若要向现有断点添加条件，请右键单击该断点并选择“断点属性”，或如下图所示在“断点”面板中选择“编辑断点”按钮： 
+* 若要向现有断点添加条件，请右键单击该断点并选择“断点属性”，或如下图所示在“断点”窗口中选择“编辑断点”按钮： 
 
- ![在“断点”面板中编辑现有断点](media/debugging-image5.png)
+ ![在“断点”窗口中编辑现有断点](media/debugging-image5.png)
 
 然后可输入想要断点发生的条件：
 

@@ -1,5 +1,7 @@
 ---
 title: Visual Studio 模板 (Description 元素) |Microsoft Docs
+description: 了解 Description 元素以及它如何指定模板在 "新建项目" 或 "添加新项" 对话框中显示的说明。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2ea10b43662d2818792dbc57aeac09a056cb63ce
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2f244fb6d681c9cc22416422be3ade098c67deea
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712262"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671280"
 ---
 # <a name="description-element-visual-studio-templates"></a>Visual Studio 模板 (Description 元素) 
 指定在 " **新建项目** " 或 " **添加新项** " 对话框中显示的模板的说明。
@@ -41,7 +43,7 @@ ms.locfileid: "80712262"
 
 ### <a name="attributes"></a>特性
 
-|特性|说明|
+|属性|说明|
 |---------------|-----------------|
 |`Package`|可选属性，适用于高级用户方案。<br /><br /> 指定 Visual Studio 包 ID 的 GUID。|
 |`ID`|可选属性，适用于高级用户方案。<br /><br /> 指定 Visual Studio 资源 ID。|
@@ -60,7 +62,7 @@ ms.locfileid: "80712262"
 
  此文本提供模板的说明。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
  `Description` 是元素的必需子元素 `TemplateData` 。
 
 ## <a name="example"></a>示例

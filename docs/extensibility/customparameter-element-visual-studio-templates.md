@@ -1,5 +1,7 @@
 ---
 title: " (Visual Studio 模板) 的 CustomParameter 元素 |Microsoft Docs"
+description: 了解 CustomParameter 元素及其包含的自定义参数名称和值，以便在从模板创建项目或项时使用。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9063a354f03b896e189566e8d84a18caf7509db8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 61c118bbc85064beb10b99641f0803af7af12d56
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739430"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671944"
 ---
 # <a name="customparameter-element-visual-studio-templates"></a> (Visual Studio 模板的 CustomParameter 元素) 
 包含从模板创建项目或项时要使用的自定义参数名和值。
@@ -34,7 +36,7 @@ ms.locfileid: "80739430"
 
 ### <a name="attributes"></a>特性
 
-|特性|说明|
+|属性|说明|
 |---------------|-----------------|
 |`Name`|必需。 参数的名称。 参数的格式为 $*name*$。|
 |`Value`|必需。 参数的替换值。|
@@ -48,7 +50,7 @@ ms.locfileid: "80739430"
 |-------------|-----------------|
 |[CustomParameters](../extensibility/customparameters-element-visual-studio-templates.md)|在向导进行参数替换时，将要传递给模板向导的自定义参数分组。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
  如果模板包含 `CustomParameter` 元素，则每个实例都会将 `Name` 属性替换为 `Value` 所创建项目或项文件中的属性。
 
 ## <a name="example"></a>示例

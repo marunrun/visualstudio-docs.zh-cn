@@ -1,5 +1,6 @@
 ---
 title: EnableEditOfLocationField 元素（Visual Studio 模板）
+description: 了解 EnableEditOfLocationField 元素以及它如何指定用户是否可以编辑位置字段。
 titleSuffix: ''
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -13,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0fdc6398a5130c2f537c2f1ad6b12f484add42b3
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 46af48bf8bf9f128103767be1aa5fa64968e68f5
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037401"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671293"
 ---
 # <a name="enableeditoflocationfield-element-visual-studio-templates"></a> (Visual Studio 模板的 EnableEditOfLocationField 元素) 
 指定用户是否可以编辑位置字段。
@@ -52,7 +53,7 @@ ms.locfileid: "90037401"
 
  文本必须是 `true` 或 `false` ，指示用户是否可以在 "**新建项目**" 对话框中编辑 "**位置**" 文本框。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
  `EnableEditOfLocationField` 是可选元素。 默认值为 `true` ，这允许用户在 "**新建项目**" 对话框的 "**位置**" 文本框中编辑值。
 
  在 " **新建项目** " 对话框中，" **位置** " 文本框指定用于保存新项目的目录。

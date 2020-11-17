@@ -9,12 +9,12 @@ ms.author: sashe
 manager: AndSter
 ms.workload:
 - multiple
-ms.openlocfilehash: 1ef802958817b43dd66973db66a80d328454aa83
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.openlocfilehash: 1f0629228c2fcad1f8ea36db2e4d0c67a68715e4
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85329250"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400306"
 ---
 # <a name="optimizing-profiler-settings"></a>优化探查器设置
 
@@ -22,7 +22,7 @@ Visual Studio 中的“性能探查器”和“诊断工具”窗口有许多不
 
 ## <a name="symbol-settings"></a>符号设置
 
-调试程序选项中的符号设置（“调试”>“选项”>“符号”）对工具中生成结果所需的时间有显著影响。 启用符号服务器或使用 _NT_SYMBOL_PATH 会导致探查器为报表中加载的每个模块请求符号。 目前，探查器始终自动加载所有符号，而不管自动符号加载首选项是什么。
+调试器选项中的符号设置（“调试”>“选项”>“符号”或“工具”>“选项”>“调试”>“符号”）对工具中生成结果所需的时间有显著影响。 启用符号服务器或使用 _NT_SYMBOL_PATH 会导致探查器为报表中加载的每个模块请求符号。 目前，探查器始终自动加载所有符号，而不管自动符号加载首选项是什么。
 
 ![符号加载页](../profiling/media/symbolloading.png "符号加载")
 

@@ -1,5 +1,7 @@
 ---
 title: 示例 XSD 文件：简单架构
+description: 查看在 XSD 架构设计器文档中的各个示例中使用的简单购买订单架构的示例 XSD 文件。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: sample
 ms.assetid: f7e1dde1-b4f6-4371-add4-935b68ec77d7
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 788de9f31a58561aa743d6ca6286ef650f4297a4
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 974e15c9645a1c1fcb8d17a8e10adc995a8743f4
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "75592537"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93398717"
 ---
 # <a name="sample-xsd-file-simple-schema"></a>示例 XSD 文件：简单架构
 

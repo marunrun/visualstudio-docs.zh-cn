@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 97ac8e4d-7a03-42f8-98cb-15bcaa90ef65
-ms.date: 09/21/2020
+ms.date: 11/09/2020
 ms.topic: how-to
 description: 了解管理员如何编辑订阅分配。
-ms.openlocfilehash: d10e9ee779c6fc37c886bb1b5e00e15913bab7e2
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.openlocfilehash: 0f1ec9c9aa63b5bd877e13f112964f7d74a4b5af
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92904166"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94433552"
 ---
 # <a name="edit-visual-studio-subscription-assignments"></a>编辑 Visual Studio 订阅分配
 作为订阅管理员，可以更改分配给组织内个人的订阅。  本文讨论可以进行更改的类型并提供必要的步骤。
@@ -39,8 +39,8 @@ ms.locfileid: "92904166"
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4vkAF]
 
-   > [!IMPORTANT]
-   > 订阅级别（即 Enterprise、Professional 等）和订阅 GUID 无法使用批量编辑进行更改。  如果需要向用户分配特定的订阅 GUID，请使用通过选择订阅 ID 添加用户的过程。 如果尝试上传批量编辑模板中的这些更改项，上传将失败。
+> [!NOTE]
+> 请勿更改模板中的订阅 Guid。 请参阅有关[分配特定订阅 GUID](assign-guid.md) 的文章。
 
 1. 若要一次编辑多个订阅者，请导航到“订阅者”选项卡。在顶部功能区中，单击“批量编辑”  。
 
@@ -48,7 +48,7 @@ ms.locfileid: "92904166"
    > [!div class="mx-imgBorder"]
    > ![编辑许可证 - 导出批量编辑列表](_img/edit-license/edit-license-bulk-edit-export.png "单击“导出此 excel”以创建当前订阅的列表。")
 
-3. 接下来，将文件保存到本地，以便能够轻松找到该文件，并在上传之前对其进行必要的更改。 为确保上传成功，请勿在批量编辑文件中编辑订阅级别或订阅 GUID  ，否则会导致上传失败。
+3. 接下来，将文件保存到本地，以便能够轻松找到该文件，并在上传之前对其进行必要的更改。 
 
 4. 返回到 Visual Studio 订阅管理门户，在“批量编辑”对话框中，单击“浏览”  。 选择之前保存的 Excel 文件，然后单击“确定”  。 屏幕上随即显示上传进度。
    > [!div class="mx-imgBorder"]

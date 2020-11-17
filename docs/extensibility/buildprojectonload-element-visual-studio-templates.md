@@ -1,5 +1,7 @@
 ---
 title: " (Visual Studio 模板) 的 BuildProjectOnload 元素 |Microsoft Docs"
+description: 了解 BuildProjectOnload 元素，以及它是如何在创建新项目时生成新项目并将其添加到解决方案中。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -9,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 72d1981aab67762b3ee4aa8d62e0643f4c2a8963
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bdf4256b2fb376fc063eb330d47c843c1ff8820b
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739952"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671587"
 ---
 # <a name="buildprojectonload-element-visual-studio-templates"></a> (Visual Studio 模板的 BuildProjectOnload 元素) 
 创建新项目，并将其添加到解决方案中。 不生成整个解决方案。
@@ -53,7 +55,7 @@ ms.locfileid: "80739952"
 
  文本必须是 `true` 或 `false` ，以指示从模板创建新项目时是否仅生成该项目。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
  `BuildProjectOnLoad` 是可选元素。 默认值为 `false`。
 
 ## <a name="example"></a>示例
@@ -84,7 +86,7 @@ ms.locfileid: "80739952"
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [BuildOnLoad 特性和元素](buildonload-visual-studio-templates.md)
 - [创建项目和项模板](../ide/creating-project-and-item-templates.md)

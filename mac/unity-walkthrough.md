@@ -3,16 +3,16 @@ title: 开始使用 Unity 生成游戏
 description: Unity 和 Visual Studio for Mac 入门
 author: heiligerdankgesang
 ms.author: dominicn
-ms.date: 05/20/2019
+ms.date: 11/09/2020
 ms.technology: vs-ide-general
 ms.assetid: D07FA43B-9D18-4DFA-8343-CD538FAD84DB
 ms.topic: how-to
-ms.openlocfilehash: da9c8b3470fee406b577b136b6c55d76c9346e44
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cae68b54623564028ea85dd1aa319fad5ceaec48
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85950651"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493577"
 ---
 # <a name="getting-started-building-games-with-unity-in-visual-studio-for-mac"></a>在 Visual Studio for Mac 中开始使用 Unity 生成游戏
 
@@ -112,7 +112,7 @@ Visual Studio for Mac Tools for Unity 是免费扩展，随 Visual Studio for Ma
 
     ![沿轴移动一个多维数据集](media/unity-image17.png)
 
-22. 现可添加一些代码，用来驱动敌人逻辑，使其追逐玩家。 右键单击“项目”板中的“资产”文件夹，然后依次选择“创建”、“C# 脚本”    。
+22. 现可添加一些代码，用来驱动敌人逻辑，使其追逐玩家。 右键单击“项目”窗口中的“资产”文件夹，然后依次选择“创建”、“C# 脚本”  。
 
     ![C# 脚本上下文操作](media/unity-image18.png)
 
@@ -144,7 +144,7 @@ Visual Studio for Mac Tools for Unity 是免费扩展，随 Visual Studio for Ma
 
 5. Visual Studio 解决方案非常简单。 其中包含“资产”文件夹（来自查找器的相同文件夹）和之前创建的 EnemyAI.cs 脚本    。 在更复杂的项目中，层次结构可能与你在 Unity 中看到的不同。
 
-    ![Visual Studio for Mac 中的 Solution Pad](media/unity-image24.png)
+    ![Visual Studio for Mac 中的解决方案窗口](media/unity-image24.png)
 
 6. EnemyAI.cs 在编辑器中打开  。 初始脚本仅包含 Start 和 Update 方法的存根   。
 
@@ -208,13 +208,13 @@ Visual Studio for Mac Tools for Unity 是免费扩展，随 Visual Studio for Ma
 
     ![Visual Studio for Mac 中的断点命中](media/unity-image28.png)
 
-5. 在“局部变量”板中，找到引用 EnemyAI 对象的 this 指针    。 展开引用，可发现你可以浏览“速度”等关联成员  。
+5. 在“局部变量”窗口中，找到引用 EnemyAI 对象的 this 指针  。 展开引用，可发现你可以浏览“速度”等关联成员  。
 
-    ![Visual Studio for Mac 中的局部变量调试板](media/unity-image29.png)
+    ![Visual Studio for Mac 中的“局部变量”窗口](media/unity-image29.png)
 
 6. 采用与添加断点相同的方法从 Start 方法中删除断点，即在边距中单击断点或选择所在行并按 F9   。
 
-    ![Visual Studio for Mac 中的断点命中](media/unity-image30.png)
+    ![通过单击在 Visual Studio for Mac 删除断点](media/unity-image30.png)
 
 7. 按 F10 跳过使用标记作为参数查找“玩家”游戏对象的第一行代码   。
 
@@ -228,7 +228,7 @@ Visual Studio for Mac Tools for Unity 是免费扩展，随 Visual Studio for Ma
 
 10. 切换回 Visual Studio for Mac 并在 Update 方法的第一行设置断点   。 应该立即击中该断点。
 
-    ![在 Visual Studio for Mac 中设置断点](media/unity-image33.png)
+    ![在 Visual Studio for Mac 中删除断点](media/unity-image33.png)
 
 11. 假设速度太快，而我们想要在不重新启动应用的情况下测试更改的影响。 在“自动”或“局部变量”窗口中找到“速度”变量，然后将其更改为“10”并按 Enter      。
 

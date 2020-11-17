@@ -3,15 +3,15 @@ title: 在项目中包括 NuGet 包
 description: 本文档介绍如何使用 Visual Studio for Mac 在项目中包含 NuGet 包。 文档将介绍如何查找和下载包，同时介绍 IDE 集成功能。
 author: jmatthiesen
 ms.author: jomatthi
-ms.date: 11/01/2019
+ms.date: 11/09/2020
 ms.assetid: 5C800815-0B13-4B27-B017-95FCEF1A0EA2
 ms.custom: conceptual
-ms.openlocfilehash: 4200f466c079247d3efa036f4f7cca2fd2d6b5d2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 46ceb99617c6a0e9ba457fdb769c1162090d1d31
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74127250"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493486"
 ---
 # <a name="install-and-manage-nuget-packages-in-visual-studio-for-mac"></a>在 Visual Studio for Mac 中安装和管理 NuGet 包
 
@@ -23,27 +23,27 @@ ms.locfileid: "74127250"
 
 ## <a name="find-and-install-a-package"></a>查找和安装包
 
-1. 对于 Visual Studio for Mac 中打开的项目，右键单击“Solution Pad”中的“依赖项”文件夹（如果使用 Xamarin 项目，则为“包”文件夹）并选择“管理 NuGet 包...”****************。
+1. 对于 Visual Studio for Mac 中打开的项目，右键单击“解决方案窗口”中的“依赖项”文件夹（如果使用 Xamarin 项目，则为“包”文件夹）并选择“管理 NuGet 包...”   。
 
     ![添加新的 NuGet 包上下文操作](media/nuget-walkthrough-packages-menu.png)
 
-2. 此时会启动“管理 NuGet 包”窗口****。 确保对话框左上角的“源”下拉列表已设置为 `nuget.org`，以便可搜索中央 NuGet 包存储库。
+2. 此时会启动“管理 NuGet 包”窗口。 确保对话框左上角的“源”下拉列表已设置为 `nuget.org`，以便可搜索中央 NuGet 包存储库。
 
     ![列出 NuGet 包](media/nuget-walkthrough-add-packages1.png)
 
-3. 使用右上角的搜索框查找特定的包，如 `EntityFramework`。 找到希望使用的包后，请选择它并单击“添加包”按钮以开始安装****。
+3. 使用右上角的搜索框查找特定的包，如 `EntityFramework`。 找到希望使用的包后，请选择它并单击“添加包”按钮以开始安装。
 
     ![添加 EntityFramework NuGet 包](media/nuget-walkthrough-add-packages2.png)
 
 4. 包下载完毕后会添加到项目中。 解决方案将根据正在编辑的项目类型而发生变化：
 
     **Xamarin 项目**
-    * “引用”节点包含属于 NuGet 包的所有程序集列表****。
-    * “包”节点显示每个已下载的 NuGet 包****。 可以更新该列表中的包，或从列表中删除包。
+    * “引用”节点包含属于 NuGet 包的所有程序集列表。
+    * “包”节点显示每个已下载的 NuGet 包。 可以更新该列表中的包，或从列表中删除包。
     
     **.NET Core 项目**
 
-    * “NuGet”节点（“依赖项”>“NuGet”）显示每个已下载的 NuGet 包****。 可以更新该列表中的包，或从列表中删除包。
+    * “NuGet”节点（“依赖项”>“NuGet”）显示每个已下载的 NuGet 包。 可以更新该列表中的包，或从列表中删除包。
 
 ## <a name="using-nuget-packages"></a>使用 NuGet 包
 
@@ -59,20 +59,33 @@ using Newtonsoft.Json;
 
 ## <a name="updating-packages"></a>更新包
 
-通过右键单击“依赖项”节点（对于 Xamarin 项目为“包”节点）可以一次性完成所有包更新，也可以在每个包上单独进行包更新********。 提供新版本的 NuGet 包时，更新图标会显示为![带有圆圈的向上箭头](media/nuget-walkthrough-update-icon.png)。
+通过右键单击“依赖项”节点（对于 Xamarin 项目为“包”节点）可以一次性完成所有包更新，也可以在每个包上单独进行包更新。 提供新版本的 NuGet 包时，更新图标会显示为![带有圆圈的向上箭头](media/nuget-walkthrough-update-icon.png)。
 
-右键单击“依赖项”，以访问上下文菜单，然后选择“更新”以更新所有包********：
+右键单击“依赖项”，以访问上下文菜单，然后选择“更新”以更新所有包：
 
-![包菜单](media/nuget-walkthrough-packages-menu-update.png)
+![突出显示“更新”菜单的“依赖项”上下文菜单](media/nuget-walkthrough-packages-menu-update.png)
 
 * **管理 NuGet 包** - 打开窗口，将更多包添加到项目。
-* 更新**** - 检查每个包的源服务器并下载任何更新版本。
-* 还原**** - 下载任何缺少的包（无需将现有包升级到更新版本）。
+* 更新 - 检查每个包的源服务器并下载任何更新版本。
+* 还原 - 下载任何缺少的包（无需将现有包升级到更新版本）。
 
 现在也提供解决方案级别的“更新”和“还原”选项，这些选项可影响该解决方案中的所有项目。
 
+### <a name="updating-to-pre-release-versions-of-packages"></a>更新为包的预发行版本
+若要更新为包的较新预发行版本，可以右键单击“依赖项”以打开上下文菜单，然后选择“管理 NuGet 包...”菜单 。
+
+![突出显示“管理 NuGet 包...”菜单的“依赖项”上下文菜单](media/nuget-walkthrough-packages-menu-manage-nuget-packages.png)
+
+选中对话框底部的“显示预发行包”复选框。
+
+![打开的“管理 NuGet 包”对话框，其中选中了“显示预发行包”选项](media/nuget-walkthrough-show-pre-release-packages.png)
+
+最后，从对话框的“更新”选项卡中，选择要更新的包，然后从“新版本”下拉列表中选择新的预发行版本并单击“更新包”  。
+
+![打开到“已安装”选项卡的“管理 NuGet 包”对话框，其中选择了一个包并打开了“新版本”下拉列表。](media/nuget-walkthrough-packages-nuget-dialog-update-installed-package.png)
+
 ### <a name="locating-outdated-packages"></a>查找过时的包
-在 Solution Pad 中，可以查看当前已安装包的版本，可右键单击包进行更新。
+在解决方案窗口中，可以查看当前已安装包的版本，可右键单击包进行更新。
 
 ![包含“更新”、“删除”和“刷新”选项的包菜单](media/nuget-walkthrough-PackageMenu.png)
 
@@ -82,14 +95,14 @@ using Newtonsoft.Json;
 
 显示的菜单中包含两个选项：
 
-* 更新**** - 检查源服务器并下载更新版本（如果存在）。
-* 删除**** - 从此项目中删除包，并从项目引用中删除相关的程序集。
+* 更新 - 检查源服务器并下载更新版本（如果存在）。
+* 删除 - 从此项目中删除包，并从项目引用中删除相关的程序集。
 
 ## <a name="manage-packages-for-the-solution"></a>管理解决方案的包
 
 管理解决方案的包是同时处理多个项目的便捷方式。
 
-1. 右键单击解决方案，并选择“管理 NuGet 包…”****：
+1. 右键单击解决方案，并选择“管理 NuGet 包…”：
 
     ![管理解决方案的 NuGet 包](media/nuget-walkthrough-manage-packages-solution.png)
 
@@ -99,17 +112,17 @@ using Newtonsoft.Json;
 
 ### <a name="consolidate-tab"></a>“合并”选项卡
 
-在具有多个项目的解决方案中操作时，最佳做法是确保无论在每个项目的何处使用同一 NuGet 包，都要使用该包的同一版本号。 在选择管理某解决方案的包时，Visual Studio for Mac 会在包管理器 UI 中提供“合并”选项卡，为你简化这一操作****。 借助此选项卡，你可轻松查看解决方案中的不同项目在哪些位置使用具有不同版本号的包：
+在具有多个项目的解决方案中操作时，最佳做法是确保无论在每个项目的何处使用同一 NuGet 包，都要使用该包的同一版本号。 在选择管理某解决方案的包时，Visual Studio for Mac 会在包管理器 UI 中提供“合并”选项卡，为你简化这一操作。 借助此选项卡，你可轻松查看解决方案中的不同项目在哪些位置使用具有不同版本号的包：
 
 ![包管理器 UI“合并”选项卡](media/nuget-walkthrough-consolidate-tab.png)
 
 在本例中，NuGetDemo 项目使用的是 Microsoft.EntityFrameworkCore 2.20，而 NuGetDemo.Shared 使用的是 Microsoft.EntityFrameworkCore 2.2.6。 若要合并包版本，请执行以下操作：
 
 - 在项目列表中选择要更新的项目。
-- 在“新版本”列表中选择要在上述所有项目中使用的版本，例如 Microsoft.EntityFrameworkCore 3.0.0****。
-- 选择“合并包”按钮****。
+- 在“新版本”列表中选择要在上述所有项目中使用的版本，例如 Microsoft.EntityFrameworkCore 3.0.0。
+- 选择“合并包”按钮。
 
-包管理器将选定的包版本安装到所有选定的项目中，之后包不再显示在“合并”选项卡上****。
+包管理器将选定的包版本安装到所有选定的项目中，之后包不再显示在“合并”选项卡上。
 
 ## <a name="adding-package-sources"></a>添加包源
 
@@ -119,13 +132,13 @@ using Newtonsoft.Json;
 
 ![包源](media/nuget-walkthrough-PackageSource.png)
 
-单击“添加”设置新源****。 向包源输入友好名称和 URL（或文件路径）。 如果源是安全的 Web 服务器，则同时输入用户名和密码，否则请将这些条目留空：
+单击“添加”设置新源。 向包源输入友好名称和 URL（或文件路径）。 如果源是安全的 Web 服务器，则同时输入用户名和密码，否则请将这些条目留空：
 
-![添加包源](media/nuget-walkthrough-PackageSource2.png)
+![“添加包源”对话框，其中提示输入名称、位置 URL、用户名和密码。](media/nuget-walkthrough-PackageSource2.png)
 
 搜索包时可以选择不同的源：
 
-![添加包源](media/nuget-walkthrough-PackageSource3.png)
+![“添加包源”对话框，显示包含包源列表的下拉列表。](media/nuget-walkthrough-PackageSource3.png)
 
 ## <a name="version-control"></a>版本控制
 

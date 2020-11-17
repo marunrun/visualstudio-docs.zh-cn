@@ -2,7 +2,7 @@
 title: Visual Studio 2019 中的新增功能
 titleSuffix: ''
 description: 了解 Visual Studio 2019 中的新增功能。
-ms.date: 08/21/2020
+ms.date: 11/10/2020
 helpviewer_keywords:
 - Visual Studio, what's new
 - what's new [Visual Studio]
@@ -15,23 +15,19 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: ff0188a93b8c7b6470aeaeced7e3f48dbad0f28b
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: a9bf479796db1b23a204050c941650c3c20dd6aa
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005364"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94438266"
 ---
 # <a name="whats-new-in-visual-studio-2019"></a>Visual Studio 2019 中的新增功能
 
-已针对[版本 16.7](/visualstudio/releases/2019/release-notes/) 进行更新
+已针对[版本 16.8](/visualstudio/releases/2019/release-notes/) 进行更新
 
 >[!div class="button"]
 >[下载 Visual Studio 2019](https://visualstudio.microsoft.com/downloads)
-
-Visual Studio 会不断改进以满足开发人员的需求。 以下视频来自 [Microsoft Build](https://mybuild.microsoft.com/) 库，请观看视频，与我们一起了解即将发布的[最新功能](/visualstudio/releases/2019/release-notes/)和[抢先体验功能](/visualstudio/releases/2019/release-notes-preview/)： <br><br>*视频长度：44.58 分钟*
-
-> [!VIDEO https://channel9.msdn.com/Events/Build/2020/BOD111/player]
 
 使用 Visual Studio 2019，你将获得面向任何开发人员、应用程序和平台的一流工具和服务。 无论是首次使用 Visual Studio 还是已经使用多年，此最新版本都有很多让你惊艳的地方！
 
@@ -138,6 +134,12 @@ C# 中有很多新颖有用的重构，更便于组织代码。 它们在灯泡�
 
 有关详细信息，请参阅博客文章 [Get to code:How we designed the new Visual Studio start window](https://devblogs.microsoft.com/visualstudio/get-to-code-how-we-designed-the-new-visual-studio-start-window/)（开始编码：如何设计新的 Visual Studio 开始窗口）。
 
+### <a name="git-productivity"></a>Git 效率
+
+16.8 中的新增功能 Git 现在是 Visual Studio 2019 中的默认版本控制体验。 我们在过去两个版本中构建了功能集，并根据你的反馈对其进行了迭代。 默认情况下，现在会为每个人开启新体验。 从新 Git 菜单中，可以克隆、创建或打开存储库。 使用集成 Git 工具窗口可提交和推送对代码进行的更改、管理分支、使远程存储库保持最新以及解决合并冲突。
+
+有关详细信息，请参阅 [Visual Studio 中的 Git 效率](git-with-visual-studio.md)页面。
+
 ### <a name="live-share"></a>Live Share
 
 [Visual Studio Live Share](https://visualstudio.microsoft.com/services/live-share/) 是一项开发者服务，可让你与团队成员共享代码库及其上下文，并直接从 Visual Studio 内获得即时双向协作。 利用“实时共享”，团队成员可以无缝且安全地读取、导航、编辑和调试已与他们共享的项目。
@@ -222,11 +224,11 @@ Visual Studio 2019 中会默认安装此服务。
 
 - **Visual Studio 2019 中改进了 Git 体验（预览版）**
 
-   我们将继续迭代改进后的 Git 体验，以提高你在 GitHub、Azure Repos 和其他远程托管服务上使用代码的效率。 可以在 Visual Studio 2019 中通过单个操作（或单击）进行初始化和推送。 还可以创建新的分支，管理当前分支，并解决合并冲突。
+   虽然默认情况下，新 Git 版本控制体验目前在 Visual Studio 2019 [版本 16.8](/visualstudio/releases/2019/release-notes/) 中处于开启状态，不过我们会继续添加功能，以增强最新预览版中的体验。
 
-   有关详细信息，请参阅 [Visual Studio 中的新 Git 体验](git-with-visual-studio.md)页面。
+   有关详细信息，请参阅 [Visual Studio 中的 Git 效率](git-with-visual-studio.md)页面。
 
-若要详细了解预览版（和下载链接，如果你希望试用），请参阅 [Visual Studio Preview](https://visualstudio.microsoft.com/vs/preview/) 页。
+若要详细了解预览版（和下载链接，如果你希望试用），请参阅 [Visual Studio Preview](https://aka.ms/vspreview/) 页。
 
 ## <a name="give-us-feedback"></a>给我们提供反馈
 

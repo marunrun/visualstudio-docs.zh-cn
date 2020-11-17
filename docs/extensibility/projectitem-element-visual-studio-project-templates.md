@@ -1,5 +1,7 @@
 ---
 title: 项目项元素 (Visual Studio 项目模板) |Microsoft Docs
+description: 了解项目模板的项目项元素及其如何接受不同的属性，具体取决于模板是用于项目还是项。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 943f50823892e3cd942709bdcd4556b65c006b58
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bf2d41fe83b440e2a3b4bfebd4fac6f5d06094a4
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770305"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671319"
 ---
 # <a name="projectitem-element-visual-studio-project-templates"></a>项目项元素 (Visual Studio 项目模板) 
 指定项目模板中包含的文件。
@@ -48,15 +50,15 @@ ms.locfileid: "85770305"
 ## <a name="attributes-and-elements"></a>特性和元素
  以下各部分描述了特性、子元素和父元素。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
-| 特性 | 描述 |
+| 属性 | 描述 |
 |---------------------| - |
 | `TargetFileName` | 可选特性。<br /><br /> 指定从模板创建项目时项目项的名称和路径。 此属性用于创建与模板 *.zip* 文件中的目录结构不同的目录结构，或用于创建项名称的。 |
 | `ReplaceParameters` | 可选特性。<br /><br /> 一个布尔值，指定在从模板创建项目时，项是否具有必须替换的参数值。 默认值为 `false`。 |
-| `OpenInEditor` | 可选特性。<br /><br /> 一个布尔值，指定在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 从模板创建项目时，是否应在其各自的编辑器中打开该项。<br /><br /> `OpenInWebBrowser` `OpenInHelpBrowser` 对于值为的项，将忽略和特性 `OpenInEditor` `true` 。<br /><br /> 默认值是 `false`。 |
-| `OpenInWebBrowser` | 可选特性。<br /><br /> 一个布尔值，指定从模板创建项目时是否应在 Web 浏览器中打开该项。<br /><br /> 只有项目的本地 HTML 文件和文本文件才能在 Web 浏览器中打开。 不能用此属性打开外部 Url。<br /><br /> 默认值是 `false`。 |
-| `OpenInHelpBrowser` | 可选特性。<br /><br /> 一个布尔值，指定在从模板创建项目时是否应在帮助查看器中打开该项。<br /><br /> 只有项目的本地 HTML 文件和文本文件才能在帮助浏览器中打开。 不能用此属性打开外部 Url。<br /><br /> 默认值是 `false`。 |
+| `OpenInEditor` | 可选特性。<br /><br /> 一个布尔值，指定在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 从模板创建项目时，是否应在其各自的编辑器中打开该项。<br /><br /> `OpenInWebBrowser` `OpenInHelpBrowser` 对于值为的项，将忽略和特性 `OpenInEditor` `true` 。<br /><br /> 默认值为 `false`。 |
+| `OpenInWebBrowser` | 可选特性。<br /><br /> 一个布尔值，指定从模板创建项目时是否应在 Web 浏览器中打开该项。<br /><br /> 只有项目的本地 HTML 文件和文本文件才能在 Web 浏览器中打开。 不能用此属性打开外部 Url。<br /><br /> 默认值为 `false`。 |
+| `OpenInHelpBrowser` | 可选特性。<br /><br /> 一个布尔值，指定在从模板创建项目时是否应在帮助查看器中打开该项。<br /><br /> 只有项目的本地 HTML 文件和文本文件才能在帮助浏览器中打开。 不能用此属性打开外部 Url。<br /><br /> 默认值为 `false`。 |
 | `OpenOrder` | 可选特性。<br /><br /> 指定一个数字值，该值表示将在各自的编辑器中打开项的顺序。 所有值都必须是10的倍数。 `OpenOrder`将首先打开值较高的项。 |
 
 ### <a name="child-elements"></a>子元素
@@ -71,12 +73,12 @@ ms.locfileid: "85770305"
 ## <a name="text-value"></a>文本值
  需要一个文本值。
 
- `string`，它表示模板 *.zip*文件中的文件的名称或路径。
+ `string`，它表示模板 *.zip* 文件中的文件的名称或路径。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
  `ProjectItem` 是的一个可选子级 `Project` 。
 
- `TargetFileName`特性可用于创建与模板 *.zip*文件中的目录结构不同的目录结构。 例如，如果文件 *myfile.txt* 位于模板 *.zip* 文件的根目录中，但你希望将该文件放在从该模板创建的所有项目中名为 *CustomFiles* 的目录中，则可以使用以下 XML：
+ `TargetFileName`特性可用于创建与模板 *.zip* 文件中的目录结构不同的目录结构。 例如，如果文件 *myfile.txt* 位于模板 *.zip* 文件的根目录中，但你希望将该文件放在从该模板创建的所有项目中名为 *CustomFiles* 的目录中，则可以使用以下 XML：
 
 ```xml
 <ProjectItem TargetFileName="CustomFiles\MyFile.vb">MyFile.vb</ProjectItem>
@@ -84,7 +86,7 @@ ms.locfileid: "85770305"
 
  `TargetFileName`特性还可用于重命名文件名中包含国际字符的文件。 例如，模板 *.zip* 文件不能包含带有 Unicode 字符的文件名，因此必须先重命名该文件，然后才能将其压缩为 *.zip* 文件。 `TargetFileName`特性可用于将文件名称设置回原始 Unicode 文件名。
 
- `TargetFileName`特性还可用于重命名具有参数的文件。 下面的过程说明如何将位于模板 *.zip*文件的根目录中的*myfile.txt*文件重命名为基于项目名称的文件名称。
+ `TargetFileName`特性还可用于重命名具有参数的文件。 下面的过程说明如何将位于模板 *.zip* 文件的根目录中的 *myfile.txt* 文件重命名为基于项目名称的文件名称。
 
 ### <a name="to-rename-files-with-parameters"></a>用参数重命名文件
 

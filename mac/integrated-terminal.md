@@ -1,23 +1,23 @@
 ---
 title: Visual Studio for Mac - 集成终端
-description: Visual Studio for Mac 提供用于在 macOS 上生成 .NET 应用程序的集成开发环境，包括 ASP.NET Core 网站和适用于 iOS、Android、Mac 和 Xamarin.Forms 的 Xamarin 项目。
+description: 使用 Visual Studio for Mac 中的集成终端。
 author: jmatthiesen
 ms.author: jomatthi
 ms.date: 05/14/2020
 ms.assetid: EFD53CE9-8174-4FE4-8863-2984D22FD921
-ms.openlocfilehash: d362938e8f0075591ea5d4ed8461d11395680b5c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f91c2b1c3f06f8f1fbe54e32fde70b9fe88c5f5d
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84185673"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492863"
 ---
 # <a name="integrated-terminal"></a>集成终端
 在 Visual Studio for Mac 中，可以打开一个集成终端窗口，该终端最初从解决方案的根目录启动。 终端适用于不同类型的情况，包括运行前端任务（例如：npm、ng 或 vue）、管理容器、运行高级 git 命令、执行实体框架命令、查看 dotnet CLI 输出、添加 NuGet 包等。 
 
 打开终端：
 - 使用 Ctrl+` 键盘快捷方式显示或隐藏终端窗口。
-- 使用“视图”\>“板”\>“终端”菜单  。
+- 使用“视图”\>“终端”菜单。
 - 使用搜索栏中的“终端”命令。
 
 ![Visual Studio for Mac 集成终端在启动后立即运行。](media/integrated-terminal-intro.png)
@@ -45,11 +45,11 @@ ms.locfileid: "84185673"
 ## <a name="multiple-instances"></a>多个实例
 可能会随时运行多个终端实例。 你可以使用 Ctrl+' 键盘快捷方式创建新的实例。 可以切换实例，操作方法是：单击每个实例的选项卡，或者使用 Ctrl+tab 快捷方式打开窗口选取器对话框。
 
-![Visual Studio for Mac 中的多个终端实例](media/integrated-terminal-multiple-instances.png) 
+![Visual Studio for Mac 中的多个终端实例](media/integrated-terminal-multiple-instances.png) 
 
 ## <a name="customizing-the-terminal-window"></a>自定义终端窗口
 ### <a name="configuring-the-terminal-font"></a>配置终端字体
-可以在“首选项”>“环境”>“字体”窗格中更改终端内容的字体和字号。 默认情况下，终端内容的字体将与输出板内容相同，都为 Menlo Regular，字号为 11。 可以将其设置为与编辑器字体不同的任何字体。
+可以在“首选项”>“环境”>“字体”窗格中更改终端内容的字体和字号。 默认情况下，终端内容的字体将与输出窗口内容相同，都为 Menlo Regular，字号为 11。 可以将其设置为与编辑器字体不同的任何字体。
 
 ![自定义集成终端的字体设置](media/integrated-terminal-change-font.png)
 

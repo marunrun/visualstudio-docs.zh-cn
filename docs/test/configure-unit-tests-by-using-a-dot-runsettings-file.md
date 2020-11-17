@@ -7,12 +7,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 8998a9e761716b28bd2815120e350b98804a6395
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: 6361b6b3d85c970d74a624c82d052054ab66e44a
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91928666"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400097"
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>使用 .runsettings 文件配置单元测试
 
@@ -172,6 +172,7 @@ ms.locfileid: "91928666"
     <TargetFrameworkVersion>Framework40</TargetFrameworkVersion>
     <TestAdaptersPaths>%SystemDrive%\Temp\foo;%SystemDrive%\Temp\bar</TestAdaptersPaths>
     <TestSessionTimeout>10000</TestSessionTimeout>
+    <TreatNoTestsAsError>true</TreatNoTestsAsError>
 </RunConfiguration>
 ```
 
@@ -186,7 +187,8 @@ RunConfiguration 元素可以包含下列元素：
 |**TreatTestAdapterErrorsAsWarnings**|false|false、true|
 |**TestAdaptersPaths**||TestAdapters 所在目录的一个或多个路径|
 |**TestSessionTimeout**||当测试会话超过给定时间，允许用户终止测试会话。 设置超时可确保资源被充分利用，并且测试会话被限制在一个设定时间内。 Visual Studio 2017 版本 15.5 及更高版本中提供了此设置。|
-|**DotnetHostPath**||指定用于运行测试主机的 dotnet 主机的自定义路径。 这在生成自己的 dotnet 时非常有用，例如在生成 dotnet/运行时存储库时。 指定此选项将跳过查找 testhost.exe，并将始终使用 testhost.dll。
+|**DotnetHostPath**||指定用于运行测试主机的 dotnet 主机的自定义路径。 这在生成自己的 dotnet 时非常有用，例如在生成 dotnet/运行时存储库时。 指定此选项将跳过查找 testhost.exe，并将始终使用 testhost.dll。|
+|TreatNoTestsAsError|false| true 或 false <br>指定一个布尔值，它定义在未发现测试时的退出代码。 如果该值为 `true` 并且未发现测试，则返回非零退出代码。 否则返回零。|
 
 ## <a name="datacollectors-element-diagnostic-data-adapters"></a>DataCollectors 元素（诊断数据适配器）
 
@@ -345,6 +347,10 @@ public void HomePageTest()
     <!-- TestSessionTimeout was introduced in Visual Studio 2017 version 15.5 -->
     <!-- Specify timeout in milliseconds. A valid value should be greater than 0 -->
     <TestSessionTimeout>10000</TestSessionTimeout>
+
+    <!-- true or false -->
+    <!-- Value that specifies the exit code when no tests are discovered -->
+    <TreatNoTestsAsError>true</TreatNoTestsAsError>
   </RunConfiguration>
 
   <!-- Configurations for data collectors -->

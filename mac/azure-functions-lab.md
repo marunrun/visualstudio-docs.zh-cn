@@ -1,18 +1,18 @@
 ---
 title: 教程：Azure Functions
-description: 在 Visual Studio for Mac 中使用 Azure Functions。
-author: sayedihashimi
-ms.author: sayedha
-ms.date: 05/06/2018
+description: 有关在 Visual Studio for Mac 中使用 Azure Functions 的详细演练。
+author: jmatthiesen
+ms.author: jomatthi
+ms.date: 11/06/2020
 ms.technology: vs-ide-install
 ms.assetid: 38FD2070-5151-482E-B0A9-993715128736
 ms.topic: tutorial
-ms.openlocfilehash: 99373d7da8c7f83c8703b237ff83c63f9d1b6a53
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3fa653a1acaae0f9b58d17f86d6e2e0feeb027a6
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85939092"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493018"
 ---
 # <a name="tutorial-getting-started-with-azure-functions"></a>教程：Azure Functions 入门
 
@@ -44,14 +44,14 @@ ms.locfileid: "85939092"
 
     ![命名和创建 Azure Function 项目](media/azure-functions-lab-image2.png)
 
-5. 展开“Solution Pad”  中的节点。 默认项目模板包括对各种 Azure WebJobs 包以及 Newtonsoft.Json 包的 NuGet 引用。
+5. 展开“解决方案窗口”中的节点。 默认项目模板包括对各种 Azure WebJobs 包以及 Newtonsoft.Json 包的 NuGet 引用。
 
-     此外还有三个文件：- 用于描述主机的全局配置选项的 host.json **和**用于配置服务设置的 local.settings.json  。
+     此外还有三个文件：- 用于描述主机的全局配置选项的 host.json **和** 用于配置服务设置的 local.settings.json  。
         - 项目模板还会创建一个默认 HttpTrigger。 对于本实验室，应从项目中删除 HttpTrigger.cs  文件。
 
     打开 local.settings.json  。 它默认具有两个空的连接字符串设置。
 
-    ![显示 local.settings.json 文件的 solution pad](media/azure-functions-lab-image3.png)
+    ![显示 local.settings.json 文件的解决方案窗口](media/azure-functions-lab-image3.png)
 
 ## <a name="exercise-2-creating-an-azure-storage-account"></a>练习 2：创建 Azure 存储帐户
 
@@ -89,7 +89,7 @@ ms.locfileid: "85939092"
 
 ## <a name="example-3-creating-and-debugging-an-azure-function"></a>示例 3：创建和调试 Azure 函数
 
-1. 现在可以开始添加一些代码。 使用 .NET 类库时，Azure Functions 将作为静态方法进行添加。 在“Solution Pad”中，右键单击“AzureFunctions”项目节点，选择“添加”>“添加函数”    ：
+1. 现在可以开始添加一些代码。 使用 .NET 类库时，Azure Functions 将作为静态方法进行添加。 在“解决方案窗口”中，右键单击“AzureFunctions”项目节点，选择“添加”>“添加函数”  ：
 
     ![“添加函数”选项](media/azure-functions-lab-image11.png)
 
@@ -193,7 +193,7 @@ ms.locfileid: "85939092"
 
 ## <a name="exercise-4-working-with-functionjson"></a>练习 4：使用 function.json
 
-1. 在之前的练习中，提到了 Visual Studio for Mac 为库中定义的 Azure Function“生成了”一个作业函数。 这是因为 Azure Functions 实际上并未在运行时使用该方法特性，而使用的是编译时文件系统约定来配置 Azure Functions 可供使用的位置及方式。 在“Solution Pad”  中，右键单击项目节点并选择“在查找器中展现”  。
+1. 在之前的练习中，提到了 Visual Studio for Mac 为库中定义的 Azure Function“生成了”一个作业函数。 这是因为 Azure Functions 实际上并未在运行时使用该方法特性，而使用的是编译时文件系统约定来配置 Azure Functions 可供使用的位置及方式。 在“解决方案窗口”中，右键单击项目节点并选择“在查找器中展现”。
 
      ![“在查找器中展现”菜单选项](media/azure-functions-lab-image23.png)
 
@@ -205,7 +205,7 @@ ms.locfileid: "85939092"
 
     ![visual studio for mac 中打开的 function.json 文件](media/azure-functions-lab-image25.png)
 
-1. 在“Solution Pad”  中，右键单击 AzureFunctionsLab  项目节点，选择“添加”>“新建文件夹”  。 将新文件夹命名为 Adder  。 按照默认约定，此文件夹的名称将定义 API 的路径，例如 api/Adder  。
+1. 在“解决方案窗口”中，右键单击 AzureFunctionsLab 项目节点，选择“添加”>“新建文件夹”。 将新文件夹命名为 Adder  。 按照默认约定，此文件夹的名称将定义 API 的路径，例如 api/Adder  。
 
     ![“新建文件夹”选项](media/azure-functions-lab-image26.png)
 

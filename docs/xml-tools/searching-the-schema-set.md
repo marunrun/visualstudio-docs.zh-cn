@@ -1,5 +1,7 @@
 ---
 title: XML 架构资源管理器 - 搜索架构集
+description: 了解如何在 XML 架构资源管理器中对架构集执行关键字搜索和特定于架构的搜索。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: ec1395e0-d03c-4130-810d-f2db656937bd
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8378ebaccefaedfcc3d83f23bcab56f7417264dd
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: c73af4f40abddaaba15e3b2cc785ab412e8884e4
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592498"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351513"
 ---
 # <a name="search-the-schema-set"></a>搜索架构集
 

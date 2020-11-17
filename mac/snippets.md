@@ -1,16 +1,16 @@
 ---
 title: 代码段
 description: 如何使用代码片段在 Visual Studio for Mac 中高效编程
-author: cobey
-ms.author: cobey
-ms.date: 02/07/2019
+author: jmatthiesen
+ms.author: jomatthi
+ms.date: 11/09/2020
 ms.assetid: 0FE27C0C-A861-4133-A74E-8D0505CF5342
-ms.openlocfilehash: 1dacc935549d738ff1b5e84c3ac4420c343155fd
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: a8fdf70b4d966c644719047eca4249e432561ace
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "68787687"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493447"
 ---
 # <a name="code-snippets"></a>代码片段
 
@@ -26,7 +26,7 @@ ms.locfileid: "68787687"
 
   ![代码中的 Tab 展开](media/source-editor-image13.png)
 
-- **工具箱** &ndash; 使用工具箱面板显示所有代码片段列表。 将任意模板从工具箱拖动到源代码中的正确位置：
+- 工具箱 &ndash; 使用工具箱窗口可显示所有代码片段列表。 将任意模板从工具箱拖动到源代码中的正确位置：
 
   [![工具箱中的代码片段](media/source-editor-image14-sml.png)](media/source-editor-image14.png#lightbox)
 
@@ -86,6 +86,6 @@ ms.locfileid: "68787687"
 
 上一部分中的 `for` 片段示范了这两个保留的关键字。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [代码片段（Windows 上的 Visual Studio）](/visualstudio/ide/code-snippets)

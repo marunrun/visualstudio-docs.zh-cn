@@ -1,21 +1,21 @@
 ---
 title: ASP.NET Core 入门
 description: 本文介绍如何在 Visual Studio for Mac 中开始使用 ASP.NET，包括安装和创建新项目。
-author: sayedihashimi
-ms.author: sayedha
-ms.date: 04/02/2019
+author: jmatthiesen
+ms.author: jomatthi
+ms.date: 11/06/2020
 ms.assetid: 6E8B0C90-33D6-4546-8207-CE0787584565
 ms.custom: video
 no-loc:
 - Blazor
 - Blazor WebAssembly
 ms.topic: how-to
-ms.openlocfilehash: 7f8795b798b492370a08e55171c5627485c7869a
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: a2f45069967df412f9245f8044c53ef425a00fdf
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584056"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493356"
 ---
 # <a name="getting-started-with-aspnet-core"></a>ASP.NET Core 入门
 
@@ -44,13 +44,13 @@ ms.locfileid: "91584056"
 
 ![ASP.NET 项目选项](media/asp-net-core-2019-new-asp-core.png)
 
-选择“ASP.NET Core 空 Web 应用”，然后按“下一步” 。 为项目指定名称，并按“创建”。 这会创建新的 ASP.NET Core 应用。 在 Solution Pad 的左窗格中，展开第二个箭头，然后选择“Startup.cs”。 如下图所示：
+选择“ASP.NET Core 空 Web 应用”，然后按“下一步” 。 为项目指定名称，并按“创建”。 这会创建新的 ASP.NET Core 应用。 在解决方案窗口的左窗格中，展开第二个箭头，然后选择“Startup.cs”。 如下图所示：
 
 ![新 ASP.NET Core 空项目视图](media/asp-net-core-2019-empty-project.png)
 
 ASP.NET Core 空模板通过以下两个默认文件创建一个 Web 应用程序：Program.cs 和 Startup.cs，后面将对这两个文件进行说明。 它还将创建一个依赖项文件夹，该文件夹包含项目的 NuGet 包依赖项，如 ASP.NET Core、.NET Core 框架和生成该项目的 MSBuild 目标：
 
-![显示依赖项的 Solution Pad](media/asp-net-core-2019-solution-dependencies.png)
+![显示依赖项的解决方案窗口](media/asp-net-core-2019-solution-dependencies.png)
 
 ### <a name="programcs"></a>Program.cs
 
@@ -128,7 +128,7 @@ Startup 类必须始终遵守以下规则：
 
 ![浏览器运行](media/asp-net-web-picker.png)
 
-Visual Studio for Mac 使用随机端口启动 Web 项目。 要找到该端口，请打开“视图”>“面板”下列出的“应用程序输出”。 之后应找到类似下图内容的输出：
+Visual Studio for Mac 使用随机端口启动 Web 项目。 要找到该端口，请打开“视图”>“其他窗口”菜单下列出的“应用程序输出”。 之后应找到类似下图内容的输出：
 
 ![显示侦听端口的应用程序输出](media/asp-net-core-image6.png)
 
@@ -138,13 +138,13 @@ Visual Studio for Mac 使用随机端口启动 Web 项目。 要找到该端口�
 
 ## <a name="adding-a-controller"></a>添加控制器
 
-ASP.NET Core 应用使用模型视图控制器 (MVC) 设计模式，来为应用的每一部分提供职责逻辑分离。 MVC 包括以下几个部分：
+ASP.NET Core 应用使用模型视图控制器 (MVC) 设计模式，来为应用的每一部分提供职责逻辑分离。 MVC 设计模式包含以下概念：
 
 - **模型**：代表应用数据的类。
 - **视图**：显示应用的用户界面（通常为模型数据）。
 - **控制器**：处理浏览器请求的类，响应用户的输入和交互。
 
-有关使用 MVC 的详细信息，请参阅 [Overview of ASP.NET Core MVC](/aspnet/core/mvc/overview)（ASP.NET Core MVC 概述）。
+有关使用 MVC 的详细信息，请参阅 [ASP.NET Core MVC 概述](/aspnet/core/mvc/overview)指南。
 
 要添加控制器，请执行下列操作：
 
@@ -230,7 +230,7 @@ ASP.NET Core 应用使用模型视图控制器 (MVC) 设计模式，来为应用
 
 ## <a name="troubleshooting"></a>疑难解答
 
-若需要在 Mac OS 10.12 (Sierra) 或更高版本上手动安装 .NET Core，请执行以下操作：
+若需要在 macOS 10.12 (Sierra) 或更高版本上手动安装 .NET Core，请执行以下操作：
 
 1. 安装 .NET Core 前，请确保所有 OS 更新已更新至最新的稳定版本。 可转到应用商店应用程序，并选择“更新”选项卡对此进行检查。
 
@@ -242,7 +242,7 @@ ASP.NET Core 应用使用模型视图控制器 (MVC) 设计模式，来为应用
 
 本指南介绍了 ASP.NET Core。 介绍了它是什么，何时使用，并提供了在 Visual Studio for Mac 中使用它的信息。
 有关后续步骤的详细信息，请参阅以下指南：
-- [ASP.NET Core ](/aspnet/core/?view=aspnetcore-2.1) 文档。
+- [ASP.NET Core ](/aspnet/core/) 文档。
 - [Creating Backend Services for Native Mobile Applications（为本地移动应用程序创建后端服务）](/aspnet/core/mobile/native-mobile-backend)，介绍了如何使用 ASP.NET Core 为 Xamarin.Forms 应用生成 REST 服务。
 - [ASP.NET Core 动手实验](https://github.com/Microsoft/vs4mac-labs/tree/master/Web/Getting-Started)。
 

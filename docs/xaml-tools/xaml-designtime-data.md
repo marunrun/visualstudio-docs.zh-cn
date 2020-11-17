@@ -1,18 +1,18 @@
 ---
 title: 在 Visual Studio 中通过 XAML 设计器使用设计时数据
 description: 了解如何在 XAML 中使用设计时数据。
-ms.date: 09/29/2020
+ms.date: 11/10/2020
 ms.topic: overview
 author: alihamie
 ms.author: tglee
 manager: jillfra
 monikerRange: vs-2019
-ms.openlocfilehash: b9477868d265e9ad8b927d9e13b67112c0ea14f7
-ms.sourcegitcommit: 6b62e09026b6f1446187c905b789645f967a371c
+ms.openlocfilehash: 1dd0b4df440f6addd474ef08e7bf0b2958a58076
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92298476"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492889"
 ---
 # <a name="use-design-time-data-with-the-xaml-designer-in-visual-studio"></a>在 Visual Studio 中通过 XAML 设计器使用设计时数据
 
@@ -25,7 +25,7 @@ ms.locfileid: "92298476"
 
 设计时数据是你设置的模拟数据，使控件更易于在 XAML 设计器中进行可视化。 首先，将以下代码行添加到 XAML 文档的标头（如果这些代码行尚不存在）：
 
-```xml 
+```xml
 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 mc:Ignorable="d"
@@ -138,9 +138,9 @@ xmlns:models="clr-namespace:Cities.Models"
 
 ## <a name="use-design-time-data-with-custom-types-and-properties"></a>将设计时数据与自定义类型和属性一起使用
 
-默认情况下，此功能仅适用于平台控件和属性。 在本部分中，我们将执行所需的步骤，使你能够将自己的自定义控件用作设计时控件，这是面向使用 Visual Studio 2019 预览版本 [16.8](/visualstudio/releases/2019/preview-notes) 或更高版本的客户提供的新功能。 要实现此操作，需要满足三个要求：
+默认情况下，此功能仅适用于平台控件和属性。 在本部分中，我们将执行所需的步骤，使你能够将自己的自定义控件用作设计时控件，这是面向使用 Visual Studio 2019 版本 [16.8](/visualstudio/releases/2019/release-notes/) 或更高版本的客户提供的新功能。 要实现此操作，需要满足三个要求：
 
-- 一个自定义 xmlns 命名空间 
+- 一个自定义 xmlns 命名空间
 
     ```xml
     xmlns:myControls="http://MyCustomControls"

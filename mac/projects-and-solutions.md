@@ -4,14 +4,14 @@ description: 本文档概述了 Visual Studio for Mac 中的项目和解决方�
 ms.topic: overview
 author: heiligerdankgesang
 ms.author: dominicn
-ms.date: 05/23/2019
+ms.date: 11/09/2020
 ms.assetid: 8254505D-D96E-48BD-8A5E-CF6A917897EA
-ms.openlocfilehash: 92e7a47f7ea2b931c0b923d10e115843d315d024
-ms.sourcegitcommit: 26178b116cbf7353fee6ca989b8d872114f7b405
+ms.openlocfilehash: c52b8513937505b40d17f7cd9fc05d9cf6a47941
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89284299"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493395"
 ---
 # <a name="projects-and-solutions-in-visual-studio-for-mac"></a>Visual Studio for Mac 中的项目和解决方案
 
@@ -26,15 +26,15 @@ ms.locfileid: "89284299"
 
 项目由包含 xml 的文件（如 C# 项目的 `.csproj`）定义，其中 xml 定义文件和文件夹层次结构、文件路径以及项目特定设置（如生成设置）。
 
-当 Visual Studio for Mac 加载项目时，Solution Pad 使用项目文件显示项目中的文件和文件夹。 编译期间，MSBuild 读取项目文件中的设置以创建可执行文件。
+当 Visual Studio for Mac 加载项目时，解决方案窗口使用项目文件显示项目中的文件和文件夹。 编译期间，MSBuild 读取项目文件中的设置以创建可执行文件。
 
 ## <a name="solutions"></a>解决方案
 
 （解决方案是将一个或多个相关项目分组到一起的容器。） 解决方案由格式唯一的文本文件（扩展名 `.sln`）描述；不应对其进行手动编辑。
 
-## <a name="managing-projects-in-the-solution-pad"></a>在 Solution Pad 中管理项目
+## <a name="managing-projects-in-the-solution-window"></a>在解决方案窗口中管理项目
 
-创建或加载项目之后，可以使用 Solution Pad 查看和管理项目或解决方案以及其中包含的文件。 下图显示具有包含两个项目的 .NET Core 解决方案的 Solution Pad：
+创建或加载项目之后，可以使用解决方案窗口查看和管理项目或解决方案以及其中包含的文件。 下图显示具有包含两个项目的 .NET Core 解决方案的解决方案窗口：
 
 ![包含多个项目的示例解决方案](media/solution-example.png)
 

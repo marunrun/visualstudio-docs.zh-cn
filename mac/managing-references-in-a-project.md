@@ -3,15 +3,15 @@ title: 管理项目中的引用
 description: 本文介绍如何在 Visual Studio for Mac 中管理项目中的引用
 author: jmatthiesen
 ms.author: jomatthi
-ms.date: 05/06/2018
+ms.date: 11/09/2020
 ms.assetid: 4AD51385-B0A8-4BA7-B2D4-BF2BD167A142
 ms.topic: overview
-ms.openlocfilehash: 28ea53826a19a9ec97349060702cf13c68342ad2
-ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
+ms.openlocfilehash: 41d49fe6b23818f3cb9de8dec72462d4b2029bb6
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85939003"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493512"
 ---
 # <a name="managing-references-in-a-project"></a>管理项目中的引用
 
@@ -22,7 +22,7 @@ Visual Studio for Mac 提供了两种将其他引用添加到项目的方法：
 这些是：
 
 * reference
-* NuGets（通过包文件夹添加）
+* NuGet 包（通过包文件夹添加）
 
 此外，也可将 Web 引用和本机引用添加到任何项目。
 
@@ -40,7 +40,7 @@ Xamarin 中的每个框架都附带十几个程序集。 项目中不会默认�
 
 NuGet 是 .NET 开发最常用的程序包管理器。 通过 Visual Studio for Mac 的 NuGet 支持，可搜索要添加到项目的包。
 
-为此，请右键单击“包”文件夹，然后选择“添加包”。
+为此，请在解决方案窗口中右键单击“包”文件夹，然后选择“添加包”。
 
 [在项目中包括 NuGet 包](nuget-walkthrough.md)演练中提供了有关使用 NuGet 包的详细信息。
 

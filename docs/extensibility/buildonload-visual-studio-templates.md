@@ -1,6 +1,7 @@
 ---
 title: " (Visual Studio 模板的 BuildOnLoad 属性和元素) "
 titleSuffix: ''
+description: 了解 BuildOnLoad 属性和元素以及它如何指定在创建项目后是否立即生成项目。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -16,12 +17,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5f411f918352391387e5c3b34eafeb209df3118b
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 37df139f890a7717287db675a3a4b7e4b250dbf3
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036855"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671600"
 ---
 # <a name="buildonload-attribute-and-element"></a>BuildOnLoad 特性和元素
 
@@ -49,9 +50,9 @@ ms.locfileid: "90036855"
 
 ## <a name="text-value"></a>文本值
 
-**BuildOnLoad**元素需要文本值。 文本必须是 `true` 或 `false` ，指示在创建项目后是否立即生成该项目。
+**BuildOnLoad** 元素需要文本值。 文本必须是 `true` 或 `false` ，指示在创建项目后是否立即生成该项目。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 **BuildOnLoad** 是一个可选属性。 默认值为 `false`。
 

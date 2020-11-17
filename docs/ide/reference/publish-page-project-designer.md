@@ -1,5 +1,7 @@
 ---
 title: “项目设计器”->“发布”页
+description: “项目设计器”的“发布”页用于为 ClickOnce 部署配置属性。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
 ms.topic: reference
@@ -13,37 +15,37 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6bbb43408dc12c55b72eb0ca0909d8b261198a5b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 13edc1b2e2e235eaf5a475764a98067aa4b0150d
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "68926173"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350278"
 ---
 # <a name="publish-page-project-designer"></a>“项目设计器”->“发布”页
 
 “项目设计器”  上的“发布”  页面用于针对 ClickOnce 部署配置属性。
 
-若要访问“发布”  页面，请在“解决方案资源管理器”  中选择项目节点，再在“项目”  菜单上单击“属性”  。 当 **“项目设计器”** 出现时，单击 **“发布”** 选项卡。
+若要访问“发布”  页面，请在“解决方案资源管理器” 中选择项目节点，再在“项目”  菜单上单击“属性” 。 当 **“项目设计器”** 出现时，单击 **“发布”** 选项卡。
 
 > [!NOTE]
-> 此处介绍的一些 ClickOnce 属性也可以在“发布向导”（可从“生成”菜单或通过单击此页面上的“发布向导”按钮来使用）中进行设置    。
+> 此处介绍的一些 ClickOnce 属性也可以在“发布向导”（可从“生成”菜单或通过单击此页面上的“发布向导”按钮来使用）中进行设置。
 
 ## <a name="uielement-list"></a>UIElement 列表
 
  **发布文件夹所在的位置**
 
-指定发布应用程序的位置。 可为驱动器路径 (`C:\deploy\myapplication`)、文件共享 (`\\server\myapplication`) 或 FTP 服务器 (`ftp://ftp.microsoft.com/myapplication`)。 请注意，“发布位置”  框中必须存在文本才能使浏览（“...”  ）按钮正常工作。
+指定发布应用程序的位置。 可为驱动器路径 (`C:\deploy\myapplication`)、文件共享 (`\\server\myapplication`) 或 FTP 服务器 (`ftp://ftp.microsoft.com/myapplication`)。 请注意，“发布位置”  框中必须存在文本才能使浏览（“...”）按钮正常工作。
 
  **安装文件夹 URL**
 
-可选。 指定用户要用于安装应用程序的网站。 仅当与“发布位置”  不同时（例如，将应用程序发布到暂存服务器时），这才是必需的。
+可选。 指定用户要用于安装应用程序的网站。 仅当与“发布位置” 不同时（例如，将应用程序发布到暂存服务器时），这才是必需的。
 
  **安装模式和设置**
 
 确定应用程序是直接从“发布位置”  运行（选择“该应用程序只能联机使用”  时），还是安装并添加到“开始”  菜单和“控制面板”  中的“添加或删除程序”  项（选择“该应用程序也可以脱机使用”  时）。
 
-对于 WPF Web 浏览器应用，“该应用程序也可以脱机使用”  选项处于禁用状态，因为此类应用程序只能联机使用。
+对于 WPF Web 浏览器应用，“该应用程序也可以脱机使用”选项处于禁用状态，因为此类应用程序只能联机使用。
 
  **应用程序文件**
 
@@ -63,7 +65,7 @@ ms.locfileid: "68926173"
 
  **发布版本**
 
-设置应用程序的发布版本号；版本号更改时，会将应用程序作为更新发布。 发布版本的每个部分（“主版本”  、“次版本”  、“生成号”  、“修订号”  ）的最大值可以是 65355 (<xref:System.UInt16.MaxValue>)，这是 <xref:System.Version>允许的最大值。
+设置应用程序的发布版本号；版本号更改时，会将应用程序作为更新发布。 发布版本的每个部分（“主版本”、“次版本” 、“生成号” 、“修订号” ）的最大值可以是 65355 (<xref:System.UInt16.MaxValue>)，这是 <xref:System.Version>允许的最大值。
 
 当使用 ClickOnce 安装多个版本的应用程序时，安装会将应用程序的早期版本移动到位于你指定的发布位置的名为“Archive”的文件夹中。 按照这种方式对早期版本进行存档，可以使安装目录与早期版本所在的文件夹分开。
 
@@ -77,7 +79,7 @@ ms.locfileid: "68926173"
 
  **立即发布**
 
-使用当前设置发布应用程序。 等效于“发布向导”中的“完成”按钮   。
+使用当前设置发布应用程序。 等效于“发布向导”中的“完成”按钮。
 
 ## <a name="see-also"></a>另请参阅
 
@@ -91,7 +93,7 @@ ms.locfileid: "68926173"
 - [如何：设置 ClickOnce 发布版本](../../deployment/how-to-set-the-clickonce-publish-version.md)
 - [如何：自动递增 ClickOnce 发布版本](../../deployment/how-to-automatically-increment-the-clickonce-publish-version.md)
 - [如何：指定通过 ClickOnce 发布的文件](../../deployment/how-to-specify-which-files-are-published-by-clickonce.md)
-- [如何：与 ClickOnce 应用程序一起安装系统必备组件](../../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)
+- [如何：与 ClickOnce 应用程序一起安装必备组件](../../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)
 - [如何：管理 ClickOnce 应用程序的更新](../../deployment/how-to-manage-updates-for-a-clickonce-application.md)
 - [如何：更改 ClickOnce 应用程序的发布语言](../../deployment/how-to-change-the-publish-language-for-a-clickonce-application.md)
 - [如何：指定 ClickOnce 应用程序的“开始”菜单名称](../../deployment/how-to-specify-a-start-menu-name-for-a-clickonce-application.md)

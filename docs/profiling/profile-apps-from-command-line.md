@@ -14,12 +14,12 @@ manager: jillfra
 monikerRange: '>= vs-2019'
 ms.workload:
 - multiple
-ms.openlocfilehash: 6de4291d08b3a6b6897b3ae41562f70fad5372b1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b0d2b0964c565bab4d3a0731a14b93ccd976bb69
+ms.sourcegitcommit: e132a870ec198fdcec289227f1a0c1c48fef070c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89053424"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93344489"
 ---
 # <a name="measure-application-performance-from-the-command-line"></a>从命令行测量应用程序性能
 
@@ -33,7 +33,7 @@ ms.locfileid: "89053424"
 
 * 熟悉命令行工具
 
-* 若要在未安装 Visual Studio 的远程计算机上收集性能信息，请在此远程计算机上安装[用于 Visual Studio 的性能工具](https://visualstudio.microsoft.com/downloads#remote-tools-for-visual-studio-2019)。 工具版本必须与 Visual Studio 版本匹配。
+* 若要在未安装 Visual Studio 的远程计算机上收集性能信息，请在此远程计算机上安装 [Visual Studio 远程工具](https://visualstudio.microsoft.com/downloads#remote-tools-for-visual-studio-2019)。 工具版本必须与 Visual Studio 版本匹配。
 
 ## <a name="collect-performance-data"></a>收集性能数据
 
