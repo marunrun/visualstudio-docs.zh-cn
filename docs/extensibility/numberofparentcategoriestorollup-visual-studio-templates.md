@@ -1,5 +1,7 @@
 ---
 title: 'NumberOfParentCategoriesToRollUp 元素 (模板) '
+description: 了解 NumberOfParentCategoriesToRollUp 元素以及它如何指定将在 "新建项目" 对话框中显示模板的父类别的数目。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b903b9d0bdab2c17dd2e489de01badad82c15473
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 58c702a70392f4a0330ea51b563570362f51df35
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80702360"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672406"
 ---
 # <a name="numberofparentcategoriestorollup-element-visual-studio-templates"></a> (Visual Studio 模板的 NumberOfParentCategoriesToRollUp 元素) 
 指定将在 " **新建项目** " 对话框中显示模板的父类别的数目。
@@ -55,7 +57,7 @@ ms.locfileid: "80702360"
 
  此值指定将在 " **新建项目** " 对话框中显示模板的父类别的数目。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
  `NumberOfParentCategoriesToRollUp` 是可选元素。
 
 ## <a name="example"></a>示例

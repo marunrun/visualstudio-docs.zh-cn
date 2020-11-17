@@ -1,5 +1,7 @@
 ---
 title: 调试 SharePoint 解决方案 |Microsoft Docs
+description: 使用 Visual Studio 调试器调试 SharePoint 解决方案。 浏览 F5 调试和部署过程、调试工作流和调试功能事件接收器。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d83c8ffd4fe5ebb627b70fa07f010bdc713225dd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c0bd1996f5d42561cb2d44879ab702d6b6c4b4f7
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72984500"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672855"
 ---
 # <a name="debug-sharepoint-solutions"></a>调试 SharePoint 解决方案
   您可以使用调试器调试 SharePoint 解决方案 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 。 开始调试时，将 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 项目文件部署到 sharepoint 服务器，然后在 Web 浏览器中打开 sharepoint 站点的实例。 以下各节说明如何在中调试 SharePoint 应用程序 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 。
@@ -118,9 +120,9 @@ ms.locfileid: "72984500"
 ## <a name="sharepoint-project-features"></a>SharePoint 项目功能
  功能是一种易于使用的模块化功能，它通过使用站点定义简化站点的修改。 它也是 [!INCLUDE[sharepointShort](../sharepoint/includes/sharepointshort-md.md)] 可为特定范围激活的 (WSS) 元素的包，可帮助用户完成特定目标或任务。 模板部署为功能。
 
- 在调试模式下运行项目时，部署过程会在 *%COMMONPROGRAMFILES%\Microsoft Shared\web server extensions\14\TEMPLATE\FEATURES*的*功能*目录中创建一个文件夹。 功能名称的格式为 *项目名称*_Feature*x*，如 TestProject_Feature1。
+ 在调试模式下运行项目时，部署过程会在 *%COMMONPROGRAMFILES%\Microsoft Shared\web server extensions\14\TEMPLATE\FEATURES* 的 *功能* 目录中创建一个文件夹。 功能名称的格式为 *项目名称* _Feature *x*，如 TestProject_Feature1。
 
- 功能目录中的解决方案文件夹包含 *功能定义* 文件和 *工作流定义* 文件。 功能定义文件 ( # A0) 描述项目功能中的文件。项目定义文件 (*Elements.xml*) 介绍项目模板。 *Elements.xml* 可以在 **解决方案资源管理器**中找到，但在创建解决方案包时将生成 Feature.xml。 有关这些文件的详细信息，请参阅 [SharePoint 项目和项目项模板](../sharepoint/sharepoint-project-and-project-item-templates.md)。
+ 功能目录中的解决方案文件夹包含 *功能定义* 文件和 *工作流定义* 文件。 功能定义文件 ( # A0) 描述项目功能中的文件。项目定义文件 (*Elements.xml*) 介绍项目模板。 *Elements.xml* 可以在 **解决方案资源管理器** 中找到，但在创建解决方案包时将生成 Feature.xml。 有关这些文件的详细信息，请参阅 [SharePoint 项目和项目项模板](../sharepoint/sharepoint-project-and-project-item-templates.md)。
 
 ## <a name="debug-workflows"></a>调试工作流
  在调试工作流项目时， [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] (工作流模板) 库的类型或列表添加工作流模板。 然后，您可以手动启动工作流模板，也可以通过添加或更新项来启动。 然后，可以使用 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 调试工作流。
@@ -140,7 +142,7 @@ ms.locfileid: "72984500"
 ## <a name="enable-enhanced-debugging-information"></a>启用增强的调试信息
  由于 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 进程 ( # A0) 之间的复杂交互， [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint 主机进程 (*vssphost4.exe*) 、SharePoint 和 WCF 层，因此，诊断生成、部署等时发生的错误可能是一项挑战。 为了帮助您解决此类错误，您可以启用增强的调试信息。 为此，请在 Windows 注册表中中转到以下注册表项：
 
- **HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\11.0\SharePointTools**
+ **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\11.0\SharePointTools**
 
  如果 "EnableDiagnostics" **REG_DWORD** 值尚不存在，请手动创建。 将 "EnableDiagnostics" 值设置为 "1"。
 

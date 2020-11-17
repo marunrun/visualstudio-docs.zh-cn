@@ -1,5 +1,7 @@
 ---
 title: FeatureProperties 元素 |Microsoft Docs
+description: 查看有关 FeatureProperties 元素的参考信息，该元素是 SharePoint 项目项架构中的一个元素。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6860a91067daa6da1d4223ae5060385087ad3433
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9ee2bddec02263a889fb1f69088a8a50b3d8b57d
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62967326"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672595"
 ---
 # <a name="featureproperties-element"></a>FeatureProperties 元素
   在将功能部署到 SharePoint 时包含的属性值的集合。 部署功能后，可以在代码中访问属性值。
@@ -48,14 +50,14 @@ ms.locfileid: "62967326"
 |-------------|-----------------|
 |[ProjectItem](../sharepoint/projectitem-element.md)|表示 SharePoint 项目项。 此元素是文件必需的根元素 `.spdata` 。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
  有关功能属性的详细信息，请参阅 [在项目项中提供打包和部署信息](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)。
 
 ## <a name="element-information"></a>元素信息
 
 |元素|说明|
 |-------------|-----------------|
-|**Namespace**|http： \/ \/ schemas.microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
+|**命名空间**|http： \/ \/ schemas.microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
 |**架构名称**|SharePoint 项目项架构|
 |**验证文件**|ProjectItemModelSchema|
 |**可以为空**|否|

@@ -1,5 +1,7 @@
 ---
 title: Visual Studio 模板 (的隐藏元素) |Microsoft Docs
+description: 了解隐藏元素以及它如何指定模板是否显示在 "新建项目" 或 "添加新项" 对话框中。
+ms.custom: SEO-VS-2020
 ms.date: 04/17/2019
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9943cefe2b624cede19c05eddd88f155f4aa4c5b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 04cb966f21bbb501545f1a203297d06f8e852793
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711113"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672695"
 ---
 # <a name="hidden-element-visual-studio-templates"></a>Visual Studio 模板 (隐藏元素) 
 
@@ -61,7 +63,7 @@ ms.locfileid: "80711113"
 
 文本必须是 `true` 或 `false` ，指示模板是否将出现在 " **新建项目** " 或 " **添加新项** " 对话框中。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 `Hidden` 是可选元素。
 
@@ -98,5 +100,5 @@ ms.locfileid: "80711113"
 
 ## <a name="see-also"></a>另请参阅
 
-- [模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
+- [模板架构引用](../extensibility/visual-studio-template-schema-reference.md)
 - [创建项目和项模板](../ide/creating-project-and-item-templates.md)

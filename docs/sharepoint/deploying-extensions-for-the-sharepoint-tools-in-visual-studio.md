@@ -1,5 +1,7 @@
 ---
 title: 在 Visual Studio 中部署 SharePoint 工具扩展 |Microsoft Docs
+description: 在 Visual Studio 中部署 SharePoint 工具扩展。 使用 Visual Studio extension (VSIX) 项目创建 VSIX 包。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8178a660f757ae7d7c2758c76d6fd0fc4b22918f
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 9c8b05b5cb74a28157436f95f01992515c716e6a
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584698"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672673"
 ---
 # <a name="deploy-extensions-for-the-sharepoint-tools-in-visual-studio"></a>在 Visual Studio 中部署 SharePoint 工具扩展
 
@@ -130,7 +132,7 @@ ms.locfileid: "91584698"
 
 5. 在 " **项目** " 列表中，选择项目的名称，然后选择 **"确定"** 按钮。
 
-6. 在 **解决方案资源管理器**中，打开项目模板或项模板项目的快捷菜单，然后选择 " **卸载项目**"。
+6. 在 **解决方案资源管理器** 中，打开项目模板或项模板项目的快捷菜单，然后选择 " **卸载项目**"。
 
 7. 再次打开项目节点的快捷菜单，然后选择 " **编辑**_YourTemplateProjectName_**" 或 "** **编辑**_YourTemplateProjectName_**.vbproj**"。
 
@@ -152,7 +154,7 @@ ms.locfileid: "91584698"
 
 10. 保存并关闭该文件。
 
-11. 在 **解决方案资源管理器**中，打开项目模板或项模板项目的快捷菜单，然后选择 " **重新加载项目**"。
+11. 在 **解决方案资源管理器** 中，打开项目模板或项模板项目的快捷菜单，然后选择 " **重新加载项目**"。
 
 #### <a name="to-include-a-template-that-you-create-manually"></a>添加手动创建的模板
 
@@ -170,9 +172,9 @@ ms.locfileid: "91584698"
 
      *YourTemplateName*.zip
 
-     例如，如果你有一个名为 ContosoCustomAction.zip 的项模板，该模板支持英语 (美国) 区域设置，则可能 *ItemTemplates\SharePoint\SharePoint14\1033\ContosoCustomAction.zip*完整路径。
+     例如，如果你有一个名为 ContosoCustomAction.zip 的项模板，该模板支持英语 (美国) 区域设置，则可能 *ItemTemplates\SharePoint\SharePoint14\1033\ContosoCustomAction.zip* 完整路径。
 
-3. 在 **解决方案资源管理器**中，选择 (*YourTemplateName*) 的模板文件。
+3. 在 **解决方案资源管理器** 中，选择 (*YourTemplateName*) 的模板文件。
 
 4. 在 " **属性** " 窗口中，将 " **生成操作** " 属性设置为 " **内容**"。
 

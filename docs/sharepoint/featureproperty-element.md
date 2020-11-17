@@ -1,5 +1,7 @@
 ---
 title: FeatureProperty 元素 |Microsoft Docs
+description: 查看有关 FeatureProperty 元素的参考信息，该元素是 SharePoint 项目项架构中的一个元素。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 61eeea33c6941624ed18a00db482590590a44a8f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8e6010ac45d0b760325c73c4bd754fbb0b422a77
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546518"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672751"
 ---
 # <a name="featureproperty-element"></a>FeatureProperty 元素
   表示在将功能部署到 SharePoint 时包含的自定义属性。 部署功能后，可在代码中访问属性。
@@ -34,7 +36,7 @@ ms.locfileid: "85546518"
 
 ### <a name="attributes"></a>特性
 
-|特性|说明|
+|属性|说明|
 |---------------|-----------------|
 |**Key**|必需的 **xs： string** 特性。<br /><br /> 用于存储和检索属性值的键。 每个属性都必须有一个在该功能中唯一的键。|
 |**值**|必需的 **xs： string** 特性。<br /><br /> 属性值。|
@@ -48,7 +50,7 @@ ms.locfileid: "85546518"
 |-------------|-----------------|
 |[FeatureProperties](../sharepoint/featureproperties-element.md)|表示在将功能部署到 SharePoint 时包含的属性值的集合。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
  有关功能属性的详细信息，请参阅 [在项目项中提供包和部署信息](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)。
 
 ## <a name="element-information"></a>元素信息

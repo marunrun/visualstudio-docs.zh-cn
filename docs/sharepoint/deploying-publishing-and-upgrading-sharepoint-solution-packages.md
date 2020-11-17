@@ -1,5 +1,7 @@
 ---
 title: 部署、发布、& 升级 SharePoint 解决方案包
+description: 部署、发布和升级 SharePoint 解决方案包。 自定义部署过程。 将包发布到远程或本地服务器。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 574712b870256fa7422e64a3c29ae8733f4c2251
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: ab97efc82575c31c8e05b73063c2b53a09691d2d
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91583874"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672660"
 ---
 # <a name="deploy-publish-and-upgrade-sharepoint-solution-packages"></a>部署、发布和升级 SharePoint 解决方案包
   在 Visual Studio 中开发 SharePoint 解决方案后，可以将其包 ( .wsp) 文件部署到本地 SharePoint 服务器，或者将其发布到远程或本地 SharePoint 服务器。 如果部署这些文件，可以自定义包文件 ( 的部署) 的部署方式。

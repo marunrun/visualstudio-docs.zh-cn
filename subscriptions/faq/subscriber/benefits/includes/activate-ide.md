@@ -7,12 +7,12 @@ author: evanwindom
 ms.author: v-evwin
 ms.date: 11/12/2020
 ms.faqid: q3_4
-ms.openlocfilehash: afcfa047e8b6b26f8e5d3648c91d684c13d8a59d
-ms.sourcegitcommit: f915322d60182143da7036893d2941bc200cf439
+ms.openlocfilehash: 7e38e477cbcbe17ce5407ba87cd7f26b35b4d174
+ms.sourcegitcommit: c1cc3d8e1673c52fbfddc86b089b4a3d46bb3e59
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94575551"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94633375"
 ---
 ## <a name="how-do-i-download-find-a-key-and-activate-the-visual-studio-ide"></a>如何下载、查找密钥并激活 Visual Studio IDE？
 订阅级别标识有权访问哪个级别的 Visual Studio IDE。 例如，Visual Studio Professional 订阅无权访问 Visual Studio Enterprise。 如果你不确定使用的是哪个级别，可通过在门户中检查[订阅页面](https://my.visualstudio.com/subscriptions)来查看可使用的订阅。 
@@ -25,4 +25,4 @@ ms.locfileid: "94575551"
 0. 可以使用你的订阅所分配到的电子邮件，在安装后立即登录 IDE，且 **不需要任何产品密钥**。 了解如何在脱机环境中[声明产品密钥](https://docs.microsoft.com/visualstudio/subscriptions/find-keys)。
 
 ### <a name="find-an-older-version"></a>查找旧版本 
-还可以在订阅门户的 [下载页面](https://my.visualstudio.com/Downloads?q=Visual%20Studio%20for%20mac&pgroup=)中搜索和下载以前的版本。
+还可以在订阅门户的 [下载页面](https://my.visualstudio.com/Downloads?q=visual%20studio&pgroup=)中搜索和下载以前的版本。

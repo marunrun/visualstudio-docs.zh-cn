@@ -1,5 +1,7 @@
 ---
 title: " (Visual Studio 模板) 的 DefaultName 元素 |Microsoft Docs"
+description: 了解 DefaultName 元素及其如何指定 Visual Studio 项目系统在创建项目或项时为其生成的名称。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 92bd29824cf1d3b91a7bdaa7220479c583ad0f23
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 23defc424d3e7ed5095f0e29d673c191c755f9ce
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712305"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672725"
 ---
 # <a name="defaultname-element-visual-studio-templates"></a> (Visual Studio 模板的 DefaultName 元素) 
 指定 Visual Studio 项目系统在创建项目或项时为其生成的名称。
@@ -54,7 +56,7 @@ ms.locfileid: "80712305"
 
  此文本指定项目或项的默认名称。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
  `DefaultName` 是可选元素。
 
  对于项目，此元素指定在磁盘上存储项目的目录的名称。 对于项，它指定源文件的文件名。

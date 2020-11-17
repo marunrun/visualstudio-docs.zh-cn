@@ -1,5 +1,7 @@
 ---
 title: 'FullClassName 元素 (VS template wizard extension) '
+description: 了解 FullClassName 元素，以及它是实现 IWizard 接口的类的完全限定名称。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ed9ceb57f49d8c08b75aa140e45a0f4268f4336c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 987a97a34c846f93ef52765375c1512dd8968fb1
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85769610"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672738"
 ---
 # <a name="fullclassname-element-visual-studio-template-wizard-extension"></a> (Visual Studio 模板向导扩展的 FullClassName 元素) 
 实现接口的类的完全限定名称 `IWizard` 。
@@ -52,7 +54,7 @@ ms.locfileid: "85769610"
 
  此文本指定实现接口的类 `IWizard` 。 指定的类必须存在于 [assembly](../extensibility/assembly-element-visual-studio-template-wizard-extension.md) 元素指定的程序集中。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
  `FullClassName` 是 `WizardExtension` 的必需子元素。
 
 ## <a name="example"></a>示例

@@ -1,6 +1,7 @@
 ---
 title: LocationFieldMRUPrefix 元素（Visual Studio 模板）
 titleSuffix: ''
+description: 了解 LocationFieldMRUPrefix 元素以及它如何在 "新建项目" 和 "添加新项" 对话框中指定最近使用的 (MRU) 路径。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -16,12 +17,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: af2c295fa1a69d7815d117a99506a91f08c29aae
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: bd3eca6297430e574435f92d4b58cfbb51be805c
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90034047"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672504"
 ---
 # <a name="locationfieldmruprefix-element-visual-studio-templates"></a> (Visual Studio 模板的 LocationFieldMRUPrefix 元素) 
 
@@ -51,7 +52,7 @@ ms.locfileid: "90034047"
 |-------------|-----------------|
 |[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|将此模板分类并定义此模板在 **“新建项目”** 或 **“添加新项”** 对话框中的显示方式。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
  此元素只应用于通过生成的模板 [!INCLUDE[vsipprvsip](../extensibility/includes/vsipprvsip_md.md)] 。
 
