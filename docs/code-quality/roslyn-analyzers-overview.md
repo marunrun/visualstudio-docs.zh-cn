@@ -1,6 +1,8 @@
 ---
 title: 使用 Roslyn 分析器进行代码分析
 ms.date: 09/01/2020
+description: 熟悉 Visual Studio 中的源代码分析。 了解代码修补程序以及不同类型的分析器和严重性级别。
+ms.custom: SEO-VS-2020
 ms.topic: overview
 helpviewer_keywords:
 - code analysis, managed code
@@ -12,12 +14,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 72e6193d850d351dacc5361d5053fe8f06b2d4bf
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: 237d1188b1a90c64464a15b2df81d507abacb718
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91860495"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349030"
 ---
 # <a name="overview-of-source-code-analysis"></a>源代码分析概述
 
@@ -25,7 +27,7 @@ ms.locfileid: "91860495"
 
 分析器可以分为以下几组：
 
-- [代码样式](/visualstudio/ide/editorconfig-code-style-settings-reference?view=vs-2019&preserve-view=true#convention-categories)分析器内置于 Visual Studio 中。 对于这些分析器，诊断 ID 或代码的格式为 IDExxxx，如 IDE0067。 可以在[文本编辑器选项页](../ide/code-styles-and-code-cleanup.md)上或在 [EditorConfig 文件](/dotnet/fundamentals/code-analysis/code-style-rule-options)中配置首选项。 从 .NET 5.0 开始，代码样式分析器包含在 .NET SDK 中，并且可以作为生成警告或错误严格地强制实施。 有关详细信息，请参阅[此文](/dotnet/fundamentals/productivity/code-analysis#code-style-analysis)。
+- [代码样式](/dotnet/fundamentals/code-analysis/code-style-rule-options?preserve-view=true&view=vs-2019#convention-categories)分析器内置于 Visual Studio 中。 对于这些分析器，诊断 ID 或代码的格式为 IDExxxx，如 IDE0067。 可以在[文本编辑器选项页](../ide/code-styles-and-code-cleanup.md)上或在 [EditorConfig 文件](/dotnet/fundamentals/code-analysis/code-style-rule-options)中配置首选项。 从 .NET 5.0 开始，代码样式分析器包含在 .NET SDK 中，并且可以作为生成警告或错误严格地强制实施。 有关详细信息，请参阅[此文](/dotnet/fundamentals/productivity/code-analysis#code-style-analysis)。
 
 - 现在，[代码质量](/dotnet/fundamentals/code-analysis/quality-rules/index)分析器包含在 .NET 5 SDK 中并且在默认情况下已启用。 对于这些分析器，诊断 ID 或代码的格式为 CAxxxx，如 CA1822。 有关详细信息，请参阅 [.NET 代码质量分析概述](/dotnet/fundamentals/productivity/code-analysis#code-quality-analysis)。
 
@@ -44,7 +46,7 @@ ms.locfileid: "91860495"
 | 无 | `none` | 完全禁止显示。 | 完全禁止显示。 |
 | 默认 | `default` | 对应于规则的默认严重性。 若要确定规则的默认值，请查看“属性”窗口。 | 对应于规则的默认严重性。 |
 
-如果分析器发现规则冲突，将在代码编辑器（违规代码下方有波浪线）和“错误列表”窗口中报告**。
+如果分析器发现规则冲突，将在代码编辑器（违规代码下方有波浪线）和“错误列表”窗口中报告。
 
 ![“错误列表”窗口中的分析器冲突](../code-quality/media/code-analysis-error-list.png)
 
@@ -71,7 +73,7 @@ ms.locfileid: "91860495"
 
 ### <a name="scope"></a>范围
 
-如果将分析器安装为 Visual Studio 扩展，则它们将在解决方案级别应用于 Visual Studio 的所有实例。 如果将分析器安装为 NuGet 包（这是首选方法），它们仅适用于安装了 NuGet 软件包的项目。 在团队环境中，作为 NuGet 包安装的分析器适用于处理该项目的所有开发人员**。
+如果将分析器安装为 Visual Studio 扩展，则它们将在解决方案级别应用于 Visual Studio 的所有实例。 如果将分析器安装为 NuGet 包（这是首选方法），它们仅适用于安装了 NuGet 软件包的项目。 在团队环境中，作为 NuGet 包安装的分析器适用于处理该项目的所有开发人员。
 
 ### <a name="build-errors"></a>生成错误
 

@@ -1,5 +1,7 @@
 ---
 title: “项目设计器”->“签名”页
+description: 使用“项目设计器”的“签名”页对应用程序和部署清单及程序集进行签名。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
 ms.topic: reference
@@ -20,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fee2244792d73924793ae82def1f533b909403c5
-ms.sourcegitcommit: 9e15138a34532b222e80f6b42b1a9de7b2fe0175
+ms.openlocfilehash: 6e76be0482353ffe4740956ab16f24d6ce82f4da
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85418855"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94348510"
 ---
 # <a name="signing-page-project-designer"></a>“项目设计器”->“签名”页
 

@@ -1,5 +1,7 @@
 ---
 title: XSLT 默认模板
+description: 了解在样式表中没有匹配的显式模板规则时，在 XSLT 处理期间使用的 XSLT 默认模板。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 773dd34e-67d3-4997-8df9-b71e7f880d88
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f3a6e6391e3c76a43a94e5cf77c819a2f4b18c6
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 3e8efdc1a35e6129de7e33d28fa7592ead48e17e
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592290"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350122"
 ---
 # <a name="xslt-default-templates"></a>XSLT 默认模板
 

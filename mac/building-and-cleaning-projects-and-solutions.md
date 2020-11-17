@@ -6,12 +6,12 @@ ms.author: dominicn
 ms.date: 09/19/2019
 ms.assetid: E4B6CB42-9FE2-43B9-93B7-BD4BD50518B1
 ms.topic: how-to
-ms.openlocfilehash: a33b590290880a7e20e7c0ec44c0b12942b1240e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: de6be4b509eff8a013f7367614e0016f810b3657
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85939102"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492693"
 ---
 # <a name="building-and-cleaning-projects-and-solutions"></a>生成和清理项目和解决方案
 
@@ -22,25 +22,25 @@ ms.locfileid: "85939102"
 
 ## <a name="to-build-rebuild-or-clean-an-entire-solution"></a>生成、重新生成或清理整个解决方案
 
-1. 在 Solution Pad 中选择“解决方案”节点：
+1. 在“解决方案窗口”中选择“解决方案”节点：
 
     ![选择选择“解决方案”节点](media/compiling-and-building-image1.png)
 
-2. 在菜单栏中选择“生成”菜单，然后选择以下选项之一****：
+2. 在菜单栏中选择“生成”菜单，然后选择以下选项之一：
 
     ![选择“生成所有菜单项”](media/compiling-and-building-image2.png)
 
-    * 选择“全部生成”，编译自最近生成以来更改过的项目中的文件和组件****。
+    * 选择“全部生成”，编译自最近生成以来更改过的项目中的文件和组件。
 
-    * 选择“全部重新生成”清理解决方案，然后创建所有项目文件和组件****。
+    * 选择“全部重新生成”清理解决方案，然后创建所有项目文件和组件。
 
-    * 选择“全部清理”，删除任何中间文件和输出文件****。 仅剩下项目和组件文件后，可生成中间文件和输出文件的新实例。
+    * 选择“全部清理”，删除任何中间文件和输出文件。 仅剩下项目和组件文件后，可生成中间文件和输出文件的新实例。
 
 ## <a name="to-build-or-rebuild-a-single-project"></a>生成或重新生成单个项目
 
-1. 选择 Solution Pad 中的项目。
+1. 在“解决方案窗口”中选择项目。
 
-2. 从菜单栏中选择“生成”菜单****。
+2. 从菜单栏中选择“生成”菜单。
 
 3. 选择“生成[ProjectName]”、“重新生成[ProjectName]”或“清理[ProjectName]”。
 
@@ -52,9 +52,9 @@ ms.locfileid: "85939102"
 
     ![按红色方块停止生成](media/compiling-and-building-image3.png)
 
-* 使用“生成”菜单中的“停止”项********。
+* 使用“生成”菜单中的“停止”项。
 
-* 按 command+shift+return****。
+* 按 command+shift+return。
 
 ## <a name="see-also"></a>请参阅
 

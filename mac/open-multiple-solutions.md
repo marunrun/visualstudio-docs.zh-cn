@@ -3,16 +3,16 @@ title: 如何：打开多个解决方案
 description: 了解如何打开 Visual Studio for Mac 的多个解决方案，以及如何打开应用程序的多个实例。
 author: heiligerdankgesang
 ms.author: dominicn
-ms.date: 04/02/2019
+ms.date: 11/09/2020
 ms.assetid: 592BA4E3-8DEF-4FCD-8BA0-519A4CEEE03E
 ms.custom: video
 ms.topic: how-to
-ms.openlocfilehash: d90a2a92e2902633e5667e71c5692faa8fa161e1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e54f002141379d93a40df69ea070d5a64eba2f7d
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85950056"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493434"
 ---
 # <a name="open-multiple-solutions-or-instances-of-visual-studio-for-mac"></a>打开 Visual Studio for Mac 的多个解决方案或实例
 
@@ -22,7 +22,7 @@ ms.locfileid: "85950056"
 
 ## <a name="open-a-second-instance-of-visual-studio-for-mac"></a>打开 Visual Studio for Mac 的第二个实例
 
-要打开集成开发环境 (IDE) 的第二个实例，请右键单击 dock 或 Applications 文件夹中的 Visual Studio 图标，然后选择“新建实例”********。
+要打开集成开发环境 (IDE) 的第二个实例，请右键单击 dock 或 Applications 文件夹中的 Visual Studio 图标，然后选择“新建实例”。
 
 ![右键单击 Visual Studio 图标时出现的“新建实例”菜单选项的屏幕截图](media/open-new-instance.png)
 
@@ -40,7 +40,7 @@ ms.locfileid: "85950056"
 
     ![已清除“关闭当前工作区”框的“选项”对话框屏幕截图](media/open-multiple-solutions-image1.png)
 
-5. 选择“打开”，在 Solution Pad 中打开第二个解决方案。
+5. 选择“打开”，在解决方案窗口中打开第二个解决方案。
 
 或者，如果最近打开过解决方案，可按照以下步骤操作：
 
@@ -48,7 +48,7 @@ ms.locfileid: "85950056"
 
     ![“最近打开的解决方案”菜单屏幕截图](media/open-multiple-solutions-image2.png)
 
-1. 按住 Ctrl 键并选择解决方案。 此组合操作会在 Solution Pad 中打开第二个解决方案。
+1. 按住 Ctrl 键并选择解决方案。 此组合操作会在解决方案窗口中打开第二个解决方案。
 
 ## <a name="related-video"></a>相关视频
 

@@ -1,5 +1,7 @@
 ---
 title: 示例 XSD 文件：订单架构
+description: 查看在 XSD 架构设计器文档中的各个示例中使用的购买订单架构的示例 XSD 文件。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: sample
 ms.assetid: f92b63b5-ec61-43b5-ae1e-63432a7a7e30
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d841b75b58dc977b5141dce0b8c7275e4a3ced8a
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 3f5a9d8d87af3f7d9e8583a1bc21c008d1a8571f
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "75592563"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93398782"
 ---
 # <a name="sample-xsd-file-purchase-order-schema"></a>示例 XSD 文件：订单架构
 

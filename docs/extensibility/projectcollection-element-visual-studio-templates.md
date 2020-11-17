@@ -1,5 +1,7 @@
 ---
 title: " (Visual Studio 模板) 的 ProjectCollection 元素 |Microsoft Docs"
+description: 了解 ProjectCollection 元素及其如何指定多项目模板的组织和内容。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 12a22ca28c90ed1df69529ed3004b417b5e04276
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2d9da3dbe92bdde8b0c19495e73cdbf2660ef3b4
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80701976"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671228"
 ---
 # <a name="projectcollection-element-visual-studio-templates"></a> (Visual Studio 模板的 ProjectCollection 元素) 
 指定多项目模板的组织和内容。
@@ -55,7 +57,7 @@ ms.locfileid: "80701976"
 |-------------|-----------------|
 |[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)|必需的元素。<br /><br /> 指定模板的内容。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
  多项目模板用作两个或多个项目的容器。 `ProjectCollection`元素用于指定要包含在模板中的项目。 有关多项目模板的详细信息，请参阅 [如何：创建多项目模板](../ide/how-to-create-multi-project-templates.md)。
 
 ## <a name="example"></a>示例

@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: f8b7dc9a388699cc9e323085769d17a00ba4fa6a
-ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
+ms.openlocfilehash: 52eee3535590842db53cd80ac761286fb4a23fa9
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92467630"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93398990"
 ---
 # <a name="install-and-use-visual-studio-and-azure-services-behind-a-firewall-or-proxy-server"></a>在防火墙或代理服务器后面安装和使用 Visual Studio 和 Azure 服务
 
@@ -81,6 +81,7 @@ ms.locfileid: "92467630"
 | developer.apple.com | Xamarin.iOS provisioning |
 | appstoreconnect.apple.com | Xamarin.iOS provisioning |
 | idmsa.apple.com | Xamarin.iOS provisioning |
+| akamized.net | 内容交付网络 (Akamai Technologies) |
 | | |
 
 ## <a name="use-visual-studio-and-azure-services"></a>使用 Visual Studio 和 Azure 服务

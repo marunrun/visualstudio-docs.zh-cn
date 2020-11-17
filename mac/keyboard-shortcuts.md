@@ -5,18 +5,18 @@ ms.date: 03/14/2019
 author: heiligerdankgesang
 ms.author: dominicn
 ms.assetid: 48E06A61-7294-4EC8-A09D-1763C32AD910
-ms.openlocfilehash: 989c47e3c192c936eec0828b96a800d5ed4feaa4
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.openlocfilehash: 3a4b2a56e5ac6ed29289c3946a65fc57b54eaa21
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88247374"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493200"
 ---
 # <a name="default-keyboard-shortcuts-in-visual-studio-for-mac"></a>Visual Studio for Mac 中的默认键盘快捷键
 
 有关键盘辅助功能的信息，请参阅[如何：使用键盘导航](~/accessibility-keyboard.md)。
 
-可以通过使用相应的键盘快捷键来访问 Visual Studio for Mac 中的各种命令。 本文档列出了 Visual Studio for Mac 键绑定方案的默认快捷键****。 有关如何更改键绑定方案的详细信息，请参阅[自定义 IDE](~/customizing-the-ide.md#key-bindings)。 另外，还可以使用 Visual Studio for Mac > “首选项”菜单项并选择“首选项”窗口中的“环境” > “键绑定”来自定义命令的快捷键。
+可以通过使用相应的键盘快捷键来访问 Visual Studio for Mac 中的各种命令。 本文档列出了 Visual Studio for Mac 键绑定方案的默认快捷键。 有关如何更改键绑定方案的详细信息，请参阅[自定义 IDE](~/customizing-the-ide.md#key-bindings)。 另外，还可以使用 Visual Studio for Mac > “首选项”菜单项并选择“首选项”窗口中的“环境” > “键绑定”来自定义命令的快捷键。
 
 > [!TIP]
 > 使用 macOS 中常用的符号将显示本文档中显示的键盘快捷键和 Visual Studio for Mac 中的键绑定首选项。 如果你不确定符号，请查看 [macOS 键符号查找表](#macos-key-symbols-lookup)。
@@ -48,8 +48,8 @@ ms.locfileid: "88247374"
 |移除所有断点|**⇧⌘F9**|
 |运行到光标处|**⌘F10**|
 |设置下一语句|**⇧⌘F10**|
-|显示下一语句|**⌥\***|
-|逐语句|**⇧⌘I**、**⌘F11**|
+|显示下一语句|⌥* *\** _|
+|逐语句|⇧⌘I_***、⌘F11|
 |步出|**⇧⌘U**、**⇧⌘F11**|
 |逐过程|**⇧⌘O**、**F10**|
 |切换断点|**⌘\\**、**F9**|
@@ -254,9 +254,9 @@ ms.locfileid: "88247374"
 |下一个文档|**⌘}** 、**⌘F6**|
 |上一个文档|**⌘{**、**⇧⌘F6**|
 |切换到下一个文档|**⌃⇥**|
-|切换到下一个窗口|**⌃⌥⇥**|
+|切换到下一个工具窗口|**⌃⌥⇥**|
 |切换到上一个文档|**⌃⇧⇥**|
-|切换到上一个窗口|**⌃⌥⇧⇥**|
+|切换到上一个工具窗口|**⌃⌥⇧⇥**|
 
 ## <a name="macos-key-symbols-lookup"></a>macOS 键符号查找
 

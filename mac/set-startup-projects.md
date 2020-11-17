@@ -1,18 +1,18 @@
 ---
 title: 设置多个启动项目
 description: 本文介绍如何设置多个要在运行或调试时启动的项目。
-author: sayedihashimi
-ms.author: sayedha
-ms.date: 12/13/2019
+author: jmatthiesen
+ms.author: jomatthi
+ms.date: 11/09/2020
 ms.topic: how-to
 ms.prod: visual-studio-mac
 ms.assetid: fd354fff-ce6b-4505-a815-84a2311e39ba
-ms.openlocfilehash: e0e1af97ec91af4105d1934a431f9aabc6562793
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: df1e088a5e2d0f65d8b72dad0895f1edb1740f1f
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85950103"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493564"
 ---
 # <a name="set-multiple-startup-projects"></a>设置多个启动项目
 
@@ -20,7 +20,7 @@ ms.locfileid: "85950103"
 
 ## <a name="to-set-multiple-startup-projects"></a>设置多个启动项目
 
-1. 在“Solution Pad”中，选择解决方案（最高层节点）。
+1. 在解决方案窗口中，选择解决方案（最高层节点）。
 
 2. 右键单击解决方案节点，然后选择“设置启动项目”：
 
@@ -42,7 +42,7 @@ ms.locfileid: "85950103"
 
    ![将带有多个项目的解决方案配置为在调试或运行时启动](media/startup-project-configured.png)
 
-   可以看到两个项目配置为启动，因为两个项目在 Solution Pad 中都是粗体****。 在工具栏中，将新的运行配置设置为当前的“解决方案运行配置”。
+   现在两个项目已配置为启动，这通过两个项目在解决方案窗口中显示为粗体来表示。 在工具栏中，将新的运行配置设置为当前的“解决方案运行配置”。
 
 ## <a name="next-steps"></a>后续步骤
 

@@ -1,5 +1,7 @@
 ---
 title: 演练：使用 XML 编辑器功能
+description: 通过执行演示 XML 编辑器功能的本演练中的步骤，了解如何创建新 XML 文档。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: ea8dc357-2e66-455a-aec2-7ccaccfc9adf
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1cebf6f7621fb5fada37b8e4592efd429bdc85e6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f8aa7daef6e427b7355eb7676db0728a4af4ca42
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817393"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351474"
 ---
 # <a name="walkthrough-use-xml-editor-features"></a>演练：使用 XML 编辑器功能
 

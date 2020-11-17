@@ -1,5 +1,7 @@
 ---
 title: 如何：从 XML 架构生成 XML 代码段
+description: 了解如何使用 XML 编辑器从 XML 架构定义语言 (XSD) 架构生成 XML 代码段。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 2c128d2a-aaa6-4814-aa95-e07056afe338
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c7dff8e1bb211343ccc44e0d1fd33d96c102283
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ce87f71a465f9c6452fa713fd8a7bdf523e801a3
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817172"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93399464"
 ---
 # <a name="how-to-generate-an-xml-snippet-from-an-xml-schema"></a>如何：从 XML 架构生成 XML 代码段
 
@@ -76,9 +78,9 @@ XML 编辑器可以从 XML 架构定义语言 (XSD) 架构生成 XML 代码段�
 
 2. 成员列表中显示可能的项：
 
-     **!--** 用于添加注释。
+     !-- 用于添加注释。
 
-     **!DOCTYPE** 用于添加文档类型。
+     !DOCTYPE 用于添加文档类型。
 
      **?** 用于添加处理指令。
 

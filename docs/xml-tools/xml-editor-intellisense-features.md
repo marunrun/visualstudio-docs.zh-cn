@@ -1,5 +1,7 @@
 ---
 title: XML 编辑器 IntelliSense 功能
+description: 了解 Visual Studio 中 XML 编辑器的 IntelliSense 功能，以及如何将它们与 XML 架构定义语言 (XSD) 和 XSLT 文档一起使用。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 2b26f214-cc3a-46bf-b260-14eb8e599182
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 609684452190bf7471f90fee75f66dbb2fcbec8e
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: dc79d40c2cb363b79c2064bd71fb23dece04e143
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592381"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350239"
 ---
 # <a name="xml-editor-intellisense-features"></a>XML 编辑器 IntelliSense 功能
 
@@ -91,9 +93,9 @@ ms.locfileid: "75592381"
 
 “XML 编辑器”对下列项执行此操作：
 
-- 匹配的开始标记和结束标记。
+- 匹配的开始和结束标记。
 
-- 任何“\<”或“>”尖括号对。
+- 任何“\<" or ">”尖括号对。
 
 - 注释的开始和结束。
 

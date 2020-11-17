@@ -1,5 +1,7 @@
 ---
 title: XML 架构设计器与 XML 编辑器集成
+description: 了解 XML 架构设计器和 XML 编辑器之间的集成，以及如何使其中一个工具中进行的更改在另一个工具中反映。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 43d7a8e6-bd94-4407-a800-15a145c74223
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 23a9220d84e2fb1a15545d1a880b0084952da77f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 9569e33f8f9f861bc5d89030c6fe38b0ab853a6f
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592576"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400182"
 ---
 # <a name="integration-with-xml-editor"></a>与 XML 编辑器集成
 
@@ -25,11 +27,11 @@ XML 架构设计器与 XML 编辑器集成。 如果在 XML 编辑器中修改 X
 
 以下屏幕快照显示了在 XML 架构资源管理器中打开的 XML 架构。 XML 架构资源管理器在树视图中显示架构集。 XML 编辑器显示当前在 XML 架构资源管理器中处于活动状态的节点的文本视图。
 
-![XSDDesignerWithXMLEditor](../xml-tools/media/xsddesignerwithxmleditor.gif)
+![Visual Studio 项目的屏幕截图，显示在“XML 编辑器”窗格中的一个 XML 节点，以及“XML 架构资源管理器”窗格中架构集的树视图。](../xml-tools/media/xsddesignerwithxmleditor.gif)
 
 有时，在 XML 编辑器中和在图形设计器中并行查看代码是很有帮助的。 若要同时查看两个文件，请在 XML 编辑器中的任意位置单击右键并选择“视图设计器”。 在“Visual Studio 窗口”菜单中，选择“新建水平(或垂直)选项卡组”。
 
-![XSDDesignerWithXMLEditorAndCMV](../xml-tools/media/xsddesignerwithxmleditorandcmv.gif)
+![Visual Studio 项目的屏幕截图，显示“视图设计器”窗格、“XML 编辑器”窗格和“XML 架构资源管理器”窗格。](../xml-tools/media/xsddesignerwithxmleditorandcmv.gif)
 
 ## <a name="see-also"></a>请参阅
 

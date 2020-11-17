@@ -1,5 +1,6 @@
 ---
 title: 发布到 Azure 应用服务
+description: 如何使用 Visual Studio for Mac 中的发布工具发布 Web 应用程序。
 ms.date: 04/02/2019
 helpviewer_keywords:
 - deployment, website
@@ -12,12 +13,12 @@ ms.custom: video
 ms.topic: how-to
 ms.workload:
 - azure
-ms.openlocfilehash: 81ae8c8dde91655a4b9b3b8dcb4d0033af34e4d5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 054c5e7871daca0d349064f261e949dec7f738a5
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85950510"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493421"
 ---
 # <a name="publish-a-web-app-to-azure-app-service-using-visual-studio-for-mac"></a>使用 Visual Studio for Mac 将 Web 应用发布到 Azure 应用服务
 
@@ -31,7 +32,7 @@ ms.locfileid: "85950510"
 
 ## <a name="publish-to-azure-app-service"></a>发布到 Azure 应用服务
 
- 1. 在 Solution Pad 中，右键单击项目，选择“发布”。
+ 1. 在解决方案窗口中，右键单击项目，选择“发布”。
 
     ![“发布”上下文菜单](media/publish-context-menu.png)
 

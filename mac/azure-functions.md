@@ -1,18 +1,18 @@
 ---
 title: Azure Functions 简介
-description: 在 Visual Studio for Mac 中使用 Azure Functions。
+description: Visual Studio for Mac 中的 Azure Functions 入门。
 author: jmatthiesen
 ms.author: jomatthi
 ms.date: 04/02/2019
 ms.technology: vs-ide-install
 ms.assetid: 25CD47A4-5B32-4734-8EF3-E24A02AABF29
 ms.topic: how-to
-ms.openlocfilehash: 586d03e88ba3a2523dde00a6826980830ad54fbc
-ms.sourcegitcommit: 703c68667261df5985a73282c1cbb0541118989c
+ms.openlocfilehash: 69ecab4f4d3dd7d99821b384dbda0c8986297282
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89402312"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492836"
 ---
 # <a name="introduction-to-azure-functions"></a>Azure Functions 简介
 
@@ -95,10 +95,10 @@ Visual Studio for Mac 使用包含的默认函数创建 .NET Standard 项目。 
 
 ## <a name="publish-to-azure"></a>发布到 Azure
 
-1. 右键单击项目名，然后选择“发布”>“发布到 Azure”：![发布到 Azure 菜单选项](media/azure-functions-image5.png)
+1. 右键单击项目名，然后选择“发布”>“发布到 Azure”：![上下文菜单，其中突出显示“发布”>“发布到 Azure...”选项](media/azure-functions-image5.png)
 2. 如果已将 Azure 帐户连接到 Visual Studio for Mac，则会显示可用应用服务的列表。 如果尚未登录，系统将提示登录。
 3. 从“发布到 Azure 应用服务”对话框，可选择现有应用服务，也可通过单击“新建”来创建新服务 。
-4. 在“创建新的应用服务”对话框中，输入设置：![发布到 Azure 菜单选项](media/azure-functions-image7.png)
+4. 在“创建新的应用服务”对话框中，输入设置：![“新建应用服务”对话框，其中包含用于服务名称、订阅、资源组和服务计划设置的字段。](media/azure-functions-image7.png)
 
     |设置  |描述  |
     |---------|---------|
@@ -109,13 +109,13 @@ Visual Studio for Mac 使用包含的默认函数创建 .NET Standard 项目。 
 
 5. 单击“下一步”创建存储帐户。 Functions 运行时需要 Azure 存储帐户。 单击“自定义”以创建通用存储帐户，或使用现有帐户：
 
-    ![发布到 Azure 菜单选项](media/azure-functions-image8.png)
+    ![“新建应用服务”对话框，其中提示输入存储帐户名称。](media/azure-functions-image8.png)
 
 6. 单击“创建”以使用这些设置在 Azure 中创建函数应用和相关资源，并部署函数项目代码。
 
 7. 在发布期间，系统可能会提示“在 Azure 上更新 Functions 版本”。 单击“是”：
 
-    ![发布到 Azure 菜单选项](media/azure-functions-image12.png)
+    ![询问“更新 Azure 应用程序设置以匹配本地 Functions 版本?”的提示， 具有“是”和“否”选项。](media/azure-functions-image12.png)
 
 ## <a name="function-app-settings"></a>函数应用设置
 

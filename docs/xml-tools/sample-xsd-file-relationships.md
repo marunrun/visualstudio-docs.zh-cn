@@ -1,5 +1,7 @@
 ---
 title: 示例 XSD 文件：关系
+description: 查看在 XSD 架构设计器文档中的各个示例中使用的购买订单架构的示例 XSD 文件（带有注释和文档）。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: sample
 ms.assetid: 60126510-b7dd-4cb4-92d3-9883590b92f2
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5a52d152a78ee585cc2724d8504feff1e72558cf
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 6dd4e4f3678cd59562f5945ab26f8d828210375c
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "75592550"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93398743"
 ---
 # <a name="sample-xsd-file-relationships"></a>示例 XSD 文件：关系
 

@@ -1,5 +1,7 @@
 ---
 title: 部署到本地文件夹
+description: 了解如何使用“发布”工具将 ASP.NET、ASP.NET Core、.NET Core 和 Python 应用从 Visual Studio 发布到文件夹。
+ms.custom: SEO-VS-2020
 ms.date: 01/29/2019
 ms.topic: quickstart
 helpviewer_keywords:
@@ -10,21 +12,29 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 800059dc8d5a3e6ccfb72c588fbb61423a338cba
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: a96ea0fe4b4bbbebfc29cde7258273ea4f4b21e2
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036387"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437680"
 ---
 # <a name="deploy-an-app-to-a-folder-using-visual-studio"></a>使用 Visual Studio 将应用部署到文件夹
 
 可以使用“发布”工具将 ASP.NET、ASP.NET Core、.NET Core 和 Python 应用从 Visual Studio 发布到文件夹。 对于 Node.js，支持这些步骤但用户界面不同。
 
 [!INCLUDE [quickstart-prereqs](includes/quickstart-prereqs.md)]
-
+::: moniker range=">=vs-2017"
 > [!NOTE]
 > 如果需要将 Windows 桌面应用程序发布到文件夹，请参阅[使用 ClickOnce 部署桌面应用](how-to-publish-a-clickonce-application-using-the-publish-wizard.md)（C# 或 Visual Basic）。 对于 C++/CLR，请参阅[使用 ClickOnce 部署本机应用](/cpp/windows/clickonce-deployment-for-visual-cpp-applications)，或者对于 C/C++，请参阅[使用安装项目部署本机应用](/cpp/windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project)。
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+> [!NOTE]
+> 如果你需要将 .NET Core 3.1 或更高版本的 Windows 桌面应用程序发布到文件夹，请参阅[使用 ClickOnce 部署 .NET Windows 应用程序](quickstart-deploy-using-clickonce-folder.md)。
+
+::: moniker-end
 
 ## <a name="deploy-to-a-local-folder"></a>部署到本地文件夹
 
@@ -38,7 +48,17 @@ ms.locfileid: "90036387"
 
     ![选择文件夹作为发布目标](../deployment/media/quickstart-publish-folder-new.png "选择文件夹")
 
-1. 输入路径，或选择“浏览”以指定文件夹。
+::: moniker range=">=vs-2019"
+
+4. 如果要部署 .NET Core 3.1 或更高版本的 Windows 应用程序，则可能需要在“特定目标”窗口中选择“文件夹” 。
+
+![选择文件夹作为特定目标](../deployment/media/quickstart-publish-folder-targets.png "选择特定目标")
+
+5. 如果你希望使用 ClickOnce 发布 .NET Core 3.1 或更高版本的 Windows 应用程序，请参阅[使用 ClickOnce 部署 .NET Windows 应用程序](quickstart-deploy-using-clickonce-folder.md)。
+
+ ::: moniker-end
+
+4. 输入路径，或选择“浏览”以指定文件夹。
 
     ![指定文件夹的路径](../deployment/media/quickstart-publish-folder-path.png "选择文件夹")
 
@@ -71,3 +91,6 @@ ms.locfileid: "90036387"
 - [使用发布工具部署 .NET Core 应用程序](/dotnet/core/deploying/deploy-with-vs)
 - [.NET Core 应用程序发布（依赖于框架的部署与自包含部署）](/dotnet/core/deploying/)
 - [部署 .NET Framework 和应用程序](/dotnet/framework/deployment/)
+::: moniker range=">=vs-2019"
+- [使用 ClickOnce 部署 .NET Windows 应用程序](quickstart-deploy-using-clickonce-folder.md)。
+ ::: moniker-end

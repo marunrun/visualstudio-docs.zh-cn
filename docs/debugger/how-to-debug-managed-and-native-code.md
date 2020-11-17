@@ -15,12 +15,12 @@ manager: jillfra
 ms.workload:
 - dotnet
 - cplusplus
-ms.openlocfilehash: 9f3fd94f8c294dce81bc69011e7d6f5fdd505325
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 0b51a41a2b2df5ac685caebbf08606ae86b4230a
+ms.sourcegitcommit: e132a870ec198fdcec289227f1a0c1c48fef070c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84182633"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93344522"
 ---
 # <a name="tutorial-debug-c-and-c-in-the-same-debugging-session"></a>教程：在同一个调试会话中调试 C# 和 C++
 
@@ -44,7 +44,7 @@ Visual Studio 允许你在调试会话中启用多个调试器类型，这名为
 - 使用 C++ 的桌面开发
 - .NET 桌面开发或 .NET Core 跨平台开发，具体取决于你想要创建哪种应用类型。
 
-如果未安装 Visual Studio，请转到  [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/) 页面，进行免费安装。
+如果未安装 Visual Studio，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/)页面，进行免费安装。
 
 如果已安装 Visual Studio，但没有所需工作负荷，请选择 Visual Studio“新建项目”对话框左窗格中的“打开 Visual Studio 安装程序” 。 在 Visual Studio 安装程序中，选择所需工作负荷，然后选择“修改”。
 
@@ -177,41 +177,11 @@ Visual Studio 允许你在调试会话中启用多个调试器类型，这名为
 
 ## <a name="configure-mixed-mode-debugging"></a>配置混合模式调试
 
-### <a name="to-configure-mixed-mode-debugging-for-a-net-framework-app"></a>为 .NET Framework 应用配置混合模式调试
-
 1. 在“解决方案资源管理器”中，选择“Mixed_Mode_Calling_App”项目节点并选择“属性”图标，或右键单击项目节点并选择“属性”   。
 
 1. 选择左窗格中的“调试”，再选中“启用本机代码调试”复选框，然后关闭属性页以保存更改 。
 
     ![启用混合模式调试](../debugger/media/mixed-mode-enable-native-code-debugging.png)
-
-### <a name="to-configure-mixed-mode-debugging-for-a-net-core-app"></a>为 .NET Core 应用配置混合模式调试
-
-从 Visual Studio 2017 开始，在 Visual Studio 的大多数版本中，必须使用 launchSettings.json 文件（而非项目属性）在 .NET Core 应用中为本机代码启用混合模式调试。 要跟踪本功能的 UI 更新，请查看 [GitHub 问题](https://github.com/dotnet/project-system/issues/1125)。
-
-1. 在“解决方案资源管理器”中展开“属性”，然后打开 launchSettings.json 文件 。
-
-   >[!NOTE]
-   >默认情况下，launchSettings.json 位于 C:\Users\username\source\repos\Mixed_Mode_Calling_App\Properties 。 如果 launchSettings.json 不存在，请在“解决方案资源管理器”中选择“Mixed_Mode_Calling_App”项目，然后选择“属性”图标，或右键点击该项目并选择“属性”   。 在“调试”选项卡进行临时更改并生成项目。 将创建 launchSettings.json 文件。 还原“调试”选项卡中所作更改。
-
-1. 在 launchsettings.json 文件中添加下列行：
-
-    ```csharp
-    "nativeDebugging": true
-    ```
-
-    完整文件将类似于下例：
-
-    ```csharp
-    {
-      "profiles": {
-        "Mixed_Mode_Calling_App": {
-          "commandName": "Project",
-          "nativeDebugging": true
-        }
-      }
-    }
-    ```
 
 ## <a name="set-a-breakpoint-and-start-debugging"></a>设置断点并开始调试
 

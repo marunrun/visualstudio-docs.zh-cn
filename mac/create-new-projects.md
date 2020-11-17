@@ -3,14 +3,14 @@ title: 创建新项目和解决方案
 description: 本文介绍如何在 Visual Studio for Mac 中创建项目和解决方案
 author: heiligerdankgesang
 ms.author: dominicn
-ms.date: 05/23/2019
+ms.date: 11/06/2020
 ms.assetid: 5880BB10-0A12-47E2-8A82-7A2D59C4D579
-ms.openlocfilehash: fa77993892c79cf29d268aa942b8c77ccb7a2139
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 7ee9b23f9ede12a353f6c6fdc0f578d7f78a772c
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183947"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493289"
 ---
 # <a name="create-a-new-project"></a>创建新项目
 
@@ -45,7 +45,7 @@ ms.locfileid: "84183947"
 
 ## <a name="adding-additional-projects-to-a-solution"></a>向解决方案添加其他项目
 
-可通过右键单击 Solution Pad 中的解决方案并依次选择“添加”、“添加新项目”，或者依次选择“添加”、“添加现有项目”，向解决方案添加其他项目 。
+可通过右键单击解决方案窗口中的解决方案并依次选择“添加”、“添加新项目”，或者依次选择“添加”、“添加现有项目”，向解决方案添加其他项目  。
 
 添加新项目将引导你完成项目创建步骤，如[配置新项目](#configuring-your-new-project)中所示。
 

@@ -3,15 +3,15 @@ title: 使用 Git
 description: 使用 Visual Studio for Mac 中的 Git。
 author: jmatthiesen
 ms.author: jomatthi
-ms.date: 05/06/2018
+ms.date: 11/09/2020
 ms.assetid: 852B6A9D-AEFA-4EF4-A5DD-94A506019D20
 ms.custom: video
-ms.openlocfilehash: 767c08505877391d71ca085097a0464d516f4f24
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 148a72fb13ff34e3fa15f0c56e145a70fa16608d
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "70108029"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493226"
 ---
 # <a name="working-with-git"></a>使用 Git
 
@@ -77,9 +77,9 @@ Git 是分布式版本控制系统，使团队可以同时在同一文档上工�
 
 还可为“跟踪”  分支设置一个远程分支。 请参阅 [Git 文档](https://git-scm.com/book/en/v2/Git-Branching-Remote-Branches#Tracking-Branches)了解更多关于跟踪分支的详细信息。
 
-在 Solution Pad 中查看当前分支（在项目名称旁）：
+在解决方案窗口中查看当前分支（在项目名称旁）：
 
- ![Solution Pad 中显示的当前分支](media/version-control-gitBranchName.png)
+ ![解决方案窗口中显示的当前分支](media/version-control-gitBranchName.png)
 
 ## <a name="reviewing-and-committing"></a>评审并提交
 

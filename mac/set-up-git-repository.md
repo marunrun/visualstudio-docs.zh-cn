@@ -1,17 +1,17 @@
 ---
 title: 设置 Git 存储库
-description: 使用 Visual Studio for Mac 中的 Git 和 Subversion。
+description: 使用 Visual Studio for Mac 连接到 Git 存储库。
 author: therealjohn
 ms.author: johmil
-ms.date: 05/13/2020
+ms.date: 11/09/2020
 ms.assetid: E992FA1D-B2AD-4A28-ADC6-47E4FC471060
 ms.topic: how-to
-ms.openlocfilehash: bc981530f5493ce1899de1c888e20129c7ae0f8c
-ms.sourcegitcommit: 2946d802aec1418e87bfa779d81834eeb7be5c9d
+ms.openlocfilehash: 862f073d3c6d535d612a67f215aee740cea175bd
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88214692"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493122"
 ---
 # <a name="set-up-a-git-repository"></a>设置 Git 存储库
 
@@ -43,9 +43,9 @@ Git 是分布式版本控制系统，使团队可以同时在同一文档上工�
 
 ## <a name="publishing-an-existing-project"></a>发布现有项目
 
-如果现有的一个项目_不_在版本控制中，请使用以下步骤在 Git 中设置该项目：
+如果现有的一个项目 _不_ 在版本控制中，请使用以下步骤在 Git 中设置该项目：
 
-1. 从 Visual Studio for Mac 的 Solution Pad 中选择解决方案名称。
+1. 从 Visual Studio for Mac 的解决方案窗口中选择解决方案名称。
 
 2. 在菜单栏中，选择“版本控制”>“在版本控制中发布”以显示“克隆存储库”对话框 ：
 
@@ -159,7 +159,7 @@ Visual Studio for Mac 现在将更改推送到远程 GitHub 存储库中：
 1. 若有 **gitignore** 文件，请删除它。
 1. 按 Command+Shift+.  以隐藏文件和文件夹。
 1. 在 VS for Mac 中打开解决方案。
-1. 在 Solution Pad 上选择解决方案节点。
+1. 在解决方案窗口上选择解决方案节点。
 1. 浏览到“版本控制”菜单，并选择“在版本控制中发布”。
 1. 执行上述教程中的步骤 6 及之后的步骤。
 

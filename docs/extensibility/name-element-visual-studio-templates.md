@@ -1,5 +1,7 @@
 ---
 title: Visual Studio 模板)  (名称元素 |Microsoft Docs
+description: 了解 Name 元素以及它如何指定模板在 "新建项目" 或 "添加新项" 对话框中显示的名称。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b2a02dc377bac5f93f8e0365f6f3d9ccb81737a8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2aa14005a202b7868f61cd41ffb6ac9e2f872b68
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80702461"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671176"
 ---
 # <a name="name-element-visual-studio-templates"></a>Visual Studio 模板 (名称元素) 
 指定模板在 " **新建项目** " 或 " **添加新项** " 对话框中显示的名称。
@@ -41,7 +43,7 @@ ms.locfileid: "80702461"
 
 ### <a name="attributes"></a>特性
 
-|特性|说明|
+|属性|说明|
 |---------------|-----------------|
 |`Package`|可选属性，适用于高级用户方案。<br /><br /> 指定 Visual Studio 包 ID 的 GUID。|
 |`ID`|可选属性，适用于高级用户方案。<br /><br /> 指定 Visual Studio 资源 ID。|
@@ -60,7 +62,7 @@ ms.locfileid: "80702461"
 
  该文本提供模板的名称。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
  `Name` 是 `TemplateData` 的必需子元素。
 
 ## <a name="example"></a>示例

@@ -1,5 +1,7 @@
 ---
 title: XML 代码片断
+description: 了解 XML 编辑器中的 XML 代码段功能，该功能使你可以通过反复使用 XML 代码段并将它们插入到文件中来更快地生成 XML 文件。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 348dbf64-3f09-4fff-b47a-a7ecdf3221cc
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a2f2bcdd0c28d7b4b99c92d3346b32ed34aa92a0
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: e9114d50abd8f12e19f67d593927b94afcb010f6
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592316"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350187"
 ---
 # <a name="xml-snippets"></a>XML 代码片断
 

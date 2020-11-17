@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 2e0fd8bb-8f20-487c-b350-b8fde405ea5e
-ms.date: 10/28/2020
+ms.date: 11/05/2020
 ms.topic: how-to
 description: 了解如何激活 Visual Studio 订阅中包含的技术支持权益。
-ms.openlocfilehash: 30b47646c26e5bc9fbf9045e2acf59a670aa5e9d
-ms.sourcegitcommit: ae9145b32fc8e1e663e504c315a5df5dd302fee9
+ms.openlocfilehash: 9ae88bcc066473752a600284d815378bc8870f64
+ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92918118"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93413955"
 ---
 # <a name="activate-and-use-the-technical-support-benefit-in-visual-studio-subscriptions"></a>激活并使用 Visual Studio 订阅中的技术支持权益
 Visual Studio 订阅中的技术支持权益用于解决仍处于[支持生命周期](https://support.microsoft.com/lifecycle/search)的主流支持阶段产品的“非生产环境”中的中断修复问题。 Visual Studio Enterprise 标准版和年度云订阅接收四个事件，但 Visual Studio Professional 标准版和年度云订阅接收两个事件，从权益激活开始最多一年。 权益激活必须在订阅为最新状态时进行。
@@ -44,7 +44,7 @@ Visual Studio 订阅中的技术支持权益用于解决仍处于[支持生命�
 ## <a name="how-to-activate-the-benefit"></a>如何激活权益
 1. 请转到 <https://my.visualstudio.com/Benefits>，向下滚动到“支持”部分，在“技术支持”磁贴上单击“聊天激活”。
     > [!div class="mx-imgBorder"]
-    > ![技术支持权益磁贴](_img/vs-tech-support/vs-tech-support-tile.png)
+    > ![技术支持权益磁贴](_img/vs-tech-support/vs-tech-support-tile.png "单击“技术支持”磁贴上的“聊天进行激活”。")
 2. 此操作将启动与可以创建“合同ID”和“访问ID”的代表的聊天会话，并通过电子邮件将这些内容提供给你，以便将其用于记录 。
 
 3. 若要完成该进程，需向代表提供：
@@ -52,70 +52,56 @@ Visual Studio 订阅中的技术支持权益用于解决仍处于[支持生命�
    - 公司名称
    - 全名
    - 用于登录到订阅的电子邮件地址
-   - 电话号码
    - 订阅 ID，可在[订阅](https://my.visualstudio.com/subscriptions)选项卡中找到。
 
    > [!div class="mx-imgBorder"]
-   > ![技术支持权益查找订阅 ID](_img/vs-tech-support/vs-tech-support-subID-cropped.png)
+   > ![技术支持权益查找订阅 ID](_img/vs-tech-support/vs-tech-support-subID-cropped.png "在“订阅”选项卡上找到订阅 ID。")
 
 4. 完成此过程后，你将收到一封电子邮件，其中包含在创建支持事件时将使用的“合同 ID”和“访问 ID” 。  它还将提供使用新的访问 ID 和合同 ID 提交支持事件的说明。 
 
-> [!NOTE]
-> 若要激活非英语的支持帐户，请从[此列表](https://support.microsoft.com/help/14084/activate-support-contract)选择你所在的国家/地区。
+   > [!NOTE]
+   > 若要激活非英语的支持帐户，请从[此列表](https://support.microsoft.com/help/14084/activate-support-contract)选择你所在的国家/地区。
 
 ## <a name="how-to-submit-an-incident-using-your-benefit"></a>如何使用权益提交事件
-设置“合同 ID”和“访问 ID”后，可以使用它[在线](https://support.microsoft.com/oas/)提交技术支持事件（需要登录），或通过 [Azure 门户](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview)提交技术支持事件，或拨打你所在国家/地区的技术支持电话提交技术支持事件 。 如果联机提交事件，可以选择让 Microsoft 支持部门专业人员回电。
+设置了“合同 ID”和“访问 ID”后，可以使用它提交技术支持事件 。 
 
-### <a name="already-have-your-contract-id-and-access-id-associated-with-the-account-used-to-sign-in-to-submit-a-tech-support-incident-online"></a>合同 ID 和访问 ID 是否已与用于登录以联机提交技术支持事件的帐户相关联？
-联机提交事件时，系统会首先提示你进行登录。 使用已与合同 ID 和访问 ID 关联的帐户登录。 支持工作流的步骤 3 将显示与帐户关联的现有支持计划权益。 只需选择该计划并继续提交事例。 可以提交事件，直至计划中指示的限制或计划的到期日期（以先到者为准）。 剩余的事件显示为“0”或者计划到期后，它就不再处于活跃状态。
+可以联机、通过电话或是从 Azure 门户提交事件。 
 
+### <a name="submit-an-incident-online"></a>联机提交事件
+若要通过业务支持门户提交事件，请执行以下步骤：
+
+  > [!NOTE]
+  > 你可能会收到一个通知，指示需要确认电子邮件地址。  单击通知中的“发送电子邮件”链接，以将确认发送到配置文件中列出的电子邮件地址。 
+
+1. 登录到 <https://support.microsoft.com/en-us/supportforbusiness/productselection>
+
+0. 在“步骤 1”部分中，从下拉列表中选择合适的条目，以指示你的产品、版本、问题等。填写问题摘要的文本字段，更详细地描述问题。 然后，单击 **“下一步”** 。
    > [!div class="mx-imgBorder"]
-   > ![技术支持权益事件提交步骤 3](_img/vs-tech-support/vs-tech-support-step3.png)
-
-### <a name="using-your-contract-id-and-access-id-when-submitting-an-incident-initial-use"></a>提交事件时使用合同 ID 和访问 ID（最初使用）
-
-#### <a name="submitting-an-incident-online"></a>联机提交事件
-联机提交事件时，系统会首先提示你进行登录。 使用下拉列表，选择需要获得帮助的产品。 例如，要为 Visual Studio Enterprise 2019 提交事件，请选择“开发人员工具”系列，然后选择“Visual Studio 2019”作为产品，然后选择“Visual Studio Enterprise 2019”作为版本  。
-
-1. 选择需要获得支持的产品后，请单击“下一步”。
-
+   > ![创建新的支持请求](_img/vs-tech-support/vs-tech-support-create-new.png "填写字段以创建新的支持请求。") 
+0. 在“步骤 2”部分中，提供你的位置和时区。
+0. 单击“添加合同”。
+0. 输入激活支持权益时在确认电子邮件中收到的“访问 ID”和“合同 ID” 。 单击 **添加**。
    > [!div class="mx-imgBorder"]
-   > ![技术支持权益事件提交步骤 1 - 产品](_img/vs-tech-support/vs-tech-support-step1.png)
-
-2. 描述你的问题，然后单击“下一步”。
-
+   > ![添加合同 ID](_img/vs-tech-support/vs-tech-support-add-contract-id.png "从确认电子邮件中添加访问 ID 和合同 ID。") 
+0. 新的支持合同会出现在“步骤 2”中。  选择该文件夹。
+0. 请指出问题的严重性。  默认值为“重要”。 
+0. 选择希望收到支持的时间。 默认情况下，“仅在工作时间内”处于选中状态。 仅当选择了“关键”作为严重性时，“全天候支持”选项才可用。
+0. 单击 **“下一步”** 以继续。 
+0. 对于“步骤 3”，提供你希望支持代理用于联系你的联系信息。 
    > [!div class="mx-imgBorder"]
-   > ![技术支持权益事件提交步骤 2 - 问题](_img/vs-tech-support/vs-tech-support-step2.png)
-
-3. 在“支持计划”页面上，向下滚动到“添加或购买支持计划”，使用右侧的箭头展开该计划，然后单击“添加合同” 。
-
-   > [!div class="mx-imgBorder"]
-   > ![技术支持权益事件提交 - 添加合同](_img/vs-tech-support/vs-tech-support-add-contract.png)
-
-4. 输入“访问 ID”和“合同 ID” 。  单击 **添加** 。
-
-   > [!div class="mx-imgBorder"]
-   > ![技术支持权益事件提交 - 添加合同 ID](_img/vs-tech-support/vs-tech-support-add-contract-id.png)
-
-5. 添加合同后，该合同将显示在顶部的“选择支持计划”下。 计划将在标题中包含术语“MSDN”。 选择它，向下滚动，然后单击“下一步”。
-
-   > [!div class="mx-imgBorder"]
-   > ![技术支持权益事件提交 - 选择计划](_img/vs-tech-support/vs-tech-support-choose-plan.png)
-
-   > [!NOTE]
-   > 如果看不到支持计划，请返回到上一页并再次单击“下一步”。  如果无法显示支持计划，请将支持问题的文本复制到剪贴板，刷新页面并重新创建支持问题。
-
-6. 请完成其余步骤（严重性、联系信息、评审）。   提交事件后，会看到确认消息显示事件已成功提交，并且可以将文件上传到事例。 我们将为事件分配支持部门专业人员，并使用你选择的联系方式与你联系以解决问题。
-
-#### <a name="submit-an-incident-by-phone"></a>通过电话提交事件
+   > ![验证联系信息](_img/vs-tech-support/vs-tech-support-contact-info.png "验证联系信息和首选联系方式。") 
+0. 在“步骤 4”中，可以选择将此支持请求信息与你团队中的其他人共享。  输入要与之共享请求的用户的电子邮件地址。 单击“下一步”以转到下一步。
+0. “步骤 5”汇总为事件提供的所有信息。  如果你认为所有内容都正确，并且你已准备好继续，请单击“提交”。 
+ 
+### <a name="submit-an-incident-by-phone"></a>通过电话提交事件
 如果希望通过电话创建支持事件，请找到你所在国家/地区的[客户服务](https://support.microsoft.com/help/13948/global-customer-service-phone-numbers)电话号码。 呼叫时请确保具有可用的合约 ID 和访问 ID。
 
-#### <a name="submit-an-incident-within-the-azure-portal"></a>在 Azure 门户中提交事件
+### <a name="submit-an-incident-in-the-azure-portal"></a>在 Azure 门户中提交事件
 若要将 Visual Studio 订阅技术支持权益用于与 Azure 相关的问题，需要将合约 ID 和访问 ID 链接到 Azure 订阅。
 
 1. 访问 https://portal.azure.com 并登录
-2. 在左侧导航栏中，单击“帮助 + 支持”
-3. 单击“支持”下的“新建支持请求”
+0. 在左侧导航栏中，单击“帮助 + 支持”
+0. 单击“支持”下的“新建支持请求”
 
 ## <a name="eligibility"></a>资格
 

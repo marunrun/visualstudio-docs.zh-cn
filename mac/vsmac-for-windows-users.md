@@ -1,22 +1,22 @@
 ---
 title: 面向 Windows 用户的 Visual Studio for Mac
-description: 介绍 Visual Studio for Mac 中的辅助功能及其启用方法。
+description: 面向熟悉在 Windows 操作系统上使用 Visual Studio 的开发人员的 Visual Studio for Mac 简介。
 author: heiligerdankgesang
 ms.author: dominicn
-ms.date: 09/25/2019
+ms.date: 11/09/2020
 ms.assetid: 61CB6883-08CE-470F-8599-6F7570DB756E
-ms.openlocfilehash: b414026ba7297dd6c93fecdf56d9a9c58c99f294
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 880811c675aac34a18a65c6eccb8ee10f3347d4c
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "74984270"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493369"
 ---
 # <a name="visual-studio-for-mac-for-windows-users"></a>面向 Windows 用户的 Visual Studio for Mac
 
-从一个操作系统迁移到另一个操作系统可能会很困难。 从用户界面到菜单项分类，跨平台应用程序中通常存在细微差异。 用户还会经历一段学习曲线以适应新操作系统的用户界面。 在这里，你将了解 Visual Studio for Mac 和 Visual Studio for Windows 之间的最常见区别。 你还将了解 macOS 与 Windows 之间的几个不同约定。
+从一个操作系统迁移到另一个操作系统可能会很困难。 从用户界面到菜单项分类，跨平台应用程序中通常存在细微差异。 在这里，你将了解 Visual Studio for Mac 和 Visual Studio for Windows 之间的最常见区别。 你还将了解 macOS 与 Windows 之间的几个不同约定。
 
-## <a name="keyboard-shortcuts"></a>键盘快捷键
+## <a name="keyboard-shortcuts"></a>键盘快捷方式
 
 作为开发人员，很多人都习惯使用键盘来执行任务和导航。 键盘上的某些键在 Mac 和 Windows PC 之间是通用的。 你可能会认为，复制和粘贴等键盘操作使用相同的组合键。 但不总是这样。 幸运的是，你可以更改 Visual Studio for Mac 中的键绑定，使其与 Windows 中的 Visual Studio 相匹配。
 
@@ -49,10 +49,9 @@ MacOS 中菜单的组织方式不同于 Windows 中的菜单。 Visual Studio fo
 |-----------------------|---------------------------------------------------------------------|-------------------------------------|
 |首选项（选项）  |工具 > 选项 >...                                                   |Visual Studio > 首选项...       |
 |扩展             |扩展 > 管理扩展                                       |Visual Studio > 扩展...        |
-|布局                |窗口 > 应用窗口布局 > [选择布局]                       |视图 > [选择布局]               |
+|布局                |窗口 > 应用窗口布局 > [选择布局]                       |视图 > 布局 > [选择布局]               |
 |更新                |帮助 > 检查更新                                             |Visual Studio > 检查更新... |
 |NuGet 程序包管理器  |工具 > NuGet 包管理器 > 管理解决方案的 NuGet 包... |项目 > 管理 NuGet 包...   |
-|面板/窗口         |视图 > [选择面板/窗口]                                         |视图 > 面板 > [选择面板/窗口]  |
 |查找工具             |编辑 > 查找和替换 > [选择工具]                              |搜索 > [选择工具]               |
 |关于 Visual Studio    |帮助 > 关于 Microsoft Visual Studio                                 |Visual Studio > 关于 Visual Studio  
 

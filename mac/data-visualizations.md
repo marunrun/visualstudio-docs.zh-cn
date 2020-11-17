@@ -3,28 +3,28 @@ title: 调试 - 数据可视化效果
 description: 调试是编程中常见且必要的部分。 Visual Studio for Mac 提供了一整套易于调试的功能。 本文介绍在调试程序中检查对象时可以查看的各种数据可视化效果。
 author: jmatthiesen
 ms.author: jomatthi
-ms.date: 05/06/2018
+ms.date: 11/09/2020
 ms.technology: vs-ide-debug
 ms.assetid: 527E6BEC-EF15-4002-ACB5-62AE1C16F6B7
-ms.openlocfilehash: 14696040160dfc33f89b7647fb73b116b41afa16
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 838762435268ea06c09392475f294dbb22c3038d
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "67691732"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493239"
 ---
 # <a name="data-visualizations"></a>数据可视化
 
 Visual Studio for Mac 提供调试程序用户界面支持，允许调试时的变量、字段或属性的值的可视化效果。 这些数据可视化工具显示数据的扩展版本，使开发者可以检查已知结构，例如显示颜色结构的颜色。
 
-用户将鼠标悬停在行上时，单击值右侧的预览图标，可显示调试“本地”  面板中的可视化工具：
+用户将鼠标悬停在行上时，单击值右侧的预览图标，可显示调试“局部变量”窗口中的可视化工具：
 
-![“本地”面板](media/data-visualizations-image9.png)
+![“局部变量”窗口](media/data-visualizations-image9.png)
 
 下表显示了在 Visual Studio for Mac 中调试时多个可用的新可视化效果。
 
 ## <a name="point"></a>Point
-iOS 和 Mac 中的 Point/PointF 或 CGPoint 作为元组呈现，在调试面板中显示 X 和 Y 值：
+iOS 和 Mac 中的 Point/PointF 或 CGPoint 作为元组呈现，在调试窗口中显示 X 和 Y 值：
 
 ![点可视化效果](media/data-visualizations-image10.png)
 

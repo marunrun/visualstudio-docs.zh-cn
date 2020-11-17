@@ -1,18 +1,19 @@
 ---
 title: Visual Studio for Mac 测试工具
-ms.date: 08/03/2020
+description: 使用 Visual Studio for Mac 创建和运行测试。
+ms.date: 11/09/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - testing tools [Visual Studio for Mac]
 - unit tests [Visual Studio for Mac]
 ms.author: jomatthi
 author: jmatthiesen
-ms.openlocfilehash: 758bdcb0d854247847e4d0d56152840643402bf4
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 3956c3158fd4ec1ad32b76882ac3f9d4cf1ea9bf
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91580956"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493382"
 ---
 # <a name="testing-tools-in-visual-studio-for-mac"></a>Visual Studio for Mac 中的测试工具
 
@@ -27,7 +28,7 @@ Visual Studio for Mac 测试工具可帮助你和你的团队达到并保持高�
 > 有关如何对 .NET Core 应用程序进行单元测试并选择单元测试框架的详细信息，请参阅 [.NET Core 和 .NET Standard 中的单元测试](/dotnet/core/testing/?pivots=xunit)文档。
 
 ## <a name="running-tests"></a>运行测试
-“单元测试”窗口用于运行单元测试，并通过“视图”>“面板”>“单元测试”菜单打开 。 解决方案中的单元测试将自动发现并显示在此窗口中，你可以在其中运行所有测试或已选中的一组测试。
+“单元测试”窗口用于运行单元测试，并通过“视图”>“测试”菜单打开 。 解决方案中的单元测试将自动发现并显示在此窗口中，你可以在其中运行所有测试或已选中的一组测试。
 
 ![“测试窗口”显示单元测试列表，以及用于运行或停止测试的工具栏。](media/test-window.PNG)
 

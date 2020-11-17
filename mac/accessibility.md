@@ -6,19 +6,19 @@ ms.author: dominicn
 ms.date: 09/23/2019
 ms.assetid: 2C4AAC2E-3B4A-4496-8BE0-1F5A7F81D1CA
 ms.topic: overview
-ms.openlocfilehash: d082cd5efbb41c6f20bc0abb8e5de9b3a25186ba
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1da1fc5145e5fd4a2f271b30ac42204c2aa611e5
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88800185"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493343"
 ---
 # <a name="accessibility"></a>可访问性
 
-MacOS 中内置了许多可帮助你与 Visual Studio for Mac 结合使用的辅助工具和功能。  除此之外，Visual Studio for Mac 还提供了以下功能，使用户能够更轻松地访问各种功能：
+macOS 中内置了许多可在你使用 Visual Studio for Mac 时提供帮助的辅助工具和功能。  除此之外，Visual Studio for Mac 还提供了以下功能，使用户能够更轻松地访问各种功能：
 
 * 编辑器文本放大
-* 面板文本放大
+* 工具窗口文本放大
 * 代码编辑器颜色主题自定义
 * 键盘快捷方式自定义
 * 键盘导航

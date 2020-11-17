@@ -1,5 +1,7 @@
 ---
 title: 如何：将 XML 架构设计器用于 XML 文本
+description: 了解如何使用 XML 架构设计器查看与 Visual Basic 项目中的 XML 文本关联的架构。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: d11803e7-f81a-41a2-a145-ba494a45cc93
@@ -10,12 +12,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: b515092087ab213db5d3002f00c56753c2e3de14
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3b86cc50e5a25466b0ec80e45a225d64b8a97f72
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85814637"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93399167"
 ---
 # <a name="how-to-use-the-xml-schema-designer-with-xml-literals"></a>如何：结合使用 XML 架构设计器和 XML 文本
 
