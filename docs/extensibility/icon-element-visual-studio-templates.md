@@ -1,5 +1,7 @@
 ---
 title: ) Visual Studio 模板 (图标元素 |Microsoft Docs
+description: 了解 Icon 元素及其如何指定用作图标的图像文件的路径和文件名。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ff725e2db0d74e571b8c41d8a8aa80228938fbff
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 059105b9d188c0e7a81252172aa2d1bf7002420c
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80710531"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672686"
 ---
 # <a name="icon-element-visual-studio-templates"></a>Visual Studio 模板 (Icon 元素) 
 指定图像文件的路径和文件名，该图像文件将显示在模板的 " **新建项目** " 或 " **添加新项** " 对话框中。
@@ -43,7 +45,7 @@ ms.locfileid: "80710531"
 
 ### <a name="attributes"></a>特性
 
-|特性|说明|
+|属性|说明|
 |---------------|-----------------|
 |`Package`|可选属性，适用于高级用户方案。<br /><br /> 指定 Visual Studio 包 ID 的 GUID。|
 |`ID`|可选属性，适用于高级用户方案。<br /><br /> 指定 Visual Studio 资源 ID。|
@@ -62,7 +64,7 @@ ms.locfileid: "80710531"
 
  此文本提供将在 " **新建项目** " 对话框中显示的模板图标的路径和文件名。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
  `Icon` 是 `TemplateData` 的必需子元素。
 
 ## <a name="example"></a>示例

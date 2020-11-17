@@ -1,5 +1,7 @@
 ---
 title: 扩展 SharePoint 项目系统 |Microsoft Docs
+description: 扩展 SharePoint 项目系统。 了解如何扩展 SharePoint 项目系统。 了解常见的开发任务。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,18 +15,18 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7dce10c2bc44eb4fde6a6e38417d136ea5e9ba41
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c017217f66e38eed6248b90efaeabce0efaa9c70
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62557019"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672543"
 ---
 # <a name="extend-the-sharepoint-project-system"></a>扩展 SharePoint 项目系统
   可以通过在 Visual Studio 中使用一组项目模板和项模板来创建 SharePoint 解决方案。 这些模板满足许多开发方案的要求，但您可能会发现某些情况下不提供您需要的功能。 在这些情况下，您可以扩展 SharePoint 项目系统。
 
 ## <a name="overview-of-the-sharepoint-project-system"></a>SharePoint 项目系统概述
- SharePoint 项目系统基于 *sharepoint 项目项*的基本组件。 SharePoint 项目项表示单个 SharePoint 自定义项，例如列表定义、Web 部件或内容类型。
+ SharePoint 项目系统基于 *sharepoint 项目项* 的基本组件。 SharePoint 项目项表示单个 SharePoint 自定义项，例如列表定义、Web 部件或内容类型。
 
  SharePoint 项目是一个 Visual Studio 项目，其中包含一个或多个 SharePoint 项目项。 SharePoint 项目还包含其他组件，这些组件定义如何将项目项分组为功能和包以进行部署。
 
@@ -55,5 +57,5 @@ ms.locfileid: "62557019"
 - [扩展 SharePoint 打包和部署](../sharepoint/extending-sharepoint-packaging-and-deployment.md)
 - [在 SharePoint 项目系统的扩展中保存数据](../sharepoint/saving-data-in-extensions-of-the-sharepoint-project-system.md)
 - [在 SharePoint 项目系统类型和其他 Visual Studio 项目类型之间转换](../sharepoint/converting-between-sharepoint-project-system-types-and-other-visual-studio-project-types.md)
-- [在 Visual Studio 中扩展 SharePoint 工具](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)
+- [扩展 Visual Studio 中的 SharePoint 工具](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)
 - [SharePoint 工具扩展的编程概念和功能](../sharepoint/programming-concepts-and-features-for-sharepoint-tools-extensions.md)

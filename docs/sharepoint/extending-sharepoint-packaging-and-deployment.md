@@ -1,5 +1,7 @@
 ---
 title: 扩展 SharePoint 打包和部署 |Microsoft Docs
+description: 扩展 SharePoint 打包和部署。 创建部署步骤和配置。 处理部署冲突。 自定义验证规则。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4bb98e2b1c83ff06570a77dc84ce6a7bf690f81d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9f0f9eb6c863a961a527fcb6fb330a2a4f88669e
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62967452"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672582"
 ---
 # <a name="extend-sharepoint-packaging-and-deployment"></a>扩展 SharePoint 打包和部署
   可以扩展 SharePoint 项目的打包和部署过程。
@@ -50,7 +52,7 @@ ms.locfileid: "62967452"
  在某些情况下，可能会发生部署冲突。 可通过多种不同的方式来解决冲突。 有关详细信息，请参阅 [SharePoint 打包和部署疑难解答](../sharepoint/troubleshooting-sharepoint-packaging-and-deployment.md)。
 
 ## <a name="customize-validation-rules"></a>自定义验证规则
- 部署解决方案包 (.wsp) 之前，可以创建自定义功能和包验证规则来验证功能或包是否有效。 例如，可以向开发人员报告信息、警告或错误以帮助他们解决验证问题。 有关详细信息，请参阅 [如何：为 SharePoint 解决方案创建自定义功能和包验证规则](../sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md)。
+ 部署解决方案包 (.wsp) 之前，可以创建自定义功能和包验证规则来验证功能或包是否有效。 例如，可以向开发人员报告信息、警告或错误以帮助他们解决验证问题。 有关详细信息，请参阅[如何：为 SharePoint 解决方案创建自定义功能和包验证规则](../sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md)。
 
 ## <a name="see-also"></a>另请参阅
 - [如何：在执行部署步骤时运行代码](../sharepoint/how-to-run-code-when-deployment-steps-are-executed.md)

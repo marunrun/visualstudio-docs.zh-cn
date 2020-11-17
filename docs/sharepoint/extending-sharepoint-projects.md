@@ -1,5 +1,7 @@
 ---
 title: 扩展 SharePoint 项目 |Microsoft Docs
+description: 了解如何在需要自定义 SharePoint 项目的项目级功能时创建项目扩展。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6bc92d65ed179c7f2cb2f569a7d254a025887845
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ae4c3c1e606fd436725ef9f54a4568b754b048af
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62967476"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672634"
 ---
 # <a name="extend-sharepoint-projects"></a>扩展 SharePoint 项目
   若要自定义 SharePoint 项目的项目级功能，请创建项目扩展。 例如，你可以添加自定义项目属性，或响应用户在 Visual Studio 中开发 SharePoint 解决方案时引发的项目级事件。
@@ -29,9 +31,9 @@ ms.locfileid: "62967476"
 
  创建项目扩展时，还可以将以下功能添加到 SharePoint 项目：
 
-- 添加快捷菜单项。 在**解决方案资源管理器**中打开 SharePoint 项目节点的快捷菜单时，将显示该菜单项，方法是右键单击该节点，或选择该节点，然后选择**Shift** + **F10**键。 有关详细信息，请参阅 [如何：向 SharePoint 项目添加快捷菜单项](../sharepoint/how-to-add-a-shortcut-menu-item-to-sharepoint-projects.md)。
+- 添加快捷菜单项。 在 **解决方案资源管理器** 中打开 SharePoint 项目节点的快捷菜单时，将显示该菜单项，方法是右键单击该节点，或选择该节点，然后选择 **Shift** + **F10** 键。 有关详细信息，请参阅 [如何：向 SharePoint 项目添加快捷菜单项](../sharepoint/how-to-add-a-shortcut-menu-item-to-sharepoint-projects.md)。
 
-- 添加自定义属性。 在**解决方案资源管理器**中选择 SharePoint 项目时，属性将显示在 "**属性**" 窗口中。 有关详细信息，请参阅 [如何：将属性添加到 SharePoint 项目](../sharepoint/how-to-add-a-property-to-sharepoint-projects.md)。
+- 添加自定义属性。 在 **解决方案资源管理器** 中选择 SharePoint 项目时，属性将显示在 "**属性**" 窗口中。 有关详细信息，请参阅 [如何：将属性添加到 SharePoint 项目](../sharepoint/how-to-add-a-property-to-sharepoint-projects.md)。
 
   有关演示如何创建、部署和测试项目扩展的演练，请参阅 [演练：创建 SharePoint 项目扩展](../sharepoint/walkthrough-creating-a-sharepoint-project-extension.md)。
 

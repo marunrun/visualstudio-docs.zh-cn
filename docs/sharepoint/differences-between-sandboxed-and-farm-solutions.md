@@ -1,5 +1,7 @@
 ---
 title: 沙盒解决方案与场解决方案之间的差异 |Microsoft Docs
+description: 了解沙盒解决方案与场解决方案之间的差异。 了解 Visual Studio 如何对这两种类型的解决方案进行调试。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 073e62b473ebfcec5f71ae1907e8f9e385333411
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 25c1c9047ba9e38e3e652abcbe92ce6575d7b750
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62967541"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672777"
 ---
 # <a name="differences-between-sandboxed-and-farm-solutions"></a>沙盒解决方案与场解决方案之间的差异
   编译 SharePoint 解决方案时，该解决方案将部署到 SharePoint 服务器上，并附加调试器以对其进行调试。 用于调试解决方案的过程取决于沙盒解决方案属性的设置：沙盒解决方案或场解决方案。

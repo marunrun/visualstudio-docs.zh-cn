@@ -1,5 +1,7 @@
 ---
 title: 定义自定义 SharePoint 项目项类型 |Microsoft Docs
+description: 若要创建新类型的 SharePoint 项目项，请定义自定义 SharePoint 项目项类型。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e5f32abba4c4cbdeab59ed66e38019d913e704e6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fc2e3670dd734b368795f270fa6c1d63c8c079e8
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62580779"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672829"
 ---
 # <a name="define-custom-sharepoint-project-item-types"></a>定义自定义 SharePoint 项目项类型
   若要创建新类型的 SharePoint 项目项，请定义新的 SharePoint 项目项类型。 例如，Visual Studio 不包括用于将字段或自定义操作添加到 SharePoint 站点的 SharePoint 项目项。 您可以定义自己的 SharePoint 项目项类型，以便创建字段、自定义操作或其他类型的 SharePoint 组件。
@@ -29,9 +31,9 @@ ms.locfileid: "62580779"
 
  定义自定义项目项类型时，还可以将以下功能添加到项目项：
 
-- 向项目项添加快捷菜单项。 在**解决方案资源管理器**中打开项目项的快捷菜单时，将显示该菜单项，方法是右键单击项目项，或通过选择该项目，然后选择**Shift** + **F10**键。 有关详细信息，请参阅 [如何：将快捷菜单项添加到自定义 SharePoint 项目项类型](../sharepoint/how-to-add-a-shortcut-menu-item-to-a-custom-sharepoint-project-item-type.md)。
+- 向项目项添加快捷菜单项。 在 **解决方案资源管理器** 中打开项目项的快捷菜单时，将显示该菜单项，方法是右键单击项目项，或通过选择该项目，然后选择 **Shift** + **F10** 键。 有关详细信息，请参阅 [如何：将快捷菜单项添加到自定义 SharePoint 项目项类型](../sharepoint/how-to-add-a-shortcut-menu-item-to-a-custom-sharepoint-project-item-type.md)。
 
-- 向项目项添加自定义属性。 在**解决方案资源管理器**中选择项目项时，属性将显示在 "**属性**" 窗口中。 有关详细信息，请参阅 [如何：将属性添加到自定义 SharePoint 项目项类型](../sharepoint/how-to-add-a-property-to-a-custom-sharepoint-project-item-type.md)。
+- 向项目项添加自定义属性。 在 **解决方案资源管理器** 中选择项目项时，属性将显示在 "**属性**" 窗口中。 有关详细信息，请参阅 [如何：将属性添加到自定义 SharePoint 项目项类型](../sharepoint/how-to-add-a-property-to-a-custom-sharepoint-project-item-type.md)。
 
   若要使其他开发人员能够在 Visual Studio 中使用您的项目项，请创建一个 spdata 文件并创建与该项目项关联的项模板或项目模板。 有关详细信息，请参阅 [为 SharePoint 项目项创建项模板和项目模板](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)。
 

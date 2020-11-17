@@ -1,5 +1,7 @@
 ---
 title: " (Visual Studio 模板) 的 MaxFrameworkVersion 元素 |Microsoft Docs"
+description: 了解 MaxFrameworkVersion 元素及其如何指定模板所需的最高 .NET Framework 版本。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9c3acf9c40499417fe180ce470224824cc89a113
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 44345b712f448bd7eedf288d7c58cb4193e1b020
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80702621"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672420"
 ---
 # <a name="maxframeworkversion-element-visual-studio-templates"></a> (Visual Studio 模板的 MaxFrameworkVersion 元素) 
 
@@ -55,7 +57,7 @@ ms.locfileid: "80702621"
 
  文本必须是模板允许的 .NET Framework 的最高版本号。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 `MaxFrameworkVersion` 是可选元素。 `MaxFrameworkVersion`除非需要，否则应省略元素，以免无意中限制模板 .NET Framework 版本的支持范围。 如果 .NET Framework 不适用于模板，也应该省略此方法。
 
