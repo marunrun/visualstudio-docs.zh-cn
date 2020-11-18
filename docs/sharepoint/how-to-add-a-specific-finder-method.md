@@ -1,5 +1,7 @@
 ---
 title: 如何：添加特定的 Finder 方法 |Microsoft Docs
+description: 通过添加 Finder 方法获取实体实例。 当用户选择业务数据 web 部件或外部列表中的实体时，BDC 服务将调用方法。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -17,19 +19,19 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 403213b6dcd87251df0b24333c759c8de8720afd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a02e88b0168a6aa4b1a69af3ee14150a71e76037
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86014810"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94849723"
 ---
 # <a name="how-to-add-a-specific-finder-method"></a>如何：添加特定的 Finder 方法
-  您可以通过创建 *特定的 Finder* 方法返回单个实体实例。 当用户选择业务数据 web 部件或外部列表中的实体时， (BDC) 服务的业务数据连接将执行特定的 Finder 方法。 有关详细信息，请参阅 [设计业务数据连接模型](../sharepoint/designing-a-business-data-connectivity-model.md)。
+  您可以通过创建 *特定的 Finder* 方法返回单个实体实例。 当用户选择业务数据 web 部件或外部列表中的实体时， (BDC) 服务的业务数据连接将执行特定的 Finder 方法。 有关详细信息，请参阅[设计业务数据连接模型](../sharepoint/designing-a-business-data-connectivity-model.md)。
 
 ### <a name="to-create-a-specific-finder-method"></a>创建特定的 Finder 方法
 
-1. 在 **BDC 设计器**中选择一个实体。
+1. 在 **BDC 设计器** 中选择一个实体。
 
     有关如何在 Visual Studio 中将实体添加到 **BDC 设计器** 的信息，请参阅 [如何：将实体添加到模型](../sharepoint/how-to-add-an-entity-to-a-model.md)。
 
@@ -51,7 +53,7 @@ ms.locfileid: "86014810"
 
    - 方法的方法实例。
 
-     有关详细信息，请参阅 [设计业务数据连接模型](../sharepoint/designing-a-business-data-connectivity-model.md)。
+     有关详细信息，请参阅[设计业务数据连接模型](../sharepoint/designing-a-business-data-connectivity-model.md)。
 
 4. 打开 Visual Studio 的 " **属性** " 窗口。
 
@@ -65,9 +67,9 @@ ms.locfileid: "86014810"
 
 6. 在 " **方法详细信息** " 窗口中，选择方法的方法实例。
 
-7. 在 " **属性" 窗口**中，将 " **返回参数名称** " 属性设置为方法的返回参数的名称。 有关方法实例属性的详细信息，请参阅 [MethodInstance](/previous-versions/office/developer/sharepoint-2010/ee556838(v=office.14))。
+7. 在 " **属性" 窗口** 中，将 " **返回参数名称** " 属性设置为方法的返回参数的名称。 有关方法实例属性的详细信息，请参阅 [MethodInstance](/previous-versions/office/developer/sharepoint-2010/ee556838(v=office.14))。
 
-8. 在 **解决方案资源管理器**中，打开为实体生成的服务代码文件的快捷菜单，然后选择 " **查看代码**"。
+8. 在 **解决方案资源管理器** 中，打开为实体生成的服务代码文件的快捷菜单，然后选择 " **查看代码**"。
 
     实体服务代码文件将在代码编辑器中打开。 有关实体服务代码文件的详细信息，请参阅 [创建业务数据连接模型](../sharepoint/creating-a-business-data-connectivity-model.md)。
 

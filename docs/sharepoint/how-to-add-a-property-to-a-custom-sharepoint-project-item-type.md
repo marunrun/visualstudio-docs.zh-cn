@@ -1,5 +1,7 @@
 ---
 title: 将属性添加到自定义 SharePoint 项目项类型
+description: 将属性添加到自定义 SharePoint 项目项类型。 当在解决方案资源管理器中选择项目项时，属性将出现在属性窗口中。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,15 +16,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 54765b9b6b82214a7deccaee4f9ee671a72dd40d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0b62f41ff6b185469a61681a8845c4e96d044695
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016002"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850177"
 ---
 # <a name="how-to-add-a-property-to-a-custom-sharepoint-project-item-type"></a>如何：向自定义 SharePoint 项目项类型添加属性
-  定义自定义 SharePoint 项目项类型时，可以将属性添加到项目项。 在**解决方案资源管理器**中选择项目项时，属性将显示在 "**属性**" 窗口中。
+  定义自定义 SharePoint 项目项类型时，可以将属性添加到项目项。 在 **解决方案资源管理器** 中选择项目项时，属性将显示在 "**属性**" 窗口中。
 
  以下步骤假定您已定义了自己的 SharePoint 项目项类型。 有关详细信息，请参阅 [如何：定义 SharePoint 项目项类型](../sharepoint/how-to-define-a-sharepoint-project-item-type.md)。
 

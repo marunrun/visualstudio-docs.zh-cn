@@ -1,6 +1,8 @@
 ---
 title: Convert： SharePoint 项目系统类型与其他类型之间的转换
 titleSuffix: ''
+description: 在 SharePoint 项目系统类型和其他 Visual Studio 项目类型之间转换。 查看可转换的类型的详细信息列表。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 44b3e32114b10eae776f39e4c3d7337bba636f3f
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 75f8a2072e81936c4c1c691261e301aae37b0191
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584641"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850476"
 ---
 # <a name="convert-between-sharepoint-project-system-types-and-other-visual-studio-project-types"></a>在 SharePoint 项目系统类型和其他 Visual Studio 项目类型之间转换
   在某些情况下，您可能在 SharePoint 项目系统中有一个对象，并且您想要使用 Visual Studio 自动化对象模型或集成对象模型中的相应对象的功能，反之亦然。 在这些情况下，可以使用 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.Convert%2A> SharePoint 项目服务的方法将对象转换为不同的对象模型。

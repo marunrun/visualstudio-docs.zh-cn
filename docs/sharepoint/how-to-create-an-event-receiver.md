@@ -1,5 +1,7 @@
 ---
 title: 如何：创建事件接收器 |Microsoft Docs
+description: 创建一个事件接收器，以便您可以在用户与 SharePoint 项（如列表或列表项）交互时做出响应。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 26d8c9f433fad051716b6ebd37e3d1f3b3f9f4eb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2e94bd1594f94f43c82eed5033d6ec2660905c18
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016920"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94849878"
 ---
 # <a name="how-to-create-an-event-receiver"></a>如何：创建事件接收器
   通过创建 *事件接收器*，你可以在用户与 SharePoint 项（如列表或列表项）交互时做出响应。 例如，当用户更改日历或从联系人列表中删除名称时，可以触发事件接收器中的代码。 通过遵循本主题，可以了解如何将事件接收器添加到列表实例。
@@ -36,11 +38,11 @@ ms.locfileid: "86016920"
 
 1. 打开在 [演练：创建网站栏、内容类型和 SharePoint 列表](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md)中创建的项目。
 
-2. 在 **解决方案资源管理器**中，选择名为 " **诊所**" 的 SharePoint 项目节点。
+2. 在 **解决方案资源管理器** 中，选择名为 " **诊所**" 的 SharePoint 项目节点。
 
 3. 在菜单栏上，选择 "**项目**" "  >  **添加新项**"。
 
-4. 在 **Visual c #** 或 **Visual Basic**下，展开 " **SharePoint** " 节点，然后选择 **2010** 项。
+4. 在 **Visual c #** 或 **Visual Basic** 下，展开 " **SharePoint** " 节点，然后选择 **2010** 项。
 
 5. 在 " **模板** " 窗格中，选择 " **事件接收器**"，将其命名为 **TestEventReceiver1**，然后选择 **"确定"** 按钮。
 
@@ -48,7 +50,7 @@ ms.locfileid: "86016920"
 
 6. 在 " **要执行哪种类型的事件接收器？"** 列表中，选择 " **列表项事件**"。
 
-7. 在 " **哪个项应为事件源？"** 列表中，选择 " **患者 (Clinic\Patients) **"。
+7. 在 " **哪个项应为事件源？"** 列表中，选择 " **患者 (Clinic\Patients)**"。
 
 8. 在 " **处理以下事件** " 列表中，选中 " **添加项**" 旁边的复选框，然后选择 " **完成** " 按钮。
 

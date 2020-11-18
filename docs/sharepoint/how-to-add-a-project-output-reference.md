@@ -1,5 +1,7 @@
 ---
 title: 如何：添加项目输出引用 |Microsoft Docs
+description: 了解如何添加项目输出引用，以便可以将非 SharePoint 项目程序集部署 (或) 的 Silverlight 项目中的 .xap 文件部署到 SharePoint。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: bea0f39ae161d8b695f872cb634c35d0cb205c91
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 03980eea9d16cde2b6f079e0b33973958fed7a7f
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016747"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94849865"
 ---
 # <a name="how-to-add-a-project-output-reference"></a>如何：添加项目输出引用
   若要将非 SharePoint 项目程序集部署 (或) 的 Silverlight 项目中的 .xap 文件部署到 SharePoint，请将其添加为项目输出引用。
@@ -30,7 +32,7 @@ ms.locfileid: "86016747"
 
 1. 加载包含至少一个 SharePoint 项目和一个非 SharePoint 项目的解决方案。
 
-2. 在 **解决方案资源管理器**中，选择 SharePoint 项目节点中的项。
+2. 在 **解决方案资源管理器** 中，选择 SharePoint 项目节点中的项。
 
 3. 在 " **属性** " 窗口中，选择 " **项目输出引用** " 属性，然后选择它旁边的省略号 (![ASP.NET Mobile 设计器](../sharepoint/media/mwellipsis.gif "ASP.NET 移动设计器中的省略号") "省略号) 按钮。
 

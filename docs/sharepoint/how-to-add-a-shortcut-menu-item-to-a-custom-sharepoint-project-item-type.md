@@ -1,6 +1,8 @@
 ---
 title: 向自定义 SharePoint 项目项类型添加快捷菜单项
 titleSuffix: ''
+description: 了解如何向自定义 SharePoint 项目项类型添加快捷菜单项。 右键单击解决方案资源管理器中的项目项时，将显示菜单项。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,15 +17,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 39de735c09c97541684628c8e4140aa42d119500
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 2916b806c6e149a9c0cbe2495a7edabcfc883e7e
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585870"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850073"
 ---
 # <a name="how-to-add-a-shortcut-menu-item-to-a-custom-sharepoint-project-item-type"></a>如何：向自定义 SharePoint 项目项类型添加快捷菜单项
-  定义自定义 SharePoint 项目项类型时，可以将快捷菜单项添加到项目项。 当用户在 **解决方案资源管理器**中右键单击项目项时，将显示菜单项。
+  定义自定义 SharePoint 项目项类型时，可以将快捷菜单项添加到项目项。 当用户在 **解决方案资源管理器** 中右键单击项目项时，将显示菜单项。
 
  以下步骤假定您已定义了自己的 SharePoint 项目项类型。 有关详细信息，请参阅 [如何：定义 SharePoint 项目项类型](../sharepoint/how-to-define-a-sharepoint-project-item-type.md)。
 

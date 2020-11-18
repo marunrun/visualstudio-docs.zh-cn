@@ -1,5 +1,7 @@
 ---
 title: 如何：生成 SharePoint 解决方案 |Microsoft Docs
+description: 生成 SharePoint 解决方案。 在 Visual Studio 中，生成 SharePoint 解决方案不同于生成其他应用程序。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d3beb1602a6572ed578208d6dd85951f1ea1c30b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e4e878221f3b6989a87fa3c9e36be1018d34d4af
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86014522"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850684"
 ---
 # <a name="how-to-build-sharepoint-solutions"></a>如何：生成 SharePoint 解决方案
 
@@ -31,7 +33,7 @@ ms.locfileid: "86014522"
 
 2. 选择相应的选项来生成或重新生成解决方案或项目。 有关详细信息，请参阅 [在 Visual Studio 中编译和生成](../ide/compiling-and-building-in-visual-studio.md)。
 
-3. 在菜单栏上，依次选择“生成” > “生成解决方案” 。
+3. 在菜单栏上，依次选择“生成” > “生成解决方案”   。
 
 ## <a name="see-also"></a>另请参阅
 

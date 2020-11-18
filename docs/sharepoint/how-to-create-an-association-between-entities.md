@@ -1,5 +1,7 @@
 ---
 title: 如何：创建实体之间的关联 |Microsoft Docs
+description: 通过在 Visual Studio 中创建关联，定义业务数据连接中的实体之间的关系 (BDC) 模型。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -21,12 +23,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 75d4fcc9b99c9c5e2960e152eb5dac1da1343109
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e736e0befe8aaf9a6c090615d0c43bb3f3116dbf
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016929"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94849839"
 ---
 # <a name="how-to-create-an-association-between-entities"></a>如何：创建实体之间的关联
   可以通过创建关联来定义业务数据连接中的实体之间的关系 (BDC) 模型。 Visual Studio 生成的方法为模型的使用者提供有关每个关联的信息。 SharePoint Web 部件、列表或自定义应用程序可以使用这些方法在用户界面 (UI) 中显示数据关系。
@@ -49,7 +51,7 @@ ms.locfileid: "86016929"
 
 4. 如果要创建外部无键关联，请清除 " **为外键关联** " 复选框。
 
-5. 选择“确定”  按钮。
+5. 选择 **“确定”** 按钮。
 
 6. 在 BDC 设计器中，表示关联的行出现在源实体和目标实体之间。
 
