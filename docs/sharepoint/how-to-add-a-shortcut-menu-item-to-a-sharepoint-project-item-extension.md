@@ -1,6 +1,8 @@
 ---
 title: 向 SharePoint 项目项扩展添加快捷菜单项
 titleSuffix: ''
+description: 使用 Visual Studio 中的项目项扩展将快捷菜单项添加到现有 SharePoint 项目项。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,15 +17,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d3c0627849df12b98ddc16f54317faf952cb41f6
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: f5e6b32c418fbbdfbced5e6a6d698ad02358393d
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585857"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94849787"
 ---
 # <a name="how-to-add-a-shortcut-menu-item-to-a-sharepoint-project-item-extension"></a>如何：向 SharePoint 项目项扩展添加快捷菜单项
-  您可以使用项目项扩展将快捷菜单项添加到现有的 SharePoint 项目项。 当用户在 **解决方案资源管理器**中右键单击项目项时，将显示菜单项。
+  您可以使用项目项扩展将快捷菜单项添加到现有的 SharePoint 项目项。 当用户在 **解决方案资源管理器** 中右键单击项目项时，将显示菜单项。
 
  以下步骤假设已创建项目项扩展。 有关详细信息，请参阅 [如何：创建 SharePoint 项目项扩展](../sharepoint/how-to-create-a-sharepoint-project-item-extension.md)。
 

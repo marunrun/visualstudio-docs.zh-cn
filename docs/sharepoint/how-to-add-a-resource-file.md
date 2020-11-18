@@ -1,5 +1,7 @@
 ---
 title: 如何：添加资源文件 |Microsoft Docs
+description: 使用 "解决方案" 节点的快捷菜单上的命令和解决方案资源管理器中的功能节点，在 Visual Studio 中添加资源文件。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 657eb473adcff40a62d2fc9b09518ebe8135eeb4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 440777aaaf239dcdd3c276786a82e3d8aef55070
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015181"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850125"
 ---
 # <a name="how-to-add-a-resource-file"></a>如何：添加资源文件
   用于添加资源文件的命令位于解决方案资源管理器中解决方案节点和功能节点的快捷菜单中。 有关详细信息，请参阅 [本地化 SharePoint 解决方案](../sharepoint/localizing-sharepoint-solutions.md)。
@@ -27,7 +29,7 @@ ms.locfileid: "86015181"
 
 1. 在中 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ，打开一个 SharePoint 解决方案。
 
-2. 在**解决方案资源管理器**中，选择 SharePoint 项目节点，然后在菜单栏上选择 "**项目**" "  >  **添加新项**"。
+2. 在 **解决方案资源管理器** 中，选择 SharePoint 项目节点，然后在菜单栏上选择 "**项目**" "  >  **添加新项**"。
 
 3. 在 " **添加新项** " 对话框中，选择 " **全局资源文件** " 模板，然后选择 " **添加** " 按钮。
 
@@ -36,7 +38,7 @@ ms.locfileid: "86015181"
 
 4. 在 " **添加资源** " 对话框中，选择资源文件的区域性，如 "英语 (美国) "。
 
-    此步骤将全局资源文件添加到解决方案，格式为 Resource_x_**。**<em>区域性</em><strong>。</strong>.resx，如， *resource1.resx*。
+    此步骤将全局资源文件添加到解决方案，格式为 Resource_x_ **。**<em>区域性</em><strong>。</strong>.resx，如， *resource1.resx*。
 
 5. 当 **资源编辑器** 在中打开时 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ，将资源添加到资源文件中。
 
@@ -44,7 +46,7 @@ ms.locfileid: "86015181"
 
 1. 如果未在中打开 SharePoint 解决方案 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ，请打开解决方案。
 
-2. 在 **解决方案资源管理器**中，打开 " **功能** " 节点下某个功能的名称的快捷菜单，然后选择 " **添加功能资源**"。
+2. 在 **解决方案资源管理器** 中，打开 " **功能** " 节点下某个功能的名称的快捷菜单，然后选择 " **添加功能资源**"。
 
      此步骤将资源文件添加到该功能，格式为 _ResourceFileName_**。**_区域性_**.resx**，如， *Feature1*）。
 

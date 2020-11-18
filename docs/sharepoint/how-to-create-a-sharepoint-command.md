@@ -1,5 +1,7 @@
 ---
 title: 如何：创建 SharePoint 命令 |Microsoft Docs
+description: 了解如何创建自定义 SharePoint 命令，以便在 SharePoint 工具扩展中调用服务器对象模型的 API。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 15ea7ff86e90bf7a474f9d64c30a9803e3e20bf5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 41e4ab0fd70f4993d148cd5c67cb816bdc92e77a
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016215"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850697"
 ---
 # <a name="how-to-create-a-sharepoint-command"></a>如何：创建 SharePoint 命令
   如果要在 SharePoint 工具扩展中使用服务器对象模型，则必须创建自定义 *SharePoint 命令* 以调用 API。 在可直接调入服务器对象模型的程序集中定义 SharePoint 命令。
@@ -53,7 +55,7 @@ ms.locfileid: "86016215"
 
     - 第二个参数和返回值必须是可以由 Windows Communication Foundation (WCF) 序列化的类型。 有关详细信息，请参阅 [数据协定序列化程序支持的类型](/dotnet/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer) 和 [使用 XmlSerializer 类](/dotnet/framework/wcf/feature-details/using-the-xmlserializer-class)。
 
-    - 方法可以具有 (**public**、 **internal**或 **private**) 的任何可见性，并且可以是静态或非静态的。
+    - 方法可以具有 (**public**、 **internal** 或 **private**) 的任何可见性，并且可以是静态或非静态的。
 
 4. 将应用 <xref:Microsoft.VisualStudio.SharePoint.Commands.SharePointCommandAttribute> 到方法。 此属性指定该命令的唯一标识符;此标识符不必与方法名称匹配。
 

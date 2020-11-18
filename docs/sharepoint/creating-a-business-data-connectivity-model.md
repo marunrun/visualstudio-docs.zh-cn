@@ -1,5 +1,7 @@
 ---
 title: 创建业务数据连接模型 |Microsoft Docs
+description: 使用 Visual Studio 创建 (BDC) 模型的业务数据连接，或自定义现有 BDC 模型。 每个 SharePoint 项目只能包含一个模型。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,18 +17,18 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9f3da13858507a3ff176aaa0a44051674fd5285f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0486ce6ac53850b1b607f9e7f859806cdc3ef8fe
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "90840402"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850463"
 ---
 # <a name="create-a-business-data-connectivity-model"></a>创建业务数据连接模型
   您可以使用 Visual Studio 创建 (BDC) 模型的业务数据连接，或自定义现有 BDC 模型。 每个 SharePoint 项目只能包含一个模型。 有关详细信息，请参阅将 [业务数据集成到 SharePoint 中](../sharepoint/integrating-business-data-into-sharepoint.md)。
 
 ## <a name="create-a-new-model"></a>创建新模型
- 若要创建新模型，请创建 **业务数据连接模型** 项目或将 **业务数据连接模型** 项添加到 **空的 SharePoint 项目**中。
+ 若要创建新模型，请创建 **业务数据连接模型** 项目或将 **业务数据连接模型** 项添加到 **空的 SharePoint 项目** 中。
 
 > [!NOTE]
 > 你必须已 [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] 在计算机上安装了。
@@ -58,7 +60,7 @@ ms.locfileid: "90840402"
 
   在任一情况下，你导入的模型中定义的 LOB 系统都不会受到影响，并将继续按预期方式工作。 若要向 SharePoint 项目添加现有模型，请使用 Visual Studio 中的 " **添加现有项** " 对话框。 有关详细信息，请参阅 [如何：向 SharePoint 项目添加现有 BDC 模型文件](../sharepoint/how-to-add-an-existing-bdc-model-file-to-a-sharepoint-project.md)。
 
-  可以通过在 **添加 .net 程序集 LobSystem**中选择一个选项，将类型 .NET Framework 程序集类型的 LOB 系统添加到导入的模型中。 这使您可以编写自定义代码，并使用设计器为导入的模型定义元数据。
+  可以通过在 **添加 .net 程序集 LobSystem** 中选择一个选项，将类型 .NET Framework 程序集类型的 LOB 系统添加到导入的模型中。 这使您可以编写自定义代码，并使用设计器为导入的模型定义元数据。
 
 ## <a name="related-topics"></a>相关主题
 

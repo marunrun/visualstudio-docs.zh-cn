@@ -1,5 +1,7 @@
 ---
 title: " (SharePoint 工具扩展性的 API 参考) |Microsoft Docs"
+description: 查看 API 参考文档，了解如何在 Visual Studio 中扩展 SharePoint 工具。 查看相关命名空间（如 VisualStudio）的列表。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,24 +14,24 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 37639068b74b5d99864871355a8b9ef36906f6cd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4599a2c305558f2ef551d19abac210bdf05269f3
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62987989"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850385"
 ---
 # <a name="api-reference-sharepoint-tools-extensibility"></a> (SharePoint 工具扩展性的 API 参考) 
   本部分包含有关在 Visual Studio 中扩展 SharePoint 工具的 API 参考文档。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在此部分中
  <xref:Microsoft.VisualStudio.SharePoint>
 
  包含用于扩展 SharePoint 项目系统的类型。 例如，你可以扩展内置 SharePoint 项目和项目项，也可以创建自己的项目项。
 
  <xref:Microsoft.VisualStudio.SharePoint.Commands>
 
- 包含可用于创建自定义 *SharePoint 命令*的类型。 SharePoint 命令是一个用于从 SharePoint 工具扩展中调入 SharePoint 服务器对象模型的方法。
+ 包含可用于创建自定义 *SharePoint 命令* 的类型。 SharePoint 命令是一个用于从 SharePoint 工具扩展中调入 SharePoint 服务器对象模型的方法。
 
  <xref:Microsoft.VisualStudio.SharePoint.Deployment>
 
@@ -71,6 +73,6 @@ ms.locfileid: "62987989"
 - [SharePoint 工具扩展性 &#40;引用&#41;](../sharepoint/reference-sharepoint-tools-extensibility.md)
 - [SharePoint 工具扩展的编程模型概述](../sharepoint/overview-of-the-programming-model-of-sharepoint-tools-extensions.md)
 - [扩展 SharePoint 项目系统](../sharepoint/extending-the-sharepoint-project-system.md)
-- [扩展中的 "SharePoint 连接" 节点服务器资源管理器](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)
+- [扩展服务器资源管理器中的“SharePoint 连接”节点](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)
 - [扩展 SharePoint 打包和部署](../sharepoint/extending-sharepoint-packaging-and-deployment.md)
 - [调入 SharePoint 对象模型](../sharepoint/calling-into-the-sharepoint-object-models.md)

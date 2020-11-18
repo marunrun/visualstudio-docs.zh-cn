@@ -1,5 +1,7 @@
 ---
 title: 为 SharePoint 创建应用程序页 |Microsoft Docs
+description: 为 SharePoint 创建应用程序页。 应用程序页是设计为在 SharePoint 网站中使用的 ASP.NET 网页。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,15 +18,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 47f403f4eec6ec66563ae88bec226e073f625716
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1228ef551235fd616803d6e05057ee50f0ea7ec4
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72981103"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850437"
 ---
 # <a name="create-application-pages-for-sharepoint"></a>为 SharePoint 创建应用程序页
-  *应用程序页*是设计为在 SharePoint 网站中使用的 ASP.NET 网页。 应用程序页是特定类型的 ASP.NET 页。 应用程序页和标准 ASP.NET 页之间的主要区别在于，应用程序页包含与 SharePoint 母版页合并的内容。 母版页使应用程序页面与站点上的其他页面共享相同的外观和行为。
+  *应用程序页* 是设计为在 SharePoint 网站中使用的 ASP.NET 网页。 应用程序页是特定类型的 ASP.NET 页。 应用程序页和标准 ASP.NET 页之间的主要区别在于，应用程序页包含与 SharePoint 母版页合并的内容。 母版页使应用程序页面与站点上的其他页面共享相同的外观和行为。
 
  利用 Visual Studio，你可以通过使用设计器来设计应用程序页。 设计器显示在母版页中定义的每个内容占位符的内容区域。 您可以通过将控件拖到这些内容区域来设计应用程序页。
 
@@ -64,7 +66,7 @@ ms.locfileid: "72981103"
 
  若要查看应用程序页，必须手动导航到应用程序页的位置 (例如： http://<em>Server_Name</em>/_layouts/*Project_Name*/ApplicationPage1.aspx) 。
 
- 有关如何调试 SharePoint 项目的详细信息，请参阅 [排查 sharepoint 解决方案问题](../sharepoint/troubleshooting-sharepoint-solutions.md)。
+ 有关如何调试 SharePoint 项目的详细信息，请参阅 [SharePoint 解决方案疑难解答](../sharepoint/troubleshooting-sharepoint-solutions.md)。
 
 ## <a name="choose-a-master-page"></a>选择母版页
  默认情况下， **应用程序页** 项引用用于调试项目的站点的母版页。 该页命名为 "v4"，您可以在 SharePoint 站点的 **母版页库** 中找到它。

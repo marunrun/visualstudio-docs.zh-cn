@@ -1,5 +1,7 @@
 ---
 title: 如何：创建 SharePoint 项目扩展 |Microsoft Docs
+description: 了解如何创建项目扩展，以便可以将功能添加到在 Visual Studio 中打开的任何 SharePoint 项目。
+ms.custom: SEO-VS-2020
 ms.date: 04/28/2017
 ms.topic: how-to
 dev_langs:
@@ -14,15 +16,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 191f5d718064a4e094a2c28e3f584168b20fb3fc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ad8ee37cba6f6f85e480fc0fe3ccaef081cefae4
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86017158"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850658"
 ---
 # <a name="how-to-create-a-sharepoint-project-extension"></a>如何：创建 SharePoint 项目扩展
-  若要向在 Visual Studio 中打开的任何 SharePoint 项目添加功能，请创建项目扩展。 有关详细信息，请参阅 [扩展 SharePoint 项目系统](../sharepoint/extending-the-sharepoint-project-system.md)。
+  若要向在 Visual Studio 中打开的任何 SharePoint 项目添加功能，请创建项目扩展。 有关详细信息，请参阅[扩展 SharePoint 项目系统](../sharepoint/extending-the-sharepoint-project-system.md)。
 
 ### <a name="to-create-a-project-extension"></a>创建项目扩展
 

@@ -1,5 +1,7 @@
 ---
 title: 如何：创建应用程序页 |Microsoft Docs
+description: 在 Visual Studio 中创建一个 ASP.NET 网页 (也称为应用程序页) 一个或多个 SharePoint 站点。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 32e6fbb7cece4c3b7513dfc1f5de3aca22f145ee
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: df52ca75ef99fe98158cb5f874e59fe4ee0c47b4
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016951"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94849852"
 ---
 # <a name="how-to-create-an-application-page"></a>如何：创建应用程序页
   可以为一个或多个 SharePoint 网站创建 ASP.NET 网页。 在 SharePoint 中，这些页称为 "应用程序页"。 与网站页不同，应用程序页包含在该页后面运行的代码。 有关详细信息，请参阅 [为 SharePoint 创建应用程序页](../sharepoint/creating-application-pages-for-sharepoint.md)。

@@ -1,6 +1,8 @@
 ---
 title: 如何：为特定列表实例创建事件接收器 |Microsoft Docs
 titleSuffix: ''
+description: 为特定列表实例创建事件接收器。 列表实例事件接收器对在列表定义的任何实例中发生的事件做出响应。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c37da8b798c3b6a0fdc093d5c443584f68b4b5cc
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 8bd76f2aafc5d0b3058dcaba68b6f3099f01ff8d
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585831"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94849891"
 ---
 # <a name="how-to-create-an-event-receiver-for-a-specific-list-instance"></a>如何：为特定列表实例创建事件接收器
   列表实例事件接收器对在列表定义的任何实例中发生的事件做出响应。 尽管事件接收器模板不启用特定列表实例的目标，但你可以修改作用域为列表定义的事件接收器，以响应特定列表实例中的事件。
@@ -37,7 +39,7 @@ ms.locfileid: "91585831"
 
 3. 在 " **所有网站内容** " 页上，选择 " **创建** " 链接。
 
-4. 在 " **创建** " 对话框中，选择 " **公告** " 类型，为公告 **TestAnnouncements**命名，然后选择 " **创建** " 按钮。
+4. 在 " **创建** " 对话框中，选择 " **公告** " 类型，为公告 **TestAnnouncements** 命名，然后选择 " **创建** " 按钮。
 
 5. 在中 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ，创建一个事件接收器项目。
 
@@ -50,7 +52,7 @@ ms.locfileid: "91585831"
 
 8. 在 " **处理以下事件** " 列表中，选中 " **要添加的项** " 复选框，然后选择 " **完成** " 按钮。
 
-9. 在 **解决方案资源管理器**的 "EventReceiver1" 下，打开 *Elements.xml*。
+9. 在 **解决方案资源管理器** 的 "EventReceiver1" 下，打开 *Elements.xml*。
 
      事件接收器当前使用以下行来引用公告列表定义：
 
@@ -84,7 +86,7 @@ ms.locfileid: "91585831"
 
 17. 添加新公告。
 
-     请注意，由于接收方配置为仅响应自定义公告列表实例 **TestAnnouncements**中的事件，因此事件接收器不会在新公告上触发。
+     请注意，由于接收方配置为仅响应自定义公告列表实例 **TestAnnouncements** 中的事件，因此事件接收器不会在新公告上触发。
 
 ## <a name="see-also"></a>另请参阅
 - [如何：创建事件接收器](../sharepoint/how-to-create-an-event-receiver.md)

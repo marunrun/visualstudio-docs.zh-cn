@@ -1,5 +1,7 @@
 ---
 title: 调入 SharePoint 对象模型 |Microsoft Docs
+description: 了解如何调入可在 SharePoint 工具扩展中使用的两个不同的对象模型。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 24634143a40f7b163c0b658bddb5596041868033
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 40cd7132888d8b19d8e2a2818ec9a299b465e786
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62988399"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850047"
 ---
 # <a name="call-into-the-sharepoint-object-models"></a>调入 SharePoint 对象模型
   在 Visual Studio 中创建 SharePoint 工具扩展时，可能需要调用 SharePoint Api 才能执行某些任务。 例如，如果为 SharePoint 项目创建自定义部署步骤，则可能必须调用 SharePoint Api 来执行某些任务来部署解决方案。
@@ -52,7 +54,7 @@ ms.locfileid: "62988399"
  有关演示如何创建和使用 SharePoint 命令的演练，请参阅 [演练：为 SharePoint 项目创建自定义部署步骤](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md) 和 [演练：扩展服务器资源管理器以显示 web 部件](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)。
 
 ### <a name="understand-how-sharepoint-commands-are-executed"></a>了解如何执行 SharePoint 命令
- 定义 SharePoint 命令的程序集在名为 *vssphost4.exe*的64位主机进程中加载。 在 SharePoint 工具扩展中调用 SharePoint 命令后，命令将由 *vssphost4.exe* 而不是32位 Visual Studio 进程来执行 (*devenv.exe*) 。 您可以通过设置注册表中的值来控制执行 SharePoint 命令的一些方面。 有关详细信息，请参阅 [Visual Studio 中的 SharePoint 工具调试扩展](../sharepoint/debugging-extensions-for-the-sharepoint-tools-in-visual-studio.md)。
+ 定义 SharePoint 命令的程序集在名为 *vssphost4.exe* 的64位主机进程中加载。 在 SharePoint 工具扩展中调用 SharePoint 命令后，命令将由 *vssphost4.exe* 而不是32位 Visual Studio 进程来执行 (*devenv.exe*) 。 您可以通过设置注册表中的值来控制执行 SharePoint 命令的一些方面。 有关详细信息，请参阅 [Visual Studio 中的 SharePoint 工具调试扩展](../sharepoint/debugging-extensions-for-the-sharepoint-tools-in-visual-studio.md)。
 
 ## <a name="see-also"></a>另请参阅
 - [如何：创建 SharePoint 命令](../sharepoint/how-to-create-a-sharepoint-command.md)

@@ -1,6 +1,8 @@
 ---
 title: 创建 SharePoint 的网站栏、内容类型和列表 |Microsoft Docs
 titleSuffix: ''
+description: 创建 SharePoint 的网站栏、内容类型和列表。 Visual Studio 为这些类型的 SharePoint 项提供项目项模板。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -19,12 +21,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 269be4aaf34e9b6c611a5d79ba38cddba04276bf
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 29d0ebc33bf3df198f3ee9b3f9d80a747087341c
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585101"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850515"
 ---
 # <a name="create-site-columns-content-types-and-lists-for-sharepoint"></a>创建 SharePoint 的站点栏、内容类型和列表
   Visual Studio 为许多不同的基本 SharePoint 项（包括 *列表* 和 *内容类型*）提供项目项模板，这两项都可以将网站列 (或 *字段*) 中。 用于内容类型和列表的新设计器可更简单地创建这些项。

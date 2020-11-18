@@ -1,6 +1,8 @@
 ---
 title: 如何：向 SharePoint 项目添加快捷菜单项 |Microsoft Docs
 titleSuffix: ''
+description: 向 Visual Studio 中的 SharePoint 项目添加快捷菜单项。 右键单击解决方案资源管理器中的项目节点时，将显示菜单项。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,15 +17,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ea862eb21aaee75499f3b1bac7007063227150e2
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 074f5b8a3ed31587b86b172ad2da000b7b81e9c3
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585844"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850060"
 ---
 # <a name="how-to-add-a-shortcut-menu-item-to-sharepoint-projects"></a>如何：向 SharePoint 项目添加快捷菜单项
-  您可以向任何 SharePoint 项目添加快捷菜单项。 当用户在 **解决方案资源管理器**中右键单击项目节点时，将显示菜单项。
+  您可以向任何 SharePoint 项目添加快捷菜单项。 当用户在 **解决方案资源管理器** 中右键单击项目节点时，将显示菜单项。
 
  以下步骤假设已创建项目扩展。 有关详细信息，请参阅 [如何：创建 SharePoint 项目扩展](../sharepoint/how-to-create-a-sharepoint-project-extension.md)。
 
@@ -36,7 +38,7 @@ ms.locfileid: "91585844"
 3. 在 <xref:Microsoft.VisualStudio.SharePoint.IMenuItem.Click> 新对象的事件处理程序中 <xref:Microsoft.VisualStudio.SharePoint.IMenuItem> ，执行用户单击快捷菜单项时要执行的任务。
 
 ## <a name="example"></a>示例
- 下面的代码示例演示如何将快捷菜单项添加到 **解决方案资源管理器**中的 SharePoint 项目节点。 当用户右键单击项目节点并单击 " **写入消息到输出窗口** " 菜单项时，Visual Studio 会在 " **输出** " 窗口中显示一条消息。 此示例使用 SharePoint 项目服务显示消息。 有关详细信息，请参阅 [使用 SharePoint 项目服务](../sharepoint/using-the-sharepoint-project-service.md)。
+ 下面的代码示例演示如何将快捷菜单项添加到 **解决方案资源管理器** 中的 SharePoint 项目节点。 当用户右键单击项目节点并单击 " **写入消息到输出窗口** " 菜单项时，Visual Studio 会在 " **输出** " 窗口中显示一条消息。 此示例使用 SharePoint 项目服务显示消息。 有关详细信息，请参阅 [使用 SharePoint 项目服务](../sharepoint/using-the-sharepoint-project-service.md)。
 
  [!code-csharp[SPExtensibility.ProjectExtension.Menu#1](../sharepoint/codesnippet/CSharp/projectmenu/extension/projectitemextensionmenu.cs#1)]
  [!code-vb[SPExtensibility.ProjectExtension.Menu#1](../sharepoint/codesnippet/VisualBasic/projectmenu/extension/projectitemextensionmenu.vb#1)]

@@ -1,5 +1,7 @@
 ---
 title: 如何：创建 BDC 模型 |Microsoft Docs
+description: 使用此类项的 Visual Studio 模板创建业务数据连接 (BDC) 模型，然后将该模型添加到任何 SharePoint 项目。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,15 +15,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 139da31ced1d32def450a1dc176ca241b0c4677f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8f95533a5ad3955ee00829194bc4da1498baace0
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86014548"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850671"
 ---
 # <a name="how-to-create-a-bdc-model"></a>如何：创建 BDC 模型
-  您可以通过使用此类项的模板，然后将该模型添加到任何 SharePoint 项目，创建 (BDC) 模型的业务数据连接。 有关详细信息，请参阅 [创建业务数据连接模型](../sharepoint/creating-a-business-data-connectivity-model.md)。 有关如何设计模型的详细信息，请参阅 [设计业务数据连接模型](../sharepoint/designing-a-business-data-connectivity-model.md)。
+  您可以通过使用此类项的模板，然后将该模型添加到任何 SharePoint 项目，创建 (BDC) 模型的业务数据连接。 有关详细信息，请参阅[创建业务数据连接模型](../sharepoint/creating-a-business-data-connectivity-model.md)。 有关如何设计模型的详细信息，请参阅 [设计业务数据连接模型](../sharepoint/designing-a-business-data-connectivity-model.md)。
 
 ### <a name="to-create-a-bdc-project"></a>创建 BDC 项目
 
@@ -51,15 +53,15 @@ ms.locfileid: "86014548"
 
 6. 在 " **添加新项** " 对话框中，选择 " **Office/SharePoint** " 节点。
 
-7. 在 SharePoint 模板列表中，选择 " **业务数据连接模型 (场解决方案" 仅) **"。
+7. 在 SharePoint 模板列表中，选择 " **业务数据连接模型 (场解决方案" 仅)**"。
 
 8. 在 " **名称** " 框中，为 BDC 模型指定一个名称，然后选择 " **添加** " 按钮。
 
-     **业务数据连接模型**项将添加到项目。 默认情况下，该模型将显示在 BDC 设计器中。 有关详细信息，请参阅 [创建业务数据连接模型](../sharepoint/creating-a-business-data-connectivity-model.md)。
+     **业务数据连接模型** 项将添加到项目。 默认情况下，该模型将显示在 BDC 设计器中。 有关详细信息，请参阅[创建业务数据连接模型](../sharepoint/creating-a-business-data-connectivity-model.md)。
 
 ## <a name="see-also"></a>另请参阅
 - [创建业务数据连接模型](../sharepoint/creating-a-business-data-connectivity-model.md)
-- [如何：向 SharePoint 项目添加现有 BDC 模型文件](../sharepoint/how-to-add-an-existing-bdc-model-file-to-a-sharepoint-project.md)
+- [如何：将现有 BDC 模型文件添加到 SharePoint 项目](../sharepoint/how-to-add-an-existing-bdc-model-file-to-a-sharepoint-project.md)
 - [如何：使用资源文件指定本地化名称、属性和权限](../sharepoint/how-to-use-a-resource-file-to-specify-localized-names-properties-and-permissions.md)
 - [如何：在 BDC 功能中包含自定义程序集](../sharepoint/how-to-include-a-custom-assembly-in-a-bdc-feature.md)
 - [将业务数据集成到 SharePoint 中](../sharepoint/integrating-business-data-into-sharepoint.md)
