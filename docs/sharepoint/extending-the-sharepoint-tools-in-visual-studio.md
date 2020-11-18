@@ -1,5 +1,7 @@
 ---
 title: 在 Visual Studio 中扩展 SharePoint 工具 | Microsoft Docs
+description: 在 Visual Studio 中扩展 SharePoint 工具。 扩展 SharePoint 项目系统。 扩展服务器资源管理器中的“SharePoint 连接”节点。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: overview
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7dc0cc0d0af73d032d870629877b62c94e6b347b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a921f45ea151ce7ee3313dba47e81a5acc86063d
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016040"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672621"
 ---
 # <a name="extend-the-sharepoint-tools-in-visual-studio"></a>在 Visual Studio 中扩展 SharePoint 工具
   Visual Studio 中的 SharePoint 工具可满足许多应用程序开发方案的要求。 但是，你可能会发现存在它们未提供你或其他开发人员所需的功能的情况。 在这些情况下，可以扩展 SharePoint 工具以创建所需的功能。
