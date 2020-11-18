@@ -11,12 +11,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 870d5005cb74a3c130af3d720991a6797bb53bc5
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 7873d42e075619e23c14d4e2e1babc6898825a6b
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036166"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672764"
 ---
 # <a name="sign-in-to-visual-studio"></a>登录 Visual Studio
 
@@ -51,7 +51,7 @@ ms.locfileid: "90036166"
 
 ## <a name="how-to-sign-in-to-visual-studio"></a>如何登录到 Visual Studio
 
-首次打开 Visual Studio 时，系统将要求登录并提供一些基本注册信息。 
+首次打开 Visual Studio 时，系统将要求登录并提供一些基本注册信息。
 
 ![登录提示](../ide/media/vs2019_signinpopup.png)
 
@@ -63,7 +63,7 @@ ms.locfileid: "90036166"
 
 ![VS2019 中当前已登录的用户](../ide/media/vs2019_username.png)
 
-如果你选择在首次打开 Visual Studio 时不登录，可以在以后轻松登录。 查找 Visual Studio 环境的右上角中的“登录”链接。 
+如果你选择在首次打开 Visual Studio 时不登录，可以在以后轻松登录。 查找 Visual Studio 环境的右上角中的“登录”链接。
 
 ![不是已登录用户](../ide/media/vs2019_usernotsignedin.png)
 
@@ -84,6 +84,7 @@ ms.locfileid: "90036166"
 ## <a name="see-also"></a>请参阅
 
 * /[扩展试用版或更新许可证](../ide/how-to-unlock-visual-studio.md)
+* [在 Visual Studio 中使用 GitHub 帐户](../ide/work-with-github-accounts.md)
 * [Visual Studio IDE 概述](../get-started/visual-studio-ide.md)
 * [登录 (Visual Studio for Mac)](/visualstudio/mac/signing-in)
 * [激活 (Visual Studio for Mac)](/visualstudio/mac/activation)
