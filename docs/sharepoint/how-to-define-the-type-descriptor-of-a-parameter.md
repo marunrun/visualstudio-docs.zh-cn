@@ -119,7 +119,7 @@ ms.locfileid: "94903593"
 
     新的类型描述符将作为子类型描述符添加到集合类型描述符中。 将此类型描述符配置为实体。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [BDC 模型设计工具概述](../sharepoint/bdc-model-design-tools-overview.md)
 - [如何：向模型添加实体](../sharepoint/how-to-add-an-entity-to-a-model.md)
 - [如何：向方法添加参数](../sharepoint/how-to-add-a-parameter-to-a-method.md)
