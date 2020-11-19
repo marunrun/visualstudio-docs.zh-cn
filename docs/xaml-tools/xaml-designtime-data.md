@@ -7,12 +7,12 @@ author: alihamie
 ms.author: tglee
 manager: jillfra
 monikerRange: vs-2019
-ms.openlocfilehash: 1dd0b4df440f6addd474ef08e7bf0b2958a58076
-ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
+ms.openlocfilehash: bda4af3a3985ec6fc3aae1e991b7f5f622d67965
+ms.sourcegitcommit: e8a13978131f257d91ce37c5a2e0d153a4c400ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94492889"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703996"
 ---
 # <a name="use-design-time-data-with-the-xaml-designer-in-visual-studio"></a>在 Visual Studio 中通过 XAML 设计器使用设计时数据
 
@@ -181,7 +181,7 @@ xmlns:models="clr-namespace:Cities.Models"
 
 - 设计时数据需要 Visual Studio 2019 版本 [16.7](/visualstudio/releases/2019/release-notes) 或更高版本。
 
-- 支持目标是适用于 .NET Core 的 Windows Presentation Foundation (WPF) 和 UWP 的 Windows 桌面项目。 如果已启用“适用于 .NET Framework 的新版 WPF XAML 设计器”预览功能，则此功能还可用于 .NET Framework。
+- 支持定目标到适用于 .NET Core 的 Windows Presentation Foundation (WPF) 和 UWP 的 Windows 桌面项目。 也可以在 .NET Framework 的[预览频道](/visualstudio/releases/2019/release-notes-preview)中找到此功能。 若要启用此功能，请依次转到“工具” > “选项” > “环境” > “预览功能”，选择“适用于 .NET Framework 的新 WPF XAML 设计器”，然后重启 Visual Studio。
 
 - 从 Visual Studio 2019 版本 16.7 开始，此功能适用于 WPF 和 UWP 框架中的所有内置控件。 16.8 预览版本现已提供对第三方控件的支持。
 

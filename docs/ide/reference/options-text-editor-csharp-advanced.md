@@ -1,6 +1,6 @@
 ---
 title: 选项，文本编辑器，C#，高级
-ms.date: 08/12/2020
+ms.date: 11/13/2020
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.CSharp.Outlining
@@ -10,12 +10,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: b8e515058b17205a65bab401c7b31c7205aa55bc
-ms.sourcegitcommit: 2946d802aec1418e87bfa779d81834eeb7be5c9d
+ms.openlocfilehash: acd04f80d5ade3a4afea418def69d4bbb6e20fa0
+ms.sourcegitcommit: c1cc3d8e1673c52fbfddc86b089b4a3d46bb3e59
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88214670"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94626186"
 ---
 # <a name="options-text-editor-c-advanced"></a>选项，文本编辑器，C#，高级
 
@@ -134,6 +134,12 @@ ms.locfileid: "88214670"
     如果选择此选项，则会在函数调用中的每个参数之前插入文本、强制转换文本和对象实例化的参数名称提示。  
     
     ![CSharp 的内联参数名称提示](media/inline-parameter-name-hints-csharp.png)
+
+- 内联类型提示 
+    
+    选中后，为具有推断类型和 lambda 参数类型的变量插入类型提示。  
+    
+    ![C# 的内联类型提示](media/inline-type-hints-csharp.png)
 ::: moniker-end
 - 为 /// 生成 XML 文档注释
 

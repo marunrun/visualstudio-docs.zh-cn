@@ -1,5 +1,5 @@
 ---
-title: 使用 Visual Studio 调试器附加到正在运行的进程 | Microsoft Docs
+title: 使用调试器附加到运行的进程
 ms.custom: seodec18
 ms.date: 06/12/2020
 ms.topic: conceptual
@@ -28,12 +28,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7decb23bb6d307732c1f675fb14a96c1fc0dcda1
-ms.sourcegitcommit: 3e05bd4bfac6f0b8b3534d8c013388f67e288651
+ms.openlocfilehash: a33af839406497a2a30fba2f5103a64a1da36ed7
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91959856"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671441"
 ---
 # <a name="attach-to-running-processes-with-the-visual-studio-debugger"></a>使用 Visual Studio 调试器附加到正在运行的进程
 
@@ -159,85 +159,15 @@ ms.locfileid: "91959856"
 
 如果这两种解决方法都不可行，第三种方法是通过从 Windows 命令行运行 `vsjitdebugger.exe -p <ProcessId>` 来附加到进程。 可使用 tlist.exe 来确定进程 ID。 若要获取“tlist.exe”，请从 [WDK 和 WinDbg 下载](/windows-hardware/drivers/download-the-wdk)中下载并安装适用于 Windows 的调试工具。
 
-::: moniker range=">= vs-2019"
-
 ## <a name="attach-to-a-net-core-process-running-on-linux-using-ssh"></a>使用 SSH 附加到正在 Linux 上运行的 .NET Core 进程
 
 有关详细信息，请参阅[使用 SSH 远程调试正在 Linux 上运行的 .NET Core](../debugger/remote-debugging-dotnet-core-linux-with-ssh.md)。
 
-## <a name="attach-to-a-process-running-on-a-linux-docker-container"></a><a name="BKMK_Linux_Docker_Attach"></a> 附加到正在 Linux Docker 容器上运行的进程
+::: moniker range=">= vs-2019"
 
-可以使用“附加到进程”对话框，将 Visual Studio 调试器附加到正在本地或远程计算机的 Linux .NET Core Docker 容器中运行的进程。
+## <a name="attach-to-a-process-running-on-a-docker-container"></a><a name="BKMK_Linux_Docker_Attach"></a> 附加到在 Docker 容器上运行的进程
 
-> [!IMPORTANT]
-> 若要使用此功能，必须安装 .NET Core 跨平台开发工作负载，并对源代码具有本地访问权限。
-
-**附加到 Linux Docker 容器中正在运行的进程：**
-
-1. 在 Visual Studio 中，选择“调试 > 附加到进程”(CTRL+ALT+P)，打开“附加到进程”对话框 。
-
-![“附加到进程”菜单](../debugger/media/attach-process-menu.png "Attach_To_Process_Menu")
-
-2. 将“连接类型”设置为“Docker (Linux 容器)”。
-3. 通过“选择 Docker 容器”对话框选择“查找...”，以设置“连接目标”。
-
-    可以在本地或远程调试 Docker 容器进程。
-
-    **在本地调试 Docker 容器进程：**
-    1. 将“Docker CLI 主机”设置为“本地计算机”。
-    1. 从列表中选择要附加到的正在运行的容器，然后点击“确定”。
-
-    ![“选择 Docker 容器”菜单](../debugger/media/select-docker-container.png "Select_Docker_Container_Menu")
-
-    **B.远程调试 Docker 容器进程：**
-
-    > [!NOTE]
-    > 可通过两个选项远程连接到 Docker 容器中正在运行的进程。 第一个选项是使用 SSH，它适用于未在本地计算机上安装 Docker 工具的情况。  如果在本地安装了 Docker 工具，并且具有配置为接受远程请求的 Docker 守护程序，请尝试第二个选项 - 使用 Docker 守护程序。
-
-    1. ***通过 SSH 连接到远程计算机：***
-        1. 选择“添加...”以连接到远程系统。<br/>
-        ![连接到远程系统](../debugger/media/connect-remote-system.png "连接到远程系统")
-        1. 成功连接到 SSH 或守护程序后，选择要附加到的正在运行的容器，然后点击“确定”。
-
-    1. ***通过 [Docker 守护程序](https://docs.docker.com/engine/reference/commandline/dockerd/)将目标设置为正在运行进程的远程容器***
-        1. 在“Docker 主机(可选)”下指定守护程序地址（即通过 TCP、IP 等），然后单击刷新链接。
-        1. 成功连接到守护程序后，选择要附加到的正在运行的容器，然后点击“确定”。
-
-4. 从“可用进程”列表中选择相应的容器进程并选择“附加”，开始在 Visual Studio 中调试 C# 容器进程！
-
-    ![已完成的 Docker 附加菜单](../debugger/media/docker-attach-complete.png "已完成的 Linux Docker 附加菜单")
-
-## <a name="attach-to-a-process-running-on-a-windows-docker-container"></a><a name="BKMK_Windows_Docker_Attach"></a> 附加到正在 Windows Docker 容器上运行的进程
-
-可以使用“附加到进程”对话框将 Visual Studio 调试器附加到正在本地计算机的 Windows Docker 容器中运行的进程。
-
-> [!IMPORTANT]
-> 若要对 .NET Core 进程使用此功能，必须安装 .NET Core 跨平台开发工作负载，并对源代码具有本地访问权限。
-
-**附加到 Windows Docker 容器中正在运行的进程：**
-
-1. 在 Visual Studio 中，选择“调试 > 附加到进程”（或 CTRL+ALT+P），打开“附加到进程”对话框  。
-
-   ![“附加到进程”菜单](../debugger/media/attach-process-menu-docker-windows.png "Attach_To_Process_Menu")
-
-2. 将“连接类型”设置为“Docker (Windows 容器)”。
-3. 使用“选择 Docker 容器”对话框选择“查找...”，以设置“连接目标”。
-
-    > [!IMPORTANT]
-    > 目标进程必须与运行它的 Docker Windows 容器具有相同的处理器体系结构。
-
-   当前无法通过 SSH 将目标设置为远程容器，而只能使用 Docker 守护程序来完成。
-
-    ***通过 [Docker 守护程序](https://docs.docker.com/engine/reference/commandline/dockerd/)将目标设置为正在运行进程的远程容器***
-    1. 在“Docker 主机(可选)”下指定守护程序地址（即通过 TCP、IP 等），然后单击刷新链接。
-
-    1. 成功连接到守护程序后，选择要附加到的正在运行的容器，然后选择“确定”。
-
-4. 从“可用进程”列表中选择相应的容器进程并选择“附加”，以开始调试 C# 容器进程。
-
-    ![已完成的 Docker 附加菜单](../debugger/media/docker-attach-complete-windows.png "已完成的 Windows Docker 附加菜单")
-
-5.  从可用进程列表中选择相应的容器进程并选择“附加”，以开始调试 C# 容器进程。
+自 Visual Studio 2019 起，可以将 Visual Studio 调试器附加到在 Docker 容器上运行的进程。 对于 Linux .NET Core Docker 容器，请参阅[附加到在 Linux Docker 容器上运行的进程](../debugger/attach-to-process-running-in-docker-container.md#attach-to-a-process-running-on-a-linux-docker-container)。 对于 Windows Docker 容器，请参阅[附加到在 Windows Docker 容器上运行的进程](../debugger/attach-to-process-running-in-docker-container.md#attach-to-a-process-running-on-a-windows-docker-container)。
 
 ::: moniker-end
 
@@ -267,7 +197,8 @@ ms.locfileid: "91959856"
 |针对受支持的应用类型，调试本地 IIS 服务器上的客户端脚本 |使用“附加到进程”|chrome.exe、MicrosoftEdgeCP.exe 或 iexplore.exe|必须启用脚本调试。 对于 Chrome，还必须在调试模式下运行 Chrome（在命令行中键入 `chrome.exe --remote-debugging-port=9222`），并在“附加到”字段中选择“JavaScript (Chrome)”。|
 |调试本地计算机上的 C#、Visual Basic 或 C++ 应用|使用标准调试 (F5) 或“附加到进程”|\<appname>.exe|在大多数情况下，请使用标准调试，而不是“附加到进程”。|
 |远程调试 Windows 桌面应用|远程工具|不可用| 请参阅[远程调试 C# 或 Visual Basic 应用](../debugger/remote-debugging-csharp.md)或[远程调试 C++ 应用](../debugger/remote-debugging-cpp.md)|
-|调试 Linux 上的 .NET Core|使用“附加到进程”|*dotnet.exe*|若要使用 SSH，请参阅[使用 SSH 远程调试正在 Linux 上运行的 .NET Core](../debugger/remote-debugging-dotnet-core-linux-with-ssh.md)。 对于容器化应用，请参阅本文前面的部分。|
+|调试 Linux 上的 .NET Core|使用“附加到进程”|dotnet.exe 或唯一进程名称|若要使用 SSH，请参阅[使用 SSH 远程调试正在 Linux 上运行的 .NET Core](../debugger/remote-debugging-dotnet-core-linux-with-ssh.md)。 对于容器化应用，请参阅[附加到在 Docker 容器上运行的进程](../debugger/attach-to-process-running-in-docker-container.md#attach-to-a-process-running-on-a-linux-docker-container)。|
+|调试容器化应用|dotnet.exe 或唯一进程名称|请参阅[附加到在 Docker 容器上运行的进程](../debugger/attach-to-process-running-in-docker-container.md)|
 |在 Linux 上远程调试 Python|使用“附加到进程”|debugpy|请参阅[从 Python 工具远程附加](../python/debugging-python-code-on-remote-linux-machines.md#attach-remotely-from-python-tools)|
 |在没有调试器的情况下，在启动本地计算机上的 ASP.NET 应用后调试该应用|使用“附加到进程”|*iiexpress.exe*|这可能有助于加快应用加载速度，例如在进行分析时。 |
 |在服务器进程上调试其他受支持的应用类型|如果是远程服务器，请使用远程工具和“附加到进程”|chrome.exe、iexplore.exe 或其他进程|如有必要，请使用资源监视器来帮助识别进程。 请参阅[远程调试](../debugger/remote-debugging.md)。|
