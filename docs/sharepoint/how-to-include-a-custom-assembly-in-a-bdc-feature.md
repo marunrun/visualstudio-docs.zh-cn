@@ -1,5 +1,7 @@
 ---
 title: 如何：在 BDC 功能中包含自定义程序集 |Microsoft Docs
+description: 在业务数据连接 (BDC) 功能中包含自定义程序集，以便您的项目可以引用同一解决方案中其他项目的程序集。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -17,19 +19,19 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 79336e241b822e5fa9f84dbb771aa4187ea5eadb
-ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
+ms.openlocfilehash: e7a2a0109faca4da5406b45b4d606ae8a5cd0685
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90740066"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903463"
 ---
 # <a name="how-to-include-a-custom-assembly-in-a-bdc-feature"></a>如何：在 BDC 功能中包含自定义程序集
   你的项目可以引用同一解决方案中其他项目的程序集。 但是，必须使用 " **将引用的程序集分配到 lobsystem** " 对话框将这些程序集添加到项目的功能文件中。
 
 ### <a name="to-include-a-custom-assembly-in-a-business-data-connectivity-bdc-feature"></a>若要将自定义程序集包括在 business data connectivity (BDC) 功能
 
-1. 在 **解决方案资源管理器**中，选择包含 BDC 模型的文件夹。
+1. 在 **解决方案资源管理器** 中，选择包含 BDC 模型的文件夹。
 
 2. 在 **“视图”** 菜单上，单击 **“属性窗口”** 。
 
@@ -47,7 +49,7 @@ ms.locfileid: "90740066"
     > [!NOTE]
     > 若要调试自定义程序集中的代码，则必须将程序集添加到解决方案包。 有关详细信息，请参阅 [如何：添加和移除附加程序集](../sharepoint/how-to-add-and-remove-additional-assemblies.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [如何：使用资源文件指定本地化名称、属性和权限](../sharepoint/how-to-use-a-resource-file-to-specify-localized-names-properties-and-permissions.md)
 - [如何：将现有 BDC 模型文件添加到 SharePoint 项目](../sharepoint/how-to-add-an-existing-bdc-model-file-to-a-sharepoint-project.md)
 - [创建业务数据连接模型](../sharepoint/creating-a-business-data-connectivity-model.md)

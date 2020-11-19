@@ -1,5 +1,7 @@
 ---
 title: 如何：编辑 SharePoint 部署配置 |Microsoft Docs
+description: 了解如何创建 SharePoint 部署配置或修改现有的部署配置。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 74f6377bad0f62aa2c470e72afe64b85b3017ee6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e64f805496d03b42ca70489bab1302ecf58b33bc
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016781"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903554"
 ---
 # <a name="how-to-edit-a-sharepoint-deployment-configuration"></a>如何：编辑 SharePoint 部署配置
   您可以创建部署配置或修改现有的部署配置。 例如，你可以运行单个步骤或更改部署过程中的步骤顺序。 你可能希望创建或修改部署配置，因为无法更改内置和以编程方式添加的配置。
@@ -28,7 +30,7 @@ ms.locfileid: "86016781"
 
 #### <a name="to-create-a-sharepoint-deployment-configuration"></a>创建 SharePoint 部署配置
 
-1. 在**解决方案资源管理器**中，选择一个 SharePoint 项目，然后在菜单栏上选择 "项目"、"**项目**_名称_**属性**"。
+1. 在 **解决方案资源管理器** 中，选择一个 SharePoint 项目，然后在菜单栏上选择 "项目"、"**项目**_名称_**属性**"。
 
 2. 在 **SharePoint** 选项卡上，选择 " **新建** " 按钮。
 
@@ -45,7 +47,7 @@ ms.locfileid: "86016781"
 
 #### <a name="to-change-the-active-deployment-configuration"></a>更改活动部署配置
 
-1. 在**解决方案资源管理器**中，选择一个 SharePoint 项目，然后在菜单栏上选择 "**项目**  >  ** \<*ProjectName*> 属性**"。
+1. 在 **解决方案资源管理器** 中，选择一个 SharePoint 项目，然后在菜单栏上选择 "**项目**  >  **\<*ProjectName*> 属性**"。
 
 2. 选择 " **SharePoint** " 选项卡。
 

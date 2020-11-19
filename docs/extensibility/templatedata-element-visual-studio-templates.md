@@ -1,5 +1,7 @@
 ---
 title: " (Visual Studio 模板) 的 TemplateData 元素 |Microsoft Docs"
+description: 了解 TemplateData 元素及其对模板进行分类的方式，并定义它在 "新建项目" 或 "添加新项" 对话框中的显示方式。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f3ce0226286e8cc4623b66c043eb7bd376597118
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bc0edf82421ba41198480e6c105dd56c02bd0f7e
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699196"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903255"
 ---
 # <a name="templatedata-element-visual-studio-templates"></a>TemplateData 元素（Visual Studio 模板）
 将此模板分类并定义此模板在 **“新建项目”** 或 **“添加新项”** 对话框中的显示方式。
@@ -47,9 +49,9 @@ ms.locfileid: "80699196"
 
 | 元素 | 描述 |
 | - | - |
-| [名称](../extensibility/name-element-visual-studio-templates.md) | 必需的元素。<br /><br /> 指定模板在 " **新建项目** " 或 " **添加新项** " 对话框中显示的名称。 |
+| [Name](../extensibility/name-element-visual-studio-templates.md) | 必需的元素。<br /><br /> 指定模板在 " **新建项目** " 或 " **添加新项** " 对话框中显示的名称。 |
 | [说明](../extensibility/description-element-visual-studio-templates.md) | 必需的元素。<br /><br /> 指定在 " **新建项目** " 或 " **添加新项** " 对话框中显示的模板的说明。 |
-| [Icon](../extensibility/icon-element-visual-studio-templates.md) | 必需的元素。<br /><br /> 指定图像文件的路径和文件名，该图像文件将显示在模板的 " **新建项目** " 或 " **添加新项** " 对话框中。 |
+| [图标](../extensibility/icon-element-visual-studio-templates.md) | 必需的元素。<br /><br /> 指定图像文件的路径和文件名，该图像文件将显示在模板的 " **新建项目** " 或 " **添加新项** " 对话框中。 |
 | [ProjectType](../extensibility/projecttype-element-visual-studio-templates.md) | 必需的元素。<br /><br /> 对项目模板进行分类，使其显示在 " **新建项目** " 对话框中的指定组下。 |
 | [ProjectSubType](../extensibility/projectsubtype-element-visual-studio-templates.md) | 可选元素。<br /><br /> 对项目模板进行分类，使其显示在 " **新建项目** " 对话框中的指定子类别下。 |
 | [TemplateID](../extensibility/templateid-element-visual-studio-templates.md) | 可选元素。<br /><br /> 指定模板 ID。 |
@@ -76,7 +78,7 @@ ms.locfileid: "80699196"
 |-------------|-----------------|
 |[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|必需的元素。<br /><br /> 包含项目模板、项模板或初学者工具包的所有元数据。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
  `TemplateData` 是必需的元素。
 
  如果不包含可选元素，则使用该元素的默认值。
@@ -108,6 +110,6 @@ ms.locfileid: "80699196"
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
 - [创建项目和项模板](../ide/creating-project-and-item-templates.md)

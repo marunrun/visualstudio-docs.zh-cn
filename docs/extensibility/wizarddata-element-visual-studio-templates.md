@@ -1,5 +1,7 @@
 ---
 title: " (Visual Studio 模板) 的 WizardData 元素 |Microsoft Docs"
+description: 了解 WizardData 元素及其如何指定自定义 XML。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: aa3f9d2e971d944b964f4b194d1324ff960fbd24
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0472bfeb3a988bcb39b4daf80cea92398130f59f
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80740392"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903398"
 ---
 # <a name="wizarddata-element-visual-studio-templates"></a>WizardData 元素（Visual Studio 模板）
 
@@ -53,7 +55,7 @@ ms.locfileid: "80740392"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|必需的元素。<br /><br /> 包含项目模板、项模板或初学者工具包的所有元数据。|
 
@@ -63,7 +65,7 @@ ms.locfileid: "80740392"
 
 此文本指定要传递给 [WizardExtension](../extensibility/wizardextension-element-visual-studio-templates.md) 元素中指定的自定义向导扩展的自定义 XML。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 可以在此元素中指定任何 XML。 XML 将作为参数传递到自定义向导扩展，允许扩展使用此元素的内容。 不对此数据执行任何验证。
 

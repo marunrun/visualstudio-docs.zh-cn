@@ -1,6 +1,7 @@
 ---
 title: SupportsLanguageDropDown 元素（Visual Studio 模板）
 titleSuffix: ''
+description: 了解 SupportsLanguageDropDown 元素及其如何指定 Web 项模板对于多语言是否相同，以及是否启用了 Language 选项。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -16,16 +17,16 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2ef6cb4f96bf1b31566fef8b714ed30c270ad754
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: b02e4b88b22257e7187e334f8c1064b68c6ef49d
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036842"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94901721"
 ---
 # <a name="supportslanguagedropdown-element-visual-studio-templates"></a>SupportsLanguageDropDown 元素（Visual Studio 模板）
 
-指定对于多种语言，Web 项模板是否相同，以及是否在 "**添加新项**" 对话框中启用了**Language**选项。
+指定对于多种语言，Web 项模板是否相同，以及是否在 "**添加新项**" 对话框中启用了 **Language** 选项。
 
  \<VSTemplate> \<TemplateData>
  \<SupportsLanguageDropDown>
@@ -60,9 +61,9 @@ ms.locfileid: "90036842"
 
  文本必须是 `true` 或 `false` ，指示是否可从 "**添加新项**" 对话框中使用 "**语言**" 选项。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
- `SupportsLanguageDropDown` 是可选元素。 默认值是 `false`。
+ `SupportsLanguageDropDown` 是可选元素。 默认值为 `false`。
 
  `SupportsLanguageDropDown`元素仅适用于 Web 项模板。
 

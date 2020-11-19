@@ -3,18 +3,17 @@ title: 使用连接服务添加 Azure 存储 | Microsoft Docs
 description: 使用 Visual Studio 连接的服务向应用添加 Azure 存储服务依赖项
 author: ghogen
 manager: jillfra
-assetId: 521ec044-ad4b-4828-8864-01decde2e758
 ms.custom: vs-azure
 ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 08/13/2020
 ms.author: ghogen
-ms.openlocfilehash: f2f55a149420205435d9f64ea1f66c8c6854ec38
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d169940d6deffdf67bcbcb94e9f647631d0f606a
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88800510"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94902631"
 ---
 # <a name="adding-azure-storage-by-using-visual-studio-connected-services"></a>使用 Visual Studio 连接服务添加 Azure 存储
 
@@ -45,15 +44,15 @@ ms.locfileid: "88800510"
 
 1. 在 Visual Studio 中打开项目。
 
-1. 在 **解决方案资源管理器**中，右键单击 " **连接的服务** " 节点，然后从上下文菜单中选择 " **添加连接服务**"。
+1. 在 **解决方案资源管理器** 中，右键单击 " **连接的服务** " 节点，然后从上下文菜单中选择 " **添加连接服务**"。
 
     ![添加 Azure 连接服务](./media/vs-azure-tools-connected-services-storage/add-connected-service.png)
 
-1. 在“连接服务”**** 页面中，选择“Azure 存储的云存储”****。
+1. 在“连接服务”页面中，选择“Azure 存储的云存储”。
 
     ![添加 Azure 存储](./media/vs-azure-tools-connected-services-storage/add-azure-storage.png)
 
-1. 在“Azure 存储”**** 对话框中，选择一个现有的存储帐户，并选择“添加”****。
+1. 在“Azure 存储”对话框中，选择一个现有的存储帐户，并选择“添加”。
 
     若要要创建存储帐户，请转到下一步。 否则，请跳到步骤 6。
 
@@ -61,26 +60,26 @@ ms.locfileid: "88800510"
 
 1. 创建存储帐户：
 
-   1. 选择对话框底部的“创建新存储帐户”****。
+   1. 选择对话框底部的“创建新存储帐户”。
 
-   1. 填写“创建存储帐户”**** 对话框，并选择“创建”****。
+   1. 填写“创建存储帐户”对话框，并选择“创建”。
 
        ![新的 Azure 存储帐户](./media/vs-azure-tools-connected-services-storage/create-storage-account.png)
 
-   1. 显示“Azure 存储”**** 对话框时，新的存储帐户会显示在列表中。 在列表中选择新存储帐户，并选择“添加”****。
+   1. 显示“Azure 存储”对话框时，新的存储帐户会显示在列表中。 在列表中选择新存储帐户，并选择“添加”。
 
-1. 该存储连接服务会显示在项目的“服务引用”**** 节点下。
+1. 该存储连接服务会显示在项目的“服务引用”节点下。
 :::moniker-end
 
 :::moniker range=">=vs-2019"
 
 1. 在 Visual Studio 中打开项目。
 
-1. 在 **解决方案资源管理器**中，右键单击 " **连接的服务** " 节点，然后从上下文菜单中选择 " **添加连接的服务**"。
+1. 在 **解决方案资源管理器** 中，右键单击 " **连接的服务** " 节点，然后从上下文菜单中选择 " **添加连接的服务**"。
 
     ![添加 Azure 连接服务](./media/vs-azure-tools-connected-services-storage/vs-2019/add-connected-service.png)
 
-1. 在 " **连接的服务** " 选项卡中，选择 " **服务依赖项**的 + 图标"。
+1. 在 " **连接的服务** " 选项卡中，选择 " **服务依赖项** 的 + 图标"。
 
     ![添加服务依赖项](./media/vs-azure-tools-connected-services-storage/vs-2019/connected-services-tab.png)
 
@@ -104,7 +103,7 @@ ms.locfileid: "88800510"
 
        ![新的 Azure 存储帐户](./media/vs-azure-tools-connected-services-storage/vs-2019/create-storage-account.png)
 
-   1. 显示“Azure 存储”**** 对话框时，新的存储帐户会显示在列表中。 在列表中选择新存储帐户，然后选择 " **下一步**"。
+   1. 显示“Azure 存储”对话框时，新的存储帐户会显示在列表中。 在列表中选择新存储帐户，然后选择 " **下一步**"。
 
 1. 输入连接字符串名称，并选择是要将连接字符串存储在本地机密文件中还是 [Azure Key Vault](/azure/key-vault)中。
 
@@ -114,7 +113,7 @@ ms.locfileid: "88800510"
 
    ![更改摘要](./media/vs-azure-tools-connected-services-storage/vs-2019/summary-of-changes.png)
 
-1. 该存储连接服务会显示在项目的“服务引用”**** 节点下。
+1. 该存储连接服务会显示在项目的“服务引用”节点下。
 :::moniker-end
 
 ## <a name="see-also"></a>另请参阅

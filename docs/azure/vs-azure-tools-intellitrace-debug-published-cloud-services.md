@@ -4,17 +4,16 @@ ms.custom: SEO-VS-2020
 description: 了解如何使用 Visual Studio 和 IntelliTrace 调试云服务
 author: mikejo5000
 manager: jillfra
-ms.assetid: 5e6662fc-b917-43ea-bf2b-4f2fc3d213dc
 ms.topic: how-to
 ms.workload: azure-vs
 ms.date: 03/21/2017
 ms.author: mikejo
-ms.openlocfilehash: b89ed536e6483f54d4d7370a02935728dedfb517
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: abfe3de9bad150fbfb187646592218e62c1cce20
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809815"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94902410"
 ---
 # <a name="debugging-a-published-azure-cloud-service-with-visual-studio-and-intellitrace"></a>使用 Visual Studio 和 IntelliTrace 调试已发布的 Azure 云服务
 通过 IntelliTrace，可以在某个角色实例在 Azure 中运行时记录该角色实例的大量调试信息。 如果需要查找问题的原因，可以从 Visual Studio 使用 IntelliTrace 日志来单步执行代码，就像它在 Azure 中运行一样。 实际上，当 Azure 应用程序以云服务的形式在 Azure 中运行时，IntelliTrace 将记录关键代码执行和环境数据，并允许从 Visual Studio 中回放已记录的数据。
@@ -32,38 +31,38 @@ ms.locfileid: "90809815"
 
 1. 当你准备好部署 Azure 应用程序时，请验证将项目生成目标设置为 **“调试”**。
 
-1. 在“解决方案资源管理器”**** 中右键单击项目，并从上下文菜单中选择“发布”****。
+1. 在“解决方案资源管理器”中右键单击项目，并从上下文菜单中选择“发布”。
 
-1. 在“发布 Azure应用程序”**** 对话框中，选择 Azure 订阅，并选择“下一步”****。
+1. 在“发布 Azure应用程序”对话框中，选择 Azure 订阅，并选择“下一步”。
 
-1. 在“设置”**** 页中，选择“高级设置”**** 选项卡。
+1. 在“设置”页中，选择“高级设置”选项卡。
 
-1. 打开“启用 IntelliTrace”**** 选项，以在云中发布应用程序时为其收集 IntelliTrace 日志。
+1. 打开“启用 IntelliTrace”选项，以在云中发布应用程序时为其收集 IntelliTrace 日志。
 
-1. 若要自定义基本 IntelliTrace 配置，请选择“启用 IntelliTrace”**** 旁边的“设置”****。
+1. 若要自定义基本 IntelliTrace 配置，请选择“启用 IntelliTrace”旁边的“设置”。
 
     ![IntelliTrace 设置链接](./media/vs-azure-tools-intellitrace-debug-published-cloud-services/intellitrace-settings-link.png)
 
-1. 在“IntelliTrace 设置”**** 对话框中，可以指定要记录的事件、是否收集调用信息、要收集其日志的模块和过程，以及分配给记录的空间量。 有关 IntelliTrace 的详细信息，请参阅[使用 IntelliTrace 进行调试](../debugger/intellitrace.md)。
+1. 在“IntelliTrace 设置”对话框中，可以指定要记录的事件、是否收集调用信息、要收集其日志的模块和过程，以及分配给记录的空间量。 有关 IntelliTrace 的详细信息，请参阅[使用 IntelliTrace 进行调试](../debugger/intellitrace.md)。
 
     ![IntelliTrace 设置](./media/vs-azure-tools-intellitrace-debug-published-cloud-services/IC519063.png)
 
 IntelliTrace 日志是一个循环日志文件，IntelliTrace 设置中指定了该文件的最大大小（默认大小为 250 MB）。 IntelliTrace 日志会被收集到虚拟机的文件系统中的一个文件中。 当请求日志时，将及时拍摄该时刻的快照，并将该快照下载到本地计算机上。
 
-将 Azure 云服务发布到 Azure 后，可以确定是否已从**服务器资源管理器**中的 Azure 节点启用了 IntelliTrace，如下图所示：
+将 Azure 云服务发布到 Azure 后，可以确定是否已从 **服务器资源管理器** 中的 Azure 节点启用了 IntelliTrace，如下图所示：
 
 ![服务器资源管理器 - 已启用 IntelliTrace](./media/vs-azure-tools-intellitrace-debug-published-cloud-services/IC744134.png)
 
 ## <a name="download-intellitrace-logs-for-a-role-instance"></a>下载角色实例的 IntelliTrace 日志
 使用 Visual Studio，可以通过执行以下步骤来下载角色实例的 IntelliTrace 日志：
 
-1. 在“服务器资源管理器”**** 中，展开“云服务”**** 节点，并找到要下载其日志的角色实例。
+1. 在“服务器资源管理器”中，展开“云服务”节点，并找到要下载其日志的角色实例。
 
-1. 右键单击此角色实例，并从上下文菜单中选择“查看 IntelliTrace 日志”****。
+1. 右键单击此角色实例，并从上下文菜单中选择“查看 IntelliTrace 日志”。
 
     ![“查看 IntelliTrace 日志”菜单选项](./media/vs-azure-tools-intellitrace-debug-published-cloud-services/view-intellitrace-logs.png)
 
-1. IntelliTrace 日志会被下载到本地计算机上某个目录中的文件中。 每次请求 IntelliTrace 日志时，就会创建新快照。 在下载日志时，Visual Studio 会在“Azure 活动日志”**** 窗口中显示操作进度。 可以展开操作的行项以查看详细信息，如下图所示。
+1. IntelliTrace 日志会被下载到本地计算机上某个目录中的文件中。 每次请求 IntelliTrace 日志时，就会创建新快照。 在下载日志时，Visual Studio 会在“Azure 活动日志”窗口中显示操作进度。 可以展开操作的行项以查看详细信息，如下图所示。
 
 ![VST_IntelliTraceDownloadProgress](./media/vs-azure-tools-intellitrace-debug-published-cloud-services/IC745551.png)
 

@@ -3,17 +3,16 @@ title: 测试云服务的性能 | Microsoft Docs
 description: 使用 Visual Studio 探查器测试云服务的性能
 author: mikejo5000
 manager: jillfra
-ms.assetid: 7a5501aa-f92c-457c-af9b-92ea50914e24
 ms.topic: conceptual
 ms.workload: azure-vs
 ms.date: 11/11/2016
 ms.author: mikejo
-ms.openlocfilehash: 5c92a2bb2349f1b5543672d7ecd944e3d82bb500
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 119f781e972b38c04763f7a069e3835f42e21941
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89508426"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94902254"
 ---
 # <a name="testing-the-performance-of-a-cloud-service"></a>测试云服务的性能
 ## <a name="overview"></a>概述
@@ -68,7 +67,7 @@ ms.locfileid: "89508426"
 * **检测信息** - 此方法收集用于重点分析和分析输入/输出性能问题有用的详细计时数据。 在分析运行过程中，检测方法将记录每个进入、退出以及对模块中的函数执行的函数调用。 此方法适用于收集有关代码中某个部分的详细计时信息，以及了解输入和输出操作对应用程序性能的影响。 此方法禁用计算机运行 32 位操作系统。 仅当云服务在 Azure 中运行，而非以本地方式在计算模拟器中运行时，此选项才可用。
 * **.NET 内存分配** - 此方法通过使用采样分析方法收集 .NET Framework 内存分配数据。 所收集的数据包括数量和分配的对象的大小。
 * **并发性** - 此方法收集资源争用数据和线程执行数据，这些数据可用于分析多线程应用程序和多进程应用程序。 并发方法收集阻止代码执行（如线程等待释放对应用程序资源的锁定访问时）的每个事件的数据。 此方法可用于分析多线程应用程序。
-* 还可以启用**层交互分析**，这种方法提供了有关在可与一个或多个数据库通信的多层应用程序函数中同步 ADO.NET 调用的执行时间的更多信息。 可以使用任意分析方法收集层交互数据。 有关层交互分析的详细信息，请参阅[层交互视图](../profiling/tier-interactions-view.md)。
+* 还可以启用 **层交互分析**，这种方法提供了有关在可与一个或多个数据库通信的多层应用程序函数中同步 ADO.NET 调用的执行时间的更多信息。 可以使用任意分析方法收集层交互数据。 有关层交互分析的详细信息，请参阅[层交互视图](../profiling/tier-interactions-view.md)。
 
 ## <a name="configuring-profiling-settings"></a>配置分析设置
 下图演示了如何从“发布 Azure 应用程序”对话框配置分析设置。
@@ -81,11 +80,11 @@ ms.locfileid: "89508426"
 >
 
 ### <a name="to-configure-profiling-settings"></a>配置分析设置
-1. 在“解决方案资源管理器”中，打开“Azure 项目”的快捷菜单，并选择“发布”。**** 有关如何发布云服务的详细步骤，请参阅[使用 Azure Tools 发布云服务](vs-azure-tools-publishing-a-cloud-service.md)。
+1. 在“解决方案资源管理器”中，打开“Azure 项目”的快捷菜单，并选择“发布”。 有关如何发布云服务的详细步骤，请参阅[使用 Azure Tools 发布云服务](vs-azure-tools-publishing-a-cloud-service.md)。
 2. 在 **“发布 Azure 应用程序”** 对话框中选择 **“高级设置”** 选项卡。
 3. 若要启用分析，请选择 **“启用分析”** 复选框。
 4. 若要配置分析设置，请选择 **“设置”** 超链接。 此时会显示“分析设置”对话框。
-5. 在“要使用什么分析方法”选项按钮中，选择所需的分析类型。****
+5. 在“要使用什么分析方法”选项按钮中，选择所需的分析类型。
 6. 若要收集层交互分析数据，请选中 **“启用层交互分析”** 复选框。
 7. 若要保存设置，请选择 **“确定”** 按钮。
 
@@ -101,7 +100,7 @@ ms.locfileid: "89508426"
 2. 选择“Azure 计算”节点，并针对从 Visual Studio 发布时所选的要进行分析的云服务，选择相应 Azure 部署节点。
 3. 若要查看实例分析报告，选择服务中的角色，打开特定实例的快捷菜单，然后选择 **“查看分析报告”**。
 
-    报告是一个 .vsp 文件，它现在已从 Azure 下载，且下载状态显示在 Azure 活动日志中。 下载完成后，分析报告会显示在名为 <Role name\><Instance Number\><identifier\>.vsp 的 Visual Studio 编辑器选项卡中**。 随即会显示报告的汇总数据。
+    报告是一个 .vsp 文件，它现在已从 Azure 下载，且下载状态显示在 Azure 活动日志中。 下载完成后，分析报告会显示在名为 <Role name\><Instance Number\><identifier\>.vsp 的 Visual Studio 编辑器选项卡中。 随即会显示报告的汇总数据。
 4. 若要显示报告的其他视图，请在“当前视图”列表中，选择所需视图类型。 有关详细信息，请参阅[分析工具报告视图](../profiling/performance-report-views.md)。
 
 ## <a name="next-steps"></a>后续步骤

@@ -4,17 +4,16 @@ description: 了解如何将 Web 项目发布到 Azure 网站。 此脚本会在
 ms.custom: SEO-VS-2020
 author: ghogen
 manager: jillfra
-assetId: 63cfaa2d-f04d-40dc-8677-345385c278d5
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
-ms.openlocfilehash: c487084a276be31730f1e268527f4c10a2f7b747
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 0a6657f8a6da751614d7d7da3f526aeebd817d5c
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93398821"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94902163"
 ---
 # <a name="publish-webapplicationwebsite-windows-powershell-script"></a>Publish-WebApplicationWebSite（Windows PowerShell 脚本）
 ## <a name="syntax"></a>语法
@@ -36,7 +35,7 @@ Publish-WebApplicationWebSite
 | 参数 | 默认值 |
 | --- | --- |
 | 别名 |无 |
-| 必需？ |是 |
+| 是否必需？ |true |
 | 位置 |所指定位置 |
 | 默认值 |无 |
 | 接受管道输入？ |false |
@@ -48,7 +47,7 @@ Publish-WebApplicationWebSite
 | 参数 | 默认值 |
 | --- | --- |
 | 别名 |无 |
-| 必需？ |false |
+| 是否必需？ |false |
 | 位置 |所指定位置 |
 | 默认值 |无 |
 | 接受管道输入？ |false |
@@ -60,7 +59,7 @@ Publish-WebApplicationWebSite
 | 参数 | 默认值 |
 | --- | --- |
 | 别名 |无 |
-| 必需？ |false |
+| 是否必需？ |false |
 | 位置 |所指定位置 |
 | 默认值 |无 |
 | 接受管道输入？ |false |
@@ -72,7 +71,7 @@ Azure 中的 SQL 数据库的用户名和密码。
 | 参数 | 默认值 |
 | --- | --- |
 | 别名 |无 |
-| 必需？ |false |
+| 是否必需？ |false |
 | 位置 |所指定位置 |
 | 默认值 |无 |
 | 接受管道输入？ |false |
@@ -84,13 +83,13 @@ Azure 中的 SQL 数据库的用户名和密码。
 | 参数 | 默认值 |
 | --- | --- |
 | 别名 |无 |
-| 必需？ |false |
+| 是否必需？ |false |
 | 位置 |所指定位置 |
 | 默认值 |false |
 | 接受管道输入？ |false |
 | 接受通配符？ |false |
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 有关如何使用脚本创建开发和测试环境的完整说明，请参阅[使用 Windows PowerShell 脚本发布到开发和测试环境](vs-azure-tools-publishing-using-powershell-scripts.md)。
 
 JSON 配置文件指定要部署的内容的详细信息。 它包括当创建项目时指定的信息，如网站的名称和用户名。 它还包括要预配的数据库（如果有的话）。 以下代码显示一个示例 JSON 配置文件：

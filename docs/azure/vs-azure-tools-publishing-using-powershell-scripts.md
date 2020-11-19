@@ -4,17 +4,16 @@ description: 了解如何使用 Windows PowerShell 脚本通过 Visual Studio �
 ms.custom: SEO-VS-2020
 author: ghogen
 manager: jillfra
-assetId: 5fff1301-5469-4d97-be88-c85c30f837c1
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
-ms.openlocfilehash: 0fafcd0042fce6d3f9eece8e493ee01a9a6923e5
-ms.sourcegitcommit: 023f52f10fb91850824558478cbfd2ec965054f0
+ms.openlocfilehash: 97c337adabc5ce22ce92c720a3a4d776eaecf867
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94407583"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94902138"
 ---
 # <a name="using-windows-powershell-scripts-to-publish-to-dev-and-test-environments"></a>使用 Windows PowerShell 脚本发布到开发和测试环境
 
@@ -22,7 +21,7 @@ ms.locfileid: "94407583"
 
 使用这些脚本，可以设置站点的自定义版本（又称为开发与测试环境）供临时使用。 例如，可以在 Azure 虚拟机中或者 Azure 网站的过渡槽中设置网站的特定版本，以运行测试套件、再现 bug、测试 bug 修复程序、试验建议的更改，或者设置自定义环境用于演示或展示。 创建用于发布项目的脚本后，可以根据需要通过重新运行该脚本来重新创建相同的环境，或者结合自己的 Web 应用版本运行该脚本，以创建自定义环境用于测试。
 
-## <a name="prerequisites"></a>必备知识
+## <a name="prerequisites"></a>先决条件
 
 * 安装有 Azure 工作负载的 Visual Studio 2015 或更高版本，或 Visual Studio 2013 和 Azure SDK 2.3 或更高版本。 请参阅 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads)。 （无需使用 Azure SDK 就能为 Web 项目生成脚本。 此功能适用于 Web 项目，而不适用于云服务中的 Web 角色。）
 * Azure PowerShell 0.7.4 或更高版本。 请参阅 [如何安装和配置 Azure PowerShell](/powershell/azure/overview)。
@@ -142,7 +141,7 @@ JSON 文件是在 **Configurations** 文件夹中创建的，其中包含的配�
 
 可以编辑 JSON 配置，以更改运行发布脚本时的行为。 `cloudService` 和 `virtualMachine` 节是必需的，但是，如果不需要 `databases` 节，则可以将它删除。 在 Visual Studio 生成的默认配置文件中为空的属性是可选的；在默认配置文件中具有值的这些属性是必需的。
 
-如果网站具有多个部署环境（称为槽），而并非仅在 Azure 中有单个生产站点，则可将槽位名称包括在 JSON 配置文件的网站名称中。 例如，如果你的网站的名称为 **mysite** ，该网站的一个槽位的名称为 **test** ，则 URI 为 `mysite-test.cloudapp.net`，但在配置文件中使用的正确名称为 mysite(test)。 只有当网站和槽已在订阅中存在时，才能这样做。 如果它们不存在，请运行脚本来创建网站，而不指定槽位，然后在 [Azure 门户](https://portal.azure.com/)中创建槽位，再使用修改的网站名称来运行脚本。 有关网站的部署槽的详细信息，请参阅[为 Azure 应用服务中的网站设置过渡环境](/azure/app-service/web-sites-staged-publishing)。
+如果网站具有多个部署环境（称为槽），而并非仅在 Azure 中有单个生产站点，则可将槽位名称包括在 JSON 配置文件的网站名称中。 例如，如果你的网站的名称为 **mysite**，该网站的一个槽位的名称为 **test**，则 URI 为 `mysite-test.cloudapp.net`，但在配置文件中使用的正确名称为 mysite(test)。 只有当网站和槽已在订阅中存在时，才能这样做。 如果它们不存在，请运行脚本来创建网站，而不指定槽位，然后在 [Azure 门户](https://portal.azure.com/)中创建槽位，再使用修改的网站名称来运行脚本。 有关网站的部署槽的详细信息，请参阅[为 Azure 应用服务中的网站设置过渡环境](/azure/app-service/web-sites-staged-publishing)。
 
 ## <a name="how-to-run-the-publish-scripts"></a>如何运行发布脚本
 
@@ -322,7 +321,7 @@ return $WebDeployPackage
 | Find-AzureVM |获取指定的 Azure 虚拟机。 |
 | Format-DevTestMessageWithTime |在消息的前面添加日期和时间。 此函数适用于写入到错误流和详细流的消息。 |
 | Get-AzureSQLDatabaseConnectionString |汇编一个连接字符串以连接到 Azure SQL 数据库。 |
-| Get-AzureVMStorage |返回 *指定的位置或地缘组中名称模式为 "开发测试" () 不区分大小写的第一个存储帐户的名称。如果 "开发测试* " 存储帐户与该位置或地缘组不匹配，该函数将忽略该帐户。 指定一个位置或地缘组。 |
+| Get-AzureVMStorage |返回 *指定的位置或地缘组中名称模式为 "开发测试" () 不区分大小写的第一个存储帐户的名称。如果 "开发测试*" 存储帐户与该位置或地缘组不匹配，该函数将忽略该帐户。 指定一个位置或地缘组。 |
 | Get-MSDeployCmd |返回一个用于运行 MsDeploy.exe 工具的命令。 |
 | New-AzureVMEnvironment |在订阅中查找或创建与 JSON 配置文件中的值匹配的虚拟机。 |
 | Publish-WebPackage |使用 MsDeploy.exe 和 Web 发布包 .Zip 文件将资源部署到网站。 此函数不生成任何输出。 如果调用 MSDeploy.exe 失败，该函数将引发异常。 若要获取更详细的输出，请使用 **-Verbose** 选项。 |
@@ -334,8 +333,8 @@ return $WebDeployPackage
 | Test-HttpsUrl |将输入 URL 转换为 System.Uri 对象。 如果 URL 是绝对的并且其方案为 https，则返回 `$True`。 如果 URL 是相对的并且其方案不是 HTTPS，或者无法将输入字符串转换为 URL，则返回 `$false`。 |
 | Test-Member |如果某个属性或方法是对象的成员，则返回 `$true`。 否则返回 `$false`。 |
 | Write-ErrorWithTime |写入以当前时间作为前缀的错误消息。 将该消息写入错误流之前，此函数将调用 **Format-DevTestMessageWithTime** 函数来添加时间前缀。 |
-| Write-HostWithTime |将以当前时间作为前缀的消息写入主机程序 ( **Write-Host** )。 写入主机程序的效果各不相同。 大多数托管 Windows PowerShell 的程序会将这些消息写入标准输出。 |
-| Write-VerboseWithTime |写入以当前时间作为前缀的详细消息。 由于该函数调用 **Write-Verbose** ，因此，仅当使用 **Verbose** 参数运行脚本，或者将 **VerbosePreference** 首选项设置为 **Continue** 时，才显示该消息。 |
+| Write-HostWithTime |将以当前时间作为前缀的消息写入主机程序 (**Write-Host**)。 写入主机程序的效果各不相同。 大多数托管 Windows PowerShell 的程序会将这些消息写入标准输出。 |
+| Write-VerboseWithTime |写入以当前时间作为前缀的详细消息。 由于该函数调用 **Write-Verbose**，因此，仅当使用 **Verbose** 参数运行脚本，或者将 **VerbosePreference** 首选项设置为 **Continue** 时，才显示该消息。 |
 
 **Publish-WebApplication**
 

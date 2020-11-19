@@ -4,17 +4,16 @@ description: 使用服务器资源管理器浏览和管理存储资源
 ms.custom: SEO-VS-2020
 author: ghogen
 manager: jillfra
-assetId: 658dc064-4a4e-414b-ae5a-a977a34c930d
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 8/24/2017
 ms.author: ghogen
-ms.openlocfilehash: ab8373a24d296052b7ecfc7fcae6c85c14c74a1d
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: ae45fafb562387720b652e0921624bc859ea5920
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93398860"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94902215"
 ---
 # <a name="browse-and-manage-storage-resources-by-using-server-explorer"></a>使用服务器资源管理器浏览和管理存储资源
 
@@ -24,7 +23,7 @@ ms.locfileid: "93398860"
 
 如果已安装 Azure Tools for Microsoft Visual Studio，可以从 Azure 的存储帐户中查看 Blob、队列和表数据。 服务器资源管理器中的 "Azure **存储** " 节点显示本地存储模拟器帐户和其他 Azure 存储帐户中的数据。
 
-若要在 Visual Studio 中查看服务器资源管理器，请在菜单栏上选择 " **查看**  >  **服务器资源管理器** "。 “存储”节点显示已连接的每个 Azure 订阅或证书下的所有存储帐户。 如果存储帐户未出现，可以遵循[本文稍后部分](#add-storage-accounts-by-using-server-explorer)的说明来添加帐户。
+若要在 Visual Studio 中查看服务器资源管理器，请在菜单栏上选择 "**查看**  >  **服务器资源管理器**"。 “存储”节点显示已连接的每个 Azure 订阅或证书下的所有存储帐户。 如果存储帐户未出现，可以遵循[本文稍后部分](#add-storage-accounts-by-using-server-explorer)的说明来添加帐户。
 
 从 Azure SDK 2.7 开始，也可使用 Cloud Explorer 来查看和管理 Azure 资源。 有关详细信息，请参阅 [Cloud Explorer 管理 Azure 资源](vs-azure-tools-resources-managing-with-cloud-explorer.md)。
 
@@ -166,7 +165,7 @@ Azure 表存储可存储大量结构化数据。 该服务是一个 NoSQL 数据
 
 ### <a name="to-create-a-table"></a>创建表
 
-1. 在 **Cloud Explorer** 中，选择存储帐户的 " **表** " 节点，然后选择 " **创建表** "。
+1. 在 **Cloud Explorer** 中，选择存储帐户的 " **表** " 节点，然后选择 " **创建表**"。
 1. 在“创建表”对话框中，输入表的名称。
 
 ### <a name="to-view-table-data"></a>查看表数据
@@ -181,7 +180,7 @@ Azure 表存储可存储大量结构化数据。 该服务是一个 NoSQL 数据
 
 ### <a name="to-edit-table-data"></a>编辑表数据
 
-在 **表设计器** 中，打开 (单个行) 或 (单个单元) 的属性的实体的快捷菜单，然后选择 " **编辑** "。
+在 **表设计器** 中，打开 (单个行) 或 (单个单元) 的属性的实体的快捷菜单，然后选择 " **编辑**"。
 
 ![添加或编辑表实体](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC656238.png)
 

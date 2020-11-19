@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.date: 08/17/2020
 ms.author: angelpe
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: 7bdf07824c7a06a692a81a93eaa5a0fd0536705d
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 4a2789246a75fe7d2331156eecb106f31f21cbf5
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93398366"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94902917"
 ---
 # <a name="add-azure-cosmos-db-to-your-app-by-using-visual-studio-connected-services"></a>使用 Visual Studio 将 Azure Cosmos DB 添加到应用连接的服务
 
@@ -42,19 +42,19 @@ ms.locfileid: "93398366"
 
 1. 在 Visual Studio 中打开项目。
 
-1. 在 **解决方案资源管理器** 中，右键单击 " **连接的服务** " 节点，然后从上下文菜单中选择 " **添加连接的服务** "。
+1. 在 **解决方案资源管理器** 中，右键单击 " **连接的服务** " 节点，然后从上下文菜单中选择 " **添加连接的服务**"。
 
 1. 在 " **连接的服务** " 选项卡中，选择 " **服务依赖项** 的 + 图标"。
 
     ![添加服务依赖项](./media/vs-azure-tools-connected-services-storage/vs-2019/connected-services-tab.png)
 
-1. 在 " **添加依赖关系** " 页上，选择 **Azure Cosmos DB** 。
+1. 在 " **添加依赖关系** " 页上，选择 **Azure Cosmos DB**。
 
     ![添加 Azure Cosmos DB](./media/azure-cosmosdb-add-connected-service/azure-cosmosdb.png)
 
     如果尚未登录，请登录到 Azure 帐户。 如果没有 Azure 帐户，可以注册[免费试用版](https://azure.microsoft.com/account/free)。
 
-1. 在 " **Azure Cosmos DB** " 屏幕上，选择现有 Azure Cosmos DB，然后选择 " **下一步** "。
+1. 在 " **Azure Cosmos DB** " 屏幕上，选择现有 Azure Cosmos DB，然后选择 " **下一步**"。
 
     如果需要创建数据库，请执行下一步。 否则，请跳到步骤 7。
 
@@ -64,21 +64,21 @@ ms.locfileid: "93398366"
 
    1. 选择屏幕底部的 " **新建 Azure Cosmos DB** "。
 
-   1. 填写 **Azure Cosmos DB：创建新** 屏幕，然后选择 " **创建** "。
+   1. 填写 **Azure Cosmos DB：创建新** 屏幕，然后选择 " **创建**"。
 
        ![新 Azure Cosmos DB](./media/azure-cosmosdb-add-connected-service/create-new-cosmosdb.png)
 
-   1. 显示 " **配置 Azure Cosmos DB** " 对话框时，新数据库将显示在列表中。 在列表中选择新数据库，然后选择 " **下一步** "。
+   1. 显示 " **配置 Azure Cosmos DB** " 对话框时，新数据库将显示在列表中。 在列表中选择新数据库，然后选择 " **下一步**"。
 
 1. 输入连接字符串名称，并选择是要将连接字符串存储在本地机密文件中还是 [Azure Key Vault](/azure/key-vault)中。
 
    ![指定连接字符串](./media/azure-cosmosdb-add-connected-service/connection-string.png)
 
-1. " **更改摘要** " 屏幕显示了在完成该过程后，将对项目进行的所有修改。 如果更改看起来正常，请选择 " **完成** "。
+1. " **更改摘要** " 屏幕显示了在完成该过程后，将对项目进行的所有修改。 如果更改看起来正常，请选择 " **完成**"。
 
    ![更改摘要](./media/azure-cosmosdb-add-connected-service/summary-of-changes.png)
 
-1. 该连接将显示在 " **连接的服务** " 选项卡的 " **服务依赖项** " 部分下。
+1. 该连接将显示在 "**连接的服务**" 选项卡的 "**服务依赖项**" 部分下。
 
    ![服务依赖项](./media/azure-cosmosdb-add-connected-service/service-dependencies-after.png)
 

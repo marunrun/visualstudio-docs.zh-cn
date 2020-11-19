@@ -1,5 +1,7 @@
 ---
 title: " (Visual Studio 模板) 的 WizardExtension 元素 |Microsoft Docs"
+description: 了解 WizardExtension 元素及其包含用于自定义模板向导的注册元素的方式。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: fd81b32861114d654aa794b992826589406b1df9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 07d1c52e2b1dd8fe452d4c24f8dc6db6b32334a5
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80740372"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903385"
 ---
 # <a name="wizardextension-element-visual-studio-templates"></a>WizardExtension 元素（Visual Studio 模板）
 包含用于自定义模板向导的注册元素。
@@ -43,18 +45,18 @@ ms.locfileid: "80740372"
 
 ### <a name="child-elements"></a>子元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
-|[件](../extensibility/assembly-element-visual-studio-template-wizard-extension.md)|必需的元素。<br /><br /> 指定出现在全局程序集缓存中的程序集的名称或强名称。 元素中必须至少有一个 `Assembly` 元素 `WizardExtension` 。|
+|[程序集](../extensibility/assembly-element-visual-studio-template-wizard-extension.md)|必需的元素。<br /><br /> 指定出现在全局程序集缓存中的程序集的名称或强名称。 元素中必须至少有一个 `Assembly` 元素 `WizardExtension` 。|
 |[FullClassName](../extensibility/fullclassname-element-visual-studio-template-wizard-extension.md)|必需的元素。<br /><br /> 实现接口的类的完全限定名称 `IWizard` 。 元素中必须至少有一个 `FullClassName` 元素 `WizardExtension` 。|
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|包含项目模板、项模板或初学者工具包的所有元数据。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
  `WizardExtension` 是 `VSTemplate` 的可选子元素。
 
 ## <a name="example"></a>示例
