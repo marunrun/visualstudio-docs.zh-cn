@@ -1,5 +1,7 @@
 ---
 title: 如何：自定义 SharePoint 功能 |Microsoft Docs
+description: 在 Visual Studio 中自定义 SharePoint 功能。 在解决方案资源管理器或 SharePoint 包资源管理器中添加新功能时，将打开功能设计器。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a330f3c4cbe1e410ddc6a1612796c92eeda281b8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b4846d79af7a031970e8870626f88450e8a3e647
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016896"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903658"
 ---
 # <a name="how-to-customize-a-sharepoint-feature"></a>如何：自定义 SharePoint 功能
   您可以使用 Visual Studio 中的功能设计器来创建和自定义 SharePoint 功能。 例如，可以设置功能范围并将其他功能添加为依赖项。 默认情况下，当你在解决方案资源管理器或 SharePoint 包资源管理器中添加新功能时，将打开功能设计器。
@@ -31,7 +33,7 @@ ms.locfileid: "86016896"
 
 #### <a name="to-open-the-feature-designer"></a>打开功能设计器
 
-1. 在 **解决方案资源管理器**中，展开 " **功能**"。
+1. 在 **解决方案资源管理器** 中，展开 " **功能**"。
 
 2. 双击 " *Feature1* " 项，或打开 " *Feature1* " 项的快捷菜单，然后选择 " **视图设计器**"。
 
@@ -40,13 +42,13 @@ ms.locfileid: "86016896"
 
 #### <a name="to-view-the-packaged-manifest-file"></a>查看打包的清单文件
 
-1. 在 **功能设计器**中，选择 " **清单** " 选项卡。
+1. 在 **功能设计器** 中，选择 " **清单** " 选项卡。
 
 #### <a name="to-view-the-packaged-manifest-file-by-using-solution-explorer"></a>使用解决方案资源管理器查看打包的清单文件
 
-1. 在 **解决方案资源管理器**中，选择 " **显示所有文件** " 图标。
+1. 在 **解决方案资源管理器** 中，选择 " **显示所有文件** " 图标。
 
-2. 展开 "功能"，展开 "功能名"，展开 "功能"，然后打开* \<FeatureName>.Template.xml*文件。
+2. 展开 "功能"，展开 "功能名"，展开 "功能"，然后打开 *\<FeatureName>.Template.xml* 文件。
 
     > [!NOTE]
     > 当你打开功能模板清单 XML 文件时，将自动验证这些文件并忽略在 "错误列表" 窗口中显示的警告。
@@ -56,13 +58,13 @@ ms.locfileid: "86016896"
 
 #### <a name="to-change-the-manifest-template-by-using-the-xml-editor"></a>使用 "XML 编辑器" 更改清单模板
 
-1. 在 **功能设计器**中，选择 **"清单** " 选项卡，展开 " **编辑选项** " 节点，然后选择 " **在 XML 编辑器中打开** " 链接。
+1. 在 **功能设计器** 中，选择 **"清单** " 选项卡，展开 " **编辑选项** " 节点，然后选择 " **在 XML 编辑器中打开** " 链接。
 
      对 XML 所做的更改将合并到打包的清单文件中。
 
 #### <a name="to-change-the-manifest-template-by-using-the-manifest-template-pane"></a>使用 "清单模板" 窗格更改清单模板
 
-1. 在 **功能设计器**中，选择 " **清单** " 选项卡，展开 " **编辑选项** " 节点，然后更改出现在 "清单模板" 窗格中的 XML。
+1. 在 **功能设计器** 中，选择 " **清单** " 选项卡，展开 " **编辑选项** " 节点，然后更改出现在 "清单模板" 窗格中的 XML。
 
      已打包的 " **打包清单** " 窗格的预览中将显示对 XML 所做的更改。
 
@@ -74,7 +76,7 @@ ms.locfileid: "86016896"
 
 #### <a name="to-overwrite-packaged-manifest-file-by-disabling-the-designer"></a>通过禁用设计器覆盖打包的清单文件
 
-1. 在 **功能设计器**中，选择 " **清单** " 选项卡。
+1. 在 **功能设计器** 中，选择 " **清单** " 选项卡。
 
 2. 展开 " **编辑选项** " 节点，选择 " **覆盖生成的 XML 并在 xml 编辑器中编辑清单** " 链接，然后选择 " **是"** 按钮。
 
@@ -85,7 +87,7 @@ ms.locfileid: "86016896"
 
 #### <a name="to-re-enable-the-designer"></a>重新启用设计器
 
-1. 在 **功能设计器**中，选择 " **放弃清单编辑并重新启用设计器"** 链接，然后选择 " **是"** 按钮。
+1. 在 **功能设计器** 中，选择 " **放弃清单编辑并重新启用设计器"** 链接，然后选择 " **是"** 按钮。
 
 2. 模板会刷新为原始文本，对 XML 所做的任何更改都将丢失。
 

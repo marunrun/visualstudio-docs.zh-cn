@@ -1,5 +1,7 @@
 ---
 title: 使用 MSBuild 任务创建 SharePoint 解决方案包
+description: 了解如何在开发计算机上使用命令行 MSBuild 任务生成、清理和验证 SharePoint 解决方案包 ( .wsp) 。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c59a38e1153a57c1bd886121eeac244075045a42
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f2979073414434d2b8f5be9d070b6b505c09ee14
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86017007"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903723"
 ---
 # <a name="how-to-create-a-sharepoint-solution-package-by-using-msbuild-tasks"></a>如何：使用 MSBuild 任务创建 SharePoint 解决方案包
   可以在开发计算机上使用命令行 MSBuild 任务来生成、清理和验证 SharePoint 包 (*.wsp*) 。 你还可以使用这些命令通过在生成计算机上使用 Team Foundation Server 来自动执行生成过程。

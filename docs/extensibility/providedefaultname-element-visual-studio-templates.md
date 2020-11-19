@@ -1,5 +1,7 @@
 ---
 title: " (Visual Studio 模板) 的 ProvideDefaultName 元素 |Microsoft Docs"
+description: 了解 ProvideDefaultName 元素以及它如何指定 Visual Studio 将在 "添加新项" 或 "新建项目" 对话框中生成默认的 Visual Studio 名称。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 192716198f605a5f6b4f62730e84dcf83b4229cc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7732c6f02ae5ec086a89bd9ade5c00ea533a68f2
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80701719"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903801"
 ---
 # <a name="providedefaultname-element-visual-studio-templates"></a> (Visual Studio 模板的 ProvideDefaultName 元素) 
 指定 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 项目系统是否会在 " **添加新项** " 或 " **新建项目** " 对话框中生成模板的默认名称。
@@ -52,8 +54,8 @@ ms.locfileid: "80701719"
 
  文本必须是 `true` 或 `false` ，指示是否在 " **添加新项** " 或 " **新建项目** " 对话框中生成模板的默认名称。
 
-## <a name="remarks"></a>备注
- `ProvideDefaultName` 是可选元素。 默认值是 `true`。
+## <a name="remarks"></a>注解
+ `ProvideDefaultName` 是可选元素。 默认值为 `true`。
 
  如果 `ProvideDefaultName` 元素为 `false` ，则 "**添加新项**" 和 "**新建项目**" 对话框的 "**名称**" 框中将包含值 `<Enter_name>` 。
 

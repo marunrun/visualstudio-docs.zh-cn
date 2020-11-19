@@ -1,6 +1,8 @@
 ---
 title: 为 SharePoint 解决方案创建功能和包验证
 titleSuffix: ''
+description: 创建自定义验证规则以验证 Visual Studio 生成的解决方案包或验证整个功能。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,16 +16,16 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7ac718d16383448ea13f01ad367d97f917bb42ed
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 8f76abeee6ace851025a29ce6d85b894bf479dfa
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585818"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903684"
 ---
 # <a name="create-feature-and-package-validations-for-sharepoint-solutions"></a>为 SharePoint 解决方案创建功能和包验证
 
-  你可以创建自定义验证规则来验证 Visual Studio 生成的解决方案包。 可以通过在**PackagingExplorer**的包或功能的上下文菜单中选择 "**验证**"，对整个功能或包执行完全验证。 当你向项目添加新的 SharePoint 项目项或功能以确定包或功能是否处于有效状态时，将执行部分验证。
+  你可以创建自定义验证规则来验证 Visual Studio 生成的解决方案包。 可以通过在 **PackagingExplorer** 的包或功能的上下文菜单中选择 "**验证**"，对整个功能或包执行完全验证。 当你向项目添加新的 SharePoint 项目项或功能以确定包或功能是否处于有效状态时，将执行部分验证。
 
 ### <a name="to-create-a-custom-package-validation-rule"></a>创建自定义包验证规则
 

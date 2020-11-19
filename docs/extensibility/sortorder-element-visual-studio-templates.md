@@ -1,5 +1,7 @@
 ---
 title: " (Visual Studio 模板) 的 SortOrder 元素 |Microsoft Docs"
+description: 了解 SortOrder 元素及其如何指定一个值，该值用于在 "新建项目" 或 "添加新项" 对话框中显示模板。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 935d00335a21d3e129e79ce351e554ea93787447
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f07c3b62d1412564fd74c420b31b2a9fed41d1fa
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699954"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903736"
 ---
 # <a name="sortorder-element-visual-studio-templates"></a>SortOrder 元素（Visual Studio 模板）
 指定一个值，该值用于在同一类别中的其他模板之间进行排列，如在 " **新建项目** " 或 " **添加新项** " 对话框中显示的模板。
@@ -53,7 +55,7 @@ ms.locfileid: "80699954"
 
  一个 `integer` ，它表示排序顺序值。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
  `SortOrder` 是可选元素。 默认值为100，所有值都必须是10的倍数。
 
  `SortOrder`对于用户创建的模板，将忽略元素。 所有用户创建的模板都按字母顺序排序。

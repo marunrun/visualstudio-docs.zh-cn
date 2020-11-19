@@ -1,5 +1,7 @@
 ---
 title: 如何：定义 SharePoint 项目项类型 |Microsoft Docs
+description: 了解如何在需要创建自定义 SharePoint 项目项时定义项目项类型。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ae709bf2d81e2b8b00dc984602c0426fdf272ebd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 78b10e6878301a878de14306f92f425402e1cc17
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016862"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903606"
 ---
 # <a name="how-to-define-a-sharepoint-project-item-type"></a>如何：定义 SharePoint 项目项类型
   若要创建自定义 SharePoint 项目项，请定义项目项类型。 有关详细信息，请参阅 [定义自定义 SharePoint 项目项类型](../sharepoint/defining-custom-sharepoint-project-item-types.md)。
@@ -40,9 +42,9 @@ ms.locfileid: "86016862"
 
     - <xref:System.ComponentModel.Composition.ExportAttribute>. 此特性使 Visual Studio 能够发现和加载你的 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider> 实现。 将 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider> 类型传递给特性构造函数。
 
-    - <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute>. 在项目项类型定义中，此属性为新项目项指定字符串标识符。 建议使用格式 " *公司名称*"。用于帮助确保所有项目项都具有唯一名称的*功能名称* 。
+    - <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute>. 在项目项类型定义中，此属性为新项目项指定字符串标识符。 建议使用格式 " *公司名称*"。用于帮助确保所有项目项都具有唯一名称的 *功能名称* 。
 
-    - <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemIconAttribute>. 此属性指定要在 **解决方案资源管理器**中为此项目项显示的图标。 此属性是可选的;如果不将它应用于类，则 Visual Studio 会为项目项显示默认图标。 如果设置此属性，则传递嵌入到程序集中的图标或位图的完全限定名称。
+    - <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemIconAttribute>. 此属性指定要在 **解决方案资源管理器** 中为此项目项显示的图标。 此属性是可选的;如果不将它应用于类，则 Visual Studio 会为项目项显示默认图标。 如果设置此属性，则传递嵌入到程序集中的图标或位图的完全限定名称。
 
 5. 在方法的实现中 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider.InitializeType%2A> ，使用 *projectItemTypeDefinition* 参数的成员定义项目项类型的行为。 此参数是一个 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition> 对象，该对象提供对和接口中定义的事件的访问 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents> <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileEvents> 。 若要访问项目项类型的特定实例，请处理 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents> 事件，例如 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemAdded> 和 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemInitialized> 。
 
