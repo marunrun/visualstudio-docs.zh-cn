@@ -82,7 +82,7 @@ ms.locfileid: "94902917"
 
    ![服务依赖项](./media/azure-cosmosdb-add-connected-service/service-dependencies-after.png)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Azure Cosmos DB 产品页](https://azure.microsoft.com/services/cosmos-db/)
 - [Azure Cosmos DB 文档](/azure/cosmos-db/)
