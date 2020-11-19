@@ -2,20 +2,20 @@
 title: Visual Studio 中的 Git 体验
 titleSuffix: ''
 description: 了解 Visual Studio 2019 中新的集成 Git 体验如何帮助提高工作效率。
-ms.date: 11/10/2020
+ms.date: 11/16/2020
 ms.topic: conceptual
 ms.author: tglee
-author: prnadago
+author: TerryGLee
 ms.manager: jillfra
 monikerRange: vs-2019
-ms.openlocfilehash: 33606a2b4290735d5c15788a1e6961191d6d92f9
-ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
+ms.openlocfilehash: 30ae69f07c89efb6d01228088596fc1bc05fac87
+ms.sourcegitcommit: e8a13978131f257d91ce37c5a2e0d153a4c400ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94493551"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94704061"
 ---
-# <a name="git-productivity-in-visual-studio"></a>Visual Studio 中的 Git 工作效率
+# <a name="git-experience-in-visual-studio"></a>Visual Studio 中的 Git 体验
 
 Git 现在是 Visual Studio 2019 中的默认版本控制体验。 从[版本 16.6](/visualstudio/releases/2019/release-notes-v16.6) 开始，我们致力于构建功能集，并根据你的反馈对其进行迭代。 默认情况下，对于使用[版本 16.8](/visualstudio/releases/2019/release-notes/) 的所有用户，新 Git 体验处于开启状态。
 
@@ -24,11 +24,18 @@ Git 现在是 Visual Studio 2019 中的默认版本控制体验。 从[版本 16
 
 ## <a name="how-to-use-git-in-visual-studio"></a>如何在 Visual Studio 中使用 Git
 
-可以通过三种方式开始将 Git 与 Visual Studio 2019 结合使用来提高工作效率：
+我们将引导你逐步使用 Visual Studio 2019 中的新 Git 体验，但若要先进行快速导览，请观看以下视频： <br><br>*视频长度：* 5.27 分钟
+
+> [!VIDEO https://www.youtube.com/embed/UHrAg3iKoe0]
+
+可以通过三种方式开始结合使用 Git 与 Visual Studio 来提高工作效率：
 
 - [打开现有 Git 存储库](#open-an-existing-local-repository)。 如果计算机上已有代码，则可以使用“文件” > “打开” > “项目/解决方案”（或“文件夹”）打开代码，Visual Studio 会自动检测其是否具有已初始化的 Git 存储库   。
 - [创建新的 Git 存储库](#create-a-new-git-repository)。 如果你的代码未与 Git 关联，则可以创建一个新的 Git 存储库。
 - [克隆现有 Git 存储库](#clone-an-existing-git-repository)。 如果要处理的代码不在计算机上，则可以克隆任何现有的远程存储库。
+
+> [!NOTE]
+> 也是自[版本 16.8](/visualstudio/releases/2019/release-notes/) 起，Visual Studio 2019 包含完全集成的 GitHub 帐户体验。 你现在可以将 GitHub 和 GitHub Enterprise 帐户都添加到密钥链中。 你可以添加并使用这些帐户，就像使用 Microsoft 帐户一样；也就是说，你将能够更轻松地跨 Visual Studio 访问 GitHub 资源。 有关详细信息，请参阅[在 Visual Studio 中使用 GitHub 帐户](work-with-github-accounts.md)页面。
 
 ## <a name="create-a-new-git-repository"></a>创建新的 Git 存储库
 
@@ -195,8 +202,10 @@ Visual Studio 中的合并编辑器是一种三向合并工具，用于显示传
 
 ## <a name="see-also"></a>另请参阅
 
+- [宣布在 Visual Studio 中推出 Git 体验](https://devblogs.microsoft.com/visualstudio/announcing-the-release-of-the-git-experience-in-visual-studio/)博客文章
 - YouTube 上的[启动新 Git 体验](https://www.youtube.com/watch?v=UHrAg3iKoe0&t)
 - [Visual Studio 工具箱系列提供：新 Git 体验](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/The-New-Git-Experience)视频（在第 9 频道和 [YouTube](https://www.youtube.com/watch?v=ZiQ2LXtAJ6I&feature=youtu.be) 上）
 - [Visual Studio 中针对 Git 体验的精彩新更新](https://devblogs.microsoft.com/visualstudio/exciting-new-updates-to-the-git-experience-in-visual-studio/)博客文章
 - [Visual Studio 2019 中的 Git 新体验](https://devblogs.microsoft.com/visualstudio/improved-git-experience-in-visual-studio-2019/)博客文章
+- [在 Visual Studio 中使用 GitHub 帐户](work-with-github-accounts.md)
 - [Visual Studio 2019 发行说明](/visualstudio/releases/2019/release-notes)

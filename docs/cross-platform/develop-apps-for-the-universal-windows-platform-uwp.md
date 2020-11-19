@@ -1,5 +1,7 @@
 ---
 title: 开发通用 Windows 平台 (UWP) 的应用
+description: 了解如何使用 Visual Studio 和通用 Windows 应用开发工具来创建应用。
+ms.custom: SEO-VS-2020
 ms.date: 10/24/2017
 ms.technology: vs-ide-general
 ms.topic: conceptual
@@ -9,14 +11,14 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 2ef09f58d22e3cb72af5b745f16b2acf8920900e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: e9cff517c60a67ee9bbf929c59a1150d5ace3757
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75587142"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671414"
 ---
-# <a name="develop-apps-for-the-universal-windows-platform-uwp"></a>开发通用 Windows 平台 (UWP) 的应用
+# <a name="develop-apps-for-the-universal-windows-platform-uwp"></a>开发面向通用 Windows 平台 (UWP) 的应用
 
 使用通用 Windows 平台和我们的一项 Windows 核心，可在任何 Windows 10 设备上（从电话到桌面）运行同一应用。 使用 Visual Studio 和通用 Windows 应用开发工具创建这些通用 Windows 应用。
 
@@ -24,7 +26,7 @@ ms.locfileid: "75587142"
 
 在 Windows 10 手机、Windows 10 台式机或 Xbox 上运行应用。 它是相同的应用包！ 通过引入 Windows 10 的单个统一核心，一个应用程序包可以跨所有平台运行。 多个平台都具有可添加到应用以利用平台特定行为的扩展 SDK。 例如，用于移动功能的扩展 SDK 控制 Windows phone 上按下的后退按钮。 如果在项目中引用扩展 SDK，只需添加运行时检查来测试该 SDK 是否可在该平台上可用。 这就是对每个平台使用相同应用包的方法！
 
-什么是 Windows 核心？ 
+什么是 Windows 核心？
 
 这是首次将 Windows 重构从而跨所有 Windows 10 平台共用一个核心。 存在一个共用源、一个共用 Windows 内核、一个文件 I/O 堆栈和一个应用模型。 对于 UI，只有一个 XAML UI 框架和一个 HTML UI 框架。 你可专注于创建出色的应用，因为我们已让在不同的 Windows 10 设备上运行应用变得容易。
 

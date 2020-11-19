@@ -7,16 +7,16 @@ ms.date: 04/02/2019
 ms.technology: vs-ide-install
 ms.assetid: 25CD47A4-5B32-4734-8EF3-E24A02AABF29
 ms.topic: how-to
-ms.openlocfilehash: 69ecab4f4d3dd7d99821b384dbda0c8986297282
-ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
+ms.openlocfilehash: f3c1c528e9201c66bc566f9867f8325c653700b9
+ms.sourcegitcommit: f915322d60182143da7036893d2941bc200cf439
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94492836"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94575536"
 ---
 # <a name="introduction-to-azure-functions"></a>Azure Functions 简介
 
-Azure functions 是一种在云中创建和运行事件驱动的代码片段（函数）的方法，无需显式预配或管理基础结构。 有关 Azure Functions 的详细信息，请参阅 [Azure Functions 文档](/azure/azure-functions/)。
+Azure Functions 是一种在云中创建和运行事件驱动的代码片段（即函数）的方法，而无需显式预配或管理基础结构。 有关 Azure Functions 的详细信息，请参阅 [Azure Functions 文档](/azure/azure-functions/)。
 
 ## <a name="requirements"></a>要求
 
@@ -29,15 +29,15 @@ Azure Function 工具包含在 Visual Studio for Mac 7.5 和更高版本中。
 1. 在 Visual Studio for Mac 中，选择“文件”>“新建解决方案”。
 2. 从“新建项目”对话框，选择“云”>“常规”下的 Azure Functions 模板并单击“下一步” ：
 
-    ![显示 Azure functions 选项的“新建项目”对话框](media/azure-functions-image1.png)
+    ![显示 Azure Functions 选项的“新建项目”对话框](media/azure-functions-image1.png)
 
 3. 选择要使用的初始 Azure Functions 模板，输入函数名称，然后单击“下一步”。
 
-    ![“新建项目”对话框显示 Azure Functions 模板](media/azure-functions-image2.png)
+    ![显示 Azure Functions 模板的“新建项目”对话框](media/azure-functions-image2.png)
 
     > [!TIP]
     > 虽然已尽可能地将捆绑的 Azure Functions 运行时和模板 (CLI) 保持最新，但它们难免会过时。 创建新的 Functions 项目时，Visual Studio for Mac 将检查 CLI 的更新并发出通知，如下图所示。 只需单击按钮即可下载更新的模板。
-    > ![显示 Azure Functions 更新可用的“新建项目”对话框](media/azure-functions-update.png)
+    > ![显示可用 Azure Functions 更新的“新建项目”对话框](media/azure-functions-update.png)
 
     根据所选函数类型，下一页会提示输入详细信息，例如访问权限，如下图所示：
 
@@ -147,15 +147,15 @@ Visual Studio for Mac 使用包含的默认函数创建 .NET Standard 项目。 
   - Http POST CRUD
   - 带有参数的 Http 触发器
 
-- **计时器** - 按照预定义计划执行清除或其他批处理任务。 此模板采用两个字段：Name 和 schedule（一个具有 6 个字段的 CRON 表达式）。 有关详细信息，请参阅[关于时间的 Azure functions 文章](/azure/azure-functions/functions-create-scheduled-function)
+- **计时器** - 按照预定义计划执行清除或其他批处理任务。 此模板采用两个字段：Name 和 schedule（一个具有 6 个字段的 CRON 表达式）。 有关详细信息，请参阅[关于时间的 Azure Functions 文章](/azure/azure-functions/functions-create-scheduled-function)
 
-- **队列触发器** - 这是在消息到达 Azure Storage 队列时会对消息进行响应的函数。 除函数名称之外，此模板还采用一个路径（将从中读取消息的队列名称）和存储帐户连接（包含存储帐户连接字符串的应用设置名称） 。 有关详细信息，请参阅[关于队列存储的 Azure functions 文章](/azure/azure-functions/functions-create-storage-queue-triggered-function)。
+- **队列触发器** - 这是在消息到达 Azure Storage 队列时会对消息进行响应的函数。 除函数名称之外，此模板还采用一个路径（将从中读取消息的队列名称）和存储帐户连接（包含存储帐户连接字符串的应用设置名称） 。 有关详细信息，请参阅[关于队列存储的 Azure Functions 文章](/azure/azure-functions/functions-create-storage-queue-triggered-function)。
 
 - **Blob 触发器** - 在 Azure 存储 Blob 添加到容器时对其进行处理。 除了函数名称，此模板还采用路径和连接属性。 路径属性是触发器将监视的存储帐户中的路径。 连接帐户是包含存储帐户连接字符串的应用设置的名称。 有关详细信息，请参阅 [Azure Functions Blob 存储](/azure/azure-functions/functions-create-storage-blob-triggered-function)一文。
 
-- **泛型 WebHook** - 这是一个简单函数，每当从支持 Webhook 的任何服务接收请求时，都会运行此函数。 有关详细信息，请参阅[有关泛型 Webhook 的 Azure Functions 文章](/azure/azure-functions/functions-create-generic-webhook-triggered-function)。
+- **泛型 WebHook** - 这是一个简单函数，每当从支持 Webhook 的任何服务接收请求时，都会运行此函数。 有关详细信息，请参阅[关于通用 Webhook 的 Azure Functions 文章](/azure/azure-functions/functions-create-generic-webhook-triggered-function)。
 
-- **Durable 函数业务流程** – Durable 函数可使用户在无服务器环境中编写有状态函数。 此扩展管理状态、检查点以及为用户重启。 有关详细信息，请参阅关于 [Durable 函数](/azure/azure-functions/durable-functions-overview)的 Azure Functions 指南。
+- **Durable 函数业务流程** – Durable 函数可使用户在无服务器环境中编写有状态函数。 此扩展管理状态、检查点以及为用户重启。 有关详细信息，请参阅关于 [Durable Functions](/azure/azure-functions/durable-functions-overview) 的 Azure Functions 指南。
 
 - **图像大小调整工具** - 此函数在每次向容器添加 blob 时都会创建已调整大小的图像。 该模板针对触发器、小图像输出和中等图像输出使用路径和连接字符串。
 

@@ -1,18 +1,18 @@
 ---
 title: Work with multiple user accounts
-ms.date: 07/23/2019
+ms.date: 11/16/2020
 ms.topic: conceptual
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: abca888cda2d309951d6b8921cfd2078972ce195
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.openlocfilehash: fe124fc35eabec4b3c48cdf8dfa53ef8f17b0003
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88800224"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671332"
 ---
 # <a name="work-with-multiple-user-accounts"></a>Work with multiple user accounts
 
@@ -124,6 +124,15 @@ Azure Active Directory (AAD) 支持 ASP.NET MVC web 应用中的最终用户单�
    ![通过浏览器登录 visual Studio 这一操作已完成](media/work-with-multiple-user-accounts/sign-in-browser-complete.png)
 
 1. 返回 Visual Studio 中的帐户管理页面，其中的“所有帐户”下列出了新添加的帐户  。 选择“关闭”  。
+
+::: moniker range=">=vs-2019"
+
+### <a name="add-a-github-account-to-visual-studio"></a>向 Visual Studio 添加 GitHub 帐户
+
+自版本 16.8 起，可以将 GitHub 和 GitHub Enterprise 帐户都添加到密钥链中。 你可以添加并使用这些帐户，就像使用 Microsoft 帐户一样；也就是说，你将能够更轻松地跨 Visual Studio 访问 GitHub 资源。
+
+有关详细说明，请参阅[在 Visual Studio 中使用 GitHub 帐户](work-with-github-accounts.md)。
+::: moniker-end
 
 ## <a name="see-also"></a>另请参阅
 

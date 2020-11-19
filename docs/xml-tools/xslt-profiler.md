@@ -2,7 +2,7 @@
 title: XSLT 性能
 description: 了解 Visual Studio 中的 XSLT 探查器，它可创建详细 XSLT 性能报告，以帮助优化 XSLT 代码的性能。
 ms.custom: SEO-VS-2020
-ms.date: 03/05/2019
+ms.date: 11/11/2020
 ms.topic: conceptual
 ms.assetid: 87387c9a-2e89-4801-ad51-83740cd6ea25
 author: TerryGLee
@@ -10,12 +10,13 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f4fd10df6a5cd91866633a46e1a512e91da2040
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+monikerRange: vs-2017
+ms.openlocfilehash: f2214ab4d66dcad1ee92eda7d7acbb94b89e8eb6
+ms.sourcegitcommit: 83a39d48b00c6c351e5c1707942633b7f73aaad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94351409"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94531883"
 ---
 # <a name="the-xslt-profiler"></a>XSLT 探查器
 
@@ -23,14 +24,14 @@ XSLT 探查器可创建详细的 XSLT 性能报告，有助于度量、评估和
 
 XSLT 探查器是 Visual Studio 的一部分，可以在 XML 菜单上使用。
 
-![XSLT 探查器](../xml-tools/media/profile-xslt-menu.png)
+![XSLT 探查器](../xml-tools/media/profile-xslt-menu.png "Visual Studio 2017 中 XML 菜单项的屏幕截图")
 
 > [!NOTE]
-> XSLT 探查器仅适用于 Visual Studio 企业版。
+> XSLT 探查器只能在 Visual Studio 2017 Enterprise 版本中使用。
 
 ## <a name="create-a-performance-report"></a>创建性能报告
 
-1. 在 Visual Studio 中打开 XSLT 文档。
+1. 在 Visual Studio 2017 中打开 XSLT 文档。
 
 2. 在菜单栏上，选择“XML” > 探查 XSLT” 。
 

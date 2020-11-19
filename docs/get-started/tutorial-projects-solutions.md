@@ -1,6 +1,6 @@
 ---
 title: 项目和解决方案简介
-ms.date: 02/24/2020
+ms.date: 11/17/2020
 ms.technology: vs-ide-general
 ms.custom: get-started
 ms.topic: tutorial
@@ -9,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: da2fc196f687e2335933794a578f507dafbc6de3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cf99c191ef6cfe32ec8ccc9b2cfd57f761941be7
+ms.sourcegitcommit: e8a13978131f257d91ce37c5a2e0d153a4c400ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77579971"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94704048"
 ---
 # <a name="learn-about-projects-and-solutions"></a>了解项目和解决方案
 
@@ -49,11 +49,11 @@ ms.locfileid: "77579971"
 
 1. 打开 Visual Studio。
 
-1. 在顶部菜单栏上，依次选择“文件”**“新建”** > **“项目”** > ****。
+1. 在顶部菜单栏上，依次选择“文件”**“新建”** > **“项目”** > 。
 
    **“新建项目”** 对话框随即打开。
 
-1. 在左侧窗格中，展开“其他项目类型”，然后选择“Visual Studio 解决方案”   。 在中间窗格中，选择“空白解决方案”模板  。 将解决方案命名为“QuickSolution”，然后选择“确定”按钮********。
+1. 在左侧窗格中，展开“其他项目类型”，然后选择“Visual Studio 解决方案”   。 在中间窗格中，选择“空白解决方案”模板  。 将解决方案命名为“QuickSolution”，然后选择“确定”按钮。
 
    ![Visual Studio 2017 中的空白解决方案模板](media/tutorial-projects-new-solution.png)
 
@@ -71,6 +71,9 @@ ms.locfileid: "77579971"
 
    ![Visual Studio 2019 中的空白解决方案模板](media/vs-2019/tutorial-projects-blank-solution-template.png)
 
+    > [!TIP]
+    > 如果你安装了多个工作负载，那么“空白解决方案”模板可能不会出现在搜索结果列表的顶部。 尝试滚动到列表的“基于你搜索的其他结果”部分。 它应该出现在那里。
+
 4. 将解决方案命名为“QuickSolution”  ，然后选择“创建”  。
 
    解决方案将显示在 Visual Studio 窗口右侧的解决方案资源管理器中  。 你可能会经常使用“解决方案资源管理器”来浏览项目的内容  。
@@ -87,7 +90,7 @@ ms.locfileid: "77579971"
 
    此时会打开 **“添加新项目”** 对话框。
 
-1. 在左侧窗格中，展开“Visual C#”，然后选择“Windows 桌面”********。 然后在中间窗格中，选择“空项目(.NET Framework)”模板  。 将项目命名为“QuickDate”，然后选择“确定”********。
+1. 在左侧窗格中，展开“Visual C#”，然后选择“Windows 桌面”。 然后在中间窗格中，选择“空项目(.NET Framework)”模板  。 将项目命名为“QuickDate”，然后选择“确定”。
 
    随后名为“QuickDate”的项目出现在“解决方案资源管理器”中的解决方案下  。 目前它包含一个名为“App.config”的文件  。
 
@@ -104,7 +107,7 @@ ms.locfileid: "77579971"
 
    随即打开显示“添加新项目”的对话框  。
 
-1. 在顶部的搜索框中输入文本“空”，然后在“语言”下选择“C#”************。
+1. 在顶部的搜索框中输入文本“空”，然后在“语言”下选择“C#”。
 
 1. 然后选择“空项目 (.NET Framework)”模板并选择“下一步”   。
 
@@ -127,11 +130,11 @@ ms.locfileid: "77579971"
 
    此时将打开“添加新项”  对话框。
 
-1. 展开“Visual C# 项”，然后选择“代码”********。 在中间窗格中，选择“类”项模板。 将类命名为“Calendar”，然后选择“添加”按钮   。
+1. 展开“Visual C# 项”，然后选择“代码”。 在中间窗格中，选择“类”项模板。 将类命名为“Calendar”，然后选择“添加”按钮   。
 
-   名为“Calendar.cs”的文件已添加到项目**。 末尾的 .cs 是 C# 代码文件的文件扩展名**。 文件出现在“解决方案资源管理器”中的可视项目层次结构中，其内容在编辑器中打开****。
+   名为“Calendar.cs”的文件已添加到项目。 末尾的 .cs 是 C# 代码文件的文件扩展名。 文件出现在“解决方案资源管理器”中的可视项目层次结构中，其内容在编辑器中打开。
 
-1. 将 Calendar.cs 文件的内容替换为以下代码**：
+1. 将 Calendar.cs 文件的内容替换为以下代码：
 
    ```csharp
    using System;
@@ -167,9 +170,9 @@ ms.locfileid: "77579971"
 
 ::: moniker range="vs-2017"
 
-2. 在左侧窗格中，展开 Visual C#，然后选择“测试”类别********。 在中间窗格中，选择“MSTest 测试项目 (.NET Core)”项目模板****。 将项目命名为“QuickTest”，然后选择“确定”********。
+2. 在左侧窗格中，展开 Visual C#，然后选择“测试”类别。 在中间窗格中，选择“MSTest 测试项目 (.NET Core)”项目模板。 将项目命名为“QuickTest”，然后选择“确定”。
 
-   第二个项目已添加到“解决方案资源管理器”，且编辑器中打开了名为 UnitTest1.cs 的文件******。
+   第二个项目已添加到“解决方案资源管理器”，且编辑器中打开了名为 UnitTest1.cs 的文件。
 
    ![包含两个项目的“Visual Studio 解决方案资源管理器”](media/tutorial-projects-solution-explorer.png)
 
@@ -177,13 +180,13 @@ ms.locfileid: "77579971"
 
 ::: moniker range=">=vs-2019"
 
-2. 在“添加新项目”对话框中，在顶部的搜索框输入文本“单元测试”，然后在“语言”下选择“C#”****************。
+2. 在“添加新项目”对话框中，在顶部的搜索框输入文本“单元测试”，然后在“语言”下选择“C#”。
 
-3. 选择“MSTest 测试项目(.NET Core)”项目模板，然后选择“下一步”********。
+3. 选择“MSTest 测试项目(.NET Core)”项目模板，然后选择“下一步”。
 
-4. 将项目命名为“QuickTest”，然后选择“创建”********。
+4. 将项目命名为“QuickTest”，然后选择“创建”。
 
-   第二个项目已添加到“解决方案资源管理器”，且编辑器中打开了名为 UnitTest1.cs 的文件******。
+   第二个项目已添加到“解决方案资源管理器”，且编辑器中打开了名为 UnitTest1.cs 的文件。
 
    ![包含两个项目的“Visual Studio 解决方案资源管理器”](media/vs-2019/tutorial-projects-solution-explorer.png)
 
@@ -191,15 +194,15 @@ ms.locfileid: "77579971"
 
 ## <a name="add-a-project-reference"></a>添加项目引用
 
-我们将使用新的单元测试项目测试“QuickDate”项目中的方法，因此需要添加对该项目的引用****。 创建引用会在两个项目间创建生成依赖关系，这意味着生成解决方案时，会先生成“QuickDate”，再生成“QuickTest”**********。
+我们将使用新的单元测试项目测试“QuickDate”项目中的方法，因此需要添加对该项目的引用。 创建引用会在两个项目间创建生成依赖关系，这意味着生成解决方案时，会先生成“QuickDate”，再生成“QuickTest”。
 
-1. 选择“QuickTest”项目中的“依赖关系”节点，然后在右键菜单或上下文菜单中选择“添加引用”************。
+1. 选择“QuickTest”项目中的“依赖关系”节点，然后在右键菜单或上下文菜单中选择“添加引用”。
 
-   打开“引用管理器”**** 对话框。
+   打开“引用管理器”对话框。
 
-1. 在左侧窗格中，展开“项目”，然后选择“解决方案”********。 在中间窗格中，选择“QuickDate”旁的复选框，然后选择“确定” 。
+1. 在左侧窗格中，展开“项目”，然后选择“解决方案”。 在中间窗格中，选择“QuickDate”旁的复选框，然后选择“确定” 。
 
-   已添加对“QuickDate”项目的引用****。
+   已添加对“QuickDate”项目的引用。
 
    ![显示项目引用的 Visual Studio 2019 解决方案资源管理器](media/vs-2019/tutorial-projects-solution-explorer-reference.png)
 
@@ -225,9 +228,9 @@ ms.locfileid: "77579971"
    }
    ```
 
-   你会看到某些代码下出现红色波浪线。 将测试项目设为“QuickDate”项目的[友元程序集](/dotnet/standard/assembly/friend-assemblies)来解决此错误****。
+   你会看到某些代码下出现红色波浪线。 将测试项目设为“QuickDate”项目的[友元程序集](/dotnet/standard/assembly/friend-assemblies)来解决此错误。
 
-1. 返回 QuickDate 项目，打开 Calendar.cs 文件（如果它尚未打开）******。 将以下 [using 语句](/dotnet/csharp/language-reference/keywords/using-statement)和 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性添加到文件顶部以解决测试项目中的错误。
+1. 返回 QuickDate 项目，打开 Calendar.cs 文件（如果它尚未打开）。 将以下 [using 语句](/dotnet/csharp/language-reference/keywords/using-statement)和 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性添加到文件顶部以解决测试项目中的错误。
 
    ```csharp
    using System.Runtime.CompilerServices;
@@ -241,26 +244,26 @@ ms.locfileid: "77579971"
 
 ## <a name="project-properties"></a>项目属性
 
-包含 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性的 Calendar.cs 文件中的行引用了“QuickTest”项目的程序集名称（文件名）******。 程序集名称可能不会始终与项目名称相同。 若要查看项目的程序集名称，请打开项目属性。
+包含 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性的 Calendar.cs 文件中的行引用了“QuickTest”项目的程序集名称（文件名）。 程序集名称可能不会始终与项目名称相同。 若要查看项目的程序集名称，请打开项目属性。
 
-1. 在“解决方案资源管理器”中，选择“QuickTest”项目********。 在右键菜单或上下文菜单中，选择“属性”，或只按 Alt+Enter 即可************。
+1. 在“解决方案资源管理器”中，选择“QuickTest”项目。 在右键菜单或上下文菜单中，选择“属性”，或只按 Alt+Enter 即可。
 
-   项目的“属性页”随即在“应用程序”选项卡上打开。属性页包含项目的各种设置。 请注意，“QuickTest”项目的程序集名称确实为“QuickTest”****。 如果想要更改，可在此处更改。 随后，在生成测试项目时，生成的二进制文件的名称将从“QuickTest.dll”更改为所选择的名称**。
+   项目的“属性页”随即在“应用程序”选项卡上打开。属性页包含项目的各种设置。 请注意，“QuickTest”项目的程序集名称确实为“QuickTest”。 如果想要更改，可在此处更改。 随后，在生成测试项目时，生成的二进制文件的名称将从“QuickTest.dll”更改为所选择的名称。
 
    ![项目属性](media/tutorial-projects-netcore-properties.png)
 
-1. 了解项目属性页的其他选项卡，例如“生成”和“调试”********。 这些选项卡对不同类型的项目是不同的。
+1. 了解项目属性页的其他选项卡，例如“生成”和“调试”。 这些选项卡对不同类型的项目是不同的。
 
 ## <a name="next-steps"></a>后续步骤
 
-若希望检查单元测试是否正常工作，请从菜单栏依次选择“测试” > “运行” > “所有测试”  。 此时名为“测试资源管理器”的窗口打开，你应该会看到“TestGetCurrentDate”测试通过********。
+若希望检查单元测试是否正常工作，请从菜单栏依次选择“测试” > “运行” > “所有测试”  。 此时名为“测试资源管理器”的窗口打开，你应该会看到“TestGetCurrentDate”测试通过。
 
 ![Visual Studio 中显示已通过的测试的文本资源管理器](media/tutorial-projects-test-explorer.png)
 
 ::: moniker range="vs-2017"
 
 > [!TIP]
-> 如果“测试资源管理器”未自动打开，请从菜单中选择“测试” > “Windows” > “测试资源管理器”****************。
+> 如果“测试资源管理器”未自动打开，请从菜单中选择“测试” > “Windows” > “测试资源管理器”。
 
 ::: moniker-end
 

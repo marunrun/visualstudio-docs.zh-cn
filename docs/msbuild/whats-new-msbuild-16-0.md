@@ -10,12 +10,12 @@ manager: jillfra
 ms.workload:
 - multiple
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: a4e0079fa301d751962a945a0bf8348ffd3c359d
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: b5d2f8205c72f2fd661a76296392bb94d1d24469
+ms.sourcegitcommit: 83a39d48b00c6c351e5c1707942633b7f73aaad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93047786"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94531857"
 ---
 # <a name="whats-new-in-msbuild-160"></a>MSBuild 16.0 中的新增功能
 
@@ -32,6 +32,10 @@ ms.locfileid: "93047786"
 - 此版工具的 `MSBuildToolsVersion` 为“Current”。 程序集版本与 Visual Studio 2017 中的程序集版本相同，为 15.1.0.0。
 
 - 此版工具的 `VisualStudioVersion` 为“16.0”
+
+## <a name="change-waves"></a>更改波次
+
+自 MSBuild 16.8 起，可以有选择地选择是否禁用 MSBuild 中某些潜在的颠覆性更改。 请参阅[变更波](change-waves.md)。
 
 ## <a name="updates"></a>更新
 
