@@ -1,6 +1,8 @@
 ---
 title: 为 SharePoint 应用程序页或 web 部件创建用户控件
 titleSuffix: ''
+description: 创建为 SharePoint 解决方案提供自定义功能的自定义用户控件，并在 web 部件或应用程序页中重用该功能。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b9c8a99562d937d7b10c3539888c2dd62eb1d1da
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: cbaeaff14d365f41bff73c29e678a08130b03dc0
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584095"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903671"
 ---
 # <a name="how-to-create-a-user-control-for-a-sharepoint-application-page-or-web-part"></a>如何：为 SharePoint 应用程序页或 Web 部件创建用户控件
   可以创建为 SharePoint 解决方案提供自定义功能的自定义用户控件，您可以在项目中重复使用此功能。 可以在 Web 部件或应用程序页中包含用户控件、添加其他 ASP.NET 控件和 SharePoint 控件、定义控件的属性和方法。 有关用户控件的详细信息，请参阅为 [web 部件或应用程序页创建可重用控件](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md) 和 [SharePoint 中的用户控件和服务器控件](https://blogs.msdn.microsoft.com/kaevans/2011/04/28/user-controls-and-server-controls-in-sharepoint/)。
@@ -38,7 +40,7 @@ ms.locfileid: "91584095"
 
 4. 在 " **已安装** " 窗格中，选择 " **Office/SharePoint** " 节点。
 
-5. 在 SharePoint 模板列表中，选择 " **用户控件 (仅在场解决方案") **。
+5. 在 SharePoint 模板列表中，选择 " **用户控件 (仅在场解决方案")**。
 
     > [!NOTE]
     > 用户控件仅适用于场解决方案。

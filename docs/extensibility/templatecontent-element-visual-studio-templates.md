@@ -1,5 +1,7 @@
 ---
 title: " (Visual Studio 模板) 的 TemplateContent 元素 |Microsoft Docs"
+description: 了解 TemplateContent 元素及其如何指定模板的内容。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 577ce71d3900947cde1de9a1e913124ab778a1ee
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 53cd7d4b5302652fc371f27b76d7e789a6942640
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699236"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903944"
 ---
 # <a name="templatecontent-element-visual-studio-templates"></a>TemplateContent 元素（Visual Studio 模板）
 
@@ -44,27 +46,27 @@ ms.locfileid: "80699236"
 
 ### <a name="attributes"></a>特性
 
-|特性|说明|
+|属性|描述|
 |---------------|-----------------|
 |[BuildOnLoad](../extensibility/buildonload-visual-studio-templates.md)|指定从模板创建项目时是否生成解决方案。|
 
 ### <a name="child-elements"></a>子元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[ProjectCollection](../extensibility/projectcollection-element-visual-studio-templates.md)|可选元素。<br /><br /> 指定多项目模板的组织和内容。|
-|[项目](../extensibility/project-element-visual-studio-templates.md)|可选元素。<br /><br /> 指定要添加到项目中的文件或目录。|
+|[Project](../extensibility/project-element-visual-studio-templates.md)|可选元素。<br /><br /> 指定要添加到项目中的文件或目录。|
 |[参考](../extensibility/references-element-visual-studio-templates.md)|可选元素。<br /><br /> 指定项模板所需的程序集引用。|
 |[ProjectItem](../extensibility/projectitem-element-visual-studio-item-templates.md)|可选元素。<br /><br /> 指定模板中包含的文件。|
 |[CustomParameters](../extensibility/customparameters-element-visual-studio-templates.md)|可选元素。<br /><br /> 指定从模板创建项目或项时要使用的任何自定义参数。|
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|必需的元素。<br /><br /> 包含项目模板、项模板或初学者工具包的所有元数据。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
  `TemplateContent` 是必需的元素。
 
 ## <a name="example"></a>示例

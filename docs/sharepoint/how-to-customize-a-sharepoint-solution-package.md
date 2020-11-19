@@ -1,5 +1,7 @@
 ---
 title: 如何：自定义 SharePoint 解决方案包 |Microsoft Docs
+description: 使用包设计器可以创建和自定义 SharePoint 解决方案包 ( .wsp) 。 查看或覆盖打包的清单文件。 更改清单模板。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 77b66160d489f711b5588fdcdd024d13769d734f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7055be0b089a0b7c582ef0b66d84951d01685870
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016873"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903632"
 ---
 # <a name="how-to-customize-a-sharepoint-solution-package"></a>如何：自定义 SharePoint 解决方案包
   您可以使用包设计器来创建和自定义包 (*.wsp*) 。 例如，你可以添加 SharePoint 项目项和功能，指定是否在部署解决方案时重置 Web 服务器，并设置部署服务器类型。
@@ -31,18 +33,18 @@ ms.locfileid: "86016873"
 
 #### <a name="to-open-the-package-designer"></a>打开包设计器
 
-- 在**解决方案资源管理器**中，双击 "**包**"，或在 "**包**" 的快捷菜单上选择 "**查看设计器**"。
+- 在 **解决方案资源管理器** 中，双击 "**包**"，或在 "**包**" 的快捷菜单上选择 "**查看设计器**"。
 
 ## <a name="view-the-packaged-manifestffile"></a>查看打包的 manifestfFile
  你可以使用包设计器来修改和生成打包的清单文件。 然后，你可以在 Visual Studio 中查看此文件的 XML 代码。
 
 #### <a name="to-view-the-xml-source-file"></a>查看 XML 源文件
 
-1. 在 **包设计器**中，选择 " **清单**"。
+1. 在 **包设计器** 中，选择 " **清单**"。
 
 #### <a name="to-view-the-packaged-manifest-file-by-using-solution-explorer"></a>使用解决方案资源管理器查看打包的清单文件
 
-1. 在“解决方案资源管理器”中，选择“显示所有文件”********。
+1. 在“解决方案资源管理器”中，选择“显示所有文件”。
 
 2. 展开 "包"，展开 "包"，然后打开 *Package.Template.xml* 文件。
 
@@ -54,13 +56,13 @@ ms.locfileid: "86016873"
 
 #### <a name="to-change-the-manifest-template-by-using-the-xml-editor"></a>使用 "XML 编辑器" 更改清单模板
 
-1. 在 **包设计器**中，选择 **"清单** " 选项卡，展开 " **编辑选项** " 节点，然后选择 " **在 XML 编辑器中打开** " 链接。
+1. 在 **包设计器** 中，选择 **"清单** " 选项卡，展开 " **编辑选项** " 节点，然后选择 " **在 XML 编辑器中打开** " 链接。
 
      对 XML 所做的更改将合并到打包的清单文件中。
 
 #### <a name="to-change-the-manifest-template-by-using-the-manifest-template-pane"></a>使用 "清单模板" 窗格更改清单模板
 
-1. 在 **包设计器**中，选择 " **清单** " 选项卡，展开 " **编辑选项** " 节点，然后更改出现在 "清单模板" 窗格中的 XML。
+1. 在 **包设计器** 中，选择 " **清单** " 选项卡，展开 " **编辑选项** " 节点，然后更改出现在 "清单模板" 窗格中的 XML。
 
      已打包的 " **打包清单** " 窗格的预览中将显示对 XML 所做的更改。
 
@@ -72,7 +74,7 @@ ms.locfileid: "86016873"
 
 #### <a name="to-overwrite-packaged-manifest-file-by-disabling-the-designer"></a>通过禁用设计器覆盖打包的清单文件
 
-1. 在 **包设计器**中，选择 " **清单** " 选项卡。
+1. 在 **包设计器** 中，选择 " **清单** " 选项卡。
 
 2. 展开 " **编辑选项** " 节点，选择 " **覆盖生成的 XML 并在 xml 编辑器中编辑清单** " 链接，然后选择 " **是"** 按钮。
 
@@ -83,7 +85,7 @@ ms.locfileid: "86016873"
 
 #### <a name="to-re-enable-the-designer"></a>重新启用设计器
 
-1. 在 **包设计器**中，选择 " **放弃清单编辑并重新启用设计器"** 链接，然后选择 " **是"** 按钮。
+1. 在 **包设计器** 中，选择 " **放弃清单编辑并重新启用设计器"** 链接，然后选择 " **是"** 按钮。
 
      模板会刷新为原始文本，对 XML 所做的任何更改都将丢失。
 

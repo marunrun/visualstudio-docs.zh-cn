@@ -1,5 +1,7 @@
 ---
 title: " (Visual Studio 模板) 的 ProjectType 元素 |Microsoft Docs"
+description: 了解 ProjectType 元素以及它如何将项目模板分类，使其显示在 "新建项目" 或 "添加新项" 对话框中。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d794bd5e81e77a892b5a3be38ff73ab805582dd7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2bd457bfb639ff0def2662476e60c8736e14b3ce
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80701809"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903814"
 ---
 # <a name="projecttype-element-visual-studio-templates"></a> (Visual Studio 模板的 ProjectType 元素) 
 对项目模板进行分类，使其显示在 " **新建项目** " 或 " **添加新项** " 对话框中的指定组下。
@@ -61,7 +63,7 @@ ms.locfileid: "80701809"
 
 - `Web`：指定模板创建 Web 项目或项。 如果 `ProjectType` 元素包含此值，则会在 ProjectSubType 元素中定义项目或项的语言 [ (Visual Studio 模板) ](../extensibility/projectsubtype-element-visual-studio-templates.md)。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
  `ProjectType` 是 `TemplateData` 的必需子元素。
 
  元素的值 `ProjectType` 指定模板位于 " **新建项目** " 或 " **添加新项** " 对话框中的位置。 例如， `ProjectType` 值为的模板 `CSharp` 会出现在 "**新建项目**" 对话框中的 " **Visual c #** " 节点下。

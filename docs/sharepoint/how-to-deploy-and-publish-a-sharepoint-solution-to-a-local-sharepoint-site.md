@@ -1,6 +1,8 @@
 ---
 title: 部署 & 将 SharePoint 解决方案发布到本地 SharePoint 站点
 titleSuffix: ''
+description: 查看如何将 SharePoint 解决方案部署或发布到开发计算机上的本地 SharePoint 服务器。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,27 +16,27 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 78a837cc7145187fbc529e6e86cc27f88dd81f51
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 65683544f345a2378fdec559f582985ffec7bc43
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585792"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903580"
 ---
 # <a name="how-to-deploy-and-publish-a-sharepoint-solution-to-a-local-sharepoint-site"></a>如何：将 SharePoint 解决方案部署和发布到本地 SharePoint 站点
   你可以在开发计算机上将 SharePoint 解决方案部署或发布到本地 SharePoint 服务器。 部署过程会将 *.wsp* 文件复制到 SharePoint 服务器，安装解决方案，然后激活功能。 发布过程仅将 *.wsp* 文件复制到 SharePoint 服务器并安装该文件。 您必须手动激活它才能在 SharePoint 中启用它。
 
 ## <a name="to-deploy-a-sharepoint-solution-to-the-local-sharepoint-server"></a>将 SharePoint 解决方案部署到本地 SharePoint 服务器
 
-1. 在 **解决方案资源管理器**中，选择要部署的项目。
+1. 在 **解决方案资源管理器** 中，选择要部署的项目。
 
 2. 在菜单栏上，依次选择 " **生成**"、" **部署解决方案**"。
 
-     *.Wsp*文件在本地 SharePoint 服务器上创建并安装。 此外，还会激活这些功能。
+     *.Wsp* 文件在本地 SharePoint 服务器上创建并安装。 此外，还会激活这些功能。
 
 ## <a name="to-publish-a-sharepoint-solution-to-a-local-sharepoint-server"></a>将 SharePoint 解决方案发布到本地 SharePoint 服务器
 
-1. 在 **解决方案资源管理器**中，打开要发布的 SharePoint 项目的快捷菜单，然后选择 " **发布**"。
+1. 在 **解决方案资源管理器** 中，打开要发布的 SharePoint 项目的快捷菜单，然后选择 " **发布**"。
 
 2. 在 " **发布** " 对话框中，选择 " **发布到文件系统** " 选项按钮。
 
