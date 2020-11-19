@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.date: 08/17/2020
 ms.author: angelpe
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: 9d279de29664dcfc17ebd719fafc95d197a3352a
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 1317f41c9463ab645e6dd3ba281f11b9246720a8
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93398665"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94901929"
 ---
 # <a name="add-azure-application-insights-by-using-visual-studio-connected-services"></a>使用 Visual Studio 连接的服务添加 Azure 应用程序 Insights
 
@@ -42,19 +42,19 @@ ms.locfileid: "93398665"
 
 1. 在 Visual Studio 中打开项目。
 
-1. 在 **解决方案资源管理器** 中，右键单击 " **连接的服务** " 节点，然后从上下文菜单中选择 " **添加连接的服务** "。
+1. 在 **解决方案资源管理器** 中，右键单击 " **连接的服务** " 节点，然后从上下文菜单中选择 " **添加连接的服务**"。
 
 1. 在 " **连接的服务** " 选项卡中，选择 " **服务依赖项** 的 + 图标"。
 
     ![添加服务依赖项](./media/vs-azure-tools-connected-services-storage/vs-2019/connected-services-tab.png)
 
-1. 在 " **添加依赖关系** " 页上，选择 **Azure 应用程序 Insights** 。
+1. 在 " **添加依赖关系** " 页上，选择 **Azure 应用程序 Insights**。
 
     ![添加 Azure 应用程序 Insights](./media/azure-app-insights-add-connected-service/azure-app-insights.png)
 
     如果尚未登录，请登录到 Azure 帐户。 如果没有 Azure 帐户，可以注册[免费试用版](https://azure.microsoft.com/account/free)。
 
-1. 在 " **配置 Azure 应用程序 insights** " 屏幕中，选择现有的 Azure 应用程序 Insights 组件，然后选择 " **下一步** "。
+1. 在 " **配置 Azure 应用程序 insights** " 屏幕中，选择现有的 Azure 应用程序 Insights 组件，然后选择 " **下一步**"。
 
     如果需要创建新的组件，请参阅下一步。 否则，请跳到步骤 7。
 
@@ -64,21 +64,21 @@ ms.locfileid: "93398665"
 
    1. 选择屏幕底部的 " **创建新的 Application Insights 组件** "。
 
-   1. 填写 **Application Insights：创建新** 屏幕，然后选择 " **创建** "。
+   1. 填写 **Application Insights：创建新** 屏幕，然后选择 " **创建**"。
 
        ![新建 Azure 应用 Insights 组件](./media/azure-app-insights-add-connected-service/create-new-app-insights.png)
 
-   1. 显示 " **配置 Azure 应用程序 Insights** " 屏幕时，新组件将出现在列表中。 在列表中选择新组件，然后选择 " **下一步** "。
+   1. 显示 " **配置 Azure 应用程序 Insights** " 屏幕时，新组件将出现在列表中。 在列表中选择新组件，然后选择 " **下一步**"。
 
 1. 输入检测密钥名称，或选择默认值，并选择是要将连接字符串存储在本地机密文件中还是 [Azure Key Vault](/azure/key-vault)中。
 
    ![指定连接字符串](./media/azure-app-insights-add-connected-service/connection-string.png)
 
-1. " **更改摘要** " 屏幕显示了在完成该过程后，将对项目进行的所有修改。 如果更改看起来正常，请选择 " **完成** "。
+1. " **更改摘要** " 屏幕显示了在完成该过程后，将对项目进行的所有修改。 如果更改看起来正常，请选择 " **完成**"。
 
    ![更改摘要](./media/azure-app-insights-add-connected-service/summary-of-changes.png)
 
-1. 该连接将显示在 " **连接的服务** " 选项卡的 " **服务依赖项** " 部分下。
+1. 该连接将显示在 "**连接的服务**" 选项卡的 "**服务依赖项**" 部分下。
 
    ![服务依赖项](./media/azure-app-insights-add-connected-service/service-dependencies-after.png)
 

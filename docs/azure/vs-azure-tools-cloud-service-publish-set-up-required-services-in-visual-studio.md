@@ -3,24 +3,23 @@ title: 准备发布或部署云服务
 description: 了解设置云服务和存储帐户服务以及配置 Azure 应用程序的过程。
 author: ghogen
 manager: jillfra
-ms.assetid: 92ee2f9e-ec49-4c7a-900d-620abe5e9d8a
 ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 11/10/2017
 ms.author: ghogen
-ms.openlocfilehash: a09b8f5c6efacab0f02a445ed78f8a3769031fa0
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: c048968ca97484812b7423a16e4a1834e1c8a66b
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399003"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94902485"
 ---
 # <a name="prepare-to-publish-or-deploy-a-cloud-service-from-visual-studio"></a>准备从 Visual Studio 发布或部署云服务
 
 若要发布云服务项目，必须设置本文描述的以下服务：
 
 * 一个云服务，用于在 Azure 环境中运行角色，和
-* 一个 **存储帐户** ，提供对 Blob、队列和表服务的访问权限。
+* 一个 **存储帐户**，提供对 Blob、队列和表服务的访问权限。
 
 ## <a name="create-a-cloud-service"></a>创建云服务
 
@@ -35,7 +34,7 @@ ms.locfileid: "93399003"
 
 ### <a name="create-a-cloud-service-through-the-azure-portal"></a>通过 Azure 门户创建云服务
 
-1. 登录 [Azure 门户](https://portal.azure.com/)。
+1. 登录到 [Azure 门户](https://portal.azure.com/)。
 1. 选择页面左侧的“云服务(经典)”。
 1. 选择“+ 添加”，然后提供所需的信息（DNS 名称、订阅、资源组和位置）。 不需要在此时上传包，因为稍后将在 Visual Studio 中执行这一操作。
 1. 选择“创建”以完成过程。
@@ -54,7 +53,7 @@ ms.locfileid: "93399003"
 
 ### <a name="create-a-storage-account-through-the-azure-portal"></a>通过 Azure 门户创建存储帐户
 
-1. 登录 [Azure 门户](https://portal.azure.com/)。
+1. 登录到 [Azure 门户](https://portal.azure.com/)。
 1. 选择左上角的“+ 新建”。
 1. 选择“Azure 市场”下的“存储”，然后从右侧选择“存储帐户 - Blob、文件、表、队列”。
 1. 提供所需的信息（名称、部署模型等）。

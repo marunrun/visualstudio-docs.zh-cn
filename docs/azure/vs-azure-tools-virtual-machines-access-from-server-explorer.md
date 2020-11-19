@@ -3,17 +3,16 @@ title: 从服务器资源管理器访问 Azure 虚拟机 | Microsoft Docs
 description: 概述如何在 Visual Studio 的服务器资源管理器中查看、创建和管理 Azure 虚拟机 (VM)。
 author: ghogen
 manager: jillfra
-assetId: eb3afde6-ba90-4308-9ac1-3cc29da4ede0
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 8/31/2017
 ms.author: ghogen
-ms.openlocfilehash: a9ca956400956ae337d8d1e0f5a881f1dc4c6377
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 653a9be556441f5f8d5fc1c1053b144dc97dd3b2
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93398548"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94901865"
 ---
 # <a name="accessing-azure-virtual-machines-from-server-explorer"></a>从服务器资源管理器访问 Azure 虚拟机
 
@@ -23,7 +22,7 @@ ms.locfileid: "93398548"
 
     下表显示了可用的属性，但这些属性都是只读的。 若要更改这些属性，请使用 [Azure 门户](https://portal.azure.com)。
 
-   | 属性 | 说明 |
+   | 属性 | 描述 |
    | --- | --- |
    | DNS 名称 |包含虚拟机 Internet 地址的 URL。 |
    | 环境 |对于虚拟机，此属性的值始终为“生产”。 |
@@ -34,7 +33,7 @@ ms.locfileid: "93398548"
 2. 选择一个终结点节点，然后查看 **“属性”** 窗口。
 3. 下表描述了可用的终结点属性，但这些属性都是只读的。 若要添加或编辑虚拟机的终结点，请使用 [Azure 门户](https://portal.azure.com)。
 
-   | 属性 | 说明 |
+   | 属性 | 描述 |
    | --- | --- |
    | 名称 |终结点的标识符。 |
    | 专用端口 |应用程序的内部网络访问端口。 |

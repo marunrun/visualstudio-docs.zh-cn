@@ -3,17 +3,16 @@ title: 创建 Azure 云服务项目
 description: 了解如何使用 Visual Studio 创建 Azure 云服务项目
 author: ghogen
 manager: jillfra
-assetId: ec580df7-3dcc-45a9-a1d9-8c110678dfb5
 ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 03/19/2019
 ms.author: ghogen
-ms.openlocfilehash: 1fd554a397c6db3bb1f1d5beb2fc12c0423aed22
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 667d3a0a4e4642c348f6a0dd6663a30fcf704d14
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399749"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94902787"
 ---
 # <a name="create-an-azure-cloud-service-project-with-visual-studio"></a>使用 Visual Studio 创建 Azure 云服务项目
 
@@ -25,7 +24,7 @@ Visual Studio 提供了一个项目模板，用于创建 [azure 云服务](/azur
 ::: moniker range="vs-2017"
 1. 以管理员的身份打开 Visual Studio。
 
-1. 在主菜单中，选择“文件” **“新建”** > **“项目”** > 。
+1. 在主菜单中，选择“文件”**“新建”** > **“项目”** > 。
 
 1. 从 Visual C# 或 Visual Basic 项目模板节点中选择“云”，并从模板列表中选择“Azure 云服务”。
 
@@ -53,7 +52,7 @@ Visual Studio 提供了一个项目模板，用于创建 [azure 云服务](/azur
 
     ![选择新的 Azure 云服务角色](./media/vs-azure-tools-azure-project-create/new-cloud-service.png)
 
-1. 要重命名已添加的角色，请在“新建 Microsoft Azure 云服务”对话框中将鼠标悬停在该角色上，然后从上下文菜单中选择“重命名”。 还可在添加角色后在解决方案（ **解决方案资源管理器** 中）内对其进行重命名。
+1. 要重命名已添加的角色，请在“新建 Microsoft Azure 云服务”对话框中将鼠标悬停在该角色上，然后从上下文菜单中选择“重命名”。 还可在添加角色后在解决方案（**解决方案资源管理器** 中）内对其进行重命名。
 
     ![重命名 Azure 云服务角色](./media/vs-azure-tools-azure-project-create/new-cloud-service-rename.png)
 

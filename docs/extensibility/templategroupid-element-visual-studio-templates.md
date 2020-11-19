@@ -1,5 +1,7 @@
 ---
 title: " (Visual Studio 模板) 的 TemplateGroupID 元素 |Microsoft Docs"
+description: 了解 TemplateGroupID 元素及其如何指定项模板将显示在哪个项目类型中。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: affc324418e3745f85fb0b91a0ef7abda0ab28b0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e5f7d30036f0f25d1f81b690168675d74fc36bbd
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699080"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903216"
 ---
 # <a name="templategroupid-element-visual-studio-templates"></a>TemplateGroupID 元素（Visual Studio 模板）
 指定项模板将显示在哪种项目类型中。 当 [ShowByDefault (Visual Studio 模板) ](../extensibility/showbydefault-visual-studio-templates.md) 设置为时，此元素很重要 `false` 。 当 [ShowByDefault (Visual Studio 模板) ](../extensibility/showbydefault-visual-studio-templates.md) 设置为时 `true` ，将在所有项目类型中提供项模板。
@@ -53,10 +55,10 @@ ms.locfileid: "80699080"
 
  此文本指定项模板类别的标识符。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
  `TemplateGroupID` 是一个元素。
 
- 元素的值 `TemplateGroupID` 与项目系统注册 (HKEY_LOCAL_MACHINE \Software\microsoft\visualstudio \\ *\<version number>* \Projects) 一起用于筛选在 \\ "**添加新项**" 对话框中显示的模板。
+ 元素的值 `TemplateGroupID` 与项目系统注册一起使用 ( # B0 \\ *\<version number>* \Projects \\) 来筛选在 "**添加新项**" 对话框中显示的模板。
 
 |Visual C++ 值|含义|
 |------------------------|-------------|
@@ -70,6 +72,6 @@ ms.locfileid: "80699080"
 |WinRT-Native|用于 Windows 8.0 应用商店项目|
 |VC-Android|用于 Android 项目|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
 - [创建项目和项模板](../ide/creating-project-and-item-templates.md)

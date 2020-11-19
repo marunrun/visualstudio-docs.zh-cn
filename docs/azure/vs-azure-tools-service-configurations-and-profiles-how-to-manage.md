@@ -3,17 +3,16 @@ title: 如何管理服务配置和配置文件 | Microsoft Docs
 description: 了解如何使用服务配置和配置文件，这两种配置文件将存储云服务的部署环境设置和发布设置。
 author: ghogen
 manager: jillfra
-assetId: 7da8c551-fb06-4057-b5c7-c77f4b39d803
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 8/11/2017
 ms.author: ghogen
-ms.openlocfilehash: 42c4668b2bf9925fe92db51b6a4275c535960a61
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 751214a99c7724c83f01226164202f90425ebf65
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93398873"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94902073"
 ---
 # <a name="how-to-manage-service-configurations-and-profiles"></a>如何管理服务配置和配置文件
 ## <a name="overview"></a>概述
@@ -26,10 +25,10 @@ ms.locfileid: "93398873"
 
 ![管理服务配置](./media/vs-azure-tools-service-configurations-and-profiles-how-to-manage/manage-service-config.png)
 
-还可以从角色的属性页中，打开 **“管理配置”** 对话框。 若要打开 Azure 项目角色的属性，请打开该角色的快捷菜单，然后选择 **“属性”** 。 在“设置”选项卡上，展开“服务配置”列表，并选择“管理”以打开“管理配置”对话框。
+还可以从角色的属性页中，打开 **“管理配置”** 对话框。 若要打开 Azure 项目角色的属性，请打开该角色的快捷菜单，然后选择 **“属性”**。 在“设置”选项卡上，展开“服务配置”列表，并选择“管理”以打开“管理配置”对话框。
 
 ### <a name="to-add-a-service-configuration"></a>添加服务配置
-1. 在解决方案资源管理器中，打开 Azure 项目的快捷菜单，然后选择 " **管理配置** "。
+1. 在解决方案资源管理器中，打开 Azure 项目的快捷菜单，然后选择 " **管理配置**"。
 
     此时将出现 **“管理服务配置”** 对话框。
 2. 若要添加服务配置，必须创建现有配置的副本。 为此，请从“名称”列表中选择想要复制的配置，并选择“创建副本”。
@@ -38,7 +37,7 @@ ms.locfileid: "93398873"
     此时名为 ServiceConfiguration.[New Name].cscfg 的新服务配置文件将添加到解决方案资源管理器的 Azure 项目中。
 
 ### <a name="to-delete-a-service-configuration"></a>删除服务配置
-1. 在解决方案资源管理器中，打开 Azure 项目的快捷菜单，然后选择 " **管理配置** "。
+1. 在解决方案资源管理器中，打开 Azure 项目的快捷菜单，然后选择 " **管理配置**"。
 
     此时将出现 **“管理服务配置”** 对话框。
 2. 要删除服务配置，请从“名称”列表中选择要删除的配置，并选择“删除”。 此时会显示一个对话框框以确认要删除此配置。
@@ -47,10 +46,10 @@ ms.locfileid: "93398873"
      此时该服务配置文件将从解决方案资源管理器的 Azure 项目中删除。
 
 ### <a name="to-rename-a-service-configuration"></a>重命名服务配置
-1. 在解决方案资源管理器中，打开 Azure 项目的快捷菜单，然后选择 " **管理配置** "。
+1. 在解决方案资源管理器中，打开 Azure 项目的快捷菜单，然后选择 " **管理配置**"。
 
     此时将出现 **“管理服务配置”** 对话框。
-2. 要重命名服务配置，请从“名称”列表中选择新的服务配置，并选择“重命名”。 在 " **名称** " 文本框中，键入要用于此服务配置的名称，然后选择 **"确定"** 。
+2. 要重命名服务配置，请从“名称”列表中选择新的服务配置，并选择“重命名”。 在 " **名称** " 文本框中，键入要用于此服务配置的名称，然后选择 **"确定"**。
 
     此时该服务配置文件的名称会在解决方案资源管理器的 Azure 项目中更改。
 
@@ -58,7 +57,7 @@ ms.locfileid: "93398873"
 * 如果要更改服务配置，请在 Azure 项目中打开要更改的特定角色的快捷菜单，并选择“属性”。 有关详细信息，请参阅[如何：使用 Visual Studio 配置 Azure 云服务的角色](vs-azure-tools-configure-roles-for-cloud-service.md)。
 
 ## <a name="make-different-setting-combinations-by-using-profiles"></a>使用配置文件指定不同的设置组合
-使用配置文件，可以为不同用途使用不同的设置组合自动填写 **发布向导** 。 例如，可以将一个配置文件用于调试，将另一个配置文件用于发布版本。 在这种情况下， **调试** 配置文件应启用 **IntelliTrace** 并选择“调试”配置，并且 **发布** 配置文件应禁用 **IntelliTrace** 并选择“发布”配置。 还可以使用不同配置文件通过不同存储帐户来部署服务。
+使用配置文件，可以为不同用途使用不同的设置组合自动填写 **发布向导**。 例如，可以将一个配置文件用于调试，将另一个配置文件用于发布版本。 在这种情况下，**调试** 配置文件应启用 **IntelliTrace** 并选择“调试”配置，并且 **发布** 配置文件应禁用 **IntelliTrace** 并选择“发布”配置。 还可以使用不同配置文件通过不同存储帐户来部署服务。
 
 第一次运行向导时，将创建默认配置文件。 Visual Studio 将配置文件存储在扩展名为 .azurePubXml 的文件中，该文件会添加到 Azure 项目中的 **“配置文件”** 文件夹下。 如果稍后运行向导时手动指定其他选项，则会自动更新该文件。 在运行以下过程之前，应该至少已发布了一次云服务。
 

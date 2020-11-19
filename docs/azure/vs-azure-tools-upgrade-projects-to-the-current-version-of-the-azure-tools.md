@@ -3,17 +3,16 @@ title: 将项目升级为 Azure 工具的最新版本
 description: 了解如何在 Visual Studio 中将 Azure 项目升级到最新版本的 Azure Tools
 author: ghogen
 manager: jillfra
-assetId: 1d64070a-078d-468a-87f4-e6715de6475f
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/18/2016
 ms.author: ghogen
-ms.openlocfilehash: 4cd9ffac5f668a9f6cd6ab266d38b90658ce9336
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: fce77f6417a14c204df883efd2f64655fa79b432
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93398574"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94901903"
 ---
 # <a name="how-to-upgrade-projects-to-the-current-version-of-the-azure-tools-for-visual-studio"></a>如何将项目升级到最新版本的 Azure Tools for Visual Studio
 ## <a name="overview"></a>概述
@@ -25,7 +24,7 @@ ms.locfileid: "93398574"
 * Web 角色的 Web.config 文件和辅助角色的 app.config 文件更新为引用较新版的 Microsoft.WindowsAzure.Diagnostics.DiagnosticMonitorTraceListener.dll。
 * Microsoft.WindowsAzure.StorageClient.dll、Microsoft.WindowsAzure.Diagnostics.dll 和 Microsoft.WindowsAzure.ServiceRuntime.dll 程序集升级到新的版本。
 * 存储在 Azure 项目文件 (.ccproj) 中的发布配置文件将转到 **Publish** 子目录中的另一个文件，扩展名为 .azurePubXml。
-* 发布配置文件中的某些属性更新为支持新的和更改的功能。 **“AllowUpgrade”** 替换为 **“DeploymentReplacementMethod”** ，因为可以同时或增量地部署云服务。
+* 发布配置文件中的某些属性更新为支持新的和更改的功能。 **“AllowUpgrade”** 替换为 **“DeploymentReplacementMethod”**，因为可以同时或增量地部署云服务。
 * 将添加属性 **“UseIISExpressByDefault”** 并设置为 false，防止用于调试的 Web 服务器从 Internet Information Services (IIS) 自动更改为 IIS Express。 IIS Express 是较新版本的工具创建的项目的默认 Web 服务器。
 * 如果 Azure Caching 托管在一个或多个项目的角色中，当项目升级时，服务配置（.cscfg 文件）和服务定义（.csdef 文件）中的某些属性会更改。 如果项目使用 Azure Caching NuGet 包，项目将升级到最新版本的包。 应该打开 Web.config 文件，并验证客户端配置在升级期间是否已得到适当维护。 如果在不使用 NuGet 包的情况下向 Azure 缓存客户端程序集添加引用，则将不会更新这些程序集；你必须手动更新这些对新版本的引用。
 

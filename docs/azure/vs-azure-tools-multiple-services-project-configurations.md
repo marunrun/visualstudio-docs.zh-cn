@@ -4,17 +4,16 @@ description: 了解如何通过更改 ServiceDefinition.csdef、ServiceConfigura
 ms.custom: SEO-VS-2020
 author: ghogen
 manager: jillfra
-assetId: a4fb79ed-384f-4183-9f74-5cac257206b9
 ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 11/11/2017
 ms.author: ghogen
-ms.openlocfilehash: a811c30114f9a45119eaccc666d6eb39be80a562
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 58d7a967c3a8cf46330c169db1b73bc048a2110c
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399801"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94902358"
 ---
 # <a name="configuring-your-azure-project-in-visual-studio-to-use-multiple-service-configurations"></a>使用多种服务配置来配置 Visual Studio 中的 Azure 项目
 
@@ -35,7 +34,7 @@ Visual Studio 中的 Azure 云服务项目包括三个配置文件：`ServiceDef
 
 选择受更改影响的 `ServiceConfiguration.*.cscfg` 文件。 默认情况下有本地和云变体，并且可以使用“管理...”命令来复制、重命名和删除配置文件。 这些文件会被添加到你的云服务项目，并显示在“解决方案资源管理器”中。 但是，只能从该控件中完成重命名或删除配置操作。
 
-### <a name="instances"></a>Instances
+### <a name="instances"></a>实例数
 
 将“实例计数”属性设置为服务应为此角色运行的实例的数目。
 
@@ -68,7 +67,7 @@ Visual Studio 中的 Azure 云服务项目包括三个配置文件：`ServiceDef
 
 若要创建连接字符串，请选择“添加设置”，并将“类型”设置为“连接字符串”。
 
-对于新的或现有的连接字符串，选择 **...***_ 打开* "创建存储连接字符串" 对话框，打开 " **创建存储连接字符串** " 对话框：
+对于新的或现有的连接字符串，选择 **...***_ 打开*"创建存储连接字符串" 对话框，打开 "**创建存储连接字符串**" 对话框：
 
 1. 在“连接时使用”下，选择“你的订阅”选项，以从订阅中选择存储帐户。 然后 Visual Studio 会从 `.publishsettings` 文件自动获取存储帐户凭据。
 1. 选择“手动输入凭据”，以便直接使用来自 Azure 门户的信息指定帐户名和密钥。 复制帐户密钥：

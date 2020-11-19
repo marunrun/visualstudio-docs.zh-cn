@@ -3,17 +3,16 @@ title: 配置 Azure 云服务的角色
 description: 了解如何使用 Visual Studio 设置和配置 Azure 云服务的角色。
 author: ghogen
 manager: jillfra
-assetId: d397ef87-64e5-401a-aad5-7f83f1022e16
 ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 03/21/2017
 ms.author: ghogen
-ms.openlocfilehash: 6b34a61bb0353bbbd4405b7f642bc63758dfa096
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 120c693e7009dddf2efaab7ce54fd4d20c0b1681
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399274"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94902644"
 ---
 # <a name="configure-azure-cloud-service-roles-with-visual-studio"></a>使用 Visual Studio 配置 Azure 云服务角色
 一个 Azure 云服务可以有一个辅助角色或 Web 角色。 对于每个角色，需要定义该角色的设置方式，并配置该角色的运行方式。 若要详细了解云服务中的角色，请观看视频 [Introduction to Azure Cloud Services](https://channel9.msdn.com/Series/Windows-Azure-Cloud-Services-Tutorials/Introduction-to-Windows-Azure-Cloud-Services)（Azure 云服务简介）。
@@ -71,7 +70,7 @@ ms.locfileid: "93399274"
 
     ![更新实例计数](./media/vs-azure-tools-configure-roles-for-cloud-service/role-configuration-properties-page-instance-count.png)
 
-1. 从 Visual Studio 工具栏中，选择 " **保存** "。
+1. 从 Visual Studio 工具栏中，选择 " **保存**"。
 
 ## <a name="manage-connection-strings-for-storage-accounts"></a>管理存储帐户的连接字符串
 可添加、删除或修改服务配置的连接字符串。 例如，你可能需要具有 `UseDevelopmentStorage=true` 值的本地服务配置的本地连接字符串。 可能还希望将云服务配置为使用 Azure 中的存储帐户。
@@ -113,11 +112,11 @@ ms.locfileid: "93399274"
 
     - **Microsoft Azure 存储模拟器** -如果选择此选项，则会禁用对话框上的其余设置，因为它们仅适用于 Azure。 选择“确定”。
     - **订阅** - 如果选择此选项，请使用下拉列表选择并登录到 Microsoft 帐户，或添加 Microsoft 帐户。 选择 Azure 订阅和 Azure 存储帐户。 选择“确定”。
-    - **手动输入的凭据** - 输入存储帐户名称，以及主密钥或辅助密钥。 在大多数情况下，建议为 **连接** (HTTPS 选择一个选项。 ) 选择 **"确定"** 。
+    - **手动输入的凭据** - 输入存储帐户名称，以及主密钥或辅助密钥。 在大多数情况下，建议为 **连接** (HTTPS 选择一个选项。 ) 选择 **"确定"**。
 
 1. 要删除某个连接字符串，请选择该连接字符串，并选择“删除设置”。
 
-1. 从 Visual Studio 工具栏中，选择 " **保存** "。
+1. 从 Visual Studio 工具栏中，选择 " **保存**"。
 
 ## <a name="programmatically-access-a-connection-string"></a>以编程方式访问连接字符串
 
@@ -173,7 +172,7 @@ ms.locfileid: "93399274"
 
 1. 要删除某个自定义设置，选择该设置，并选择“删除设置”。
 
-1. 从 Visual Studio 工具栏中，选择 " **保存** "。
+1. 从 Visual Studio 工具栏中，选择 " **保存**"。
 
 ## <a name="programmatically-access-a-custom-settings-value"></a>以编程方式访问自定义设置的值
 
@@ -224,7 +223,7 @@ ms.locfileid: "93399274"
 
 1. 要删除某个本地存储项，请选择该项，并选择“删除本地存储”。
 
-1. 从 Visual Studio 工具栏中，选择 " **保存** "。
+1. 从 Visual Studio 工具栏中，选择 " **保存**"。
 
 ## <a name="programmatically-accessing-local-storage"></a>以编程方式访问本地存储
 

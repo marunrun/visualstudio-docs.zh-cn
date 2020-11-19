@@ -3,17 +3,16 @@ title: 使用云资源管理器管理 Azure 资源 | Microsoft Docs
 description: 了解如何使用云资源管理器来浏览和管理 Visual Studio 中的 Azure 资源。
 author: ghogen
 manager: jillfra
-assetId: 6347dc53-f497-49d5-b29b-e8b9f0e939d7
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 03/25/2017
 ms.author: ghogen
-ms.openlocfilehash: 12c82cca6c8873facc1a16a926d90fd0f3918c07
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: c9c2ce60b2096b6c3a4f06fad7360b1d5ea0c753
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399385"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94902275"
 ---
 # <a name="manage-the-resources-associated-with-your-azure-accounts-in-visual-studio-cloud-explorer"></a>在 Visual Studio Cloud Explorer 中管理与 Azure 帐户关联的资源
 
@@ -27,17 +26,17 @@ ms.locfileid: "93399385"
 * Microsoft Azure 帐户 - 如果没有帐户，可以[注册免费试用帐户](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/)，或者[激活 Visual Studio 订户权益](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/)。
 
 > [!NOTE]
-> 若要查看 Cloud Explorer，请按 **Ctrl** + **Q** 激活搜索框，然后输入 **Cloud Explorer** 。
+> 若要查看 Cloud Explorer，请按 **Ctrl** + **Q** 激活搜索框，然后输入 **Cloud Explorer**。
 
 ## <a name="add-an-azure-account-to-cloud-explorer"></a>将 Azure 帐户添加到 Cloud Explorer
 
-若要查看与 Azure 帐户关联的资源，必须先将帐户添加到 **Cloud Explorer** 。
+若要查看与 Azure 帐户关联的资源，必须先将帐户添加到 **Cloud Explorer**。
 
 1. 在 **Cloud Explorer** 中，选择 " **帐户管理** " 按钮。
 
    ![Cloud Explorer Azure 帐户设置图标](./media/vs-azure-tools-resources-managing-with-cloud-explorer/azure-account-settings.png)
 
-1. 选择 " **管理帐户** "。
+1. 选择 " **管理帐户**"。
 
    ![Cloud Explorer 添加帐户链接](./media/vs-azure-tools-resources-managing-with-cloud-explorer/manage-accounts-link.png)
 
@@ -53,7 +52,7 @@ ms.locfileid: "93399385"
 
 ## <a name="remove-an-azure-account-from-cloud-explorer"></a>从 Cloud Explorer 删除 Azure 帐户
 
-1. 在 **Cloud Explorer** 中，选择 " **帐户管理** "。
+1. 在 **Cloud Explorer** 中，选择 " **帐户管理**"。
 
    ![Azure 帐户设置](./media/vs-azure-tools-resources-managing-with-cloud-explorer/azure-account-settings.png)
 
@@ -94,13 +93,13 @@ ms.locfileid: "93399385"
 
   ![云资源管理器的屏幕截图](./media/vs-azure-tools-resources-managing-with-cloud-explorer/actions-and-properties.png)
 
-每个资源都有“在门户中打开”操作。 选择此操作时，云资源管理器会在 [Azure 门户](https://portal.azure.com)中显示所选的资源。 在导航到深度嵌套的资源时， **在门户中打开** 功能特别方便。
+每个资源都有“在门户中打开”操作。 选择此操作时，云资源管理器会在 [Azure 门户](https://portal.azure.com)中显示所选的资源。 在导航到深度嵌套的资源时，**在门户中打开** 功能特别方便。
 
 根据 Azure 资源，还可能会显示其他操作和属性值。 例如，除了“在门户中打开”以外，Web 应用和逻辑应用还提供了“在浏览器中打开”和“附加调试器”操作。 当选择存储帐户 Blob、队列或表时，会显示用于打开编辑器的操作。 Azure 应用具有“URL”和“状态”属性，而存储资源具有键和连接字符串属性。
 
 ## <a name="find-resources-in-cloud-explorer"></a>在 Cloud Explorer 中查找资源
 
-若要在 Azure 帐户订阅中查找具有特定名称的资源，请在 **Cloud Explorer** 的 " **搜索** " 框中输入名称。
+若要在 Azure 帐户订阅中查找具有特定名称的资源，请在 **Cloud Explorer** 的 "**搜索**" 框中输入名称。
 
   ![在云资源管理器中查找资源](./media/vs-azure-tools-resources-managing-with-cloud-explorer/search-for-resources.png)
 

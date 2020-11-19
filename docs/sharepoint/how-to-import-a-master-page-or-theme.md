@@ -1,5 +1,7 @@
 ---
 title: 如何：导入母版页或主题 |Microsoft Docs
+description: 在 SharePoint 设计器中为母版页和主题生成模板，然后将其导入到 Visual Studio，以使您的 SharePoint 站点上的页面具有一致的外观。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7abca9e9141fdc8d4540e8a38e9579862fc540f1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c17f4e7477a20ea245eaa359a6f9611a8dc4ece6
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015301"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903489"
 ---
 # <a name="how-to-import-a-master-page-or-theme"></a>如何：导入母版页或主题
   您可以通过创建和使用母版页和主题，为您的 SharePoint 站点上的页面指定一致的外观。 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 不提供这些元素的模板，但您可以在 SharePoint Designer 中创建模板，然后将其导入到中 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 。 有关详细信息，请参阅 Microsoft 网站上的 [构建基块：页面和用户界面](/previous-versions/office/developer/sharepoint-2010/ee539040(v=office.14)) 。
@@ -37,7 +39,7 @@ ms.locfileid: "86015301"
 
      模块包含文件 (例如，要部署到在 SharePoint 中指定的位置) 母版页或主题文件。
 
-5. 在模块中，删除名为 *Sample.txt*的默认文件。
+5. 在模块中，删除名为 *Sample.txt* 的默认文件。
 
 6. 选择 "模块" 节点。
 
@@ -76,12 +78,12 @@ ms.locfileid: "86015301"
 
      特性 `Type="GhostableInLibrary"` 指示项已添加到内容数据库， `Url` 模块的特性指定在 SharePoint 内容数据库中存储文件的位置。
 
-11. 若要更改母版页的部署范围，请在 **解决方案资源管理器**中打开功能设计器中的功能文件，然后从 " **作用域** " 列表中选择新的部署范围。
+11. 若要更改母版页的部署范围，请在 **解决方案资源管理器** 中打开功能设计器中的功能文件，然后从 " **作用域** " 列表中选择新的部署范围。
 
      值为 " **Web** " 表示母版页仅适用于当前在项目中指定的网站。 " **站点** " 值表示母版页适用于当前网站集，其中包括所有子网站和根 web。 其他值不适用。
 
     > [!NOTE]
-    > 因为主题仅适用于网站集级别，所以建议您不要将主题的作用域设置为 **网站**以外的任何内容。 如果子站点中使用主题，则会发生错误。
+    > 因为主题仅适用于网站集级别，所以建议您不要将主题的作用域设置为 **网站** 以外的任何内容。 如果子站点中使用主题，则会发生错误。
 
 12. 在菜单栏上，选择 "**生成**" "  >  **部署解决方案**"。
 
@@ -92,5 +94,5 @@ ms.locfileid: "86015301"
 ## <a name="see-also"></a>另请参阅
 - [母版页](/previous-versions/office/developer/sharepoint-2010/ms443795(v=office.14))
 - [从现有 SharePoint 站点导入项](../sharepoint/importing-items-from-an-existing-sharepoint-site.md)
-- [创建 SharePoint 页面](../sharepoint/creating-pages-for-sharepoint.md)
-- [使用模块在解决方案中包括文件](../sharepoint/using-modules-to-include-files-in-the-solution.md)
+- [为 SharePoint 创建页](../sharepoint/creating-pages-for-sharepoint.md)
+- [使用模块包括解决方案中的文件](../sharepoint/using-modules-to-include-files-in-the-solution.md)

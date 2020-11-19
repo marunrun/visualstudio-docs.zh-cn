@@ -1,5 +1,7 @@
 ---
 title: 如何：执行 SharePoint 命令 |Microsoft Docs
+description: 阅读如何创建自定义 SharePoint 命令以从 SharePoint 工具扩展调用服务器对象模型 API。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 789b77f3161b5fe566ea033060e8cab16cbaecc7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2746704e30a61b0971db50a5083855b4a93560d4
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016984"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903530"
 ---
 # <a name="how-to-execute-a-sharepoint-command"></a>如何：执行 SharePoint 命令
   如果要在 SharePoint 工具扩展中使用服务器对象模型，则必须创建自定义 *SharePoint 命令* 以调用 API。 定义该命令并将其与 SharePoint 工具扩展一起部署后，扩展可以执行命令以调入 SharePoint 服务器对象模型。 若要执行该命令，请使用对象的 ExecuteCommand 方法之一 <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection> 。
@@ -32,7 +34,7 @@ ms.locfileid: "86016984"
 
          有关项目系统扩展的详细信息，请参阅 [扩展 SharePoint 项目系统](../sharepoint/extending-the-sharepoint-project-system.md)。
 
-    - 在**服务器资源管理器**的 " **SharePoint 连接**" 节点的扩展中，使用 <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext.SharePointConnection%2A> 属性。 若要获取 <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext> 对象，请使用 <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.Context%2A> 属性。
+    - 在 **服务器资源管理器** 的 " **SharePoint 连接**" 节点的扩展中，使用 <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext.SharePointConnection%2A> 属性。 若要获取 <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext> 对象，请使用 <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.Context%2A> 属性。
 
          有关 **服务器资源管理器** 扩展的详细信息，请参阅 [服务器资源管理器中的 "扩展 SharePoint 连接" 节点](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)。
 
@@ -65,7 +67,7 @@ ms.locfileid: "86016984"
 
 - 第二个参数是要传递给命令的自定义第二个参数的值。 在这种情况下，它是要升级到 SharePoint 站点的 *.wsp* 文件的完整路径。
 
-- 此代码不会将隐式 <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> 参数传递给命令。 当你从 SharePoint 项目系统的扩展或**服务器资源管理器**中**sharepoint 连接**节点的扩展中调用命令时，此参数将自动传递到该命令。 在其他类型的解决方案中，如在实现接口的项目模板向导中 <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> ，此参数为 **null**。
+- 此代码不会将隐式 <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> 参数传递给命令。 当你从 SharePoint 项目系统的扩展或 **服务器资源管理器** 中 **sharepoint 连接** 节点的扩展中调用命令时，此参数将自动传递到该命令。 在其他类型的解决方案中，如在实现接口的项目模板向导中 <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> ，此参数为 **null**。
 
 ## <a name="compile-the-code"></a>编译代码
  此示例需要引用 VisualStudio 程序集。

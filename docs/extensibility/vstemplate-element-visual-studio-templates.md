@@ -1,5 +1,7 @@
 ---
 title: " (Visual Studio 模板) 的 .Vstemplate 元素 |Microsoft Docs"
+description: 了解 .Vstemplate 元素以及它如何包含有关项目模板、项模板或初学者工具包的所有元数据。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 651e8b6dbbe11c450b105f3185e7e987bb30da9b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 973e2ede7e97d1e7710e6571d520be3d8919b9d9
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80697870"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903476"
 ---
 # <a name="vstemplate-element-visual-studio-templates"></a> (Visual Studio 模板的 .Vstemplate 元素) 
 包含有关项目模板、项模板或初学者工具包的所有元数据。
@@ -38,7 +40,7 @@ ms.locfileid: "80697870"
 
 ### <a name="attributes"></a>特性
 
-| 特性 | 说明 |
+| 属性 | 描述 |
 |-----------| - |
 | `Type` | 将模板标识为项目模板或项模板。 此属性的值可以是 `Project` 或 `Item` 。 |
 | `Version` | 指定模板的版本号。 和中的模板的 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] `Version` 属性值为 `3.0.0` 。 |
@@ -56,7 +58,7 @@ ms.locfileid: "80697870"
  无。
 
 ## <a name="remarks"></a>备注
- `VSTemplate`元素是 *.vstemplate*文件的根元素。
+ `VSTemplate`元素是 *.vstemplate* 文件的根元素。
 
 ## <a name="example"></a>示例
  下面的示例演示应用程序的项目模板的元数据 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 。

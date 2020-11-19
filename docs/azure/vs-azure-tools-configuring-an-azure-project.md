@@ -3,17 +3,16 @@ title: 配置 Azure 云服务项目
 description: 了解如何根据你对该项目的要求在 Visual Studio 中配置 Azure 云服务项目。
 author: ghogen
 manager: jillfra
-assetId: 609d6965-05cc-47b1-82dc-c76a92d4f295
 ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 03/06/2017
 ms.author: ghogen
-ms.openlocfilehash: 388cd20468624c6441342267f6545dfaf0e21901
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: dbf8d1ce8e668adb5fbab61178fafa980fd56298
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399141"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94902528"
 ---
 # <a name="configure-an-azure-cloud-service-project-with-visual-studio"></a>使用 Visual Studio 配置 Azure 云服务项目
 可根据你对 Azure 云服务项目的要求来对其进行配置。 可针对以下类别设置项目的属性：
@@ -33,7 +32,7 @@ ms.locfileid: "93399141"
 
 1. 将“删除现有部署前提示”设为“True”。 此设置有助于确保不会意外删除 Azure 中的现有部署
 
-1. 若要指示在本地运行或调试云服务时要使用的服务配置，请选择所需 **服务配置** 。 有关如何修改角色的服务配置的详细信息，请参阅[如何使用 Visual Studio 配置 Azure 云服务的角色](./vs-azure-tools-configure-roles-for-cloud-service.md)。
+1. 若要指示在本地运行或调试云服务时要使用的服务配置，请选择所需 **服务配置**。 有关如何修改角色的服务配置的详细信息，请参阅[如何使用 Visual Studio 配置 Azure 云服务的角色](./vs-azure-tools-configure-roles-for-cloud-service.md)。
 
 1. 若要在本地运行或调试云服务时启动 Azure 存储模拟器，请将 " **启动 Azure 存储模拟器** " 设置为 " **True** "。
 

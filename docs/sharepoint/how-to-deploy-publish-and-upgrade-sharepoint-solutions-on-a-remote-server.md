@@ -1,6 +1,8 @@
 ---
 title: 远程部署、发布、& 升级 SharePoint 解决方案
 titleSuffix: ''
+description: 在远程站点或本地 SharePoint 站点上部署、发布和升级沙盒 SharePoint 解决方案。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -16,19 +18,19 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5de5128ff19472390e65aa5d9a437aee269ff897
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: db476af4a9d3be9cab2109fb3489d0767765075f
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585779"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903567"
 ---
 # <a name="how-to-deploy-publish-and-upgrade-sharepoint-solutions-on-a-remote-server"></a>如何：在远程服务器上部署、发布和升级 SharePoint 解决方案
   除了将 SharePoint 解决方案部署到本地系统以外，还可以将沙盒 SharePoint 解决方案发布到远程站点或本地 SharePoint 站点。 远程发布过程会将 *.wsp* 文件复制到 SharePoint 服务器，安装解决方案，并使您能够激活解决方案。 你还可以在对其进行更改之后升级远程 SharePoint 解决方案安装。
 
 ## <a name="to-publish-a-sandboxed-sharepoint-solution-to-a-remote-sharepoint-server"></a>将沙盒 SharePoint 解决方案发布到远程 SharePoint 服务器
 
-1. 在 **解决方案资源管理器**中，打开要发布的沙盒 SharePoint 项目的快捷菜单，然后选择 " **发布**"。
+1. 在 **解决方案资源管理器** 中，打开要发布的沙盒 SharePoint 项目的快捷菜单，然后选择 " **发布**"。
 
 2. 在 " **发布** " 对话框中，选择 " **发布到 SharePoint 站点** " 选项按钮，然后输入联机发布网站的 URL，例如： `https://mytestsite.sharepoint.microsoftonline.com` 。
 
@@ -49,13 +51,13 @@ ms.locfileid: "91585779"
 ## <a name="to-upgrade-a-sandboxed-sharepoint-solution-on-a-remote-sharepoint-server"></a>在远程 SharePoint 服务器上升级沙盒 SharePoint 解决方案
  如果已在远程服务器上发布沙盒 SharePoint 解决方案，则可以使用以下过程在中对应用程序进行更改后进行升级 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 。
 
-1. 重命名中的 SharePoint 包 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 。 为此，请在 **解决方案资源管理器** 打开包。 它将出现在 **包资源管理器**中。
+1. 重命名中的 SharePoint 包 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 。 为此，请在 **解决方案资源管理器** 打开包。 它将出现在 **包资源管理器** 中。
 
 2. 在 " **包资源管理器**" 的 " **名称** " 框中，将包名称更改为唯一名称。
 
 3. 保存项目。
 
-4. 在 **解决方案资源管理器**中，打开项目的快捷菜单，然后选择 " **发布**"。
+4. 在 **解决方案资源管理器** 中，打开项目的快捷菜单，然后选择 " **发布**"。
 
 5. 在 " **发布** " 对话框中，选择 " **发布到 SharePoint 站点** " 选项按钮，然后，如果保存解决方案的远程服务器的 URL 丢失，请输入该 URL。
 
