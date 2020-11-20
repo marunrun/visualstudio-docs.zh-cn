@@ -1,5 +1,6 @@
 ---
 title: 在数据集设计器中创建 DataTable
+description: 在本演练中，将使用数据集设计器创建无 TableAdapter) 的 DataTable (。 创建新的 Windows 窗体应用程序，并向其添加新的数据集。
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: conceptual
@@ -13,16 +14,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 7dd762c6df5eebc9ebbf142a3ad7dfe430800802
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: a0dad1e6878adc73a08753dca21500499e652602
+ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036764"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94998247"
 ---
 # <a name="walkthrough-create-a-datatable-in-the-dataset-designer"></a>演练：在数据集设计器中创建 DataTable
 
-本演练说明如何 <xref:System.Data.DataTable> 使用 **数据集设计器**创建没有 TableAdapter) 的 (。 有关创建包含 Tableadapter 的数据表的信息，请参阅 [创建和配置 tableadapter](../data-tools/create-and-configure-tableadapters.md)。
+本演练说明如何 <xref:System.Data.DataTable> 使用 **数据集设计器** 创建没有 TableAdapter) 的 (。 有关创建包含 Tableadapter 的数据表的信息，请参阅 [创建和配置 tableadapter](../data-tools/create-and-configure-tableadapters.md)。
 
 ## <a name="create-a-new-windows-forms-application"></a>创建新的 Windows 窗体应用程序
 
@@ -46,11 +47,11 @@ ms.locfileid: "90036764"
 
 3. 选择“添加”。
 
-     Visual Studio 会将名为 **DataSet1** 的文件添加到项目中，并在 **数据集设计器**中打开它。
+     Visual Studio 会将名为 **DataSet1** 的文件添加到项目中，并在 **数据集设计器** 中打开它。
 
 ## <a name="add-a-new-datatable-to-the-dataset"></a>向数据集添加新 DataTable
 
-1. 将**DataTable**从 "**工具箱**" 的 "**数据集**" 选项卡拖动到**数据集设计器**。
+1. 将 **DataTable** 从 "**工具箱**" 的 "**数据集**" 选项卡拖动到 **数据集设计器**。
 
      名为 **DataTable1** 的表将添加到数据集。
 
@@ -62,7 +63,7 @@ ms.locfileid: "90036764"
 
 2. 将列命名为 `SongID` 。
 
-3. 在“属性” **** 窗口中，将 <xref:System.Data.DataColumn.DataType%2A> 属性设置为 <xref:System.Int16?displayProperty=fullName>。
+3. 在“属性”  窗口中，将 <xref:System.Data.DataColumn.DataType%2A> 属性设置为 <xref:System.Int16?displayProperty=fullName>。
 
 4. 重复此过程并添加以下列：
 
@@ -76,7 +77,7 @@ ms.locfileid: "90036764"
 
 所有数据表都应有一个主键。 主键唯一标识数据表中的特定记录。
 
-若要设置主密钥，请右键单击 **SongID** 列，然后单击 " **设置主键**"。 **SongID**列的旁边将显示一个钥匙图标。
+若要设置主密钥，请右键单击 **SongID** 列，然后单击 " **设置主键**"。 **SongID** 列的旁边将显示一个钥匙图标。
 
 ## <a name="save-your-project"></a>保存项目
 

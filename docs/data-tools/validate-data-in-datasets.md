@@ -1,5 +1,7 @@
 ---
 title: 验证数据集中的数据
+description: 了解如何验证数据集中的数据。 验证数据涉及到确认输入到数据对象中的值符合数据集架构内的约束。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -21,12 +23,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 379c5ec40a59ba044c8cce1ef7926294b763d05d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cde45c4086b93713fe6e5223c1725538c0880491
+ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85281079"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94998299"
 ---
 # <a name="validate-data-in-datasets"></a>验证数据集中的数据
 验证数据是确认输入到数据对象中的值是否符合数据集架构中的约束的过程。 验证过程还会确认这些值遵循了已为应用程序建立的规则。 在将更新发送到基础数据库之前对数据进行验证是一种很好的做法。 这可以减少错误，以及应用程序和数据库之间可能出现的往返次数。
@@ -80,7 +82,7 @@ ms.locfileid: "85281079"
 ## <a name="validate-data-during-column-changes"></a>在列更改过程中验证数据
 
 > [!NOTE]
-> **数据集设计器**创建一个可在其中将验证逻辑添加到数据集的分部类。 设计器生成的数据集不会删除或更改分部类中的任何代码。
+> **数据集设计器** 创建一个可在其中将验证逻辑添加到数据集的分部类。 设计器生成的数据集不会删除或更改分部类中的任何代码。
 
 当数据列中的值更改时，可以通过响应事件来验证数据 <xref:System.Data.DataTable.ColumnChanging> 。 引发时，此事件会将事件参数传递 (<xref:System.Data.DataColumnChangeEventArgs.ProposedValue%2A>) ，其中包含当前列所建议的值。 根据的内容 `e.ProposedValue` ，您可以：
 
@@ -97,7 +99,7 @@ ms.locfileid: "85281079"
 
 ### <a name="to-validate-data-when-a-row-changes-visual-basic"></a>当行 (Visual Basic 更改时验证数据) 
 
-1. 在“数据集设计器”中打开数据集****。 有关详细信息，请参阅 [演练：在数据集设计器中创建数据集](walkthrough-creating-a-dataset-with-the-dataset-designer.md)。
+1. 在“数据集设计器”中打开数据集。 有关详细信息，请参阅 [演练：在数据集设计器中创建数据集](walkthrough-creating-a-dataset-with-the-dataset-designer.md)。
 
 2. 双击要验证的表的标题栏。 此操作会 <xref:System.Data.DataTable.RowChanging> <xref:System.Data.DataTable> 在数据集的分部类文件中自动创建的事件处理程序。
 
@@ -108,12 +110,12 @@ ms.locfileid: "85281079"
 
 ### <a name="to-validate-data-when-a-row-changes-c"></a>当行 (c # 更改时验证数据 ) 
 
-1. 在“数据集设计器”中打开数据集****。 有关详细信息，请参阅 [演练：在数据集设计器中创建数据集](walkthrough-creating-a-dataset-with-the-dataset-designer.md)。
+1. 在“数据集设计器”中打开数据集。 有关详细信息，请参阅 [演练：在数据集设计器中创建数据集](walkthrough-creating-a-dataset-with-the-dataset-designer.md)。
 
 2. 双击要验证的表的标题栏。 此操作为创建的分部类文件 <xref:System.Data.DataTable> 。
 
     > [!NOTE]
-    > **数据集设计器**不会自动为事件创建事件处理程序 <xref:System.Data.DataTable.RowChanging> 。 您必须创建用于处理事件的方法 <xref:System.Data.DataTable.RowChanging> ，并运行代码以在表的初始化方法中挂接该事件。
+    > **数据集设计器** 不会自动为事件创建事件处理程序 <xref:System.Data.DataTable.RowChanging> 。 您必须创建用于处理事件的方法 <xref:System.Data.DataTable.RowChanging> ，并运行代码以在表的初始化方法中挂接该事件。
 
 3. 将以下代码复制到分部类中：
 

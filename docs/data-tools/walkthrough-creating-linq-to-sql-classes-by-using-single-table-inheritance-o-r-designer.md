@@ -1,5 +1,6 @@
 ---
 title: 具有单表继承的 LINQ to SQL 类
+description: 在本演练中，将使用 Visual Studio 中的单表继承来创建 LINQ to SQL 类对象关系设计器 (O/R 设计器) 。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: b0b5319cb36179e51b34eacce56282b97ad4a4bb
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: b83fd664cb2969c12d69e1e818f61190deed3804
+ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036751"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94998234"
 ---
 # <a name="walkthrough-create-linq-to-sql-classes-by-using-single-table-inheritance-or-designer"></a>演练：使用单表继承 (O/R 设计器创建 LINQ to SQL 类) 
 [Visual Studio 中的 LINQ to SQL 工具](../data-tools/linq-to-sql-tools-in-visual-studio2.md)支持单表继承，因为它通常在关系系统中实现。 本演练扩展了 [如何：使用 O/R 设计器配置继承](../data-tools/how-to-configure-inheritance-by-using-the-o-r-designer.md) 主题中提供的一般步骤，并提供了一些真实数据来演示中的继承使用 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] 。
@@ -43,12 +44,12 @@ ms.locfileid: "90036751"
 
 ### <a name="to-create-a-base-table-to-demonstrate-inheritance"></a>创建基表以演示继承
 
-1. 在 **服务器资源管理器** 或 **数据库资源管理器**中，右键单击 " **表** " 节点，然后单击 " **添加新表**"。
+1. 在 **服务器资源管理器** 或 **数据库资源管理器** 中，右键单击 " **表** " 节点，然后单击 " **添加新表**"。
 
     > [!NOTE]
     > 可以使用 Northwind 数据库或其他任何可添加表的数据库。
 
-2. 在表设计器中，向该表中添加以下列****：
+2. 在表设计器中，向该表中添加以下列：
 
     |列名|数据类型|允许 Null 值|
     |-----------------|---------------|-----------------|
@@ -60,14 +61,14 @@ ms.locfileid: "90036751"
 
 3. 将 ID 列设置为主键。
 
-4. 保存该表并将其命名为 Person****。
+4. 保存该表并将其命名为 Person。
 
 ## <a name="add-data-to-the-table"></a>向表中添加数据
 为了验证对继承的配置是否正确，表对于单表继承中的每个类都需要一些数据。
 
 ### <a name="to-add-data-to-the-table"></a>向表中添加数据。
 
-1. 在数据视图中打开该表。  (在**服务器资源管理器**或**数据库资源管理器**中右键单击**Person**表，然后单击 "**显示表数据**"。 ) 
+1. 在数据视图中打开该表。  (在 **服务器资源管理器** 或 **数据库资源管理器** 中右键单击 **Person** 表，然后单击 "**显示表数据**"。 ) 
 
 2. 将下面的数据复制到表中。  (你可以通过在 " **结果** " 窗格中选择整行来复制它，然后将其粘贴到表中。 ) 
 
@@ -99,7 +100,7 @@ ms.locfileid: "90036751"
 
 4. 将项目命名为 **命名为 inheritancewalkthrough**，然后选择 **"确定"**。
 
-     InheritanceWalkthrough 项目即被创建并添加到解决方案资源管理器中********。
+     InheritanceWalkthrough 项目即被创建并添加到解决方案资源管理器中。
 
 ## <a name="add-a-linq-to-sql-classes-file-to-the-project"></a>将 LINQ to SQL 类文件添加到项目
 
@@ -107,36 +108,36 @@ ms.locfileid: "90036751"
 
 1. 在 **“项目”** 菜单上，单击 **“添加新项”**。
 
-2. 单击“LINQ to SQL 类”模板，然后单击“添加”********。
+2. 单击“LINQ to SQL 类”模板，然后单击“添加”。
 
-     *.Dbml*文件将添加到项目中，并打开**O/R 设计器**。
+     *.Dbml* 文件将添加到项目中，并打开 **O/R 设计器**。
 
 ## <a name="create-the-inheritance-by-using-the-or-designer"></a>使用 O/R 设计器创建继承
-通过将“继承”对象从“工具箱”拖动到设计图面来配置继承********。
+通过将“继承”对象从“工具箱”拖动到设计图面来配置继承。
 
 ### <a name="to-create-the-inheritance"></a>创建继承
 
-1. 在 **服务器资源管理器** 或 **数据库资源管理器**中，导航到之前创建的 **Person** 表。
+1. 在 **服务器资源管理器** 或 **数据库资源管理器** 中，导航到之前创建的 **Person** 表。
 
 2. 将 **Person** 表拖到 **O/R 设计器** 设计图面上。
 
 3. 将第二个 **Person** 表拖到 **O/R 设计器** 上，并将其名称更改为 **Employee**。
 
-4. 从“Person”对象删除“Manager”属性********。
+4. 从“Person”对象删除“Manager”属性。
 
-5. 从“Employee”对象删除“Type”、“ID”、“FirstName”和“LastName”属性********************。 （即删除“Manager”以外的所有属性。****）
+5. 从“Employee”对象删除“Type”、“ID”、“FirstName”和“LastName”属性。 （即删除“Manager”以外的所有属性。）
 
-6. 从“工具箱”的“对象关系设计器”选项卡上，在“Person”和“Employee”对象之间创建“继承”********************。 为此，请单击“工具箱”中的“继承”项，然后松开鼠标按钮********。 接下来，单击 " **Employee** " 对象，然后单击**O/R 设计器**中的**Person**对象。 继承连线上的箭头将指向 **Person** 对象。
+6. 从“工具箱”的“对象关系设计器”选项卡上，在“Person”和“Employee”对象之间创建“继承”。 为此，请单击“工具箱”中的“继承”项，然后松开鼠标按钮。 接下来，单击 " **Employee** " 对象，然后单击 **O/R 设计器** 中的 **Person** 对象。 继承连线上的箭头将指向 **Person** 对象。
 
-7. 单击设计图面上的“继承”连线****。
+7. 单击设计图面上的“继承”连线。
 
-8. 将“鉴别器属性”属性设置为“Type”********。
+8. 将“鉴别器属性”属性设置为“Type”。
 
-9. 将“派生类鉴别器值”属性设置为“2”********。
+9. 将“派生类鉴别器值”属性设置为“2”。
 
-10. 将“基类鉴别器值”属性设置为“1”********。
+10. 将“基类鉴别器值”属性设置为“1”。
 
-11. 将“继承默认值”属性设置为“Person”********。
+11. 将“继承默认值”属性设置为“Person”。
 
 12. 生成项目。
 
@@ -145,7 +146,7 @@ ms.locfileid: "90036751"
 
 ### <a name="to-create-a-linq-query-and-display-the-results-on-the-form"></a>创建一个 LINQ 查询并在窗体上显示结果
 
-1. 将一个“ListBox”拖动到 Form1 上********。
+1. 将一个“ListBox”拖动到 Form1 上。
 
 2. 双击窗体以创建 `Form1_Load` 事件处理程序。
 
@@ -175,13 +176,13 @@ ms.locfileid: "90036751"
     ```
 
 ## <a name="test-the-application"></a>测试应用程序
-运行应用程序并检验列表框中显示的记录是否全为员工（“Type”列值为 2 的记录）****。
+运行应用程序并检验列表框中显示的记录是否全为员工（“Type”列值为 2 的记录）。
 
 ### <a name="to-test-the-application"></a>测试应用程序
 
-1. 按 **F5**。
+1. 按 F5 。
 
-2. 检验是否仅显示了“Type”列值为 2 的记录****。
+2. 检验是否仅显示了“Type”列值为 2 的记录。
 
 3. 关闭窗体。  (在 " **调试** " 菜单上，单击 " **停止调试**"。 ) 
 

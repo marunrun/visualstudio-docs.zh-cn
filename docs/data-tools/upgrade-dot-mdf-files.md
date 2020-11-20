@@ -1,5 +1,7 @@
 ---
 title: 升级 .mdf 文件
+description: 查看在安装较新版本的 Visual Studio 后升级数据库文件 ( .mdf) 的选项。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -14,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: d35611dcc7b6067cf6d6166aff521ef291b8dfcd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: babc82469d32540f1a003b629c9d83887ca91595
+ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85281118"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94998039"
 ---
 # <a name="upgrade-mdf-files"></a>升级 .mdf 文件
 
@@ -57,7 +59,7 @@ ms.locfileid: "85281118"
 
 ### <a name="to-upgrade-a-database-file-to-use-the-localdb-version"></a>升级数据库文件以使用 LocalDB 版本
 
-1. 在 **服务器资源管理器**中，选择 " **连接到数据库** " 按钮。
+1. 在 **服务器资源管理器** 中，选择 " **连接到数据库** " 按钮。
 
 2. 在 " **添加连接** " 对话框中，指定下列信息：
 
@@ -65,7 +67,7 @@ ms.locfileid: "85281118"
 
     - **服务器名称**：
 
-        - 使用默认版本： `(localdb)\MSSQLLocalDB` 。  这将指定 ProjectV12 或 ProjectV13，具体取决于安装的 Visual Studio 版本以及第一个 LocalDB 实例的创建时间。 **SQL Server 对象资源管理器**中的 " **MSSQLLocalDB** " 节点显示它所指向的版本。
+        - 使用默认版本： `(localdb)\MSSQLLocalDB` 。  这将指定 ProjectV12 或 ProjectV13，具体取决于安装的 Visual Studio 版本以及第一个 LocalDB 实例的创建时间。 **SQL Server 对象资源管理器** 中的 " **MSSQLLocalDB** " 节点显示它所指向的版本。
 
         - 若要使用特定版本： `(localdb)\ProjectsV12` 或 `(localdb)\ProjectsV13` ，则 V12 为 localdb 2014，V13 为 localdb 2016。
 
@@ -97,11 +99,11 @@ ms.locfileid: "85281118"
 
   - 若要运行项目，请选择 **F5** 键。
 
-  - 若要编辑数据库，请在**解决方案资源管理器**中打开 *.mdf*文件，然后展开**服务器资源管理器**中的节点以使用您的数据库。
+  - 若要编辑数据库，请在 **解决方案资源管理器** 中打开 *.mdf* 文件，然后展开 **服务器资源管理器** 中的节点以使用您的数据库。
 
 ### <a name="to-make-sql-server-express-the-default-database-engine"></a>使 SQL Server Express 默认的数据库引擎
 
-1. 在菜单栏上，选择“工具” > “选项”。
+1. 在菜单栏上，选择“工具”   >   “选项”。
 
 2. 在 " **选项** " 对话框中，展开 " **数据库工具** " 选项，然后选择 " **数据连接**"。
 
@@ -111,6 +113,6 @@ ms.locfileid: "85281118"
 
     SQL Server Express 将是应用程序的默认数据库引擎。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [在 Visual Studio 中访问数据](accessing-data-in-visual-studio.md)
