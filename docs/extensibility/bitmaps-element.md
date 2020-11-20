@@ -1,5 +1,7 @@
 ---
 title: 位图元素 |Microsoft Docs
+description: Bitmap 元素对一个或多个位图元素进行分组。 本文包含一个位图元素示例。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 85310923134a6db59f1b6a3a15ac4b96a127e239
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fd3222e24c6e90380ec9c5836bed583ba95eaa68
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739987"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974577"
 ---
 # <a name="bitmaps-element"></a>位图元素
 组 [位图元素](../extensibility/bitmap-element.md) 元素。
@@ -35,7 +37,7 @@ ms.locfileid: "80739987"
 
 ### <a name="attributes"></a>特性
 
-|特性|说明|
+|属性|说明|
 |---------------|-----------------|
 |条件|可选。 请参阅 [条件特性](../extensibility/vsct-xml-schema-conditional-attributes.md)。|
 
@@ -50,7 +52,7 @@ ms.locfileid: "80739987"
 
 |元素|说明|
 |-------------|-----------------|
-|[命令元素](../extensibility/commands-element.md)|表示 VSPackage 工具栏上命令的集合。|
+|[Commands 元素](../extensibility/commands-element.md)|表示 VSPackage 工具栏上命令的集合。|
 
 ## <a name="example"></a>示例
 

@@ -1,5 +1,7 @@
 ---
 title: 使用 VSPackage 创建扩展 |Microsoft Docs
+description: 了解如何创建 VSIX 项目并使用 VSPackage 添加 VSPackage 项目项，以获取 UI Shell 服务以便显示消息框。
+ms.custom: SEO-VS-2020
 ms.date: 3/16/2019
 ms.topic: how-to
 ms.assetid: c0cc5e08-4897-44f2-8309-e3478f1f999e
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 68ade2f8d334c1f93349e396d910fa300f6b5417
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 431de32838ad236229db5e41330aba372e30ea75
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903849"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94973773"
 ---
 # <a name="create-an-extension-with-a-vspackage"></a>使用 VSPackage 创建扩展
 
@@ -21,13 +23,13 @@ ms.locfileid: "85903849"
 
 ## <a name="prerequisites"></a>先决条件
 
-从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 也可稍后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
 ## <a name="create-a-vspackage"></a>创建 VSPackage
 
-1. 创建名为 **FirstPackage**的 VSIX 项目。 可以通过搜索 "vsix" 在 " **新建项目** " 对话框中找到 VSIX 项目模板。
+1. 创建名为 **FirstPackage** 的 VSIX 项目。 可以通过搜索 "vsix" 在 " **新建项目** " 对话框中找到 VSIX 项目模板。
 
-2. 项目打开时，添加一个名为 **FirstPackage**的 Visual Studio 包项模板。 在**解决方案资源管理器**中，右键单击项目节点，然后选择 "**添加**  >  **新项**"。 在 "**添加新项**" 对话框中，选择 " **visual c #**  >  **扩展性**" 并选择 " **visual Studio 包**"。 在窗口底部的 " **名称** " 字段中，将命令文件名更改为 *FirstPackage.cs*。
+2. 项目打开时，添加一个名为 **FirstPackage** 的 Visual Studio 包项模板。 在 **解决方案资源管理器** 中，右键单击项目节点，然后选择 "**添加**  >  **新项**"。 在 "**添加新项**" 对话框中，选择 " **visual c #**  >  **扩展性**" 并选择 " **visual Studio 包**"。 在窗口底部的 " **名称** " 字段中，将命令文件名更改为 *FirstPackage.cs*。
 
 3. 生成项目并启动调试。
 
@@ -76,4 +78,4 @@ ms.locfileid: "85903849"
 
 3. 生成项目并启动调试。 这将显示实验实例。
 
-4. 在实验实例中打开解决方案。 应该会看到一个消息框，其中显示 " **初始化 ( # B1 内的第一个包 **。
+4. 在实验实例中打开解决方案。 应该会看到一个消息框，其中显示 " **初始化 ( # B1 内的第一个包**。

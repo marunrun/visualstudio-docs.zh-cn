@@ -1,5 +1,7 @@
 ---
 title: 特定命令使用的 Bitflags |Microsoft Docs
+description: 了解源代码管理插件 API 使用的 bitflags，并按使用这些 API 的函数进行组织。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ffa1fd8bf025d665977e87dc8b88da724ade5a8b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7c6c48dbad986d8bc4be58f1ebd9c5bd1fffbd57
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80740011"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974597"
 ---
 # <a name="bitflags-used-by-specific-commands"></a>特定命令使用的 Bitflags
 可以通过在一个值中设置一个或多个位来修改源代码管理插件 API 中许多函数的行为。 这些值称为 bitflags。 此处详细介绍了源代码管理插件 API 使用的各种 bitflags，并按使用它们的函数分组。

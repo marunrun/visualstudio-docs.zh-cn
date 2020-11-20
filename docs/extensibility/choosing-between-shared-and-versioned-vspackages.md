@@ -1,5 +1,7 @@
 ---
 title: 在共享和版本控制的 Vspackage 之间选择 |Microsoft Docs
+description: 了解使用多个版本的 Visual Studio 和 .NET Framework，通过共享或版本控制策略 Vspackage 并行安装。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 96386c2d3b7d1e822fdd1dd6632d754740f86301
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 725dd8368bd4db9509426fa1a98ce56ef85bc3c0
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90011926"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974408"
 ---
 # <a name="choose-between-shared-and-versioned-vspackages"></a>在共享和版本控制之间进行选择 Vspackage
 不同版本的 Visual Studio 可以在同一台计算机上共存。 Vspackage 可以支持任意版本组合 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 。

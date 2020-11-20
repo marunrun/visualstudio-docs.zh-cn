@@ -1,5 +1,7 @@
 ---
 title: 创建多实例工具窗口 |Microsoft Docs
+description: 了解如何修改工具窗口，以便可以同时打开该工具窗口的多个实例。 默认情况下，工具窗口只能打开一个实例。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1bb84ed9961cac5159e15bc0c45fada5426d2f2c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 10de60620bcd0b56f251955f478d4d06c984d021
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904068"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974005"
 ---
 # <a name="create-a-multi-instance-tool-window"></a>创建多实例工具窗口
 您可以对工具窗口进行编程，以便可以同时打开该工具窗口的多个实例。 默认情况下，工具窗口只能打开一个实例。
@@ -25,7 +27,7 @@ ms.locfileid: "85904068"
 
 ## <a name="create-a-basic-single-instance-tool-window"></a>创建基本 (单实例) 工具窗口
 
-1. 使用 VSIX 模板创建名为 **MultiInstanceToolWindow** 的项目，并添加一个名为 **MIToolWindow**的自定义工具窗口项模板。
+1. 使用 VSIX 模板创建名为 **MultiInstanceToolWindow** 的项目，并添加一个名为 **MIToolWindow** 的自定义工具窗口项模板。
 
     > [!NOTE]
     > 有关使用工具窗口创建扩展的详细信息，请参阅 [使用工具窗口创建扩展](../extensibility/creating-an-extension-with-a-tool-window.md)。

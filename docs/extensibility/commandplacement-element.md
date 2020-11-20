@@ -1,5 +1,7 @@
 ---
 title: CommandPlacement 元素 |Microsoft Docs
+description: CommandPlacement 元素允许在多个组或菜单中包含按钮、组和菜单。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: dcf9f23b5e860b895baa4c2a7a783f2ee15fcc77
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d2828a32ea837e95be438aafa6ec4b31293a43a7
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739744"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974062"
 ---
 # <a name="commandplacement-element"></a>CommandPlacement 元素
 CommandPlacement 元素允许在多个组或菜单中包含按钮、组和菜单。 使用 CommandPlacement 元素时，无需完全重新定义这些项即可修改用户界面的外观。
@@ -36,7 +38,7 @@ CommandPlacement 元素允许在多个组或菜单中包含按钮、组和菜单
 
 ### <a name="attributes"></a>特性
 
-|特性|说明|
+|属性|说明|
 |---------------|-----------------|
 |guid|必需。 在 [符号元素](../extensibility/symbols-element.md)中定义的命令集的 guid。|
 |id|必需。 要放置的菜单、组或命令的 id，如中所定义 `Symbols Element` 。|
@@ -47,7 +49,7 @@ CommandPlacement 元素允许在多个组或菜单中包含按钮、组和菜单
 
 |元素|说明|
 |-------------|-----------------|
-|Parent|必需。 承载要放置的项的菜单或组。|
+|父级|必需。 承载要放置的项的菜单或组。|
 
 ### <a name="parent-elements"></a>父元素
 
@@ -66,6 +68,6 @@ CommandPlacement 元素允许在多个组或菜单中包含按钮、组和菜单
 </CommandPlacements>
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [CommandPlacements 元素](../extensibility/commandplacements-element.md)
 - [Visual Studio 命令表 ( .vsct) 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

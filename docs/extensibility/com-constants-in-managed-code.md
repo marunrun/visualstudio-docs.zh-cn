@@ -1,5 +1,7 @@
 ---
 title: 托管代码中的 COM 常量 |Microsoft Docs
+description: 了解托管包框架，该框架使一些标准 COM 常量可用于托管代码。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 919d000e44b90e975543f8aa6419968a40149adf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0dadf3d8965d36719282e0ae98f56e61679f97e4
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739824"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94973925"
 ---
 # <a name="com-constants-in-managed-code"></a>托管代码中的 COM 常量
 托管包框架 (MPF) 使某些标准 COM 常量可用于托管代码。 下面列出了这些常量供你参考。
@@ -126,5 +128,5 @@ ms.locfileid: "80739824"
 
  <xref:Microsoft.VisualStudio.VSConstants.DISP_E_UNKNOWNNAME>
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [错误处理和返回值](../extensibility/error-handling-and-return-values.md)

@@ -1,5 +1,7 @@
 ---
 title: 创建和管理模式对话框 |Microsoft Docs
+description: 了解如何使用 DialogWindow 和不使用 DialogWindow 在 Visual Studio 中创建模式对话框。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f2f4f296bb155bcde82235d962ae63c8fa4d41d7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c95f03ee71a827380539404a90cd79d50232e488
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903771"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94973626"
 ---
 # <a name="create-and-manage-modal-dialog-boxes"></a>创建和管理模式对话框
 在 Visual Studio 中创建模式对话框时，必须确保在对话框显示时已禁用对话框的父窗口，然后在关闭该对话框后重新启用父窗口。 如果不这样做，可能会收到错误： *Microsoft Visual Studio 无法关闭，因为模式对话框处于活动状态。关闭活动对话框，然后重试。*
@@ -26,7 +28,7 @@ ms.locfileid: "85903771"
 
 ## <a name="create-a-dialog-box-derived-from-dialogwindow"></a>创建一个从 DialogWindow 派生的对话框
 
-1. 创建名为 **OpenDialogTest** 的 VSIX 项目，并添加名为 **OpenDialog**的菜单命令。 有关如何执行此操作的详细信息，请参阅 [使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)。
+1. 创建名为 **OpenDialogTest** 的 VSIX 项目，并添加名为 **OpenDialog** 的菜单命令。 有关如何执行此操作的详细信息，请参阅 [使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)。
 
 2. 若要使用 <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> 类，必须在 " **添加引用** " 对话框的 "框架" 选项卡中添加对以下程序集的引用 () ：
 
@@ -38,7 +40,7 @@ ms.locfileid: "85903771"
 
     - *System.Xaml*
 
-3. 在 *OpenDialog.cs*中，添加以下 `using` 语句：
+3. 在 *OpenDialog.cs* 中，添加以下 `using` 语句：
 
     ```csharp
     using Microsoft.VisualStudio.PlatformUI;

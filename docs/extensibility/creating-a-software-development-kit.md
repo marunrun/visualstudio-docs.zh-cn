@@ -1,5 +1,7 @@
 ---
 title: 创建软件开发工具包 |Microsoft Docs
+description: 了解 Sdk 的通用基础结构以及如何创建平台 SDK 和扩展 SDK。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 8496afb4-1573-4585-ac67-c3d58b568a12
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 61e547be5f240cafccc058eb7ea2249fd492554b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b3a793e3d7233eb1b6d0aaaa74fbe16d52cf6f43
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904120"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974322"
 ---
 # <a name="create-a-software-development-kit"></a>创建软件开发工具包
 
@@ -33,9 +35,9 @@ ms.locfileid: "85904120"
 
 ### <a name="installation"></a>安装
 
-所有平台 Sdk 都将安装在*HKLM\Software\Microsoft\Microsoft sdk \\ [TPI] \V [TPV] \\ @InstallationFolder = [SDK root]* 上。 相应地， [!INCLUDE[win81](../debugger/includes/win81_md.md)] SDK 安装在 *HKLM\Software\Microsoft\Microsoft SDKs\Windows\v8.1*。
+所有平台 Sdk 都将安装在 *HKLM\Software\Microsoft\Microsoft sdk \\ [TPI] \V [TPV] \\ @InstallationFolder = [SDK root]* 上。 相应地， [!INCLUDE[win81](../debugger/includes/win81_md.md)] SDK 安装在 *HKLM\Software\Microsoft\Microsoft SDKs\Windows\v8.1*。
 
-### <a name="layout"></a>布局
+### <a name="layout"></a>Layout
 
 平台 Sdk 具有以下布局：
 
@@ -53,7 +55,7 @@ ms.locfileid: "85904120"
 | 节点 | 说明 |
 |------------------------| - |
 | *引用* 文件夹 | 包含二进制文件，这些二进制文件包含可针对编写的 Api。 其中可能包括 Windows 元数据 (WinMD) 文件或程序集。 |
-| *DesignTime* 文件夹 | 包含仅在运行前/调试时需要的文件。 其中可能包括 XML 文档、库、标头、工具箱设计时二进制文件、MSBuild 项目等等<br /><br /> 理想情况下，XML 文档将放置在 *\DesignTime* 文件夹中，但引用的 xml 文档将继续与 Visual Studio 中的引用文件放置在一起。 例如，引用<em>\References \\ [config] \\ [\sample.xml\sample.dll</em> 的 XML 文档将是 *\References \\ [config] \\ [] *，而该文档的本地化版本将为 *\References \\ [config] [] \\ \\ [locale] \sample.xml*。 |
+| *DesignTime* 文件夹 | 包含仅在运行前/调试时需要的文件。 其中可能包括 XML 文档、库、标头、工具箱设计时二进制文件、MSBuild 项目等等<br /><br /> 理想情况下，XML 文档将放置在 *\DesignTime* 文件夹中，但引用的 xml 文档将继续与 Visual Studio 中的引用文件放置在一起。 例如，引用 <em>\References \\ [config] \\ [\sample.xml\sample.dll</em> 的 XML 文档将是 *\References \\ [config] \\ []*，而该文档的本地化版本将为 *\References \\ [config] [] \\ \\ [locale] \sample.xml*。 |
 | *配置* 文件夹 | 只能有三个文件夹： " *调试*"、" *零售* " 和 " *CommonConfiguration*"。 如果应使用相同的一组 SDK 文件，SDK 作者可以将其文件放在 *CommonConfiguration* 下，而不管 sdk 使用者将面向的配置如何。 |
 | *体系结构* 文件夹 | 任何受支持的 *体系结构* 文件夹都可能存在。 Visual Studio 支持以下体系结构： x86、x64、ARM 和非特定语言。 注意： Win32 映射到 x86，而 AnyCPU 映射到非特定语言。<br /><br /> MSBuild 仅在适用于平台 Sdk 的 *\CommonConfiguration\neutral* 下显示。 |
 | *SDKManifest.xml* | 此文件介绍 Visual Studio 应如何使用 SDK。 查看以下 SDK 清单 [!INCLUDE[win81](../debugger/includes/win81_md.md)] ：<br /><br /> `<FileList             DisplayName = "Windows"             PlatformIdentity = "Windows, version=8.1"             TargetFramework = ".NET for Windows Store apps, version=v4.5.1; .NET Framework, version=v4.5.1"             MinVSVersion = "14.0">              <File Reference = "Windows.winmd">                <ToolboxItems VSCategory = "Toolbox.Default" />             </File> </FileList>`<br /><br /> **DisplayName：** 对象浏览器在 "浏览" 列表中显示的值。<br /><br /> **PlatformIdentity：** 此属性的存在会告诉 Visual Studio 和 MSBuild，SDK 是平台 SDK，不应在本地复制从它添加的引用。<br /><br /> **TargetFramework：** 此属性由 Visual Studio 用于确保只有面向此属性值中指定的相同框架的项目才能使用 SDK。<br /><br /> **MinVSVersion：** Visual Studio 使用此属性来仅使用适用于它的 Sdk。<br /><br /> **参考：** 必须仅为包含控件的引用指定此属性。 有关如何指定引用是否包含控件的信息，请参阅下面的。 |
@@ -107,7 +109,7 @@ ms.locfileid: "85904120"
 
 2. *引用* 文件夹：包含 api 的二进制文件。 它们可以是 Windows 元数据 (WinMD) 文件或程序集。
 
-3. 再*发行*文件夹：运行时/调试所需的文件，应打包为用户应用程序的一部分。 所有二进制文件都应放置在*\redist \\<config \> \\<\> *下，二进制名称应采用以下格式，以确保唯一性： *]* \<company> ... \<product> \<purpose> \<extension><em>.例如，* Microsoft.Cpp.Build.dll</em>。 所有名称都可能与其他 Sdk (的文件名（例如 javascript、css、pri、xaml、png 和 jpg 文件）的所有文件都应放置在<em>\redist \\<config<<) 下（ \> \\ \> \\ \> \* 与 xaml 控件关联的文件除外）。应将这些文件放在 * \redist \\<config \> \\<\> \\<componentname \> \\ 下</em>。
+3. 再 *发行* 文件夹：运行时/调试所需的文件，应打包为用户应用程序的一部分。 所有二进制文件都应放置在 *\redist \\<config \> \\<\>* 下，二进制名称应采用以下格式，以确保唯一性： *]* \<company> ... \<product> \<purpose> \<extension><em>.例如，* Microsoft.Cpp.Build.dll</em>。 所有名称都可能与其他 Sdk (的文件名（例如 javascript、css、pri、xaml、png 和 jpg 文件）的所有文件都应放置在<em>\redist \\<config<<) 下（ \> \\ \> \\ \> \* 与 xaml 控件关联的文件除外）。应将这些文件放在 * \redist \\<config \> \\<\> \\<componentname \> \\ 下</em>。
 
 4. *DesignTime* 文件夹：只需预运行/调试时间所需的文件，不应将其打包为用户的应用程序的一部分。 它们可以是 XML 文档、库、标头、工具箱设计时二进制文件、MSBuild 项目等。 旨在供本机项目使用的任何 SDK 都必须有 *SDKName 属性* 文件。 下面显示了此类型文件的示例。
 
@@ -127,15 +129,15 @@ ms.locfileid: "85904120"
 
    ```
 
-    XML 引用文档与引用文件放在一起。 例如， *\References \\<config \> \\<拱 \>\sample.dll*程序集的 XML 引用文档为*\References \\<config \> \\ \> *<！，而该文档的本地化版本*\References \\\sample.xml\> \\ \> \\ \> *<<<\sample.xml
+    XML 引用文档与引用文件放在一起。 例如， *\References \\<config \> \\<拱 \>\sample.dll* 程序集的 XML 引用文档为 *\References \\<config \> \\ \>*<！，而该文档的本地化版本 *\References \\\sample.xml\> \\ \> \\ \>*<<<\sample.xml
 
-5. *配置* 文件夹：三个子文件夹： *调试*、 *零售*和 *CommonConfiguration*。 当使用相同的一组 SDK 文件时，SDK 作者可以将其文件放在 *CommonConfiguration* 下，而不管 sdk 使用者的目标配置如何。
+5. *配置* 文件夹：三个子文件夹： *调试*、 *零售* 和 *CommonConfiguration*。 当使用相同的一组 SDK 文件时，SDK 作者可以将其文件放在 *CommonConfiguration* 下，而不管 sdk 使用者的目标配置如何。
 
 6. *体系结构* 文件夹：支持以下体系结构： x86、X64、ARM、非特定语言。 Win32 映射到 x86，而 AnyCPU 映射到非特定语言。
 
 ### <a name="sdkmanifestxml"></a>SDKManifest.xml
 
-*SDKManifest.xml*文件描述了 Visual Studio 应如何使用 SDK。 以下是一个示例：
+*SDKManifest.xml* 文件描述了 Visual Studio 应如何使用 SDK。 以下是一个示例：
 
 ```
 <FileList>
@@ -183,9 +185,9 @@ MoreInfo = "https://msdn.microsoft.com/MySDK">
 
 10. SupportsMultipleVersions：如果此属性设置为 " **错误** " 或 " **警告**"，则 MSBuild 将指示同一个项目无法引用同一 SDK 系列的多个版本。 如果此属性不存在或设置为 " **允许**"，则 MSBuild 不会显示此类型的错误或警告。
 
-11. AppX：指定磁盘上 Windows 组件库的应用包的路径。 在本地调试期间，此值将传递给 Windows 组件库的注册组件。 文件名的命名约定为* \<Company> ... \<Product> 。 \<Architecture> \<Configuration> \<Version>appx*。 如果属性名称和属性值不适用于 Windows 组件库，则配置和体系结构是可选的。 此值仅适用于 Windows 组件库。
+11. AppX：指定磁盘上 Windows 组件库的应用包的路径。 在本地调试期间，此值将传递给 Windows 组件库的注册组件。 文件名的命名约定为 *\<Company> ... \<Product> 。 \<Architecture> \<Configuration> \<Version>appx*。 如果属性名称和属性值不适用于 Windows 组件库，则配置和体系结构是可选的。 此值仅适用于 Windows 组件库。
 
-12. CopyRedistToSubDirectory：指定应相对于应用程序包根 (复制*\redist*文件夹下的文件，即在 "**创建应用包**" 向导中选择的**包位置**) 和运行时布局 "根"。 默认位置是应用包和 **F5** 布局的根。
+12. CopyRedistToSubDirectory：指定应相对于应用程序包根 (复制 *\redist* 文件夹下的文件，即在 "**创建应用包**" 向导中选择的 **包位置**) 和运行时布局 "根"。 默认位置是应用包和 **F5** 布局的根。
 
 13. DependsOn：一系列 SDK 标识，用于定义此 SDK 依赖的 sdk。 此属性显示在 "引用管理器" 的 "详细信息" 窗格中。
 
@@ -197,7 +199,7 @@ MoreInfo = "https://msdn.microsoft.com/MySDK">
 
 ## <a name="specify-the-location-of-toolbox-items"></a><a name="ToolboxItems"></a> 指定工具箱项的位置
 
-*SDKManifest.xml*架构的**ToolBoxItems**元素指定平台和扩展 sdk 中的工具箱项的类别和位置。 下面的示例演示如何指定不同的位置。 这适用于 WinMD 或 DLL 引用。
+*SDKManifest.xml* 架构的 **ToolBoxItems** 元素指定平台和扩展 sdk 中的工具箱项的类别和位置。 下面的示例演示如何指定不同的位置。 这适用于 WinMD 或 DLL 引用。
 
 1. 将控件置于 "工具箱" 的 "默认" 类别。
 
@@ -267,7 +269,7 @@ MoreInfo = "https://msdn.microsoft.com/MySDK">
     </File>
     ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [演练：使用 c + + 创建 SDK](../extensibility/walkthrough-creating-an-sdk-using-cpp.md)
 - [演练：使用 c # 或 Visual Basic 创建 SDK](../extensibility/walkthrough-creating-an-sdk-using-csharp-or-visual-basic.md)

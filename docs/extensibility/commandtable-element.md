@@ -1,5 +1,7 @@
 ---
 title: CommandTable 元素 |Microsoft Docs
+description: CommandTable 是 .vsct 文件的根元素，该元素定义 VSPackage 提供给 IDE 的命令的布局和类型。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a362763d34335b9a18c4114a7c35b23f0efee020
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 24e6792bb6199606f1d993492527d39c3f0f7f8b
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739643"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974517"
 ---
 # <a name="commandtable-element"></a>CommandTable 元素
 CommandTable 是 *.vsct* 文件的根元素。 此文件用于定义 VSPackage 提供给 IDE 的命令的实际布局和类型。 命令可能包括菜单项、菜单、工具栏和组合框。 有关详细信息，请参阅 [Visual Studio 命令表 ( .vsct) 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)。
@@ -44,7 +46,7 @@ CommandTable 是 *.vsct* 文件的根元素。 此文件用于定义 VSPackage �
 
 ### <a name="attributes"></a>特性
 
-| 特性 | 说明 |
+| 属性 | 说明 |
 |-----------| - |
 | xmlns | 必需。 XML 命名空间：<br /><br /> `xmlns=http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable`<br /><br /> xmlns： xs = " <http://www.w3.org/2001/XMLSchema> " |
 | 语言 | 可选。 Language 特性可用于指定命令表中所有元素的默认语言 \<Strings> 。  如果未指定语言，则将使用当前进程的语言：<br /><br /> language = "en-us" |
@@ -56,7 +58,7 @@ CommandTable 是 *.vsct* 文件的根元素。 此文件用于定义 VSPackage �
 |[Extern 元素](../extensibility/extern-element.md)|可选。 包含编译器的预处理器指令。|
 |[Include 元素](../extensibility/include-element.md)|可选。 包含要包含在编译中的任何文件的路径。|
 |[Define 元素](../extensibility/define-element.md)|可选。 定义符号的名称和值。|
-|[命令元素](../extensibility/commands-element.md)|可选。 父元素，用于为包含所有其他元素的 VSPackage 定义所有命令。|
+|[Commands 元素](../extensibility/commands-element.md)|可选。 父元素，用于为包含所有其他元素的 VSPackage 定义所有命令。|
 |[CommandPlacements 元素](../extensibility/commandplacements-element.md)|可选。 定义命令栏上命令的放置位置。|
 |[VisibilityConstraints 元素](../extensibility/visibilityconstraints-element.md)|可选。 确定命令和工具栏的静态可见性。|
 |[键绑定元素](../extensibility/keybindings-element.md)|可选。 为命令指定快捷键组合（如果有）。|
@@ -69,5 +71,5 @@ CommandTable 是 *.vsct* 文件的根元素。 此文件用于定义 VSPackage �
 |-------------|-----------------|
 |无||
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [Visual Studio 命令表 ( .vsct) 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

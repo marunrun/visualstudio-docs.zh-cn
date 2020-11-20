@@ -1,5 +1,7 @@
 ---
 title: 创建选项页 |Microsoft Docs
+description: 了解如何创建使用属性网格检查和设置属性的简单 "工具/选项" 页。
+ms.custom: SEO-VS-2020
 ms.date: 3/16/2019
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: be826b73e28a73216ea88ceba8e23eb1e9ea457b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 41102dfbbf1e49dadb1360ab0182810a47651dca
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903812"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94973719"
 ---
 # <a name="create-an-options-page"></a>创建选项页
 
@@ -25,9 +27,9 @@ ms.locfileid: "85903812"
 
  MPF 提供了两个类来帮助你创建工具选项页、 <xref:Microsoft.VisualStudio.Shell.Package> 类和 <xref:Microsoft.VisualStudio.Shell.DialogPage> 类。 通过为类创建子类，创建 VSPackage 以为这些页面提供容器 `Package` 。 可以通过从类派生来创建每个 "工具选项" 页 `DialogPage` 。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
- 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+ 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 也可稍后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
 ## <a name="create-a-tools-options-grid-page"></a>创建 "工具选项" 网格页
 
@@ -37,7 +39,7 @@ ms.locfileid: "85903812"
 
 1. 每个 Visual Studio 扩展都从一个 VSIX 部署项目开始，该项目将包含扩展资产。 创建一个 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 名为的 VSIX 项目 `MyToolsOptionsExtension` 。 可以通过搜索 "vsix" 在 " **新建项目** " 对话框中找到 VSIX 项目模板。
 
-2. 通过添加名为的 Visual Studio 包项模板来添加 VSPackage `MyToolsOptionsPackage` 。 在**解决方案资源管理器**中，右键单击项目节点，然后选择 "**添加**  >  **新项**"。 在 "**添加新项" 对话框**中，选择 " **visual c # 项**" "  >  **扩展性**"，然后选择 " **visual Studio 包**"。 在对话框底部的 " **名称** " 字段中，将文件名更改为 `MyToolsOptionsPackage.cs` 。 有关如何创建 VSPackage 的详细信息，请参阅 [使用 VSPackage 创建扩展](../extensibility/creating-an-extension-with-a-vspackage.md)。
+2. 通过添加名为的 Visual Studio 包项模板来添加 VSPackage `MyToolsOptionsPackage` 。 在 **解决方案资源管理器** 中，右键单击项目节点，然后选择 "**添加**  >  **新项**"。 在 "**添加新项" 对话框** 中，选择 " **visual c # 项**" "  >  **扩展性**"，然后选择 " **visual Studio 包**"。 在对话框底部的 " **名称** " 字段中，将文件名更改为 `MyToolsOptionsPackage.cs` 。 有关如何创建 VSPackage 的详细信息，请参阅 [使用 VSPackage 创建扩展](../extensibility/creating-an-extension-with-a-vspackage.md)。
 
 ### <a name="to-create-the-tools-options-property-grid"></a>创建 "工具选项" 属性网格
 
@@ -99,7 +101,7 @@ ms.locfileid: "85903812"
 
 7. 在 Visual Studio 的实验实例中，单击 " **工具** " 菜单上的 " **选项**"。
 
-     在左侧窗格中，应会看到 **"我的类别**"。  (选项类别按字母顺序列出，因此它应显示在列表中的下一半。 ) 打开 **"我的类别** "，然后单击 **"我的网格" 页**。 选项网格将显示在右窗格中。 "属性" 类别为 " **我的选项**"，属性名称为 **"我的整数" 选项**。 属性说明 " **我的整数" 选项**显示在窗格的底部。 将值从其初始值256更改为其他值。 单击 **"确定"**，然后重新打开 **网格页**。 您可以看到新值仍然存在。
+     在左侧窗格中，应会看到 **"我的类别**"。  (选项类别按字母顺序列出，因此它应显示在列表中的下一半。 ) 打开 **"我的类别** "，然后单击 **"我的网格" 页**。 选项网格将显示在右窗格中。 "属性" 类别为 " **我的选项**"，属性名称为 **"我的整数" 选项**。 属性说明 " **我的整数" 选项** 显示在窗格的底部。 将值从其初始值256更改为其他值。 单击 **"确定"**，然后重新打开 **网格页**。 您可以看到新值仍然存在。
 
      还可以通过 Visual Studio 的搜索框使用 "选项" 页。 在 IDE 顶部附近的 "搜索" 框中，键入 **"我的类别** "，将看到 "我的 **网格" 页** 在结果中列出 >。
 
@@ -190,7 +192,7 @@ ms.locfileid: "85903812"
     }
     ```
 
-     `optionsPage`字段保存对父实例的引用 `OptionPageCustom` 。 `Initialize`方法 `OptionString` 在**文本框**中显示。 **TextBox** `OptionString` 当焦点离开**textbox**时，事件处理程序会将文本框的当前值写入。
+     `optionsPage`字段保存对父实例的引用 `OptionPageCustom` 。 `Initialize`方法 `OptionString` 在 **文本框** 中显示。 **TextBox** `OptionString` 当焦点离开 **textbox** 时，事件处理程序会将文本框的当前值写入。
 
 9. 在包代码文件中，将属性的替代添加 `OptionPageCustom.Window` 到类， `OptionPageCustom` 以创建、初始化和返回的实例 `MyUserControl` 。 该类现在应如下所示：
 
@@ -225,7 +227,7 @@ ms.locfileid: "85903812"
 
 12. 查找 **我的类别** ，然后查找 **我的自定义页面**。
 
-13. 更改 **OptionString**的值。 单击 **"确定"**，然后重新打开 **自定义页面**。 您可以看到新值已保存。
+13. 更改 **OptionString** 的值。 单击 **"确定"**，然后重新打开 **自定义页面**。 您可以看到新值已保存。
 
 ## <a name="access-options"></a>访问选项
 
