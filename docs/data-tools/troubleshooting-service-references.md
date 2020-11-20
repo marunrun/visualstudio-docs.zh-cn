@@ -1,5 +1,7 @@
 ---
 title: 服务引用疑难解答
+description: 查看在 Visual Studio 中使用 Windows Communication Foundation (WCF) 或 WCF 数据服务引用时可能出现的常见问题。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: troubleshooting
 f1_keywords:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: d52562382f10615c7da1dfab22d4c18323b725b3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7d1a1f0efc21f1f612d85725358555fcb0cb8245
+ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75586115"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94998065"
 ---
 # <a name="troubleshoot-service-references"></a>服务引用疑难解答
 
@@ -33,7 +35,7 @@ ms.locfileid: "75586115"
 
 修复此错误的方法：
 
-1. 在 **解决方案资源管理器**中，双击 *app.config* 文件以将其打开。
+1. 在 **解决方案资源管理器** 中，双击 *app.config* 文件以将其打开。
 
 2. 找到 `MaxReceivedMessageSize` 属性，并将其更改为更大的值。
 
@@ -43,7 +45,7 @@ ms.locfileid: "75586115"
 
 修复此错误的方法：
 
-- 在 **解决方案资源管理器**中，右键单击 WCF 服务库项目，然后单击 " **生成**"。
+- 在 **解决方案资源管理器** 中，右键单击 WCF 服务库项目，然后单击 " **生成**"。
 
 ## <a name="error-accessing-a-service-over-a-remote-desktop"></a>通过远程桌面访问服务时出错
 
@@ -84,7 +86,7 @@ ms.locfileid: "75586115"
 
 5. 在 " **Configuration Manager** " 对话框中，将 " **活动解决方案配置** " 设置为 " **调试**"。 有关详细信息，请参阅[如何：创建和编辑配置](../ide/how-to-create-and-edit-configurations.md)。
 
-6. 在 **解决方案资源管理器**中，选择 "WCF 服务" 项目。
+6. 在 **解决方案资源管理器** 中，选择 "WCF 服务" 项目。
 
 7. 在 " **生成** " 菜单上，单击 " **重新生成** " 以重新生成 WCF 服务项目。
 
@@ -94,7 +96,7 @@ ms.locfileid: "75586115"
 
 若要修复此错误，请禁用 RSS 源：
 
-1. 在 Internet Explorer 的“工具”**** 菜单上，单击“Internet 选项”****。
+1. 在 Internet Explorer 的“工具”菜单上，单击“Internet 选项”。
 
 2. 在 " **内容** " 选项卡上的 " **源** " 部分中，单击 " **设置**"。
 

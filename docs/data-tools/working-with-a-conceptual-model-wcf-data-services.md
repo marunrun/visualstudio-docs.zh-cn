@@ -1,5 +1,7 @@
 ---
 title: 使用概念模型（WCF 数据服务）
+description: 使用 WCF 数据服务中的概念模型。 通过对象查询数据，而不是在数据库架构和对象模型之间来回转换。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 272f2f5e04ad8d87da45c98ed38c30751658d5c9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2aa79ca10729b9c36437fe30072328838de5dda4
+ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75585907"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94997870"
 ---
 # <a name="work-with-a-conceptual-model-wcf-data-services"></a>使用 WCF 数据服务的概念模型 () 
 

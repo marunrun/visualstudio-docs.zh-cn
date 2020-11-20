@@ -1,5 +1,6 @@
 ---
 title: 使用数据集设计器创建数据集
+description: 在本演练中，使用数据集设计器创建一个数据集。 了解如何创建新项目并向其添加新的数据集项。
 ms.custom: SEO-VS-2020
 ms.date: 09/11/2017
 ms.topic: conceptual
@@ -14,22 +15,22 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 20cd8bdc4f7d72cd0ed3920f75a4955ee57d2a68
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 1f124a459d55b945cd8dbb480d7e7c22b5de4f3e
+ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036777"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94998026"
 ---
 # <a name="walkthrough-create-a-dataset-with-the-dataset-designer"></a>演练：创建具有数据集设计器的数据集
 
-在本演练中，您将使用 **数据集设计器**创建一个数据集。 本文将指导你完成创建新项目的过程，并向其中添加新的 **数据集** 项。 您将了解如何在不使用向导的情况下创建基于数据库中的表的表。
+在本演练中，您将使用 **数据集设计器** 创建一个数据集。 本文将指导你完成创建新项目的过程，并向其中添加新的 **数据集** 项。 您将了解如何在不使用向导的情况下创建基于数据库中的表的表。
 
 ## <a name="prerequisites"></a>先决条件
 
 本演练使用 SQL Server Express LocalDB 和 Northwind 示例数据库。
 
-1. 如果没有 SQL Server Express 的 LocalDB，请从 [SQL Server Express 下载 "页](https://www.microsoft.com/sql-server/sql-server-editions-express)或通过 **Visual Studio 安装程序**安装它。 在 Visual Studio 安装程序中，SQL Server Express LocalDB 可以作为 **数据存储和处理** 工作负荷的一部分进行安装，也可以作为单个组件安装。
+1. 如果没有 SQL Server Express 的 LocalDB，请从 [SQL Server Express 下载 "页](https://www.microsoft.com/sql-server/sql-server-editions-express)或通过 **Visual Studio 安装程序** 安装它。 在 Visual Studio 安装程序中，SQL Server Express LocalDB 可以作为 **数据存储和处理** 工作负荷的一部分进行安装，也可以作为单个组件安装。
 
 2. 按照以下步骤安装 Northwind 示例数据库：
 
@@ -65,13 +66,13 @@ ms.locfileid: "90036777"
 
 3. 将数据集命名为 **NorthwindDataset**，然后选择 " **添加**"。
 
-     Visual Studio 会将名为 **NorthwindDataset** 的文件添加到项目中，并在 **数据集设计器**中打开它。
+     Visual Studio 会将名为 **NorthwindDataset** 的文件添加到项目中，并在 **数据集设计器** 中打开它。
 
 ## <a name="create-a-data-connection-in-server-explorer"></a>在服务器资源管理器中创建数据连接
 
-1. 在“视图”菜单上，单击“服务器资源管理器”********。
+1. 在“视图”菜单上，单击“服务器资源管理器”。
 
-2. 在 **服务器资源管理器**中，单击 " **连接到数据库** " 按钮。
+2. 在 **服务器资源管理器** 中，单击 " **连接到数据库** " 按钮。
 
 3. 创建与 Northwind 示例数据库的连接。
 
@@ -81,23 +82,23 @@ ms.locfileid: "90036777"
 
 ### <a name="to-create-the-customers-table"></a>创建 Customers 表
 
-1. 展开在 **服务器资源管理器**中创建的数据连接，然后展开 " **表** " 节点。
+1. 展开在 **服务器资源管理器** 中创建的数据连接，然后展开 " **表** " 节点。
 
-2. 将 " **Customers** " 表从 **服务器资源管理器** 拖动到 **数据集设计器**上。
+2. 将 " **Customers** " 表从 **服务器资源管理器** 拖动到 **数据集设计器** 上。
 
-     **客户**数据表和**CustomersTableAdapter**将添加到数据集。
+     **客户** 数据表和 **CustomersTableAdapter** 将添加到数据集。
 
 ### <a name="to-create-the-orders-table"></a>创建 Orders 表
 
-- 将 **Orders** 表从 **服务器资源管理器** 拖动到 **数据集设计器**上。
+- 将 **Orders** 表从 **服务器资源管理器** 拖动到 **数据集设计器** 上。
 
-     "**客户**" 和 "**订单**" 表之间的**订单**数据表、 **OrdersTableAdapter**和数据关系将添加到数据集。
+     "**客户**" 和 "**订单**" 表之间的 **订单** 数据表、 **OrdersTableAdapter** 和数据关系将添加到数据集。
 
 ### <a name="to-create-the-orderdetails-table"></a>创建 OrderDetails 表
 
-- 将 " **订单详细信息** " 表从 **服务器资源管理器** 拖动到 **数据集设计器**上。
+- 将 " **订单详细信息** " 表从 **服务器资源管理器** 拖动到 **数据集设计器** 上。
 
-     订单 **详细信息** 数据表、 **OrderDetailsTableAdapter**和 **Orders** 表与 **OrderDetails** 表之间的数据关系将添加到数据集。
+     订单 **详细信息** 数据表、 **OrderDetailsTableAdapter** 和 **Orders** 表与 **OrderDetails** 表之间的数据关系将添加到数据集。
 
 ## <a name="next-steps"></a>后续步骤
 

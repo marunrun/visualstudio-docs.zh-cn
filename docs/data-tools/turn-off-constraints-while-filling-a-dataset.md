@@ -1,5 +1,7 @@
 ---
 title: 在填充数据集时关闭约束
+description: 了解如何在填充数据集时关闭约束。 以编程方式或通过使用数据集设计器挂起更新约束。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -20,12 +22,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 7bdb225a5b310f6f602619b2afcee610c3e9258b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8a4d1e17d2f6a0159a9c0187d5e1a3d16216d0ba
+ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85281261"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94998312"
 ---
 # <a name="turn-off-constraints-while-filling-a-dataset"></a>在填充数据集时关闭约束
 
@@ -45,9 +47,9 @@ ms.locfileid: "85281261"
 
 ## <a name="to-suspend-update-constraints-using-the-dataset-designer"></a>使用数据集设计器挂起更新约束
 
-1. 在“数据集设计器”中打开数据集****。 有关详细信息，请参阅 [演练：在数据集设计器中创建数据集](walkthrough-creating-a-dataset-with-the-dataset-designer.md)。
+1. 在“数据集设计器”中打开数据集。 有关详细信息，请参阅 [演练：在数据集设计器中创建数据集](walkthrough-creating-a-dataset-with-the-dataset-designer.md)。
 
-2. 在“属性” **** 窗口中，将 <xref:System.Data.DataSet.EnforceConstraints%2A> 属性设置为 `false`。
+2. 在“属性”  窗口中，将 <xref:System.Data.DataSet.EnforceConstraints%2A> 属性设置为 `false`。
 
 ## <a name="see-also"></a>另请参阅
 
