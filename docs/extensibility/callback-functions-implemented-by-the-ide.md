@@ -1,5 +1,7 @@
 ---
 title: IDE 实现的回调函数 |Microsoft Docs
+description: 了解插件在源代码管理操作期间可调用的回调函数，以将信息传递到 IDE。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,19 +13,19 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 666486f5b800707a4467a129abeed7a13306f10a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9dfb7e8b7e046c9587f591aec96a6a7fbd270865
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739890"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974449"
 ---
 # <a name="callback-functions-implemented-by-the-ide"></a>IDE 实现的回调函数
 为了与集成开发环境集成 (IDE) 尽可能无缝地进行集成，并提供统一的最终用户体验，则源代码管理插件可以使用 IDE 实现的回调函数。 在源代码管理操作期间，该插件可以在适当的时间调用这些函数，以将信息传递到 IDE;然后，IDE 可以在其本机 UI 中将此信息显示为嵌入元素。 在此方案中，用户的工作效率较低，但该插件使用自己的 UI。
 
- 所需的标头文件是 *scc. h*。 默认位置为*\Program Files\VSIP 8.0 \ EnvSDK\common\inc \\ *。 它还包含在*\Program Files\VSIP 8.0 \ MSSCCI \\ *源代码管理插件示例的 VSIP 文件夹中。
+ 所需的标头文件是 *scc. h*。 默认位置为 *\Program Files\VSIP 8.0 \ EnvSDK\common\inc \\*。 它还包含在 *\Program Files\VSIP 8.0 \ MSSCCI \\* 源代码管理插件示例的 VSIP 文件夹中。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在此部分中
 - [LPTEXTOUTPROC](../extensibility/lptextoutproc.md) 描述 [SccOpenProject](../extensibility/sccopenproject-function.md) 用于通过 IDE 显示源代码管理插件消息的回调函数。
 
 - [POPLISTFUNC](../extensibility/poplistfunc.md) 描述当 IDE 无法完全访问仅适用于源代码管理插件的信息（如版本控制下的文件的完整列表）时， [SccPopulateList](../extensibility/sccpopulatelist-function.md) 使用的回调函数。

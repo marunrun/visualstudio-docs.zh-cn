@@ -1,5 +1,7 @@
 ---
 title: 更改菜单命令的文本 |Microsoft Docs
+description: 查看此代码示例，了解如何通过使用 IMenuCommandService 服务来更改菜单命令的文本标签。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,19 +14,19 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 88a20d9f29ae86f7946389cafd26d67c244caea7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d22669e67becb62d5e90f58c0cdd6b572e684bcf
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84183686"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974387"
 ---
 # <a name="change-the-text-of-a-menu-command"></a>更改菜单命令的文本
 以下步骤演示如何使用服务更改菜单命令的文本标签 <xref:System.ComponentModel.Design.IMenuCommandService> 。
 
 ## <a name="changing-a-menu-command-label-with-the-imenucommandservice"></a>使用 IMenuCommandService 更改菜单命令标签
 
-1. `MenuText`使用名为**ChangeMenuText**的菜单命令创建一个名为的 VSIX 项目。 有关详细信息，请参阅 [使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)。
+1. `MenuText`使用名为 **ChangeMenuText** 的菜单命令创建一个名为的 VSIX 项目。 有关详细信息，请参阅 [使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)。
 
 2. 在 *.vsct* 文件中，将标志添加 `TextChanges` 到菜单命令中，如下面的示例中所示。
 

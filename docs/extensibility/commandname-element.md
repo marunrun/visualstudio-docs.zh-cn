@@ -1,5 +1,7 @@
 ---
 title: CommandName 元素 |Microsoft Docs
+description: CommandName 元素指定在 "选项" 对话框的 "键盘" 类别和 "自定义" 对话框的 "命令" 列表中显示的文本。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8152942d015e21b1b80f735fd921a5ddde3674d5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8447213b14a3632197ea7ce27677423460315f71
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739746"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974112"
 ---
 # <a name="commandname-element"></a>CommandName 元素
 `CommandName`元素指定在 "**选项**" 对话框的 "键盘" 类别和 "**自定义**" 对话框的 "**命令**" 列表中显示的文本。
@@ -42,5 +44,5 @@ ms.locfileid: "80739746"
 |-------------|-----------------|
 |[Strings 元素](../extensibility/strings-element.md)|组合文本元素，例如 `ButtonText` 和 `CommandName` 。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [Visual Studio 命令表 ( .vsct) 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

@@ -1,5 +1,7 @@
 ---
 title: 命令元素 |Microsoft Docs
+description: 命令元素表示 VSPackage 工具栏上命令的集合，并可包含以下各节：菜单、组、按钮、combos 和位图。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3ea2400cca19a02475caecec3d022e0b78794ae4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 59afdda5a9af3a779b65063c3c764ef4f284a265
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739687"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974503"
 ---
 # <a name="commands-element"></a>Commands 元素
 表示 VSPackage 工具栏上命令的集合。 集合最多可以包含五个子节，如下所示：菜单、组、按钮、combos 和位图。
@@ -42,7 +44,7 @@ ms.locfileid: "80739687"
 
 ### <a name="attributes"></a>特性
 
-|特性|说明|
+|属性|描述|
 |---------------|-----------------|
 |包|标识提供命令的 VSPackage 的 GUID。<br /><br /> 例如，package = "guidVsPackage1Pkg"。|
 
@@ -88,6 +90,6 @@ ms.locfileid: "80739687"
 <Commands>
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [Vspackage 如何添加用户界面元素](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
 - [命令、菜单和工具栏](../extensibility/internals/commands-menus-and-toolbars.md)

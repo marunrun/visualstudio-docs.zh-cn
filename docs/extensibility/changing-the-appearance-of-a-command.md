@@ -1,5 +1,7 @@
 ---
 title: 更改命令的外观 |Microsoft Docs
+description: 了解如何提供更改命令外观的反馈，如使命令可用/不可用、隐藏/显示或选中/取消选中。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1c1574704f8848c16f4740189688cb1719f19623
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0f79ac7873a1746e0b14db51ba864e94f6bbfa1e
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84183712"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974411"
 ---
 # <a name="change-the-appearance-of-a-command"></a>更改命令的外观
 可以通过更改命令的外观向用户提供反馈。 例如，你可能希望某个命令在不可用时的外观有所不同。 您可以使命令可用或不可用、隐藏或显示它们，或在菜单中选中或取消选中它们。
@@ -80,7 +82,7 @@ ms.locfileid: "84183712"
 
 6. 生成项目并启动调试。 应显示 Visual Studio 的实验实例。
 
-7. 在 " **工具** " 菜单上，单击 " **调用 ChangeMenuText** " 命令。 此时，命令名称会 **调用 ChangeMenuText**，因此命令处理程序不会调用 **ChangeMyCommand ( # B1 **。
+7. 在 " **工具** " 菜单上，单击 " **调用 ChangeMenuText** " 命令。 此时，命令名称会 **调用 ChangeMenuText**，因此命令处理程序不会调用 **ChangeMyCommand ( # B1**。
 
 8. 此时，你应该会看到 " **工具** " 菜单上的 " **新文本**"。 单击 " **新文本**"。 该命令现在应显示为灰色。
 

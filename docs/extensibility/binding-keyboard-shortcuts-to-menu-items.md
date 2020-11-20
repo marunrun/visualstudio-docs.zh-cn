@@ -1,5 +1,7 @@
 ---
 title: 将键盘快捷方式绑定到菜单项 |Microsoft Docs
+description: 了解如何将 Visual Studio 中的键盘快捷键映射到默认编辑器或自定义编辑器的自定义按钮、菜单项或工具栏命令。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8df973ef6a75a9134b4ee6e945a5702708ece712
-ms.sourcegitcommit: 023f52f10fb91850824558478cbfd2ec965054f0
+ms.openlocfilehash: 112089581965b96133f2160341a13efe23329934
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94407710"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974626"
 ---
 # <a name="bind-keyboard-shortcuts-to-menu-items"></a>将键盘快捷方式绑定到菜单项
 若要将键盘快捷方式绑定到自定义菜单命令，只需将条目添加到包的 *.vsct* 文件。 本主题说明如何将键盘快捷方式映射到自定义按钮、菜单项或工具栏命令，以及如何在默认编辑器中应用键盘映射或将其限制为自定义编辑器。
@@ -31,9 +33,9 @@ ms.locfileid: "94407710"
 
 ### <a name="to-verify-the-availability-of-a-keyboard-shortcut"></a>验证键盘快捷方式的可用性
 
-1. 在 " **工具**  >  **选项** "  >  **环境** 窗口中，选择 " **键盘** "。
+1. 在 "**工具**  >  **选项**"  >  **环境** 窗口中，选择 "**键盘**"。
 
-2. 请确保将 **"使用新快捷方式"** 设置为 " **全局** "。
+2. 请确保将 **"使用新快捷方式"** 设置为 " **全局**"。
 
 3. 在 " **按快捷键** " 框中，键入要使用的键盘快捷方式。
 
@@ -42,7 +44,7 @@ ms.locfileid: "94407710"
 4. 尝试不同的键组合，直到找到一个未映射的键组合。
 
    > [!NOTE]
-   > 使用 **Alt** 的键盘快捷方式可打开菜单而不直接执行命令。 因此，当您键入包含 **Alt** 的快捷方式时，" **当前使用者** " 框中的快捷方式可能为空。可以通过关闭 " **选项** " 对话框，然后按下键来验证快捷方式是否未打开菜单。
+   > 使用 **Alt** 的键盘快捷方式可打开菜单而不直接执行命令。 因此，当您键入包含 **Alt** 的快捷方式时，"**当前使用者**" 框中的快捷方式可能为空。可以通过关闭 "**选项**" 对话框，然后按下键来验证快捷方式是否未打开菜单。
 
    下面的过程假定您有一个具有菜单命令的现有 VSPackage。 如果需要执行此操作的帮助，请参阅 [使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)。
 
@@ -59,7 +61,7 @@ ms.locfileid: "94407710"
 
     将 `guid`  和  `id` 属性设置为要调用的命令的属性。
 
-    将 `mod1` 属性设置为 " **控件** "、" **Alt** " 或 " **移动** "。
+    将 `mod1` 属性设置为 " **控件**"、" **Alt**" 或 " **移动**"。
 
     键绑定部分应如下所示：
 

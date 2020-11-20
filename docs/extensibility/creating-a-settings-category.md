@@ -1,5 +1,7 @@
 ---
 title: 创建设置类别 |Microsoft Docs
+description: 了解如何创建 Visual Studio 设置类别并使用它来保存和还原设置文件中的值。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 03d50ca998efa034b1d4392c1fb7cecb8de8ed06
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 468b1a44fb4754f86b31992e2c6d96bf6380592d
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904029"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974543"
 ---
 # <a name="create-a-settings-category"></a>创建设置类别
 
@@ -26,7 +28,7 @@ ms.locfileid: "85904029"
 若要开始本演练，必须先完成 " [创建选项" 页面](../extensibility/creating-an-options-page.md)的第一个部分。 "生成的选项" 属性网格使你可以检查和更改类别中的属性。 将属性类别保存到设置文件中后，将检查该文件以查看属性值的存储方式。
 
 ## <a name="prerequisites"></a>先决条件
- 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+ 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 也可稍后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
 ## <a name="create-a-settings-category"></a>创建设置类别
  在本部分中，将使用自定义设置点保存和还原 "设置" 类别的值。
@@ -48,18 +50,18 @@ ms.locfileid: "85904029"
     > [!NOTE]
     > 在这三种情况下，" **导入和导出设置** 向导" 中将不显示类别名称。
 
-3. 在 *MyToolsOptionsPackage.cs*中，将一个 `float` 名为的属性添加 `OptionFloat` 到 `OptionPageGrid` 类，如下面的示例中所示。
+3. 在 *MyToolsOptionsPackage.cs* 中，将一个 `float` 名为的属性添加 `OptionFloat` 到 `OptionPageGrid` 类，如下面的示例中所示。
 
     ```csharp
-    public class OptionPageGrid : DialogPage
+    public class OptionPageGrid : DialogPage
     {
-        private int optionInt = 256;
-        private float optionFloat = 3.14F;
+        private int optionInt = 256;
+        private float optionFloat = 3.14F;
 
         [Category("My Options")]
         [DisplayName("My Integer option")]
         [Description("My integer option")]
-        public int OptionInteger
+        public int OptionInteger
         {
             get { return optionInt; }
             set { optionInt = value; }
@@ -67,7 +69,7 @@ ms.locfileid: "85904029"
         [Category("My Options")]
         [DisplayName("My Float option")]
         [Description("My float option")]
-        public float OptionFloat
+        public float OptionFloat
         {
             get { return optionFloat; }
             set { optionFloat = value; }
@@ -90,7 +92,7 @@ ms.locfileid: "85904029"
 ## <a name="examine-the-settings-file"></a>检查设置文件
  在本部分中，将属性类别值导出到设置文件。 检查该文件，然后将这些值导入回属性类别。
 
-1. 通过按 **F5**在调试模式下启动项目。 这将启动实验实例。
+1. 通过按 **F5** 在调试模式下启动项目。 这将启动实验实例。
 
 2. 打开 "**工具**  >  **选项**" 对话框。
 
@@ -108,7 +110,7 @@ ms.locfileid: "85904029"
 
 7. 单击 **"我的设置"**。
 
-     **说明**更改为 " **OptionInteger" 和 "OptionFloat**"。
+     **说明** 更改为 " **OptionInteger" 和 "OptionFloat**"。
 
 8. 请确保 " **我的设置** " 是所选的唯一类别，然后单击 " **下一步**"。
 
@@ -118,7 +120,7 @@ ms.locfileid: "85904029"
 
      " **导出完成** " 页将报告你的设置已成功导出。
 
-10. 在“文件”**** 菜单中，指向“打开”****，再单击“文件”****。 找到 *mysetting .vssettings* 并将其打开。
+10. 在“文件”菜单中，指向“打开”，再单击“文件”。 找到 *mysetting .vssettings* 并将其打开。
 
      你可以在文件的以下部分中找到导出的属性类别 (你的 Guid 将) 不同。
 
@@ -147,7 +149,7 @@ ms.locfileid: "85904029"
 
      此时将显示 " **选择要导入的设置集合** " 页。
 
-15. 在树视图的 "**我的设置**" 节点中选择 " *mysetting" .vssettings*文件。 如果该文件未出现在树视图中，请单击 " **浏览** " 并找到该文件。 单击“配置目录分区”  。
+15. 在树视图的 "**我的设置**" 节点中选择 " *mysetting" .vssettings* 文件。 如果该文件未出现在树视图中，请单击 " **浏览** " 并找到该文件。 单击“下一步”。
 
      此时将显示 " **选择要导入的设置** " 对话框。
 

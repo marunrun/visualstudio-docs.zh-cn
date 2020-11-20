@@ -1,5 +1,7 @@
 ---
 title: 创建自定义起始页 |Microsoft Docs
+description: 了解如何创建自定义起始页。 从空白起始页开始，将控件添加到空的 UserControl 元素，然后测试页面。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: d67e0c53-9f5a-45fb-a929-b9d2125c3c82
@@ -9,12 +11,12 @@ manager: jillfra
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: ed35948158866b7d0bbb2e458c8f8bc2f7b3f844
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b7e4c9690e573d2807eb3ad9d842921ee08417d8
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903667"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974559"
 ---
 # <a name="creating-a-custom-start-page"></a>创建自定义起始页
 
@@ -24,7 +26,7 @@ ms.locfileid: "85903667"
 
 首先，创建一个包含 Visual Studio 将识别的标记结构的 *.xaml* 文件，从而创建一个空白起始页。 然后，添加标记和代码隐藏以生成所需的外观和功能。
 
-1. 在**Visual c #** Windows Desktop) 中创建 " **WPF 应用程序**" 类型的新项目 ( >  **Windows Desktop** 。
+1. 在 **Visual c #** Windows Desktop) 中创建 " **WPF 应用程序**" 类型的新项目 ( >  **Windows Desktop** 。
 
 2. 添加对 `Microsoft.VisualStudio.Shell.14.0` 的引用。
 
@@ -69,7 +71,7 @@ ms.locfileid: "85903667"
 
 ### <a name="to-test-a-manually-created-custom-start-page"></a>测试手动创建的自定义起始页
 
-1. 将 XAML 文件和任何支持的文本文件或标记文件复制到 *%USERPROFILE%\My Documents\Visual Studio 2015 \ StartPages \\ *文件夹中。
+1. 将 XAML 文件和任何支持的文本文件或标记文件复制到 *%USERPROFILE%\My Documents\Visual Studio 2015 \ StartPages \\* 文件夹中。
 
 2. 如果起始页引用 Visual Studio 未安装的程序集中的任何控件或类型，请复制这些程序集，然后将其粘贴到 *{Visual studio 安装文件夹} \\ \Common7\IDE\PrivateAssemblies*。
 
@@ -77,7 +79,7 @@ ms.locfileid: "85903667"
 
 4. 在实验实例中，请切换到 "**工具**  >  **选项**  >  **环境**  >  **启动**" 页，然后从 "**自定义起始页**" 下拉列表中选择您的 XAML 文件。
 
-5. 在“视图” **** 菜单上，单击“起始页” ****。
+5. 在“视图”  菜单上，单击“起始页” 。
 
      应显示自定义起始页。 如果要更改任何文件，则必须关闭实验实例，进行更改，复制并粘贴已更改的文件，然后重新打开实验实例以查看更改。
 
@@ -85,7 +87,7 @@ ms.locfileid: "85903667"
 
 - 在测试起始页并发现它稳定后，使用 "**选项**" 对话框中的 "**自定义起始页**" 选项将其选择为 Visual Studio 主实例中的起始页
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [演练：将自定义 XAML 添加到起始页](../extensibility/walkthrough-adding-custom-xaml-to-the-start-page.md)
 - [将用户控件添加到起始页](../extensibility/adding-user-control-to-the-start-page.md)

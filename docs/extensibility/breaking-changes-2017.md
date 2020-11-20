@@ -1,5 +1,7 @@
 ---
 title: Visual Studio 2017 扩展性中的重大更改
+description: 了解有关在 Visual Studio 2017 中对扩展性模型所做的重大更改的技术详细信息以及可用于解决这些问题的信息。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 11/09/2016
 ms.topic: conceptual
@@ -9,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d872003b319773401ef4da72c1fac8dc177ecbdb
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 3121189b1d73543d2a01bbf0b149c6a98eab6909
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90011783"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94973750"
 ---
 # <a name="changes-in-visual-studio-2017-extensibility"></a>Visual Studio 2017 扩展性中的更改
 
@@ -63,7 +65,7 @@ Visual Studio 2017 中提供了用于创作新的 VSIX v3 清单格式的设计�
 
 * 仅安装到 GAC 中的程序集：
 
-  这些程序集现在安装在 <em>[INSTALLDIR] \Common7\IDE \* 、* [INSTALLDIR] \Common7\IDE\PublicAssemblies</em> 或 *[INSTALLDIR] \Common7\IDE\PrivateAssemblies*下。 这些文件夹是 Visual Studio 进程的探测路径的一部分。
+  这些程序集现在安装在 <em>[INSTALLDIR] \Common7\IDE \* 、* [INSTALLDIR] \Common7\IDE\PublicAssemblies</em> 或 *[INSTALLDIR] \Common7\IDE\PrivateAssemblies* 下。 这些文件夹是 Visual Studio 进程的探测路径的一部分。
 
 * 安装到非探测路径和 GAC 中的程序集：
 
@@ -98,7 +100,7 @@ Visual Studio 2017 中提供了用于创作新的 VSIX v3 清单格式的设计�
 ### <a name="global-com-registration"></a>全局 COM 注册
 
 * 以前，Visual Studio 已在 HKEY_CLASSES_ROOT 中安装多个注册表项，并 HKEY_LOCAL_MACHINE 配置单元来支持本机 COM 注册。 为了消除这种影响，Visual Studio 现在使用 [COM 组件无注册激活](/previous-versions/dotnet/articles/ms973913(v=msdn.10))。
-* 因此，默认情况下，Visual Studio 将不再安装% ProgramFiles (x86) % \ Common Files\Microsoft Shared\MSEnv 下的大多数 TLB/.OLB/DLL 文件。 这些文件现在安装在 [INSTALLDIR] 下，其中包含 Visual Studio 主机进程使用的相应免注册 COM 清单。
+* 因此，默认情况下，Visual Studio 将不再安装% ProgramFiles (x86) % \ Common Files\Microsoft Shared\MSEnv 下的大多数 TLB/.OLB/DLL 文件。 这些文件现在安装在 [INSTALLDIR] 下，其中包含 Visual Studio 主机进程使用的相应 Registration-Free COM 清单。
 * 因此，依赖于 Visual Studio COM 接口的全局 COM 注册的外部代码将不再查找这些注册。 在 Visual Studio 进程内运行的代码看不到差异。
 
 ### <a name="visual-studio-registry"></a>Visual Studio 注册表
@@ -109,13 +111,13 @@ Visual Studio 2017 中提供了用于创作新的 VSIX v3 清单格式的设计�
   * **HKCU\Software\Microsoft\VisualStudio \{Version}**： Visual Studio 创建的用于存储特定于用户的设置的注册表项。
   * **HKCU\Software\Microsoft\VisualStudio \{版本} _Config**：上面的 Visual STUDIO HKLM 密钥的副本，以及按扩展名从 *.pkgdef* 文件合并的注册表项。
 
-* 为了降低对注册表的影响，Visual Studio 现在使用 [RegLoadAppKey](/windows/desktop/api/winreg/nf-winreg-regloadappkeya) 函数将注册表项存储在 *[VSAPPDATA] \privateregistry.bin*下的私有二进制文件中。 系统注册表中仅保留非常少的特定于 Visual Studio 的键。
+* 为了降低对注册表的影响，Visual Studio 现在使用 [RegLoadAppKey](/windows/desktop/api/winreg/nf-winreg-regloadappkeya) 函数将注册表项存储在 *[VSAPPDATA] \privateregistry.bin* 下的私有二进制文件中。 系统注册表中仅保留非常少的特定于 Visual Studio 的键。
 * Visual Studio 进程内运行的现有代码不受影响。 Visual Studio 会将特定于 HKCU Visual Studio 的密钥下的所有注册表操作重定向到专用注册表。 读取和写入到其他注册表位置将继续使用系统注册表。
 * 对于 Visual Studio 注册表项，外部代码将需要从此文件加载和读取。
 
 ### <a name="react-to-this-breaking-change"></a>应对此重大更改
 
-* 应将外部代码转换为使用适用于 COM 组件的无注册激活。
+* 应将外部代码转换为使用 Registration-Free 的 COM 组件激活。
 * 外部组件可按照 [此处的指南](https://devblogs.microsoft.com/setup/changes-to-visual-studio-15-setup)查找 Visual Studio 的位置。
 * 建议外部组件使用 [外部设置管理器](/dotnet/api/microsoft.visualstudio.settings.externalsettingsmanager) ，而不是直接读取/写入 Visual Studio 注册表项。
 * 检查扩展所使用的组件是否可能已实现了另一种注册技术。 例如，调试器扩展或许能够利用新的 [MSVSMON JSON 文件 COM 注册](migrate-debugger-COM-registration.md)。

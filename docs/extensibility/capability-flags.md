@@ -1,5 +1,7 @@
 ---
 title: 功能标志 |Microsoft Docs
+description: 了解 SCC_CAP_xxx 标志，这些标志指示源代码管理插件的功能和指示扩展功能的 SCC_EXCAP_xxx 标志。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,15 +12,15 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9660cbe5a18e82974858fa4d923a38fc73e773f2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b80672b00bec95c740824ef7e29f1faba0e63cf4
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739871"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974439"
 ---
 # <a name="capability-flags"></a>功能标志
-SCC_CAP_*xxx* 标志是用于指示源代码管理插件的功能的位标志。 SCC_EXCAP_*xxx* 标志是增量标志，指示扩展功能并解析为整数值。
+SCC_CAP_ *xxx* 标志是用于指示源代码管理插件的功能的位标志。 SCC_EXCAP_ *xxx* 标志是增量标志，指示扩展功能并解析为整数值。
 
 |功能代码|值|说明|
 |---------------------|-----------|-----------------|

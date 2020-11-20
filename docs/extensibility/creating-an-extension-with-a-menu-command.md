@@ -1,5 +1,7 @@
 ---
 title: 使用菜单命令创建扩展 |Microsoft Docs
+description: 了解如何使用启动记事本的菜单命令创建扩展。 创建菜单命令，然后更改菜单命令处理程序。
+ms.custom: SEO-VS-2020
 ms.date: 3/16/2019
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,34 +15,34 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7c8639ede4a01157718f0ab1a1514927e620fa8d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 00afdc31e72e4b0336db19939955a0b2360a00a1
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86972330"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974271"
 ---
 # <a name="create-an-extension-with-a-menu-command"></a>使用菜单命令创建扩展
 
 本演练演示如何使用可启动记事本的菜单命令创建扩展。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
-从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 也可稍后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
 ## <a name="create-a-menu-command"></a>创建菜单命令
 
-1. 创建名为 **FirstMenuCommand**的 VSIX 项目。 可以通过搜索 "vsix" 在 " **新建项目** " 对话框中找到 VSIX 项目模板。
+1. 创建名为 **FirstMenuCommand** 的 VSIX 项目。 可以通过搜索 "vsix" 在 " **新建项目** " 对话框中找到 VSIX 项目模板。
 
 ::: moniker range="vs-2017"
 
-2. 当项目打开时，添加一个名为 **FirstCommand**的自定义命令项模板。 在**解决方案资源管理器**中，右键单击项目节点，然后选择 "**添加**  >  **新项**"。 在 "**添加新项**" 对话框中，选择 " **Visual c #**  >  **扩展性**" 并选择 "**自定义命令**"。 在窗口底部的 " **名称** " 字段中，将命令文件名更改为 *FirstCommand.cs*。
+2. 当项目打开时，添加一个名为 **FirstCommand** 的自定义命令项模板。 在 **解决方案资源管理器** 中，右键单击项目节点，然后选择 "**添加**  >  **新项**"。 在 "**添加新项**" 对话框中，选择 " **Visual c #**  >  **扩展性**" 并选择 "**自定义命令**"。 在窗口底部的 " **名称** " 字段中，将命令文件名更改为 *FirstCommand.cs*。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-2. 当项目打开时，添加一个名为 **FirstCommand**的自定义命令项模板。 在**解决方案资源管理器**中，右键单击项目节点，然后选择 "**添加**  >  **新项**"。 在 "**添加新项**" 对话框中，选择 " **Visual c #**  >  **扩展性**" 并选择 "**命令**"。 在窗口底部的 " **名称** " 字段中，将命令文件名更改为 *FirstCommand.cs*。
+2. 当项目打开时，添加一个名为 **FirstCommand** 的自定义命令项模板。 在 **解决方案资源管理器** 中，右键单击项目节点，然后选择 "**添加**  >  **新项**"。 在 "**添加新项**" 对话框中，选择 " **Visual c #**  >  **扩展性**" 并选择 "**命令**"。 在窗口底部的 " **名称** " 字段中，将命令文件名更改为 *FirstCommand.cs*。
 
 ::: moniker-end
 
@@ -60,7 +62,7 @@ ms.locfileid: "86972330"
 
 ::: moniker-end
 
-现在，请在实验实例中中转到 " **工具** " 菜单。 应会看到 " **调用 FirstCommand** " 命令。 此时，该命令会显示一个消息框，其中显示 **FirstCommand ( # B1 中 **的 "FirstMenuCommand"。 在下一部分中，我们将了解如何实际从此命令启动记事本。
+现在，请在实验实例中中转到 " **工具** " 菜单。 应会看到 " **调用 FirstCommand** " 命令。 此时，该命令会显示一个消息框，其中显示 **FirstCommand ( # B1 中** 的 "FirstMenuCommand"。 在下一部分中，我们将了解如何实际从此命令启动记事本。
 
 ## <a name="change-the-menu-command-handler"></a>更改菜单命令处理程序
 
@@ -123,13 +125,13 @@ ms.locfileid: "86972330"
 
 现在，你已使用所需的方式运行了你的工具扩展，接下来可以考虑将它与朋友和同事共享。 这很简单，只要安装了 Visual Studio 2015。 你需要做的就是向其发送生成的 *.vsix* 文件。  (确保在发布模式下生成它。 ) 
 
-可以在*FirstMenuCommand* bin 目录中找到此扩展的 *.vsix*文件。 具体而言，假设你已经生成了版本配置，它将位于：
+可以在 *FirstMenuCommand* bin 目录中找到此扩展的 *.vsix* 文件。 具体而言，假设你已经生成了版本配置，它将位于：
 
 *\<code directory>\FirstMenuCommand\FirstMenuCommand\bin\Release\FirstMenuCommand.vsix*
 
 若要安装该扩展，您的朋友需要关闭 Visual Studio 的所有打开的实例，然后双击 *.vsix* 文件，该文件将显示 **vsix 安装程序**。 文件将复制到 *%LocalAppData%\Microsoft\VisualStudio \<version> \Extensions* 目录。
 
-当您的朋友再次出现 Visual Studio 时，他们会在**工具**  >  **扩展和更新**中找到 FirstMenuCommand 扩展。 他们还可以通过 " **扩展和更新** " 来卸载或禁用该扩展。
+当您的朋友再次出现 Visual Studio 时，他们会在 **工具**  >  **扩展和更新** 中找到 FirstMenuCommand 扩展。 他们还可以通过 " **扩展和更新** " 来卸载或禁用该扩展。
 
 ## <a name="next-steps"></a>后续步骤
 
