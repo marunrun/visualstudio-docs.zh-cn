@@ -1,5 +1,7 @@
 ---
 title: 生成和调试 SharePoint 解决方案 | Microsoft Docs
+description: 学习如何生成和调试 SharePoint 解决方案，了解在 Visual Studio 中生成和构建其他类型的项目时有何不同。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: overview
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e4b34df23c8cb612d72fed108a6c0aecbf57875c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f6801f6b60d2ef522385ecdf290d0a1913bd6df2
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016368"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850216"
 ---
 # <a name="build-and-debug-sharepoint-solutions"></a>生成和调试 SharePoint 解决方案
   通常情况下，生成和调试 SharePoint 解决方案与在 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 中生成和调试其他类型的项目相同。 本部分的主题介绍存在的差异。

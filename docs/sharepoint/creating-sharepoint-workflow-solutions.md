@@ -1,5 +1,7 @@
 ---
 title: 创建 SharePoint 工作流解决方案 | Microsoft Docs
+description: 使用工具创建 SharePoint 工作流解决方案，进而创建在 SharePoint 网站中管理文档生命周期和列出项目的自定义工作流。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: overview
 f1_keywords:
@@ -20,12 +22,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2c787009577735213437140513ec095f81c3f43b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dd3f88df661537434c79a8b0049f90ddbce14c70
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015284"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850606"
 ---
 # <a name="create-sharepoint-workflow-solutions"></a>创建 SharePoint 工作流解决方案
 

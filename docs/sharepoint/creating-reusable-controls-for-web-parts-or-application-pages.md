@@ -1,6 +1,8 @@
 ---
 title: 为 Web 部件或应用程序页创建可重用控件 | Microsoft Docs
 titleSuffix: ''
+description: 在 Visual Studio 中，创建可由 SharePoint 中运行的应用程序页和 Web 部件使用的自定义可重用控件（用户控件）。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: overview
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d3052b2eab3dc353cdccc991a793c47485037fe8
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 2e9d2f3a99e3e43ebf40208bf8dfc01d5ac92dca
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585088"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850593"
 ---
 # <a name="create-reusable-controls-for-web-parts-or-application-pages"></a>为 Web 部件或应用程序页创建可重用控件
   在 Visual Studio 中，你可以创建可由 SharePoint 中运行的应用程序页和 Web 部件使用的自定义可重用控件。 这些控件称为用户控件。 用户控件是一种复合控件，其工作原理与 ASP.NET 网页非常类似：可将现有 Web 服务器控件和标记添加到用户控件，并定义控件的属性和方法。 然后可以将它们嵌入到 ASP.NET 网页中，充当其中的一个单元。

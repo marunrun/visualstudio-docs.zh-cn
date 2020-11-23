@@ -1,5 +1,7 @@
 ---
 title: 创建 SharePoint 网站定义 | Microsoft Docs
+description: 创建 SharePoint 网站定义。 网站定义决定了 SharePoint 网站的外观和行为，还决定了其默认内容和功能。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: overview
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0f1a512218c3c1b7af179cfaba3e231a90941fe0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7585a4b80322afb37e816758fc7074806a443676
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015057"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850567"
 ---
 # <a name="create-site-definitions-for-sharepoint"></a>创建 SharePoint 网站定义
   通过 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 中的 SharePoint 站点定义项目，可创建一个网站定义，是新 SharePoint 网站的基础。 这些定义不仅决定了 SharePoint 网站的外观和行为，还决定了其默认内容和功能。 在定义中，您可以放入预配置的列表、内容类型、事件接收器、图像以及其他项。 例如 SharePoint 包含某些网站定义（如 BLOG）。 根据 BLOG 网站定义创建网站时，该网站包含列表、Web 部件和博客网站所需的其他项。

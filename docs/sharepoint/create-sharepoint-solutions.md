@@ -1,5 +1,7 @@
 ---
 title: 创建 SharePoint 解决方案 | Microsoft Docs
+description: 除了在 SharePoint Designer 中创建 SharePoint 解决方案，还可在 Visual Studio 中创建它们。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: overview
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 13689d82f3aae24a16a577b1555d8b02ae31b2ba
-ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
+ms.openlocfilehash: 0893596157078de62e33034a9ab6566637642176
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90740165"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850489"
 ---
 # <a name="create-sharepoint-solutions"></a>创建 SharePoint 解决方案
   你可以将在 Visual Studio 中创建 SharePoint 应用程序作为在 SharePoint 设计器中创建它们的替代方法。 Visual Studio 可通过提供诸如高级调试工具、IntelliSense、语句完成和项目模板等功能加快对 SharePoint 的开发。 Visual Studio 还会利用基于 .NET Framework 的高级工具和语言。 你可以通过使用 Visual Basic 或 Visual C# 来开发 SharePoint 项目，也可以通过使用 JavaScript 来开发 SharePoint 应用程序。
@@ -39,4 +41,4 @@ ms.locfileid: "90740165"
 |![如何操作？视频](../sharepoint/media/vs-icon-howdoivideos.gif "“如何实现”视频")|**如何操作？视频**<br /><br /> -   [如何：在 Visual Studio 2010 中创建用于 SharePoint 2010 的可视 Web 部件？](https://visualstudio.microsoft.com/)<br />-   [如何：在 Visual Studio 2010 中创建用于 SharePoint 2010 的内容类型？](/previous-versions/visualstudio/visual-studio-2010/dd831853\(v\=vs.100\))<br />-   [如何：在 Visual Studio 2010 中创建用于 SharePoint 2010 的网站定义？](/previous-versions/visualstudio/visual-studio-2010/dd831853\(v\=vs.100\))<br />-   [如何：使用 Visual Studio 2010 创建用于 SharePoint 2010 的业务数据连接模型？](/previous-versions/visualstudio/visual-studio-2010/dd831853\(v\=vs.100\))|
 |![第 9 频道视频](../sharepoint/media/vs-icon-channel9videos.gif "第 9 频道视频")|**第 9 频道视频**<br /><br /> -   [Visual Studio 2010 中的 SharePoint 开发概述](https://channel9.msdn.com/blogs/funkyonex/overview-of-sharepoint-development-in-visual-studio-2010)<br />-   [使用 Visual Studio 2010 构建 SharePoint 2010 Web 部件的最佳做法](https://channel9.msdn.com/blogs/funkyonex/best-practices-on-building-sharepoint-2010-web-parts-with-visual-studio-2010)<br />-   [Visual Studio 2010 中的 SharePoint 功能和包设计器](https://channel9.msdn.com/blogs/funkyonex/sharepoint-feature-and-package-designers-in-visual-studio-2010)|
 |![开发人员中心](../sharepoint/media/vs-icon-msdndevcenter.gif "开发人员中心")|**开发人员中心**<br /><br /> -   [Visual Studio 开发中心](https://visualstudio.microsoft.com/)<br />-   [SharePoint 开发人员中心](/sharepoint/dev/)<br />-   [SharePoint Server 开发人员中心](/previous-versions/office/fp161348\(v\=office.15\))<br />-   [SharePoint Designer 开发人员中心](/previous-versions/office/fp161348\(v\=office.15\))<br />-   [ASP.NET 开发人员中心](/previous-versions/msdn10/aa336522(v=msdn.10))|
-|![提供反馈](../sharepoint/media/vs-icon-feedback.gif "提供反馈")|**提供反馈**<br /><br /> 提供有关 Visual Studio 的反馈：<br /><br /> -   [Microsoft Connect](/collaborate/connect-redirect)<br /><br /> 提供有关 Visual Studio 文档的反馈：<br /><br /> -   **轻量级视图。** 如果位于任意主题的顶部，可以选择“评估该主题” **** 链接来跳转到该主题的底部，在这里你可以指定“是” **** 或“否” **** 来对 **** “你是否认为本主题有用?”作出响应然后，你可以选择一个或多个复选框（选择“否” **** 后出现的），在文本框中或两者中提供详细信息。 完成后，选择“提交” **** 按钮。<br />-   **无脚本视图。** 在该主题顶部，选择“反馈”链接，以在 TechNet 和表达式库反馈论坛中提供反馈。<br />-   **经典视图。** 在该主题顶部，选择“反馈” **** 图标，以向文档团队提供关于该主题的反馈。|
+|![提供反馈](../sharepoint/media/vs-icon-feedback.gif "提供反馈")|**提供反馈**<br /><br /> 提供有关 Visual Studio 的反馈：<br /><br /> -   [Microsoft Connect](/collaborate/connect-redirect)<br /><br /> 提供有关 Visual Studio 文档的反馈：<br /><br /> -   **轻量级视图。** 如果位于任意主题的顶部，可以选择“评估该主题”  链接来跳转到该主题的底部，在这里你可以指定“是”  或“否”  来对  “你是否认为本主题有用?”作出响应然后，你可以选择一个或多个复选框（选择“否” 后出现的），在文本框中或两者中提供详细信息。 完成后，选择“提交”  按钮。<br />-   **无脚本视图。** 在该主题顶部，选择“反馈”链接，以在 TechNet 和表达式库反馈论坛中提供反馈。<br />-   **经典视图。** 在该主题顶部，选择“反馈”  图标，以向文档团队提供关于该主题的反馈。|
