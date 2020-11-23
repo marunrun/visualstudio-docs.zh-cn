@@ -1,5 +1,7 @@
 ---
 title: 使用服务器资源管理器浏览 SharePoint 连接 | Microsoft Docs
+description: 使用服务器资源管理器浏览 SharePoint 连接。 了解服务器资源管理器节点和节点快捷菜单命令。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: overview
 f1_keywords:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: baf580ace98ab14032de1e9a3edf18af2b2cfee8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 79e8d3dbc1dab865b2ab9048cea8d13c478f2a12
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016355"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94849826"
 ---
 # <a name="browse-sharepoint-connections-by-using-server-explorer"></a>使用服务器资源管理器浏览 SharePoint 连接
   你现在可以在“服务器资源管理器”中浏览本地 SharePoint 连接。 通过使用这种方法，您可以在系统上浏览 SharePoint 网站的组件。 SharePoint 网站组件（例如列表定义和内容类型）显示在“服务器资源管理器”树状视图中一个名为“SharePoint 连接”的节点中 。 若要显示“服务器资源管理器”，请在菜单栏上选择“视图” > “服务器资源管理器”  。 除了显示 SharePoint 网站组件以外，通过使用快捷菜单命令，你还可以移除项、查看它们的属性或刷新树视图。
