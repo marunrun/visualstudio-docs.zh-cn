@@ -1,5 +1,7 @@
 ---
 title: Windows Communication Foundation 和 WCF Data Services
+description: 在 Visual Studio 中探索 Windows Communication Foundation (WCF) 服务和 WCF Data Services，这样就可以创建分布式应用程序了。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: overview
 dev_langs:
@@ -35,12 +37,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: c1f24a33a482b1994d0d8667b4fc71cf968e4625
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 983ff598003a4f966b5173dc9ae78dd9aaa16580
+ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85281040"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94997896"
 ---
 # <a name="windows-communication-foundation-services-and-wcf-data-services-in-visual-studio"></a>Visual Studio 中的 Windows Communication Foundation 服务和 WCF 数据服务
 
@@ -200,7 +202,7 @@ Windows Communication Foundation (WCF) 服务中的大多数方法都可同步�
 
 1. 在 **“数据”** 菜单上，单击 **“显示数据源”**。
 
-   随即出现“数据源”窗口****。
+   随即出现“数据源”窗口。
 
 2. 在“数据源”窗口中，展开服务引用的节点。 这会显示服务返回的所有复合类型。
 
@@ -216,7 +218,7 @@ Windows Communication Foundation (WCF) 服务中的大多数方法都可同步�
 
 ### <a name="to-bind-a-control-to-composite-type-returned-by-a-wcf-service"></a>将控件绑定到 WCF 服务返回的复合类型
 
-1. 在“数据”菜单上，选择“显示数据源” 。 随即出现“数据源”窗口****。
+1. 在“数据”菜单上，选择“显示数据源” 。 随即出现“数据源”窗口。
 
 2. 在“数据源”窗口中，展开服务引用的节点。 这会显示服务返回的所有复合类型。
 
