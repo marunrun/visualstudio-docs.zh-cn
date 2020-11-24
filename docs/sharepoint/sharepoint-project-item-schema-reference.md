@@ -1,5 +1,7 @@
 ---
 title: SharePoint 项目项架构参考 |Microsoft Docs
+description: 请参阅 SharePoint 项目项 XML 架构引用 (ProjectItemModelSchema) 的概述，用于验证 spdata 文件的内容。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -23,15 +25,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: bc15ff5c384ec63f99ed50a5f3c700efd7ba3c18
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bd425111e7e3d69e381e69e60daf914f74cd2d11
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "63007714"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442542"
 ---
 # <a name="sharepoint-project-item-schema-reference"></a>SharePoint 项目项架构参考
-  Visual Studio 使用 SharePoint 项目项架构来验证 *spdata* 文件的内容。 *Spdata*文件指定 SharePoint 项目项的内容和行为。 有关 SharePoint 项目项的内容的详细信息，请参阅 [为 sharepoint 项目项创建项模板和项目模板](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)。
+  Visual Studio 使用 SharePoint 项目项架构来验证 *spdata* 文件的内容。 *Spdata* 文件指定 SharePoint 项目项的内容和行为。 有关 SharePoint 项目项的内容的详细信息，请参阅 [为 sharepoint 项目项创建项模板和项目模板](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)。
 
  SharePoint 项目项架构名为 ProjectItemModelSchema，默认情况下安装在 (x86) % \ Microsoft Visual Studio 11.0 \ Xml\schemas 的% Program Files 中。
 

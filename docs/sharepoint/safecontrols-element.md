@@ -1,5 +1,7 @@
 ---
 title: SafeControls 元素 |Microsoft Docs
+description: 获取有关 SafeControls 元素的信息，该元素包含在 SharePoint 站点的 ASPX 页上标记为 "安全访问" 的 ASPX 控件或 web 部件的集合。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e840f0040cf94fea408615525358580d207f07c0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c3423d1b6efd106ef7f947bd8573dcd1aa548a66
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547896"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95440670"
 ---
 # <a name="safecontrols-element"></a>SafeControls 元素
   ASPX 控件和 Web 部件的集合，指定为任何用户在 SharePoint 站点上的任何 ASPX 页上访问的安全。
@@ -48,7 +50,7 @@ ms.locfileid: "85547896"
 |-------------|-----------------|
 |[ProjectItem](../sharepoint/projectitem-element.md)|表示 SharePoint 项目项。 此元素是 *spdata* 文件必需的根元素。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
  有关安全控件的详细信息，请参阅 [在项目项中提供打包和部署信息](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)。
 
 ## <a name="element-information"></a>元素信息

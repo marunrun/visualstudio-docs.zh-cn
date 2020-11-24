@@ -1,5 +1,7 @@
 ---
 title: "\"URL 选取器\" 对话框 (SharePoint 开发) "
+description: 了解 "URL 选取器" 对话框，该对话框允许用户选择位于其项目或运行 SharePoint 的本地服务器上的文件。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 991693c3379e008a2a907efd3127290c7e804c22
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 584b77ab714cb692069fadd6c6fad50e20d46f80
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "66261946"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442529"
 ---
 # <a name="url-picker-dialog-box-sharepoint-development-in-visual-studio"></a>"URL 选取器" 对话框 (Visual Studio 中的 SharePoint 开发) 
   在“URL 选取器”对话框中，您可以选择文件，如位于项目中或运行 SharePoint 的本地服务器上的母版页文件或图像文件。
@@ -42,7 +44,7 @@ ms.locfileid: "66261946"
 
   展开 **服务器** 节点，选择位于运行 SharePoint 的本地服务器上的文件。 若要在对话框中显示为可选择，这些文件必须满足以下条件：
 
-- 该文件必须位于以下映射文件夹之一中： **图像**、 **布局**或 **ControlTemplates**。
+- 该文件必须位于以下映射文件夹之一中： **图像**、 **布局** 或 **ControlTemplates**。
 
 - 无法在 SharePoint 内容数据库中找到该文件。
 
@@ -54,5 +56,5 @@ ms.locfileid: "66261946"
 
 ## <a name="see-also"></a>另请参阅
 - [为 SharePoint 创建应用程序页](../sharepoint/creating-application-pages-for-sharepoint.md)
-- [为 SharePoint 创建 web 部件](../sharepoint/creating-web-parts-for-sharepoint.md)
-- [为 web 部件或应用程序页创建可重用控件](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)
+- [为 SharePoint 创建 Web 部件](../sharepoint/creating-web-parts-for-sharepoint.md)
+- [为 Web 部件或应用程序页创建可重用控件](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)
