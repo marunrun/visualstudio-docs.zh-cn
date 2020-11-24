@@ -1,5 +1,7 @@
 ---
 title: 向子菜单添加最近使用过的列表 |Microsoft Docs
+description: 了解如何在 Visual Studio 集成开发环境中将最近使用的菜单命令添加到子菜单 (IDE) 。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3f73f948befc7665ecc3a40f816389bfaae8e4fd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0de48e30ea20ab2f7df4e512312978e4faa3a46b
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904203"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597920"
 ---
 # <a name="add-a-most-recently-used-list-to-a-submenu"></a>向子菜单添加最近使用过的列表
 本演练基于 [向菜单添加子](../extensibility/adding-a-submenu-to-a-menu.md)菜单中的演示，并演示如何向子菜单添加动态列表。 动态列表构成了创建最近使用 (MRU) 列表的基础。
@@ -30,7 +32,7 @@ ms.locfileid: "85904203"
 
 有关菜单和 *.vsct* 文件的详细信息，请参阅 [命令、菜单和工具栏](../extensibility/internals/commands-menus-and-toolbars.md)。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 要按照本演练的步骤操作，必须安装 Visual Studio SDK。 有关详细信息，请参阅 [Visual STUDIO SDK](../extensibility/visual-studio-sdk.md)。
 
 ## <a name="create-an-extension"></a>创建一个扩展
@@ -47,7 +49,7 @@ ms.locfileid: "85904203"
 
     ```xml
     <IDSymbol name="MRUListGroup" value="0x1200"/>
-    <IDSymbol name="cmdidMRUList" value="0x0200"/>
+    <IDSymbol name="cmdidMRUList" value="0x0200"/>
     ```
 
 3. 在 `Groups` 部分中，在现有组条目后面添加声明的组。
@@ -81,11 +83,11 @@ ms.locfileid: "85904203"
 
 ## <a name="filling-the-mru-list"></a>填充 MRU 列表
 
-1. 在 *TestCommandPackageGuids.cs*中，在类定义中的现有命令 id 后面添加以下行 `TestCommandPackageGuids` 。
+1. 在 *TestCommandPackageGuids.cs* 中，在类定义中的现有命令 id 后面添加以下行 `TestCommandPackageGuids` 。
 
     ```csharp
     public const string guidTestCommandPackageCmdSet = "00000000-0000-0000-0000-00000000"; // get the GUID from the .vsct file
-    public const uint cmdidMRUList = 0x200;
+    public const uint cmdidMRUList = 0x200;
     ```
 
 2. 在 *TestCommand.cs* 中，添加以下 using 语句。
@@ -147,7 +149,7 @@ ms.locfileid: "85904203"
 6. 在 `InitMRUMenu` 方法之后添加以下 `OnMRUQueryStatus` 方法。 这是为每个 MRU 项设置文本的处理程序。
 
     ```csharp
-    private void OnMRUQueryStatus(object sender, EventArgs e)
+    private void OnMRUQueryStatus(object sender, EventArgs e)
     {
         OleMenuCommand menuCommand = sender as OleMenuCommand;
         if (null != menuCommand)
@@ -155,7 +157,7 @@ ms.locfileid: "85904203"
             int MRUItemIndex = menuCommand.CommandID.ID - this.baseMRUID;
             if (MRUItemIndex >= 0 && MRUItemIndex < this.mruList.Count)
             {
-                menuCommand.Text = this.mruList[MRUItemIndex] as string;
+                menuCommand.Text = this.mruList[MRUItemIndex] as string;
             }
         }
     }
@@ -164,7 +166,7 @@ ms.locfileid: "85904203"
 7. 在 `OnMRUQueryStatus` 方法之后添加以下 `OnMRUExec` 方法。 这是用于选择 MRU 项的处理程序。 此方法将选定的项移动到列表的顶部，然后在消息框中显示选定项。
 
     ```csharp
-    private void OnMRUExec(object sender, EventArgs e)
+    private void OnMRUExec(object sender, EventArgs e)
     {
         var menuCommand = sender as OleMenuCommand;
         if (null != menuCommand)
@@ -172,7 +174,7 @@ ms.locfileid: "85904203"
             int MRUItemIndex = menuCommand.CommandID.ID - this.baseMRUID;
             if (MRUItemIndex >= 0 && MRUItemIndex < this.mruList.Count)
             {
-                string selection = this.mruList[MRUItemIndex] as string;
+                string selection = this.mruList[MRUItemIndex] as string;
                 for (int i = MRUItemIndex; i > 0; i--)
                 {
                     this.mruList[i] = this.mruList[i - 1];

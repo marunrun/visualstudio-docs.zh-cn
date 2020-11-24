@@ -1,5 +1,7 @@
 ---
 title: 向工具窗口添加工具栏 |Microsoft Docs
+description: 了解如何在 IDE)  (IDE 中，将包含绑定到命令的按钮的工具栏添加到 Visual Studio 集成开发环境中的工具窗口。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e5351fe6a713c217f8fca20d6740b542dc75f053
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6a093dd65ce4de187cadf7e277c695bac99b5ca6
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904121"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597972"
 ---
 # <a name="add-a-toolbar-to-a-tool-window"></a>将工具栏添加到工具窗口
 本演练演示如何将工具栏添加到工具窗口。
@@ -27,14 +29,14 @@ ms.locfileid: "85904121"
 
  有关如何添加工具栏的详细信息，请参阅 [添加工具栏](../extensibility/adding-a-toolbar.md)。
 
-## <a name="prerequisites"></a>先决条件
- 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+## <a name="prerequisites"></a>必备条件
+ 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 也可稍后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
 ## <a name="create-a-toolbar-for-a-tool-window"></a>为工具窗口创建工具栏
 
-1. 创建一个名为的 VSIX 项目 `TWToolbar` ，该项目包含一个名为 **TWTestCommand** 的菜单命令和一个名为 **TestToolWindow**的工具窗口。 有关详细信息，请参阅 [使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md) 和 [使用工具窗口创建扩展](../extensibility/creating-an-extension-with-a-tool-window.md)。 在添加工具窗口模板之前，需要添加命令项模板。
+1. 创建一个名为的 VSIX 项目 `TWToolbar` ，该项目包含一个名为 **TWTestCommand** 的菜单命令和一个名为 **TestToolWindow** 的工具窗口。 有关详细信息，请参阅 [使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md) 和 [使用工具窗口创建扩展](../extensibility/creating-an-extension-with-a-tool-window.md)。 在添加工具窗口模板之前，需要添加命令项模板。
 
-2. 在 *TWTestCommandPackage .vsct*中，查找 "符号" 部分。 在名为 guidTWTestCommandPackageCmdSet 的 GuidSymbol 节点中，按如下所示声明工具栏和工具栏组。
+2. 在 *TWTestCommandPackage .vsct* 中，查找 "符号" 部分。 在名为 guidTWTestCommandPackageCmdSet 的 GuidSymbol 节点中，按如下所示声明工具栏和工具栏组。
 
     ```xml
     <IDSymbol name="TWToolbar" value="0x1000" />
@@ -111,7 +113,7 @@ ms.locfileid: "85904121"
 
      应该会看到一个工具栏， (它在工具窗口左上角的默认图标) ，就在标题的正下方。
 
-3. 在工具栏上，单击 "TWTestCommandPackage" 图标以显示消息 " **内部的 TWToolbar. TWTestCommand. MenuItemCallback ( # B1 **"。
+3. 在工具栏上，单击 "TWTestCommandPackage" 图标以显示消息 " **内部的 TWToolbar. TWTestCommand. MenuItemCallback ( # B1**"。
 
 ## <a name="see-also"></a>另请参阅
 - [添加工具栏](../extensibility/adding-a-toolbar.md)

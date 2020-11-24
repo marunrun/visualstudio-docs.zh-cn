@@ -1,5 +1,7 @@
 ---
 title: 添加语言服务器协议扩展 |Microsoft Docs
+description: 了解如何创建 Visual Studio 扩展，该扩展基于语言服务器协议 (LSP) 集成语言服务器。
+ms.custom: SEO-VS-2020
 ms.date: 11/14/2017
 ms.topic: conceptual
 ms.assetid: 52f12785-1c51-4c2c-8228-c8e10316cd83
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d0c43d5a50b7a2acb536dee5fe9c6ed9ec3d36d7
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: 26f78be8708e61370be3256c8cde481d5c61c89d
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91860451"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95598141"
 ---
 # <a name="add-a-language-server-protocol-extension"></a>添加语言服务器协议扩展
 
@@ -43,7 +45,7 @@ ms.locfileid: "91860451"
 
 下表显示了 Visual Studio 中支持的 LSP 功能：
 
-Message | 在 Visual Studio 中具有支持
+消息 | 在 Visual Studio 中具有支持
 --- | ---
 初始化 | 是
 已初始化 | 是
@@ -107,7 +109,7 @@ textDocument/rename | 是
 
 若要使用基于 LSP 的语言服务器来创建语言服务扩展，请首先确保已为 VS 的实例安装 **Visual Studio 扩展开发** 工作负荷。
 
-接下来，通过导航到**文件**"  >  **新建项目**" "  >  **Visual c #**  >  **扩展性**  >  **VSIX 项目**" 来创建新的 VSIX 项目：
+接下来，通过导航到 **文件**"  >  **新建项目**" "  >  **Visual c #**  >  **扩展性**  >  **VSIX 项目**" 来创建新的 VSIX 项目：
 
 ![创建 vsix 项目](media/lsp-vsix-project.png)
 
@@ -125,10 +127,10 @@ LSP 不包含有关如何提供语言文本着色的规范。 为了在 Visual S
 
 1. 在扩展 (中创建名为 "语法" 的文件夹，也可以是你选择的任何名称) 。
 
-2. 在*语法*文件夹内，包含要提供自定义着色的任何* \* . tmlanguage*、 * \* . info.plist*、 * \* . tmtheme*或* \* json*文件。
+2. 在 *语法* 文件夹内，包含要提供自定义着色的任何 *\* . tmlanguage*、 *\* . info.plist*、 *\* . tmtheme* 或 *\* json* 文件。
 
    > [!TIP]
-   > *Tmtheme*文件定义了作用域映射到 Visual Studio 分类的方式 (名为) 的颜色键。 为获得指导，可以引用 *% ProgramFiles (x86) % \ Microsoft Visual Studio \\ \<version> \\ \<SKU> \Common7\IDE\CommonExtensions\Microsoft\TextMate\Starterkit\Themesg*目录中的*tmtheme*文件。
+   > *Tmtheme* 文件定义了作用域映射到 Visual Studio 分类的方式 (名为) 的颜色键。 为获得指导，可以引用 *% ProgramFiles (x86) % \ Microsoft Visual Studio \\ \<version> \\ \<SKU> \Common7\IDE\CommonExtensions\Microsoft\TextMate\Starterkit\Themesg* 目录中的 *tmtheme* 文件。
 
 3. 创建一个 *.pkgdef* 文件并添加类似于下面的行：
 
@@ -139,7 +141,7 @@ LSP 不包含有关如何提供语言文本着色的规范。 为了在 Visual S
 
 4. 右键单击文件，然后选择 " **属性**"。 将 " **生成** 操作" 更改为 " **内容** "，并将 " **包括在 VSIX 中** " 属性更改为 **true**。
 
-完成前面的步骤后，将 *语法* 文件夹添加到包的安装目录，作为名为 "MyLang" 的存储库源 ( "MyLang" 只是消除歧义的名称，可以是任何唯一的字符串) 。 此目录中) 的所有语法 (*tmlanguage* 文件) 和主题 * (文件* 将被提取为潜力，它们取代了 TextMate 提供的内置语法。 如果语法文件的已声明扩展名与正在打开的文件的扩展名匹配，则 TextMate 将单步执行。
+完成前面的步骤后，将 *语法* 文件夹添加到包的安装目录，作为名为 "MyLang" 的存储库源 ( "MyLang" 只是消除歧义的名称，可以是任何唯一的字符串) 。 此目录中) 的所有语法 (*tmlanguage* 文件) 和主题 *(文件* 将被提取为潜力，它们取代了 TextMate 提供的内置语法。 如果语法文件的已声明扩展名与正在打开的文件的扩展名匹配，则 TextMate 将单步执行。
 
 ## <a name="create-a-simple-language-client"></a>创建简单的语言客户端
 
@@ -292,7 +294,7 @@ namespace MockLanguageExtension
 
 请按照下面的步骤将对设置的支持添加到 LSP 语言服务扩展：
 
-1. 将 JSON 文件 (例如，) * 上的MockLanguageExtensionSettings.js* 添加到包含设置及其默认值的项目。 例如：
+1. 将 JSON 文件 (例如，) *上的MockLanguageExtensionSettings.js* 添加到包含设置及其默认值的项目。 例如：
 
     ```json
     {
@@ -341,7 +343,7 @@ namespace MockLanguageExtension
 ### <a name="user-editing-of-settings-for-a-workspace"></a>用户编辑工作区的设置
 
 1. 用户打开包含您的服务器拥有的文件的工作区。
-2. 用户在 *. vs* 文件夹中添加了一个文件，该文件在 * 上称为VSWorkspaceSettings.js*。
+2. 用户在 *. vs* 文件夹中添加了一个文件，该文件在 *上称为VSWorkspaceSettings.js*。
 3. 用户为该服务器提供的设置向文件 *VSWorkspaceSettings.js* 添加一行。 例如：
 
     ```json
@@ -480,7 +482,7 @@ public class MockLanguageClient: ILanguageClient, ILanguageClientCustomMessage
 
 若要在 Visual Studio 中使用 LSP 客户端 API 查看示例扩展的源代码，请参阅 VSSDK 的可扩展性 [示例](https://github.com/Microsoft/VSSDK-Extensibility-Samples/tree/master/LanguageServerProtocol)。
 
-## <a name="faq"></a>常见问题解答
+## <a name="faq"></a>常见问题
 
 **我要构建一个自定义项目系统来补充我的 LSP 语言服务器，以在 Visual Studio 中提供更丰富的功能支持，如何实现此目的？**
 
@@ -498,6 +500,6 @@ Visual Studio 中基于 LSP 的语言服务器的支持依赖于 " [打开文件
 
 请参阅 [此处](walkthrough-publishing-a-visual-studio-extension.md)的 Marketplace 说明。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [为其他语言添加 Visual Studio 编辑器支持](../ide/adding-visual-studio-editor-support-for-other-languages.md)

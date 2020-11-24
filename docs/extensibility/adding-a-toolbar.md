@@ -1,5 +1,7 @@
 ---
 title: 添加工具栏 |Microsoft Docs
+description: 了解如何将包含绑定到命令的按钮的工具栏添加到 Visual Studio 集成开发环境 (IDE) 。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: beb97356daf3c932470bf2598e58e1f5b40ea233
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 434f7470fe5fca13f217c981cc99d6a884117a86
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904078"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597946"
 ---
 # <a name="add-a-toolbar"></a>添加工具栏
 本演练演示如何将工具栏添加到 Visual Studio IDE。
@@ -27,15 +29,15 @@ ms.locfileid: "85904078"
 
  有关菜单的详细信息，请参阅 [命令、菜单和工具栏](../extensibility/internals/commands-menus-and-toolbars.md)。
 
-## <a name="prerequisites"></a>先决条件
- 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+## <a name="prerequisites"></a>必备条件
+ 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 也可稍后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
 ## <a name="create-an-extension-with-a-toolbar"></a>使用工具栏创建扩展
- 创建一个名为的 VSIX 项目 `IDEToolbar` 。 添加一个名为 **ToolbarTestCommand**的菜单命令项模板。 有关如何执行此操作的信息，请参阅 [使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)。
+ 创建一个名为的 VSIX 项目 `IDEToolbar` 。 添加一个名为 **ToolbarTestCommand** 的菜单命令项模板。 有关如何执行此操作的信息，请参阅 [使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)。
 
 ## <a name="create-a-toolbar-for-the-ide"></a>为 IDE 创建工具栏
 
-1. 在 *ToolbarTestCommandPackage .vsct*中，查找 "符号" 部分。 在名为 guidToolbarTestCommandPackageCmdSet 的 GuidSymbol 元素中，为工具栏和工具栏组添加声明，如下所示。
+1. 在 *ToolbarTestCommandPackage .vsct* 中，查找 "符号" 部分。 在名为 guidToolbarTestCommandPackageCmdSet 的 GuidSymbol 元素中，为工具栏和工具栏组添加声明，如下所示。
 
     ```xml
     <IDSymbol name="Toolbar" value="0x1000" />
@@ -87,7 +89,7 @@ ms.locfileid: "85904078"
 
 6. 右键单击 Visual Studio 菜单栏以获取工具栏列表。 选择 " **测试工具栏**"。
 
-7. 现在，你应该将工具栏显示为 "在文件中查找" 图标右侧的图标。 单击图标时，应会看到一个消息框，其中显示 " **ToolbarTestCommandPackage"。MenuItemCallback ( # B1 **。
+7. 现在，你应该将工具栏显示为 "在文件中查找" 图标右侧的图标。 单击图标时，应会看到一个消息框，其中显示 " **ToolbarTestCommandPackage"。MenuItemCallback ( # B1**。
 
 ## <a name="see-also"></a>另请参阅
 - [命令、菜单和工具栏](../extensibility/internals/commands-menus-and-toolbars.md)

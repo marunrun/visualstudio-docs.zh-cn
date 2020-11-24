@@ -1,5 +1,7 @@
 ---
 title: 使用 IntelliTrace 调试 SharePoint 应用程序
+description: 使用 IntelliTrace 可以更轻松地调试和修复 SharePoint 应用程序。 创建代码并将其添加到功能接收器。 测试项目。 收集 IntelliTrace 数据。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 041a110ee39ae7711756b8d689bdf68ae2368caf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4c7ab11dbe213208a2e8f5e39c3af2d20b79f5cb
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015749"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95598479"
 ---
 # <a name="walkthrough-debug-a-sharepoint-application-by-using-intellitrace"></a>演练：使用 IntelliTrace 调试 SharePoint 应用程序
 
@@ -65,7 +67,7 @@ ms.locfileid: "86015749"
 
      IntelliTrace 仅适用于场解决方案。
 
-3. 在 **解决方案资源管理器**中，打开 " **功能** " 节点的快捷菜单，然后选择 " **添加功能**"。
+3. 在 **解决方案资源管理器** 中，打开 " **功能** " 节点的快捷菜单，然后选择 " **添加功能**"。
 
      *Feature1* 出现。
 
@@ -258,7 +260,7 @@ ms.locfileid: "86015749"
 
 2. 显示 "公告" 和 "任务" 列表的内容。
 
-     "公告" 列表应包含名为 "已 **激活" 功能**的新公告： "IntelliTraceTest_Feature1"，并且 "任务" 列表应包含名为 " **停用" 功能**的新任务： "IntelliTraceTest_Feature1"。 如果缺少上述任何一项，请验证该功能是否已激活。 如果未激活，请激活它。
+     "公告" 列表应包含名为 "已 **激活" 功能** 的新公告： "IntelliTraceTest_Feature1"，并且 "任务" 列表应包含名为 " **停用" 功能** 的新任务： "IntelliTraceTest_Feature1"。 如果缺少上述任何一项，请验证该功能是否已激活。 如果未激活，请激活它。
 
 3. 通过执行以下步骤停用此功能：
 
@@ -329,7 +331,7 @@ ms.locfileid: "86015749"
 
      代码现在正常运行。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [验证和调试 SharePoint 代码](../sharepoint/verifying-and-debugging-sharepoint-code.md)
 - [IntelliTrace](../debugger/intellitrace.md)
