@@ -1,5 +1,7 @@
 ---
 title: SharePoint 工具扩展性 (引用) |Microsoft Docs
+description: 获取有关在 Visual Studio 中扩展 SharePoint 工具的参考文档的链接，涵盖 SharePoint 项目项架构参考和 API 参考。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,18 +14,18 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4ab3b60e727f7f4ce113b86fc3491bf244115551
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5fcc1117c88f19eaae7633698dee1698a8108fdb
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62827098"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95440709"
 ---
 # <a name="reference-sharepoint-tools-extensibility"></a>SharePoint 工具扩展性 (引用) 
 
 本部分包含有关在 Visual Studio 中扩展 SharePoint 工具的参考文档。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在此部分中
 
 [SharePoint 项目项架构参考](../sharepoint/sharepoint-project-item-schema-reference.md)
 
@@ -35,4 +37,4 @@ ms.locfileid: "62827098"
 
 ## <a name="see-also"></a>另请参阅
 
-- [在 Visual Studio 中扩展 SharePoint 工具](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)
+- [扩展 Visual Studio 中的 SharePoint 工具](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)
