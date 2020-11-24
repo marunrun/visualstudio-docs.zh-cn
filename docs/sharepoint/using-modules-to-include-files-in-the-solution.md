@@ -1,5 +1,7 @@
 ---
 title: 使用模块包括解决方案中的文件 | Microsoft Docs
+description: 使用模块或 SharePoint 解决方案中的文件容器将文件部署到 SharePoint 服务器，而不管是何种文件类型（如母版页）。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: overview
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 778bbc9cff2d7853628edbb5be6466acc55d9ab8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: aa0d6fe1855a1d60a0e1293e8422791f8148bd04
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015822"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442516"
 ---
 # <a name="use-modules-to-include-files-in-the-solution"></a>使用模块包括解决方案中的文件
   有时可能需要将文件部署到 SharePoint 服务器，而不考虑它们的文件类型（如新的母版页）。 为此，可使用模块（不要与 [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] 代码模块混淆）。 模块是 SharePoint 解决方案中文件的容器。 部署解决方案时，模块中的文件将复制到 SharePoint 服务器上的指定文件夹中。
