@@ -1,5 +1,7 @@
 ---
 title: 关于文件扩展名 |Microsoft Docs
+description: 了解如何为 Vspackage 注册文件扩展名，并将其与 Visual Studio 的特定版本相关联。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 03e07ec233ef975441a1f10507f0db872051558f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9ef0c942e88c10b4f814dc103702edc08229fb9b
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80740355"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597660"
 ---
 # <a name="about-file-name-extensions"></a>关于文件扩展名
 注册 VSPackage 的文件扩展名时，可以将其与的版本相关联 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 。 如果在计算机上安装了多个版本的，则这一点非常重要 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 。

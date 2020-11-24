@@ -1,5 +1,7 @@
 ---
 title: VSIX 包的剖析 |Microsoft Docs
+description: 了解 Visual Studio 中的 VSIX 包的内容，它是一个包含一个或多个 Visual Studio 扩展和元数据清单文件的文件。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 33cecb4767193010d7e7ca330d891d1835091875
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 3fc65cda5eb969e361e90771e0245fdaeaeebcd1
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012329"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95598154"
 ---
 # <a name="anatomy-of-a-vsix-package"></a>VSIX 包的解析
 VSIX 包是一个 *.vsix* 文件，其中包含一个或多个 visual studio 扩展，以及 visual studio 用来分类和安装扩展的元数据。 该元数据包含在 VSIX 清单和 *[Content_Types] .xml* 文件中。 VSIX 包还可以包含一个或多个 *vsixlangpack* 文件以提供本地化的设置文本，并可能包含用于安装依赖项的其他 VSIX 包。
@@ -50,11 +52,11 @@ VSIX 包是一个 *.vsix* 文件，其中包含一个或多个 visual studio 扩
  若要包含来自 VSIX 包中引用的程序集的附属 Dll，请将添加 `SatelliteDllsProjectOutputGroup` 到 **vsix 属性中包含的输出组** 。
 
 ## <a name="installation-location"></a>安装位置
- 在安装过程中， **扩展和更新** 将在 *%LocalAppData%\Microsoft\VisualStudio\14.0\Extensions*下的文件夹中查找 VSIX 包的内容。
+ 在安装过程中， **扩展和更新** 将在 *%LocalAppData%\Microsoft\VisualStudio\14.0\Extensions* 下的文件夹中查找 VSIX 包的内容。
 
  默认情况下，安装仅适用于当前用户，因为 *% LocalAppData%* 是用户特定的目录。 但是，如果将清单的[AllUsers](/previous-versions/ee191547(v=vs.110))元素设置为，则 `True` 会在上安装该扩展<em>。 \\ </em>VisualStudioInstallationFolder<em>\Common7\IDE\Extensions</em> ，将可供计算机的所有用户使用。
 
 ## <a name="content_typesxml"></a>[Content_Types] .xml
- *[Content_Types] .xml*文件标识展开的 *.vsix*文件中的文件类型。 Visual Studio 在安装包的过程中使用此文件，但不安装文件本身。 有关此文件的详细信息，请参阅 [[Content_types] .xml 文件的结构](the-structure-of-the-content-types-dot-xml-file.md)。
+ *[Content_Types] .xml* 文件标识展开的 *.vsix* 文件中的文件类型。 Visual Studio 在安装包的过程中使用此文件，但不安装文件本身。 有关此文件的详细信息，请参阅 [[Content_types] .xml 文件的结构](the-structure-of-the-content-types-dot-xml-file.md)。
 
  开放式打包约定 (OPC) standard 要求使用 *[Content_Types] .xml* 文件。 有关 OPC 的详细信息，请参阅 MSDN 网站上的 [opc：用于打包数据的新标准](/archive/blogs/msdnmagazine/opc-a-new-standard-for-packaging-your-data) 。

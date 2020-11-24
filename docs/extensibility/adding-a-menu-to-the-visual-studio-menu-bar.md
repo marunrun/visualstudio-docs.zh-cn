@@ -1,5 +1,7 @@
 ---
 title: 将菜单添加到 Visual Studio 菜单栏 |Microsoft Docs
+description: 了解如何将菜单添加到 Visual Studio 集成开发环境的菜单栏 (IDE) 。
+ms.custom: SEO-VS-2020
 ms.date: 3/16/2019
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3eb5afbbe688c15f429054d50210a68769173e73
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fc84eb8854c0a6ff738a51c2ca883ad0527ec919
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801849"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597855"
 ---
 # <a name="add-a-menu-to-the-visual-studio-menu-bar"></a>将菜单添加到 Visual Studio 菜单栏
 
@@ -33,9 +35,9 @@ ms.locfileid: "88801849"
 > 从 Visual Studio 2019 开始，由扩展提供的顶级菜单放置在 " **扩展** " 菜单下。
 :::moniker-end
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
-从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 也可稍后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
 ## <a name="create-a-vsix-project-that-has-a-custom-command-item-template"></a>创建具有自定义命令项模板的 VSIX 项目
 
@@ -43,13 +45,13 @@ ms.locfileid: "88801849"
 
 ::: moniker range="vs-2017"
 
-2. 当项目打开时，添加一个名为 **testcommand (** 的自定义命令项模板。 在**解决方案资源管理器**中，右键单击项目节点，然后选择 "**添加**  >   **新项**"。 在 " **添加新项** " 对话框中，切换到 " **Visual c #/扩展性** "，然后选择 " **自定义命令**"。 在窗口底部的 " **名称** " 字段中，将命令文件名更改为 *TestCommand.cs*。
+2. 当项目打开时，添加一个名为 **testcommand (** 的自定义命令项模板。 在 **解决方案资源管理器** 中，右键单击项目节点，然后选择 "**添加**  >   **新项**"。 在 " **添加新项** " 对话框中，切换到 " **Visual c #/扩展性** "，然后选择 " **自定义命令**"。 在窗口底部的 " **名称** " 字段中，将命令文件名更改为 *TestCommand.cs*。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-2. 当项目打开时，添加一个名为 **testcommand (** 的自定义命令项模板。 在**解决方案资源管理器**中，右键单击项目节点，然后选择 "**添加**  >   **新项**"。 在 " **添加新项** " 对话框中，选择 " **Visual c #/扩展性** "，然后选择 " **命令**"。 在窗口底部的 " **名称** " 字段中，将命令文件名更改为 *TestCommand.cs*。
+2. 当项目打开时，添加一个名为 **testcommand (** 的自定义命令项模板。 在 **解决方案资源管理器** 中，右键单击项目节点，然后选择 "**添加**  >   **新项**"。 在 " **添加新项** " 对话框中，选择 " **Visual c #/扩展性** "，然后选择 " **命令**"。 在窗口底部的 " **名称** " 字段中，将命令文件名更改为 *TestCommand.cs*。
 
 ::: moniker-end
 
@@ -57,7 +59,7 @@ ms.locfileid: "88801849"
 
 ::: moniker range="vs-2017"
 
-1. 在 **解决方案资源管理器**中，打开 *.vsct*。
+1. 在 **解决方案资源管理器** 中，打开 *.vsct*。
 
     在文件末尾，有一个 `<Symbols>` 节点包含多个 `<GuidSymbol>` 节点。 在名为的节点中 `guidTestCommandPackageCmdSet` ，添加一个新符号，如下所示：
 
@@ -101,7 +103,7 @@ ms.locfileid: "88801849"
 
 ::: moniker range=">=vs-2019"
 
-1. 在 **解决方案资源管理器**中，打开 *.vsct*。
+1. 在 **解决方案资源管理器** 中，打开 *.vsct*。
 
     在文件末尾，有一个 `<Symbols>` 节点包含多个 `<GuidSymbol>` 节点。 在名为的节点中 `guidTopLevelMenuPackageCmdSet` ，添加一个新符号，如下所示：
 

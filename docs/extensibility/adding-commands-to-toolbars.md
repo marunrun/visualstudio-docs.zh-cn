@@ -1,5 +1,7 @@
 ---
 title: 将命令添加到工具栏 |Microsoft Docs
+description: 了解如何在 Visual Studio 中的 windows 上向工具栏添加自己的命令，包括主窗口、解决方案资源管理器和自定义工具窗口。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 4f8cfba8-0653-4ccc-a2da-acf064c83aa7
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 31f8a779479d32986dfa774109a0c9a3fcd717fa
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 55e808e6f472c48dcd14aac2d81b4cd3f615397f
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80740183"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597712"
 ---
 # <a name="add-commands-to-toolbars"></a>将命令添加到工具栏
 工具栏是包含绑定到命令的按钮的水平或垂直条带。 您可以在 Visual Studio 中的许多不同窗口上向工具栏添加您自己的命令： Visual studio 的主窗口、解决方案资源管理器，以及您自己的自定义工具窗口。

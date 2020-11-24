@@ -1,5 +1,7 @@
 ---
 title: 将 Visual Studio 命令添加到起始页 |Microsoft Docs
+description: 了解在 Visual Studio 中的自定义起始页上将 Visual Studio 命令绑定到 XAML 对象的不同方式。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ manager: jillfra
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: 13dd40006039209b06cc6a71760fdbaa240db4fe
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7784b077093660eb5f9c9a0bf471a8965811ba72
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80740113"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597517"
 ---
 # <a name="add-visual-studio-commands-to-a-start-page"></a>将 Visual Studio 命令添加到起始页
 
@@ -34,7 +36,7 @@ xmlns:vs="clr-namespace:Microsoft.VisualStudio.PlatformUI;assembly=Microsoft.Vis
 xmlns:vsfx="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.14.0"
 ```
 
-从程序集 *Microsoft.VisualStudio.Shell.Immutable.11.0.dll*中为 VisualStudio 添加另一个命名空间。  (可能需要在项目中添加对此程序集的引用 ) 
+从程序集 *Microsoft.VisualStudio.Shell.Immutable.11.0.dll* 中为 VisualStudio 添加另一个命名空间。  (可能需要在项目中添加对此程序集的引用 ) 
 
 ```xml
 xmlns:vscom="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.Immutable.11.0"

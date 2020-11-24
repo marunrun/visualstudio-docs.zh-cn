@@ -1,5 +1,7 @@
 ---
 title: 寻址 DPI Issues2 |Microsoft Docs
+description: 了解对高分辨率屏幕进行编程所涉及的问题，例如，扩展内容、布局问题和使用 DPI 缩放 Api。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 359184aa-f5b6-4b6c-99fe-104655b3a494
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 80f16c5b17a41d1f95b9bcb70e90eb8de46ad69d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 455f144a95a41ae482c1f240e1d2f87b888763a5
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80740102"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95598453"
 ---
 # <a name="address-dpi-issues"></a>解决 DPI 问题
 使用 "高分辨率" 屏幕装运的设备数量增加。 这些屏幕的每英寸一般超过200像素 (ppi) 。 在这些计算机上使用应用程序时，需要对内容进行扩展，以满足在设备的正常查看距离内查看内容的需要。 从2014，高密度显示的主要目标是移动计算设备 (平板电脑、clamshell 便携式计算机和手机) 。
@@ -103,7 +105,7 @@ ImageList_Create(VsUI::DpiHelper::LogicalToDeviceUnitsX(16),VsUI::DpiHelper::Log
 ## <a name="using-the-dpihelper-libraryclass-to-scale-images-and-layout"></a>使用 DPIHelper 库/类缩放图像和布局
 Visual Studio DPI 帮助程序库在本机和托管窗体中提供，可在 Visual Studio shell 的其他应用程序的外部使用。
 
-若要使用库，请参阅 [Visual STUDIO VSSDK 扩展性示例](https://github.com/Microsoft/VSSDK-Extensibility-Samples) 并克隆高 DPI_Images_Icons 示例。
+若要使用库，请参阅 [Visual STUDIO VSSDK 扩展性示例](https://github.com/Microsoft/VSSDK-Extensibility-Samples) 并克隆 High-DPI_Images_Icons 示例。
 
 在 "源文件" 中，包含 *VsUIDpiHelper* 并调用类的静态函数 `VsUI::DpiHelper` ：
 
@@ -126,7 +128,7 @@ VsUI::DpiHelper::LogicalToDeviceUnits(&hBitmap);
     <Reference Include="Microsoft.VisualStudio.Shell.14.0.dll" />
     ```
 
-- 确保该项目已引用**PresentationCore**和**PresentationUI** **。**
+- 确保该项目已引用 **PresentationCore** 和 **PresentationUI** **。**
 
 - 在代码中，使用 **VisualStudio. PlatformUI** 命名空间并调用 DpiHelper 类的静态函数。 对于支持的类型 (点、大小、矩形等) ，提供的扩展函数将返回新的缩放对象。 例如：
 

@@ -1,5 +1,7 @@
 ---
 title: 将用户控件添加到起始页 |Microsoft Docs
+description: 了解如何向 Visual Studio 的起始页添加 Windows Presentation Foundation (WPF) 用户控件。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,12 +15,12 @@ manager: jillfra
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: 1d093ecc8afd9fe822c19c2c1f2ceb5765208865
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: fa812b477f88b03b8f0d4bdcba6c69f009ec2894
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90011991"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597543"
 ---
 # <a name="add-user-control-to-the-start-page"></a>将用户控件添加到起始页
 
@@ -32,7 +34,7 @@ ms.locfileid: "90011991"
 
 1. 使用 " [创建自定义起始页](../extensibility/creating-a-custom-start-page.md)" 中创建的创建起始页。
 
-2. 在 **解决方案资源管理器**中，右键单击解决方案，单击 " **添加**"，然后单击 " **新建项目**"。
+2. 在 **解决方案资源管理器** 中，右键单击解决方案，单击 " **添加**"，然后单击 " **新建项目**"。
 
 3. 在 " **新建项目** " 对话框的左窗格中，展开 " **Visual Basic** " 或 " **Visual c #** " 节点，然后单击 " **Windows**"。 在中间窗格中，选择 " **WPF 用户控件库**"。
 
@@ -106,12 +108,12 @@ ms.locfileid: "90011991"
 
 1. 在 XAML 设计器中，双击添加到控件的 " **设置地址** " 按钮。
 
-    *UserControl1.cs*文件将在代码编辑器中打开。
+    *UserControl1.cs* 文件将在代码编辑器中打开。
 
 2. 按如下所示填写 SetButton_Click 事件处理程序。
 
     ```csharp
-    private void SetButton_Click(object sender, RoutedEventArgs e)
+    private void SetButton_Click(object sender, RoutedEventArgs e)
     {
         try
         {
@@ -139,11 +141,11 @@ ms.locfileid: "90011991"
 
 若要使此控件可用于 "起始页" 项目，请在 "起始页" 项目文件中添加对新控件库的引用。 然后，可以将该控件添加到起始页 XAML 标记。
 
-1. 在 **解决方案资源管理器**的 "起始页" 项目中，右键单击 " **引用** "，然后单击 " **添加引用**"。
+1. 在 **解决方案资源管理器** 的 "起始页" 项目中，右键单击 " **引用** "，然后单击 " **添加引用**"。
 
 2. 在 " **项目** " 选项卡上，选择 " **WebUserControl** "，然后单击 **"确定"**。
 
-3. 在“生成”菜单中，单击“生成解决方案”。
+3. 在 **“生成”** 菜单上，单击 **“生成解决方案”** 。
 
     生成解决方案使用户控件对解决方案中其他文件的 IntelliSense 可用。
 
@@ -151,7 +153,7 @@ ms.locfileid: "90011991"
 
 ### <a name="to-add-the-control-to-the-markup"></a>向标记添加控件
 
-1. 在 **解决方案资源管理器**中，打开起始页 *.xaml* 文件。
+1. 在 **解决方案资源管理器** 中，打开起始页 *.xaml* 文件。
 
 2. 在 " **XAML** " 窗格中，将以下命名空间声明添加到顶级 <xref:System.Windows.Controls.Grid> 元素。
 
@@ -177,19 +179,19 @@ ms.locfileid: "90011991"
 
 ## <a name="test-a-manually-created-custom-start-page"></a>测试手动创建的自定义起始页
 
-1. 将 XAML 文件和任何支持的文本文件或标记文件复制到 *%USERPROFILE%\My Documents\Visual Studio 2015 \ StartPages \\ *文件夹中。
+1. 将 XAML 文件和任何支持的文本文件或标记文件复制到 *%USERPROFILE%\My Documents\Visual Studio 2015 \ StartPages \\* 文件夹中。
 
-2. 如果起始页引用 Visual Studio 未安装的程序集中的任何控件或类型，请复制这些程序集，然后将其粘贴到_Visual studio 安装文件夹_**\Common7\IDE\PrivateAssemblies \\ **中。
+2. 如果起始页引用 Visual Studio 未安装的程序集中的任何控件或类型，请复制这些程序集，然后将其粘贴到 _Visual studio 安装文件夹_**\Common7\IDE\PrivateAssemblies \\** 中。
 
 3. 在 Visual Studio 命令提示符处，键入 **devenv/Rootsuffix Exp** 来打开 Visual studio 的实验实例。
 
 4. 在实验实例中，请切换到 "**工具**  >  **选项**  >  **环境**  >  **启动**" 页，然后从 "**自定义起始页**" 下拉列表中选择您的 XAML 文件。
 
-5. 在“视图” **** 菜单上，单击“起始页” ****。
+5. 在“视图”  菜单上，单击“起始页” 。
 
     应显示自定义起始页。 如果要更改任何文件，则必须关闭实验实例，进行更改，复制并粘贴已更改的文件，然后重新打开实验实例以查看更改。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [WPF 容器控件](/previous-versions/bb675291(v=vs.110))
 - [演练：将自定义 XAML 添加到起始页](../extensibility/walkthrough-adding-custom-xaml-to-the-start-page.md)

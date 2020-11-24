@@ -1,5 +1,7 @@
 ---
 title: 将菜单控制器添加到工具栏 |Microsoft Docs
+description: 了解如何创建菜单控制器并将其添加到 Visual Studio 中的工具窗口工具栏，然后实现菜单控制器命令并对其进行测试。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 32cbbbc7784c112b33b5f720b306b8c93269bb82
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3ce14999913a3928cbe25d9f034c8288651629a3
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903529"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597816"
 ---
 # <a name="add-a-menu-controller-to-a-toolbar"></a>向工具栏添加菜单控制器
 本演练 [以 "将工具栏添加到工具窗口](../extensibility/adding-a-toolbar-to-a-tool-window.md) " 演练为基础，并演示如何将菜单控制器添加到工具窗口工具栏中。 此处所示的步骤还可以应用于在 " [添加工具栏](../extensibility/adding-a-toolbar.md) " 演练中创建的工具栏。
@@ -26,14 +28,14 @@ ms.locfileid: "85903529"
 
 菜单控制器可以出现在菜单中，但它们最常在工具栏上使用。
 
-## <a name="prerequisites"></a>先决条件
-从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+## <a name="prerequisites"></a>必备条件
+从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 也可稍后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
 ## <a name="create-a-menu-controller"></a>创建菜单控制器
 
 1. 按照 [将工具栏添加到工具窗口](../extensibility/adding-a-toolbar-to-a-tool-window.md) 中所述的过程来创建具有工具栏的工具窗口。
 
-2. 在 *TWTestCommandPackage .vsct*中，请参阅符号部分。 在名为 **guidTWTestCommandPackageCmdSet**的 GuidSymbol 元素中，声明菜单控制器、菜单控制器组和三个菜单项。
+2. 在 *TWTestCommandPackage .vsct* 中，请参阅符号部分。 在名为 **guidTWTestCommandPackageCmdSet** 的 GuidSymbol 元素中，声明菜单控制器、菜单控制器组和三个菜单项。
 
     ```xml
     <IDSymbol name="TestMenuController" value="0x1300" /><IDSymbol name="TestMenuControllerGroup" value="0x1060" /><IDSymbol name="cmdidMCItem1" value="0x0130" /><IDSymbol name="cmdidMCItem2" value="0x0131" /><IDSymbol name="cmdidMCItem3" value="0x0132" />
@@ -110,18 +112,18 @@ ms.locfileid: "85903529"
 
 ## <a name="implement-the-menu-controller-commands"></a>实现菜单控制器命令
 
-1. 在 *TWTestCommandPackageGuids.cs*中，在现有的命令 id 后面添加三个菜单项的命令 id。
+1. 在 *TWTestCommandPackageGuids.cs* 中，在现有的命令 id 后面添加三个菜单项的命令 id。
 
     ```csharp
-    public const int cmdidMCItem1 = 0x130;
-    public const int cmdidMCItem2 = 0x131;
-    public const int cmdidMCItem3 = 0x132;
+    public const int cmdidMCItem1 = 0x130;
+    public const int cmdidMCItem2 = 0x131;
+    public const int cmdidMCItem3 = 0x132;
     ```
 
-2. 在 *TWTestCommand.cs*中，在类的顶部添加以下代码 `TWTestCommand` 。
+2. 在 *TWTestCommand.cs* 中，在类的顶部添加以下代码 `TWTestCommand` 。
 
     ```csharp
-    private int currentMCCommand; // The currently selected menu controller command
+    private int currentMCCommand; // The currently selected menu controller command
     ```
 
 3. 在 TWTestCommand 构造函数中，在最后一次调用 `AddCommand` 方法后，添加代码，以便通过相同的处理程序为每个命令路由事件。
@@ -136,7 +138,7 @@ ms.locfileid: "85903529"
           EventHandler(OnMCItemClicked), cmdID);
         mc.BeforeQueryStatus += new EventHandler(OnMCItemQueryStatus);
         commandService.AddCommand(mc);
-        // The first item is, by default, checked. 
+        // The first item is, by default, checked. 
         if (TWTestCommandPackageGuids.cmdidMCItem1 == i)
         {
             mc.Checked = true;
@@ -148,7 +150,7 @@ ms.locfileid: "85903529"
 4. 向 **TWTestCommand** 类添加一个事件处理程序，以将所选命令标记为已选中。
 
     ```csharp
-    private void OnMCItemQueryStatus(object sender, EventArgs e)
+    private void OnMCItemQueryStatus(object sender, EventArgs e)
     {
         OleMenuCommand mc = sender as OleMenuCommand;
         if (null != mc)
@@ -161,7 +163,7 @@ ms.locfileid: "85903529"
 5. 添加一个事件处理程序，该处理程序在用户选择菜单控制器上的命令时显示 MessageBox：
 
     ```csharp
-    private void OnMCItemClicked(object sender, EventArgs e)
+    private void OnMCItemClicked(object sender, EventArgs e)
     {
         OleMenuCommand mc = sender as OleMenuCommand;
         if (null != mc)

@@ -1,5 +1,7 @@
 ---
 title: 向菜单命令添加图标 |Microsoft Docs
+description: 了解如何向可在 Visual Studio 集成开发环境中的菜单和工具栏上显示的命令添加图标 (IDE) 。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c9f038dc43c1705a7cef47eb09a17607c535e307
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: eaf0a089c10c850c14b9ba2f807a69eada5d04b9
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903443"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597647"
 ---
 # <a name="add-icons-to-menu-commands"></a>向菜单命令添加图标
 菜单和工具栏上都可以出现命令。 在工具栏上，通常只显示一个图标 (来保存) 空间，而在菜单上，命令通常同时出现同时包含图标和文本。
@@ -33,11 +35,11 @@ ms.locfileid: "85903443"
 
      如果使用8位颜色深度，请使用洋红色 `RGB(255,0,255)` 作为透明度。 但是，建议采用32位颜色图标。
 
-2. 将图标文件复制到 VSPackage 项目中的 *Resources* 目录。 在 **解决方案资源管理器**中，将图标添加到项目。  ("选择 **资源**"，并在上下文菜单上单击 " **添加**"，然后单击 " **现有项**"，然后选择图标文件。 ) 
+2. 将图标文件复制到 VSPackage 项目中的 *Resources* 目录。 在 **解决方案资源管理器** 中，将图标添加到项目。  ("选择 **资源**"，并在上下文菜单上单击 " **添加**"，然后单击 " **现有项**"，然后选择图标文件。 ) 
 
 3. 在编辑器中打开 *.vsct* 文件。
 
-4. 添加 `GuidSymbol` 名称为 **testIcon**的元素。 创建 guid (**工具**  >  "**创建 guid**"，然后选择 "**注册表格式**" 并单击 "**复制**) 并将其粘贴到 `value` 属性。 结果应如下所示：
+4. 添加 `GuidSymbol` 名称为 **testIcon** 的元素。 创建 guid (**工具**  >  "**创建 guid**"，然后选择 "**注册表格式**" 并单击 "**复制**) 并将其粘贴到 `value` 属性。 结果应如下所示：
 
     ```xml
     <!-- Create your own GUID -->
@@ -53,7 +55,7 @@ ms.locfileid: "85903443"
     </GuidSymbol>
     ```
 
-6. `<Bitmap>`在 `<Bitmaps>` *.vsct*文件的节中创建，以表示包含图标的位图。
+6. `<Bitmap>`在 `<Bitmaps>` *.vsct* 文件的节中创建，以表示包含图标的位图。
 
     - 将 `guid` 值设置为 `<GuidSymbol>` 你在上一步中创建的元素的名称。
 
