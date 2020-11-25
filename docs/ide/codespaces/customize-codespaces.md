@@ -11,12 +11,12 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 monikerRange: vs-2019
-ms.openlocfilehash: 2223aecd66da721ff1afe9877853c8a00c837611
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: 9072676dfc96ffc6286f81785048eca8ec46b0b8
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862231"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850502"
 ---
 # <a name="how-to-customize-a-codespace-preview"></a>如何自定义 codespace（预览）
 
@@ -84,7 +84,7 @@ GitHub Codespaces 支持以下 devcontainer.json 属性。 如果希望通过 Vi
 
 ## <a name="customize-with-devinit"></a>使用 devinit 进行自定义
 
-[devinit](../../devinit/getting-started-with-devinit.md) 是 Windows codespace 中包含的命令行工具，可用于在环境中安装框架和工具。 可以从命令提示符 (`devinit -t require-dotnetcoresdk`) 手动运行该工具，但该工具真正强大之处在于，可用于创建自定义 [.devinit.json](../../devinit/devinit-json.md) 文件，以便在每次创建 codespace 时统一进行配置。
+[devinit](../../devinit/getting-started-with-devinit.md) 是 Windows codespace 中包含的命令行工具，可用于在环境中安装框架和工具。 可以从命令提示符 (`devinit run -t require-dotnetcoresdk`) 手动运行该工具，但该工具真正强大之处在于，可用于创建自定义 [.devinit.json](../../devinit/devinit-json.md) 文件，以便在每次创建 codespace 时统一进行配置。
 
 `devinit` 包括一组用于安装特定项的工具（例如 SQL Server 和 Azure CLI），以及用于运行常规包管理器的工具（例如 chocolatey、npm 和 vcpkg）。 可以在[可用工具](../../devinit/devinit-tool-list.md)文档中找到 `devinit` 工具的完整列表。
 
