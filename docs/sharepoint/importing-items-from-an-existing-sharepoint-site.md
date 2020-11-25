@@ -19,11 +19,11 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 9c2703bfdd4f47281a1fc19060cb69f8b312e7d2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86017022"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95970591"
 ---
 # <a name="import-items-from-an-existing-sharepoint-site"></a>从现有的 SharePoint 网站导入项
   利用“导入 SharePoint 解决方案包”项目模板，你可以在新的 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint 解决方案中重用现有 SharePoint 网站中的元素，例如，内容类型和字段。 虽然无需修改即可运行大多数导入的解决方案，但需要考虑一些限制和问题，尤其是在导入任何项后对这些项进行修改的情况下。
@@ -74,26 +74,26 @@ ms.locfileid: "86017022"
 ## <a name="what-happens-when-you-import-a-solution"></a>导入解决方案时出现的情况
  在使用“导入 SharePoint 解决方案包”模板导入解决方案时，[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 将复制 .wsp 文件的全部内容，并尝试尽可能多地协调和保留已导入元素与其文件之间的关联和引用。
 
- 所有导入的项将复制到“解决方案资源管理器” **** 中对应的文件夹。 例如，内容类型出现在“内容类型” **** 文件夹下，列表实例出现在“列表实例” **** 下。 与导入的项关联的文件也将复制到该项的文件夹中。 例如，导入的列表实例包括其模块、窗体和 ASPX 页。
+ 所有导入的项将复制到“解决方案资源管理器” 中对应的文件夹。 例如，内容类型出现在“内容类型”  文件夹下，列表实例出现在“列表实例” 下。 与导入的项关联的文件也将复制到该项的文件夹中。 例如，导入的列表实例包括其模块、窗体和 ASPX 页。
 
 ### <a name="dependent-items"></a>依赖项
  如果在“导入 SharePoint 解决方案包”向导中选择某一项，但没有选择其依赖项，则将显示一个消息框，通知你导入之前还必须选择相应的依赖项。
 
 ### <a name="what-are-features"></a>什么是功能？
- SharePoint Designer 用户可能会看到一些称作 *功能*的意想不到的文件出现在“解决方案资源管理器” **** 中的导入的解决方案中。虽然功能过去就存在于 SharePoint Designer 解决方案中，但它们是隐藏的。 现在，功能在 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]中是可见的。
+ SharePoint Designer 用户可能会看到一些称作 *功能* 的意想不到的文件出现在“解决方案资源管理器”  中的导入的解决方案中。虽然功能过去就存在于 SharePoint Designer 解决方案中，但它们是隐藏的。 现在，功能在 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]中是可见的。
 
- 功能是包含 SharePoint 项的容器。 每个功能都会保留对它所包含的每个项（如内容类型和列表定义）的引用。 在导入解决方案时， [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 将设置所有导入元素的功能，并尝试保留这些文件的功能与元素间的关系。 所有未能解析其引用的文件都将置于“其他已导入文件” **** 文件夹中。
+ 功能是包含 SharePoint 项的容器。 每个功能都会保留对它所包含的每个项（如内容类型和列表定义）的引用。 在导入解决方案时， [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 将设置所有导入元素的功能，并尝试保留这些文件的功能与元素间的关系。 所有未能解析其引用的文件都将置于“其他已导入文件”  文件夹中。
 
  有关功能的详细信息，请参阅[开发 SharePoint 解决方案](../sharepoint/developing-sharepoint-solutions.md)和[使用功能](/previous-versions/office/developer/sharepoint-2010/ms460318(v=office.14))。
 
 ### <a name="handle-special-cases"></a>处理特殊情况
- 在某些情况下，Visual Studio 无法协调项及其依赖文件。 所有 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 未能解析的文件都将出现在“其他已导入文件” **** 文件夹下。 此外，这些文件的“DeploymentType” **** 属性将设置为“NoDeployment” **** ，以便它们不会随解决方案一起部署。
+ 在某些情况下，Visual Studio 无法协调项及其依赖文件。 所有 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 未能解析的文件都将出现在“其他已导入文件” 文件夹下。 此外，这些文件的“DeploymentType”  属性将设置为“NoDeployment”  ，以便它们不会随解决方案一起部署。
 
- 例如，如果导入列表定义 ExpenseForms，则具有此名称的列表定义将与其 Elements.xml 和 Schema.xml 文件一起出现在“解决方案资源管理器”中的“列表定义”文件夹下  。 但其关联的 ASPX 和 HTML 窗体可能会放置在“其他已导入文件” **** 文件夹下的名为“ExpenseForms” **** 的文件夹中。 若要完成此导入，请在“解决方案资源管理器” **** 中的 ExpenseForms 列表定义下移动这些文件，并将每个文件的“DeploymentType” **** 属性从“NoDeployment” **** 更改为“ElementFile” ****。
+ 例如，如果导入列表定义 ExpenseForms，则具有此名称的列表定义将与其 Elements.xml 和 Schema.xml 文件一起出现在“解决方案资源管理器”中的“列表定义”文件夹下  。 但其关联的 ASPX 和 HTML 窗体可能会放置在“其他已导入文件”  文件夹下的名为“ExpenseForms”  的文件夹中。 若要完成此导入，请在“解决方案资源管理器”  中的 ExpenseForms 列表定义下移动这些文件，并将每个文件的“DeploymentType”  属性从“NoDeployment”  更改为“ElementFile” 。
 
  在导入事件接收器时，Elements.xml 文件将会复制到正确位置，但必须手动将程序集包含在解决方案包中，以使其随解决方案一起部署。 [!INCLUDE[crabout](../sharepoint/includes/crabout-md.md)] 如何进行此操作，请参阅[如何：添加和删除附加程序集](../sharepoint/how-to-add-and-remove-additional-assemblies.md)。
 
- 在导入工作流时，InfoPath 窗体将会复制到“其他已导入文件” **** 文件夹中。 如果 .wsp 文件包含 Web 模板，则将该文件设置为“解决方案资源管理器”中的启动页。
+ 在导入工作流时，InfoPath 窗体将会复制到“其他已导入文件”  文件夹中。 如果 .wsp 文件包含 Web 模板，则将该文件设置为“解决方案资源管理器”中的启动页。
 
 ## <a name="import-fields-and-property-bags"></a>导入字段和属性包
  在导入具有多个字段的解决方案时，所有单独的字段定义将合并到一个 Elements.xml 文件中，此文件位于“解决方案资源管理器”中一个名为“字段”的节点下 。 同样，所有属性包项将合并到一个 Elements.xml 文件中，此文件位于一个名为“PropertyBags”的节点下。
@@ -119,7 +119,7 @@ ms.locfileid: "86017022"
 
  若收到此错误，则不会创建相应的项。 导入的模块最常出现此问题。 若要避免此问题，请执行下列操作：
 
-- 在“添加新项目” **** 对话框中输入项目名称时，请使用项目的短名称。
+- 在“添加新项目”  对话框中输入项目名称时，请使用项目的短名称。
 
 - 在尽可能接近根文件夹的位置创建项目，以便减小路径长度。
 

@@ -1,5 +1,7 @@
 ---
 title: 创建具有关联窗体和启动窗体的工作流
+description: 在此 SharePoint 演练中，创建一个包含关联和初始窗体使用的基本顺序工作流。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -17,14 +19,14 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6f257dfed2fe439c5ab22ab9951b6258116c6567
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 62501a23695b81ee0437d3210dced7c81f9b054e
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86017127"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95970443"
 ---
-# <a name="walkthrough-create-a-workflow-with-association-and-initiation-forms"></a>演练：创建具有关联窗体和启动窗体的工作流
+# <a name="walkthrough-create-a-workflow-with-association-and-initiation-forms"></a>演练：使用关联和启动窗体创建工作流
   本演练演示如何创建包含关联和初始窗体使用的基本顺序工作流。 这是一种 ASPX 窗体，当在工作流第一次与 SharePoint 管理员 (关联窗体) 时，以及当用户 (启动窗体) 启动工作流时，将参数添加到工作流。
 
  本演练概述了这样一种情况：用户想要为满足以下要求的支出报表创建审批工作流：
@@ -84,13 +86,13 @@ ms.locfileid: "86017127"
 
 7. 在菜单栏上，选择 "**项目**" "  >  **添加新项**"。
 
-8. 在 " **Visual c #** " 或 " **Visual Basic**下，展开" **SharePoint** "节点，然后选择" **2010** "节点。
+8. 在 " **Visual c #** " 或 " **Visual Basic** 下，展开" **SharePoint** "节点，然后选择" **2010** "节点。
 
-9. 在 " **模板** " 窗格中，选择 " **顺序工作流 (场解决方案仅) ** 模板"，然后选择 " **添加** " 按钮。
+9. 在 " **模板** " 窗格中，选择 " **顺序工作流 (场解决方案仅)** 模板"，然后选择 " **添加** " 按钮。
 
      " **SharePoint 自定义向导** " 随即出现。
 
-10. 在 " **指定用于调试的工作流名称** " 页上，接受默认名称 (**ExpenseReport-workflow1.xaml**) 。 保留默认工作流模板类型值 (**List workflow) **。 选择“下一步”按钮  。
+10. 在 " **指定用于调试的工作流名称** " 页上，接受默认名称 (**ExpenseReport-workflow1.xaml**) 。 保留默认工作流模板类型值 (**List workflow)**。 选择“下一步”按钮  。
 
 11. 在 " **是否希望 Visual Studio 在调试会话中自动关联工作流？"** 页上，清除自动关联工作流模板的框（如果已选中）。
 
@@ -103,9 +105,9 @@ ms.locfileid: "86017127"
 
 #### <a name="to-add-an-association-form-to-the-workflow"></a>向工作流添加关联窗体
 
-1. 在**解决方案资源管理器**中选择 " **workflow1.xaml** " 节点。
+1. 在 **解决方案资源管理器** 中选择 " **workflow1.xaml** " 节点。
 
-2. 在菜单栏上，选择**Project**  >  "项目" "**添加新项**" 以显示 "**添加新项**" 对话框。
+2. 在菜单栏上，选择 **Project**  >  "项目" "**添加新项**" 以显示 "**添加新项**" 对话框。
 
 3. 在 "对话框" 树视图中，展开 " **Visual c #** " 或 " **Visual Basic** (具体取决于你的项目语言) ，展开" **SharePoint** "节点，然后选择" **2010** "节点。
 
@@ -131,7 +133,7 @@ ms.locfileid: "86017127"
     <br /><br />
     ```
 
-3. 展开**解决方案资源管理器**中的**ExpenseReportAssocForm**文件以显示其依赖文件。
+3. 展开 **解决方案资源管理器** 中的 **ExpenseReportAssocForm** 文件以显示其依赖文件。
 
     > [!NOTE]
     > 如果你的项目处于中 [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] ，则必须选择 " **查看所有文件** " 按钮以执行此步骤。
@@ -164,7 +166,7 @@ ms.locfileid: "86017127"
 
 #### <a name="to-create-an-initiation-form"></a>创建启动窗体
 
-1. 在**解决方案资源管理器**中选择 " **workflow1.xaml** " 节点。
+1. 在 **解决方案资源管理器** 中选择 " **workflow1.xaml** " 节点。
 
 2. 在菜单栏上，依次选择 "**项目**  >  " "**添加新项**" 和 "**添加新项**" 对话框。
 
@@ -196,7 +198,7 @@ ms.locfileid: "86017127"
     <br /><br />
     ```
 
-3. 展开**解决方案资源管理器**中的**ExpenseReportInitForm**文件以显示其依赖文件。
+3. 展开 **解决方案资源管理器** 中的 **ExpenseReportInitForm** 文件以显示其依赖文件。
 
 4. 打开 ExpenseReportInitForm 文件的快捷菜单，然后选择 " **查看代码**"。
 
@@ -259,17 +261,17 @@ ms.locfileid: "86017127"
 
     - 打开 " **IfElse** " 活动的快捷菜单，选择 " **复制**"，在工作流设计器中的 " **onWorkflowActivated1** " 活动下打开行的快捷菜单，然后选择 " **粘贴**"。
 
-    - 从**工具箱**中拖动**IfElse**活动，并将其连接到工作流设计器中**onWorkflowActiviated1**活动下的行。
+    - 从 **工具箱** 中拖动 **IfElse** 活动，并将其连接到工作流设计器中 **onWorkflowActiviated1** 活动下的行。
 
 4. 在 "工具箱" 中，展开 " **SharePoint 工作流** " 节点并找到 " **CreateTask** " 活动。
 
 5. 通过执行以下步骤之一将此活动添加到工作流中：
 
-    - 打开 " **CreateTask** " 活动的快捷菜单，选择 "**复制**"，在工作流设计器中的 " **IfElseActivity1** " 中，在 "此处" 区域中打开两个 "**删除" 活动**之一的快捷菜单，然后选择 "**粘贴**"。
+    - 打开 " **CreateTask** " 活动的快捷菜单，选择 "**复制**"，在工作流设计器中的 " **IfElseActivity1** " 中，在 "此处" 区域中打开两个 "**删除" 活动** 之一的快捷菜单，然后选择 "**粘贴**"。
 
     - 将 " **CreateTask** " 活动从 "**工具箱**" 拖动到 " **IfElseActivity1**" 中的两个 "**放置活动**" 区域之一。
 
-6. 在 "**属性**" 窗口中，为 " **CorrelationToken** " 属性输入*taskToken*属性值。
+6. 在 "**属性**" 窗口中，为 " **CorrelationToken** " 属性输入 *taskToken* 属性值。
 
 7. 展开 " **CorrelationToken** " 属性，方法是：选择加号 (![树视图](../sharepoint/media/plus.gif "TreeView 加号")) 旁边的加号。
 
@@ -287,9 +289,9 @@ ms.locfileid: "86017127"
 
 14. 通过执行以下步骤之一将此活动添加到工作流中：
 
-    - 打开 " **LogToHistoryListActivity** " 活动的快捷菜单，选择 "**复制**"，在工作流设计器中的 " **IfElseActivity1** " 区域内的 "其他**放置活动**" 区域中打开快捷菜单，然后选择 "**粘贴**"。
+    - 打开 " **LogToHistoryListActivity** " 活动的快捷菜单，选择 "**复制**"，在工作流设计器中的 " **IfElseActivity1** " 区域内的 "其他 **放置活动**" 区域中打开快捷菜单，然后选择 "**粘贴**"。
 
-    - 将 " **LogToHistoryListActivity** " 活动从 "**工具箱**" 拖放到 " **IfElseActivity1**" 中的 "其他**放置活动**" 区域。
+    - 将 " **LogToHistoryListActivity** " 活动从 "**工具箱**" 拖放到 " **IfElseActivity1**" 中的 "其他 **放置活动**" 区域。
 
 ## <a name="add-code-to-the-workflow"></a>将代码添加到工作流
  接下来，将代码添加到工作流，以使其能够正常工作。
@@ -428,7 +430,7 @@ ms.locfileid: "86017127"
 
 7. 在 " **支出合计** " 文本框中，输入 **1600**，然后选择 " **启动工作流** " 按钮。
 
-     此时将再次显示 " **共享文档** " 列表。 **将值为** **ExpenseReportWorkflow**的新列添加到工作流刚刚启动的项。
+     此时将再次显示 " **共享文档** " 列表。 **将值为** **ExpenseReportWorkflow** 的新列添加到工作流刚刚启动的项。
 
 8. 选择上传的文档旁边的下拉箭头，然后选择 " **工作流** " 项以显示 "工作流状态" 页。 选择 "**已完成工作流**" 下的 "**已完成**" 值。 任务列在 " **任务** " 部分下列出。
 
@@ -447,4 +449,4 @@ ms.locfileid: "86017127"
 
 ## <a name="see-also"></a>另请参阅
 - [创建 SharePoint 工作流解决方案](../sharepoint/creating-sharepoint-workflow-solutions.md)
-- [演练：向工作流添加应用程序页](../sharepoint/walkthrough-add-an-application-page-to-a-workflow.md)
+- [演练：将应用程序页添加到工作流](../sharepoint/walkthrough-add-an-application-page-to-a-workflow.md)

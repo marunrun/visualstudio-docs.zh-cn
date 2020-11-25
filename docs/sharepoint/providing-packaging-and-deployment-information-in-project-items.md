@@ -1,5 +1,7 @@
 ---
 title: 打包 & 项目项中的部署信息
+description: 使用功能属性、功能接收器、项目输出引用和安全控件实体在 SharePoint 项目项中添加打包和部署数据。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -24,12 +26,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: db805c308fd245554824997b24236eb2e2d80e62
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f73d8727fb960cf519d368d928aa20cae38ae1a9
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72984204"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95970482"
 ---
 # <a name="provide-packaging-and-deployment-information-in-project-items"></a>在项目项中提供打包和部署信息
   中的所有 SharePoint 项目项 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 都具有一些属性，可用于在将项目部署到 SharePoint 时提供附加数据。 这些属性如下所示：
@@ -57,7 +59,7 @@ ms.locfileid: "72984204"
 
  所有项目项中的相同功能属性值将合并到功能清单中。 但是，如果两个不同的项目项指定了与不匹配的值相同的功能属性键，则会发生验证错误。
 
- 若要将功能属性直接添加 *到功能文件 () * ，请调用 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint 对象模型方法 <xref:Microsoft.VisualStudio.SharePoint.Features.IPropertyCollection.Add%2A> 。 如果使用此方法，请注意，与在功能属性中添加相同的功能属性值有关的相同规则也适用于直接添加到功能文件中的属性。
+ 若要将功能属性直接添加 *到功能文件 ()* ，请调用 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint 对象模型方法 <xref:Microsoft.VisualStudio.SharePoint.Features.IPropertyCollection.Add%2A> 。 如果使用此方法，请注意，与在功能属性中添加相同的功能属性值有关的相同规则也适用于直接添加到功能文件中的属性。
 
 ## <a name="feature-receiver"></a>功能接收器
  功能接收器是在项目项的包含功能中发生特定事件时执行的代码。 例如，你可以定义在安装、激活或升级功能时执行的功能接收器。 添加功能接收器的一种方法是将其直接添加到功能，如 [演练：添加功能事件接收器](../sharepoint/walkthrough-add-feature-event-receivers.md)中所述。 另一种方法是在 **功能接收器** 属性中引用功能接收器类名称和程序集。
@@ -82,11 +84,11 @@ ms.locfileid: "72984204"
  有关详细信息，请参阅 [如何：添加项目输出引用](../sharepoint/how-to-add-a-project-output-reference.md)。
 
 ## <a name="safe-control-entries"></a>安全控件项
- SharePoint 提供了一个称为安全控制项的安全机制，用于限制不受信任的用户对某些控件的访问。 按照设计，SharePoint 允许不受信任的用户在 SharePoint 服务器上上传和创建 ASPX 页。 为了防止这些用户向 ASPX 页添加不安全代码，SharePoint 限制了对 *安全控件*的访问。 安全控件是将 ASPX 控件和 Web 部件指定为安全的，并可由网站上的任何用户使用。 有关详细信息，请参阅 [步骤4：将 Web 部件添加到安全控件列表](/previous-versions/office/developer/sharepoint-2007/ms581321(v=office.12))。
+ SharePoint 提供了一个称为安全控制项的安全机制，用于限制不受信任的用户对某些控件的访问。 按照设计，SharePoint 允许不受信任的用户在 SharePoint 服务器上上传和创建 ASPX 页。 为了防止这些用户向 ASPX 页添加不安全代码，SharePoint 限制了对 *安全控件* 的访问。 安全控件是将 ASPX 控件和 Web 部件指定为安全的，并可由网站上的任何用户使用。 有关详细信息，请参阅 [步骤4：将 Web 部件添加到安全控件列表](/previous-versions/office/developer/sharepoint-2007/ms581321(v=office.12))。
 
  中的每个 SharePoint 项目项 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 都有一个名为 **安全控件项** 的属性，该属性具有两个布尔子属性： **Safe** 和 **safe for Script**。 “安全”属性指定不受信任的用户是否能访问控件。 "安全应对脚本" 属性指定不受信任的用户是否可以查看和更改控件的属性。
 
- 安全控件项是根据程序集引用的。 通过在项目项的 " **安全控件项** " 属性中输入安全控件项，可以将这些项添加到项目的程序集。 但是，在将其他程序集添加到包时，还可以通过**包设计器**中的 "**高级**" 选项卡，将安全控件项添加到项目的程序集。 有关详细信息，请参阅 [如何：将控件标记为安全控件](../sharepoint/how-to-mark-controls-as-safe-controls.md) 或 [将 Web 部件程序集注册为安全控件](/previous-versions/office/developer/sharepoint2003/dd587360(v=office.11))。
+ 安全控件项是根据程序集引用的。 通过在项目项的 " **安全控件项** " 属性中输入安全控件项，可以将这些项添加到项目的程序集。 但是，在将其他程序集添加到包时，还可以通过 **包设计器** 中的 "**高级**" 选项卡，将安全控件项添加到项目的程序集。 有关详细信息，请参阅 [如何：将控件标记为安全控件](../sharepoint/how-to-mark-controls-as-safe-controls.md) 或 [将 Web 部件程序集注册为安全控件](/previous-versions/office/developer/sharepoint2003/dd587360(v=office.11))。
 
 ### <a name="xml-entries-for-safe-controls"></a>安全控件的 XML 项
  将安全控件项添加到项目项或项目的程序集时，引用将按以下格式写入包清单：
@@ -107,5 +109,5 @@ ms.locfileid: "72984204"
 
 ## <a name="see-also"></a>另请参阅
 - [打包和部署 SharePoint 解决方案](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)
-- [使用模块在解决方案中包括文件](../sharepoint/using-modules-to-include-files-in-the-solution.md)
+- [使用模块包括解决方案中的文件](../sharepoint/using-modules-to-include-files-in-the-solution.md)
 - [扩展 SharePoint 打包和部署](../sharepoint/extending-sharepoint-packaging-and-deployment.md)

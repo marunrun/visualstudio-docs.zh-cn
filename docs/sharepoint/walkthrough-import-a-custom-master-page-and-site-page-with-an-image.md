@@ -1,5 +1,7 @@
 ---
 title: 导入自定义母版页 & 包含图像的网站页面
+description: 在本演练中，将 SharePoint 自定义母版页和包含图像的网站页面导入到 Visual Studio SharePoint 项目。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 311124b2e0b81e70c4c2a7b40754207e6c66b749
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7ceb69608a2d1770f082991f3d927d4e4639ae56
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015681"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95970158"
 ---
 # <a name="walkthrough-import-a-custom-master-page-and-site-page-with-an-image"></a>演练：导入带有图像的自定义母版页和网站页面
   本演练演示如何将 SharePoint 自定义母版页和包含图像的网站页面导入到 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint 项目中。
@@ -158,7 +160,7 @@ ms.locfileid: "86015681"
 
 3. 选择 " **完成** " 按钮以导入所选项目。
 
-4. 在 **解决方案资源管理器**中，选择 " \_ catalogsmasterpage" \_ 节点，并将其 " **部署冲突解决方法** " 属性的值设置为 " **自动**"。
+4. 在 **解决方案资源管理器** 中，选择 " \_ catalogsmasterpage" \_ 节点，并将其 " **部署冲突解决方法** " 属性的值设置为 " **自动**"。
 
     这有助于确保自动解决任何部署冲突。
 
@@ -179,4 +181,4 @@ ms.locfileid: "86015681"
 ## <a name="see-also"></a>另请参阅
 - [从现有 SharePoint 站点导入项](../sharepoint/importing-items-from-an-existing-sharepoint-site.md)
 - [开发 SharePoint 解决方案](../sharepoint/developing-sharepoint-solutions.md)
-- [为 web 部件或应用程序页创建可重用控件](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)
+- [为 Web 部件或应用程序页创建可重用控件](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)

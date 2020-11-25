@@ -1,5 +1,7 @@
 ---
 title: 演练：扩展 SharePoint 项目项类型 |Microsoft Docs
+description: 在本演练中，将创建 SharePoint 项目项类型的扩展，如业务数据连接 (BDC) 模型项目项。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e8186b1a1388745527fbb9f4dd37478942c36e62
-ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
+ms.openlocfilehash: 3a360b6a336f64920c0144f742e98a64282eeeec
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90740001"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95970411"
 ---
 # <a name="walkthrough-extend-a-sharepoint-project-item-type"></a>演练：扩展 SharePoint 项目项类型
   您可以使用 " **业务数据连接模型** " 项目项在 SharePoint 中创建业务数据连接 (BDC) 服务的模型。 默认情况下，当您使用此项目项创建模型时，不会向用户显示模型中的数据。 还必须在 SharePoint 中创建外部列表，以使用户能够查看数据。
@@ -30,7 +32,7 @@ ms.locfileid: "90740001"
 
   - 它将生成一个外部列表，其中显示 BDC 模型中的数据。 该扩展插件使用 SharePoint 项目系统的对象模型生成定义此列表的 *Elements.xml* 文件。 它还会将文件添加到项目中，以便与 BDC 模型一起部署。
 
-  - 它将快捷菜单项添加到**解决方案资源管理器**中的**业务数据连接模型**项目项。 开发人员可以单击此菜单项，为 BDC 模型生成外部列表。
+  - 它将快捷菜单项添加到 **解决方案资源管理器** 中的 **业务数据连接模型** 项目项。 开发人员可以单击此菜单项，为 BDC 模型生成外部列表。
 
 - 构建 Visual Studio 扩展 (VSIX) 包部署扩展程序集。
 
@@ -41,7 +43,7 @@ ms.locfileid: "90740001"
 
 - 支持的 Microsoft Windows、SharePoint 和 Visual Studio 版本。
 
-- [!include[vssdk_current_long](../sharepoint/includes/vssdk-current-long-md.md)] 本演练使用 SDK 中的 **Vsix 项目** 模板来创建用于部署项目项的 vsix 包。 有关详细信息，请参阅 [在 Visual Studio 中扩展 SharePoint 工具](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)。
+- [!include[vssdk_current_long](../sharepoint/includes/vssdk-current-long-md.md)]。 本演练使用 SDK 中的 **Vsix 项目** 模板来创建用于部署项目项的 vsix 包。 有关详细信息，请参阅 [在 Visual Studio 中扩展 SharePoint 工具](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)。
 
   以下概念的知识非常有用，但不是必需的，无法完成本演练：
 
@@ -85,7 +87,7 @@ ms.locfileid: "90740001"
 
 #### <a name="to-create-the-extension-project"></a>创建扩展项目
 
-1. 在 **解决方案资源管理器**中，打开 **GenerateExternalDataLists** 解决方案节点的快捷菜单，选择 " **添加**"，然后选择 " **新建项目**"。
+1. 在 **解决方案资源管理器** 中，打开 **GenerateExternalDataLists** 解决方案节点的快捷菜单，选择 " **添加**"，然后选择 " **新建项目**"。
 
 2. 在 " **添加新项目** " 对话框中，展开 " **Visual c #** " 或 " **Visual Basic** " 节点，然后选择 " **Windows** " 节点。
 
@@ -152,14 +154,14 @@ ms.locfileid: "90740001"
 
 #### <a name="to-build-the-solution"></a>生成解决方案
 
-1. 在菜单栏上，依次选择“生成” > “生成解决方案” 。
+1. 在菜单栏上，依次选择“生成” > “生成解决方案”   。
 
 ## <a name="create-a-vsix-package-to-deploy-the-project-item-extension"></a>创建 VSIX 包以部署项目项扩展
  若要部署扩展，请使用解决方案中的 VSIX 项目创建 VSIX 包。 首先，通过修改 VSIX 项目中包含的 source.extension.vsixmanifest 文件来配置 VSIX 包。 然后，通过生成解决方案创建 VSIX 包。
 
 #### <a name="to-configure-and-create-the-vsix-package"></a>配置和创建 VSIX 包
 
-1. 在 **解决方案资源管理器**中，在 GenerateExternalDataLists 项目中打开 source.extension.vsixmanifest 文件的快捷菜单，然后选择 " **打开**"。
+1. 在 **解决方案资源管理器** 中，在 GenerateExternalDataLists 项目中打开 source.extension.vsixmanifest 文件的快捷菜单，然后选择 " **打开**"。
 
      Visual Studio 将在清单编辑器中打开该文件。 Source.extension.vsixmanifest 文件是 source.extension.vsixmanifest 文件的基础，所有 VSIX 包都需要此文件。 有关此文件的详细信息，请参阅 [VSIX 扩展架构1.0 引用](/previous-versions/dd393700(v=vs.110))。
 
@@ -182,7 +184,7 @@ ms.locfileid: "90740001"
 
 8. 在 " **项目** " 列表中，选择 " **BdcProjectItemExtension**"，然后选择 " **确定"** 按钮。
 
-9. 在菜单栏上，依次选择“生成” > “生成解决方案” 。
+9. 在菜单栏上，依次选择“生成” > “生成解决方案”   。
 
 10. 请确保项目编译和生成时没有错误。
 
@@ -201,7 +203,7 @@ ms.locfileid: "90740001"
 
 3. 打开 GenerateExternalDataLists 代码文件，然后将一个断点添加到方法中的第一行代码 `GenerateExternalDataLists_Execute` 。
 
-4. 选择**F5**键，或在菜单栏上选择 "**调试**" "  >  **开始调试**"，开始调试。
+4. 选择 **F5** 键，或在菜单栏上选择 "**调试**" "  >  **开始调试**"，开始调试。
 
      Visual Studio 会将扩展安装到%UserProfile%\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Contoso\External Data List Generator\1.0，并启动 Visual Studio 的实验实例。 你将在 Visual Studio 的此实例中测试项目项。
 
@@ -223,15 +225,15 @@ ms.locfileid: "90740001"
 
 8. 在 " **添加 NewItem-SharePointProjectTestBDC** " 对话框中，展开 "已安装的语言" 节点，展开 " **SharePoint** " 节点。
 
-9. 选择 " **2010** " 节点，然后选择 " **业务数据连接模型 (场解决方案" 仅) ** 模板。
+9. 选择 " **2010** " 节点，然后选择 " **业务数据连接模型 (场解决方案" 仅)** 模板。
 
 10. 在 " **名称** " 框中，输入 **TestBDCModel**，然后选择 " **添加** " 按钮。
 
 11. 验证 Visual Studio 的另一个实例中的代码是否在 ProjectItemExtension 代码文件的方法中设置的断点处停止 `Initialize` 。
 
-12. 在 Visual Studio 的停止实例中，选择**F5**键，或在菜单栏上，选择 "**调试**  >  **继续**" 继续调试项目。
+12. 在 Visual Studio 的停止实例中，选择 **F5** 键，或在菜单栏上，选择 "**调试**  >  **继续**" 继续调试项目。
 
-13. 在 Visual Studio 的实验实例中，选择**F5**键，或在菜单栏上选择 "**调试**" "  >  **开始调试**" 以生成、部署和运行**TestBDCModel**项目。
+13. 在 Visual Studio 的实验实例中，选择 **F5** 键，或在菜单栏上选择 "**调试**" "  >  **开始调试**" 以生成、部署和运行 **TestBDCModel** 项目。
 
      Web 浏览器将打开到为调试指定的 SharePoint 站点的默认页。
 
@@ -239,13 +241,13 @@ ms.locfileid: "90740001"
 
 15. 关闭 Web 浏览器。
 
-16. 在已打开 TestBDCModel 项目的 Visual Studio 实例中，打开**解决方案资源管理器**中 " **TestBDCModel** " 节点的快捷菜单，然后选择 "**生成外部数据列表**"。
+16. 在已打开 TestBDCModel 项目的 Visual Studio 实例中，打开 **解决方案资源管理器** 中 " **TestBDCModel** " 节点的快捷菜单，然后选择 "**生成外部数据列表**"。
 
-17. 验证在 Visual Studio 的另一个实例中的代码是否在您在方法中设置的断点处停止 `GenerateExternalDataLists_Execute` 。 选择**F5**键，或在菜单栏上选择 "**调试**  >  **继续**" 以继续调试项目。
+17. 验证在 Visual Studio 的另一个实例中的代码是否在您在方法中设置的断点处停止 `GenerateExternalDataLists_Execute` 。 选择 **F5** 键，或在菜单栏上选择 "**调试**  >  **继续**" 以继续调试项目。
 
 18. Visual Studio 的实验实例会将名为 **Entity1DataList** 的列表实例添加到 TestBDCModel 项目，并且该实例还会生成一个名为 **Feature2** 的列表实例的功能。
 
-19. 选择**F5**键，或在菜单栏上选择 "**调试**" "  >  **开始调试**" 以生成、部署和运行 TestBDCModel 项目。
+19. 选择 **F5** 键，或在菜单栏上选择 "**调试**" "  >  **开始调试**" 以生成、部署和运行 TestBDCModel 项目。
 
      Web 浏览器将打开用于调试的 SharePoint 站点的默认页面。
 
@@ -282,7 +284,7 @@ ms.locfileid: "90740001"
 
 1. 在 Visual Studio 的实验实例中，在菜单栏上选择 "**工具**" "  >  **扩展和更新**"。
 
-     此时，“扩展和更新”**** 对话框打开。
+     此时，“扩展和更新”对话框打开。
 
 2. 在扩展列表中，选择 " **外部数据列表生成器**"，然后选择 " **卸载** " 按钮。
 
@@ -292,7 +294,7 @@ ms.locfileid: "90740001"
 
 5. 关闭 Visual Studio 的两个实例 (实验实例和在其中打开 GenerateExternalDataLists 解决方案的实例) 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [扩展 SharePoint 项目系统](../sharepoint/extending-the-sharepoint-project-system.md)
 - [创建业务数据连接模型](../sharepoint/creating-a-business-data-connectivity-model.md)
 - [设计业务数据连接模型](../sharepoint/designing-a-business-data-connectivity-model.md)

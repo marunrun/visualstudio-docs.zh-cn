@@ -1,5 +1,7 @@
 ---
 title: 演练：部署项目任务列表定义 |Microsoft Docs
+description: 在本演练中，使用 Visual Studio 来创建、自定义、调试和部署 SharePoint 列表，以跟踪项目任务。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b5639fe7a1b35dea41b14be3730986ad7c7309b7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0be8eed2dc41ad433c0e0514dfd34e3c6e3d7193
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015763"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95970429"
 ---
 # <a name="walkthrough-deploy-a-project-task-list-definition"></a>演练：部署项目任务列表定义
 
@@ -25,7 +27,7 @@ ms.locfileid: "86015763"
 
 [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 - 支持的 Microsoft Windows 和 SharePoint 版本。
 
@@ -53,7 +55,7 @@ ms.locfileid: "86015763"
 
 7. 选择 " **基于现有列表类型创建不可自定义的列表** " 选项按钮，然后在其列表中选择 " **任务**"，然后选择 " **完成** " 按钮。
 
-     **解决方案资源管理器**中将显示列表、功能和包。
+     **解决方案资源管理器** 中将显示列表、功能和包。
 
 ## <a name="add-an-event-receiver"></a>添加事件接收器
 
@@ -71,7 +73,7 @@ ms.locfileid: "86015763"
 
 5. 在要处理的事件列表中，选中 "已 **添加项**" 旁边的复选框，然后选择 " **完成** " 按钮。
 
-     使用名为 **ProjectTaskListEventReceiver**的代码文件将新的事件接收器节点添加到项目。
+     使用名为 **ProjectTaskListEventReceiver** 的代码文件将新的事件接收器节点添加到项目。
 
 6. 将代码添加到 `ItemAdded` **ProjectTaskListEventReceiver** 代码文件中的方法。 每次添加新任务时，都会向任务添加一个默认的截止日期和说明。 默认截止日期为2009年7月1日。
 
@@ -82,9 +84,9 @@ ms.locfileid: "86015763"
 
 创建 SharePoint 解决方案时，Visual Studio 会自动为默认项目项创建功能。 您可以通过使用功能设计器来自定义 SharePoint 站点的项目任务列表设置。
 
-1. 在 **解决方案资源管理器**中，展开 " **功能**"。
+1. 在 **解决方案资源管理器** 中，展开 " **功能**"。
 
-2. 打开 **Feature1**的快捷菜单，然后选择 " **查看设计器**"。
+2. 打开 **Feature1** 的快捷菜单，然后选择 " **查看设计器**"。
 
 3. 在 " **标题** " 框中，输入 **项目任务列表功能**。
 
@@ -96,7 +98,7 @@ ms.locfileid: "86015763"
 
 创建 SharePoint 项目时，Visual Studio 会自动将包含默认项目项的功能添加到包中。 您可以通过使用包设计器来自定义 SharePoint 站点的项目任务列表设置。
 
-1. 在 **SolutionExplorer**中，打开 " **包**" 的快捷菜单，然后选择 " **查看设计器**"。
+1. 在 **SolutionExplorer** 中，打开 " **包**" 的快捷菜单，然后选择 " **查看设计器**"。
 
 2. 在 " **名称** " 框中，输入 **ProjectTaskListPackage**。
 
@@ -138,7 +140,7 @@ ms.locfileid: "86015763"
 
 在 Visual Studio 菜单栏上，选择 "**生成**" "  >  **部署解决方案**"。
 
-Visual Studio 将回收 IIS 应用程序池，收回解决方案的任何现有版本，将解决方案 *包 () * 文件复制到 SharePoint，然后激活其功能。 你现在可以在 SharePoint 中使用该解决方案。 有关部署配置步骤的详细信息，请参阅 [如何：编辑 SharePoint 部署配置](../sharepoint/how-to-edit-a-sharepoint-deployment-configuration.md)。
+Visual Studio 将回收 IIS 应用程序池，收回解决方案的任何现有版本，将解决方案 *包 ()* 文件复制到 SharePoint，然后激活其功能。 你现在可以在 SharePoint 中使用该解决方案。 有关部署配置步骤的详细信息，请参阅 [如何：编辑 SharePoint 部署配置](../sharepoint/how-to-edit-a-sharepoint-deployment-configuration.md)。
 
 ### <a name="to-deploy-the-project-task-list-to-a-remote-system"></a>将项目任务列表部署到远程系统
 
@@ -146,7 +148,7 @@ Visual Studio 将回收 IIS 应用程序池，收回解决方案的任何现有�
 
 2. 在 " **发布** " 对话框中，选择 " **发布到文件系统** " 选项按钮。
 
-     您可以通过选择省略号按钮![省略号图标](../sharepoint/media/ellipsisicon.gif "“省略号”图标")，然后导航到另一个位置，在 "**发布**" 对话框中更改目标位置。
+     您可以通过选择省略号按钮 ![省略号图标](../sharepoint/media/ellipsisicon.gif "“省略号”图标")，然后导航到另一个位置，在 "**发布**" 对话框中更改目标位置。
 
 3. 选择 **“发布”** 按钮。
 
@@ -156,11 +158,11 @@ Visual Studio 将回收 IIS 应用程序池，收回解决方案的任何现有�
 
 5. 使用 PowerShell `Add-SPUserSolution` 命令在远程 SharePoint 安装上安装包。  (场解决方案，请使用 `Add-SPSolution` 命令。 ) 
 
-     例如，`Add-SPUserSolution C:\MyProjects\ProjectTaskList\ProjectTaskList\bin\Debug\ProjectTaskList.wsp`。
+     例如 `Add-SPUserSolution C:\MyProjects\ProjectTaskList\ProjectTaskList\bin\Debug\ProjectTaskList.wsp`。
 
 6. 使用 PowerShell `Install-SPUserSolution` 命令来部署解决方案。  (场解决方案，请使用 `Install-SPSolution` 命令。 ) 
 
-     例如，`Install-SPUserSolution -Identity ProjectTaskList.wsp -Site http://NewSiteName`。
+     例如 `Install-SPUserSolution -Identity ProjectTaskList.wsp -Site http://NewSiteName`。
 
      有关远程部署的详细信息，请参阅在 SharePoint 2010 中 [使用解决方案](/previous-versions/office/developer/sharepoint-2010/ee534972(v=office.14)) 以及使用 [PowerShell 添加和部署解决方案](http://www.dotnetmafia.com/blogs/dotnettipoftheday/archive/2009/12/02/adding-and-deploying-solutions-with-powershell-in-sharepoint-2010.aspx)。
 
@@ -168,11 +170,11 @@ Visual Studio 将回收 IIS 应用程序池，收回解决方案的任何现有�
 
 可以从以下主题中了解有关如何自定义和部署 SharePoint 解决方案的详细信息：
 
-- [演练：为 SharePoint 创建网站栏、内容类型和列表](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md)
+- [演练：创建 SharePoint 的网站栏、内容类型和列表](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md)
 
 - [如何：创建事件接收器](../sharepoint/how-to-create-an-event-receiver.md)
 
 - [Windows PowerShell for SharePoint Server 2010](/powershell/module/sharepoint-server)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 [打包和部署 SharePoint 解决方案](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)

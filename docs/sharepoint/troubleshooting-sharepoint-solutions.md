@@ -1,5 +1,7 @@
 ---
 title: SharePoint 解决方案疑难解答 |Microsoft Docs
+description: 查看使用 Visual Studio 调试器调试 SharePoint 解决方案时可能发生的问题或警报。
+ms.custom: SEO-VS-2020
 ms.date: 02/22/2017
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e79a08d3f8dbc4b579a52501afb08ffb7dca33f2
-ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
+ms.openlocfilehash: a9ef5e7d47f72b82e7a8fab52cc2f1f8716c83bf
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "92298403"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95970283"
 ---
 # <a name="troubleshoot-sharepoint-solutions"></a>SharePoint 解决方案疑难解答
   使用调试器调试 SharePoint 解决方案时，可能会出现以下问题或警报 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 。 有关详细信息，请参阅 [调试 SharePoint 2007 工作流解决方案](/previous-versions/bb386166(v=vs.100))。
@@ -102,7 +104,7 @@ ms.locfileid: "92298403"
  无。
 
 ### <a name="resolution"></a>解决方法
- 出现此问题的原因是 webtemp 站点定义配置文件的 **路径** 属性中的值不正确，如 *webtemp_SiteDefinitionProject1.xml*。 在 webtemp 文件（位于**部署位置**下）的 "**路径**" 属性中，将 "1033" 更改为相应的区域设置 [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)] 。 例如，若要使用日语区域设置，请将值更改为1041。 有关详细信息，请参阅 [Microsoft 分配的区域设置 ID](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c)。
+ 出现此问题的原因是 webtemp 站点定义配置文件的 **路径** 属性中的值不正确，如 *webtemp_SiteDefinitionProject1.xml*。 在 webtemp 文件（位于 **部署位置** 下）的 "**路径**" 属性中，将 "1033" 更改为相应的区域设置 [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)] 。 例如，若要使用日语区域设置，请将值更改为1041。 有关详细信息，请参阅 [Microsoft 分配的区域设置 ID](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c)。
 
 ## <a name="error-appears-when-a-workflow-project-is-deployed-on-a-clean-system"></a>在干净系统上部署工作流项目时出现错误
  如果在干净系统上部署 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 中的工作流项目，则会发生此问题。 干净系统是指以全新方式安装了 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 和 SharePoint 但未部署工作流项目的计算机。
@@ -115,7 +117,7 @@ ms.locfileid: "92298403"
 
 ##### <a name="to-reenter-the-workflow-wizard"></a>重新输入工作流向导
 
-1. 在 **解决方案资源管理器**中，选择 "工作流" 节点。
+1. 在 **解决方案资源管理器** 中，选择 "工作流" 节点。
 
 2. 在 " **属性** " 窗口中，选择具有省略号按钮的任何属性上的省略号 ( ") " 按钮。
 
@@ -123,7 +125,7 @@ ms.locfileid: "92298403"
  如果正在调试的 SharePoint 解决方案包含的应用程序页包含显示图像的控件（如 [!INCLUDE[TLA2#tla_html](../sharepoint/includes/tla2sharptla-html-md.md)] 图像控件），则必须刷新浏览器中的页面，以显示对图像所做的任何更改。
 
 ## <a name="error-the-site-location-is-not-valid"></a>错误：站点位置无效
- 如果未安装，则可能出现此问题 [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)] 。 如果你没有管理员访问 **Sharepoint 自定义向导**中指定的 sharepoint 网站的权限，也可能会发生这种情况。
+ 如果未安装，则可能出现此问题 [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)] 。 如果你没有管理员访问 **Sharepoint 自定义向导** 中指定的 sharepoint 网站的权限，也可能会发生这种情况。
 
 ### <a name="error-message"></a>错误消息
 
@@ -156,7 +158,7 @@ ms.locfileid: "92298403"
 
 ##### <a name="to-change-the-feature-scope-of-the-event-receiver"></a>更改事件接收器的功能范围
 
-1. 在**解决方案资源管理器**中，双击文件或打开其快捷菜单，然后选择 "**打开**"，在**功能设计器**中打开事件接收器的 *. 功能*文件。
+1. 在 **解决方案资源管理器** 中，双击文件或打开其快捷菜单，然后选择 "**打开**"，在 **功能设计器** 中打开事件接收器的 *. 功能* 文件。
 
 2. 选择 " **作用域**" 旁边的箭头，然后在显示的列表中选择 " **站点** "。
 
@@ -189,7 +191,7 @@ ms.locfileid: "92298403"
 
 ##### <a name="to-resolve-this-issue"></a>解决方法
 
-1. 在 **解决方案资源管理器**中，选择文件扩展名为 *.ascx*的用户控件文件。
+1. 在 **解决方案资源管理器** 中，选择文件扩展名为 *.ascx* 的用户控件文件。
 
 2. 在菜单栏上，选择 "**查看**  >  **属性窗口**"。
 
@@ -236,7 +238,7 @@ ms.locfileid: "92298403"
 
 3. 在 " **应用程序池** " 页上，选择 "sharepoint 应用程序池" (通常为 "sharepoint-80" ) ，然后在 " **操作** " 窗格中选择 " **高级设置** " 链接。
 
-4. 若要增加 IIS 超时前的等待时间，请将 " **Ping 最大响应时间" 的值 (秒) ** 更改为大于90秒的值。
+4. 若要增加 IIS 超时前的等待时间，请将 " **Ping 最大响应时间" 的值 (秒)** 更改为大于90秒的值。
 
 5. 若要禁用 IIS ping，请将 " **启用 Ping** " 设置为 " **False**"。
 
@@ -257,7 +259,7 @@ ms.locfileid: "92298403"
 ### <a name="resolution"></a>解决方法
  发生这种情况的原因是，在关闭 SharePoint 解决方案的调试会话之后，自动收回功能将收回解决方案。 收回操作会从 SharePoint 中删除列表定义，但不会删除列表的实例。 列表实例需要基础列表定义。
 
- 若要解决此问题，请通过在菜单栏上选择 "**生成**部署" 来部署解决方案  >  **Deploy**。  (不要通过选择 **F5** 键调试解决方案。 ) 然后在 SharePoint 中删除列表实例。
+ 若要解决此问题，请通过在菜单栏上选择 "**生成** 部署" 来部署解决方案  >  **Deploy**。  (不要通过选择 **F5** 键调试解决方案。 ) 然后在 SharePoint 中删除列表实例。
 
 ## <a name="original-sharepoint-solution-is-replaced-by-an-exported-version"></a>原始 SharePoint 解决方案替换为导出版本
  如果导出 SharePoint 解决方案，则将解决方案导入到 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ，然后将其部署到从中导出解决方案的同一站点，将替换原始 SharePoint 解决方案。 如果将解决方案部署到的服务器上未激活原始解决方案，则不会出现此问题。

@@ -1,5 +1,7 @@
 ---
 title: 演练：分析 SharePoint 应用程序 |Microsoft Docs
+description: 在本演练中，使用 Visual Studio 中的分析工具来优化 SharePoint 应用程序的性能。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9a2e4ca528c7f534cc3a7f04d7e1e2832ee9b412
-ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
+ms.openlocfilehash: 66e19f7744a56d147fb0760c6f20254ea4308603
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "92298633"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95970102"
 ---
 # <a name="walkthrough-profile-a-sharepoint-application"></a>演练：分析 SharePoint 应用程序
   本演练演示在 Visual Studio 中如何使用分析工具优化 SharePoint 应用程序的性能。 此示例应用程序是 SharePoint 功能事件接收器，其中包含降低功能事件接收器性能的空闲循环。 Visual Studio 探查器使你可以查找和消除最昂贵的 (执行项目的) 部分，也称为 *热路径*。
@@ -65,16 +67,16 @@ ms.locfileid: "92298633"
 
     目前，只能分析场解决方案。 有关沙盒解决方案与场解决方案的详细信息，请参阅 [沙盒解决方案注意事项](../sharepoint/sandboxed-solution-considerations.md)。
 
-7. 选择 **“完成”** 按钮。 项目将显示在 **解决方案资源管理器**中。
+7. 选择 **“完成”** 按钮。 项目将显示在 **解决方案资源管理器** 中。
 
 ## <a name="add-a-feature-and-feature-event-receiver"></a>添加功能和功能事件接收器
  接下来，向项目中添加功能和该功能的事件接收器。 此事件接收器将包含要分析的代码。
 
 ### <a name="to-add-a-feature-and-feature-event-receiver"></a>添加功能和功能事件接收器。
 
-1. 在 **解决方案资源管理器**中，打开 " **功能** " 节点的快捷菜单，选择 " **添加功能**"，并将名称保留为默认值 **Feature1**。
+1. 在 **解决方案资源管理器** 中，打开 " **功能** " 节点的快捷菜单，选择 " **添加功能**"，并将名称保留为默认值 **Feature1**。
 
-2. 在 **解决方案资源管理器**中，打开 **Feature1**的快捷菜单，然后选择 " **添加事件接收器**"。
+2. 在 **解决方案资源管理器** 中，打开 **Feature1** 的快捷菜单，然后选择 " **添加事件接收器**"。
 
      这将为功能添加一个代码文件以及一些注释掉的事件处理程序，并打开要编辑的文件。
 
@@ -178,7 +180,7 @@ ms.locfileid: "92298633"
     }
     ```
 
-6. 在 **解决方案资源管理器**中，打开项目 (**ProfileTest**) 的快捷菜单，然后选择 " **属性**"。
+6. 在 **解决方案资源管理器** 中，打开项目 (**ProfileTest**) 的快捷菜单，然后选择 " **属性**"。
 
 7. 在 " **属性** " 对话框中，选择 " **SharePoint** " 选项卡。
 
@@ -203,7 +205,7 @@ ms.locfileid: "92298633"
 
      如果解决方案包含多个项目，它们将显示在此列表中。
 
-4. 在 **性能向导**第三页上，清除 " **启用层交互分析** " 复选框，然后选择 " **下一步** " 按钮。
+4. 在 **性能向导** 第三页上，清除 " **启用层交互分析** " 复选框，然后选择 " **下一步** " 按钮。
 
      层交互分析 (TIP) 功能用于衡量查询数据库的应用程序的性能，并显示网页的请求次数。 本示例不需要这些数据，因此我们不启用此功能。
 
@@ -247,7 +249,7 @@ ms.locfileid: "92298633"
 
 3. 在 " **被调用函数** " 部分中，选择 " **FeatureActivated** " 按钮。
 
-     在**FeatureActivated**的 "**被调用函数**" 部分中，该 `TimeCounter` 函数作为开销最高的函数列出。 在 " **函数代码视图** " 窗格中，突出显示的代码 (`TimeCounter`) 是热点，并指示需要更正的位置。
+     在 **FeatureActivated** 的 "**被调用函数**" 部分中，该 `TimeCounter` 函数作为开销最高的函数列出。 在 " **函数代码视图** " 窗格中，突出显示的代码 (`TimeCounter`) 是热点，并指示需要更正的位置。
 
 4. 关闭示例分析报告。
 
@@ -262,7 +264,7 @@ ms.locfileid: "92298633"
 
 2. 保存项目。
 
-3. 在 **性能资源管理器**中，打开 "目标" 文件夹，然后选择 " **ProfileTest** " 节点。
+3. 在 **性能资源管理器** 中，打开 "目标" 文件夹，然后选择 " **ProfileTest** " 节点。
 
 4. 在 **性能资源管理器** 工具栏上的 " **操作** " 选项卡中，选择 " **开始分析** " 按钮。
 
