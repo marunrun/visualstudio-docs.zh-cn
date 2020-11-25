@@ -12,11 +12,11 @@ manager: ''
 robots: ''
 ms.date: 4/3/2020
 ms.faqid: q1_5
-ms.openlocfilehash: d50798fcc04baca95d6ee4843f5ecd79d5e892c3
-ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
+ms.openlocfilehash: 04c6f3473f31f438afb9785cc460aa0da38605d5
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2020
+ms.lasthandoff: 11/25/2020
 ms.locfileid: "91838390"
 ---
 ## <a name="how-do-i-add-alternate-identities-to-my-subscription-and-how-does-this-impact-my-azure-credits-and-azure-devops"></a>如何将备用标识添加到订阅中？这对我的 Azure 额度和 Azure DevOps 有何影响？
@@ -27,4 +27,4 @@ ms.locfileid: "91838390"
 
 对于所有订阅，都可添加“工作或学校帐户”，以便使用该帐户享受需要登录的权益（VS IDE、Azure DevOps 和 Azure）。
 
-添加备用 ID 很简单。 连接到 [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions)，单击“添加备用帐户”，输入电子邮件地址，然后单击“添加”。 有关使用备用标识的详细信息，请查看我们的[备用标识](../../../../vs-alternate-identity.md)一文。
+添加备用 ID 很简单。 连接到 [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions)，单击“添加备用帐户”，输入电子邮件地址，然后单击“添加”。 有关使用备用标识的详细信息，请查看我们的[备用标识](https://docs.microsoft.com/visualstudio/subscriptions/vs-alternate-identity)一文。
