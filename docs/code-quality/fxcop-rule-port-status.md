@@ -1,33 +1,33 @@
 ---
 title: FxCop 规则端口状态
 ms.date: 05/21/2019
-description: 了解已经移植到 Visual Studio 中的 FxCop 分析器的静态代码分析规则。 查看移植规则和移植更新的资源。
+description: 了解已经移植到 Visual Studio 中的 .NET 分析器的静态代码分析规则。 查看移植规则和移植更新的资源。
 ms.custom: SEO-VS-2020
 ms.topic: reference
 helpviewer_keywords:
 - fxcop rules
-- fxcop analyzers, ported rules
+- .NET analyzers, ported rules
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: cedd96036a6d0725dbde5f0b11400a20360a20ec
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: dde5a3d8ccf5557905395ee03d108e995ecffe7e
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94348940"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96039570"
 ---
 # <a name="fxcop-rule-port-status"></a>Fxcop 规则端口状态
 
-如果以前在 Visual Studio 中使用了静态代码分析，则可能想知道哪些规则在当前实现中作为 [FxCop 分析器](install-fxcop-analyzers.md)提供。 此页列出了已移植的规则。 请参阅 [Unported 规则](fxcop-unported-rules.md) ，了解尚未移植的规则，以及是否有计划对其进行端口。
+如果以前在 Visual Studio 中使用了静态代码分析，则可能会想知道哪些规则在当前实现中作为 [.net 分析器](install-net-analyzers.md)提供。 此页列出了已移植的规则。 请参阅 [Unported 规则](fxcop-unported-rules.md) ，了解尚未移植的规则，以及是否有计划对其进行端口。
 
 ## <a name="ported-rules"></a>移植的规则
 
-Roslyn 存储库中自动 [生成的文档页面](https://github.com/dotnet/roslyn-analyzers/blob/master/src/Microsoft.CodeAnalysis.FxCopAnalyzers/Microsoft.CodeAnalysis.FxCopAnalyzers.md) 具有已移植到 FxCop 分析器的最新规则列表。 该页还包含其他信息，例如是否默认启用规则，以及是否有关联的 *代码修复* 。  ([代码修补程序](../ide/quick-actions.md) 是 Visual Studio 的灯泡图标菜单中提供的单击一次修复。 ) 
+Roslyn 存储库中自动 [生成的文档页](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Microsoft.CodeAnalysis.NetAnalyzers.md) 具有已移植到 roslyn 分析器的最新规则列表。 该页还包含其他信息，例如是否默认启用规则，以及是否有关联的 *代码修复*。  ([代码修补程序](../ide/quick-actions.md) 是 Visual Studio 的灯泡图标菜单中提供的单击一次修复。 ) 
 
-截止到此页上的日期，已移植到 [fxcop 分析器](install-fxcop-analyzers.md) 的 fxcop 规则列表包括：
+截止到此页上的日期，已移植到 [.net 分析器](install-net-analyzers.md) 的 FxCop 规则列表包括：
 
 规则 ID | 标题
 --------|---------
@@ -64,7 +64,7 @@ Roslyn 存储库中自动 [生成的文档页面](https://github.com/dotnet/rosl
 [CA1050](/dotnet/fundamentals/code-analysis/quality-rules/ca1050) | 在命名空间中声明类型
 [CA1051](/dotnet/fundamentals/code-analysis/quality-rules/ca1051) | 不要声明可见实例字段
 [CA1052](/dotnet/fundamentals/code-analysis/quality-rules/ca1052) | 静态容器类型应为 static 或 NotInheritable
-[CA1053](/dotnet/fundamentals/code-analysis/quality-rules/ca1053) | 静态容器类型不应具有构造函数 (CA1053 是 FxCop 分析器的 [CA1052](/dotnet/fundamentals/code-analysis/quality-rules/ca1052) 的一部分) 
+[CA1053](/dotnet/fundamentals/code-analysis/quality-rules/ca1053) | 静态容器类型不应具有构造函数 (CA1053 是 .NET 分析器 [CA1052](/dotnet/fundamentals/code-analysis/quality-rules/ca1052) 的一部分) 
 [CA1054](/dotnet/fundamentals/code-analysis/quality-rules/ca1054) | Uri 参数不应为字符串
 [CA1055](/dotnet/fundamentals/code-analysis/quality-rules/ca1055) | Uri 返回值不应是字符串
 [CA1056](/dotnet/fundamentals/code-analysis/quality-rules/ca1056) | Uri 属性不应是字符串
@@ -204,4 +204,4 @@ CA9999 | 分析器版本不匹配
 
 ## <a name="see-also"></a>请参阅
 
-- [CodeAnalysis. FxCopAnalyzers 规则](https://github.com/dotnet/roslyn-analyzers/blob/master/src/Microsoft.CodeAnalysis.FxCopAnalyzers/Microsoft.CodeAnalysis.FxCopAnalyzers.md)
+- [.NET 分析器规则](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Microsoft.CodeAnalysis.NetAnalyzers.md)
