@@ -1,5 +1,7 @@
 ---
 title: 单元测试入门
+description: 使用 Visual Studio 定义和运行单元测试，使代码保持正常运行、确保代码覆盖率并在客户之前找到错误和缺陷。
+ms.custom: SEO-VS-2020
 ms.date: 04/07/2020
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c167e98f9419842876aed713e008b8746064669a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3daff1a7b7c2e62b4ca4a508c5c8dd31261a40dd
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "82153040"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441776"
 ---
 # <a name="get-started-with-unit-testing"></a>单元测试入门
 
@@ -26,7 +28,7 @@ ms.locfileid: "82153040"
 
 1. 在 Visual Studio 中，打开要测试的项目。
 
-   为了演示示例单元测试，本文测试了简单的“Hello World”项目（名为“HelloWorldCore”）  。 此类项目的示例代码如下所示：
+   为了演示示例单元测试，本文测试了简单的“Hello World”项目（名为“HelloWorldCore”）。 此类项目的示例代码如下所示：
 
    ```csharp
    namespace HelloWorldCore
@@ -40,7 +42,7 @@ ms.locfileid: "82153040"
       }
    ```
 
-1. 在“解决方案资源管理器”中，选择解决方案节点  。 然后，在顶部菜单栏中，选择“文件” > “添加” > “新项目”    。
+1. 在“解决方案资源管理器”中，选择解决方案节点。 然后，在顶部菜单栏中，选择“文件” > “添加” > “新项目”  。
 
 1. 在新项目对话框中，找到并选择要使用的测试框架的单元测试项目模板。
 
@@ -48,7 +50,7 @@ ms.locfileid: "82153040"
 
    ![Visual Studio 2019 中的单元测试项目模板](media/vs-2019/add-new-test-project.png)
 
-   单击“下一步”，选择测试项目的名称，然后单击“创建”   。
+   单击“下一步”，选择测试项目的名称，然后单击“创建”。
 
    ::: moniker-end
 
@@ -56,7 +58,7 @@ ms.locfileid: "82153040"
 
    ![Visual Studio 2019 中的单元测试项目模板](media/mstest-test-project-template.png)
 
-   选择测试项目的名称，然后单击“确定”  。
+   选择测试项目的名称，然后单击“确定”。
 
    ::: moniker-end
 
@@ -64,9 +66,9 @@ ms.locfileid: "82153040"
 
    ![解决方案资源管理器中的单元测试项目](media/vs-2019/solution-explorer.png)
 
-1. 在单元测试项目中，右键单击“引用”或“依赖项”，然后选择“添加引用”，添加对要测试的项目的引用    。
+1. 在单元测试项目中，右键单击“引用”或“依赖项”，然后选择“添加引用”，添加对要测试的项目的引用。
 
-1. 选择包含待测试代码的项目，单击“确定”  。
+1. 选择包含待测试代码的项目，单击“确定”。
 
    ![在 Visual Studio 中添加项目引用](media/vs-2019/reference-manager.png)
 
@@ -139,16 +141,16 @@ ms.locfileid: "82153040"
 
 ## <a name="run-unit-tests"></a>运行单元测试
 
-1. 打开[测试资源管理器](../test/run-unit-tests-with-test-explorer.md)。
+1. 打开“测试资源管理器”。[](../test/run-unit-tests-with-test-explorer.md)
 
    ::: moniker range=">=vs-2019"
-   若要打开测试资源管理器，请选择顶部菜单栏中的“测试”>“测试资源管理器”   。
+   若要打开测试资源管理器，请选择顶部菜单栏中的“测试”>“测试资源管理器” 。
    ::: moniker-end
    ::: moniker range="vs-2017"
-   若要打开测试资源管理器，请选择顶部菜单栏中的“测试”>“Windows”>“测试资源管理器”    。
+   若要打开测试资源管理器，请选择顶部菜单栏中的“测试”>“Windows”>“测试资源管理器”  。
    ::: moniker-end
 
-1. 单击“全部运行”，运行单元测试  。
+1. 单击“全部运行”，运行单元测试。
 
    ![在测试资源管理器中运行单元测试](media/vs-2019/test-explorer-run-all.png)
 
@@ -166,7 +168,7 @@ ms.locfileid: "82153040"
 > [!NOTE]
 > 只有企业版中提供 Live Unit Testing 功能。
 
-1. 选择“测试” > “Live Unit Testing” > “启动”，从“测试”菜单启用 Live Unit Testing     。
+1. 选择“测试” > “Live Unit Testing” > “启动”，从“测试”菜单启用 Live Unit Testing。
 
    ::: moniker range="vs-2017"
 
@@ -205,27 +207,27 @@ ms.locfileid: "82153040"
 
 ## <a name="use-a-third-party-test-framework"></a>使用第三方测试框架
 
-通过使用第三方测试框架（如 Boost、Google、和 NUnit），可以在 Visual Studio 中运行单元测试。 使用 NuGet 包管理器为所选框架安装 NuGet 包  。 或者，对于 NUnit 和 xUnit 测试框架，Visual Studio 包含预配置的测试项目模板，其中包含必要的 NuGet 包。
+通过使用第三方测试框架（如 Boost、Google、和 NUnit），可以在 Visual Studio 中运行单元测试。 使用 NuGet 包管理器为所选框架安装 NuGet 包。 或者，对于 NUnit 和 xUnit 测试框架，Visual Studio 包含预配置的测试项目模板，其中包含必要的 NuGet 包。
 
 创建使用 [NUnit](https://nunit.org/) 的单元测试：
 
 1. 打开包含待测试代码的解决方案。
 
-2. 右键单击“解决方案资源管理器”中的解决方案，然后选择“添加” > “新建项目”    。
+2. 右键单击“解决方案资源管理器”中的解决方案，然后选择“添加” > “新建项目”。
 
-3. 选择“NUnit 测试项目”项目模板  。
+3. 选择“NUnit 测试项目”项目模板。
 
    ::: moniker range=">=vs-2019"
 
    ![Visual Studio 2019 中的 NUnit 测试项目模板](media/vs-2019/nunit-test-project-template.png)
 
-   单击“下一步”，为项目命名，然后单击“创建”   。
+   单击“下一步”，为项目命名，然后单击“创建”。
 
    ::: moniker-end
 
    ::: moniker range="vs-2017"
 
-   为项目命名，然后单击“确定”进行创建  。
+   为项目命名，然后单击“确定”进行创建。
 
    ::: moniker-end
 
@@ -235,15 +237,15 @@ ms.locfileid: "82153040"
 
 4. 将测试项目中的引用添加到包含待测试代码的项目中。
 
-   右键单击“解决方案资源管理器”中的项目，然后选择“添加” > “引用”    。 （还可以从“引用”  或“依赖项”  节点右键单击菜单来添加一个引用。）
+   右键单击“解决方案资源管理器”中的项目，然后选择“添加” > “引用”。 （还可以从“引用”或“依赖项”节点右键单击菜单来添加一个引用。）
 
 5. 将代码添加到测试方法。
 
    ![将代码添加到单元测试代码文件](media/vs-2019/unit-test-method.png)
 
-6. 从测试资源管理器运行测试，或右键单击测试代码并选择“运行测试”   。
+6. 从测试资源管理器运行测试，或右键单击测试代码并选择“运行测试”。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 * [演练：创建并运行托管代码的单元测试](walkthrough-creating-and-running-unit-tests-for-managed-code.md)
 * [创建单元测试命令](create-unit-tests-menu.md)
