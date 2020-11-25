@@ -1,5 +1,7 @@
 ---
 title: 可替换参数 |Microsoft Docs
+description: 查看 (标记) 的可替换参数，该参数在项目文件中为其实际值在设计时未知的 SharePoint 解决方案项指定值。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ author: John-Hart
 ms.author: johnhart
 manager: jillfra
 ms.workload: office
-ms.openlocfilehash: 165ef1256a0150e0942d85c4f876c8b3f5e15c72
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1cd44b3edfaeae376e5a4a9698d138bd75c03bf8
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "90840726"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95970255"
 ---
 # <a name="replaceable-parameters"></a>可替换参数
   可替换参数（或 *标记*）可用于项目文件中，以提供在设计时实际值未知的 SharePoint 解决方案项的值。 它们在功能上类似于标准 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 模板标记。 有关详细信息，请参阅 [模板参数](../ide/template-parameters.md)。
@@ -64,7 +66,7 @@ ms.locfileid: "90840726"
 |$SharePoint FileNameWithoutExtension $|功能定义文件的名称，没有文件扩展名。|
 |$SharePoint DeploymentPath $|包中包含功能的文件夹的名称。 此标记等同于功能设计器中的 "部署路径" 属性。 示例值为 "Project1_Feature1"。|
 |$SharePoint. Feature.Id $|包含功能的 SharePoint ID。 与所有功能级令牌一样，此令牌只能由包中包含的文件使用，而不会直接添加到功能外部的包中。|
-|$SharePoint. ProjectItem.Name $|项目项的名称不 (其文件名) ，从 **ISharePointProjectItem.Name**获取。|
+|$SharePoint. ProjectItem.Name $|项目项的名称不 (其文件名) ，从 **ISharePointProjectItem.Name** 获取。|
 |$SharePoint \<GUID> . 类型。AssemblyQualifiedName $|与标记的 [!INCLUDE[TLA2#tla_guid](../sharepoint/includes/tla2sharptla-guid-md.md)] 匹配的类型的程序集限定名。 [!INCLUDE[TLA2#tla_guid](../sharepoint/includes/tla2sharptla-guid-md.md)] 的格式为小写，并与 Guid.ToString("D") 格式（即 xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx）对应。|
 |$SharePoint \<GUID> . 类型。FullName $|与令牌中的 GUID 匹配的类型的完整名称。 GUID 的格式为小写，并对应于 Guid.empty ( "D" ) 格式 (也就是说，xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx) 为 xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx。|
 
@@ -75,7 +77,7 @@ ms.locfileid: "90840726"
 
 - ASCX
 
-- DEFAULT.ASPX
+- ASPX
 
 - 图片
 
@@ -105,5 +107,5 @@ ms.locfileid: "90840726"
 
  可以将扩展添加 *到 (目标*) 文件中。 但是，添加扩展会改变在本地系统上打包的所有 SharePoint 项目的扩展列表，而不只是您自己的扩展列表。 如果你是系统上的唯一开发人员，或者你的大多数项目需要它，则此扩展可能很方便。 但是，因为它是特定于系统的，所以此方法是不可移植的，因此建议您改为将任何扩展添加到项目文件。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [开发 SharePoint 解决方案](../sharepoint/developing-sharepoint-solutions.md)

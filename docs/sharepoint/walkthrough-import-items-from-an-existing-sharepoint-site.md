@@ -1,6 +1,8 @@
 ---
 title: 演练：从现有 SharePoint 站点导入项 |Microsoft Docs
 titleSuffix: ''
+description: 在本演练中，将项从现有 SharePoint 站点导入到 Visual Studio SharePoint 项目。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c5f9fd5e3cc9b0df5feb60149e58e895996bb1f0
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 7eeff880538d98f997f48f82c49d01045e834031
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "92298643"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95970131"
 ---
 # <a name="walkthrough-import-items-from-an-existing-sharepoint-site"></a>演练：从现有的 SharePoint 网站导入项
   本演练演示如何将项从现有 SharePoint 网站导入 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] sharepoint 项目。
@@ -122,7 +124,7 @@ ms.locfileid: "92298643"
 
 7. 在 " **选择要导入的项** " 框中，清除列表中除 " **测试列**" 之外的所有复选框，然后选择 " **完成** " 按钮。
 
-    由于列表包含多个项，因此可以选择**Ctrl** + **A**键以选择列表中的所有项，选择空格键以清除所有复选框，然后仅选中**测试列**项旁边的复选框。
+    由于列表包含多个项，因此可以选择 **Ctrl** + **A** 键以选择列表中的所有项，选择空格键以清除所有复选框，然后仅选中 **测试列** 项旁边的复选框。
 
     导入操作完成后，将创建一个名为 **WspImportProject1** 的新项目，其中包含一个名为 " **字段**" 的文件夹。 在此文件夹中，为自定义网站列 **测试列** 及其定义文件 *Elements.xml*。
 

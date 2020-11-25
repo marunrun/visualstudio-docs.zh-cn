@@ -1,6 +1,8 @@
 ---
 title: 演练：导入 SharePoint 设计器可重用工作流 |Microsoft Docs
 titleSuffix: ''
+description: 在本演练中，将在 SharePoint Designer 中创建的可重用工作流导入到 Visual Studio SharePoint 工作流项目中。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -16,20 +18,20 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8e6680c6ff95808db56e5bb32e02e0775c935011
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 1421b061c50277177b5a30f0357725e9a042f3bd
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "92298039"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95970171"
 ---
 # <a name="walkthrough-import-a-sharepoint-designer-reusable-workflow"></a>演练：导入 SharePoint 设计器可重用工作流
 
   本演练演示如何将在 SharePoint Designer 2010 中创建的可重用工作流导入到 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] sharepoint 工作流项目中。
 
- 在 SharePoint 设计器或 *声明性工作流*中创建的工作流由 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 语句而不是代码组成。 SharePoint Designer 2010 引入了可移植的 *工作流，这些工作流*可供 SharePoint 站点中的不同列表使用。
+ 在 SharePoint 设计器或 *声明性工作流* 中创建的工作流由 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 语句而不是代码组成。 SharePoint Designer 2010 引入了可移植的 *工作流，这些工作流* 可供 SharePoint 站点中的不同列表使用。
 
- 在中创建的工作流（ [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)] 例如顺序和状态机工作流）称为 " *代码工作*流"。 代码工作流由 XML 文件和代码模块组成，用户可以在其中自定义工作流的行为。
+ 在中创建的工作流（ [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)] 例如顺序和状态机工作流）称为 " *代码工作* 流"。 代码工作流由 XML 文件和代码模块组成，用户可以在其中自定义工作流的行为。
 
  Visual Studio 允许你在 SharePoint Designer 2010 中导入可重用工作流，并将其转换为代码工作流，以便在 SharePoint 网站中使用。
 
@@ -61,7 +63,7 @@ ms.locfileid: "92298039"
 
 #### <a name="to-create-sharepoint-subsites"></a>创建 SharePoint 子网站
 
-1. 在 SharePoint Designer 2010 的菜单栏上，选择 "**文件**" "  >  **新建空白**网站"。
+1. 在 SharePoint Designer 2010 的菜单栏上，选择 "**文件**" "  >  **新建空白** 网站"。
 
 2. 在 " **新建空白网站** " 对话框中，浏览到要在其中创建工作流的 SharePoint 站点，或使用 http://<em>SystemName</em>/的值，然后选择 " **确定"** 按钮。
 
@@ -144,7 +146,7 @@ ms.locfileid: "92298039"
 
 7. 在 " **文档库** " 部分中，选择 " **站点资产** " 链接。
 
-     **SPD 任务工作流**文件与其他站点资产一起列出。
+     **SPD 任务工作流** 文件与其他站点资产一起列出。
 
 8. 在文件列表中，选择该文件的名称
 
@@ -178,19 +180,19 @@ ms.locfileid: "92298039"
 
 7. 在 " **选择要导入的项** " 框中，选择 " **SPD 任务工作** 流"，然后选择 " **完成** " 按钮。
 
-    导入操作完成后，将创建一个名为 **WorkflowImportProject1** 的项目，其中包含一个名为 **SPD_Workflow_TestFT**的工作流。 在此文件夹中，工作流的定义文件 *Elements.xml* 和工作流设计器文件 (*xoml*) 。 设计器包含两个文件：规则文件 () 和代码隐藏文件 (*.cs* 或 *.vb*，具体取决于项目的编程语言) 。
+    导入操作完成后，将创建一个名为 **WorkflowImportProject1** 的项目，其中包含一个名为 **SPD_Workflow_TestFT** 的工作流。 在此文件夹中，工作流的定义文件 *Elements.xml* 和工作流设计器文件 (*xoml*) 。 设计器包含两个文件：规则文件 () 和代码隐藏文件 (*.cs* 或 *.vb*，具体取决于项目的编程语言) 。
 
-8. 在 **解决方案资源管理器**中，删除 " **其他已导入文件** " 文件夹。
+8. 在 **解决方案资源管理器** 中，删除 " **其他已导入文件** " 文件夹。
 
 9. 在 *Elements.xml* 文件中，删除 `InstantiationURL="_layouts/IniErkflIP.sspx"` 。
 
-10. 在**解决方案资源管理器**中，选择 " **WorkflowImportProject1**"，然后在菜单栏上选择 "**项目**  >  **设置为启动项目**"，将 " **WorkflowImportProject1** " 设置为 "启动项目"。
+10. 在 **解决方案资源管理器** 中，选择 " **WorkflowImportProject1**"，然后在菜单栏上选择 "**项目**  >  **设置为启动项目**"，将 " **WorkflowImportProject1** " 设置为 "启动项目"。
 
      调试项目时，这会立即显示列表。
 
 11. 因为 " **导入可重用的 SharePoint 2010 工作流** " 模板不会导入导入工作流的关联属性值，所以必须输入这些值。 为此，请按以下步骤操作：
 
-    1. 在 **解决方案资源管理器**中，选择 " **SPD_Workflow_TestFT** " 节点。
+    1. 在 **解决方案资源管理器** 中，选择 " **SPD_Workflow_TestFT** " 节点。
 
     2. 选择其中一个列表属性（如 "**目标列表**" 属性）旁边的省略号 (![ASP.NET Mobile 设计器 "椭圆形](../sharepoint/media/mwellipsis.gif "ASP.NET 移动设计器中的省略号")) 按钮。
 
@@ -204,13 +206,13 @@ ms.locfileid: "92298039"
 
     - 将 " **代码** " 活动从 " **工具箱** " 拖动到工作流设计器，并将其连接到 " **SequenceActivity1** " 活动下的行。
 
-      这会将活动添加到名为 **CodeActivity1**的工作流设计器中。 在此活动中，你将添加一个代码操作，该操作在用户启动工作流时在 "公告" 列表中创建公告。
+      这会将活动添加到名为 **CodeActivity1** 的工作流设计器中。 在此活动中，你将添加一个代码操作，该操作在用户启动工作流时在 "公告" 列表中创建公告。
 
 14. 执行下面的某一组步骤：
 
     - 双击 " **CodeActivity1** " 以生成事件处理程序并查看代码。
 
-    - 在**CodeActivity1**的 "**属性**" 窗口中，将 " **ExecuteCode** " 属性的值设置为 " **codeActivity_ExecuteCode**"。
+    - 在 **CodeActivity1** 的 "**属性**" 窗口中，将 " **ExecuteCode** " 属性的值设置为 " **codeActivity_ExecuteCode**"。
 
 15. 在现有 **using** 或 **Imports** 指令下添加以下内容：
 

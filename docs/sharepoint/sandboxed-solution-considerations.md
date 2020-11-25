@@ -1,5 +1,7 @@
 ---
 title: 沙盒解决方案注意事项 |Microsoft Docs
+description: 探索沙盒解决方案，这是 Microsoft SharePoint 中的一项功能，使网站集用户可以上传自己的自定义代码解决方案。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3f6345e7627549c672aa28fac8cba5f6d9658a23
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 17b310a3f992f80b04ad14bb6e038e05b009a4af
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "90840443"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95970458"
 ---
 # <a name="sandboxed-solution-considerations"></a>沙盒解决方案注意事项
   *沙盒解决方案* 是 Microsoft SharePoint 2010 的一项功能，它使网站集用户可以上传自己的自定义代码解决方案。 常见的沙盒解决方案是用户上传自己的 Web 部件。
@@ -31,7 +33,7 @@ ms.locfileid: "90840443"
  沙盒中的 SharePoint 应用程序在安全的、受监视的进程中运行，该进程可以访问部分 Web 场。 Microsoft SharePoint 2010 使用功能、解决方案库、解决方案监视和验证框架的组合来启用沙盒解决方案。
 
 ## <a name="specify-project-trust-level"></a>指定项目信任级别
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 支持通过名为 *沙盒解决方案*的布尔项目属性使用沙盒解决方案。 此属性可以在项目中随时设置，也可以在 **SharePoint 自定义向导**中创建项目时指定。
+ [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 支持通过名为 *沙盒解决方案* 的布尔项目属性使用沙盒解决方案。 此属性可以在项目中随时设置，也可以在 **SharePoint 自定义向导** 中创建项目时指定。
 
 > [!NOTE]
 > 在项目创建后更改其 " *沙盒解决方案* " 属性可能会导致验证错误。
@@ -137,6 +139,6 @@ ms.locfileid: "90840443"
 
 - 包含代码的工作流
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [沙盒解决方案与场解决方案之间的差异](../sharepoint/differences-between-sandboxed-and-farm-solutions.md)
 - [开发 SharePoint 解决方案](../sharepoint/developing-sharepoint-solutions.md)

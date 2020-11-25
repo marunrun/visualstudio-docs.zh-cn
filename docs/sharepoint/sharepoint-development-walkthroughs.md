@@ -1,5 +1,7 @@
 ---
 title: SharePoint 开发演练 |Microsoft Docs
+description: 请参阅指向演示如何使用 Visual Studio 开发和部署 SharePoint 解决方案的演练的链接。 这些链接按功能区域进行组织。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0ae7ed434d2f76036f0409fe21d4dd1493cd28b2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4d1700958d155801a436cbd00a8a88f7599292a0
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62979466"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95970315"
 ---
 # <a name="sharepoint-development-walkthroughs"></a>SharePoint 开发演练
   下面的演练演示如何使用开发和部署 SharePoint 解决方案 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 。
@@ -27,7 +29,7 @@ ms.locfileid: "62979466"
 |主题|说明|
 |-----------|-----------------|
 |[演练：添加功能事件接收器](../sharepoint/walkthrough-add-feature-event-receivers.md)|介绍如何添加功能事件接收器，功能事件接收器是安装、激活、停用或删除功能时执行的方法。|
-|[演练：为 SharePoint 创建网站栏、内容类型和列表](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md)|演示如何创建自定义字段、内容类型、内容类型中的列表定义和列表实例。|
+|[演练：创建 SharePoint 的网站栏、内容类型和列表](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md)|演示如何创建自定义字段、内容类型、内容类型中的列表定义和列表实例。|
 |[演练：创建基本网站定义项目](../sharepoint/walkthrough-create-a-basic-site-definition-project.md)|演示如何创建包含具有控件的可视 Web 部件的基本网站定义。|
 |[演练：导入带有图像的自定义母版页和网站页面](../sharepoint/walkthrough-import-a-custom-master-page-and-site-page-with-an-image.md)|演示如何将 SharePoint 自定义母版页和包含图像的网站页面导入到 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint 项目中|
 
@@ -36,22 +38,22 @@ ms.locfileid: "62979466"
 |主题|说明|
 |-----------|-----------------|
 |[演练：将 SharePoint Designer 可重用工作流导入 Visual Studio](../sharepoint/walkthrough-import-a-sharepoint-designer-reusable-workflow-into-visual-studio.md)|演示如何将在 SharePoint Designer 2010 中创建的可重用工作流导入到 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] sharepoint 工作流项目中。|
-|[演练：从现有的 SharePoint 网站导入项](../sharepoint/walkthrough-import-items-from-an-existing-sharepoint-site.md)|演示如何将项从现有 SharePoint 网站导入 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] sharepoint 项目。|
+|[演练：从现有 SharePoint 网站导入项](../sharepoint/walkthrough-import-items-from-an-existing-sharepoint-site.md)|演示如何将项从现有 SharePoint 网站导入 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] sharepoint 项目。|
 
 ## <a name="web-parts"></a>Web 部件
 
 |主题|说明|
 |-----------|-----------------|
-|[演练：为 SharePoint 创建 web 部件](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint.md)|演示如何使用 Visual Studio 中的 " **Web 部件** " 项模板创建 web 部件。|
-|[演练：使用设计器为 SharePoint 创建 web 部件](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint-by-using-a-designer.md)|演示如何使用 Visual Studio 中的 "SharePoint **可视 Web 部件** " 项目模板以可视化方式创建 Web 部件。|
+|[演练：为 SharePoint 创建 Web 部件](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint.md)|演示如何使用 Visual Studio 中的 " **Web 部件** " 项模板创建 web 部件。|
+|[演练：使用设计器为 SharePoint 创建 Web 部件](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint-by-using-a-designer.md)|演示如何使用 Visual Studio 中的 "SharePoint **可视 Web 部件** " 项目模板以可视化方式创建 Web 部件。|
 
 ## <a name="workflows"></a>工作流
 
 |主题|说明|
 |-----------|-----------------|
 |[演练：创建和调试 SharePoint 工作流解决方案](../sharepoint/walkthrough-creating-and-debugging-a-sharepoint-workflow-solution.md)|演示如何创建基本的顺序工作流模板。|
-|[演练：创建具有关联窗体和启动窗体的工作流](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)|演示如何创建使用关联窗体和启动窗体的基本顺序工作流。|
-|[演练：向工作流添加应用程序页](../sharepoint/walkthrough-add-an-application-page-to-a-workflow.md)|演示如何将显示从工作流派生的数据的应用程序页添加到工作流项目中。|
+|[演练：使用关联和启动窗体创建工作流](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)|演示如何创建使用关联窗体和启动窗体的基本顺序工作流。|
+|[演练：将应用程序页添加到工作流](../sharepoint/walkthrough-add-an-application-page-to-a-workflow.md)|演示如何将显示从工作流派生的数据的应用程序页添加到工作流项目中。|
 |[演练：创建自定义站点工作流活动](../sharepoint/walkthrough-create-a-custom-site-workflow-activity.md)|演示如何为站点级工作流创建自定义活动。|
 |[演练：将 SharePoint Designer 可重用工作流导入 Visual Studio](../sharepoint/walkthrough-import-a-sharepoint-designer-reusable-workflow-into-visual-studio.md)|演示如何将可重用工作流从 SharePoint Designer 迁移到 Visual Studio。|
 
@@ -59,7 +61,7 @@ ms.locfileid: "62979466"
 
 |主题|说明|
 |-----------|-----------------|
-|[演练：向工作流添加应用程序页](../sharepoint/walkthrough-add-an-application-page-to-a-workflow.md)|演示如何将显示从工作流派生的数据的应用程序页添加到工作流项目中。|
+|[演练：将应用程序页添加到工作流](../sharepoint/walkthrough-add-an-application-page-to-a-workflow.md)|演示如何将显示从工作流派生的数据的应用程序页添加到工作流项目中。|
 |[演练：创建 SharePoint 应用程序页](../sharepoint/walkthrough-creating-a-sharepoint-application-page.md)|演示如何创建一个应用程序页，然后使用本地 SharePoint 站点调试该页。|
 
 ## <a name="business-data-connectivity"></a>业务数据连接
@@ -86,7 +88,7 @@ ms.locfileid: "62979466"
 |[演练：使用项目模板创建网站栏项目项（第2部分）](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)|演示如何为与项目模板关联的自定义 SharePoint 项目项类型创建向导。|
 |[演练：为 SharePoint 项目创建自定义部署步骤](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md)|演示如何定义可用于升级 SharePoint 解决方案的自定义部署步骤。|
 
-## <a name="extend-the-sharepoint-connections-node-in-server-explorer"></a>扩展中的 "SharePoint 连接" 节点服务器资源管理器
+## <a name="extend-the-sharepoint-connections-node-in-server-explorer"></a>扩展服务器资源管理器中的“SharePoint 连接”节点
 
 |主题|说明|
 |-----------|-----------------|
