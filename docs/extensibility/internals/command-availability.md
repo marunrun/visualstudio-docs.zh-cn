@@ -1,5 +1,7 @@
 ---
 title: 命令可用性 |Microsoft Docs
+description: 了解如何根据当前项目、当前编辑器以及其他因素更改命令上下文，以确定哪些命令可用于 Visual Studio。
+ms.custom: SEO-VS-2020
 ms.date: 03/22/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: dca47d9ed9968c101e3b6b859b51c1cd8d7404db
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1da4d48b41b4b42a3c3f049f64ca76e1d9eba6eb
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709700"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96189935"
 ---
 # <a name="command-availability"></a>命令可用性
 
@@ -53,7 +55,7 @@ Visual Studio 上下文确定哪些命令可用。 上下文可能会更改，�
 > [!CAUTION]
 > 请确保 VSPackage 不会影响任何现有的上下文 Guid，因为其他 Vspackage 可能依赖于它们。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [选择上下文对象](../../extensibility/internals/selection-context-objects.md)
 - [Vspackage 如何添加用户界面元素](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)

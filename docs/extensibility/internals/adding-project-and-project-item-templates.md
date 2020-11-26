@@ -1,5 +1,7 @@
 ---
 title: 添加项目和项目项模板 |Microsoft Docs
+description: 了解如何将项目和项目项模板添加到 Visual Studio 集成开发环境中的对话框 (IDE) 。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +13,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 14eb1a9e2e63fa6e63d3ba2efa4426421e6b5593
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1e97b04294f0545c378210d39f343f3b009b6d15
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80710198"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96190169"
 ---
 # <a name="add-project-and-project-item-templates"></a>添加项目和项目项模板
 创建自己的项目类型时，必须通过使用标准 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 集成开发环境 (IDE) "对话框提供对添加新项目和项目项的支持。 以下主题介绍添加项目和项目项的不同方法。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
 - [项目上下文](../../extensibility/internals/project-context.md)
 
  说明项目为环境中的发生提供了大部分上下文信息。

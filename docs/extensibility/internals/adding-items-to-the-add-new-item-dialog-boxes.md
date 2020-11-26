@@ -1,5 +1,7 @@
 ---
 title: 向 "添加新项" 对话框添加项 |Microsoft Docs
+description: 了解如何将项添加到 Visual Studio 中的 "添加新项" 对话框，以便你可以显示要在项目中使用的模板和项目元素。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: af7f9e5c792785a23ad1674a50abeb4eb6d3cba9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 99377db0e835de8d84485d0254d84892a360f5f0
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80710218"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96190156"
 ---
 # <a name="add-items-to-the-add-new-item-dialog-box"></a>向 "添加新项" 对话框添加项
 将项添加到 " **添加新项** " 对话框的过程从注册表项开始。 如以下注册表项中所示， **AddItemTemplates** 部分包含在 " **添加新项** " 对话框中提供了项的目录的路径和名称。
@@ -23,7 +25,7 @@ ms.locfileid: "80710218"
 > [!NOTE]
 > 紧跟在代码段之后的表包含有关注册表项的其他信息。
 
- 本部分位于 **HKEY_LOCAL_MACHINE \software\microsoft\visualstudio\14.0exp\projects**下。
+ 本部分位于 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\14.0Exp\Projects** 下。
 
  第一个 GUID 是此类型的项目的 CLSID;第二个 GUID 指示添加项模板的已注册项目类型：
 
@@ -35,9 +37,9 @@ ms.locfileid: "80710218"
 
  **SortPriority** = dword：00000064
 
-| 名称 | 类型 | 从 *.rgs* 文件 (的数据)  | 说明 |
+| 名称 | 类型 | 从 *.rgs* 文件 (的数据)  | 描述 |
 |------------------|-----------| - | - |
-| @ (默认值)  | REG_SZ | #% IDS_ADDITEM_TEMPLATES_ENTRY% | **添加项**模板的资源 ID。 |
+| @ (默认值)  | REG_SZ | #% IDS_ADDITEM_TEMPLATES_ENTRY% | **添加项** 模板的资源 ID。 |
 | Val TemplatesDir | REG_SZ | % TEMPLATE_PATH% \\ &lt; SomeProjectItems&gt; | 显示在 " **添加新项** " 向导的对话框中的项目项的路径。 |
 | Val SortPriority | REG_DWORD | 100 ([!INCLUDE[vcprx64](../../extensibility/internals/includes/vcprx64_md.md)])  | 确定在 " **添加新项** " 对话框中显示的文件的树节点中的排序顺序。 |
 
@@ -46,7 +48,7 @@ ms.locfileid: "80710218"
 > - [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]: {FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}
 > - [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]: {F184B08F-C81C-45F6-A57F-5ABD9991F28F}
 
- 为**TemplatesDir**列出的目录为 *% TEMPLATE_PATH% \\ &lt; SomeProjectItems &gt; *，它是 "**添加新项**" 对话框左侧的节点。 树中的其他元素基于该根目录中的子目录。 可添加到项目中的文件是 " **添加新项** " 对话框的右窗格中的项。
+ 为 **TemplatesDir** 列出的目录为 *% TEMPLATE_PATH% \\ &lt; SomeProjectItems &gt;*，它是 "**添加新项**" 对话框左侧的节点。 树中的其他元素基于该根目录中的子目录。 可添加到项目中的文件是 " **添加新项** " 对话框的右窗格中的项。
 
  通常，此文件夹将包含项目的模板文件（如模板 HTML 或 *.cpp* 文件）和任何用于启动向导的 *.vsz* 文件。 若要控制项的显示方式，还可以包含用于本地化目录名称和图标的 *vsdir* 文件。 本地化字符串是在 " **添加新项** " 对话框中表示此节点的对话框中显示的标题。
 
@@ -77,7 +79,7 @@ ms.locfileid: "80710218"
 
   如果实现此筛选器功能，则不必映射应隐藏的每个项的表。 您可以简单地将项分类为类型，并将分类置于 *vsdir* 文件中。 然后，可以通过实现接口来隐藏具有特定分类的任何项。 通过这种方式，您可以基于项目中的状态，使 " **添加新项** " 对话框中的项成为动态的。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2>
 - [注册项目和项模板](../../extensibility/internals/registering-project-and-item-templates.md)
 - [通常用于扩展项目的对象的 Catid](../../extensibility/internals/catids-for-objects-that-are-typically-used-to-extend-projects.md)

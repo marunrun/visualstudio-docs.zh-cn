@@ -1,5 +1,7 @@
 ---
 title: 旧版语言服务中的大括号匹配 |Microsoft Docs
+description: 了解旧版语言服务中的大括号匹配，该服务可帮助你跟踪必须同时出现的语言元素，如括号和大括号。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0081be3e3ab5a53f7d85f77475d4288aa5c87092
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7d9f93f0081d45e986ab6845cdaee53209b84e13
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709809"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96190000"
 ---
 # <a name="brace-matching-in-a-legacy-language-service"></a>旧版语言服务中的大括号匹配
 大括号匹配有助于开发人员跟踪需要同时出现的语言元素，如括号和大括号。 当开发人员输入右大括号时，将突出显示左大括号。
@@ -35,12 +37,12 @@ ms.locfileid: "80709809"
 
  <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A>方法调用扫描器以标记行并在插入符号的紧前面返回标记。 扫描程序通过 <xref:Microsoft.VisualStudio.Package.TokenTriggers> 在当前令牌上设置的令牌触发器值来指示已找到语言元素对。 <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A>方法调用方法 <xref:Microsoft.VisualStudio.Package.Source.MatchBraces%2A> ，该方法将调用 <xref:Microsoft.VisualStudio.Package.LanguageService.BeginParse%2A> 具有分析原因值的方法 <xref:Microsoft.VisualStudio.Package.ParseReason> 来查找匹配的语言元素。 当找到匹配的语言元素时，将突出显示这两个元素。
 
- 有关键入大括号如何触发大括号突出显示内容的完整说明，请参阅文章[旧版语言服务分析器和扫描程序](../../extensibility/internals/legacy-language-service-parser-and-scanner.md)中的*示例分析操作*部分。
+ 有关键入大括号如何触发大括号突出显示内容的完整说明，请参阅文章 [旧版语言服务分析器和扫描程序](../../extensibility/internals/legacy-language-service-parser-and-scanner.md)中的 *示例分析操作* 部分。
 
 ## <a name="enable-support-for-brace-matching"></a>启用对大括号匹配的支持
- <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute>属性可以设置**MatchBraces**、 **MatchBracesAtCaret**和**ShowMatchingBrace**注册表项，这些项可设置类的相应属性 <xref:Microsoft.VisualStudio.Package.LanguagePreferences> 。 还可以由用户设置语言首选项属性。
+ <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute>属性可以设置 **MatchBraces**、 **MatchBracesAtCaret** 和 **ShowMatchingBrace** 注册表项，这些项可设置类的相应属性 <xref:Microsoft.VisualStudio.Package.LanguagePreferences> 。 还可以由用户设置语言首选项属性。
 
-|注册表项|属性|说明|
+|注册表项|Property|描述|
 |--------------------|--------------|-----------------|
 |MatchBraces|<xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableMatchBraces%2A>|启用大括号匹配。|
 |MatchBracesAtCaret|<xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableMatchBracesAtCaret%2A>|启用与插入符号移动的大括号匹配。|
@@ -50,7 +52,7 @@ ms.locfileid: "80709809"
  可以通过与 `if` `else if` `else` `#if` `#elif` `#else` `#endif` 匹配分隔符相同的方式匹配条件语句，如、、和。 您可以为 <xref:Microsoft.VisualStudio.Package.AuthoringSink> 类添加子类，并提供一个方法，该方法可以将文本范围以及分隔符添加到匹配元素的内部数组。
 
 ## <a name="set-the-trigger"></a>设置触发器
- 下面的示例演示如何检测匹配的括号、大括号和方括号，并在扫描程序中为其设置触发器。 <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A>类上的方法将 <xref:Microsoft.VisualStudio.Package.Source> 检测触发器，并调用分析器来查找匹配对 (请参阅本文) 的*查找匹配*部分。 此示例仅用于说明目的。 它假定您的扫描程序包含一个方法 `GetNextToken` ，该方法用于标识和返回文本行中的标记。
+ 下面的示例演示如何检测匹配的括号、大括号和方括号，并在扫描程序中为其设置触发器。 <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A>类上的方法将 <xref:Microsoft.VisualStudio.Package.Source> 检测触发器，并调用分析器来查找匹配对 (请参阅本文) 的 *查找匹配* 部分。 此示例仅用于说明目的。 它假定您的扫描程序包含一个方法 `GetNextToken` ，该方法用于标识和返回文本行中的标记。
 
 ```csharp
 using Microsoft.VisualStudio.Package;
@@ -135,6 +137,6 @@ namespace TestLanguagePackage
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [旧版语言服务功能](../../extensibility/internals/legacy-language-service-features1.md)
 - [旧版语言服务分析器和扫描程序](../../extensibility/internals/legacy-language-service-parser-and-scanner.md)

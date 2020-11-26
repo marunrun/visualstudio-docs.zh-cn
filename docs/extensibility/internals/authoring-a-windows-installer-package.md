@@ -1,5 +1,7 @@
 ---
 title: 创作 Windows Installer 包 |Microsoft Docs
+description: 了解如何为 Visual Studio 创作 Windows Installer 包，其中包含包含文件和注册表数据的数据库表。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 03d30c0e2b3b375e6e0efedddd3a017fbfb8646a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 82c96bdf8e73f7d40b41220524edef022c216f1b
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80710030"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96190117"
 ---
 # <a name="author-a-windows-installer-package"></a>创作 Windows Installer 包
 数据驱动 Windows Installer 模型。 例如，您可以在数据库表中创作包含文件和注册表数据的行和列，而不是编写过程脚本来复制文件和写入注册表项。
@@ -32,7 +34,7 @@ ms.locfileid: "80710030"
 
 - 使用注册表)  (将 VSPackage 的相应信息添加到注册表中。
 
-- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]通过使用 CustomAction 表) 调用**devenv.exe/setup** (来集成中的 VSPackage。
+- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]通过使用 CustomAction 表) 调用 **devenv.exe/setup** (来集成中的 VSPackage。
 
 有关详细信息，请参阅 [Windows Installer](/windows/desktop/Msi/windows-installer-portal)。
 
