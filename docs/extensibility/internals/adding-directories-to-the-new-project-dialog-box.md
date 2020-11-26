@@ -1,5 +1,7 @@
 ---
 title: 将目录添加到 "新建项目" 对话框 |Microsoft Docs
+description: 了解如何将目录添加到 Visual Studio 的 "新建项目" 对话框中，以便您可以创建新的项目类型并将其显示为模板。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,17 +12,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 827e383bba13c9742deb654bf3d680adeb3c109b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 87e4c0bcb44690a36579fe77564962515534338d
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80710243"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96190143"
 ---
 # <a name="add-directories-to-the-new-project-dialog-box"></a>将目录添加到 "新建项目" 对话框
-创建新的项目类型时，还可以在 " **新建项目** " 对话框中注册一个新的目录，以将其显示为模板。 下面的代码示例说明了如何注册新目录（也称为节点）。 在此示例中，注册了 VSPackage *CLSID_Package*公开的模板。 因此，" **新建项目** " 对话框的左侧提供添加的节点，名称由 *Folder_Label_ResID* 资源确定。 此资源从 VSPackage 附属 DLL 加载。
+创建新的项目类型时，还可以在 " **新建项目** " 对话框中注册一个新的目录，以将其显示为模板。 下面的代码示例说明了如何注册新目录（也称为节点）。 在此示例中，注册了 VSPackage *CLSID_Package* 公开的模板。 因此，" **新建项目** " 对话框的左侧提供添加的节点，名称由 *Folder_Label_ResID* 资源确定。 此资源从 VSPackage 附属 DLL 加载。
 
- **文件夹**值表示在其下显示*Folder_Label_ResID*节点的文件夹的 GUID。 在此示例中，GUID 表示 "**新建项目**" 对话框的 "**项目类型**" 窗格中的 "**其他项目**" 文件夹。 如果缺少 **其他项目** 值，标签将定位在顶层。
+ **文件夹** 值表示在其下显示 *Folder_Label_ResID* 节点的文件夹的 GUID。 在此示例中，GUID 表示 "**新建项目**" 对话框的 "**项目类型**" 窗格中的 "**其他项目**" 文件夹。 如果缺少 **其他项目** 值，标签将定位在顶层。
 
  `TemplatesDir`值指定包含项目模板的目录的完整路径。 这些文件可以是要克隆的 *.vsz* 文件或典型模板文件。
 

@@ -1,5 +1,7 @@
 ---
 title: 创作..Vsct Files |Microsoft Docs
+description: 了解如何创作 .vsct 文件，这些文件将菜单项、工具栏和其他 UI 元素添加到 Visual Studio 集成开发环境 (IDE) 。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 54e67a28d59cb739abbeab188ff1f100751f2aa8
-ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
+ms.openlocfilehash: e0aeb601449ffcc47b7f7786825ee222b8b6ac5b
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93413901"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96190078"
 ---
 # <a name="author-vsct-files"></a>创作 .vsct 文件
 本文档演示如何创作 *.vsct* 文件，以将 (UI) 元素添加到 Visual Studio 集成开发环境 (IDE) 中的菜单项、工具栏和其他用户界面。 将 UI 元素添加到 Visual Studio 包时，请使用以下步骤 (VSPackage) ，该文件还没有 *.vsct* 文件。
@@ -51,9 +53,9 @@ ms.locfileid: "93413901"
 
 1. 在元素顶部，为 `CommandTable` `Extern` 要引用的每个外部文件添加一个元素，并将 `href` 属性设置为该文件的名称。 可以引用以下头文件来访问 Visual Studio 资源：
 
-   - *Stdidcmd* ：定义 Visual Studio 公开的所有命令的 id。
+   - *Stdidcmd*：定义 Visual Studio 公开的所有命令的 id。
 
-   - *Vsshlids* ：包含 Visual Studio 菜单的命令 id。
+   - *Vsshlids*：包含 Visual Studio 菜单的命令 id。
 
 2. 如果你的包调用由 Visual Studio 或其他包定义的任何命令，请在 `UsedCommands` 元素后面添加元素 `Commands` 。 对于您调用的不属于包的每个命令，使用 [UsedCommand](../../extensibility/usedcommand-element.md) 元素填充此元素。 将 `guid` 元素的和 `id` 特性设置 `UsedCommand` 为要调用的命令的 GUID 和 ID 值。
 
@@ -64,7 +66,7 @@ ms.locfileid: "93413901"
 
 #### <a name="to-declare-ui-elements"></a>声明 UI 元素
 
-1. 在 `Symbols` 元素中，添加三个 [GuidSymbol](../../extensibility/guidsymbol-element.md) 元素。 每个 `GuidSymbol` 元素都有一个 `name` 属性和一个 `value` 属性。 设置 `name` 属性，使其反映元素的用途。 `value`属性采用 GUID。  (生成 GUID，请在 " **工具** " 菜单上选择 " **创建 guid** "，然后选择 " **注册表格式** "。 ) 
+1. 在 `Symbols` 元素中，添加三个 [GuidSymbol](../../extensibility/guidsymbol-element.md) 元素。 每个 `GuidSymbol` 元素都有一个 `name` 属性和一个 `value` 属性。 设置 `name` 属性，使其反映元素的用途。 `value`属性采用 GUID。  (生成 GUID，请在 " **工具** " 菜单上选择 " **创建 guid**"，然后选择 " **注册表格式**"。 ) 
 
      第一个 `GuidSymbol` 元素表示包，并且通常没有子级。 第二个 `GuidSymbol` 元素表示命令集，并将包含定义菜单、组和命令的所有符号。 第三个 `GuidSymbol` 元素表示映像存储，并包含命令的所有图标的符号。 如果你没有使用图标的命令，则可以省略第三个 `GuidSymbol` 元素。
 
@@ -233,7 +235,7 @@ ms.locfileid: "93413901"
 
    - 菜单控制器：菜单控制器是一个按钮，该按钮旁有一个箭头。 单击箭头将打开一个列表。 若要将菜单控制器添加到 UI，请创建一个 `Menu` 元素，并将其 `type` 属性设置为 `MenuController` 或 `MenuControllerLatched` ，具体取决于所需的行为。 若要填充菜单控制器，请将其设置为元素的父项 `Group` 。 菜单控制器会在其下拉列表中显示该组的所有子级。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [扩展菜单和命令](../../extensibility/extending-menus-and-commands.md)
 - [Visual Studio 命令表 ( .vsct) 文件](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
 - [.VSCT XML 架构引用](../../extensibility/vsct-xml-schema-reference.md)

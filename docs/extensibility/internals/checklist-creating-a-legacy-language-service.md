@@ -1,5 +1,7 @@
 ---
 title: 清单：创建旧版语言服务 |Microsoft Docs
+description: 了解为 Visual Studio 核心编辑器创建旧版语言服务时必须执行的基本步骤。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 11785dab63cbb6a95ab2d34c5edbfb4525ebf34c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 905d81d49706c3ae5348d71c03189d6e036dd3e5
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709792"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96189987"
 ---
 # <a name="checklist-create-a-legacy-language-service"></a>清单：创建旧版语言服务
 以下清单汇总了为核心编辑器创建语言服务时必须执行的基本步骤 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。 若要将语言服务集成到 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 中，必须创建一个调试表达式计算器。 有关详细信息，请参阅[Visual Studio 调试器扩展性](../../extensibility/debugger/visual-studio-debugger-extensibility.md)中的 "[编写 CLR 表达式计算器](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)"。
@@ -123,6 +125,6 @@ ms.locfileid: "80709792"
 
   - 通过实现接口提供所有用户上下文 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageContextProvider> 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [开发旧版语言服务](../../extensibility/internals/developing-a-legacy-language-service.md)
 - [编写 CLR 表达式计算器](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)

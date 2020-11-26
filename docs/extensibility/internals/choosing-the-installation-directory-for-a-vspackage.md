@@ -1,5 +1,7 @@
 ---
 title: 选择 VSPackage 的安装目录 |Microsoft Docs
+description: 了解如何通过使用诸如是否托管或非托管的因素来选择 VSPackage 及其支持文件的安装目录。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ead19e9f50201ab795e3c3f68b661037d309d98d
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: cfb7f339ca9832db8fdfea47a5bc1aa940534823
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90011900"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96189974"
 ---
 # <a name="choose-the-installation-directory-for-a-vspackage"></a>选择 VSPackage 的安装目录
 VSPackage 及其支持文件必须位于用户的文件系统上。 位置取决于 VSPackage 是托管的还是非托管的、并排版本控制方案和用户选择。
@@ -47,7 +49,7 @@ VSPackage 及其支持文件必须位于用户的文件系统上。 位置取决
 
  " [管理 vspackage](../../extensibility/managing-vspackages.md) " 一文指示注册表项控制 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 实际查找 VSPACKAGE 的附属 DLL 的位置。 不过， [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 尝试按照以下顺序在名为 LCID 值的子目录中加载附属 DLL：
 
-1. Visual Studio LCID (默认 LCID;例如，对于英语) 为*\ 1033*
+1. Visual Studio LCID (默认 LCID;例如，对于英语) 为 *\ 1033*
 
 2. 默认的子语言为默认的 LCID。
 
