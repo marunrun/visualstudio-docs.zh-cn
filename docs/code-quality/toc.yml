@@ -13,21 +13,25 @@
           items:
             - name: 概述
               href: use-roslyn-analyzers.md
-            - name: 代码质量
+            - name: .NET 分析器
               items:
-                - name: 代码质量选项
-                  href: /dotnet/fundamentals/code-analysis/code-quality-rule-options?toc=%2fvisualstudio%2fcode-quality%2ftoc.json
-                - name: 使用 EditorConfig 文件提高代码质量
-                  href: /dotnet/fundamentals/code-analysis/configuration-files?toc=%2fvisualstudio%2fcode-quality%2ftoc.json
-            - name: 代码样式
-              items:
-                - name: 代码样式首选项
-                  href: ../ide/code-styles-and-code-cleanup.md?toc=%252fvisualstudio%252fcode-quality%252ftoc.json
-                - name: 使用 EditorConfig 文件构造代码样式
-                  displayName: Configure code style analyzers
-                  href: ../ide/create-portable-custom-editor-options.md?toc=%252fvisualstudio%252fcode-quality%252ftoc.json
-                - name: 规则选项
-                  href: /dotnet/fundamentals/code-analysis/code-style-rule-options?toc=%2fvisualstudio%2fcode-quality%2ftoc.json
+                - name: 安装 .NET 分析器
+                  href: install-net-analyzers.md
+                - name: 代码质量
+                  items:
+                    - name: 代码质量选项
+                      href: /dotnet/fundamentals/code-analysis/code-quality-rule-options?toc=%2fvisualstudio%2fcode-quality%2ftoc.json
+                    - name: 使用 EditorConfig 文件提高代码质量
+                      href: /dotnet/fundamentals/code-analysis/configuration-files?toc=%2fvisualstudio%2fcode-quality%2ftoc.json
+                - name: 代码样式
+                  items:
+                    - name: 代码样式首选项
+                      href: ../ide/code-styles-and-code-cleanup.md?toc=%252fvisualstudio%252fcode-quality%252ftoc.json
+                    - name: 使用 EditorConfig 文件构造代码样式
+                      displayName: Configure code style analyzers
+                      href: ../ide/create-portable-custom-editor-options.md?toc=%252fvisualstudio%252fcode-quality%252ftoc.json
+                    - name: 规则选项
+                      href: /dotnet/fundamentals/code-analysis/code-style-rule-options?toc=%2fvisualstudio%2fcode-quality%2ftoc.json
             - name: 配置源代码分析
               href: configure-live-code-analysis-scope-managed-code.md
             - name: 手动运行代码分析
@@ -49,8 +53,8 @@
           href: static-code-analysis-for-managed-code-overview.md
         - name: 旧版分析演练
           href: walkthrough-analyzing-managed-code-for-code-defects.md
-        - name: 迁移到 FxCop 分析器
-          href: migrate-from-legacy-analysis-to-fxcop-analyzers.md
+        - name: 迁移到 .NET 分析器
+          href: migrate-from-legacy-analysis-to-net-analyzers.md
         - name: 手动运行旧版分析
           href: how-to-run-legacy-code-analysis-manually-for-managed-code.md
         - name: Configuration
@@ -77,16 +81,14 @@
               href: how-to-synchronize-code-project-rule-sets-with-team-project-check-in-policy.md
             - name: 版本兼容性
               href: version-compatibility-for-code-analysis-check-in-policies.md
-        - name: FxCop 分析器
+        - name: 迁移到 .NET 分析器
           items:
-            - name: 安装 FxCop 分析器
-              href: install-fxcop-analyzers.md
-            - name: 迁移到 FxCop 分析器
-              items:
-                - name: 从旧版分析迁移到 FxCop 分析器
-                  href: migrate-from-legacy-analysis-to-fxcop-analyzers.md
-                - name: FAQ
-                  href: fxcop-analyzers-faq.md
+            - name: 从旧版分析迁移到 .NET 分析器
+              href: migrate-from-legacy-analysis-to-net-analyzers.md
+            - name: 从 FxCop 分析器迁移到 .NET 分析器
+              href: migrate-from-fxcop-analyzers-to-net-analyzers.md
+            - name: FAQ
+              href: net-analyzers-faq.md
         - name: 规则集
           items:
             - name: 概述
