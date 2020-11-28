@@ -1,5 +1,7 @@
 ---
 title: 合并功能和包清单中的 XML |Microsoft Docs
+description: 合并设计器-在 SharePoint 功能和包清单中生成和用户添加的 XML 代码。 了解功能和包清单元素以及合并异常。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1378cddbc9770af923a98f1b7083a8792874b5b3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 16305ed63f48d9f14e35aeb8d37e35f23f40be25
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "90840558"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96304230"
 ---
 # <a name="merge-xml-in-feature-and-package-manifests"></a>合并功能和包清单中的 XML
   功能和包是由 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 清单文件定义的。 这些打包的清单是由设计器生成的数据和 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 由用户在清单模板中输入的自定义数据的组合。 打包时，会 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 将自定义 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 语句与提供程序合并， [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 以形成打包的 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 清单文件。 在将 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 文件部署到 SharePoint 并使清单文件更小且更有效的情况下，将合并类似元素，其中包含在合并异常之后的异常。
@@ -35,7 +37,7 @@ ms.locfileid: "90840558"
 
  下面是功能和包清单文件的合并异常列表 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 。
 
-|Designer|XML 元素|
+|设计器|XML 元素|
 |--------------|-----------------|
 |功能设计器|ActivationDependency|
 |功能设计器|UpgradeAction|
@@ -50,7 +52,7 @@ ms.locfileid: "90840558"
 |功能 (所有属性) |*特性名称* (功能元素的每个特性名称都是唯一键。 ) |
 |ElementFile|位置|
 |ElementManifests/ElementManifest|位置|
-|属性/属性|密钥|
+|属性/属性|键|
 |CustomUpgradeAction|名称|
 |CustomUpgradeActionParameter|名称|
 
@@ -78,6 +80,6 @@ ms.locfileid: "90840558"
 ## <a name="manually-add-deployed-files"></a>手动添加已部署文件
  某些清单元素（例如 ApplicationResourceFile 和 DwpFiles）指定包含文件名的位置。 但是，将文件名条目添加到清单模板不会将基础文件添加到包中。 您必须将该文件添加到项目中，以将其包含在包中，并相应地设置其 "部署类型" 属性。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [打包和部署 SharePoint 解决方案](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)
 - [生成和调试 SharePoint 解决方案](../sharepoint/building-and-debugging-sharepoint-solutions.md)

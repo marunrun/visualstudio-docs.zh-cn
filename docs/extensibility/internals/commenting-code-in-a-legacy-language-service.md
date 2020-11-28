@@ -1,5 +1,7 @@
 ---
 title: 对旧版语言服务中的代码进行注释 |Microsoft Docs
+description: 了解管理包框架 (MPF) 类，这些类为 Visual Studio 中的旧版语言服务中的代码注释提供支持。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5450199fde29f581dafdf9b2884c88ef26ea4ce7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 07205a8e15cd338fa1acf0d3b081301a083bba5d
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709441"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305004"
 ---
 # <a name="comment-code-in-a-legacy-language-service"></a>旧版语言服务中的注释代码
 编程语言通常提供一种批注或注释代码的方法。 注释是提供有关代码的其他信息但在编译或解释过程中被忽略的文本部分。
@@ -32,7 +34,7 @@ ms.locfileid: "80709441"
 
 行注释的开头字符 (或字符) ，而块注释则包含开始字符和结束字符。 例如，在 c # 中，行注释以开头 `//` ，并且块注释以开头 `/*` 并以结尾 `*/` 。
 
-当用户从 "**编辑**高级" 菜单中选择命令**注释选择**时  >  **Advanced** ，该命令将路由到 <xref:Microsoft.VisualStudio.Package.Source.CommentSpan%2A> 类的方法 <xref:Microsoft.VisualStudio.Package.Source> 。 当用户选择 " **取消注释选定内容**" 命令时，该命令将路由到 <xref:Microsoft.VisualStudio.Package.Source.UncommentSpan%2A> 方法。
+当用户从 "**编辑** 高级" 菜单中选择命令 **注释选择** 时  >  **Advanced** ，该命令将路由到 <xref:Microsoft.VisualStudio.Package.Source.CommentSpan%2A> 类的方法 <xref:Microsoft.VisualStudio.Package.Source> 。 当用户选择 " **取消注释选定内容**" 命令时，该命令将路由到 <xref:Microsoft.VisualStudio.Package.Source.UncommentSpan%2A> 方法。
 
 ## <a name="support-code-comments"></a>支持代码注释
  你可以通过的命名参数，使你的语言服务支持代码注释 `EnableCommenting` <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> 。 这将设置 <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableCommenting%2A> 类的属性 <xref:Microsoft.VisualStudio.Package.LanguagePreferences> 。 有关设置语言服务功能的详细信息，请参阅 [注册旧版语言服务](../../extensibility/internals/registering-a-legacy-language-service1.md)。

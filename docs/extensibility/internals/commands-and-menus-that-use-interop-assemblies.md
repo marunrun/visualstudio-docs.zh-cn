@@ -1,5 +1,7 @@
 ---
 title: 使用互操作程序集的命令和菜单 |Microsoft Docs
+description: 了解通过使用互操作程序集实现 VSPackage 中的菜单和工具栏命令时必须完成的任务。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e6c381abe9b4c6ea2a58342e185d7427fa56a180
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e4bf3c1843db67fdadcf0fe177aa17e0f17a627e
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709490"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96304803"
 ---
 # <a name="commands-and-menus-that-use-interop-assemblies"></a>使用互操作程序集的命令和菜单
 使用互操作程序集实现菜单和工具栏命令的 VSPackage 必须：
@@ -31,7 +33,7 @@ ms.locfileid: "80709490"
 
   以下部分介绍如何执行这些任务。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
 - [使用互操作程序集确定命令状态](../../extensibility/internals/determining-command-status-by-using-interop-assemblies.md)
 
  介绍 VSPackage 如何通知 IDE 它所支持的命令以及它们当前是否已启用。

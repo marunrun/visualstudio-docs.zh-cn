@@ -1,5 +1,7 @@
 ---
 title: 如何：将控件标记为安全控件 |Microsoft Docs
+description: 添加程序集时，将控件标记为 SharePoint 项目项的 "安全控件项" 属性或包设计器中的安全控件。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: cd7ed13504d3d91f4239a8ea070454e1c31b1114
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 024cd50fc36b84addca11dc3c0f23cdc64fa507d
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016257"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96304500"
 ---
 # <a name="how-to-mark-controls-as-safe-controls"></a>如何：将控件标记为安全控件
   为安全，SharePoint 在保护的 Web 控件和不是的脚本注入和 Web 控件之间区分开来。 不受信任的用户可以访问受保护的控件或 *安全控件*。 将程序集添加到包中时，可以在 SharePoint 项目项的 "安全控件项" 属性或 **包设计器** 中将控件标记为安全。 有关详细信息，请参阅
@@ -67,9 +69,9 @@ ms.locfileid: "86016257"
 
 4. 创建另一个 SharePoint 解决方案。
 
-5. 在 **解决方案资源管理器**中，打开 *包* 文件的快捷菜单，然后选择 " **打开** " 以打开 **包设计器**。
+5. 在 **解决方案资源管理器** 中，打开 *包* 文件的快捷菜单，然后选择 " **打开** " 以打开 **包设计器**。
 
-6. 在 **包设计器**中，选择 " **高级** " 选项卡。
+6. 在 **包设计器** 中，选择 " **高级** " 选项卡。
 
 7. 在 " **其他程序集**" 下，选择 " **添加** " 按钮，然后从列表中选择 " **添加现有程序集** "。
 
@@ -94,7 +96,7 @@ ms.locfileid: "86016257"
     |安全应对脚本|清除 " **安全应对脚本** " 复选框。|
 
     > [!NOTE]
-    > 通过**包设计器**的 "**高级**" 选项卡添加的程序**集的程序集名称**值不能是标记，它必须是具有强名称的程序集。 有关详细信息，请参阅[创建和使用具有强名称的程序集](/previous-versions/dotnet/netframework-4.0/xwb8f617(v=vs.100))。
+    > 通过 **包设计器** 的 "**高级**" 选项卡添加的程序 **集的程序集名称** 值不能是标记，它必须是具有强名称的程序集。 有关详细信息，请参阅[创建和使用具有强名称的程序集](/previous-versions/dotnet/netframework-4.0/xwb8f617(v=vs.100))。
 
 13. 选择 **Tab** 键以创建另一个安全控件项。
 

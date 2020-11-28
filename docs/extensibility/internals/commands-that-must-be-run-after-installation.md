@@ -1,5 +1,7 @@
 ---
 title: 必须在安装后运行的命令 |Microsoft Docs
+description: 了解在通过 Visual Studio 中的 .msi 文件部署的扩展的安装过程中必须运行的命令。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 77add5afd5d44358f0077a11bb70559a796e74c6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 64eda9c95b9c469d8defc8ab0318031e9e43172a
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709475"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305036"
 ---
 # <a name="commands-that-must-be-run-after-installation"></a>必须在安装后运行的命令
 如果通过 *.msi* 文件部署扩展，则必须在安装过程中运行 **Devenv/Setup** ，Visual Studio 才能发现扩展。
@@ -24,7 +26,7 @@ ms.locfileid: "80709475"
 > 本主题中的信息适用于通过 Visual Studio 2008 和更早版本查找 *devenv.exe* 。 有关如何发现更高版本的 Visual Studio *devenv.exe* 的信息，请参阅 [检测系统要求](../../extensibility/internals/detecting-system-requirements.md)。
 
 ## <a name="find-devenvexe"></a>查找 devenv.exe
- 您可以*devenv.exe* [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 使用 RegLocator 表和 AppSearch 表将注册表值存储为属性，从安装程序编写的注册表值中查找每个版本的devenv.exe。 有关详细信息，请参阅 [检测系统要求](../../extensibility/internals/detecting-system-requirements.md)。
+ 您可以 *devenv.exe* [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 使用 RegLocator 表和 AppSearch 表将注册表值存储为属性，从安装程序编写的注册表值中查找每个版本的devenv.exe。 有关详细信息，请参阅 [检测系统要求](../../extensibility/internals/detecting-system-requirements.md)。
 
 ### <a name="reglocator-table-rows-to-locate-devenvexe-from-different-versions-of-visual-studio"></a>RegLocator 表行，用于从不同版本的 Visual Studio 查找 devenv.exe
 
@@ -44,7 +46,7 @@ ms.locfileid: "80709475"
 |DEVENV_EXE_2005|RL_DevenvExe_2005|
 |DEVENV_EXE_2008|RL_DevenvExe_2008|
 
- 例如，Visual Studio 安装程序将 **HKEY_LOCAL_MACHINE \software\microsoft\visualstudio\9.0\setup\vs\environmentpath** 的注册表值写入 *C:\VS2008\Common7\IDE\devenv.exe*，这是安装程序必须运行的可执行文件的完整路径。
+ 例如，Visual Studio 安装程序将 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0\Setup\VS\EnvironmentPath** 的注册表值写入 *C:\VS2008\Common7\IDE\devenv.exe*，这是安装程序必须运行的可执行文件的完整路径。
 
 > [!NOTE]
 > 因为 RegLocator 表的类型列是2，所以不需要在签名表中指定其他版本信息。

@@ -1,5 +1,7 @@
 ---
 title: 如何：本地化代码 |Microsoft Docs
+description: 了解如何通过将硬编码字符串替换为对 GetGlobalResourceObject 的调用（一个引用本地化资源的方法），来本地化 SharePoint 中的代码。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6c1963ff0b6ef317dfa1a2c8154a1628710dc562
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2cbe38c55b92514954cc3487544fed89d68cc4dc
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016687"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96304587"
 ---
 # <a name="how-to-localize-code"></a>如何：本地化代码
   未本地化代码使用硬编码的字符串值。 若要对代码字符串进行本地化，请将其替换为对的调用 <xref:System.Web.HttpContext.GetGlobalResourceObject%2A> ，这是一个引用本地化资源的方法。
@@ -27,7 +29,7 @@ ms.locfileid: "86016687"
 
 #### <a name="to-localize-code"></a>本地化代码
 
-1. 在**解决方案资源管理器**中，打开项目项的快捷菜单，然后选择 "**添加**  >  **模块**"。
+1. 在 **解决方案资源管理器** 中，打开项目项的快捷菜单，然后选择 "**添加**  >  **模块**"。
 
      选择 " **资源文件** " 模板。
 
@@ -50,9 +52,9 @@ ms.locfileid: "86016687"
 
 7. 生成项目以创建资源附属 Dll。
 
-8. 在 **包设计器**中，选择 " **高级** " 选项卡，然后添加附属程序集。
+8. 在 **包设计器** 中，选择 " **高级** " 选项卡，然后添加附属程序集。
 
-9. 在 "**位置**" 框中，在位置路径前面添加区域性 ID 文件夹，如*取消 \\ \<Project Item Name>.resources.dll*。
+9. 在 "**位置**" 框中，在位置路径前面添加区域性 ID 文件夹，如 *取消 \\ \<Project Item Name>.resources.dll*。
 
 10. 如果解决方案尚未引用 System.web 程序集，请添加对该程序集的引用，并在代码中添加一个指令 <xref:System.Web> 。
 
@@ -68,7 +70,7 @@ ms.locfileid: "86016687"
 
      本地化的字符串将显示在应用程序中。 若要显示本地化的资源，SharePoint 服务器必须安装与资源文件的区域性匹配的语言包。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [本地化 SharePoint 解决方案](../sharepoint/localizing-sharepoint-solutions.md)
 - [如何：本地化功能](../sharepoint/how-to-localize-a-feature.md)
 - [如何：本地化 ASPX 标记](../sharepoint/how-to-localize-aspx-markup.md)

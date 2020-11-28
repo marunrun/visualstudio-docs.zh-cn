@@ -1,5 +1,7 @@
 ---
 title: 如何：本地化功能 |Microsoft Docs
+description: 了解如何通过将硬编码的字符串值替换为引用本地化资源的表达式来本地化 SharePoint 中的功能标题和说明。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b0d15654ba48b6c95cf2b2f7fa4f9cd665f0959a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3865c11c67fd826e0ce914b6aeb88364da3212b7
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016140"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305201"
 ---
 # <a name="how-to-localize-a-feature"></a>如何：本地化功能
   默认情况下，功能标题和说明使用硬编码的字符串值。 若要本地化功能标题和说明，请将字符串替换为引用本地化资源的表达式。
@@ -27,7 +29,7 @@ ms.locfileid: "86016140"
 
 #### <a name="to-localize-a-feature"></a>本地化功能
 
-1. 在 **解决方案资源管理器**中，打开 **Feature1** 节点的快捷菜单，然后选择 " **添加功能资源**"。
+1. 在 **解决方案资源管理器** 中，打开 **Feature1** 节点的快捷菜单，然后选择 " **添加功能资源**"。
 
 2. 在 " **添加资源** " 对话框中，从列表中选择 " **固定语言** " 作为 "默认语言" 功能资源文件的区域性。
 
@@ -37,7 +39,7 @@ ms.locfileid: "86016140"
 
 4. 在资源编辑器中打开每个资源文件，并输入所有字符串 ID 及其值。
 
-     例如，在默认的功能资源文件中，输入一个标题值为 **"我的功能标题**" 的**标题**，并输入一个值为 **"我的功能说明**" 的**说明**的第二个字符串 id。 对于每个本地化的资源文件，使用默认功能资源文件中所使用的相同字符串 ID，但为值输入本地化的字符串。
+     例如，在默认的功能资源文件中，输入一个标题值为 **"我的功能标题**" 的 **标题**，并输入一个值为 **"我的功能说明**" 的 **说明** 的第二个字符串 id。 对于每个本地化的资源文件，使用默认功能资源文件中所使用的相同字符串 ID，但为值输入本地化的字符串。
 
 5. 输入所有资源值后，打开 *Feature1*)  (的功能的快捷菜单，然后选择 " **查看设计器** " 以打开功能设计器中的功能。
 
@@ -45,7 +47,7 @@ ms.locfileid: "86016140"
 
      `$Resources:` *字符串 ID*
 
-     例如，在**功能标题**框中输入 $Resources：**Title** ，并 $Resources： "**功能说明**" 框中的 "**说明**"。
+     例如，在 **功能标题** 框中输入 $Resources：**Title** ，并 $Resources： "**功能说明**" 框中的 "**说明**"。
 
      字符串 ID 必须与资源文件中使用的字符串 ID 匹配。
 

@@ -1,5 +1,7 @@
 ---
 title: 组件管理 |Microsoft Docs
+description: 了解如何在 Visual Studio 中创建 VSPackage 安装程序时管理 Windows Installer 组件。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b5dcac9fb14a83021b852be2c52436fcdca84bf5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 648a1c90b143a0f38f8911fcaed3ee1ed16908b6
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709326"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96304919"
 ---
 # <a name="component-management"></a>组件管理
 Windows Installer 中的任务单位称为 Windows Installer 组件 (有时称为 WICs 或只是组件) 。 GUID 标识每个 WIC，这是使用 Windows Installer 的安装程序的基本安装和引用计数。
@@ -29,7 +31,7 @@ Windows Installer 中的任务单位称为 Windows Installer 组件 (有时称�
 
 - 创作在各个版本之间共享的文件和注册表项。
 
-     这样做使您可以在下一版本中轻松地使用它们。 例如，键入在全局注册的库、文件扩展名、在 **HKEY_CLASSES_ROOT**中注册的其他项，等等。
+     这样做使您可以在下一版本中轻松地使用它们。 例如，键入在全局注册的库、文件扩展名、在 **HKEY_CLASSES_ROOT** 中注册的其他项，等等。
 
 - 将共享组件组合到不同的合并模块中。
 

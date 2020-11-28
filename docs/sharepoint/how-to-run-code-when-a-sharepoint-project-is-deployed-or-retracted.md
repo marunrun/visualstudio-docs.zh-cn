@@ -1,6 +1,8 @@
 ---
 title: 在部署或收回 SharePoint 项目时运行代码
 titleSuffix: ''
+description: 了解如何在部署或撤消 SharePoint 项目时运行代码，以便可以处理由 Visual Studio 引发的事件。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: bb83696febe9eca700ae9651492dbd188e38f856
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 24e6536dc5fdc62bb3b1c32bbd7c379fcef1f8cd
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585753"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96304482"
 ---
 # <a name="how-to-run-code-when-a-sharepoint-project-is-deployed-or-retracted"></a>如何：在部署或收回 SharePoint 项目时运行代码
   如果要在部署或收回 SharePoint 项目时执行其他任务，可以处理由 Visual Studio 引发的事件。 有关详细信息，请参阅 [扩展 SharePoint 打包和部署](../sharepoint/extending-sharepoint-packaging-and-deployment.md)。
