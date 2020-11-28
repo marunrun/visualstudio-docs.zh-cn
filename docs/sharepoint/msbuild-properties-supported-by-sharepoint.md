@@ -1,5 +1,7 @@
 ---
 title: SharePoint 支持的 MSBuild 属性 |Microsoft Docs
+description: 读取由支持的 MSBuild 属性名称和说明的列表，该列表特定于 SharePoint。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,22 +14,22 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5470160c6b0af1af39238a14319ad497e1541a43
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f1eab3832121f1e0c926257797ddbc79695546a5
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72985163"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305148"
 ---
 # <a name="msbuild-properties-supported-by-sharepoint"></a>SharePoint 支持的 MsBuild 属性
   [!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)]可以在 SharePoint 项目中使用在 VisualStudio 文件、项目文件或项目用户文件中定义的任何属性 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 。 除了项目提供的公共 [!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)] 属性，sharepoint 还定义了特定于 sharepoint 项目的其他属性。
 
- 有关公共属性的列表 [!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)] ，请参阅 [常见的 MSBuild 项目属性](/previous-versions/dotnet/netframework-4.0/bb629394(v=vs.100))。 有关编程语言支持的属性的完整列表，请查看 *.targets*文件、项目文件 (*.csproj*或 *.vbproj*) 或项目用户文件 (*.csproj. user*或 *. .vbproj) 。*
+ 有关公共属性的列表 [!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)] ，请参阅 [常见的 MSBuild 项目属性](/previous-versions/dotnet/netframework-4.0/bb629394(v=vs.100))。 有关编程语言支持的属性的完整列表，请查看 *.targets* 文件、项目文件 (*.csproj* 或 *.vbproj*) 或项目用户文件 (*.csproj. user* 或 *. .vbproj) 。*
 
 ## <a name="msbuild-properties-specific-to-sharepoint"></a>特定于 SharePoint 的 MsBuild 属性
  下表列出了 [!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)] 专门适用于中的 SharePoint 项目的属性 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 。 存在其他属性，但它们供内部使用。
 
-|属性名|说明|
+|属性名称|描述|
 |-------------------|-----------------|
 |SharePointSiteUrl|一个字符串，表示 [!INCLUDE[TLA2#tla_url](../sharepoint/includes/tla2sharptla-url-md.md)] SharePoint 站点的。|
 |SandboxedSolution|指示解决方案是否为沙盒解决方案的布尔值。|
@@ -51,6 +53,6 @@ ms.locfileid: "72985163"
 > [!NOTE]
 > 您可以使用 [!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)] variable 语法 `$(` *propertyname* `)` 或环境变量语法 `%` *propertyname* `%` 来指定属性。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [MSBuild 引用](../msbuild/msbuild-reference.md)

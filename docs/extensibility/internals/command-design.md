@@ -1,5 +1,7 @@
 ---
 title: 命令设计 |Microsoft Docs
+description: 了解如何在 Visual Studio 中为 VSPackage 设计命令。 包括，如何指定其出现位置、可用时间以及处理方式。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6aa58813623dc8150cafb4fbfee6496d09f889ac
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2ab06ade9be1ccd0683cd298a5e758ddcfa883f8
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709659"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96304864"
 ---
 # <a name="command-design"></a>命令设计
 将命令添加到 VSPackage 时，必须指定该命令的显示位置、可用时间以及处理方式。
@@ -36,12 +38,12 @@ ms.locfileid: "80709659"
 ## <a name="visual-studio-command-environment"></a>Visual Studio 命令环境
  Visual Studio 可托管任意数量的 Vspackage，每个都可以提供自己的命令集。 环境只显示适合当前任务的命令。 有关详细信息，请参阅 [命令可用性](../../extensibility/internals/command-availability.md) 和 [选择上下文对象](../../extensibility/internals/selection-context-objects.md)。
 
- 定义新命令、菜单、工具栏或快捷菜单的 VSPackage 通过引用本机或托管程序集中的资源的注册表项，在安装时向 Visual Studio 提供其命令信息。 然后，每个资源都引用二进制数据资源 (*cto*) 文件，此文件是在编译 Visual Studio 命令 *表 () * 文件时生成的。 这使 Visual Studio 能够提供合并的命令集、菜单和工具栏，而无需加载每个已安装的 VSPackage。
+ 定义新命令、菜单、工具栏或快捷菜单的 VSPackage 通过引用本机或托管程序集中的资源的注册表项，在安装时向 Visual Studio 提供其命令信息。 然后，每个资源都引用二进制数据资源 (*cto*) 文件，此文件是在编译 Visual Studio 命令 *表 ()* 文件时生成的。 这使 Visual Studio 能够提供合并的命令集、菜单和工具栏，而无需加载每个已安装的 VSPackage。
 
 ### <a name="command-organization"></a>命令组织
  环境按组、优先级和菜单定位命令。
 
-- 组是相关命令的逻辑集合，例如 **剪切**、 **复制**和 **粘贴** 命令组。 组是显示在菜单上的命令。
+- 组是相关命令的逻辑集合，例如 **剪切**、 **复制** 和 **粘贴** 命令组。 组是显示在菜单上的命令。
 
 - 优先级确定组中的单个命令在菜单上的显示顺序。
 
@@ -60,7 +62,7 @@ ms.locfileid: "80709659"
 
 ## <a name="related-topics"></a>相关主题
 
-|Title|说明|
+|Title|描述|
 |-----------|-----------------|
 |[命令实现](../../extensibility/internals/command-implementation.md)|介绍如何在 VSPackage 中实现命令。|
 |[命令可用性](../../extensibility/internals/command-availability.md)|描述 Visual Studio 上下文如何确定哪些命令可用。|

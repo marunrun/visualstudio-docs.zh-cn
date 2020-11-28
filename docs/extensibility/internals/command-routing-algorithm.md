@@ -1,5 +1,7 @@
 ---
 title: 命令传送算法 |Microsoft Docs
+description: 了解 Visual Studio 中的命令解析顺序，因为命令由不同组件处理，并从最内部到最外层上下文。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: af8d3e53e09214ce36a80ca18856085dfb2bb746
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1694e0835add6eac75986538a8abae99adf717b1
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709541"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305230"
 ---
 # <a name="command-routing-algorithm"></a>命令传送算法
 在 Visual Studio 中，命令由许多不同的组件进行处理。 命令从最内层的上下文路由，该上下文基于当前所选内容，到最外面的 (（也称为全局) 上下文）。 有关详细信息，请参阅 [命令可用性](../../extensibility/internals/command-availability.md)。
@@ -36,11 +38,11 @@ ms.locfileid: "80709541"
 
 6. 文档窗口：如果命令在 `RouteToDocs` *.vsct* 文件中设置了标志，则 Visual Studio 将在文档视图对象上查找命令目标，该对象既可以是接口的实例，也可以是 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> 文档对象的实例， (通常是 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines> 接口或 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer>) 接口。 如果文档视图对象不支持命令，则 Visual Studio 会将命令路由到返回的 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> 接口。  (这是文档数据对象的可选接口。 ) 
 
-7. 当前层次结构：当前层次结构可以是拥有活动文档窗口的项目，也可以是在 **解决方案资源管理器**中选择的层次结构。 Visual Studio 将查找 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> 在当前或活动层次结构上实现的接口。 层次结构应支持在层次结构处于活动状态时有效的命令，即使项目项的文档窗口具有焦点也是如此。 但是，仅当 **解决方案资源管理器** 具有焦点时，才必须使用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> 接口及其 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A> 和方法来支持命令 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.ExecCommand%2A> 。
+7. 当前层次结构：当前层次结构可以是拥有活动文档窗口的项目，也可以是在 **解决方案资源管理器** 中选择的层次结构。 Visual Studio 将查找 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> 在当前或活动层次结构上实现的接口。 层次结构应支持在层次结构处于活动状态时有效的命令，即使项目项的文档窗口具有焦点也是如此。 但是，仅当 **解决方案资源管理器** 具有焦点时，才必须使用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> 接口及其 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A> 和方法来支持命令 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.ExecCommand%2A> 。
 
-     **剪切**、 **复制**、 **粘贴**、 **删除**、 **重命名**、 **输入**和 **DoubleClick** 命令需要特殊处理。 有关如何处理层次结构中 **删除** 和 **删除** 命令的信息，请参阅 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyDeleteHandler> 接口。
+     **剪切**、 **复制**、 **粘贴**、 **删除**、 **重命名**、 **输入** 和 **DoubleClick** 命令需要特殊处理。 有关如何处理层次结构中 **删除** 和 **删除** 命令的信息，请参阅 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyDeleteHandler> 接口。
 
 8. 全局：如果命令尚未由前面提到的上下文处理，Visual Studio 会尝试将其路由到拥有实现接口的命令的 VSPackage <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> 。 如果尚未加载 VSPackage，则在 Visual Studio 调用方法时不会加载它 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> 。 VSPackage 仅在调用方法时加载 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [命令设计](../../extensibility/internals/command-design.md)

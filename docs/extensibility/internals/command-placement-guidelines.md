@@ -1,5 +1,7 @@
 ---
 title: 命令放置准则 |Microsoft Docs
+description: 了解有关在 Visual Studio 集成开发环境中将命令定位到 (IDE) 的准则和最佳方案。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 021a5fd9f9931e3041a431d211c8ab49978bbbab
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 11a1619eaa625e086ac93bfa0f9e208239f8c844
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709567"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305247"
 ---
 # <a name="command-placement-guidelines"></a>命令放置准则
 在 Visual Studio 集成开发环境中定位命令的最佳做法 (IDE) 不同，具体取决于命令集的大小。 命令根据 *.vsct* 文件中的信息进行定义和定位。

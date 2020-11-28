@@ -1,5 +1,7 @@
 ---
 title: 分析 SharePoint 应用程序的性能 |Microsoft Docs
+description: 分析 SharePoint 应用程序运行缓慢或效率低下的性能。 使用 Visual Studio 分析功能查找有问题的代码。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 13f2e3f5df236157550aa79af40f0cbc575eb8bf
-ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
+ms.openlocfilehash: ecdacce58e17c616b22c9a6a8ba6fce9d5cf272c
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93414407"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305103"
 ---
 # <a name="profile-the-performance-of-sharepoint-applications"></a>分析 SharePoint 应用程序的性能
 
@@ -39,9 +41,9 @@ ms.locfileid: "93414407"
 
 ## <a name="performance-session-process"></a>性能会话进程
 
-若要分析应用程序，请首先使用分析工具性能向导来创建性能会话。 在菜单栏上，选择 " **分析** "、" **启动性能向导** "。 完成向导时，请输入性能会话所需的信息，例如所需的配置文件方法和要分析的应用程序。 有关详细信息，请参阅 [如何：使用性能向导分析网站或 Web 应用程序](../profiling/how-to-collect-performance-data-for-a-web-site.md)。 作为替代方法，可以使用命令行选项来设置和运行性能会话。 有关详细信息，请参阅 [从命令行使用分析工具](../profiling/using-the-profiling-tools-from-the-command-line.md)。 如果要手动配置性能会话的每个方面，请参阅 [如何：使用分析工具手动创建性能会话](../profiling/how-to-manually-create-performance-sessions.md)。 还可以通过单元测试创建性能会话，方法是在 " **测试结果** " 窗口中打开单元测试的快捷菜单，然后选择 " **创建性能会话** "。
+若要分析应用程序，请首先使用分析工具性能向导来创建性能会话。 在菜单栏上，选择 " **分析**"、" **启动性能向导**"。 完成向导时，请输入性能会话所需的信息，例如所需的配置文件方法和要分析的应用程序。 有关详细信息，请参阅 [如何：使用性能向导分析网站或 Web 应用程序](../profiling/how-to-collect-performance-data-for-a-web-site.md)。 作为替代方法，可以使用命令行选项来设置和运行性能会话。 有关详细信息，请参阅 [从命令行使用分析工具](../profiling/using-the-profiling-tools-from-the-command-line.md)。 如果要手动配置性能会话的每个方面，请参阅 [如何：使用分析工具手动创建性能会话](../profiling/how-to-manually-create-performance-sessions.md)。 还可以通过单元测试创建性能会话，方法是在 " **测试结果** " 窗口中打开单元测试的快捷菜单，然后选择 " **创建性能会话**"。
 
-设置性能会话后，将保存会话配置，并将服务器配置为提供分析数据，并运行应用程序。 使用应用程序时，会将性能数据写入日志文件。 性能会话在 " **目标** " 文件夹下 **性能资源管理器** 中列出。 性能会话完成后，其报表将显示在 **性能资源管理器** 的 " **报表** " 文件夹中。 若要显示报表，请在 **性能资源管理器** 中打开它。 若要查看或配置性能会话的属性，请在 **性能资源管理器** 中打开其快捷菜单，然后选择 " **属性** "。 有关性能会话的特定属性的详细信息，请参阅 [配置分析工具的性能会话](../profiling/configuring-performance-sessions.md)。 有关如何解释性能会话结果的信息，请参阅 [分析分析工具数据](../profiling/analyzing-performance-tools-data.md)。
+设置性能会话后，将保存会话配置，并将服务器配置为提供分析数据，并运行应用程序。 使用应用程序时，会将性能数据写入日志文件。 性能会话在 "**目标**" 文件夹下 **性能资源管理器** 中列出。 性能会话完成后，其报表将显示在 **性能资源管理器** 的 "**报表**" 文件夹中。 若要显示报表，请在 **性能资源管理器** 中打开它。 若要查看或配置性能会话的属性，请在 **性能资源管理器** 中打开其快捷菜单，然后选择 " **属性**"。 有关性能会话的特定属性的详细信息，请参阅 [配置分析工具的性能会话](../profiling/configuring-performance-sessions.md)。 有关如何解释性能会话结果的信息，请参阅 [分析分析工具数据](../profiling/analyzing-performance-tools-data.md)。
 
 ## <a name="stress-test"></a>压力测试
 
@@ -59,7 +61,7 @@ Web 性能测试模拟最终用户可能与 SharePoint 应用程序交互的方�
 
 ## <a name="related-topics"></a>相关主题
 
-|Title|说明|
+|Title|描述|
 |-----------|-----------------|
 |[演练：分析 SharePoint 应用程序](../sharepoint/walkthrough-profiling-a-sharepoint-application.md)|演示如何对 SharePoint 应用程序执行采样分析分析。|
 |[发布前对应用进行性能测试](/azure/devops/test/load-test/run-performance-tests-app-before-release?view=vsts&preserve-view=true)|介绍如何创建负载测试，从而帮助你对 SharePoint 应用程序进行压力测试。|

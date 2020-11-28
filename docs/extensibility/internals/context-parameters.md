@@ -1,5 +1,7 @@
 ---
 title: 上下文参数 |Microsoft Docs
+description: 了解 Visual Studio 集成开发环境中的上下文参数 (IDE) 在添加或实现向导时定义项目的状态。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,15 +13,15 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3d1a8c83ef9794479c35cd36609d77ef94621732
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 654ebf68efebaa44766079c172e87396134805e3
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012446"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96304709"
 ---
 # <a name="context-parameters"></a>上下文参数
-在 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 集成开发环境中 (IDE) ，你可以将向导添加到 " **新建项目**"、" **添加新项**" 或 " **添加子项目** " 对话框。 添加的向导位于 " **文件** " 菜单上，或右键单击 " **解决方案资源管理器**中的项目。 IDE 将上下文参数传递到向导实现。 上下文参数定义在 IDE 调用向导时项目的状态。
+在 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 集成开发环境中 (IDE) ，你可以将向导添加到 " **新建项目**"、" **添加新项**" 或 " **添加子项目** " 对话框。 添加的向导位于 " **文件** " 菜单上，或右键单击 " **解决方案资源管理器** 中的项目。 IDE 将上下文参数传递到向导实现。 上下文参数定义在 IDE 调用向导时项目的状态。
 
  IDE 将启动向导，方法是将 <xref:Microsoft.VisualStudio.Shell.Interop.VSADDITEMOPERATION> IDE 调用中的标志设置为 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.AddItem%2A> 项目的方法。 如果设置此参数，则项目必须 `IVsExtensibility::RunWizardFile` 通过使用已注册的向导名称或 GUID 以及 IDE 传递给它的其他上下文参数来执行方法。
 
@@ -32,7 +34,7 @@ ms.locfileid: "90012446"
 | `LocalDirectory` | 工作项目文件的本地位置。 |
 | `InstallationDirectory` | 的目录路径 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 是安装。 |
 | `FExclusive` | 布尔型标志，指示项目应关闭打开的解决方案。 |
-| `SolutionName` | 解决方案文件的名称，不含目录部分或 *.sln* 扩展名。 *.Suo*文件名也是使用创建的 `SolutionName` 。 如果此参数不是空字符串，向导 <xref:EnvDTE._Solution.Create%2A> 将在添加项目前使用 <xref:EnvDTE._Solution.AddFromTemplate%2A> 。 如果此名称为空字符串，则在 <xref:EnvDTE._Solution.AddFromTemplate%2A> 不调用的情况下使用 <xref:EnvDTE._Solution.Create%2A> 。 |
+| `SolutionName` | 解决方案文件的名称，不含目录部分或 *.sln* 扩展名。 *.Suo* 文件名也是使用创建的 `SolutionName` 。 如果此参数不是空字符串，向导 <xref:EnvDTE._Solution.Create%2A> 将在添加项目前使用 <xref:EnvDTE._Solution.AddFromTemplate%2A> 。 如果此名称为空字符串，则在 <xref:EnvDTE._Solution.AddFromTemplate%2A> 不调用的情况下使用 <xref:EnvDTE._Solution.Create%2A> 。 |
 | `Silent` | 布尔值，指示向导是否应以无提示方式运行，就好像单击了 " **完成** " (`TRUE`) 。 |
 
 ## <a name="context-parameters-for-add-new-item"></a>添加新项的上下文参数
@@ -58,7 +60,7 @@ ms.locfileid: "90012446"
 | `InstallationDirectory` | 安装的目录路径 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。 |
 | `Silent` | 布尔值，指示向导是否应以无提示方式运行，就好像单击了 " **完成** " (`TRUE`) 。 |
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject>
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject2>
 - [自定义参数](../../extensibility/internals/custom-parameters.md)

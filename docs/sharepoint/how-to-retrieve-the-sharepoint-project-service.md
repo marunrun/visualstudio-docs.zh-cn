@@ -1,5 +1,7 @@
 ---
 title: 如何：检索 SharePoint 项目服务 |Microsoft Docs
+description: 了解如何访问项目系统扩展、服务器资源管理器扩展或其他 Visual Studio 扩展中的 SharePoint 项目服务。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -12,19 +14,19 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f49883337c5748c0f8bcab5d0a88e02612e51b4c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 553b4ae3b7ecfa9fa49065824020ebdcecf77215
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015553"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96304446"
 ---
 # <a name="how-to-retrieve-the-sharepoint-project-service"></a>如何：检索 SharePoint 项目服务
   您可以使用以下类型的解决方案访问 SharePoint 项目服务：
 
 - SharePoint 项目系统的扩展，例如项目扩展、项目项扩展或项目项类型定义。 有关这些类型的扩展的详细信息，请参阅 [扩展 SharePoint 项目系统](../sharepoint/extending-the-sharepoint-project-system.md)。
 
-- **服务器资源管理器**中的 " **SharePoint 连接**" 节点的扩展。 有关这些类型的扩展的详细信息，请参阅 [服务器资源管理器中的 "扩展 SharePoint 连接" 节点](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)。
+- **服务器资源管理器** 中的 " **SharePoint 连接**" 节点的扩展。 有关这些类型的扩展的详细信息，请参阅 [服务器资源管理器中的 "扩展 SharePoint 连接" 节点](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)。
 
 - Visual Studio 扩展的另一种类型，如 VSPackage。
 
@@ -52,7 +54,7 @@ ms.locfileid: "86015553"
 
 2. 使用 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType.ProjectService%2A> *projectItemType* 参数的属性检索服务。
 
-     下面的代码示例演示如何使用项目服务将消息写入到 "**输出**" 窗口，并在 "**列表定义**" 项目项的简单扩展中**错误列表**"窗口。
+     下面的代码示例演示如何使用项目服务将消息写入到 "**输出**" 窗口，并在 "**列表定义**" 项目项的简单扩展中 **错误列表**"窗口。
 
      [!code-vb[SPExtensibility.ProjectService.FromProjectSystemExtensions#2](../sharepoint/codesnippet/VisualBasic/spextensibility.projectservice.fromprojectsystemextensions.getprojectservice/extension/extension.vb#2)]
      [!code-csharp[SPExtensibility.ProjectService.FromProjectSystemExtensions#2](../sharepoint/codesnippet/CSharp/spextensibility.projectservice.fromprojectsystemextensions.getprojectservice/extension/extension.cs#2)]
@@ -73,7 +75,7 @@ ms.locfileid: "86015553"
      有关定义项目项类型的详细信息，请参阅 [如何：定义 SharePoint 项目项类型](../sharepoint/how-to-define-a-sharepoint-project-item-type.md)。
 
 ## <a name="retrieve-the-service-in-server-explorer-extensions"></a>检索服务器资源管理器扩展中的服务
- 在**服务器资源管理器**的 " **SharePoint 连接**" 节点的扩展中，可以通过使用对象的属性来访问项目服务 <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.ServiceProvider%2A> <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode> 。
+ 在 **服务器资源管理器** 的 " **SharePoint 连接**" 节点的扩展中，可以通过使用对象的属性来访问项目服务 <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.ServiceProvider%2A> <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode> 。
 
 #### <a name="to-retrieve-the-service-in-a-server-explorer-extension"></a>在服务器资源管理器扩展中检索服务
 
@@ -81,12 +83,12 @@ ms.locfileid: "86015553"
 
 2. 使用 <xref:System.IServiceProvider.GetService%2A> 方法请求 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService> 对象。
 
-     下面的代码示例演示如何使用项目服务将消息写入到 "**输出**" 窗口，并从扩展添加到**服务器资源管理器**中的列表节点的快捷菜单中**错误列表**"窗口。
+     下面的代码示例演示如何使用项目服务将消息写入到 "**输出**" 窗口，并从扩展添加到 **服务器资源管理器** 中的列表节点的快捷菜单中 **错误列表**"窗口。
 
      [!code-vb[SPExtensibility.ProjectService.FromSPExplorerExtensions#1](../sharepoint/codesnippet/VisualBasic/spextensibility.projectservice.fromspexplorerextensions.getprojectservice/extension/extension.vb#1)]
      [!code-csharp[SPExtensibility.ProjectService.FromSPExplorerExtensions#1](../sharepoint/codesnippet/CSharp/spextensibility.projectservice.fromspexplorerextensions.getprojectservice/extension/extension.cs#1)]
 
-     有关**服务器资源管理器**中扩展**sharepoint 连接**节点的详细信息，请参阅[如何：在服务器资源管理器中扩展 sharepoint 节点](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md)。
+     有关 **服务器资源管理器** 中扩展 **sharepoint 连接** 节点的详细信息，请参阅 [如何：在服务器资源管理器中扩展 sharepoint 节点](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md)。
 
 ## <a name="retrieve-the-service-in-other-visual-studio-extensions"></a>在其他 Visual Studio 扩展中检索服务
  可以在 VSPackage 中检索项目服务，或在可访问自动化对象模型中的对象的任何 Visual Studio 扩展中检索项目服务 <xref:EnvDTE80.DTE2> ，例如实现接口的项目模板向导 <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> 。

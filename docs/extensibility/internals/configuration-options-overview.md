@@ -1,5 +1,7 @@
 ---
 title: 配置选项概述 |Microsoft Docs
+description: 了解 Visual Studio 中的项目配置选项。 配置是用命名的属性集和文件位置描述的生成类型。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6d5ac25fcef7b942b791402baf17982c9810e92a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: df8931066aef5f7163018fba540dd46dcfe5dcc0
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709414"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96304745"
 ---
 # <a name="configuration-options-overview"></a>配置选项概述
 中的项目 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 可以支持可生成、调试、运行和/或部署的多个配置。 配置是用命名的属性集（通常是编译器开关和文件位置）描述的生成类型。 默认情况下，新的解决方案包含两个配置： " *调试* " 和 " *发布*"。 可以使用默认设置应用这些配置，或修改这些配置以满足特定的解决方案和/或项目要求。 可以通过两种方式生成某些包：作为 ActiveX 编辑器或就地组件。 但项目不需要支持多个配置。 如果只有一个配置可用，则该配置将映射到所有解决方案配置中。
