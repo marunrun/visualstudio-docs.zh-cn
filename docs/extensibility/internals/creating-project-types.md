@@ -1,5 +1,7 @@
 ---
 title: 创建项目类型 |Microsoft Docs
+description: 了解如何通过设计、创建和注册支持编程任务的新项目类型来扩展 Visual Studio。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +13,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d2398b63b8cd52784252cfc764bb6c6a30e1accc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4038a122c6d2ec5f6ed29df6e529b2bff2e2bb71
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709071"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329921"
 ---
 # <a name="create-project-types"></a>创建项目类型
 可以 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 通过创建新的项目类型来扩展。 若要创建新的项目类型，您必须了解若干概念并完成多个步骤。 以下主题概述了如何创建项目类型。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
 - [项目类型设计决策](../../extensibility/internals/project-type-design-decisions.md)
 
  讨论了在创建新的项目类型之前必须做出的项目、项目文件持久性和承诺 mechanic 设计决策。

@@ -1,5 +1,7 @@
 ---
 title: 自定义可着色项 |Microsoft Docs
+description: 了解如何通过重写 "字体和颜色" 对话框中的项（如关键字和注释），将自定义可着色项创建为语言服务的一部分。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: feecd9e8f8178045f66999b775e2d0792f50b288
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 648a8e45b5b472ccc1a37cd69e2043f0bb5b9aa3
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708999"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328530"
 ---
 # <a name="custom-colorable-items"></a>自定义可着色项
 可以通过将自定义可着色项作为语言服务的一部分实现，来重写着色的类型列表，如关键字和注释。
@@ -32,7 +34,7 @@ ms.locfileid: "80708999"
 >
 > *C:\Program 文件 (x86) \Microsoft Visual Studio 14.0 \ VSSDK\VisualStudioIntegration\Tools\Bin*
 >
-> 若要重置缓存，请输入 **CreateExpInstance/Reset**。 有关 **CreateExpInstance**的详细信息，请参阅 [CreateExpInstance 实用工具](../../extensibility/internals/createexpinstance-utility.md)。
+> 若要重置缓存，请输入 **CreateExpInstance/Reset**。 有关 **CreateExpInstance** 的详细信息，请参阅 [CreateExpInstance 实用工具](../../extensibility/internals/createexpinstance-utility.md)。
 
  永远不会引用可着色项列表中的第一项。 第一项对应于可着色项索引0，并且 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 始终为该项提供默认文本颜色和特性。 处理此未引用项的最简单方法是将列表中的占位符可着色项提供为第一项。
 
@@ -64,7 +66,7 @@ ms.locfileid: "80708999"
 
     有关如何实现 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorableItem> 和接口的示例 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiColorItem> ，请参见 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiColorItem> 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [旧版语言服务的模型](../../extensibility/internals/model-of-a-legacy-language-service.md)
 - [自定义编辑器中的语法着色](../../extensibility/syntax-coloring-in-custom-editors.md)
 - [旧版语言服务中的语法着色](../../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md)

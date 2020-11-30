@@ -1,5 +1,7 @@
 ---
 title: 正在为解决方案创建父容器文件夹 |Microsoft Docs
+description: 了解如何使用源代码管理插件 API 版本1.2 为解决方案中的所有 web 项目指定一个根源代码管理目标。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3e5481e20a12fc05ccba97eef55173e5ce9b30d6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e65da2b50984b0259079a1693dd31d400e1e12e3
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709099"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329934"
 ---
 # <a name="create-parent-container-folders-for-solutions"></a>为解决方案创建父容器文件夹
 在源代码管理插件 API 版本1.2 中，用户可以为解决方案中的所有 web 项目指定一个根源代码管理目标。 此单个根称为超级统一根 (.SUR) 。
@@ -62,7 +64,7 @@ ms.locfileid: "80709099"
 
  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 如果源代码管理插件未返回 `SCC_CAP_CREATESUBPROJECT` 并且功能标志，则默认为版本1.1 行为 `SCC_CAP_GETPARENTPROJECT` 。 此外，用户 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 可以通过将以下项的值设置为 *dword*，选择恢复到1.1 版本：00000001：
 
- **[HKEY_CURRENT_USER \software\microsoft\visualstudio\8.0\sourcecontrol] DoNotCreateSolutionRootFolderInSourceControl**  = *dword： 00000001*
+ **[HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl] DoNotCreateSolutionRootFolderInSourceControl**  = *dword： 00000001*
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [源代码管理插件 API 版本1.2 中的新增功能](../../extensibility/internals/what-s-new-in-the-source-control-plug-in-api-version-1-2.md)

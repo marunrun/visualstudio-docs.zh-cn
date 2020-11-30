@@ -1,5 +1,7 @@
 ---
 title: 设计 XML 命令表 (。.Vsct) 文件 |Microsoft Docs
+description: 了解如何设计 XML 命令表 ( .vsct) 文件，该文件描述命令项的布局和外观，包括按钮、组合框、菜单和工具栏。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,18 +12,18 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: fcd29aee98139bb151c87590b256df6b8370abff
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a1ccab1eddf38e2f93cb00f1f5fdea6ce09f2f05
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708741"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328426"
 ---
 # <a name="design-xml-command-table-vsct-files"></a>设计 XML 命令表 ( .vsct) 文件
 XML 命令表 (*.vsct*) 文件描述 VSPackage 的命令项的布局和外观。 命令项包括按钮、组合框、菜单、工具栏和命令项组。 本文介绍 XML 命令表文件、它们如何影响命令项和菜单，以及如何创建它们。
 
 ## <a name="commands-menus-groups-and-the-vsct-file"></a>命令、菜单、组和 .vsct 文件
- *.Vsct*文件是围绕命令、菜单和命令组进行组织的。 *.Vsct*文件中的 XML 标记表示每个项，以及其他关联项，如命令按钮、命令位置和位图。
+ *.Vsct* 文件是围绕命令、菜单和命令组进行组织的。 *.Vsct* 文件中的 XML 标记表示每个项，以及其他关联项，如命令按钮、命令位置和位图。
 
  通过运行包模板来创建新的 VSPackage 时 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ，模板会生成一个 *.vsct* 文件，其中包含菜单命令、工具窗口或自定义编辑器的必要元素，具体取决于所做的选择。 然后，可以修改此 *.vsct* 文件以满足特定 VSPackage 的要求。 有关如何修改 *.vsct* 文件的示例，请参阅 [扩展菜单和命令](../../extensibility/extending-menus-and-commands.md)。
 
@@ -30,7 +32,7 @@ XML 命令表 (*.vsct*) 文件描述 VSPackage 的命令项的布局和外观。
 ## <a name="differences-between-ctc-and-vsct-files"></a>.Ctc 和 .vsct 文件之间的差异
  尽管 *.vsct* 文件中 XML 标记后面的含义与 *.ctc* 文件格式中的标记相同，但其实现有点不同：
 
-- 新 **\<extern>** 标记是引用其他 *.h*文件（如工具栏文件）的位置。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]
+- 新 **\<extern>** 标记是引用其他 *.h* 文件（如工具栏文件）的位置。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]
 
 - 尽管 *.vsct* 文件支持 **/include** 语句，但 *.ctc* 文件也是 **\<import>** 如此。 差别在于， **/include** 会引入 *所有* 信息，而 **\<import>** 只会引入名称。
 
@@ -50,7 +52,7 @@ XML 命令表 (*.vsct*) 文件描述 VSPackage 的命令项的布局和外观。
 
 - 父节点是可选的。 如果省略，则使用值 *组 Unknown* 。
 
-- *Icon*参数是可选的。
+- *Icon* 参数是可选的。
 
 - Bitmap 节：此部分与 *.ctc* 文件中的相同，不同之处在于，你现在可以通过 Href 指定一个文件名，该文件名将在编译时由 *vsct.exe* 编译器提取。
 
@@ -62,7 +64,7 @@ XML 命令表 (*.vsct*) 文件描述 VSPackage 的命令项的布局和外观。
 
 - Keychord： Keychord 已删除。 新格式为 *Key1、Mod1、Key2、Mod2*。  可以指定字符、十六进制或 VK 常量。
 
-新编译器 *vsct.exe*会编译 *.ctc* 和 *.vsct* 文件。 但是，旧的 *ctc.exe* 编译器将无法识别或 *.vsct* 文件。
+新编译器 *vsct.exe* 会编译 *.ctc* 和 *.vsct* 文件。 但是，旧的 *ctc.exe* 编译器将无法识别或 *.vsct* 文件。
 
 可以使用 *vsct.exe* 编译器将现有 *的 cto* 文件转换为 *.vsct* 文件。 有关详细信息，请参阅 [如何：从现有的 cto 文件创建 .vsct 文件](../../extensibility/internals/how-to-create-a-dot-vsct-file.md#how-to-create-a-dot-vsct-file-from-an-existing-dot-cto-file)。
 
@@ -73,7 +75,7 @@ XML 命令表 (*.vsct*) 文件描述 VSPackage 的命令项的布局和外观。
 
 - [Extern 元素](../../extensibility/extern-element.md)：引用要与 *.vsct* 文件合并的所有外部 .h 文件。
 
-- [Include 元素](../../extensibility/include-element.md)：引用要编译的任何附加标头 () 文件以及 *.vsct* 文件。 *.Vsct*文件可以包含 *.h*文件，其中包含的常量用于定义 IDE 或其他 VSPackage 提供的命令、菜单组和菜单。
+- [Include 元素](../../extensibility/include-element.md)：引用要编译的任何附加标头 () 文件以及 *.vsct* 文件。 *.Vsct* 文件可以包含 *.h* 文件，其中包含的常量用于定义 IDE 或其他 VSPackage 提供的命令、菜单组和菜单。
 
 - [命令元素](../../extensibility/commands-element.md)：表示所有可执行的单个命令。 每个命令都具有以下四个子元素：
 
@@ -89,7 +91,7 @@ XML 命令表 (*.vsct*) 文件描述 VSPackage 的命令项的布局和外观。
 
 - [VisibilityConstraints 元素](../../extensibility/visibilityconstraints-element.md)：指定是在任何时候还是仅在某些上下文（如显示特定的对话框或窗口）中显示命令。 只有指定的上下文处于活动状态时，才会显示具有此元素的值的菜单和命令。 默认行为是始终显示该命令。
 
-- [键绑定元素](../../extensibility/keybindings-element.md)：指定命令的任何键绑定。 这是一个或多个必须按下以执行命令的组合键，如**Ctrl** + **S**。
+- [键绑定元素](../../extensibility/keybindings-element.md)：指定命令的任何键绑定。 这是一个或多个必须按下以执行命令的组合键，如 **Ctrl** + **S**。
 
 - [UsedCommands 元素](../../extensibility/usedcommands-element.md)：通知 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 环境：尽管指定的命令由其他代码实现，但当当前 VSPackage 处于活动状态时，它会提供命令实现。
 
@@ -119,7 +121,7 @@ XML 命令表 (*.vsct*) 文件描述 VSPackage 的命令项的布局和外观。
 
  *% PROGRAMFILES (x86) % \ Visual Studio \\ \<version> SDK\VisualStudioIntegration\Tools\Bin\CreateExpInstance.exe*
 
- 使用命令 **CreateExpInstance/Reset**运行该工具。 请记住，此工具从实验性 hive 中删除通常不随一起安装的所有已注册的 Vspackage [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。
+ 使用命令 **CreateExpInstance/Reset** 运行该工具。 请记住，此工具从实验性 hive 中删除通常不随一起安装的所有已注册的 Vspackage [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [扩展菜单和命令](../../extensibility/extending-menus-and-commands.md)

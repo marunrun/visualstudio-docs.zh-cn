@@ -1,5 +1,7 @@
 ---
 title: 使用 "打开方式" 命令显示文件 |Microsoft Docs
+description: 了解项目如何通过 Visual Studio 集成开发环境中的 "打开方式" 命令调用 (IDE) 来显示文件。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4051793077e613981e1dd5b44f1736878f5853e9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f2cb6bd44148d470cac68addc09db9e9207e9d70
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708582"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329687"
 ---
 # <a name="display-files-by-using-the-open-with-command"></a>使用 "打开方式" 命令显示文件
 项目可以要求 IDE 显示 " **打开方式** " 对话框。 此请求将提示用户打开具有选定标准编辑器的文件。 以下步骤描述了此过程：

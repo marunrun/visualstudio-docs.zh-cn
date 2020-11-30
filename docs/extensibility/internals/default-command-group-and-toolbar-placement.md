@@ -1,5 +1,7 @@
 ---
 title: 默认命令、组和工具栏位置 |Microsoft Docs
+description: 了解默认情况下 Visual Studio 用户界面显示的 IDE 命令、产品命令和编辑器命令。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +17,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b432b514231e876dda1393bad8a315030272d998
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cacf8db933c7d56d44351da11b7b310bc0bdb8aa
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708890"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329875"
 ---
 # <a name="default-command-group-and-toolbar-placement"></a>默认命令、组和工具栏位置
 对于产品一致性和稳定性，UI 默认显示特定的命令组，并 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 提供命令和命令组的定义。 Vspackage 还可以使用标准命令和命令组。
@@ -40,6 +42,6 @@ ms.locfileid: "80708890"
 
  编辑器工具栏应放置在 IDE 和 product 工具栏下方。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [IDE 定义的命令、菜单和组](../../extensibility/internals/ide-defined-commands-menus-and-groups.md)
 - [Vspackage 如何添加用户界面元素](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)

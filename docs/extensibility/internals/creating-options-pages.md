@@ -1,5 +1,7 @@
 ---
 title: 创建选项页 |Microsoft Docs
+description: 了解如何通过从托管包框架实现 Dialogpage 派生类，在 Visual Studio 的 "工具" 菜单下创建选项页。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 368efaa78a56723d4a72c482bea9ee739385127e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4759b3590fcde116e6f106ac326ff875e9566c43
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709149"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328634"
 ---
 # <a name="create-options-pages"></a>创建选项页
 在 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 托管包框架中， <xref:Microsoft.VisualStudio.Shell.DialogPage> 通过在 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] "**工具**" 菜单下添加 "**选项**" 页，从派生的类扩展 IDE。
@@ -59,7 +61,7 @@ ms.locfileid: "80709149"
 ## <a name="example"></a>示例
  下面是一个简单的 "Hello world" 选项页实现。 将以下代码添加到 Visual Studio 包模板创建的默认项目，并选择 " **菜单命令** " 选项，可充分说明选项页面功能。
 
-### <a name="description"></a>说明
+### <a name="description"></a>描述
  下面的类定义最小的 "Hello world" 选项页。 当打开时，用户可以 `HelloWorld` 在属性网格中设置公共属性。
 
 ### <a name="code"></a>代码

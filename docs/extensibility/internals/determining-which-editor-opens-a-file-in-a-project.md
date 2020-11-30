@@ -1,5 +1,7 @@
 ---
 title: 确定在项目中打开文件的编辑器 |Microsoft Docs
+description: 了解 Visual Studio 用来确定在项目中打开文件的编辑器的注册表项和 Visual Studio SDK 方法。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: af7037a3b4bfbae1801e802256af240d017d2789
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f9574a3319d3c43c17d7351e462b6956ae899d84
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708662"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328400"
 ---
 # <a name="determine-which-editor-opens-a-file-in-a-project"></a>确定在项目中打开文件的编辑器
 当用户打开项目中的文件时，环境将经历一个轮询过程，最后打开该文件的相应编辑器或设计器。 环境使用的初始过程对于标准编辑器和自定义编辑器都是相同的。 环境在轮询用于打开文件的编辑器时使用各种条件，而 VSPackage 必须在此过程中与环境进行协调。
@@ -27,11 +29,11 @@ ms.locfileid: "80708662"
 
  "杂项文件" 项目声明了其他项目未声明的所有文件。 这样，自定义编辑器可以在标准编辑器打开文档之前打开它们。 如果杂项文件项目声明文件，则环境将调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> 方法以使用标准编辑器打开文件。 环境检查其已注册编辑器的内部列表，其中一个用于处理 *.rtf* 文件的编辑器。 此列表位于注册表中的以下项：
 
- **HKEY_LOCAL_MACHINE \Software\Microsoft\VisualStudio \\ \<version> \Editors \\ \<editor factory guid> \Extensions**
+ **HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\\ \<version> \Editors \\ \<editor factory guid> \Extensions**
 
- 环境还会检查 **HKEY_CLASSES_ROOT \clsid** 键中具有子项 **DocObject**的任何对象的类标识符。 如果在此处找到文件扩展名，则会在 Visual Studio 中就地创建应用程序的嵌入式版本，如 Microsoft Word。 这些文档对象必须是实现接口的复合文件 <xref:Microsoft.VisualStudio.OLE.Interop.IPersistStorage> ，或者对象必须实现 <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat> 接口。
+ 环境还会检查 **HKEY_CLASSES_ROOT\CLSID** 项中具有子项 **DocObject** 的任何对象的类标识符。 如果在此处找到文件扩展名，则会在 Visual Studio 中就地创建应用程序的嵌入式版本，如 Microsoft Word。 这些文档对象必须是实现接口的复合文件 <xref:Microsoft.VisualStudio.OLE.Interop.IPersistStorage> ，或者对象必须实现 <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat> 接口。
 
- 如果在注册表中没有针对 *.rtf* 文件的编辑器工厂，则环境将查找 **HKEY_CLASSES_ROOT \\ .rtf** 密钥并打开其中指定的编辑器。 如果在 **HKEY_CLASSES_ROOT**中找不到该文件扩展名，则该环境将使用 Visual Studio core 文本编辑器打开该文件（如果它是文本文件）。
+ 如果在注册表中没有针对 *.rtf* 文件的编辑器工厂，则环境将查找 **HKEY_CLASSES_ROOT \\ .rtf** 密钥并打开其中指定的编辑器。 如果在 **HKEY_CLASSES_ROOT** 中找不到该文件扩展名，则该环境将使用 Visual Studio core 文本编辑器打开该文件（如果它是文本文件）。
 
  如果核心文本编辑器失败（如果文件不是文本文件，则会发生这种情况），环境将为文件使用其二进制编辑器。
 
@@ -39,7 +41,7 @@ ms.locfileid: "80708662"
 
  该环境现在复查列为其内部注册编辑器的列表，以便查找 *.rtf* 文件的新注册编辑器工厂。 环境调用方法的实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A> ，并传入要创建的文件名称和视图类型。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat>
 - <xref:Microsoft.VisualStudio.OLE.Interop.IPersistStorage>
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A>

@@ -1,5 +1,6 @@
 ---
 title: 旧版语言服务中的自定义文档属性
+description: 了解如何创建在 Visual Studio 属性窗口中显示的自定义文档属性作为旧版语言服务的一部分。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3c38ad28456ab8b9bccf29d2249307b718a5767b
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: d5fa24f3d052ab9122776967607b2c197fb102bf
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036829"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329895"
 ---
 # <a name="custom-document-properties-in-a-legacy-language-service"></a>旧版语言服务中的自定义文档属性
 文档属性可以显示在 " [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **属性** " 窗口中。 编程语言通常没有与单个源文件关联的属性。 但是，XML 支持影响编码、架构和样式表的文档属性。
@@ -159,7 +160,7 @@ namespace TestLanguagePackage
 //!Description = A sample file
 ```
 
- 此示例显示了从源文件的前两行获取和设置文档属性所需的两个方法，以及在用户直接修改源文件的情况下如何更新属性。 `SetPropertyValue`此处显示的示例中的方法与类中调用的方法相同， `TestDocumentProperties` 如*自定义 DocumentProperties 类*部分所示。
+ 此示例显示了从源文件的前两行获取和设置文档属性所需的两个方法，以及在用户直接修改源文件的情况下如何更新属性。 `SetPropertyValue`此处显示的示例中的方法与类中调用的方法相同， `TestDocumentProperties` 如 *自定义 DocumentProperties 类* 部分所示。
 
  此示例使用扫描器来确定前两行中的令牌类型。 此示例仅用于说明目的。 对于这种情况，更典型的方法是将源文件分析为分析树，其中树的每个节点都包含关于特定标记的信息。 根节点将包含文档属性。
 
@@ -398,5 +399,5 @@ namespace TestLanguagePackage
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [旧版语言服务功能](../../extensibility/internals/legacy-language-service-features1.md)

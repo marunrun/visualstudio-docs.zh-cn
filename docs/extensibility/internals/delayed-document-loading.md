@@ -1,5 +1,7 @@
 ---
 title: 延迟的文档加载 |Microsoft Docs
+description: 了解有关 Visual Studio 中延迟的文档加载的信息，以及如何编写扩展的代码，使其不在加载文档之前查询文档中的元素。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: fb07b8e2-a4e3-4cb0-b04f-8eb11c491f35
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2f78d49013c1f0bd359d4439b73620a159a9ccc0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c6489c819efe0fd29cd2d120c08414cf0532ad6f
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708816"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328387"
 ---
 # <a name="delayed-document-loading"></a>延迟的文档加载
 
@@ -65,4 +67,4 @@ ms.locfileid: "80708816"
 
 没有可见的提示来指示文档是否已初始化，因此，如果扩展正在强制初始化，则很难发现。 你可以设置一个使验证更简单的注册表项，因为这会导致未完全初始化的每个文档的标题在标题中具有文本 *[存根]* 。
 
-在**HKEY_CURRENT_USER \software\microsoft\visualstudio\14.0\backgroundsolutionload**中，将**StubTabTitleFormatString**设置为* {0} [存根]*。
+在 **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0\BackgroundSolutionLoad** 中，将 **StubTabTitleFormatString** 设置为 *{0} [存根]*。
