@@ -6,12 +6,12 @@ ms.author: dominicn
 ms.date: 09/23/2019
 ms.assetid: 598FC25A-6DA3-44BB-B128-AD979E9F86EA
 ms.topic: how-to
-ms.openlocfilehash: 18bf3b0e36efda193c341993f9c2a88f04430922
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6796ab12716d1d2f3ec2570c32b410c8360b8a81
+ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801758"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94998381"
 ---
 # <a name="accessibility-features-of-macos"></a>macOS 辅助功能
 
@@ -29,12 +29,20 @@ macOS 是一种可访问的操作系统，具有许多功能，可帮助用户�
 
 1. 选择“重启 Visual Studio”  ，以启用对 Apple 辅助技术的支持。
 
+也可以使用命令行启用辅助功能。 为此，请在终端中输入以下命令：
+
+```bash
+defaults write com.microsoft.visual-studio com.monodevelop.AccessibilityEnabled 1
+```
+
+通过命令行更改此设置后，需要重启 Visual Studio。
+
 ## <a name="increase-the-contrast-in-macos"></a>提高 macOS 中的对比度
 
 Visual Studio for Mac 支持 macOS 中提高的对比度，可提高 UI 元素的对比度并使轮廓更明确。 启用此项：
 
-1. 打开“系统首选项”  。
+1. 打开“系统首选项”。
 
-1. 转到“辅助功能”  ，然后选择“显示”  。
+1. 转到“辅助功能”，然后选择“显示”。
 
-1. 选择“增加对比度”  复选框。
+1. 选择“增加对比度”复选框。

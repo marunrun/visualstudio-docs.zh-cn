@@ -1,5 +1,7 @@
 ---
 title: 实用指南
+description: 了解 Visual Studio 中的键盘快捷方式以及可提高工作效率的功能，它们可帮助你高效地编写代码、调试代码和处理错误。
+ms.custom: SEO-VS-2020
 ms.date: 4/29/2020
 ms.topic: conceptual
 author: ornellaalt
@@ -7,12 +9,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8a10b1f9b3dd6dda643a2775cf7b89221fba71d8
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: bee392ddc4e7a0d185bdcc2d0e31dbd17832c733
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808137"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95870867"
 ---
 # <a name="productivity-guide-for-visual-studio"></a>Visual Studio 实用指南
 
@@ -84,7 +86,7 @@ ms.locfileid: "90808137"
 
 - **使用“编辑/转到最近文件”查看经常使用的文件**。 使用 Visual Studio 中的“转到”命令执行代码的重点搜索，以帮助快速找到指定项。 有关详细说明，请参阅[使用“转到”命令查找代码](../ide/go-to.md)。
 
-- **将[属性窗口](../ide/reference/properties-window.md)移到右侧**。 如果正在寻找更熟悉的窗口布局，则可通过按 F4 在 Visual Studio 中移动“属性”窗口。
+- **将 [属性窗口](../ide/reference/properties-window.md)移到右侧**。 如果正在寻找更熟悉的窗口布局，则可通过按 F4 在 Visual Studio 中移动“属性”窗口。
 
 ## <a name="find-items-faster"></a>更快速查找项
 

@@ -1,5 +1,6 @@
 ---
 title: 将测试控制器/测试代理绑定到网络适配器
+description: 了解在安装的测试控制器或测试代理有多种网络适配器可用的情况下如何使用 IP 地址将其绑定到一种网络适配器。
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
@@ -12,12 +13,12 @@ ms.assetid: 7eb9290a-f9f6-4e41-9caa-796fcfaf0610
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: dc590973a0a98cd9c5108c9cfe44ea957073b313
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 3f4c215937f6637eedfa869a5e3abd701966c693
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810293"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442345"
 ---
 # <a name="how-to-bind-a-test-controller-or-test-agent-to-a-network-adapter"></a>如何：将测试控制器或测试代理绑定到网络适配器
 

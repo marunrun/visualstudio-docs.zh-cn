@@ -1,5 +1,7 @@
 ---
 title: “类视图”和“对象浏览器”图标
+description: 了解“类视图”和“对象浏览器”显示的表示代码实体的图标，如命名空间、类、函数和变量。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -16,12 +18,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 87bce70f83be2af80f93cf9888432257f6139732
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: f8c0cf21d6d9055f183d15728fb63118ffb87e9c
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85285136"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903996"
 ---
 # <a name="class-view-and-object-browser-icons"></a>“类视图”和“对象浏览器”图标
 

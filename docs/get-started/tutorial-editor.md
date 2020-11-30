@@ -1,8 +1,11 @@
 ---
 title: 代码编辑器中的编辑功能简介
+description: 了解如何使用 Visual Studio 中的代码编辑器向文件添加代码，以及如何编写代码、导航到代码和重构代码。
 ms.date: 11/30/2017
 ms.technology: vs-ide-general
-ms.custom: get-started
+ms.custom:
+- get-started
+- SEO-VS-2020
 ms.topic: tutorial
 author: TerryGLee
 ms.author: tglee
@@ -11,12 +14,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: a0c8122bd08e4eb9af68a0aa70f06cfb18e51469
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 39c5fd62b67c8153da0a64dcd92142300912c25f
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75595262"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94901773"
 ---
 # <a name="learn-to-use-the-code-editor"></a>了解如何使用代码编辑器
 
@@ -54,7 +57,7 @@ ms.locfileid: "75595262"
 
 ::: moniker-end
 
-2. 在菜单栏上的“文件”菜单中，选择“新建” > “文件”************。
+2. 在菜单栏上的“文件”菜单中，选择“新建” > “文件”。
 
 3. 在“新建文件”对话框的“常规”类别中，选择“Visual C# 类”，然后选择“打开”   。
 
@@ -66,7 +69,7 @@ ms.locfileid: "75595262"
 
 Visual Studio 提供了实用的代码片段，可用于快速方便地生成常用代码块。 [代码片段](../ide/code-snippets.md)可用于不同编程语言，包括 C#、Visual Basic 和 C++。 我们将 C# `void Main` 代码片段添加到文件。
 
-1. 将光标停在文件中最后的结束括号 } 的上方，并键入字符 `svm`****。 （`svm` 代表 `static void Main`；[Main()](/dotnet/csharp/programming-guide/main-and-command-args/) 方法是 C# 应用程序的入口点。）
+1. 将光标停在文件中最后的结束括号 } 的上方，并键入字符 `svm`。 （`svm` 代表 `static void Main`；[Main()](/dotnet/csharp/programming-guide/main-and-command-args/) 方法是 C# 应用程序的入口点。）
 
    随即将出现一个弹出对话框，其中包含有关 `svm` 代码片段的信息。
 

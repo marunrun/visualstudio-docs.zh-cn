@@ -1,5 +1,7 @@
 ---
 title: 使用存根隔离应用程序的各个部分以进行测试
+description: 了解存根，这是用来在测试期间替代另一个组件的一小段代码。 可通过使用存根返回一致的结果。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.author: mikejo
@@ -10,12 +12,12 @@ author: mikejo5000
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 268cfaa0a5df458ae529f5f2d369dc157ef64548
-ms.sourcegitcommit: f2bb3286028546cbd7f54863b3156bd3d65c55c4
+ms.openlocfilehash: eeb7b981dcaec97d52c24ea40476f0bec84e608e
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93325964"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95598557"
 ---
 # <a name="use-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing"></a>使用存根隔离应用程序的各个部分以进行单元测试
 

@@ -1,5 +1,7 @@
 ---
 title: 分析负载测试结果
+description: 了解如何通过负载测试分析器以自动方式或以手动方式（在通过命令行进行测试的情况下）访问负载测试结果来进行分析。
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -14,12 +16,12 @@ ms.assetid: b0a3e694-2894-479b-b270-7e61e9fafacd
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: b72db87014304dc2b9baf57e05015e53a630c431
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 95108a5901a00582e708f6bf3660cb07d2126e0a
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85288528"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442594"
 ---
 # <a name="how-to-access-load-test-results-for-analysis"></a>如何：访问负载测试结果进行分析
 

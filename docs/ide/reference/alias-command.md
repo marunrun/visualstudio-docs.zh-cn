@@ -1,5 +1,7 @@
 ---
 title: “别名”命令
+description: 了解如何使用“别名”命令为完整命令、完整命令和参数或另一个别名创建新别名。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,12 +18,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 031f1a4bab1acee3f3d0999b17c0b607f7808df9
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 8a9521809baf338c542b0c1cba288f643b985f02
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75596900"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95871504"
 ---
 # <a name="alias-command"></a>“别名”命令
 为完整命令、完整命令和参数或另一个别名创建新别名。
@@ -35,21 +37,21 @@ ms.locfileid: "75596900"
 Tools.Alias [/delete] [/reset] [aliasname] [aliasstring]
 ```
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 `aliasname`\
 可选。 新别名的名称。 如果不为 `aliasname` 提供任何值，则显示当前别名及其定义的列表。
 
 `aliasstring`\
 可选。 完整命令名称、现有别名或想创建为别名的任何参数。 如果不为 `aliasstring` 提供任何值，则显示指定别名的名称和字符串。
 
-## <a name="switches"></a>开关
+## <a name="switches"></a>交换机
 /delete 或 /del 或 /d\
 可选。 删除指定别名，将其从自动补全中删除。
 
 /reset\
 可选。 将预定义别名的列表重置为其原始设置。 即还原所有预定义别名，并删除所有用户定义的别名。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 别名表示命令，因此别名必须位于命令行的开头。
 
 发出此命令时，应将开关紧跟在命令（而不是别名）之后，否则开关本身会被视为别名字符串。
@@ -80,4 +82,4 @@ Tools.Alias [/delete] [/reset] [aliasname] [aliasstring]
 - [Visual Studio 命令](../../ide/reference/visual-studio-commands.md)
 - [“命令”窗口](../../ide/reference/command-window.md)
 - [“查找/命令”框](../../ide/find-command-box.md)
-- [Visual Studio Command Aliases](../../ide/reference/visual-studio-command-aliases.md)
+- [Visual Studio 命令别名](../../ide/reference/visual-studio-command-aliases.md)

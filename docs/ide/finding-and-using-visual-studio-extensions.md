@@ -1,5 +1,7 @@
 ---
 title: 查找并安装扩展
+description: 了解 Visual Studio 中的扩展并了解如何管理扩展，以便获得控件、示例、模板、工具以及其他所需组件。
+ms.custom: SEO-VS-2020
 ms.date: 09/18/2019
 ms.topic: conceptual
 f1_keywords:
@@ -14,12 +16,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f016af58b5799ca37b1a8f0cc54366d639c57c03
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c5d4cf36d722c260f52584b16557bcb8d7cda83c
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75594404"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006531"
 ---
 # <a name="manage-extensions-for-visual-studio"></a>管理 Visual Studio 的扩展
 

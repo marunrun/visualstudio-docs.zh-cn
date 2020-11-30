@@ -1,5 +1,7 @@
 ---
 title: 添加文件头
+description: 了解如何使用 EditorConfig 文件向现有文件、项目和解决方案添加文件头。
+ms.custom: SEO-VS-2020
 ms.date: 07/10/2020
 ms.topic: reference
 author: mikadumont
@@ -7,12 +9,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 44c3b64d9fb8944a578d054b7d98d4bf39bde3bc
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 5f2e4715c0333b02f120ec5f92d9f742196c04f3
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810371"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95870854"
 ---
 # <a name="add-file-header"></a>添加文件头
 
@@ -36,7 +38,7 @@ ms.locfileid: "90810371"
 
 3. 将规则的值设置为等于要应用的头文本。 对于文件名，可以使用 `{fileName}` 作为占位符。
 
-    ![EditorConfig 文件头规则](media/add-file-header-rule.png)
+    ![显示 file_header_template 值的 EditorConfig 文件的屏幕截图。](media/add-file-header-rule.png)
 
     > [!NOTE]
     > EditorConfig 中不能有显式多行，你需要使用 Unix 换行符来插入新行。
@@ -47,7 +49,7 @@ ms.locfileid: "90810371"
 
 6. 选择“添加文件头”。 
 
-    ![EditorConfig 文件头规则](media/add-file-header.png)
+    ![“添加文件头”选项的屏幕截图。](media/add-file-header.png)
 
 7. 若要将文件头应用于整个项目或解决方案，请选择“修复以下对象中的所有实例:”选项下面的“项目”或“解决方案”。
 

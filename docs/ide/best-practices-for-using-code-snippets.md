@@ -1,5 +1,7 @@
 ---
 title: 有关使用代码段的最佳做法
+description: 了解代码片段、代码片段的用途以及如何以最佳方式使用它们来使其适合应用程序。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 08add20b59e3e14897d1870aa45fd6cce8698d96
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: f54a451bea8345d06073e6f3a8ab944b3c7ea820
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75591705"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903138"
 ---
 # <a name="best-practices-for-using-code-snippets"></a>有关使用代码片段的最佳做法
 
@@ -23,19 +25,19 @@ ms.locfileid: "75591705"
 
 ## <a name="handling-exceptions"></a>处理异常
 
-通常情况下，代码片段 Try…Catch 块可捕获和重新引发所有异常。 这可能并不适合你的项目。 对于每个异常，可通过几种方法进行响应。 相关示例请参阅[如何：使用 try/catch 处理异常 (C#)](/dotnet/csharp/programming-guide/exceptions/how-to-handle-an-exception-using-try-catch) 和 [Try...Catch...Finally 语句 (Visual Basic)](/dotnet/visual-basic/language-reference/statements/try-catch-finally-statement)。
+通常情况下，代码片段 Try…Catch 块可捕获和重新引发所有异常。 这可能并不适合你的项目。 对于每个异常，可通过几种方法进行响应。 相关示例，请参阅[如何：使用 try/catch 处理异常 (C#)](/dotnet/csharp/programming-guide/exceptions/how-to-handle-an-exception-using-try-catch) 和 [Try...Catch...Finally 语句 (Visual Basic)](/dotnet/visual-basic/language-reference/statements/try-catch-finally-statement)。
 
 ## <a name="file-locations"></a>文件位置
 
 改写文件位置以使其适合应用程序时，应考虑以下事项：
 
-- 查找可访问的位置。 用户可能无权访问计算机的 Program Files 文件夹，因此可能无法存储包含应用程序文件的文件  。
+- 查找可访问的位置。 用户可能无权访问计算机的 Program Files 文件夹，因此可能无法存储包含应用程序文件的文件。
 
-- 查找安全位置。 将文件存储在根文件夹 (C:\\) 中并不安全。 建议将应用程序数据存储在“应用程序数据”文件夹中  。 对于个人用户数据，应用程序可在“文档”文件夹中为每位用户创建一个文件  。
+- 查找安全位置。 将文件存储在根文件夹 (C:\\) 中并不安全。 建议将应用程序数据存储在“应用程序数据”文件夹中。 对于个人用户数据，应用程序可在“文档”文件夹中为每位用户创建一个文件。
 
 - 使用有效文件名。 可使用 <xref:System.Windows.Forms.OpenFileDialog> 和 <xref:System.Windows.Forms.SaveFileDialog> 控件降低使用无效文件名的可能性。 请注意，在用户选择文件和代码操作该文件的时间范围内，可能会删除该文件。 此外，用户可能没有写入该文件的权限。
 
-## <a name="security"></a>安全
+## <a name="security"></a>安全性
 
 代码片段的安全程度取决于源代码中使用它的位置以及位于代码中后如何对其进行修改。 以下列表包含几个必须考虑的区域。
 

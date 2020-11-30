@@ -1,5 +1,6 @@
 ---
 title: 修复无法检测的动态参数（Web 性能测试）
+description: 了解 Web 性能测试记录器和播放引擎如何自动处理最常见的动态参数类型。
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
@@ -11,12 +12,12 @@ ms.assetid: 92dff25c-36ee-4135-acdd-315c4962fa11
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: cad94040997d8cead6be799bee6b2bc17aab699c
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 713d711847d798c617074d2d620e09f914c1a147
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810635"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442711"
 ---
 # <a name="fix-non-detectable-dynamic-parameters-in-a-web-performance-test"></a>在 Web 性能测试中修复无法检测的动态参数
 

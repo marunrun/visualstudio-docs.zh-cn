@@ -1,5 +1,7 @@
 ---
 title: MSTest Assert 类和方法
+description: 了解如何在执行应用程序代码单元测试时使用 Assert 语句测试代码行为的正确性。
+ms.custom: SEO-VS-2020
 ms.date: 06/07/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -11,12 +13,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: c36916c79bd783ed2c6ce960b068e85478b9971d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: c5401fb15a19d069c0bf454661d6d9283abb2585
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75592043"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95598193"
 ---
 # <a name="use-assert-classes-for-unit-testing"></a>使用 Assert 类进行单元测试
 
@@ -34,11 +36,11 @@ ms.locfileid: "75592043"
 
 使用 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert> 类来比较和检查字符串。 此类包含各种有用的方法，如 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.Contains%2A?displayProperty=nameWithType>、<xref:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.Matches%2A?displayProperty=nameWithType> 和 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.StartsWith%2A?displayProperty=nameWithType>。
 
-### <a name="exceptions"></a>异常
+### <a name="exceptions"></a>例外
 
-测试失败时，将引发 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException> 异常。 如果测试超时，引发意外的异常，或者包含生成失败结果的 Assert 语句，则测试将失败  。
+测试失败时，将引发 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException> 异常。 如果测试超时，引发意外的异常，或者包含生成失败结果的 Assert 语句，则测试将失败。
 
-测试生成无结论的结果时，将引发 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.AssertInconclusiveException>  。 通常，将 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.Inconclusive%2A?displayProperty=nameWithType> 语句添加到仍在处理的测试中，以指示它是否尚未准备好运行。
+测试生成无结论的结果时，将引发 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.AssertInconclusiveException>。 通常，将 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.Inconclusive%2A?displayProperty=nameWithType> 语句添加到仍在处理的测试中，以指示它是否尚未准备好运行。
 
 > [!NOTE]
 > 备用策略使用 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.IgnoreAttribute> 属性标记尚未准备好运行的测试。 但是，这样做的弊端是你无法轻松地对未执行的测试数量生成报表。
@@ -47,6 +49,6 @@ ms.locfileid: "75592043"
 
 要验证期望由应用程序代码中的方法引发的异常确实已引发，请使用 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.ThrowsException%2A?displayProperty=nameWithType> 方法。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [单元测试代码](../test/unit-test-your-code.md)

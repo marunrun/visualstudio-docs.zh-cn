@@ -1,5 +1,7 @@
 ---
 title: 管理外部工具
+description: 了解如何添加和管理可通过“工具”菜单访问的新外部工具。
+ms.custom: SEO-VS-2020
 ms.date: 11/20/2017
 ms.topic: conceptual
 f1_keywords:
@@ -11,45 +13,45 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f22c687f88c7736d5c088ebc28ff490c4c16b8f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: c77ab079a2950d4417c2d00ef74cf86d5c206de7
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75591289"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95596685"
 ---
 # <a name="manage-external-tools"></a>管理外部工具
 
-可以使用“工具”  菜单从 Visual Studio 内部调用外部工具。 “工具”  菜单上提供了几个默认工具，但你也可以通过添加自己的其他可执行文件来自定义该菜单。
+可以使用“工具”菜单从 Visual Studio 内部调用外部工具。 “工具”菜单上提供了几个默认工具，但你也可以通过添加自己的其他可执行文件来自定义该菜单。
 
 ## <a name="tools-available-on-the-tools-menu"></a>“工具”菜单中提供的工具
 
-“工具”  菜单包含若干内置命令，包括：
+“工具”菜单包含若干内置命令，包括：
 
 ::: moniker range="vs-2017"
 
-*  用于[管理 Visual Studio 扩展](finding-and-using-visual-studio-extensions.md)的“扩展和更新”
-*  用于[整理代码片段](code-snippets.md)的“代码片段管理器”
-*  用于[自定义菜单和工具栏](how-to-customize-menus-and-toolbars-in-visual-studio.md)的“自定义”
-*  用于[为 Visual Studio IDE 和其他工具设置各种不同选项](reference/options-dialog-box-visual-studio.md)的“选项”
+* 用于[管理 Visual Studio 扩展](finding-and-using-visual-studio-extensions.md)的“扩展和更新”
+* 用于[整理代码片段](code-snippets.md)的“代码片段管理器”
+* 用于[自定义菜单和工具栏](how-to-customize-menus-and-toolbars-in-visual-studio.md)的“自定义”
+* 用于[为 Visual Studio IDE 和其他工具设置各种不同选项](reference/options-dialog-box-visual-studio.md)的“选项”
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-*  用于[整理代码片段](code-snippets.md)的“代码片段管理器”
-*  用于[自定义菜单和工具栏](how-to-customize-menus-and-toolbars-in-visual-studio.md)的“自定义”
-*  用于[为 Visual Studio IDE 和其他工具设置各种不同选项](reference/options-dialog-box-visual-studio.md)的“选项”
+* 用于[整理代码片段](code-snippets.md)的“代码片段管理器”
+* 用于[自定义菜单和工具栏](how-to-customize-menus-and-toolbars-in-visual-studio.md)的“自定义”
+* 用于[为 Visual Studio IDE 和其他工具设置各种不同选项](reference/options-dialog-box-visual-studio.md)的“选项”
 
 ::: moniker-end
 
 ## <a name="add-new-tools-to-the-tools-menu"></a>将新工具添加到“工具”菜单
 
-可以添加将在“工具”  菜单中显示的外部工具。
+可以添加将在“工具”菜单中显示的外部工具。
 
-1. 通过选择“工具” > “外部工具”，打开“外部工具”对话框。
+1. 通过选择“工具” > “外部工具”，打开“外部工具”对话框  。
 
-1. 单击  “添加”，然后填写信息。 例如，以下条目会导致 Windows 资源管理器在当前已在 Visual Studio 中打开的文件目录中打开  ：
+1. 单击“添加”，然后填写信息。 例如，以下条目会导致 Windows 资源管理器在当前已在 Visual Studio 中打开的文件目录中打开：
 
    * 标题：`Open File Location`
 
@@ -72,7 +74,7 @@ ms.locfileid: "75591289"
 |当前文本|$(CurText)|选定的文本。|
 |目标路径|$(TargetPath)|要生成的项的完整文件名（驱动器 + 路径 + 文件名）。|
 |目标目录|$(TargetDir)|要生成的项的目录。|
-|Target Name|$(TargetName)|要生成的项的文件名。|
+|目标名称|$(TargetName)|要生成的项的文件名。|
 |目标扩展名|$(TargetExt)|要生成的项的文件扩展名。|
 |二进制目录|$(BinDir)|正在生成的二进制文件的最终位置（定义为驱动器 + 路径）。|
 |项目目录|$(ProjectDir)|当前项目的目录（驱动器 + 路径）。|
@@ -81,7 +83,7 @@ ms.locfileid: "75591289"
 |解决方案文件名|$(SolutionFileName)|当前解决方案的文件名（驱动器 + 路径 + 文件名）。|
 
 > [!NOTE]
-> IDE 状态栏会显示“当前行”和“当前列”变量，用于指示插入点在活动代码编辑器中的位置    。 “当前文本”变量返回在该位置选择的文本或代码  。
+> IDE 状态栏会显示“当前行”和“当前列”变量，用于指示插入点在活动代码编辑器中的位置  。 “当前文本”变量返回在该位置选择的文本或代码。
 
 ## <a name="see-also"></a>另请参阅
 

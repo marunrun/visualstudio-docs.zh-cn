@@ -2,17 +2,17 @@
 title: Visual Studio 订阅中的 Azure 社区支持权益 | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
-manager: lank
+manager: cabuschl
 ms.assetid: c15f7e18-b280-4902-a60d-2c2598653207
-ms.date: 07/29/2019
+ms.date: 11/17/2020
 ms.topic: conceptual
 description: 了解有关所选 Visual Studio 订阅中包含的 Azure 社区支持权益。
-ms.openlocfilehash: 000732d2c46d777c68451153dc5965d45087abce
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.openlocfilehash: 21f984d3c41ae4f654fea638792b5db4f3c8acb2
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92353208"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903918"
 ---
 # <a name="azure-community-support-forum-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 Azure 社区支持论坛
 在选定的支持论坛中通过 Azure 社区直接从 Azure 团队获得帮助。  Azure 社区权益提供访问专注于 Azure 相关主题的一系列论坛的权限。
@@ -70,13 +70,13 @@ Azure 社区权益的可用性取决于订阅级别，如下所示：
 
 |                                          订阅级别                                           |     信道      |    好处    | 是否续订？ |
 |-------------------------------------------------------------------------------------------------------|-------------------|---------------|------------|
-|                           Visual Studio Enterprise（标准）                           | VL、Azure、零售 |   一年    |    是     |
-|                           带有 GitHub Enterprise 的 Visual Studio Enterprise                           | VL、Azure、零售 |   一年    |    是     |
-|                          Visual Studio Professional（标准）                          | VL、Azure、零售 |   一年    |    是     |
-|                          带有 GitHub Enterprise 的 Visual Studio Professional                          | VL、Azure、零售 |   一年    |    是     |
-|                              Visual Studio Test Professional（标准）                               |    VL、零售     |   一年    |    是     |
-|                                       MSDN 平台（标准）                                       |    VL、零售     |   一年    |    是     |
-| Visual Studio Enterprise（月度云）、Visual Studio Professional（月度云）、NFR<sup>1</sup> |        全部        | 不可用 |     否     |
+|                           Visual Studio Enterprise（标准）、NFR<sup>1</sup>                            | VL、Azure、零售 |   可用    |    是     |
+|                           带有 GitHub Enterprise 的 Visual Studio Enterprise                           | VL、Azure、零售 |   可用    |    是     |
+|                          Visual Studio Professional（标准）                          | VL、Azure、零售 |   可用    |    是     |
+|                          带有 GitHub Enterprise 的 Visual Studio Professional                          | VL、Azure、零售 |   可用    |    是     |
+|                              Visual Studio Test Professional（标准）                               |    VL、零售     |   可用    |    是     |
+|                                       MSDN 平台（标准）                                       |    VL、零售     |   可用    |    是     |
+| Visual Studio Enterprise（月度云）、Visual Studio Professional（月度云）|        全部        | 不可用 |     否     |
 
 <sup>1</sup>  包括：  不得转售 (NFR)、Microsoft FTE、最有价值专家 (MVP)、区域总监 (RD)、Visual Studio 行业合作伙伴 (VSIP)、BizSpark、Imagine、Microsoft 认证培训师 (MCT)
 

@@ -1,5 +1,7 @@
 ---
 title: 应用程序页上的 VB 项目属性
+description: 了解如何使用“Visual Basic 项目设计器”的“应用程序”页指定项目的应用程序设置和属性。
+ms.custom: SEO-VS-2020
 ms.date: 10/30/2018
 ms.topic: reference
 f1_keywords:
@@ -13,18 +15,18 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fe303f86b282e7e803dacc1dd8f4d3c1d6b72121
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 675c3fbaaf1a3e49648befebca4927299649b057
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75595808"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95871413"
 ---
 # <a name="application-page-project-designer-visual-basic"></a>Application Page, Project Designer (Visual Basic)
 
 使用项目设计器的“应用程序”  页可指定项目的应用程序设置和属性。
 
-若要访问“应用程序”页，请在**解决方案资源管理器**中选择项目节点（而非“解决方案”节点）。 然后在菜单栏上依次选择“项目”   > “属性”  。 当“项目设计器”出现时，选择“应用程序”选项卡   。
+若要访问“应用程序”页，请在 **解决方案资源管理器** 中选择项目节点（而非“解决方案”节点）。 然后在菜单栏上依次选择“项目”   > “属性”  。 当“项目设计器”出现时，选择“应用程序”选项卡   。
 
 [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]
 

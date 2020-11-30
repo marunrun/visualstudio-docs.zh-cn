@@ -1,5 +1,7 @@
 ---
 title: 使用类设计器
+description: 了解如何使用 Visual Studio 中的类设计器设计、直观显示和重构代码中的类和其他类型。
+ms.custom: SEO-VS-2020
 ms.date: 05/08/2018
 ms.topic: conceptual
 f1_keywords:
@@ -17,16 +19,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 80668f3b999d9e022de3d22abb383f2dbd10730a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 72d646150baafb7e7169a3c0a2452da6aec5df9b
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87507906"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94902982"
 ---
 # <a name="design-and-view-classes-and-types-with-class-designer"></a>使用类设计器设计和查看类和类型
 
-使用 Visual Studio 中的类设计器设计、直观显示和重构代码中的类和其他类型  。 使用类图来创建和编辑 C#、Visual Basic 或 C++ 项目中的类。 也可以使用类图深入了解项目结构或重新组织代码。
+使用 Visual Studio 中的类设计器设计、直观显示和重构代码中的类和其他类型。 使用类图来创建和编辑 C#、Visual Basic 或 C++ 项目中的类。 也可以使用类图深入了解项目结构或重新组织代码。
 
 ## <a name="what-you-can-do-with-class-diagrams"></a>如何使用类图
 
@@ -54,9 +56,9 @@ ms.locfileid: "87507906"
 在对一个或多个类图进行微调之后，你可以将它们复制到 Microsoft Office 文档中并打印出来，或是将它们作为图像文件导出。 有关详细信息，请参阅[如何：将类图元素复制到 Microsoft Office 文档](how-to-copy-class-diagram-elements-to-a-microsoft-office-document.md)、[如何：打印类图](how-to-print-class-diagrams.md)以及[如何：将类图作为图像导出](how-to-export-class-diagrams-as-images.md)。
 
 > [!NOTE]
-> 类设计器不会跟踪源文件的位置，因此更改项目结构或移动项目中的源文件就可能导致类设计器无法继续对类型进行跟踪，尤其是 typedef 的源类型、基类或关联类型。 可能会收到错误，如“类设计器无法显示此类型”  。 如果收到错误，要将修改过的或被重新定位的源代码再次拖到类图中以重新显示。
+> 类设计器不会跟踪源文件的位置，因此更改项目结构或移动项目中的源文件就可能导致类设计器无法继续对类型进行跟踪，尤其是 typedef 的源类型、基类或关联类型。 可能会收到错误，如“类设计器无法显示此类型”。 如果收到错误，要将修改过的或被重新定位的源代码再次拖到类图中以重新显示。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [代码编辑器功能](../writing-code-in-the-code-and-text-editor.md)
 - [映射解决方案中的依赖项](../../modeling/map-dependencies-across-your-solutions.md)

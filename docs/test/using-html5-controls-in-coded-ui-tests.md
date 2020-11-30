@@ -1,5 +1,7 @@
 ---
 title: 在编码的 UI 测试中使用 HTML5 控件
+description: 了解编码的 UI 测试对 Internet Explorer 9 和 Internet Explorer 10 中包含的 HTML5 控件的支持。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.author: mikejo
@@ -7,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 3519d1cc030c69880bcc047b4b4123785c4fb8b2
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: d902d31b0d417c32b7b3e1a2067a8bb5bcf77451
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85289334"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95598375"
 ---
 # <a name="using-html5-controls-in-coded-ui-tests"></a>在编码的 UI 测试中使用 HTML5 控件
 

@@ -1,5 +1,7 @@
 ---
 title: 创建适用于 Web 性能测试的记录器插件
+description: 了解在“Web 性能测试记录器”工具栏中选择“停止”后如何通过 WebTestRecorderPlugin 修改已记录的 Web 性能测试。
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -8,12 +10,12 @@ ms.assetid: 6fe13be1-aeb5-4927-9bff-35950e194da9
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 3f75114683a4f456d0514af20c1c201c373bd4b0
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: ce4be33e2e29ee0089184a034e56cf3a0539dc76
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85287997"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95440055"
 ---
 # <a name="how-to-create-a-recorder-plug-in"></a>如何：创建记录器插件
 

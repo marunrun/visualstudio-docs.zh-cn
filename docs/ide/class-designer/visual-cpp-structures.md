@@ -1,5 +1,7 @@
 ---
 title: 类设计器中的 C++ 结构
+description: 了解类设计器如何支持使用关键字 struct 声明的 C++ 结构。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2aa8014835df2b5b2bd3dc68e2aaf0b079e001e8
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: d22ff6be694de69f105897821aba1b587955f748
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75590679"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903424"
 ---
 # <a name="c-structures-in-class-designer"></a>类设计器中的 C++ 结构
 

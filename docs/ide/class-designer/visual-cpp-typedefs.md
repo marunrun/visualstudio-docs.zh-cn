@@ -1,5 +1,7 @@
 ---
 title: 类设计器中的 C++ Typedef
+description: 了解类设计器如何支持使用关键字 typedef 声明的 C++ typedef 类型。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,16 +15,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c57382809b7730df2d7c674c24902d70ccab647
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: f95b948d4ffc70d225dd4a8b2bb2debe111c967e
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75590691"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903437"
 ---
 # <a name="c-typedefs-in-class-designer"></a>类设计器中的 C++ Typedef
 
-[Typedef](/cpp/cpp/aliases-and-typedefs-cpp#typedefs) 语句可在某个名称和其基础类型之间创建一个或多个间接层。 “类设计器”  支持使用关键字 `typedef` 声明的 C++ typedef 类型，例如：
+[Typedef](/cpp/cpp/aliases-and-typedefs-cpp#typedefs) 语句可在某个名称和其基础类型之间创建一个或多个间接层。 “类设计器”支持使用关键字 `typedef` 声明的 C++ typedef 类型，例如：
 
 ```cpp
 typedef class coord
@@ -39,11 +41,11 @@ typedef class coord
 
 ## <a name="class-and-struct-shapes"></a>类和结构形状
 
-在“类设计器”  中，C++ typedef 具有 typedef 中所指定类型的形状。 如果源声明 `typedef class`，则形状具有圆角和标签“类”  。 对于 `typedef struct`，形状具有方角和标签 **Struct**。
+在“类设计器”中，C++ typedef 具有 typedef 中所指定类型的形状。 如果源声明 `typedef class`，则形状具有圆角和标签“类”。 对于 `typedef struct`，形状具有方角和标签 **Struct**。
 
-类和结构可在自身内声明嵌套的 typedef。 在“类设计器”  中，类和结构形状可将嵌套的 typedef 声明显示为嵌套的形状。
+类和结构可在自身内声明嵌套的 typedef。 在“类设计器”中，类和结构形状可将嵌套的 typedef 声明显示为嵌套的形状。
 
-Typedef 形状支持右键单击菜单（关联菜单）中的“显示为关联”  和“显示为集合关联”  命令。
+Typedef 形状支持右键单击菜单（关联菜单）中的“显示为关联”和“显示为集合关联”命令。
 
 ### <a name="class-typedef-example"></a>类 typedef 示例
 
@@ -68,7 +70,7 @@ typedef struct mystructtag
 
 ## <a name="unnamed-typedefs"></a>未命名的 typedef
 
-虽然可以声明没有名称的 typedef，但“类设计器”不会使用指定的标记名称  。 “类设计器”  使用“类视图”  生成的名称。 例如，以下声明有效，但它在类视图和类设计器中显示为名为 __unnamed 的对象    ：
+虽然可以声明没有名称的 typedef，但“类设计器”不会使用指定的标记名称。 “类设计器”使用“类视图”生成的名称。 例如，以下声明有效，但它在类视图和类设计器中显示为名为 __unnamed 的对象  ：
 
 ```cpp
 typedef class coord
@@ -80,9 +82,9 @@ typedef class coord
 ```
 
 > [!NOTE]
-> “类设计器”不显示其源类型为函数指针的 typedef  。
+> “类设计器”不显示其源类型为函数指针的 typedef。
 
 ## <a name="see-also"></a>另请参阅
 
 - [使用 C++代码](working-with-visual-cpp-code.md)
-- [Typedefs](/cpp/cpp/aliases-and-typedefs-cpp#typedefs)
+- [Typedef](/cpp/cpp/aliases-and-typedefs-cpp#typedefs)

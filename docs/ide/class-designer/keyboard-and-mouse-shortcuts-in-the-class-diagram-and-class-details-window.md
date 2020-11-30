@@ -1,5 +1,7 @@
 ---
 title: 类设计器的键盘快捷方式和鼠标快捷方式
+description: 了解除鼠标外还可如何使用键盘在类设计器和“类详细信息”窗口中执行导航操作。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 30932a6c94bc6104aeea0244f06f471d0a639b21
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: c184a12474e2d7ff0b626547acaaf2a37d460c8e
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85533661"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94901097"
 ---
 # <a name="keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window"></a>类图和“类详细信息”窗口中的键盘快捷方式和鼠标快捷方式
 
@@ -95,7 +97,7 @@ ms.locfileid: "85533661"
 |**空格键**|将光标移到下一个字段，方法是先从左到右移动，再从上到下移动。 如果光标位于空字段（如 \<add parameter>）上，它将移动到下一行的第一个字段。 请注意，将忽略紧跟着逗号键入的 \<space>。<br /><br /> 如果光标在“摘要”字段中，键入一个空格就会添加一个空格字符。<br /><br /> 如果光标位于给定行的隐藏列中，键入一个空格将切换“隐藏”复选框的值。|
 |Ctrl + Tab|切换到另一个文档窗口。 例如，从类详细信息窗口切换到打开的代码文件。|
 |**Esc**|如果你已经开始在字段中键入文本，则按 ESC 将等同于撤消键，这会将字段内容恢复到以前的值。 如果类详细信息窗口具有常规焦点，但特定的单元格均无焦点，则按 ESC 会将焦点移出类详细信息窗口。|
-|**向上键**和**向下键**|这些键会在类详细信息窗口网格中使光标在行间垂直移动。|
+|**向上键** 和 **向下键**|这些键会在类详细信息窗口网格中使光标在行间垂直移动。|
 |**向左键**|如果光标位于名称列中，按左箭头将在层次结构中折叠当前节点（如果打开）。|
 |**向右键**|如果光标位于名称列中，按右箭头将在层次结构中展开当前节点（如果折叠）。|
 

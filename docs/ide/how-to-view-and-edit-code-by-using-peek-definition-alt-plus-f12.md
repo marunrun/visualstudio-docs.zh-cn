@@ -1,5 +1,7 @@
 ---
 title: 使用查看定义
+description: 了解如何使用“速览定义”命令查看和编辑代码，而不必切换当前编写的代码的上下文。
+ms.custom: SEO-VS-2020
 ms.date: 01/10/2018
 ms.topic: how-to
 author: TerryGLee
@@ -7,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 753d26e2c48f6263ccbc9c403f255948b5077924
-ms.sourcegitcommit: a466720759426265b18b0f8d74a970e72493d700
+ms.openlocfilehash: 0b706e730767c7c79fbeebc11291ecd11f4635b6
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86092305"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95596919"
 ---
 # <a name="how-to-view-and-edit-code-by-using-peek-definition-altf12"></a>如何：使用“查看定义”(Alt+F12) 查看和编辑代码
 

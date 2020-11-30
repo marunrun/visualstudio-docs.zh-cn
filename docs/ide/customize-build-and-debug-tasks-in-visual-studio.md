@@ -1,5 +1,6 @@
 ---
 title: 使用 JSON 文件来自定义生成调试任务
+description: 了解如何自定义任务，以提供某些配置详细信息，从而运行和调试 Visual Studio 无法识别的代码库。
 ms.custom: SEO-VS-2020
 ms.date: 02/21/2018
 ms.topic: conceptual
@@ -14,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 795fbb099654c8b947c1c8e2941fad015a574717
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: 26f529fe8d9d8731375c4aa0783dde0dadb28a1d
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93046233"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006453"
 ---
 # <a name="customize-build-and-debug-tasks-for-open-folder-development"></a>自定义“打开文件夹”开发的生成和调试任务
 

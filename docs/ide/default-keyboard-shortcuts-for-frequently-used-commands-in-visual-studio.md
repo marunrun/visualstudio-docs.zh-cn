@@ -1,5 +1,6 @@
 ---
 title: 常用命令的键盘快捷方式
+description: 了解调用 Visual Studio 最常用命令的键盘快捷方式。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -8,21 +9,21 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 64c3a163f706898dfb358b15279e62729f40cf84
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: c60da36ac6a8e5002e65e0973af0f3e0cb13eef7
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93045663"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006479"
 ---
 # <a name="popular-keyboard-shortcuts-for-visual-studio"></a>Visual Studio 的常用键盘快捷方式
 
 你可以通过按以下默认键盘快捷键访问 Visual Studio 中的常用命令。 有关具有默认快捷方式的命令的完整列表，请参阅[默认键盘快捷方式](../ide/default-keyboard-shortcuts-in-visual-studio.md)。
 
-“全局”上下文表示该快捷方式适用于 Visual Studio 中的任何工具窗口  。
+“全局”上下文表示该快捷方式适用于 Visual Studio 中的任何工具窗口。
 
 > [!NOTE]
-> 通过打开“选项”对话框，展开“环境”节点，然后选择“键盘”，可以[查找任何命令的快捷方式](identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)    。
+> 通过打开“选项”对话框，展开“环境”节点，然后选择“键盘”，可以[查找任何命令的快捷方式](identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)  。
 
 ## <a name="build"></a>生成
 
@@ -58,9 +59,9 @@ ms.locfileid: "93045663"
 |命令|键盘快捷方式 [上下文]|
 |--------------| - |
 |编辑.分行|**Enter** [文本编辑器、报表设计器、Windows 窗体设计器]<br /><br />或 **Shift+Enter** [文本编辑器]|
-|Edit.CollapseToDefinitions|**Ctrl+M** 、 **Ctrl+O** [文本编辑器]|
-|编辑.注释选定内容|**Ctrl+K** 、 **Ctrl+C** [文本编辑器]|
-|编辑.完成单词|**Alt+向右键** [文本编辑器、工作流设计器]<br /><br />或 **Ctrl+空格键** [文本编辑器、工作流设计器]<br /><br />或 **Ctrl+K** 、 **W** [工作流设计器]<br /><br />或 **Ctrl+K、Ctrl+W** [工作流设计器]|
+|Edit.CollapseToDefinitions|**Ctrl+M**、**Ctrl+O** [文本编辑器]|
+|编辑.注释选定内容|**Ctrl+K**、**Ctrl+C** [文本编辑器]|
+|编辑.完成单词|**Alt+向右键** [文本编辑器、工作流设计器]<br /><br />或 **Ctrl+空格键** [文本编辑器、工作流设计器]<br /><br />或 **Ctrl+K**、**W** [工作流设计器]<br /><br />或 **Ctrl+K、Ctrl+W** [工作流设计器]|
 |编辑.复制|**Ctrl+C** [全局]<br /><br />或 **Ctrl+Insert** [全局]|
 |编辑.剪切|**Ctrl+X** [全局]<br /><br />或 **Shift+Delete** [全局]|
 |编辑.删除|**Delete** [全局、团队资源管理器]<br /><br />或 **Shift+Delete** [序列图、UML 活动图、层关系图]<br /><br />或 **Ctrl+Delete** [类图]|
@@ -76,7 +77,7 @@ ms.locfileid: "93045663"
 |编辑.转到定义|**F12**|
 |编辑.转到查找组合框|**Ctrl+D** [全局]|
 |编辑.转到下一个位置|**F8** [全局]|
-|编辑.插入代码片段|**Ctrl+K** 、 **Ctrl+X** [全局]|
+|编辑.插入代码片段|**Ctrl+K**、**Ctrl+X** [全局]|
 |编辑.插入制表符|**Tab** [报表设计器、Windows 窗体设计器、文本编辑器]|
 |编辑.剪切行|**Ctrl+L** [文本编辑器]|
 |编辑.向下扩展列|**Shift+Alt+向下箭** [文本编辑器]|
@@ -120,7 +121,7 @@ ms.locfileid: "93045663"
 |文件.保存选定项|**Ctrl+S** [全局]|
 |文件.在浏览器中查看|**Ctrl+Shift+W** [全局]|
 
-## <a name="project"></a>Project
+## <a name="project"></a>项目
 
 |命令|键盘快捷方式 [上下文]|
 |--------------| - |
@@ -139,7 +140,7 @@ ms.locfileid: "93045663"
 |-------------| - |
 |工具.附加到进程|**Ctrl+Alt+P** [全局]|
 
-## <a name="view"></a>查看
+## <a name="view"></a>视图
 
 |命令|键盘快捷方式 [上下文]|
 |--------------| - |
@@ -150,7 +151,7 @@ ms.locfileid: "93045663"
 |视图.向前定位|**Ctrl+Shift+-** [全局]|
 |视图.对象浏览器|**Ctrl+Alt+J** [全局]|
 |视图.输出|**Ctrl+Alt+O** [全局]|
-|视图.属性窗口|**F4**|
+|视图.属性窗口|F4|
 |视图.刷新|**F5** [团队资源管理器]|
 |视图.服务器资源管理器|**Ctrl+Alt+S** [全局]|
 |视图.显示智能标记|**Ctrl+.** [Global]<br /><br />或 **Shift+Alt+F10** [全局、HTML 编辑器设计视图]|

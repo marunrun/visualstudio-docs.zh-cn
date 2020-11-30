@@ -1,5 +1,6 @@
 ---
 title: 分析负载测试结果 - 关系图视图（负载测试分析器）
+description: 了解如何以关系图形式显示测试结果。 每个关系图将显示在一个面板中，关系图的名称显示在下拉列表中。
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: conceptual
@@ -16,12 +17,12 @@ ms.assetid: 4a919cd8-541c-40ee-be3b-352fabc56140
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: b48162da7a753516ce0c1ae0dba4cfe1f94387e4
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: e30d81277ae28a3f5d6ca45a259fa66e0f4ee004
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810648"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441971"
 ---
 # <a name="analyze-load-test-results-in-the-graphs-view-of-the-load-test-analyzer"></a>在负载测试分析器的关系图视图中分析负载测试结果
 

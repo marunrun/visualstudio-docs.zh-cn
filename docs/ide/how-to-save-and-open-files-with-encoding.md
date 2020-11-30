@@ -1,5 +1,7 @@
 ---
 title: 如何：保存和打开带有编码的文件
+description: 了解如何使用特定编码保存和打开文件，以便在打开文件时 Visual Studio 可正确显示该文件。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 72496e842841b2c55833075e890da4b7088cb489
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cfec7d31e6fc2c120ef42dc9de2a5a7eea4132e0
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85284160"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597088"
 ---
 # <a name="how-to-save-and-open-files-with-encoding"></a>如何：保存和打开带有编码的文件
 
@@ -26,13 +28,13 @@ ms.locfileid: "85284160"
 
 ## <a name="to-save-a-file-with-encoding"></a>使用编码保存文件
 
-1. 从“文件”  菜单中选择“将文件另存为”  ，然后单击“保存”  按钮旁边的下拉按钮。
+1. 从“文件”菜单中选择“将文件另存为”，然后单击“保存”按钮旁边的下拉按钮。
 
-     随即出现“高级保存选项”对话框  。
+     显示 **“高级保存选项”** 对话框。
 
-2. 在“编码”  下，选择要用于文件的编码。
+2. 在“编码”下，选择要用于文件的编码。
 
-3. 或者，在“行尾”  下，选择行尾字符的格式。
+3. 或者，在“行尾”下，选择行尾字符的格式。
 
      如果要与使用不同操作系统的用户交换文件，此选项很有用。
 
@@ -42,17 +44,17 @@ ms.locfileid: "85284160"
 
 1. 在 **“解决方案资源管理器”** 中右键单击文件，然后选择 **“打开方式”**
 
-2. 在“打开方式”  对话框中，选择用于打开文件的编辑器。
+2. 在“打开方式”对话框中，选择用于打开文件的编辑器。
 
-     许多 Visual Studio 编辑器（例如窗体编辑器）将自动检测编码并使用相应编码打开文件。 如果所选择的编码器允许选择编码，将显示“编码”  对话框。
+     许多 Visual Studio 编辑器（例如窗体编辑器）将自动检测编码并使用相应编码打开文件。 如果所选择的编码器允许选择编码，将显示“编码”对话框。
 
-3. 在“编码”  对话框中，选择编辑器应使用的编码。
+3. 在“编码”对话框中，选择编辑器应使用的编码。
 
 ## <a name="to-open-an-encoded-file-that-is-not-part-of-a-project"></a>打开不属于项目一部分的编码文件
 
-1. 在“文件”  菜单上，指向“打开”  、选择“文件”  或“来自 Web 的文件”  ，然后选择要打开的文件。
+1. 在“文件”菜单上，指向“打开”、选择“文件”或“来自 Web 的文件”，然后选择要打开的文件。
 
-2. 单击“打开”  按钮旁边的下拉按钮，然后选择“打开方式”  。
+2. 单击“打开”按钮旁边的下拉按钮，然后选择“打开方式”。
 
 3. 按照上述步骤中的步骤 2 和步骤 3 操作。
 

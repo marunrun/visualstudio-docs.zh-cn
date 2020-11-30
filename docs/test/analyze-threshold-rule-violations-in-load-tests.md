@@ -1,5 +1,7 @@
 ---
 title: 分析负载测试中的阈值规则冲突
+description: 了解如何查看与所设置的阈值规则发生的冲突，以对这些冲突进行分析。
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,18 +17,18 @@ ms.assetid: 969ed346-cf2e-4d48-82b3-edb3e075e1c0
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 0a20c5e3f30a6d006175e78fc70dab79d0b9bf8a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 49fe5893254083dd83551ef5f43fffcc295a992a
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75591276"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442698"
 ---
 # <a name="analyzing-threshold-rule-violations-in-load-tests-using-the-load-test-analyzer"></a>使用负载测试分析器分析负载测试中的阈值规则冲突
 
 阈值规则与特定的性能计数器关联，存在冲突意味着性能计数器超过或低于设定的值。 运行负载测试时，可以依据之前设置的阈值规则分析所发生的冲突。
 
-如果发生任何冲突，负载测试分析器的状态栏上将显示“阈值冲突”超链接，并指明发生的冲突数量   。 选择超链接将显示阈值冲突表。 还可以在“计数器”窗口和关系图上查看阈值冲突  。
+如果发生任何冲突，负载测试分析器的状态栏上将显示“阈值冲突”超链接，并指明发生的冲突数量。 选择超链接将显示阈值冲突表。 还可以在“计数器”窗口和关系图上查看阈值冲突。
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
@@ -41,7 +43,7 @@ ms.locfileid: "75591276"
 |类别|发生冲突的性能计数器的类别。|是|
 |计数器|发生冲突的性能计数器的名称。|是|
 |实例|发生冲突的性能计数器实例。|是|
-|消息|描述阈值冲突的消息。 例如，值 5 超出了值 0 的临界阈值  。|是|
+|消息|描述阈值冲突的消息。 例如，值 5 超出了值 0 的临界阈值。|是|
 
 > [!NOTE]
 > 选择列标题可以对表进行排序。
@@ -50,7 +52,7 @@ ms.locfileid: "75591276"
 
 ## <a name="view-threshold-violations-in-the-counters-panel"></a>在计数器面板中查看阈值冲突
 
-可以在“计数器”面板中列有负载测试的性能计数器的树中查看阈值冲突  。 “计数器”面板中的图标表示阈值冲突  。 该图标可以为如下所述的几种图标之一：
+可以在“计数器”面板中列有负载测试的性能计数器的树中查看阈值冲突。 “计数器”面板中的图标表示阈值冲突。 该图标可以为如下所述的几种图标之一：
 
 该图标可以为如下所述的几种图标之一：
 
@@ -70,7 +72,7 @@ ms.locfileid: "75591276"
 
 ## <a name="view-threshold-violations-on-the-graph"></a>在关系图上查看阈值冲突
 
-可以在关系图上查看阈值冲突。 与“计数器”面板类似，关系图上的图标也表示阈值冲突  。 图标显示在关系图上发生阈值冲突的数据点旁边。 如果阈值冲突发生在关系图中未显示的计数器上，则可以通过将该计数器从“计数器”面板拖到关系图上来将该计数器添加到关系图中  。
+可以在关系图上查看阈值冲突。 与“计数器”面板类似，关系图上的图标也表示阈值冲突。 图标显示在关系图上发生阈值冲突的数据点旁边。 如果阈值冲突发生在关系图中未显示的计数器上，则可以通过将该计数器从“计数器”面板拖到关系图上来将该计数器添加到关系图中。
 
 有关详细信息，请参阅[在关系图视图中分析负载测试结果](../test/analyze-load-test-results-in-the-graphs-view.md)。
 

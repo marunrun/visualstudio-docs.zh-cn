@@ -1,5 +1,7 @@
 ---
 title: 更新现有项目项模板
+description: 了解如何使用“导出模板向导”和对你已创建的项目项模板进行更新的其他手动过程。
+ms.custom: SEO-VS-2020
 ms.date: 01/02/2018
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: d5d9726ecbf3cb7c403f682aadb197a26b0dc26b
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: e3a709070d777ebaf600fc05abf0e651eaef5b1a
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85283913"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95596880"
 ---
 # <a name="how-to-update-existing-templates"></a>如何：更新现有模板
 

@@ -1,5 +1,7 @@
 ---
 title: 查找和替换文本以及多个插入点选择
+description: 了解“查找和替换”功能，并了解如何使用它查找和替换模式的实例。
+ms.custom: SEO-VS-2020
 ms.date: 10/17/2020
 ms.topic: conceptual
 f1_keywords:
@@ -30,12 +32,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b878ccbf6714987599d1585ca9c0dc3ceb759144
-ms.sourcegitcommit: 4450abc99453ccaf8936449bbff437c5b9efa022
+ms.openlocfilehash: 475f0249bd6af8176fba3ecc79ad758cc6ceceb7
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92334189"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006583"
 ---
 # <a name="find-and-replace-text"></a>查找和替换文本
 

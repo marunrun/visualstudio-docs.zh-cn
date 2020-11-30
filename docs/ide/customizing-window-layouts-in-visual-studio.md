@@ -1,5 +1,7 @@
 ---
 title: 自定义窗口布局
+description: 了解如何自定义窗口的显示特征，以创建适合各种开发工作流的布局。
+ms.custom: SEO-VS-2020
 ms.date: 07/31/2020
 ms.topic: conceptual
 f1_keywords:
@@ -23,12 +25,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2135183a474e29229d941bbd47af8d6abc263e49
-ms.sourcegitcommit: 30a810f39c06958c79505773f052e96b982e5d5b
+ms.openlocfilehash: c433a6faf3eab9dd959cc25f26033c74852c0899
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546062"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006661"
 ---
 # <a name="customize-window-layouts-in-visual-studio"></a>在 Visual Studio 中自定义窗口布局
 
@@ -58,7 +60,7 @@ IDE 提供两种基本窗口类型，即 *“工具窗口”* 和 *“文档窗�
 
 #### <a name="vertical-document-tabs"></a>竖排文档选项卡
 
-**[版本 16.4 中的新增功能](/visualstudio/releases/2019/release-notes-v16.4/)** ：在 Visual Studio 2019 版本 16.4 中，我们添加了一个热门的功能请求，即[竖排文档选项卡](https://developercommunity.visualstudio.com/idea/467369/vertical-group-tab.html)。 现在，可以在位于编辑器左侧或右侧的垂直列表中管理文档选项卡。
+**[版本 16.4 中的新增功能](/visualstudio/releases/2019/release-notes-v16.4/)** ：在 Visual Studio 2019 版本 16.4 中，我们添加了一个热门的功能请求，即 [竖排文档选项卡](https://developercommunity.visualstudio.com/idea/467369/vertical-group-tab.html)。 现在，可以在位于编辑器左侧或右侧的垂直列表中管理文档选项卡。
 
 可以通过以下方式应用竖排文档选项卡：
 

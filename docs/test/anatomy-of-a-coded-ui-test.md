@@ -1,5 +1,7 @@
 ---
 title: 编码的 UI 测试剖析
+description: 了解创建编码的 UI 测试时向编码的 UI 测试解决方案添加的文件。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d7100c6bb5c1dfb4c7d336ec110cf532f1f998d4
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: aeaa2231c62487ec366aa561ea199cf63f3c6792
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75591198"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441789"
 ---
 # <a name="anatomy-of-a-coded-ui-test"></a>编码的 UI 测试剖析
 
@@ -24,9 +26,9 @@ ms.locfileid: "75591198"
 
 ## <a name="contents-of-a-coded-ui-test"></a>编码的 UI 测试的内容
 
-创建编码的 UI 测试时，**编码的 UI 测试生成器**会创建受测用户界面的映射，以及所有测试的测试方法、参数和断言。 此外，它还会为每个测试创建一个类文件。
+创建编码的 UI 测试时，**编码的 UI 测试生成器** 会创建受测用户界面的映射，以及所有测试的测试方法、参数和断言。 此外，它还会为每个测试创建一个类文件。
 
-|文件|内容|可编辑？|
+|文件|目录|可编辑？|
 |-|-|-|
 |[UIMap.Designer.cs](#UIMapDesignerFile)|[声明部分](#UIMapDesignerFile)<br /><br /> [UIMap 类](#UIMapClass)（自动生成的分部类）<br /><br /> [方法](#UIMapMethods)<br /><br /> [属性](#UIMapProperties)|否|
 |[UIMap.cs](#UIMapCS)|[UIMap 类](#UIMapCS)（分部类）|是|
@@ -34,7 +36,7 @@ ms.locfileid: "75591198"
 |[UIMap.uitest](#UIMapuitest)|用于测试的 UI 的 XML 映射。|否|
 
 ### <a name="uimapdesignercs"></a><a name="UIMapDesignerFile"></a>UIMap.Designer.cs
-此文件包含在测试创建后由**编码的 UI 测试生成器**自动创建的代码。 此文件会在每次更改测试时重新创建，因此，你不可以在其中添加或修改代码。
+此文件包含在测试创建后由 **编码的 UI 测试生成器** 自动创建的代码。 此文件会在每次更改测试时重新创建，因此，你不可以在其中添加或修改代码。
 
 #### <a name="declarations-section"></a>声明部分
 本部分包含 Windows UI 的以下声明。
@@ -65,7 +67,7 @@ using MouseButtons = System.Windows.Forms.MouseButtons;
 public partial class UIMap
 ```
 
-类代码以 <xref:System.CodeDom.Compiler.GeneratedCodeAttribute> 属性开头，可应用于声明为分部类的类。 请注意，该属性也适用于此文件中的每个类。 UIMap.cs 文件也可包含此类的更多代码（稍后将作介绍）  。
+类代码以 <xref:System.CodeDom.Compiler.GeneratedCodeAttribute> 属性开头，可应用于声明为分部类的类。 请注意，该属性也适用于此文件中的每个类。 UIMap.cs 文件也可包含此类的更多代码（稍后将作介绍）。
 
 生成的 `UIMap` 类包括记录测试时指定的每一种方法的代码。
 
@@ -124,7 +126,7 @@ public void AddItems()
 
 方法代码的顶部是 `Variable Declarations` 区域，该区域用于定义该方法所用 UI 对象的局部变量。
 
-在此方法中，`UIItemWindow` 和 `UIItemEdit` 属性均可通过 `UICalculatorWindow` 类进行访问；该类稍后在 UIMap.cs 文件中进行定义  。
+在此方法中，`UIItemWindow` 和 `UIItemEdit` 属性均可通过 `UICalculatorWindow` 类进行访问；该类稍后在 UIMap.cs 文件中进行定义。
 
 接下来是可通过使用 `AddItemsParams` 对象的属性将文本从键盘发送到计算器应用程序的行。
 
@@ -156,7 +158,7 @@ public virtual AddItemsParams AddItemsParams
 }
 ```
 
-请注意，该属性使用名为 `mAddItemsParams` 的专用本地变量在返回之前保留该值。 属性名称和它所返回的对象的类名称是相同的。 此类稍后将在 UIMap.cs 文件中进行定义  。
+请注意，该属性使用名为 `mAddItemsParams` 的专用本地变量在返回之前保留该值。 属性名称和它所返回的对象的类名称是相同的。 此类稍后将在 UIMap.cs 文件中进行定义。
 
 每个由属性返回的类结构上都相似。 以下为 `AddItemsParams` 类：
 
@@ -187,12 +189,12 @@ public class AddItemsParams
 默认情况下，此文件包括没有方法或属性的分部 `UIMap` 类。
 
 #### <a name="uimap-class"></a>UIMap 类
-这是可以在其中创建自定义代码以扩展 [UIMap](/previous-versions/dd580454(v=vs.140)) 类的功能的地方。 编码的 UI 测试生成器  不会在每次修改测试时覆盖在此文件中创建的代码。
+这是可以在其中创建自定义代码以扩展 [UIMap](/previous-versions/dd580454(v=vs.140)) 类的功能的地方。 编码的 UI 测试生成器不会在每次修改测试时覆盖在此文件中创建的代码。
 
 [UIMap](/previous-versions/dd580454(v=vs.140)) 的所有部分都可以使用 [UIMap](/previous-versions/dd580454(v=vs.140)) 类的任何其他部分的方法和属性。
 
 ### <a name="codeduitest1cs"></a><a name="CodedUITestCS"></a>CodedUITest1.cs
-此文件由**编码的 UI 测试生成器**生成，但不会在每次测试有修改时重新创建，因此可以在此文件中修改代码。 文件的名称由你创建测试时为该测试指定的名称生成。
+此文件由 **编码的 UI 测试生成器** 生成，但不会在每次测试有修改时重新创建，因此可以在此文件中修改代码。 文件的名称由你创建测试时为该测试指定的名称生成。
 
 #### <a name="codeduitest1-class"></a>CodedUITest1 类
 
@@ -264,9 +266,9 @@ public void MyTestCleanup()
 ### <a name="uimapuitest"></a><a name="UIMapuitest"></a>UIMap.uitest
 这是一个 XML 文件，表示编码的 UI 测试录制及其所有部分的结构。 除类的方法和属性之外，其中还包括操作以及这些类。 [UIMap.Designer.cs](#UIMapDesignerFile) 文件包含编码的 UI 测试生成器为了重现测试结构而生成的代码，并建立与测试框架的连接。
 
-UIMap.uitest 文件不可直接编辑  。 但是，可使用编码的 UI 生成器来修改测试，从而自动修改 UIMap.uitest 文件和 [UIMap.Designer.cs](#UIMapDesignerFile) 文件。
+UIMap.uitest 文件不可直接编辑。 但是，可使用编码的 UI 生成器来修改测试，从而自动修改 UIMap.uitest 文件和 [UIMap.Designer.cs](#UIMapDesignerFile) 文件。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [UIMap](/previous-versions/dd580454(v=vs.140))
 - <xref:Microsoft.VisualStudio.TestTools.UITesting.WinControls>

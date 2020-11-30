@@ -1,5 +1,7 @@
 ---
 title: 使用配置文件来定义数据源
+description: 了解如何使用 app.config 文件中定义的数据源进行单元测试，此过程从创建一个定义数据源的 app.config 文件开始。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,18 +13,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a4f5731a828eb04e57f56a46fe399125b5ded2f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 06e33721fa4ac1cc657c79c8aa68b35e5ceec00b
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75776159"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95598492"
 ---
 # <a name="walkthrough-using-a-configuration-file-to-define-a-data-source"></a>演练：使用配置文件定义数据源
 
-本演练演示如何使用 app.config 文件中定义的数据源进行单元测试。  你将学习如何创建用于定义可供 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> 类使用的数据源的 app.config 文件。 本演练包括以下任务：
+本演练演示如何使用 app.config 文件中定义的数据源进行单元测试。 你将学习如何创建用于定义可供 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> 类使用的数据源的 app.config 文件。 本演练包括以下任务：
 
-- 创建 app.config 文件  。
+- 创建 app.config 文件。
 
 - 定义自定义配置节。
 
@@ -48,23 +50,23 @@ ms.locfileid: "75776159"
 
 2. 在解决方案资源管理器中右键单击测试项目，然后选择“添加” > “新建项”。
 
-     此时，“添加新项”  窗口会打开。
+     此时，“添加新项”窗口会打开。
 
-3. 选择“应用配置文件”  模板，然后单击“添加”  。
+3. 选择“应用配置文件”模板，然后单击“添加”。
 
 ## <a name="define-a-custom-configuration-section"></a>定义自定义配置节
 
-检查 app.config  文件。 它至少包含 XML 声明和一个根元素。
+检查 app.config 文件。 它至少包含 XML 声明和一个根元素。
 
 ### <a name="to-add-the-custom-configuration-section-to-the-appconfig-file"></a>若要将自定义配置节添加到 app.config 文件
 
-1. app.config 的根元素应为 configuration 元素   。 在 configuration 元素中创建一个 configSections 元素。 configSections  应为 app.config  文件中的第一个元素。
+1. app.config 的根元素应为 configuration 元素。 在 configuration 元素中创建一个 configSections 元素。 configSections 应为 app.config 文件中的第一个元素。
 
 2. 在 configSections 元素中创建一个 section 元素。
 
-3. 在 section  元素中，添加一个名为 `name` 的特性，并为其分配一个 `microsoft.visualstudio.testtools` 的值。 再添加一个名为 `type` 的特性，并为其分配一个 `Microsoft.VisualStudio.TestTools.UnitTesting.TestConfigurationSection, Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions` 的值。
+3. 在 section 元素中，添加一个名为 `name` 的特性，并为其分配一个 `microsoft.visualstudio.testtools` 的值。 再添加一个名为 `type` 的特性，并为其分配一个 `Microsoft.VisualStudio.TestTools.UnitTesting.TestConfigurationSection, Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions` 的值。
 
-section  元素应类似于：
+section 元素应类似于：
 
 ```xml
 <section name="microsoft.visualstudio.testtools" type="Microsoft.VisualStudio.TestTools.UnitTesting.TestConfigurationSection, Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions" />
@@ -79,27 +81,27 @@ section  元素应类似于：
 
 ### <a name="to-define-connection-strings"></a>定义连接字符串
 
-1. 在 configSections  元素后，创建一个 connectionStrings  元素。
+1. 在 configSections 元素后，创建一个 connectionStrings 元素。
 
-2. 在 connectionStrings  元素中，创建两个 add  元素。
+2. 在 connectionStrings 元素中，创建两个 add 元素。
 
-3. 在第一个 add  元素中，创建下列特性和值以连接到 Microsoft Access 数据库：
+3. 在第一个 add 元素中，创建下列特性和值以连接到 Microsoft Access 数据库：
 
-|特性|值|
+|属性|值|
 |-|------------|
 |`name`|`"MyJetConn"`|
 |`connectionString`|`"Provider=Microsoft.Jet.OLEDB.4.0; Data Source=C:\testdatasource.accdb; Persist Security Info=False;"`|
 |`providerName`|`"System.Data.OleDb"`|
 
-在第二个 add  元素中，创建下列特性和值以连接到 Microsoft Excel 电子表格：
+在第二个 add 元素中，创建下列特性和值以连接到 Microsoft Excel 电子表格：
 
-|特性|值|
+|属性|值|
 |-|-|
 |`name`|`"MyExcelConn"`|
 |`connectionString`|`"Dsn=Excel Files;dbq=data.xlsx;defaultdir=.\; driverid=790;maxbuffersize=2048;pagetimeout=5"`|
 |`providerName`|`"System.Data.Odbc"`|
 
-connectionStrings  元素应类似于：
+connectionStrings 元素应类似于：
 
 ```xml
 <connectionStrings>
@@ -124,31 +126,31 @@ connectionStrings  元素应类似于：
 
 ### <a name="to-define-data-sources"></a>若要定义数据源
 
-1. 在 connectionStrings  元素后，创建一个 microsoft.visualstudio.testtools  元素。 本节在“定义自定义配置节”中创建。
+1. 在 connectionStrings 元素后，创建一个 microsoft.visualstudio.testtools 元素。 本节在“定义自定义配置节”中创建。
 
-2. 在 microsoft.visualstudio.testtools  元素，创建一个 dataSources  元素。
+2. 在 microsoft.visualstudio.testtools 元素，创建一个 dataSources 元素。
 
-3. 在 dataSources  元素中，创建两个 add  元素。
+3. 在 dataSources 元素中，创建两个 add 元素。
 
-4. 在第一个 add  元素中，为 Microsoft Access 数据源创建下列特性和值：
+4. 在第一个 add 元素中，为 Microsoft Access 数据源创建下列特性和值：
 
-|特性|值|
+|属性|值|
 |-|------------|
 |`name`|`"MyJetDataSource"`|
 |`connectionString`|`"MyJetConn"`|
 |`dataTableName`|`"MyDataTable"`|
 |`dataAccessMethod`|`"Sequential"`|
 
-在第二个 add  元素中，为 Microsoft Excel 数据源创建下列特性和值：
+在第二个 add 元素中，为 Microsoft Excel 数据源创建下列特性和值：
 
-|特性|值|
+|属性|值|
 |-|-|
 |`Name`|`"MyExcelDataSource"`|
 |`connectionString`|`"MyExcelConn"`|
 |`dataTableName`|`"Sheet1$"`|
 |`dataAccessMethod`|`"Sequential"`|
 
-Microsoft.visualstudio.testtools  元素应类似于：
+Microsoft.visualstudio.testtools 元素应类似于：
 
 ```xml
 <microsoft.visualstudio.testtools>
@@ -159,7 +161,7 @@ Microsoft.visualstudio.testtools  元素应类似于：
 </microsoft.visualstudio.testtools>
 ```
 
-最终的 app.config  文件应类似于：
+最终的 app.config 文件应类似于：
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -182,15 +184,15 @@ Microsoft.visualstudio.testtools  元素应类似于：
 
 ## <a name="create-a-unit-test-that-uses-data-sources-defined-in-appconfig"></a>创建一个使用 app.config 中定义的数据源的单元测试
 
-由于已定义了 app.config 文件，你将创建一个单元测试，它会使用位于 app.config 文件中定义的数据源中的数据   。 在本节中，我们将：
+由于已定义了 app.config 文件，你将创建一个单元测试，它会使用位于 app.config 文件中定义的数据源中的数据。 在本节中，我们将：
 
-- 创建在 app.config 文件中找到的数据源  。
+- 创建在 app.config 文件中找到的数据源。
 
 - 使用两个可比较每个数据源中的值的测试方法中的数据源。
 
 ### <a name="to-create-a-microsoft-access-data-source"></a>若要创建 Microsoft Access 数据源
 
-1. 创建一个名为 testdatasource.accdb  的 Microsoft Access 数据库。
+1. 创建一个名为 testdatasource.accdb 的 Microsoft Access 数据库。
 
 2. 在 testdatasource.accdb 中创建一个表并将其命名为 `MyDataTable`。
 
@@ -204,7 +206,7 @@ Microsoft.visualstudio.testtools  元素应类似于：
 
 ### <a name="to-create-a-microsoft-excel-data-source"></a>若要创建 Microsoft Excel 数据源
 
-1. 创建一个名为 data.xlsx  的 Microsoft Excel 电子表格。
+1. 创建一个名为 data.xlsx 的 Microsoft Excel 电子表格。
 
 2. 如果 data.xlsx 中尚不存在名为 `Sheet1` 的工作表，则创建一个。
 
@@ -260,7 +262,7 @@ Microsoft.visualstudio.testtools  元素应类似于：
     }
     ```
 
-3. 检查数据源特性。 请注意 app.config 文件中的设置名称  。
+3. 检查数据源特性。 请注意 app.config 文件中的设置名称。
 
 4. 生成你的解决方案并运行 MyTestMethod 和 MyTestMethod2 测试。
 

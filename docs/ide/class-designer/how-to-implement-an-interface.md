@@ -1,5 +1,7 @@
 ---
 title: 如何：实现接口（类设计器）
+description: 了解如何在类图上将接口连接至为接口方法提供代码的类，以此来实现接口。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,16 +13,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 81b6815dd96894acd574de59c5616371220d2999
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ad038774b4acfb7256edbaa35ae4c67cfe835891
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770095"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94901370"
 ---
 # <a name="how-to-implement-an-interface-in-class-designer"></a>如何：在类设计器中实现接口
 
-在类设计器中，可以在类图上将接口连接至为接口方法提供代码的类，以此来实现接口  。 类设计器可生成接口实现，并将接口与类之间的关系显示为继承关系  。 可以通过在接口与类之间绘制继承连线或从类视图拖动接口来实现接口。
+在类设计器中，可以在类图上将接口连接至为接口方法提供代码的类，以此来实现接口。 类设计器可生成接口实现，并将接口与类之间的关系显示为继承关系。 可以通过在接口与类之间绘制继承连线或从类视图拖动接口来实现接口。
 
 > [!TIP]
 > 创建接口的方法与创建其他类型的方法相同。 如果接口存在但未显示在类图上，则首先要显示接口。 有关详细信息，请参阅[如何：使用类设计器创建类型](how-to-create-types.md)和[如何：查看现有类型](how-to-view-existing-types.md)。
@@ -39,7 +41,7 @@ ms.locfileid: "85770095"
 
 1. 在类图上，显示要实现接口的类。
 
-2. 打开类视图，并查找该接口  。
+2. 打开类视图，并查找该接口。
 
     > [!TIP]
     > 如果类视图尚未打开，则从“视图”菜单或按 Ctrl+Shift+C 打开类视图。

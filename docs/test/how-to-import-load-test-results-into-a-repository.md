@@ -1,5 +1,7 @@
 ---
 title: 如何：将负载测试结果导入存储库中
+description: 了解如何使用“打开和管理负载测试结果”对话框，将信息导入到“负载测试结果存储库”。
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.assetid: a955b3d2-c8ad-40dd-8ea3-9f1a271e1eed
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: f8f0ec6b9f1a5664ac898e525420ec2cc374f5ad
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 2133977de827fe558ee9323280c5f05df683ed59
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85287735"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442308"
 ---
 # <a name="how-to-import-load-test-results-into-a-repository"></a>如何：将负载测试结果导入存储库中
 

@@ -1,5 +1,7 @@
 ---
 title: 类设计器中的 C++ 枚举
+description: 了解类设计器如何支持 C++ 枚举和区分范围的枚举类类型。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee56850c05e4b06ea4325ec238e56e99b38978d0
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: b12d270884ca9877d6c1c80780a9ae96324f3af4
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76114199"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903450"
 ---
 # <a name="c-enumerations-in-class-designer"></a>类设计器中的 C++ 枚举
 

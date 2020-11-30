@@ -1,5 +1,7 @@
 ---
 title: 代码片段架构参考
+description: 了解 IntelliSense Code 代码片段 XML 架构，并了解如何使用它们来提高自己的工作效率。
+ms.custom: SEO-VS-2020
 ms.date: 03/31/2020
 ms.topic: reference
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e31ec2be9ccce0b07b04746d2ed51ab3909cdd2c
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: b5030efcfe6fc774a1bb576f6056db7d9f8fd662
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183673"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006466"
 ---
 # <a name="code-snippets-schema-reference"></a>代码片段架构参考
 
@@ -44,7 +46,7 @@ IntelliSense 代码片段是预编写的代码段，可以随时使用 Visual St
 
 ## <a name="author-element"></a>Author 元素
 
-指定代码段作者的姓名。 **代码片段管理器**显示存储在代码片段的 `Author` 元素中的名称。
+指定代码段作者的姓名。 **代码片段管理器** 显示存储在代码片段的 `Author` 元素中的名称。
 
 ```xml
 <Author>
@@ -588,7 +590,7 @@ $selected$ is a great color. I love $selected$.
 
 ## <a name="title-element"></a>Title 元素
 
-指定代码段的标题。 代码片段的 `Title` 元素中存储的标题显示在**代码片段选择器**中和**代码片段管理器**的代码片段说明中。
+指定代码段的标题。 代码片段的 `Title` 元素中存储的标题显示在 **代码片段选择器** 中和 **代码片段管理器** 的代码片段说明中。
 
 ```xml
 <Title>

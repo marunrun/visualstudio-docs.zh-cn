@@ -1,5 +1,6 @@
 ---
 title: 为 Web 性能测试创建自定义验证规则
+description: 了解如何通过从验证规则类 ValidationRule 进行派生来创建自己的验证规则。
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
@@ -16,12 +17,12 @@ dev_langs:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: a6222aaf6b6aeace595e12c797ead1dfb86b4931
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 627122368c90163cf9aef4c8035bfbb67c4a0dba
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810609"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441815"
 ---
 # <a name="code-a-custom-validation-rule-for-a-web-performance-test"></a>为 Web 性能测试编码自定义验证规则
 

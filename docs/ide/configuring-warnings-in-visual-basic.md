@@ -1,5 +1,7 @@
 ---
 title: 在 Visual Basic 中配置警告
+description: 了解如何在 Visual Basic 中配置警告从而帮助你编写 bug 较少的更干净、更快速和更好的代码。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 33302a4a686d80621cc64ee018371a2d03ea30ee
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: cd5239c4fd01aefa247fc63a66af3e872dbecbb6
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76114731"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006401"
 ---
 # <a name="configuring-warnings-in-visual-basic"></a>在 Visual Basic 中配置警告
 
@@ -28,11 +30,11 @@ ms.locfileid: "76114731"
 你可能需要自定义项目，并关闭与你的应用程序无关的某些警告，而将其他警告变为错误。 本页说明如何打开和关闭单个警告。
 
 ## <a name="turning-warnings-off-and-on"></a>关闭和打开警告
-配置警告有两种不同的方法：可以使用“项目设计器”  配置警告，也可以使用 **/warnaserror** 和 **/nowarn** 编译器选项进行配置。
+配置警告有两种不同的方法：可以使用“项目设计器”配置警告，也可以使用 **/warnaserror** 和 **/nowarn** 编译器选项进行配置。
 
-使用“项目设计器”页的“编译”选项卡可以打开和关闭警告。 选中“禁用所有警告”  复选框可禁用所有警告；选中“将所有警告视为错误”  可将所有警告都视为错误。 有些个别警告可以根据所显示的表的需要，在错误和警告之间切换。
+使用“项目设计器”页的“编译”选项卡可以打开和关闭警告。 选中“禁用所有警告”复选框可禁用所有警告；选中“将所有警告视为错误”可将所有警告都视为错误。 有些个别警告可以根据所显示的表的需要，在错误和警告之间切换。
 
-如果“Option Strict”  设置为“Off”  ，则不能将与“Option Strict”  相关的警告视为彼此独立。 如果“Option Strict”  设置为“On”  ，则将相关联的警告视为错误，而无论其状态如何。 如果通过在命令行编译器中指定 `/optionstrict:custom` 将“Option Strict”设置为“自定义”，则可以不受限制地在开和关之间切换“Option Strict”警告。
+如果“Option Strict”设置为“Off”，则不能将与“Option Strict”相关的警告视为彼此独立。 如果“Option Strict”设置为“On”，则将相关联的警告视为错误，而无论其状态如何。 如果通过在命令行编译器中指定 `/optionstrict:custom` 将“Option Strict”设置为“自定义”，则可以不受限制地在开和关之间切换“Option Strict”警告。
 
 此外，还可以使用该编译器的 **/warnaserror** 命令行选项指定是否将警告视为错误。 可以将逗号分隔的列表添加到此选项，以通过使用 + 或 - 指定应将哪些警告视为错误或警告。 下表对可能的选项进行了详细说明。
 
@@ -73,12 +75,12 @@ ID：42016
 ID：42017
 
 ### <a name="operands-of-type-object-warnings"></a>“Object”类型的操作数警告
-当出现会引发“Option Strict On”错误的 `Object` 类型的操作数时生成  。 新项目的默认值为 On。
+当出现会引发“Option Strict On”错误的 `Object` 类型的操作数时生成。 新项目的默认值为 On。
 
 ID：42018 和 42019
 
 ### <a name="declarations-require-as-clause-warnings"></a>声明需要“As”子句警告
-当缺少 `As` 子句的变量、函数或属性声明会引发“Option Strict On”错误时生成  。 假定未指定类型的变量属于类型 `Object`。 新项目的默认值为 On。
+当缺少 `As` 子句的变量、函数或属性声明会引发“Option Strict On”错误时生成。 假定未指定类型的变量属于类型 `Object`。 新项目的默认值为 On。
 
 ID：42020（变量声明）、42021（函数声明）和 42022（属性声明）。
 
@@ -88,7 +90,7 @@ ID：42020（变量声明）、42021（函数声明）和 42022（属性声明�
 ID：42104, 42030
 
 ### <a name="unused-local-variable-warning"></a>未使用的局部变量警告
-当声明了局部变量但从未引用该变量时生成。 默认值为 On。
+当声明了局部变量但从未引用该变量时生成。 默认值为“启用”。
 
 ID：42024
 
@@ -123,5 +125,5 @@ ID：42029、42031
 - [Try...Catch...Finally 语句](/dotnet/visual-basic/language-reference/statements/try-catch-finally-statement)
 - [/nowarn](/dotnet/visual-basic/reference/command-line-compiler/nowarn)
 - [/warnaserror (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/warnaserror)
-- [“项目设计器”->“编译”页 (Visual Basic)](../ide/reference/compile-page-project-designer-visual-basic.md)
+- [项目设计器的“编译”页 (Visual Basic)](../ide/reference/compile-page-project-designer-visual-basic.md)
 - [默认关闭的编译器警告](/cpp/preprocessor/compiler-warnings-that-are-off-by-default)

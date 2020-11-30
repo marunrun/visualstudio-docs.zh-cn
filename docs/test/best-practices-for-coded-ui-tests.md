@@ -1,5 +1,7 @@
 ---
 title: 编码的 UI 测试的最佳做法
+description: 了解有关开发编码的 UI 测试的建议。 以下准则有助于创建灵活的编码的 UI 测试。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e71029a185d1b3fea1812b2a4b1cf7bf20effff8
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 2a4a79ca397b46d06e18c62fde2034551ff7afe0
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75565157"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441802"
 ---
 # <a name="best-practices-for-coded-ui-tests"></a>编码的 UI 测试的最佳做法
 
@@ -26,9 +28,9 @@ ms.locfileid: "75565157"
 
 使用以下准则来创建灵活的编码的 UI 测试。
 
-- 尽可能使用**编码的 UI 测试生成器**。
+- 尽可能使用 **编码的 UI 测试生成器**。
 
-- 请不要直接修改 UIMap.Designer.cs 文件  。 如果修改该文件，会覆盖对该文件的更改。
+- 请不要直接修改 UIMap.Designer.cs 文件。 如果修改该文件，会覆盖对该文件的更改。
 
 - 将测试创建为一系列记录的方法。 若要详细了解如何录制方法，请参阅[创建编码的 UI 测试](../test/use-ui-automation-to-test-your-code.md)。
 
@@ -38,7 +40,7 @@ ms.locfileid: "75565157"
 
 - 如果可能，将每个记录的方法限制为少于 10 次操作。 这种模块化方法便于在 UI 更改时替换方法。
 
-- 使用“编码的 UI 测试生成器”创建每个断言，这会自动向 UIMap.Designer.cs 文件添加断言方法   。
+- 使用“编码的 UI 测试生成器”创建每个断言，这会自动向 UIMap.Designer.cs 文件添加断言方法。
 
 - 如果用户界面 (UI) 更改，请重新记录测试方法或断言方法，或重新记录现有测试方法中受影响的部分。
 
@@ -48,17 +50,17 @@ ms.locfileid: "75565157"
 
 - 如果通过用 API 编码来创建断言，请为 UIMap.cs 文件中 [UIMap](/previous-versions/dd580454(v=vs.140)) 类部分中的每个断言创建一个方法。 若要执行断言，请从测试方法中调用此方法。
 
-- 如果直接用 API 编码，请在代码中尽可能使用 UIMap.Designer.cs 文件中生成的类中的属性和方法  。 这些类将使您的工作更简单可靠，并帮助您提高效率。
+- 如果直接用 API 编码，请在代码中尽可能使用 UIMap.Designer.cs 文件中生成的类中的属性和方法。 这些类将使您的工作更简单可靠，并帮助您提高效率。
 
 编码的 UI 测试能够自动适应用户界面中的许多更改。 例如，在大多数情况下，如果 UI 元素更改了位置或颜色，则编码的 UI 测试仍将找到正确的元素。
 
-在测试运行期间，测试框架使用一组搜索属性来定位 UI 控件。 搜索属性应用于“编码的 UI 测试生成器”在 UIMap.Designer.cs 文件中创建的定义中的每个控件类   。 搜索属性包含可用于标识控件的属性名称和属性值的名称-值对，例如控件的 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FriendlyName%2A>、<xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.Name%2A> 和 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.ControlType%2A> 属性。 如果搜索属性未更改，则编码的 UI 测试会在 UI 中成功找到控件。 如果搜索属性发生更改，编码的 UI 测试会使用一个智能匹配算法，应用试探方法在 UI 中查找控件和窗口。 当 UI 已更改时，你或许能够修改以前标识的元素的搜索属性，以确保能够找到这些元素。
+在测试运行期间，测试框架使用一组搜索属性来定位 UI 控件。 搜索属性应用于“编码的 UI 测试生成器”在 UIMap.Designer.cs 文件中创建的定义中的每个控件类。 搜索属性包含可用于标识控件的属性名称和属性值的名称-值对，例如控件的 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FriendlyName%2A>、<xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.Name%2A> 和 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.ControlType%2A> 属性。 如果搜索属性未更改，则编码的 UI 测试会在 UI 中成功找到控件。 如果搜索属性发生更改，编码的 UI 测试会使用一个智能匹配算法，应用试探方法在 UI 中查找控件和窗口。 当 UI 已更改时，你或许能够修改以前标识的元素的搜索属性，以确保能够找到这些元素。
 
 ## <a name="if-your-user-interface-changes"></a>如果用户界面发生更改
 
 在开发过程中，用户界面经常更改。 下面提供了一些可以降低这些更改的影响的方法：
 
-- 查找引用此控件的已录制方法，并使用“编码的 UI 测试生成器”重新录制此方法的操作  。 可对方法使用同一名称，以覆盖现有操作。
+- 查找引用此控件的已录制方法，并使用“编码的 UI 测试生成器”重新录制此方法的操作。 可对方法使用同一名称，以覆盖现有操作。
 
 - 如果控件有一个不再有效的断言，则执行下列操作：
 
@@ -85,7 +87,7 @@ this.UIMap.ClickSubmit();
 Playback.PlaybackSettings.WaitForReadyLevel = WaitForReadyLevel.UIThreadOnly;
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [UIMap](/previous-versions/dd580454(v=vs.140))
 - <xref:Microsoft.VisualStudio.TestTools.UITesting>

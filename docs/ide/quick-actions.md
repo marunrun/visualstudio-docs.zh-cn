@@ -1,5 +1,7 @@
 ---
 title: 快速操作、灯泡和螺丝刀
+description: 了解如何使用一个快速操作重构、生成或修改代码。
+ms.custom: SEO-VS-2020
 ms.date: 03/28/2018
 ms.topic: conceptual
 author: TerryGLee
@@ -10,12 +12,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: bfafcca1cddcaa216b8a9e12dd7d961949afa2bb
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 967e73748b364e7e41b1773a7fab33831152ab18
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036517"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95870776"
 ---
 # <a name="quick-actions"></a>快速操作
 
@@ -44,13 +46,13 @@ ms.locfileid: "90036517"
 > [!NOTE]
 > 本主题适用于 Visual Studio  Windows 版。 对于 Visual Studio for Mac，请参阅[重构 (Visual Studio for Mac)](/visualstudio/mac/refactoring)。
 
-可使用灯泡![灯泡图标](media/light-bulb-icon.png)或螺丝刀![螺丝刀图标](media/screwdriver-icon.png)图标，或按“Ctrl”  应用快速操作。+  当光标位于可操作的代码行上时， 如果出现指示错误的红色波形曲线，且 Visual Studio 有针对该错误的可用修复方法，会显示一个错误灯泡 ![错误灯泡图标](media/error-light-bulb-icon.png)。
+可使用灯泡![灯泡图标](media/light-bulb-icon.png)或螺丝刀![螺丝刀图标](media/screwdriver-icon.png)图标，或按“Ctrl”应用快速操作。+ 当光标位于可操作的代码行上时， 如果出现指示错误的红色波形曲线，且 Visual Studio 有针对该错误的可用修复方法，会显示一个错误灯泡 ![错误灯泡图标](media/error-light-bulb-icon.png)。
 
 第三方可针对任何语言提供自定义诊断和建议，例如在 SDK 中提供；同时根据这些规则，Visual Studio 电灯泡可能会显示。
 
 ## <a name="icons"></a>图标
 
-当存在可用的快速操作时，会出现一个图标，指示可用的修复方法或重构的类型。 螺丝刀  ![ 螺丝刀图标](media/screwdriver-icon.png)图标仅指示存在可用于更改代码的操作，但不一定要使用它们。 黄色灯泡  ![灯泡图标](media/light-bulb-icon.png)图标指示存在应  执行的、用于改进代码的可用操作。 错误灯泡  ![错误灯泡图标](media/error-light-bulb-icon.png)图标指示存在可用于修复代码中的错误的操作。
+当存在可用的快速操作时，会出现一个图标，指示可用的修复方法或重构的类型。 螺丝刀 ![螺丝刀图标](media/screwdriver-icon.png)图标仅指示存在可用于更改代码的操作，但不一定要使用它们。 黄色灯泡 ![灯泡图标](media/light-bulb-icon.png)图标指示存在应执行的、用于改进代码的可用操作。 错误灯泡 ![错误灯泡图标](media/error-light-bulb-icon.png)图标指示存在可用于修复代码中的错误的操作。
 
 ## <a name="to-see-a-light-bulb-or-screwdriver"></a>查看灯泡或螺丝刀
 
@@ -62,9 +64,9 @@ ms.locfileid: "90036517"
 
 - 将插入点（光标）移到相应的代码行时，显示在编辑器的左边距中
 
-还可按 Ctrl+。 可在行的任意位置查看可用快速操作和重构的列表。
+还可按 Ctrl+ 。 可在行的任意位置查看可用快速操作和重构的列表。
 
-若要查看可能的修补程序，请选择灯泡旁边的下箭头或“显示可能的修补程序”  链接。 此时会显示可用的“快速操作”列表。
+若要查看可能的修补程序，请选择灯泡旁边的下箭头或“显示可能的修补程序”链接。 此时会显示可用的“快速操作”列表。
 
 ![灯泡已展开](../ide/media/vs2015_lightbulb_hover_expanded.png)
 

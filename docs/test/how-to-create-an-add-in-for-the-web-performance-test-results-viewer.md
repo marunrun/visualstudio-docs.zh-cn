@@ -1,5 +1,7 @@
 ---
 title: 为 Web 性能测试结果查看器创建加载项
+description: 了解如何创建 Visual Studio 加载项来扩展“Web 性能测试结果查看器”的 UI 以及如何实现扩展该 UI 所需的类。
+ms.custom: SEO-VS-2020
 ms.date: 10/20/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.assetid: 1118c604-4b1b-4b21-a04e-45995b676fa8
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 736c43a83a956c02b760b4909a427a82c6fa9e4c
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: b8fa3b83fb9a92be0118f4222e92364767affcda
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85287826"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441073"
 ---
 # <a name="how-to-create-an-add-in-for-the-web-performance-test-results-viewer"></a>如何：为 Web 性能测试结果查看器创建加载项
 

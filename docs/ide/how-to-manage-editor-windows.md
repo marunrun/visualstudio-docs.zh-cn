@@ -1,5 +1,7 @@
 ---
 title: 如何：管理编辑器窗口
+description: 了解如何拆分窗口并一次打开多个窗口，以便代码能够以最适合自己的方式显示。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 461593e4c77d7c90210ae1bb78741a1fff9616ec
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 93a2a9d74c66ffa699ea3fbf73da5d9043316f31
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85284186"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597127"
 ---
 # <a name="how-to-manage-editor-windows"></a>如何：管理编辑器窗口
 
@@ -35,7 +37,7 @@ ms.locfileid: "85284186"
 
 1. 在编辑器窗口中单击以获得焦点。
 
-2. 在“窗口”菜单中，选择“拆分”   。
+2. 在“窗口”菜单中，选择“拆分”。
 
      编辑区域分为由分隔条隔开的两个窗格。 可以分别滚动这两个窗格，以便同时查看和编辑活动文档的不同部分。 窗格中的任何更改都会在其他窗格中反映。
 
@@ -44,17 +46,17 @@ ms.locfileid: "85284186"
 
 ### <a name="to-return-to-single-pane-view"></a>返回单一窗格视图
 
-- 在“窗口”菜单中，选择“移除拆分”   。
+- 在“窗口”菜单中，选择“移除拆分”。
 
 ## <a name="create-new-windows"></a>新建窗口
 
 也可以创建编辑器窗口的多个实例。 通过此功能，可在一个编辑器的多个实例中打开长文档，以便在单独的全尺寸编辑器窗口同时查看和编辑不同部分。
 
-- 在“窗口”菜单上，单击“新建窗口”   。
+- 在“窗口”菜单上，单击“新建窗口”。
 
    添加编辑器的制表符分隔的新实例。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [代码编辑器功能](../ide/writing-code-in-the-code-and-text-editor.md)
 - [自定义窗口布局](../ide/customizing-window-layouts-in-visual-studio.md)

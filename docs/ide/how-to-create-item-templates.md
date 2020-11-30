@@ -1,5 +1,7 @@
 ---
 title: 创建项模板
+description: 了解如何在 Visual Studio 中使用“导出模板向导”创建项模板。
+ms.custom: SEO-VS-2020
 ms.date: 01/02/2018
 ms.topic: how-to
 helpviewer_keywords:
@@ -7,12 +9,12 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 0a0d4122d36c0946b6c1c98ef0f1523ce35751a6
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: abf058526a6ff48a37d4c7585e7deabe1decb14a
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85284472"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597270"
 ---
 # <a name="how-to-create-item-templates"></a>如何：创建项模板
 
@@ -119,7 +121,7 @@ ms.locfileid: "85284472"
 
 6. 保存 .vstemplate 文件并将其关闭。
 
-7. 在**个Windows资源管理器**中，选择要包含在模板中的文件。 右键单击所选文件，然后选择“发送至” > “压缩的文件夹（zip 格式）” 。 所选的文件将压缩到一个 .zip 文件中。
+7. 在 **个Windows资源管理器** 中，选择要包含在模板中的文件。 右键单击所选文件，然后选择“发送至” > “压缩的文件夹（zip 格式）” 。 所选的文件将压缩到一个 .zip 文件中。
 
 ::: moniker range="vs-2017"
 

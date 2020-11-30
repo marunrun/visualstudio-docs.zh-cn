@@ -1,5 +1,7 @@
 ---
 title: EditorConfig 设置
+description: 了解如何向项目或代码库添加 EditorConfig 文件，强制对使用该代码库的所有人实施一致的编码样式。
+ms.custom: SEO-VS-2020
 ms.date: 09/02/2020
 ms.topic: how-to
 helpviewer_keywords:
@@ -7,12 +9,12 @@ helpviewer_keywords:
 author: mikadumont
 ms.author: midumont
 manager: jillfra
-ms.openlocfilehash: 277e5cd03d4006ced0791356be73ca1fcbe5c217
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: a1f66368972614347df9eebe33af435987ea9cc8
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91659246"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006492"
 ---
 # <a name="create-portable-custom-editor-settings-with-editorconfig"></a>使用 EditorConfig 创建可移植的自定义编辑器设置
 
@@ -114,7 +116,7 @@ Visual Studio 中的编辑器支持 [EditorConfig 属性](https://editorconfig.o
 
 ![EditorConfig 层次结构](../ide/media/vside_editorconfig_hierarchy.png)
 
-如果想替代一部分而非所有设置，请在 .editorconfig 文件中仅指定这些设置。 仅替代较低级别文件中显式列出的属性。 更高级别 .editorconfig 文件中的其他设置会继续应用。 如果要确保_任何_更高级别的 .editorconfig 文件中_没有_设置应用于此部分代码库，请将 ```root=true``` 属性添加到较低级别的 .editorconfig 文件中 ：
+如果想替代一部分而非所有设置，请在 .editorconfig 文件中仅指定这些设置。 仅替代较低级别文件中显式列出的属性。 更高级别 .editorconfig 文件中的其他设置会继续应用。 如果要确保 _任何_ 更高级别的 .editorconfig 文件中 _没有_ 设置应用于此部分代码库，请将 ```root=true``` 属性添加到较低级别的 .editorconfig 文件中 ：
 
 ```ini
 # top-most EditorConfig file
