@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: b1fe36a4ee74ca1b41c1db1d79a6e4683c1f2b1f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e53ef96ad8fab8b26f04ccd5f7f0488d1f0d6985
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85542423"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974072"
 ---
 # <a name="use-ipython-in-the-interactive-window"></a>在交互窗口中使用 IPython
 
@@ -82,6 +82,4 @@ IPython 有很多其他有用的功能，如转义到系统外壳、变量替换
 
 ## <a name="see-also"></a>请参阅
 
-- 若要在不安装的情况下轻松使用 Jupyter，请试用免费的 [Azure 笔记本托管服务](https://notebooks.azure.com/)来保留笔记本并与他人进行共享。
-
-- 还预配置了 [Azure Data Science Virtual Machine](/azure/machine-learning/data-science-virtual-machine/overview) 以运行 Jupyter 笔记本以及各种其他数据科学工具。
+- 预配置了 [Azure Data Science Virtual Machine](/azure/machine-learning/data-science-virtual-machine/overview) 以运行 Jupyter 笔记本以及各种其他数据科学工具。

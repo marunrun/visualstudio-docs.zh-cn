@@ -1,5 +1,7 @@
 ---
 title: 数据驱动的编码 UI 测试教程
+description: 了解如何使用不同的参数值运行测试多次，以使用数据驱动的编码的 UI 测试对不同情况进行测试。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ada1f297bbb30fbe636042c87aae42849c1b6b7d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: d9c4deb02bea8bf6e3dc3615ba9c5f0eddc6c877
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75595353"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442672"
 ---
 # <a name="create-a-data-driven-coded-ui-test"></a>创建数据驱动的编码的 UI 测试
 
@@ -22,14 +24,14 @@ ms.locfileid: "75595353"
 
 [!INCLUDE [coded-ui-test-deprecation](includes/coded-ui-test-deprecation.md)]
 
-**要求**
+**惠?**
 
 - Visual Studio Enterprise
 - 编码的 UI 测试组件
 
 ## <a name="create-a-test-project"></a>创建测试项目
 
-该示例创建了一个在 Windows 计算器应用程序上运行的编码的 UI 测试。 它将两个数字添加在一起并用断言来验证总和是正确的。 然后，这两个数的断言和参数值被编码为数据驱动，并且存储在逗号分隔值 (.csv) 文件中  。
+该示例创建了一个在 Windows 计算器应用程序上运行的编码的 UI 测试。 它将两个数字添加在一起并用断言来验证总和是正确的。 然后，这两个数的断言和参数值被编码为数据驱动，并且存储在逗号分隔值 (.csv) 文件中。
 
 ### <a name="step-1---create-a-coded-ui-test"></a>步骤 1 - 创建编码的 UI 测试
 
@@ -38,9 +40,9 @@ ms.locfileid: "75595353"
     ![创建编码的 UI 测试项目](../test/media/cuit_datadriven_.png)
 
    > [!NOTE]
-   > 如未看到“编码的 UI 测试项目”模板，则需要安装[编码的 UI 测试组件](../test/use-ui-automation-to-test-your-code.md#install-the-coded-ui-test-component)  。
+   > 如未看到“编码的 UI 测试项目”模板，则需要安装[编码的 UI 测试组件](../test/use-ui-automation-to-test-your-code.md#install-the-coded-ui-test-component)。
 
-2. 选择“记录操作”  。
+2. 选择“记录操作”。
 
     ![选择以记录操作](../test/media/cuit_datadriven_generatecodedialog.png)
 
@@ -64,17 +66,17 @@ ms.locfileid: "75595353"
    }
    ```
 
-5. 使用 `AddNumbers()` 方法验证测试正常运行。 将光标放在上面所示的测试方法中，打开右键单击菜单，再选择“运行测试”  。 （键盘快捷键：Ctrl+R，T）    。
+5. 使用 `AddNumbers()` 方法验证测试正常运行。 将光标放在上面所示的测试方法中，打开右键单击菜单，再选择“运行测试”。 （键盘快捷键：Ctrl+R，T）  。
 
-    表明测试通过还是失败的测试结果会显示在“测试资源管理器”窗口中  。 若要打开测试资源管理器窗口，请从“测试”菜单中选择“窗口”，然后选择“测试资源管理器”。   
+    表明测试通过还是失败的测试结果会显示在“测试资源管理器”窗口中。 若要打开测试资源管理器窗口，请从“测试”菜单中选择“窗口”，然后选择“测试资源管理器”。
 
-6. 因为数据源还可以用于断言参数值（供测试用于验证预期的值），所以通过添加断言来验证这两个数的总和是正确的。 将光标放在上面所示的测试方法中，打开右键单击菜单，再依次选择“为已编码 UI 测试生成代码”  和“使用已编码 UI 测试生成器”  。
+6. 因为数据源还可以用于断言参数值（供测试用于验证预期的值），所以通过添加断言来验证这两个数的总和是正确的。 将光标放在上面所示的测试方法中，打开右键单击菜单，再依次选择“为已编码 UI 测试生成代码”和“使用已编码 UI 测试生成器”。
 
     映射显示总和的计算器中的文本控件。
 
     ![映射 UI 文本控制](../test/media/cuit_datadriven_addassertion.png)
 
-7. 添加验证总和数值正确的断言。 选择具有值“3”的“DisplayText”属性，然后选择“添加断言”。    使用“AreEqual”比较运算符并确认比较值为“3”。  
+7. 添加验证总和数值正确的断言。 选择具有值“3”的“DisplayText”属性，然后选择“添加断言”。 使用“AreEqual”比较运算符并确认比较值为“3”。
 
     ![配置断言](../test/media/cuit_datadriven_builderaddassertion2.png)
 
@@ -92,17 +94,17 @@ ms.locfileid: "75595353"
    }
    ```
 
-9. 通过 `ValidateSum()` 方法验证测试正常运行。 将光标放在上面所示的测试方法中，打开右键单击菜单，再选择“运行测试”  。 （键盘快捷键：Ctrl+R，T）    。
+9. 通过 `ValidateSum()` 方法验证测试正常运行。 将光标放在上面所示的测试方法中，打开右键单击菜单，再选择“运行测试”。 （键盘快捷键：Ctrl+R，T）  。
 
      在这一点上，所有参数值在方法中都定义为常量。 然后，创建数据集，让测试成为数据驱动的测试。
 
 ### <a name="step-2---create-a-data-set"></a>步骤 2 - 创建数据集
 
-1. 在名为 data.csv 的 dataDrivenSample 项目中添加文本文件  。
+1. 在名为 data.csv 的 dataDrivenSample 项目中添加文本文件。
 
      ![将逗号分隔的值文件添加到项目](../test/media/cuit_datadriven_addcsvfile.png)
 
-2. 使用以下数据填充 .csv 文件  ：
+2. 使用以下数据填充 .csv 文件：
 
     |Num1|Num2|Sum|
     |-|-|-|
@@ -114,9 +116,9 @@ ms.locfileid: "75595353"
 
      ![用数据填充 .csv 文件](../test/media/cuit_datadriven_adddatatocsvfile.png)
 
-3. 务必使用正确的编码保存 .csv 文件  。 在“文件”菜单上，选择“高级保存选项”，并选择“Unicode (无签名的 UTF-8) - 代码页 65001”作为编码。   
+3. 务必使用正确的编码保存 .csv 文件。 在“文件”菜单上，选择“高级保存选项”，并选择“Unicode (无签名的 UTF-8) - 代码页 65001”作为编码。  
 
-4. 必须将 .csv 文件复制到输出目录，否则测试无法运行  。 使用“属性”窗口进行复制  。
+4. 必须将 .csv 文件复制到输出目录，否则测试无法运行。 使用“属性”窗口进行复制。
 
      ![部署 .csv 文件](../test/media/cuit_datadriven_deploycsvfile.png)
 
@@ -148,7 +150,7 @@ ms.locfileid: "75595353"
 
 ### <a name="step-4---use-the-data-in-the-coded-ui-test"></a>步骤 4 - 将数据用于编码的 UI 测试中
 
-1. 将 `using Microsoft.VisualStudio.TestTools.UITesting.WinControls` 添加到 CodedUITest.cs 文件的顶部  ：
+1. 将 `using Microsoft.VisualStudio.TestTools.UITesting.WinControls` 添加到 CodedUITest.cs 文件的顶部：
 
     ```csharp
     using System;
@@ -179,7 +181,7 @@ ms.locfileid: "75595353"
 
      使用编码的 UI 测试编辑器来区分将数据编码为何种搜索属性。
 
-    - 打开 UIMap.uitest 文件  。
+    - 打开 UIMap.uitest 文件。
 
          ![打开经编码的 UI 测试编辑器](../test/media/cuit_datadriven_opentesteditor.png)
 
@@ -187,7 +189,7 @@ ms.locfileid: "75595353"
 
          ![使用编码的 UI 测试编辑器以辅助编码](../test/media/cuit_datadriven_testeditor.png)
 
-    - 在属性窗口中，打开“搜索属性”   。 搜索属性“名称”值为使用数据源在代码中对其进行操作的值。  例如，`SearchProperties` 被分配给每个数据行第一列中的值：`UIItem1Button.SearchProperties[WinButton.PropertyNames.Name] = TestContext.DataRow["Num1"].ToString();`。 对于这三个迭代，测试会将搜索属性的“名称”  值依次更改为 3、5、6。
+    - 在属性窗口中，打开“搜索属性” 。 搜索属性“名称”值为使用数据源在代码中对其进行操作的值。 例如，`SearchProperties` 被分配给每个数据行第一列中的值：`UIItem1Button.SearchProperties[WinButton.PropertyNames.Name] = TestContext.DataRow["Num1"].ToString();`。 对于这三个迭代，测试会将搜索属性的“名称”值依次更改为 3、5、6。
 
          ![使用搜索属性以辅助编码](../test/media/cuit_datadriven_searchproperties.png)
 
@@ -197,7 +199,7 @@ ms.locfileid: "75595353"
 
 通过再次运行测试来验证现在测试是数据驱动的。
 
-使用 .csv 文件中的值，你可以发现测试通过这三个迭代运行  。 验证工作仍可进行，并且测试资源管理器中的测试应显示为通过。
+使用 .csv 文件中的值，你可以发现测试通过这三个迭代运行。 验证工作仍可进行，并且测试资源管理器中的测试应显示为通过。
 
 ## <a name="q--a"></a>问题解答
 
@@ -229,11 +231,11 @@ ms.locfileid: "75595353"
 
 ### <a name="q-why-cant-i-modify-the-code-in-the-uimapdesigner-file"></a>问：为什么无法修改 UIMap.Designer 文件中的代码？
 
-**答：** 每次使用“UIMap - 编码的 UI 测试生成器”生成代码时，都会覆盖在 UIMapDesigner.cs 文件中进行的所有代码更改  。 在该示例中以及大多数情况下，为了让测试可以使用某项数据而需要更改代码，这时可以对该测试的源代码文件（即 CodedUITest1.cs）进行更改  。
+**答：** 每次使用“UIMap - 编码的 UI 测试生成器”生成代码时，都会覆盖在 UIMapDesigner.cs 文件中进行的所有代码更改。 在该示例中以及大多数情况下，为了让测试可以使用某项数据而需要更改代码，这时可以对该测试的源代码文件（即 CodedUITest1.cs）进行更改。
 
-如果必须修改录制的方法，则必须将其复制到 UIMap.cs 文件并对其重命名  。 UIMap.cs 文件可用于重写 UIMapDesigner.cs 文件中的方法和属性   。 必须在 Coded UITest.cs 文件中删除对原始方法的引用，并将其替换为重命名的方法名称  。
+如果必须修改录制的方法，则必须将其复制到 UIMap.cs 文件并对其重命名。 UIMap.cs 文件可用于重写 UIMapDesigner.cs 文件中的方法和属性   。 必须在 Coded UITest.cs 文件中删除对原始方法的引用，并将其替换为重命名的方法名称。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [UIMap](/previous-versions/dd580454(v=vs.140))
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert>

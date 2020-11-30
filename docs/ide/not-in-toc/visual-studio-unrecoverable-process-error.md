@@ -1,5 +1,7 @@
 ---
 title: 进程遇到不可恢复的错误
+description: 了解可能会在 Visual Studio 正常运行过程中遇到不可恢复的错误的进程。
+ms.custom: SEO-VS-2020
 ms.date: 09/10/2020
 ms.topic: troubleshooting
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e1c9dc5053e2168482f4463f805bdc5e724ef6b0
-ms.sourcegitcommit: d9dd86c421532cfca6c0c5761d160f35829419c6
+ms.openlocfilehash: e44f96e0a8056a369b164e725aca6832b5a349cb
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90025560"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95871478"
 ---
 # <a name="visual-studio-unrecoverable-process-error"></a>Visual Studio 无法恢复的处理器错误
 

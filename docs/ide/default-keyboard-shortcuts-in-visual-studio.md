@@ -1,5 +1,7 @@
 ---
 title: 默认键盘快捷方式
+description: 了解 Visual Studio 中的默认键盘快捷方式，以便通过它们访问各种命令和窗口。
+ms.custom: SEO-VS-2020
 ms.date: 06/26/2017
 ms.topic: reference
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eab8798dfb5c1666ef2829361adb8c48202c3981
-ms.sourcegitcommit: 4affcf2830337e6aba84621c3eda5faf5d0d4a01
+ms.openlocfilehash: 06bbbb0124984530e92b0066044c71bfbe80ad2b
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91022212"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006362"
 ---
 # <a name="default-keyboard-shortcuts-in-visual-studio"></a>Visual Studio 中的默认键盘快捷方式
 
@@ -35,7 +37,7 @@ ms.locfileid: "91022212"
 - [分析](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_analyze)
 - [编辑](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_edit)
 - [Project](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_project)
-- [Test](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_test)
+- [测试](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_test)
 - [体系结构](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_architecture)
 - [编辑器上下文菜单](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_editorContext)
 - [项目和解决方案上下文菜单](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_projectContext)

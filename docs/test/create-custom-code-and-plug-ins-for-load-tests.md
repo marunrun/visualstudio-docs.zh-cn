@@ -1,5 +1,7 @@
 ---
 title: 为负载测试创建自定义代码和插件
+description: 了解如何使用负载测试 API 和 Web 性能测试 API 为测试创建自定义插件，以扩展内置功能。
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 f1_keywords:
@@ -11,12 +13,12 @@ ms.assetid: 0c0fcc99-673b-4ea0-a268-0475f66e5cb6
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 3c060dc9bd50c6dc49777e9114eadae4d6267d92
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: db91f8f5ccf86d67d01bb56a3a42b66757320500
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288671"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442659"
 ---
 # <a name="create-custom-code-and-plug-ins-for-load-tests"></a>为负载测试创建自定义代码和插件
 
@@ -33,7 +35,7 @@ ms.locfileid: "85288671"
 |**向 Web 性能测试结果查看器添加 UI 功能：** 可以使用 Visual Studio 外接程序向 Web 性能测试结果查看器添加多个 UI 功能。|-   [如何：为 Web 性能测试结果查看器创建 Visual Studio 外接程序](../test/how-to-create-an-add-in-for-the-web-performance-test-results-viewer.md)|
 |**创建自定义 HTTP 正文编辑器：** 可以创建自定义编辑器来编辑来自 Web 服务的二进制或字符串 http XML 响应。|-   [如何：为 Web 性能测试编辑器创建自定义 HTTP 正文编辑器](../test/how-to-create-a-custom-http-body-editor-for-the-web-performance-test-editor.md)|
 
-## <a name="reference"></a>引用
+## <a name="reference"></a>参考
 
 <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestPlugin>
 
@@ -45,7 +47,7 @@ ms.locfileid: "85288671"
 
 <xref:Microsoft.VisualStudio.TestTools.LoadTesting>
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [分析负载测试结果](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
 - [生成和运行编码的 Web 性能测试](../test/generate-and-run-a-coded-web-performance-test.md)

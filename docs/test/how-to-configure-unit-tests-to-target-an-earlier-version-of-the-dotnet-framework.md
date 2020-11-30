@@ -1,5 +1,7 @@
 ---
 title: 单元测试面向 .NET Framework 的早期版本
+description: 了解如何创建面向 .NET Framework 的特定版本的单元测试项目。 所面向的版本必须为 3.5 或更高版本，并且不能为客户端版本。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.author: mikejo
@@ -7,12 +9,12 @@ manager: jillfra
 ms.workload:
 - dotnet
 author: mikejo5000
-ms.openlocfilehash: 670ec672c55d591496e26435db5a3112c345a44d
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 6badbb7723bf4d8ed0c9385558204c2dc4907574
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85288164"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441243"
 ---
 # <a name="how-to-configure-unit-tests-to-target-an-earlier-version-of-the-net-framework"></a>如何：配置单元测试以面向 .NET Framework 的早期版本
 
@@ -58,7 +60,7 @@ ms.locfileid: "85288164"
 
      ![高级编译选项](../test/media/howtoconfigureunittest35frameworka.png)
 
-4. 使用“目标框架 (所有配置)”下拉列表，将目标框架更改为 **.NET Framework 3.5**或更高版本，如下图中的标注 B 所示。 不应指定客户端版本。
+4. 使用“目标框架 (所有配置)”下拉列表，将目标框架更改为 **.NET Framework 3.5** 或更高版本，如下图中的标注 B 所示。 不应指定客户端版本。
 
      ![目标框架下拉列表](../test/media/howtoconfigureunitest35frameworkstepb.png)
 

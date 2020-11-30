@@ -1,7 +1,7 @@
 ---
 title: Kubernetes 桥接的工作原理
 ms.technology: vs-azure
-ms.date: 06/02/2020
+ms.date: 11/19/2020
 ms.topic: conceptual
 description: 介绍如何使用 Bridge to Kubernetes 将开发计算机连接到 Kubernetes 群集
 keywords: Bridge to Kubernetes, Docker, Kubernetes, Azure, 容器
@@ -9,12 +9,12 @@ monikerRange: '>=vs-2019'
 manager: jillfra
 author: ghogen
 ms.author: ghogen
-ms.openlocfilehash: afeb612e1d092ebc1f5c33394a62dd9cef6b6a1c
-ms.sourcegitcommit: 54ec951bcfa87fd80a42e3ab4539084634a5ceb4
+ms.openlocfilehash: d1a92433a90e6e6b7f71d0c7db6ced3a52c33315
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92116098"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95440605"
 ---
 # <a name="how-bridge-to-kubernetes-works"></a>Kubernetes 桥接的工作原理
 
@@ -105,6 +105,37 @@ Bridge to Kubernetes 与群集建立连接时会执行以下操作：
 ## <a name="diagnostics-and-logging"></a>诊断和日志记录
 
 使用 Bridge to Kubernetes 连接到群集时，会将群集中的诊断日志记录到开发计算机的 Bridge to Kubernetes 文件夹中的 TEMP 目录 。
+
+## <a name="rbac-authorization"></a>RBAC 授权
+
+Kubernetes 提供了基于角色的访问控制 (RBAC) 来管理用户和组的权限。 有关信息，请参阅 [Kubernetes 文档](https://kubernetes.io/docs/reference/access-authn-authz/rbac/) 可以通过创建 YAML 文件并使用 `kubectl` 将其应用到群集，来设置对启用了 RBAC 的群集的权限。 
+
+若要设置对群集的权限，请将自己的命名空间用于 `<namespace>` 并使用需要访问权限的使用者（用户和组），创建或修改 YAML 文件（如下所示的 permissions.yml）。
+
+```yml
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: bridgetokubernetes-<namespace>
+  namespace: development
+subjects:
+  - kind: User
+    name: jane.w6wn8.k8s.ginger.eu-central-1.aws.gigantic.io
+    apiGroup: rbac.authorization.k8s.io
+  - kind: Group
+    name: dev-admin
+    apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: ClusterRole
+  name: admin
+  apiGroup: rbac.authorization.k8s.io
+```
+
+使用以下命令应用权限：
+
+```cmd
+kubectl -n <namespace> apply -f <yaml file name>
+```
 
 ## <a name="limitations"></a>限制
 

@@ -1,5 +1,7 @@
 ---
 title: 启用控件的编码的 UI 测试
+description: 了解如何实现对编码的 UI 测试框架的支持，以使控件更易测试。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.author: mikejo
@@ -7,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: d94c68a660201b0a8767b1405fcd4399cdf6d660
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7b36b7e2469aa5d4ef6e11cff2580e0fb0c8ff03
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288684"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441399"
 ---
 # <a name="enable-coded-ui-testing-of-your-controls"></a>启用控件的编码的 UI 测试
 
@@ -69,7 +71,7 @@ ms.locfileid: "85288684"
 4. 替代子控件辅助功能对象的 <xref:System.Windows.Forms.AccessibleObject.Bounds%2A>、<xref:System.Windows.Forms.AccessibleObject.Name%2A>、<xref:System.Windows.Forms.AccessibleObject.Parent%2A>、<xref:System.Windows.Forms.AccessibleObject.Role%2A>、<xref:System.Windows.Forms.AccessibleObject.State%2A>、<xref:System.Windows.Forms.AccessibleObject.Navigate%2A> 和 <xref:System.Windows.Forms.AccessibleObject.Select%2A> 属性及方法。
 
 > [!NOTE]
-> 本主题从 <xref:System.Windows.Forms.AccessibleObject> 辅助功能示例开始，然后在此示例上完成剩余过程。 如果要创建辅助功能示例的可行版本，请创建一个控制台应用程序，然后用示例代码替换 Program.cs  中的代码。 添加对辅助功能、System.Drawing 和 System.Windows.Forms 的引用。 若要消除生成警告，将辅助功能的“嵌入互操作类型”更改为“False”   。 可以将项目的输出类型从“控制台应用程序”更改为“Windows 应用程序”，以便在运行应用程序时不显示控制台窗口。  
+> 本主题从 <xref:System.Windows.Forms.AccessibleObject> 辅助功能示例开始，然后在此示例上完成剩余过程。 如果要创建辅助功能示例的可行版本，请创建一个控制台应用程序，然后用示例代码替换 Program.cs 中的代码。 添加对辅助功能、System.Drawing 和 System.Windows.Forms 的引用。 若要消除生成警告，将辅助功能的“嵌入互操作类型”更改为“False”。 可以将项目的输出类型从“控制台应用程序”更改为“Windows 应用程序”，以便在运行应用程序时不显示控制台窗口。
 
 ## <a name="support-custom-property-validation-by-implementing-a-property-provider"></a>通过实现属性提供程序来支持自定义属性验证
 
@@ -99,7 +101,7 @@ ms.locfileid: "85288684"
     }
     ```
 
-1. 通过创建类库项目，为控件创建 UI 测试扩展包。 添加对辅助功能、Microsoft.VisualStudio.TestTools.UITesting、Microsoft.VisualStudio.TestTools.UITest.Common 和 Microsoft.VisualStudio.TestTools.Extension 的引用。 将可访问性的“嵌入互操作类型”  更改为“False”  。
+1. 通过创建类库项目，为控件创建 UI 测试扩展包。 添加对辅助功能、Microsoft.VisualStudio.TestTools.UITesting、Microsoft.VisualStudio.TestTools.UITest.Common 和 Microsoft.VisualStudio.TestTools.Extension 的引用。 将可访问性的“嵌入互操作类型”更改为“False”。
 
 1. 添加一个派生自 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider> 的属性提供程序类：
 
@@ -171,7 +173,7 @@ ms.locfileid: "85288684"
 
 1. 将操作筛选器添加到扩展包的 <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage.GetService%2A> 方法。
 
-1. 生成二进制文件，然后将其复制到 %ProgramFiles%\Common Files\Microsoft Shared\VSTT\10.0\UITestExtensionPackages  。
+1. 生成二进制文件，然后将其复制到 %ProgramFiles%\Common Files\Microsoft Shared\VSTT\10.0\UITestExtensionPackages。
 
 > [!NOTE]
 > 操作筛选器不依赖于辅助功能实现或属性提供程序。
@@ -182,7 +184,7 @@ ms.locfileid: "85288684"
 
 ### <a name="to-debug-your-property-provider-or-action-filter"></a>调试属性提供程序或操作筛选器
 
-1. 生成扩展包的调试版本，然后将 .dll  和 .pdb  文件复制到 %ProgramFiles%\Common Files\Microsoft Shared\VSTT\10.0\UITestExtensionPackages  。
+1. 生成扩展包的调试版本，然后将 .dll 和 .pdb 文件复制到 %ProgramFiles%\Common Files\Microsoft Shared\VSTT\10.0\UITestExtensionPackages。
 
 2. 运行您的应用程序（不在调试器中）。
 

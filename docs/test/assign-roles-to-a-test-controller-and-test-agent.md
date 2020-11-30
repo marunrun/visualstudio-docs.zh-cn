@@ -1,5 +1,6 @@
 ---
 title: 测试控制器和测试代理角色
+description: 了解如何创建和配置测试设置，以使用测试控制器和测试代理跨多台使用 Visual Studio 的计算机分发测试。
 ms.custom: SEO-VS-2020
 ms.date: 10/20/2016
 ms.topic: conceptual
@@ -13,12 +14,12 @@ ms.assetid: 57ed43ae-4e67-4139-8aec-3e9fceb0a745
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: c7f4360772f3962ff60517071dcae4318dc71e56
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: c059510dc39472d5c981f93e4d7259545b809d38
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809297"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442438"
 ---
 # <a name="assign-roles-to-a-test-controller-and-test-agent"></a>为测试控制器和测试代理分配角色
 

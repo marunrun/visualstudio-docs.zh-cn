@@ -1,5 +1,6 @@
 ---
 title: 为负载测试配置测试代理/测试控制器
+description: 了解 Visual Studio 如何使用物理计算机或虚拟机创建模拟负载，从而生成超出一台计算机单机生成能力的负载。
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
@@ -8,12 +9,12 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 4e9aea22a63f2eee8f83ee597ed11c90df7f6b1a
-ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
+ms.openlocfilehash: e70c1f3783945fbea00816d961f8ae6518ff726b
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099396"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442607"
 ---
 # <a name="overview-of-test-agents-and-test-controllers-for-running-load-tests"></a>用于运行负载测试的测试代理和测试控制器的概述
 

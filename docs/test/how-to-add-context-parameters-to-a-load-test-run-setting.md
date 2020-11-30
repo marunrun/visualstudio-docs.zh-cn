@@ -1,5 +1,7 @@
 ---
 title: 向负载测试运行设置中添加上下文参数
+description: 了解如何使用负载测试编辑器创建将字符串参数化的上下文参数，以在负载测试运行设置中使用它们。
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,16 +11,16 @@ ms.assetid: a8a0b97e-8040-4711-85ab-36548b130ed2
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 10a410b18391b3fbaee98f10be56cdc70c0f3562
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 22b3a6a1f40a317284380bf72aadec4d53b6ce13
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288411"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95440182"
 ---
 # <a name="how-to-add-context-parameters-to-a-load-test-run-setting"></a>如何：向负载测试运行设置中添加上下文参数
 
-在使用“新建负载测试向导”创建负载测试后，可以使用“负载测试编辑器”更改方案属性，以满足你的测试需求和目标。  
+在使用“新建负载测试向导”创建负载测试后，可以使用“负载测试编辑器”更改方案属性，以满足测试需求和目标 。
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
@@ -54,21 +56,21 @@ ms.locfileid: "85288411"
 
 1. 打开一个负载测试。
 
-2. 在负载测试编辑器中，展开负载测试树中的“运行设置”文件夹  。
+2. 在负载测试编辑器中，展开负载测试树中的“运行设置”文件夹。
 
-3. 右键单击要在其中添加上下文参数的特定运行设置，然后选择“添加上下文参数”  。
+3. 右键单击要在其中添加上下文参数的特定运行设置，然后选择“添加上下文参数”。
 
-     一个新上下文参数将添加到负载测试树中“运行设置”文件夹的“上下文参数”文件夹   。
+     一个新上下文参数将添加到负载测试树中“运行设置”文件夹的“上下文参数”文件夹。
 
-     或
+     -或-
 
-     如果运行设置已经包含“上下文参数”文件夹，则可以右键单击该文件夹，然后选择“添加上下文参数”   。
+     如果运行设置已经包含“上下文参数”文件夹，则可以右键单击该文件夹，然后选择“添加上下文参数”。
 
-4. 在“属性”窗口中，根据需要更改“名称”的值（例如，WebServer1）   。 在“属性”窗口中，将“值”更改为要使用的参数（例如 `http://CorporateStagingWebServer`）。
+4. 在“属性”窗口中，根据需要更改“名称”的值（例如，WebServer1） 。 在“属性”窗口中，将“值”更改为要使用的参数（例如 `http://CorporateStagingWebServer`） 。
 
 5. （可选）重复步骤 3 至 5，并对“值”属性使用其他字符串（例如 `http://CorporateProductionWebServer`）。
 
-6. 选择你希望哪些运行设置处于活动状态。 打开运行设置上的快捷菜单并选择“设置为活动的”  。
+6. 选择你希望哪些运行设置处于活动状态。 打开运行设置上的快捷菜单并选择“设置为活动的”。
 
 ## <a name="see-also"></a>另请参阅
 

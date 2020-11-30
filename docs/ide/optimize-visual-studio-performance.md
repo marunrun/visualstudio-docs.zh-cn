@@ -1,6 +1,8 @@
 ---
 title: 在 Visual Studio 速度较慢的情况下提高性能
 titleSuffix: ''
+description: 了解发现 Visual Studio 运行速度较慢时提高其性能的方式。
+ms.custom: SEO-VS-2020
 ms.date: 04/11/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ f1_keywords:
 - vs.performancecenter
 ms.workload:
 - multiple
-ms.openlocfilehash: 6495e8506e12c0c5e5f878a23c609fe53a401bde
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 6e6f93b7709144e6682bc54d5686fde5ff650f56
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75596991"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95871465"
 ---
 # <a name="optimize-visual-studio-performance"></a>优化 Visual Studio 性能
 
@@ -29,7 +31,7 @@ ms.locfileid: "75596991"
 
 ::: moniker range="vs-2017"
 
-如果已在使用 Visual Studio 2017，请确保运行版本 15.6 或更高版本。 数据显示，在版本 15.6 中，解决方案的加载速度最高可提升两到三倍。 在[此处](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)下载。
+如果已在使用 Visual Studio 2017，请确保运行版本 15.6 或更高版本。 数据显示，在版本 15.6 中，解决方案的加载速度最高可提升两到三倍。 可从[此处](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)下载。
 
 ::: moniker-end
 
@@ -49,7 +51,7 @@ ms.locfileid: "75596991"
 
 ## <a name="help-us-improve"></a>帮助我们改进
 
-你的反馈有助于我们改进。 使用“报告问题”功能来“记录”跟踪并发送给我们  。 选择“快速启动”旁边的反馈图标，或从菜单栏中选择“帮助” > “发送反馈” > “报告问题”。 有关详细信息，请参阅[如何报告 Visual Studio 的问题](../ide/how-to-report-a-problem-with-visual-studio.md)。
+你的反馈有助于我们改进。 使用“报告问题”功能来“记录”跟踪并发送给我们。 选择“快速启动”旁边的反馈图标，或从菜单栏中选择“帮助” > “发送反馈” > “报告问题”。 有关详细信息，请参阅[如何报告 Visual Studio 的问题](../ide/how-to-report-a-problem-with-visual-studio.md)。
 
 ## <a name="see-also"></a>另请参阅
 

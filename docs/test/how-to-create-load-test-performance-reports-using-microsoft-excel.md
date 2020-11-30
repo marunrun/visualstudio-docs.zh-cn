@@ -1,5 +1,6 @@
 ---
 title: 使用 Excel 创建负载测试性能报告
+description: 了解如何基于两个或多个测试结果生成 Microsoft Excel 负载测试报告。 可以创建运行比较报告和趋势报告。
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
@@ -10,12 +11,12 @@ ms.assetid: b87fb196-9973-4512-a924-088788def4ea
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 9ce92e157ba3fe02dbabd1ddd408492c440102a1
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: a89818630258aab42535fb4256fa3e844b0c6878
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810254"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442425"
 ---
 # <a name="how-to-create-load-test-performance-reports-using-microsoft-excel"></a>如何：使用 Microsoft Excel 创建负载测试性能报告
 
@@ -25,9 +26,9 @@ ms.locfileid: "90810254"
 
 负载测试报告分为两种：
 
-- **运行比较**这种方式会创建一组报告，它们使用表和条形图比较两个负载测试结果的数据。
+- **运行比较** 这种方式会创建一组报告，它们使用表和条形图比较两个负载测试结果的数据。
 
-- **趋势**可基于两个或更多负载测试结果生成趋势分析。 其结果以折线图显示，但可从数据透视表获得数据。
+- **趋势** 可基于两个或更多负载测试结果生成趋势分析。 其结果以折线图显示，但可从数据透视表获得数据。
 
 > [!TIP]
 > 也可以通过从摘要视图、关系图视图和表视图中复制和粘贴数据来手动创建 Microsoft Word 报告。 请参阅[如何：使用 Microsoft Word 手动创建负载测试性能报告](../test/how-to-manually-create-a-load-test-performance-report-using-microsoft-word.md)。

@@ -1,5 +1,7 @@
 ---
 title: 全屏和虚拟空间模式
+description: 了解如何管理 Visual Studio 编辑器模式，以使所有工具和窗口的显示方式最适合自己。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -24,12 +26,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3f8f86d635e1e57d82dd2d18084c91a9267f9a0b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2b86859f5f5718871499bb1f3e2014da59f956db
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85284199"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597140"
 ---
 # <a name="how-to-manage-editor-modes"></a>如何：管理编辑器模式
 
@@ -40,26 +42,26 @@ ms.locfileid: "85284199"
 
 ## <a name="enable-full-screen-mode"></a>启用全屏模式
 
-启用“全屏”模式后，可选择隐藏所有工具窗口并仅查看文档窗口  。
+启用“全屏”模式后，可选择隐藏所有工具窗口并仅查看文档窗口。
 
-- 按 **Alt**+**Shift**+**Enter** 可进入或退出“全屏”  模式。
+- 按 **Alt**+**Shift**+**Enter** 可进入或退出“全屏”模式。
 
-     --或者--
+     \- 或 -
 
-- 在“命令”窗口中发出命令 `View.Fullscreen`  。
+- 在“命令”窗口中发出命令 `View.Fullscreen`。
 
 ## <a name="enable-virtual-space-mode"></a>启用虚空格模式
 
-在“虚空格”模式下，将在每个代码行末尾插入空格  。 选择此选项可将注释放置在代码旁的一致位置。
+在“虚空格”模式下，将在每个代码行末尾插入空格。 选择此选项可将注释放置在代码旁的一致位置。
 
-1. 从“工具”菜单中选择“选项”   。
+1. 从“工具”菜单中选择“选项” 。
 
-2. 展开“文本编辑器”文件夹，选择“所有语言”，全局设置此选项，或选择特定语言的文件夹   。 例如，若要仅在 Visual Basic 中启用行号，则选择“Basic” > “文本编辑器”节点。
+2. 展开“文本编辑器”文件夹，选择“所有语言”，全局设置此选项，或选择特定语言的文件夹。 例如，若要仅在 Visual Basic 中启用行号，则选择“Basic” > “文本编辑器”节点 。
 
-3. 选择“常规”选项，然后在“设置”下选择“启用虚空格”    。
+3. 选择“常规”选项，然后在“设置”下选择“启用虚空格”。
 
     > [!NOTE]
-    > “虚空格”在“列选择”模式下启用   。 如果未启用“虚空格”模式，插入点将从一行的末尾直接移动到下一行的第一个字符  。
+    > “虚空格”在“列选择”模式下启用。 如果未启用“虚空格”模式，插入点将从一行的末尾直接移动到下一行的第一个字符。
 
 ## <a name="see-also"></a>另请参阅
 

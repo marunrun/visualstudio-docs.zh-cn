@@ -1,5 +1,7 @@
 ---
 title: 编码和换行符字符
+description: 了解 Visual Studio 解释为换行符的字符并了解维护原始编码和换行符的方式。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +19,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6634a0b2715fb83a397b5e8cd0c8c68274771e2a
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: 889af1c0fd28224b2f31eb80bbeecad28346cd1c
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93045589"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006635"
 ---
 # <a name="encodings-and-line-endings"></a>编码和行尾
 

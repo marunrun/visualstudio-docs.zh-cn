@@ -1,5 +1,6 @@
 ---
 title: 编写自定义提取规则（Web 性能测试）
+description: 了解如何通过从提取规则类 ExtractionRule 进行派生来创建自己的提取规则。
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
@@ -14,12 +15,12 @@ dev_langs:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: d29bb2d0bfa1bbea7d0dd8dedbb17f9704a9c66d
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: e03a289ee95e9aefddb49154d1199fffa31ce3ca
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810622"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442451"
 ---
 # <a name="code-a-custom-extraction-rule-for-a-web-performance-test"></a>为 Web 性能测试编码自定义提取规则
 

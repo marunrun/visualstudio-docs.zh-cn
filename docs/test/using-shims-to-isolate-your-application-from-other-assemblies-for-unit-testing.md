@@ -1,5 +1,6 @@
 ---
 title: 将你的应用与填充码隔离（单元测试）
+description: 了解如何使用填充码类型将对特定方法的调用转换为在测试中编写的部分代码。 填充码可以在每次调用时返回一致的结果。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -9,12 +10,12 @@ author: mikejo5000
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 13a5c8c4058fc051cf7ec0093632220c757604f0
-ms.sourcegitcommit: f2bb3286028546cbd7f54863b3156bd3d65c55c4
+ms.openlocfilehash: 0ce89246d227d747fee2d3a02484855257f016f8
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93325920"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95598206"
 ---
 # <a name="use-shims-to-isolate-your-app-for-unit-testing"></a>使用填充码隔离应用以进行单元测试
 
@@ -96,7 +97,7 @@ public void Y2kCheckerTest() {
 
 ### <a name="write-a-test-with-shims"></a>编写包含填充码的测试
 
-在测试代码中，为要虚设的方法插入 *绕道* 。 例如:
+在测试代码中，为要虚设的方法插入 *绕道*。 例如:
 
 ```csharp
 [TestClass]
@@ -157,7 +158,7 @@ End Class
 
 填充码类名称是通过在原始类型名称前加上 `Fakes.Shim` 前缀构成的。
 
-填充码的运行方式为在受测应用的代码中插入 *绕道* 。 无论在什么位置调用原始方法，Fakes 系统都会执行绕道，这样就会调用填充码代码而不是实际方法。
+填充码的运行方式为在受测应用的代码中插入 *绕道*。 无论在什么位置调用原始方法，Fakes 系统都会执行绕道，这样就会调用填充码代码而不是实际方法。
 
 请注意，绕道是在运行时创建和删除的。 必须始终在 `ShimsContext` 生存期内创建绕道。 释放绕道后，在绕道活动期间创建的任何填充码都会被移除。 为此，最好的方法是在 `using` 语句内执行。
 

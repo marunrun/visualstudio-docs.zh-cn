@@ -1,5 +1,7 @@
 ---
 title: 代码生成功能
+description: 了解 Visual Studio 如何帮助你生成、修复和重构代码。
+ms.custom: SEO-VS-2020
 ms.date: 01/11/2018
 ms.topic: conceptual
 author: TerryGLee
@@ -7,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a043c2e1e79d629b32d46f0f54d233cd0ea9cb54
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 14cc2965589ec46565740bf17037013f10640aea
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75594248"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903866"
 ---
 # <a name="code-generation-features-in-visual-studio"></a>Visual Studio 中的代码生成功能
 
@@ -29,7 +31,7 @@ Visual Studio 可通过诸多方式帮助你生成、修复和重构代码。
 > [!NOTE]
 > Visual Studio 的每种语言服务都由自己的代码生成服务，一些功能仅在 C# 中可用，而一些可同时在 C# 和 Visual Basic 中使用。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [代码片段](../ide/code-snippets.md)
 - [快速操作](../ide/quick-actions.md)

@@ -1,5 +1,7 @@
 ---
 title: Microsoft Fakes：生成和编译代码；命名约定
+description: 了解 Fakes 代码生成和编译中的选项和问题，其中包括 Fakes 生成的类型、成员和参数的命名约定。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.author: mikejo
@@ -7,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 9a1ba469f460e966be581b87226f2a89faac8186
-ms.sourcegitcommit: f2bb3286028546cbd7f54863b3156bd3d65c55c4
+ms.openlocfilehash: e3ebb1439c7b8eb958d8e7126ca0197462e89a09
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93325938"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441628"
 ---
 # <a name="code-generation-compilation-and-naming-conventions-in-microsoft-fakes"></a>Microsoft Fakes 中的代码生成、编译和命名约定
 
@@ -223,13 +225,13 @@ attribute of the Assembly element in the .fakes:
 
 ### <a name="shim-delegate-property-or-stub-delegate-field-naming-conventions"></a>填充委托属性或存根委托字段命名约定
 
-字段命名的 **基本规则** ，从空的名称开始：
+字段命名的 **基本规则**，从空的名称开始：
 
 - 追加方法名称。
 
 - 如果方法名称是显式接口实现，则删除点。
 
-- 如果是泛型方法，则追加 `Of`*n* ，其中 *n* 是泛型方法自变量的数量。
+- 如果是泛型方法，则追加 `Of`*n*，其中 *n* 是泛型方法自变量的数量。
 
   特殊方法名称（比如属性 getter 或 setter）将按下表所述方式处理：
 
@@ -237,14 +239,14 @@ attribute of the Assembly element in the .fakes:
 |-|-|-|
 |**构造函数**|`.ctor`|`Constructor`|
 |静态 **构造函数**|`.cctor`|`StaticConstructor`|
-|方法名称由以“_”分隔的两部分组成（比如属性 getter）的 **取值函数**|*kind_name* （通常情况下，但不是由 ECMA 强制执行）|*NameKind* ，两部分均首字母大写且进行交换|
+|方法名称由以“_”分隔的两部分组成（比如属性 getter）的 **取值函数**|*kind_name*（通常情况下，但不是由 ECMA 强制执行）|*NameKind*，两部分均首字母大写且进行交换|
 ||属性 `Prop` 的 getter|`PropGet`|
 ||属性 `Prop` 的 setter|`PropSet`|
 ||事件 adder|`Add`|
 ||事件 remover|`Remove`|
 |由两部分组成的 **运算符**|`op_name`|`NameOp`|
 |例如：+ 运算符|`op_Add`|`AddOp`|
-|对于 **转换运算符** ，追加返回类型。|`T op_Implicit`|`ImplicitOpT`|
+|对于 **转换运算符**，追加返回类型。|`T op_Implicit`|`ImplicitOpT`|
 
 > [!NOTE]
 > - **索引器的 getter 和 setter** 的处理方式类似于属性。 索引器的默认名称为 `Item`。

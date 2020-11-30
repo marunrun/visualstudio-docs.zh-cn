@@ -1,20 +1,23 @@
 ---
 title: 项目和解决方案简介
+description: 了解 Visual Studio 中的项目和解决方案之间的区别，以及如何使用它们。
 ms.date: 11/17/2020
 ms.technology: vs-ide-general
-ms.custom: get-started
+ms.custom:
+- get-started
+- SEO-VS-2020
 ms.topic: tutorial
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cf99c191ef6cfe32ec8ccc9b2cfd57f761941be7
-ms.sourcegitcommit: e8a13978131f257d91ce37c5a2e0d153a4c400ef
+ms.openlocfilehash: 8b22695dac3f75b9e90950ee5428bb906436d661
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94704048"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903931"
 ---
 # <a name="learn-about-projects-and-solutions"></a>了解项目和解决方案
 
@@ -55,7 +58,7 @@ ms.locfileid: "94704048"
 
 1. 在左侧窗格中，展开“其他项目类型”，然后选择“Visual Studio 解决方案”   。 在中间窗格中，选择“空白解决方案”模板  。 将解决方案命名为“QuickSolution”，然后选择“确定”按钮。
 
-   ![Visual Studio 2017 中的空白解决方案模板](media/tutorial-projects-new-solution.png)
+   ![Visual Studio 2017 中的空白解决方案模板](media/tutorial-projects-new-solution.png "Visual Studio 2017 中的空白解决方案模板。")
 
    此时“起始页”关闭，Visual Studio 窗口右侧的“解决方案资源管理器”中出现解决方案   。 你可能会经常使用“解决方案资源管理器”来浏览项目的内容  。
 
@@ -69,7 +72,7 @@ ms.locfileid: "94704048"
 
 3. 在“创建新项目”页上，  在搜索框中输入“空白解决方案”  ，选择“空白解决方案”模板，然后选择“下一步”   。
 
-   ![Visual Studio 2019 中的空白解决方案模板](media/vs-2019/tutorial-projects-blank-solution-template.png)
+   ![Visual Studio 2019 中的空白解决方案模板](media/vs-2019/tutorial-projects-blank-solution-template.png "Visual Studio 2019 中的空白解决方案模板。")
 
     > [!TIP]
     > 如果你安装了多个工作负载，那么“空白解决方案”模板可能不会出现在搜索结果列表的顶部。 尝试滚动到列表的“基于你搜索的其他结果”部分。 它应该出现在那里。
@@ -97,7 +100,7 @@ ms.locfileid: "94704048"
    > [!NOTE]
    > 如果在对话框的左侧窗格中看不到“Visual C#”，则需安装 .NET 桌面开发 Visual Studio 工作负载 。 Visual Studio 使用基于工作负载的安装旨在仅安装所执行的开发类型需要的组件。 一种安装新工作负载的简单方法是选择“添加新项目”对话框左下角的“打开 Visual Studio 安装程序”链接   。 在“Visual Studio 安装程序”启动后，选择“.NET 桌面开发”工作负载，再单击“修改”按钮   。
    >
-   > ![“打开 Visual Studio 安装程序”链接](media/tutorial-projects-open-installer.png)
+   > ![“打开 Visual Studio 安装程序”链接](media/tutorial-projects-open-installer.png "Visual Studio 2017 中“添加新项目”对话框中的“打开 Visual Studio 安装程序”链接。")
 
 ::: moniker-end
 
@@ -116,9 +119,11 @@ ms.locfileid: "94704048"
    随后名为“QuickDate”的项目出现在“解决方案资源管理器”中的解决方案下  。 目前它包含一个名为“App.config”的文件  。
 
    > [!NOTE]
-   > 如果没有看到“空项目(.NET Framework)”模板，则需要安装 .NET 桌面开发 Visual Studio 工作负载 。 Visual Studio 使用基于工作负载的安装旨在仅安装所执行的开发类型需要的组件。 在创建新项目时安装新工作负载的简便方法是，在显示“未找到你要查找的内容”的文本下选择“安装更多工具和功能”链接   。 在“Visual Studio 安装程序”启动后，选择“.NET 桌面开发”工作负载，再单击“修改”按钮   。
+   > 如果没有看到“空项目(.NET Framework)”模板，则需要安装 .NET 桌面开发 Visual Studio 工作负载 。 Visual Studio 使用基于工作负载的安装旨在仅安装所执行的开发类型需要的组件。
    >
-   > ![“打开 Visual Studio 安装程序”链接](media/vs-2019/tutorial-projects-open-installer.png)
+   >在创建新项目时安装新工作负载的简便方法是，在显示“未找到你要查找的内容”的文本下选择“安装更多工具和功能”链接   。 在“Visual Studio 安装程序”启动后，选择“.NET 桌面开发”工作负载，再单击“修改”按钮   。
+   >
+   > ![“打开 Visual Studio 安装程序”链接](media/vs-2019/tutorial-projects-open-installer.png "Visual Studio 中“新建项目”对话框中的“打开 Visual Studio 安装程序”链接。")
 
 ::: moniker-end
 
@@ -174,7 +179,7 @@ ms.locfileid: "94704048"
 
    第二个项目已添加到“解决方案资源管理器”，且编辑器中打开了名为 UnitTest1.cs 的文件。
 
-   ![包含两个项目的“Visual Studio 解决方案资源管理器”](media/tutorial-projects-solution-explorer.png)
+   ![包含两个项目的“Visual Studio 解决方案资源管理器”](media/tutorial-projects-solution-explorer.png "Visual Studio 2017 中包含两个项目的解决方案资源管理器”。")
 
 ::: moniker-end
 
@@ -188,7 +193,7 @@ ms.locfileid: "94704048"
 
    第二个项目已添加到“解决方案资源管理器”，且编辑器中打开了名为 UnitTest1.cs 的文件。
 
-   ![包含两个项目的“Visual Studio 解决方案资源管理器”](media/vs-2019/tutorial-projects-solution-explorer.png)
+   ![包含两个项目的“Visual Studio 解决方案资源管理器”](media/vs-2019/tutorial-projects-solution-explorer.png "Visual Studio 中包含两个项目的解决方案资源管理器”。")
 
 ::: moniker-end
 
@@ -204,7 +209,7 @@ ms.locfileid: "94704048"
 
    已添加对“QuickDate”项目的引用。
 
-   ![显示项目引用的 Visual Studio 2019 解决方案资源管理器](media/vs-2019/tutorial-projects-solution-explorer-reference.png)
+   ![显示项目引用的 Visual Studio 2019 解决方案资源管理器](media/vs-2019/tutorial-projects-solution-explorer-reference.png "Visual Studio 中显示项目引用的解决方案资源管理器。")
 
 ## <a name="add-test-code"></a>添加测试代码
 
@@ -240,7 +245,7 @@ ms.locfileid: "94704048"
 
    代码文件应如下所示：
 
-   ![CSharp 代码](media/tutorial-projects-cs-code.png)
+   ![CSharp 代码](media/tutorial-projects-cs-code.png "本文中“添加测试代码”部分中的代码片段。")
 
 ## <a name="project-properties"></a>项目属性
 
@@ -250,7 +255,7 @@ ms.locfileid: "94704048"
 
    项目的“属性页”随即在“应用程序”选项卡上打开。属性页包含项目的各种设置。 请注意，“QuickTest”项目的程序集名称确实为“QuickTest”。 如果想要更改，可在此处更改。 随后，在生成测试项目时，生成的二进制文件的名称将从“QuickTest.dll”更改为所选择的名称。
 
-   ![项目属性](media/tutorial-projects-netcore-properties.png)
+   ![项目属性](media/tutorial-projects-netcore-properties.png "Visual Studio 中的“项目属性”对话框。")
 
 1. 了解项目属性页的其他选项卡，例如“生成”和“调试”。 这些选项卡对不同类型的项目是不同的。
 
@@ -258,7 +263,7 @@ ms.locfileid: "94704048"
 
 若希望检查单元测试是否正常工作，请从菜单栏依次选择“测试” > “运行” > “所有测试”  。 此时名为“测试资源管理器”的窗口打开，你应该会看到“TestGetCurrentDate”测试通过。
 
-![Visual Studio 中显示已通过的测试的文本资源管理器](media/tutorial-projects-test-explorer.png)
+![Visual Studio 中显示已通过的测试的文本资源管理器](media/tutorial-projects-test-explorer.png "Visual Studio 中显示已通过的测试的测试资源管理器。")
 
 ::: moniker range="vs-2017"
 

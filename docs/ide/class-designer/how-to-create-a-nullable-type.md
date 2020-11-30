@@ -1,5 +1,7 @@
 ---
 title: 如何：创建可以为 null 的类型（类设计器）
+description: 了解如何在类设计器中创建可以为 null 的类型。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -14,12 +16,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: ad371f987ab7ff0e50dc7d2fe4effeba5205e74e
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.openlocfilehash: 3e229583b2ff375928ea462ee676e21462157dcb
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85770990"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94901643"
 ---
 # <a name="how-to-create-a-nullable-type-in-class-designer"></a>如何：在类设计器中创建可以为 null 的类型
 

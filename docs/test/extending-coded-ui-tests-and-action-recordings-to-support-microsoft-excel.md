@@ -1,5 +1,7 @@
 ---
 title: 扩展编码的 UI 测试和操作录制
+description: 了解如何利用编码的 UI 测试框架的扩展性，针对特定 UI 为编码的 UI 测试框架创建扩展。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.author: mikejo
@@ -7,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: c8efead1712ace2f533cb9075ea7a4c5305289a4
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 6a2996da30c0be8e3dc4d303d0e46e901c8b885d
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036075"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442620"
 ---
 # <a name="extend-coded-ui-tests-and-action-recordings"></a>扩展编码的 UI 测试和操作录制
 

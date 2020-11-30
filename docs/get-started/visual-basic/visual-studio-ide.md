@@ -1,8 +1,11 @@
 ---
 title: 面向 Visual Basic 开发人员的概述
+description: 了解 Visual Basic 开发人员如何使用 Visual Basic 编辑、调试和生成代码以及如何发布应用。
 ms.date: 11/15/2018
 ms.technology: vs-ide-general
-ms.custom: get-started
+ms.custom:
+- get-started
+- SEO-VS-2020
 ms.topic: conceptual
 author: TerryGLee
 ms.author: tglee
@@ -11,16 +14,16 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9938d017d683fd27a3f303824f9568a3876c2c4d
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: 990bff2832f290987ed29fd48b69f4d7a1a05bba
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91928038"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94901565"
 ---
 # <a name="welcome-to-the-visual-studio-ide--visual-basic"></a>欢迎使用 Visual Studio IDE | Visual Basic
 
-Visual Studio 集成开发环境是一种创新启动板，可用于编辑、调试并生成代码，然后发布应用**。 集成开发环境 (IDE) 是一个功能丰富的程序，可用于软件开发的许多方面。 除了大多数 IDE 提供的标准编辑器和调试器之外，Visual Studio 还包括编译器、代码完成工具、图形设计器和许多其他功能，以简化软件开发过程。
+Visual Studio 集成开发环境是一种创新启动板，可用于编辑、调试并生成代码，然后发布应用。 集成开发环境 (IDE) 是一个功能丰富的程序，可用于软件开发的许多方面。 除了大多数 IDE 提供的标准编辑器和调试器之外，Visual Studio 还包括编译器、代码完成工具、图形设计器和许多其他功能，以简化软件开发过程。
 
 ::: moniker range="vs-2017"
 
@@ -36,9 +39,9 @@ Visual Studio 集成开发环境是一种创新启动板，可用于编辑、调
 
 此图像显示 Visual Studio 具有一个打开的项目和若干可能会使用的关键工具窗口：
 
-- 使用[解决方案资源管理器](../../ide/solutions-and-projects-in-visual-studio.md)（右上角），可以查看、导航和管理代码文件。 解决方案资源管理器可将代码文件分组为[解决方案和项目](tutorial-projects-solutions.md)，从而帮助整理代码。
+- 可通过[解决方案资源管理器](../../ide/solutions-and-projects-in-visual-studio.md)（右上方）查看、导航和管理代码文件。 解决方案资源管理器可将代码文件分组为[解决方案和项目](tutorial-projects-solutions.md)，从而帮助整理代码  。
 
-- [编辑器窗口](../../ide/writing-code-in-the-code-and-text-editor.md)（中心）用于显示文件内容，你的大部分时间可能都是在此窗口中度过的。 可在该窗口编辑代码或设计用户界面，例如带有按钮和文本框的窗口。
+- [编辑器窗口](../../ide/writing-code-in-the-code-and-text-editor.md)（中心）用于显示文件内容，你可能会在该窗口花费大部分时间。 可在该窗口编辑代码或设计用户界面，例如带有按钮和文本框的窗口。
 
 - [“输出”窗口](../../ide/reference/output-window.md)（底部中心）是 Visual Studio 发送通知（例如，调试和错误消息、编译器警告、发布状态消息等）的位置。 每个消息源都有自己的选项卡。
 
@@ -129,7 +132,7 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
 - [调用层次结构](../../ide/reference/call-hierarchy.md)
 
-   “调用层次结构”窗口显示调用所选方法的方法****。 考虑更改或删除方法时，或者尝试追踪 bug 时，这可能是有用的信息。
+   “调用层次结构”窗口显示调用所选方法的方法。 考虑更改或删除方法时，或者尝试追踪 bug 时，这可能是有用的信息。
 
    ::: moniker range="vs-2017"
 
@@ -177,7 +180,7 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
 - [查看定义](../../ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md)
 
-   “速览定义”窗口显示方法或类型的定义，而无需实际打开一个单独的文件****。
+   “速览定义”窗口显示方法或类型的定义，而无需实际打开一个单独的文件。
 
    ::: moniker range="vs-2017"
 
@@ -197,13 +200,13 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
 ::: moniker range="vs-2017"
 
-首先，请[下载 Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) 并将其安装到你的系统上。 通过模块化安装程序，可以选择和安装工作负荷。工作负荷是你习惯使用的编程语言或平台所需的一些功能**。 若要执行[创建程序](#create-a-program)所需的步骤，请务必在安装过程中选择“.NET Core 跨平台开发”工作负载****。
+首先，请[下载 Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) 并将其安装到你的系统上。 通过模块化安装程序，可以选择和安装工作负荷。工作负荷是你习惯使用的编程语言或平台所需的一些功能。 若要执行[创建程序](#create-a-program)所需的步骤，请务必在安装过程中选择“.NET Core 跨平台开发”工作负载。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-首先，请[下载 Visual Studio](https://visualstudio.microsoft.com/downloads) 并将其安装到你的系统上。 通过模块化安装程序，可以选择和安装工作负荷。工作负荷是你习惯使用的编程语言或平台所需的一些功能**。 若要执行[创建程序](#create-a-program)所需的步骤，请务必在安装过程中选择“.NET Core 跨平台开发”工作负载****。
+首先，请[下载 Visual Studio](https://visualstudio.microsoft.com/downloads) 并将其安装到你的系统上。 通过模块化安装程序，可以选择和安装工作负荷。工作负荷是你习惯使用的编程语言或平台所需的一些功能。 若要执行[创建程序](#create-a-program)所需的步骤，请务必在安装过程中选择“.NET Core 跨平台开发”工作负载。
 
 ::: moniker-end
 
@@ -217,7 +220,7 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
 ### <a name="change-the-color-theme"></a>更改颜色主题
 
-更改为“深色”主题****：
+更改为“深色”主题：
 
 ::: moniker range="vs-2017"
 
@@ -241,7 +244,7 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
    ![将 Visual Studio 中的“颜色主题”更改为“深色”](media/change-color-theme.png)
 
-   此时，整个 IDE 的颜色主题更改为“深色”****。
+   此时，整个 IDE 的颜色主题更改为“深色”。
 
    ::: moniker range="vs-2017"
 
@@ -265,7 +268,7 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
 3. 在“保存当前设置”页上，依次选择确定是否保存当前设置的选项和“下一步”。 （如果尚未自定义任何设置，请选择“不，只重置设置，同时覆盖我的当前设置”。）
 
-4. 在“选择默认设置集合”**** 页上，依次选择“Visual Basic”**** 和“完成”****。
+4. 在“选择默认设置集合”页上，依次选择“Visual Basic”和“完成”。
 
 5. 在“重置完成”页上，选择“关闭”。
 
@@ -277,18 +280,18 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
 ::: moniker range="vs-2017"
 
-1. 在 Visual Studio 菜单栏上，依次选择“文件”“新建项目”**** > ****。
+1. 在 Visual Studio 菜单栏上，依次选择“文件”“新建项目” > 。
 
    ![菜单栏上的“文件”>“新建项目”](media/file-new-project-menu.png)
 
-   “新建项目”**** 对话框中会显示几个项目模板**。 模板包含给定项目类型所需的基本文件和设置。
+   “新建项目”对话框中会显示几个项目模板。 模板包含给定项目类型所需的基本文件和设置。
 
-1. 依次选择“Visual Basic”**** 下的“.NET Core”**** 类别和“控制台应用(.NET Core)”**** 模板。 在“名称”文本框中，键入“HelloWorld”，然后选择“确定”按钮************。
+1. 依次选择“Visual Basic”下的“.NET Core”类别和“控制台应用(.NET Core)”模板。 在“名称”文本框中，键入“HelloWorld”，然后选择“确定”按钮。
 
    ![.NET Core 应用模板](media/overview-npd.png)
 
    > [!NOTE]
-   > 如果未看到“.NET Core”类别，则需要安装“.NET Core 跨平台开发”工作负载********。 为此，选择“新建项目”**** 对话框左下角的“打开 Visual Studio 安装程序”**** 链接。 “Visual Studio 安装程序”打开后，向下滚动并选择“.NET Core 跨平台开发”工作负载，然后选择“修改”********。
+   > 如果未看到“.NET Core”类别，则需要安装“.NET Core 跨平台开发”工作负载。 为此，选择“新建项目”对话框左下角的“打开 Visual Studio 安装程序”链接。 “Visual Studio 安装程序”打开后，向下滚动并选择“.NET Core 跨平台开发”工作负载，然后选择“修改”。
 
    Visual Studio 随即创建项目。 它是简单的“Hello World”应用程序，可调用 <xref:System.Console.WriteLine?displayProperty=nameWithType> 方法在控制台窗口中 显示文本字符串“Hello World!”。
 
@@ -296,17 +299,17 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
    ![Visual Studio IDE](media/overview-ide-console-app.png)
 
-   应用的 Visual Basic 代码会显示在编辑窗口中，占据大部分空间。 请注意，文本已自动着色，用于指示代码的不同方面，如关键字或类型。 此外，代码中的垂直短虚线指示哪两个大括号相匹配，行号能够帮助你在以后查找代码。 可以通过选择带减号的小方形来折叠或展开代码块。 此代码大纲功能可以隐藏不需要的代码，最大程度地减少屏幕混乱。 右侧名为“解决方案资源管理器”的窗口中列出了项目文件****。
+   应用的 Visual Basic 代码会显示在编辑窗口中，占据大部分空间。 请注意，文本已自动着色，用于指示代码的不同方面，如关键字或类型。 此外，代码中的垂直短虚线指示哪两个大括号相匹配，行号能够帮助你在以后查找代码。 可以通过选择带减号的小方形来折叠或展开代码块。 此代码大纲功能可以隐藏不需要的代码，最大程度地减少屏幕混乱。 右侧名为“解决方案资源管理器”的窗口中列出了项目文件。
 
    ![具有红色框的 Visual Studio IDE](media/overview-ide-console-app-red-boxes.png)
 
    还提供了一些其他的菜单和工具窗口，但是现在我们继续下一步操作。
 
-1. 现在启动该应用。 可从菜单栏的“调试”菜单中选择“开始执行(不调试)”，以执行此操作********。 还可按 Ctrl+F5 。
+1. 现在启动该应用。 可从菜单栏的“调试”菜单中选择“开始执行(不调试)”，以执行此操作。 还可按 Ctrl+F5 。
 
    ![“调试”>“开始执行(不调试)”菜单](../media/overview-start-without-debugging.png)
 
-   Visual Studio 生成应用，控制台窗口随即打开并显示消息“Hello World!”****。 现在你拥有了一个正在运行的应用！
+   Visual Studio 生成应用，控制台窗口随即打开并显示消息“Hello World!”。 现在你拥有了一个正在运行的应用！
 
    ![控制台窗口](../media/overview-console-window.png)
 
@@ -319,7 +322,7 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
    Dim name = Console.ReadLine()
    ```
 
-   此代码在控制台窗口中显示“What is your name?”，然后等待用户输入文本并按 Enter 键********。
+   此代码在控制台窗口中显示“What is your name?”，然后等待用户输入文本并按 Enter 键。
 
 1. 将显示 `Console.WriteLine("Hello World!")` 的行更改为以下代码：
 
@@ -331,7 +334,7 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
    Visual Studio 重新生成应用，控制台窗口随即打开，并提示输入姓名。
 
-1. 在控制台窗口中输入姓名，并按 Enter****。
+1. 在控制台窗口中输入姓名，并按 Enter。
 
    ![控制台窗口输入](../media/overview-console-input.png)
 
@@ -341,19 +344,19 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
 ::: moniker range=">=vs-2019"
 
-1. 在 Visual Studio 菜单栏上，依次选择“文件”“新建项目”**** > ****。
+1. 在 Visual Studio 菜单栏上，依次选择“文件”“新建项目” > 。
 
    ![菜单栏上的“文件”>“新建项目”](media/vs-2019/file-new-project.png)
 
-   随即打开“创建新项目”**** 窗口，并显示几个项目模板**。 模板包含给定项目类型所需的基本文件和设置。
+   随即打开“创建新项目”窗口，并显示几个项目模板。 模板包含给定项目类型所需的基本文件和设置。
 
-1. 若要查找所需的模板，请在搜索框中键入或输入“.Net Core 控制台”****。 系统会自动根据输入的关键字筛选可用模板列表。 可以通过从“语言”**** 下拉列表选择“Visual Basic”**** 进一步筛选模板结果。
+1. 若要查找所需的模板，请在搜索框中键入或输入“.Net Core 控制台”。 系统会自动根据输入的关键字筛选可用模板列表。 可以通过从“语言”下拉列表选择“Visual Basic”进一步筛选模板结果。
 
-1. 选择“控制台应用 (.NET Core)”**** 模板，然后选择“下一步”****。
+1. 选择“控制台应用 (.NET Core)”模板，然后选择“下一步”。
 
    ![在 Visual Studio 中创建新项目](media/vs-2019/create-new-project.png)
 
-1. 在“配置新项目”**** 窗口中，在“项目名称”**** 框中输入“HelloWorld”****，根据需要更改项目文件的目录位置，然后选择“创建”****。
+1. 在“配置新项目”窗口中，在“项目名称”框中输入“HelloWorld”，根据需要更改项目文件的目录位置，然后选择“创建”。
 
    ![在 Visual Studio 中配置新项目](media/vs-2019/configure-new-project.png)
 
@@ -363,19 +366,19 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
    ![Visual Studio IDE](media/overview-ide-console-app.png)
 
-   应用的 Visual Basic 代码会显示在编辑窗口中，占据大部分空间。 请注意，文本已自动着色，用于指示代码的不同方面，如关键字或类型。 此外，代码中的垂直短虚线指示哪两个大括号相匹配，行号能够帮助你在以后查找代码。 可以通过选择带减号的小方形来折叠或展开代码块。 此代码大纲功能可以隐藏不需要的代码，最大程度地减少屏幕混乱。 右侧名为“解决方案资源管理器”的窗口中列出了项目文件****。
+   应用的 Visual Basic 代码会显示在编辑窗口中，占据大部分空间。 请注意，文本已自动着色，用于指示代码的不同方面，如关键字或类型。 此外，代码中的垂直短虚线指示哪两个大括号相匹配，行号能够帮助你在以后查找代码。 可以通过选择带减号的小方形来折叠或展开代码块。 此代码大纲功能可以隐藏不需要的代码，最大程度地减少屏幕混乱。 右侧名为“解决方案资源管理器”的窗口中列出了项目文件。
 
    ![具有红色框的 Visual Studio IDE](media/overview-ide-console-app-red-boxes.png)
 
    还提供了一些其他的菜单和工具窗口，但是现在我们继续下一步操作。
 
-1. 现在启动该应用。 可从菜单栏的“调试”菜单中选择“开始执行(不调试)”，以执行此操作********。 还可按 Ctrl+F5 。
+1. 现在启动该应用。 可从菜单栏的“调试”菜单中选择“开始执行(不调试)”，以执行此操作。 还可按 Ctrl+F5 。
 
    ![“调试”>“开始执行(不调试)”菜单](media/vs-2019/start-without-debugging.png)
 
-   Visual Studio 生成应用，控制台窗口随即打开并显示消息“Hello World!”****。 现在你拥有了一个正在运行的应用！
+   Visual Studio 生成应用，控制台窗口随即打开并显示消息“Hello World!”。 现在你拥有了一个正在运行的应用！
 
-   ![控制台窗口](../media/vs-2019/overview-console-window.png)
+   ![控制台窗口的屏幕截图，其中显示 Hello World 消息。](../media/vs-2019/overview-console-window.png)
 
 1. 要关闭控制台窗口，请在键盘上按任意键。
 
@@ -386,7 +389,7 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
    Dim name = Console.ReadLine()
    ```
 
-   此代码在控制台窗口中显示“What is your name?”，然后等待用户输入文本并按 Enter 键********。
+   此代码在控制台窗口中显示“What is your name?”，然后等待用户输入文本并按 Enter 键。
 
 1. 将显示 `Console.WriteLine("Hello World!")` 的行更改为以下代码：
 
@@ -398,9 +401,9 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
    Visual Studio 重新生成应用，控制台窗口随即打开，并提示输入姓名。
 
-1. 在控制台窗口中输入姓名，并按 Enter****。
+1. 在控制台窗口中输入姓名，并按 Enter。
 
-   ![控制台窗口](../media/vs-2019/overview-console-input.png)
+   ![控制台窗口的屏幕截图，其中显示问题“你的名字是什么”以及应用的回复。](../media/vs-2019/overview-console-input.png)
 
 1. 按任意键关闭控制台窗口，并停止正在运行的程序。
 
@@ -414,11 +417,11 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
 1. 双击 `name` 变量将其选中。
 
-2. 为变量 username 键入新名称****。
+2. 为变量 username 键入新名称。
 
    请注意，变量周围将显示灰色框且边距中会出现灯泡。
 
-3. 选择灯泡图标，显示可用的[快速操作](../../ide/quick-actions.md)。 选择“将 'name' 重命名为 'username'”****。
+3. 选择灯泡图标，显示可用的[快速操作](../../ide/quick-actions.md)。 选择“将 'name' 重命名为 'username'”。
 
    ![Visual Studio 中的重命名操作](media/rename-quick-action.png)
 
@@ -434,7 +437,7 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
    ![Visual Studio 中的 IntelliSense 列表成员](media/intellisense-list-members.png)
 
-5. 通过双击选择成员“Now”****（类属性），或通过使用向上箭头或向下箭头并按 Tab**** 键来选择此成员。
+5. 通过双击选择成员“Now”（类属性），或通过使用向上箭头或向下箭头并按 Tab 键来选择此成员。
 
 6. 在它的下方，键入或粘贴以下代码行：
 
@@ -455,7 +458,7 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
    ![Visual Studio 中的内联临时变量重构](media/inline-temporary-variable-refactoring.png)
 
-9. 单击“内联临时变量”，重构代码****。
+9. 单击“内联临时变量”，重构代码。
 
 ::: moniker range="vs-2017"
 
@@ -475,11 +478,11 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
 ## <a name="debug-code"></a>调试代码
 
-编写代码时，需要运行并测试该代码是否存在 bug。 可通过 Visual Studio 的调试系统逐句执行代码，一次执行一条语句，逐步检查变量。 可设置停止在特定行执行代码的断点**。 可观察变量的值如何随代码运行而更改等。
+编写代码时，需要运行并测试该代码是否存在 bug。 可通过 Visual Studio 的调试系统逐句执行代码，一次执行一条语句，逐步检查变量。 可设置停止在特定行执行代码的断点。 可观察变量的值如何随代码运行而更改等。
 
 通过设置断点，可查看程序处于飞行模式时 `username` 变量的值。
 
-1. 查找显示 `Console.WriteLine("Hello " + username + "!")` 的代码行。 要在此代码行上设置一个断点，即让程序在该行暂停执行，请单击编辑器的最左侧边距。 还可单击代码行上的任意位置，然后按 F9****。
+1. 查找显示 `Console.WriteLine("Hello " + username + "!")` 的代码行。 要在此代码行上设置一个断点，即让程序在该行暂停执行，请单击编辑器的最左侧边距。 还可单击代码行上的任意位置，然后按 F9。
 
    此时，最左侧边距中将显示一个红圈，代码突出显示为红色。
 
@@ -487,15 +490,15 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
 1. 选择“调试” > “启动调试”或按 F5，开始调试  。
 
-1. 控制台窗口出现并询问姓名时，请键入姓名，然后按 Enter****。
+1. 控制台窗口出现并询问姓名时，请键入姓名，然后按 Enter。
 
    Visual Studio 代码编辑器重新获得焦点，有断点的代码行突出显示为黄色。 这表示它是程序将执行的下一个代码行。
 
-1. 将鼠标悬停在 `username` 变量上，即可查看它的值。 或者，可以右键单击 `username` 并选择“添加监视”，将变量添加到监视窗口，这样也可查看它的值********。
+1. 将鼠标悬停在 `username` 变量上，即可查看它的值。 或者，可以右键单击 `username` 并选择“添加监视”，将变量添加到监视窗口，这样也可查看它的值。
 
    ![在 Visual Studio 中进行调试时的变量值](media/debugging-variable-value.png)
 
-1. 若要让程序运行至结束，请再次按 F5****。
+1. 若要让程序运行至结束，请再次按 F5。
 
 有关在 Visual Studio 中进行调试的详细信息，请参阅[调试器功能简介](../../debugger/debugger-feature-tour.md)。
 

@@ -1,5 +1,7 @@
 ---
 title: 用于负载测试的浏览器测试组合
+description: 了解如何编辑浏览器组合，从而在负载测试方案中更真实地模拟负载。
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,16 +13,16 @@ ms.assetid: 47f981d9-3038-45cc-a486-82b9daf9a9a1
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 394331ae06760e0547cfc2b5a37a6dcd357e3614
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 4dae1a89eb40e71a07540eef7512327282ef0b9b
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76114532"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441309"
 ---
 # <a name="edit-the-test-mix-to-specify-which-web-browsers-types-in-a-load-test-scenario"></a>编辑测试组合以指定在负载测试方案中包括哪些 Web 浏览器类型
 
-浏览器组合提供了一种在负载测试方案中更真实地模拟负载的方法  。 负载是使用异类 Web 浏览器组合（而非单一种类的 Web 浏览器）生成的。 这样便创建了一种与你的应用程序所使用的 Web 浏览器更为接近的浏览器使用情形。
+浏览器组合提供了一种在负载测试方案中更真实地模拟负载的方法。 负载是使用异类 Web 浏览器组合（而非单一种类的 Web 浏览器）生成的。 这样便创建了一种与你的应用程序所使用的 Web 浏览器更为接近的浏览器使用情形。
 
 浏览器组合指定了虚拟用户在负载测试方案中运行特定 Web 浏览器类型的概率。 创建负载测试时，你可能希望模拟通过多个 Web 浏览器生成负载的情况。 从提供的 Web 浏览器集向浏览器组合中添加 Web 浏览器类型时，将在 Web 性能测试所提交的每个 HTTP 请求中添加一组与所选 Web 浏览器相关联的标头。
 
@@ -34,18 +36,18 @@ ms.locfileid: "76114532"
 
 ### <a name="to-add-new-browsers-to-a-scenario"></a>向方案中添加新浏览器
 
-1. 在为方案指定浏览器组合的过程中，选择“添加”  。
+1. 在为方案指定浏览器组合的过程中，选择“添加”。
 
      新的浏览器项即添加到网格中。
 
     > [!NOTE]
-    > 若要显示“编辑浏览器组合”对话框，请右键单击现有方案，然后选择“编辑浏览器组合”   。
+    > 若要显示“编辑浏览器组合”对话框，请右键单击现有方案，然后选择“编辑浏览器组合”。
 
-2. 在“浏览器类型”列中，选择表示新项的箭头，然后选择所需的浏览器类型  。
+2. 在“浏览器类型”列中，选择表示新项的箭头，然后选择所需的浏览器类型。
 
 3. （可选）调整混合控件以指定测试分布。
 
-4. 完成浏览器的添加后，选择“确定”  。
+4. 完成浏览器的添加后，选择“确定”。
 
 ## <a name="remove-browsers-from-a-scenario"></a>从方案中移除浏览器
 
@@ -53,15 +55,15 @@ ms.locfileid: "76114532"
 
 1. 打开一个负载测试。
 
-2. 右键单击要从中移除浏览器的方案，然后选择“编辑浏览器组合”  。
+2. 右键单击要从中移除浏览器的方案，然后选择“编辑浏览器组合”。
 
-     将显示“编辑浏览器组合”对话框  。
+     将显示“编辑浏览器组合”对话框。
 
-3. 在网格中选择浏览器，然后选择“移除”  。
+3. 在网格中选择浏览器，然后选择“移除”。
 
 4. （可选）调整混合控件以指定测试分布。
 
-5. 完成浏览器的移除后，选择“确定”  。
+5. 完成浏览器的移除后，选择“确定”。
 
 ## <a name="about-the-mix-control"></a>关于混合控件
 

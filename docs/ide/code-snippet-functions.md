@@ -1,5 +1,7 @@
 ---
 title: 代码段函数
+description: 了解可与 C# 代码片段一起使用的 GenerateSwitchCases(EnumerationLiteral)、ClassName() 和 SimpleTypeName(TypeName) 函数。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c7df85c429794d61028d5304108d289dfe9bf496
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: e6529f4f82f7a8a6862ae85adbf170d2fb6f8706
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75594235"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006505"
 ---
 # <a name="code-snippet-functions"></a>代码片段函数
 
@@ -31,7 +33,7 @@ ms.locfileid: "75594235"
 |--------------|-----------------|--------------|
 |`GenerateSwitchCases(EnumerationLiteral)`|为 `EnumerationLiteral` 参数指定的枚举成员生成一个switch 语句和一组 case 语句。 `EnumerationLiteral` 参数必须是枚举文本的引用或是枚举类型。|C#|
 |`ClassName()`|返回包含插入的代码片段的类的名称。|C#|
-|`SimpleTypeName(TypeName)`|在已调用该代码片段的上下文中将 TypeName 参数缩减为其最简单的形式  。|C#|
+|`SimpleTypeName(TypeName)`|在已调用该代码片段的上下文中将 TypeName 参数缩减为其最简单的形式。|C#|
 
 ## <a name="generateswitchcases-example"></a>GenerateSwitchCases 示例
 

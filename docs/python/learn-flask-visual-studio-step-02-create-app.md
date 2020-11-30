@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 03a0eb6808b2298e0727492978d9beb7cfaf2216
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a06c6dbacf21cb2ce00539af901c24c77aaf9ef5
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89313739"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974085"
 ---
 # <a name="step-2-create-a-flask-app-with-views-and-page-templates"></a>步骤 2：使用视图和页面模板创建 Flask 应用
 
@@ -84,7 +84,7 @@ ms.locfileid: "89313739"
 
 7. 选择“调试” > “启动调试”(F5) 或使用工具栏上的“Web 服务器”按钮（所看到的浏览器可能会有所不同）启动应用并打开浏览器     。 同时尝试 / 和 /home URL 路由。
 
-8. 还可以在代码的不同部分设置断点，并且重新启动应用，跟随启动顺序。 例如，对 runserver.py  和 HelloFlask\_init_.py   的第一行设置断点，并对 views.py  中的 `return "Hello Flask!"` 行设置断点。 然后，重启应用（“调试” > “重启”，按 Ctrl+F5 或者下示工具栏按钮）并逐步执行 (F10) 代码，或者使用 F5 从每个断点运行       。
+8. 还可以在代码的不同部分设置断点，并且重新启动应用，跟随启动顺序。 例如，对 runserver.py  和 HelloFlask\_init_.py   的第一行设置断点，并对 views.py  中的 `return "Hello Flask!"` 行设置断点。 然后，重启应用（“调试” > “重启”，按 Ctrl++ShiftF5 或者如下所示的工具栏按钮）并逐步执行 (F10) 代码，或者使用 F5 从每个断点运行。
 
     ![Visual Studio 中调试工具栏上的重启按钮](media/debugging-restart-toolbar-button.png)
 

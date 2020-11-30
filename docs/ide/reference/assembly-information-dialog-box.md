@@ -1,5 +1,7 @@
 ---
 title: “程序集信息”对话框
+description: 了解“程序集信息”对话框以及如何使用该对话框指定 .NET Framework 全局程序集属性的值。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -12,25 +14,25 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c1813c4e399a125aca0185436b4a7216b72b5842
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: ee8738d06c0f02adb6f5e6352d2006e0133c66ef
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809002"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95871335"
 ---
 # <a name="assembly-information-dialog-box"></a>“程序集信息”对话框
 
-“程序集信息”对话框用于指定 .NET Framework 全局程序集特性的值，这些特性存储在为你的项目自动创建的 AssemblyInfo 文件中。 在“解决方案资源管理器”中，对于 Visual Basic 项目，AssemblyInfo 文件位于“我的项目”   节点中（单击“显示所有文件”可以查看它）。 对于 C# 项目，该文件位于“属性”  下。 有关详细信息，请参阅[特性 (C#)](/dotnet/csharp/programming-guide/concepts/attributes/index)。
+“程序集信息”对话框用于指定 .NET Framework 全局程序集特性的值，这些特性存储在为你的项目自动创建的 AssemblyInfo 文件中。 在“解决方案资源管理器”中，对于 Visual Basic 项目，AssemblyInfo 文件位于“我的项目”节点中（单击“显示所有文件”可以查看它）。 对于 C# 项目，该文件位于“属性”下。 有关详细信息，请参阅[特性 (C#)](/dotnet/csharp/programming-guide/concepts/attributes/index)。
 
-若要访问此对话框，请在“解决方案资源管理器”  中选择项目节点，然后在“项目”  菜单上选择“属性”  。在“应用程序”  页上，选择“程序集信息”  按钮。
+若要访问此对话框，请在“解决方案资源管理器”中选择项目节点，然后在“项目”菜单上选择“属性”。在“应用程序”页上，选择“程序集信息”按钮。
 
 ## <a name="uielement-list"></a>UIElement 列表
 
 **标题**\
 指定程序集清单的标题。 对应到 <xref:System.Reflection.AssemblyTitleAttribute>。
 
-**Description**\
+**描述**\
 指定程序集清单的可选描述。 对应到 <xref:System.Reflection.AssemblyDescriptionAttribute>。
 
 **公司**\

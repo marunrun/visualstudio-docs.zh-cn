@@ -1,5 +1,7 @@
 ---
 title: 如何：从存储库删除负载测试结果
+description: 了解如何使用“打开和管理负载测试结果”对话框，从“负载测试结果存储库”中删除信息。
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.assetid: c2afe36b-d061-4f0e-9580-c18569ec08f9
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: dd196076fb769f80c36ab8630eebf1e8a0f8b234
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 9b838d79237fc54f6d44d5b8222489973dea0c6e
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85287774"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95440943"
 ---
 # <a name="how-to-delete-load-test-results-from-a-repository"></a>如何：从存储库删除负载测试结果
 

@@ -1,5 +1,6 @@
 ---
 title: 向项目添加类图（类设计器）
+description: 了解如何设计、编辑及重构类和其他类型，如何将类图添加到 C#、Visual Basic 或 C++ 项目中。
 ms.custom: SEO-VS-2020
 ms.date: 05/08/2018
 ms.topic: how-to
@@ -12,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4aa336672dce538c5bfe07cd8ae7b1a4c5771cbd
-ms.sourcegitcommit: f1bb1b66ed141837e992b3352ce68ff24c11f53e
+ms.openlocfilehash: 2fbde07ec9825f094777f7e9b962e8394595e180
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93102546"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94902995"
 ---
 # <a name="how-to-add-class-diagrams-to-projects"></a>如何：向项目添加类图
 

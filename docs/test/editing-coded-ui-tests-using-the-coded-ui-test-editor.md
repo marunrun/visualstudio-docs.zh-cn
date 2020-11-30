@@ -1,5 +1,7 @@
 ---
 title: 编辑编码的 UI 测试
+description: 了解如何使用编码的 UI 测试编辑器查找、查看和编辑测试方法和 UI 操作。 使用 UI 控件图查看和编辑相应的控件。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -11,12 +13,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: d6c2fcf3d8807e9095abc9546e8bf1e39aecb8ea
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0f78839280ae19da5020b08d499d347c0537a045
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288723"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441438"
 ---
 # <a name="edit-coded-ui-tests-using-the-coded-ui-test-editor"></a>使用编码的 UI 测试编辑器编辑编码的 UI 测试
 
@@ -51,7 +53,7 @@ ms.locfileid: "85288723"
 
 8. **查找 UI 控件** 可识别待测试应用程序的 UI 中控件的位置。
 
-9. **查找全部**可帮助你验证控制属性和对应用程序控件所做的重大更改。
+9. **查找全部** 可帮助你验证控制属性和对应用程序控件所做的重大更改。
 
 打开与编码的 UI 测试关联的 UIMap.uitest 文件时，编码的 UI 测试编辑器中随即打开编码的 UI 测试   。 下面的过程介绍了随后如何使用编辑器工具栏和快捷菜单查找和编辑测试方法、UI 操作的属性和控件。
 

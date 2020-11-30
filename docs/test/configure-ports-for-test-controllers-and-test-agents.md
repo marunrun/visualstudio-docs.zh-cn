@@ -1,5 +1,7 @@
 ---
 title: 为测试控制器和测试代理配置端口
+description: 了解如何更改测试控制器、测试代理和客户端使用的默认传入端口，以避免与其他软件发生冲突。
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.assetid: 211edbd7-9fe4-4251-ba85-8bec4363261b
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 7889feffc41d6bb64b85b4ea95a17a4a986d22df
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2726d489c0c67bffb11bc59357f6ad107a6c94ba
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288814"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441563"
 ---
 # <a name="configure-ports-for-test-controllers-and-test-agents"></a>为测试控制器和测试代理配置端口
 
@@ -39,7 +41,7 @@ ms.locfileid: "85288814"
     测试控制器需要能够建立与测试代理和客户端的传出连接。
 
     > [!NOTE]
-    > 测试控制器需要打开传入“文件和打印机共享”连接  。
+    > 测试控制器需要打开传入“文件和打印机共享”连接。
 
 - **测试代理** 传入连接位于 TCP 端口 6910 上。 如果需要，您可以配置传入端口。 有关详细信息，请参阅[配置传入端口](#configure-the-incoming-ports)。
 
@@ -49,7 +51,7 @@ ms.locfileid: "85288814"
 
    当测试控制器首次尝试连接到客户端时，您可能会收到防火墙通知。
 
-   Windows Server 2008 默认禁用防火墙通知，必须为客户端程序（devenv.exe  、mstest.exe  、mlm.exe  ）手动添加防火墙例外，这样它才能接受传入连接。
+   Windows Server 2008 默认禁用防火墙通知，必须为客户端程序（devenv.exe、mstest.exe、mlm.exe）手动添加防火墙例外，这样它才能接受传入连接。
 
 ## <a name="outgoing-connections"></a>传出连接
 
@@ -65,7 +67,7 @@ ms.locfileid: "85288814"
 
 按照以下指示配置测试控制器和测试代理的端口。
 
-- **控制器服务**：通过编辑 %ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\QTCcontroller.exe.config  文件来修改端口值：
+- **控制器服务**：通过编辑 %ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\QTCcontroller.exe.config 文件来修改端口值：
 
     ```xml
     <appSettings>
@@ -73,7 +75,7 @@ ms.locfileid: "85288814"
     </appSettings>
     ```
 
-- **代理服务**：通过编辑 %ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\QTAgentService.exe.config  文件来修改端口：
+- **代理服务**：通过编辑 %ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\QTAgentService.exe.config 文件来修改端口：
 
     ```xml
     <appSettings>
@@ -81,7 +83,7 @@ ms.locfileid: "85288814"
     </appSettings>
     ```
 
-- **客户端**：使用注册表编辑器来添加以下注册表 (DWORD  ) 值。 客户端将使用指定范围内的某个端口来接收来自测试控制器的数据：
+- **客户端**：使用注册表编辑器来添加以下注册表 (DWORD) 值。 客户端将使用指定范围内的某个端口来接收来自测试控制器的数据：
 
      **HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\VisualStudio\12.0\EnterpriseTools\QualityTools\ListenPortRange\PortRangeStart**
 

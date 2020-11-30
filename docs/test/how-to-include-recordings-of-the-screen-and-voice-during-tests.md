@@ -1,5 +1,7 @@
 ---
 title: 在测试期间录制屏幕和语音
+description: 了解如何在 Visual Studio 中配置诊断数据适配器，以录制运行测试的用户的屏幕和语音。
+ms.custom: SEO-VS-2020
 ms.date: 10/03/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -8,12 +10,12 @@ ms.assetid: 2cefe8c2-430a-4cb4-bbe0-f3edb2e5bc03
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 2366e77b0b66e2a31ce17e1aefb9240e4f45df2d
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: 08ae6d19327a956b5dab71fa30b0b33742390d2b
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91928640"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95440982"
 ---
 # <a name="how-to-include-recordings-of-the-screen-and-voice-during-tests-using-test-settings"></a>如何：使用测试设置在测试期间包括屏幕和语音录制
 

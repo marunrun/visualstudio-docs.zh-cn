@@ -1,5 +1,7 @@
 ---
 title: 从 Windows 信息保护中免除
+description: 了解如何从 Windows 信息保护中免除 Visual Studio 同时仍允许该应用使用企业数据。
+ms.custom: SEO-VS-2020
 ms.date: 06/01/2018
 ms.topic: conceptual
 author: TerryGLee
@@ -7,18 +9,18 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8b4eb454f641b5bef7273464d605fb194f650790
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 34765cc7ac303bd44c3c4ccca87ea7c00a36ccda
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75588559"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95598388"
 ---
 # <a name="configure-visual-studio-as-a-wip-exempt-app"></a>将 Visual Studio 配置为 WIP 免除应用
 
 [Windows 信息保护](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip) (WIP) 可帮助保护企业数据，避免数据从不受企业控制的电子邮件、社交媒体和公有云等应用泄露。 WIP 可帮助预防在企业拥有设备和个人设备上发生意外数据泄露，且无需更改环境或其他应用。
 
-适用于 WIP 的启发式应用旨在防止企业数据进入不受保护的网络位置，以及避免对个人数据进行加密  。 Visual Studio 不是启发式应用，因此不能在启用 WIP 的环境中使用，除非将其免除。 按照本文步骤启用 Visual Studio，使其在启用 WIP 的计算机上正常运行。
+适用于 WIP 的启发式应用旨在防止企业数据进入不受保护的网络位置，以及避免对个人数据进行加密。 Visual Studio 不是启发式应用，因此不能在启用 WIP 的环境中使用，除非将其免除。 按照本文步骤启用 Visual Studio，使其在启用 WIP 的计算机上正常运行。
 
 ## <a name="configure-vs-as-a-wip-exempt-app"></a>将 VS 配置为 WIP 免除应用
 

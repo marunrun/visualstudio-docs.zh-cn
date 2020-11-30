@@ -1,5 +1,7 @@
 ---
 title: 从命令行设置负载测试运行设置
+description: 负载测试包含运行设置，运行设置是会影响负载测试运行方式的属性。 了解如何从命令行加载运行设置。
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,16 +11,16 @@ ms.assetid: 175d1d58-f09a-4449-b132-a29a394a7c8e
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 79f1cc833278a62e2871cdc725f5993b12bcdb60
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 290f56ba0f0ca9c6a8f6a6a1ee4e30b86bcfacd7
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85287553"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95440956"
 ---
 # <a name="how-to-select-a-load-test-run-setting-to-use-from-the-command-line"></a>如何：从命令行选择要使用的负载测试运行设置
 
-负载测试包含运行设置，运行设置是会影响负载测试运行方式的属性  。 在“属性”窗口中，运行设置按类别进行组织  。 当负载测试运行时，它会使用当前设置为活动的运行设置。
+负载测试包含运行设置，运行设置是会影响负载测试运行方式的属性。 在“属性”窗口中，运行设置按类别进行组织。 当负载测试运行时，它会使用当前设置为活动的运行设置。
 
 如果负载测试只包含一个运行设置，则它始终为活动节点。 如果负载测试包含多个运行测试节点，则可以选择一个在从命令行运行负载测试时使用的节点。 请参阅[如何：向负载测试添加额外的运行设置](../test/how-to-add-additional-run-settings-to-a-load-test.md)。
 

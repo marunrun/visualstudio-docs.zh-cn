@@ -1,5 +1,7 @@
 ---
 title: 代码片段
+description: 了解代码片段以及它们如何作为小块可重用代码插入到代码文件中。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +19,12 @@ dev_langs:
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: c06f9f7dc7e5a672e3fd5da3f3fc834fe223a783
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 52059dd464ad0c720a4a2e77a961b7d6f3525c6d
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75585413"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006388"
 ---
 # <a name="code-snippets"></a>代码片段
 
@@ -31,7 +33,7 @@ ms.locfileid: "75585413"
 > [!NOTE]
 > 本主题适用于 Visual Studio  Windows 版。 对于 Visual Studio for Mac，请参阅[代码片段 (Visual Studio for Mac)](/visualstudio/mac/snippets)。
 
-代码片段可用于多种语言，例如 C#、C++、Visual Basic、XML 和 T-SQL。 要查看对某种语言可用的所有已安装片段，请在“工具”菜单中打开“代码片段管理器”（或按“Ctrl+K”、“Ctrl+B”），然后从顶部的下拉菜单中选择此语言************************。
+代码片段可用于多种语言，例如 C#、C++、Visual Basic、XML 和 T-SQL。 要查看对某种语言可用的所有已安装片段，请在“工具”菜单中打开“代码片段管理器”（或按“Ctrl+K”、“Ctrl+B”），然后从顶部的下拉菜单中选择此语言。
 
 ![“代码片段管理器”对话框](media/code-snippets-manager.png)
 

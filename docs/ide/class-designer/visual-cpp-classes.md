@@ -1,5 +1,7 @@
 ---
 title: 类设计器中的 C++ 类
+description: 了解类设计器中的 C++ 类、支持它们的方式以及这些类如何拥有多个继承关系。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7af49e94045e519e32aacd12ec33a4a31a4c905
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 593ca8ba3edc3c779a0440a35551bf870f20c831
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808124"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94901201"
 ---
 # <a name="c-classes-in-class-designer"></a>类设计器中的 C++ 类
 
@@ -39,7 +41,7 @@ class B : A {};
 
 ## <a name="multiple-inheritance"></a>多重继承
 
-类设计器支持直观显示多类继承关系  。 当派生类有多个基类的特性时，就会用到*多重继承*。 下面的示例展示了多重继承：
+类设计器支持直观显示多类继承关系  。 当派生类有多个基类的特性时，就会用到 *多重继承*。 下面的示例展示了多重继承：
 
 ```cpp
 class Bird {};
@@ -111,7 +113,7 @@ int main()
 
 ## <a name="anonymous-classes"></a>匿名类
 
-类设计器支持匿名类  。 *匿名类类型*是指未使用标识符声明的类。 匿名类不能有构造函数或析构函数，不能作为自变量传递给函数，也不能作为返回值从函数返回。 匿名类可用于将类名替换为 typedef 名称，如以下示例所示：
+类设计器支持匿名类  。 *匿名类类型* 是指未使用标识符声明的类。 匿名类不能有构造函数或析构函数，不能作为自变量传递给函数，也不能作为返回值从函数返回。 匿名类可用于将类名替换为 typedef 名称，如以下示例所示：
 
 ```cpp
 typedef struct

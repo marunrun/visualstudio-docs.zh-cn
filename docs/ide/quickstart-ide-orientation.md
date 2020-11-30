@@ -1,5 +1,7 @@
 ---
 title: 快速入门：Visual Studio IDE 教程
+description: 了解 Visual Studio 集成开发环境 (IDE) 的一些窗口、菜单和其他 UI 功能。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/21/2019
 ms.topic: quickstart
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 08ec25312068d5c69cdb0df9b7c293ae0575f608
-ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
+ms.openlocfilehash: 4511658a454c1431967905e88428842c3ba00c64
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88238850"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95870880"
 ---
 # <a name="quickstart-first-look-at-the-visual-studio-ide"></a>快速入门：初步了解 Visual Studio IDE
 
@@ -35,11 +37,11 @@ ms.locfileid: "88238850"
 
 ## <a name="start-page"></a>起始页
 
-打开 Visual Studio 之后你最先看到的很可能就是起始页  。 起始页设计成一个“中心”，可帮助你更快地找到所需的命令和项目文件  。  “最新动态”部分显示你最近处理的项目和文件夹。 在“新建项目”下，可以单击链接转到“新建项目”对话框中，或在“打开”下，可以打开现有代码项目或文件夹    。 右侧是最新的开发人员新闻源。
+打开 Visual Studio 之后你最先看到的很可能就是起始页  。 起始页设计成一个“中心”，可帮助你更快地找到所需的命令和项目文件  。 “最新动态”部分显示你最近处理的项目和文件夹。 在“新建项目”下，可以单击链接转到“新建项目”对话框中，或在“打开”下，可以打开现有代码项目或文件夹  。 右侧是最新的开发人员新闻源。
 
 ![Visual Studio 中的“起始页”](media/start-page.png)
 
-如果关闭“起始页”并希望再次查看，则可以从“文件”菜单重新打开它   。
+如果关闭“起始页”并希望再次查看，则可以从“文件”菜单重新打开它 。
 
 ![Visual Studio 中的“文件”菜单](media/quickstart-IDE-file-menu-large.png)
 
@@ -55,9 +57,9 @@ ms.locfileid: "88238850"
 
 如果首次使用 Visual Studio，最近的项目列表将为空。
 
-如果使用基于非 MSBuild 的代码库，则将使用“打开本地文件夹”选项在 Visual Studio 中打开代码  。 有关详细信息，请参阅[在 Visual Studio 中开发代码而无需创建项目或解决方案](develop-code-in-visual-studio-without-projects-or-solutions.md)。 否则，可以从源提供程序（如 GitHub 或 Azure DevOps）创建新项目或克隆项目。
+如果使用基于非 MSBuild 的代码库，则将使用“打开本地文件夹”选项在 Visual Studio 中打开代码。 有关详细信息，请参阅[在 Visual Studio 中开发代码而无需创建项目或解决方案](develop-code-in-visual-studio-without-projects-or-solutions.md)。 否则，可以从源提供程序（如 GitHub 或 Azure DevOps）创建新项目或克隆项目。
 
-“无需代码，即可继续”选项仅打开 Visual Studio 开发环境，而不加载任何特定项目或代码  。 可以选择此选项，加入 [Live Share](/visualstudio/liveshare/) 会话或附加到进程以进行调试。 此外可以按“Esc”关闭启动窗口，然后打开 IDE  。
+“无需代码，即可继续”选项仅打开 Visual Studio 开发环境，而不加载任何特定项目或代码。 可以选择此选项，加入 [Live Share](/visualstudio/liveshare/) 会话或附加到进程以进行调试。 此外可以按“Esc”关闭启动窗口，然后打开 IDE  。
 
 ::: moniker-end
 
@@ -99,13 +101,13 @@ ms.locfileid: "88238850"
 
 ## <a name="solution-explorer"></a>“解决方案资源管理器”
 
-“解决方案资源管理器”（通常位于 Visual Studio 的右侧）可以显示项目、解决方案或代码文件夹中文件和文件夹层次结构的图形表示形式  。 你可以浏览层次结构，并导航到“解决方案资源管理器”中的某个文件  。
+“解决方案资源管理器”（通常位于 Visual Studio 的右侧）可以显示项目、解决方案或代码文件夹中文件和文件夹层次结构的图形表示形式。 你可以浏览层次结构，并导航到“解决方案资源管理器”中的某个文件。
 
 ![Visual Studio 中的解决方案资源管理器](media/quickstart-IDE-solution-explorer.png)
 
 ## <a name="menus"></a>菜单
 
-Visual Studio 顶部的菜单栏将命令分组成不同的类别。 例如，  “项目”菜单包含与你正在处理的项目相关的命令。 在“工具”菜单上，可通过选择“选项”自定义 Visual Studio 的行为方式，或选择“获取工具和功能”向安装程序添加功能    。
+Visual Studio 顶部的菜单栏将命令分组成不同的类别。 例如，“项目”菜单包含与你正在处理的项目相关的命令。 在“工具”菜单上，可通过选择“选项”自定义 Visual Studio 的行为方式，或选择“获取工具和功能”向安装程序添加功能    。
 
 ::: moniker range="vs-2017"
 
@@ -129,9 +131,9 @@ Visual Studio 顶部的菜单栏将命令分组成不同的类别。 例如，  
 
 ## <a name="output-window"></a>“输出”窗口
 
-“输出”窗口显示生成项目和源代码管理提供程序中的输出消息  。
+“输出”窗口显示生成项目和源代码管理提供程序中的输出消息。
 
-让我们生成该项目来查看一些生成输出。 从 **“生成”** 菜单中选择 **“生成解决方案”** 。 “输出”窗口自动获得焦点并显示成功生成的消息  。
+让我们生成该项目来查看一些生成输出。 从 **“生成”** 菜单中选择 **“生成解决方案”** 。 “输出”窗口自动获得焦点并显示成功生成的消息。
 
 ![Visual Studio 中的“输出”窗口](media/build-output-minimal.png)
 

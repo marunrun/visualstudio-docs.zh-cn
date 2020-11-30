@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c2d7dc38f1a25826ba275738cd8e758a2ad5d90e
-ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.openlocfilehash: 95e35037ba07dcba1f51da7b47b7fca40a447dfb
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86386636"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850021"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>使用测试资源管理器运行单元测试
 
@@ -233,6 +233,21 @@ Visual Studio 包含适用于托管和本机代码的 Microsoft 单元测试框�
 还可以选中或取消选中层次结构中父组的复选框。 此操作将创建一个动态播放列表，会始终基于该组中的测试更新播放列表。 例如，如果你在某一类旁边放置一个复选标记，那么从该类添加的任何测试都将成为此播放列表的一部分。 如果从该类中删除某个测试，该测试则会从播放列表中删除。 通过使用工具栏中的“保存”按钮保存播放列表，并打开在磁盘上创建的 .playlist 文件，可了解有关这些规则的更多信息。 此文件列出了构成播放列表的所有规则和各个测试。
 
 ![播放列表 xml 文件](../test/media/vs-2019/test-explorer-playlist-xml-file.png)
+
+若要生成特征的播放列表，请使用以下格式。 请确保 `TestCategory` 名称和 `[Value]` 之间存在空格。
+```xml
+<Playlist Version="2.0">
+  <Rule Name="Includes" Match="Any">
+    <Rule Match="All">
+      <Property Name="Solution" />
+        <Rule Match="Any">
+            <Property Name="Trait" Value="TestCategory [Value]" />
+        </Rule>
+    </Rule>
+  </Rule>
+</Playlist>
+```
+
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"

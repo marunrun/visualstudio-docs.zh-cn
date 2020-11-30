@@ -1,5 +1,7 @@
 ---
 title: 如何：编写 C++ DLL 单元测试
+description: 了解如何使用测试优先方法开发本机 C++ DLL。 首先创建一个本机测试项目。
+ms.custom: SEO-VS-2020
 ms.date: 06/13/2019
 ms.topic: how-to
 ms.author: corob
@@ -7,16 +9,16 @@ manager: markl
 ms.workload:
 - cplusplus
 author: corob-msft
-ms.openlocfilehash: 16020c0928229c80a9eb33b3bc4804b004d9f432
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 178fef548bc52346a78c7f9e4607aad7b1c56f65
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85816002"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95598401"
 ---
-# <a name="how-to-write-unit-tests-for-c-dlls"></a>如何：编写 C++ DLL 单元测试
+# <a name="how-to-write-unit-tests-for-c-dlls"></a>如何：编写 C/C++ DLL 单元测试
 
-本演练介绍如何使用测试优先方法开发本机 C++ DLL。 基本步骤如下：
+本演练介绍如何使用测试优先方法开发本机 C++ DLL。 基本步骤如下所示：
 
 1. [创建本机测试项目](#create_test_project)。 测试项目位于与 DLL 项目相同的解决方案中。
 
@@ -36,12 +38,12 @@ ms.locfileid: "85816002"
 
 ## <a name="create-a-native-unit-test-project"></a><a name="create_test_project"></a> 创建本机单元测试项目
 
-1. 在“文件”菜单上，选择“新建” > “项目”    。
+1. 在“文件”菜单上，选择“新建” > “项目”  。
 
-     **Visual Studio 2017 及更早版本**：依次展开“已安装” > “模板” > “Visual C++” > “测试”     。
-     **Visual Studio 2019** ：将“语言”设置为 C++ 并在搜索框中键入“测试”  。
+     **Visual Studio 2017 及更早版本**：依次展开“已安装” > “模板” > “Visual C++” > “测试”   。
+     **Visual Studio 2019** ：将“语言”设置为 C++ 并在搜索框中键入“测试”。
 
-     选择“本机单元测试项目”  模板，或任何所需的已安装框架。 如果选择其他模板（如 Google Test 或 Boost.Test），则基本原则是相同的，不过某些细节将有所不同。
+     选择“本机单元测试项目”模板，或任何所需的已安装框架。 如果选择其他模板（如 Google Test 或 Boost.Test），则基本原则是相同的，不过某些细节将有所不同。
 
      在本演练中，该测试项目的名称为 `NativeRooterTest`。
 
@@ -51,7 +53,7 @@ ms.locfileid: "85816002"
 
      请注意：
 
-    - 每个测试都使用 `TEST_METHOD(YourTestName){...}`来定义。
+    - 每个测试都使用 `TEST_METHOD(YourTestName){...}` 来定义。
 
          你不必编写常规函数签名。 签名由宏 TEST_METHOD 来创建。 该宏将生成一个返回 void 的实例函数。 它还将生成返回有关测试方法的信息的静态函数。 此信息允许测试资源管理器查找方法。
 
@@ -76,9 +78,9 @@ ms.locfileid: "85816002"
 
          将生成并运行测试。
 
-         此时将显示测试资源管理器  。
+         此时将显示测试资源管理器。
 
-         测试显示在“通过的测试”  下方。
+         测试显示在“通过的测试” 下方。
 
          ![具有 1 个已通过测试的单元测试资源管理器](../test/media/utecpp04.png)
 
@@ -88,23 +90,23 @@ ms.locfileid: "85816002"
 
 以下步骤说明如何在 Visual Studio 2019 中创建 DLL 项目。
 
-1. 使用“Windows 桌面向导”创建 C++ 项目  ：右键单击“解决方案资源管理器”中的解决方案名称，然后依次选择“添加” > “新建项目”    。 将“语言”设置为 C++，然后在搜索框中键入“windows”  。 从结果列表中选择“Windows 桌面向导”  。
+1. 使用“Windows 桌面向导”创建 C++ 项目：右键单击“解决方案资源管理器”中的解决方案名称，然后依次选择“添加” > “新建项目”  。 将“语言”设置为 C++，然后在搜索框中键入“windows”。 从结果列表中选择“Windows 桌面向导”。
 
      在本演练中，该项目的名称为 `RootFinder`。
 
-2. 按“创建”  。 在下一个对话框中，在“应用程序类型”下选择“动态链接库 (dll)”，同时选中“导出符号”    。
+2. 按“创建”。 在下一个对话框中，在“应用程序类型”下选择“动态链接库 (dll)”，同时选中“导出符号”。
 
      “导出符号”  选项生成可用来声明导出方法的便利宏。
 
      ![为 DLL 设置的 C++ 项目向导和导出符号](../test/media/vs-2019/windows-desktop-project-dll.png)
 
-3. 在主体 .h 文件中声明导出的函数  ：
+3. 在主体 .h 文件中声明导出的函数：
 
      ![使用 API 宏新建 DLL 代码项目和 .h 文件](../test/media/utecpp07.png)
 
      声明符 `__declspec(dllexport)` 会导致类的公共和受保护成员在 DLL 外可见。 有关详细信息，请参阅 [Using dllimport and dllexport in C++ Classes](/cpp/cpp/using-dllimport-and-dllexport-in-cpp-classes)。
 
-4. 在主体 .cpp 文件中，添加最小的函数体  ：
+4. 在主体 .cpp 文件中，添加最小的函数体：
 
     ```cpp
         // Find the square root of a number.
@@ -120,7 +122,7 @@ ms.locfileid: "85816002"
 
 以下步骤说明如何在 Visual Studio 2017 中创建 DLL 项目。
 
-1. 使用“Win32 项目”模板创建 C++ 项目  。
+1. 使用“Win32 项目”模板创建 C++ 项目。
 
      在本演练中，该项目的名称为 `RootFinder`。
 
@@ -130,13 +132,13 @@ ms.locfileid: "85816002"
 
      ![为 DLL 设置的 C++ 项目向导和导出符号](../test/media/utecpp06.png)
 
-3. 在主体 .h 文件中声明导出的函数  ：
+3. 在主体 .h 文件中声明导出的函数：
 
      ![使用 API 宏新建 DLL 代码项目和 .h 文件](../test/media/utecpp07.png)
 
      声明符 `__declspec(dllexport)` 会导致类的公共和受保护成员在 DLL 外可见。 有关详细信息，请参阅 [Using dllimport and dllexport in C++ Classes](/cpp/cpp/using-dllimport-and-dllexport-in-cpp-classes)。
 
-4. 在主体 .cpp 文件中，添加最小的函数体  ：
+4. 在主体 .cpp 文件中，添加最小的函数体：
 
     ```cpp
         // Find the square root of a number.
@@ -152,13 +154,13 @@ ms.locfileid: "85816002"
 
 1. 将 DLL 项目添加到测试项目的项目引用中：
 
-   1. 右键单击解决方案资源管理器中的测试项目节点，并选择“添加” > “引用”    。
+   1. 右键单击解决方案资源管理器中的测试项目节点，并选择“添加” > “引用”。
 
-   2. 在“添加引用”  对话框中，选择 DLL 项目并选择“添加”  。
+   2. 在“添加引用”  对话框中，选择 DLL 项目并选择“添加” 。
 
         ![C++ 项目属性 | 添加新引用](../test/media/utecpp09.png)
 
-2. 在主体单元测试 .cpp 文件中，将 DLL 代码的 .h 文件包括在内   ：
+2. 在主体单元测试 .cpp 文件中，将 DLL 代码的 .h 文件包括在内：
 
    ```cpp
    #include "..\RootFinder\RootFinder.h"
@@ -186,9 +188,9 @@ ms.locfileid: "85816002"
 
 4. 生成解决方案。
 
-    新测试出现在测试资源管理器中  。
+    新测试出现在测试资源管理器中。
 
-5. 在“测试资源管理器”  中，选择“全部运行”  。
+5. 在“测试资源管理器”中，选择“全部运行”。
 
     ![单元测试资源管理器 - 已通过基本测试](../test/media/utecpp10.png)
 
@@ -215,7 +217,7 @@ ms.locfileid: "85816002"
     >
     > 当用户更改其要求时，请禁用不再正确的测试。 编写新测试，并以相同的增量方式使他们每次运行一个。
 
-2. 生成解决方案，然后在测试资源管理器中选择“全部运行”   。
+2. 生成解决方案，然后在测试资源管理器中选择“全部运行” 。
 
      新未通过测试。
 
@@ -243,7 +245,7 @@ ms.locfileid: "85816002"
     }
     ```
 
-4. 生成解决方案，然后在“测试资源管理器”  中选择“全部运行”  。
+4. 生成解决方案，然后在“测试资源管理器”中选择“全部运行”。
 
      两个测试均通过。
 
@@ -287,11 +289,11 @@ ms.locfileid: "85816002"
     }
     ```
 
-2. 生成解决方案并选择“全部运行”  。
+2. 生成解决方案并选择“全部运行” 。
 
 3. 打开（或双击）失败的测试。
 
-     失败的断言会突出显示。 失败消息会显示在“测试资源管理器”  的“详细信息”窗格中。
+     失败的断言会突出显示。 失败消息会显示在“测试资源管理器”的“详细信息”窗格中。
 
      ![NegativeRangeTests 未通过](../test/media/ute_cpp_testexplorer_negativerangetest_fail.png)
 
@@ -299,7 +301,7 @@ ms.locfileid: "85816002"
 
     1. 在 SquareRoot 函数的开始处设置一个断点。
 
-    2. 在失败测试的快捷菜单上，选择“调试所选测试”  。
+    2. 在失败测试的快捷菜单上，选择“调试所选测试” 。
 
          当在断点处停止运行时，请单步调试代码。
 
@@ -349,7 +351,7 @@ ms.locfileid: "85816002"
 
     ```
 
-2. 生成解决方案并选择“全部运行”  ，以确保未引入错误。
+2. 生成解决方案并选择“全部运行” ，以确保未引入错误。
 
     > [!TIP]
     > 良好的单元测试组可以让你确信在更改代码时不会引入 Bug。
@@ -366,7 +368,7 @@ ms.locfileid: "85816002"
 
    也可以强制实施最低级别的代码覆盖率。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [将单元测试添加到现有 C++ 应用程序](../test/how-to-use-microsoft-test-framework-for-cpp.md)
 - [使用 Microsoft.VisualStudio.TestTools.CppUnitTestFramework](how-to-use-microsoft-test-framework-for-cpp.md)

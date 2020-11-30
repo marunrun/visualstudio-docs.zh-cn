@@ -1,5 +1,7 @@
 ---
 title: 使用 .runsettings 文件配置单元测试
+description: 了解如何使用 Visual Studio 中的 .runsettings 文件配置命令行、IDE 或生成工作流运行的单元测试。
+ms.custom: SEO-VS-2020
 ms.date: 07/15/2020
 ms.topic: conceptual
 ms.author: mikejo
@@ -7,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 8194a5f61b45ac2b4358922aaf8c7c7b8bea4ae9
-ms.sourcegitcommit: 63ff7cb85b3baeeb713240d17bb2a18497f3741d
+ms.openlocfilehash: ca15e265f9e6f3188826c019a8c81d02a7668bcf
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94518760"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442685"
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>使用 .runsettings 文件配置单元测试
 

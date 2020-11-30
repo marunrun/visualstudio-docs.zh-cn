@@ -1,5 +1,7 @@
 ---
 title: 使用测试设置收集诊断信息
+description: 了解如何使用 Visual Studio 中的测试设置在运行测试时收集额外的数据。 了解多个诊断数据适配器。
+ms.custom: SEO-VS-2020
 ms.date: 10/03/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -8,12 +10,12 @@ ms.assetid: 0c86918b-cd63-4468-8f49-6d547a1276dc
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 14d98e34ef35efb1498d37071b2f53ef25bac4ad
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fc8bbf1aea3e596af392db97ba33ebdaff5d1f56
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288853"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441602"
 ---
 # <a name="collect-diagnostic-information-using-test-settings"></a>使用测试设置收集诊断信息
 

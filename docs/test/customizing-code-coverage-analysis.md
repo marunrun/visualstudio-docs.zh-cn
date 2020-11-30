@@ -1,5 +1,7 @@
 ---
 title: 自定义代码覆盖率分析
+description: 了解如何使用 ExcludeFromCodeCoverageAttribute 属性从覆盖率结果中排除测试代码。 可以将解决方案外部的程序集包括在内。
+ms.custom: SEO-VS-2020
 ms.date: 08/21/2019
 ms.topic: conceptual
 ms.author: mikejo
@@ -7,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 9171afdc6fe5ca65a8ba2bcae81fe255981cdae6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 99eb322e1eebe2d8845b355cd76a9e34a7516348
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86475986"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441823"
 ---
 # <a name="customize-code-coverage-analysis"></a>自定义代码覆盖率分析
 
@@ -118,9 +120,9 @@ ms.locfileid: "86475986"
 
 Include 和 exclude 节点使用正则表达式，它们与通配符不同。 所有匹配项都不区分大小写。 下面是一些示例：
 
-- .\* 与任意字符组成的字符串匹配
+- * *.\** _ 与包含任意字符的字符串匹配
 
-- **\\.** 与句点“.”匹配
+- _ *\\.* * 与句点“.”匹配
 
 - **\\(   \\)** 与括号“(  )”匹配
 

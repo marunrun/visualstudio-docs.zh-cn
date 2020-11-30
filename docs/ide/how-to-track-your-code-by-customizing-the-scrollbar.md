@@ -1,5 +1,7 @@
 ---
 title: 滚动条的地图模式和滚动条模式
+description: 了解如何通过自定义滚动条来跟踪代码中的更改，并了解如何使用“滚动条”模式和“地图”模式。
+ms.custom: SEO-VS-2020
 ms.date: 03/20/2020
 ms.topic: how-to
 author: TerryGLee
@@ -7,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5d1b659dabed2337013ffb84ff48277f0edacb09
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c59ac152be9528ef3e01410f0a3b5f34dd882286
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85283978"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95596932"
 ---
 # <a name="how-to-customize-the-scroll-bar"></a>如何：自定义滚动条
 

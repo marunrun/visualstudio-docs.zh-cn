@@ -1,5 +1,7 @@
 ---
 title: 环境设置
+description: 了解 Visual Studio 环境设置，并了解如何对其进行调整，使其适合你所使用的开发类型。
+ms.custom: SEO-VS-2020
 ms.date: 11/21/2018
 ms.topic: conceptual
 author: TerryGLee
@@ -7,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 780f9e6cdd3a2b30a8cc5ce31b0c8cc61a6d5e55
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1e38505b800037be63b326003bfa6c7fc5396126
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89313024"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006648"
 ---
 # <a name="environment-settings-for-visual-studio"></a>Visual Studio 的环境设置
 
@@ -32,19 +34,19 @@ ms.locfileid: "89313024"
 
 要在首次打开 Visual Studio 后更改开发设置，请按照下列步骤操作：
 
-1. 选择菜单栏中的“工具” > “导入和导出设置”，打开“导入和导出设置向导”。
+1. 选择菜单栏中的“工具” > “导入和导出设置”，打开“导入和导出设置向导”  。
 
-1. 在“导入和导出设置向导”中，选择“重置所有设置”，然后选择“下一步”    。
+1. 在“导入和导出设置向导”中，选择“重置所有设置”，然后选择“下一步”。
 
    ![在 Visual Studio 中导入和导出设置向导](media/reset-all-settings.png)
 
-1. 在“保存当前设置”页上，选择“是”或“否”，然后选择“下一步”     。
+1. 在“保存当前设置”页上，选择“是”或“否”，然后选择“下一步”。
 
-1. 在“选择设置的默认集合”页上，选择一个集合，然后选择“完成”   。
+1. 在“选择设置的默认集合”页上，选择一个集合，然后选择“完成”。
 
    ![Visual Studio 中的设置集合](media/settings-collections.png)
 
-1. 在“重置完成”页上，选择“关闭”   。
+1. 在“重置完成”页上，选择“关闭”。
 
 ## <a name="see-also"></a>另请参阅
 

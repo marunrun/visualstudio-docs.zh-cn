@@ -1,5 +1,7 @@
 ---
 title: 如何：将类关系图导出为图像（类设计器）
+description: 了解如何通过将类图保存为图像来导出项目中的代码创建的类图。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fdecb8834f296d24cbd53d6725b800612f9bcf57
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2cb72a494cbafc9e2ab6661f056436a083b52de1
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770149"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94901396"
 ---
 # <a name="how-to-export-class-diagrams-as-images"></a>如何：将类图作为图像导出
 
@@ -25,15 +27,15 @@ ms.locfileid: "85770149"
 
 ## <a name="export-a-diagram"></a>导出关系图
 
-1. 打开你的类图 (.cd)  文件。
+1. 打开你的类图 (.cd) 文件。
 
-2. 通过“类图”  菜单或关系图面快捷菜单，选择“将关系图导出为图像”  。
+2. 通过“类图”菜单或关系图面快捷菜单，选择“将关系图导出为图像”。
 
 3. 选择关系图。
 
 4. 选择所需格式。
 
-5. 选择“导出”  来完成导出。
+5. 选择“导出”来完成导出。
 
 若要自动更新从其他文档链接的导出图像，请在 Visual Studio 中再次导出该关系图。
 

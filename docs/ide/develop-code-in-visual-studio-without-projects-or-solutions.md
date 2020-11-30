@@ -1,5 +1,7 @@
 ---
 title: 开发代码而无需创建项目或解决方案
+description: 了解如何在不使用项目或解决方案的情况下直接在 Visual Studio 中开发代码。
+ms.custom: SEO-VS-2020
 ms.date: 06/22/2020
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 68665acfcc3ea00f118dc19cf155cb3e6f5d1b36
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.openlocfilehash: d706ccdc07abcc91e956878e1bc180be9c542223
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85769663"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95005998"
 ---
 # <a name="develop-code-in-visual-studio-without-projects-or-solutions"></a>在 Visual Studio 中开发代码而无需创建项目或解决方案
 
