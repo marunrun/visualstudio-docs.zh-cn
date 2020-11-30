@@ -1,5 +1,7 @@
 ---
 title: 使用项目工厂创建项目实例 |Microsoft Docs
+description: 了解如何使用 Visual Studio 集成开发环境中的项目工厂创建项目类实例 (IDE) 。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 31ba5dd11af18f8a723b2271544eff2bd292e2e8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 59ad41bda80337fd0adc65d4792adbbbb1cf38f1
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709065"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328582"
 ---
 # <a name="create-project-instances-by-using-project-factories"></a>使用项目工厂创建项目实例
 中的项目类型 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 使用 *项目工厂* 创建项目对象的实例。 项目工厂类似于 cocreatable COM 对象的标准类工厂。 但是，项目对象不是 cocreatable;它们只能通过使用项目工厂来创建。
@@ -38,7 +40,7 @@ ms.locfileid: "80709065"
 
    项目类型与特定文件扩展名关联。 当用户尝试打开现有项目文件或尝试通过克隆模板来创建新项目时，IDE 将使用该文件的扩展名来确定相应的项目 GUID。
 
-   IDE 一旦确定是否必须创建一个新项目或打开特定类型的现有项目，IDE 就会使用 **[HKEY_LOCAL_MACHINE \software\microsoft\visualstudio\8.0\projects]** 下的系统注册表中的信息来查找哪些 VSPackage 实现所需的项目工厂。 IDE 将加载此 VSPackage。 在 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A> 方法中，VSPackage 必须通过调用方法将其项目工厂注册到 IDE <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterProjectTypes.RegisterProjectType%2A> 。
+   IDE 一旦确定是否必须创建一个新项目或打开特定类型的现有项目，IDE 就会使用 **[HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\8.0\Projects]** 下的系统注册表中的信息来查找哪些 VSPackage 实现了所需的项目工厂。 IDE 将加载此 VSPackage。 在 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A> 方法中，VSPackage 必须通过调用方法将其项目工厂注册到 IDE <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterProjectTypes.RegisterProjectType%2A> 。
 
    接口的主要方法 `IVsProjectFactory` 是 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory.CreateProject%2A> ，它应处理两个方案：打开现有项目并创建新项目。 大多数项目将其项目状态存储在项目文件中。 通常，通过复制传递到方法的模板文件 `CreateProject` ，然后打开副本来创建新项目。 通过直接打开传递给方法的项目文件来实例化现有项目 `CreateProject` 。 `CreateProject`方法可根据需要向用户显示其他 UI 功能。
 

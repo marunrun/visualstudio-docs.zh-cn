@@ -1,5 +1,7 @@
 ---
 title: " (源代码管理的自定义用户界面) |Microsoft Docs"
+description: 了解如何使用源代码管理 VSPackage 指定 UI 元素，在 Visual Studio 中 (UI) 创建自定义用户界面。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a6ef807cef17a6ca3cddfee05ba57ace27e34a9e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e1426b271ea8db4d486043c9fbe885a0f428b514
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708932"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328517"
 ---
 # <a name="custom-user-interface-source-control-vspackage"></a> (源代码管理的自定义用户界面 VSPackage) 
 VSPackage 通过 Visual Studio 命令 *表) 文件* (声明其菜单项及其默认状态。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]集成开发环境 (IDE) 在加载 VSPackage 之前显示处于默认状态的菜单项。 然后， <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> 调用方法以启用或禁用菜单项。
@@ -49,13 +51,13 @@ VSPackage 通过 Visual Studio 命令 *表) 文件* (声明其菜单项及其默
 
   下表介绍有关 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE 如何隐藏不同 UI 项的特定详细信息。
 
-| UI 项 | 说明 |
+| UI 项 | 描述 |
 | - | - |
-| 菜单和工具栏 | 源代码管理包必须在 *.vsct*文件的[VisibilityConstraints](../../extensibility/visibilityconstraints-element.md)节中将初始菜单和工具栏可见性状态设置为源代码管理包 ID。 这使 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE 可以适当地设置菜单项的状态，而无需加载 VSPackage 和调用方法的实现 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> 。 |
+| 菜单和工具栏 | 源代码管理包必须在 *.vsct* 文件的 [VisibilityConstraints](../../extensibility/visibilityconstraints-element.md)节中将初始菜单和工具栏可见性状态设置为源代码管理包 ID。 这使 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE 可以适当地设置菜单项的状态，而无需加载 VSPackage 和调用方法的实现 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> 。 |
 | 工具窗口 | 当激活时，源代码管理 VSPackage 将隐藏它拥有的任何工具窗口。 |
 | 源代码管理 VSPackage 特定的选项页 | 使用注册表项 **HKLM\SOFTWARE\Microsoft\VisualStudio\X.Y\ToolsOptionsPages\VisibilityCmdUIContexts** ，VSPackage 可以设置在其中显示其选项页的上下文。 此项下的注册表项必须使用源代码管理服务的服务 ID (SID) 来创建，并为其分配 DWORD 值1。 每当在 VSPackage 中向其注册源代码管理的上下文中发生 UI 事件时，如果该 VSPackage 处于活动状态，就会调用它。 |
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A>
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2>
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2>

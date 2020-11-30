@@ -1,5 +1,6 @@
 ---
 title: 何时实现源代码管理 VSPackage
+description: 了解可用于扩展 Visual Studio 源代码管理解决方案的源代码管理插件和源代码管理 Vspackage 的选项。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 16f96191115a509e07b5263f1d10d53ea3b2cc9c
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: c7b6c0e786f13ff526a1b71861c040cb165bc9e4
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037037"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329817"
 ---
 # <a name="determine-whether-to-implement-a-source-control-vspackage"></a>确定是否实现源代码管理 VSPackage
 
@@ -30,7 +31,7 @@ ms.locfileid: "90037037"
 
  如果要实现一个源代码管理解决方案，该解决方案提供一个使用源代码管理插件 API 未充分捕获的丰富源代码管理模型，则可以将源代码管理包视为集成路径。 这尤其适用于替换源代码管理适配器包 (它与源代码管理插件通信，并提供自己的基本源代码管理 UI) ，以便能够以自定义方式处理源代码管理事件。 如果你已经有一个令人满意的源代码管理 UI，并且想要在中保留该体验 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ，则源代码管理包选项仅允许你这样做。 源代码管理包不是泛型包，而是专门为与 IDE 一起使用而设计的 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。
 
- 如果要实现一个源代码管理解决方案，该解决方案可为源代码管理逻辑和 UI 提供灵活性和更丰富的控制，您可能更倾向于源代码管理包集成路由。 你可以：
+ 如果要实现一个源代码管理解决方案，该解决方案可为源代码管理逻辑和 UI 提供灵活性和更丰富的控制，您可能更倾向于源代码管理包集成路由。 可以：
 
 1. 注册自己的源代码管理 VSPackage (参阅 [注册和选择](../../extensibility/internals/registration-and-selection-source-control-vspackage.md)) 。
 
@@ -40,6 +41,6 @@ ms.locfileid: "90037037"
 
 4. 处理查询编辑和查询保存事件 (参阅 [查询编辑查询保存](../../extensibility/internals/query-edit-query-save-source-control-vspackage.md)) 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [创建源代码管理插件](../../extensibility/internals/creating-a-source-control-plug-in.md)

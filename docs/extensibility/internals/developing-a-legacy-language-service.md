@@ -1,5 +1,7 @@
 ---
 title: 开发旧版语言服务 |Microsoft Docs
+description: 了解如何在 VSPackage 中实现旧版语言服务，或通过使用 Managed Extensibility Framework (MEF) 扩展。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +18,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0c7f930d5087b6a822156fd44024def0d5b42b49
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f7876b590cb5b09cf5db571ba1145f6bf747e5e5
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708672"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329739"
 ---
 # <a name="develop-a-legacy-language-service"></a>开发旧版语言服务
 本部分链接到帮助你创建旧版语言服务的主题。
@@ -31,7 +33,7 @@ ms.locfileid: "80708672"
 > [!NOTE]
 > 建议你尽快开始使用新的编辑器 API。 这将提高语言服务的性能，并使你能够利用新的编辑器功能。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
 - [旧版语言服务的模型](../../extensibility/internals/model-of-a-legacy-language-service.md)
 
  为核心编辑器提供最小语言服务的模型 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。 您可以使用此模型作为创建自己的语言服务的指南。
