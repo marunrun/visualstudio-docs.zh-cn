@@ -1,5 +1,7 @@
 ---
 title: 打包和部署 SharePoint 解决方案 | Microsoft Docs
+description: 打包和部署 SharePoint 解决方案（通过使用解决方案包 (.wsp) 文件部署到 SharePoint 服务器）。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: overview
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9a4bf3394cf47b4f355fbe6a330ff5374e2da1c9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bd06a5be3c9e7ceea38bdb4560f8b6262175bd45
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015590"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305075"
 ---
 # <a name="package-and-deploy-sharepoint-solutions"></a>打包和部署 SharePoint 解决方案
   通常，使用解决方案包 (.wsp) 文件将 SharePoint 解决方案部署到 SharePoint 服务器。 可以使用 Visual Studio 将 SharePoint 项目项组织为功能，并创建包来部署 SharePoint 功能。
