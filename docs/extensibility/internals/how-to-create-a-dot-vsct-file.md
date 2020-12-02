@@ -1,5 +1,7 @@
 ---
 title: 如何：创建。.Vsct 文件 |Microsoft Docs
+description: 了解如何手动创建 .vsct 文件（一种基于 XML 的 Visual Studio 命令表配置文件）。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a571098deeeca0e8262d855c24d0bf1ce66be08e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 47d38e68494f29947131bcc8ce3a2a59b2e8d48b
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905535"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480364"
 ---
 # <a name="how-to-create-a-vsct-file"></a>如何：创建 .vsct 文件
 
@@ -23,9 +25,9 @@ ms.locfileid: "85905535"
 
 - 可以在包模板中创建新的 VSPackage [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。
 
-- 您可以使用基于 XML 的命令表配置编译器 *Vsct.exe*从现有的 *.ctc* 文件生成文件。
+- 您可以使用基于 XML 的命令表配置编译器 *Vsct.exe* 从现有的 *.ctc* 文件生成文件。
 
-- 可以使用*Vsct.exe*从现有的*cto*文件生成 *.vsct*文件。
+- 可以使用 *Vsct.exe* 从现有的 *cto* 文件生成 *.vsct* 文件。
 
 - 可以手动创建 *.vsct* 文件。
 
@@ -55,13 +57,13 @@ ms.locfileid: "85905535"
 
 ## <a name="how-to-create-a-vsct-file-from-an-existing-ctc-file"></a>如何：从现有的 .ctc 文件创建 .vsct 文件
 
-你可以从现有命令表 *.ctc*源文件创建基于 XML 的 *.vsct*文件。 通过执行此操作，可以利用基于 XML 的新 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 命令表 (VSCT) 编译器格式。
+你可以从现有命令表 *.ctc* 源文件创建基于 XML 的 *.vsct* 文件。 通过执行此操作，可以利用基于 XML 的新 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 命令表 (VSCT) 编译器格式。
 
 ### <a name="to-create-a-vsct-file-from-a-ctc-file"></a>从 .ctc 文件创建 .vsct  文件
 
 1. 获取 Perl 语言的副本。
 
-2. 获取 Perl 脚本*ConvertCTCToVSCT.pl*的副本（通常位于* \<Visual Studio SDK installation path> \VisualStudioIntegration\Tools\bin*文件夹中）。
+2. 获取 Perl 脚本 *ConvertCTCToVSCT.pl* 的副本（通常位于 *\<Visual Studio SDK installation path> \VisualStudioIntegration\Tools\bin* 文件夹中）。
 
 3. 获取要转换的 *.ctc* 源文件的副本。
 
@@ -86,7 +88,7 @@ ms.locfileid: "85905535"
 
 ## <a name="how-to-create-a-vsct-file-from-an-existing-cto-file"></a>如何：从现有的 cto 文件创建 .vsct 文件
 
-可以从现有的*cto*文件创建基于 XML 的 *.vsct*文件。 这样既可充分利用新的命令表编译器格式。 即使 *cto* 文件是从 *.ctc* 文件编译的，此过程仍然有效。 你可以编辑 *.vsct* 文件并将其编译到另一个 cto 文件中。
+可以从现有的 *cto* 文件创建基于 XML 的 *.vsct* 文件。 这样既可充分利用新的命令表编译器格式。 即使 *cto* 文件是从 *.ctc* 文件编译的，此过程仍然有效。 你可以编辑 *.vsct* 文件并将其编译到另一个 cto 文件中。
 
 ### <a name="to-create-a-vsct-file-from-a-cto-file"></a>从 .cto 文件创建 .Vsct 文件
 
@@ -104,7 +106,7 @@ ms.locfileid: "85905535"
 
      其中 \<ctofilename\> 是 *cto* 文件的名称， \<vsctfilename\> 是要创建的 *.vsct* 文件的名称， \<symfilename\> 是 *.ctsym* 文件的名称。
 
-     此过程将创建一个新的 *.Vsct* XML 命令表编译器文件。 可以像处理任何其他 *.vsct*文件一样，用*vsct.exe*.vsct 编译器编辑和编译文件。
+     此过程将创建一个新的 *.Vsct* XML 命令表编译器文件。 可以像处理任何其他 *.vsct* 文件一样，用 *vsct.exe*.vsct 编译器编辑和编译文件。
 
 ## <a name="compile-the-code"></a>编译代码
  只需将 *.vsct* 文件添加到项目不会导致编译。 您必须将其合并到生成过程中。
@@ -138,7 +140,7 @@ ms.locfileid: "85905535"
 
      此标记应在 `ItemGroup` 包含嵌入资源的元素内。
 
-4. 在编辑器中打开包文件（通常名为* \<ProjectName\> Package.cs*或* \<ProjectName\> package*）。
+4. 在编辑器中打开包文件（通常名为 *\<ProjectName\> Package.cs* 或 *\<ProjectName\> package*）。
 
 5. 将 `ProvideMenuResource` 特性添加到包类，如下面的示例中所示。
 
@@ -148,7 +150,7 @@ ms.locfileid: "85905535"
 
      第一个参数值必须与 `ResourceName` 项目文件中定义的属性的值相匹配。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [创作 .vsct 文件](../../extensibility/internals/authoring-dot-vsct-files.md)
 - [Visual Studio 命令表 ( .vsct) 文件](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
 - [.VSCT XML 架构引用](../../extensibility/vsct-xml-schema-reference.md)

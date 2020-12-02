@@ -1,5 +1,7 @@
 ---
 title: 在 Visual Studio SDK 中公开事件 |Microsoft Docs
+description: 了解公开项目和项目项事件的 Visual Studio SDK 方法和注册表项。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 48f1e0ea0dcd07bbc26fc89d5c61a6a5941d4727
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d5eec842f989497fda618482916154aabdcdd406
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708488"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480533"
 ---
 # <a name="expose-events-in-the-visual-studio-sdk"></a>在 Visual Studio SDK 中公开事件
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 允许使用自动化来源事件。 建议你为项目和项目项提供源事件。
@@ -27,7 +29,7 @@ ms.locfileid: "80708488"
 
 1. 环境启动。
 
-2. 它从注册表中读取所有 Vspackage 的 **Automation**、 **AutomationEvents**和 **automationproperties.livesetting** 键下的所有值名称，并将这些名称存储在表中。
+2. 它从注册表中读取所有 Vspackage 的 **Automation**、 **AutomationEvents** 和 **automationproperties.livesetting** 键下的所有值名称，并将这些名称存储在表中。
 
 3. 自动化使用者调用，在此示例中为 `DTE.Events.AutomationProjectsEvents` 或 `DTE.Events.AutomationProjectItemsEvents` 。
 
@@ -46,7 +48,7 @@ ms.locfileid: "80708488"
 ## <a name="registry-entries-from-the-basic-project-sample"></a>基本项目示例中的注册表项
  本部分介绍将自动化事件值添加到注册表的位置。
 
- **[HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio\8.0\Packages \\<PkgGUID \> \AutomationEvents]**
+ **[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0\Packages\\<PkgGUID \> \AutomationEvents]**
 
  **AutomationProjectEvents** = 返回 `AutomationProjectEvents` 对象。
 
@@ -62,7 +64,7 @@ ms.locfileid: "80708488"
 
  ![Visual Studio 项目事件](../../extensibility/internals/media/projectevents.gif "ProjectEvents") 事件的自动化模型
 
- 类 `CProjectEventsContainer` 表示 *BscProjectsEvents*的源对象， `CProjectItemsEventsContainer` 表示 *BscProjectItemsEvents*的源对象。
+ 类 `CProjectEventsContainer` 表示 *BscProjectsEvents* 的源对象， `CProjectItemsEventsContainer` 表示 *BscProjectItemsEvents* 的源对象。
 
  在大多数情况下，你必须为每个事件请求返回一个新的对象，因为大多数事件对象都带有筛选器对象。 触发事件时，请检查此筛选器以验证是否正在调用事件处理程序。
 

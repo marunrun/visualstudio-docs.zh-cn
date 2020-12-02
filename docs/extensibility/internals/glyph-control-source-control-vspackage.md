@@ -1,5 +1,7 @@
 ---
 title: " (源代码管理的标志符号控件 VSPackage) |Microsoft Docs"
+description: 了解如何在源代码管理中显示自定义标志符号 VSPackage，以便可以使用自己的图标来指示源代码管理下的项的状态。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,21 +13,21 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9db1b4542eae293e39cda674fac3eb984aa77d3e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: eaf7f40224e2f197627bb995dc6cccdf297b46e5
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708320"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480468"
 ---
 # <a name="glyph-control-source-control-vspackage"></a> (源代码管理的标志符号控件 VSPackage) 
 可用于源代码管理的深度集成 Vspackage 是显示自己的标志符号，以指示源代码管理下项的状态的能力。
 
 ## <a name="levels-of-glyph-control"></a>字形控件的级别
- 状态标志符号是一个图标，指示项在显示时的当前状态，例如在 **解决方案资源管理器** 或 **类视图**中。 源代码管理 VSPackage 可以执行两个级别的字形控件。 它可以将字形选择限制为 IDE 提供的一组预定义字形 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ，或者可以定义要显示的一组自定义字形。
+ 状态标志符号是一个图标，指示项在显示时的当前状态，例如在 **解决方案资源管理器** 或 **类视图** 中。 源代码管理 VSPackage 可以执行两个级别的字形控件。 它可以将字形选择限制为 IDE 提供的一组预定义字形 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ，或者可以定义要显示的一组自定义字形。
 
 ### <a name="default-set-of-glyphs"></a>默认字型集
- 若要确定与 **解决方案资源管理器**中的项关联的状态标志符号，项目将使用从源代码管理请求状态标志符号 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2.GetSccGlyph%2A> 。 源代码管理 VSPackage 可能决定保留仅限于 IDE 提供的预定义字形的字形选择。 在这种情况下，VSPackage 会传递返回值的数组，这些值表示在 *vsshell*中定义的标志符号枚举。 有关详细信息，请参阅 <xref:Microsoft.VisualStudio.Shell.Interop.VsStateIcon>。 这是由 IDE 设置的一组预定义字形，如检入标志符号的挂锁和检出标志符号的复选标记。
+ 若要确定与 **解决方案资源管理器** 中的项关联的状态标志符号，项目将使用从源代码管理请求状态标志符号 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2.GetSccGlyph%2A> 。 源代码管理 VSPackage 可能决定保留仅限于 IDE 提供的预定义字形的字形选择。 在这种情况下，VSPackage 会传递返回值的数组，这些值表示在 *vsshell* 中定义的标志符号枚举。 有关详细信息，请参阅 <xref:Microsoft.VisualStudio.Shell.Interop.VsStateIcon>。 这是由 IDE 设置的一组预定义字形，如检入标志符号的挂锁和检出标志符号的复选标记。
 
 ### <a name="custom-set-of-glyphs"></a>自定义字形集
  源代码管理 VSPackage 可以使用自己的标志符号，在安装时具有独特的外观。 当新的源代码管理 VSPackage 处于活动状态时，它应该能够开始使用自己的标志符号，即使之前的源代码管理 VSPackage 仍处于加载状态，但仍处于非活动状态。 在此模式下，源控件 VSPackage 仍可使用现有的图标，以便在其选择时保持一致的外观 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。

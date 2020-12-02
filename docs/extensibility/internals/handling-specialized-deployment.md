@@ -1,5 +1,7 @@
 ---
 title: 处理专用部署 |Microsoft Docs
+description: 了解如何处理 Visual Studio 中的应用程序项目的专用部署。 例如，部署到 Web 服务器或设备。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 972965c3565088af8205d6f7903d7098e568c057
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 664625cd8737fb9a9a3e398716d750d6d9665529
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708209"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480429"
 ---
 # <a name="handle-specialized-deployment"></a>处理专用部署
 部署是项目的可选操作。 例如，Web 项目支持部署，使项目可以更新 Web 服务器。 同样， **智能设备** 项目支持将生成的应用程序复制到目标设备的部署。 项目子类型可以通过实现接口来提供专用的部署行为 <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> 。 此接口定义一组完整的部署操作：
@@ -289,5 +291,5 @@ ms.locfileid: "80708209"
 > [!NOTE]
 > 本主题中提供的所有代码示例都是 [VSSDK 示例](https://github.com/Microsoft/VSSDK-Extensibility-Samples)中更大示例的一部分。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [项目子类型](../../extensibility/internals/project-subtypes.md)

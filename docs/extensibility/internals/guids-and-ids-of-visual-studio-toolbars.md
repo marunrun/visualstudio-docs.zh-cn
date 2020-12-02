@@ -1,5 +1,7 @@
 ---
 title: Visual Studio 工具栏的 Guid 和 Id |Microsoft Docs
+description: 查看工具栏及其包含的组的 GUID 和 ID 值的列表，这些值包含在 Visual Studio 集成开发环境中 (IDE) 。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +18,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: fe42821cdacc038d767e52373d45ddd7b8954323
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b44cda401faa0d7e34bf9ce7579aa3cca026fa13
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708230"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480377"
 ---
 # <a name="guids-and-ids-of-visual-studio-toolbars"></a>Visual Studio 工具栏的 Guid 和 Id
 本主题枚举 Visual Studio 集成开发环境中包含的工具栏的 GUID 和 ID 值 (IDE) 以及它们所包含的组。 这些值是在作为 Visual Studio SDK 的一部分安装的 *.vsct* 文件中定义的。 有关详细信息，请参阅 [IDE 定义的命令、菜单和组](../../extensibility/internals/ide-defined-commands-menus-and-groups.md)。
@@ -38,10 +40,10 @@ ms.locfileid: "80708230"
 
  只有组才能直接从工具栏中进行。 若要添加组，请将其父级设置为工具栏的 GUID 和 ID。 若要将按钮添加到工具栏，请在工具栏上将其父项设置为组。
 
-|工具栏|ID|
+|Toolbar|ID|
 |-------------|--------|
 |标准|IDM_VS_TOOL_STANDARD|
-|构建|IDM_VS_TOOL_BUILD|
+|生成|IDM_VS_TOOL_BUILD|
 |文本编辑器|IDM_VS_TOOL_TEXTEDITOR|
 |调试|guidVSDebugGroup： IDM_DEBUG_TOOLBAR|
 |调试位置|guidVSDebugGroup： IDM_DEBUG_CONTEXT_TOOLBAR|
@@ -49,7 +51,7 @@ ms.locfileid: "80708230"
 ### <a name="special-toolbars"></a>特殊工具栏
  这些工具栏是由 Visual Studio IDE 定义的，但它们提供专用函数，并且不托管命令组。
 
-|工具栏|ID|
+|Toolbar|ID|
 |-------------|--------|
 |Add 命令|IDM_VS_TOOL_ADDCOMMAND|
 |Undefined|IDM_VS_TOOL_UNDEFINED|
@@ -95,7 +97,7 @@ ms.locfileid: "80708230"
 |----------|--------|
 |执行|IDM_DEBUG_TOOLBAR|
 |单步执行|IDG_DEBUG_TOOLBAR_STEPPING|
-|监视|IDG_DEBUG_TOOLBAR_WATCH|
+|观看|IDG_DEBUG_TOOLBAR_WATCH|
 |Windows|IDG_DEBUG_TOOLBAR_WINDOWS|
 
 ### <a name="debug-location-toolbar-groups"></a>调试位置工具栏组
@@ -110,7 +112,7 @@ ms.locfileid: "80708230"
 > [!NOTE]
 > `guidSHLMainMenu`除了使用 guid： ID 语法指定的情况外，工具栏和组使用 guid。 如果为工具栏指定了 GUID，它也适用于从该工具栏中继承的组。
 
-|工具窗口|工具栏|组|
+|工具窗口|Toolbar|组|
 |-----------------|-------------|------------|
 |解决方案资源管理器|IDM_VS_TOOL_PROJWIN|IDG_VS_PROJ_TOOLBAR1.。5|
 |服务器资源管理器|guid_SE_MenuGroup： IDM_SE_TOOLBAR_SERVEREXPLORER|IDG_SE_TOOLBAR_REFRESH|
@@ -134,7 +136,7 @@ ms.locfileid: "80708230"
 |内存1-4|guidVSDebugGroup： IDM_MEMORY_WINDOW_TOOLBAR1 .。。4|IDG_MEMORY_EXPRESSION1.。4<br /><br /> IDG_MEMORY_COLUMNS1.。4|
 |进程|guidVSDebugGroup： IDM_ATTACHED_PROCS_TOOLBAR|IDG_ATTACHED_PROCS_EXECCNTRL IDG_ATTACHED_PROCS_STEPPING<br /><br /> IDG_ATTACHED_PROCS_EXECCNTRL2<br /><br /> IDG_ATTACHED_PROCS_ATTACH<br /><br /> IDG_ATTACHED_PROCS_COLUMNS|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [向工具栏添加菜单控制器](../../extensibility/adding-a-menu-controller-to-a-toolbar.md)
 - [将工具栏添加到工具窗口](../../extensibility/adding-a-toolbar-to-a-tool-window.md)
 - [Visual Studio 菜单的 Guid 和 Id](../../extensibility/internals/guids-and-ids-of-visual-studio-menus.md)

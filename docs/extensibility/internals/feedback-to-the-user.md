@@ -1,5 +1,7 @@
 ---
 title: 向用户提供反馈 |Microsoft Docs
+description: 了解如何在 (IDE) 的 Visual Studio 集成开发环境中向用户提供有关可用功能的视觉反馈。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 46b9190b16b9aa444384847bf209ccca50c7f768
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d8f3f79a61729a641ee7c046ddd196a648469fb3
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708403"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480520"
 ---
 # <a name="feedback-to-the-user"></a>向用户提供反馈
 在 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 集成开发环境 (IDE) 上，有关可用功能的视觉反馈基于用户的当前选择和全局选择上下文。 下表列出了在不同选择上下文中可用的功能。
@@ -55,7 +57,7 @@ ms.locfileid: "80708403"
 
 - 将显示 **编辑器** 工具栏和 **表** 菜单，并且标题栏将更新以反映 Web 窗体窗口。
 
-- 活动层次结构窗口通常是 **解决方案资源管理器**的，其标题栏更新将反映当前上下文，并且上下文相关 **项目** 菜单命令现在适用于活动 Web 应用程序项目。
+- 活动层次结构窗口通常是 **解决方案资源管理器** 的，其标题栏更新将反映当前上下文，并且上下文相关 **项目** 菜单命令现在适用于活动 Web 应用程序项目。
 
 ## <a name="see-also"></a>请参阅
 - [IDE 中的选择和货币](../../extensibility/internals/selection-and-currency-in-the-ide.md)
