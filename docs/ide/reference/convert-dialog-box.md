@@ -1,5 +1,7 @@
 ---
 title: 项目转换器
+description: “转换”对话框曾在以前版本的 Visual Studio 中使用，现已被弃用。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -14,17 +16,17 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d5348bb82d54f2914a5b8ee26ada0f924f592aab
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 2f095d05a873eb59b0f6453ddb796fc2a183705e
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75595730"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040805"
 ---
 # <a name="convert-dialog-box"></a>“转换”对话框
 
-“转换”对话框曾在以前版本的 Visual Studio 中使用，现已被弃用  。
+“转换”对话框曾在以前版本的 Visual Studio 中使用，现已被弃用。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-- [移植、迁移和升级 Visual Studio 项目](../../porting/port-migrate-and-upgrade-visual-studio-projects.md)
+- [Porting, Migrating, and Upgrading Visual Studio Projects](../../porting/port-migrate-and-upgrade-visual-studio-projects.md)

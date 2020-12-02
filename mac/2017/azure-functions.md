@@ -8,11 +8,11 @@ ms.technology: vs-ide-install
 ms.assetid: 25CD47A4-5B32-4734-8EF3-E24A02AABF29
 ms.topic: how-to
 ms.openlocfilehash: 009df6525696405914aeeb224e3817bbfbe27155
-ms.sourcegitcommit: 703c68667261df5985a73282c1cbb0541118989c
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89402621"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96189792"
 ---
 # <a name="introduction-to-azure-functions"></a>Azure Functions 简介
 
@@ -20,7 +20,7 @@ Azure functions 是一种在云中创建和运行事件驱动的代码片段（�
 
 ## <a name="requirements"></a>要求
 
-Azure Function 工具包含在 Visual Studio for Mac 7.5 中****。
+Azure Function 工具包含在 Visual Studio for Mac 7.5 中。
 
 若要创建和部署函数，还需要 Azure 订阅，可从 [https://azure.com/free](https://azure.com/free) 免费获取。
 
@@ -104,7 +104,7 @@ Visual Studio for Mac 使用包含的默认函数创建 .NET Standard 项目。 
     |**[服务计划](/azure/azure-functions/functions-scale)**|选择现有计划或创建自定义计划。 在附近的区域或函数访问的其他服务附近选择一个位置。|
 
     > [!CAUTION]
-    > Visual Studio for Mac 的 7.6 版本中存在 bug，如果尝试创建自定义服务计划，且“定价”设置为“消费”，会导致发布失败并出现预配错误********。 此问题将在下一服务版本中修复。
+    > Visual Studio for Mac 的 7.6 版本中存在 bug，如果尝试创建自定义服务计划，且“定价”设置为“消费”，会导致发布失败并出现预配错误。 此问题将在下一服务版本中修复。
 
 5. 单击“下一步”创建存储帐户。 Functions 运行时需要 Azure 存储帐户。 单击“自定义”以创建通用存储帐户，或使用现有帐户：
 

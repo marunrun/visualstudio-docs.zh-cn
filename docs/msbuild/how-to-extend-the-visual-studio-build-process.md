@@ -16,11 +16,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 07f0312892d9f4f4073cf6fb2c9537ffa52a6267
-ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92436356"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95970078"
 ---
 # <a name="how-to-extend-the-visual-studio-build-process"></a>如何：扩展 Visual Studio 生成过程
 
@@ -35,7 +35,7 @@ Visual Studio 生成过程由导入到项目文件中的一系列 MSBuild .targe
 公共目标包含一组预定义的空目标，在生成过程中某些主目标的前后会调用这些空目标。 例如，MSBuild 会在主 `CoreBuild` 目标之前调用 `BeforeBuild` 目标，在 `CoreBuild` 目标之后调用 `AfterBuild` 目标。 公共目标中的空目标默认不执行任何操作，但可通过定义导入公共目标的项目文件中所需的目标，重写这些空目标的默认行为。 通过重写预定义目标，可以使用 MSBuild 任务，更好地控制生成过程。
 
 > [!NOTE]
-> SDK 类型的项目在项目文件的最后一行后会隐式导入目标  。 这意味着，除非根据[如何：使用 MSBuild 项目 SDK](how-to-use-project-sdk.md) 中所述的方法手动指定导入，否则无法重写默认目标。
+> SDK 类型的项目在项目文件的最后一行后会隐式导入目标。 这意味着，除非根据[如何：使用 MSBuild 项目 SDK](how-to-use-project-sdk.md) 中所述的方法手动指定导入，否则无法重写默认目标。
 
 #### <a name="to-override-a-predefined-target"></a>重写预定义的目标
 
@@ -62,7 +62,7 @@ Visual Studio 生成过程由导入到项目文件中的一系列 MSBuild .targe
 |目标名称|说明|
 |-----------------|-----------------|
 |`BeforeCompile`, `AfterCompile`|插入到这些目标之一中的任务，在完成内核编译之前或之后运行。 大多数自定义均在这两个目标之一中完成。|
-|`BeforeBuild`, `AfterBuild`|插入到这些目标之一中的任务，在生成中所有其他任务之前或之后运行。 注意：`BeforeBuild` 和 `AfterBuild` 目标已在大多数项目文件的注释末尾定义，使你能够轻松向项目文件添加预生成和生成后事件  。|
+|`BeforeBuild`, `AfterBuild`|插入到这些目标之一中的任务，在生成中所有其他任务之前或之后运行。 注意：`BeforeBuild` 和 `AfterBuild` 目标已在大多数项目文件的注释末尾定义，使你能够轻松向项目文件添加预生成和生成后事件。|
 |`BeforeRebuild`, `AfterRebuild`|插入到这些目标之一中的任务，在调用内核重新生成功能之前或之后运行。 Microsoft.Common.targets 中的目标执行顺序是：`BeforeRebuild`、`Clean`、`Build`、`AfterRebuild`。|
 |`BeforeClean`, `AfterClean`|插入到这些目标之一中的任务，在调用内核清理功能之前或之后运行。|
 |`BeforePublish`, `AfterPublish`|插入到这些目标之一中的任务，在调用内核发布功能之前或之后运行。|

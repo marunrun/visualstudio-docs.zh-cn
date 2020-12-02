@@ -16,11 +16,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 496b6d538385473d50baec80e30fbc269e06c1f6
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92353390"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96189701"
 ---
 # <a name="assignprojectconfiguration-task"></a>AssignProjectConfiguration 任务
 
@@ -34,7 +34,7 @@ ms.locfileid: "92353390"
 |---------------|-----------------|
 |`ProjectReferences`|所需的 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 输入参数。<br /><br /> 要配置的项目。|
 |`SolutionConfigurationContents`|可选 `string` 输出参数。<br /><br /> 包含 XML 字符串，该字符串包含每个项目的项目配置。 这些配置分配给已命名的项目。|
-|`DefaultToVcxPlatformMapping`|可选 `string` 输出参数。<br /><br /> 包含以分号分隔的映射列表，这些映射是从大多数类型使用的平台名称到 .vcxproj 文件使用的平台名称的映射  。<br /><br /> 例如：<br /><br /> `"AnyCPU=Win32;X86=Win32;X64=X64"`|
+|`DefaultToVcxPlatformMapping`|可选 `string` 输出参数。<br /><br /> 包含以分号分隔的映射列表，这些映射是从大多数类型使用的平台名称到 .vcxproj 文件使用的平台名称的映射。<br /><br /> 例如：<br /><br /> `"AnyCPU=Win32;X86=Win32;X64=X64"`|
 |`VcxToDefaultPlatformMapping`|可选<br /><br /> `string` 输出参数。<br /><br /> 包含以分号分隔的映射列表，这些映射是从 .vcxproj 平台名称到由大多数类型所使用的平台名称的映射。<br /><br /> 例如：<br /><br /> `"Win32=AnyCPU;X64=X64"`|
 |`CurrentProjectConfiguration`|可选 `string` 输出参数。<br /><br /> 包含当前项目的配置。|
 |`CurrentProjectPlatform`|可选 `string` 输出参数。<br /><br /> 包含当前项目的平台。|

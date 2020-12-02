@@ -23,11 +23,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: dbfd8ac877fce4b1808a76e3bb2a66ac595693de
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599497"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95970625"
 ---
 # <a name="dump-files-in-the-visual-studio-debugger"></a>Visual Studio 调试器中的转储文件
 
@@ -55,9 +55,9 @@ Visual Studio 调试器可为托管或本机代码保存转储文件。 它可�
 
 转储文件不一定具有堆信息。
 
-- **带堆的转储文件**包含转储时的应用内存的快照，其中包括变量的值。 Visual Studio 还会在带堆的转储文件中保存加载的本机模块的二进制文件，这可让调试变得更加容易。 Visual Studio 可以从带堆的转储文件中加载符号，即使找不到应用二进制文件也是如此。
+- **带堆的转储文件** 包含转储时的应用内存的快照，其中包括变量的值。 Visual Studio 还会在带堆的转储文件中保存加载的本机模块的二进制文件，这可让调试变得更加容易。 Visual Studio 可以从带堆的转储文件中加载符号，即使找不到应用二进制文件也是如此。
 
-- **不带堆的转储文件**比带堆的转储要小得多，但调试器必须加载应用二进制文件才能查找符号信息。 加载的二进制文件必须与转储创建期间运行的二进制文件完全匹配。 不带堆的转储文件仅保存堆栈变量的值。
+- **不带堆的转储文件** 比带堆的转储要小得多，但调试器必须加载应用二进制文件才能查找符号信息。 加载的二进制文件必须与转储创建期间运行的二进制文件完全匹配。 不带堆的转储文件仅保存堆栈变量的值。
 
 ## <a name="create-a-dump-file"></a><a name="BKMK_Create_a_dump_file"></a>创建转储文件
 

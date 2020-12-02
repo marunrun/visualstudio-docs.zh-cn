@@ -7,11 +7,11 @@ ms.date: 07/03/2020
 ms.assetid: C7782BF3-016F-4B41-8A81-85FC540A1A8F
 ms.custom: video
 ms.openlocfilehash: 3892117e5c84a71f258d4e019105fca0a8cf9c5b
-ms.sourcegitcommit: 703c68667261df5985a73282c1cbb0541118989c
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89402571"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96189233"
 ---
 # <a name="refactoring"></a>Refactoring
 
@@ -23,11 +23,11 @@ Visual Studio for Mac 与 Roslyn（Microsoft 的开源 .NET 编译器平台）�
 
 ## <a name="renaming"></a>重命名
 
-任何代码标识符（例如，类名、属性名等）都可使用“重命名”重构命令来查找该标识符所有的出现次数并更改它们  。 若要重命名某个符号，请右键单击该符号，并选择“重命名...”，或使用“Cmd (⌘) + R”键绑定********：
+任何代码标识符（例如，类名、属性名等）都可使用“重命名”重构命令来查找该标识符所有的出现次数并更改它们  。 若要重命名某个符号，请右键单击该符号，并选择“重命名...”，或使用“Cmd (⌘) + R”键绑定：
 
 ![重命名菜单项](media/refactoring-renaming1.png)
 
-将突出显示符号和对该符号的任何引用。 开始键入新名称时，它会自动更改代码中的所有引用，按 Enter 可提交所做的更改****：
+将突出显示符号和对该符号的任何引用。 开始键入新名称时，它会自动更改代码中的所有引用，按 Enter 可提交所做的更改：
 
 ![重命名和标识符](media/refactoring-renaming2.png)
 
@@ -47,7 +47,7 @@ Visual Studio for Mac 与 Roslyn（Microsoft 的开源 .NET 编译器平台）�
 第三方可针对任何语言提供自定义诊断和建议，例如随附 SDK 提供，同时根据这些规则，Visual Studio 电灯泡可能亮起。
 
 ### <a name="quick-action-icons"></a>快速操作图标
-当存在可用的快速操作时，会出现一个图标，指示可用的修复方法或重构的类型。 螺丝刀** ![螺丝刀图标](media/quick-actions-screwdriver-icon.png)图标仅指示存在可用于更改代码的操作，但不一定要使用它们。 黄色灯泡** ![灯泡图标](media/quick-actions-light-bulb-icon.png)图标指示存在应** 执行的、用于改进代码的可用操作。 错误灯泡** ![错误灯泡图标](media/quick-actions-error-light-bulb-icon.png)图标指示存在可用于修复代码中的错误的操作。
+当存在可用的快速操作时，会出现一个图标，指示可用的修复方法或重构的类型。 螺丝刀 ![螺丝刀图标](media/quick-actions-screwdriver-icon.png)图标仅指示存在可用于更改代码的操作，但不一定要使用它们。 黄色灯泡 ![灯泡图标](media/quick-actions-light-bulb-icon.png)图标指示存在应执行的、用于改进代码的可用操作。 错误灯泡 ![错误灯泡图标](media/quick-actions-error-light-bulb-icon.png)图标指示存在可用于修复代码中的错误的操作。
 
 ### <a name="to-see-a-light-bulb-or-screwdriver"></a>查看灯泡或螺丝刀
 
@@ -65,11 +65,11 @@ Visual Studio for Mac 与 Roslyn（Microsoft 的开源 .NET 编译器平台）�
 
 ![“选项 + Enter”上下文项](media/refactoring-image2a.png)
 
-要启用这些选项，必须在选项“Visual Studio for Mac”>“首选项”>“文本编辑器”>“源分析”中选择“启用所有已打开文件的源分析”：******
+要启用这些选项，必须在选项“Visual Studio for Mac”>“首选项”>“文本编辑器”>“源分析”中选择“启用所有已打开文件的源分析”：
 
 ![启用源分析](media/refactoring-options.png)
 
-可能的建议操作具有 100 多个，可通过浏览到“Visual Studio for Mac”>“首选项”>“源分析”>“C#”>“代码操作”，并选中或取消选中操作旁的框，启用或禁用它们****。
+可能的建议操作具有 100 多个，可通过浏览到“Visual Studio for Mac”>“首选项”>“源分析”>“C#”>“代码操作”，并选中或取消选中操作旁的框，启用或禁用它们。
 
 ![C# 源分析操作](media/refactoring-image3a.png)
 

@@ -13,11 +13,11 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 4b3f7f6785b1a1693e0b041e64a0d507281926d3
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809932"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96189807"
 ---
 # <a name="understand-memory-allocation-and-object-lifetime-data-values"></a>了解内存分配数据值和对象生存期数据值
 

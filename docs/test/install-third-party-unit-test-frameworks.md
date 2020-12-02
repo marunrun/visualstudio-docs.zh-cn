@@ -1,5 +1,7 @@
 ---
 title: 安装第三方单元测试框架
+description: Visual Studio 测试资源管理器可从任何针对该资源管理器开发了适配器接口的单元测试框架中运行测试。
+ms.custom: SEO-VS-2020
 ms.date: 07/09/2020
 ms.topic: how-to
 ms.author: mikejo
@@ -7,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: c274f203b9bf2746716c0625c61141aaa332977a
-ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.openlocfilehash: e6433d665157c186a390e2963ef7ad1447b2f982
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86387182"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329973"
 ---
 # <a name="install-unit-test-frameworks"></a>安装单元测试框架
 
