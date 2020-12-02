@@ -1,20 +1,20 @@
 ---
-title: Visual Studio 订阅续订和取消
-description: 续订和取消常见问题解答列表。
+title: 购买、续订和取消 Visual Studio 订阅
+description: 针对 Visual Studio 订阅购买、续订和取消的常见问题解答列表
 ms.faqid: Section4
 ms.topic: conceptual
 ms.assetid: 9d7a7d4c-dce3-4655-983c-a7e4180a5433
 author: CaityBuschlen
 ms.author: cabuschl
-ms.date: 3/3/2020
-ms.openlocfilehash: acc381b8eedac8a3b842a0776e380712c4c544d4
-ms.sourcegitcommit: f915322d60182143da7036893d2941bc200cf439
+ms.date: 11/30/2020
+ms.openlocfilehash: 9fb297c4aeba3b35949b4552d9709886b9e69650
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94575410"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329726"
 ---
-# <a name="renewal-and-cancellation"></a>续订和取消
+# <a name="purchasing-renewing-and-canceling-visual-studio-subscriptions"></a>购买、续订和取消 Visual Studio 订阅
 
 [!INCLUDE [How do I renew my subscriptions?](includes/renew-subscriptions.md)]
 

@@ -1,5 +1,7 @@
 ---
 title: Visual Studio 中的层次结构 |Microsoft Docs
+description: 了解 Visual Studio 集成开发环境中的项目层次结构 (IDE) 包含项目项及其关联的属性。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,15 +13,15 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: cdbb8a0e58f6b1e5bc6e32f8c319d1480c4db4b5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5a7126f52517b1028cf878750294f1d4c7dbfe26
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708188"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480351"
 ---
 # <a name="hierarchies-in-visual-studio"></a>Visual Studio 中的层次结构
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]集成开发环境 (IDE) 将项目显示为*层次结构*。 在 IDE 中，层次结构是节点的树，其中每个节点都有一组关联的属性。 *项目层次结构*是一个容器，用于保存项目的项、项的关系以及项的关联属性和命令。
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]集成开发环境 (IDE) 将项目显示为 *层次结构*。 在 IDE 中，层次结构是节点的树，其中每个节点都有一组关联的属性。 *项目层次结构* 是一个容器，用于保存项目的项、项的关系以及项的关联属性和命令。
 
  在中 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ，可以使用层次结构接口管理项目层次结构 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> 。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>接口将从项目项调用的命令重定向到适当的层次结构窗口，而不是标准命令处理程序。
 

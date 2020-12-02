@@ -1,5 +1,7 @@
 ---
 title: 项目模型的元素 |Microsoft Docs
+description: 了解项目模型的元素，以及 Visual Studio 中所有项目的接口和实现如何共享基本结构。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5cafc167eac28b7560287c6de88ee8c490196007
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: e366b2923d5903f00241db0a6b71017dc25f3dee
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90011770"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480039"
 ---
 # <a name="elements-of-a-project-model"></a>项目模型的元素
 中所有项目的接口和实现 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 共享基本结构：项目类型的项目模型。 在你要开发的 VSPackage 中，你可以创建符合设计决策的对象，并与 IDE 提供的全局功能一起工作。 例如，你可以控制如何保存项目项，但你不会控制必须保存文件的通知。 当用户将焦点放在打开的项目项上并在菜单栏上的 "**文件**" 菜单中选择 "**保存**" 时 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ，项目类型代码必须截获 ide 中的命令，保存该文件，然后将通知发送回 ide，指出该文件不再发生更改。

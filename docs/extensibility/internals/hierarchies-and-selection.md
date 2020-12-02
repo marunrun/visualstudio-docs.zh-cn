@@ -1,5 +1,7 @@
 ---
 title: 层次结构和选择 |Microsoft Docs
+description: 了解 Visual Studio 如何处理项目的层次结构，以及如何使用选择上下文来确定向用户显示的内容。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,17 +14,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a0e38c2cea464abded5ecf6ee2c8ac087868b07e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 04f433e3da45e10d2b1721ac13254856489d2d0a
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708131"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480416"
 ---
 # <a name="hierarchies-and-selection"></a>层次结构和选择
 自定义时 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ，应了解如何 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 处理项目的层次结构，以及如何使用选择上下文来确定向用户显示的内容。 本部分讨论 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 层次结构和选择的概念。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
 - [Visual Studio 中的层次结构](../../extensibility/internals/hierarchies-in-visual-studio.md)
 
  描述项目层次结构和层次结构的一般概念。

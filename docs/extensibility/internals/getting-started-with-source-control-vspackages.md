@@ -1,5 +1,7 @@
 ---
 title: 入门源代码管理 Vspackage |Microsoft Docs
+description: 了解 Visual Studio 中的源代码管理 Vspackage，以及如何使用更高级的源代码管理插件替代方法。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,18 +13,18 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 69245d9a5c4fb8b27e66b5f1860063756cd46520
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3e444b73dce312625c7f86eda2930ba683e504f2
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708331"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480481"
 ---
 # <a name="get-started-with-source-control-vspackages"></a>源代码管理 Vspackage 入门
 
 源代码管理 VSPackage 是源代码管理插件的更高级的替代方法。 有关源代码管理插件的详细信息，请参阅 [创建源代码管理插件](../../extensibility/internals/creating-a-source-control-plug-in.md)。 源代码管理 VSPackage 可以完全控制源代码管理模型、功能和用户界面 (UI) ，并 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 以 VSPackage 的形式集成到环境中。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
 
 [确定是否实现源代码管理 VSPackage](../../extensibility/internals/determining-whether-to-implement-a-source-control-vspackage.md)
 

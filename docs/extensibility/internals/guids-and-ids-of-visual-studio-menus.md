@@ -1,5 +1,7 @@
 ---
 title: Visual Studio 菜单的 Guid 和 Id |Microsoft Docs
+description: 在 visual studio 集成开发环境 (IDE) 中，查看 Visual Studio 菜单栏上包含的菜单和组的 GUID 和 ID 值列表。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,29 +17,29 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a656d5cb9a126a9dc3988d70a290fceb3e56439e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0203c8b7028fb170ae2ba4d2cc9d6f1825414f64
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708246"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480403"
 ---
 # <a name="guids-and-ids-of-visual-studio-menus"></a>Visual Studio 菜单的 Guid 和 Id
 本文枚举 Visual Studio 菜单栏上的菜单和组的 GUID 和 ID 值。 这些值是在作为 Visual Studio SDK 的一部分安装的 *.vsct* 文件中定义的。 有关详细信息，请参阅 [IDE 定义的命令、菜单和组](../../extensibility/internals/ide-defined-commands-menus-and-groups.md)。
 
- 有关如何使用集成开发环境 (*IDE 中定义的) * 对象的详细信息，请参阅 [扩展菜单和命令](../../extensibility/extending-menus-and-commands.md)。
+ 有关如何使用集成开发环境 (*IDE 中定义的)* 对象的详细信息，请参阅 [扩展菜单和命令](../../extensibility/extending-menus-and-commands.md)。
 
  Visual Studio 菜单栏上的菜单和组使用 GUID `guidSHLMainMenu` 。 菜单栏本身具有的 ID `IDM_VS_TOOL_MAINMENU` 。
 
 ## <a name="groups-on-the-visual-studio-menu-bar"></a>Visual Studio 菜单栏上的组
  若要向菜单栏添加菜单，请将这些组中的一个设置为父项。
 
-|组|ID|
+|Group|ID|
 |-----------|--------|
 |文件/编辑/查看|IDG_VS_MM_FILEEDITVIEW|
-|Refactoring|IDG_VS_MM_REFACTORING：|
+|重构|IDG_VS_MM_REFACTORING：|
 |项目|IDG_VS_MM_PROJECT|
-|构建|IDG_VS_MM_BUILDDEBUGRUN|
+|生成|IDG_VS_MM_BUILDDEBUGRUN|
 |格式/工具|IDG_VS_MM_TOOLSADDINS|
 |窗口/帮助/社区|IDG_VS_MM_WINDOWHELP|
 |加载项|IDG_VS_MM_MACROS|
@@ -50,10 +52,10 @@ ms.locfileid: "80708246"
 |----------|--------|
 |文件|IDM_VS_MENU_FILE|
 |编辑|IDM_VS_MENU_EDIT|
-|查看|IDM_VS_MENU_VIEW|
+|视图|IDM_VS_MENU_VIEW|
 |重构|IDM_VS_MENU_REFACTORING|
 |项目|IDM_VS_MENU_PROJECT|
-|构建|IDM_VS_MENU_BUILD|
+|生成|IDM_VS_MENU_BUILD|
 |格式|IDM_VS_MENU_FORMAT|
 |工具|IDM_VS_MENU_TOOLS|
 |扩展|IDM_VS_MENU_EXTENSIONS|
@@ -67,7 +69,7 @@ ms.locfileid: "80708246"
 
 ### <a name="file-menu-groups"></a>文件菜单组
 
-|组|ID|
+|Group|ID|
 |-----------|--------|
 |新建/打开|IDG_VS_FILE_FILE|
 |添加|IDG_VS_FILE_ADD|
@@ -75,7 +77,7 @@ ms.locfileid: "80708246"
 |杂项|IDG_VS_FILE_MISC|
 |保存|IDG_VS_FILE_SAVE|
 |重命名|IDG_VS_FILE_RENAME|
-|浏览器|IDG_VS_FILE_BROWSER|
+|浏览者|IDG_VS_FILE_BROWSER|
 |打印|IDG_VS_FILE_PRINT|
 |最近使用的|IDG_VS_FILE_MRU|
 |移动|IDG_VS_FILE_MOVE|
@@ -83,11 +85,11 @@ ms.locfileid: "80708246"
 
 ### <a name="edit-menu-groups"></a>编辑菜单组
 
-|组|ID|
+|Group|ID|
 |-----------|--------|
 |撤消/重做|IDG_VS_EDIT_UNDOREDO|
 |剪切/复制/粘贴|IDG_VS_EDIT_CUTCOPY|
-|选择|IDG_VS_EDIT_SELECT|
+|Select|IDG_VS_EDIT_SELECT|
 |语句|IDG_VS_EDIT_GOTO|
 |查找|IDG_VS_EDIT_FIND|
 |对象|IDG_VS_EDIT_OBJECTS|
@@ -96,17 +98,17 @@ ms.locfileid: "80708246"
 
 ### <a name="refactor-menu-groups"></a>重构菜单组
 
-|组|ID|
+|Group|ID|
 |-----------|--------|
 |通用|IDG_REFACTORING_COMMON|
 |高级|IDG_REFACTORING_ADVANCED|
 
 ### <a name="view-menu-groups"></a>查看菜单组
 
-|组|ID|
+|Group|ID|
 |-----------|--------|
 |表单代码|IDG_VS_VIEW_FORMCODE|
-|浏览器|IDG_VS_VIEW_BROWSER|
+|浏览者|IDG_VS_VIEW_BROWSER|
 |定义视图|IDG_VS_VIEW_DEFINEVIEWS|
 |Windows|IDG_VS_VIEW_WINDOWS|
 |架构师窗口|IDG_VS_VIEW_ARCH_WINDOWS|
@@ -124,11 +126,11 @@ ms.locfileid: "80708246"
 
 ### <a name="project-menu-groups"></a>项目菜单组
 
-|组|ID|
+|Group|ID|
 |-----------|--------|
 |其他添加|IDG_VS_PROJ_MISCADD|
 |添加|IDG_VS_PROJ_ADD|
-|Folder|IDG_VS_PROJ_FOLDER|
+|文件夹|IDG_VS_PROJ_FOLDER|
 |卸载/重载|IDG_VS_PROJ_UNLOADRELOAD|
 |参考|IDG_VS_PROJ_REFERENCE|
 |选项|IDG_VS_PROJ_OPTIONS|
@@ -136,17 +138,17 @@ ms.locfileid: "80708246"
 
 ### <a name="build-menu-groups"></a>生成菜单组
 
-|组|ID|
+|Group|ID|
 |-----------|--------|
 |解决方案|IDG_VS_BUILD_SOLUTION|
 |选择|IDG_VS_BUILD_SELECTION|
 |按配置优化|IDG_VS_PGO_SELECTION|
-|其他|IDG_VS_BUILD_MISC|
+|杂项|IDG_VS_BUILD_MISC|
 |取消|IDG_VS_BUILD_CANCEL|
 
 ### <a name="tools-menu-groups"></a>工具菜单组
 
-|组|ID|
+|Group|ID|
 |-----------|--------|
 |命令行|IDG_VS_TOOLS_CMDLINE|
 |代码片段|IDG_VS_TOOLS_SNIPPETS|
@@ -158,18 +160,18 @@ ms.locfileid: "80708246"
 
 ### <a name="window-menu-groups"></a>窗口菜单组
 
-|组|ID|
+|Group|ID|
 |-----------|--------|
 |新建|IDG_VS_WINDOW_NEW|
 |停靠/关闭|IDG_VS_DOCKCLOSE|
 |停靠/隐藏|IDG_VS_DOCKHIDE|
 |排列|IDG_VS_WINDOW_ARRANGE|
 |导航|IDG_VS_WINDOW_NAVIGATION|
-|列表|IDG_VS_WINDOW_LIST|
+|列出|IDG_VS_WINDOW_LIST|
 
 ### <a name="help-menu-groups"></a>帮助菜单组
 
-|组|ID|
+|Group|ID|
 |-----------|--------|
 |示例|IDG_VS_HELP_SAMPLES|
 |支持|IDG_VS_HELP_SUPPORT|
@@ -179,7 +181,7 @@ ms.locfileid: "80708246"
  以下层次结构显示与 Visual Studio 菜单栏上的菜单相关联的子菜单。 由于只有一个组可以有一个菜单作为其父项，因此每个子菜单都必须从菜单上的一个组中，而不是直接从菜单中进行。 有关菜单、组和子菜单之间的关系的详细信息，请参阅 [将子菜单添加到菜单](../../extensibility/adding-a-submenu-to-a-menu.md)。
 
 > [!NOTE]
-> Visual Studio 菜单栏上的菜单名称不会在此层次结构中单独显示，因为它们可以在 IDE 中组的命名约定中推断，如下所示： *IDG_VS_ \<Menu Name\> _ \<Group Name\> *。
+> Visual Studio 菜单栏上的菜单名称不会在此层次结构中单独显示，因为它们可以在 IDE 中组的命名约定中推断，如下所示： *IDG_VS_ \<Menu Name\> _ \<Group Name\>*。
 
 |父组|快捷|子组|
 |------------------|-------------|------------------|
