@@ -1,5 +1,7 @@
 ---
 title: 向可视化设计器公开类型 |Microsoft Docs
+description: 了解如何公开类和类型定义（包括自定义工具中的定义），以便 Visual Studio 可以使其可供可视化设计器使用。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 48aa8a729b5cc38d3cee08a7f5ec143d5e84931a
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 43d1e1dca1860faa44d6bb5bc256bb8f0465e8b2
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012525"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479520"
 ---
 # <a name="expose-types-to-visual-designers"></a>向可视化设计器公开类型
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 必须能够在设计时访问类和类型定义，才能显示可视化设计器。 从一组预定义的程序集加载类，这些程序集包括当前项目 (引用及其依赖项) 的完整依赖项集。 可视化设计器还可能需要访问自定义工具所生成的文件中定义的类和类型。
@@ -31,13 +33,13 @@ ms.locfileid: "90012525"
 
  利用临时 PE 支持的自定义工具必须遵循以下规则：
 
-- 在注册表中， **GeneratesDesignTimeSource**必须设置为1。
+- 在注册表中， **GeneratesDesignTimeSource** 必须设置为1。
 
      如果没有此设置，则不会进行程序可执行文件编译。
 
 - 生成的代码必须与全局项目设置的语言相同。
 
-     无论自定义工具在 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.DefaultExtension%2A> 注册表中将 **GeneratesDesignTimeSource** 设置为1，都将编译临时 PE，而不考虑自定义工具将报告为请求的扩展的内容。 扩展不需要为 *.vb*、 *.cs*或 *jsl*;它可以是任何扩展。
+     无论自定义工具在 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.DefaultExtension%2A> 注册表中将 **GeneratesDesignTimeSource** 设置为1，都将编译临时 PE，而不考虑自定义工具将报告为请求的扩展的内容。 扩展不需要为 *.vb*、 *.cs* 或 *jsl*;它可以是任何扩展。
 
 - 自定义工具生成的代码必须有效，并且它必须在完成执行后仅使用项目中存在的一组引用进行编译 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.Generate%2A> 。
 

@@ -8,11 +8,11 @@ ms.date: 10/28/2020
 ms.topic: conceptual
 description: Visual Studio 订阅 – 为什么我会在我的订阅者中看到 Hotmail 或 Gmail 地址？
 ms.openlocfilehash: fda7dab50c2151049e0feffa50609bf4c38e38cc
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "92904260"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96189038"
 ---
 # <a name="visual-studio-subscriptions--why-do-i-see-personal-accounts-for-my-subscribers"></a>Visual Studio 订阅 - 我为什么会看到我的订阅者的个人帐户？
 随着公司从批量许可服务中心 (VLSC) 迁移到新的 Visual Studio [订阅管理门户](https://manage.visualstudio.com)，管理员惊奇地发现某些订阅者的“登录电子邮件地址”显示 Hotmail 或 Outlook 等个人电子邮件地址。  

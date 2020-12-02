@@ -12,11 +12,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 02d26416357ec13b61232f2adb0bc3e5e3c67818
-ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92136597"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95970205"
 ---
 # <a name="how-to-view-save-and-configure-build-log-files"></a>如何：查看、保存和配置生成日志文件
 
@@ -65,7 +65,7 @@ ms.locfileid: "92136597"
      有关详细信息，请参阅[“选项”对话框->“项目和解决方案”->“生成和运行”](../ide/reference/options-dialog-box-projects-and-solutions-build-and-run.md)和 <xref:Microsoft.Build.Framework.LoggerVerbosity>。
 
     > [!IMPORTANT]
-    > 要使更改在“输出”窗口（所有项目）和 \<ProjectName>.txt 文件（仅限 C++ 项目）中生效，必须重新生成该项目  。
+    > 要使更改在“输出”窗口（所有项目）和 \<ProjectName>.txt 文件（仅限 C++ 项目）中生效，必须重新生成该项目。
 
 ## <a name="use-binary-logs-to-make-it-easier-to-browse-large-log-files"></a>使用二进制日志更轻松地浏览大型日志文件
 

@@ -1,5 +1,7 @@
 ---
 title: 扩展属性 |Microsoft Docs
+description: 了解必须实现的接口，并调用来扩展 Visual Studio 属性窗口中的属性列表。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,23 +12,23 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7064128c54434b0a7bb8799e62b751e765511c48
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 721f45ebe83e0edb7bf7a182ea71b2181593ad6e
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708416"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479526"
 ---
 # <a name="extend-properties"></a>扩展属性
 " [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **属性** " 窗口是 COM 和 com + 组件的通用属性浏览器，支持所有 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 产品。 " **属性** " 窗口与 `ITypeInfo` 类型信息和 com + 元数据一起使用，以便在集成开发环境 (IDE) 的任何其他窗口中列出当前所选对象的设计时属性。
 
- 可以通过按键盘上的**F4**或选择 "**视图**" 菜单上的 "**属性" 窗口**打开的 "**属性**" 窗口，用于查看和编辑所选对象的独立于配置的、设计时属性和事件。 与解决方案和项目关联的配置相关属性将显示在 [属性页](../../extensibility/internals/property-pages.md)上。 有关详细信息，请 [管理配置选项](../../extensibility/internals/managing-configuration-options.md)。
+ 可以通过按键盘上的 **F4** 或选择 "**视图**" 菜单上的 "**属性" 窗口** 打开的 "**属性**" 窗口，用于查看和编辑所选对象的独立于配置的、设计时属性和事件。 与解决方案和项目关联的配置相关属性将显示在 [属性页](../../extensibility/internals/property-pages.md)上。 有关详细信息，请 [管理配置选项](../../extensibility/internals/managing-configuration-options.md)。
 
  ![属性窗口概述](../../extensibility/internals/media/vspropertieswindow.png "vsPropertiesWindow") 属性窗口
 
  本节提供的详细信息与 " **属性** " 窗口的各个区域以及您必须实现并调用以填充窗口的接口相关。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
 - [属性窗口概述](../../extensibility/internals/properties-window-overview.md)
 
  说明 " **属性** " 窗口相对于工具窗口和文档窗口的用途。

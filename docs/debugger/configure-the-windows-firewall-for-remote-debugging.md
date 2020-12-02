@@ -9,11 +9,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0fa5d60d7fe662cff31b54bf3a13c203f4b6d8c9
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85350688"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95970088"
 ---
 # <a name="configure-windows-firewall-for-remote-debugging"></a>配置 Windows 防火墙以便进行远程调试
 
@@ -102,7 +102,7 @@ Visual Studio 和远程调试器会尝试在安装或启动期间打开正确的
 
 1. 选择“允许应用通过 Windows 防火墙”。
 
-1. 如果**远程调试器**或**Visual Studio 远程调试器**未显示在**允许的应用程序和功能**，选择**更改设置**，然后选择**允许另一个应用**。
+1. 如果 **远程调试器** 或 **Visual Studio 远程调试器** 未显示在 **允许的应用程序和功能**，选择 **更改设置**，然后选择 **允许另一个应用**。
 
 1. 如果远程调试器应用仍未在“添加应用”对话框中列出，请选择“浏览”，然后导航到 *\<Visual Studio installation directory\>\\Common7\\IDE\\远程调试器\\\<x86*, *x64*, or *Appx*\>，具体取决于适用于应用的相应体系结构 。 选择“msvsmon.exe”，然后选择“添加”。
 
