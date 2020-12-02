@@ -1,7 +1,7 @@
 ---
-title: 启用或安装 .NET 分析器
+title: 启用或安装第一方 .NET 分析器
 ms.date: 08/03/2018
-description: 了解如何从 .NET SDK 启用 .NET 分析器，或将这些分析器安装为 NuGet 包。
+description: 了解如何从 .NET SDK 启用第一方 .NET 分析器，或将这些分析器安装为 NuGet 包。
 ms.custom: SEO-VS-2020
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,18 +11,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a14d89caba498a07c2447f9df1109e4da9f6a466
-ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
+ms.openlocfilehash: 60eb4828d4c8450376178c2fdccf7d4c0f63d989
+ms.sourcegitcommit: 208bd1edebfe6dec5d3bb92c63b5c1e093677e35
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96112157"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96440381"
 ---
-# <a name="enable-or-install-net-analyzers"></a>启用或安装 .NET 分析器
+# <a name="enable-or-install-first-party-net-analyzers"></a>启用或安装第一方 .NET 分析器
 
 ## <a name="overview"></a>概述
 
-.NET Compiler Platform (Roslyn) 分析器会检查 C# 或 Visual Basic 代码的代码质量和代码样式问题。 可以通过以下方式之一来启用或安装这些分析器：
+.NET Compiler Platform (Roslyn) 分析器会检查 C# 或 Visual Basic 代码的代码质量和代码样式问题。 可以通过以下方式之一启用或安装第一方 .NET 分析器：
 
 - **从 .NET Sdk 启用：从** Visual Studio 2019 16.8 和 .Net 5.0 开始， [.net sdk 随附](/dotnet/fundamentals/code-analysis/overview)了这些分析器。 默认情况下，对于面向 .NET 5.0 或更高版本的项目，分析处于启用状态。 通过将属性设置为，可以对面向早期 .NET 版本的项目启用代码分析 `EnableNETAnalyzers` `true` 。 你还可以通过将设置为来对你的项目禁用代码分析 `EnableNETAnalyzers` `false` 。
 
@@ -35,5 +35,5 @@ ms.locfileid: "96112157"
 
 - [Visual Studio 中的代码分析器概述](roslyn-analyzers-overview.md)
 - [在 Visual Studio 中使用代码分析器](use-roslyn-analyzers.md)
-- [从旧分析迁移到 .NET 分析器](migrate-from-legacy-analysis-to-net-analyzers.md)
+- [从旧版分析迁移到 .NET 分析器](migrate-from-legacy-analysis-to-net-analyzers.md)
 - [从 FxCop 分析器迁移到 .NET 分析器](migrate-from-fxcop-analyzers-to-net-analyzers.md)
