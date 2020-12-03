@@ -188,7 +188,7 @@
           href: aliasing.md
         - name: 使用个人电子邮件登录的订阅者
           href: personal-email-sign-ins.md
-        - name: 使用 GitHub Enterprise 管理 Visual Studio
+        - name: 管理带有 GitHub Enterprise 的 Visual Studio 订阅
           href: assign-github.md
 - name: 资源
   items:
