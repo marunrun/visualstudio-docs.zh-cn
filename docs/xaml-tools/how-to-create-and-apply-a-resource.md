@@ -1,5 +1,7 @@
 ---
 title: 如何创建和应用资源
+description: 了解如何在 XAML 设计器中创建和应用资源，以便可以存储和重用元素的样式和模板。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -11,18 +13,18 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2301ce14fcd3d2d8a9c5d003a05186513d950cd4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ac8502b3d5058294efe102564453bb23a3eb3b98
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85330111"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93049236"
 ---
 # <a name="how-to-create-and-apply-a-resource"></a>如何创建和应用资源
 
 XAML 设计器中元素的样式和模板存储在称作资源的可重用实体中。 样式可设置元素属性并重用这些设置以便多个元素实现一致的外观。 [ControlTemplate](xref:Windows.UI.Xaml.Controls.ControlTemplate) 定义控件的外观，并且可作为资源应用。 有关详细信息，请参阅 [XAML 样式](/windows/uwp/design/controls-and-patterns/xaml-styles)和[快速操作控件模板](/windows/uwp/design/controls-and-patterns/control-templates)。
 
-每当从现有属性、[样式](xref:Windows.UI.Xaml.Style)或 [ControlTemplate](xref:Windows.UI.Xaml.Controls.ControlTemplate) 创建新资源时，可在“创建资源”**** 对话框中将资源定义为应用程序级别、文档级别或元素级别。 这些级别决定了可使用资源的位置。 例如，如果定义元素级别的资源，则该资源只能应用于在其上创建资源的元素。 你还可以选择将资源存储在 [资源字典](/windows/uwp/design/controls-and-patterns/resourcedictionary-and-xaml-resource-references)中，这是一个可以在另一个项目中再次使用的单独文件。
+每当从现有属性、[样式](xref:Windows.UI.Xaml.Style)或 [ControlTemplate](xref:Windows.UI.Xaml.Controls.ControlTemplate) 创建新资源时，可在“创建资源”对话框中将资源定义为应用程序级别、文档级别或元素级别。 这些级别决定了可使用资源的位置。 例如，如果定义元素级别的资源，则该资源只能应用于在其上创建资源的元素。 你还可以选择将资源存储在 [资源字典](/windows/uwp/design/controls-and-patterns/resourcedictionary-and-xaml-resource-references)中，这是一个可以在另一个项目中再次使用的单独文件。
 
 ## <a name="create-a-new-resource"></a>创建新资源
 
@@ -34,19 +36,19 @@ XAML 设计器中元素的样式和模板存储在称作资源的可重用实体
 
      ![“创建资源”对话框](../designers/media/xaml_create_resource.png)
 
-3. 在“名称(关键字)”**** 框中，输入关键字名称。 这是当希望其他元素可以引用该资源时，可以使用的名称。
+3. 在“名称(关键字)”框中，输入关键字名称。 这是当希望其他元素可以引用该资源时，可以使用的名称。
 
-4. 在“定义位置”**** 下，选择指定想要在其中定义资源的位置的选项：
+4. 在“定义位置”下，选择指定想要在其中定义资源的位置的选项：
 
-    - 若要使该资源对应用程序中的任何文档可用，则选择“应用程序”****。
+    - 若要使该资源对应用程序中的任何文档可用，则选择“应用程序”。
 
-    - 若要使该资源仅对当前文档可用，则选择“此文档”****。
+    - 若要使该资源仅对当前文档可用，则选择“此文档”。
 
-    - 若要使该资源仅对从中创建了该资源的元素或其子元素可用，则选择“此文档”****，然后在下拉列表中，选择 **element**: **name**。
+    - 若要使该资源仅对从中创建了该资源的元素或其子元素可用，则选择“此文档”，然后在下拉列表中，选择 **element**: **name**。
 
-    - 若要在[资源字典](/windows/uwp/design/controls-and-patterns/resourcedictionary-and-xaml-resource-references)文件中定义资源，以便可以将它重复用于其他项目，请单击“资源字典”。**** 然后从下拉列表中选择一个现有的资源字典文件，如“StandardStyles.xaml”。****
+    - 若要在[资源字典](/windows/uwp/design/controls-and-patterns/resourcedictionary-and-xaml-resource-references)文件中定义资源，以便可以将它重复用于其他项目，请单击“资源字典”。 然后从下拉列表中选择一个现有的资源字典文件，如“StandardStyles.xaml”。
 
-5. 选择“确定”**** 按钮以创建资源并将其应用于从其中创建了该资源的元素。
+5. 选择“确定”按钮以创建资源并将其应用于从其中创建了该资源的元素。
 
 ## <a name="apply-a-resource-to-an-element-or-property"></a>将资源应用于某个元素或属性
 
@@ -58,12 +60,12 @@ XAML 设计器中元素的样式和模板存储在称作资源的可重用实体
 
       如果看不到希望看到的资源，可能是因为该资源的类型与属性的类型不匹配。
 
-   - 将样式或控件模板资源应用于控件。 在“文档大纲”窗口中打开控件的右键单击菜单（关联菜单），选择“编辑模板”**** 或“编辑其他模板”****，选择“应用资源”****，再从显示的列表中选择控件模板的名称。
+   - 将样式或控件模板资源应用于控件。 在“文档大纲”窗口中打开控件的右键单击菜单（关联菜单），选择“编辑模板”或“编辑其他模板”，选择“应用资源”，再从显示的列表中选择控件模板的名称。
 
      > [!NOTE]
-     > “编辑模板”应用控件模板****。 “编辑其他模板”应用其他模板类型****。
+     > “编辑模板”应用控件模板。 “编辑其他模板”应用其他模板类型。
 
-     可在任何兼容的位置应用资源。 例如，画笔资源可应用于 [TextBox](xref:Windows.UI.Xaml.Controls.TextBox) 控件的“前景色”属性****。
+     可在任何兼容的位置应用资源。 例如，画笔资源可应用于 [TextBox](xref:Windows.UI.Xaml.Controls.TextBox) 控件的“前景色”属性。
 
 ## <a name="edit-a-resource"></a>编辑资源
 
@@ -73,6 +75,6 @@ XAML 设计器中元素的样式和模板存储在称作资源的可重用实体
 
 3. 修改该资源的选项。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [使用 XAML 设计器创建 UI](../xaml-tools/creating-a-ui-by-using-xaml-designer-in-visual-studio.md)
