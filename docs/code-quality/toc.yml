@@ -8,15 +8,21 @@
       items:
         - name: 概述
           href: roslyn-analyzers-overview.md
+        - name: 安装
+          expanded: true
+          items:
+            - name: .NET 分析器
+              href: install-net-analyzers.md
+            - name: 第三方分析器
+              href: install-roslyn-analyzers.md
         - name: Configuration
           expanded: true
           items:
             - name: 概述
               href: use-roslyn-analyzers.md
             - name: .NET 分析器
+              expanded: true
               items:
-                - name: 安装 .NET 分析器
-                  href: install-net-analyzers.md
                 - name: 代码质量
                   items:
                     - name: 代码质量选项
@@ -42,9 +48,7 @@
               href: automatic-feature-suspension.md
             - name: 禁止显示代码分析违规情况
               href: in-source-suppression-overview.md
-        - name: 安装第三方分析器
-          href: install-roslyn-analyzers.md
-        - name: 常见问题
+        - name: 常见问题解答
           href: analyzers-faq.md
     - name: 旧版分析
       items:
