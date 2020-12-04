@@ -1,5 +1,7 @@
 ---
 title: 表达式计算器体系结构 |Microsoft Docs
+description: 了解如何将专用语言集成到 Visual Studio 调试包中，包括表达式计算器和符号提供程序/联编程序接口。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: aac782c653f230d5598a49d43eb70f548de6dc41
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 216bf2f19d528084685a2361a158e105e2284010
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738695"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560156"
 ---
 # <a name="expression-evaluator-architecture"></a>表达式计算器体系结构
 > [!IMPORTANT]
@@ -37,7 +39,7 @@ ms.locfileid: "80738695"
 ### <a name="evaluate-the-expression"></a>计算表达式
  Visual Studio 将调用 [EvaluateSync](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) 或 [EvaluateAsync](../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) 来计算分析后的表达式。 这两种方法都调用 [EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) (`IDebugExpression2::EvaluateSync` 立即调用方法，同时 `IDebugExpression2::EvaluateAsync` 通过后台线程调用方法) 计算分析的表达式并返回表示已分析表达式的值和类型的 [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) 接口。 `IDebugParsedExpression::EvaluateSync` 使用提供的 SH、address 和联编程序将已分析的表达式转换为实际值，并由 `IDebugProperty2` 接口表示。
 
-### <a name="for-example"></a>例如：
+### <a name="for-example"></a>例如
  在正在运行的程序中命中断点后，用户可以选择在 " **快速监视** " 对话框中查看变量。 此对话框显示变量的名称、值和类型。 用户通常可以更改值。
 
  显示 " **快速监视** " 对话框时，要检查的变量的名称将作为文本发送到 [ParseText](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)。 这会返回一个 [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) 对象，该对象表示已分析的表达式（在本例中为变量）。 然后，调用[EvaluateSync](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md)以生成一个 `IDebugProperty2` 对象，该对象表示变量的值和类型以及其名称。 此时会显示此信息。
@@ -46,7 +48,7 @@ ms.locfileid: "80738695"
 
  有关显示变量值的此过程的更多详细信息，请参阅 [显示局部变量](../../extensibility/debugger/displaying-locals.md) 。 有关如何更改变量的值的更多详细信息，请参阅 [更改本地的值](../../extensibility/debugger/changing-the-value-of-a-local.md) 。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
  [计算上下文](../../extensibility/debugger/evaluation-context.md) 提供在 DE 调用 EE 时传递的参数。
 
  [键表达式计算器接口](../../extensibility/debugger/key-expression-evaluator-interfaces.md) 介绍编写 EE 时所需的关键接口以及计算上下文。

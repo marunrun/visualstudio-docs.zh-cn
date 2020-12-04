@@ -1,5 +1,7 @@
 ---
 title: 表达式计算上下文 |Microsoft Docs
+description: 了解表达式计算上下文（表示表达式计算的上下文），并在程序在断点处停止时存在。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e939a4fa5f4673e2f701206c96599c54bc0c3b51
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 26705b32628a9bd9ecc79489e2552f2d7e537273
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738733"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96559675"
 ---
 # <a name="expression-evaluation-context"></a>表达式计算上下文
 在 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 调试中， **表达式计算上下文**：

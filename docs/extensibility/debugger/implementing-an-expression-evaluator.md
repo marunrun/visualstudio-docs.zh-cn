@@ -1,5 +1,7 @@
 ---
 title: 实现表达式计算器 |Microsoft Docs
+description: 了解如何计算表达式，这涉及到调试引擎、符号提供程序、联编程序对象和表达式计算器。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a8c7c9a1130794dd4c28f212afd6cb3c030f5a1b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 28989178ab726a9b274f66e0a9296f2bf49ead4a
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738539"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96559961"
 ---
 # <a name="implement-an-expression-evaluator"></a>实现表达式计算器
 > [!IMPORTANT]
@@ -58,7 +60,7 @@ ms.locfileid: "80738539"
 
   EE 使用所有这些接口。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
  [表达式计算器实现策略](../../extensibility/debugger/expression-evaluator-implementation-strategy.md) 为表达式计算器定义一个三步过程， (EE) 实现策略。
 
 ## <a name="see-also"></a>另请参阅
