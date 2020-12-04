@@ -1,5 +1,7 @@
 ---
 title: 表达式计算器 |Microsoft Docs
+description: 了解表达式计算器，它在中断模式下检查语言的语法来分析和评估变量和表达式。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a477aaceb57e6ccd2eb5125fcf9d8af9be59472b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a8223e39eb804684fede50ceb2f7c859e198a272
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738685"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560130"
 ---
 # <a name="expression-evaluator"></a>表达式计算器
 表达式计算器 (EE) 检查语言的语法，以便在运行时分析和评估变量和表达式，从而在 IDE 处于中断模式时，用户可以查看这些语法和表达式。

@@ -1,5 +1,7 @@
 ---
 title: 命中断点 |Microsoft Docs
+description: 本文介绍当调试引擎在运行或单步执行时命中断点时所发生的过程。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6e75eb1e807e72f3bd035b5dd0534860f5fd8df2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dc796689b56518948c62196407ddeaefe3ea822f
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738568"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560845"
 ---
 # <a name="hit-a-breakpoint"></a>命中断点
 以下部分介绍当调试引擎 (在运行或单步执行时) 命中断点时的进程：

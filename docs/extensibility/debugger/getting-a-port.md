@@ -1,5 +1,7 @@
 ---
 title: 获取端口 |Microsoft Docs
+description: 了解 Visual Studio 如何向调试引擎提供一个端口，以便将程序节点注册到端口并满足进程信息的请求。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7bf4948e7cb2590136774eab76fbafec91dbfa40
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cd86d84ba4187df70d2aa02181249336c38dda41
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738633"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560043"
 ---
 # <a name="get-a-port"></a>获取端口
 端口表示到运行进程的计算机的连接。 该计算机可以是本地计算机或远程计算机， (可能运行非基于 Windows 的操作系统;) 的详细信息，请参阅 [端口](../../extensibility/debugger/ports.md) 。

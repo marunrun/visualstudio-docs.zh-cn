@@ -1,5 +1,7 @@
 ---
 title: Visual Studio SDK)  (处理异常 |Microsoft Docs
+description: 了解引发异常时所发生的过程。 本文介绍了所涉及的所有步骤。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 34b83c7181a7ba405e642d9911e2c53df3f4401d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: af5dc1007a4624a24bef59dd822f6e9fe3861551
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738760"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96559649"
 ---
 # <a name="exception-handling-visual-studio-sdk"></a>Visual Studio SDK (的异常处理) 
 下面描述了在引发异常时所发生的过程。
@@ -34,7 +36,7 @@ ms.locfileid: "80738760"
 
     - 如果该方法返回 S_OK，则调用 [IDebugExceptionEvent2：:P asstodebuggee](../../extensibility/debugger/reference/idebugexceptionevent2-passtodebuggee.md)。
 
-         - 或 -
+         \- 或 -
 
          如果该方法返回 S_FALSE，则将为正在调试的程序提供另一个处理异常的机会。
 

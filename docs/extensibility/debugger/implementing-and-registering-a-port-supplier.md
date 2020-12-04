@@ -1,5 +1,7 @@
 ---
 title: 实现和注册端口供应商 |Microsoft Docs
+description: 了解如何实现和注册端口供应商，以跟踪和提供管理进程的端口。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: efa9cdd8740648b66fe7190177b5fe769c4b2539
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a5bce26a00a525ed93e27b531b36aca1fc04dce4
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738531"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96559922"
 ---
 # <a name="implement-and-register-a-port-supplier"></a>实现并注册端口供应商
 端口供应商的角色是跟踪和提供端口，进而管理进程。 需要创建端口时，将使用共同 iopalisserverextension 和端口供应商的 GUID 来实例化端口供应商 (会话调试管理器 [SDM] 将使用用户选择的端口供应商或由项目系统) 指定的端口供应商。 然后，SDM 调用 [CanAddPort](../../extensibility/debugger/reference/idebugportsupplier2-canaddport.md) 来查看是否可以添加任何端口。 如果可以添加某个端口，则通过调用 [AddPort](../../extensibility/debugger/reference/idebugportsupplier2-addport.md) 并向其传递描述该端口的 [IDebugPortRequest2](../../extensibility/debugger/reference/idebugportrequest2.md) 来请求一个新端口。 `AddPort` 返回由 [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md) 接口表示的新端口。
@@ -55,7 +57,7 @@ RemoveMetric(metrictypePortSupplier,
 ```
 
 > [!NOTE]
-> [SDK 帮助程序用于调试](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) `SetMetric` ， `RemoveMetric` 是在*dbgmetric*中定义的、编译到*ad2de*中的静态函数。 `metrictypePortSupplier`、 `metricCLSID` 和帮助程序 `metricName` 也是在*dbgmetric*中定义的。
+> [SDK 帮助程序用于调试](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) `SetMetric` ， `RemoveMetric` 是在 *dbgmetric* 中定义的、编译到 *ad2de* 中的静态函数。 `metrictypePortSupplier`、 `metricCLSID` 和帮助程序 `metricName` 也是在 *dbgmetric* 中定义的。
 
  端口供应商可以通过 [GetPortSupplierName](../../extensibility/debugger/reference/idebugportsupplier2-getportsuppliername.md) 和 [GetPortSupplierId](../../extensibility/debugger/reference/idebugportsupplier2-getportsupplierid.md)方法分别提供其名称和 GUID。
 

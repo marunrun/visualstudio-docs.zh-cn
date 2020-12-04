@@ -1,5 +1,7 @@
 ---
 title: 如何：调试自定义调试引擎 |Microsoft Docs
+description: 了解允许使用 Visual Studio 调试自定义调试引擎或自定义项目类型的步骤。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a65e69655c4e8699bd267f1835ec0c49603014d7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e79ceea58fc78922cd07bb6635ed2f399e97dd1c
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903302"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560806"
 ---
 # <a name="how-to-debug-a-custom-debug-engine"></a>如何：调试自定义调试引擎
 项目类型从方法中启动调试引擎 (DE) <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg.DebugLaunch%2A> 。 这意味着在控制项目类型的实例的控制下启动 DE [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。 但是，此实例 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 无法调试 DE。 下面是允许您调试自定义 DE 的步骤。
@@ -29,9 +31,9 @@ ms.locfileid: "85903302"
 
 ## <a name="debug-a-custom-debug-engine"></a>调试自定义调试引擎
 
-1. 启动 *msvsmon.exe*远程调试监视器。
+1. 启动 *msvsmon.exe* 远程调试监视器。
 
-2. 从*msvsmon.exe*中的 "**工具**" 菜单中，选择 "**选项**" 以打开 "**选项**" 对话框。
+2. 从 *msvsmon.exe* 中的 "**工具**" 菜单中，选择 "**选项**" 以打开 "**选项**" 对话框。
 
 3. 选择 "无身份验证" 选项，然后单击 **"确定**"。
 
@@ -43,7 +45,7 @@ ms.locfileid: "85903302"
 
 7. 在 (的第一个实例中 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ，) 的 "**调试**" 菜单中选择 "**附加到进程**"。
 
-8. 在 " **附加到进程** " 对话框中，将 " **传输** " 改为 " **仅限本地 (仅) 身份验证 **"。
+8. 在 " **附加到进程** " 对话框中，将 " **传输** " 改为 " **仅限本地 (仅) 身份验证**"。
 
 9. 将 **限定符** 更改为计算机的名称 (注意：存在条目历史记录，因此只需) 键入此名称一次。
 
@@ -61,9 +63,9 @@ ms.locfileid: "85903302"
 
 3. 对于 " **命令参数**"，键入 `/rootsuffix exp` 在安装 VSIP 时 (创建的实验性注册表配置单元) 。
 
-4. 单击“确定” **** 接受这些更改。
+4. 单击“确定”  接受这些更改。
 
-5. 按 **F5**启动项目类型。 这会启动的第二个实例 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。
+5. 按 **F5** 启动项目类型。 这会启动的第二个实例 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。
 
 6. 此时，可以将断点放置在项目类型源代码中。
 
