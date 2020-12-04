@@ -24,7 +24,7 @@ ms.locfileid: "92918222"
 
 “内存使用情况”工具监视应用的内存使用情况。 可以使用该工具来研究在 Visual Studio 中正在积极开发的场景的实时内存效果。 可以获取应用内存状态的详细情况快照，并比较快照以找出内存问题的根本原因。 “内存使用”工具支持在 .NET、ASP.NET、C++ 或混合模式（.NET 和本机）应用上使用。
 
-“内存使用情况”工具在带或不带调试器的情况下都可以运行。 本文介绍了如何使用 Visual Studio 性能探查器中不含调试器的内存使用工具，这是推荐用于“发布”版本的工具。
+“内存使用情况”工具在[带或不带调试器](../profiling/running-profiling-tools-with-or-without-the-debugger.md)的情况下都可以运行。 本文介绍了如何使用 Visual Studio 性能探查器中不含调试器的内存使用工具，这是推荐用于“发布”版本的工具。
 
 ## <a name="memory-usage-diagnostic-sessions"></a>内存使用情况诊断会话
 
