@@ -1,5 +1,7 @@
 ---
 title: 进程 |Microsoft Docs
+description: 本文介绍 Visual Studio 的调试器结构中的进程的定义和角色。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 392c59b90bb117dded0f528bc33a617370b091a7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4a707d62443004795824c8bd437c29802635cf41
+ms.sourcegitcommit: 42981ace63c0f2b087de5703ca76b8dcdd93a719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738250"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96606497"
 ---
 # <a name="processes"></a>进程
 在调试程序体系结构中， *进程*：
@@ -34,8 +36,8 @@ ms.locfileid: "80738250"
 
   调试包可以通过调用 [attach](../../extensibility/debugger/reference/idebugprocess2-attach.md)将调试引擎附加到进程 (取消) ，这意味着它会附加到可处理的进程中运行的所有可能的程序。 例如，如果公共语言运行时将附加到某个进程，则它仅附加到运行托管代码的程序。
 
-## <a name="see-also"></a>另请参阅
-- [计划](../../extensibility/debugger/programs.md)
+## <a name="see-also"></a>请参阅
+- Programs 
 - [线程](../../extensibility/debugger/threads.md)
 - [调试器概念](../../extensibility/debugger/debugger-concepts.md)
 - [调试包](../../extensibility/debugger/debug-package.md)

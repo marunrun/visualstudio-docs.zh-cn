@@ -1,5 +1,7 @@
 ---
 title: 端口 |Microsoft Docs
+description: 本文介绍 Visual Studio 的调试器结构中的端口定义和角色。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7b42e7fa97c12afa07923e99d8b084840ee7ccad
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f13ca62f841525ef91ac7d66b67c09da54cabeb3
+ms.sourcegitcommit: 42981ace63c0f2b087de5703ca76b8dcdd93a719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738292"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96606550"
 ---
 # <a name="ports"></a>端口
 在调试程序体系结构中， *端口*：
@@ -31,7 +33,7 @@ ms.locfileid: "80738292"
 
   [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 提供一个默认端口，用于处理所有基于 Windows 的进程，包括本机和托管。 必须为不是基于 Windows 的外部设备的连接设置自定义端口。 若要提供此类自定义端口，还必须设置自定义端口供应商。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [服务器](../../extensibility/debugger/servers-visual-studio-sdk.md)
 - [进程](../../extensibility/debugger/processes.md)
 - [调试器概念](../../extensibility/debugger/debugger-concepts.md)

@@ -1,5 +1,7 @@
 ---
 title: 程序 |Microsoft Docs
+description: 本文介绍 Visual Studio 的调试器结构中的程序定义和角色。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d3fd1db5add74d2d94467e1f369916feb5f30d4a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cf0d3adb174e9b13cb09f9506927217326890c32
+ms.sourcegitcommit: 42981ace63c0f2b087de5703ca76b8dcdd93a719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738204"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96606510"
 ---
 # <a name="programs"></a>计划
 在调试程序体系结构中， *程序*：
@@ -31,7 +33,7 @@ ms.locfileid: "80738204"
 
 - 由在附加程序之前创建的 [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md) 接口表示，或作为附加过程的一部分，具体取决于实现。 当端口枚举进程的程序时，将根据作为参数传递到[AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md)的相应[IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md)接口创建每个程序。 尽管调试引擎还 `IDebugProgram2` 会创建接口来表示程序，但不会根据程序节点创建这些程序。 `IDebugProgramNode2`由 DE 创建的接口用于实际调试，而由端口创建的接口仅用于发现进程中运行的程序。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [进程](../../extensibility/debugger/processes.md)
 - [程序节点](../../extensibility/debugger/program-nodes.md)
 - [模块](../../extensibility/debugger/modules.md)

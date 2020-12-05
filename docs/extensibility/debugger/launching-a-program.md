@@ -1,5 +1,7 @@
 ---
 title: 启动程序 |Microsoft Docs
+description: 了解在使用 F5 从 IDE 中运行调试器时，调试程序时所发生的一系列事件。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: bf638e0c96c7df1de2650260427a972a07efce23
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0dce13e49eeadf4dc02fec07707bebcfe164ed9c
+ms.sourcegitcommit: 42981ace63c0f2b087de5703ca76b8dcdd93a719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738477"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96606692"
 ---
 # <a name="launch-a-program"></a>启动程序
 要调试程序的用户可以按 **F5** 从 IDE 中运行调试器。 这将开始一系列事件，这些事件最终会导致 IDE 连接到调试引擎， (DE) ，然后将其连接或附加到程序，如下所示：
@@ -25,7 +27,7 @@ ms.locfileid: "80738477"
 
 2. 如果指定了 DE，则 DE 会调用操作系统来启动程序。 作为启动程序的结果，程序的运行时环境将加载。 例如，如果使用 MSIL 编写程序，则将调用公共语言运行时来运行程序。
 
-    - 或 -
+    \- 或 -
 
     如果未指定 DE，端口将调用操作系统来启动程序，这会导致程序的运行时环境加载。
 
@@ -39,7 +41,7 @@ ms.locfileid: "80738477"
 
    在同一个 IDE 中，新创建的程序以及任何其他程序（相关或无关的）已启动或附加到，构成调试会话。
 
-   以编程方式，当用户第一次按 **F5**时， [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 调试包将调用与通过方法) 所启动程序的类型相关联 (的项目包 <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg.DebugLaunch%2A> ，后者又 <xref:Microsoft.VisualStudio.Shell.Interop.VsDebugTargetInfo2> 使用解决方案的活动项目调试设置来填充结构。 此结构通过调用方法传递回调试包 <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebugger2.LaunchDebugTargets2%2A> 。 然后，调试包将实例化会话调试管理器 (SDM) ，后者启动正在调试的程序以及任何关联的调试引擎。
+   以编程方式，当用户第一次按 **F5** 时， [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 调试包将调用与通过方法) 所启动程序的类型相关联 (的项目包 <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg.DebugLaunch%2A> ，后者又 <xref:Microsoft.VisualStudio.Shell.Interop.VsDebugTargetInfo2> 使用解决方案的活动项目调试设置来填充结构。 此结构通过调用方法传递回调试包 <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebugger2.LaunchDebugTargets2%2A> 。 然后，调试包将实例化会话调试管理器 (SDM) ，后者启动正在调试的程序以及任何关联的调试引擎。
 
    传递给 SDM 的参数之一是要用于启动程序的 DE 的 GUID。
 
@@ -49,7 +51,7 @@ ms.locfileid: "80738477"
 
    如果 `GUID_NULL` 传递了，则端口启动程序。 程序运行后，运行时环境将创建一个 `IDebugProgramNode2` 接口，用于描述程序并将其传递给 `IDebugPortNotify2::AddProgramNode` 。 这会通知端口该程序正在运行。 然后，SDM 将调试引擎附加到正在运行的程序。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
  [通知端口](../../extensibility/debugger/notifying-the-port.md) 说明启动程序并通知端口后会发生的情况。
 
  [启动后附加](../../extensibility/debugger/attaching-after-a-launch.md) 当调试会话准备好将 DE 附加到程序时进行记录。

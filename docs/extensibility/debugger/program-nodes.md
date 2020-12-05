@@ -1,5 +1,7 @@
 ---
 title: 程序节点 |Microsoft Docs
+description: 本文介绍 Visual Studio 的调试器结构中的程序节点的定义和角色。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2943f74c7316495be93c2f5c20998ffa685f5d01
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d2f3694eff6cd48cc01c0e244d3a068f3bb13fda
+ms.sourcegitcommit: 42981ace63c0f2b087de5703ca76b8dcdd93a719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738220"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96606484"
 ---
 # <a name="program-nodes"></a>程序节点
 在调试程序体系结构中， *程序节点*：
@@ -33,8 +35,8 @@ ms.locfileid: "80738220"
 
   将程序附加到之前，IDE 只需要程序的轻型说明。 可以从程序节点获取此信息。 将程序附加到后，IDE 将显示更多详细信息，如程序中运行的所有线程的列表。 此信息是从程序本身获取的。
 
-## <a name="see-also"></a>另请参阅
-- [计划](../../extensibility/debugger/programs.md)
+## <a name="see-also"></a>请参阅
+- Programs 
 - [进程](../../extensibility/debugger/processes.md)
 - [调试引擎](../../extensibility/debugger/debug-engine.md)
 - [调试器概念](../../extensibility/debugger/debugger-concepts.md)

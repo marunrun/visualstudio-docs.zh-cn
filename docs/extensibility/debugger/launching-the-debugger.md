@@ -1,5 +1,7 @@
 ---
 title: 启动调试器 |Microsoft Docs
+description: 了解用于启动调试器所需的具有适当特性的方法和事件的序列。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,14 +13,14 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ceb2f484449d1b3f8474a6586d298b057875b342
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 40b91ae695a5e78745c01c5ac974411ac924f8f0
+ms.sourcegitcommit: 42981ace63c0f2b087de5703ca76b8dcdd93a719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738457"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96606653"
 ---
-# <a name="launch-the-debugger"></a>启动调试器
+# <a name="launch-the-debugger"></a>启动调试程序
 启动调试器要求发送正确的方法和事件顺序及其正确的特性。
 
 ## <a name="sequences-of-methods-and-events"></a>方法和事件的序列
@@ -31,7 +33,7 @@ ms.locfileid: "80738457"
 
      如果 `S_FALSE` 返回，将在虚拟机的进程中加载 (DE) 调试引擎。
 
-     - 或 -
+     \- 或 -
 
      如果 `S_OK` 返回，则将在 SDM 的进程中加载 DE。 然后，SDM 会执行以下任务：
 
@@ -51,6 +53,6 @@ ms.locfileid: "80738457"
 
 8. DE 使用特性向 SDM 发送 [IDebugEntryPointEvent2](../../extensibility/debugger/reference/idebugentrypointevent2.md) `EVENT_SYNC` 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [调用调试器事件](../../extensibility/debugger/calling-debugger-events.md)
 - [启动程序](../../extensibility/debugger/launching-a-program.md)

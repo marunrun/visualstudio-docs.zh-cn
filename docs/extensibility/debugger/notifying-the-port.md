@@ -1,5 +1,7 @@
 ---
 title: 通知端口 |Microsoft Docs
+description: 了解启动程序后如何通知端口。 本文包含详细说明。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ff94c20969e77bcc70af2f5a16137e09366a0d7d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e9a838879e7c1eb590bb16cd12a6bf345de8031a
+ms.sourcegitcommit: 42981ace63c0f2b087de5703ca76b8dcdd93a719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738324"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96606614"
 ---
 # <a name="notify-the-port"></a>通知端口
 启动程序后，必须通知端口，如下所示：
@@ -44,7 +46,7 @@ ms.locfileid: "80738324"
 
  一旦知道了 DE 标识，SDM 就可以将其附加到程序。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [启动程序](../../extensibility/debugger/launching-a-program.md)
 - [启动后附加](../../extensibility/debugger/attaching-after-a-launch.md)
 - [调试任务](../../extensibility/debugger/debugging-tasks.md)

@@ -1,5 +1,7 @@
 ---
 title: INTERCEPT_EXCEPTION_ACTION |Microsoft Docs
+description: INTERCEPT_EXCEPTION_ACTION 枚举指定在截获 Visual Studio 调试中的异常时要执行的操作。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: cc44a4fc5264566468777749d5732662ba81ed6d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e80ed1b17f98326701b0ca0aacb8e114c9b49db4
+ms.sourcegitcommit: 42981ace63c0f2b087de5703ca76b8dcdd93a719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80715067"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96606438"
 ---
 # <a name="intercept_exception_action"></a>INTERCEPT_EXCEPTION_ACTION
 指定截获异常时要执行的操作。
@@ -42,7 +44,7 @@ public enum enum_INTERCEPT_EXCEPTION_ACTION
 }
 ```
 
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
 `IEA_INTERCEPT`\
 启用截获当前异常。 这是目前支持的唯一值，并且必须指定。
