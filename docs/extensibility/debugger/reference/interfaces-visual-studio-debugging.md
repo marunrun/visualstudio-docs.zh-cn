@@ -1,5 +1,7 @@
 ---
 title: Visual Studio 调试 (的接口) |Microsoft Docs
+description: 使用这些资源来了解 Visual Studio 调试中的核心接口、表达式计算接口和符号提供程序接口。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d31eb6900841dee9d2675e87bac573b432ff2acb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 508cf5d324a62b0ada056fe0c2495ff97334b8cf
+ms.sourcegitcommit: 42981ace63c0f2b087de5703ca76b8dcdd93a719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80715081"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96606551"
 ---
 # <a name="interfaces-visual-studio-debugging"></a>接口（Visual Studio 调试）
 方法在目录中的每个接口下按字母顺序列出，在 "接口" 页上按 Vtable 顺序列出。
@@ -38,5 +40,5 @@ ms.locfileid: "80715081"
 
  包含有关调试 SDK 的接口、枚举器和结构的文档 [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [API 参考](../../../extensibility/debugger/reference/api-reference-visual-studio-debugging.md)

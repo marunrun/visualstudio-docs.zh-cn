@@ -1,5 +1,7 @@
 ---
 title: 操作模式 |Microsoft Docs
+description: 了解 IDE 可以操作的三种模式，即设计模式、运行模式和中断模式。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 027152b2b2fc18b509a687220e5d963ea1b7e721
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cabf32dcbe8b4d2e925bcfd48635063ecd0a5b74
+ms.sourcegitcommit: 42981ace63c0f2b087de5703ca76b8dcdd93a719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738282"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96606601"
 ---
 # <a name="operational-modes"></a>操作模式
 IDE 可在三种模式下运行，如下所示：
@@ -54,5 +56,5 @@ IDE 可在三种模式下运行，如下所示：
 
  当程序成功地执行下一行代码或进入函数时，或者运行到游标或设置断点时，将自动转换回中断模式。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [控制执行](../../extensibility/debugger/control-of-execution.md)
