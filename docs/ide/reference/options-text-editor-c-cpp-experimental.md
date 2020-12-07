@@ -1,5 +1,7 @@
 ---
 title: 选项, 文本编辑器, C/C++, 实验
+description: 了解如何使用 C/C++ 部分中的“试验性”页面来更改与 IntelliSense 和浏览数据库有关的试验性行为。
+ms.custom: SEO-VS-2020
 ms.date: 08/02/2017
 ms.topic: reference
 f1_keywords:
@@ -11,12 +13,12 @@ ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e239ad3d2091f334f18ec00a367fc47d5c21db3
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: e35bdb8c6a56ef3174277836769201cd00e47dad
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77278701"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040298"
 ---
 # <a name="options-text-editor-cc-experimental"></a>选项, 文本编辑器, C/C++, 实验
 
@@ -24,11 +26,11 @@ ms.locfileid: "77278701"
 
 ::: moniker range="vs-2017"
 
-本文介绍 Visual Studio 2017 中的各选项。 对于 Visual Studio 2015，请在目录上方的选择器中选择“2015”  。
+本文介绍 Visual Studio 2017 中的各选项。 对于 Visual Studio 2015，请在目录上方的选择器中选择“2015”。
 
 ::: moniker-end
 
-要访问此属性页，请按 Ctrl+Q 以激活搜索框，然后键入“experimental”。 在键入前几个字母后，搜索会查找该页面。 此外，还可以选择“工具” > “选项”，依次展开“文本编辑器”和“C/C++”，再选择“试验”。
+要访问此属性页，请按 Ctrl+Q  以激活搜索框，然后键入“experimental”。 在键入前几个字母后，搜索会查找该页面。 此外，还可以选择“工具” > “选项”，依次展开“文本编辑器”和“C/C++”，再选择“试验”    。
 
 这些功能在 Visual Studio 安装中可用。
 
@@ -61,7 +63,7 @@ ms.locfileid: "77278701"
 
 - **联机帮助** - 在联机帮助中搜索错误消息
 
-- 更多内容...
+- 等等。
 
 ## <a name="see-also"></a>请参阅
 

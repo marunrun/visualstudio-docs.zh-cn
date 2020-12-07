@@ -7,12 +7,12 @@ author: CaityBuschlen
 ms.author: cabuschl
 ms.date: 10/13/2020
 ms.faqid: q3_2
-ms.openlocfilehash: 6533a68c334f52310c20a79cf1e6d93d0b967be0
-ms.sourcegitcommit: 296ab61c40bf090c577ef20e84d581939bd1855b
+ms.openlocfilehash: 3c13e82af88030a33d5bedc6b8e9d8f518b8c88e
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92526083"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560758"
 ---
 ## <a name="how-do-i-use-my-benefits"></a>如何使用权益？
 

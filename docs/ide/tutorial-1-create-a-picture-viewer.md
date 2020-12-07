@@ -1,5 +1,7 @@
 ---
 title: 教程 1：创建图片查看器
+description: 了解如何生成从文件加载图片并将其显示在窗口中的应用。
+ms.custom: SEO-VS-2020
 ms.date: 10/16/2019
 ms.assetid: 3071d6df-2b2f-4e95-ab68-bef727323136
 ms.topic: tutorial
@@ -10,16 +12,16 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 44fe22aa1d4549d1daba4324349160afcd3133ba
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 1c0eea844b04cbe8ba261fd4d65a6d21fb99aa4b
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90811209"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479129"
 ---
 # <a name="tutorial-1-create-a-picture-viewer"></a>教程 1：创建图片查看器
 
-在本教程中，你将生成一个从文件加载图片并将其显示在窗口中的应用。 你将学习如何使用“Windows 窗体设计器”拖动控件（如窗体上的按钮和图片框）、设置控件属性，以及如何使用容器来轻松地调整窗体的大小  。 您还将开始编写代码。
+在本教程中，你将生成一个从文件加载图片并将其显示在窗口中的应用。 你将学习如何使用“Windows 窗体设计器”拖动控件（如窗体上的按钮和图片框）、设置控件属性，以及如何使用容器来轻松地调整窗体的大小。 您还将开始编写代码。
 
 > [!NOTE]
 > 本教程中同时涉及 C# 和 Visual Basic，因此请关注特定于你所用编程语言的信息。
@@ -34,7 +36,7 @@ ms.locfileid: "90811209"
 
 * 使用布局在窗体上放置控件。
 
-* 向窗体中添加“打开文件”和“颜色”对话框   。
+* 向窗体中添加“打开文件”和“颜色”对话框。
 
 * 使用 IntelliSense 和代码片段编写代码。
 
@@ -46,11 +48,11 @@ ms.locfileid: "90811209"
 
 ## <a name="tutorial-links"></a>教程链接
 
-|Title|描述|
+|Title|说明|
 |-----------|-----------------|
 |[步骤 1：创建 Windows 窗体应用项目](../ide/step-1-create-a-windows-forms-application-project.md)|首先创建 Windows 窗体应用项目。|
 |[步骤 2：运行图片查看器应用](../ide/step-2-run-your-program.md)|运行你在上一步中创建的 Windows 窗体应用项目。|
-|[步骤 3：设置窗体属性](../ide/step-3-set-your-form-properties.md)|使用“属性”窗口更改窗体的显示方式  。|
+|[步骤 3：设置窗体属性](../ide/step-3-set-your-form-properties.md)|使用“属性”窗口更改窗体的显示方式。|
 |[步骤 4：使用 TableLayoutPanel 控件设置窗体布局](../ide/step-4-lay-out-your-form-with-a-tablelayoutpanel-control.md)|向窗体添加一个 `TableLayoutPanel` 控件。|
 |[步骤 5：向窗体添加控件](../ide/step-5-add-controls-to-your-form.md)|向窗体添加控件，如 `PictureBox` 控件和 `CheckBox` 控件。 向窗体中添加按钮。|
 |[步骤 6：命名按钮控件](../ide/step-6-name-your-button-controls.md)|将按钮重命名为更有意义的名称。|

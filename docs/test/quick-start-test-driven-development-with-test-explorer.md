@@ -1,5 +1,7 @@
 ---
 title: 测试驱动开发演练
+description: 了解如何使用 Microsoft 测试框架以 C# 开发一种经过测试的方法，你可以轻松地将其改写以适用于其他语言或测试框架（例如 NUnit）。
+ms.custom: SEO-VS-2020
 ms.date: 07/24/2019
 ms.topic: conceptual
 ms.author: mikejo
@@ -7,28 +9,28 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: a264975014fea88126bbca0589fe037e629dae10
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 82cccbc47d26dd9ef74ee02931d6efb4bbfa0054
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75566275"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329154"
 ---
 # <a name="walkthrough-test-driven-development-using-test-explorer"></a>演练：通过测试资源管理器进行测试驱动开发
 
-创建单元测试，以通过增量代码更改来帮助保持代码正常工作。 你可以使用几个框架来编写单元测试，包括第三方开发的一些框架。 某些测试框架专用于不同语言或平台中的测试。 “测试资源管理器”为其中任意框架中的单元测试提供了一个接口。 有关测试资源管理器的详细信息，请参阅[使用测试资源管理器运行单元测试](run-unit-tests-with-test-explorer.md)和[测试资源管理器常见问题解答](test-explorer-faq.md)  。
+创建单元测试，以通过增量代码更改来帮助保持代码正常工作。 你可以使用几个框架来编写单元测试，包括第三方开发的一些框架。 某些测试框架专用于不同语言或平台中的测试。 “测试资源管理器”为其中任意框架中的单元测试提供了一个接口。 有关测试资源管理器的详细信息，请参阅[使用测试资源管理器运行单元测试](run-unit-tests-with-test-explorer.md)和[测试资源管理器常见问题解答](test-explorer-faq.md)。
 
 本演练演示如何使用 Microsoft 测试框架 (MSTest) 开发 C# 语言的受测试方法。 你可以将其轻松改写为其他语言，也可加以调整以使用其他测试框架，例如 NUnit。 有关详细信息，请参阅[安装第三方单元测试框架](install-third-party-unit-test-frameworks.md)。
 
 ## <a name="create-a-test-and-generate-code"></a>创建测试并生成代码
 
-1. 选择 C#“类库(.NET Standard)”项目  。 此项目将包含我们要测试的代码。 将项目命名为 MyMath  。
+1. 选择 C#“类库(.NET Standard)”项目。 此项目将包含我们要测试的代码。 将项目命名为 MyMath。
 
-2. 在同一解决方案中，添加一个新的“MSTest 测试项目(.NET Core)”项目  。 将该测试项目命名为 MathTests  。
+2. 在同一解决方案中，添加一个新的“MSTest 测试项目(.NET Core)”项目。 将该测试项目命名为 MathTests。
 
    ![新建代码和测试项目](../test/media/test-driven-development-ide.png)
 
-3. 编写一个简单的测试方法，用于验证针对特定输入获得的结果。 将下面的代码添加到 `UnitTest1` 类中:
+3. 编写一个简单的测试方法，用于验证针对特定输入获得的结果。 将以下代码添加到 `UnitTest1` 类：
 
    ```csharp
    [TestMethod]
@@ -48,37 +50,37 @@ ms.locfileid: "75566275"
 
 4. 从测试代码生成类型。
 
-   1. 将光标放在 `Rooter` 上，然后在灯泡菜单中，选择“生成类型 Rooter” > “生成新类型”   。
+   1. 将光标放在 `Rooter` 上，然后在灯泡菜单中，选择“生成类型 Rooter” > “生成新类型” 。
 
       ![生成新类型快速操作](media/test-driven-development-generate-new-type.png)
 
-   2. 在“生成类型”对话框中，将“项目”设置为 MyMath，并选择类库项目，然后选择“确定”     。
+   2. 在“生成类型”对话框中，将“项目”设置为 MyMath，并选择类库项目，然后选择“确定”。
 
       ![Visual Studio 2019 中的“生成类型”对话框](media/test-driven-development-generate-type-dialog.png)
 
-5. 从测试代码生成方法。 将光标放在 `SquareRoot` 上，然后在灯泡菜单中，选择“生成方法 Rooter.SquareRoot”  。
+5. 从测试代码生成方法。 将光标放在 `SquareRoot` 上，然后在灯泡菜单中，选择“生成方法 Rooter.SquareRoot”。
 
 6. 运行单元测试。
 
-   1. 要打开“测试资源管理器”，请在“测试”菜单中，依次选择“Windows” > “测试资源管理器”     。
+   1. 要打开“测试资源管理器”，请在“测试”菜单中，依次选择“Windows” > “测试资源管理器”。
 
-   2. 在“测试资源管理器”中，选择“全部运行”按钮运行测试   。
+   2. 在“测试资源管理器”中，选择“全部运行”按钮运行测试。
 
    解决方案生成，测试运行但失败。
 
 7. 选择测试名称。
 
-   “测试详细信息摘要”窗格中将显示测试的详细信息  。
+   “测试详细信息摘要”窗格中将显示测试的详细信息。
 
    ![测试资源管理器中的测试详细信息摘要](media/test-driven-development-test-detail-summary.png)
 
-8. 选择“堆栈跟踪”下的顶部链接，跳到测试失败的位置  。
+8. 选择“堆栈跟踪”下的顶部链接，跳到测试失败的位置。
 
 此时，你已创建了测试和存根，在此基础上进行修改以使测试通过。
 
 ## <a name="verify-a-code-change"></a>验证代码更改
 
-1. 在 Class1.cs 文件中，改进 `SquareRoot` 的代码  ：
+1. 在 Class1.cs 文件中，改进 `SquareRoot` 的代码：
 
     ```csharp
     public double SquareRoot(double input)
@@ -87,7 +89,7 @@ ms.locfileid: "75566275"
     }
     ```
 
-2. 在“测试资源管理器”  中，选择“全部运行”  。
+2. 在“测试资源管理器”中，选择“全部运行”。
 
    解决方案生成，测试运行并通过。
 
@@ -124,9 +126,9 @@ ms.locfileid: "75566275"
     }
     ```
 
-2. 在“测试资源管理器”  中，选择“全部运行”  。
+2. 在“测试资源管理器”中，选择“全部运行”。
 
-   新测试失败（但第一个测试仍然通过）。 要查找失败位置，请选择失败的测试，然后在“测试详细信息摘要”窗格中查看详细信息  。
+   新测试失败（但第一个测试仍然通过）。 要查找失败位置，请选择失败的测试，然后在“测试详细信息摘要”窗格中查看详细信息。
 
 3. 检查所测试的方法，以查明可能出错的地方。 按如下所示更改 `SquareRoot` 代码：
 
@@ -144,7 +146,7 @@ ms.locfileid: "75566275"
     }
     ```
 
-4. 在“测试资源管理器”  中，选择“全部运行”  。
+4. 在“测试资源管理器”中，选择“全部运行”。
 
    现在两个测试均通过。
 
@@ -169,11 +171,11 @@ ms.locfileid: "75566275"
     }
     ```
 
-2. 在“测试资源管理器”  中，选择“全部运行”  。
+2. 在“测试资源管理器”中，选择“全部运行”。
 
    所测试的方法形成循环，必须手动取消。
 
-3. 在“测试资源管理器”的工具栏上选择“取消”   。
+3. 在“测试资源管理器”的工具栏上选择“取消”。
 
    测试将停止执行。
 
@@ -189,7 +191,7 @@ ms.locfileid: "75566275"
         ...
     ```
 
-5. 在“测试资源管理器”  中，选择“全部运行”  。
+5. 在“测试资源管理器”中，选择“全部运行”。
 
    所有测试均通过。
 
@@ -198,7 +200,7 @@ ms.locfileid: "75566275"
 重构代码，但不要更改测试。
 
 > [!TIP]
-> 重构是旨在提高代码性能或易理解性的更改  。 其目的不在于更改代码的行为，因此不更改测试。
+> 重构是旨在提高代码性能或易理解性的更改。 其目的不在于更改代码的行为，因此不更改测试。
 >
 > 我们建议你分开进行功能扩展和重构步骤。 保持测试不变，就能有信心在重构时不意外引入 bug。
 
@@ -224,6 +226,6 @@ ms.locfileid: "75566275"
     }
     ```
 
-2. 选择“全部运行”，并验证所有测试是否仍然通过  。
+2. 选择“全部运行”，并验证所有测试是否仍然通过。
 
    ![显示 3 个通过的测试的测试资源管理器](../test/media/test-driven-development-three-passed-tests.png)

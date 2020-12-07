@@ -1,5 +1,7 @@
 ---
 title: 步骤 6：添加计时器
+description: 了解如何向匹配游戏添加 <xref:System.Windows.Forms.Timer> 控件。
+ms.custom: SEO-VS-2020
 ms.date: 03/31/2020
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -13,12 +15,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0473ab07155e0f132e8e6207361e409b804257f2
-ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
+ms.openlocfilehash: 2684b197fc32b33081c8ecdfa8139b3c8f14e752
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80472768"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480546"
 ---
 # <a name="step-6-add-a-timer"></a>步骤 6：添加计时器
 接下来，要向匹配游戏中添加 <xref:System.Windows.Forms.Timer> 控件。 计时器等待指定的毫秒数后，触发一个称为“Tick”  的事件。 这对于启动操作或定时重复操作很有用。 在本例中，你将使用一个计时器，让玩家开始选择两个图标，而如果图标不匹配，则在短暂时间后再次隐藏这两个图标。
@@ -28,12 +30,12 @@ ms.locfileid: "80472768"
 1. 在“Windows 窗体设计器”  的“工具箱”中，选择“Timer”  （位于“组件”  类别中），然后按 Enter  键，或双击该计时器，向窗体中添加一个计时器控件。 该计时器的图标名为 Timer1  ，应显示在窗体下的空间中，如下图所示。
 
      ![计时器](../ide/media/express_timer.png)<br/>
-***计时器***
+*计时器
 
     > [!NOTE]
     > 如果工具箱是空的，请确保在打开工具箱前选择窗体设计器，而不是窗体的后台代码。
 
-2. 选择 **Timer1** 图标以选中该计时器。 在“属性”  窗口中，从查看事件切换到查看属性。 然后将计时器的 **Interval** 属性设置为 **750**，但保留 **Enabled** 属性的设置“False”  。 “Interval”  属性将通知计时器两个始终周期  之间的等待时长，或何时触发 <xref:System.Windows.Forms.Timer.Tick> 事件。 值为 750 时，将通知计时器等待四分之三秒（750 毫秒）后触发 Tick 事件。 只有在玩家选择第二个标签后，你才能调用 <xref:System.Windows.Forms.Timer.Start> 方法启动计时器。
+2. 选择“Timer1”图标以选中该计时器。 在“属性”  窗口中，从查看事件切换到查看属性。 然后将计时器的 **Interval** 属性设置为 **750**，但保留 **Enabled** 属性的设置“False”  。 “Interval”  属性将通知计时器两个始终周期  之间的等待时长，或何时触发 <xref:System.Windows.Forms.Timer.Tick> 事件。 值为 750 时，将通知计时器等待四分之三秒（750 毫秒）后触发 Tick 事件。 只有在玩家选择第二个标签后，你才能调用 <xref:System.Windows.Forms.Timer.Start> 方法启动计时器。
 
 3. 选择“Windows 窗体设计器”  中的计时器控件图标，然后按 Enter  键或双击该计时器，以添加空的“Tick”事件处理程序。 用下列代码替换该代码，或手动将下列代码输入到事件处理程序。
 
@@ -63,6 +65,6 @@ ms.locfileid: "80472768"
 
 ## <a name="to-continue-or-review"></a>继续或查看
 
-- 要转到下一个教程步骤，请参阅[步骤 7：**保持对可见](../ide/step-7-keep-pairs-visible.md)  。
+- 要转到下一个教程步骤，请参阅[步骤 7：保持对可见  。
 
 - 要返回上一个教程步骤，请参阅[步骤 5：添加标签引用](../ide/step-5-add-label-references.md)。

@@ -1,5 +1,7 @@
 ---
 title: -Run (devenv.exe)
+description: 了解如何使用 Run devenv 命令行开关来编译和运行指定的项目或解决方案。
+ms.custom: SEO-VS-2020
 ms.date: 12/10/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -15,12 +17,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7468fbd6422248f2f15bf74e70cdf9c5bee849c3
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: e523220ca3269b6af5404ce2d6ab653f29698599
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75593624"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96039900"
 ---
 # <a name="run-devenvexe"></a>/Run (devenv.exe)
 
@@ -32,7 +34,7 @@ ms.locfileid: "75593624"
 devenv {/Run|/R} {SolutionName|ProjectName} [/Out OutputFilename]
 ```
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 
 - *SolutionName*
 
@@ -46,7 +48,7 @@ devenv {/Run|/R} {SolutionName|ProjectName} [/Out OutputFilename]
 
   可选。 要将工具输出发送到的文件的文件名。 如果文件已有，工具将输出追加到文件末尾。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 根据为活动解决方案配置指定的设置编译并运行指定项目或解决方案。 此开关启动 IDE，并在项目或解决方案已完成运行后让它一直处于活动状态。
 

@@ -1,5 +1,6 @@
 ---
 title: 以管理员身份运行
+description: 了解如何以管理员身份运行 Visual Studio。
 ms.date: 01/06/2020
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 927031b4755644aeac553367a4f8a08faa0c0992
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 9d69d916b8b99d6f5b5b3421ae4aea073e24fa67
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75718631"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96478947"
 ---
 # <a name="user-permissions-and-visual-studio"></a>用户权限与 Visual Studio
 
@@ -32,7 +33,7 @@ ms.locfileid: "75718631"
 |----------|----------| - |
 |安装|安装或修改 Visual Studio。|[安装 Visual Studio](../install/install-visual-studio.md)，[修改 Visual Studio](../install/modify-visual-studio.md)|
 ||安装、更新或删除本地帮助内容。|[安装和管理本地帮助内容](../help-viewer/install-manage-local-content.md)|
-|工具箱|将经典 COM 控件添加到“工具箱”  。|[工具箱](../ide/reference/toolbox.md)|
+|工具箱|将经典 COM 控件添加到“工具箱”。|[工具箱](../ide/reference/toolbox.md)|
 |生成|使用注册组件的生成后事件。|[了解自定义生成步骤和生成事件](/cpp/build/understanding-custom-build-steps-and-build-events)|
 ||在生成 C++ 项目时包括一个注册步骤。||
 |调试|调试使用提升的权限运行的应用程序。|[调试器设置和准备](../debugger/debugger-settings-and-preparation.md)|
@@ -53,27 +54,27 @@ ms.locfileid: "75718631"
 
 ::: moniker range="vs-2017"
 
-1. 打开“开始”  菜单，并滚动到 Visual Studio 2017。
+1. 打开“开始”菜单，并滚动到 Visual Studio 2017。
 
-1. 从右键单击或 Visual Studio 2017  的上下文菜单中，依次选择“更多”  >“以管理员身份运行”  。
+1. 从右键单击或 Visual Studio 2017 的上下文菜单中，依次选择“更多”“以管理员身份运行” > 。
 
-   Visual Studio 启动时，标题栏的产品名后显示“(管理员)”  。
+   Visual Studio 启动时，标题栏的产品名后显示“(管理员)”。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-1. 打开“开始”菜单，并滚动到 Visual Studio 2019  。
+1. 打开“开始”菜单，并滚动到 Visual Studio 2019。
 
-1. 从右键单击或 Visual Studio 2019  的上下文菜单中，依次选择“更多”  >“以管理员身份运行”  。
+1. 从右键单击或 Visual Studio 2019 的上下文菜单中，依次选择“更多”“以管理员身份运行” > 。
 
-   Visual Studio 启动时，标题栏的产品名后显示“(管理员)”  。
+   Visual Studio 启动时，标题栏的产品名后显示“(管理员)”。
 
 ::: moniker-end
 
 此外可以修改应用程序快捷方式，以便始终利用管理权限运行。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [移植、迁移和升级 Visual Studio 项目](../porting/port-migrate-and-upgrade-visual-studio-projects.md)
 - [安装 Visual Studio](../install/install-visual-studio.md)

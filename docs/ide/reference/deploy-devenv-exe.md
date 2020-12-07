@@ -1,5 +1,7 @@
 ---
 title: -Deploy (devenv.exe)
+description: 了解如何使用 Deploy devenv 命令行开关在生成或重新生成后部署解决方案。
+ms.custom: SEO-VS-2020
 ms.date: 12/10/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b8eeb1a03e584b0b39030ec56ca6945a2d5ced78
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 23064842d89ffb1e7fb5e521afe80caea5ffae56
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75570123"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040703"
 ---
 # <a name="deploy-devenvexe"></a>/Deploy (devenv.exe)
 
@@ -30,7 +32,7 @@ ms.locfileid: "75570123"
 devenv SolutionName /Deploy [SolnConfigName [/Project ProjName [/ProjectConfig ProjConfigName]] [/Out OutputFilename]]
 ```
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 
 - *SolutionName*
 
@@ -40,25 +42,25 @@ devenv SolutionName /Deploy [SolnConfigName [/Project ProjName [/ProjectConfig P
 
   可选。 要用于生成 SolutionName 中命名的解决方案的解决方案配置的名称（如 `Debug` 或 `Release`）。 如果有多个解决方案平台可用，还必须指定平台（例如，`Debug|Win32`）。 如果未指定此参数或字符串为空 (`""`)，工具便会使用解决方案的有效配置。
 
-- `/Project` *ProjName*
+- `/Project` *项目名称*
 
-  可选。 解决方案中项目文件的路径和名称。 可以将项目在 SolutionName  文件夹中的显示名称或相对路径输入到项目文件中。 也可以输入项目文件的完整路径和名称。
+  可选。 解决方案中项目文件的路径和名称。 可以将项目在 SolutionName 文件夹中的显示名称或相对路径输入到项目文件中。 也可以输入项目文件的完整路径和名称。
 
-- `/ProjectConfig` *ProjConfigName*
+-  ProjConfigName`/ProjectConfig` 
 
-  可选。 要在生成已命名 `/Project` 时使用的项目生成配置的名称（如 `Debug` 或 `Release`）。 如果有多个解决方案平台可用，还必须指定平台（例如，`Debug|Win32`）。 如果此开关已指定，它会替代 SolnConfigName  参数。
+  可选。 要在生成已命名 `/Project` 时使用的项目生成配置的名称（如 `Debug` 或 `Release`）。 如果有多个解决方案平台可用，还必须指定平台（例如，`Debug|Win32`）。 如果此开关已指定，它会替代 SolnConfigName 参数。
 
 - `/Out` *OutputFilename*
 
   可选。 要将工具输出发送到的文件的文件名。 如果文件已有，工具将输出追加到文件末尾。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 指定的项目必须是部署项目。 如果指定的项目不是部署项目，当已生成的项目进行传递以供部署时，便会失败并出现错误。
 
 用双引号将含有空格的字符串引起来。
 
-与生成相关的摘要信息（包括错误）可以显示在“命令”  窗口中，也可以显示在使用 [/Out](out-devenv-exe.md) 开关指定的任何日志文件中。
+与生成相关的摘要信息（包括错误）可以显示在“命令”窗口中，也可以显示在使用 [/Out](out-devenv-exe.md) 开关指定的任何日志文件中。
 
 ## <a name="example"></a>示例
 

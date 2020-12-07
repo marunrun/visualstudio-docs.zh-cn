@@ -18,11 +18,11 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.openlocfilehash: ea12076e41185e9de4ee10afe3056ff97403d6ea
-ms.sourcegitcommit: 13cf7569f62c746708a6ced1187d8173eda7397c
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352265"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96190197"
 ---
 # <a name="visual-studio-administrator-guide"></a>Visual Studio 管理员指南
 
@@ -44,7 +44,7 @@ ms.locfileid: "91352265"
 
   如果打算应用维护更新及累积功能更新，可选择最新的位数。
 
-* 确定更新模型。
+确定更新模型。
 
   希望单个客户端计算机在哪里获得更新？ 具体而言，确定是想要从 Internet 还是从公司范围的本地共享获取更新。 接下来，如果选择使用本地共享，确定是单个用户可以自行更新客户端，还是需要管理员以编程方式更新客户端。
 
@@ -70,7 +70,7 @@ ms.locfileid: "91352265"
 
   如果打算应用维护更新及累积功能更新，可选择最新的位数。
 
-* 确定更新模型。
+确定更新模型。
 
   希望单个客户端计算机在哪里获得更新？ 具体而言，确定是想要从 Internet 还是从公司范围的本地共享获取更新。 接下来，如果选择使用本地共享，确定是单个用户可以自行更新客户端，还是需要管理员以编程方式更新客户端。
 

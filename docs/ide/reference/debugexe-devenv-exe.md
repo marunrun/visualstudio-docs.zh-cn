@@ -1,5 +1,7 @@
 ---
 title: -DebugExe (devenv.exe)
+description: 了解如何使用 DebugExe devenv 命令行开关打开要调试的指定可执行文件。
+ms.custom: SEO-VS-2020
 ms.date: 12/10/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aeae28288936b6723b53e826142a4888ad0bc8b4
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 6e60c3fb8a72caa44bcf70ac36850748ce240d42
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75570136"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96039466"
 ---
 # <a name="debugexe-devenvexe"></a>/DebugExe (devenv.exe)
 
@@ -32,13 +34,13 @@ devenv /DebugExe ExecutableFile
 
 ## <a name="arguments"></a>参数
 
-- ExecutableFile 
+- ExecutableFile
 
   必需。 `.exe` 文件的路径和文件名。 如果 `.exe` 文件找不到或不存在，Visual Studio 不会显示任何警告或错误，而是正常启动。
 
 ## <a name="remarks"></a>备注
 
-ExecutableFile  参数后跟的任何字符串都作为参数传递到相应文件。
+ExecutableFile 参数后跟的任何字符串都作为参数传递到相应文件。
 
 ## <a name="example"></a>示例
 

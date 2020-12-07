@@ -1,5 +1,7 @@
 ---
 title: -? (devenv.exe)
+description: 了解如何使用 /? devenv 命令行开关来显示消息框，其中列出了所有 devenv 开关以及每个开关的简短说明。
+ms.custom: SEO-VS-2020
 ms.date: 12/10/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f23765ac4ee58b20af26bd100a0d167b2873582
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 5b0b3784b832c56aba97f68e57be872820991c74
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75565729"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040012"
 ---
 # <a name="-devenvexe"></a>/? (devenv.exe)
 

@@ -1,5 +1,7 @@
 ---
 title: 将本地函数转换为方法
+description: 了解如何使用“快速操作和重构”菜单将本地函数转换为方法。
+ms.custom: SEO-VS-2020
 ms.date: 02/19/2019
 ms.topic: reference
 author: kendrahavens
@@ -7,12 +9,12 @@ ms.author: kehavens
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3572682fe68d9b0b1bc4adee537de5cd056a8906
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 64a46fc6221f00e6bb130be8010cb2544a00dcc8
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "71301697"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305567"
 ---
 # <a name="convert-a-local-function-to-a-method"></a>将本地函数转换为方法
 
@@ -24,7 +26,7 @@ ms.locfileid: "71301697"
 
 **使用时机：** 需要在当前本地上下文之外定义一个本地函数。
 
-操作原因：  需要将本地函数转换为方法，以便可以在本地上下文之外调用它。 本地函数变得太长时，可能需要将其转换为方法。 在单独的方法中定义函数时，代码更易于阅读。
+操作原因：需要将本地函数转换为方法，以便可以在本地上下文之外调用它。 本地函数变得太长时，可能需要将其转换为方法。 在单独的方法中定义函数时，代码更易于阅读。
 
 ## <a name="convert-local-function-to-method-refactoring"></a>将本地函数转换为方法重构
 

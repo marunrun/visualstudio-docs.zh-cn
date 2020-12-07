@@ -1,5 +1,7 @@
 ---
 title: “选项”>“文本编辑器”>“HTML (Web 窗体)”>“格式化”
+description: 了解如何使用 HTML 部分中的“格式设置”页面设置用于在代码编辑器中设置代码格式的 HTML 项目选项。
+ms.custom: SEO-VS-2020
 ms.date: 1/15/2019
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9e28caf7f71af7c7a07634d1732a1001a32a4aee
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e3c8fe85b7bce856867802d43411816ae2df5d2c
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75568316"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040974"
 ---
 # <a name="options-text-editor-html-web-forms-formatting"></a>“选项”>“文本编辑器”>“HTML (Web 窗体)”>“格式化”
 

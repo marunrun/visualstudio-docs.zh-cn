@@ -1,5 +1,7 @@
 ---
 title: 使用 lambda 表达式或程序块主体
+description: 了解如何使用“快速操作和重构”菜单重构 lambda 表达式，这样就可以使用表达式主体或块主体。
+ms.custom: SEO-VS-2020
 ms.date: 02/14/2019
 ms.topic: reference
 author: kendrahavens
@@ -9,12 +11,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5c46506e81e5334efea9060e957269e92e9d49cc
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 505a76a2300f2e3ddb9c1513ee64c2a17abb10ab
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "65531922"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480169"
 ---
 # <a name="use-expression-body-or-block-body-for-lambda-expressions"></a>将表达式主体或程序块主体用于 lambda 表达式
 
@@ -26,7 +28,7 @@ ms.locfileid: "65531922"
 
 **使用时机：** 你更倾向于通过 lambda 表达式来使用表达式主体或程序块主体。
 
-操作原因：  可以根据用户偏好重构 Lambda 表达式以提高可读性。
+操作原因：可以根据用户偏好重构 Lambda 表达式以提高可读性。
 
 ## <a name="lambda-expression-body-or-block-body-refactoring"></a>Lambda 表达式主体或程序块主体重构
 
@@ -35,7 +37,7 @@ ms.locfileid: "65531922"
 
   ![使用 lambda 表达式/程序块主体](media/block-body-lambda.png)
 
-3. 选择“为 lambda 表达式使用程序块主体”或“为 lambda 表达式使用表达式主体”   。
+3. 选择“为 lambda 表达式使用程序块主体”或“为 lambda 表达式使用表达式主体”。
 
 ## <a name="see-also"></a>请参阅
 

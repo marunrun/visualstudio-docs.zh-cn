@@ -1,5 +1,7 @@
 ---
 title: -Log (devenv.exe)
+description: 了解如何使用 Log devenv 命令行开关将所有活动记录到日志文件中，以便进行故障排除。
+ms.custom: SEO-VS-2020
 ms.date: 12/12/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 008e7ca15595db249c05485f0d9e8f8b1277993e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e9dae594df60d75ced4ba6bdda5cb37c8c07a852
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75595457"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040571"
 ---
 # <a name="log-devenvexe"></a>/Log (devenv.exe)
 

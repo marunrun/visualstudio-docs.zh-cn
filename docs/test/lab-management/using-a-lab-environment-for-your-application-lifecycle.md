@@ -1,5 +1,7 @@
 ---
 title: 使用实验室环境进行开发
+description: 了解实验环境以及如何通过 Azure Pipelines 或 Team Foundation Server 生成和发布使用云。
+ms.custom: SEO-VS-2020
 ms.date: 05/02/2017
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,30 +11,30 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 1a5958b03b9797882b3df37f4ba99c75ff832d22
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: cb25561f70882336a1143918d3cf78849b394065
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91928103"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328920"
 ---
 # <a name="use-a-lab-environment-for-your-devops"></a>使用实验室环境进行开发
 
 实验室环境是可用于开发和测试应用程序的虚拟和物理计算机的集合。 实验室环境可包含测试多层应用程序所需的多个角色，如工作站、Web 服务器和数据库服务器。 此外，还可以在实验室环境下使用生成-部署-测试工作流，以实现在应用程序上生成、部署和运行自动测试的过程的自动化。
 
-* **使用测试计划运行自动化测试**  - 可以运行自动化测试的集合（称为测试计划），并查看进度。
+* **使用测试计划运行自动化测试** - 可以运行自动化测试的集合（称为测试计划），并查看进度。
 
 * **使用“生成-部署-测试”工作流** - 可以使用“生成-部署-测试”工作流自动测试多层应用程序。 一个典型示例是在实验室环境中启动生成、在实验室环境中将生成文件部署到适当的计算机然后执行自动化测试的工作流。 此外，你还可以将你的工作流规划为按照指定间隔运行。
 
-* **从所有计算机收集诊断数据（即使在手动测试期间）** - 可以同时从多台计算机收集诊断数据。 例如，在单个测试运行期间，你可以从 Web 服务器、数据服务器和客户端收集 IntelliTrace、测试影响和其他形式的数据。
+* **从所有计算机收集诊断数据（即使在手动测试期间）**- 可以同时从多台计算机收集诊断数据。 例如，在单个测试运行期间，你可以从 Web 服务器、数据服务器和客户端收集 IntelliTrace、测试影响和其他形式的数据。
 
 以下是常见的实验室环境拓扑示例：
 
 | 拓扑 | 说明 |
 |---|---|
-|![仅包含服务器的拓扑](../media/topology_backend.png)| 此实验室环境具有服务器拓扑，此拓扑常用于在服务器应用程序上运行手动测试，并且允许测试人员使用他们自己的客户端计算机验证环境中的 bug  。 在后端拓扑中，你的实验室环境仅包含服务器。 当你使用此类型的拓扑时，通常使用不属于该环境一部分的客户端计算机连接实验室环境中的服务器。|
-|![云实验室环境](../media/topology_cloud.png)| 此实验室环境提供的功能与服务器拓扑类似，但无需在本地环境运行物理计算机或虚拟机，这样可以缩短安装时间、简化维护过程并降低成本  。 在 Microsoft Azure 等云环境中可以快速方便地设置多个网站、虚拟机和自定义网络。|
-|![客户端服务器实验室环境](../media/topology_clientserver.png)| 此实验室环境具有客户端-服务器拓扑，此拓扑常用于测试具有服务器和客户端组件的应用程序  。 在客户端/服务器拓扑中，所有用于测试应用程序的所有客户端和服务器计算机都在你的实验室环境中。 当你使用此拓扑时，你可以从影响测试的每台计算机收集测试数据。|
+|![仅包含服务器的拓扑](../media/topology_backend.png)| 此实验室环境具有服务器拓扑，此拓扑常用于在服务器应用程序上运行手动测试，并且允许测试人员使用他们自己的客户端计算机验证环境中的 bug。 在后端拓扑中，你的实验室环境仅包含服务器。 当你使用此类型的拓扑时，通常使用不属于该环境一部分的客户端计算机连接实验室环境中的服务器。|
+|![云实验室环境](../media/topology_cloud.png)| 此实验室环境提供的功能与服务器拓扑类似，但无需在本地环境运行物理计算机或虚拟机，这样可以缩短安装时间、简化维护过程并降低成本。 在 Microsoft Azure 等云环境中可以快速方便地设置多个网站、虚拟机和自定义网络。|
+|![客户端服务器实验室环境](../media/topology_clientserver.png)| 此实验室环境具有客户端-服务器拓扑，此拓扑常用于测试具有服务器和客户端组件的应用程序。 在客户端/服务器拓扑中，所有用于测试应用程序的所有客户端和服务器计算机都在你的实验室环境中。 当你使用此拓扑时，你可以从影响测试的每台计算机收集测试数据。|
 
 :::row:::
     :::column:::
@@ -69,13 +71,13 @@ ms.locfileid: "91928103"
 
 * **快速重现计算机配置** - 可以存储已配置的虚拟机集合以重新创建典型生产环境 然后你可以在存储的环境的每个新副本上执行每个测试运行。
 
-* 重现 bug 的具体条件  - 当测试运行失败时，可以存储实验室环境的状态副本，然后从生成结构或工作项访问它。
+* 重现 bug 的具体条件 - 当测试运行失败时，可以存储实验室环境的状态副本，然后从生成结构或工作项访问它。
 
 * **同时运行实验室环境的多个副本** - 可以在没有命名冲突的情况下同时运行实验室环境的多个副本。
 
 ### <a name="standard-environments-and-scvmm-environments"></a>标准环境和 SCVMM 环境
 
-可以使用 Visual Studio 实验室管理工具版创建两种类型的实验室环境：标准环境和 SCVMM 环境   。 但是，每种类型的环境的功能不相同。
+可以使用 Visual Studio 实验室管理工具版创建两种类型的实验室环境：标准环境和 SCVMM 环境。 但是，每种类型的环境的功能不相同。
 
 **标准环境：** 可混合包含虚拟机和物理计算机。 你还可以向由第三方虚拟化框架托管的标准环境添加虚拟机。 此外，标准环境不需要其他服务器资源，例如 SCVMM 服务器。
 
@@ -100,7 +102,7 @@ ms.locfileid: "91928103"
 
 |功能|SCVMM 环境|标准环境|
 |-|------------------------|-|
-|**测试**|||
+|测试：|||
 |运行手动测试|支持|支持|
 |运行代码 UI 和其他自动化测试|支持|支持|
 |使用诊断适配器的文件丰富 bug|支持|支持|
@@ -134,7 +136,7 @@ ms.locfileid: "91928103"
 * [设置 SCVMM 环境](/previous-versions/dd380687(v=vs.140))
 * [管理权限](/previous-versions/dd380760(v=vs.140))
 * [更改设置](/previous-versions/ee704508(v=vs.140))
-* [疑难解答](/previous-versions/ee853230(v=vs.140))
+* [故障排除](/previous-versions/ee853230(v=vs.140))
 
 有关设置环境的信息，请参阅：
 
@@ -144,8 +146,8 @@ ms.locfileid: "91928103"
 * [创建和使用网络独立环境](/previous-versions/ee518924(v=vs.140))
 ::: moniker-end
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 * [安装和配置测试代理](../../test/lab-management/install-configure-test-agents.md)
 * [Visual Studio 实验室管理工具版指南](/archive/blogs/visualstudioalmrangers/library-of-tooling-and-guidance-solutions-aka-msvsarsolutions)
-* [Microsoft DevOps Blog](https://devblogs.microsoft.com/devops/)
+* [Microsoft DevOps 博客](https://devblogs.microsoft.com/devops/)

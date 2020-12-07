@@ -1,5 +1,7 @@
 ---
 title: -Out (devenv.exe)
+description: 了解如何使用 Out devenv 命令行开关指定一个文件，用于在运行、运行并退出、升级、生成、重新生成、清理或部署解决方案时存储和显示错误。
+ms.custom: SEO-VS-2020
 ms.date: 12/10/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +20,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cda81d37be0246c1181b4d82cbd17c3119b94437
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 06409d3b7e3d218fcf2b81dce7ea58d3202b7e21
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75568006"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040051"
 ---
 # <a name="out-devenvexe"></a>/Out (devenv.exe)
 
@@ -45,7 +47,7 @@ devenv /Out FileName
 
 如果指定的文件名不存在，便会自动创建文件。 否则，如果已有文件，结果会追加到文件的现有内容中。
 
-命令行生成错误显示在“命令”  窗口中，以及“输出”  窗口的“解决方案生成器”视图中。 此开关可用于查看无人参与生成的结果。
+命令行生成错误显示在“命令”窗口中，以及“输出”窗口的“解决方案生成器”视图中。 此开关可用于查看无人参与生成的结果。
 
 ## <a name="example"></a>示例
 

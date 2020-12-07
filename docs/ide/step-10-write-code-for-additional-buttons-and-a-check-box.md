@@ -15,18 +15,18 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d66f7705821025bd5e30ea0d0c7f2dd57d540e4
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: c8fa5bcacd4d6086dbe926240ec11743f06e513d
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036907"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480325"
 ---
 # <a name="step-10-write-code-for-additional-buttons-and-a-check-box"></a>步骤 10：为其他按钮和复选框编写代码
 
 现在，您可以完成其他四个方法了。 虽然您可以复制并粘贴此代码，但是若想从此教程中学些到最多的内容，那么请键入代码并使用 IntelliSense。
 
-此代码将为您之前添加的按钮添加功能。 如果不使用此代码，这些按钮将不执行任何操作。 当您激活控件时，这些按钮将使用其 <xref:System.Windows.Forms.Control.Click> 事件（复选框使用 <xref:System.Windows.Forms.CheckBox.CheckedChanged> 事件）来执行不同的操作。 例如，`clearButton_Click`（或 `ClearButton_Click`）事件（当选择“清除图片”按钮时激活），在将其“图像”属性设置为“null”（或“无”）后，可擦除当前的图像****************。 代码中的每个事件都包括一些注释，用于解释代码所执行的操作。
+此代码将为您之前添加的按钮添加功能。 如果不使用此代码，这些按钮将不执行任何操作。 当您激活控件时，这些按钮将使用其 <xref:System.Windows.Forms.Control.Click> 事件（复选框使用 <xref:System.Windows.Forms.CheckBox.CheckedChanged> 事件）来执行不同的操作。 例如，`clearButton_Click`（或 `ClearButton_Click`）事件（当选择“清除图片”按钮时激活），在将其“图像”属性设置为“null”（或“无”）后，可擦除当前的图像。 代码中的每个事件都包括一些注释，用于解释代码所执行的操作。
 
 > [!TIP]
 > 最佳做法是始终对您的代码进行注释。 注释是供用户阅读的信息，花些时间使您的代码易于理解是值得的。 应用会忽略注释行上的所有内容。 在 C# 中，通过在开头键入两个正斜杠 (//) 来注释一行；在 Visual Basic 中，通过以单引号 (') 开头来注释一行。

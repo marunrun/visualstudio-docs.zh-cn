@@ -1,5 +1,7 @@
 ---
 title: -Upgrade (devenv.exe)
+description: 了解如何使用 Upgrade devenv 命令行开关将解决方案文件及其所有项目文件或指定的项目文件更新为这些文件的当前 Visual Studio 格式。
+ms.custom: SEO-VS-2020
 ms.date: 12/10/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5bb2b296d8728587c9aa3c22b7a670d89612eff1
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 2bb0565783efb27cf4194bb25982ee0f717be776
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75596419"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040948"
 ---
 # <a name="upgrade-devenvexe"></a>/Upgrade (devenv.exe)
 
@@ -31,11 +33,11 @@ devenv {SolutionFile|ProjectFile} /Upgrade [/Out OutputFilename]
 
 ## <a name="arguments"></a>参数
 
-- SolutionFile 
+- SolutionFile
 
   若要升级整个解决方案及其项目，此为必需参数。 解决方案文件的路径和名称。 可以只输入解决方案文件的名称，也可以输入解决方案文件的完整路径和名称。 如果已命名的文件夹或文件尚不存在，便会进行创建。
 
-- ProjectFile 
+- ProjectFile
 
   若要升级一个项目，此为必需参数。 解决方案中项目文件的路径和名称。 可以只输入项目文件的名称，也可以输入项目文件的完整路径和名称。 如果已命名的文件夹或文件尚不存在，便会进行创建。
 
@@ -43,7 +45,7 @@ devenv {SolutionFile|ProjectFile} /Upgrade [/Out OutputFilename]
 
   可选。 要将工具输出发送到的文件的文件名。 如果文件已有，工具将输出追加到文件末尾。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 备份自动创建，并复制到在当前目录中创建的“备份”目录中。
 

@@ -1,5 +1,7 @@
 ---
 title: 代码覆盖率测试
+description: 了解如何使用 Visual Studio 的代码覆盖率功能来确定正由编码的测试进行测试的项目代码的比例。
+ms.custom: SEO-VS-2020
 ms.date: 07/23/2019
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ dev_langs:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 2d1b51661d9fc9a5492d123bdacd6c49d241ed87
-ms.sourcegitcommit: 3e05bd4bfac6f0b8b3534d8c013388f67e288651
+ms.openlocfilehash: c2c7bcb270184bcc140dbadef63af1315df765dc
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91959770"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330051"
 ---
 # <a name="use-code-coverage-to-determine-how-much-code-is-being-tested"></a>使用代码覆盖率确定所测试的代码量
 
@@ -40,13 +42,13 @@ ms.locfileid: "91959770"
 
 ::: moniker range="vs-2017"
 
-1. 在“测试”  菜单上，选择“分析代码覆盖率”  。
+1. 在“测试”菜单上，选择“分析代码覆盖率”。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-1. 在“测试”  菜单中，选择“分析所有测试的代码覆盖率”  。
+1. 在“测试”菜单中，选择“分析所有测试的代码覆盖率”。
 
    ![在 VS 2019 中分析代码覆盖率](../test/media/vs-2019/analyze-code-coverage.png)
 
@@ -54,10 +56,10 @@ ms.locfileid: "91959770"
 
 ::: moniker-end
 
-2. 测试运行后，若要查看已运行的行，请选择“代码覆盖率结果”  窗口中的![显示代码覆盖率着色图标](../test/media/codecoverage-showcoloringicon.png)“显示代码覆盖率着色”  。 默认情况下，测试覆盖的代码以浅蓝色突出显示。
+2. 测试运行后，若要查看已运行的行，请选择“代码覆盖率结果”窗口中的![显示代码覆盖率着色图标“显示代码覆盖率着色”](../test/media/codecoverage-showcoloringicon.png) 。 默认情况下，测试覆盖的代码以浅蓝色突出显示。
 
    > [!TIP]
-   > 要更改颜色或使用加粗，请选择“工具” > “选项” > “环境” > “字体和颜色” > “显示其设置:      文本编辑器”。 在“显示项”下，调整“覆盖率”项的设置，例如“覆盖率未涉及的区域”   。
+   > 要更改颜色或使用加粗，请选择“工具” > “选项” > “环境” > “字体和颜色” > “显示其设置:     文本编辑器”。 在“显示项”下，调整“覆盖率”项的设置，例如“覆盖率未涉及的区域”。
    >
    > ![代码覆盖率字体和颜色](media/vs-2019/coverage-fonts-and-colors.png)
 
@@ -74,16 +76,16 @@ ms.locfileid: "91959770"
 
 ## <a name="report-in-blocks-or-lines"></a>按块或行报告
 
-代码覆盖率将以  块为单位计数。 块是恰好有一个入口点和出口点的一段代码。  在测试运行期间，如果程序的控制流通过某个块，则将该块计为“已覆盖”。 块的使用次数对结果没有影响。
+代码覆盖率将以块为单位计数。 块是恰好有一个入口点和出口点的一段代码。  在测试运行期间，如果程序的控制流通过某个块，则将该块计为“已覆盖”。 块的使用次数对结果没有影响。
 
-还可以通过在表标题中选择“添加/移除列”  来按行显示结果。 某些用户更喜欢行计数，因为百分比与你在源代码中看到的段的大小更为对应。 一个很长的计算块即使占用多行，也将计为一行。
+还可以通过在表标题中选择“添加/移除列”来按行显示结果。 某些用户更喜欢行计数，因为百分比与你在源代码中看到的段的大小更为对应。 一个很长的计算块即使占用多行，也将计为一行。
 
 > [!TIP]
 > 一个代码行可包含多个代码块。 如果是这种情况，并且测试运行执行行中的所有代码块，则将该代码行计为一行。 如果执行行中的某些代码块（但不是所有代码块），则将其计算为部分行。
 
 ## <a name="manage-code-coverage-results"></a>管理代码覆盖率结果
 
-“代码覆盖率结果”窗口通常显示最新运行的结果  。 如果更改了测试数据或每次只运行一部分测试，结果将会变化。
+“代码覆盖率结果”窗口通常显示最新运行的结果。 如果更改了测试数据或每次只运行一部分测试，结果将会变化。
 
 “代码覆盖率”窗口也可用来查看以前的结果或在其他计算机上获取的结果。
 
@@ -91,13 +93,13 @@ ms.locfileid: "91959770"
 
 - **若要查看以前的结果集**，请从下拉菜单中选择它。 该菜单将会显示一个临时列表。打开新的解决方案时，将会清除该列表。
 
-- **要查看以前会话中的结果**，请选择“导入代码覆盖率结果”，导航到解决方案中的 TestResults 文件夹，然后导入 .coverage 文件    。
+- **要查看以前会话中的结果**，请选择“导入代码覆盖率结果”，导航到解决方案中的 TestResults 文件夹，然后导入 .coverage 文件 。
 
-   如果源代码自 .coverage 文件生成之后已发生更改，则覆盖率着色可能不正确  。
+   如果源代码自 .coverage 文件生成之后已发生更改，则覆盖率着色可能不正确。
 
-- **若要使结果可作为文本读取**，请选择“导出代码覆盖率结果”  。 这将生成可使用其他工具处理或在邮件中轻松发送的可读 .coveragexml 文件  。
+- **若要使结果可作为文本读取**，请选择“导出代码覆盖率结果”。 这将生成可使用其他工具处理或在邮件中轻松发送的可读 .coveragexml 文件。
 
-- **要将结果发送给其他人**，请发送 .coverage 文件或导出的 .coveragexml 文件   。 他们随后可以导入该文件。 如果他们具有相同版本的源代码，还可以看到覆盖率着色。
+- **要将结果发送给其他人**，请发送 .coverage 文件或导出的 .coveragexml 文件 。 他们随后可以导入该文件。 如果他们具有相同版本的源代码，还可以看到覆盖率着色。
 
 ## <a name="merge-results-from-different-runs"></a>合并不同运行的结果
 
@@ -105,15 +107,15 @@ ms.locfileid: "91959770"
 
 例如，假设你在运行某个测试（输入为“2”）时发现某个特定函数已被覆盖了 50%。 当你第二次运行该测试（输入为“-2”）时，你在覆盖着色视图中发现该函数的另外 50% 也被覆盖。 现在，你合并来自这两个测试运行的结果，报告和覆盖率着色视图显示该函数已经 100% 被覆盖。
 
-为此，请使用![“代码覆盖率”窗口中“合并”按钮的图标](../test/media/codecoverage-mergeicon.png)合并代码覆盖率结果  。 你可以选择最近的运行或导入的结果的任意组合。 如果要组合导出的结果，则必须先将其导入。
+为此，请使用![“代码覆盖率”窗口中“合并”按钮的图标](../test/media/codecoverage-mergeicon.png) **合并代码覆盖率结果**。 你可以选择最近的运行或导入的结果的任意组合。 如果要组合导出的结果，则必须先将其导入。
 
-使用“导出代码覆盖率结果”  可保存合并操作的结果。
+使用“导出代码覆盖率结果”可保存合并操作的结果。
 
 ### <a name="limitations-in-merging"></a>有关合并的限制
 
 - 如果你合并不同版本的代码中的覆盖率数据，结果将单独显示，但不会合并。 若要获取完全合并的结果，请使用相同的代码生成，并且仅更改测试数据。
 
-- 如果你合并一个先导出然后导入的结果文件，则只能按行查看结果，而不能按块查看结果。 使用“添加/移除列”  命令可显示行数据。
+- 如果你合并一个先导出然后导入的结果文件，则只能按行查看结果，而不能按块查看结果。 使用“添加/移除列”命令可显示行数据。
 
 - 如果你合并来自 ASP.NET 项目的测试的结果，则将显示各个测试的结果，而不是合并的测试的结果。 这只适用于 ASP.NET 项目本身：任何其他程序集的结果都将合并。
 
@@ -243,9 +245,9 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
 
 使用以下宏：
 
-`ExcludeFromCodeCoverage(` ExclusionName  `, L"` FunctionName  `");`
+ ExclusionName`ExcludeFromCodeCoverage(` *FunctionName* `, L"`  `");`
 
-`ExcludeSourceFromCodeCoverage(` ExclusionName  `, L"` SourceFilePath  `");`
+ ExclusionName`ExcludeSourceFromCodeCoverage(` *SourceFilePath* `, L"`  `");`
 
 - *ExclusionName* 是唯一名称。
 
@@ -266,9 +268,9 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
 
 ### <a name="include-or-exclude-additional-elements"></a>包括或排除其他元素
 
-仅对已加载并且在 .dll 或 .exe 文件所在相同目录中有可用的 .pdb 文件的程序集执行代码覆盖率分析    。 因此，在某些情况下，可以通过获取适当的 .pdb 文件的副本来扩展包含的一组程序集  。
+仅对已加载并且在 .dll 或 .exe 文件所在相同目录中有可用的 .pdb 文件的程序集执行代码覆盖率分析  。 因此，在某些情况下，可以通过获取适当的 .pdb 文件的副本来扩展包含的一组程序集。
 
-可通过编写 .runsettings 文件来加强控制为代码覆盖率分析选择哪些程序集和元素  。 例如，你可以排除特定类型的程序集，而不必向它们的类添加特性。 有关详细信息，请参阅[自定义代码覆盖率分析](../test/customizing-code-coverage-analysis.md)。
+可通过编写 .runsettings 文件来加强控制为代码覆盖率分析选择哪些程序集和元素。 例如，你可以排除特定类型的程序集，而不必向它们的类添加特性。 有关详细信息，请参阅[自定义代码覆盖率分析](../test/customizing-code-coverage-analysis.md)。
 
 ## <a name="analyze-code-coverage-in-azure-pipelines"></a>分析 Azure Pipelines 中的代码覆盖率
 
@@ -276,23 +278,23 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
 
 ## <a name="analyze-code-coverage-from-the-command-line"></a>从命令行分析代码覆盖率
 
-若要从命令行运行测试，请使用 vstest.console.exe。  代码覆盖率是 vstest.console.exe 实用工具的一个选项  。
+若要从命令行运行测试，请使用 vstest.console.exe。 代码覆盖率是 vstest.console.exe 实用工具的一个选项。
 
 1. 启动“Visual Studio 开发人员命令提示”：
 
    ::: moniker range="vs-2017"
 
-   在 Windows“启动”  菜单中，选择“Visual Studio 2017”  >“VS 2017 的开发人员命令提示”  。
+   在 Windows“启动”菜单中，选择“Visual Studio 2017”“VS 2017 的开发人员命令提示” > 。
 
    ::: moniker-end
 
    ::: moniker range=">=vs-2019"
 
-   在 Windows“启动”  菜单中，选择“Visual Studio 2019”  >“VS 2019 的开发人员命令提示”  。
+   在 Windows“启动”菜单中，选择“Visual Studio 2019”“VS 2019 的开发人员命令提示” > 。
 
    ::: moniker-end
 
-2. 在命令提示符下，运行下列命令：
+2. 在命令提示符处运行以下命令：
 
    ```shell
    vstest.console.exe MyTestAssembly.dll /EnableCodeCoverage

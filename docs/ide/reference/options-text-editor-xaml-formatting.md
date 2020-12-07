@@ -1,5 +1,7 @@
 ---
 title: 选项，文本编辑器，XAML，格式
+description: 了解在使用 XAML 进行编程时，如何使用“格式设置选项”页面及其子页面来设置代码编辑器中的代码格式设置选项。
+ms.custom: SEO-VS-2020
 ms.date: 10/29/2018
 ms.topic: reference
 f1_keywords:
@@ -29,16 +31,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: d340a3b9468ea23c4cab23aabe19a7c1390955a3
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ddeb503153eacdcff993405e29bb8b3bdbe0c722
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75568238"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040519"
 ---
 # <a name="options-text-editor-xaml-formatting"></a>选项，文本编辑器，XAML，格式
 
-使用“格式设置”  属性页可指定如何在 XAML 文档中设置元素和特性的格式。 若要打开“选项”  对话框，请单击“工具”  菜单，然后单击“选项”  。 要访问“格式设置”属性页，请展开“文本编辑器” > “XAML” > “格式设置”节点。
+使用“格式设置”属性页可指定如何在 XAML 文档中设置元素和特性的格式。 若要打开“选项”对话框，请单击“工具”菜单，然后单击“选项”。 要访问“格式设置”属性页，请展开“文本编辑器” > “XAML” > “格式设置”节点。
 
 ## <a name="auto-formatting-events"></a>自动格式化事件
 
@@ -88,9 +90,9 @@ ms.locfileid: "75568238"
 
 **对超出指定长度的标记执行换行**
 
-指定是否在“长度”  指定的行长度处换行。
+指定是否在“长度”指定的行长度处换行。
 
-**长度**
+**时长**
 
 一行中可以包含的字符数。 如有必要，某些 XAML 行可以超过指定的行长度。
 
@@ -174,6 +176,6 @@ Width="75">Hello</Button>
 </Grid>
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [WPF 中的 XAML](/dotnet/framework/wpf/advanced/xaml-in-wpf)

@@ -1,5 +1,7 @@
 ---
 title: 如何使用适用于 C++ 的 CTest
+description: 了解如何使用 CTest 创建和运行测试，CTest 默认集成到 Visual Studio IDE 中。
+ms.custom: SEO-VS-2020
 ms.date: 01/23/2020
 ms.topic: how-to
 ms.author: corob
@@ -7,16 +9,16 @@ manager: jillfra
 ms.workload:
 - cplusplus
 author: corob-msft
-ms.openlocfilehash: c429c9e676ead54bb9f168e3220bf2d4791fac63
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5ed713e8b216d64816abd9e25d4d84ce53c44499
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85287228"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329986"
 ---
 # <a name="how-to-use-ctest-for-c-in-visual-studio-2017-and-later"></a>如何在 Visual Studio 2017 及更高版本中使用适用于 C++ 的 CTest
 
-默认情况下，CMake（包括 CTest）作为“使用 C++ 的桌面开发”工作负载的组件集成到 Visual Studio IDE 中  。 如果需要将其安装在计算机上，请打开 Visual Studio 安装程序计划，单击“使用 C++ 的桌面开发”按钮，然后单击“修改”   。 检查工作负载组件列表下的适用于 Windows 的 C++ CMake 工具  。
+默认情况下，CMake（包括 CTest）作为“使用 C++ 的桌面开发”工作负载的组件集成到 Visual Studio IDE 中。 如果需要将其安装在计算机上，请打开 Visual Studio 安装程序计划，单击“使用 C++ 的桌面开发”按钮，然后单击“修改”。 检查工作负载组件列表下的适用于 Windows 的 C++ CMake 工具。
 
 ## <a name="to-write-tests"></a>编写测试
 
@@ -26,7 +28,7 @@ Visual Studio 中的 CMake 支持不涉及 Visual Studio 项目系统。 因此�
 
 ## <a name="to-run-tests"></a>运行测试
 
-CTest 与“测试资源管理器”完全集成，同时支持 Google 和 Boost 单元测试框架  。 默认情况下，这些框架作为组件包含在“使用 C++ 的桌面开发”工作负载中  。 但是，如果你要从较旧版本的 Visual Studio 升级项目，可能需要通过使用 Visual Studio 安装程序来安装这些框架。
+CTest 与“测试资源管理器”完全集成，同时支持 Google 和 Boost 单元测试框架。 默认情况下，这些框架作为组件包含在“使用 C++ 的桌面开发”工作负载中。 但是，如果你要从较旧版本的 Visual Studio 升级项目，可能需要通过使用 Visual Studio 安装程序来安装这些框架。
 
 下图显示使用 Google Test 框架的 CTest 运行结果：
 
@@ -34,6 +36,6 @@ CTest 与“测试资源管理器”完全集成，同时支持 Google 和 Boost
 
 如果使用的是 CTest 而不是 Google 或 Boost 适配器，你将看到 CTest 级别而非单个测试方法级别的结果。 可以调试并单步调试仅限 CTest 的可执行文件，但不支持单个测试上的堆栈跟踪。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [编写适用于 C/C++ 的单元测试](writing-unit-tests-for-c-cpp.md)

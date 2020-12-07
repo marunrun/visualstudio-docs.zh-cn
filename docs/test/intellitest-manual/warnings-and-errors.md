@@ -1,5 +1,7 @@
 ---
 title: 警告和错误 | Microsoft IntelliTest 开发人员测试工具
+description: 本文包括分为不同的类别的 IntelliTest 警告和错误，并为每个警告和错误提供了说明。
+ms.custom: SEO-VS-2020
 ms.date: 05/02/2017
 ms.topic: reference
 helpviewer_keywords:
@@ -9,12 +11,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: c3f5fe55a4e1afb1a9551d43d0d61ae9f76b81e4
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 639b68c4d999a5e491f6e52a2cf3a7960563ed17
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77275434"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329427"
 ---
 # <a name="warnings-and-errors"></a>警告和错误
 
@@ -65,7 +67,7 @@ IntelliTest 在[输入生成](input-generation.md)期间会限制其浏览的所
 for (int i=0; i<100; i++) { }
 ```
 
-可以编辑派生自 PexSettingsAttributeBase 的属性（例如 [PexClass](attribute-glossary.md#pexclass) 或 [PexMethod](attribute-glossary.md#pexmethod)）的 MaxBranches 选项 。 下面的示例可有效地移除此边界：
+可以编辑派生自 PexSettingsAttributeBase 的属性（例如 [PexClass](attribute-glossary.md#pexclass) 或 [PexMethod](attribute-glossary.md#pexmethod)）的 MaxBranches 选项。 下面的示例可有效地移除此边界：
 
 ```csharp
 [PexMethod(MaxBranches=int.MaxValue)]
@@ -74,7 +76,7 @@ public void MyTest(...) {
 }
 ```
 
-还可通过设置 TestExcludePathBoundsExceeded 选项告知 IntelliTest 通常如何处理这些问题  。
+还可通过设置 TestExcludePathBoundsExceeded 选项告知 IntelliTest 通常如何处理这些问题。
 
 在测试代码中，可使用 [PexSymbolicValue](static-helper-classes.md#pexsymbolicvalue) 来忽略循环条件生成的约束：
 
@@ -88,7 +90,7 @@ for (int i=0;
 <a name="maxconstraintsolvertime-exceeded"></a>
 ## <a name="maxconstraintsolvertime-exceeded"></a>已超出 MaxConstraintSolverTime
 
-IntelliTest 使用[约束求解器](input-generation.md#constraint-solver)来计算新的测试输入。 约束求解是一个非常耗时的过程，所以 IntelliTest 允许配置边界，即 MaxConstraintSolverTime  。
+IntelliTest 使用[约束求解器](input-generation.md#constraint-solver)来计算新的测试输入。 约束求解是一个非常耗时的过程，所以 IntelliTest 允许配置边界，即 MaxConstraintSolverTime。
 
 对于许多应用程序，大幅度增加超时并不会有更好的覆盖率。 其原因在于，大部分超时都是由没有解决方案的约束系统引起的。 但是，IntelliTest 需要尝试所有可能的解决方法才能确定它不一致，这就会导致超时。
 
@@ -99,7 +101,7 @@ IntelliTest 在[输入生成](input-generation.md)期间会限制其浏览的所
 
 每个依赖于[参数化单元测试](test-generation.md#parameterized-unit-testing)的输入的条件分支均计入此限制。
 
-例如，以下代码中的每个路径均使用 n+1  个条件：
+例如，以下代码中的每个路径均使用 n+1 个条件：
 
 ```csharp
 [PexMethod]
@@ -114,7 +116,7 @@ void ParameterizedTest(int n) {
 }
 ```
 
-可以编辑派生自 PexSettingsAttributeBase 的属性（例如 [PexClass](attribute-glossary.md#pexclass) 或 [PexMethod](attribute-glossary.md#pexmethod)）的 MaxConditions 选项 。 例如：
+可以编辑派生自 PexSettingsAttributeBase 的属性（例如 [PexClass](attribute-glossary.md#pexclass) 或 [PexMethod](attribute-glossary.md#pexmethod)）的 MaxConditions 选项。 例如：
 
 ```csharp
 [PexMethod(MaxConditions=10000)]
@@ -123,7 +125,7 @@ void ParameterizedTest(int n) {
 }
 ```
 
-还可通过设置 TestExcludePathBoundsExceeded 选项告知 IntelliTest 通常如何处理这些问题  。
+还可通过设置 TestExcludePathBoundsExceeded 选项告知 IntelliTest 通常如何处理这些问题。
 
 可使用 [PexSymbolicValue](static-helper-classes.md#pexsymbolicvalue) 来忽略循环条件生成的约束：
 
@@ -145,7 +147,7 @@ IntelliTest 在[输入生成](input-generation.md)期间会限制其浏览的所
 
 执行和监视代码的每个调用（直接、间接、虚拟或跳转）均计入此限制。
 
-可编辑派生自 PexSettingsAttributeBase 的属性（例如 [PexClass](attribute-glossary.md#pexclass) 或 [PexMethod](attribute-glossary.md#pexmethod)）的 MaxCalls 选项 。 下面的示例可有效地移除此边界：
+可编辑派生自 PexSettingsAttributeBase 的属性（例如 [PexClass](attribute-glossary.md#pexclass) 或 [PexMethod](attribute-glossary.md#pexmethod)）的 MaxCalls 选项。 下面的示例可有效地移除此边界：
 
 ```csharp
 [PexMethod(MaxCalls=int.MaxValue)]
@@ -154,14 +156,14 @@ public void MyTest(...) {
 }
 ```
 
-还可通过设置 TestExcludePathBoundsExceeded 选项告知 IntelliTest 通常如何处理这些问题  。
+还可通过设置 TestExcludePathBoundsExceeded 选项告知 IntelliTest 通常如何处理这些问题。
 
 <a name="maxstack-exceeded"></a>
 ## <a name="maxstack-exceeded"></a>已超出 MaxStack
 
 IntelliTest 在[输入生成](input-generation.md)期间会限制其浏览的所有执行路径的调用堆栈大小。 发生堆栈溢出时，此功能可防止 IntelliTest 终止。
 
-可编辑派生自 PexSettingsAttributeBase 的属性（例如 [PexClass](attribute-glossary.md#pexclass) 或 [PexMethod](attribute-glossary.md#pexmethod)）的 MaxStack 选项 。 下例可有效地移除此边界（不推荐）：
+可编辑派生自 PexSettingsAttributeBase 的属性（例如 [PexClass](attribute-glossary.md#pexclass) 或 [PexMethod](attribute-glossary.md#pexmethod)）的 MaxStack 选项。 下例可有效地移除此边界（不推荐）：
 
 ```csharp
 [PexMethod(MaxStack=int.MaxValue)]
@@ -170,7 +172,7 @@ public void MyTest(...) {
 }
 ```
 
-还可通过设置 TestExcludePathBoundsExceeded 选项告知 IntelliTest 通常如何处理这些问题  。
+还可通过设置 TestExcludePathBoundsExceeded 选项告知 IntelliTest 通常如何处理这些问题。
 
 <a name="maxruns-exceeded"></a>
 ## <a name="maxruns-exceeded"></a>已超出 MaxRuns
@@ -179,7 +181,7 @@ IntelliTest 在[输入生成](input-generation.md)期间会限制其浏览的执
 
 并不是每次 IntelliTest 使用特定输入运行参数化测试时，它都会发出新的测试用例。 请参阅 [TestEmissionFilter](exploration-bounds.md#testemissionfilter) 了解有关详细信息。
 
-可编辑派生自 PexSettingsAttributeBase 的属性（例如 [PexClass](attribute-glossary.md#pexclass) 或 [PexMethod](attribute-glossary.md#pexmethod)）的 MaxRuns 选项 。 下例可有效地移除此边界（不推荐）：
+可编辑派生自 PexSettingsAttributeBase 的属性（例如 [PexClass](attribute-glossary.md#pexclass) 或 [PexMethod](attribute-glossary.md#pexmethod)）的 MaxRuns 选项。 下例可有效地移除此边界（不推荐）：
 
 ```csharp
 [PexMethod(MaxRuns=2000)]
@@ -197,7 +199,7 @@ IntelliTest 在[输入生成](input-generation.md)期间会限制其浏览的执
 
 IntelliTest 通常会在最初查找许多有趣的测试输入，但一段时间之后它就不会再发出任何其他测试。 此选项可控制 IntelliTest 在多长时间内不断尝试查找其他相关的测试输入。
 
-可编辑派生自 PexSettingsAttributeBase 的属性（例如 [PexClass](attribute-glossary.md#pexclass) 或 [PexMethod](attribute-glossary.md#pexmethod)）的 MaxRunsWithoutNewTests 选项 。 下例可有效地移除此边界（不推荐）：
+可编辑派生自 PexSettingsAttributeBase 的属性（例如 [PexClass](attribute-glossary.md#pexclass) 或 [PexMethod](attribute-glossary.md#pexmethod)）的 MaxRunsWithoutNewTests 选项。 下例可有效地移除此边界（不推荐）：
 
 ```csharp
 [PexMethod(MaxRunsWithoutNewTests=2000)]
@@ -235,7 +237,7 @@ IntelliTest 可针对任何 .NET 类型[生成测试输入](input-generation.md)
 
 * **PexUseTypeAttribute**，指向特定类型。
 
-  例如，如果 IntelliTest 报告“不知道可以分配给 System.Collections.IDictionary 的任何类型”，则可以将以下 PexUseTypeAttribute 附加到测试（或装置类），以提供帮助   ：
+  例如，如果 IntelliTest 报告“不知道可以分配给 System.Collections.IDictionary 的任何类型”，则可以将以下 PexUseTypeAttribute 附加到测试（或装置类），以提供帮助：
 
   ```csharp
   [PexMethod]
@@ -298,7 +300,7 @@ IntelliTest 会通过监视 .NET 应用程序的执行来[生成测试输入](in
 
 IntelliTest 会通过监视程序执行来[生成测试输入](input-generation.md)。 仅当程序确定，并且相关行为由测试输入控制时才能生成相关测试输入。
 
-执行测试用例期间，如果调用方法的行为不确定或与环境进行交互，会出现此警告。 示例包括 System.Random 和 System.IO.File 的方法   。 如果希望 IntelliTest 创建有意义的测试输入，必须模拟 IntelliTest 标记为可测试性问题的方法。
+执行测试用例期间，如果调用方法的行为不确定或与环境进行交互，会出现此警告。 示例包括 System.Random 和 System.IO.File 的方法。 如果希望 IntelliTest 创建有意义的测试输入，必须模拟 IntelliTest 标记为可测试性问题的方法。
 
 <a name="limitation"></a>
 ## <a name="limitation"></a>限制
@@ -309,7 +311,7 @@ IntelliTest 会使用[约束求解器](input-generation.md#constraint-solver)来
 
 * 大部分浮点操作（浮点数仅支持某些线性运算）
 * 浮点数和整数之间的转换
-* System.Decimal 类型上的所有操作 
+* System.Decimal 类型上的所有操作
 
 执行的代码执行操作或调用 IntelliTest 无法解释的方法时，会出现此警告。
 
@@ -342,6 +344,6 @@ IntelliTest 不知道未检测中间方法的作用，因此无法生成与嵌�
 
 <a name="report-bug"></a>
 
-## <a name="got-feedback"></a>是否获得反馈？
+## <a name="got-feedback"></a>有反馈？
 
 在[开发人员社区](https://developercommunity.visualstudio.com/content/idea/post.html?space=8)上发布想法和功能请求。

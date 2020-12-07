@@ -1,5 +1,7 @@
 ---
 title: 步骤 7：保持对可见
+description: 了解如何添加 if 语句，以便在玩家选择匹配的图标对时，这些图标保持可见。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -13,12 +15,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e854425bab10174220188b23fb7e292371e9cb48
-ms.sourcegitcommit: 2c26d6e6f2a5c56ae5102cdded7b02f2d0fd686c
+ms.openlocfilehash: 9fc61a59d1e04d96fb36e7a7e4cd1304e2057adb
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88168718"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479441"
 ---
 # <a name="step-7-keep-pairs-visible"></a>步骤 7：保持对可见
 只要玩家仅选择不匹配的图标对，游戏即可顺畅地运行。 但是，请考虑玩家选择匹配对时发生的情况。 游戏不是通过打开计时器（使用 <xref:System.Windows.Forms.Timer.Start> 方法）来使图标消失，而应当进行重置，这样游戏就不再使用 `firstClicked` 和 `secondClicked` 引用变量跟踪任何标签，而且无需重置选择的两个标签的颜色。
@@ -57,12 +59,12 @@ ms.locfileid: "88168718"
     firstClicked = null;
     ```
 
-     这两个语句中的第一句检查两个图标是否相同。 因为要比较两个值，所以 C# 程序使用 `==` 相等运算符。 第二个语句实际上更改值（称为“赋值”**），将 `firstClicked` 引用变量设置为等于 `null` 以重置它。 这就是使用 `=` 赋值运算符的原因。 C# 使用 `=` 设置值，使用 `==` 比较值。 Visual Basic 使用 `=` 进行变量赋值和比较。
+     这两个语句中的第一句检查两个图标是否相同。 因为要比较两个值，所以 C# 程序使用 `==` 相等运算符。 第二个语句实际上更改值（称为“赋值”），将 `firstClicked` 引用变量设置为等于 `null` 以重置它。 这就是使用 `=` 赋值运算符的原因。 C# 使用 `=` 设置值，使用 `==` 比较值。 Visual Basic 使用 `=` 进行变量赋值和比较。
 
 2. 保存并运行程序，然后开始选择窗体上的图标。 如果选择的是不匹配的对，则将触发计时器的 Tick 事件，两个图标都会消失。 如果选择的是匹配的对，则将执行新的 `if` 语句，而 return 语句会使方法跳过启动计时器的代码，因此图标保持可见，如下图所示。
 
      ![在本教程中创建的游戏](../ide/media/express_finishedgame.png)<br/>
-***具有可见图标对*** *的匹配游戏*
+*具有可见图标对的匹配游戏
 
 ## <a name="to-continue-or-review"></a>继续或查看
 

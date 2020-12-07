@@ -1,5 +1,7 @@
 ---
 title: 选项, 文本编辑器, C/C++, 视图
+description: 了解如何使用 C/C++ 部分中的“查看”页面在 Visual Studio 中更改代码波形曲线、无效代码、大纲显示等的默认行为。
+ms.custom: SEO-VS-2020
 ms.date: 10/29/2018
 ms.topic: reference
 f1_keywords:
@@ -11,18 +13,18 @@ ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95963245b15828f374e9812a9bb09d015b21a94b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 68d08953ca3c493f3b3e42dd4ddd84bc19bdfd6e
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77278689"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96041069"
 ---
 # <a name="options-text-editor-cc-view"></a>选项, 文本编辑器, C/C++, 视图
 
 使用 C 或 C++ 进行编程时，请使用以下属性页更改代码编辑器的默认行为。
 
-要访问此属性页，请选择“工具” > “选项”并依次展开“文本编辑器”和“C/C++”，然后选择“视图”。
+要访问此属性页，请选择“工具” > “选项”并依次展开“文本编辑器”和“C/C++”，然后选择“视图”    。
 
 ## <a name="code-squiggles"></a>代码波形曲线
 
@@ -54,7 +56,7 @@ ms.locfileid: "77278689"
 
 - **大纲语句块** - 自动描绘语句块。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [设置语言特定的编辑器选项](../../ide/reference/setting-language-specific-editor-options.md)
 - [在 C++ 中重构（VC 博客）](https://devblogs.microsoft.com/cppblog/all-about-c-refactoring-in-visual-studio-2015-preview/)

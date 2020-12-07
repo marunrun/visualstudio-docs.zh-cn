@@ -1,5 +1,7 @@
 ---
 title: 测试控制器和测试代理的超时周期
+description: 了解如何通过编辑关联的 XML 配置文件来更改测试控制器和测试代理的超时值。
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.assetid: 777d0db5-0073-458a-a2a3-58b1c1f24c60
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 7b06dc7d363cefd568a6e1432582744f486fa222
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9dc661999eb12bb679aa3622f0f14adc3ffc661a
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85287280"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329999"
 ---
 # <a name="how-to-specify-timeout-periods-for-test-controllers-and-test-agents"></a>如何：为测试控制器和测试代理指定超时周期
 
@@ -26,7 +28,7 @@ ms.locfileid: "85287280"
 
 若要编辑测试控制器或测试代理的各种超时设置，请使用表中的键名和值来修改以下配置文件：
 
-- 测试控制器：QTController.exe.config 
+- 测试控制器：QTController.exe.config
 
     |项名称|说明|“值”|
     |-|-----------------|-|
@@ -35,7 +37,7 @@ ms.locfileid: "85287280"
     |AgentInitializeTimeout|中止测试运行前，在测试运行开始时等待所有代理及其数据收集器进行初始化的秒数。 如果使用数据收集器，则此值应相当大。|“n”秒。 默认值：“120”（两分钟）。|
     |AgentCleanupTimeout|完成测试运行前，等待所有代理及其数据收集器进行清理的秒数。 如果使用数据收集器，则此值应相当大。|“n”秒。 默认值：“120”（两分钟）。|
 
-- 测试代理：QTAgentService.exe.config 
+- 测试代理：QTAgentService.exe.config
 
     |项名称|说明|“值”|
     |-|-----------------|-|
@@ -46,7 +48,7 @@ ms.locfileid: "85287280"
 
 ## <a name="to-specify-agent-timeout-options-for-a-test-controller"></a>指定测试控制器的代理超时选项
 
-1. 打开位于 %ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE 中的 QTCcontroller.exe.config XML 配置文件   。
+1. 打开位于 %ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE 中的 QTCcontroller.exe.config XML 配置文件。
 
 2. 找到 `<appSettings>` 标记。
 
@@ -68,7 +70,7 @@ ms.locfileid: "85287280"
     <add key="AgentConnectionTimeoutInSeconds" value="180"/>
     ```
 
-    或
+    - 或 -
 
     添加其他键并指定超时值。 例如，可以在 `AgentInitializeTimeout` 节中添加 `<appSettings>` 键并指定五分钟的值：
 
@@ -80,7 +82,7 @@ ms.locfileid: "85287280"
 
 ## <a name="to-specify-agent-timeout-options-for-a-test-agent"></a>指定测试控代理的代理超时选项
 
-1. 打开位于 %ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE 中的 QTAgentService.exe.config XML 配置文件   。
+1. 打开位于 %ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE 中的 QTAgentService.exe.config XML 配置文件。
 
 2. 找到 `<appSettings>` 标记。
 
@@ -102,7 +104,7 @@ ms.locfileid: "85287280"
     <add key="ControllerConnectionPeriodInSeconds" value="60"/>
     ```
 
-    或
+    - 或 -
 
     添加其他键并指定超时值。 例如，可以在 `RemotingTimeoutSeconds` 节中添加 `<appSettings>` 键并指定十五分钟的值：
 
@@ -112,7 +114,7 @@ ms.locfileid: "85287280"
     </appSettings>
     ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [安装和配置测试代理](../test/lab-management/install-configure-test-agents.md)
 - [修改负载测试记录设置](../test/modify-load-test-logging-settings.md)

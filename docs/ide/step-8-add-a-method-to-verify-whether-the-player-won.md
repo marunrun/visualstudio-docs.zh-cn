@@ -1,5 +1,7 @@
 ---
 title: 步骤 8：添加验证玩家是否获胜的方法
+description: 了解如何添加一种方法来确定玩家是否获胜。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -13,12 +15,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 881fa0d90390a059bea28cb19584381f814396d3
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: c53afebfd8c39e9c43f82916095d8eeef2ec8b11
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "77579759"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479285"
 ---
 # <a name="step-8-add-a-method-to-verify-whether-the-player-won"></a>步骤 8：添加验证玩家是否获胜的方法
 你已创建了一个有趣的游戏，但需要添加其他项来完成制作。 该游戏应当在玩家获胜时结束，因此您需要添加 `CheckForWinner()` 方法以验证玩家是否获胜。
@@ -40,13 +42,13 @@ ms.locfileid: "77579759"
      [!code-csharp[VbExpressTutorial4Step8#11](../ide/codesnippet/CSharp/step-8-add-a-method-to-verify-whether-the-player-won_2.cs)]
      [!code-vb[VbExpressTutorial4Step8#11](../ide/codesnippet/VisualBasic/step-8-add-a-method-to-verify-whether-the-player-won_2.vb)]
 
-3. 保存并运行程序。 玩游戏并匹配所有图标。 当你获胜时，程序将显示一个祝贺 MessageBox  （如以下屏幕截图所示），然后关闭该框。
+3. 保存并运行程序。 玩游戏并匹配所有图标。 当你获胜时，程序将显示一个祝贺 MessageBox（如以下屏幕截图所示），然后关闭该框。
 
      ![具有 MessageBox 的匹配游戏](../ide/media/express_tut4step8.png)<br/>
-具有 MessageBox 的匹配游戏  
+*具有 MessageBox 的匹配游戏 
 
 ## <a name="to-continue-or-review"></a>继续或查看
 
-- 要转到下一个教程步骤，请参阅[步骤 9：  尝试其他功能](../ide/step-9-try-other-features.md)。
+- 要转到下一个教程步骤，请参阅[步骤 9：试用其他功能](../ide/step-9-try-other-features.md)。
 
-- 要返回上一个教程步骤，请参阅[步骤 7：保持对可见](../ide/step-7-keep-pairs-visible.md)。
+- 要返回到上一个教程步骤，请参阅[步骤 7：保持对可见](../ide/step-7-keep-pairs-visible.md)。

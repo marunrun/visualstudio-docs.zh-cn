@@ -1,5 +1,7 @@
 ---
 title: 属性术语表 | Microsoft IntelliTest 开发人员测试工具
+description: 本文提供了按名称空间组织的 IntelliTest 属性列表以及这些属性的详细信息。
+ms.custom: SEO-VS-2020
 ms.date: 05/02/2017
 ms.topic: reference
 helpviewer_keywords:
@@ -9,12 +11,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 00d8b24d26237a3c7b4130eba4614b5ea7b7eccd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8c356893b0c9716374950df3edc3dc480f022100
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89315221"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330220"
 ---
 # <a name="attribute-glossary"></a>属性术语表
 
@@ -46,9 +48,9 @@ ms.locfileid: "89315221"
 <a name="pexassumenotnull"></a>
 ## <a name="pexassumenotnull"></a>PexAssumeNotNull
 
-此属性表示控制的值不能为“null”  。 可以将其附加到：
+此属性表示控制的值不能为“null”。 可以将其附加到：
 
-* 参数化测试方法的参数 
+* 参数化测试方法的参数
 
   ```csharp
   // assume foo is not null
@@ -56,7 +58,7 @@ ms.locfileid: "89315221"
   public void SomeTest([PexAssumeNotNull]IFoo foo, ...) {}
   ```
 
-* 字段 
+* 字段
 
   ```csharp
   public class Foo {
@@ -66,7 +68,7 @@ ms.locfileid: "89315221"
   }
   ```
 
-* 类型 
+* 类型
 
   ```csharp
   // never consider null for Foo types
@@ -79,9 +81,9 @@ ms.locfileid: "89315221"
 <a name="pexclass"></a>
 ## <a name="pexclass"></a>PexClass
 
-此属性标记包含“explorations”的类  。 它等同于 MSTest TestClassAttribute（或 NUnit TestFixtureAttribute）   。 此属性是可选的。
+此属性标记包含“explorations”的类。 它等同于 MSTest TestClassAttribute（或 NUnit TestFixtureAttribute）。 此属性是可选的。
 
-标记为 [PexClass](#pexclass) 的类必须采用默认构造类型  ：
+标记为 [PexClass](#pexclass) 的类必须采用默认构造类型：
 
 * 公开导出的类型
 * 默认构造函数
@@ -89,7 +91,7 @@ ms.locfileid: "89315221"
 
 如果类不满足这些要求，系统会报错，浏览失败。
 
-此外，强烈建议使这些类成为“部分”，便于 IntelliTest 生成属于该类但位于单独文件的新类  。 此方法可解决因[可见性](input-generation.md#visibility)引起的许多问题，是 C# 中的典型技术。
+此外，强烈建议使这些类成为“部分”，便于 IntelliTest 生成属于该类但位于单独文件的新类。 此方法可解决因[可见性](input-generation.md#visibility)引起的许多问题，是 C# 中的典型技术。
 
 **其他套件和类别**：
 
@@ -205,7 +207,7 @@ public void MyTest(object testParameter)
 
 **示例**
 
-以下测试指定堆栈的构造函数可能会引发 ArgumentOutOfRangeException   ：
+以下测试指定堆栈的构造函数可能会引发 ArgumentOutOfRangeException：
 
 ```csharp
 class Stack {

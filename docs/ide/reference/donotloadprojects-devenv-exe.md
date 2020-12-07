@@ -1,5 +1,7 @@
 ---
 title: -DoNotLoadProjects (devenv.exe)
+description: 了解如何使用 DoNotLoadProjects devenv 命令行开关在不加载任何项目的情况下打开指定的解决方案。
+ms.custom: SEO-VS-2020
 ms.date: 04/30/2019
 ms.topic: reference
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 51e3341082ff354fc8bc87a89b3d7bc56e4e7887
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ef3502a2180f7ae7ed5963deb14844b46f3dbff9
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75569850"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040623"
 ---
 # <a name="donotloadprojects-devenvexe"></a>/DoNotLoadProjects (devenv.exe)
 
@@ -30,7 +32,7 @@ ms.locfileid: "75569850"
 devenv /DoNotLoadProjects SolutionName
 ```
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 
 *SolutionName*
 
@@ -44,7 +46,7 @@ devenv /DoNotLoadProjects SolutionName
 devenv /donotloadprojects MySln.sln
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Visual Studio 中筛选的解决方案](../filtered-solutions.md)
 - [Devenv 命令行开关](../../ide/reference/devenv-command-line-switches.md)

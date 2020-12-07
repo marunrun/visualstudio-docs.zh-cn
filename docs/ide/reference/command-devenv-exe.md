@@ -1,5 +1,7 @@
 ---
 title: -Command (devenv.exe)
+description: 了解如何使用 Command devenv 命令行开关在启动 Visual Studio IDE 后执行指定的命令。
+ms.custom: SEO-VS-2020
 ms.date: 12/10/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 434b2ad0f2a6ca4d84c6d82bf9a1a85876a4d975
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: bcfff93ac9cb4903c534c0d4d57387a5143b6b40
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75570396"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040870"
 ---
 # <a name="command-devenvexe"></a>/Command (devenv.exe)
 
@@ -29,9 +31,9 @@ ms.locfileid: "75570396"
 devenv /Command CommandName
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 
-CommandName 
+CommandName
 
 必需。 Visual Studio 命令或其别名的完整名称（放在双引号中）。 有关命令和别名语法的详细信息，请参阅 [Visual Studio 命令](../../ide/reference/visual-studio-commands.md)。
 
@@ -63,8 +65,8 @@ devenv /command "navigate https://docs.microsoft.com/"
 devenv /command "nf some_file.cs"
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Devenv 命令行开关](../../ide/reference/devenv-command-line-switches.md)
-- [Visual Studio Command Aliases](../../ide/reference/visual-studio-command-aliases.md)
+- [Visual Studio 命令别名](../../ide/reference/visual-studio-command-aliases.md)
 - [“命令”窗口](command-window.md)

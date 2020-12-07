@@ -1,5 +1,7 @@
 ---
 title: 使用多个 UI 映射测试大型应用程序
+description: 了解如何在使用多个 UI 映射测试大型应用程序时使用编码的 UI 测试。 此功能需要 Visual Studio Enterprise。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 99e703d10d2bc6ed8fd573f4973e73f7ad40a937
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 93ae6aaa77a133a0d1805554a38b2714bff5b312
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85286578"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330155"
 ---
 # <a name="test-a-large-application-with-multiple-ui-maps"></a>使用多个 UI 映射测试大型应用程序
 
@@ -50,28 +52,28 @@ ms.locfileid: "85286578"
 
 ### <a name="to-add-a-ui-map-to-your-coded-ui-test-project"></a>向编码的 UI 测试项目中添加 UI 映射
 
-1. 要在编码的 UI 测试项目中创建用于存储所有 UI 映射的文件夹，请在解决方案资源管理器中右键单击编码的 UI 测试项目文件，指向“添加”，然后选择“新建文件夹”    。 例如，可将其命名为 `UIMaps`。
+1. 要在编码的 UI 测试项目中创建用于存储所有 UI 映射的文件夹，请在解决方案资源管理器中右键单击编码的 UI 测试项目文件，指向“添加”，然后选择“新建文件夹”  。 例如，可将其命名为 `UIMaps`。
 
     新文件夹显示在编码的 UI 测试项目下面。
 
-2. 右键单击“`UIMaps`”文件夹，指向“添加”  ，然后选择“新建项”  。
+2. 右键单击“`UIMaps`”文件夹，指向“添加”，然后选择“新建项”。
 
-    随即出现“添加新项”  对话框。
+    随即出现“添加新项”对话框。
 
    > [!NOTE]
    > 若要添加新的编码 UI 测试映射，你必须在编码的 UI 测试项目中。
 
-3. 选择列表中的“编码的 UI 测试映射”  。
+3. 选择列表中的“编码的 UI 测试映射”。
 
-    在“名称”  框中，输入新 UI 映射的名称。 使用该映射将表示的组件或页的名称，例如，`HomePageMap`。
+    在“名称”框中，输入新 UI 映射的名称。 使用该映射将表示的组件或页的名称，例如，`HomePageMap`。
 
 4. 选择“添加”  。
 
-    此时，Visual Studio 窗口最小化，同时显示“编码的 UI 测试生成器”  对话框。
+    此时，Visual Studio 窗口最小化，同时显示“编码的 UI 测试生成器”对话框。
 
-5. 录制第一个方法的操作，然后选择“生成代码”  。
+5. 录制第一个方法的操作，然后选择“生成代码”。
 
-6. 录制第一个组件或页面的所有操作和断言并将它们分入方法后，关闭“编码的 UI 测试生成器”  对话框。
+6. 录制第一个组件或页面的所有操作和断言并将它们分入方法后，关闭“编码的 UI 测试生成器”对话框。
 
 7. 继续创建 UI 映射。 为每个组件录制操作和断言并将它们分组为方法，然后生成代码。
 

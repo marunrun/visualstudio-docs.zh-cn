@@ -1,5 +1,7 @@
 ---
 title: 教程 3：创建匹配游戏
+description: 了解如何制作匹配游戏，在该游戏中，玩家必须匹配隐藏的图标对。
+ms.custom: SEO-VS-2020
 ms.date: 10/16/2019
 ms.assetid: 525815c8-2845-45e8-be96-100d1f144725
 ms.topic: tutorial
@@ -9,12 +11,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 399275b64392ab4c6def97eb8c4f6a5bdafb2c4a
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 62859c86ff3b4057eceb1f6e00ebfd46867f9927
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810830"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479025"
 ---
 # <a name="tutorial-3-create-a-matching-game"></a>教程 3：创建匹配游戏
 
@@ -41,7 +43,7 @@ ms.locfileid: "90810830"
 
 ## <a name="tutorial-links"></a>教程链接
 
-|Title|描述|
+|Title|说明|
 |-----------|-----------------|
 |[步骤 1：创建项目并向窗体添加表](../ide/step-1-create-a-project-and-add-a-table-to-your-form.md)|首先创建项目并添加 `TableLayoutPanel` 控件，以保持控件正确对齐。|
 |[步骤 2：添加 Random 对象和图标列表](../ide/step-2-add-a-random-object-and-a-list-of-icons.md)|添加 `Random` 对象和 `List` 对象，以创建图标列表。|
@@ -57,7 +59,7 @@ ms.locfileid: "90810830"
 
 ## <a name="next-steps"></a>后续步骤
 
-要开始学习本教程，请从[步骤 1：  创建项目并向窗体添加表](../ide/step-1-create-a-project-and-add-a-table-to-your-form.md)。
+要开始学习本教程，请从[步骤 1：创建项目并向窗体添加表](../ide/step-1-create-a-project-and-add-a-table-to-your-form.md)。
 
 ## <a name="see-also"></a>请参阅
 

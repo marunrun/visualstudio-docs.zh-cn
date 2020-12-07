@@ -1,5 +1,7 @@
 ---
 title: Live Unit Testing
+description: 了解应用程序开发过程中的 Live Unit Testing，包括受支持的框架以及配置 Live Unit Testing 的方法。
+ms.custom: SEO-VS-2020
 ms.date: 04/07/2020
 ms.topic: how-to
 helpviewer_keywords:
@@ -8,12 +10,12 @@ author: mikejo5000
 ms.author: mikejo
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1084b79fceda34cceed51ae8d4a5a84d7ebfb016
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.openlocfilehash: 82ed41514109887d32f38faf4f965c923864ae32
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88249901"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329349"
 ---
 # <a name="how-to-configure-and-use-live-unit-testing"></a>如何配置和使用 Live Unit Testing
 
@@ -133,7 +135,7 @@ Live Unit Testing 适用于下表中列出的三个常用的单元测试框架�
 ::: moniker range="vs-2017"
 ## <a name="test-explorer"></a>测试资源管理器
 
-测试资源管理器具有可供运行和调试测试以及分析测试结果的界面。 Live Unit Testing 与**测试资源管理器**集成。 当 Live Unit Testing 未启用或已停止时，**测试资源管理器**将显示上次运行测试时的单元测试状态。 源代码更改需要重新运行测试。 与此相反，启用 Live Unit Testing 后，**测试资源管理器**中的单元测试状态将立即更新。 你不必显式运行单元测试。
+测试资源管理器具有可供运行和调试测试以及分析测试结果的界面。 Live Unit Testing 与 **测试资源管理器** 集成。 当 Live Unit Testing 未启用或已停止时，**测试资源管理器** 将显示上次运行测试时的单元测试状态。 源代码更改需要重新运行测试。 与此相反，启用 Live Unit Testing 后，**测试资源管理器** 中的单元测试状态将立即更新。 你不必显式运行单元测试。
 
 > [!TIP]
 > 可在 Visual Studio 顶层菜单中依次选择“测试” > “Windows” > “测试资源管理器”，打开 Live Unit Testing   。
@@ -147,7 +149,7 @@ Live Unit Testing 适用于下表中列出的三个常用的单元测试框架�
 Live Unit Testing 自动运行、更新测试结果与通过“测试资源管理器”显式运行测试结果有所不同。 区别包括：
 
 - 从测试资源管理器窗口运行或调试测试将运行常规二进制文件，而 Live Unit Testing 运行已检测二进制文件。
-- Live Unit Testing 不会新建应用程序域来运行测试，而是通过默认域运行测试。 从**测试资源管理器**窗口运行的测试确实会创建新的应用程序域。
+- Live Unit Testing 不会新建应用程序域来运行测试，而是通过默认域运行测试。 从 **测试资源管理器** 窗口运行的测试确实会创建新的应用程序域。
 - Live Unit Testing 按顺序运行每个测试程序集中的测试。 在“测试资源管理器”窗口中，可以选择并行运行多个测试。
 ::: moniker-end
 
@@ -168,7 +170,7 @@ Live Unit Testing 类似于测试资源管理器，具有可供运行和调试�
 Live Unit Testing 自动运行、更新测试结果与通过“测试资源管理器”显式运行测试结果有所不同。 区别包括：
 
 - 从测试资源管理器窗口运行或调试测试将运行常规二进制文件，而 Live Unit Testing 运行已检测二进制文件。
-- Live Unit Testing 不会新建应用程序域来运行测试，而是通过默认域运行测试。 从**测试资源管理器**窗口运行的测试确实会创建新的应用程序域。
+- Live Unit Testing 不会新建应用程序域来运行测试，而是通过默认域运行测试。 从 **测试资源管理器** 窗口运行的测试确实会创建新的应用程序域。
 - Live Unit Testing 按顺序运行每个测试程序集中的测试。 在“测试资源管理器”窗口中，可以选择并行运行多个测试。
 ::: moniker-end
 

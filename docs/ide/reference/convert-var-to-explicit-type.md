@@ -1,5 +1,7 @@
 ---
 title: 重构代码以将 var 替换为显式类型
+description: 了解如何使用“快速操作”将局部变量表达式中的 var 替换为显式类型。
+ms.custom: SEO-VS-2020
 ms.date: 05/15/2018
 ms.topic: reference
 author: TerryGLee
@@ -9,12 +11,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4ec388564e1851402f085f6bbaefba08dbea212c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: a9270ca6cf7407d196eca211b6a76c6dc6a8be78
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75595769"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305527"
 ---
 # <a name="refactoring-to-replace-var-with-an-explicit-type"></a>重构以将 var 替换为显式类型
 
@@ -42,9 +44,9 @@ ms.locfileid: "75595769"
 
    ![使用显式类型快速操作菜单](media/use-explicit-type.png)
 
-1. 选择“使用显式类型”  。 或者，选择“预览更改”  以打开[“预览更改”](../../ide/preview-changes.md)对话框，然后选择“应用”  。
+1. 选择“使用显式类型”。 或者，选择“预览更改”  以打开[“预览更改”](../../ide/preview-changes.md)对话框，然后选择“应用”  。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [隐式类型化变量 (C#)](/dotnet/csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables)
 - [重构](../refactoring-in-visual-studio.md)

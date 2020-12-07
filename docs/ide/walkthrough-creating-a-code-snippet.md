@@ -1,5 +1,7 @@
 ---
 title: 演练：创建代码片段
+description: 了解如何通过三个步骤创建代码片段：创建 XML 文件，填写适当的元素，然后向其添加代码。
+ms.custom: SEO-VS-2020
 ms.date: 03/31/2020
 ms.topic: how-to
 helpviewer_keywords:
@@ -17,12 +19,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 46744decddcc2d50fd05ea86cc6ebfad9d210031
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.openlocfilehash: 61b7f227344f00fe277d4bf062f83bd3c1d79fd5
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88800497"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479636"
 ---
 # <a name="walkthrough-create-a-code-snippet"></a>演练：创建代码片段
 
@@ -97,7 +99,7 @@ ms.locfileid: "88800497"
    ::: moniker range="vs-2017"
 
    %USERPROFILE%\Documents\Visual Studio 2017\Code Snippets\Visual C#\My Code Snippets  
-   %USERPROFILE%\Documents\Visual Studio 2017\Code Snippets\Visual Basic\My Code Snippets**
+   %USERPROFILE%\Documents\Visual Studio 2017\Code Snippets\Visual Basic\My Code Snippets
 
    ::: moniker-end
 

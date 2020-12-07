@@ -1,5 +1,7 @@
 ---
 title: 了解如何使用实时单元测试测试代码
+description: 通过创建面向 .NET Standard 的简单类库了解 Live Unit Testing 的用法，并通过创建面向 .NET Core 的 MSTest 项目对其进行测试。
+ms.custom: SEO-VS-2020
 ms.date: 04/03/2020
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: ef0fbd5c422d16df4e361ff95f4ac8deabdd5bae
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ce2376f2dc3cb6abeb11b328452defb891949558
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85287007"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329492"
 ---
 # <a name="get-started-with-live-unit-testing"></a>Live Unit Testing 入门
 

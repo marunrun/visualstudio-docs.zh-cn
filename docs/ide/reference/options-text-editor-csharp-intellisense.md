@@ -1,5 +1,7 @@
 ---
 title: 选项，文本编辑器，C#，IntelliSense
+description: 了解如何使用 C# 部分中的“IntelliSense”页面修改影响 IntelliSense for C# 行为的设置。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,18 +18,18 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 87a167a75f3b06522da77d562b0137df89757975
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 8e727fad6d3cb15f70cf630b1077170d16d28b7f
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75596211"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96039739"
 ---
 # <a name="options-text-editor-c-intellisense"></a>选项，文本编辑器，C#，IntelliSense
 
-使用“IntelliSense”选项页可修改影响 IntelliSense for C# 行为的设置  。 要访问此选项页，请选择“工具” > “选项”，然后选择“文本编辑器” > “C#” > “IntelliSense”。
+使用“IntelliSense”选项页可修改影响 IntelliSense for C# 行为的设置。 要访问此选项页，请选择“工具” > “选项”，然后选择“文本编辑器” > “C#” > “IntelliSense”    。
 
-“IntelliSense”选项页面包含以下选项  ：
+“IntelliSense”选项页面包含以下选项：
 
 ## <a name="completion-lists"></a>完成列表
 
@@ -53,37 +55,37 @@ ms.locfileid: "75596211"
 
 - 在标识符后键入 ?-Tab 时包含片段
 
-   选择此选项后，IntelliSense 会在标识符后按 ?+Tab 时，将 C# 代码片段的别名添加到完成列表中
+   选择此选项后，IntelliSense 会在标识符后按 ?+Tab 时，将 C# 代码片段的别名添加到完成列表中 
 
 ## <a name="enter-key-behavior"></a>输入关键行为
 
 - 按下 Enter 时不添加新行
 
-   指定在完成列表中选择项目以及按下 Enter 之后不自动添加新行  。
+   指定在完成列表中选择项目以及按下 Enter 之后不自动添加新行。
 
 - 只有在完整键入的单词结尾后按下回车键时才添加新行
 
-   指定如果键入完成列表中某条目的所有字符后按 Enter，则自动添加新行并且光标移动到新行  。
+   指定如果键入完成列表中某条目的所有字符后按 Enter，则自动添加新行并且光标移动到新行。
 
-   例如，如果键入 `else` 后按 Enter，则编辑器中显示以下内容  ：
+   例如，如果键入 `else` 后按 Enter，则编辑器中显示以下内容：
 
    `else`
 
    `|`（光标位置）
 
-   但是，如果仅键入 `el`，然后按 Enter，则编辑器中显示以下内容  ：
+   但是，如果仅键入 `el`，然后按 Enter，则编辑器中显示以下内容：
 
    `else|`（光标位置）
 
 - 按下 Enter 时始终添加新行
 
-   指定如果键入完成列表中某条目的任意字符后按 Enter，则自动添加新行并且光标移动到新行   。
+   指定如果键入完成列表中某条目的任意字符后按 Enter，则自动添加新行并且光标移动到新行。
 
 ## <a name="show-name-suggestions"></a>显示名称建议
 
 为最近所选择的成员执行自动对象名称完成。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [“选项”对话框 ->“环境”->“常规”](../../ide/reference/general-environment-options-dialog-box.md)
 - [使用 IntelliSense](../../ide/using-intellisense.md)

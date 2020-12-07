@@ -1,5 +1,7 @@
 ---
 title: “选项”->“文本编辑器”->“所有语言”->“滚动条”
+description: 了解如何使用“所有语言”部分中的“滚动条”页来更改 Visual Studio 中代码编辑器滚动条的默认行为。
+ms.custom: SEO-VS-2020
 ms.date: 10/25/2018
 ms.topic: reference
 f1_keywords:
@@ -32,15 +34,15 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c89be8a79aad9a2e3e0cdbc8601a08a99c1ad1aa
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: f75ba02b65b7025f9cf1e4f2eb9b5b6e3de96be0
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808085"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96039791"
 ---
 # <a name="options-text-editor-all-languages-scroll-bars"></a>“选项”->“文本编辑器”->“所有语言”->“滚动条”
-使用此对话框可更改代码编辑器滚动条的默认行为。 若要显示这些选项，请选择“工具”菜单中的“选项”   。 在“文本编辑器”中，展开“所有语言”子文件夹，然后选择“滚动条”    。
+使用此对话框可更改代码编辑器滚动条的默认行为。 若要显示这些选项，请选择“工具”菜单中的“选项”。 在“文本编辑器”中，展开“所有语言”子文件夹，然后选择“滚动条”。
 
 > [!CAUTION]
 > 在此页面用于设置所有开发语言的默认选项。 重置此对话框中的一个选项会将所有语言的“滚动条”选项重置为在此处选择的任何选项。 若要只为一种语言更改文本编辑器选项，请展开该语言的子文件夹并选择其选项页。
@@ -81,11 +83,11 @@ ms.locfileid: "90808085"
 
 ### <a name="use-map-mode-for-vertical-scroll-bar"></a>使用垂直滚动条的缩略图模式
 
-当你在地图模式  下单击滚动条上的某个位置后，光标会跳到文件中的相应位置，而不只是向上或向下滚动页面。 代码行以缩图形式显示在滚动条上。 可选择地图列的宽度，具体方法是在“源代码概述”  中设置值。 若要在将指针悬停在地图之上时放大预览代码，请选择“显示预览工具提示”  选项。 折叠区域进行了不同的阴影化处理，双击阴影即可展开此类区域。
+当你在地图模式下单击滚动条上的某个位置后，光标会跳到文件中的相应位置，而不只是向上或向下滚动页面。 代码行以缩图形式显示在滚动条上。 可选择地图列的宽度，具体方法是在“源代码概述”  中设置值。 若要在将指针悬停在地图之上时放大预览代码，请选择“显示预览工具提示”  选项。 折叠区域进行了不同的阴影化处理，双击阴影即可展开此类区域。
 
 > [!TIP]
 > 在地图模式下，可禁用代码缩图，具体方法是将“源代码概述”  设置为“关”  。 如果已选择“显示预览工具提示”  ，仍可在将指针悬停在滚动条之上时预览相应位置的代码，并且在你单击滚动条后光标仍会跳到文件中的相应位置。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-- [操作说明：自定义滚动条](../how-to-track-your-code-by-customizing-the-scrollbar.md)
+- [如何：自定义滚动条](../how-to-track-your-code-by-customizing-the-scrollbar.md)

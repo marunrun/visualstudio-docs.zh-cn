@@ -1,5 +1,7 @@
 ---
 title: “列出反汇编”命令
+description: 了解 List Disassembly 命令，以及它如何开始调试过程并允许你指定处理错误的方式。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 91319a8d25aaec6bdd676ed6d709dffc47100195
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 15e9016551b178b0a29656e615d029ddaf0ca279
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770646"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305335"
 ---
 # <a name="list-disassembly-command"></a>“列出反汇编”命令
 开始调试进程，并允许指定如何处理错误。
@@ -31,7 +33,7 @@ Debug.ListDisassembly [/count:number] [/endaddress:expression]
 [/linenumbers:yes|no]
 ```
 
-## <a name="switches"></a>开关
+## <a name="switches"></a>交换机
 每个开关都可以使用其完整形式或缩写形式来调用。
 
 /count: `number` [or] /c: `number` [or] /length: `number` [or] /l: `number`
@@ -64,11 +66,11 @@ Debug.ListDisassembly [/count:number] [/endaddress:expression]
 >Debug.ListDisassembly
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [“列出调用堆栈”命令](../../ide/reference/list-call-stack-command.md)
 - [“列出线程”命令](../../ide/reference/list-threads-command.md)
 - [Visual Studio 命令](../../ide/reference/visual-studio-commands.md)
 - [“命令”窗口](../../ide/reference/command-window.md)
 - [“查找/命令”框](../../ide/find-command-box.md)
-- [Visual Studio Command Aliases](../../ide/reference/visual-studio-command-aliases.md)
+- [Visual Studio 命令别名](../../ide/reference/visual-studio-command-aliases.md)

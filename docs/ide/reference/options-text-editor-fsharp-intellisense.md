@@ -1,5 +1,7 @@
 ---
 title: “选项”>“文本编辑器”>“F#”>“IntelliSense”
+description: 了解如何使用 F# 部分中的“IntelliSense”页面来修改 F# 的文本编辑器 IntelliSense 设置。
+ms.custom: SEO-VS-2020
 ms.date: 01/16/2019
 ms.topic: reference
 f1_keywords:
@@ -9,22 +11,22 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: d293d2c649329f5de8444ea75fd05ddc34738ab4
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 84e24f609891e67bdafaab5ff8847dc341b861ba
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "72666217"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96039609"
 ---
 # <a name="options-text-editor-f-intellisense"></a>“选项”>“文本编辑器”>“F#”>“IntelliSense”
 
-使用“IntelliSense”  选项页，可以修改一些与 F# 相关的文本编辑器设置。 若要访问此选项页，请先依次选择“工具”   > “选项”  ，再依次选择“文本编辑器”   > “F#”   > “IntelliSense”  。
+使用“IntelliSense”选项页，可以修改一些与 F# 相关的文本编辑器设置。 若要访问此选项页，请先依次选择“工具” > “选项”，再依次选择“文本编辑器” > “F#” > “IntelliSense”。
 
 ## <a name="completion-lists"></a>完成列表
 
 - **键入字符后显示完成列表**
 
-   选择此选项后，IntelliSense 在你开始键入时会自动显示完成列表。 如果取消选中此选项，仍可通过“IntelliSense”菜单或按 Ctrl   + 空格键  使用 IntelliSense 完成功能。
+   选择此选项后，IntelliSense 在你开始键入时会自动显示完成列表。 如果取消选中此选项，仍可通过“IntelliSense”菜单或按 Ctrl + 空格键使用 IntelliSense 完成功能。
 
 - **删除字符后显示完成列表**
 
@@ -34,7 +36,7 @@ ms.locfileid: "72666217"
 
    如果你选中此选项，IntelliSense 就会在你开始键入时自动显示完成列表，并添加尚未打开的命名空间中的项。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [“选项”对话框 ->“环境”->“常规”](../../ide/reference/general-environment-options-dialog-box.md)
 - [使用 IntelliSense](../../ide/using-intellisense.md)

@@ -1,5 +1,7 @@
 ---
 title: 步骤 8：自定义测验
+description: 了解如何将 timeLabel 控件更改为其他颜色，并为测验对象提供提示。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -13,12 +15,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e568a9fa844802ddab934264cbc316d3514fe577
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 21403aeb51f342f607575d99a79ce2bdb7aaa54a
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "77579366"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479311"
 ---
 # <a name="step-8-customize-the-quiz"></a>步骤 8：自定义测验
 
@@ -29,7 +31,7 @@ ms.locfileid: "77579366"
 
 ## <a name="to-customize-the-quiz"></a>自定义测验
 
-- 通过设置“timeLabel”控件的“BackColor”属性，使其在测验只剩下 5 秒时变为红色   。
+- 通过设置“timeLabel”控件的“BackColor”属性，使其在测验只剩下 5 秒时变为红色 。
 
   ```csharp
   timeLabel.BackColor = Color.Red;
@@ -47,6 +49,6 @@ ms.locfileid: "77579366"
 
 ## <a name="to-continue-or-review"></a>继续或查看
 
-- 要转到下一个教程，请参阅[教程 3：  创建匹配游戏](../ide/tutorial-3-create-a-matching-game.md)。
+- 要转到下一个教程，请参阅[教程 3：创建匹配游戏](../ide/tutorial-3-create-a-matching-game.md)。
 
-- 要返回上一个教程步骤，请参阅[步骤 7：添加乘法和除法问题](../ide/step-7-add-multiplication-and-division-problems.md)。
+- 若要返回上一个教程步骤，请参阅[步骤 7：添加乘法和除法问题](../ide/step-7-add-multiplication-and-division-problems.md)。

@@ -1,5 +1,7 @@
 ---
 title: “在文件中替换”命令
+description: 了解 Replace in Files 命令，以及该命令如何通过使用“查找和替换”窗口的“在文件中替换”选项卡上提供的某些选项来替换文件中的文本。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -14,15 +16,15 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 96f7d7ae0ea5eaf0de1a6fa4357e2750cdd8c22e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: da2bfe820f70925a979548abeab955865f2bbc2c
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75565469"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96304154"
 ---
 # <a name="replace-in-files-command"></a>“在文件中替换”命令
-使用“查找和替换”窗口的“在文件中替换”选项卡上的可用选项子集替换文件中的文本   。
+使用“查找和替换”窗口的“在文件中替换”选项卡上的可用选项子集替换文件中的文本。
 
 ## <a name="syntax"></a>语法
 
@@ -32,7 +34,7 @@ Edit.ReplaceinFiles findwhat replacewith [/all] [/case]
 [/reset] [/stop] [/sub] [/text2] [/wild] [/word]
 ```
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 `findwhat`
 
 必需。 要匹配的文本。
@@ -41,7 +43,7 @@ Edit.ReplaceinFiles findwhat replacewith [/all] [/case]
 
 必需。 用于替换匹配文本的文本。
 
-## <a name="switches"></a>开关
+## <a name="switches"></a>交换机
 /all 或 /a
 
 可选。 使用替换文本替换搜索文本的所有匹配项。
@@ -88,7 +90,7 @@ Edit.ReplaceinFiles findwhat replacewith [/all] [/case]
 
 /text2 或 /2
 
-可选。 在“查找结果 2”窗口中显示替换结果  。
+可选。 在“查找结果 2”窗口中显示替换结果。
 
 /wild 或 /l
 
@@ -99,17 +101,17 @@ Edit.ReplaceinFiles findwhat replacewith [/all] [/case]
 可选。 仅搜索全字。
 
 ## <a name="example"></a>示例
-此示例搜索 `btnCancel` 并将其替换为“我的 visual studio 项目”文件夹中所有 .cls 文件中的 `btnReset` 并在“查找结果 2”窗口显示替换信息  。
+此示例搜索 `btnCancel` 并将其替换为“我的 visual studio 项目”文件夹中所有 .cls 文件中的 `btnReset` 并在“查找结果 2”窗口显示替换信息。
 
 ```
 >Edit.ReplaceinFiles btnCancel btnReset /lookin:"c:/my visual studio projects" /ext:.cls /text2
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [查找和替换文本](../../ide/finding-and-replacing-text.md)
 - [在文件中替换](../../ide/replace-in-files.md)
 - [“命令”窗口](../../ide/reference/command-window.md)
 - [“查找/命令”框](../../ide/find-command-box.md)
 - [Visual Studio 命令](../../ide/reference/visual-studio-commands.md)
-- [Visual Studio Command Aliases](../../ide/reference/visual-studio-command-aliases.md)
+- [Visual Studio 命令别名](../../ide/reference/visual-studio-command-aliases.md)

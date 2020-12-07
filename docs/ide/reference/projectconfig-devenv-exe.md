@@ -1,5 +1,7 @@
 ---
 title: -ProjectConfig (devenv.exe)
+description: 了解如何使用 ProjectConfig devenv 命令行开关指定在生成、清理、重新生成或部署项目时要应用的项目生成配置。
+ms.custom: SEO-VS-2020
 ms.date: 12/10/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -20,12 +22,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e8bb4b2860d40828a96e25ec6e6c73d947dd60c0
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 06c6f98e9d022a7b253fdd0ea25a60ff01a4d756
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75567653"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040064"
 ---
 # <a name="projectconfig-devenvexe"></a>/ProjectConfig (devenv.exe)
 
@@ -37,7 +39,7 @@ ms.locfileid: "75567653"
 devenv SolutionName {/Build|/Clean|/Deploy|/Rebuild} [SolnConfigName [/Project ProjName [/ProjectConfig ProjConfigName]] [/Out OutputFilename]]
 ```
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 
 - *SolutionName*
 
@@ -51,11 +53,11 @@ devenv SolutionName {/Build|/Clean|/Deploy|/Rebuild} [SolnConfigName [/Project P
 
   可选。 要用于 SolutionName 中命名的解决方案的解决方案配置的名称（如 `Debug` 或 `Release`）。 如果有多个解决方案平台可用，还必须指定平台（例如，`Debug|Win32`）。 如果未指定此参数或字符串为空 (`""`)，工具便会使用解决方案的有效配置。
 
-- `/Project` *ProjName*
+- `/Project` *项目名称*
 
-  可选。 解决方案中项目文件的路径和名称。 可以将项目在 SolutionName  文件夹中的显示名称或相对路径输入到项目文件中。 也可以输入项目文件的完整路径和名称。
+  可选。 解决方案中项目文件的路径和名称。 可以将项目在 SolutionName 文件夹中的显示名称或相对路径输入到项目文件中。 也可以输入项目文件的完整路径和名称。
 
-- `/ProjectConfig` *ProjConfigName*
+-  ProjConfigName`/ProjectConfig` 
 
   可选。 要应用于已命名 `/Project` 的项目生成配置名称（如 `Debug` 或 `Release`）。 如果有多个解决方案平台可用，还必须指定平台（例如，`Debug|Win32`）。
 
@@ -63,7 +65,7 @@ devenv SolutionName {/Build|/Clean|/Deploy|/Rebuild} [SolnConfigName [/Project P
 
   可选。 要将工具输出发送到的文件的文件名。 如果文件已有，工具将输出追加到文件末尾。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 `/ProjectConfig` 开关必须在 `/Build`、/`Clean`、`/Deploy` 或 `/Rebuild` 命令中与 `/Project` 开关一起使用。
 

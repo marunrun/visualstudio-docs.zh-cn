@@ -1,5 +1,7 @@
 ---
 title: 使用正则表达式
+description: 了解一些可在 Visual Studio 中使用的正则表达式字符、运算符、构造和模式示例。
+ms.custom: SEO-VS-2020
 ms.date: 09/13/2019
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +18,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f1739d6b2376a4f86edd3c0102f7fad79da5d7cd
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 8648eb48c68e0220b1d36a851619edec2b51ceb7
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75568615"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96478986"
 ---
 # <a name="use-regular-expressions-in-visual-studio"></a>在 Visual Studio 中使用正则表达式
 
@@ -33,7 +35,7 @@ Visual Studio 使用 [.NET 正则表达式](/dotnet/standard/base-types/regular-
 
 |目标|表达式|示例|
 |-------------|----------------|-------------|
-|与任何单个字符匹配（换行符除外）。 有关详细信息，请参阅[任意字符](/dotnet/standard/base-types/character-classes-in-regular-expressions#any-character-)。|。|`a.o` 匹配“around”中的“aro”和“about”中的“abo”，但不匹配“across”中的“acro”|
+|与任何单个字符匹配（换行符除外）。 有关详细信息，请参阅[任意字符](/dotnet/standard/base-types/character-classes-in-regular-expressions#any-character-)。|.|`a.o` 匹配“around”中的“aro”和“about”中的“abo”，但不匹配“across”中的“acro”|
 |零次或多次匹配前面的表达式（匹配尽可能多的字符）。 有关详细信息，请参阅[零次或多次匹配](/dotnet/standard/base-types/quantifiers-in-regular-expressions#match-zero-or-more-times-)。|*|`a*r` 匹配“rack”中的“r”，“ark”中的“ar”和“aardvark”中的“aar”|
 |零次或多次匹配任何字符。|.*|`c.*e` 匹配“racket”中的“cke”，“comment”中的“comme”和“code”中的“code”|
 |一次或多次匹配前面的表达式（匹配尽可能多的字符）。 有关详细信息，请参阅[一次或多次匹配](/dotnet/standard/base-types/quantifiers-in-regular-expressions#match-one-or-more-times-)。|+|`e+d` 匹配“feeder”中的“eed”和“faded”中的“ed”|
@@ -71,14 +73,14 @@ Visual Studio 使用 [.NET 正则表达式](/dotnet/standard/base-types/regular-
 
 - **在正则表达式中**：请使用 `\number`。 例如，正则表达式 `(\w+)\s\1` 中的 `\1` 引用第一个捕获组 `(\w+)`。
 
-- **在替换模式中**：请使用 `$number`。 例如，已分组的正则表达式 `(\d)([a-z])` 定义了两个组：第一个组包含一个十进制数字，第二个组包含一个 a 到 z 之间的字符   。 该表达式在以下字符串中查找四个匹配项：1a 2b 3c 4d  。 替换字符串 `z$1` 仅引用第一个组（`$1`），并将该字符串转换为 z1 z2 z3 z4  。
+- **在替换模式中**：请使用 `$number`。 例如，已分组的正则表达式 `(\d)([a-z])` 定义了两个组：第一个组包含一个十进制数字，第二个组包含一个 a 到 z 之间的字符。 该表达式在以下字符串中查找四个匹配项：1a 2b 3c 4d。 替换字符串 `z$1` 仅引用第一个组（`$1`），并将该字符串转换为 z1 z2 z3 z4。
 
-下图显示了正则表达式 `(\w+)\s\1` 和替换字符串 `$1`。 正则表达式和替换模式均引用自动编号为 1 的第一个捕获组。 在 Visual Studio 中选择“快速替换”对话框中的“全部替换”时，会删除文本中的重复单词   。
+下图显示了正则表达式 `(\w+)\s\1` 和替换字符串 `$1`。 正则表达式和替换模式均引用自动编号为 1 的第一个捕获组。 在 Visual Studio 中选择“快速替换”对话框中的“全部替换”时，会删除文本中的重复单词。
 
 ![“快速替换”显示 Visual Studio 中编号的捕获组](media/numbered-capture-group.png)
 
 > [!TIP]
-> 确保选中“快速替换”对话框中的“使用正则表达式”按钮   。
+> 确保选中“快速替换”对话框中的“使用正则表达式”按钮。
 
 ### <a name="named-capture-groups"></a>命名的捕获组
 
@@ -90,12 +92,12 @@ Visual Studio 使用 [.NET 正则表达式](/dotnet/standard/base-types/regular-
 
 - **在替换模式中**：请使用 `${name}`。 例如 `${repeated}`。
 
-例如，下图显示了正则表达式 `(?<repeated>\w+)\s\k<repeated>` 和替换字符串 `${repeated}`。 正则表达式和替换模式均引用名为 `repeated` 的捕获组。 在 Visual Studio 中选择“快速替换”对话框中的“全部替换”时，会删除文本中的重复单词   。
+例如，下图显示了正则表达式 `(?<repeated>\w+)\s\k<repeated>` 和替换字符串 `${repeated}`。 正则表达式和替换模式均引用名为 `repeated` 的捕获组。 在 Visual Studio 中选择“快速替换”对话框中的“全部替换”时，会删除文本中的重复单词。
 
 ![“快速替换”显示 Visual Studio 中的命名捕获组](media/named-capture-group.png)
 
 > [!TIP]
-> 确保选中“快速替换”对话框中的“使用正则表达式”按钮   。
+> 确保选中“快速替换”对话框中的“使用正则表达式”按钮。
 
 有关命名的捕获组的更多信息，请参阅[命名匹配的子表达式](/dotnet/standard/base-types/grouping-constructs-in-regular-expressions#named-matched-subexpressions)。 有关在替换模式中使用的正则表达式的详细信息，请参阅[正则表达式中的替代](/dotnet/standard/base-types/substitutions-in-regular-expressions)。
 

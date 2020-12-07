@@ -1,5 +1,7 @@
 ---
 title: 项目和项模板参数
+description: 了解在实例化模板时如何使用模板参数替换模板中的值。
+ms.custom: SEO-VS-2020
 ms.date: 01/02/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -10,20 +12,20 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 7076e8f5718e44cc382eb0768e6456dbd6ee5664
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8e575011f76370083b5a0f461fbb62bbbc839ea3
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "78169360"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479192"
 ---
 # <a name="template-parameters"></a>模板参数
 
-实例化模板时，可替换模板中的值。 若要设置此功能，请使用模板参数**。 模板参数可用于替换值，例如模板中的类名和命名空间。 当用户添加新项或项目时，后台运行的模板向导会替换这些参数。
+实例化模板时，可替换模板中的值。 若要设置此功能，请使用模板参数。 模板参数可用于替换值，例如模板中的类名和命名空间。 当用户添加新项或项目时，后台运行的模板向导会替换这些参数。
 
 ## <a name="declare-and-enable-template-parameters"></a>声明和启用模板参数
 
-模板参数以 $参数$ 的格式进行声明**。 例如：
+模板参数以 $参数$ 的格式进行声明。 例如：
 
 - $safeprojectname$
 

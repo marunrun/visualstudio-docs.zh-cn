@@ -1,5 +1,7 @@
 ---
 title: 选项, Windows 窗体设计器, 常规
+description: 了解如何使用“常规”页在 Visual Studio 中设置 Windows 窗体设计器的网格和其他功能的首选项。
+ms.custom: SEO-VS-2020
 ms.date: 08/09/2019
 ms.topic: reference
 f1_keywords:
@@ -10,16 +12,16 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 2a72b27dc2277501d0e0957c8b89b551f4d6852d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: d7172ca12344ab046c9bf65e7df280a9fa6dd0aa
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75568056"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040077"
 ---
 # <a name="options-dialog-box-windows-forms-designer"></a>“选项”对话框：Windows Forms Designer — Windows 窗体设计器
 
-使用 Windows 窗体设计器选项页，用户可以在 Visual Studio 中设置 Windows 窗体设计器网格和其他功能的首选项。 可以从“工具”  菜单打开“选项”  对话框。
+使用 Windows 窗体设计器选项页，用户可以在 Visual Studio 中设置 Windows 窗体设计器网格和其他功能的首选项。 可以从“工具”菜单打开“选项”对话框。
 
 ## <a name="code-generation-settings"></a>代码生成设置
 

@@ -1,5 +1,7 @@
 ---
 title: “列出模块”命令
+description: 了解 List Modules 命令，以及它如何列出当前进程的模块。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -14,12 +16,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e083a0e1baeefc6807dccb2199cd0e5a9bd883d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: fa0c3f6445a22ee80457e8a7f9f24fb7008f77ed
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75595496"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305311"
 ---
 # <a name="list-modules-command"></a>“列出模块”命令
 列出当前进程的模块。
