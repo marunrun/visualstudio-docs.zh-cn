@@ -1,5 +1,7 @@
 ---
-title: 实现单文件生成器 |Microsoft Docs
+title: 实现 Single-File 生成器 |Microsoft Docs
+description: '了解如何使用实现 IVsSingleFileGenerator 接口的自定义工具，在 Visual Studio 中扩展 Visual Basic 和 Visual c # 项目系统。'
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e700d09277edbb04b30676d3965b6c996d0a11f3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 373536844e3572e2e61b56c1b86f3e00ed47845d
+ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707658"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761239"
 ---
 # <a name="implementing-single-file-generators"></a>实现单个文件生成器
 自定义工具（有时称为单个文件生成器）可用于 [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] 在中扩展和项目系统 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。 自定义工具是实现接口的 COM 组件 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator> 。 使用此接口，自定义工具将单个输入文件转换为一个输出文件。 转换的结果可以是源代码，也可以是任何有用的输出。 自定义工具生成的代码文件的两个示例是生成的代码，以响应可视化设计器中的更改和使用 Web 服务描述语言 (WSDL) 生成的文件。
@@ -28,5 +30,5 @@ ms.locfileid: "80707658"
 
  自定义工具必须实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator> 接口。 自定义工具还支持 <xref:Microsoft.VisualStudio.OLE.Interop.IObjectWithSite> 从输入文件以外的源中检索信息的接口。 在任何情况下，你都必须将其注册到系统或本地注册表中，然后才能使用自定义工具 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。 有关注册自定义工具的详细信息，请参阅 [注册单个文件生成器](../../extensibility/internals/registering-single-file-generators.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [向可视化设计器公开类型](../../extensibility/internals/exposing-types-to-visual-designers.md)

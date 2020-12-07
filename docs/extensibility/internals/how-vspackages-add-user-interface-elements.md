@@ -1,5 +1,7 @@
 ---
 title: Vspackage 如何添加用户界面元素 |Microsoft Docs
+description: 了解 Vspackage 如何将用户界面 (UI) 元素（例如菜单、工具栏和工具窗口）添加到 Visual Studio。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1d9cc3184009dd98e743064db1b8eb2abe6059d1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e3e2fe51c365e3e6936a73aef9d4de9d52024d47
+ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81649598"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761083"
 ---
 # <a name="how-vspackages-add-user-interface-elements"></a>Vspackage 如何添加用户界面元素
 VSPackage 可以通过 *.vsct* 文件 (UI) 元素（例如，菜单、工具栏和工具窗口）添加到 Visual Studio 的用户界面。
@@ -36,7 +38,7 @@ VSPackage 可以通过 *.vsct* 文件 (UI) 元素（例如，菜单、工具栏�
 每个命令都必须将组作为其父项，即使它是该组中唯一的子节点也是如此。 每个标准菜单还必须有一个父组。 工具栏和工具窗口充当其自身的父级。 组可以将主 Visual Studio 菜单栏或菜单、工具栏或工具窗口作为其父项。
 
 ### <a name="how-items-are-defined"></a>如何定义项
-*.Vsct*文件采用 XML 格式。 它定义包的 UI 元素并确定这些元素在 IDE 中的显示位置。 包中的每个菜单、组或命令首先在部分中分配了 GUID 和 ID `Symbols` 。 在 *.vsct* 文件的其余部分中，每个菜单、命令和组都由其 GUID 和 ID 组合标识。 以下示例显示在 `Symbols` 模板中选择了 **菜单命令** 时 Visual Studio 包模板生成的典型节。
+*.Vsct* 文件采用 XML 格式。 它定义包的 UI 元素并确定这些元素在 IDE 中的显示位置。 包中的每个菜单、组或命令首先在部分中分配了 GUID 和 ID `Symbols` 。 在 *.vsct* 文件的其余部分中，每个菜单、命令和组都由其 GUID 和 ID 组合标识。 以下示例显示在 `Symbols` 模板中选择了 **菜单命令** 时 Visual Studio 包模板生成的典型节。
 
 ```xml
 <Symbols>
@@ -88,7 +90,7 @@ VSPackage 可以通过 *.vsct* 文件 (UI) 元素（例如，菜单、工具栏�
 
 - 一个 `type` 特性，该特性指定菜单应作为菜单类型还是作为工具栏出现在 IDE 中。
 
-- 一个包含[ButtonText 元素](../../extensibility/buttontext-element.md)的[string 元素](../../extensibility/strings-element.md)，该元素指定 IDE 中的菜单的标题和一个[CommandName 元素](../../extensibility/commandname-element.md)，该元素指定在**命令**窗口中用于访问菜单的名称。
+- 一个包含 [ButtonText 元素](../../extensibility/buttontext-element.md)的 [string 元素](../../extensibility/strings-element.md)，该元素指定 IDE 中的菜单的标题和一个 [CommandName 元素](../../extensibility/commandname-element.md)，该元素指定在 **命令** 窗口中用于访问菜单的名称。
 
 - 可选标志。 [CommandFlag 元素](../../extensibility/command-flag-element.md)可能出现在菜单定义中，以更改其在 IDE 中的外观或行为。
 
@@ -187,7 +189,7 @@ Combos 在部分中定义 `Combos` 。 每个 `Combo` 元素都表示 IDE 中的
 |-------------| - | - | - |
 |组|[Groups 元素](../../extensibility/groups-element.md)、IDE、其他 vspackage|菜单、组、项本身|菜单、组和命令|
 |菜单|[菜单元素](../../extensibility/menus-element.md)、IDE、其他 vspackage|1到 *n* 组|0到 *n* 组|
-|工具栏|[菜单元素](../../extensibility/menus-element.md)、IDE、其他 vspackage|项本身|0到 *n* 组|
+|Toolbar|[菜单元素](../../extensibility/menus-element.md)、IDE、其他 vspackage|项本身|0到 *n* 组|
 |菜单项|[按钮元素](../../extensibility/buttons-element.md)、IDE、其他 vspackage|1到 *n* 组，项本身|-0 到 *n* 组|
 |Button|[按钮元素](../../extensibility/buttons-element.md)、IDE、其他 vspackage|1到 *n* 组，项本身||
 |组合图|[Combos 元素](../../extensibility/combos-element.md)，IDE，其他 vspackage|1到 *n* 组，项本身||
@@ -288,5 +290,5 @@ Combos 在部分中定义 `Combos` 。 每个 `Combo` 元素都表示 IDE 中的
 
 - 若要使某些 UI 元素在 IDE 中显示，您必须实现一个或多个接口或编写一些代码。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [扩展菜单和命令](../../extensibility/extending-menus-and-commands.md)

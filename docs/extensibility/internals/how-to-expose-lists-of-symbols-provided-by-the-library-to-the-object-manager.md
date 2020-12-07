@@ -1,5 +1,7 @@
 ---
 title: 公开提供给对象管理器的符号列表 |Microsoft Docs
+description: 了解如何实现 IVsSimpleObjectList2 接口，以便在 Visual Studio 中将符号列表公开到对象管理器和更新符号浏览工具。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,15 +16,15 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: bb15b7d9b29c578a0acf43fd1aa9cfdea88e23ae
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 52bb2505e70d39e6cd861190db6eab9fa29e7aa7
+ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708086"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761331"
 ---
 # <a name="how-to-expose-lists-of-symbols-provided-by-the-library-to-the-object-manager"></a>如何：将库提供的符号列表公开给对象管理器
-符号浏览工具、 **类视图**、 **对象浏览器**、 **调用浏览器** 和 **查找符号结果**会将新数据的请求传递给 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 对象管理器。 对象管理器查找适当的库，并请求新的符号列表。 这些库通过接口向对象管理器提供请求的数据来做出响应 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2> 。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]对象管理器调用接口中的方法 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2> 来获取数据，并使用它来填充或更新符号浏览工具的视图。
+符号浏览工具、 **类视图**、 **对象浏览器**、 **调用浏览器** 和 **查找符号结果** 会将新数据的请求传递给 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 对象管理器。 对象管理器查找适当的库，并请求新的符号列表。 这些库通过接口向对象管理器提供请求的数据来做出响应 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2> 。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]对象管理器调用接口中的方法 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2> 来获取数据，并使用它来填充或更新符号浏览工具的视图。
 
  在调用工具、展开节点或刷新视图时，库可能会获取数据请求。 第一次调用符号浏览工具时，对象管理器会请求库提供顶级列表。 当用户展开列表节点时，库将提供该节点下的子节点列表。 每个对象管理器查询都包含相关项的索引。 若要显示新列表，对象管理器必须确定列表中有多少项、项目的类型、名称、辅助功能和其他属性。
 

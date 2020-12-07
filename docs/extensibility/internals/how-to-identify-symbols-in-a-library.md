@@ -1,5 +1,7 @@
 ---
 title: 如何：在库中标识符号 |Microsoft Docs
+description: 了解如何通过实现将导航信息从符号库传递到 Visual Studio 对象管理器的方法来标识库中的符号。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: fd091f003909110c696c2e42ad80d6c6ea4859d2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4b1dab9dc6bee4ed987141057194d8b00ff35f99
+ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905407"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761369"
 ---
 # <a name="how-to-identify-symbols-in-a-library"></a>如何：标识库中的符号
 符号浏览工具显示符号的层次结构视图。 符号表示命名空间、对象、类、类成员和其他语言元素。
@@ -79,7 +81,7 @@ N1
 
      对象管理器调用此方法以获取符号的表示路径中包含的节点的列表。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [支持符号浏览工具](../../extensibility/internals/supporting-symbol-browsing-tools.md)
 - [如何：向对象管理器注册库](../../extensibility/internals/how-to-register-a-library-with-the-object-manager.md)
 - [如何：将库提供的符号列表公开给对象管理器](../../extensibility/internals/how-to-expose-lists-of-symbols-provided-by-the-library-to-the-object-manager.md)

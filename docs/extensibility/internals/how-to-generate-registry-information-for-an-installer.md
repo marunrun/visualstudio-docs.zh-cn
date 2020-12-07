@@ -1,5 +1,7 @@
 ---
 title: 如何：为安装程序生成注册表信息 |Microsoft Docs
+description: 了解如何使用 Visual Studio 中的 RegPkg.exe 实用工具生成用于合并到 Windows installer 安装包中的 VSPackage 注册表信息。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,19 +14,19 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b0140ea2e1b894754b0cf35bc75676f277b12a0a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 082833c97706868261e39b50377c158f90b46a4a
+ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905469"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761220"
 ---
 # <a name="how-to-generate-registry-information-for-an-installer"></a>如何：为安装程序生成注册表信息
 
-*RegPkg.exe*实用工具可用于为托管 VSPackage 生成注册清单。 清单可以合并到 Windows Installer 安装包中。 RegPkg 还可以生成一个文件，该文件可以包含在基于 [WINDOWS INSTALLER XML 工具集](https://wixtoolset.org/)的安装程序源文件中。
+*RegPkg.exe* 实用工具可用于为托管 VSPackage 生成注册清单。 清单可以合并到 Windows Installer 安装包中。 RegPkg 还可以生成一个文件，该文件可以包含在基于 [WINDOWS INSTALLER XML 工具集](https://wixtoolset.org/)的安装程序源文件中。
 
 > [!IMPORTANT]
-> RegPkg 生成特定于您的开发系统的路径名称，因此，每次使用 RegPkg 时，必须编辑输出，以使用适当的 Windows Installer 格式属性。 例如， `InprocServer32` 应* \<SystemFolder\>mscoree.dll*值并且路径应使用 *\<#filekey\>* 和 *\<$componentkey\>* 。 以这种方式调整输出支持将 Windows 安装在其他驱动器或不同的目录中的计算机，以及用户可以选择的、本地化的目录名称和路径。 有关详细信息，请参阅 Windows Installer SDK 中的 [格式设置](https://msdn.microsoft.com/library?url=/library/msi/setup/formatted.asp) 。 如果你遵循开发系统路径的 RegPkg 约定（例如*File_ \<filename\> *格式的文件 id），则需要进行更少的更改。
+> RegPkg 生成特定于您的开发系统的路径名称，因此，每次使用 RegPkg 时，必须编辑输出，以使用适当的 Windows Installer 格式属性。 例如， `InprocServer32` 应 *\<SystemFolder\>mscoree.dll* 值并且路径应使用 *\<#filekey\>* 和 *\<$componentkey\>* 。 以这种方式调整输出支持将 Windows 安装在其他驱动器或不同的目录中的计算机，以及用户可以选择的、本地化的目录名称和路径。 有关详细信息，请参阅 Windows Installer SDK 中的 [格式设置](https://msdn.microsoft.com/library?url=/library/msi/setup/formatted.asp) 。 如果你遵循开发系统路径的 RegPkg 约定（例如 *File_ \<filename\>* 格式的文件 id），则需要进行更少的更改。
 
 ## <a name="to-create-a-registration-manifest"></a>创建注册清单
 
@@ -181,7 +183,7 @@ ms.locfileid: "85905469"
     </Include>
     ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [注册 Vspackage](../../extensibility/registering-and-unregistering-vspackages.md)
 - [VSPackages](../../extensibility/internals/vspackages.md)

@@ -1,5 +1,7 @@
 ---
-title: IDE 定义的命令、菜单和组 |Microsoft Docs
+title: IDE-Defined 命令、菜单和组 |Microsoft Docs
+description: 了解在 Visual Studio 集成开发环境中定义的菜单、命令和命令组 (IDE) 。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,17 +14,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6557f49b019a6793698dabe852919ec2e9f28cfd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6314199fdf850c377825ee31e58cd9f315c5f672
+ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707721"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761018"
 ---
 # <a name="ide-defined-commands-menus-and-groups"></a>IDE 定义的命令、菜单和组
 许多菜单、命令和命令组已定义为供 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE 使用。 扩展时，还可以使用这些命令 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。
 
-## <a name="finding-environment-defined-commands"></a>查找环境定义的命令
+## <a name="finding-environment-defined-commands"></a>查找 Environment-Defined 命令
  环境命令在一组 .vsct 文件中定义：
 
 - SharedCmdDef. .vsct
@@ -48,7 +50,7 @@ ms.locfileid: "80707721"
 
  提供 Visual Studio IDE 定义的命令的 GUID 和 ID 值。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [Visual Studio 命令表格 (.Vsct) 文件](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
 - [用于扩展项目系统的 IDE 定义的命令](../../extensibility/internals/ide-defined-commands-for-extending-project-systems.md)
 - [VSPackage 如何添加用户界面元素](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)

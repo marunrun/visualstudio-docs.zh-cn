@@ -1,5 +1,7 @@
 ---
 title: 如何：实现嵌套项目 |Microsoft Docs
+description: 了解如何通过引发解决方案和父项目中的事件来生成项目层次结构，从而在 Visual Studio 中实现嵌套项目。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3b1ac3c147962b943499172435c3f601115d36a9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 85a5c14196211a638cd830ac6df39570288aa831
+ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905355"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761332"
 ---
 # <a name="how-to-implement-nested-projects"></a>如何：实现嵌套项目
 
@@ -84,7 +86,7 @@ ms.locfileid: "85905355"
 - [实现嵌套项目的命令处理](../../extensibility/internals/implementing-command-handling-for-nested-projects.md)
 - [筛选嵌套项目的 AddItem 对话框](../../extensibility/internals/filtering-the-additem-dialog-box-for-nested-projects.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [向 "添加新项" 对话框添加项](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md)
 - [注册项目和项模板](../../extensibility/internals/registering-project-and-item-templates.md)

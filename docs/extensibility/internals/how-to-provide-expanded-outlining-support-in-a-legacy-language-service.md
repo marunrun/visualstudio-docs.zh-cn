@@ -1,5 +1,7 @@
 ---
 title: 在语言服务中提供大纲支持 |Microsoft Docs
+description: 了解如何通过添加编辑器控制的大纲区域和客户端控制的大纲区域，在旧版语言服务中提供扩展的大纲显示支持。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 450ef1430e86467d116cc635a27600756bc36075
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9397ff17ba80368a86ba03260b3c5af3759bfe8d
+ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905287"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761356"
 ---
 # <a name="how-to-provide-expanded-outlining-support-in-a-legacy-language-service"></a>如何：提供旧版语言服务中的扩展大纲支持
 有两个选项可用于扩展对语言的大纲支持，但不支持 " **折叠到定义** " 命令。 可以添加编辑器控制的大纲区域并添加客户端控制的大纲区域。
