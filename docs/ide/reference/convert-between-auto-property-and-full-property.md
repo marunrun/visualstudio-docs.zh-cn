@@ -1,5 +1,7 @@
 ---
 title: 在自动属性和完整属性之间转换
+description: 了解如何使用“快速操作和重构”菜单在自动实现的属性和完整属性之间进行转换。
+ms.custom: SEO-VS-2020
 ms.date: 03/27/2020
 ms.topic: reference
 author: mikadumont
@@ -9,12 +11,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8950ce27e95a59f5425419dcac5bd807193d51b6
-ms.sourcegitcommit: d6828e7422c8d74ec1e99146fedf0a05f757245f
+ms.openlocfilehash: b53f337b538ff1c0aef84272eea7d9e032eb2c1d
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80395735"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040831"
 ---
 # <a name="convert-between-auto-property-and-full-property"></a>在自动属性和完整属性之间转换
 

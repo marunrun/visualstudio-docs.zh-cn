@@ -1,5 +1,7 @@
 ---
 title: “打开项目”命令
+description: 了解 Open Project 命令，以及它如何打开现有项目或解决方案。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,12 +17,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 97c1034fbbafa04af2d62526fdbb48812d64e050
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ce00713cbfe862c5788a0131c99ba4c5750bb600
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75565807"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96304147"
 ---
 # <a name="open-project-command"></a>打开项目命令
 
@@ -32,7 +34,7 @@ ms.locfileid: "75565807"
 File.OpenProject filename
 ```
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 
 `filename`
 
@@ -49,13 +51,13 @@ File.OpenProject filename
 
 ## <a name="example"></a>示例
 
-以下示例打开 Visual Basic 项目 Test1  ：
+以下示例打开 Visual Basic 项目 Test1：
 
 ```cmd
 >File.OpenProject "C:\My Projects\Test1\Test1.vbproj"
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Visual Studio 命令](../../ide/reference/visual-studio-commands.md)
 - [“命令”窗口](../../ide/reference/command-window.md)

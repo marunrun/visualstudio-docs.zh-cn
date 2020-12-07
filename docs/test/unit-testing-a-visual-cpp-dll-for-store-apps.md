@@ -1,5 +1,7 @@
 ---
 title: 如何测试 UWP 应用的 C++ DLL
+description: 了解如何使用用于 C++ 的 Microsoft 测试框架为通用 Windows 平台应用的 C++ DLL 创建单元测试。
+ms.custom: SEO-VS-2020
 ms.date: 05/01/2019
 ms.topic: how-to
 ms.author: corob
@@ -7,12 +9,12 @@ manager: jillfra
 ms.workload:
 - uwp
 author: corob-msft
-ms.openlocfilehash: 7b556f085ae4e4a9c610aefa87b3f9125fb27042
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: a7ae79ff4df783d3c4541720c9fef709087e7da6
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85285604"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330090"
 ---
 # <a name="how-to-test-a-c-dll"></a>如何测试 C++ DLL
 

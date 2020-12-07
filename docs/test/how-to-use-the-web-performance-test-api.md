@@ -1,5 +1,7 @@
 ---
 title: Web 性能测试 API
+description: 了解 Web 性能测试 API，该 API 支持编码的 Web 性能测试、测试插件、请求插件、请求以及提取/验证规则。
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.assetid: 93a6a1dd-663b-4ab5-8760-7d6b081561d3
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 14b7320a38d474748713d687f4ee00b5b91f0208
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d4802d95c46d1187911f4bbc134cc0c50ce08b18
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85287072"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329713"
 ---
 # <a name="how-to-use-the-web-performance-test-api"></a>如何：使用 Web 性能测试 API
 
@@ -27,7 +29,7 @@ ms.locfileid: "85287072"
 > [!TIP]
 > 可使用对象浏览器来检查 <xref:Microsoft.VisualStudio.TestTools.WebTesting> 命名空间。 Visual C# 和 Visual Basic 编辑器均为使用此命名空间中的类编写代码提供了 IntelliSense 支持。
 
-还可以为负载测试创建插件。 有关详细信息，请查阅[如何：使用负载测试 API](../test/how-to-use-the-load-test-api.md) 和[如何：创建负载测试插件](../test/how-to-create-a-load-test-plug-in.md)。
+还可以为负载测试创建插件。 有关详细信息，请参阅[如何：使用负载测试 API](../test/how-to-use-the-load-test-api.md) 以及[如何：创建负载测试插件](../test/how-to-create-a-load-test-plug-in.md)。
 
 ## <a name="to-use-the-webtesting-namespace"></a>使用 WebTesting 命名空间
 
@@ -47,13 +49,13 @@ ms.locfileid: "85287072"
 
 8. 使用“Web 性能测试编辑器”添加新 Web 性能测试插件：
 
-    1. 选择工具栏上的“添加 Web 测试插件”。 
+    1. 选择工具栏上的“添加 Web 测试插件”。
 
-         随即显示“添加 Web 测试插件”对话框。 
+         随即显示“添加 Web 测试插件”对话框。
 
-    2. 在“选择插件”  下，选择 Web 性能测试插件类。
+    2. 在“选择插件”下，选择 Web 性能测试插件类。
 
-    3. 在“选定插件的属性”窗格中，设置要在运行时使用的插件的初始值。 
+    3. 在“选定插件的属性”窗格中，设置要在运行时使用的插件的初始值。
 
         > [!NOTE]
         > 可根据需要从插件中公开任意多个属性；只需将其设置为公共、可设置并属于 Integer、Boolean 或 String 等基本类型。 以后还可以使用“属性”窗口来编辑 Web 性能测试插件属性。
@@ -62,9 +64,9 @@ ms.locfileid: "85287072"
 
 9. 运行该 Web 性能测试。
 
-     有关 <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestPlugin> 的示例实现，请参阅[如何：创建 Web 性能测试插件](../test/how-to-create-a-web-performance-test-plug-in.md)。
+     有关 <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestPlugin> 的实现示例，请参见[如何：创建 Web 性能测试插件](../test/how-to-create-a-web-performance-test-plug-in.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:Microsoft.VisualStudio.TestTools.WebTesting>
 - [为负载测试创建自定义代码和插件](../test/create-custom-code-and-plug-ins-for-load-tests.md)

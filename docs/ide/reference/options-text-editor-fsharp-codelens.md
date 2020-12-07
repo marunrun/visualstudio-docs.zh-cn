@@ -1,5 +1,7 @@
 ---
 title: “选项”>“文本编辑器”>“F#”>“CodeLens”
+description: 了解如何使用 F# 部分中的“CodeLens”页面来修改 F# 的文本编辑器 CodeLens 设置。
+ms.custom: SEO-VS-2020
 ms.date: 01/16/2019
 ms.topic: reference
 f1_keywords:
@@ -9,16 +11,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: ad891030cb9cf54855e6bef69a8b6926d6ae17aa
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 6bdccdc45664bd620018fa094d35add545b302d4
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75568472"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96039648"
 ---
 # <a name="options-text-editor-f-codelens"></a>“选项”>“文本编辑器”>“F#”>“CodeLens”
 
-使用“CodeLens”  选项页，可以修改与 F# 相关的文本编辑器 CodeLens 设置。 若要访问此选项页，请先依次选择“工具”   > “选项”  ，再依次选择“文本编辑器”   > “F#”   > “CodeLens”  。
+使用“CodeLens”选项页，可以修改与 F# 相关的文本编辑器 CodeLens 设置。 若要访问此选项页，请先依次选择“工具” > “选项”，再依次选择“文本编辑器” > “F#” > “CodeLens”。
 
 ## <a name="codelens"></a>CodeLens
 
@@ -38,7 +40,7 @@ ms.locfileid: "75568472"
 
    可更改对注释使用的默认前缀。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [“选项”对话框 ->“环境”->“常规”](../../ide/reference/general-environment-options-dialog-box.md)
 - [使用 CodeLens 查找代码更改和其他历史记录](../../ide/find-code-changes-and-other-history-with-codelens.md)

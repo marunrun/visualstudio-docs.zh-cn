@@ -1,5 +1,7 @@
 ---
 title: Replace 命令
+description: 了解 Replace 命令，以及该命令如何通过使用“查找和替换”窗口的“在文件中替换”选项卡上提供的某些选项来替换文件中的文本。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,15 +15,15 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 620e55938a9c96393d8cd7de6f238d3f98715d29
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 2db7b59c1982f706cc6d2b18039870871ffa1039
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75596679"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96304033"
 ---
 # <a name="replace-command"></a>Replace 命令
-使用“查找和替换”窗口的“在文件中替换”选项卡上的可用选项子集替换文件中的文本   。
+使用“查找和替换”窗口的“在文件中替换”选项卡上的可用选项子集替换文件中的文本。
 
 ## <a name="syntax"></a>语法
 
@@ -31,7 +33,7 @@ Edit.Replace findwhat replacewith [/all] [/case]
 [/wild|/regex] [/word]
 ```
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 `findwhat`
 
 必需。 要匹配的文本。
@@ -40,7 +42,7 @@ Edit.Replace findwhat replacewith [/all] [/case]
 
 必需。 用于替换匹配文本的文本。
 
-## <a name="switches"></a>开关
+## <a name="switches"></a>交换机
 /all 或 /a
 
 可选。 使用替换文本替换搜索文本的所有匹配项。
@@ -100,10 +102,10 @@ Edit.Replace findwhat replacewith [/all] [/case]
 >Edit.Replace btnSend btnSubmit /open
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [查找和替换文本](../../ide/finding-and-replacing-text.md)
 - [“命令”窗口](../../ide/reference/command-window.md)
 - [“查找/命令”框](../../ide/find-command-box.md)
 - [Visual Studio 命令](../../ide/reference/visual-studio-commands.md)
-- [Visual Studio Command Aliases](../../ide/reference/visual-studio-command-aliases.md)
+- [Visual Studio 命令别名](../../ide/reference/visual-studio-command-aliases.md)

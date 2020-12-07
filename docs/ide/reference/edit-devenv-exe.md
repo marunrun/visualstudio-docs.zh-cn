@@ -1,5 +1,7 @@
 ---
 title: -Edit (devenv.exe)
+description: 了解如何使用 Edit devenv 命令行开关在 Visual Studio 的现有实例中打开指定的文件。
+ms.custom: SEO-VS-2020
 ms.date: 12/10/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d180d5a5d723d8085537f2993aac022d74df2c08
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 845f83d2078999e3b3e32e048f9a3fa716300b19
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75595691"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040584"
 ---
 # <a name="edit-devenvexe"></a>/Edit (devenv.exe)
 
@@ -31,11 +33,11 @@ devenv /Edit [File1[ FileN]...]
 
 ## <a name="arguments"></a>参数
 
-- File1 
+- File1
 
-  可选。 要在现有 Visual Studio 实例中打开的文件。 如果没有 Visual Studio 实例，便会新建包含简化窗口布局的实例，且工具会在新实例中打开 File1  。
+  可选。 要在现有 Visual Studio 实例中打开的文件。 如果没有 Visual Studio 实例，便会新建包含简化窗口布局的实例，且工具会在新实例中打开 File1。
 
-- FileN 
+- FileN
 
   可选。 要在现有 Visual Studio 实例中打开的一个或多个其他文件。
 

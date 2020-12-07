@@ -1,5 +1,7 @@
 ---
 title: Live Unit Testing 常见问题解答
+description: 查看这些 Live Unit Testing 常见问题解答，包括支持的框架、配置和自定义。
+ms.custom: SEO-VS-2020
 ms.date: 10/03/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,12 +10,12 @@ author: mikejo5000
 ms.author: mikejo
 ms.workload:
 - dotnet
-ms.openlocfilehash: ba231e6c203197518b75a7a8c0592f01bba4ffe9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bb2c9a4cae25b388d5817b04ff54f6e6443b2f44
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75591536"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329284"
 ---
 # <a name="live-unit-testing-frequently-asked-questions"></a>Live Unit Testing 常见问题解答
 
@@ -77,7 +79,7 @@ Live Unit Testing 是否适用于 .NET Core？
 
 如果解决方案需要为检测 (Live Unit Testing) 而生成的自定义步骤，但非检测的“常规”生成不需要，可向项目或 .targets 文件添加代码，检查 `BuildingForLiveUnitTesting` 属性并执行自定义生成前/后步骤  。 还可以选择删除特定的生成步骤（如发布或生成包），或将生成步骤（如复制先决条件）添加到基于此项目属性的 Live Unit Testing 生成。 基于此属性自定义生成不会以任何方式改变常规生成，只会影响 Live Unit Testing 生成。
 
-例如，常规生成过程中可能有生成 NuGet 包的目标。 可能不需要每次编辑后都生成 NuGet 包。 因此，可以通过执行以下操作在 Live Unit Testing 生成中禁用该目标：  
+例如，常规生成过程中可能有生成 NuGet 包的目标。 可能不需要每次编辑后都生成 NuGet 包。 因此，可以通过执行以下操作在 Live Unit Testing 生成中禁用该目标：  
 
 ```xml
 <Target Name="GenerateNuGetPackages" BeforeTargets="AfterBuild" Condition="'$(BuildingForLiveUnitTesting)' != 'true'">
@@ -171,7 +173,7 @@ Solution.sln
 
 **我想要将 Live Unit Testing 生成的项目转到特定位置，而不是 .vs 文件夹下的默认位置  。可如何进行更改？**
 
-将 `LiveUnitTesting_BuildRoot` 用户级环境变量设置为想要放置 Live Unit Testing 生成项目的路径。 
+将 `LiveUnitTesting_BuildRoot` 用户级环境变量设置为想要放置 Live Unit Testing 生成项目的路径。 
 
 ## <a name="test-explorer-versus-live-unit-testing"></a>测试资源管理器与 Live Unit Testing
 
@@ -179,7 +181,7 @@ Solution.sln
 
 有几个区别：
 
-- 从测试资源管理器窗口运行或调试测试将运行常规二进制文件，而 Live Unit Testing 运行已检测二进制文件  。 如果想要调试已检测的二进制文件，可在测试方法中添加 [Debugger.Launch](xref:System.Diagnostics.Debugger.Launch)  方法调用，这会导致每当执行该方法时（包括其由 Live Unit Testing 执行时）都启动调试器，然后可附加和调试已检测的二进制文件。 但我们希望检测对于大多数用户方案是透明的，不需要调试要检测的二进制文件。
+- 从测试资源管理器窗口运行或调试测试将运行常规二进制文件，而 Live Unit Testing 运行已检测二进制文件  。 如果想要调试已检测的二进制文件，可在测试方法中添加 [Debugger.Launch](xref:System.Diagnostics.Debugger.Launch) 方法调用，这会导致每当执行该方法时（包括其由 Live Unit Testing 执行时）都启动调试器，然后可附加和调试已检测的二进制文件。 但我们希望检测对于大多数用户方案是透明的，不需要调试要检测的二进制文件。
 
 - Live Unit Testing 不会创建新的应用程序域来运行测试，但从测试资源管理器窗口运行的测试确实会创建新的应用程序域  。
 
@@ -248,7 +250,7 @@ Live Unit Testing 只要检测到源文件已更改，就会启动一个生成�
 
 **为什么即使 Live Unit Testing 似乎正基于“输出”窗口中的消息运行测试，但仍在编辑器中看不到任何图标？**
 
-如果 Live Unit Testing 正在操作的程序集出于任何原因未进行检测，则可能无法在编辑器中看到图标。 例如，Live Unit Testing 与设置 `<UseHostCompilerIfAvailable>false</UseHostCompilerIfAvailable>` 的项目不兼容。 在这种情况下，需要将生成过程更新为，删除此设置或将设置更改为 `true`，以便 Live Unit Testing 可以正常运行。 
+如果 Live Unit Testing 正在操作的程序集出于任何原因未进行检测，则可能无法在编辑器中看到图标。 例如，Live Unit Testing 与设置 `<UseHostCompilerIfAvailable>false</UseHostCompilerIfAvailable>` 的项目不兼容。 在这种情况下，需要将生成过程更新为，删除此设置或将设置更改为 `true`，以便 Live Unit Testing 可以正常运行。 
 
 ## <a name="capture-logs"></a>捕获日志
 

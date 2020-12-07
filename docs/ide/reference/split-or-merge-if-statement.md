@@ -1,5 +1,7 @@
 ---
 title: Split 或 merge if 语句
+description: 了解如何使用“快速操作和重构”菜单拆分或合并 if 语句。
+ms.custom: SEO-VS-2020
 ms.date: 03/10/2020
 ms.topic: reference
 author: mikadumont
@@ -10,12 +12,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: a3b42f83faacda6be34b282150cf4fb4c0f379f1
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: f72c6c2ed1cfdd1c8ea4471976d6a4980dfe422f
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79093678"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479922"
 ---
 # <a name="split-or-merge-if-statements"></a>Split 或 merge if 语句
 
@@ -29,7 +31,7 @@ ms.locfileid: "79093678"
 
 **使用时机：** 希望将使用 `&&` 或 `||` 运算符的 `if` 语句拆分为嵌套的 `if` 语句，或者将 `if` 语句与外部 `if` 语句合并。
 
-操作原因：  这是一个样式偏好问题。  
+操作原因：这是一个样式偏好问题。  
 
 ## <a name="how-to"></a>操作说明
 
@@ -41,7 +43,7 @@ ms.locfileid: "79093678"
 
     ![拆分 If 语句](../media/split-if-statement.png)
 
-3. 选择“拆分到嵌套的 if 语句”  。
+3. 选择“拆分到嵌套的 if 语句”。
 
     ![拆分 If 语句完成](../media/split-if-statement-complete.png)
 
@@ -53,7 +55,7 @@ ms.locfileid: "79093678"
 
     ![合并 If 语句](../media/merge-if-statement.png)
 
-3. 选择“与外部 if 语句合并”  。
+3. 选择“与外部 if 语句合并”。
 
     ![合并 If 语句完成](../media/merge-if-statement-complete.png)
 

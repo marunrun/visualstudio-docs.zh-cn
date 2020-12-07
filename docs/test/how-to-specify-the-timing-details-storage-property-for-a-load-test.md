@@ -1,5 +1,6 @@
 ---
 title: “计时详细信息存储”属性（负载测试运行设置）
+description: 了解如何编辑运行设置的“计时详细信息存储”属性。 有效值为“所有单个详细信息”、“无”和“仅统计信息”。
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
@@ -10,12 +11,12 @@ ms.assetid: 867a9c21-0909-4963-bc02-d41e9393008c
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 132c55b4cd6f716d8983358064f749eabeb9ba88
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 94603c2da0eb339df52aa58e3b2bb5666b75ead7
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810557"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330012"
 ---
 # <a name="how-to-specify-the-timing-details-storage-property-for-a-load-test-run-setting"></a>如何：为负载测试运行设置指定计时详细信息存储属性
 

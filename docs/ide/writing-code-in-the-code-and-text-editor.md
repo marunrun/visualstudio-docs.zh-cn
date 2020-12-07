@@ -1,5 +1,7 @@
 ---
 title: 代码编辑器功能
+description: 了解 Visual Studio 中的代码编辑器提供的功能，通过这些功能，可以更轻松地编写和管理代码和文本。
+ms.custom: SEO-VS-2020
 ms.date: 02/23/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6cf1cdbebab5d59091454e340b567eef7430efd3
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: a2363d350c91ac72b21784f490778010eba12007
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85532621"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480182"
 ---
 # <a name="features-of-the-code-editor"></a>代码编辑器功能
 

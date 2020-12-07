@@ -1,5 +1,7 @@
 ---
 title: 将单元测试作为 64 位进程运行
+description: 了解如何作为 64 位进程运行单元测试和捕获代码覆盖率信息。 必须拥有 64 位计算机。
+ms.custom: SEO-VS-2020
 ms.date: 03/10/2020
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 3c5cb51232457a43200c8a71ace51cc4b8a63e02
-ms.sourcegitcommit: 8e5b0106061bb43247373df33d0850ae68457f5e
+ms.openlocfilehash: 7d18a97a3cf8f680e7bfe3d679e8e57f7cc716fb
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88507981"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329063"
 ---
 # <a name="run-a-unit-test-as-a-64-bit-process"></a>将单元测试作为 64 位进程运行
 

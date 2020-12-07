@@ -1,5 +1,7 @@
 ---
 title: “选项”>“文本编辑器”>“U-SQL”>“IntelliSense”
+description: 了解如何使用 U-SQL 部分中的“IntelliSense”页面来修改 U-SQL 的文本编辑器 IntelliSense 设置。
+ms.custom: SEO-VS-2020
 ms.date: 01/17/2019
 ms.topic: reference
 f1_keywords:
@@ -10,26 +12,26 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 91d2af8bfcd8c9d80b589e01aedd535afbd1a913
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c1aea741c91f38be9d5b423226e635b77e440d9e
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85769467"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040194"
 ---
 # <a name="options-text-editor-u-sql-intellisense"></a>“选项”>“文本编辑器”>“U-SQL”>“IntelliSense”
 
-使用“IntelliSense”  选项页，可以修改一些与 U-SQL 相关的文本编辑器设置。 若要访问此选项页，请先依次选择“工具”   > “选项”  ，再依次选择“文本编辑器”   > “U-SQL”   > “IntelliSense”  。
+使用“IntelliSense”选项页，可以修改一些与 U-SQL 相关的文本编辑器设置。 若要访问此选项页，请先依次选择“工具” > “选项”，再依次选择“文本编辑器” > “U-SQL” > “IntelliSense”。
 
 ## <a name="intellisense-settings"></a>IntelliSense 设置
 
-选中复选框即可启用“快速信息”  或“Intellisense”  。 如果你将鼠标光标悬停在变量之上，快速信息就会显示完成声明。
+选中复选框即可启用“快速信息”或“Intellisense”。 如果你将鼠标光标悬停在变量之上，快速信息就会显示完成声明。
 
 ## <a name="completion-lists"></a>完成列表
 
 - **键入字符后显示完成列表**
 
-   选择此选项后，IntelliSense 在你开始键入时会自动显示完成列表。 如果取消选中此选项，仍可通过“IntelliSense”菜单或按 Ctrl   + 空格键  使用 IntelliSense 完成功能。
+   选择此选项后，IntelliSense 在你开始键入时会自动显示完成列表。 如果取消选中此选项，仍可通过“IntelliSense”菜单或按 Ctrl + 空格键使用 IntelliSense 完成功能。
 
 - **将关键字放入完成列表**
 
@@ -53,7 +55,7 @@ ms.locfileid: "85769467"
 
    如果你选中此选项，编辑器就会在你键入完成列表建议的所有字符时自动添加新行，并将光标移到新行。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [“选项”对话框 ->“环境”->“常规”](../../ide/reference/general-environment-options-dialog-box.md)
 - [使用 IntelliSense](../../ide/using-intellisense.md)

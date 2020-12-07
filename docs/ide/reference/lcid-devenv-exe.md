@@ -1,5 +1,7 @@
 ---
 title: -LCID (devenv.exe)
+description: 了解如何使用 LCID devenv 命令行开关设置 IDE 中文本、货币和其他值所使用的默认语言。
+ms.custom: SEO-VS-2020
 ms.date: 12/10/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +20,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cabbf36adb5019543b3cfb72b0b0e56976517d2d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: eda3a4d9242655af1b018664273ceb693c7e775c
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77557931"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96043980"
 ---
 # <a name="lcid-devenvexe"></a>/LCID (devenv.exe)
 
@@ -43,7 +45,7 @@ devenv {/LCID|/L} LocaleID
 
 ## <a name="remarks"></a>备注
 
-加载 IDE 并设置环境的默认自然语言。 此更改跨会话暂留，IDE 在“工具”   > “选项”   > “环境”   > “国际设置”   > “语言”  框中显示此更改。
+加载 IDE 并设置环境的默认自然语言。 此更改跨会话暂留，IDE 在“工具” > “选项” > “环境” > “国际设置” > “语言”框中显示此更改。
 
 如果指定的语言对系统不可用，`/LCID` 开关遭忽略。
 
@@ -51,10 +53,10 @@ devenv {/LCID|/L} LocaleID
 
 |语言|LCID|
 |--------------|----------|
-|中文（简体）|2052|
-|和 SharePoint 2010 显示的“中文(繁体)”|1028|
+|中文(简体)|2052|
+|中文(繁体)|1028|
 |捷克语|1029|
-|英语|1033|
+|英语|2052|
 |法语|1036|
 |德语|1031|
 |意大利语|1040|
@@ -77,5 +79,5 @@ devenv /LCID 1033
 ## <a name="see-also"></a>另请参阅
 
 - [Devenv 命令行开关](../../ide/reference/devenv-command-line-switches.md)
-- [“选项”对话框 ->“环境”->“区域设置”](../../ide/reference/international-settings-environment-options-dialog-box.md)
+- [“选项”对话框 -&gt;“环境”-&gt;“区域设置”](../../ide/reference/international-settings-environment-options-dialog-box.md)
 - [自定义窗口布局](../../ide/customizing-window-layouts-in-visual-studio.md)

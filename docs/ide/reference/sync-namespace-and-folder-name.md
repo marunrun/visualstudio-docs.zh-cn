@@ -1,5 +1,7 @@
 ---
 title: 同步命名空间和文件夹名称
+description: 了解如何使用“快速操作和重构”菜单来同步名称空间和文件夹名称。
+ms.custom: SEO-VS-2020
 ms.date: 06/12/2019
 ms.topic: reference
 author: mikadumont
@@ -9,12 +11,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: d7073edaf6ecc261c58bf1e5607323b9214c5ed0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 10dff5d9129d1a91f01ef7541397d86f5a71468c
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "67160753"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479805"
 ---
 # <a name="sync-namespace-and-folder-name"></a>同步命名空间和文件夹名称
 

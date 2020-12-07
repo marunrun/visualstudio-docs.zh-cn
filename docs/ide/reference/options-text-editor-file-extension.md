@@ -1,5 +1,7 @@
 ---
 title: 选项，文本编辑器，文件扩展名
+description: 了解如何使用“文件扩展名”页面来指定 Visual Studio IDE 如何处理具有某些文件扩展名的所有文件。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,22 +17,22 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3711a87d84e25fd6f790cee62ecb71b2b046d0be
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 1d0e782b0d141666ca7d1f79464d60afd89ef871
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75596198"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96039726"
 ---
 # <a name="options-text-editor-file-extension"></a>选项，文本编辑器，文件扩展名
 
-通过此“选项”对话框，可以指定 Visual Studio 集成开发环境 (IDE) 对具有特定文件扩展名的所有文件的处理方式。 对于输入的每个“扩展名”，可以选择一个编辑体验  。 这样便可选择在某种类型的哪些文档中打开 IDE 编辑器或设计器。 若要显示这些选项，请从“工具”菜单中选择“选项”，展开“文本编辑器”节点并选择“文件扩展名”     。
+通过此“选项”对话框，可以指定 Visual Studio 集成开发环境 (IDE) 对具有特定文件扩展名的所有文件的处理方式。 对于输入的每个“扩展名”，可以选择一个编辑体验。 这样便可选择在某种类型的哪些文档中打开 IDE 编辑器或设计器。 若要显示这些选项，请从“工具”菜单中选择“选项”，展开“文本编辑器”节点并选择“文件扩展名”。
 
 选中“使用编码”选项后，每当打开该类型的文档时，都会显示一个对话框，用户可以为该文档选择编码方案。 在准备不同版本的项目文档以用于不同的平台或不同的目标语言时，此选项将很有帮助。
 
 ## <a name="uielement-list"></a>UIElement 列表
 
-**扩展**
+**扩展名**
 
 键入要定义在 IDE 中的编辑体验的文件扩展名。
 
@@ -40,7 +42,7 @@ ms.locfileid: "75596198"
 
 **添加**
 
-向扩展名列表添加包含指定的“扩展名”和“编辑体验”的条目   。
+向扩展名列表添加包含指定的“扩展名”和“编辑体验”的条目。
 
 **移除**
 
@@ -50,14 +52,14 @@ ms.locfileid: "75596198"
 
 列出所有已指定编辑体验的扩展名。
 
-将无扩展名文件映射到 
+**将无扩展名文件映射到**
 
 若要指定 IDE 将如何处理无扩展名的文件，请选择此选项。
 
-无扩展名文件选项 
+无扩展名文件选项
 
-提供与“编辑器”相同的列表  。 选择打开不具有此文件扩展名的文档所使用的 IDE 编辑器或设计器。
+提供与“编辑器”相同的列表。 选择打开不具有此文件扩展名的文档所使用的 IDE 编辑器或设计器。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [如何：管理编辑器模式](../../ide/how-to-manage-editor-modes.md)

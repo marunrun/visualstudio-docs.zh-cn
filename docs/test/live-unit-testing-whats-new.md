@@ -1,5 +1,7 @@
 ---
 title: Visual Studio 2017 中 Live Unit Testing 的新增功能
+description: 本文介绍从 Visual Studio 2017 版本 15.3 开始，每个 Visual Studio 版本中的 Live Unit Testing 添加的新功能。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 10/11/2017
 ms.topic: conceptual
@@ -11,12 +13,12 @@ ms.author: mikejo
 ms.workload:
 - dotnet
 monikerRange: vs-2017
-ms.openlocfilehash: cc6a7a25ebd2f7d07dcb887952b82bda34aaad35
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: ae1caef04c1ccd1c51c38ddef5dc8c783bdbfaa9
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851458"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328829"
 ---
 # <a name="whats-new-in-live-unit-testing-for-visual-studio-2017"></a>Visual Studio 2017 的 Live Unit Testing 的新增功能
 
@@ -38,7 +40,7 @@ ms.locfileid: "90851458"
 
 - **可靠性和性能**：Live Unit Testing 现在可确保系统能够更好地检测出项目尚未完全完成加载的情况，并可避免 Live Unit Testing 出现崩溃。 生成性能改进还可在系统知道项目文件未进行任何更改时避免重新计算 MSBuild 项目。
 
-- **其他用户界面优化**：右键单击手势中令人费解的“实时测试集 - 包括/排除”  选项已更名为“Live Unit Testing 包括/排除”  。 “测试” > “Live Unit Testing”菜单的“重置清理”选项已被删除。 现可通过依次选择“工具” > “选项” > “Live Unit Testing”，然后选择“删除持久化数据”访问该选项。
+- **其他用户界面优化**：右键单击手势中令人费解的“实时测试集 - 包括/排除”选项已更名为“Live Unit Testing 包括/排除”。 “测试” > “Live Unit Testing”菜单的“重置清理”选项已被删除。 现可通过依次选择“工具” > “选项” > “Live Unit Testing”，然后选择“删除持久化数据”访问该选项   。
 
 ## <a name="version-153"></a>版本 15.3
 
@@ -56,7 +58,7 @@ ms.locfileid: "90851458"
 
 - “工具/选项/Live Unit Testing/常规”中额外添加了一些可配置的选项。 可设置用于 Live Unit Testing 的内存上限。 还可以为未结解决方案指定 Live Unit Testing 永久性数据的文件路径。
 
-- “测试/Live Unit Testing”的菜单栏下额外添加了一些菜单项。 “重置清理”  可以删除永久性数据，并能重新生成这些数据。 “选项”  跳转到“工具/选项/Live Unit Testing/常规”。
+- “测试/Live Unit Testing”的菜单栏下额外添加了一些菜单项。 “重置清理”可以删除永久性数据，并能重新生成这些数据。 “选项”跳转到“工具/选项/Live Unit Testing/常规”。
 
 - 现在可以使用以下属性，在源代码中指定要从 Live Unit Testing 中排除的目标测试方法：
 
@@ -64,7 +66,7 @@ ms.locfileid: "90851458"
   - 对于 NUnit：`[Category("SkipWhenLiveUnitTesting")]`
   - 对于 MSTest：`[TestCategory("SkipWhenLiveUnitTesting")]`
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Live Unit Testing 简介](live-unit-testing-intro.md)
-- [使用 Visual Studio 进行实时单元测试](live-unit-testing.md)
+- [使用 Visual Studio 执行 Live Unit Testing](live-unit-testing.md)

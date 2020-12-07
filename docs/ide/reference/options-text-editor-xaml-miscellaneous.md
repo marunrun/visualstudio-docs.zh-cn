@@ -1,5 +1,7 @@
 ---
 title: 选项, 文本编辑器, XAML, 杂项
+description: 了解如何使用 XML 部分中的“杂项”页面来指定 XAML 文档中元素和属性的格式设置方式。
+ms.custom: SEO-VS-2020
 ms.date: 10/29/2018
 ms.topic: reference
 f1_keywords:
@@ -28,12 +30,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: f646d52e3aae3d52f6cd24d75421fbdc71d30d66
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: c5662381d025fa2c74ac82ac217122ea9097ab14
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85544087"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040961"
 ---
 # <a name="options-text-editor-xaml-miscellaneous"></a>选项, 文本编辑器, XAML, 杂项
 

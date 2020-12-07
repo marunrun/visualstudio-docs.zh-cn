@@ -1,5 +1,7 @@
 ---
 title: “选项”>“文本编辑器”>“HTML (Web 窗体)”>“杂项”
+description: 了解如何使用 HTML 部分中的“杂项”页面来设置 HTML 编辑器处理粘贴到页面中的元素的方式的首选项。
+ms.custom: SEO-VS-2020
 ms.date: 1/15/2019
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8aa26144a7c0a2f7edad58ecfb26e3a7d402a994
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.openlocfilehash: bf5495f60e92a38c0c43a0751054d41dc4de6970
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85770911"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040766"
 ---
 # <a name="options-text-editor-html-web-forms-miscellaneous"></a>“选项”>“文本编辑器”>“HTML (Web 窗体)”>“杂项”
 

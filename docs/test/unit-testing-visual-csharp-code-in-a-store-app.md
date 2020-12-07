@@ -1,5 +1,7 @@
 ---
 title: 对 Visual C# 代码进行单元测试
+description: 了解如何在 UWP 应用中为 C# 类创建单元测试。 本文演示了测试驱动开发。
+ms.custom: SEO-VS-2020
 ms.date: 09/27/2019
 ms.topic: conceptual
 ms.author: mikejo
@@ -7,38 +9,38 @@ author: mikejo5000
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 31fbbfaa5d16dd51776f592b89a7846936b3013f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 410d5dfefa5980bceabff99d66067987b390a615
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75590860"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330077"
 ---
 # <a name="unit-test-c-code"></a>单元测试 C# 代码
 
 本文介绍一种在 UWP 应用中创建面向 C# 类的单元测试的方法。
 
-将对 Rooter  类进行测试，此类实现了一个函数，该函数可计算给定数平方根的估算值。
+将对 Rooter 类进行测试，此类实现了一个函数，该函数可计算给定数平方根的估算值。
 
-本文演示了测试驱动开发  。 在此方法中，首先编写验证要测试的系统的特定行为的测试，然后编写通过测试的代码。
+本文演示了测试驱动开发。 在此方法中，首先编写验证要测试的系统的特定行为的测试，然后编写通过测试的代码。
 
 ## <a name="create-the-solution-and-the-unit-test-project"></a>创建解决方案和单元测试项目
 
-1. 在“文件”菜单上，选择“新建” > “项目”    。
+1. 在“文件”菜单上，选择“新建” > “项目”  。
 
-2. 搜索并选择“空白应用(通用 Windows)”项目模板  。
+2. 搜索并选择“空白应用(通用 Windows)”项目模板。
 
-3. 将项目命名为“Maths”  。
+3. 将项目命名为“Maths”。
 
-4. 在“解决方案资源管理器”  中，右键单击解决方案，然后依次选择“添加”   > “新建项目”  。
+4. 在“解决方案资源管理器”中，右键单击解决方案，然后依次选择“添加” > “新建项目”。
 
-5. 搜索并选择“单元测试应用(通用 Windows)”项目模板  。
+5. 搜索并选择“单元测试应用(通用 Windows)”项目模板。
 
-6. 将该测试项目命名为“RooterTests”  。
+6. 将该测试项目命名为“RooterTests”。
 
 ## <a name="verify-that-the-tests-run-in-test-explorer"></a>验证测试是否在测试资源管理器中运行
 
-1. 在 UnitTest.cs  文件的 TestMethod1  中插入一些测试代码：
+1. 在 UnitTest.cs 文件的 TestMethod1 中插入一些测试代码：
 
    ```csharp
    [TestMethod]
@@ -52,25 +54,25 @@ ms.locfileid: "75590860"
 
 ::: moniker range="vs-2017"
 
-2. 在“测试”  菜单中，选择“运行”  >“所有测试”  。
+2. 在“测试”菜单中，选择“运行”>“所有测试”。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-2. 在“测试”  菜单中，选择“运行所有测试”  。
+2. 在“测试”菜单中，选择“运行所有测试”。
 
 ::: moniker-end
 
-   将生成并运行测试项目。 请耐心等待，因为这可能需要一些时间。 随即显示测试资源管理器窗口，并且测试在“通过的测试”下列出   。 窗口底部的“摘要”窗格将提供有关所选测试的其他详细信息  。
+   将生成并运行测试项目。 请耐心等待，因为这可能需要一些时间。 随即显示测试资源管理器窗口，并且测试在“通过的测试”下列出 。 窗口底部的“摘要”窗格将提供有关所选测试的其他详细信息。
 
 ## <a name="add-the-rooter-class-to-the-maths-project"></a>向 Maths 项目添加 Rooter 类
 
-1. 在“解决方案资源管理器”  中，右键单击“Maths”  项目，然后选择“添加”   > “类”  。
+1. 在“解决方案资源管理器”中，右键单击“Maths”项目，然后选择“添加” > “类”。
 
-2. 将类文件命名为 Rooter.cs  。
+2. 将类文件命名为 Rooter.cs。
 
-3. 将以下代码添加到 Rooter  类 Rooter.cs  文件中：
+3. 将以下代码添加到 Rooter 类 Rooter.cs 文件中：
 
    ```csharp
    public Rooter()
@@ -84,9 +86,9 @@ ms.locfileid: "75590860"
    }
    ```
 
-   Rooter  类声明一个构造函数和 SquareRoot  estimator 方法。 SquareRoot  方法只是一个最小实现，足以为测试设置测试基本结构。
+   Rooter 类声明一个构造函数和 SquareRoot estimator 方法。 SquareRoot 方法只是一个最小实现，足以为测试设置测试基本结构。
 
-4. 将 `public` 关键字添加到 Rooter  类声明，以便测试代码能够访问它。
+4. 将 `public` 关键字添加到 Rooter 类声明，以便测试代码能够访问它。
 
    ```csharp
    public class Rooter
@@ -96,15 +98,15 @@ ms.locfileid: "75590860"
 
 1. 添加从 RooterTests 项目到 Maths 应用的引用。
 
-    1. 在“解决方案资源管理器”  中，右键单击“RooterTests”  项目，然后选择“添加”   > “引用”  。
+    1. 在“解决方案资源管理器”中，右键单击“RooterTests”项目，然后选择“添加” > “引用”。
 
-    2. 在“添加引用 - RooterTests”  对话框中，展开“解决方案”  ，然后选择“项目”  。 选择“Maths”  项目。
+    2. 在“添加引用 - RooterTests”对话框中，展开“解决方案”，然后选择“项目”。 选择“Maths”项目。
 
         ![添加一个对 Maths 项目的引用](../test/media/ute_cs_windows_addreference.png)
 
-2. 向 UnitTest1.cs  文件添加 `using` 语句：
+2. 向 UnitTest1.cs 文件添加 `using` 语句：
 
-    1. 打开 UnitTest.cs  。
+    1. 打开 UnitTest.cs。
 
     2. 在 `using Microsoft.VisualStudio.TestTools.UnitTesting;` 行下添加以下代码：
 
@@ -112,7 +114,7 @@ ms.locfileid: "75590860"
        using Maths;
        ```
 
-3. 添加使用 Rooter  函数的测试。 将以下代码添加到 UnitTest.cs  中：
+3. 添加使用 Rooter 函数的测试。 将以下代码添加到 UnitTest.cs 中：
 
    ```csharp
    [TestMethod]
@@ -126,13 +128,13 @@ ms.locfileid: "75590860"
    }
    ```
 
-   新测试将显示在测试资源管理器的“未运行的测试”节点中   。
+   新测试将显示在测试资源管理器的“未运行的测试”节点中 。
 
-4. 若要避免“负载包含两个或更多具有相同目标路径的文件”错误，请在“解决方案资源管理器”  中，展开“Maths”  项目下的“属性”  节点，然后删除 Default.rd.xml  文件。
+4. 若要避免“负载包含两个或更多具有相同目标路径的文件”错误，请在“解决方案资源管理器”中，展开“Maths”项目下的“属性”节点，然后删除 Default.rd.xml 文件。
 
 ::: moniker range="vs-2017"
 
-6. 在“测试资源管理器”  中，选择“全部运行”  。
+6. 在“测试资源管理器”中，选择“全部运行”。
 
    解决方案生成，测试运行并通过。
 
@@ -142,7 +144,7 @@ ms.locfileid: "75590860"
 
 ::: moniker range=">=vs-2019"
 
-6. 在“测试资源管理器”  中，选择“运行所有测试”  。
+6. 在“测试资源管理器”中，选择“运行所有测试”。
 
    解决方案生成，测试运行并通过。
 
@@ -154,7 +156,7 @@ ms.locfileid: "75590860"
 
 ## <a name="iteratively-augment-the-tests-and-make-them-pass"></a>以迭代方式增加测试并使它们通过
 
-1. 添加一个名为“RangeTest”  的新测试：
+1. 添加一个名为“RangeTest”的新测试：
 
    ```csharp
    [TestMethod]
@@ -174,14 +176,14 @@ ms.locfileid: "75590860"
    > [!TIP]
    > 建议你不更改已通过的测试。 改为添加新的测试。
 
-2. 运行 RangeTest  测试并验证它是否失败。
+2. 运行 RangeTest 测试并验证它是否失败。
 
    ![RangeTest 未通过](../test/media/ute_cpp_testexplorer_rangetest_fail.png)
 
    > [!TIP]
    > 编写测试后，请立即运行测试，验证它是否失败。 这有助于避免编写从不失败的测试这一易犯错误。
 
-3. 增强受测代码，以便新测试通过。 将 Rooter.cs  中的 SquareRoot  函数更改为：
+3. 增强受测代码，以便新测试通过。 将 Rooter.cs 中的 SquareRoot 函数更改为：
 
    ```csharp
    public double SquareRoot(double x)
@@ -200,13 +202,13 @@ ms.locfileid: "75590860"
 
 ::: moniker range="vs-2017"
 
-4. 在“测试资源管理器”  中，选择“全部运行”  。
+4. 在“测试资源管理器”中，选择“全部运行”。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-4. 在“测试资源管理器”  中，选择“运行所有测试”  。
+4. 在“测试资源管理器”中，选择“运行所有测试”。
 
 ::: moniker-end
 
@@ -221,7 +223,7 @@ ms.locfileid: "75590860"
 
 ### <a name="simplify-the-square-root-estimation"></a>简化平方根估算
 
-1. 通过更改一行代码，简化 SquareRoot  函数中的集中计算，如下所示：
+1. 通过更改一行代码，简化 SquareRoot 函数中的集中计算，如下所示：
 
     ```csharp
     // Old code
@@ -238,9 +240,9 @@ ms.locfileid: "75590860"
 
 ### <a name="eliminate-duplicated-code"></a>消除重复的代码
 
-RangeTest  方法对传递到 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> 方法的“公差”  变量的分母进行硬编码。 如果计划添加其他使用同一公差计算的测试，则在多个位置使用硬编码的值会导致代码难以维护。
+RangeTest 方法对传递到 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> 方法的“公差”变量的分母进行硬编码。 如果计划添加其他使用同一公差计算的测试，则在多个位置使用硬编码的值会导致代码难以维护。
 
-1. 向 UnitTest1  类添加一个私有 helper 方法以计算公差值，然后从 RangeTest  调用该方法。
+1. 向 UnitTest1 类添加一个私有 helper 方法以计算公差值，然后从 RangeTest 调用该方法。
 
     ```csharp
     private double ToleranceHelper(double expected)
@@ -263,10 +265,10 @@ RangeTest  方法对传递到 <xref:Microsoft.VisualStudio.TestTools.UnitTesting
     ...
     ```
 
-2. 运行 RangeTest  ，以确保它仍然通过。
+2. 运行 RangeTest，以确保它仍然通过。
 
 > [!TIP]
-> 如果将一个 helper 方法添加到不想在“测试资源管理器”  中出现的测试类中，那么不要向该方法添加 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> 属性。
+> 如果将一个 helper 方法添加到不想在“测试资源管理器”中出现的测试类中，那么不要向该方法添加 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> 属性。
 
 ## <a name="see-also"></a>请参阅
 

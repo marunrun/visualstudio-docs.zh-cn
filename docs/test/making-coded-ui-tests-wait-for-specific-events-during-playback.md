@@ -1,5 +1,7 @@
 ---
 title: 让编码 UI 测试等待特定事件
+description: 了解如何指示编码的 UI 测试回放测试等待某些事件（例如某个窗口出现或进度条消失）发生。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: mikejo5000
@@ -7,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ea0bd0135ca90f96c2275248da7d116ecfd92e01
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 401888eee7fb5952c69c953824f3959c2b456a4d
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85286773"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329557"
 ---
 # <a name="make-coded-ui-tests-wait-for-specific-events-during-playback"></a>播放期间让编码 UI 测试等待特定事件
 
@@ -35,7 +37,7 @@ Visual Studio Enterprise
 
 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlEnabled%2A>
 
-在向导通过对服务器进行调用来执行输入的某种异步验证时，等待控件启用。 例如，可以执行方法以等待启用向导的“下一步”按钮。  有关此方法的示例，请参阅[演练：创建、编辑和维护编码的 UI 测试](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)。
+在向导通过对服务器进行调用来执行输入的某种异步验证时，等待控件启用。 例如，可以执行方法以等待启用向导的“下一步”按钮。 有关此方法的示例，请参阅[演练：创建、编辑和维护编码的 UI 测试](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)。
 
 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlExist%2A>
 
@@ -47,7 +49,7 @@ Visual Studio Enterprise
 
 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlPropertyEqual%2A>
 
-等待控件的指定属性具有给定值。 例如，等待状态文本更改为“完成”。 
+等待控件的指定属性具有给定值。 例如，等待状态文本更改为“完成”。
 
 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlPropertyNotEqual%2A>
 
@@ -55,7 +57,7 @@ Visual Studio Enterprise
 
 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlCondition%2A>
 
-等待指定谓词返回为 `true`。 这可以用于对给定控件执行的复杂等待操作（如 OR 条件）。 例如，可以等到状态文本为“成功”或“失败”，如下面的代码中所示：  
+等待指定谓词返回为 `true`。 这可以用于对给定控件执行的复杂等待操作（如 OR 条件）。 例如，可以等到状态文本为“成功”或“失败”，如下面的代码中所示：
 
 ```csharp
 
@@ -72,7 +74,7 @@ statusText.WaitForControlCondition(IsStatusDone);
 
  <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForCondition%2A>
 
-前面的所有方法都是 UITestControl 的实例方法。 此方法是静态方法。 此方法也等待指定谓词为 `true`，但它可以用于对多个控件执行的复杂等待操作（如 OR 条件）。 例如，可以等到状态文本为“成功”或等到错误消息出现，如下面的代码中所示： 
+前面的所有方法都是 UITestControl 的实例方法。 此方法是静态方法。 此方法也等待指定谓词为 `true`，但它可以用于对多个控件执行的复杂等待操作（如 OR 条件）。 例如，可以等到状态文本为“成功”或等到错误消息出现，如下面的代码中所示：
 
 ```csharp
 
@@ -105,7 +107,7 @@ Playback.Wait() 采用 For 循环在较小区块中内部调用 Thread.Sleep()�
 > [!TIP]
 > 通过编码的 UI 测试编辑器，可轻松修改编码的 UI 测试。 使用编码的 UI 测试编辑器，可以查找、查看和编辑测试方法。 也可以在 UI 控件映射中编辑 UI 操作及其关联的控件。 有关详细信息，请参阅[使用编码的 UI 测试编辑器编辑编码的 UI 测试](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [使用 UI 自动化来测试代码](../test/use-ui-automation-to-test-your-code.md)
 - [创建编码的 UI 测试](../test/use-ui-automation-to-test-your-code.md)

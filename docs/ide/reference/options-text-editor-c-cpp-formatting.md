@@ -1,5 +1,7 @@
 ---
 title: 选项，文本编辑器，C/C++，格式设置
+description: 了解在使用 C 和 C++ 进行编程时，如何使用“格式设置选项”页面及其子页面来设置代码编辑器中的代码格式设置选项。
+ms.custom: SEO-VS-2020
 ms.date: 04/30/2018
 ms.topic: reference
 f1_keywords:
@@ -16,20 +18,20 @@ ms.author: tglee
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7a6029058ab0bc02a623df0e1733eb8548102d5
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 264485fd8f20ee31046035dba7b208795d0d91b0
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75596250"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96041082"
 ---
-# <a name="options-text-editor-cc-formatting"></a>选项，文本编辑器，C/C++，格式设置
+# <a name="options-text-editor-cc-formatting"></a>选项，文本编辑器，C/C++，格式
 
 使用 C 或 C++ 进行编程时，请使用以下属性页更改代码编辑器的默认行为。
 
 ![C++ Formatting 属性页](media/cpp-formatting.png)
 
-若要访问此页，请在“选项”  对话框的左窗格中，展开“文本编辑器”  ，再展开“C/C++”  ，然后单击“格式设置”  。
+若要访问此页，请在“选项”对话框的左窗格中，展开“文本编辑器”，再展开“C/C++”，然后单击“格式设置”。
 
 > [!NOTE]
 > 以下说明中的某些 Visual Studio 用户界面元素在计算机上出现的名称或位置可能会不同。 这些元素取决于你所使用的 Visual Studio 版本和你所使用的设置。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](../../ide/personalizing-the-visual-studio-ide.md)。
@@ -56,13 +58,13 @@ ms.locfileid: "75596250"
 
 默认情况下，启用 ClangFormat 支持。 可选择对所有项目应用下述一种常见的格式约定：LLVM、Google、Chromium、Mozilla 或 Webkit。 此外，还可创建自定义格式定义 .clang-format 或 _clang-format 文件。 如果项目文件夹中存在此类文件，Visual Studio 将使用它来设置该文件夹及其子文件夹中所有源代码文件的格式。
 
-当你键入内容时，Visual Studio 默认在背景应用格式中运行 clangformat.exe。 此外，还可指定仅针对“设置文档格式(Ctrl+K, Ctrl+D)”或“设置选定内容格式(Ctrl+K, Ctrl+F)”这两个手动调用的格式命令运行它   。
+当你键入内容时，Visual Studio 默认在背景应用格式中运行 clangformat.exe。 此外，还可指定仅针对“设置文档格式(Ctrl+K, Ctrl+D)”或“设置选定内容格式(Ctrl+K, Ctrl+F)”这两个手动调用的格式命令运行它。
 
 ## <a name="indentation-new-lines-spacing-wrapping-pages"></a>“缩进”、“新行”和“间距换行”页面
 
 这些页面支持各种格式自定义；但如果启用了 ClangFormat，则忽略这些页面。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [“选项”对话框 ->“环境”->“常规”](../../ide/reference/general-environment-options-dialog-box.md)
 - [使用 IntelliSense](../../ide/using-intellisense.md)

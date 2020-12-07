@@ -1,5 +1,7 @@
 ---
 title: “列出寄存器”命令
+description: 了解 List Registers 命令，以及它如何显示所选寄存器的值，并允许你修改要显示的寄存器列表。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -14,12 +16,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e87b10a7827b5365b507abb2c72a21506e59c19e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 5459ded60ea90ae00a3f943f829065a82548d160
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75568680"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305293"
 ---
 # <a name="list-registers-command"></a>“列出寄存器”命令
 显示选中寄存器的值并允许修改要显示的寄存器列表。
@@ -32,10 +34,10 @@ Debug.ListRegisters [/Display [{register|registerGroup}...]] [/List]
 [/Unwatch [{register|registerGroup}...]]
 ```
 
-## <a name="switches"></a>开关
+## <a name="switches"></a>交换机
 /Display [{`register`&#124;`registerGroup`}...]
 
-显示指定 `register` 或 `registerGroup` 的值。 如果没有指定 `register` 或 `registerGroup`，将显示寄存器的默认列表。 如果没有指定任何开关，则出现相同行为。 例如:
+显示指定 `register` 或 `registerGroup` 的值。 如果没有指定 `register` 或 `registerGroup`，将显示寄存器的默认列表。 如果没有指定任何开关，则出现相同行为。 例如：
 
 `Debug.ListRegisters /Display eax`
 

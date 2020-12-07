@@ -1,5 +1,7 @@
 ---
 title: 参数信息、成员列表和快速信息
+description: 了解如何使用以下 IntelliSense 功能：成员列表、参数信息、快速信息和完成单词。
+ms.custom: SEO-VS-2020
 ms.date: 05/25/2018
 ms.topic: conceptual
 f1_keywords:
@@ -15,12 +17,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cbd85ece0cf7b84230e37c74c27e746df7a52439
-ms.sourcegitcommit: f78960320798e2c6b33145cee77a2221f031603c
+ms.openlocfilehash: c60372d7268dd76bf9bbd967678490998ffa76c3
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94878278"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479012"
 ---
 # <a name="intellisense-in-visual-studio"></a>Visual Studio 中的 IntelliSense
 

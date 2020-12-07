@@ -1,5 +1,7 @@
 ---
 title: 有关无效引用的疑难解答
+description: 了解如何排查除应用程序无法找到引用的组件以外的其他可能原因导致的无效引用问题。
+ms.custom: SEO-VS-2020
 ms.date: 03/21/2017
 ms.topic: troubleshooting
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a5116d2487ca9f53c460e1cae8f362f3ff1bcdf8
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 627724410ac9e0829faeb23cb5b0eef01b153293
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75565911"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479168"
 ---
 # <a name="troubleshoot-broken-references"></a>有关无效引用的疑难解答
 
@@ -41,24 +43,24 @@ ms.locfileid: "75565911"
 
 ## <a name="reference-path-is-incorrect"></a>引用路径不正确
 
-如果在不同计算机上共享项目，当组件位于每台计算机上的不同目录中时可能找不到某些引用。 引用存储时采用组件文件的名称（例如，MyComponent  ）。 向项目添加引用时，组件文件的文件夹位置（例如 C:\MyComponents  ）追加到 ReferencePath  项目属性。
+如果在不同计算机上共享项目，当组件位于每台计算机上的不同目录中时可能找不到某些引用。 引用存储时采用组件文件的名称（例如，MyComponent）。 向项目添加引用时，组件文件的文件夹位置（例如 C:\MyComponents）追加到 ReferencePath 项目属性。
 
-打开项目时，它会尝试通过查找引用路径上的目录找到这些引用的组件文件。 如果在组件存储于其他目录（例如 D:\MyComponents  ）的计算机上打开项目，则无法找到该引用，并且任务列表  中会出现错误。
+打开项目时，它会尝试通过查找引用路径上的目录找到这些引用的组件文件。 如果在组件存储于其他目录（例如 D:\MyComponents）的计算机上打开项目，则无法找到该引用，并且任务列表中会出现错误。
 
-若要解决此问题，可以删除损坏的引用，然后使用“添加引用”  对话框替换引用。 另一种解决方案是使用项目的属性页中的“引用路径”  项，并修改列表中的文件夹，以指向正确位置。 为每台计算机上的每位用户保留“引用路径”  属性。 因此，修改引用路径不会影响项目中的其他用户。
+若要解决此问题，可以删除损坏的引用，然后使用“添加引用”对话框替换引用。 另一种解决方案是使用项目的属性页中的“引用路径”项，并修改列表中的文件夹，以指向正确位置。 为每台计算机上的每位用户保留“引用路径”属性。 因此，修改引用路径不会影响项目中的其他用户。
 
 > [!TIP]
 > 项目到项目的引用不存在这些问题。 因此，如果可以，请使用项目到项目的引用，而不是文件引用。
 
 ### <a name="to-fix-a-broken-project-reference-by-correcting-the-reference-path"></a>通过纠正引用路径修复损坏的项目引用
 
-1. 在“解决方案资源管理器”  中，右键单击项目节点，然后单击“属性”  。
+1. 在“解决方案资源管理器”中，右键单击项目节点，然后单击“属性”。
 
-   随即显示“项目设计器”  。
+   随即显示“项目设计器”。
 
-1. 如果使用 Visual Basic，请选择“引用”  页，并单击“引用路径”  按钮。 在“引用路径”  对话框中，键入包含要在“文件夹”  字段中引用的项的文件夹路径，然后单击”添加文件夹”  按钮。
+1. 如果使用 Visual Basic，请选择“引用”页，并单击“引用路径”按钮。 在“引用路径”对话框中，键入包含要在“文件夹”字段中引用的项的文件夹路径，然后单击”添加文件夹”按钮。
 
-    如果使用 C#，请选择“引用路径”  页。 在“文件夹”  字段中，键入包含要引用项的文件夹路径，然后单击”添加文件夹”  按钮。
+    如果使用 C#，请选择“引用路径”页。 在“文件夹”字段中，键入包含要引用项的文件夹路径，然后单击”添加文件夹”按钮。
 
 ## <a name="referenced-file-has-been-deleted"></a>引用的文件已删除
 
@@ -88,6 +90,6 @@ ms.locfileid: "75565911"
 
 如果一个用户已添加对 COM 组件的引用，而第二个用户尝试在未安装此组件的计算机上运行代码，则第二个用户将收到引用已损坏的错误。 在第二台计算机上安装组件可更正此错误。 有关如何在项目中使用对 COM 组件的引用，请参阅 [.NET Framework 应用程序中的 COM 互操作性](/dotnet/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-- [项目设计器 ->“引用”页 (Visual Basic)](../ide/reference/references-page-project-designer-visual-basic.md)
+- [项目设计器 -&gt;“引用”页 (Visual Basic)](../ide/reference/references-page-project-designer-visual-basic.md)

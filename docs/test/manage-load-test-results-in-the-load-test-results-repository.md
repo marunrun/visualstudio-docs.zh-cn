@@ -1,5 +1,7 @@
 ---
 title: 管理负载测试结果
+description: 了解如何管理在负载测试期间收集的数据，这些数据存储在负载测试结果存储库 SQL 数据库中。
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,20 +13,20 @@ ms.assetid: 1cd63c4b-4f74-4133-b675-5e8fbeab25f3
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 9945551469541cdcffe520844da600d758dc43b5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ea27d94f4fbe4c0ebe81cf0153ce2e98a0789dd6
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85286760"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328731"
 ---
 # <a name="manage-load-test-results-in-the-load-test-results-repository"></a>管理“负载测试结果存储库”中的负载测试结果
 
-运行负载测试时，在运行负载测试期间收集的任何信息都存储到负载测试结果存储库中，这是一个 SQL 数据库  。 负载测试结果储存库包含性能计数器数据和有关已记录错误的任何信息。 “结果储存库”数据库在安装控制器时创建，或者首次在本地运行负载测试时自动创建。 对于本地运行，如果没有负载测试架构，则将自动创建该数据库。
+运行负载测试时，在运行负载测试期间收集的任何信息都存储到负载测试结果存储库中，这是一个 SQL 数据库。 负载测试结果储存库包含性能计数器数据和有关已记录错误的任何信息。 “结果储存库”数据库在安装控制器时创建，或者首次在本地运行负载测试时自动创建。 对于本地运行，如果没有负载测试架构，则将自动创建该数据库。
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-如果修改控制器的结果储存库连接字符串以使用其他服务器，则新服务器必须运行 loadtestresultsrepository.sql 脚本才能创建该架构  。
+如果修改控制器的结果储存库连接字符串以使用其他服务器，则新服务器必须运行 loadtestresultsrepository.sql 脚本才能创建该架构。
 
 Visual Studio Enterprise 提供命名的计数器集，用于基于某种技术来收集通用性能计数器。 在分析 IIS 服务器、ASP.NET 服务器或 SQL Server 时可使用这些计数器集。 计数器集收集的所有数据都存储在负载测试结果储存库中。
 
@@ -46,17 +48,17 @@ Visual Studio Enterprise 提供命名的计数器集，用于基于某种技术�
 |任务|关联主题|
 |-|-----------------------|
 |**设置负载测试结果存储库：** 可在 SQL 数据库中设置负载测试结果存储库。 **注意：** 在安装测试控制器时也可创建负载测试存储库。 有关详细信息，请参阅[安装和配置测试代理](../test/lab-management/install-configure-test-agents.md)。||
-|**选择并查看结果存储库：** 可选择一个特定结果存储库。 并不局限于使用本地结果存储区。 通常，负载测试是在一组远程代理计算机上运行。 代理或本地计算机生成的测试结果可保存到任何已创建负载测试结果存储区的 SQL 服务器中。 在这两种情况下，都必须使用“管理测试控制器”窗口标识负载测试结果的存储区  。|-   [如何：选择负载测试结果存储库](../test/how-to-select-a-load-test-results-repository.md)<br />-   [如何：访问负载测试结果进行分析](../test/how-to-access-load-test-results-for-analysis.md)|
-|**从存储库中删除负载测试结果：** 可以使用“打开和管理负载测试结果”对话框从“负载测试编辑器”中删除负载测试结果   。|-   [如何：从存储库中删除负载测试结果](../test/how-to-delete-load-test-results-from-a-repository.md)|
-|**将结果导入和导出存储库：** 可在“负载测试编辑器”中导入和导出负载测试结果  。|-   [如何：将负载测试结果导入存储库中](../test/how-to-import-load-test-results-into-a-repository.md)<br />-   [如何：从存储库导出负载测试结果](../test/how-to-export-load-test-results-from-a-repository.md)|
+|**选择并查看结果存储库：** 可选择一个特定结果存储库。 并不局限于使用本地结果存储区。 通常，负载测试是在一组远程代理计算机上运行。 代理或本地计算机生成的测试结果可保存到任何已创建负载测试结果存储区的 SQL 服务器中。 在这两种情况下，都必须使用“管理测试控制器”窗口标识负载测试结果的存储区。|-   [如何：选择负载测试结果存储库](../test/how-to-select-a-load-test-results-repository.md)<br />-   [如何：访问负载测试结果进行分析](../test/how-to-access-load-test-results-for-analysis.md)|
+|**从存储库中删除负载测试结果：** 可以使用“打开和管理负载测试结果”对话框从“负载测试编辑器”中删除负载测试结果。|-   [如何：从存储库删除负载测试结果](../test/how-to-delete-load-test-results-from-a-repository.md)|
+|**将结果导入和导出存储库：** 可在“负载测试编辑器”中导入和导出负载测试结果。|-   [如何：将负载测试结果导入存储库中](../test/how-to-import-load-test-results-into-a-repository.md)<br />-   [如何：从存储库导出负载测试结果](../test/how-to-export-load-test-results-from-a-repository.md)|
 
 ## <a name="related-tasks"></a>相关任务
 
 [分析负载测试结果](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
 
-可以使用负载测试分析器查看正在运行的负载测试和已完成的负载测试的结果  。
+可以使用负载测试分析器查看正在运行的负载测试和已完成的负载测试的结果。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [分析负载测试结果](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
 - [如何：访问负载测试结果进行分析](../test/how-to-access-load-test-results-for-analysis.md)

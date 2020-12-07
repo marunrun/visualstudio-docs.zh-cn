@@ -1,5 +1,7 @@
 ---
 title: “列出调用堆栈”命令
+description: 了解 List Call Stack 命令，以及它如何显示当前的调用堆栈。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,15 +15,15 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 34de768f41079311505ae7948502bb4356814ec7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 845d48f6a0fcc2b844777870bd7c9551f4a4d471
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770681"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305356"
 ---
 # <a name="list-call-stack-command"></a>“列出调用堆栈”命令
-显示当前调用堆栈。
+显示当前的调用堆栈。
 
 ## <a name="syntax"></a>语法
 
@@ -33,12 +35,12 @@ Debug.ListCallStack [/Count:number] [/ShowTypes:yes|no]
 [/ShowExternalCode:yes|no] [Thread:n] [index]
 ```
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 
 `index`\
 可选。 设置当前堆栈帧且不显示任何输出。
 
-## <a name="switches"></a>开关
+## <a name="switches"></a>交换机
 每个开关都可以使用其完整形式或缩写形式来调用。
 
 /Count:`number` [or] /C:`number`
@@ -108,11 +110,11 @@ kb 2
 >Debug.CallStack /Count:4 /ShowTypes:yes
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [“列出反汇编”命令](../../ide/reference/list-disassembly-command.md)
 - [“列出线程”命令](../../ide/reference/list-threads-command.md)
 - [Visual Studio 命令](../../ide/reference/visual-studio-commands.md)
 - [“命令”窗口](../../ide/reference/command-window.md)
 - [“查找/命令”框](../../ide/find-command-box.md)
-- [Visual Studio Command Aliases](../../ide/reference/visual-studio-command-aliases.md)
+- [Visual Studio 命令别名](../../ide/reference/visual-studio-command-aliases.md)

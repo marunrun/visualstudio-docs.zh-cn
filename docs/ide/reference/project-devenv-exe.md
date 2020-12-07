@@ -1,5 +1,7 @@
 ---
 title: -Project (devenv.exe)
+description: 了解如何使用 Project devenv 命令行开关在指定的解决方案配置中标识单个项目，以便生成、清理、重新生成或部署项目。
+ms.custom: SEO-VS-2020
 ms.date: 12/10/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -16,12 +18,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a4b57a5bd51ff20de8da87798aa398db04bc1c7d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 90c1cdf37ddda7209b4f951e42ad07720e5cc40b
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75567770"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040103"
 ---
 # <a name="project-devenvexe"></a>/Project (devenv.exe)
 
@@ -33,7 +35,7 @@ ms.locfileid: "75567770"
 devenv SolutionName {/Build|/Clean|/Deploy|/Rebuild} [SolnConfigName [/Project ProjName [/ProjectConfig ProjConfigName]] [/Out OutputFilename]]
 ```
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 
 - *SolutionName*
 
@@ -47,11 +49,11 @@ devenv SolutionName {/Build|/Clean|/Deploy|/Rebuild} [SolnConfigName [/Project P
 
   可选。 应用于 SolutionName 中命名的解决方案的解决方案配置的名称（如 `Debug` 或 `Release`）。 如果有多个解决方案平台可用，还必须指定平台（例如，`Debug|Win32`）。 如果未指定此参数或字符串为空 (`""`)，工具便会使用解决方案的有效配置。
 
-- `/Project` *ProjName*
+- `/Project` *项目名称*
 
-  可选。 解决方案中项目文件的路径和名称。 可以将项目在 SolutionName  文件夹中的显示名称或相对路径输入到项目文件中。 也可以输入项目文件的完整路径和名称。
+  可选。 解决方案中项目文件的路径和名称。 可以将项目在 SolutionName 文件夹中的显示名称或相对路径输入到项目文件中。 也可以输入项目文件的完整路径和名称。
 
-- `/ProjectConfig` *ProjConfigName*
+-  ProjConfigName`/ProjectConfig` 
 
   可选。 要应用于已命名 `/Project` 的项目生成配置名称（如 `Debug` 或 `Release`）。 如果有多个解决方案平台可用，还必须指定平台（例如，`Debug|Win32`）。
 
@@ -59,13 +61,13 @@ devenv SolutionName {/Build|/Clean|/Deploy|/Rebuild} [SolnConfigName [/Project P
 
   可选。 要将工具输出发送到的文件的文件名。 如果文件已有，工具将输出追加到文件末尾。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 - 必须用作 `devenv` `/Build`、`/Clean`、`/Rebuild` 或 `/Deploy` 命令的一部分。
 
 - 用双引号将含有空格的字符串引起来。
 
-- “命令”  窗口或使用 `/Out` 开关指定的任何日志文件中都可显示生成的摘要信息（包括错误）。
+- “命令”窗口或使用 `/Out` 开关指定的任何日志文件中都可显示生成的摘要信息（包括错误）。
 
 ## <a name="example"></a>示例
 

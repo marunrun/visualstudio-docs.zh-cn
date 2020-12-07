@@ -1,5 +1,7 @@
 ---
 title: 管理测试控制器和测试代理
+description: 了解在首次安装测试控制器和测试代理并对其进行配置后如何管理它们。
+ms.custom: SEO-VS-2020
 ms.date: 09/18/2018
 ms.topic: how-to
 author: mikejo5000
@@ -7,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 78bd0143ee2584bcabb5e8ed4946818ee2590789
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8d9a416dc64a9d49d14e367a04023f067c7b595c
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85286695"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329635"
 ---
 # <a name="manage-test-controllers-and-test-agents"></a>管理测试控制器和测试代理
 
@@ -151,7 +153,7 @@ ms.locfileid: "85286695"
 
 1. （可选）在“测试代理”窗格中，选择要为其更改属性的测试代理计算机  。
 
-1. 选择**属性**。
+1. 选择 **属性**。
 
 1. 根据需要更改以下测试代理属性：
 

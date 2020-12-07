@@ -1,5 +1,7 @@
 ---
 title: “选项”>“文本编辑器”>“F#”>“代码修复”
+description: 了解如何使用 F# 部分中的“代码修复”页面来指定有助于识别代码错误并提供解决方案的设置。
+ms.custom: SEO-VS-2020
 ms.date: 01/16/2019
 ms.topic: reference
 f1_keywords:
@@ -9,16 +11,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: c20646c8da4101ac674a64c5ca1ed23a3b1fd7b5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 73d66e4f8611a08d6dee3733c30b075d71f6712c
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770936"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96039596"
 ---
 # <a name="options-text-editor--f--code-fixes"></a>选项:文本编辑器 > F# > 代码修补程序
 
-使用“代码修复”选项页，可以指定有助于发现代码错误并提供解决方案的设置。 若要访问此选项页，请先依次选择“工具”   > “选项”  ，再依次选择“文本编辑器”   > “F#”   > “代码修复”  。
+使用“代码修复”选项页，可以指定有助于发现代码错误并提供解决方案的设置。 若要访问此选项页，请先依次选择“工具” > “选项”，再依次选择“文本编辑器” > “F#” > “代码修复”。
 
 ## <a name="code-fixes"></a>代码修复
 

@@ -1,5 +1,7 @@
 ---
 title: “列出源”命令
+description: 了解 List Source 命令，以及它如何显示源代码的指定行。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -14,12 +16,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 286cfa87de96b75e8b79d9ee3bc31e84d7761670
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ae2463a3d8dd295fcba9bf264e1ad3fa250169d4
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770617"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305288"
 ---
 # <a name="list-source-command"></a>“列出源”命令
 显示源代码的指定行。
@@ -31,7 +33,7 @@ Debug.ListSource [/Count:number] [/Current] [/File:filename]
 [/Line:number] [/ShowLineNumbers:yes|no]
 ```
 
-## <a name="switches"></a>开关
+## <a name="switches"></a>交换机
 /Count:`number`
 
 可选。 指定要显示的行的编号。

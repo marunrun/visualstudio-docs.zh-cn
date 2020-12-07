@@ -1,5 +1,7 @@
 ---
 title: 步骤 7：添加乘法和除法问题
+description: 了解如何添加乘法题和除法题。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -13,12 +15,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 92a1744b68ad043dcee21dcb5995fbd1908bd81b
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 84dc1df79392aeefe331746c52d2fbe8dbb91e8e
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "77579776"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479493"
 ---
 # <a name="step-7-add-multiplication-and-division-problems"></a>步骤 7：添加乘法和除法问题
 
@@ -58,10 +60,10 @@ ms.locfileid: "77579776"
      如下图所示，测验对象必须回答四个问题才能完成测验。
 
      ![包含四道题的数学测验](../ide/media/express_finishedquiz.png)<br/>
-包含四道题的数学测验 
+*包含四道题的数学测验
 
 ## <a name="to-continue-or-review"></a>继续或查看
 
-- 要转到下一个教程步骤，请参阅[步骤 8：  自定义测验](../ide/step-8-customize-the-quiz.md)。
+- 要转到下一个教程步骤，请参阅[步骤 8：自定义测验](../ide/step-8-customize-the-quiz.md)。
 
-- 要返回上一个教程步骤，请参阅[步骤 6：添加减法问题](../ide/step-6-add-a-subtraction-problem.md)。
+- 若要返回上一个教程步骤，请参阅[步骤 6：添加减法问题](../ide/step-6-add-a-subtraction-problem.md)。

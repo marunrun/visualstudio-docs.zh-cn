@@ -1,5 +1,7 @@
 ---
 title: “选项”>“文本编辑器”>“基本(VB)”>“高级”
+description: 了解如何使用“基本”部分中的“高级”页面来更改“分析”、“导入指令”和“突出显示”属性的默认设置。
+ms.custom: SEO-VS-2020
 ms.date: 08/12/2020
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 778cd1f9c126b176cafad8b33a147d284bea1b67
-ms.sourcegitcommit: 2946d802aec1418e87bfa779d81834eeb7be5c9d
+ms.openlocfilehash: 530fffdf335232a76a54e66551487a89dc50b09a
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88214643"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040987"
 ---
 # <a name="options-text-editor-basic-visual-basic-advanced"></a>“选项”>“文本编辑器”>“基本(Visual Basic)”>“高级”
 在“选项”  （“工具”  菜单）对话框中“文本编辑器”  文件夹的“基本”  文件夹内，“VB 专用”  属性页包含以下属性：

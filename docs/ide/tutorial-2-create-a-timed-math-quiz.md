@@ -1,5 +1,7 @@
 ---
 title: 教程 2：创建计时数学测验
+description: 了解如何构建一个测验，在该测验中，测验对象必须在指定时间内回答四道随机算术题。
+ms.custom: SEO-VS-2020
 ms.date: 10/16/2019
 ms.assetid: d7165d08-ace3-457d-b57d-fb8f80760a6f
 ms.topic: tutorial
@@ -9,12 +11,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 738d32186a0bb0f1d4655f9afea3d236bf53ad4c
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: b0044e5d3a08e46318a325443e9f05742e141127
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810843"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479103"
 ---
 # <a name="tutorial-2-create-a-timed-math-quiz"></a>教程 2：创建计时数学测验
 
@@ -39,7 +41,7 @@ ms.locfileid: "90810843"
 
 ## <a name="tutorial-links"></a>教程链接
 
-|Title|描述|
+|Title|说明|
 |-----------|-----------------|
 |[步骤 1：创建项目并向窗体添加标签](../ide/step-1-create-a-project-and-add-labels-to-your-form.md)|首先创建项目，更改属性并添加 `Label` 控件。|
 |[步骤 2：创建随机加法问题](../ide/step-2-create-a-random-addition-problem.md)|创建一道加法题，然后使用 `Random` 类生成随机数。|
@@ -54,7 +56,7 @@ ms.locfileid: "90810843"
 
 ## <a name="next-steps"></a>后续步骤
 
-要开始学习本教程，请从[步骤 1：  创建项目并向窗体添加标签](../ide/step-1-create-a-project-and-add-labels-to-your-form.md)。
+要开始学习本教程，请从[步骤 1：创建项目并向窗体添加标签](../ide/step-1-create-a-project-and-add-labels-to-your-form.md)。
 
 ## <a name="see-also"></a>请参阅
 
