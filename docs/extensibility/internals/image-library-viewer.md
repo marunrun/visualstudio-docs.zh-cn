@@ -1,5 +1,7 @@
 ---
 title: 图像库查看器 |Microsoft Docs
+description: 了解用于加载和搜索图像清单的 Visual Studio 图像库查看器工具，允许你查看和操作图像属性。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 9d9c7fbb-ebae-4b20-9dd8-3c9070c0d0d1
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d9714879f93af052e244134ce225b07317455921
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ae9090604a16196c43b80140395eb3401215d665
+ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85536339"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761266"
 ---
 # <a name="image-library-viewer"></a>图像库查看器
 Visual Studio 图像库查看器工具可以加载和搜索图像清单，使用户能够以与 Visual Studio 相同的方式对其进行操作。 用户可以更改背景、大小、DPI、高对比度和其他设置。 该工具还显示每个映像清单的加载信息，并显示映像清单中每个映像的源信息。 此工具适用于：
@@ -73,7 +75,7 @@ Visual Studio 图像库查看器工具可以加载和搜索图像清单，使用
 |导入|导入给定清单文件的符号，以便在当前清单中使用。|
 |Guid|符号表示 GUID 并且必须与 GUID 格式匹配。|
 |ID|符号表示 ID，必须为非负整数。|
-|字符串|符号表示任意字符串值。|
+|String|符号表示任意字符串值。|
 
  符号区分大小写，并使用 $ (符号名) 语法进行引用：
 
@@ -114,7 +116,7 @@ Visual Studio 图像库查看器工具可以加载和搜索图像清单，使用
 |ID|请求图像名字对象的 ID 部分|
 |AllowColorInversion|[可选，默认值为 true]指示在深色背景上使用时，图像是否可以通过编程方式进行反转。|
 
- **Source**
+ **源**
 
  \<Source>元素定义单个图像源资产 (XAML 和 PNG) 。
 
@@ -127,11 +129,11 @@ Visual Studio 图像库查看器工具可以加载和搜索图像清单，使用
 |**Attribute**|**定义**|
 |-|-|
 |Uri|请求一个 URI，用于定义图像的加载位置。 该参数可以是下列值之一：<br /><br /> -使用 application:///机构的[PACK URI](/dotnet/framework/wpf/app-development/pack-uris-in-wpf)<br /><br /> -绝对组件资源引用<br /><br /> -指向包含本机资源的文件的路径|
-|背景|可有可无指示源要使用的背景类型。<br /><br /> 该参数可以是下列值之一：<br /><br /> - *浅*：源可在浅色背景上使用。<br /><br /> - *深色*：可在深色背景上使用源。<br /><br /> - *System.windows.forms.systeminformation.highcontrast*：源可在高对比度模式下的任何背景上使用。<br /><br /> - *HighContrastLight*：在高对比度模式下，可在浅色背景上使用源。<br /><br /> -*HighContrastDark*：在高对比度模式下，可以在深色背景上使用源。<br /><br /> 如果省略 **背景** 属性，则可以在任何背景上使用源。<br /><br /> 如果 **背景** 为 *浅*、 *暗*、 *HighContrastLight*或 *HighContrastDark*，则源的颜色永远不会反转。 如果省略背景或将 **背景** 设置为 *system.windows.forms.systeminformation.highcontrast*，则源颜色的反转由图像的 **AllowColorInversion** 属性控制。|
+|背景|可有可无指示源要使用的背景类型。<br /><br /> 该参数可以是下列值之一：<br /><br /> - *浅*：源可在浅色背景上使用。<br /><br /> - *深色*：可在深色背景上使用源。<br /><br /> - *System.windows.forms.systeminformation.highcontrast*：源可在高对比度模式下的任何背景上使用。<br /><br /> - *HighContrastLight*：在高对比度模式下，可在浅色背景上使用源。<br /><br /> -*HighContrastDark*：在高对比度模式下，可以在深色背景上使用源。<br /><br /> 如果省略 **背景** 属性，则可以在任何背景上使用源。<br /><br /> 如果 **背景** 为 *浅*、 *暗*、 *HighContrastLight* 或 *HighContrastDark*，则源的颜色永远不会反转。 如果省略背景或将 **背景** 设置为 *system.windows.forms.systeminformation.highcontrast*，则源颜色的反转由图像的 **AllowColorInversion** 属性控制。|
 
  \<Source>元素可以具有以下一个可选子元素：
 
-|**Element**|**属性 (所有必需的) **|**定义**|
+|**元素**|**属性 (所有必需的)**|**定义**|
 |-|-|-|
 |\<Size>|值|源将用于设备单位)  (给定大小的图像。 图像将为方形。|
 |\<SizeRange>|MinSize，MaxSize|源将用于 MinSize 中的到 MaxSize (的图像，) 包括在内。 图像将为方形。|
@@ -179,7 +181,7 @@ Visual Studio 图像库查看器工具可以加载和搜索图像清单，使用
 
  默认情况下，该工具将尝试查找 Visual Studio 安装目录，并将这些目录添加到搜索目录列表中。 您可以手动添加该工具找不到的目录。
 
- 加载所有清单后，可以使用该工具切换图像的 **背景** 色、 **DPI**、 **高对比度**或 **grayscaling** ，以便用户可以通过视觉方式检查图像资产，以验证它们是否能正确地针对各种设置进行呈现。
+ 加载所有清单后，可以使用该工具切换图像的 **背景** 色、 **DPI**、 **高对比度** 或 **grayscaling** ，以便用户可以通过视觉方式检查图像资产，以验证它们是否能正确地针对各种设置进行呈现。
 
  ![图像库查看器 背景](../../extensibility/internals/media/image-library-viewer-background.png "图像库查看器 背景")
 

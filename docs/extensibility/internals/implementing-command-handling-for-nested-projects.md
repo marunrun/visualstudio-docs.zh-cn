@@ -1,5 +1,7 @@
 ---
 title: 实现嵌套项目的命令处理 |Microsoft Docs
+description: 了解如何在 Visual Studio 集成开发环境 (IDE) 中实现嵌套项目的命令处理。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2092fc8033d5a5cc53b12bd63a945bd9865ca30e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 13cfa6ebb8cae645202339c511f15ca15e2b3490
+ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707599"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761148"
 ---
 # <a name="implementing-command-handling-for-nested-projects"></a>实现嵌套项目的命令处理
 IDE 可以将通过和接口传递的命令传递 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> 到嵌套项目，也可以使用父项目来筛选或重写命令。
@@ -51,7 +53,7 @@ IDE 可以将通过和接口传递的命令传递 <xref:Microsoft.VisualStudio.S
 
     父项目不需要将命令路由到子项目。 IDE 将执行此任务。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>
 - [命令、菜单和工具栏](../../extensibility/internals/commands-menus-and-toolbars.md)
 - [嵌套项目](../../extensibility/internals/nesting-projects.md)

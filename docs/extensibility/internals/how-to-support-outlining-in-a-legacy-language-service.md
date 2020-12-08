@@ -1,5 +1,7 @@
 ---
 title: 如何：支持旧版语言服务中的大纲显示 |Microsoft Docs
+description: 了解如何在旧版语言服务中为大纲显示、扩展或折叠不同的文本区域提供支持。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 28396d513c83ed83e2769e75a6020a98b10251b4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c9d1d7b7a74b6565c666e4d5e3293caaef3c7732
+ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707919"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761317"
 ---
 # <a name="how-to-support-outlining-in-a-legacy-language-service"></a>如何：支持旧版语言服务中的大纲显示
 大纲用于展开或折叠不同的文本区域。 使用大纲显示的方式可以通过不同的语言以不同的方式定义。 有关详细信息，请参阅[大纲显示](../../ide/outlining.md)。
@@ -45,6 +47,6 @@ ms.locfileid: "80707919"
 > [!NOTE]
 > 请小心隐藏新行字符。 隐藏的文本应该从第一行的开头到节中最后一行的最后一个字符，并使最后的新行字符可见。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [如何：在旧版语言服务中提供隐藏的文本支持](../../extensibility/internals/how-to-provide-hidden-text-support-in-a-legacy-language-service.md)
 - [如何：提供旧版语言服务中的扩展大纲支持](../../extensibility/internals/how-to-provide-expanded-outlining-support-in-a-legacy-language-service.md)

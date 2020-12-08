@@ -1,5 +1,7 @@
 ---
 title: 实现旧版语言 Service1 |Microsoft Docs
+description: 了解如何使用托管包框架 (MPF) 实现支持扩展语言服务功能的旧版语言服务。 第1部分（共2部分）。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2535c527fc3d2d94609246959c5293e455b9808d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: be2caf25dfef71cb267f49b6cfd732923aa0848c
+ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238733"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761174"
 ---
 # <a name="implementing-a-legacy-language-service-1"></a>实现旧版语言服务1
 可以在托管包框架中使用类 (MPF) 来实现支持各种功能（如语法突出显示、大括号匹配和 IntelliSense 完成）的旧版语言服务。

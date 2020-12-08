@@ -1,5 +1,7 @@
 ---
 title: 实现旧版语言 Service2 |Microsoft Docs
+description: 了解如何使用托管包框架 (MPF) 实现支持扩展语言服务功能的旧版语言服务。 第2部分（共2部分）。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: df44b92cdf311689397a062b127d4c3e514a15e6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1a7da218a9ada593731e6205e017861084e73adc
+ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238694"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761135"
 ---
 # <a name="implementing-a-legacy-language-service-2"></a>实现旧版语言服务2
 若要使用托管包框架 (MPF) 实现语言服务，必须从类派生一个类 <xref:Microsoft.VisualStudio.Package.LanguageService> ，并实现以下抽象方法和属性：
@@ -32,7 +34,7 @@ ms.locfileid: "88238694"
 
   若要支持其他功能，语言服务可能必须从一个 MPF 语言服务类派生一个类;例如，若要支持其他菜单命令，你必须从类派生一个类 <xref:Microsoft.VisualStudio.Package.ViewFilter> 并重写几个命令处理方法 (参阅 <xref:Microsoft.VisualStudio.Package.ViewFilter> 获取详细信息) 。 <xref:Microsoft.VisualStudio.Package.LanguageService>类提供了许多方法，这些方法可用于创建各种类的新实例，并重写适当的创建方法来提供类的实例。 例如，你需要重写 <xref:Microsoft.VisualStudio.Package.LanguageService.CreateViewFilter%2A> 类中的方法， <xref:Microsoft.VisualStudio.Package.LanguageService> 以返回你自己的类的实例 <xref:Microsoft.VisualStudio.Package.ViewFilter> 。 有关更多详细信息，请参阅 "实例化自定义类" 一节。
 
-  你的语言服务还可以提供自己的图标，这些图标在多个位置使用。 例如，当显示 IntelliSense 完成列表时，列表中的每一项都可以有与之关联的图标，将项标记为方法、类、命名空间、属性或语言所需的任何内容。 这些图标在所有 IntelliSense 列表、 **导航栏**和 " **错误列表** 任务" 窗口中使用。 有关详细信息，请参阅下面的 "语言服务映像" 部分。
+  你的语言服务还可以提供自己的图标，这些图标在多个位置使用。 例如，当显示 IntelliSense 完成列表时，列表中的每一项都可以有与之关联的图标，将项标记为方法、类、命名空间、属性或语言所需的任何内容。 这些图标在所有 IntelliSense 列表、 **导航栏** 和 " **错误列表** 任务" 窗口中使用。 有关详细信息，请参阅下面的 "语言服务映像" 部分。
 
 ## <a name="getlanguagepreferences-method"></a>GetLanguagePreferences 方法
  <xref:Microsoft.VisualStudio.Package.LanguageService.GetLanguagePreferences%2A>方法始终返回类的同一实例 <xref:Microsoft.VisualStudio.Package.LanguagePreferences> 。 <xref:Microsoft.VisualStudio.Package.LanguagePreferences>如果你不需要语言服务的任何其他首选项，则可以使用基类。 MPF 语言服务类假定至少存在基类 <xref:Microsoft.VisualStudio.Package.LanguagePreferences> 。
@@ -193,7 +195,7 @@ namespace TestLanguagePackage
 
 ### <a name="in-the-languageservice-class"></a>在 LanguageService 类中
 
-|方法|返回的类|说明|
+|方法|返回的类|描述|
 |------------|--------------------|-----------------|
 |<xref:Microsoft.VisualStudio.Package.LanguageService.CreateCodeWindowManager%2A>|<xref:Microsoft.VisualStudio.Package.CodeWindowManager>|支持对文本视图进行自定义添加。|
 |<xref:Microsoft.VisualStudio.Package.LanguageService.CreateDocumentProperties%2A>|<xref:Microsoft.VisualStudio.Package.DocumentProperties>|支持自定义文档属性。|
@@ -210,7 +212,7 @@ namespace TestLanguagePackage
 
 ### <a name="in-the-source-class"></a>在源类中
 
-|方法|返回的类|说明|
+|方法|返回的类|描述|
 |------------|--------------------|-----------------|
 |<xref:Microsoft.VisualStudio.Package.Source.CreateCompletionSet%2A>|<xref:Microsoft.VisualStudio.Package.CompletionSet>|为了自定义 IntelliSense 完成列表的显示 (通常不会) 重写此方法。|
 |<xref:Microsoft.VisualStudio.Package.Source.CreateErrorTaskItem%2A>|<xref:Microsoft.VisualStudio.Package.DocumentTask>|错误列表任务列表中的支持标记;具体而言，支持除打开文件并跳转到导致错误的行以外的功能。|
@@ -220,7 +222,7 @@ namespace TestLanguagePackage
 
 ### <a name="in-the-authoringscope-class"></a>在 AuthoringScope 类中
 
-|方法|返回的类|说明|
+|方法|返回的类|描述|
 |------------|--------------------|-----------------|
 |<xref:Microsoft.VisualStudio.Package.AuthoringScope.GetDeclarations%2A>|<xref:Microsoft.VisualStudio.Package.Declarations>|提供一个声明列表，如成员或类型。 必须实现此方法，但可以返回 null 值。 如果此方法返回有效的对象，则该对象必须是您的类版本的实例 <xref:Microsoft.VisualStudio.Package.Declarations> 。|
 |<xref:Microsoft.VisualStudio.Package.AuthoringScope.GetMethods%2A>|<xref:Microsoft.VisualStudio.Package.Methods>|提供给定上下文的方法签名列表。 必须实现此方法，但可以返回 null 值。 如果此方法返回有效的对象，则该对象必须是您的类版本的实例 <xref:Microsoft.VisualStudio.Package.Methods> 。|
@@ -232,7 +234,7 @@ namespace TestLanguagePackage
  对于 IntelliSense 完成列表，为类的方法中的每个项指定了图像索引 <xref:Microsoft.VisualStudio.Package.Declarations.GetGlyph%2A> <xref:Microsoft.VisualStudio.Package.Declarations> ，若要提供图像索引，必须重写此索引。 从方法返回的值 <xref:Microsoft.VisualStudio.Package.Declarations.GetGlyph%2A> 是提供给类构造函数的图像列表中的索引 <xref:Microsoft.VisualStudio.Package.CompletionSet> ，并且是从类中的方法返回的相同图像列表 <xref:Microsoft.VisualStudio.Package.LanguageService.GetImageList%2A> <xref:Microsoft.VisualStudio.Package.LanguageService> (<xref:Microsoft.VisualStudio.Package.CompletionSet> 如果你重写 <xref:Microsoft.VisualStudio.Package.Source.CreateCompletionSet%2A> 类中的方法 <xref:Microsoft.VisualStudio.Package.Source> 以提供不同的图像) 列表，则可以更改要用于的图像列表。
 
 ### <a name="images-used-in-the-navigation-bar"></a>导航栏中使用的图像
- **导航栏**会显示类型和成员列表，并用于快速导航显示图标。 这些图标是从 <xref:Microsoft.VisualStudio.Package.LanguageService.GetImageList%2A> 类中的方法获取的 <xref:Microsoft.VisualStudio.Package.LanguageService> ，不能专门用于 **导航栏**。 用于组合框中的每一项的索引是在类的方法中填充了表示组合框的列表时指定的 <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> (请参阅 [旧版语言服务中的导航栏](../../extensibility/internals/support-for-the-navigation-bar-in-a-legacy-language-service.md)) 。 这些图像索引是从分析器获得的，通常是通过类的版本获取的 <xref:Microsoft.VisualStudio.Package.Declarations> 。 获取索引的方式完全取决于你。
+ **导航栏** 会显示类型和成员列表，并用于快速导航显示图标。 这些图标是从 <xref:Microsoft.VisualStudio.Package.LanguageService.GetImageList%2A> 类中的方法获取的 <xref:Microsoft.VisualStudio.Package.LanguageService> ，不能专门用于 **导航栏**。 用于组合框中的每一项的索引是在类的方法中填充了表示组合框的列表时指定的 <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> (请参阅 [旧版语言服务中的导航栏](../../extensibility/internals/support-for-the-navigation-bar-in-a-legacy-language-service.md)) 。 这些图像索引是从分析器获得的，通常是通过类的版本获取的 <xref:Microsoft.VisualStudio.Package.Declarations> 。 获取索引的方式完全取决于你。
 
 ### <a name="images-used-in-the-error-list-task-window"></a>用于错误列表任务窗口的图像
  每当 <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> 方法分析器 (查看 [旧版语言服务分析器和扫描程序](../../extensibility/internals/legacy-language-service-parser-and-scanner.md)) 遇到错误并将该错误传递给 <xref:Microsoft.VisualStudio.Package.AuthoringSink.AddError%2A> 类中的方法时，将 <xref:Microsoft.VisualStudio.Package.AuthoringSink> 在 **错误列表** 任务窗口中报告该错误。 图标可以与 "任务" 窗口中显示的每个项相关联，并且该图标来自类中从方法返回的同一图像列表 <xref:Microsoft.VisualStudio.Package.LanguageService.GetImageList%2A> <xref:Microsoft.VisualStudio.Package.LanguageService> 。 MPF 类的默认行为是不显示包含错误消息的图像。 但是，您可以通过从类派生一个类并重写方法来重写此行为 <xref:Microsoft.VisualStudio.Package.Source> <xref:Microsoft.VisualStudio.Package.Source.CreateErrorTaskItem%2A> 。 在此方法中，您将创建一个新的 <xref:Microsoft.VisualStudio.Package.DocumentTask> 对象。 返回该对象之前，可以使用 <xref:Microsoft.VisualStudio.Shell.Task.ImageIndex%2A> 对象上的属性 <xref:Microsoft.VisualStudio.Package.DocumentTask> 设置图像索引。 这类似于下面的示例。 请注意， `TestIconImageIndex` 是一个枚举，它列出了所有图标并且特定于此示例。 你可以使用不同的方式来识别语言服务中的图标。
@@ -358,7 +360,7 @@ public enum IconImageIndex
         }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [实现旧版语言服务](../../extensibility/internals/implementing-a-legacy-language-service1.md)
 - [旧版语言服务概述](../../extensibility/internals/legacy-language-service-overview.md)
 - [注册旧版语言服务](../../extensibility/internals/registering-a-legacy-language-service1.md)

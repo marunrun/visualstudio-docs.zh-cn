@@ -1,5 +1,7 @@
 ---
-title: IDE 定义的用于扩展项目系统的命令 |Microsoft Docs
+title: 用于扩展项目系统的 IDE-Defined 命令 |Microsoft Docs
+description: 了解在 Visual Studio 集成开发环境中定义的命令和命令组， (IDE) 用于扩展项目系统。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 61c0b2924548f50ad650389e3ad81759be1986a4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5d5147f4e03b019b083613a77afe95b95e9e033a
+ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707736"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761161"
 ---
 # <a name="ide-defined-commands-for-extending-project-systems"></a>用于扩展项目系统的 IDE 定义的命令
 要扩展项目系统时，可以使用 IDE 提供的命令和命令组 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。
@@ -26,15 +28,15 @@ ms.locfileid: "80707736"
 ## <a name="command-menus"></a>命令菜单
  下表显示了可用于放置调用项目扩展程序的高级命令的有用位置的命令菜单。
 
-|命令菜单|说明|
+|命令菜单|描述|
 |------------------|-----------------|
-|IDM_VS_MENU_PROJECT|**项目**顶级菜单。|
-|IDM_VS_TOOL_PROJWIN|**解决方案资源管理器**工具栏。|
+|IDM_VS_MENU_PROJECT|**项目** 顶级菜单。|
+|IDM_VS_TOOL_PROJWIN|**解决方案资源管理器** 工具栏。|
 
 ## <a name="shortcut-menus"></a>快捷菜单
- 下表显示了在 **解决方案资源管理器**中选择单个节点时或 **解决方案资源管理器**中存在多个同源选项时应用的快捷菜单，这是所有选定节点的类型相同。
+ 下表显示了在 **解决方案资源管理器** 中选择单个节点时或 **解决方案资源管理器** 中存在多个同源选项时应用的快捷菜单，这是所有选定节点的类型相同。
 
-|快捷菜单|说明|
+|快捷菜单|描述|
 |-------------------|-----------------|
 |<xref:Microsoft.VisualStudio.Shell.VsMenus.IDM_VS_CTXT_PROJNODE>|在选择项目节点时应用。|
 |<xref:Microsoft.VisualStudio.Shell.VsMenus.IDM_VS_CTXT_ITEMNODE>|在选定文件时应用。|
@@ -45,7 +47,7 @@ ms.locfileid: "80707736"
 
  下表显示了在 **解决方案资源管理器** 中的选定内容跨越多个层次结构时适用的快捷菜单。
 
-|快捷菜单|说明|
+|快捷菜单|描述|
 |-------------------|-----------------|
 |IDM_VS_CTXT_XPROJ_SLNPROJ|当当前所选内容包含 "解决方案" 节点和 "根项目" 节点时应用。|
 |IDM_VS_CTXT_XPROJ_SLNITEM|在当前所选内容包含解决方案节点和项目项时应用。|
@@ -56,7 +58,7 @@ ms.locfileid: "80707736"
 ## <a name="command-groups"></a>命令组
  下表显示了可以在扩展项目时使用的命令组，以及可通过快捷菜单访问的命令组 <xref:Microsoft.VisualStudio.Shell.VsMenus.IDM_VS_CTXT_PROJNODE> 。
 
-|命令组|说明|
+|命令组|描述|
 |-------------------|-----------------|
 |IDG_VS_CTXT_PROJECT_BUILD|用于生成、重新生成和部署项目的命令。|
 |IDG_VS_CTXT_COMPILELINK|用于编译和链接项目的命令。|
@@ -69,7 +71,7 @@ ms.locfileid: "80707736"
 |IDG_VS_CTXT_PROJECT_TRANSFER|用于剪切、复制和粘贴操作的命令。|
 |IDG_VS_CTXT_PROJECT_PROPERTIES|提供对 " **项目属性** " 对话框的访问的命令。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [VSPackage 如何添加用户界面元素](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)
 - [创建可重复使用的按钮组](../../extensibility/creating-reusable-groups-of-buttons.md)
