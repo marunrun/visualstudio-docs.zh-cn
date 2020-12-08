@@ -1,5 +1,7 @@
 ---
 title: Visual Studio Tools for Office 运行时中的程序集
+description: 了解 Visual Studio 会自动将引用添加到 Visual Studio Tools for Office 运行时程序集。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b2fc47aa917fa9c9d5351fd313ec46ae4aaa0664
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 86c3c2b77b6bbea1e609bbea092b44bd1dee1dd4
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75918787"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96848288"
 ---
 # <a name="assemblies-in-the-visual-studio-tools-for-office-runtime"></a>Visual Studio Tools for Office 运行时中的程序集
   在创建新的 Office 项目时，Visual Studio 会自动添加对项目类型和项目的目标 .NET Framework 使用的 [!INCLUDE[vsto_runtime](includes/vsto-runtime-md.md)] 程序集的引用。 在 .NET Framework 3.5、 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]和 [!INCLUDE[net_v45](includes/net-v45-md.md)]的 Office 扩展中存在不同的程序集。 有关 Office 扩展的详细信息，请参阅 [Visual Studio Tools for Office 运行时概述](visual-studio-tools-for-office-runtime-overview.md)。
@@ -26,7 +28,7 @@ ms.locfileid: "75918787"
 ## <a name="assemblies-in-the-office-extensions-for-the-net-framework-4-and-the-net_v45"></a>.NET Framework 4 和的 Office 扩展中的程序集 [!INCLUDE[net_v45](includes/net-v45-md.md)]
  下表列出了包含在 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 和 [!INCLUDE[net_v45](includes/net-v45-md.md)]的 Office 扩展中的程序集。 有关这些程序集中的命名空间和类型的文档，请参阅 [Visual Studio 中的托管引用 &#40;Office 开发&#41;](managed-reference-office-development-in-visual-studio.md)。
 
-|程序集名称|说明|
+|程序集名称|描述|
 |-------------------|-----------------|
 |Microsoft.Office.Tools.Common.dll|提供以下类型：<br /><br /> -用于创建功能区自定义和智能标记的类型。 **注意：**      在和中已弃用智能标记 [!INCLUDE[Excel_14_short](includes/excel-14-short-md.md)] [!INCLUDE[Word_14_short](includes/word-14-short-md.md)] 。<br />-用于在文档级自定义项和 VSTO 外接程序中的自定义任务窗格中创建操作窗格的类型。|
 |Microsoft.Office.Tools.Excel.dll|提供表示 Excel 项目的主机项和主机控件以及支持类型的接口。 有关详细信息，请参阅 [使用扩展对象实现 Excel 自动化](automating-excel-by-using-extended-objects.md)。|
@@ -39,7 +41,7 @@ ms.locfileid: "75918787"
 
  以 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](includes/net-v45-md.md)] 为目标的项目还引用以下程序集。 这些程序集不属于 [!INCLUDE[vsto_runtime](includes/vsto-runtime-md.md)] 可再发行组件。 相反，它们是必须与解决方案一起部署的依赖程序集。 默认情况下，它们复制到项目的生成输出文件夹（这些程序集的 **“本地属性”** 属性设置为 **“True”**）。 如果使用 ClickOnce 部署项目，这些程序集包含在生成的包中。
 
-|程序集名称|说明|
+|程序集名称|描述|
 |-------------------|-----------------|
 |Microsoft.Office.Tools.Common.v4.0.Utilities.dll|提供 VSTO 外接程序项目中生成的 `ThisAddIn` 类和所有项目中生成的功能区类的基类。|
 |Microsoft.Office.Tools.Excel.v4.0.Utilities.dll|提供以下类型：<br /><br /> - `ThisWorkbook` `Sheet` 在 Excel 文档级项目中生成的类和类的基类。<br />-Windows 窗体可在 Excel 项目中的工作表上使用的控件。|
@@ -49,7 +51,7 @@ ms.locfileid: "75918787"
 ## <a name="assemblies-in-the-office-extensions-for-the-net-framework-35"></a>.NET Framework 3.5 的 Office 扩展中的程序集
  下表列出了包含在 .NET Framework 3.5 的 Office 扩展中的程序集。 有关这些程序集中的命名空间和类的文档，请参阅 Visual Studio 2008 文档中的以下参考部分： [http://go.microsoft.com/fwlink/?LinkId=160658](managed-reference-office-development-in-visual-studio.md) 。
 
-|程序集名称|说明|
+|程序集名称|描述|
 |-------------------|-----------------|
 |Microsoft.Office.Tools.Common.v9.0.dll|提供以下类型：<br /><br /> -适用于 VSTO 外接程序的 Microsoft. .Addin 基类。<br />-用于创建功能区自定义和智能标记的类。 **注意：**      在和中已弃用智能标记 [!INCLUDE[Excel_14_short](includes/excel-14-short-md.md)] [!INCLUDE[Word_14_short](includes/word-14-short-md.md)] 。<br />-用于在文档级自定义项和 VSTO 外接程序中的自定义任务窗格中创建操作窗格的类。|
 |Microsoft.Office.Tools.Excel.v9.0.dll|提供 Excel 解决方案的主机项和主机控件。 有关详细信息，请参阅 [使用扩展对象实现 Excel 自动化](automating-excel-by-using-extended-objects.md)。|

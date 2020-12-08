@@ -1,5 +1,7 @@
 ---
 title: 扩展调试器的路线图 |Microsoft Docs
+description: Visual Studio 调试文档包括示例、引用以及演示自定义调试器的典型方法的几个方案。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9d97a7edd62540d12a0a60d15b3179ca0a623c26
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 2574fe76faadf4284088c0d47592d0c5ba0d38f9
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90011822"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96848334"
 ---
 # <a name="roadmap-for-extending-the-debugger"></a>扩展调试器的路线图
 此文档提供了用来扩展调试器的指南和参考信息 [!INCLUDE[vs_current_short](../../code-quality/includes/vs_current_short_md.md)] [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] 。
@@ -27,7 +29,7 @@ ms.locfileid: "90011822"
 
 - 面向 Windows 本机操作系统并写入 *。PDB* 文件，你可以通过将集成到中的本机代码调试引擎 (DE) 调试程序 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。 不需要实现 "DE" 或 "表达式计算器"。 表达式计算器是用 c + + 编程语言的语法编写的。
 
--  (MSIL) 输出生成 Microsoft 中间语言，你可以用托管代码调试引擎 DE 调试程序，该程序也集成到中 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。 因此，只需实现表达式计算器。 提供了一个示例表达式计算器。 有关详情，请参阅以下主题：
+-  (MSIL) 输出生成 Microsoft 中间语言，你可以用托管代码调试引擎 DE 调试程序，该程序也集成到中 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。 因此，只需实现表达式计算器。 提供了一个示例表达式计算器。 有关详细信息，请参阅下列主题：
 
    [表达式计算](../../extensibility/debugger/expression-evaluation-visual-studio-debugging-sdk.md)
 
@@ -39,7 +41,7 @@ ms.locfileid: "90011822"
 
    [编写公共语言运行时表达式计算器](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)
 
-- 针对专有操作系统或其他一些运行时环境，需要编写自己的 DE。 提供了一个使用 ATL COM 创建简单的 DE 的教程。 有关详情，请参阅以下主题：
+- 针对专有操作系统或其他一些运行时环境，需要编写自己的 DE。 提供了一个使用 ATL COM 创建简单的 DE 的教程。 有关详细信息，请参阅下列主题：
 
    [创建自定义调试引擎](../../extensibility/debugger/creating-a-custom-debug-engine.md)
 

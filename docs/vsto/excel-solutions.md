@@ -1,5 +1,7 @@
 ---
 title: Excel 解决方案
+description: '了解你可以使用项目模板自动执行 Excel、扩展 Excel 功能以及自定义 Excel 用户界面 (UI) '
+ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
 dev_langs:
@@ -26,12 +28,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 53351354a470eb5770f07b9afd527b81c4e587b6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e6ca4cfd45c1147d10ffaf8d3308b9adb09c689e
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72986078"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96848113"
 ---
 # <a name="excel-solutions"></a>Excel 解决方案
   Visual Studio 提供可用于创建 Microsoft Office Excel 的文档级自定义项和 VSTO 外接程序的项目模板。 你可以使用这些解决方案自动化 Excel、扩展 Excel 功能以及自定义 Excel 用户界面 (UI)。 有关文档级自定义项和 VSTO 外接程序之间的差异的详细信息，请参阅 [Office 解决方案开发概述 &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)。
@@ -107,7 +109,7 @@ ms.locfileid: "72986078"
 
 ### <a name="related-topics"></a>相关主题
 
-| Title | 说明 |
+| Title | 描述 |
 | - | - |
 | [Excel 对象模型概述](../vsto/excel-object-model-overview.md) | 概述由 Excel 对象模型提供的主类型。 |
 | [使用扩展对象实现 Excel 自动化](../vsto/automating-excel-by-using-extended-objects.md) | 提供有关扩展对象（由 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]提供）的信息，这些信息可用于 Excel 解决方案。 |

@@ -1,5 +1,7 @@
 ---
 title: Bookmark 控件
+description: 了解 Bookmark 控件是具有唯一名称的书签，公开事件，并且可以绑定到数据。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2b8557581e93c8d2ba5a54a13c04d5de74b24f71
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 53f68bfd9abd26d9dfcb9e253c412a1ddf3c0e28
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71255150"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96848360"
 ---
 # <a name="bookmark-control"></a>Bookmark 控件
   <xref:Microsoft.Office.Tools.Word.Bookmark> 控件是一个具有唯一名称且用于公开事件的书签，可以绑定到数据。 可以将书签用作占位符以在 Microsoft Office Word 文档中标记项或位置。 <xref:Microsoft.Office.Tools.Word.Bookmark> 控件是 <xref:Microsoft.Office.Interop.Word.Bookmark> 对象和 <xref:Microsoft.Office.Interop.Word.Range> 对象的组合。
@@ -36,7 +38,7 @@ ms.locfileid: "71255150"
 
  如果更新绑定数据集中的数据，则该 <xref:Microsoft.Office.Tools.Word.Bookmark> 控件将显示所做的更改。
 
- 在文档级项目中，还可以使用“数据源” **** 窗口将数据绑定到书签。 有关详细信息，请参阅 [如何：用对象中的数据填充文档](../vsto/how-to-populate-documents-with-data-from-objects.md)。
+ 在文档级项目中，还可以使用“数据源”  窗口将数据绑定到书签。 有关详细信息，请参阅 [如何：用对象中的数据填充文档](../vsto/how-to-populate-documents-with-data-from-objects.md)。
 
 ## <a name="formatting"></a>格式设置
  可应用于 <xref:Microsoft.Office.Interop.Word.Bookmark> 的格式设置也可应用于 <xref:Microsoft.Office.Tools.Word.Bookmark> 控件。 此格式包括字体、缩进、间距、编号和样式。
@@ -46,13 +48,13 @@ ms.locfileid: "71255150"
 
  <xref:Microsoft.Office.Tools.Word.Bookmark?displayProperty=nameWithType> 控件还具有 <xref:Microsoft.Office.Tools.Word.Bookmark.Text?displayProperty=nameWithType> 属性。 此属性与 <xref:Microsoft.Office.Interop.Word.Range.Text?displayProperty=nameWithType> <xref:Microsoft.Office.Tools.Word.Bookmark.Range?displayProperty=nameWithType> 控件的属性 <xref:Microsoft.Office.Tools.Word.Bookmark?displayProperty=nameWithType> 或对象的属性上可用的属性不同 <xref:Microsoft.Office.Interop.Word.Bookmark.Range?displayProperty=nameWithType> <xref:Microsoft.Office.Interop.Word.Bookmark?displayProperty=nameWithType> 。
 
-|Text 属性|说明|
+|Text 属性|描述|
 |-------------------|-----------------|
 |<xref:Microsoft.Office.Tools.Word.Bookmark.Text?displayProperty=nameWithType>|使用此属性可以在书签内显示文本，并使书签保留在文档中。 向书签分配文本会扩展书签范围，但不会删除书签。<br /><br /> 例如， `Bookmark1.Text = "Hello world"` 将文本插入书签中，且使书签保持原样。|
 |<xref:Microsoft.Office.Interop.Word.Range.Text?displayProperty=nameWithType>|使用此属性可在书签位置处显示文本，并自动删除该书签。 例如， `Bookmark1.Range.Text = "Hello world"` 将文本插入书签中，并删除该书签。|
 
 ## <a name="rename-the-control-at-design-time"></a>在设计时重命名控件
- 在文档级项目中，将 <xref:Microsoft.Office.Tools.Word.Bookmark> 控件从“工具箱” **** 拖到文档中时，Visual Studio 会自动为该控件生成一个名称。 可以在“属性” **** 窗口中更改控件的名称。
+ 在文档级项目中，将 <xref:Microsoft.Office.Tools.Word.Bookmark> 控件从“工具箱”  拖到文档中时，Visual Studio 会自动为该控件生成一个名称。 可以在“属性”  窗口中更改控件的名称。
 
 ## <a name="overlapping-controls"></a>重叠控件
  书签控件可以相互重叠。 相同的文本可以由多个书签共享。 向其中一个重叠书签分配新文本时，该书签将仅包含新文本，并且书签不再重叠。 现在，另一个书签只包含原始重叠书签之间未共享的文本。

@@ -1,7 +1,8 @@
 ---
 title: 如何：将架构映射到 Visual Studio 内部的工作表
+description: 了解如何在 Visual Studio 中打开工作表时，如何将 XML 架构映射到 Microsoft Office Excel 工作表。
 titleSuffix: ''
-ms.custom: seodec18
+ms.custom: seodec18, SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -17,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c8a0437b940953e89e24969314f63df34d223496
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7a7e1a06e644536ce9ce881d9b9f1dc23aae03f1
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85538133"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96848204"
 ---
 # <a name="how-to-map-schemas-to-worksheets-inside-visual-studio"></a>如何：将架构映射到 Visual Studio 内部的工作表
   在 Visual Studio 中打开工作表时，可以将 XML 架构映射到工作表。 使用在 Visual Studio 外打开工作簿时使用的相同 Microsoft Office Excel 工具。 无论你是在创建 Excel 解决方案之前还是之后将架构映射到工作表，Office 项目都将创建相同的对象。
@@ -55,7 +56,7 @@ ms.locfileid: "85538133"
 
 7. 浏览到您的架构文件，选择它，然后单击 " **打开**"。
 
-8. 单击“确定”。
+8. 单击 **“确定”** 。
 
      架构在 " **XML 源** " 窗口中表示。 在您的项目中，将 <xref:System.Data.DataSet> 基于架构生成类型化，并 <xref:System.Windows.Forms.BindingSource> 创建一个。
 
@@ -65,6 +66,6 @@ ms.locfileid: "85538133"
 
      如果拖动重复架构元素，Office 项目将生成一个 <xref:Microsoft.Office.Tools.Excel.ListObject> 不会自动绑定到数据源的控件。 有关详细信息，请参阅 [文档级自定义项中的 XML 架构和数据](../vsto/xml-schemas-and-data-in-document-level-customizations.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [如何：将架构映射到 Visual Studio 中的 Word 文档](../vsto/how-to-map-schemas-to-word-documents-inside-visual-studio.md)
 - [文档级自定义项中的 XML 架构和数据](../vsto/xml-schemas-and-data-in-document-level-customizations.md)
