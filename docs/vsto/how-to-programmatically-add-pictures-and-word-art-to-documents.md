@@ -1,5 +1,7 @@
 ---
 title: 以编程方式向文档添加图片和艺术字
+description: 了解如何在设计时或在运行时将图片和图形对象添加到文档中。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e73473229a35bebb99eac03963fb43f880a39903
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 0662c9324aaab8f5a368bc4db300ccff1a0ece33
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585387"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844044"
 ---
 # <a name="how-to-programmatically-add-pictures-and-word-art-to-documents"></a>如何：以编程方式向文档中添加图片和艺术字
   可以在设计时或运行时向文档中添加图片和图形对象。 可使用“艺术字”向 Microsoft Office Word 文档添加装饰性文本。 这些特殊文本效果是一些图形对象，你可以自定义这些图形对象并插入到文档中。
@@ -100,7 +102,7 @@ ms.locfileid: "91585387"
 
 - 驱动器 C 上必须存在一个名为 *SamplePicture.jpg* 的照片。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [如何：以编程方式打开现有文档](../vsto/how-to-programmatically-open-existing-documents.md)
 - [如何：以编程方式在 Word 文档中插入文本](../vsto/how-to-programmatically-insert-text-into-word-documents.md)
 - [如何：以编程方式在搜索后还原选定内容](../vsto/how-to-programmatically-restore-selections-after-searches.md)

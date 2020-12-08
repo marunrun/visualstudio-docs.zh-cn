@@ -1,5 +1,7 @@
 ---
 title: 如何：向 Word 文档添加内容控件
+description: 了解，在文档级 Word 项目中，您可以在设计时或运行时向项目中的文档添加内容控件。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -26,12 +28,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2f15adeb801e33a134c681c206e3a5b38ccce70f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: aa1528371a1466ec2886bf652ed33561b66b7028
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85538380"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845539"
 ---
 # <a name="how-to-add-content-controls-to-word-documents"></a>如何：向 Word 文档添加内容控件
   在文档级 Word 项目中，你可以在设计时或在运行时向项目中的文档添加内容控件。 在 Word VSTO 外接程序项目中，可以在运行时向任何打开的文档添加内容控件。
@@ -110,7 +112,7 @@ ms.locfileid: "85538380"
 
 ### <a name="to-add-a-content-control-at-the-current-selection"></a>在当前所选内容中添加内容控件
 
-1. 使用 <xref:Microsoft.Office.Tools.Word.ControlCollection> 名称 (的方法， `Add` \<*control class*> 其中*control class*是想要添加的内容控件的类名，如 <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A>) ，并且具有单个参数作为新控件的名称。
+1. 使用 <xref:Microsoft.Office.Tools.Word.ControlCollection> 名称 (的方法， `Add` \<*control class*> 其中 *control class* 是想要添加的内容控件的类名，如 <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A>) ，并且具有单个参数作为新控件的名称。
 
      下面的代码示例使用 <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A> 方法将一个新 <xref:Microsoft.Office.Tools.Word.RichTextContentControl> 添加到文档的开头。 若要运行此代码，将此代码添加到项目的 `ThisDocument` 类中，然后从 `AddRichTextControlAtSelection` 事件处理程序调用 `ThisDocument_Startup` 方法。
 
@@ -119,7 +121,7 @@ ms.locfileid: "85538380"
 
 ### <a name="to-add-a-content-control-at-a-specified-range"></a>在指定范围内添加内容控件
 
-1. 使用 <xref:Microsoft.Office.Tools.Word.ControlCollection> 名称 (的方法， `Add` \<*control class*> 其中*control class*是要添加的内容控件类的名称，如 <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A>) 和具有 <xref:Microsoft.Office.Interop.Word.Range> 参数的。
+1. 使用 <xref:Microsoft.Office.Tools.Word.ControlCollection> 名称 (的方法， `Add` \<*control class*> 其中 *control class* 是要添加的内容控件类的名称，如 <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A>) 和具有 <xref:Microsoft.Office.Interop.Word.Range> 参数的。
 
      下面的代码示例使用 <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A> 方法将一个新 <xref:Microsoft.Office.Tools.Word.RichTextContentControl> 添加到文档的开头。 若要运行此代码，将此代码添加到项目的 `ThisDocument` 类中，然后从 `AddRichTextControlAtRange` 事件处理程序调用 `ThisDocument_Startup` 方法。
 
@@ -128,7 +130,7 @@ ms.locfileid: "85538380"
 
 ### <a name="to-add-a-content-control-that-is-based-on-a-native-content-control"></a>要添加基于本机内容控件的内容控件
 
-1. 使用 <xref:Microsoft.Office.Tools.Word.ControlCollection> 名称 (的方法， `Add` \<*control class*> 其中*control class*是要添加的内容控件类的名称，如 <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A>) 和具有 `Microsoft.Office.Interop.Word.ContentControl` 参数的。
+1. 使用 <xref:Microsoft.Office.Tools.Word.ControlCollection> 名称 (的方法， `Add` \<*control class*> 其中 *control class* 是要添加的内容控件类的名称，如 <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A>) 和具有 `Microsoft.Office.Interop.Word.ContentControl` 参数的。
 
      下面的代码示例使用 <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A> 方法为文档中的每个本机多格式文本控件创建一个新的 <xref:Microsoft.Office.Tools.Word.RichTextContentControl> 。 若要运行此代码，将此代码添加到项目的 `ThisDocument` 类中，然后从 `CreateRichTextControlsFromNativeControls` 事件处理程序调用 `ThisDocument_Startup` 方法。
 
@@ -153,7 +155,7 @@ ms.locfileid: "85538380"
 
 ### <a name="to-add-a-content-control-at-the-current-selection"></a>在当前所选内容中添加内容控件
 
-1. 使用 <xref:Microsoft.Office.Tools.Word.ControlCollection> 名称 (的方法， `Add` \<*control class*> 其中*control class*是想要添加的内容控件的类名，如 <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A>) ，并且具有单个参数作为新控件的名称。
+1. 使用 <xref:Microsoft.Office.Tools.Word.ControlCollection> 名称 (的方法， `Add` \<*control class*> 其中 *control class* 是想要添加的内容控件的类名，如 <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A>) ，并且具有单个参数作为新控件的名称。
 
      下面的代码示例使用 <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A> 方法将一个新 <xref:Microsoft.Office.Tools.Word.RichTextContentControl> 添加到活动文档的开头。 若要运行此代码，将此代码添加到项目的 `ThisAddIn` 类中，然后从 `AddRichTextControlAtSelection` 事件处理程序调用 `ThisAddIn_Startup` 方法。
 
@@ -162,7 +164,7 @@ ms.locfileid: "85538380"
 
 ### <a name="to-add-a-content-control-at-a-specified-range"></a>在指定范围内添加内容控件
 
-1. 使用 <xref:Microsoft.Office.Tools.Word.ControlCollection> 名称 (的方法， `Add` \<*control class*> 其中*control class*是要添加的内容控件类的名称，如 <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A>) 和具有 <xref:Microsoft.Office.Interop.Word.Range> 参数的。
+1. 使用 <xref:Microsoft.Office.Tools.Word.ControlCollection> 名称 (的方法， `Add` \<*control class*> 其中 *control class* 是要添加的内容控件类的名称，如 <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A>) 和具有 <xref:Microsoft.Office.Interop.Word.Range> 参数的。
 
      下面的代码示例使用 <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A> 方法将一个新 <xref:Microsoft.Office.Tools.Word.RichTextContentControl> 添加到活动文档的开头。 若要运行此代码，将此代码添加到项目的 `ThisAddIn` 类中，然后从 `AddRichTextControlAtRange` 事件处理程序调用 `ThisAddIn_Startup` 方法。
 
@@ -171,7 +173,7 @@ ms.locfileid: "85538380"
 
 #### <a name="to-add-a-content-control-that-is-based-on-a-native-content-control"></a>要添加基于本机内容控件的内容控件
 
-1. 使用 <xref:Microsoft.Office.Tools.Word.ControlCollection> 名称 (的方法， `Add` \<*control class*> 其中*control class*是要添加的内容控件类的名称，如 <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A>) 和具有 `Microsoft.Office.Interop.Word.ContentControl` 参数的。
+1. 使用 <xref:Microsoft.Office.Tools.Word.ControlCollection> 名称 (的方法， `Add` \<*control class*> 其中 *control class* 是要添加的内容控件类的名称，如 <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A>) 和具有 `Microsoft.Office.Interop.Word.ContentControl` 参数的。
 
      下面的代码示例使用 <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A> 方法以在文档打开之后为文档中的每个本机多格式文本控件创建一个新的 <xref:Microsoft.Office.Tools.Word.RichTextContentControl> 。 若要运行此代码，将代码添加到项目中的 `ThisAddIn` 类。
 
@@ -182,7 +184,7 @@ ms.locfileid: "85538380"
 
      [!code-csharp[Trin_WordAddInDynamicControls#6](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#6)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [使用扩展对象实现 Word 自动化](../vsto/automating-word-by-using-extended-objects.md)
 - [主机项和主机控件概述](../vsto/host-items-and-host-controls-overview.md)
 - [在运行时将控件添加到 Office 文档](../vsto/adding-controls-to-office-documents-at-run-time.md)

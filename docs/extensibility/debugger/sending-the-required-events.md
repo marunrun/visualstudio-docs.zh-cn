@@ -1,5 +1,7 @@
 ---
 title: 正在发送所需的事件 |Microsoft Docs
+description: 了解创建调试引擎并将其附加到 Visual Studio 调试中的程序时所需的有序事件。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: cc83b47e53607fe1111ececbbf892c96f7bbb639
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 49c85e3d371bfd729d55e9d17a6c8de61924e35f
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712998"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845305"
 ---
 # <a name="send-the-required-events"></a>发送所需的事件
 使用此过程来发送所需的事件。
@@ -36,5 +38,5 @@ ms.locfileid: "80712998"
 > [!NOTE]
 > 许多语言使用 (从 CRT 库中的全局初始值设定项或外部预编译函数，或 _Main) 在其代码的开头。 如果正在调试的程序的语言在初始入口点之前包含这两种类型的元素，则会运行此代码，并在达到用户入口点（如 **main** 或）时发送入口点事件 `WinMain` 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [启用要调试的程序](../../extensibility/debugger/enabling-a-program-to-be-debugged.md)

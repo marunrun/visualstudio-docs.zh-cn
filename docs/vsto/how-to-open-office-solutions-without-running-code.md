@@ -1,5 +1,7 @@
 ---
 title: 如何：打开 Office 解决方案但不运行代码
+description: 了解如何在不运行程序集代码的情况下，打开包含托管代码扩展的文档或工作簿。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d84515c2c3159b61b96f77555b23eef0df0ae961
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8339f21fbf7add4335941360b73d42700ef6e635
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85543476"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844915"
 ---
 # <a name="how-to-open-office-solutions-without-running-code"></a>如何：打开 Office 解决方案但不运行代码
   即使最终用户的 Office 应用程序中的安全设置设置为 "高"，使用托管代码扩展创建的 Microsoft Office 解决方案也会运行。 这是因为，.NET 程序集代码安全由 Microsoft .NET 框架管理，而不是 Microsoft Office。
@@ -36,7 +38,7 @@ ms.locfileid: "85543476"
 
 ## <a name="to-bypass-the-assembly-by-using-the-shift-key"></a>使用 Shift 键跳过程序集
 
-- 在按住**Shift**键的同时打开 "**文件**" 菜单中的文档和工作簿，以防止 Word 和 Excel 在文档打开时引发初始化事件。
+- 在按住 **Shift** 键的同时打开 "**文件**" 菜单中的文档和工作簿，以防止 Word 和 Excel 在文档打开时引发初始化事件。
 
     > [!NOTE]
     > 如果从 " **入门** 任务窗格打开文档或工作簿，则按住 **Shift** 不会绕过代码。 而且，按住 SHIFT 不会阻止在打开文档后引发事件。
@@ -49,7 +51,7 @@ ms.locfileid: "85543476"
 
      如果该解决方案由多个用户使用，则此方法会阻止解决方案运行。 如果在代码或引用的服务器中发现问题并且你想要阻止所有用户执行该问题，则这会很有用。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [保护 Office 解决方案](../vsto/securing-office-solutions.md)
 - [部署 Office 解决方案](../vsto/deploying-an-office-solution.md)
 - [设计和创建 Office 解决方案](../vsto/designing-and-creating-office-solutions.md)

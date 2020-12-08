@@ -1,5 +1,7 @@
 ---
 title: 如何：将 XMLNodes 控件添加到 Word 文档
+description: 了解，当您将重复的 XML 架构元素映射到 Microsoft Office Word 文档时，Visual Studio 会自动将 XMLNodes 控件添加到文档中。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 95fc165c1a3123d68529f6ccaea99fea963c2a67
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 256c62fc69be2c057d3ffc2588577fa87910c161
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85543489"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844434"
 ---
 # <a name="how-to-add-xmlnodes-controls-to-word-documents"></a>如何：将 XMLNodes 控件添加到 Word 文档
   **重要提示** 本主题中的关于 Microsoft Word 的信息是专门为其提供的个人和美国组织的权益和使用的，也就是在 Microsoft word 产品（在2010年1月之前）中运行的、microsoft Word 产品，microsoft Word 产品在年1月之前获得的 microsoft Word 产品，microsoft word 产品在 microsoft word 中删除了与自定义 与 Microsoft Word 有关的信息可能不会被美国或其所在区域中的个人或组织阅读或使用，或开发在 Microsoft Word 产品上运行的、2010年1月10日之后的 microsoft Word 产品。对于该日期之前许可的产品，这些产品的行为并不相同，也不会在美国之外购买和许可。
@@ -67,7 +69,7 @@ ms.locfileid: "85543489"
 
      <xref:Microsoft.Office.Tools.Word.XMLNodes>创建一个控件，并将其添加到该项目中。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [XMLNodes 控件](../vsto/xmlnodes-control.md)
 - [使用扩展对象实现 Word 自动化](../vsto/automating-word-by-using-extended-objects.md)
 - [主机项和主机控件概述](../vsto/host-items-and-host-controls-overview.md)

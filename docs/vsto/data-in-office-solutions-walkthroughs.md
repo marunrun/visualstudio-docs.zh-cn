@@ -1,5 +1,7 @@
 ---
 title: Office 解决方案演练中的数据
+description: 了解如何在 Microsoft Word 和 Microsoft Excel 的文档级自定义项和 VSTO 外接程序中使用数据。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 52b2efa5e5def8214736d648e2b90906fe720dbe
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 25bf42015dcc60014012faf0254d4b6d02c30d56
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62956025"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845578"
 ---
 # <a name="data-in-office-solutions-walkthroughs"></a>Office 解决方案演练中的数据
   下列演练演示了如何将文档级自定义项和 VSTO 外接程序中的数据用于 Microsoft Office Word 和 Microsoft Office Excel。
@@ -47,7 +49,7 @@ ms.locfileid: "62956025"
 
 - [演练：更改服务器上的工作簿中的缓存数据](../vsto/walkthrough-changing-cached-data-in-a-workbook-on-a-server.md) 演示如何修改在不启动 Excel 的情况下在 Microsoft Office Excel 工作簿中缓存的数据集。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [使用 Word 的演练](../vsto/walkthroughs-using-word.md)
 - [使用 Excel 的演练](../vsto/walkthroughs-using-excel.md)
 - [Office UI 自定义演练](../vsto/office-ui-customization-walkthroughs.md)

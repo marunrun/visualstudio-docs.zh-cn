@@ -1,5 +1,7 @@
 ---
 title: 操作窗格概述
+description: 了解操作窗格如何是附加到特定 Microsoft Office Word 文档或 Excel 工作簿的可自定义 "文档操作" 任务窗格。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 82bf3ac9515effaa1053a011085849f0afea67f5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5d03ba8968b08fb07eb2cc9c17839af57cf06eca
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72986316"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844824"
 ---
 # <a name="actions-pane-overview"></a>操作窗格概述
   操作窗格是附加到特定 Microsoft Office Word 文档或 Microsoft Office Excel 工作簿的可自定义的 **文档操作** 任务窗格。 操作窗格与其他内置任务窗格（如 Excel 中的 " **XML 源** " 任务窗格或 Word 中的 " **样式和格式** " 任务窗格）一起托管在 Office 任务窗格中。 可使用 Windows 窗体控件或 WPF 控件来设计操作窗格用户界面。
@@ -43,7 +45,7 @@ ms.locfileid: "72986316"
 ### <a name="add-multiple-controls-to-the-actions-pane"></a>将多个控件添加到 "操作" 窗格
  将多个控件添加到 "操作" 窗格时，应将用户控件中的控件分组，然后将该用户控件添加到 <xref:Microsoft.Office.Tools.ActionsPane.Controls%2A> 属性中。 此过程包括下列步骤：
 
-1. 通过向项目中添加 **操作窗格控件** 或 **用户控件** 项，创建操作窗格 (UI) 的用户界面。 这两项均包含自定义 Windows 窗体 <xref:System.Windows.Forms.UserControl> 类。 **操作窗格控件**和**用户控件**项等效;唯一的区别是它们的名称。
+1. 通过向项目中添加 **操作窗格控件** 或 **用户控件** 项，创建操作窗格 (UI) 的用户界面。 这两项均包含自定义 Windows 窗体 <xref:System.Windows.Forms.UserControl> 类。 **操作窗格控件** 和 **用户控件** 项等效;唯一的区别是它们的名称。
 
 2. 通过使用设计器或编写代码，将 Windows 窗体控件添加到 <xref:System.Windows.Forms.UserControl>。
 
@@ -78,7 +80,7 @@ ms.locfileid: "72986316"
  当用户在 "操作" 窗格可见时保存文档时，无论操作窗格是否包含任何控件，每次打开文档时，操作窗格都可见。 如果想在显示此窗格时进行控制，请调用 `ThisDocument` 或 `ThisWorkbook` 的 `Startup` 事件处理程序中 `ActionsPane` 字段的 <xref:Microsoft.Office.Tools.ActionsPane.Clear%2A> 方法，以确保操作窗格在文档打开时不可见。
 
 ### <a name="determine-when-the-actions-pane-is-closed"></a>确定操作窗格何时关闭
- 操作窗格关闭时没有引发事件。 虽然 <xref:Microsoft.Office.Tools.ActionsPane> 类具有 <xref:Microsoft.Office.Tools.ActionsPane.VisibleChanged> 事件，但在最终用户关闭操作窗格时不会引发此事件。 相反，当通过调用 <xref:Microsoft.Office.Tools.ActionsPane.Hide%2A> 方法或将 <xref:Microsoft.Office.Tools.ActionsPane.Visible%2A> 属性设置为 **false**来隐藏操作窗格上的控件时，将引发此事件。
+ 操作窗格关闭时没有引发事件。 虽然 <xref:Microsoft.Office.Tools.ActionsPane> 类具有 <xref:Microsoft.Office.Tools.ActionsPane.VisibleChanged> 事件，但在最终用户关闭操作窗格时不会引发此事件。 相反，当通过调用 <xref:Microsoft.Office.Tools.ActionsPane.Hide%2A> 方法或将 <xref:Microsoft.Office.Tools.ActionsPane.Visible%2A> 属性设置为 **false** 来隐藏操作窗格上的控件时，将引发此事件。
 
  用户关闭操作窗格后，用户可以通过在应用程序 (UI) 的用户界面中执行以下过程之一来再次显示它。
 

@@ -1,5 +1,7 @@
 ---
 title: 如何：用服务中的数据填充文档
+description: 了解如何在解决方案中使用服务中的数据，以及如何使用 Windows 窗体控件在文档中显示数据。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 01e2a83f464576d1ca780daa17c0d9478f0caa14
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b4d8fb377896762672574c6ef5ff15b4e12b9e59
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547142"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845825"
 ---
 # <a name="how-to-populate-documents-with-data-from-services"></a>如何：用服务中的数据填充文档
 
@@ -31,9 +33,9 @@ ms.locfileid: "85547142"
 
 ## <a name="to-populate-a-document-level-project-with-data-from-a-web-service"></a>使用 web 服务中的数据填充文档级项目
 
-1. 打开“数据源” **** 窗口并为项目创建服务数据源。 有关详细信息，请参阅[添加新数据源](../data-tools/add-new-data-sources.md)。
+1. 打开“数据源”  窗口并为项目创建服务数据源。 有关详细信息，请参阅[添加新数据源](../data-tools/add-new-data-sources.md)。
 
-2. 将所需的表或字段从“数据源” **** 窗口拖动到你的文档。
+2. 将所需的表或字段从“数据源”  窗口拖动到你的文档。
 
      在文档中创建控件，创建绑定到项目中的对象类的 <xref:System.Windows.Forms.BindingSource> ，并为该服务生成类。
 
@@ -49,7 +51,7 @@ ms.locfileid: "85547142"
 
 运行项目时，控件显示数据源中的第一条记录。 可以通过使用 <xref:System.Windows.Forms.BindingSource>中的对象处理货币事件，从而滚动记录。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [将数据绑定到 Office 解决方案中的控件](../vsto/binding-data-to-controls-in-office-solutions.md)
 - [添加新数据源](../data-tools/add-new-data-sources.md)

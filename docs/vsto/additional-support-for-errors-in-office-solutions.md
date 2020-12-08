@@ -1,5 +1,7 @@
 ---
 title: Office 解决方案中的错误的其他支持
+description: 了解如何使用支持资源来查找在 Visual Studio 中创建 Office 解决方案时遇到的问题的答案。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -56,12 +58,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 01b225b27dfe9c5e1f006105b8e2676a509234b9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e307c839dfb0aa764ccd0aa5727f009635ecabce
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72984626"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844772"
 ---
 # <a name="additional-support-for-errors-in-office-solutions"></a>Office 解决方案中的错误的其他支持
 
@@ -91,7 +93,7 @@ ms.locfileid: "72984626"
 
 提供指向其他资源的链接，以了解有关通过 Visual Studio 开发 Office 解决方案和 Office 开发的详细信息。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [排查 Office 解决方案中的错误](../vsto/troubleshooting-errors-in-office-solutions.md)
 - [Office 解决方案安全性疑难解答](../vsto/troubleshooting-office-solution-security.md)

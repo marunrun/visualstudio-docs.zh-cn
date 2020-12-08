@@ -1,5 +1,7 @@
 ---
 title: 中断模式下的单步执行 |Microsoft Docs
+description: 了解调试器处于中断模式时所发生的过程。 然后，调试器必须单步调试代码。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3161fc1c1ec8b44d96b3793198ac630ba2e32d67
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 80273bf470a3ed0c342e781085de6e991508451c
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712859"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845188"
 ---
 # <a name="stepping-in-break-mode"></a>中断模式下的单步执行
 以下部分介绍调试器处于中断模式下时所发生的过程，并且必须单步执行代码：
@@ -28,5 +30,5 @@ ms.locfileid: "80712859"
 
 2. 步骤完成后，发送 [IDebugStepCompleteEvent2](../../extensibility/debugger/reference/idebugstepcompleteevent2.md) 作为停止事件。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [调用调试器事件](../../extensibility/debugger/calling-debugger-events.md)

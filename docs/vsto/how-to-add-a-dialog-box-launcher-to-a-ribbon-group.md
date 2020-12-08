@@ -1,5 +1,7 @@
 ---
 title: 如何：向功能区组添加对话框启动器
+description: 您可以向功能区上的任何组添加对话框启动器，该程序可打开相关对话框或任务窗格，它们提供与组相关的更多选项。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 29b260929d0478749296496db5b454326497d3ad
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 85b5d6f127c6f8b2b8140e778792aa1088efe05c
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85541613"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844928"
 ---
 # <a name="how-to-add-a-dialog-box-launcher-to-a-ribbon-group"></a>如何：向功能区组添加对话框启动器
   您可以向功能区上的任何组添加对话框启动器。 对话框启动器是出现在组中的小图标。 用户单击此图标可打开相关对话框或任务窗格，其中提供了与组相关的更多选项。
@@ -27,7 +29,7 @@ ms.locfileid: "85541613"
 
 ### <a name="to-add-a-dialog-box-launcher-to-a-ribbon-group"></a>向功能区组添加对话框启动器
 
-1. 选择功能区代码文件 (*.vb* 或 *.cs* 文件) 在 **解决方案资源管理器**中。
+1. 选择功能区代码文件 (*.vb* 或 *.cs* 文件) 在 **解决方案资源管理器** 中。
 
 2. 在 " **视图** " 菜单上，单击 " **设计器**"。
 

@@ -1,5 +1,7 @@
 ---
 title: 使用扩展性接口自定义 UI 功能
+description: 了解 Visual Studio 中的 Office 开发工具提供了可帮助你自定义 UI 功能的扩展性接口。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -21,12 +23,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 07b62903388012dac3459c86011e349f8053762c
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 436f426eee6c90476997f416bab907c8e17f94cc
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91583835"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845617"
 ---
 # <a name="customize-ui-features-by-using-extensibility-interfaces"></a>使用扩展性接口自定义 UI 功能
   Visual Studio 中的 Office 开发工具提供了一些类和设计器，使用它们在 VSTO 外接程序中创建自定义任务窗格、功能区自定义项和 Outlook 窗体区域时可处理许多实现细节。 不过，如果你有特殊要求，也可以自己为每项功能实现 *扩展性接口* 。
@@ -43,9 +45,9 @@ ms.locfileid: "91583835"
 ## <a name="extensibility-interfaces-you-can-implement-in-a-vsto-add-in"></a>可在 VSTO 外接程序中实现的扩展性接口
  下表列出了你可以实现的扩展性接口以及支持这些接口的应用程序。
 
-|接口|说明|应用程序|
+|接口|描述|应用程序|
 |---------------|-----------------|------------------|
-|<xref:Microsoft.Office.Core.IRibbonExtensibility>|实现此接口可自定义功能区 UI。 **注意：**  可以将 **功能区 (XML) ** 项添加到项目，以便 <xref:Microsoft.Office.Core.IRibbonExtensibility> 在 VSTO 外接程序中生成默认实现。 有关更多信息，请参见 [Ribbon XML](../vsto/ribbon-xml.md)。|Excel<br /><br /> [!INCLUDE[InfoPath_15_short](../vsto/includes/infopath-15-short-md.md)]<br /><br /> InfoPath 2010<br /><br /> Outlook<br /><br /> PowerPoint<br /><br /> Project<br /><br /> Visio<br /><br /> Word|
+|<xref:Microsoft.Office.Core.IRibbonExtensibility>|实现此接口可自定义功能区 UI。 **注意：**  可以将 **功能区 (XML)** 项添加到项目，以便 <xref:Microsoft.Office.Core.IRibbonExtensibility> 在 VSTO 外接程序中生成默认实现。 有关更多信息，请参见 [Ribbon XML](../vsto/ribbon-xml.md)。|Excel<br /><br /> [!INCLUDE[InfoPath_15_short](../vsto/includes/infopath-15-short-md.md)]<br /><br /> InfoPath 2010<br /><br /> Outlook<br /><br /> PowerPoint<br /><br /> Project<br /><br /> Visio<br /><br /> Word|
 |<xref:Microsoft.Office.Core.ICustomTaskPaneConsumer>|实现此接口可创建自定义任务窗格。|Excel<br /><br /> Outlook<br /><br /> PowerPoint<br /><br /> Word|
 |<xref:Microsoft.Office.Interop.Outlook.FormRegionStartup>|实现此接口可创建 Outlook 窗体区域。|Outlook|
 
@@ -64,7 +66,7 @@ ms.locfileid: "91583835"
 - `TaskPaneUI` 类提供任务窗格的 UI。 `TaskPaneUI` 类的属性使类对于 COM 可见，从而使 Microsoft Office 应用程序能够发现该类。 在此示例中，UI 是一个空 <xref:System.Windows.Forms.UserControl>，但你可以通过修改代码来添加控件。
 
   > [!NOTE]
-  > 要向 COM 公开 `TaskPaneUI` 类，你必须同时为项目设置“为 COM 互操作注册” **** 属性。
+  > 要向 COM 公开 `TaskPaneUI` 类，你必须同时为项目设置“为 COM 互操作注册”  属性。
 
   [!code-vb[Trin_SimpleExtensibilityInterface#1](../vsto/codesnippet/VisualBasic/Trin_SimpleExtensibilityInterface/ThisAddIn.vb#1)]
   [!code-csharp[Trin_SimpleExtensibilityInterface#1](../vsto/codesnippet/CSharp/Trin_SimpleExtensibilityInterface/ThisAddIn.cs#1)]
@@ -77,7 +79,7 @@ ms.locfileid: "91583835"
  [!code-vb[Trin_SimpleExtensibilityInterface#2](../vsto/codesnippet/VisualBasic/Trin_SimpleExtensibilityInterface/ThisAddIn.vb#2)]
  [!code-csharp[Trin_SimpleExtensibilityInterface#2](../vsto/codesnippet/CSharp/Trin_SimpleExtensibilityInterface/ThisAddIn.cs#2)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [Office 开发示例和演练](../vsto/office-development-samples-and-walkthroughs.md)
 - [程序 VSTO 外接程序](../vsto/programming-vsto-add-ins.md)
 - [开发 Office 解决方案](../vsto/developing-office-solutions.md)

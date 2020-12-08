@@ -1,5 +1,7 @@
 ---
 title: 如何：向工作表添加 XMLMappedRange 控件
+description: 请注意，在将 XML 元素映射到 Microsoft Office Excel 中的单元格时，Visual Studio 会自动将 XmlMappedRange 控件添加到工作表中。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1d69e705e8f537ba3636422ad6883a7633e03322
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7e807a5673f27da6a852fd2c83347d1348f1f6fd
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85544880"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844408"
 ---
 # <a name="how-to-add-xmlmappedrange-controls-to-worksheets"></a>如何：向工作表添加 XMLMappedRange 控件
   将 XML 元素映射到 Microsoft Office Excel 中的单元格时，Visual Studio 会自动将 <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> 控件添加到工作表中。

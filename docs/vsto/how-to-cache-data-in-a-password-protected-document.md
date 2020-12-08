@@ -1,5 +1,7 @@
 ---
 title: 如何：在受密码保护的文档中缓存数据
+description: 了解，如果您将数据添加到用密码保护的文档或工作簿中的数据缓存，则可以通过重写项目中的两个方法来保存对缓存数据所做的更改。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 12b04b985d54161343d26cdd32178b67bd6e6b91
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2a11b70da4bdd2500f70d2b45f025340af21ea94
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547233"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845994"
 ---
 # <a name="how-to-cache-data-in-a-password-protected-document"></a>如何：在受密码保护的文档中缓存数据
   如果将数据添加到受密码保护的文档或工作簿中的数据缓存，则不会自动保存对缓存数据所做的更改。 可以通过重写项目中的两个方法来保存对缓存数据所做的更改。
@@ -54,7 +56,7 @@ ms.locfileid: "85547233"
 
 ### <a name="to-cache-data-in-an-excel-workbook-that-is-protected-with-a-password"></a>在受密码保护的 Excel 工作簿中缓存数据
 
-1. 在 `ThisWorkbook` 类或 `Sheet` *n*类中，将要缓存的公共字段或属性标记为。 有关详细信息，请参阅 [缓存数据](../vsto/caching-data.md)。
+1. 在 `ThisWorkbook` 类或 `Sheet` *n* 类中，将要缓存的公共字段或属性标记为。 有关详细信息，请参阅 [缓存数据](../vsto/caching-data.md)。
 
 2. 重写 <xref:Microsoft.Office.Tools.Excel.WorkbookBase.UnprotectDocument%2A> 类中的方法 `ThisWorkbook` ，并从工作簿中移除保护。
 

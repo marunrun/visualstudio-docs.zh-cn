@@ -1,5 +1,7 @@
 ---
 title: 用于开发 Office 解决方案的其他资源
+description: 了解可用于开发 Microsoft Office 应用程序扩展的其他资源。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8bea9faa315fbd6ec41c667836dac7216f1f8f81
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 828cd2c451e531eeecda7574b5750bc3bb7023b2
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72986274"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844811"
 ---
 # <a name="additional-resources-to-develop-office-solutions"></a>用于开发 Office 解决方案的其他资源
   Visual Studio 中的 Microsoft Office 开发人员工具仅代表用于扩展 Office 应用程序的许多方法中的一种。 Office 应用程序还具有一些内置功能，如 Open XML 格式，这是 Visual Studio 中的 Office 开发人员工具所不提供的或本文档中未介绍的功能。

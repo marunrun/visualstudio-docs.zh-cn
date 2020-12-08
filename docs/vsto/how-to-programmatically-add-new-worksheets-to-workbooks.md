@@ -1,5 +1,7 @@
 ---
 title: 如何：以编程方式向工作簿添加新工作表
+description: 了解如何以编程方式创建工作表，然后将工作表添加到工作簿中工作表的集合。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3c014d8ea1701dde4e83e6849cce337656579f5d
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 3397b2ad8f656a7ada82ce0be17dcf21064d0ee3
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585400"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96843979"
 ---
 # <a name="how-to-programmatically-add-new-worksheets-to-workbooks"></a>如何：以编程方式向工作簿添加新工作表
   可以通过编程方式创建一个工作表，然后将它添加到工作簿中工作表的集合。
@@ -46,7 +48,7 @@ ms.locfileid: "91585400"
 
      新工作表是一个本机 <xref:Microsoft.Office.Interop.Excel.Worksheet> 对象，不是主机项。 你还可以从本机 <xref:Microsoft.Office.Tools.Excel.Worksheet> 对象生成 <xref:Microsoft.Office.Interop.Excel.Worksheet> 主机项。 有关详细信息，请参阅 [Extending Word Documents and Excel Workbooks in VSTO Add-ins at Run Time](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [使用工作表](../vsto/working-with-worksheets.md)
 - [主机项和主机控件概述](../vsto/host-items-and-host-controls-overview.md)
 - [如何：以编程方式从工作簿中删除工作表](../vsto/how-to-programmatically-delete-worksheets-from-workbooks.md)

@@ -1,5 +1,7 @@
 ---
 title: SetNotificationForWaitCompletion 方法 |Microsoft Docs
+description: 了解调试器如何使用状态位来帮助跳出用于实现承诺样式的任务的异步方法主体。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 226ac41c8e3b7427ac3b9aba7bea08dbb7329d16
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 80904e95c1561dd20ed2a6cc9ad561e6c18ee93a
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712863"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845214"
 ---
 # <a name="setnotificationforwaitcompletion-method"></a>SetNotificationForWaitCompletion 方法
 设置或清除 TASK_STATE_WAIT_COMPLETION_NOTIFICATION 状态位。

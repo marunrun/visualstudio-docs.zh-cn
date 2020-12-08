@@ -1,5 +1,7 @@
 ---
 title: 符号提供程序接口 |Microsoft Docs
+description: 本文链接到 Visual Studio SDK 的符号处理接口说明，它在中断模式期间计算调用堆栈中的变量。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7929ba36c76f0db1cabab087afe3590de509efff
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a24baec6738382f93dee5d8b7843d624eea80890
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80715841"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845786"
 ---
 # <a name="symbol-provider-interfaces"></a>符号提供程序接口
 下面是的符号处理接口 [!INCLUDE[vsipsdk](../../../extensibility/includes/vsipsdk_md.md)] 。
@@ -25,14 +27,14 @@ ms.locfileid: "80715841"
 ## <a name="discussion"></a>讨论 (Discussion)
  这些接口用于在中断模式期间计算调用堆栈中的变量。 它们仅实现公共语言运行时符号提供程序 (SP) 。
 
-|接口|实现者|说明|
+|接口|实现者|描述|
 |---------------|--------------------|-----------------|
 |[IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)|SP|表示项的地址。|
 |[IDebugAddress2](../../../extensibility/debugger/reference/idebugaddress2.md)|SP|表示项的地址，提供对进程 ID 的访问。|
 |[IDebugArrayField](../../../extensibility/debugger/reference/idebugarrayfield.md)|SP|表示数组符号或数组类型。|
 |[IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)|SP|表示类符号或类类型。|
 |[IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)|SP|表示一个 COM + 符号提供程序，其中包含特定于托管代码的方法。|
-|[IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md)|SP|表示一个 COM + 符号提供程序，其中包含特定于托管代码并扩展 **IDebugComPlusSymbolProvider**的方法。|
+|[IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md)|SP|表示一个 COM + 符号提供程序，其中包含特定于托管代码并扩展 **IDebugComPlusSymbolProvider** 的方法。|
 |[IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md)|SP|表示作为其他符号或类型的容器的符号或类型。|
 |[IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md)|SP|表示可以附加到符号的自定义特性。|
 |[IDebugCustomAttributeQuery](../../../extensibility/debugger/reference/idebugcustomattributequery.md)|SP|表示对方法或类型的自定义特性的查询。|

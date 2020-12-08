@@ -1,5 +1,7 @@
 ---
 title: 调试 Office 项目
+description: 了解如何使用用于其他 Visual Studio 项目的相同 Microsoft Visual Studio 工具来调试 Office 项目。
+ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 92cc0922a36d8c57b54b69ad984d18cf4742b823
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ea4874effcba4ee948f921ae9bf91f145b661f4f
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73189697"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845630"
 ---
 # <a name="debug-office-projects"></a>调试 Office 项目
   可使用与用于其他 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 项目相同的 Microsoft [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 工具来调试 Office 项目。 调试 Office 项目时也可使用[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 调试器的功能（如插入断点和查看 **“局部变量”** 窗口中的变量）。 有关调试工具的详细信息 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ，请参阅 [在 Visual Studio 中调试](../debugger/debugger-feature-tour.md)。
@@ -63,7 +65,7 @@ ms.locfileid: "73189697"
  默认情况下，Visual Studio 也不会显示 Office 项目的实时调试错误；但可以启用此功能，这样可看到所引发的错误。 有关详细信息，请参阅 [Visual Studio 中](../debugger/just-in-time-debugging-in-visual-studio.md)的实时调试。
 
 ## <a name="command-line-arguments"></a>命令行参数
- 如果将 "**调试**" 属性页上的 "**启动" 操作**设置为 "**启动项目**"，则即使已将命令行参数指定为启动选项，Visual Studio 也不会在调试项目时使用命令行参数。 如果要在开始调试时使用命令行参数，则必须选择 "**启动项目**" 之外的 "**启动" 操作**。
+ 如果将 "**调试**" 属性页上的 "**启动" 操作** 设置为 "**启动项目**"，则即使已将命令行参数指定为启动选项，Visual Studio 也不会在调试项目时使用命令行参数。 如果要在开始调试时使用命令行参数，则必须选择 "**启动项目**" 之外的 "**启动" 操作**。
 
 ## <a name="source-control"></a>源代码管理
  调试属性不在源控件下的多个用户中共享。 Visual Basic 和 C# 项目的调试属性存储在特定于用户的文件（*ProjectName*.vbproj.user 或 *ProjectName*.csproj.user）中，但此文件不在源控件下。 如果有多个用户正在调试，则每个用户都必须手动输入调试属性。
@@ -97,7 +99,7 @@ ms.locfileid: "73189697"
 
  若要将错误写入日志文件，可创建一个名为 `VSTO_LOGALERTS` 的环境变量并将其设置为 1（一）。 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 可在包含 VSTO 外接程序的部署清单的文件夹中或在包含与自定义项关联的文档或工作簿的文件夹中创建日志文件。 如果失败，将在 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 本地 *% TEMP%* 文件夹中创建日志文件。 对于应用程序级 VSTO 外接程序，默认名称为 *add-in name*.vsto.log。 对于文档级项目，日志文件的名称为 *document name*.*extension*.log（如 ExcelWorkbook1.xlsx.log）。 若要停止记录错误，可删除环境变量，或将其设置为 0（零）。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [构建 Office 解决方案](../vsto/building-office-solutions.md)
 - [如何：重新启用已禁用的 VSTO 外接程序](../vsto/how-to-re-enable-a-vsto-add-in-that-has-been-disabled.md)
