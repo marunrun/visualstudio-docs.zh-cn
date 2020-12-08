@@ -1,5 +1,7 @@
 ---
 title: 堆栈帧 |Microsoft Docs
+description: 本文介绍 Visual Studio 的调试器结构中的堆栈帧的定义和角色。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1ea79ad199e20afeb5d2bf1ca6a3cf881c6d51c3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ab2c891002ad90d767a4c5ca9efffd3f3d1d10ee
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712846"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845201"
 ---
 # <a name="stack-frames"></a>堆栈帧
 在调试程序体系结构中， *堆栈帧*：
@@ -30,7 +32,7 @@ ms.locfileid: "80712846"
 
 - 由 [IDebugStackFrame2](../../extensibility/debugger/reference/idebugstackframe2.md) 接口表示，此接口通常由调试引擎创建 (取消) 或虚拟机作为执行线程的结果。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [调试器上下文](../../extensibility/debugger/debugger-contexts.md)
 - [调试器概念](../../extensibility/debugger/debugger-concepts.md)
 - [调试引擎](../../extensibility/debugger/debug-engine.md)

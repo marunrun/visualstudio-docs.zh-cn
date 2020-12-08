@@ -1,5 +1,7 @@
 ---
 title: Word 文档级自定义项编程入门
+description: 了解开始使用 Visual Studio 创建 Microsoft Office Word 的文档级自定义项时需要了解的知识。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f4cf54dcdd08e7c44e8318973a3653dbe9c5ea1b
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: e9420ab02b5f402dd39e5ca1713b911a10932dfb
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585662"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845175"
 ---
 # <a name="get-started-programming-document-level-customizations-for-word"></a>Word 文档级自定义项编程入门
   如果只是开始使用 Visual Studio 创建 Microsoft Office Word 的文档级自定义项，则需要了解以下内容。
@@ -64,7 +66,7 @@ ms.locfileid: "91585662"
 
  有关演练 Word 项目中的一些常见任务的主题列表，请参阅 [Office 编程中的常见任务](../vsto/common-tasks-in-office-programming.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [如何：在 Visual Studio 中创建 Office 项目](../vsto/how-to-create-office-projects-in-visual-studio.md)
 - [程序文档级自定义项](../vsto/programming-document-level-customizations.md)
 - [Word 解决方案](../vsto/word-solutions.md)

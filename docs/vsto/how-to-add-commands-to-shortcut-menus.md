@@ -1,5 +1,7 @@
 ---
 title: 如何：向快捷菜单中添加命令
+description: 了解如何使用 VSTO 外接程序将命令添加到 Office 应用程序的快捷菜单中。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1ad27481799718d9d2b0872d7a43837fc822ca40
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 95cc6a9dc773c9a0cb07eff518566af9dcc49e96
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546193"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845487"
 ---
 # <a name="how-to-add-commands-to-shortcut-menus"></a>如何：向快捷菜单中添加命令
   本主题演示如何使用 VSTO 外接程序将命令添加到 Office 应用程序的快捷菜单中。
@@ -27,22 +29,22 @@ ms.locfileid: "85546193"
 
 ### <a name="to-add-commands-to-shortcut-menus-in-office"></a>将命令添加到 Office 的快捷菜单中
 
-1. 将“功能区 XML” **** 项添加到文档级项目或 VSTO 外接程序项目中。 有关详细信息，请参阅 [如何：开始自定义功能区](../vsto/how-to-get-started-customizing-the-ribbon.md)。 In
+1. 将“功能区 XML”  项添加到文档级项目或 VSTO 外接程序项目中。 有关详细信息，请参阅 [如何：开始自定义功能区](../vsto/how-to-get-started-customizing-the-ribbon.md)。 在
 
-2. 在“解决方案资源管理器”**** 中，选择“” **** 或“” ****。
+2. 在“解决方案资源管理器”中，选择“”  或“” 。
 
-3. 在菜单栏上，选择 "**查看**  >  **代码**"。
+3. 在菜单栏上，选择“视图” > “代码”。
 
-     “ThisAddin” **** 类文件随即在代码编辑器中打开。
+     “ThisAddin”  类文件随即在代码编辑器中打开。
 
 4. 将下面的代码添加到 **ThisAddin** 类中。 此代码可替代 `CreateRibbonExtensibilityObject` 方法，并将功能区 XML 类返回到 Office 应用程序。
 
      [!code-csharp[Trin_WordAddIn_Menus#1](../vsto/codesnippet/CSharp/trin_wordaddin_menus.cs/thisaddin.cs#1)]
      [!code-vb[Trin_WordAddIn_Menus#1](../vsto/codesnippet/VisualBasic/trin_wordaddin_menus.vb/thisaddin.vb#1)]
 
-5. 在“解决方案资源管理器” **** 中，选择功能区 XML 文件。 默认情况下，功能区 XML 文件命名为 *Ribbon1.xml*。
+5. 在“解决方案资源管理器” 中，选择功能区 XML 文件。 默认情况下，功能区 XML 文件命名为 *Ribbon1.xml*。
 
-6. 在菜单栏上，选择 "**查看**  >  **代码**"。
+6. 在菜单栏上，选择“视图” > “代码”。
 
      功能区 XML 文件随即在代码编辑器中打开。
 
@@ -70,11 +72,11 @@ ms.locfileid: "85546193"
     </customUI>
     ```
 
-8. 在“解决方案资源管理器” **** 中，选择“MyRibbon.cs” **** 或“MyRibbon.vb” ****。
+8. 在“解决方案资源管理器” 中，选择“MyRibbon.cs”  或“MyRibbon.vb” 。
 
 9. 向 `Ribbon1` 要处理的每个控件的类添加一个回叫方法。
 
-     下面的回叫方法将处理“我的按钮” **** 按钮。 此代码会在光标当前位置向活动文档添加一个字符串。
+     下面的回叫方法将处理“我的按钮”  按钮。 此代码会在光标当前位置向活动文档添加一个字符串。
 
      [!code-vb[Trin_WordAddIn_Menus#2](../vsto/codesnippet/VisualBasic/trin_wordaddin_menus.vb/ribbon1.vb#2)]
      [!code-csharp[Trin_WordAddIn_Menus#2](../vsto/codesnippet/CSharp/trin_wordaddin_menus.cs/ribbon1.cs#2)]

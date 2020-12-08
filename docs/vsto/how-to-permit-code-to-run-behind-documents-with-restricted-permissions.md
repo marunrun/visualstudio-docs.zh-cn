@@ -1,5 +1,7 @@
 ---
 title: 允许代码在具有受限权限的文档的后台运行
+description: 了解如何使用 Visual Studio 中的 Office 开发工具允许代码在具有受限权限的文档的后台运行。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 14c468a806160fd31c84b164a4b995f904e71fc6
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: ac15302e81a68d8866c69a30a8368d36648ef1d9
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "92298494"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844889"
 ---
 # <a name="how-to-permit-code-to-run-behind-documents-with-restricted-permissions"></a>如何：允许代码在具有受限权限的文档的后台运行
   您可以使用 Microsoft Office 的 Rights Management (IRM) 功能的信息来限制对文档或工作簿的权限。 默认情况下，不允许运行受限 Microsoft Office Word 文档或 Microsoft Office Excel 工作簿的隐藏代码。 你可以更改默认值，以便托管代码扩展可以访问对象模型，你的解决方案将工作。
@@ -47,7 +49,7 @@ ms.locfileid: "92298494"
 
    Word 或 Excel 将允许以编程方式访问对象模型。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [信息权限管理和托管代码扩展概述](../vsto/information-rights-management-and-managed-code-extensions-overview.md)
 - [文档级解决方案中的文档保护](../vsto/document-protection-in-document-level-solutions.md)
 - [Office 文档上的密码保护](../vsto/password-protection-on-office-documents.md)

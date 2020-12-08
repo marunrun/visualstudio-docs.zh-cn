@@ -1,5 +1,7 @@
 ---
 title: 在运行时将控件添加到 Office 文档
+description: 了解如何在运行时将控件添加到 Microsoft Office Word 文档和 Microsoft Office Excel 工作簿。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -22,12 +24,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 44bf1de5d550a264a63ba7293fe1bdc0c9630aee
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e971556605a120b4ef475f434390c6dcf7b17938
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72986324"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844837"
 ---
 # <a name="add-controls-to-office-documents-at-run-time"></a>在运行时将控件添加到 Office 文档
   可以在运行时向 Microsoft Office Word 文档和 Microsoft Office Excel 工作簿中添加控件。 还可以在运行时删除这些控件。 在运行时添加或删除的控件称为 *动态控件*。

@@ -1,5 +1,7 @@
 ---
 title: 使用 ClickOnce 部署 Office 解决方案
+description: 如果使用 ClickOnce，则了解如何使用更少的步骤来部署 Office 解决方案。 如果发布更新，解决方案将自动检测并安装更新。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: bb495b30950105d1ff19a1f4fb13da1ee624b228
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: d808348528a64cc184c7a6c50359c057b2325a75
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809344"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845643"
 ---
 # <a name="deploy-an-office-solution-by-using-clickonce"></a>使用 ClickOnce 部署 Office 解决方案
   如果使用 ClickOnce，则部署 Office 解决方案的步骤更少。 如果发布更新，解决方案将自动检测并安装更新。 不过，ClickOnce 需要你分别为计算机的每个用户安装解决方案。 因此，如果多个用户将在同一台计算机上运行你的解决方案，则应考虑使用 Windows Installer (*.msi*) 。
@@ -50,23 +52,23 @@ ms.locfileid: "90809344"
 
 #### <a name="to-publish-the-solution"></a>发布解决方案
 
-1. 在 **解决方案资源管理器**中，选择为你的项目命名的节点。
+1. 在 **解决方案资源管理器** 中，选择为你的项目命名的节点。
 
 2. 在菜单栏上，依次选择 "项目"、"**项目***名称***属性**"。
 
-3. 在 **项目设计器**中，选择 " **发布** " 选项卡，如下图所示。
+3. 在 **项目设计器** 中，选择 " **发布** " 选项卡，如下图所示。
 
     ![项目设计器中的“发布”选项卡](../vsto/media/vsto-publishtab.png "项目设计器中的“发布”选项卡")
 
-4. 在 " **发布文件夹位置 (ftp 服务器或文件路径) ** " 框中，输入希望 **项目设计器** 从中复制解决方案文件的文件夹的路径。
+4. 在 " **发布文件夹位置 (ftp 服务器或文件路径)** " 框中，输入希望 **项目设计器** 从中复制解决方案文件的文件夹的路径。
 
     可以输入以下任一类型的路径。
 
    - 本地路径 (例如 *C:\FolderName\FolderName*) 。
 
-   - 统一命名约定 (网络上的文件夹的 UNC) 路径 (例如， * \\ \ServerName\FolderName*) 。
+   - 统一命名约定 (网络上的文件夹的 UNC) 路径 (例如， *\\ \ServerName\FolderName*) 。
 
-   - 相对路径 (例如*PublishFolder \\ *，默认情况下，该项目将发布到该文件夹) 。
+   - 相对路径 (例如 *PublishFolder \\*，默认情况下，该项目将发布到该文件夹) 。
 
 5. 在 " **安装文件夹 URL** " 框中，输入最终用户将在其中找到解决方案的位置的完全限定路径。
 
@@ -89,7 +91,7 @@ ms.locfileid: "90809344"
 
      下表对每个选项进行了描述。
 
-    |选项|说明|
+    |选项|描述|
     |------------|-----------------|
     |**从组件供应商的网站下载系统必备组件**|系统将提示用户从供应商处下载并安装这些系统必备组件。|
     |**从与我的应用程序相同的位置下载系统必备组件**|系统必备软件与解决方案一起安装。 如果选择此选项，Visual Studio 会将所有系统必备组件包为你复制到发布位置。 要让此选项正常工作，系统必备包必须位于开发计算机上。|
@@ -110,7 +112,7 @@ ms.locfileid: "90809344"
 
      Visual Studio 将向你先前在此过程中指定的发布文件夹添加以下文件夹和文件。
 
-    - **应用程序文件**文件夹。
+    - **应用程序文件** 文件夹。
 
     - 安装程序。
 
@@ -202,7 +204,7 @@ ms.locfileid: "90809344"
 
 4. 在 " **名称** " 字段中，输入 **FileCopyPDA**，然后选择 " **确定"** 按钮。
 
-5. 在 **解决方案资源管理器**中，选择 " **FileCopyPDA** " 项目。
+5. 在 **解决方案资源管理器** 中，选择 " **FileCopyPDA** " 项目。
 
 6. 在菜单栏上，选择“项目” > “添加引用”。
 
@@ -221,7 +223,7 @@ ms.locfileid: "90809344"
 
 ### <a name="build-and-publish-the-solution"></a>生成并发布解决方案
 
-1. 在 **解决方案资源管理器**中，打开 **FileCopyPDA** 项目的快捷菜单，然后选择 " **生成**"。
+1. 在 **解决方案资源管理器** 中，打开 **FileCopyPDA** 项目的快捷菜单，然后选择 " **生成**"。
 
 2. 打开 **ExcelWorkbook** 项目的快捷菜单，然后选择 " **生成**"。
 
@@ -229,13 +231,13 @@ ms.locfileid: "90809344"
 
 4. 在 " **添加引用** " 对话框中，选择 " **项目** " 选项卡，选择 " **FileCopyPDA**"，然后选择 **"确定"** 按钮。
 
-5. 在 **解决方案资源管理器**中，选择 " **ExcelWorkbook** " 项目。
+5. 在 **解决方案资源管理器** 中，选择 " **ExcelWorkbook** " 项目。
 
 6. 在菜单栏上，选择 "**项目**" "  >  **新建文件夹**"。
 
 7. 输入 **数据**，然后选择 **enter** 键。
 
-8. 在 **解决方案资源管理器**中，选择 **Data** 文件夹。
+8. 在 **解决方案资源管理器** 中，选择 **Data** 文件夹。
 
 9. 在菜单栏上，选择 "**项目**" "  >  **添加现有项**"。
 
@@ -243,7 +245,7 @@ ms.locfileid: "90809344"
 
 11. 在 **解决方案资源管理器** 选择 **ExcelWorkbook.xlsx** 文件。
 
-12. 在 " **属性** " 窗口中，将 " **生成操作** " 属性更改为 " **内容** "，将 " **复制到输出目录** " 属性 **更改为 "复制到**输出目录"
+12. 在 " **属性** " 窗口中，将 " **生成操作** " 属性更改为 " **内容** "，将 " **复制到输出目录** " 属性 **更改为 "复制到** 输出目录"
 
      完成这些步骤后，你的项目将与下图类似。
 
@@ -253,7 +255,7 @@ ms.locfileid: "90809344"
 
 ### <a name="modify-the-application-manifest"></a>修改应用程序清单
 
-1. 使用**文件资源管理器**打开解决方案目录**c:\publish**。
+1. 使用 **文件资源管理器** 打开解决方案目录 **c:\publish**。
 
 2. 打开 " **应用程序文件** " 文件夹，然后打开与解决方案的最新发布版本对应的文件夹。
 
@@ -280,9 +282,9 @@ ms.locfileid: "90809344"
 
 ### <a name="re-sign-the-application-and-deployment-manifests"></a>对应用程序清单和部署清单进行重新签名
 
-1. 在 **%USERPROFILE%\Documents\Visual Studio 2013 \ Projects\ExcelWorkbook\ExcelWorkbook**文件夹中，复制**ExcelWorkbook_TemporaryKey .pfx**证书文件，然后将其粘贴到*PublishFolder* **\Application Files\ExcelWorkbook** \_ _MostRecentPublishedVersion_文件夹中。
+1. 在 **%USERPROFILE%\Documents\Visual Studio 2013 \ Projects\ExcelWorkbook\ExcelWorkbook** 文件夹中，复制 **ExcelWorkbook_TemporaryKey .pfx** 证书文件，然后将其粘贴到 *PublishFolder* **\Application Files\ExcelWorkbook** \_ _MostRecentPublishedVersion_ 文件夹中。
 
-2. 打开 Visual Studio 命令提示符，然后将目录更改为**c:\publish\Application Files\ExcelWorkbook** \_ _MostRecentPublishedVersion_文件夹 (例如， **c:\publish\Application Files \ ExcelWorkbook_1_0_0_4**) 。
+2. 打开 Visual Studio 命令提示符，然后将目录更改为 **c:\publish\Application Files\ExcelWorkbook** \_ _MostRecentPublishedVersion_ 文件夹 (例如， **c:\publish\Application Files \ ExcelWorkbook_1_0_0_4**) 。
 
 3. 通过运行以下命令对修改的应用程序清单进行签名：
 
@@ -304,7 +306,7 @@ ms.locfileid: "90809344"
 
      将出现“ExcelWorkbook.vsto 已成功签名”消息。
 
-5. 将*ExcelWorkbook*文件复制到**c:\publish\Application Files\ExcelWorkbook** \_ _MostRecentVersionNumber_目录。
+5. 将 *ExcelWorkbook* 文件复制到 **c:\publish\Application Files\ExcelWorkbook** \_ _MostRecentVersionNumber_ 目录。
 
 ## <a name="put-the-document-of-a-solution-onto-a-server-thats-running-sharepoint-document-level-customizations-only"></a><a name="SharePoint"></a> 将解决方案文档置于运行 SharePoint 的服务器上 (仅限文档级自定义项) 
  可以使用 SharePoint 将文档级自定义项发布到最终用户。 当用户转到 SharePoint 站点并打开文档时，运行时会将解决方案从共享网络文件夹自动安装到用户的本地计算机。 将解决方案安装到本地后，即使将文档复制到其他位置（例如桌面），自定义项仍可正常工作。
@@ -325,7 +327,7 @@ ms.locfileid: "90809344"
 
         2. 在 " **信任中心** " 对话框中，选择 " **受信任位置** " 按钮。
 
-        3. 选中 " **允许我的网络上的受信任位置 (不推荐) ** 复选框，然后选择" **添加新位置** "按钮。
+        3. 选中 " **允许我的网络上的受信任位置 (不推荐)** 复选框，然后选择" **添加新位置** "按钮。
 
         4. 在 " **路径** " 框中，输入包含上载文档的 SharePoint 文档库的 URL (例如， *http://SharePointServerName/TeamName/ProjectName/DocumentLibraryName*) 。
 
@@ -342,18 +344,18 @@ ms.locfileid: "90809344"
 
  *%commonprogramfiles%\microsoft shared\VSTO\10.0\VSTOInstaller.exe*
 
- 如果该工具不在该位置，可以使用 **HKEY_LOCAL_MACHINE \Software\microsoft\vsto runtime Setup\v4\InstallerPath** 或 **HKEY_LOCAL_MACHINE \software\wow6432node\microsoft\vsto runtime Setup\v4\InstallerPath** 注册表项来查找该工具的路径。
+ 如果该工具不在该位置，可以使用 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSTO Runtime Setup\v4\InstallerPath** 或 **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VSTO Runtime Setup\v4\InstallerPath** 注册表项查找该工具的路径。
 
- 可以在 *VSTOinstaller.exe*中使用以下参数。
+ 可以在 *VSTOinstaller.exe* 中使用以下参数。
 
 | 参数 | 定义 |
 |------------------| - |
-| /Install 或 /I | 安装解决方案。 此选项必须后跟部署清单的路径。 您可以在本地计算机上指定路径，一个通用命名约定 (UNC) 文件共享。 可以指定本地路径 (*C:\FolderName\PublishFolder*) 、相对路径 (*发布 \\ *) ，或 (* \\ \ServerName\FolderName*或 http://<em>ServerName/文件夹名称</em>) 的完全限定位置。 |
-| /Uninstall 或 /U | 卸载解决方案。 此选项必须后跟部署清单的路径。 您可以指定可以在本地计算机上的路径，一个 UNC 文件共享。 可以指定本地路径 (*c:\FolderName\PublishFolder*) 、相对路径 (*发布 \\ *) ，或 (* \\ \ServerName\FolderName*或 http://<em>ServerName/文件夹名称</em>) 的完全限定位置。 |
+| /Install 或 /I | 安装解决方案。 此选项必须后跟部署清单的路径。 您可以在本地计算机上指定路径，一个通用命名约定 (UNC) 文件共享。 可以指定本地路径 (*C:\FolderName\PublishFolder*) 、相对路径 (*发布 \\*) ，或 (*\\ \ServerName\FolderName* 或 http://<em>ServerName/文件夹名称</em>) 的完全限定位置。 |
+| /Uninstall 或 /U | 卸载解决方案。 此选项必须后跟部署清单的路径。 您可以指定可以在本地计算机上的路径，一个 UNC 文件共享。 可以指定本地路径 (*c:\FolderName\PublishFolder*) 、相对路径 (*发布 \\*) ，或 (*\\ \ServerName\FolderName* 或 http://<em>ServerName/文件夹名称</em>) 的完全限定位置。 |
 | /Silent 或 /S | 在不提示用户输入或不显示任何消息的情况下进行安装或卸载。 如果需要信任提示，则不会安装或更新自定义项。 |
 | /Help 或 /? | 显示帮助信息。 |
 
- 运行 *VSTOinstaller.exe*时，可能会出现以下错误代码。
+ 运行 *VSTOinstaller.exe* 时，可能会出现以下错误代码。
 
 |错误代码|定义|
 |----------------|----------------|
@@ -424,7 +426,7 @@ ms.locfileid: "90809344"
 
      " **值** " 框包含部署清单标识符。
 
-4. 在 "标识符" 之前，输入文档的完全限定路径，后跟一个条形，格式*路径* | *标识符* (例如*File://ServerName/FolderName/FileName|74744e4b-e4d6-41eb-84f7-ad20346fe2d9*。
+4. 在 "标识符" 之前，输入文档的完全限定路径，后跟一个条形，格式 *路径* | *标识符* (例如 *File://ServerName/FolderName/FileName|74744e4b-e4d6-41eb-84f7-ad20346fe2d9*。
 
      有关如何设置此标识符的格式的详细信息，请参阅 [自定义文档属性概述](../vsto/custom-document-properties-overview.md)。
 
@@ -445,7 +447,7 @@ ms.locfileid: "90809344"
 
 4. 将相应部署清单从该子文件夹复制到顶级发布文件夹。
 
-     例如，若要将名为**outlookaddin1.dll**的解决方案从版本1.0.0.1 回滚到1.0.0.0 版，请从**OutlookAddIn1_1_0_0_0**文件夹复制文件**outlookaddin1.dll。** 将该文件粘贴到顶层发布文件夹，并覆盖已存在的 **OutlookAddIn1_1_0_0_1** 的特定于版本的部署清单。
+     例如，若要将名为 **outlookaddin1.dll** 的解决方案从版本1.0.0.1 回滚到1.0.0.0 版，请从 **OutlookAddIn1_1_0_0_0** 文件夹复制文件 **outlookaddin1.dll。** 将该文件粘贴到顶层发布文件夹，并覆盖已存在的 **OutlookAddIn1_1_0_0_1** 的特定于版本的部署清单。
 
      下图显示了此示例中的发布文件夹结构。
 
@@ -456,7 +458,7 @@ ms.locfileid: "90809344"
 > [!NOTE]
 > 仅为解决方案的一个早期版本保存本地数据。 如果回滚两个版本，则不会保留本地数据。 有关本地数据的详细信息，请参阅 [在 ClickOnce 应用程序中访问本地数据和远程数据](../deployment/accessing-local-and-remote-data-in-clickonce-applications.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [部署 Office 解决方案](../vsto/deploying-an-office-solution.md)
 - [发布 Office 解决方案](../vsto/deploying-an-office-solution-by-using-clickonce.md)

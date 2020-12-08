@@ -1,5 +1,7 @@
 ---
 title: 如何：开始自定义功能区
+description: 了解如何自定义 Microsoft Office 应用程序的功能区，向 Office 项目添加功能区 (可视化设计器) 或功能区 (XML) 项。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,15 +17,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: be311f87862f4447d903294508927735d3507b08
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3974fe85a97226a920959b41256fa7e29923c9d1
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85520063"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845942"
 ---
 # <a name="how-to-get-started-customizing-the-ribbon"></a>如何：开始自定义功能区
-  若要自定义 Microsoft Office 应用程序的功能区，请向 Office 项目添加 **功能区 (可视化设计器) ** 或 **功能区 (XML) ** 项。
+  若要自定义 Microsoft Office 应用程序的功能区，请向 Office 项目添加 **功能区 (可视化设计器)** 或 **功能区 (XML)** 项。
 
  [!INCLUDE[appliesto_ribbon](../vsto/includes/appliesto-ribbon-md.md)]
 
@@ -31,7 +33,7 @@ ms.locfileid: "85520063"
 
 1. 在 " **项目** " 菜单上，单击 " **添加新项**"。
 
-2. 在 " **添加新项** " 对话框中，选择 " **功能区" (可视化设计器) ** 或 **功能区 (XML) **。 有关这些模板的详细信息，请参阅 [功能区概述](../vsto/ribbon-overview.md)。
+2. 在 " **添加新项** " 对话框中，选择 " **功能区" (可视化设计器)** 或 **功能区 (XML)**。 有关这些模板的详细信息，请参阅 [功能区概述](../vsto/ribbon-overview.md)。
 
 3. 在 " **名称** " 框中，键入功能区项的名称。
 
@@ -67,7 +69,7 @@ ms.locfileid: "85520063"
 
 4. 单击 **“确定”** 。
 
-   功能区项显示在 **解决方案资源管理器**中。 有关后续步骤的信息，请参阅 [功能区概述](../vsto/ribbon-overview.md)。
+   功能区项显示在 **解决方案资源管理器** 中。 有关后续步骤的信息，请参阅 [功能区概述](../vsto/ribbon-overview.md)。
 
 ## <a name="see-also"></a>请参阅
 - [在运行时访问功能区](../vsto/accessing-the-ribbon-at-run-time.md)

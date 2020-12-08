@@ -1,7 +1,8 @@
 ---
 title: 如何：在 Visual Studio 中创建 Office 项目
+description: 了解如何使用 Visual Studio 创建 Microsoft Office 应用程序的 VSTO 外接程序和文档级自定义项。
 titleSuffix: ''
-ms.custom: seodec18
+ms.custom: seodec18, SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -23,12 +24,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c70668f2d4cb9597e00a7e3848b78b9f2ed49db7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 652b7676ddf5d7e095010e711ab0dabc5b5f2ab7
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547558"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844369"
 ---
 # <a name="how-to-create-office-projects-in-visual-studio"></a>如何：在 Visual Studio 中创建 Office 项目
   你可以使用 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 来创建 Microsoft Office 应用程序的 VSTO 外接程序和文档级自定义项。 有关这些项目类型的详细信息，请参阅 [Office 解决方案开发概述 &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)。
@@ -41,7 +42,7 @@ ms.locfileid: "85547558"
 
 1. 在“文件”菜单上，选择“新建” > “项目”  。 如果集成开发环境 (IDE) 设置为 [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] "使用开发设置"，请在 "**文件**" 菜单上选择 "**新建**  >  **项目**"。
 
-    此时将出现“新建项目”对话框。
+    此时将出现“新建项目”  对话框。
 
    > [!NOTE]
    > 默认情况下，Office 项目均面向 [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]。 有关详细信息，请参阅 [.NET Framework 客户端配置文件](/dotnet/framework/deployment/client-profile)。
@@ -83,7 +84,7 @@ ms.locfileid: "85547558"
 
    * 百分号 (%)
 
-7. 选择“确定”  按钮。
+7. 选择 **“确定”** 按钮。
 
    ::: moniker range="vs-2017"
 
@@ -96,11 +97,11 @@ ms.locfileid: "85547558"
 
 1. 在“文件”菜单上，选择“新建” > “项目”  。 如果 IDE 设置为使用 Visual Basic 开发设置，请在 "**文件**" 菜单上选择 "**新建**  >  **项目**"。
 
-    此时将出现“新建项目”对话框。
+    此时将出现“新建项目”  对话框。
 
 2. 在 "模板" 窗格中要使用的语言节点下，展开 " **Office/SharePoint**"。
 
-3. 选择“Office 外接程序” **** 节点。
+3. 选择“Office 外接程序”  节点。
 
 4. 在项目模板列表中，选择一个文档级项目模板。 有关可用文档级项目模板的列表，请参阅 [Office 项目模板概述](../vsto/office-project-templates-overview.md)。
 
@@ -112,9 +113,9 @@ ms.locfileid: "85547558"
    > [!NOTE]
    > 不能在项目位置路径或项目名称中使用代理项字符。 此外，如果计划部署脱机使用的解决方案，则该项目名称中的字符必须符合 HTTP 协议规范。
 
-6. 选择“确定”  按钮。
+6. 选择 **“确定”** 按钮。
 
-    将打开“Visual Studio Tools for Office 项目向导” **** 。
+    将打开“Visual Studio Tools for Office 项目向导”  。
 
 7. 如果要为解决方案创建新文档，请选择 " **创建新文档** "，如果要自定义现有文档，请选择 " **复制现有文档** "。
 

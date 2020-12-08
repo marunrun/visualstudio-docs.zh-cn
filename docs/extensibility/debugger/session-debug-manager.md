@@ -1,5 +1,7 @@
 ---
 title: 会话调试管理器 |Microsoft Docs
+description: 了解会话调试管理器，该管理器在多个计算机上管理多个进程中调试程序的多个调试引擎。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +17,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 953b4e948ef5e21531a3e73bceed3a363ed3cec5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d2c51b1fd345789cabbb9735621626ab7c2db993
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712884"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845279"
 ---
 # <a name="session-debug-manager"></a>会话调试管理器
 会话调试管理器 (SDM) 管理任意数量的调试引擎)  (用于在多个进程中调试任意数量的程序的调试引擎。 除了成为调试引擎多路复用器外，SDM 还为 IDE 提供了一个统一的调试会话视图。
@@ -36,7 +38,7 @@ ms.locfileid: "80712884"
 
  SDM 不跟踪当前程序、线程或堆栈帧。 进程、程序和线程信息与特定的调试事件一起发送到 SDM。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [调试引擎](../../extensibility/debugger/debug-engine.md)
 - [调试器组件](../../extensibility/debugger/debugger-components.md)
 - [调试器上下文](../../extensibility/debugger/debugger-contexts.md)

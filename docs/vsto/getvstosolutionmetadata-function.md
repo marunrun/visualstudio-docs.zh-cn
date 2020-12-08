@@ -1,5 +1,7 @@
 ---
 title: GetVstoSolutionMetadata 函数
+description: 了解 GetVstoSolutionMetadata API 如何支持 Office 基础结构，不应在代码中直接使用。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: reference
 dev_langs:
@@ -10,12 +12,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: aebbedaab7e7ac342f6d6ace191d820f6a0c8090
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 205bde9352e2a037b4a08108d8cfce3460034e66
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85520180"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845032"
 ---
 # <a name="getvstosolutionmetadata-function"></a>GetVstoSolutionMetadata 函数
   此 API 支持 Office 基础结构，不应在代码中直接使用。
@@ -31,7 +33,7 @@ HRESULT WINAPI GetVstoSolutionMetadata(
 
 ### <a name="parameters"></a>参数
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |*lpwszSolutionMetadataKey*|请勿使用。|
 |*ppSolutionInfo*|请勿使用。|

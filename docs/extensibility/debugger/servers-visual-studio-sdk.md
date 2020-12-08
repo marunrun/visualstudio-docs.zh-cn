@@ -1,5 +1,7 @@
 ---
 title: Visual Studio SDK)  (服务器 |Microsoft Docs
+description: 本文介绍 Visual Studio 的调试器结构中的服务器的定义和角色。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 32fdbb5afca40c3b4fced468d2f9ef0ea5226c00
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9eaccebf874fa5fc0e7aaf63823547742215a568
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712897"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845292"
 ---
 # <a name="servers-visual-studio-sdk"></a>服务器 (Visual Studio SDK)
 在调试程序体系结构中， *服务器*：
@@ -27,7 +29,7 @@ ms.locfileid: "80712897"
 
 - 由 [IDebugCoreServer2](../../extensibility/debugger/reference/idebugcoreserver2.md) 接口表示，此接口仅由 visual studio 为运行) 的每个 visual studio 实例 (服务器的一个实例实现。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [端口](../../extensibility/debugger/ports.md)
 - [端口供应商](../../extensibility/debugger/port-suppliers.md)
 - [调试器概念](../../extensibility/debugger/debugger-concepts.md)

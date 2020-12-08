@@ -1,5 +1,7 @@
 ---
 title: 开发 Office 解决方案
+description: 了解如何使用 Visual Studio 中的 Office 开发人员工具设计项目。 还了解如何开始实现代码和自定义用户界面)  (UI。
+ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8ede09f18808eda22c747ac28e3c279fc43266bc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fbfe569e587c53aede6d550bc20527ad8d0fd328
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "69551572"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844993"
 ---
 # <a name="develop-office-solutions"></a>开发 Office 解决方案
   使用 Visual Studio 中的 Office 开发人员工具设计项目并设置项目文件后，便可以开始集中精力实现代码和自定义用户界面 (UI)。
@@ -46,7 +48,7 @@ ms.locfileid: "69551572"
 
 ## <a name="related-topics"></a>相关主题
 
-|Title|说明|
+|Title|描述|
 |-----------|-----------------|
 |[在 Office 解决方案中编写代码](../vsto/writing-code-in-office-solutions.md)|描述在 Office 解决方案中编写代码的各个方面。|
 |[程序 VSTO 外接程序](../vsto/programming-vsto-add-ins.md)|提供对 VSTO 外接程序的编程模型和相关编程任务的概述。|
@@ -58,7 +60,7 @@ ms.locfileid: "69551572"
 |[Office 中的线程支持](../vsto/threading-support-in-office.md)|提供在 Office 解决方案中使用多个线程的概述。|
 |[Office 项目中的辅助功能](../vsto/accessibility-in-office-projects.md)|描述 Office 解决方案中可用的辅助功能。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [如何：创建和修改自定义文档属性](../vsto/how-to-create-and-modify-custom-document-properties.md)
 - [如何：读取和写入文档属性](../vsto/how-to-read-from-and-write-to-document-properties.md)
 - [如何：面向 Office 多语言用户界面](../vsto/how-to-target-the-office-multilingual-user-interface.md)

@@ -1,5 +1,7 @@
 ---
 title: 如何：将功能区从功能区设计器导出到功能区 XML
+description: 了解如何自定义功能区，可以将功能区从设计器导出到功能区 XML，并直接编辑 XML。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -19,15 +21,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: cf3101a062fa8b30ae821bf6a157319b6f37862a
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: f39131eb7e3469d389ad2d50aaeb1ee97e3865b9
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "92298436"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844135"
 ---
 # <a name="how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml"></a>如何：将功能区从功能区设计器导出到功能区 XML
-  **功能区 (可视化设计器) **项不支持功能区自定义项的所有可能的类型。 若要以高级方式自定义功能区，可以将功能区从设计器导出到功能区 XML，并直接编辑 XML。
+  **功能区 (可视化设计器)** 项不支持功能区自定义项的所有可能的类型。 若要以高级方式自定义功能区，可以将功能区从设计器导出到功能区 XML，并直接编辑 XML。
 
 > [!NOTE]
 > 并非所有属性值都显示在功能区 XML 文件中。 有关详细信息，请参阅 [功能区概述](../vsto/ribbon-overview.md)。
@@ -36,7 +38,7 @@ ms.locfileid: "92298436"
 
 ### <a name="to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml"></a>将功能区从功能区设计器导出到功能区 XML
 
-1. 在 **解决方案资源管理器**中右键单击功能区代码文件，然后单击 " **视图设计器**"。
+1. 在 **解决方案资源管理器** 中右键单击功能区代码文件，然后单击 " **视图设计器**"。
 
 2. 右键单击功能区设计器，然后单击 " **将功能区导出到 XML**"。
 
@@ -44,11 +46,11 @@ ms.locfileid: "92298436"
 
 3. 在功能区代码类中，找到以开头的注释 `TODO:` 。
 
-4. 根据要开发的解决方案的类型，将这些注释中的代码块复制到 **ThisAddin**、 **ThisWorkbook**或 **ThisDocument** 类中。
+4. 根据要开发的解决方案的类型，将这些注释中的代码块复制到 **ThisAddin**、 **ThisWorkbook** 或 **ThisDocument** 类中。
 
      此代码使 Microsoft Office 的应用程序能够发现和加载自定义功能区。 有关更多信息，请参见 [Ribbon XML](../vsto/ribbon-xml.md)。
 
-5. 在 **ThisAddin**、 **ThisWorkbook**或 **ThisDocument** 类中，取消注释代码块。
+5. 在 **ThisAddin**、 **ThisWorkbook** 或 **ThisDocument** 类中，取消注释代码块。
 
      取消注释代码后，它应与下面的示例类似。 在此示例中，调用了功能区类 `MyRibbon` 。
 
@@ -65,7 +67,7 @@ ms.locfileid: "92298436"
 
      有关编写回调方法和使用 RibbonX 编程模型的信息，请参阅 [功能区 XML](../vsto/ribbon-xml.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [功能区概述](../vsto/ribbon-overview.md)
 - [功能区设计器](../vsto/ribbon-designer.md)
 - [Ribbon XML](../vsto/ribbon-xml.md)

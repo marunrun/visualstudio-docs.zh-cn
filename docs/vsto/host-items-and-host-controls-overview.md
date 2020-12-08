@@ -1,5 +1,7 @@
 ---
 title: 主机项和主机控件概述
+description: 了解宿主项和宿主控件是帮助提供 Office 解决方案编程模型的类型。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -36,12 +38,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c349756eb12fe66800e209bd6a1aad5b8d2337ab
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: edc8939f2a9e5f41f81c8176d5268528c273a7ce
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71255928"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845565"
 ---
 # <a name="host-items-and-host-controls-overview"></a>主机项和主机控件概述
   宿主项和宿主控件是帮助向通过使用 Visual Studio 中的 Office 开发工具创建的 Office 解决方案提供编程模型的类型。 宿主项和宿主控件与基于 COM 的 Microsoft Office Word 和 Microsoft Office Excel 的对象模型交互，但更像与托管对象（如 Windows 窗体控件）进行交互。
@@ -74,7 +76,7 @@ ms.locfileid: "71255928"
 
  <xref:Microsoft.Office.Tools.Excel.Workbook> 宿主项并不会充当具有用户界面的控件的容器。 相反，此宿主项的设计器充当组件栏，这使你可以将一个组件（如 <xref:System.Data.DataSet>拖动到其设计图面上。 有关详细信息，请参阅 [工作簿主机项](../vsto/workbook-host-item.md)。
 
- 宿主项不能在文档级项目中以编程方式创建。 请改用 `ThisDocument` `ThisWorkbook` `Sheet` Visual Studio 在设计时在项目中自动生成的、或*n*类。 这些生成的类派生自宿主项，并提供代码的入口点。 有关详细信息，请参阅 [主机项和主机控件的编程限制](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)。
+ 宿主项不能在文档级项目中以编程方式创建。 请改用 `ThisDocument` `ThisWorkbook` `Sheet` Visual Studio 在设计时在项目中自动生成的、或 *n* 类。 这些生成的类派生自宿主项，并提供代码的入口点。 有关详细信息，请参阅 [主机项和主机控件的编程限制](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)。
 
 ### <a name="understand-host-items-in-vsto-add-in-projects"></a>了解 VSTO 外接程序项目中的宿主项
  创建 VSTO 外接程序时，默认情况下，你无权访问任何主机项。 但是，可以在运行时在 Word 和 Excel VSTO 加载项中生成 <xref:Microsoft.Office.Tools.Word.Document>、 <xref:Microsoft.Office.Tools.Excel.Workbook>和 <xref:Microsoft.Office.Tools.Excel.Worksheet> 宿主项。
@@ -120,9 +122,9 @@ ms.locfileid: "71255928"
 
 - 在设计时按与添加本机对象相同的方式将宿主控件添加到你的文档。
 
-- 将宿主控件从“工具箱” **** 拖动到文档和工作表。 Excel 宿主控件位于 Excel 项目中的“Excel 控件” **** 选项卡，Word 宿主控件位于 Word 项目中的“Word 控件” **** 选项卡。
+- 将宿主控件从“工具箱”  拖动到文档和工作表。 Excel 宿主控件位于 Excel 项目中的“Excel 控件”  选项卡，Word 宿主控件位于 Word 项目中的“Word 控件”  选项卡。
 
-- 将宿主控件从“数据源” **** 窗口拖动到文档和工作表。 这使你能够添加已绑定到数据的控件。 有关详细信息，请参阅 [将数据绑定到 Office 解决方案中的控件](../vsto/binding-data-to-controls-in-office-solutions.md)。
+- 将宿主控件从“数据源”  窗口拖动到文档和工作表。 这使你能够添加已绑定到数据的控件。 有关详细信息，请参阅 [将数据绑定到 Office 解决方案中的控件](../vsto/binding-data-to-controls-in-office-solutions.md)。
 
   在文档级别和 VSTO 外接程序项目中，可以在运行时将某些宿主控件添加到文档。 有关详细信息，请参阅 [在运行时向 Office 文档添加控件](../vsto/adding-controls-to-office-documents-at-run-time.md)。
 
@@ -145,13 +147,13 @@ ms.locfileid: "71255928"
 - [如何：将 XMLNodes 控件添加到 Word 文档](../vsto/how-to-add-xmlnodes-controls-to-word-documents.md)
 
 ### <a name="name-host-controls"></a>名称主机控件
- 将宿主控件从“工具箱” **** 拖动到文档时，将自动使用末端尾号递增的控件类型对该控件命名。 例如，书签命名为 **bookmark1**、 **bookmark2**，依此类推。 如果使用 Word 或 Excel 的本机功能来添加控件，你可以在创建此控件时指定特定名称。 也可以通过在“属性” **** 窗口更改“名称” **** 属性的值来重命名你的控件。
+ 将宿主控件从“工具箱”  拖动到文档时，将自动使用末端尾号递增的控件类型对该控件命名。 例如，书签命名为 **bookmark1**、 **bookmark2**，依此类推。 如果使用 Word 或 Excel 的本机功能来添加控件，你可以在创建此控件时指定特定名称。 也可以通过在“属性”  窗口更改“名称”  属性的值来重命名你的控件。
 
 > [!NOTE]
 > 不能使用保留字来命名宿主控件。 例如，如果你将 <xref:Microsoft.Office.Tools.Excel.NamedRange> 控件添加到工作表，并将名称更改为 **System**，生成项目时将出现错误。
 
 ### <a name="delete-host-controls"></a>删除主机控件
- 在文档级项目中，您可以通过选择 Excel 工作表或 Word 文档上的控件并按 **delete** 键，在设计时删除宿主控件。 但是，在 Excel 中必须使用“定义名称” **** 对话框来删除 <xref:Microsoft.Office.Tools.Excel.NamedRange> 控件。
+ 在文档级项目中，您可以通过选择 Excel 工作表或 Word 文档上的控件并按 **delete** 键，在设计时删除宿主控件。 但是，在 Excel 中必须使用“定义名称”  对话框来删除 <xref:Microsoft.Office.Tools.Excel.NamedRange> 控件。
 
  如果在设计时向文档添加宿主控件，则不应在运行时以编程方式删除它，因为下次在代码中尝试使用控件时，将引发异常。 宿主控件的 `Delete` 方法仅删除在运行时添加到文档的宿主控件。 如果调用在设计时创建的宿主控件的 `Delete` 方法，将引发异常。
 
@@ -168,7 +170,7 @@ ms.locfileid: "71255928"
 > [!NOTE]
 > 不应将 Excel 中 <xref:Microsoft.Office.Interop.Excel._Application.EnableEvents%2A> 对象的 <xref:Microsoft.Office.Interop.Excel.Application> 属性设置为 **false**。 将此属性设置为 **false** 可防止 Excel 引发任何事件，包括主机控件的事件。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [宿主项和宿主控件的编程限制](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
 - [程序 VSTO 外接程序](../vsto/programming-vsto-add-ins.md)
 - [程序文档级自定义项](../vsto/programming-document-level-customizations.md)

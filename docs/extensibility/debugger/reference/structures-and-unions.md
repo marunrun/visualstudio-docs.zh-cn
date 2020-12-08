@@ -1,5 +1,7 @@
 ---
 title: 结构和联合 |Microsoft Docs
+description: 本文链接到 Visual Studio 调试 SDK 中结构和联合的参考说明。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 19d8f547d98488edffc6049be7619e5b5e921d93
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c1f477b46083b5abd5b8e93593cc728b660b58d9
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80713498"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845760"
 ---
 # <a name="structures-and-unions"></a>结构和联合
 下面是 Visual Studio 调试 SDK 中的结构和联合。

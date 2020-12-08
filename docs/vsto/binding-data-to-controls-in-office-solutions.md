@@ -1,5 +1,7 @@
 ---
 title: 将数据绑定到 Office 解决方案中的控件
+description: 了解如何将 Microsoft Office Word 文档或 Excel 工作表上 Windows 窗体控件和宿主控件绑定到数据源。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 93e2d5abb9c8fda9d4a1300a9bb0958ac9266499
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9be201899f0e2ff4f685343d58a859d8a9157068
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72986174"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844421"
 ---
 # <a name="bind-data-to-controls-in-office-solutions"></a>将数据绑定到 Office 解决方案中的控件
   可以将 Microsoft Office Word 文档或 Microsoft Office Excel 工作表中的 Windows 窗体控件和 *宿主控件* 绑定到某个数据源，以便这些控件自动显示数据。 可以将数据绑定到应用程序级项目和文档级项目中的控件。
@@ -59,12 +61,12 @@ ms.locfileid: "72986174"
  有关演示复杂数据绑定的演练，请参阅演练：文档级项目的 [文档级项目中的复杂数据绑定](../vsto/walkthrough-complex-data-binding-in-a-document-level-project.md) 和演练： vsto 外接程序项目的 [vsto 外接程序项目中的复杂数据绑定](../vsto/walkthrough-complex-data-binding-in-vsto-add-in-project.md) 。
 
 ## <a name="display-data-in-documents-and-workbooks"></a>在文档和工作簿中显示数据
- 在文档级项目中，可通过与用于 Windows 窗体相同的方法，使用“数据源” **** 窗口轻松地将数据绑定控件添加到文档或工作簿中。 有关使用 " **数据源** " 窗口的详细信息，请参阅 [在 Visual Studio 中将 Windows 窗体控件绑定到数据](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md) 和 [添加新数据源](../data-tools/add-new-data-sources.md)。
+ 在文档级项目中，可通过与用于 Windows 窗体相同的方法，使用“数据源”  窗口轻松地将数据绑定控件添加到文档或工作簿中。 有关使用 " **数据源** " 窗口的详细信息，请参阅 [在 Visual Studio 中将 Windows 窗体控件绑定到数据](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md) 和 [添加新数据源](../data-tools/add-new-data-sources.md)。
 
 ### <a name="drag-controls-from-the-data-sources-window"></a>从 "数据源" 窗口拖动控件
- 从“数据源” **** 窗口中将一个对象拖到文档中时，会在此文档中创建一个控件。 所创建的控件的类型取决于绑定的是单列数据还是多列数据。
+ 从“数据源”  窗口中将一个对象拖到文档中时，会在此文档中创建一个控件。 所创建的控件的类型取决于绑定的是单列数据还是多列数据。
 
- 对于 Excel，会在工作表上为每个单独的字段创建一个 <xref:Microsoft.Office.Tools.Excel.NamedRange> 控件，并且会为每个包括多个行和列的数据范围创建一个 <xref:Microsoft.Office.Tools.Excel.ListObject> 控件。 通过在“数据源” **** 窗口中选择表或字段，然后从下拉列表中选择其他控件，可以更改此默认设置。
+ 对于 Excel，会在工作表上为每个单独的字段创建一个 <xref:Microsoft.Office.Tools.Excel.NamedRange> 控件，并且会为每个包括多个行和列的数据范围创建一个 <xref:Microsoft.Office.Tools.Excel.ListObject> 控件。 通过在“数据源”  窗口中选择表或字段，然后从下拉列表中选择其他控件，可以更改此默认设置。
 
  <xref:Microsoft.Office.Tools.Word.ContentControl> 控件即会添加到文档中。 内容控件的类型取决于所选字段的数据类型。
 

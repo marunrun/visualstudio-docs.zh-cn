@@ -1,7 +1,8 @@
 ---
 title: '&lt;自定义 &gt; 元素 (Visual Studio 中的 Office 开发) '
+description: 了解 vstov4 命名空间的 "自定义" 元素如何包含有关安装和加载各个 Office 解决方案的所有信息。
 titleSuffix: ''
-ms.custom: seodec18
+ms.custom: seodec18, SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 58d88f865e5f220000bf021b548e4b9c4b8745f6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cc1f33101346d334d08d2bd2d7795961ea33011e
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64790006"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844031"
 ---
 # <a name="ltcustomizationsgt-element-office-development-in-visual-studio"></a>&lt;自定义 &gt; 元素 (Visual Studio 中的 Office 开发) 
   `customizations` 命名空间的 `vstov4` 元素包括有关安装和加载各个 Office 解决方案的所有信息。
@@ -68,7 +69,7 @@ ms.locfileid: "64790006"
 
 ## <a name="example-of-a-document-level-customization"></a>文档级自定义项示例
 
-### <a name="description"></a>说明
+### <a name="description"></a>描述
  下面的代码示例演示了文档级自定义项的 `customizations` 元素。
 
 > [!NOTE]
@@ -88,7 +89,7 @@ ms.locfileid: "64790006"
 
 ## <a name="example-of-a-vsto-add-in"></a>VSTO 外接程序示例
 
-### <a name="description"></a>说明
+### <a name="description"></a>描述
  下面的代码示例演示了 `customizations` VSTO 外接程序的元素。 这是一个包含窗体区域的 Outlook VSTO 外接程序。 此代码示例是 [Office 解决方案的应用程序清单](../vsto/application-manifests-for-office-solutions.md)中提供的一个更大示例的一部分。
 
 ### <a name="code"></a>代码

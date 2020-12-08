@@ -1,5 +1,7 @@
 ---
 title: 文档级自定义项的体系结构
+description: 了解文档级自定义项的各个方面，包括自定义组件以及自定义项如何与 Microsoft Office 的应用程序配合使用。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -19,12 +21,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f5028f5a9b16ecfc2461c0d29cbedb44be70a64c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a522446f9109d996088dff9389f267ef5ff39447
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "68926561"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845956"
 ---
 # <a name="architecture-of-document-level-customizations"></a>文档级自定义项的体系结构
   [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] 包括用于为 Microsoft Office Word 和 Microsoft Office Excel 创建文档级自定义项的项目。 本主题介绍文档级自定义项的以下方面：
@@ -91,11 +93,11 @@ ms.locfileid: "68926561"
 ### <a name="support-for-word-documents-that-have-xml-file-name-extensions"></a>支持具有 .xml 文件扩展名的 Word 文档
  文档级项目模板不允许基于下列文件格式创建项目：
 
-- Word XML 文档 (* \* XML*) 。
+- Word XML 文档 (*\* XML*) 。
 
-- Word 2003 XML 文档 (* \* xml*) 。
+- Word 2003 XML 文档 (*\* xml*) 。
 
-  如果希望最终用户在这些文件格式中使用自定义项，请生成并部署使用上表中指定的某个受支持文件格式的自定义项。 安装自定义项后，最终用户可以将文档保存在 Word XML 文档中 (* \* Xml*) 格式或 Word 2003 xml 文档 (* \* xml*) 格式，并且自定义项将继续按预期方式工作。
+  如果希望最终用户在这些文件格式中使用自定义项，请生成并部署使用上表中指定的某个受支持文件格式的自定义项。 安装自定义项后，最终用户可以将文档保存在 Word XML 文档中 (*\* Xml*) 格式或 Word 2003 xml 文档 (*\* xml*) 格式，并且自定义项将继续按预期方式工作。
 
 ## <a name="components-of-customizations"></a><a name="Components"></a> 自定义组件
  自定义项的主要组成部分是文档和程序集。 除了这些组成部分外，还有一些其他部件在 Microsoft Office 应用程序发现并加载自定义项的过程中扮演着重要角色。
@@ -109,7 +111,7 @@ ms.locfileid: "68926561"
  有关详细信息，请参阅 [Visual Studio tools For Office runtime 概述](../vsto/visual-studio-tools-for-office-runtime-overview.md)。
 
 ## <a name="how-customizations-work-with-microsoft-office-applications"></a><a name="HowCustomizationsWork"></a> 自定义项如何与 Microsoft Office 的应用程序一起工作
- 当用户打开属于 Microsoft Office 自定义项的文档时，应用程序将使用链接到文档的部署清单来查找并加载自定义项程序集的最新版本。 部署清单的位置存储在名为 **AssemblyLocation**的自定义文档属性中。 标识此位置的字符串在生成解决方案时插入该属性中。
+ 当用户打开属于 Microsoft Office 自定义项的文档时，应用程序将使用链接到文档的部署清单来查找并加载自定义项程序集的最新版本。 部署清单的位置存储在名为 **AssemblyLocation** 的自定义文档属性中。 标识此位置的字符串在生成解决方案时插入该属性中。
 
  部署清单指向应用程序清单，后者随后指向最新的程序集。 有关详细信息，请参阅 [Office 解决方案中的应用程序和部署清单](../vsto/application-and-deployment-manifests-in-office-solutions.md)。
 
@@ -125,11 +127,11 @@ ms.locfileid: "68926561"
 
 1. Microsoft Office 应用程序检查自定义文档属性，以确定是否有与文档关联的托管代码扩展。 有关详细信息，请参阅 [自定义文档属性概述](../vsto/custom-document-properties-overview.md)。
 
-2. 如果存在托管代码扩展，则应用程序将加载*VSTOLoader.dll*加载*VSTOEE.dll*。 这些是非托管 Dll，是 Visual Studio 2010 Tools for Office runtime 的加载程序组件。 有关详细信息，请参阅 [Visual Studio Tools for Office 运行时概述](../vsto/visual-studio-tools-for-office-runtime-overview.md)。
+2. 如果存在托管代码扩展，则应用程序将加载 *VSTOLoader.dll* 加载 *VSTOEE.dll*。 这些是非托管 Dll，是 Visual Studio 2010 Tools for Office runtime 的加载程序组件。 有关详细信息，请参阅 [Visual Studio Tools for Office 运行时概述](../vsto/visual-studio-tools-for-office-runtime-overview.md)。
 
 3. *VSTOLoader.dll* 加载 [!INCLUDE[dnprdnshort](../sharepoint/includes/dnprdnshort-md.md)] 并启动的托管部分 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 。
 
-4. 如果从本地计算机以外的位置打开文档， [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 将验证文档的位置是否位于该特定 Office 应用程序的“信任中心设置” **** 中的“受信任位置” **** 列表中。 如果文档位置不在受信任位置中，自定义项将不会得到信任，并且加载过程将在此处停止。
+4. 如果从本地计算机以外的位置打开文档， [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 将验证文档的位置是否位于该特定 Office 应用程序的“信任中心设置”  中的“受信任位置”  列表中。 如果文档位置不在受信任位置中，自定义项将不会得到信任，并且加载过程将在此处停止。
 
 5. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 将安装解决方案（如果尚未安装），下载最新的应用程序和部署清单，并执行一系列安全检查。 有关详细信息，请参阅 [保护 Office 解决方案](../vsto/securing-office-solutions.md)。
 
@@ -141,9 +143,9 @@ ms.locfileid: "68926561"
 
 9. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 将在自定义项程序集中调用 **Startup** 事件处理程序。 有关详细信息，请参阅 [Office 项目中的事件](../vsto/events-in-office-projects.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [Visual Studio 中 Office 解决方案的体系结构](../vsto/architecture-of-office-solutions-in-visual-studio.md)
-- [Architecture of VSTO Add-ins](../vsto/architecture-of-vsto-add-ins.md)
+- [VSTO 外接程序的体系结构](../vsto/architecture-of-vsto-add-ins.md)
 - [Visual Studio Tools for Office 运行时概述](../vsto/visual-studio-tools-for-office-runtime-overview.md)
 - [保护 Office 解决方案](../vsto/securing-office-solutions.md)
 - [设计和创建 Office 解决方案](../vsto/designing-and-creating-office-solutions.md)

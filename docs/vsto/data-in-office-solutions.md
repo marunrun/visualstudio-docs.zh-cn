@@ -1,5 +1,7 @@
 ---
 title: Office 解决方案中的数据
+description: 了解使用 Visual Studio 创建 Microsoft Office 解决方案时使用数据的各种方式。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,17 +16,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a5f0b85acfd45996dd00208aae820b24265be9f5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4ce6d73a7c70101c0fe364ac5dafba8cbe47f5c8
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73189692"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845543"
 ---
 # <a name="data-in-office-solutions"></a>Office 解决方案中的数据
   多种 Office 解决方案使用户能够检索或修改数据。 当通过使用 Visual Studio 创建 Office 解决方案时，可通过多种不同方法使用数据。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
 - [将数据绑定到 Office 解决方案中的控件](../vsto/binding-data-to-controls-in-office-solutions.md)
 
  描述如何将数据绑定到 Office 解决方案中的控件。
