@@ -1,5 +1,7 @@
 ---
 title: 向 Office 解决方案授予信任
+description: 向 Office 解决方案授予信任意味着修改每台目标计算机的安全策略，以信任解决方案程序集、部署清单和文档。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: cf7a68d5d3567305e4f70049d76a1c260ddecf25
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f0b81c034ed0f8934da378dc214191d3be1f4506
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89315234"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96848321"
 ---
 # <a name="grant-trust-to-office-solutions"></a>向 Office 解决方案授予信任
   向 Office 解决方案授予信任意味着修改每台目标计算机的安全策略，以信任解决方案程序集、应用程序清单、部署清单和文档。 你或最终用户可以向 Office 解决方案授予信任。

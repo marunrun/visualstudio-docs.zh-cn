@@ -1,5 +1,7 @@
 ---
 title: 如何：向工作表添加 NamedRange 控件
+description: 了解如何在设计时和运行时在文档级项目中将 NamedRange 控件添加到 Microsoft Office Excel 工作表。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 448a44c8f4bc9380a4ef1ebfec33b264e797cac8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 54487ed7f7cdcb7e7da024e4b96fcbb6d5c2cfe4
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85543515"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96848139"
 ---
 # <a name="how-to-add-namedrange-controls-to-worksheets"></a>如何：向工作表添加 NamedRange 控件
   在文档级项目中，你可以在设计时和运行时将 <xref:Microsoft.Office.Tools.Excel.NamedRange> 控件添加到 Microsoft Office Excel 工作表。
@@ -39,7 +41,7 @@ ms.locfileid: "85543515"
   有关控件的详细信息 <xref:Microsoft.Office.Tools.Excel.NamedRange> ，请参阅 [NamedRange 控件](../vsto/namedrange-control.md)。
 
 ## <a name="add-namedrange-controls-at-design-time"></a><a name="designtime"></a> 在设计时添加 NamedRange 控件
- 有多种方法可在设计时在文档级项目中将 <xref:Microsoft.Office.Tools.Excel.NamedRange> 控件添加到工作表：从 Excel、从 Visual Studio“工具箱” ****，以及从“数据源” **** 窗口。
+ 有多种方法可在设计时在文档级项目中将 <xref:Microsoft.Office.Tools.Excel.NamedRange> 控件添加到工作表：从 Excel、从 Visual Studio“工具箱” ，以及从“数据源”  窗口。
 
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
@@ -47,7 +49,7 @@ ms.locfileid: "85543515"
 
 1. 选择要包含在命名范围中的一个或多个单元格。
 
-2. 在 " **名称" 框**中，键入范围名称并按 **enter**。
+2. 在 " **名称" 框** 中，键入范围名称并按 **enter**。
 
      **“名称框”** 位于公式栏旁边，也即工作表 **A** 列的正上方。
 
@@ -61,13 +63,13 @@ ms.locfileid: "85543515"
 
 3. 选择要包含在命名范围中的一个或多个单元格。
 
-4. 单击“确定”。
+4. 单击 **“确定”** 。
 
      如果不需要提供给控件的默认名称，可以在 **“属性”** 窗口中更改名称。
 
 ### <a name="to-add-a-namedrange-control-to-a-worksheet-using-the-data-sources-window"></a>若要使用“数据源”窗口向工作表添加 NamedRange 控件
 
-1. 打开“数据源” **** 窗口并为项目创建数据源。 有关详细信息，请参阅 [添加新连接](../data-tools/add-new-connections.md)。
+1. 打开“数据源”  窗口并为项目创建数据源。 有关详细信息，请参阅 [添加新连接](../data-tools/add-new-connections.md)。
 
 2. 将单个字段从 **“数据源”** 窗口拖到工作表中。
 
@@ -93,7 +95,7 @@ ms.locfileid: "85543515"
      [!code-csharp[Trin_Excel_Dynamic_Controls#7](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/ThisAddIn.cs#7)]
      [!code-vb[Trin_Excel_Dynamic_Controls#7](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/ThisAddIn.vb#7)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [在运行时在 VSTO 外接程序中扩展 Word 文档和 Excel 工作簿](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)
 - [Office 文档上的控件](../vsto/controls-on-office-documents.md)
 - [NamedRange 控件](../vsto/namedrange-control.md)

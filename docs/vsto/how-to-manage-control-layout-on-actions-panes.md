@@ -1,5 +1,7 @@
 ---
 title: 如何：管理操作窗格上的控件布局
+description: 了解如何通过编写代码来正确地堆栈用户控件，来管理操作窗格上的控件布局。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b6df90847000560299b8b1a6f259ffa6e7df0729
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dbee49a97ab6cb3e6084950e53f30b3cb6ce1b7c
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85520142"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96848243"
 ---
 # <a name="how-to-manage-control-layout-on-actions-panes"></a>如何：管理操作窗格上的控件布局
   默认情况下，操作窗格停靠在文档或工作表的右侧;但是，可以将其停靠在左侧、顶部或底部。 如果使用多个用户控件，则可以编写代码以正确地在操作窗格上堆叠用户控件。 有关详细信息，请参阅 [操作窗格概述](../vsto/actions-pane-overview.md)。
@@ -38,7 +40,7 @@ ms.locfileid: "85520142"
 
 1. 打开包含包含多个用户控件或嵌套操作窗格控件的操作窗格 Microsoft Office Word 的文档级项目。 有关详细信息，请参阅 [如何：将操作窗格添加到 Word 文档或 Excel 工作簿](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)。
 
-2. 在**解决方案资源管理器**中右键单击 " **ThisDocument.cs** " 或 " **ThisDocument** "，然后单击 "**查看代码**"。
+2. 在 **解决方案资源管理器** 中右键单击 " **ThisDocument.cs** " 或 " **ThisDocument** "，然后单击 "**查看代码**"。
 
 3. 在 <xref:Microsoft.Office.Tools.ActionsPane.OrientationChanged> 操作窗格的事件处理程序中，检查操作窗格的方向是否为水平。
 

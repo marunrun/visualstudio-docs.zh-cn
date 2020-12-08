@@ -1,5 +1,7 @@
 ---
 title: 如何：向工作表添加 ListObject 控件
+description: 了解如何在设计时和运行时在文档级项目中将 ListObject 控件添加到 Microsoft Office Excel 工作表。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4c53d820170c359e568b0a7b0ab5711a632d9eba
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5dd72db2678f448158f268b790d39d4f6e44a737
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85538315"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96848152"
 ---
 # <a name="how-to-add-listobject-controls-to-worksheets"></a>如何：向工作表添加 ListObject 控件
   在文档级项目中，你可以在设计时和运行时将 <xref:Microsoft.Office.Tools.Excel.ListObject> 控件添加到 Microsoft Office Excel 工作表。
@@ -44,25 +46,25 @@ ms.locfileid: "85538315"
 
 ### <a name="to-use-the-ribbon-in-excel"></a>在 Excel 中使用功能区
 
-1. 在“插入” **** 选项卡上，单击“表” **** 组中的“表” ****。
+1. 在“插入”  选项卡上，单击“表”  组中的“表” 。
 
-2. 选择要包含在列表中的一个或多个单元格，然后单击“确定” ****。
+2. 选择要包含在列表中的一个或多个单元格，然后单击“确定” 。
 
 #### <a name="to-use-the-toolbox"></a>使用工具箱
 
-1. 从“工具箱” **** 的“Excel 控件” **** 选项卡上，拖动 <xref:Microsoft.Office.Tools.Excel.ListObject> 到工作表。
+1. 从“工具箱”  的“Excel 控件” 选项卡上，拖动 <xref:Microsoft.Office.Tools.Excel.ListObject> 到工作表。
 
-     “添加 ListObject 控件” **** 对话框随即出现。
+     “添加 ListObject 控件”  对话框随即出现。
 
-2. 选择要包含在列表中的一个或多个单元格，然后单击“确定” ****。
+2. 选择要包含在列表中的一个或多个单元格，然后单击“确定” 。
 
-     如果不希望保留默认名称，可以在“属性” **** 窗口中更改名称。
+     如果不希望保留默认名称，可以在“属性”  窗口中更改名称。
 
 #### <a name="to-use-the-data-sources-window"></a>使用“数据源”窗口
 
-1. 打开“数据源” **** 窗口并为项目创建数据源。 有关详细信息，请参阅 [添加新连接](../data-tools/add-new-connections.md)。
+1. 打开“数据源”  窗口并为项目创建数据源。 有关详细信息，请参阅 [添加新连接](../data-tools/add-new-connections.md)。
 
-2. 将表从“数据源” **** 窗口拖到工作表中。
+2. 将表从“数据源”  窗口拖到工作表中。
 
      数据绑定 <xref:Microsoft.Office.Tools.Excel.ListObject> 控件将添加到工作表中。 有关详细信息，请参阅 [数据绑定和 Windows 窗体](/dotnet/framework/winforms/data-binding-and-windows-forms)。
 
@@ -71,7 +73,7 @@ ms.locfileid: "85538315"
 
 #### <a name="to-add-a-listobject-control-to-a-worksheet-programmatically"></a>以编程方式将 ListObject 控件添加到工作表中
 
-1. 在 <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> 的 `Sheet1`事件处理程序中，插入下列代码以将 <xref:Microsoft.Office.Tools.Excel.ListObject> 控件添加到 **A1** 至 **A4**单元格。
+1. 在 <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> 的 `Sheet1`事件处理程序中，插入下列代码以将 <xref:Microsoft.Office.Tools.Excel.ListObject> 控件添加到 **A1** 至 **A4** 单元格。
 
      [!code-csharp[Trin_VstcoreHostControlsExcel#2](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#2)]
      [!code-vb[Trin_VstcoreHostControlsExcel#2](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#2)]
@@ -81,12 +83,12 @@ ms.locfileid: "85538315"
 
 #### <a name="to-add-a-listobject-control-to-a-worksheet-programmatically"></a>以编程方式将 ListObject 控件添加到工作表中
 
-1. 下面的代码将生成基于打开工作表的工作表宿主项，然后将 <xref:Microsoft.Office.Tools.Excel.ListObject> 控件添加到 **A1** 至 **A4**单元格。
+1. 下面的代码将生成基于打开工作表的工作表宿主项，然后将 <xref:Microsoft.Office.Tools.Excel.ListObject> 控件添加到 **A1** 至 **A4** 单元格。
 
      [!code-csharp[Trin_Excel_Dynamic_Controls#8](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/ThisAddIn.cs#8)]
      [!code-vb[Trin_Excel_Dynamic_Controls#8](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/ThisAddIn.vb#8)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [在运行时在 VSTO 外接程序中扩展 Word 文档和 Excel 工作簿](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)
 - [Office 文档上的控件](../vsto/controls-on-office-documents.md)
 - [ListObject 控件](../vsto/listobject-control.md)
