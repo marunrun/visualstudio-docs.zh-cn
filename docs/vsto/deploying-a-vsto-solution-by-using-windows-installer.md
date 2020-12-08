@@ -1,5 +1,7 @@
 ---
 title: 使用 Windows Installer 部署 VSTO 解决方案
+description: 了解如何使用 Visual Studio 安装程序项目部署适用于 Office (VSTO) 外接程序或文档级解决方案的 Microsoft Visual Studio 工具。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 08/18/2010
 ms.topic: conceptual
@@ -19,12 +21,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a6fd2824ae10ad36a7ed50250620e98575e9ea60
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: e49705c99801cd6e09f4bf6d9be3c411cc2c53e3
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585688"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96846540"
 ---
 # <a name="deploying-a-vsto-solution-using-windows-installer"></a>使用 Windows Installer 部署 VSTO 解决方案
 
@@ -119,11 +121,11 @@ Microsoft Office 使用注册表项来查找和加载外接程序。这些注册
 2. 打开 Office 项目后，在 " **文件** " 菜单上，展开 " **添加** "，然后单击 " **新建项目** " 添加新项目。
 ::: moniker range="=vs-2017"
 3. 在 "**添加新项目**" 对话框中，展开 **"项目类型"** 窗格中的 "**其他项目类型**"，展开 "**安装和部署**"，然后选择 " **Visual Studio 安装程序**"。
-4. 在 "**模板**" 窗格中，从 " **Visual Studio 已安装**的模板" 组中选择 "**安装项目**"。
+4. 在 "**模板**" 窗格中，从 " **Visual Studio 已安装** 的模板" 组中选择 "**安装项目**"。
 ::: moniker-end
 ::: moniker range="=vs-2019"
 3. 在 " **添加新项目** " 对话框中，选择 " **安装" 项目** 模板。
-4. 单击“下一步”。
+4. 单击 **“下一步”** 。
 ::: moniker-end
 
 5. 在 " **名称** " 框中，键入 **officeaddinsetup "**。
@@ -144,7 +146,7 @@ Visual Studio 将打开新安装项目的文件系统资源管理器。 文件�
 
 ### <a name="to-add-the-exceladdin-project-output"></a>添加 ExcelAddIn 项目输出
 
-1. 在 **解决方案资源管理器**中，右键单击 **officeaddinsetup "**，单击" **添加** "，然后单击" **项目输出**"。
+1. 在 **解决方案资源管理器** 中，右键单击 **officeaddinsetup "**，单击" **添加** "，然后单击" **项目输出**"。
 2. 在 " **添加项目输出组** " 对话框中，从 "项目" 列表中选择 " **ExcelAddIn** "，并选择 " **主输出**"。
 3. 单击 **"确定"** ，将项目输出添加到安装项目。
 
@@ -156,7 +158,7 @@ Visual Studio 将打开新安装项目的文件系统资源管理器。 文件�
 
 ### <a name="to-add-the-deployment-and-application-manifests"></a>添加部署和应用程序清单
 
-1. 在 **解决方案资源管理器**中，右键单击 **officeaddinsetup "**，单击" **添加**"，然后单击" **文件**"。
+1. 在 **解决方案资源管理器** 中，右键单击 **officeaddinsetup "**，单击" **添加**"，然后单击" **文件**"。
 2. 在 " **添加文件** " 对话框中，导航到 " **ExcelAddIn** " 输出目录。 通常，输出目录是项目根目录的 **bin \\ release** 子文件夹，具体取决于所选的生成配置。
 3. 选择 **ExcelAddIn** 和 **ExcelAddIn.dll .manifest** 文件，然后单击 " **打开** " 将这两个文件添加到安装项目。
 
@@ -168,7 +170,7 @@ Visual Studio 将打开新安装项目的文件系统资源管理器。 文件�
 
 ### <a name="to-exclude-the-exceladdin-project-dependencies"></a>排除 ExcelAddIn 项目依赖项
 
-1. 在**解决方案资源管理器**的 " **officeaddinsetup"** "节点中，选择"**检测到的依赖**项 "项下的" 所有依赖项 "项， **Microsoft .NET 框架**或以** \*.Utilities.dll**结尾的任何程序集除外。 实用程序程序集与应用程序一起部署。
+1. 在 **解决方案资源管理器** 的 " **officeaddinsetup"** "节点中，选择"**检测到的依赖** 项 "项下的" 所有依赖项 "项， **Microsoft .NET 框架** 或以 **\*.Utilities.dll** 结尾的任何程序集除外。 实用程序程序集与应用程序一起部署。
 2. 右键单击该组，然后选择 " **属性**"。
 3. 在 " **属性** " 窗口中，将 " **排除** " 属性更改为 " **True** "，以从安装项目中排除依赖程序集。 请确保不排除任何实用工具程序集。
 
@@ -185,7 +187,7 @@ Visual Studio 将打开新安装项目的文件系统资源管理器。 文件�
 
 配置依赖组件为系统必备组件
 
-1. 在 **解决方案资源管理器**中，右键单击 **officeaddinsetup "** 项目，然后选择" **属性**"。
+1. 在 **解决方案资源管理器** 中，右键单击 **officeaddinsetup "** 项目，然后选择" **属性**"。
 2. 此时将显示 " **Officeaddinsetup" 属性页** "对话框。
 3. 单击 " **必备项** " 按钮。
 4. 在 "系统必备" 对话框中，选择正确的 .NET Framework 版本和 Office 运行时 Microsoft Visual Studio 工具。
@@ -201,14 +203,14 @@ Microsoft Office 使用注册表项查找外接程序。 HKEY \_ 当前 \_ 用�
 
 ### <a name="to-configure-the-registry"></a>配置注册表
 
-1. 在 **解决方案资源管理器**中，右键单击 **officeaddinsetup "**。
+1. 在 **解决方案资源管理器** 中，右键单击 **officeaddinsetup "**。
 2. 展开 " **视图**"。
 3. 单击 " **注册表** "，打开 "注册表编辑器" 窗口。
-4. 在 **注册表 (officeaddinsetup ") ** 编辑器中，依次展开" HKEY "、" ** \_ 本地 \_ 计算机** "和" **软件**"。
-5. 删除** \[ 制造商 \] **？在**HKEY \_ 本地 \_ 计算机 \\ 软件**下找到的密钥。
+4. 在 **注册表 (officeaddinsetup ")** 编辑器中，依次展开" HKEY "、" **\_ 本地 \_ 计算机** "和" **软件**"。
+5. 删除 **\[ 制造商 \]**？在 **HKEY \_ 本地 \_ 计算机 \\ 软件** 下找到的密钥。
 6. 展开 " **HKEY \_ 当前 \_ 用户** " 和 " **软件**"。
-7. 删除**HKEY " \_ 当前 \_ 用户 \\ 软件**" 下的** \[ 制造商 \] **密钥。
-8. 若要为外接程序安装添加注册表项，请右键单击 **用户/计算机 Hive** 键，然后选择 " **新项**"。 使用文本 **软件** 作为新密钥的名称。 右键单击新创建的 **软件** 密钥，并使用文本 **Microsoft**创建新密钥。
+7. 删除 **HKEY " \_ 当前 \_ 用户 \\ 软件**" 下的 **\[ 制造商 \]** 密钥。
+8. 若要为外接程序安装添加注册表项，请右键单击 **用户/计算机 Hive** 键，然后选择 " **新项**"。 使用文本 **软件** 作为新密钥的名称。 右键单击新创建的 **软件** 密钥，并使用文本 **Microsoft** 创建新密钥。
 9. 使用类似的过程创建外接程序注册所需的整个密钥层次结构：
 
     **用户/计算机 Hive \\ Software \\ Microsoft \\ Office \\ Excel \\ Addins \\ samplecompany.exceladdin 注册表项. ExcelAddIn**
@@ -217,22 +219,22 @@ Microsoft Office 使用注册表项查找外接程序。 HKEY \_ 当前 \_ 用�
 
 10. 右键单击 " **ExcelAddIn** " 项，选择 " **新建**"，然后单击 " **字符串值**"。 使用名称的文本 **说明** 。
 11. 使用此步骤添加三个更多值：
-    - **字符串**类型的**FriendlyName**
-    - **DWORD**类型的**LoadBehavior**
-    - **字符串**类型的**清单**
+    - **字符串** 类型的 **FriendlyName**
+    - **DWORD** 类型的 **LoadBehavior**
+    - **字符串** 类型的 **清单**
 
-12. 在注册表编辑器中右键单击 **说明** 值，然后单击 " **属性窗口**"。 在 " **属性" 窗口**中，为 "值" 属性输入 **Excel Demo AddIn** 。
-13. 在注册表编辑器中选择 **FriendlyName** 项。 在 " **属性" 窗口**中，将 " **值** " 属性更改为 **Excel Demo 外接**程序。
-14. 在注册表编辑器中选择 " **LoadBehavior** " 项。 在 " **属性" 窗口**中，将 " **值** " 属性更改为 **3。** LoadBehavior 的值3指示加载项应在宿主应用程序启动时加载。 有关加载行为的详细信息，请参阅 [VSTO 外接程序的注册表项](registry-entries-for-vsto-add-ins.md)。
+12. 在注册表编辑器中右键单击 **说明** 值，然后单击 " **属性窗口**"。 在 " **属性" 窗口** 中，为 "值" 属性输入 **Excel Demo AddIn** 。
+13. 在注册表编辑器中选择 **FriendlyName** 项。 在 " **属性" 窗口** 中，将 " **值** " 属性更改为 **Excel Demo 外接** 程序。
+14. 在注册表编辑器中选择 " **LoadBehavior** " 项。 在 " **属性" 窗口** 中，将 " **值** " 属性更改为 **3。** LoadBehavior 的值3指示加载项应在宿主应用程序启动时加载。 有关加载行为的详细信息，请参阅 [VSTO 外接程序的注册表项](registry-entries-for-vsto-add-ins.md)。
 
-15. 在注册表编辑器中选择 **清单** 键。 在 " **属性" 窗口**中，将 " **值** " 属性更改为 **file：///[TARGETDIR] ExcelAddIn | vstolocal**
+15. 在注册表编辑器中选择 **清单** 键。 在 " **属性" 窗口** 中，将 " **值** " 属性更改为 **file：///[TARGETDIR] ExcelAddIn | vstolocal**
 
     ![注册表编辑器的屏幕截图](media/setup-project-figure-6.png)
 
     **图6：设置注册表项**
 
       VSTO 运行时使用此注册表项来查找部署清单。 [TARGETDIR] 宏将替换为将外接程序安装到的文件夹。 该宏将包含尾随 \ 字符，因此部署清单的文件名应为 ExcelAddIn，不含 \ 字符。
-      **Vstolocal**后缀通知 VSTO 运行时外接程序应从此位置加载（而不是 ClickOnce 缓存）。 删除此后缀将导致运行时将自定义项复制到 ClickOnce 缓存中。
+      **Vstolocal** 后缀通知 VSTO 运行时外接程序应从此位置加载（而不是 ClickOnce 缓存）。 删除此后缀将导致运行时将自定义项复制到 ClickOnce 缓存中。
 
    >[!WARNING]
    >在 Visual Studio 中，你应非常小心地处理注册表编辑器。 例如，如果你无意中为错误的键设置了 DeleteAtUninstall，则可能会删除注册表的活动部分，使用户计算机处于不一致的状态，甚至更糟糕的状态。
@@ -252,22 +254,22 @@ Microsoft Office 使用注册表项查找外接程序。 HKEY \_ 当前 \_ 用�
 
 ### <a name="configure-a-launch-condition-to-detect-the-vsto-runtime"></a>配置启动条件以检测 VSTO 运行时
 
-1. 在 **解决方案资源管理器**中，右键单击 **officeaddinsetup "**。
+1. 在 **解决方案资源管理器** 中，右键单击 **officeaddinsetup "**。
 2. 展开 " **视图**"。
 3. 单击 " **启动条件**"。
-4. 在 " **启动条件" (officeaddinsetup ") ** " 编辑器中，右键单击 " **目标计算机上的要求**"，然后单击 " **添加注册表启动条件**"。 此搜索条件可以在注册表中搜索 VSTO 运行时安装的键。 然后，可通过命名属性对安装程序的各个部分使用该密钥的值。 启动条件使用由搜索条件定义的属性来检查某个值。
-5. 在 " **启动条件 (officeaddinsetup" ") ** 编辑器中，选择" **搜索 RegistryEntry1** "搜索条件，右键单击该条件，然后选择" **属性窗口**"。
+4. 在 " **启动条件" (officeaddinsetup ")** " 编辑器中，右键单击 " **目标计算机上的要求**"，然后单击 " **添加注册表启动条件**"。 此搜索条件可以在注册表中搜索 VSTO 运行时安装的键。 然后，可通过命名属性对安装程序的各个部分使用该密钥的值。 启动条件使用由搜索条件定义的属性来检查某个值。
+5. 在 " **启动条件 (officeaddinsetup" ")** 编辑器中，选择" **搜索 RegistryEntry1** "搜索条件，右键单击该条件，然后选择" **属性窗口**"。
 
 6. 在 " **属性** " 窗口中，设置以下属性：
-   1. 将 ** (名称) ** 的值设置为 **搜索 VSTO 2010 运行时**。
+   1. 将 **(名称)** 的值设置为 **搜索 VSTO 2010 运行时**。
    2. 将 **属性** 的值更改为 **VSTORUNTIMEREDIST**。
    3. 将 **RegKey** 的值设置为 **软件 \\ Microsoft \\ VSTO 运行时安装 \\ v4R**
    4. 将 **根** 属性设置为 " **vsdrrHKLM**"。
    5. 将 " **值** " 属性更改为 " **版本**"。
 
-7. 在 " **启动条件" (officeaddinsetup ") ** " 编辑器中，选择 " **Condition1** " 启动条件，右键单击该条件，然后选择 " **属性窗口**"。
+7. 在 " **启动条件" (officeaddinsetup ")** " 编辑器中，选择 " **Condition1** " 启动条件，右键单击该条件，然后选择 " **属性窗口**"。
 8. 在“属性”窗口中，设置以下属性：
-   1. 设置 ** (名称) ** 以 **验证 VSTO 2010 运行时可用性**。
+   1. 设置 **(名称)** 以 **验证 VSTO 2010 运行时可用性**。
    2. 将 **条件** 的值更改为 **VSTORUNTIMEREDIST \> = "10.0.30319"**
    3. 将 **InstallURL** 属性留空。
    4. 将 **消息** 设置为 **未安装 Visual Studio 2010 Tools for Office Runtime。请运行 Setup.exe 以安装外接程序**。
@@ -280,16 +282,16 @@ Microsoft Office 使用注册表项查找外接程序。 HKEY \_ 当前 \_ 用�
 
 ### <a name="configure-a-launch-condition-to-detect-the-vsto-runtime-installed-by-office"></a>配置启动条件以检测 Office 安装的 VSTO 运行时
 
-1. 在 " **启动条件" (officeaddinsetup ") ** " 编辑器中，右键单击 " **搜索目标计算机**"，然后单击 " **添加注册表搜索**"。
+1. 在 " **启动条件" (officeaddinsetup ")** " 编辑器中，右键单击 " **搜索目标计算机**"，然后单击 " **添加注册表搜索**"。
 2. 选择 " **搜索 RegistryEntry1** " 搜索条件，右键单击该条件，然后选择 " **属性窗口**"。
 3. 在 " **属性** " 窗口中，设置以下属性：
-    1. 将 ** (名称) ** 的值设置为 **搜索 Office VSTO 运行时**。
+    1. 将 **(名称)** 的值设置为 **搜索 Office VSTO 运行时**。
     2. 将 **属性** 的值更改为 **OfficeRuntime**。
     3. 将 **RegKey** 的值设置为 **软件 \\ Microsoft \\ VSTO 运行时安装程序 \\ v4**。
     4. 将 **根** 属性设置为 " **vsdrrHKLM**"。
     5. 将 " **值** " 属性更改为 " **版本**"。
 
-4. 在 " **启动条件" (officeaddinsetup ") ** " 编辑器中，选择前面定义的 " **验证 VSTO 2010 运行时可用性** " 启动条件，右键单击该条件，然后选择 " **属性窗口**"。
+4. 在 " **启动条件" (officeaddinsetup ")** " 编辑器中，选择前面定义的 " **验证 VSTO 2010 运行时可用性** " 启动条件，右键单击该条件，然后选择 " **属性窗口**"。
 
 5. 将 **Condition** 属性的值更改为 **VSTORUNTIMEREDIST \> = "10.0.30319" 或 OFFICERUNTIME \> = "10.0.21022"**。 版本号可能不同，具体取决于外接程序所需的运行时版本。
 
@@ -312,19 +314,19 @@ Microsoft Office 使用注册表项查找外接程序。 HKEY \_ 当前 \_ 用�
 
 ### <a name="to-configure-launch-conditions-to-detect-that-for-office-pias"></a>配置启动条件以检测 Office Pia 的情况
 
-1. 在 " **启动条件" (officeaddinsetup ") ** " 编辑器中，右键单击 " **目标计算机上的要求**"，然后 **单击 "添加 Windows Installer 启动条件**"。 此启动条件通过搜索特定组件 ID 搜索 Office PIA。
+1. 在 " **启动条件" (officeaddinsetup ")** " 编辑器中，右键单击 " **目标计算机上的要求**"，然后 **单击 "添加 Windows Installer 启动条件**"。 此启动条件通过搜索特定组件 ID 搜索 Office PIA。
 2. 右键单击 " **搜索 Component1** "，然后单击 " **属性窗口** " 以显示启动条件的属性。
-3. 在 " **属性" 窗口**中，设置以下属性：
+3. 在 " **属性" 窗口** 中，设置以下属性：
 
-    1. 将** (名称) **属性的值更改为 "**搜索 Office 共享 PIA** "
+    1. 将 **(名称)** 属性的值更改为 "**搜索 Office 共享 PIA** "
     2. 将组件 Id 的值 **更改为你** 正在使用的 Office 组件的组件 Id。 可以在下表中找到组件 Id 的列表，例如 **{64E2917E-AA13-4CA4-BFFE-EA6EDA3AFCB4}**。
     3. 将 **属性** 属性的值更改为 **HASSHAREDPIA**。
 
-4. 在 " **启动条件" (officeaddinsetup ") ** " 编辑器中，右键单击 " **Condition1** "，然后单击 " **属性窗口** " 以显示启动条件的属性。
+4. 在 " **启动条件" (officeaddinsetup ")** " 编辑器中，右键单击 " **Condition1** "，然后单击 " **属性窗口** " 以显示启动条件的属性。
 
-5. 更改 **Condition1**的以下属性：
+5. 更改 **Condition1** 的以下属性：
 
-    1. 更改 ** (名称) ** **验证 Office 共享 PIA 可用性**。
+    1. 更改 **(名称)** **验证 Office 共享 PIA 可用性**。
     2. 将 **条件** 更改为 **HASSHAREDPIA**。
     3. 将 **InstallUrl** 留空。
     4. 将 **消息** 更改为 **与 Excel 交互所需的组件不可用。请运行 setup.exe**。
@@ -347,7 +349,7 @@ Microsoft Office 使用注册表项查找外接程序。 HKEY \_ 当前 \_ 用�
 |Microsoft Graph|{011B9112-EBB1-4A6C-86CB-C2FDC9EA7B0E}|{52DA4B37-B8EB-4B7F-89C1-824654CE4C70}|{24706F33-F0CE-4EB4-BC91-9E935394F510}|-|-|
 |智能标记 (Smart Tag)|{7102C98C-EF47-4F04-A227-FE33650BF954}|{487A7921-EB3A-4262-BB5B-A5736B732486}|{74EFC1F9-747D-4867-B951-EFCF29F51AF7}|-|-|
 |Office 共享|{64E2917E-AA13-4CA4-BFFE-EA6EDA3AFCB4}|{6A174BDB-0049-4D1C-86EF-3114CB0C4C4E}|{76601EBB-44A7-49EE-8DE3-7B7B9D7EBB05}|{625F5772-C1B3-497E-8ABE-7254EDB00506}|{625F5772-C1B3-497E-8ABE-7254EDB00506}|
-|Project|{957A4EC0-E67B-4E86-A383-6AF7270B216A}|{1C50E422-24FA-44A9-A120-E88280C8C341}|{706D7F44-8231-489D-9B25-3025ADE9F114}|{107BCD9A-F1DC-4004-A444-33706FC10058}|{107BCD9A-F1DC-4004-A444-33706FC10058}|
+|项目|{957A4EC0-E67B-4E86-A383-6AF7270B216A}|{1C50E422-24FA-44A9-A120-E88280C8C341}|{706D7F44-8231-489D-9B25-3025ADE9F114}|{107BCD9A-F1DC-4004-A444-33706FC10058}|{107BCD9A-F1DC-4004-A444-33706FC10058}|
 
   ![最终启动条件的屏幕截图](media/setup-project-figure-11.jpg)
 
@@ -357,7 +359,7 @@ Microsoft Office 使用注册表项查找外接程序。 HKEY \_ 当前 \_ 用�
 
 ### <a name="to-build-the-setup-project"></a>生成安装项目
 
-1. 在 **解决方案资源管理器**中，右键单击 **officeaddinsetup "** 项目，然后单击" **生成**"。
+1. 在 **解决方案资源管理器** 中，右键单击 **officeaddinsetup "** 项目，然后单击" **生成**"。
 2. 使用 **Windows 资源管理器**，导航到 **officeaddinsetup "** 项目的输出目录，然后转到" 发布 "或" 调试 "文件夹，具体取决于所选的生成配置。 将文件夹中的所有文件复制到用户可以访问的位置。
 
 测试 ExcelAddIn 安装程序
@@ -395,7 +397,7 @@ Office 文档中的属性用于查找文档级解决方案。 如果将文档安
 
 将自定义操作项目添加到 Visual Studio 解决方案
 
-1. 通过右键单击 "**解决方案资源管理器**中的**Office 文档部署项目**，将新的 .net 控制台项目添加到解决方案中。
+1. 通过右键单击 "**解决方案资源管理器** 中的 **Office 文档部署项目**，将新的 .net 控制台项目添加到解决方案中。
 2. 展开 " **添加** "，然后单击 " **新建项目**"。
 3. 选择 "控制台应用程序" 模板，并将项目命名为 " **AddCustomizationCustomAction**"。
 
@@ -514,30 +516,30 @@ Office 文档中的属性用于查找文档级解决方案。 如果将文档安
 检索解决方案 ID
 
 1. 在 " **生成** " 菜单上，单击 " **生成解决方案** " 以生成文档级解决方案，并将 "解决方案 ID" 属性添加到项目文件。
-2. 在 **解决方案资源管理器**中，右键单击文档级项目 **ExcelWorkbookProject**
+2. 在 **解决方案资源管理器** 中，右键单击文档级项目 **ExcelWorkbookProject**
 3. 单击 " **UnloadProject** " 可从 Visual Studio 内部访问项目文件。
 
     ![卸载 Excel 文档解决方案的解决方案资源管理器屏幕截图](media/setup-project-figure-16.jpg)
 
     **图13：卸载 Excel 文档解决方案**
 
-4. 在**解决方案资源管理器**中，右键单击 " **ExcelWorkbookProject** "，然后单击 "EditExcelWorkbookProject **" 或 "** **.vbproj** "。
-5. 在**ExcelWorkbookProject**编辑器中，找到**PropertyGroup**元素中的**SolutionID**元素。
+4. 在 **解决方案资源管理器** 中，右键单击 " **ExcelWorkbookProject** "，然后单击 "EditExcelWorkbookProject **" 或 "** **.vbproj** "。
+5. 在 **ExcelWorkbookProject** 编辑器中，找到 **PropertyGroup** 元素中的 **SolutionID** 元素。
 6. 复制此元素的 GUID 值。
 
     ![检索 SolutionID](media/setup-project-figure-17.jpg)
 
     **图14：检索 SolutionID**
 
-7. 在 **解决方案资源管理器**中，右键单击 **ExcelWorkbookProject** ，然后单击 " **重新加载项目**"。
+7. 在 **解决方案资源管理器** 中，右键单击 **ExcelWorkbookProject** ，然后单击 " **重新加载项目**"。
 8. 在出现的对话框中单击 **"是"** 以关闭 " **ExcelWorkbookProject** 编辑器"。
-9. **解决方案 ID**将用于安装自定义操作。
+9. **解决方案 ID** 将用于安装自定义操作。
 
 最后一步是配置用于 **安装** 和 **卸载** 步骤的自定义操作。
 
 ### <a name="to-configure-the-setup-project"></a>配置安装程序项目
 
-1. 在 **解决方案资源管理器**中，右键单击 **ExcelWorkbookSetup**，展开 " **添加** "，然后单击 " **项目输出**"。
+1. 在 **解决方案资源管理器** 中，右键单击 **ExcelWorkbookSetup**，展开 " **添加** "，然后单击 " **项目输出**"。
 2. 在 " **添加项目输出组** " 对话框的 " **项目** " 列表中，单击 " **AddCustomizationCustomAction**"。
 3. 选择 " **主输出** "，然后单击 **"确定"** 以关闭对话框，并将包含自定义操作的程序集添加到安装项目。
 
@@ -545,19 +547,19 @@ Office 文档中的属性用于查找文档级解决方案。 如果将文档安
 
     **图15：文档清单自定义操作-添加项目输出组**
 
-4. 在 **解决方案资源管理器**中，右键单击 **ExcelWorkbookSetup**。
+4. 在 **解决方案资源管理器** 中，右键单击 **ExcelWorkbookSetup**。
 5. 展开 " **视图** "，然后单击 " **自定义操作**"。
-6. 在 " **自定义操作 (ExcelWorkbookSetup") ** 编辑器中，右键单击 " **自定义操作** "，然后单击 " **添加自定义操作**"。
-7. 在 " **选择项目中的项** " 对话框的 " **查找范围** " 列表中，单击 " **应用程序文件夹**"。 选择 **AddCustomizationCustomAction (active) 中的 "主输出 ** "，然后单击 **"确定"** 将自定义操作添加到安装步骤。
-8. 在 " **安装" 节点**下，右键单击 " **AddCustomizationCustomAction (Active) **中的" 主输出 "，然后单击" **重命名**"。 命名自定义操作 **将文档复制到 "我的文档" 并附加自定义**。
-9. 在 " **卸载" 节点**下，右键单击 " **AddCustomizationCustomAction (Active) 中的" 主输出 ** "，然后单击" **重命名**"。 命名自定义操作 **从文档文件夹中删除文档**。
+6. 在 " **自定义操作 (ExcelWorkbookSetup")** 编辑器中，右键单击 " **自定义操作** "，然后单击 " **添加自定义操作**"。
+7. 在 " **选择项目中的项** " 对话框的 " **查找范围** " 列表中，单击 " **应用程序文件夹**"。 选择 **AddCustomizationCustomAction (active) 中的 "主输出** "，然后单击 **"确定"** 将自定义操作添加到安装步骤。
+8. 在 " **安装" 节点** 下，右键单击 " **AddCustomizationCustomAction (Active)** 中的" 主输出 "，然后单击" **重命名**"。 命名自定义操作 **将文档复制到 "我的文档" 并附加自定义**。
+9. 在 " **卸载" 节点** 下，右键单击 " **AddCustomizationCustomAction (Active) 中的" 主输出** "，然后单击" **重命名**"。 命名自定义操作 **从文档文件夹中删除文档**。
 
     ![文档清单自定义操作窗口的屏幕截图](media/setup-project-figure-19.jpg)
 
     **图16：文档清单自定义操作**
 
-10. 在 " **自定义操作 (ExcelWorkbookSetup") ** 编辑器中，右键单击 **"将文档复制到我的文档" 并附加自定义** ，然后单击 " **属性窗口**"。
-11. 在 **CustomActionData**的 " **属性** " 窗口中，输入自定义 DLL 的位置、部署清单和 Microsoft Office 文档的位置。 还需要 SolutionID。
+10. 在 " **自定义操作 (ExcelWorkbookSetup")** 编辑器中，右键单击 **"将文档复制到我的文档" 并附加自定义** ，然后单击 " **属性窗口**"。
+11. 在 **CustomActionData** 的 " **属性** " 窗口中，输入自定义 DLL 的位置、部署清单和 Microsoft Office 文档的位置。 还需要 SolutionID。
 12. 如果要将任何安装错误记录到文件中，请包含 LogFile 参数。
 s
     ``` text
@@ -568,7 +570,7 @@ s
 
     **图17：用于将文档复制到我的文档的自定义操作**
 
-13. 用于卸载的自定义操作需要文档的名称，你可以通过在**CustomActionData**中使用相同的 documentLocation 参数提供该文档
+13. 用于卸载的自定义操作需要文档的名称，你可以通过在 **CustomActionData** 中使用相同的 documentLocation 参数提供该文档
 
     ``` text
     /documentLocation="[INSTALLDIR]ExcelWorkbookProject.xlsx"

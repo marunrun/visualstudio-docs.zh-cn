@@ -1,5 +1,7 @@
 ---
 title: 自定义文档属性概述
+description: 了解，当您生成文档级项目时，Visual Studio 会将两个自定义属性添加到项目中的文档。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3d9fd14753f447b929faf5aecd37277529e0dd19
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 8c30e0b3253e19316eed24fa26500cd55a3dd515
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "92298465"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847788"
 ---
 # <a name="custom-document-properties-overview"></a>自定义文档属性概述
 
@@ -40,17 +42,17 @@ ms.locfileid: "92298465"
 
  \_AssemblyLocation 属性值的格式可以不同，具体取决于解决方案的部署方式：
 
-- 如果将解决方案发布为从网站、UNC 路径或 CD 或 USB 驱动器进行安装，则 _AssemblyLocation 属性的格式为*DeploymentManifestPath* | *SolutionID*。 以下字符串是一个示例：
+- 如果将解决方案发布为从网站、UNC 路径或 CD 或 USB 驱动器进行安装，则 _AssemblyLocation 属性的格式为 *DeploymentManifestPath* | *SolutionID*。 以下字符串是一个示例：
 
      file://deployserver/MyShare/ExcelWorkbook1.vsto|74744e4b-e4d6-41eb-84f7-ad20346fe2d9
 
-- 如果正在运行或调试 Visual Studio 中的解决方案，则 _AssemblyLocation 属性的格式为*DeploymentManifestName* | *SolutionID*| vstolocal。 以下字符串是一个示例：
+- 如果正在运行或调试 Visual Studio 中的解决方案，则 _AssemblyLocation 属性的格式为 *DeploymentManifestName* | *SolutionID*| vstolocal。 以下字符串是一个示例：
 
      Excelworkbook1.xlsx.log | 74744e4b-e4d6-41eb-84f7-ad20346fe2d9 | vstolocal
 
-  *SolutionID*是用于标识解决方案的 GUID [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 。 生成项目时，会自动生成 *SolutionID* 。 **Vstolocal**项指示 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 程序集应与文档从同一文件夹中加载。
+  *SolutionID* 是用于标识解决方案的 GUID [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 。 生成项目时，会自动生成 *SolutionID* 。 **Vstolocal** 项指示 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 程序集应与文档从同一文件夹中加载。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Visual Studio 中 Office 解决方案的体系结构](../vsto/architecture-of-office-solutions-in-visual-studio.md)
 - [文档级自定义项的体系结构](../vsto/architecture-of-document-level-customizations.md)

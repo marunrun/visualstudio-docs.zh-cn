@@ -1,5 +1,7 @@
 ---
 title: 更改值的示例实现 |Microsoft Docs
+description: 在 "局部变量" 窗口中显示的每个本地都具有与之关联的 IDebugProperty2 对象。 了解 Visual Studio 如何在内存中更新本地值。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1d7b712d2a97b02bed215c4996d3309341fb8ff9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5193fd07c1a891f052814446815bfbc836c6a9a7
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80713118"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847723"
 ---
 # <a name="sample-implementation-of-changing-values"></a>更改值的示例实现
 > [!IMPORTANT]
@@ -420,6 +422,6 @@ HRESULT FieldSetValue(
 
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [更改本地的值](../../extensibility/debugger/changing-the-value-of-a-local.md)
 - [计算上下文](../../extensibility/debugger/evaluation-context.md)

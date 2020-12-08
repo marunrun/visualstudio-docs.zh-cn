@@ -1,5 +1,7 @@
 ---
 title: 如何：将 Windows 窗体控件添加到 Office 文档
+description: 了解如何在文档级项目中，将 Windows 窗体控件添加到 Microsoft Office Excel 并在设计时 Microsoft Office Word 文档。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b12d51ffe3a2e647a067b95d320e8beb70cac384
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a8f073a72db1a18574dff6ab060b1ea069475fbb
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547532"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96846774"
 ---
 # <a name="how-to-add-windows-forms-controls-to-office-documents"></a>如何：向 Office 文档添加 Windows 窗体控件
   你可以在设计时在文档级项目中，将 Windows 窗体控件添加到 Microsoft Office Excel 和 Microsoft Office Word 文档。 在运行时，你可以在文档级自定义项和 VSTO 外接程序中添加控件。例如，可以向 <xref:Microsoft.Office.Tools.Excel.Controls.ComboBox> 工作表添加控件，以便用户可以从选项列表中进行选择。
@@ -60,7 +62,7 @@ ms.locfileid: "85547532"
      该控件将按指定的位置和大小添加到文档。
 
     > [!NOTE]
-    > 当在 Excel 中选择控件时，将在**编辑栏**中看到 **= "嵌入" ( "WinForms"，"" ) ** 。 此文本是必需的并且不应删除。
+    > 当在 Excel 中选择控件时，将在 **编辑栏** 中看到 **= "嵌入" ( "WinForms"，"" )** 。 此文本是必需的并且不应删除。
 
 ### <a name="to-add-a-windows-forms-control-to-the-document-by-single-clicking-the-control"></a>若要通过右键单击控件将 Windows 窗体控件添加到文档
 
@@ -90,7 +92,7 @@ ms.locfileid: "85547532"
 
 1. 在 Visual Studio 中创建或打开 Excel 工作簿项目或 Word 文档项目，以使文档在设计器中可见。 有关创建项目的信息，请参阅 [如何：在 Visual Studio 中创建 Office 项目](../vsto/how-to-create-office-projects-in-visual-studio.md)。
 
-2. 在 "**工具箱**" 的 "**公共控件**" 选项卡中，单击要添加的控件，然后按**enter**键。
+2. 在 "**工具箱**" 的 "**公共控件**" 选项卡中，单击要添加的控件，然后按 **enter** 键。
 
      该控件将被添加到位于文档或活动窗格中心位置处的文档。
 

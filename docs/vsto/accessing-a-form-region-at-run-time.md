@@ -1,5 +1,7 @@
 ---
 title: 在运行时访问窗体区域
+description: 了解如何在运行时访问各种项目类型和版本 Microsoft Office 中的窗体区域。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5dd8818b57a1aa33b70254303150d8f00e36cc02
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d0276405c023717c88f334d6231939d59f79ee4e
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71255801"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847411"
 ---
 # <a name="access-a-form-region-at-run-time"></a>在运行时访问窗体区域
 
@@ -59,12 +61,12 @@ ms.locfileid: "71255801"
  若要使用 `Globals` 类来访问窗体区域中的控件，必须使窗体区域代码文件外部的代码可以访问控件。
 
 ### <a name="form-regions-designed-in-the-form-region-designer"></a>在窗体区域设计器中设计的窗体区域
- 对于 C#，更改要访问的每个控件的修饰符。 若要执行此操作，请在窗体区域设计器中选择每个控件，然后在“属性” **** 窗口中将“Modifiers” **** 属性更改为“Internal” **** 或“public” **** 。 例如，如果将 **的“Modifier”**`textBox1` 属性更改为“Internal” ****，则可以通过键入 `textBox1` 来访问 `Globals.FormRegions.FormRegion1.textBox1`。
+ 对于 C#，更改要访问的每个控件的修饰符。 若要执行此操作，请在窗体区域设计器中选择每个控件，然后在“属性”  窗口中将“Modifiers”  属性更改为“Internal”  或“public”  。 例如，如果将 **的“Modifier”**`textBox1` 属性更改为“Internal” ，则可以通过键入 `textBox1` 来访问 `Globals.FormRegions.FormRegion1.textBox1`。
 
  对于 Visual Basic，不需要更改修饰符。
 
 ### <a name="imported-form-regions"></a>导入的窗体区域
- 如果导入在 Outlook 中设计的窗体区域，则窗体区域中每个控件的访问修饰符变为专用。 因为无法使用窗体区域设计器来修改导入的窗体区域，所以无法在“属性” **** 窗口更改控件的修饰符。
+ 如果导入在 Outlook 中设计的窗体区域，则窗体区域中每个控件的访问修饰符变为专用。 因为无法使用窗体区域设计器来修改导入的窗体区域，所以无法在“属性”  窗口更改控件的修饰符。
 
  若要能够从窗体区域代码文件外部访问控件，请在窗体区域代码文件中创建属性来返回该控件。
 

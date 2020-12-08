@@ -1,5 +1,7 @@
 ---
 title: 使用 Windows Installer 部署 Office 解决方案
+description: 了解如何使用 Visual Studio 创建 Windows Installer，可以在最终用户的计算机上部署需要管理访问权限的 Office 解决方案。
+ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1336af7469b030492b486004940b730d372760bb
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: c001b3ce308c9e991cee747bdcab3ad646b226ab
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90807958"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847112"
 ---
 # <a name="deploy-an-office-solution-by-using-windows-installer"></a>使用 Windows Installer 部署 Office 解决方案
 
@@ -105,7 +107,7 @@ ms.locfileid: "90807958"
 
 1. 在 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]中，打开要部署的 Office 项目。
 
-   与本主题相关的 VSTO 外接程序示例包含一个名为 **ExcelAddIn**的项目。 文档级自定义项示例包含一个名为 **ExcelWorkbook**的项目。 本主题将通过使用这两个名称之一来引用解决方案中的 Office 项目。
+   与本主题相关的 VSTO 外接程序示例包含一个名为 **ExcelAddIn** 的项目。 文档级自定义项示例包含一个名为 **ExcelWorkbook** 的项目。 本主题将通过使用这两个名称之一来引用解决方案中的 Office 项目。
 
 2. 在菜单栏上，选择 "**文件**" "  >  **添加**  >  **新项目**"。
 
@@ -209,7 +211,7 @@ ms.locfileid: "90807958"
 
 4. 在记事本中，将 GUID 粘贴到文本 **Your GUID goes here** 的位置，取代该文本。
 
-   文件的** &lt; properties &gt; **元素如下所示。
+   文件的 **&lt; properties &gt;** 元素如下所示。
 
    ```xml
    <properties Id="{87989B73-21DC-4403-8FD1-0C68A41A6D8C}" Description="This prerequisite installs the most recent version of the Microsoft Visual Studio 2010 Tools for Office Runtime." >
@@ -220,7 +222,7 @@ ms.locfileid: "90807958"
 
 6. 在 **“另存为”** 对话框中，浏览到 **“桌面”** 文件夹。
 
-7. 在 " **保存类型** " 列表中，选择 " **所有文件" ( # A0 &#42;) **"。
+7. 在 " **保存类型** " 列表中，选择 " **所有文件" ( # A0 &#42;)**"。
 
 8. 在 **“文件名”** 框中，输入 **Visual Studio 2010 Tools for Office Runtime.prq**，然后选择 **“保存”** 按钮。
 
@@ -231,9 +233,9 @@ ms.locfileid: "90807958"
 
 10. 从 " **桌面** " 文件夹中，将 *Visual Studio 2010 Tools for Office runtime.prq* 文件复制到计算机上的以下目录之一。
 
-   对于32位操作系统： *%ProgramFiles%\InstallShield\2013LE\SetupPrerequisites \\ *
+   对于32位操作系统： *%ProgramFiles%\InstallShield\2013LE\SetupPrerequisites \\*
 
-   对于64位操作系统： *% ProgramFiles (x86) % \ 2013LE \ SetupPrerequisites \\ *
+   对于64位操作系统： *% ProgramFiles (x86) % \ 2013LE \ SetupPrerequisites \\*
 
 11. 在 InstallShield 项目的 **“可再发行组件”** 页上，选择 **“刷新”** 按钮刷新可再发行组件列表，如下图所示。
 
@@ -279,7 +281,7 @@ ms.locfileid: "90807958"
 
 3. 在 **“AllUSERS”** 属性列表中，指定要为计算机的所有用户安装此解决方案，还是仅为某位用户安装此解决方案。
 
-   若要为当前用户安装 VSTO 外接程序，请选择 **ALLUSERS = "" (按用户安装) **。 若要为计算机的所有用户安装 VSTO 外接程序，请选择 **ALLUSERS=1**（基于计算机安装）。
+   若要为当前用户安装 VSTO 外接程序，请选择 **ALLUSERS = "" (按用户安装)**。 若要为计算机的所有用户安装 VSTO 外接程序，请选择 **ALLUSERS=1**（基于计算机安装）。
 
    在下一个过程中，你将创建注册表项，以使 Office 应用程序能够发现和加载 VSTO 外接程序。 请参阅 [VSTO 外接程序的注册表项](../vsto/registry-entries-for-vsto-add-ins.md)。
 
@@ -303,21 +305,21 @@ ms.locfileid: "90807958"
 
    **基于用户的安装程序**
 
-   **HKEY_CURRENT_USER \Software\Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**
+   **HKEY_CURRENT_USER\Software\Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**
 
    **根据 Office 版本创建的基于计算机的安装程序**
 
 | Office 版本<br /><br /> | InstallShield 配置路径<br /><br /> |
 |----------------------------| - |
-| 32 位<br /><br /> | **HKEY_LOCAL_MACHINE \SOFTWARE (32 位) \Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br /> |
-| 64 位<br /><br /> | **HKEY_LOCAL_MACHINE \SOFTWARE (64 位) \Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br /> |
+| 32 位<br /><br /> | **HKEY_LOCAL_MACHINE\SOFTWARE(32-Bit)\Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br /> |
+| 64 位<br /><br /> | **HKEY_LOCAL_MACHINE\SOFTWARE(64-Bit)\Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br /> |
 
    **根据 Windows 版本创建的基于计算机的安装程序**
 
 | Windows 版本<br /><br /> | InstallShield 配置路径<br /><br /> |
 |-----------------------------| - |
-| 32 位<br /><br /> | **HKEY_LOCAL_MACHINE \SOFTWARE (32 位) \Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br /> |
-| 64 位<br /><br /> | **HKEY_LOCAL_MACHINE \SOFTWARE (32 位) \Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br />**HKEY_LOCAL_MACHINE \SOFTWARE (64 位) \Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br /> |
+| 32 位<br /><br /> | **HKEY_LOCAL_MACHINE\SOFTWARE(32-Bit)\Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br /> |
+| 64 位<br /><br /> | **HKEY_LOCAL_MACHINE\SOFTWARE(32-Bit)\Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br />**HKEY_LOCAL_MACHINE\SOFTWARE(64-Bit)\Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br /> |
 
    > [!NOTE]
    > 64位 Windows 的安装程序需要两个注册表路径，因为用户可以在运行64位 Windows 的计算机上运行32位和64位版本的 Office。
@@ -337,21 +339,21 @@ ms.locfileid: "90807958"
 |--------------|--------|
 |“字符串值”<br /><br />|**FriendlyName**<br /><br />|
 |DWORD 值<br /><br />|**LoadBehavior**<br /><br />|
-|“字符串值”<br /><br />|**file:///**<br /><br />|
+|“字符串值”<br /><br />|**Manifest**<br /><br />|
 
 8. 打开 **“Description”** 值的快捷菜单，然后选择 **“修改”**。
 
    出现 **“编辑数据”** 对话框。
 
-9. 在“值数据” **** 文本框中，输入 **Excel Demo Add-In**，然后选择“确定” **** 按钮。
+9. 在“值数据”  文本框中，输入 **Excel Demo Add-In**，然后选择“确定”  按钮。
 
-   当用户依次打开 Office 应用程序、“选项” **** 对话框，然后在“外接程序” **** 窗格中选择 VSTO 外接程序时，将会显示此说明。
+   当用户依次打开 Office 应用程序、“选项”  对话框，然后在“外接程序”  窗格中选择 VSTO 外接程序时，将会显示此说明。
 
 10. 打开 **“FriendlyName”** 值的快捷菜单，然后选择 **“修改”**。
 
    出现 **“编辑数据”** 对话框。
 
-11. 在“值数据” **** 文本框中，输入 **Excel Demo Add-In**，然后选择“确定” **** 按钮。
+11. 在“值数据”  文本框中，输入 **Excel Demo Add-In**，然后选择“确定”  按钮。
 
    此字符串会显示在 Office 应用程序的 **“COM 外接程序”** 对话框中。 默认情况下，该字符串的值为 VSTO 外接程序 ID。
 
@@ -359,7 +361,7 @@ ms.locfileid: "90807958"
 
    出现 **“编辑数据”** 对话框。
 
-13. 在“值数据” **** 文本框中，输入 **3**，然后选择“确定” **** 按钮。
+13. 在“值数据”  文本框中，输入 **3**，然后选择“确定”  按钮。
 
    应用程序启动时，值 3 会加载该 VSTO 外接程序。 有关 LoadBehavior 值的详细信息，请参阅 [VSTO 外接程序的注册表项](../vsto/registry-entries-for-vsto-add-ins.md)。
 
@@ -367,9 +369,9 @@ ms.locfileid: "90807958"
 
    出现 **“编辑数据”** 对话框。
 
-15. 在“值数据” **** 文本框中，输入 **file:///[INSTALLDIR]ExcelAddIn.vsto|vstolocal**，然后选择“确定” **** 按钮。
+15. 在“值数据”  文本框中，输入 **file:///[INSTALLDIR]ExcelAddIn.vsto|vstolocal**，然后选择“确定”  按钮。
 
-   Visual Studio 2010 Tools for Office Runtime 会使用此路径查找部署清单。 此路径的 **[INSTALLDIR]** 部分是映射到 InstallShield 安装项目“常规信息” **** 属性页中的 **INSTALLDIR** 属性的宏。 此属性指定 VSTO 外接程序在目标计算机上的安装位置。 **|vstolocal** 后缀可确保从安装文件夹，而非 ClickOnce 缓存加载你的解决方案。
+   Visual Studio 2010 Tools for Office Runtime 会使用此路径查找部署清单。 此路径的 **[INSTALLDIR]** 部分是映射到 InstallShield 安装项目“常规信息”  属性页中的 **INSTALLDIR** 属性的宏。 此属性指定 VSTO 外接程序在目标计算机上的安装位置。 **|vstolocal** 后缀可确保从安装文件夹，而非 ClickOnce 缓存加载你的解决方案。
 
 > [!IMPORTANT]
 > 如果在 Outlook 的 VSTO 外接程序中创建自定义窗体区域，则必须创建更多注册表项以在 Outlook 中注册该区域。 有关详细信息，请参阅 [Outlook 窗体区域的注册表项](../vsto/registry-entries-for-vsto-add-ins.md#OutlookEntries)。
@@ -392,7 +394,7 @@ ms.locfileid: "90807958"
 
 3. 在面向 **“Windows”** 的项目类型列表中，选择 **“控制台应用程序”** 模板。
 
-4. 将项目命名为 **SetExcelDocumentProperties**，并选择“确定” **** 按钮。
+4. 将项目命名为 **SetExcelDocumentProperties**，并选择“确定”  按钮。
 
 5. 在 **“解决方案资源管理器”** 中，选择 **“显示所有文件”** 按钮，打开 **“SetExcelDocumentProperties”** 项目节点的快捷菜单，然后选择 **“添加引用”**。
 
@@ -463,7 +465,7 @@ ms.locfileid: "90807958"
 
 13. 在记事本中打开解决方案的项目文件。 对于 Visual Basic 项目，该文件的名称为 *.vbproj*。 对于 c # 项目，该文件的名称为 *ExcelWorkbook*。
 
-14. 在项目文件中，搜索** &lt; SolutionID &gt; **元素，将其值复制到剪贴板，然后关闭记事本。
+14. 在项目文件中，搜索 **&lt; SolutionID &gt;** 元素，将其值复制到剪贴板，然后关闭记事本。
 
     可以将该值作为参数传递到控制台应用程序。
 
@@ -476,7 +478,7 @@ ms.locfileid: "90807958"
 16. 将 **Your Solution ID** 替换为复制到剪贴板中的解决方案 ID。
 
    > [!IMPORTANT]
-   > 测试安装程序，以验证此自定义操作运行的控制台应用程序可以访问 [INSTALLDIR] 目录中的文档。 用户计算机上的某些目录可能需要管理访问权限 (例如，Program Files 目录) 。 如果要将解决方案部署到需要管理访问权限的目录，则应打开*setup.exe*文件的 "**属性**" 对话框，选择 "**兼容性**" 选项卡，然后选择 "以**管理员身份运行此程序**" 复选框，然后再分发安装程序。 如果你不希望用户使用管理权限运行安装程序，请将 [INSTALLDIR] 属性设置为用户可能已具有访问权限的目录，例如 **文档** 目录。 有关详细信息，请参阅本主题的 [指定在用户计算机上安装解决方案的位置](#Location) 部分。
+   > 测试安装程序，以验证此自定义操作运行的控制台应用程序可以访问 [INSTALLDIR] 目录中的文档。 用户计算机上的某些目录可能需要管理访问权限 (例如，Program Files 目录) 。 如果要将解决方案部署到需要管理访问权限的目录，则应打开 *setup.exe* 文件的 "**属性**" 对话框，选择 "**兼容性**" 选项卡，然后选择 "以 **管理员身份运行此程序**" 复选框，然后再分发安装程序。 如果你不希望用户使用管理权限运行安装程序，请将 [INSTALLDIR] 属性设置为用户可能已具有访问权限的目录，例如 **文档** 目录。 有关详细信息，请参阅本主题的 [指定在用户计算机上安装解决方案的位置](#Location) 部分。
 
 ## <a name="build-the-setup-project"></a><a name="Build"></a>Build the Setup Project
 
@@ -500,9 +502,9 @@ ms.locfileid: "90807958"
 
 9. 在菜单栏上，选择 "**生成**  >  **生成 officeaddinsetup"**"。
 
-   生成完成后，可以在以下位置找到**officeaddinsetup "** 项目的*setup.exe*文件： <em>OfficeAddInSetupProjectRoot</em>**\OfficeAddInSetup\Express\SingleImage\DiskImages\DISK1 \\ **
+   生成完成后，可以在以下位置找到 **officeaddinsetup "** 项目的 *setup.exe* 文件： <em>OfficeAddInSetupProjectRoot</em>**\OfficeAddInSetup\Express\SingleImage\DiskImages\DISK1 \\**
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [部署的 Office 解决方案先决条件](/previous-versions/bb608617(v=vs.110))
 - [部署 Office 解决方案](../vsto/deploying-an-office-solution.md)

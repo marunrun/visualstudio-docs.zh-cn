@@ -1,5 +1,7 @@
 ---
 title: 如何：配置包含列表安全性
+description: 配置 ClickOnce 信任提示，以控制是否向最终用户提供通过将信任决策保存到包含列表来安装 Office 解决方案的选项。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 459cf3f33197939a916a5f11a94bbaf09e8142e3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1f9eca5150e019906805adf40e5c9b6af8a3c14e
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85541630"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96846722"
 ---
 # <a name="how-to-configure-inclusion-list-security"></a>如何：配置包含列表安全性
   如果你具有管理员权限，则可以配置 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] 信任提示，以控制最终用户是否可以选择通过将信任决策保存到包含列表来安装 Office 解决方案。 有关包含列表的信息，请参阅 [使用包含列表信任 Office 解决方案](../vsto/trusting-office-solutions-by-using-inclusion-lists.md)。
@@ -52,7 +54,7 @@ ms.locfileid: "85541630"
 
 3. 将以下子项添加为 **字符串值**（如果它们尚不存在）以及关联的值。
 
-    |字符串值子项|值|
+    |字符串值子项|“值”|
     |-------------------------|-----------|
     |**Internet**|**AuthenticodeRequired**|
     |**UntrustedSites**|**已禁用**|
@@ -66,7 +68,7 @@ ms.locfileid: "85541630"
 
 1. 创建 Visual Basic 或 Visual c # 控制台应用程序。
 
-2. 打开 Program.cs *Program.vb*文件进行编辑并*Program.cs*添加以下代码。
+2. 打开 Program.cs *Program.vb* 文件进行编辑并 *Program.cs* 添加以下代码。
 
     ```vb
     Dim key As Microsoft.Win32.RegistryKey
@@ -111,7 +113,7 @@ ms.locfileid: "85541630"
 
 3. 将以下子项添加为 **字符串值**（如果它们尚不存在）以及关联的值。
 
-    |字符串值子项|值|
+    |字符串值子项|“值”|
     |-------------------------|-----------|
     |**UntrustedSites**|**已禁用**|
     |**Internet**|**AuthenticodeRequired**|
@@ -125,7 +127,7 @@ ms.locfileid: "85541630"
 
 1. 创建 Visual Basic 或 Visual c # 控制台应用程序。
 
-2. 打开 Program.cs *Program.vb*文件进行编辑并*Program.cs*添加以下代码。
+2. 打开 Program.cs *Program.vb* 文件进行编辑并 *Program.cs* 添加以下代码。
 
     ```vb
     Dim key As Microsoft.Win32.RegistryKey
@@ -168,7 +170,7 @@ ms.locfileid: "85541630"
 
 3. 将以下子项添加为 **字符串值**（如果它们尚不存在）以及关联的值。
 
-    |字符串值子项|值|
+    |字符串值子项|“值”|
     |-------------------------|-----------|
     |**UntrustedSites**|**已禁用**|
     |**Internet**|**已禁用**|
@@ -180,7 +182,7 @@ ms.locfileid: "85541630"
 
 1. 创建 Visual Basic 或 Visual c # 控制台应用程序。
 
-2. 打开 Program.cs *Program.vb*文件进行编辑并*Program.cs*添加以下代码。
+2. 打开 Program.cs *Program.vb* 文件进行编辑并 *Program.cs* 添加以下代码。
 
     ```vb
     Dim key As Microsoft.Win32.RegistryKey
@@ -207,6 +209,6 @@ ms.locfileid: "85541630"
 
 3. 生成并运行应用程序。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [使用包含列表信任 Office 解决方案](../vsto/trusting-office-solutions-by-using-inclusion-lists.md)
 - [保护 Office 解决方案](../vsto/securing-office-solutions.md)

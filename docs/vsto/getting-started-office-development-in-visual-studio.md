@@ -1,7 +1,8 @@
 ---
 title: '开始 (Visual Studio 中的 Office 开发) '
+description: 了解如何开始使用 Visual Studio 中的 Microsoft Office 开发人员工具来构建 Office 解决方案。
 titleSuffix: ''
-ms.custom: seodec18
+ms.custom: seodec18, SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
 dev_langs:
@@ -14,19 +15,19 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1439bef59c621523b74f0e0634cd809deea1f3ee
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a14d8254d42b78e788622afd93c6832871d54627
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72986059"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847320"
 ---
 # <a name="get-started-office-development-in-visual-studio"></a>开始 (Visual Studio 中的 Office 开发) 
   本部分包含可帮助你开始在 Visual Studio 中使用 Microsoft Office 开发人员工具的主题。
 
 [!include[Add-ins note](includes/addinsnote.md)]
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
 - [Office 解决方案开发概述 &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)
 
  提供用于在 Visual Studio 中开发 Office 解决方案的背景信息。

@@ -1,5 +1,7 @@
 ---
 title: 启动后发送启动事件 |Microsoft Docs
+description: 了解调试引擎附加到程序后，调试引擎向调试会话发送的启动事件系列。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c71db002420a2b822bffd34f2ae05e712f6a4bb9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 99b094fd1019e0d7dea09e2953cb4f31e03b80dc
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80713015"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847879"
 ---
 # <a name="send-startup-events-after-a-launch"></a>启动后发送启动事件
 调试引擎 (DE) 附加到程序后，它会向调试会话发送一系列启动事件。
@@ -43,6 +45,6 @@ ms.locfileid: "80713015"
 
   当代码已加载并准备好运行，但在执行任何代码之前，DE 将发送 SDM a [IDebugLoadCompleteEvent2](../../extensibility/debugger/reference/idebugloadcompleteevent2.md) load 完成事件。 最后，如果程序未在运行，则 DE 将发送 [IDebugEntryPointEvent2](../../extensibility/debugger/reference/idebugentrypointevent2.md) 入口点事件，并发出信号表明程序已到达其主入口点，并且已准备好进行调试。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [控制执行](../../extensibility/debugger/control-of-execution.md)
 - [调试任务](../../extensibility/debugger/debugging-tasks.md)

@@ -1,8 +1,8 @@
 ---
 title: 创建/打开 VSTO 系统项目的 VBA 访问权限
 titleSuffix: ''
-decsprition: You must explicitly enable access to the Office VBA project system before you can create or open a Visual Studio Tools for Office system project
-ms.custom: seodec18
+description: 了解必须先显式启用对 Office VBA 项目系统的访问权限，然后才能创建或打开 Visual Studio Tools for Office 系统项目。
+ms.custom: seodec18, SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
 f1_keywords:
@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 71e30a89bdf8547eab9ed9c51b07c49e014b7302
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 62477f7cd37a7d5a416e8f42fb7eb2d2a8e43828
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584854"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96846124"
 ---
 # <a name="enable-access-to-vba-to-create-or-open-a-visual-studio-tools-for-the-microsoft-office-system-project"></a>启用对 VBA 的访问以创建或打开 Microsoft Office 系统项目的 Visual Studio Tools
 
@@ -59,7 +59,7 @@ ms.locfileid: "91584854"
 
 5. 选中或取消选中 **"信任对 VBA 项目对象模型的访问权限"** 以启用或禁用对 Visual Basic 项目的访问。
 
-6. 单击“确定”。
+6. 单击 **“确定”** 。
 
 ### <a name="to-enable-or-disable-access-to-visual-basic-projects-with-the-2007-microsoft-office-system"></a>使用 2007 Microsoft Office 系统启用或禁用对 Visual Basic 项目的访问
 
@@ -69,7 +69,7 @@ ms.locfileid: "91584854"
 
 3. 选择 "启用" 或 "清除" 以禁用， **信任对 Visual Basic 项目的访问**。
 
-4. 单击“确定”。
+4. 单击 **“确定”** 。
 
 ## <a name="to-set-your-office-macro-security-level"></a>设置 Office 宏安全级别
 
@@ -83,7 +83,7 @@ ms.locfileid: "91584854"
 
 5. 在 " **宏设置** " 部分中，选择所需的设置。
 
-6. 单击“确定”。
+6. 单击 **“确定”** 。
 
 ### <a name="to-set-your-office-macro-security-level-with-the-2007-microsoft-office-system"></a>将 Office 宏安全级别设置为 2007 Microsoft Office 系统
 
@@ -99,7 +99,7 @@ ms.locfileid: "91584854"
 
 2. 选择 " **当前安装的程序** " 列表中的 "Office"。
 
-3. 单击“更改”****。
+3. 单击“更改”。
 
 4. 选择 " **添加或删除功能**"，然后单击 " **继续**"。
 
@@ -109,9 +109,9 @@ ms.locfileid: "91584854"
 
 7. 打开 " **Visual Basic for Applications**" 旁边的下拉菜单，然后单击 " **从我的电脑运行**"。
 
-8. 单击 **“继续”** 。
+8. 单击“继续” 。
 
-9. 单击 **“关闭”** 。
+9. 单击“关闭”  。
 
 ## <a name="to-repair-your-installation-of-office"></a>修复 Office 安装
 
@@ -119,11 +119,11 @@ ms.locfileid: "91584854"
 
 2. 在 " **当前安装的程序** " 列表中选择 Office 版本。
 
-3. 单击“更改”****。
+3. 单击“更改”。
 
 4. 选择 " **重新安装或修复**"，然后单击 " **下一步**"。
 
 5. 选择 " **检测并修复 Office 安装中的错误**"，然后单击 " **安装**"。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [保护 Office 解决方案](../vsto/securing-office-solutions.md)

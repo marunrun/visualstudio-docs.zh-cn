@@ -1,5 +1,7 @@
 ---
 title: 注册程序 |Microsoft Docs
+description: 了解调试引擎获取端口后如何向端口注册要调试的程序。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b68fa67f784d155288482ad724b632ed5ba5fa41
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 80c3d13cc7319e43390a7e9e6f4eb42a5a87c780
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80713162"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847091"
 ---
 # <a name="register-the-program"></a>注册程序
 调试引擎获取端口（由 [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md) 接口表示）后，启用程序调试的下一步是将其注册到该端口。 注册后，可通过以下方法之一进行调试：
@@ -104,6 +106,6 @@ ms.locfileid: "80713162"
 
     ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [获取端口](../../extensibility/debugger/getting-a-port.md)
 - [启用要调试的程序](../../extensibility/debugger/enabling-a-program-to-be-debugged.md)

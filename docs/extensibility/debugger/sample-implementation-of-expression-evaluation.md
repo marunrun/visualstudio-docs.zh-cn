@@ -1,5 +1,7 @@
 ---
 title: 表达式计算的示例实现 |Microsoft Docs
+description: 了解 Visual Studio 如何调用 ParseText 为 Watch windows 表达式生成 IDebugExpression2 对象。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: cf994a61ed9283463cd01aa468018f6acce5e209
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ba5baf52f18f638730ecc5f3b7c016889503cbbb
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80713103"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847697"
 ---
 # <a name="sample-implementation-of-expression-evaluation"></a>表达式计算的示例实现
 > [!IMPORTANT]

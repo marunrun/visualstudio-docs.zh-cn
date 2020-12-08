@@ -1,5 +1,7 @@
 ---
 title: Visual Studio 调试器术语表 |Microsoft Docs
+description: 本文介绍 Visual Studio 调试 SDK 中使用的几个术语，例如绑定断点、因果关系和代码上下文。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 954532311fe6b63fc288877a6d41722e6ea47581
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a01a6ad0e23af04001e9b0990be57d78e84c7241
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80713349"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847060"
 ---
 # <a name="visual-studio-debugger-glossary"></a>Visual Studio 调试器词汇表
 下面是调试 SDK 中使用的术语 [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] 。
@@ -66,5 +68,5 @@ ms.locfileid: "80713349"
 
   警告断点描述挂起断点中的警告的抽象。 警告断点描述挂起断点尚未绑定到代码位置的原因。 这可能是因为尚未为挂起断点描述的位置或出于其他原因而加载代码。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [Visual Studio 调试器可扩展性](../../../extensibility/debugger/visual-studio-debugger-extensibility.md)

@@ -1,5 +1,7 @@
 ---
 title: Office 解决方案的应用程序清单
+description: 了解应用程序清单是一个 XML 文件，描述加载到 Microsoft Office 解决方案中的程序集。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: reference
 dev_langs:
@@ -12,26 +14,26 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a6272f145ee2c7ef2a91cc635112e440e6404457
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5a16d0f438d06cbfa48538bb3e370ed9b334ad16
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85531503"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847918"
 ---
 # <a name="application-manifests-for-office-solutions"></a>Office 解决方案的应用程序清单
   应用程序清单是一个 XML 文件，描述加载到 Microsoft Office 解决方案中的程序集。 Visual Studio 中的 Microsoft Office 开发工具使用 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] [ClickOnce 应用程序清单](../deployment/clickonce-application-manifest.md) 引用中定义的应用程序清单架构。
 
  Office 解决方案的应用程序清单使用以下 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] 元素和特性。
 
-|元素|说明|特性|
+|元素|描述|特性|
 |-------------|-----------------|----------------|
 |[&#60;assembly&#62; 元素 &#40;ClickOnce 应用程序&#41;](../deployment/assembly-element-clickonce-deployment.md)|必需。 顶级元素。|**manifestVersion**|
-|[&#60;assemblyIdentity&#62; 元素 &#40;ClickOnce 应用程序&#41;](../deployment/assemblyidentity-element-clickonce-deployment.md)|必需。 标识 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] 应用程序的主程序集。|name <br /><br /> **version**<br /><br /> **publicKeyToken**<br /><br /> **processorArchitecture**<br /><br /> **language**|
+|[&#60;assemblyIdentity&#62; 元素 &#40;ClickOnce 应用程序&#41;](../deployment/assemblyidentity-element-clickonce-deployment.md)|必需。 标识 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] 应用程序的主程序集。|name<br /><br /> **version**<br /><br /> **publicKeyToken**<br /><br /> **processorArchitecture**<br /><br /> **language**|
 |[&#60;trustInfo&#62; 元素 &#40;ClickOnce 应用程序&#41;](../deployment/trustinfo-element-clickonce-application.md)|标识应用程序安全性要求。|无|
-|[&#60;入口点&#62; 元素 &#40;ClickOnce 应用程序&#41;](../deployment/entrypoint-element-clickonce-application.md)|必需。 标识用于执行的应用程序代码入口点。|name <br /><br /> **dependencyName**<br /><br /> **d**|
+|[&#60;入口点&#62; 元素 &#40;ClickOnce 应用程序&#41;](../deployment/entrypoint-element-clickonce-application.md)|必需。 标识用于执行的应用程序代码入口点。|name<br /><br /> **dependencyName**<br /><br /> **d**|
 |[&#60;依赖关系&#62; 元素 &#40;ClickOnce 应用程序&#41;](../deployment/dependency-element-clickonce-deployment.md)|必需。 标识应用程序运行所需的每个依赖项。 （可选）标识需要进行预安装的程序集。|无|
-|[&#60;文件&#62; 元素 &#40;ClickOnce 应用程序&#41;](../deployment/file-element-clickonce-application.md)|必需。 标识应用程序使用的每个非程序集文件。 可以包括与文件关联的组件对象模型 (COM) 隔离数据。|name <br /><br /> **大小**|
+|[&#60;文件&#62; 元素 &#40;ClickOnce 应用程序&#41;](../deployment/file-element-clickonce-application.md)|必需。 标识应用程序使用的每个非程序集文件。 可以包括与文件关联的组件对象模型 (COM) 隔离数据。|name<br /><br /> **大小**|
 
  Office 解决方案的应用程序清单具有 `co.v1` 命名空间中的以下元素。
 
@@ -67,7 +69,7 @@ ms.locfileid: "85531503"
 </addIn>
 ```
 
-|元素|说明|特性|
+|元素|描述|特性|
 |-------------|-----------------|----------------|
 |[&#60;d&#62; 元素 &#40;Visual Studio 中的 Office 开发&#41;](../vsto/customhostspecified-element-office-development-in-visual-studio.md)|必需。 将清单专门标记为 Office 解决方案。|无|
 |[ &#40;Visual Studio 中的 Office 开发&#62; 元素&#60;外接程序&#41;](../vsto/addin-element-office-development-in-visual-studio.md)|必需。 将入口点存储到单个命名空间。|无|
@@ -100,7 +102,7 @@ ms.locfileid: "85531503"
 
  `OutlookAddIn1.dll.manifest`
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Office 解决方案的部署清单](../vsto/deployment-manifests-for-office-solutions.md)
 - [ClickOnce 应用程序清单](../deployment/clickonce-application-manifest.md)

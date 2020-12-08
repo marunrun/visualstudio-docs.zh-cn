@@ -1,5 +1,7 @@
 ---
 title: 对 Office 项目中对象的全局访问
+description: 了解如何在运行时使用 Globals 类从项目中的任何代码访问多个不同的项目项。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -30,12 +32,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f76a2e74315980764a2cdffe67af4403552de7fe
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e2653f314edf07c4dcca6d3afc74af64c548af35
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88041046"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96846384"
 ---
 # <a name="global-access-to-objects-in-office-projects"></a>对 Office 项目中对象的全局访问
   创建 Office 项目时，Visual Studio 将在项目中自动生成一个名为 `Globals` 的类。 可以使用 `Globals` 类在运行时从项目中的任何代码访问多个不同的项目项。
@@ -75,7 +77,7 @@ ms.locfileid: "88041046"
 > [!NOTE]
 > 永远不会在设计时初始化 `Globals` 类，控件实例由设计器创建。 这意味着，如果您在用户控件类的内部创建使用类的属性的用户控件 `Globals` ，则在尝试使用返回的对象之前，必须检查属性是否返回 **null** 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [在运行时访问功能区](../vsto/accessing-the-ribbon-at-run-time.md)
 - [在运行时访问窗体区域](../vsto/accessing-a-form-region-at-run-time.md)
 - [主机项和主机控件概述](../vsto/host-items-and-host-controls-overview.md)

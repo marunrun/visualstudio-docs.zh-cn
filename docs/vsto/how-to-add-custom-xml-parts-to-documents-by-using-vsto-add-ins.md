@@ -1,5 +1,7 @@
 ---
 title: 使用 VSTO 外接程序向文档添加自定义 XML 部件
+description: 了解如何通过在 VSTO 外接程序中创建自定义 XML 部件，来将 XML 数据存储在以下类型的文档中。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -19,12 +21,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 92c00ea69069b7374f5f595cc6f198aac23d1f91
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1b153fe3e7c68ed6a8288ff69a30e16dd32c448a
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85538289"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847710"
 ---
 # <a name="how-to-add-custom-xml-parts-to-documents-by-using-vsto-add-ins"></a>如何：使用 VSTO 外接程序将自定义 XML 部件添加到文档
   通过在 VSTO 外接程序中创建自定义 XML 部件，可以将 XML 数据存储在以下类型的文档中：
@@ -67,7 +69,7 @@ ms.locfileid: "85538289"
 
 ## <a name="to-add-a-custom-xml-part-to-a-powerpoint-presentation"></a>向 PowerPoint 演示文稿添加自定义 XML 部件
 
-1. 向 <xref:Microsoft.Office.Core.CustomXMLPart> 演示文稿中的 [CustomXMLParts](/previous-versions/office/developer/office-2010/ff760806%28v%3doffice.14%29) 集合添加一个新 _Presentation 的对象。 <xref:Microsoft.Office.Core.CustomXMLPart> 包含你希望存储在演示文稿中的 XML 字符串。
+1. 将新的 <xref:Microsoft.Office.Core.CustomXMLPart> 对象添加到演示中的 [Microsoft.Office.Interop.PowerPoint._Presentation CustomXMLParts](/previous-versions/office/developer/office-2010/ff760806%28v%3doffice.14%29) 集合。 <xref:Microsoft.Office.Core.CustomXMLPart> 包含你希望存储在演示文稿中的 XML 字符串。
 
      下面的代码示例向指定演示文稿添加自定义 XML 部件。
 
@@ -76,11 +78,11 @@ ms.locfileid: "85538289"
 
 2. 将 `AddCustomXmlPartToPresentation` 方法添加到 `ThisAddIn` POWERPOINT 的 VSTO 外接程序项目中的类。
 
-3. 从项目中的其他代码调用该方法。 例如，若要在用户打开演示文稿时创建自定义 XML 部件，请从 AfterPresentationOpen 事件的事件处理 [EApplication_Event](/previous-versions/office/developer/office-2010/ff762843(v=office.14)) 程序调用方法。
+3. 从项目中的其他代码调用该方法。 例如，若要在用户打开演示文稿时创建自定义 XML 部件，请从 [Microsoft.Office.Interop.PowerPoint.EApplication_Event](/previous-versions/office/developer/office-2010/ff762843(v=office.14)) 事件的事件处理程序调用方法。
 
 ## <a name="robust-programming"></a>可靠编程
  为简单起见，此示例使用在方法中定义为局部变量的 XML 字符串。 通常，应从外部源（如文件或数据库）获取 XML。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [自定义 XML 部件概述](../vsto/custom-xml-parts-overview.md)
 - [如何：向文档级自定义项添加自定义 XML 部件](../vsto/how-to-add-custom-xml-parts-to-document-level-customizations.md)

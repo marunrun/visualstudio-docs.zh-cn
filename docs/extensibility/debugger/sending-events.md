@@ -1,5 +1,7 @@
 ---
 title: 发送事件 |Microsoft Docs
+description: 了解调试器和调试引擎如何使用基于 DCOM 的事件模型。 事件作为 COM 对象发送。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5ec0d3aa29da562147b71b8efde49baf07d8ae0b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0262868ae442bfdd8b99c16f59e000f4ebfc35c5
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80713032"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847905"
 ---
 # <a name="send-events"></a>发送事件
 调试器和调试引擎之间通信的机制 (DE) 是基于 DCOM 的事件模型。 事件作为 COM 对象发送，并且每个事件都有指定以下各项的参数：
@@ -30,7 +32,7 @@ ms.locfileid: "80713032"
 
   所有调试事件都是使用 [IDebugEventCallback2：： Event](../../extensibility/debugger/reference/idebugeventcallback2-event.md)方法发送的。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
  [事件源](../../extensibility/debugger/event-sources-visual-studio-sdk.md) 说明两个事件源：调试引擎 (DE) 和会话调试管理器 (SDM) 。
 
  [支持的事件类型](../../extensibility/debugger/supported-event-types.md) 讨论当前支持的事件类型：异步和同步。

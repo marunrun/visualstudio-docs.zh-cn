@@ -1,5 +1,7 @@
 ---
 title: 文档级解决方案中的文档保护
+description: 了解如何使用文档级项目中 Microsoft Office Word 和 Microsoft Office Excel 的保护功能。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6c5f019907495c3cad3fddef501455aedf345bb2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2898781a3603e7cb9582d246e4fa7edaaf6bddb9
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71253806"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96846189"
 ---
 # <a name="document-protection-in-document-level-solutions"></a>文档级解决方案中的文档保护
   可以在文档级项目中使用 Microsoft Office Word 和 Microsoft Office Excel 的保护功能。 这些功能会阻止未经授权的用户更改文档的受保护部分。
@@ -52,7 +54,7 @@ ms.locfileid: "71253806"
 ## <a name="setting-the-password"></a>设置密码
  Visual Studio 会自动启用保护，但默认情况下不提供密码。 如果希望文档保护具有密码，则必须在部署解决方案之前添加密码。 通过添加密码，你可以允许授权用户从文档中删除保护;如果没有密码，则无法轻松删除保护。 有关设置密码的详细信息，请参阅特定 Office 应用程序中的帮助。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [如何：以编程方式保护文档和文档的某些部分](../vsto/how-to-programmatically-protect-documents-and-parts-of-documents.md)
 - [Office 开发示例和演练](../vsto/office-development-samples-and-walkthroughs.md)
 - [信息权限管理和托管代码扩展概述](../vsto/information-rights-management-and-managed-code-extensions-overview.md)

@@ -1,5 +1,7 @@
 ---
 title: 如何：用数据库中的数据填充工作表
+description: 了解如何使用解决方案中对象的数据，以及如何使用 Windows 窗体控件来显示工作表中的数据。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1b594014b2564b5730c1895a007294ee66e07637
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4252eac32540ac2d0b6e763b5b6e9cf0e2ac7055
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85520115"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96846436"
 ---
 # <a name="how-to-populate-worksheets-with-data-from-a-database"></a>如何：用数据库中的数据填充工作表
 
@@ -35,7 +37,7 @@ ms.locfileid: "85520115"
 
 1. 在 Visual Studio 中打开 Excel 文档级项目，并在设计器中打开工作表。
 
-2. 打开“数据源” **** 窗口并为项目创建数据源。 有关详细信息，请参阅 [添加新连接](../data-tools/add-new-connections.md)。
+2. 打开“数据源”  窗口并为项目创建数据源。 有关详细信息，请参阅 [添加新连接](../data-tools/add-new-connections.md)。
 
 3. 将所需的字段或表从 " **数据源** " 窗口拖到工作表中。
 

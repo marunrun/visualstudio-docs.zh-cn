@@ -1,5 +1,7 @@
 ---
 title: 从其他 Office 解决方案调用 VSTO 外接程序中的代码
+description: 了解如何向其他解决方案（包括其他 Microsoft Office 解决方案）公开 VSTO 外接程序中的对象。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 584406098f058c17b3dd215dda9c8c4e9498cf46
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fad3f107487e4736ccd0a6aa59ea5a801b5f72e5
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71255330"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847840"
 ---
 # <a name="call-code-in-vsto-add-ins-from-other-office-solutions"></a>从其他 Office 解决方案调用 VSTO 外接程序中的代码
   可以向其他解决方案（包括其他 Microsoft Office 解决方案）公开 VSTO 外接程序中的对象。 如果 VSTO 外接程序提供了你希望使其他解决方案能够使用的服务，这一点非常有用。 例如，如果您有 Microsoft Office Excel 的 VSTO 外接程序从 Web 服务中执行财务数据计算，则其他解决方案可以通过在运行时调用 Excel VSTO 外接程序来执行这些计算。
@@ -72,7 +74,7 @@ ms.locfileid: "71255330"
 
    - 从 <xref:System.Runtime.InteropServices.StandardOleMarshalObject>派生类。 有关详细信息，请参阅向 [进程外客户端公开类](#outofproc)。
 
-   - 在定义此接口的项目中设置“为 COM 互操作注册” **** 属性。 仅当你希望让客户端使用早期绑定来调入 VSTO 外接程序时，此属性才是必需的。
+   - 在定义此接口的项目中设置“为 COM 互操作注册”  属性。 仅当你希望让客户端使用早期绑定来调入 VSTO 外接程序时，此属性才是必需的。
 
    下面的代码示例演示一个 `AddInUtilities` 类，该类具有可由其他解决方案调用的 `ImportData` 方法。 若要在更大的演练上下文中查看此代码，请参阅 [演练：从 VBA 调用 VSTO 外接程序中的代码](../vsto/walkthrough-calling-code-in-a-vsto-add-in-from-vba.md)。
 
@@ -111,7 +113,7 @@ ms.locfileid: "71255330"
    对于 VBA 客户端和非 VBA 客户端，使用 COMAddIn 属性的返回值的方式是不同的。 对于进程外客户端，需要其他代码以避免可能的争用情况。
 
 ### <a name="access-objects-from-vba-solutions"></a>从 VBA 解决方案中访问对象
- 下面的代码示例演示如何使用 VBA 调用由 VSTO 外接程序公开的方法。 此 VBA 宏调用一个名为 `ImportData` 的方法，该方法是在名为 **EXCELIMPORTDATA**的 VSTO 外接程序中定义的。 若要在更大的演练上下文中查看此代码，请参阅 [演练：从 VBA 调用 VSTO 外接程序中的代码](../vsto/walkthrough-calling-code-in-a-vsto-add-in-from-vba.md)。
+ 下面的代码示例演示如何使用 VBA 调用由 VSTO 外接程序公开的方法。 此 VBA 宏调用一个名为 `ImportData` 的方法，该方法是在名为 **EXCELIMPORTDATA** 的 VSTO 外接程序中定义的。 若要在更大的演练上下文中查看此代码，请参阅 [演练：从 VBA 调用 VSTO 外接程序中的代码](../vsto/walkthrough-calling-code-in-a-vsto-add-in-from-vba.md)。
 
 ```vb
 Sub CallVSTOMethod()
@@ -147,5 +149,5 @@ utilities.ImportData();
 - [演练：从 VBA 调用 VSTO 外接程序中的代码](../vsto/walkthrough-calling-code-in-a-vsto-add-in-from-vba.md)
 - [开发 Office 解决方案](../vsto/developing-office-solutions.md)
 - [如何：在 Visual Studio 中创建 Office 项目](../vsto/how-to-create-office-projects-in-visual-studio.md)
-- [Architecture of VSTO Add-ins](../vsto/architecture-of-vsto-add-ins.md)
+- [VSTO 外接程序的体系结构](../vsto/architecture-of-vsto-add-ins.md)
 - [使用扩展性接口自定义 UI 功能](../vsto/customizing-ui-features-by-using-extensibility-interfaces.md)
