@@ -1,5 +1,7 @@
 ---
 title: 内容控件
+description: 了解内容控件以及如何使用内容控件来设计文档和模板。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -38,12 +40,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8683f5379aaa33446b150adf34f8a5aa57a83ff3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a34211c7fb1fa001719219b7d08baab65340bde5
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72986181"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96848035"
 ---
 # <a name="content-controls"></a>内容控件
   借助内容控件，可设计出具有以下功能的文档和模板：
@@ -72,7 +74,7 @@ ms.locfileid: "72986181"
   在文档级项目中，可以在设计时或运行时向文档中添加内容控件。 在 VSTO 外接程序项目中，可以在运行时向任何打开的文档中添加内容控件。 有关详细信息，请参阅 [如何：向 Word 文档添加内容控件](../vsto/how-to-add-content-controls-to-word-documents.md)。
 
 > [!NOTE]
-> 只能在以 Open XML 格式保存的文档中使用内容控件。 不能使用保存在 Word 97-2003 *文档 () * 格式的文档中的内容控件。
+> 只能在以 Open XML 格式保存的文档中使用内容控件。 不能使用保存在 Word 97-2003 *文档 ()* 格式的文档中的内容控件。
 
 ## <a name="types-of-content-controls"></a>内容控件的类型
  有九种不同类型的内容控件可添加到文档中。 大多数内容控件在 <xref:Microsoft.Office.Tools.Word> 命名空间内都具有对应的类型。 还可以使用通用 <xref:Microsoft.Office.Tools.Word.ContentControl> 以表示任一可用的内容控件。 有关演示如何使用每个可用内容控件的演练，请参阅 [演练：使用内容控件创建模板](../vsto/walkthrough-creating-a-template-by-using-content-controls.md)。
@@ -97,7 +99,7 @@ ms.locfileid: "72986181"
 ### <a name="group"></a>组
  分组控件定义了文档中用户无法编辑或删除的受保护区域。 分组控件可以包含任何文档项，例如文本、表格、图形和其他内容控件。 有关详细信息，请参阅 <xref:Microsoft.Office.Tools.Word.GroupContentControl> 类型。
 
-### <a name="picture"></a>Picture
+### <a name="picture"></a>图片
  图片控件显示图像。 可以在设计时或运行时指定图像，用户也可以单击此控件以选择要插入文档中的图像。 有关详细信息，请参阅 <xref:Microsoft.Office.Tools.Word.PictureContentControl> 类型。
 
 ### <a name="rich-text"></a>富文本
@@ -130,9 +132,9 @@ ms.locfileid: "72986181"
 
  如果要保护的区域位于内容控件中，则可以使用内容控件的属性来阻止用户编辑或删除控件：
 
-- **LockContents**属性可防止用户编辑内容。
+- **LockContents** 属性可防止用户编辑内容。
 
-- **LockContentControl**属性阻止用户删除控件。
+- **LockContentControl** 属性阻止用户删除控件。
 
   如果要保护的区域不在内容控件中，或者要保护的区域中包含内容控件和其他类型的内容，则可以将整个区域置于 <xref:Microsoft.Office.Tools.Word.GroupContentControl> 中。 与其他内容控件不同，<xref:Microsoft.Office.Tools.Word.GroupContentControl> 不提供任何对用户可见的 UI。 其唯一的目的是定义用户无法编辑的区域。
 
@@ -165,7 +167,7 @@ ms.locfileid: "72986181"
 |<xref:System.DateTime>|<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>|<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl><br /><br /> <xref:Microsoft.Office.Tools.Word.ComboBoxContentControl><br /><br /> <xref:Microsoft.Office.Tools.Word.PlainTextContentControl><br /><br /> <xref:Microsoft.Office.Tools.Word.RichTextContentControl>|
 |<xref:System.Drawing.Image><br /><br /> <xref:System.Byte> 数组|<xref:Microsoft.Office.Tools.Word.PictureContentControl>|无|
 
- 在文档级和 VSTO 外接程序项目中，可以使用控件中 <xref:System.Windows.Forms.IBindableComponent.DataBindings%2A> 属性的 <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> 方法，以编程方式将内容控件绑定到数据源。 如果执行此操作，请将字符串 **文本** 传入方法的 *propertyName* 参数 <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> 。 **Text**属性是内容控件的默认数据绑定属性。
+ 在文档级和 VSTO 外接程序项目中，可以使用控件中 <xref:System.Windows.Forms.IBindableComponent.DataBindings%2A> 属性的 <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> 方法，以编程方式将内容控件绑定到数据源。 如果执行此操作，请将字符串 **文本** 传入方法的 *propertyName* 参数 <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> 。 **Text** 属性是内容控件的默认数据绑定属性。
 
  内容控件还支持双向数据绑定，在这种绑定形式下，控件中的更改会更新到数据源。 有关详细信息，请参阅 [如何：使用主机控件中的数据更新数据源](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)。
 
@@ -234,7 +236,7 @@ plainTextContentControl1.XMLMapping.SetMapping("/Product/Price", String.Empty, n
  [!code-vb[Trin_ContentControlReference#800](../vsto/codesnippet/VisualBasic/trin_contentcontrolreference/checkbox.vb#800)]
  [!code-csharp[Trin_ContentControlReference#800](../vsto/codesnippet/CSharp/trin_wordcontentcontrolreference/checkbox.cs#800)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [使用扩展对象实现 Word 自动化](../vsto/automating-word-by-using-extended-objects.md)
 - [如何：向 Word 文档添加内容控件](../vsto/how-to-add-content-controls-to-word-documents.md)
 - [演练：使用内容控件创建模板](../vsto/walkthrough-creating-a-template-by-using-content-controls.md)

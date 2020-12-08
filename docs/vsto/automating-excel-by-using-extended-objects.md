@@ -1,5 +1,7 @@
 ---
 title: 使用扩展对象实现 Excel 自动化
+description: 请注意，在 Visual Studio 中开发 Excel 解决方案时，可以使用解决方案中的主机项和主机控件。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -20,12 +22,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 65734f5397bae8c35fb8e312041d0600b8fa84e9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 912385950721de1d1e0b98c1b6582552210aa04a
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71254337"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96846956"
 ---
 # <a name="automate-excel-by-using-extended-objects"></a>使用扩展对象实现 Excel 自动化
   当开发 Visual Studio 中的 Excel 解决方案时，可以使用解决方案中的 *主机项* 和 *主机控件*。 这些对象可扩展 Excel 对象模型（即由 Excel 的主互操作程序集公开的对象模型）中某些常用对象，例如 <xref:Microsoft.Office.Interop.Excel.Worksheet> 和 <xref:Microsoft.Office.Interop.Excel.Range> 对象。 扩展的对象行为类似于其所基于的 Excel 对象，但它们可以将其他功能（如“新建事件”）和数据绑定功能添加到对象。
@@ -60,7 +62,7 @@ ms.locfileid: "71254337"
 
 - [XmlMappedRange 控件](../vsto/xmlmappedrange-control.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [如何：用数据填充 ListObject 控件](../vsto/how-to-fill-listobject-controls-with-data.md)
 - [如何：向工作表添加图表控件](../vsto/how-to-add-chart-controls-to-worksheets.md)
 - [如何：向工作表添加 ListObject 控件](../vsto/how-to-add-listobject-controls-to-worksheets.md)

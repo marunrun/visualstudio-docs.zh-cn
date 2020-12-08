@@ -1,5 +1,7 @@
 ---
 title: 如何：用对象中的数据填充文档
+description: 了解如何使用解决方案中对象的数据，并可以使用 Windows 窗体控件在文档中显示数据。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 38461fc30f71a811033ea70bfe560a6492f56e12
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 73cc795b5476f312f5fc80ba76dc383175596b64
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547168"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96848048"
 ---
 # <a name="how-to-populate-documents-with-data-from-objects"></a>如何：用对象中的数据填充文档
 
@@ -48,7 +50,7 @@ ms.locfileid: "85547168"
 
 若要将数据对象连接到 BindingSource：
 
-1. 将所需数据字段从“数据源” **** 窗口拖动到你的文档。 此操作会自动创建一个控件。
+1. 将所需数据字段从“数据源”  窗口拖动到你的文档。 此操作会自动创建一个控件。
 
 2. 在代码中，可以创建为数据源选择的对象类型的实例。
 
@@ -66,7 +68,7 @@ ms.locfileid: "85547168"
 
 4. 将数据源作为数据绑定添加到控件。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [添加新数据源](../data-tools/add-new-data-sources.md)
 - [在 Visual Studio 中将 Windows 窗体控件绑定到数据](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)

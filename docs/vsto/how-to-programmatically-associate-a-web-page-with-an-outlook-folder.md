@@ -1,5 +1,7 @@
 ---
 title: 将网页与 Outlook 文件夹关联
+description: 了解如何将网页与 Microsoft Office Outlook 文件夹关联。 此示例将在 Outlook 中检查名为 HtmlView 的文件夹。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 35eb2dc3b1b595a4bf960af67ac5006cd9839c6e
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: e4c2ee5e6494023ee3d5bca97f96ad3c8fe35517
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585335"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847502"
 ---
 # <a name="associate-a-web-page-with-an-outlook-folder"></a>将网页与 Outlook 文件夹关联
 
@@ -30,7 +32,7 @@ ms.locfileid: "91585335"
 ## <a name="example"></a>示例
  [!code-csharp[Trin_OL_HTMLFolder#1](../vsto/codesnippet/CSharp/Trin_OL_HTMLFolder/thisaddin.cs#1)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [使用文件夹](../vsto/working-with-folders.md)
 - [如何：以编程方式按名称检索文件夹](../vsto/how-to-programmatically-retrieve-a-folder-by-name.md)
 - [如何：以编程方式创建自定义文件夹项](../vsto/how-to-programmatically-create-custom-folder-items.md)

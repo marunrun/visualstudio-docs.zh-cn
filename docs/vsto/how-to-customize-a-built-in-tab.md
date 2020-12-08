@@ -1,5 +1,7 @@
 ---
 title: 如何：自定义内置选项卡
+description: 了解如何将组和控件添加到内置选项卡。内置选项卡是 Microsoft Office 应用程序的功能区上已有的选项卡。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5f73ec7a8555a5e5d569d4316ca619747550bf11
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7ac002b4c9ebacaf9cb522b583d6c4c9580b7bf2
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547181"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96846631"
 ---
 # <a name="how-to-customize-a-built-in-tab"></a>如何：自定义内置选项卡
   可以将组和控件添加到内置选项卡。内置选项卡是 Microsoft Office 应用程序的功能区上已有的选项卡。 例如，" **数据** " 选项卡是 Excel 中的内置选项卡。 创建自定义组时，它显示在选项卡末尾，但可以在选项卡上任意移动你的组。
@@ -30,10 +32,10 @@ ms.locfileid: "85547181"
 
 ### <a name="to-add-groups-to-a-built-in-tab"></a>将组添加到内置选项卡
 
-1. 在 **解决方案资源管理器**中右键单击功能区代码文件，然后单击 " **视图设计器**"。
+1. 在 **解决方案资源管理器** 中右键单击功能区代码文件，然后单击 " **视图设计器**"。
 
     > [!NOTE]
-    > 如果功能区代码文件未出现在 **解决方案资源管理器**中，则必须将 **功能区项** 添加到项目。 请参阅 [如何：开始自定义功能区](../vsto/how-to-get-started-customizing-the-ribbon.md)。
+    > 如果功能区代码文件未出现在 **解决方案资源管理器** 中，则必须将 **功能区项** 添加到项目。 请参阅 [如何：开始自定义功能区](../vsto/how-to-get-started-customizing-the-ribbon.md)。
 
 2. 右键单击功能区设计器中的任意选项卡，然后单击 " **属性**"。
 

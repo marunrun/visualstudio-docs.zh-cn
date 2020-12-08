@@ -1,5 +1,7 @@
 ---
 title: Office 文档上的控件
+description: 了解如何使用 Visual Studio 中的 Office 开发工具将 Windows 窗体控件和宿主控件添加到 Word 文档和 Excel 工作表中。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 160897a37ff6a8b335479b42a80f4186f176cab6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 203edcf2b77cfff3fb557ce7c1c8fea7592e17ea
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71254405"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847983"
 ---
 # <a name="controls-on-office-documents"></a>Office 文档上的控件
   你可以在 Visual Studio 中使用 Office 开发工具将 Windows 窗体控件和 *主机控件* 添加到 Word 文档和 Excel 工作表。 主机控件是在 Word 和 Excel 对象模型中扩展各种用户界面 (UI) 对象的对象。
@@ -32,7 +34,7 @@ ms.locfileid: "71254405"
 
  开发 Excel 或 Word 文档级项目时，可以在运行时以编程方式添加控件，或在设计时使用 Visual Studio 设计器向项目中的文档或工作簿添加控件。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
 - [主机项和主机控件概述](../vsto/host-items-and-host-controls-overview.md)
 
  描述主机项和主机控件的功能，包括对事件编程、将控件绑定到数据以及控件与本机对象的区别。

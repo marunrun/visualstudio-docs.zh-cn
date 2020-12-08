@@ -1,5 +1,7 @@
 ---
 title: Visual Studio 中 Office 解决方案的体系结构
+description: 了解使用 Visual Studio 中的 Microsoft Office 开发人员工具创建的解决方案及其工作原理。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 08/14/2019
 ms.topic: conceptual
@@ -15,25 +17,25 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0842cab03ba92568b0b672e2b8d257af4b6aa490
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0ca40ed18639caae3250ddc1dc2a664b11780f7a
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "69551874"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847580"
 ---
 # <a name="architecture-of-office-solutions-in-visual-studio"></a>Visual Studio 中 Office 解决方案的体系结构
   本部分中的主题提供有关使用 Visual Studio 中的 Office 开发人员工具创建的解决方案的工作原理的信息。
 
 [!include[Add-ins note](includes/addinsnote.md)]
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
 
 [文档级自定义项的体系结构](../vsto/architecture-of-document-level-customizations.md)
 
 介绍文档级自定义项如何工作，以及开发人员和最终用户如何以不同的方式看待它们。
 
-[Architecture of VSTO Add-ins](../vsto/architecture-of-vsto-add-ins.md)
+[VSTO 外接程序的体系结构](../vsto/architecture-of-vsto-add-ins.md)
 
 描述 VSTO 外接程序的组件以及应用程序加载这些组件的方式。
 

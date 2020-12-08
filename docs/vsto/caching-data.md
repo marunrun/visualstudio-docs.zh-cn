@@ -1,5 +1,7 @@
 ---
 title: 缓存数据
+description: 了解如何在文档级自定义项中缓存数据对象，以便可以脱机访问数据或在不 Microsoft Office Word 或 Excel 中打开数据。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c6e0f6d7fcf9920ddb8861712b7c5f8bf04506fc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: db22378477daffd4562a9d60c6b30bc7b96e58e2
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62939410"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847866"
 ---
 # <a name="cache-data"></a>缓存数据
   可以在文档级自定义项中缓存数据对象，以便可以脱机访问数据，也可以在不打开 Microsoft Office Word 或 Microsoft Office Excel 的情况下访问数据。 若要缓存对象，对象必须具有满足特定要求的数据类型。 .NET Framework 中的许多常见数据类型都满足这些要求，其中包括 <xref:System.String> 、 <xref:System.Data.DataSet> 和 <xref:System.Data.DataTable> 。
@@ -79,11 +81,11 @@ ms.locfileid: "62939410"
  有关详细信息，请参阅 [如何：在受密码保护的文档中缓存数据](../vsto/how-to-cache-data-in-a-password-protected-document.md)。
 
 ## <a name="prevent-data-loss-when-adding-null-values-to-the-data-cache"></a>在将 null 值添加到数据缓存时防止数据丢失
- 将对象添加到数据缓存后，在保存和关闭文档之前，所有缓存的对象都必须初始化为非**null** 值。 如果在保存和关闭文档时，任何缓存对象的值都为 **null** ，则 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 将自动从数据缓存中删除所有已缓存的对象。
+ 将对象添加到数据缓存后，在保存和关闭文档之前，所有缓存的对象都必须初始化为非 **null** 值。 如果在保存和关闭文档时，任何缓存对象的值都为 **null** ，则 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 将自动从数据缓存中删除所有已缓存的对象。
 
  如果在设计时使用特性将具有 **null** 值的对象添加到数据缓存 <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> 中，则可以使用 <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> 类在打开文档之前初始化缓存的数据对象。 如果要在最终用户打开文档之前，在未安装 Word 或 Excel 的服务器上初始化缓存的数据，则这非常有用。 有关详细信息，请参阅在 [服务器上访问文档中的数据](../vsto/accessing-data-in-documents-on-the-server.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [如何：缓存数据以便脱机使用或在服务器上使用](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md)
 - [如何：以编程方式在 Office 文档中缓存数据源](../vsto/how-to-programmatically-cache-a-data-source-in-an-office-document.md)
 - [如何：在受密码保护的文档中缓存数据](../vsto/how-to-cache-data-in-a-password-protected-document.md)

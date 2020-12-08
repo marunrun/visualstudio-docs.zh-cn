@@ -1,5 +1,7 @@
 ---
 title: 注册自定义调试引擎 |Microsoft Docs
+description: 了解调试引擎如何将自身注册为类工厂（遵循 COM 约定），并通过注册表向 Visual Studio 注册。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a664385594f139e2c3c5a18a0d8a59e23c13df0a
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 01d7190bbf087bb60ac670341d82078e94c81c52
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90011835"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847177"
 ---
 # <a name="register-a-custom-debug-engine"></a>注册自定义调试引擎
 调试引擎必须在 COM 约定之后将自身注册为类工厂，并通过 Visual Studio 注册表子项注册到 Visual Studio。
@@ -29,7 +31,7 @@ ms.locfileid: "90011835"
  [用于调试的 SDK 帮助](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) 器不仅描述注册调试引擎所需的注册表位置;它还介绍了 *dbgmetric* 库，其中包含许多适用于 c + + 开发人员的有用函数和声明，使操作更容易。
 
 ### <a name="example"></a>示例
- 下面的示例从 TextInterpreter 示例 () 演示如何使用 `SetMetric` *dbgmetric*) 中的函数 (向 Visual Studio 注册调试引擎。 还会在 *dbgmetric*中定义要传递的指标。
+ 下面的示例从 TextInterpreter 示例 () 演示如何使用 `SetMetric` *dbgmetric*) 中的函数 (向 Visual Studio 注册调试引擎。 还会在 *dbgmetric* 中定义要传递的指标。
 
 > [!NOTE]
 > TextInterpreter 是一个基本的调试引擎;它不会进行设置，因此不会注册任何其他功能。 一个更完整的调试引擎可能有一个 `SetMetric` 或其等效的调用的完整列表，一个用于调试引擎支持的每个功能。

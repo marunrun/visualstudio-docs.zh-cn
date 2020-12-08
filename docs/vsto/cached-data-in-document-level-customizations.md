@@ -1,5 +1,7 @@
 ---
 title: 文档级自定义项中的缓存数据
+description: 了解 Visual Studio 如何通过将数据嵌入为数据缓存来将数据从文档级自定义项中的视图中分离出来。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -18,17 +20,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9985dd25ba62cc9c0735a8a8f4008a4c0abe0558
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: be4229c179ec6c5640ab612d28991fe476363a53
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238343"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847892"
 ---
 # <a name="cached-data-in-document-level-customizations"></a>文档级自定义项中的缓存数据
   文档级自定义项的主要目标是在 Office 文档中将数据从视图中分离出来。 数据是指存储在文档中的信息，包括数字和文本。 视图引用 Microsoft Office Word 和 Microsoft Office Excel 的用户界面和对象模型。
 
- Visual Studio 通过允许将数据作为 *数据岛*嵌入（也称为 *数据缓存*），将数据从视图中的数据分离出来。 无需启动 Word 或 Excel 即可直接读取或修改数据。 当你需要修改未安装 Microsoft Office 的服务器上的文档中的数据时，这很有用。 Word 和 Excel 应在客户端环境中使用;它们不会在服务器上运行。
+ Visual Studio 通过允许将数据作为 *数据岛* 嵌入（也称为 *数据缓存*），将数据从视图中的数据分离出来。 无需启动 Word 或 Excel 即可直接读取或修改数据。 当你需要修改未安装 Microsoft Office 的服务器上的文档中的数据时，这很有用。 Word 和 Excel 应在客户端环境中使用;它们不会在服务器上运行。
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
@@ -60,6 +62,6 @@ ms.locfileid: "88238343"
 |可以存储哪些类型的数据？|自定义程序集中满足特定要求的任何公共对象。 有关详细信息，请参阅 [缓存数据](../vsto/caching-data.md)。|任何 XML 数据。|
 |能否在不启动 Microsoft Office 应用程序的情况下访问数据？|是，通过使用 <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> 提供的类 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 。|是，通过使用命名空间中的类 <xref:System.IO.Packaging> ，或使用 OPEN XML 格式 SDK。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [Office 解决方案中的数据](../vsto/data-in-office-solutions.md)
 - [Visual Studio 中 Office 解决方案的体系结构](../vsto/architecture-of-office-solutions-in-visual-studio.md)

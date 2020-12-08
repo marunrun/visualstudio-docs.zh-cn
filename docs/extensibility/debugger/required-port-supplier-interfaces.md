@@ -1,5 +1,7 @@
 ---
 title: 必需的端口提供商接口 |Microsoft Docs
+description: 了解端口提供程序必须运行的接口。 端口供应商提供端口并实现它们。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: bf2aeb1f26f81d773e171aa3fed6b0f2ef976c91
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 13e3ac8dc0c229f0c0a00bd22131251c71893224
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80713155"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847125"
 ---
 # <a name="required-port-supplier-interfaces"></a>必需的端口提供商接口
 端口供应商必须实现 [IDebugPortSupplier2](../../extensibility/debugger/reference/idebugportsupplier2.md) 接口。[IDebugPortSupplier2](../../extensibility/debugger/reference/idebugportsupplier2.md)
@@ -80,5 +82,5 @@ ms.locfileid: "80713155"
 
   为 SDM 附加到此程序提供了一种方法。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [实现端口供应商](../../extensibility/debugger/implementing-a-port-supplier.md)

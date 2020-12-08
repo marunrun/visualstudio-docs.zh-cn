@@ -1,5 +1,7 @@
 ---
 title: 如何：防止 Outlook 显示窗体区域
+description: 了解如何防止 Microsoft Office Outlook 显示特定项的窗体区域。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 90da255beb0a85a302158feb1f9d5cc4981437eb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f247bf82d51fda6d321b45c16f91b857300cc1e4
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85520129"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847671"
 ---
 # <a name="how-to-prevent-outlook-from-displaying-a-form-region"></a>如何：防止 Outlook 显示窗体区域
   在某些情况下，您可能不希望 Microsoft Office Outlook 显示特定项的窗体区域。 例如，如果某一联系人项不包含业务地址，则可以阻止显示该业务在地图中的位置的窗体区域。

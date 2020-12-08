@@ -1,5 +1,7 @@
 ---
 title: 局部变量的示例实现 |Microsoft Docs
+description: 了解 Visual Studio 如何获取本文的表达式计算器中的方法的局部变量。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 86aacb096001bdf634fe019ae9a28f01745c3ce0
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: aad77c9b9481ed6ae32c66260b1e3ef2a662c836
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90011887"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847632"
 ---
 # <a name="sample-implementation-of-locals"></a>局部变量的示例实现
 > [!IMPORTANT]

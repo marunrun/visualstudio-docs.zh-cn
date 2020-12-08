@@ -1,5 +1,7 @@
 ---
 title: 如何：用数据库中的数据填充文档
+description: 了解如何使用解决方案中的数据库中的数据，以及如何使用 Windows 窗体控件在文档中显示数据。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8470ec4acf686c016088c5f474539a1ab7ed85df
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0915d0ef57da5cba7fe73b6b374babe95b1a09c7
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547194"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96848074"
 ---
 # <a name="how-to-populate-documents-with-data-from-a-database"></a>如何：用数据库中的数据填充文档
 
@@ -66,7 +68,7 @@ ms.locfileid: "85547194"
 
 有关如何将更新发送到类型化数据集和数据库的信息，请参阅 [如何：使用主机控件中的数据更新数据源](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [将数据绑定到 Office 解决方案中的控件](../vsto/binding-data-to-controls-in-office-solutions.md)
 - [添加新数据源](../data-tools/add-new-data-sources.md)

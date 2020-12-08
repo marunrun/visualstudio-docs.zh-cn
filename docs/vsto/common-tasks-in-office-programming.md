@@ -1,5 +1,7 @@
 ---
 title: Office 编程中的常见任务
+description: 了解如何对文档级自定义项中的数据进行编程，而无需使用 Microsoft Office Word 或 Office Excel 的对象模型。
+ms.custom: SEO-VS-2020SS
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c82b4dec0c92f19933b045040ed0f1fcecb5b10b
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 4f6fae2b7d446035a08e3fcb77bcffaaed6de3a9
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809854"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96846293"
 ---
 # <a name="common-tasks-in-office-programming"></a>Office 编程中的常见任务
   本主题旨在帮助针对使用 Visual Studio 对 Office 解决方案编程的下列常见问题找到解决方法。
@@ -230,7 +232,7 @@ ms.locfileid: "90809854"
 
 - [如何：更改 Office 解决方案的安装路径](/previous-versions/bb608626(v=vs.110))。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [开始 &#40;Visual Studio 中的 Office 开发&#41;](../vsto/getting-started-office-development-in-visual-studio.md)
 - [按 Office 应用程序和项目类型提供的功能](../vsto/features-available-by-office-application-and-project-type.md)
 - [Office 开发示例和演练](../vsto/office-development-samples-and-walkthroughs.md)

@@ -1,5 +1,7 @@
 ---
 title: 合并 VBA 和文档级自定义项
+description: 了解如何在作为 Microsoft Office Word 或 Excel 的文档级自定义项的一部分的文档中使用 Visual Basic for Applications (VBA) 代码。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -24,12 +26,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b3bab9c132439c6efa53842f1e13c6c5be31db00
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 59d0e9122bf35ac6f40799d91d3b52614d027f50
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "70977605"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96846397"
 ---
 # <a name="combine-vba-and-document-level-customizations"></a>合并 VBA 和文档级自定义项
   在属于 Microsoft Office Word 或 Microsoft Office Excel 的文档级自定义项的文档中，可以使用 Visual Basic for Applications (VBA) 代码。 可以从自定义程序集调用文档中的 VBA 代码，也可以将项目配置为使文档中的 VBA 代码能够调用自定义程序集中的代码。
@@ -42,7 +44,7 @@ ms.locfileid: "70977605"
  运行解决方案时，VBA 和自定义程序集中的事件处理程序选取文档中引发的事件，并且两组代码都会运行。 无法预先确定哪组代码将在另一组代码之前运行；必须在每个单独的情况下通过测试来确定这一点。 如果没有仔细调整和测试这两组代码，可能会得到意外的结果。
 
 ## <a name="call-vba-code-from-the-customization-assembly"></a>从自定义程序集调用 VBA 代码
- 可以在 Word 文档中调用宏，也可以在 Excel 工作簿中调用宏和函数。 为此，可使用以下方法之一：
+ 可以在 Word 文档中调用宏，也可以在 Excel 工作簿中调用宏和函数。 若要执行此操作，请使用以下方法之一：
 
 - 对于 Word，调用 <xref:Microsoft.Office.Interop.Word._Application.Run%2A> 类的方法 <xref:Microsoft.Office.Interop.Word.Application> 。
 
@@ -90,7 +92,7 @@ Globals.Sheet1.Application.Run("MyMacro", missing, missing, missing,
 
   - 对于 Word： *. docm* 或 *.doc*
 
-  - 对于 Excel： *. xlsm*、 *. xltm*、 *.xls*或 *.xlt*
+  - 对于 Excel： *. xlsm*、 *. xltm*、 *.xls* 或 *.xlt*
 
 - 文档必须已经包含其中有 VBA 代码的 VBA 项目。
 
@@ -213,7 +215,7 @@ GetManagedClass(pdispInteropObject Object) As Object
 
 3. 将主机项的 **ReferenceAssemblyFromVbaProject** 属性设置为 **True**。
 
-   当你将 **EnableVbaCallers** 属性重新设置为 **False**时，Visual Studio 将执行以下任务：
+   当你将 **EnableVbaCallers** 属性重新设置为 **False** 时，Visual Studio 将执行以下任务：
 
 4. 从 <xref:Microsoft.VisualBasic.ComClassAttribute> 类删除 <xref:System.Runtime.InteropServices.ComVisibleAttribute> 和 `ThisDocument` 特性。
 
@@ -223,7 +225,7 @@ GetManagedClass(pdispInteropObject Object) As Object
    > Visual Studio 不会自动将 **ReferenceAssemblyFromVbaProject** 属性重新设置为 **False**。 可以使用 **“属性”** 窗口将此属性手动设置为 **False** 。
 
 ### <a name="referenceassemblyfromvbaproject"></a>ReferenceAssemblyFromVbaProject
- 当 Visual Basic 项目或 Visual C# 项目中任何主机项的 **ReferenceAssemblyFromVbaProject** 属性设置为 **True**时，Visual Studio 将执行以下任务：
+ 当 Visual Basic 项目或 Visual C# 项目中任何主机项的 **ReferenceAssemblyFromVbaProject** 属性设置为 **True** 时，Visual Studio 将执行以下任务：
 
 1. 为自定义程序集生成一个类型库，并将该类型库嵌入程序集。
 
@@ -233,13 +235,13 @@ GetManagedClass(pdispInteropObject Object) As Object
 
    - Microsoft Visual Studio Tools for Office Execution Engine 9.0 类型库。 此类型库包含在 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]中。
 
-   将 **ReferenceAssemblyFromVbaProject** 属性重新设置为 **False**时，Visual Studio 将执行以下任务：
+   将 **ReferenceAssemblyFromVbaProject** 属性重新设置为 **False** 时，Visual Studio 将执行以下任务：
 
 3. 文档内的 VBA 项目中删除类型库引用。
 
 4. 从程序集中删除嵌入的类型库。
 
-## <a name="troubleshoot"></a>疑难解答
+## <a name="troubleshoot"></a>故障排除
  下表列出了一些常见错误以及修复错误的建议。
 
 |错误|建议|
@@ -249,7 +251,7 @@ GetManagedClass(pdispInteropObject Object) As Object
 |设置了 **“属性”** 或 **ReferenceAssemblyFromVbaProject** 属性后，一条错误消息指明 <xref:System.Reflection.AssemblyVersionAttribute> 指定的版本号无效。|确保 <xref:System.Reflection.AssemblyVersionAttribute> 项目中的 *AssemblyInfo.cs* 或 *AssemblyInfo* 文件中的声明设置为有效的程序集版本号。 有关有效的程序集版本号的信息，请参见 <xref:System.Reflection.AssemblyVersionAttribute> 类。|
 |重命名自定义程序集后，调入自定义程序集的 VBA 代码将停止工作。|如果在向 VBA 代码公开自定义程序集之后更改其名称，则文档中的 VBA 项目与自定义程序集之间的链接将断开。 若要修复此问题，请将项目中的 **ReferenceFromVbaAssembly** 属性更改为 **False** ，并随后更改回 **True**，然后将 VBA 代码中对旧程序集名称的任何引用替换为新程序集名称。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [如何：在 Visual Basic 项目中向 VBA 公开代码](../vsto/how-to-expose-code-to-vba-in-a-visual-basic-project.md)
 - [如何：在 Visual C&#35; 项目中向 VBA 公开代码](../vsto/how-to-expose-code-to-vba-in-a-visual-csharp-project.md)
 - [演练：在 Visual Basic 项目中调用 VBA 中的代码](../vsto/walkthrough-calling-code-from-vba-in-a-visual-basic-project.md)

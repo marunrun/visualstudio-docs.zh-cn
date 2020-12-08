@@ -1,6 +1,7 @@
 ---
 title: '如何：在 c # 项目中向 VBA 公开代码'
-ms.custom: seodec18
+description: '了解如何在 Visual c # 项目中公开代码，以便在两种类型的代码相互交互时，Visual Basic for Applications (VBA) 代码。'
+ms.custom: seodec18, SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -16,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 21d7672d3c08012e75d73ee8bf4d9816b850eb2c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a830ec75e3997bee8d4bed9e275fc6229fec3405
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85544828"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96846592"
 ---
 # <a name="how-to-expose-code-to-vba-in-a-visual-c-project"></a>如何：在 Visual c # 项目中向 VBA 公开代码
   如果希望两种类型的代码彼此交互，可以在 Visual c # 项目中公开代码，以 Visual Basic for Applications (的 VBA) 代码。
@@ -46,7 +47,7 @@ ms.locfileid: "85544828"
 
 2. 确保在不提示用户启用宏的情况下允许文档中的 VBA 代码运行。 通过在 Word 或 Excel 的“信任中心”设置中将 Office 项目的位置添加到受信任位置列表中，可以信任要运行的 VBA 代码。
 
-3. 将要向 VBA 公开的成员添加到项目中的公共类，并将新成员声明为 **公共**成员。
+3. 将要向 VBA 公开的成员添加到项目中的公共类，并将新成员声明为 **公共** 成员。
 
 4. 将以下和属性应用于要 <xref:System.Runtime.InteropServices.ComVisibleAttribute> <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> 向 VBA 公开的类。 这些特性使类对于 COM 可见，但不生成类接口。
 
@@ -93,7 +94,7 @@ ms.locfileid: "85544828"
 10. 在 **“属性”** 窗口中，选择 **“ReferenceAssemblyFromVbaProject”** 属性，并将值更改为 **“True”**。
 
     > [!NOTE]
-    > 如果工作簿或文档尚未包含 VBA 代码，或者文档中的 VBA 代码不受信任，无法运行，则在您将 **ReferenceAssemblyFromVbaProject** 属性设置为 **True**时，您将收到一条错误消息。 这是因为在这种情况下，Visual Studio 无法修改文档中的 VBA 项目。
+    > 如果工作簿或文档尚未包含 VBA 代码，或者文档中的 VBA 代码不受信任，无法运行，则在您将 **ReferenceAssemblyFromVbaProject** 属性设置为 **True** 时，您将收到一条错误消息。 这是因为在这种情况下，Visual Studio 无法修改文档中的 VBA 项目。
 
 11. 在显示的消息中单击 **“确定”** 。 此消息提醒你，如果在运行项目时将 VBA 代码添加到工作簿或文档，则在 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 下次生成项目时，vba 代码将丢失。 这是因为每次生成项目时，都会覆盖生成输出文件夹中的文档。
 
