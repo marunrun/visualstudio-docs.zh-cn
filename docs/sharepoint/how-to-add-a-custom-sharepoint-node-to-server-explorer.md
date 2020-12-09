@@ -1,6 +1,8 @@
 ---
 title: 如何：将自定义 SharePoint 节点添加到服务器资源管理器 |Microsoft Docs
 titleSuffix: ''
+description: 在 Visual Studio 中将自定义 SharePoint 节点添加到服务器资源管理器。 显示默认情况下不显示在服务器资源管理器中的额外 SharePoint 组件。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,15 +16,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5a74c9c879df57a5ff6444626870ee9f021fb4e9
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: bbee6d780c7f447c8b47f7b478531cb58cef94fd
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584880"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915461"
 ---
 # <a name="how-to-add-a-custom-sharepoint-node-to-server-explorer"></a>如何：将自定义 SharePoint 节点添加到服务器资源管理器
-  可以在**服务器资源管理器**中的 " **SharePoint 连接**" 节点下添加自定义节点。 当你希望显示默认情况下未显示在 **服务器资源管理器** 中的其他 SharePoint 组件时，这非常有用。 有关详细信息，请参阅[扩展服务器资源管理器中的 SharePoint 连接节点](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)。
+  可以在 **服务器资源管理器** 中的 " **SharePoint 连接**" 节点下添加自定义节点。 当你希望显示默认情况下未显示在 **服务器资源管理器** 中的其他 SharePoint 组件时，这非常有用。 有关详细信息，请参阅[扩展服务器资源管理器中的 SharePoint 连接节点](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)。
 
  若要添加自定义节点，请首先创建一个定义新节点的类。 然后创建一个将节点作为现有节点的子节点添加的扩展。
 
@@ -65,7 +67,7 @@ ms.locfileid: "91584880"
 
      若要指定 Visual Studio 提供的内置节点类型，请将以下枚举值之一传递给特性构造函数：
 
-    - <xref:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeTypes>：使用这些值来指定站点连接节点 (在 **服务器资源管理器**中显示站点 url 的节点) 、站点节点或所有其他父节点。
+    - <xref:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeTypes>：使用这些值来指定站点连接节点 (在 **服务器资源管理器** 中显示站点 url 的节点) 、站点节点或所有其他父节点。
 
     - <xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ExtensionNodeTypes>：使用这些值来指定一个内置节点，这些节点表示 SharePoint 站点上的单个组件，如表示列表、字段或内容类型的节点。
 
@@ -73,13 +75,13 @@ ms.locfileid: "91584880"
 
 5. 在 <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodeChildrenRequested> 事件处理程序中，将新节点添加到 <xref:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeEventArgs.Node%2A> 由事件参数参数公开的对象的子节点集合。
 
-     下面的代码示例演示如何将新节点作为 **服务器资源管理器**中 SharePoint 站点节点的子节点添加。
+     下面的代码示例演示如何将新节点作为 **服务器资源管理器** 中 SharePoint 站点节点的子节点添加。
 
      [!code-vb[SPExtensibility.ProjectSystemExtension.General#7](../sharepoint/codesnippet/VisualBasic/projectsystemexamples/extension/serverexplorernode.vb#7)]
      [!code-csharp[SPExtensibility.ProjectSystemExtension.General#7](../sharepoint/codesnippet/CSharp/projectsystemexamples/extension/serverexplorernode.cs#7)]
 
 ## <a name="complete-example"></a>完整示例
- 下面的代码示例提供了完整的代码，用于定义一个简单的节点并将其作为 **服务器资源管理器**中 SharePoint 站点节点的子节点添加。
+ 下面的代码示例提供了完整的代码，用于定义一个简单的节点并将其作为 **服务器资源管理器** 中 SharePoint 站点节点的子节点添加。
 
  [!code-vb[SPExtensibility.ProjectSystemExtension.General#5](../sharepoint/codesnippet/VisualBasic/projectsystemexamples/extension/serverexplorernode.vb#5)]
  [!code-csharp[SPExtensibility.ProjectSystemExtension.General#5](../sharepoint/codesnippet/CSharp/projectsystemexamples/extension/serverexplorernode.cs#5)]

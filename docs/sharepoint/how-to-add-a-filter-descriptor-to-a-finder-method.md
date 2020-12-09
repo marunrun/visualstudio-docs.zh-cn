@@ -1,5 +1,7 @@
 ---
 title: 如何：向 Finder 方法添加筛选器描述符 |Microsoft Docs
+description: 了解如何使用 Visual Studio 中的 "BDC 方法详细信息" 窗口向 Finder 方法添加筛选器描述符。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,15 +17,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 228afb2f49f4d528fa9b806e9bf8d2531f7de901
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ff312753be07867d8978dc4d5f60d5dfc0eee557
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016737"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915422"
 ---
 # <a name="how-to-add-a-filter-descriptor-to-a-finder-method"></a>如何：向 Finder 方法添加筛选器描述符
-  筛选器描述符允许模型的使用者在执行之前将值传递给方法。 有关详细信息，请参阅 [设计业务数据连接模型](../sharepoint/designing-a-business-data-connectivity-model.md)。
+  筛选器描述符允许模型的使用者在执行之前将值传递给方法。 有关详细信息，请参阅[设计业务数据连接模型](../sharepoint/designing-a-business-data-connectivity-model.md)。
 
  常见的一种情况是，SharePoint 中的用户想要检索符合某些条件的外部内容类型的实例。 可以通过向 Finder 方法添加筛选器描述符来支持此方案。
 
@@ -37,13 +39,13 @@ ms.locfileid: "86016737"
 
 4. 在 " **属性** " 窗口中，将 " **类型名称** " 属性设置为适用于筛选器的数据类型。
 
-     例如，筛选器可以使用订单日期来限制该方法返回的销售订单数。 若要支持该筛选器，必须将类型描述符的**Type Name**属性**设置为 system.string。**
+     例如，筛选器可以使用订单日期来限制该方法返回的销售订单数。 若要支持该筛选器，必须将类型描述符的 **Type Name** 属性 **设置为 system.string。**
 
 5. 在 " **方法详细信息** " 窗口中，展开 " **筛选器描述符** " 节点。
 
 6. 在 " **添加筛选器描述符** " 列表中，选择 " **创建筛选器描述符**"。
 
-     **筛选器描述符**节点下将显示一个新的筛选器描述符。
+     **筛选器描述符** 节点下将显示一个新的筛选器描述符。
 
 7. 在菜单栏上，选择 "**查看**  >  **属性窗口**"。
 

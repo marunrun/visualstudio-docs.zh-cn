@@ -1,6 +1,8 @@
 ---
 title: 如何：向 SharePoint 项目添加现有 BDC 模型文件 |Microsoft Docs
 titleSuffix: ''
+description: 向 Visual Studio 中的 SharePoint 项目添加现有的业务数据连接 (BDC) 模型文件，以便您可以自定义、打包和重新部署 BDC 模型。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -18,19 +20,19 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: fbfbd4e485a359b7e760188217326d23d3b0aa47
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: ce65f286c3de760ff74e5ef7239aac54d760f003
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584615"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914954"
 ---
 # <a name="how-to-add-an-existing-bdc-model-file-to-a-sharepoint-project"></a>如何：将现有 BDC 模型文件添加到 SharePoint 项目
   您可以使用 Visual Studio 自定义、打包和重新部署业务数据连接 (BDC) 模型，以便将模型文件 (*bdcm*) 添加到任何 SharePoint 场项目。 有关详细信息，请参阅[创建业务数据连接模型](../sharepoint/creating-a-business-data-connectivity-model.md)。
 
 ### <a name="to-add-a-bdc-model-file-to-a-sharepoint-project"></a>将 BDC 模型文件添加到 SharePoint 项目
 
-1. 在 **解决方案资源管理器**中，选择 SharePoint 项目的文件夹。
+1. 在 **解决方案资源管理器** 中，选择 SharePoint 项目的文件夹。
 
 2. 在菜单栏上，选择 "**项目**" "  >  **添加现有项**"。
 
@@ -44,7 +46,7 @@ ms.locfileid: "91584615"
 
    - 否则，请选择 " **否** " 按钮，然后选择 " **确定"** 按钮。
 
-     **业务数据连接模型**项将添加到项目。
+     **业务数据连接模型** 项将添加到项目。
 
 ## <a name="see-also"></a>另请参阅
 - [创建业务数据连接模型](../sharepoint/creating-a-business-data-connectivity-model.md)

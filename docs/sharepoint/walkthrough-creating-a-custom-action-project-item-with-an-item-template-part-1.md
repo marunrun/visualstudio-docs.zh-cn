@@ -1,6 +1,8 @@
 ---
 title: 用项模板创建自定义操作项目项（第1部分）
 titleSuffix: ''
+description: 使用项模板创建可添加到 SharePoint 项目中的项目项，以便在 SharePoint 站点上创建自定义操作。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5cdf574d17e63e1ef4906c629d43f5f928784d01
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 5d9d1d2cca8f8ffaec67c92b44e7a621d08ad673
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585558"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915266"
 ---
 # <a name="walkthrough-create-a-custom-action-project-item-with-an-item-template-part-1"></a>演练：使用项模板创建自定义操作项目项（第1部分）
   你可以通过创建自己的项目项类型，在 Visual Studio 中扩展 SharePoint 项目系统。 在本演练中，您将创建一个可以添加到 SharePoint 项目中以在 SharePoint 站点上创建自定义操作的项目项。 自定义操作将菜单项添加到 SharePoint 网站的 " **网站操作** " 菜单。
@@ -34,7 +36,7 @@ ms.locfileid: "91585558"
 
   - 当开发人员更改项目项和包含它的项目的某些属性时运行的代码。
 
-  - 显示在 **解决方案资源管理器**中的项目项旁边的自定义图标。
+  - 显示在 **解决方案资源管理器** 中的项目项旁边的自定义图标。
 
 - 为项目项创建 Visual Studio 项模板。
 
@@ -47,12 +49,12 @@ ms.locfileid: "91585558"
 > [!NOTE]
 > 可以从 [Github](https://github.com/SharePoint/PnP/tree/master/Samples/Workflow.Activities) 下载示例，其中演示了如何为工作流创建自定义活动。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
  若要完成本演练，开发计算机上需要以下组件：
 
 - 支持的 Microsoft Windows、SharePoint 和 Visual Studio 版本。
 
-- [!INCLUDE[vssdk_current_long](../sharepoint/includes/vssdk-current-long-md.md)] 本演练使用 SDK 中的 **Vsix 项目** 模板来创建用于部署项目项的 vsix 包。 有关详细信息，请参阅 [在 Visual Studio 中扩展 SharePoint 工具](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)。
+- [!INCLUDE[vssdk_current_long](../sharepoint/includes/vssdk-current-long-md.md)]。 本演练使用 SDK 中的 **Vsix 项目** 模板来创建用于部署项目项的 vsix 包。 有关详细信息，请参阅 [在 Visual Studio 中扩展 SharePoint 工具](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)。
 
   以下概念的知识非常有用，但不是必需的，无法完成本演练：
 
@@ -92,7 +94,7 @@ ms.locfileid: "91585558"
 
 #### <a name="to-create-the-item-template-project"></a>创建项模板项目
 
-1. 在 **解决方案资源管理器**中，打开 "解决方案" 节点的快捷菜单，选择 " **添加**"，然后选择 " **新建项目**"。
+1. 在 **解决方案资源管理器** 中，打开 "解决方案" 节点的快捷菜单，选择 " **添加**"，然后选择 " **新建项目**"。
 
 2. 在 " **新建项目** " 对话框顶部的列表中，确保选择了 " **.NET Framework 4.5** "。
 
@@ -106,7 +108,7 @@ ms.locfileid: "91585558"
 
 #### <a name="to-create-the-extension-project"></a>创建扩展项目
 
-1. 在 **解决方案资源管理器**中，打开 "解决方案" 节点的快捷菜单，选择 " **添加**"，然后选择 " **新建项目**"。
+1. 在 **解决方案资源管理器** 中，打开 "解决方案" 节点的快捷菜单，选择 " **添加**"，然后选择 " **新建项目**"。
 
 2. 在 " **新建项目** " 对话框顶部的列表中，确保选择了 " **.NET Framework 4.5** "。
 
@@ -123,13 +125,13 @@ ms.locfileid: "91585558"
 
 #### <a name="to-configure-the-project"></a>配置项目
 
-1. 在 **解决方案资源管理器**中，打开 **ProjectItemDefinition** 项目的快捷菜单，选择 " **添加**"，然后选择 " **新建项**"。
+1. 在 **解决方案资源管理器** 中，打开 **ProjectItemDefinition** 项目的快捷菜单，选择 " **添加**"，然后选择 " **新建项**"。
 
 2. 在项目项列表中，选择 " **代码文件**"。
 
 3. 在 " **名称** " 框中，输入名称 **CustomAction** ，并选择相应的文件扩展名，然后选择 " **添加** " 按钮。
 
-4. 在 **解决方案资源管理器**中，打开 **ProjectItemDefinition** 项目的快捷菜单，然后选择 " **添加引用**"。
+4. 在 **解决方案资源管理器** 中，打开 **ProjectItemDefinition** 项目的快捷菜单，然后选择 " **添加引用**"。
 
 5. 在 " **引用管理器-ProjectItemDefinition** " 对话框中，选择 " **程序集** " 节点，然后选择 " **框架** " 节点。
 
@@ -154,13 +156,13 @@ ms.locfileid: "91585558"
      [!code-vb[SPExtensibility.ProjectItem.CustomAction#1](../sharepoint/codesnippet/VisualBasic/customactionprojectitem/projectitemdefinition/customaction.vb#1)]
 
 ## <a name="create-an-icon-for-the-project-item-in-solution-explorer"></a>为中的项目项创建一个图标解决方案资源管理器
- 创建自定义 SharePoint 项目项时，可以将图像与项目项 (的图标或位图) 相关联。 此图像显示在 **解决方案资源管理器**中的项目项的旁边。
+ 创建自定义 SharePoint 项目项时，可以将图像与项目项 (的图标或位图) 相关联。 此图像显示在 **解决方案资源管理器** 中的项目项的旁边。
 
  在下面的过程中，您将为项目项创建一个图标，并将该图标嵌入到扩展程序集中。 此图标由 <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemIconAttribute> `CustomActionProjectItemTypeProvider` 之前创建的类的引用。
 
 #### <a name="to-create-a-custom-icon-for-the-project-item"></a>为项目项创建自定义图标
 
-1. 在 **解决方案资源管理器**中，打开 **ProjectItemDefinition** 项目的快捷菜单，选择 " **添加**"，然后选择 " **新建项 ...**"。
+1. 在 **解决方案资源管理器** 中，打开 **ProjectItemDefinition** 项目的快捷菜单，选择 " **添加**"，然后选择 " **新建项 ...**"。
 
 2. 在项目项列表中，选择 **图标文件** 项。
 
@@ -169,17 +171,17 @@ ms.locfileid: "91585558"
 
 3. 在 " **名称** " 框中，输入 **CustomAction_SolutionExplorer .ico**，然后选择 " **添加** " 按钮。
 
-     此时会在 **图像编辑器**中打开 "新建" 图标。
+     此时会在 **图像编辑器** 中打开 "新建" 图标。
 
 4. 编辑16x16 版本的图标文件，使其具有可识别的设计，并保存图标文件。
 
-5. 在 **解决方案资源管理器**中，选择 " **CustomAction_SolutionExplorer**"。
+5. 在 **解决方案资源管理器** 中，选择 " **CustomAction_SolutionExplorer**"。
 
 6. 在 " **属性** " 窗口中，选择 " **生成操作** " 属性旁边的箭头。
 
 7. 在出现的列表中，选择 " **嵌入的资源**"。
 
-## <a name="checkpoint"></a>检查点
+## <a name="checkpoint"></a>Checkpoint
  在本演练的此时，项目项的所有代码现在都在项目中。 生成项目以验证它是否编译而不发生错误。
 
 #### <a name="to-build-your-project"></a>若要生成你的项目
@@ -221,7 +223,7 @@ ms.locfileid: "91585558"
 
      此文件定义项模板的内容和行为。 有关此文件的内容的详细信息，请参阅 [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)。
 
-4. 在 **解决方案资源管理器**中，打开 **ItemTemplate** 项目的快捷菜单，选择 " **添加**"，然后选择 " **新建项**"。
+4. 在 **解决方案资源管理器** 中，打开 **ItemTemplate** 项目的快捷菜单，选择 " **添加**"，然后选择 " **新建项**"。
 
 5. 在 " **添加新项** " 对话框中，选择 " **文本文件** " 模板。
 
@@ -241,7 +243,7 @@ ms.locfileid: "91585558"
 
      此文件包含有关项目项所包含的文件的信息。 `Type`元素的属性 `ProjectItem` 必须设置为在项目项定义上传递到的相同字符串 (在 <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute> `CustomActionProjectItemTypeProvider` 本演练前面部分中创建的类) 。 有关 *spdata* 文件的内容的详细信息，请参阅 [SharePoint 项目项架构参考](../sharepoint/sharepoint-project-item-schema-reference.md)。
 
-8. 在 **解决方案资源管理器**中，打开 **ItemTemplate** 项目的快捷菜单，选择 " **添加**"，然后选择 " **新建项**"。
+8. 在 **解决方案资源管理器** 中，打开 **ItemTemplate** 项目的快捷菜单，选择 " **添加**"，然后选择 " **新建项**"。
 
 9. 在 " **添加新项** " 对话框中，选择 " **XML 文件** " 模板。
 
@@ -267,7 +269,7 @@ ms.locfileid: "91585558"
 
 12. （可选）打开 *ItemTemplate .ico* 文件并对其进行修改，使其具有可识别的设计。 此图标将显示在 " **添加新项** " 对话框中的项目项旁边。
 
-13. 在 **解决方案资源管理器**中，打开 **ItemTemplate** 项目的快捷菜单，然后选择 " **卸载项目**"。
+13. 在 **解决方案资源管理器** 中，打开 **ItemTemplate** 项目的快捷菜单，然后选择 " **卸载项目**"。
 
 14. 再次打开 **ItemTemplate** 项目的快捷菜单，然后选择 " **编辑 itemtemplate. .csproj** " 或 " **编辑 .vbproj**"。
 
@@ -287,14 +289,14 @@ ms.locfileid: "91585558"
 
      `OutputSubPath`元素指定在生成项目时创建项模板的路径中的其他文件夹。 此处指定的文件夹确保项模板仅在客户打开 " **添加新项** " 对话框时可用，展开 " **SharePoint** " 节点，然后选择 " **2010** " 节点。
 
-17. 在 **解决方案资源管理器**中，打开 **ItemTemplate** 项目的快捷菜单，然后选择 " **重新加载项目**"。
+17. 在 **解决方案资源管理器** 中，打开 **ItemTemplate** 项目的快捷菜单，然后选择 " **重新加载项目**"。
 
 ## <a name="create-a-vsix-package-to-deploy-the-project-item"></a>创建 VSIX 包以部署项目项
  若要部署扩展，请使用解决方案中的 VSIX 项目创建 VSIX 包。 首先，通过修改 VSIX 项目中包含的 source.extension.vsixmanifest 文件来配置 VSIX 包。 然后，通过生成解决方案创建 VSIX 包。
 
 #### <a name="to-configure-and-create-the-vsix-package"></a>配置和创建 VSIX 包
 
-1. 在 **解决方案资源管理器**中，在 CustomActionProjectItem 项目中打开 **source.extension.vsixmanifest** 文件的快捷菜单，然后选择 " **打开**"。
+1. 在 **解决方案资源管理器** 中，在 CustomActionProjectItem 项目中打开 **source.extension.vsixmanifest** 文件的快捷菜单，然后选择 " **打开**"。
 
      Visual Studio 将在清单编辑器中打开该文件。 Source.extension.vsixmanifest 文件是所有 VSIX 包都需要的 source.extension.vsixmanifest 文件的基础。 有关此文件的详细信息，请参阅 [VSIX 扩展架构1.0 引用](/previous-versions/dd393700(v=vs.110))。
 
@@ -363,7 +365,7 @@ ms.locfileid: "91585558"
 
 5. 在 " **SharePoint 自定义向导**" 中，输入要用于调试的站点的 URL，然后选择 " **完成** " 按钮。
 
-6. 在 **解决方案资源管理器**中，打开项目节点的快捷菜单，选择 " **添加**"，然后选择 " **新建项**"。
+6. 在 **解决方案资源管理器** 中，打开项目节点的快捷菜单，选择 " **添加**"，然后选择 " **新建项**"。
 
 7. 在 "**添加新项**" 对话框中，选择 " **SharePoint** " 节点下的 " **2010** " 节点。
 
@@ -377,7 +379,7 @@ ms.locfileid: "91585558"
 
 10. 选择 **F5** 键以继续调试项目。
 
-11. 在 Visual Studio 的实验实例中，在 **解决方案资源管理器**中，打开 **CustomAction1** 节点的快捷菜单，然后选择 " **查看自定义操作设计器**"。
+11. 在 Visual Studio 的实验实例中，在 **解决方案资源管理器** 中，打开 **CustomAction1** 节点的快捷菜单，然后选择 " **查看自定义操作设计器**"。
 
 12. 确认出现消息框，然后选择 **"确定"** 按钮。
 
@@ -387,13 +389,13 @@ ms.locfileid: "91585558"
 
      此时将打开 " **输出** " 窗口。
 
-14. 在 **解决方案资源管理器**中，打开 **CustomAction1** 项目的快捷菜单，然后将其名称更改为 **MyCustomAction**。
+14. 在 **解决方案资源管理器** 中，打开 **CustomAction1** 项目的快捷菜单，然后将其名称更改为 **MyCustomAction**。
 
      在 " **输出** " 窗口中，将显示一条确认消息。 此消息由 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemNameChanged> 您在类中定义的事件处理程序来编写 `CustomActionProjectItemTypeProvider` 。 当开发人员修改项目项时，可以处理此事件和其他项目项事件以实现自定义行为。
 
 #### <a name="to-test-the-custom-action-in-sharepoint"></a>测试 SharePoint 中的自定义操作
 
-1. 在 Visual Studio 的实验实例中，打开**MyCustomAction**项目项子项目的*Elements.xml*文件。
+1. 在 Visual Studio 的实验实例中，打开 **MyCustomAction** 项目项子项目的 *Elements.xml* 文件。
 
 2. 在 *Elements.xml* 文件中，进行以下更改，并保存该文件：
 
@@ -421,7 +423,7 @@ ms.locfileid: "91585558"
         Url="https://docs.microsoft.com/sharepoint/dev/"
         ```
 
-3. 选择 F5****。
+3. 选择 F5。
 
      自定义操作打包并部署到在项目的 " **网站 URL** " 属性中指定的 SharePoint 站点。 Web 浏览器将打开此站点的默认页面。
 
@@ -437,7 +439,7 @@ ms.locfileid: "91585558"
 
 1. 在 Visual Studio 的实验实例中，在菜单栏上选择 "**工具**" "  >  **扩展和更新**"。
 
-     此时，“扩展和更新”**** 对话框打开。
+     此时，“扩展和更新”对话框打开。
 
 2. 在扩展列表中，选择 " **自定义操作项目项**"，然后选择 " **卸载** " 按钮。
 

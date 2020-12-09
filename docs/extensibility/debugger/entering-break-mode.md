@@ -1,5 +1,7 @@
 ---
 title: 进入中断模式 |Microsoft Docs
+description: 了解在函数中遇到的断点、运行到光标处的源代码行或运行到断点时所发生的过程。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4bbcec8adf6468f70d95df5f291ce1e5540406cf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e73c64d17aee48cdb67a110e93aa556f112a1014
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738877"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915227"
 ---
 # <a name="enter-break-mode"></a>进入中断模式
 以下信息描述了单步执行函数后遇到断点、运行到包含游标的源代码行或运行到断点时所发生的过程。
@@ -41,5 +43,5 @@ ms.locfileid: "80738877"
 
     - [IDebugStackFrame2：： GetCodeContext](../../extensibility/debugger/reference/idebugstackframe2-getcodecontext.md) 获取内存信息
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [调用调试器事件](../../extensibility/debugger/calling-debugger-events.md)

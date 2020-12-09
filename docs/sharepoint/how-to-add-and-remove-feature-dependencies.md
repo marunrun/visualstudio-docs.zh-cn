@@ -1,5 +1,7 @@
 ---
 title: 如何：添加和移除功能依赖项 |Microsoft Docs
+description: 查看如何使用 Visual Studio 中的功能设计器在 SharePoint 解决方案中添加和移除功能依赖项。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c318a7dc4672a10e993d0149ec77e7f94679d465
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5011db32123e77e9bf60c99459125302b2bf8264
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86014776"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915357"
 ---
 # <a name="how-to-add-and-remove-feature-dependencies"></a>如何：添加和移除功能依赖项
   SharePoint 功能可能取决于功能或数据的其他功能。 在这些情况下，你可以将这些其他功能标记为功能的依赖项。 这样一来，SharePoint server 确保在激活功能之前激活依赖功能。

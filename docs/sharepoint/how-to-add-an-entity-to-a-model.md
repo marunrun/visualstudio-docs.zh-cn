@@ -1,5 +1,7 @@
 ---
 title: 如何：向模型添加实体 |Microsoft Docs
+description: 通过将实体控件从 Visual Studio 工具箱添加到业务数据连接 (BDC) 设计器，将实体添加到模型。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -17,19 +19,19 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b80f39494b98014a75d4265f228906be2ff45188
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0efd7a6fc0d6254dbfd3cbda538ffe0e30585453
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016672"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915383"
 ---
 # <a name="how-to-add-an-entity-to-a-model"></a>如何：向模型添加实体
   若要创建实体，请将 Visual Studio **工具箱** 中的实体控件添加到业务数据连接 (BDC) 设计器中。
 
 ### <a name="to-add-an-entity-to-the-model"></a>向模型添加实体
 
-1. 创建 BDC 项目，或打开现有的 BDC 项目。 有关详细信息，请参阅 [创建业务数据连接模型](../sharepoint/creating-a-business-data-connectivity-model.md)。
+1. 创建 BDC 项目，或打开现有的 BDC 项目。 有关详细信息，请参阅[创建业务数据连接模型](../sharepoint/creating-a-business-data-connectivity-model.md)。
 
 2. 在 " **工具箱**" 的 " **BusinessDataCatalog** " 组中，将 " **实体** " 控件添加到设计器上。
 
@@ -47,7 +49,7 @@ ms.locfileid: "86016672"
      [!code-csharp[SP_BDC_Entity_Data_Class#1](../sharepoint/codesnippet/CSharp/sp_bdc_entity_data_class/bdcmodel1/contact.cs#1)]
      [!code-vb[SP_BDC_Entity_Data_Class#1](../sharepoint/codesnippet/VisualBasic/sp_bdc_entity_data_class/bdcmodel1/contact.vb#1)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [如何：添加 Creator 方法](../sharepoint/how-to-add-a-creator-method.md)
 - [如何：添加删除器方法](../sharepoint/how-to-add-a-deleter-method.md)
 - [如何：添加更新程序方法](../sharepoint/how-to-add-an-updater-method.md)

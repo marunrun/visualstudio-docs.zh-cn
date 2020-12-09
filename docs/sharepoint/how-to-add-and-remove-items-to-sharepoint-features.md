@@ -1,5 +1,7 @@
 ---
 title: 如何：在 SharePoint 功能中添加和移除项 |Microsoft Docs
+description: 使用 Visual Studio 中的功能设计器将 SharePoint 项目项手动添加到 SharePoint 功能并将其删除。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 27c6ebfb0b0cdbff0a184859ffa2a73acab809c1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dacfbf715ff37238af5332976313c3b592d21be6
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86014536"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914915"
 ---
 # <a name="how-to-add-and-remove-items-to-sharepoint-features"></a>如何：在 SharePoint 功能中添加和移除项
   当你创建 SharePoint 解决方案时，Visual Studio 会向你的功能添加默认的 SharePoint 项目项。 在部署之前，您可以添加和删除 SharePoint 项目项以修改 SharePoint 功能。
@@ -30,7 +32,7 @@ ms.locfileid: "86014536"
 
 1. 打开 "功能设计器"。
 
-    有关详细信息，请参阅 [如何：自定义 SharePoint 功能](../sharepoint/how-to-customize-a-sharepoint-feature.md)。
+    有关详细信息，请参阅[如何：自定义 SharePoint 功能](../sharepoint/how-to-customize-a-sharepoint-feature.md)中的说明进行操作。
 
 2. 通过执行以下一个或多个步骤，将 **"解决方案** " 列表中的项中的一个或多个项添加到 **功能列表中的项** ：
 

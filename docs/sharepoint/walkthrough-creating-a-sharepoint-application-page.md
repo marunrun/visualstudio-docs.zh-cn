@@ -1,5 +1,7 @@
 ---
 title: 演练：创建 SharePoint 应用程序页 |Microsoft Docs
+description: 在本演练中，将创建一个应用程序页 (专用形式的 ASP.NET 页面) ，然后使用本地 SharePoint 站点进行调试。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 76375c15077bf672eaba01c840ba406228046435
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 95addb145312de85a3525c228297e7ff9636ea0d
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016490"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914876"
 ---
 # <a name="walkthrough-create-a-sharepoint-application-page"></a>演练：创建 SharePoint 应用程序页
 
@@ -37,7 +39,7 @@ ms.locfileid: "86016490"
 > [!NOTE]
 > 以下说明中的某些 Visual Studio 用户界面元素在计算机上出现的名称或位置可能会不同。 这些元素取决于你所使用的 Visual Studio 版本和你所使用的设置。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md)。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 - 支持的 Windows 和 SharePoint 版本。
 
@@ -59,9 +61,9 @@ ms.locfileid: "86016490"
 
 若要创建应用程序页，请向项目添加 " **应用程序页** " 项。
 
-1. 在 **解决方案资源管理器**中，选择 " **MySharePointProject** " 项目。
+1. 在 **解决方案资源管理器** 中，选择 " **MySharePointProject** " 项目。
 
-2. 在菜单栏上，选择 "**项目**" "  >  **添加新项**"。
+2. 在菜单栏上，依次选择“项目” > “添加新项”。
 
 3. 在 " **添加新项** " 对话框中，选择 " **应用程序页 (场仅解决方案** 模板"。
 
@@ -127,9 +129,9 @@ ms.locfileid: "86016490"
 
 运行该项目时，SharePoint 网站将打开，并显示应用程序页面。
 
-1. 在 **解决方案资源管理器**中，打开应用程序页的快捷菜单，然后选择 " **设为启动项**"。
+1. 在 **解决方案资源管理器** 中，打开应用程序页的快捷菜单，然后选择 " **设为启动项**"。
 
-2. 选择 F5****。
+2. 选择 F5。
 
      SharePoint 站点将打开。
 

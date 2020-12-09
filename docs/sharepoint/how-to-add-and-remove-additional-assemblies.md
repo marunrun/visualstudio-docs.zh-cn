@@ -1,5 +1,7 @@
 ---
 title: 如何：添加和移除附加程序集 |Microsoft Docs
+description: 了解如何添加和删除 SharePoint 解决方案包中的其他程序集。 同时，添加或删除安全控件和类资源。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 07b9016a4e246d3ed5a2697d924f556517a8226f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 41b41ccd5eda2a44457adf23302a833574dade9e
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86014833"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914967"
 ---
 # <a name="how-to-add-and-remove-additional-assemblies"></a>如何：添加和移除附加程序集
   如果 SharePoint 包依赖于其他程序集以获取功能或数据，则您可以将这些程序集添加到您的解决方案包 ( .wsp) 。 这样一来，SharePoint server 便可确保使用包安装自定义程序集。

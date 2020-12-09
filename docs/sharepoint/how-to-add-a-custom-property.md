@@ -1,5 +1,7 @@
 ---
 title: 如何：添加自定义属性 |Microsoft Docs
+description: 了解如何使用 Visual Studio 的 BDC 资源管理器中的属性编辑器将自定义属性添加到 SharePoint 中的业务数据连接 (BDC) 模型。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -17,15 +19,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e79b18b4d2b388d2ff0387fed24778f8db03fd54
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b12124d874c58ce17f1fa24d2bd9283af64f1c92
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86017072"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915474"
 ---
 # <a name="how-to-add-a-custom-property"></a>如何：添加自定义属性
-  您可以使用 **属性编辑器**向模型中添加自定义属性。 您可以在代码中访问这些属性，以便在运行时检索连接字符串和其他数据等信息。
+  您可以使用 **属性编辑器** 向模型中添加自定义属性。 您可以在代码中访问这些属性，以便在运行时检索连接字符串和其他数据等信息。
 
 ### <a name="to-add-a-custom-property"></a>添加自定义属性
 

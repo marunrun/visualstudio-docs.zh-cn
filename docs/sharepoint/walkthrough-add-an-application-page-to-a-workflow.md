@@ -1,5 +1,7 @@
 ---
 title: 演练：向工作流添加应用程序页 |Microsoft Docs
+description: 在本演练中，向 SharePoint 工作流解决方案中添加一个应用程序页。 修改工作流代码。 创建、编码和测试应用程序页。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,14 +17,14 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f54914e6676e0cc2400fa04ebb089fac08f58c3c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c862c1de3b0630b3a5144f821e6266c34a88a5db
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015492"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915656"
 ---
-# <a name="walkthrough-add-an-application-page-to-a-workflow"></a>演练：向工作流添加应用程序页
+# <a name="walkthrough-add-an-application-page-to-a-workflow"></a>演练：将应用程序页添加到工作流
   本演练演示如何将显示从工作流派生的数据的应用程序页添加到工作流项目中。 它基于主题 [演练：创建具有关联和启动窗体的工作流](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)中所述的项目。
 
  本演练演示了下列任务：
@@ -44,7 +46,7 @@ ms.locfileid: "86015492"
 
 - 还需要完成主题 [演练：创建具有关联和启动窗体的工作流](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)中的项目。
 
-## <a name="ammend-the-workflow-code"></a>Ammend 工作流代码
+## <a name="amend-the-workflow-code"></a>修改工作流代码
  首先，将一行代码添加到工作流，以便将 "结果" 列的值设置为支出报表的金额。 此值稍后会在支出报表汇总计算中使用。
 
 #### <a name="to-set-the-value-of-the-outcome-column-in-the-workflow"></a>设置工作流中的结果列的值
@@ -308,7 +310,7 @@ ms.locfileid: "86015492"
 
 3. 若要表示此示例的费用报表，请选择页面顶部的 " **LibraryTools** " 选项卡上的 "**文档**" 链接，并选择工具功能区上的 "**上载文档**" 按钮，将一些新文档上载到 "文档" 列表中。
 
-4. 上传一些文档后，可通过选择页面顶部的 " **LibraryTools** " 选项卡上的**库**链接，然后选择工具功能区上的 "**库设置**" 按钮来实例化工作流。
+4. 上传一些文档后，可通过选择页面顶部的 " **LibraryTools** " 选项卡上的 **库** 链接，然后选择工具功能区上的 "**库设置**" 按钮来实例化工作流。
 
 5. 在 "**文档库设置**" 页中，选择 "**权限和管理**" 部分中的 "**工作流设置**" 链接。
 
@@ -318,7 +320,7 @@ ms.locfileid: "86015492"
 
     此时将显示工作流关联窗体。 使用它报告支出限制金额。
 
-8. 在关联窗体中，在 "**自动批准限制**" 框中输入**1000** ，然后选择 "**关联工作流**" 按钮。
+8. 在关联窗体中，在 "**自动批准限制**" 框中输入 **1000** ，然后选择 "**关联工作流**" 按钮。
 
 9. 选择 " **主页** " 按钮返回到 SharePoint 主页。
 
@@ -330,7 +332,7 @@ ms.locfileid: "86015492"
 
 13. 在 " **支出合计** " 文本框中，输入大于1000的值，然后选择 " **启动工作流** " 按钮。
 
-     如果报告的支出超出分配的支出金额，则会将任务添加到任务列表。 已**完成**值为**ExpenseTest**的列也会添加到 "共享文档" 列表中的 "费用报表" 项。
+     如果报告的支出超出分配的支出金额，则会将任务添加到任务列表。 已 **完成** 值为 **ExpenseTest** 的列也会添加到 "共享文档" 列表中的 "费用报表" 项。
 
 14. 在 "共享文档" 列表中对其他文档重复步骤 11-13。  (确切的文档数并不重要。 ) 
 
@@ -349,7 +351,7 @@ ms.locfileid: "86015492"
 
 ## <a name="see-also"></a>另请参阅
 
-- [演练：创建具有关联窗体和启动窗体的工作流](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)
+- [演练：使用关联和启动窗体创建工作流](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)
 - [如何：创建应用程序页](../sharepoint/how-to-create-an-application-page.md)
 - [为 SharePoint 创建应用程序页](../sharepoint/creating-application-pages-for-sharepoint.md)
 - [开发 SharePoint 解决方案](../sharepoint/developing-sharepoint-solutions.md)

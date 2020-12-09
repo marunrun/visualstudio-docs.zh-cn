@@ -1,5 +1,7 @@
 ---
 title: 显示局部变量 |Microsoft Docs
+description: 了解局部变量和参数的列表（统称为方法的局部变量），该方法在执行暂停时显示。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4d44b276aeb9c6acb0ef34cc186662d49246de7d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ddc7bc564e4e294144eeb3fa34db8bdf73971053
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738929"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915539"
 ---
 # <a name="display-locals"></a>显示局部变量
 > [!IMPORTANT]
@@ -31,11 +33,11 @@ ms.locfileid: "80738929"
 > [!NOTE]
 > " **快速监视** " 和 " **监视** " 窗口还显示具有相同格式的名称、值和类型的变量。 不过，这些值通过调用 [GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) 而不是获得 `IDebugProperty2::EnumChildren` 。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
  [局部变量的示例实现](../../extensibility/debugger/sample-implementation-of-locals.md) 使用示例逐步完成实现局部变量的过程。
 
 ## <a name="related-sections"></a>相关章节
  [计算上下文](../../extensibility/debugger/evaluation-context.md) 说明当调试引擎 (DE) 调用表达式计算器 (EE) 时，它将传递三个参数。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [编写 CLR 表达式计算器](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)
