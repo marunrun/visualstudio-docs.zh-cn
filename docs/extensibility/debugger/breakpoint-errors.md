@@ -1,5 +1,7 @@
 ---
 title: 断点错误 |Microsoft Docs
+description: 了解断点尝试绑定到代码但失败以及如何解决断点错误的过程。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0766792f19faf7c1933c6576ab41f65ec1b31ae9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 88a5003ce8abe79fcba9f9604047d2265810fda2
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739215"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914486"
 ---
 # <a name="breakpoint-errors"></a>断点错误
 下面描述了当断点尝试绑定到代码但失败时的过程。

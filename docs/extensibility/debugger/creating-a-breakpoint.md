@@ -1,5 +1,7 @@
 ---
 title: 创建断点 |Microsoft Docs
+description: 了解在加载了绑定断点所需的模块时，会话调试管理器所执行的方法调用。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3f89b99f15374ef7e0bbc6964ee1ff521eeb469f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ba192a0cda2e63453984d3de7d6007744cc401b7
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903626"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914223"
 ---
 # <a name="create-a-breakpoint"></a>创建断点
 下面介绍了创建断点的过程。
@@ -31,7 +33,7 @@ ms.locfileid: "85903626"
 3. [IDebugPendingBreakpoint2::CanBind](../../extensibility/debugger/reference/idebugpendingbreakpoint2-canbind.md)
 
     > [!NOTE]
-    > 仅当用户从 "**断点**" 窗口中发出断点时才调用**CanBind** 。
+    > 仅当用户从 "**断点**" 窗口中发出断点时才调用 **CanBind** 。
 
 4. [IDebugPendingBreakpoint2::Bind](../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)
 

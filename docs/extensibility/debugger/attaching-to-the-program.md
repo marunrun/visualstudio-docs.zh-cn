@@ -1,5 +1,7 @@
 ---
 title: 附加到程序 |Microsoft Docs
+description: 了解 Visual Studio 如何实现在将程序注册到适当端口之后，如何实现调试器附加到程序。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 00b9780d0d302b9e067feed057d1a8d49c5f9fc0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 030ee19e7e9e9e52140fb41da78f766978e18d3f
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903211"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96913758"
 ---
 # <a name="attach-to-the-program"></a>附加到程序
 使用适当的端口注册程序后，必须将调试器附加到要调试的程序。

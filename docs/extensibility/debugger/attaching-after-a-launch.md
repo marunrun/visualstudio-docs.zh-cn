@@ -1,5 +1,7 @@
 ---
 title: 启动后附加 |Microsoft Docs
+description: 当程序启动时，调试会话便已准备好将调试引擎附加到程序中。 选择用于与调试引擎进行通信的设计方法。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3a4ce0a7465891035b43bbb8f6f22f0c064d104c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4e19d9090126a13b657f53c20d7ec44a793d5376
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739281"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96913888"
 ---
 # <a name="attach-after-a-launch"></a>启动后附加
 在程序启动后，调试会话已准备好将调试引擎附加 (DE) 。

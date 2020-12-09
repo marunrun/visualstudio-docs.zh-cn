@@ -1,5 +1,7 @@
 ---
 title: 控件的执行 |Microsoft Docs
+description: 了解如何停止事件，这意味着 DE 通过 IDE 等待用户的响应。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9c59831efb2fc97ad1bb2891fd93a67fe79f8eff
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 88adaad3092e084841c40b5e04d45f94985a2ee8
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86387000"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96913875"
 ---
 # <a name="control-of-execution"></a>控制执行
 调试引擎 (DE) 通常会将以下事件之一作为上一个启动事件发送：
@@ -39,11 +41,11 @@ ms.locfileid: "86387000"
 
 5. 如果用户想要单步执行、逐过程执行或跳出某个函数，IDE 将提示调试会话调用该程序的 `Step` 方法。 然后，IDE 将 (指令、语句或行) 的步骤单元传递到步骤类型， (是单步执行、逐过程执行还是跳出函数) 。 步骤完成后，将向调试会话发送一个步骤完成事件，该事件是一个停止事件。
 
-    - 或 -
+    -或-
 
     如果用户想要继续从当前指令指针执行，IDE 将提示调试会话调用程序的 **Execute** 方法。 程序将继续执行，直到它遇到下一个停止条件为止。
 
-    - 或 -
+    -或-
 
     如果调试会话要忽略特定的停止事件，调试会话会调用程序的 **Continue** 方法。 如果程序在遇到停止条件时进入、锁定或跳出某个函数，则会继续执行此步骤。
 
@@ -57,7 +59,7 @@ ms.locfileid: "86387000"
 
    如果调试包要忽略特定的停止事件，则调试包将调用 SDM，这将调用 [IDebugProgram2：： Continue](../../extensibility/debugger/reference/idebugprogram2-continue.md)。 如果程序在遇到停止条件时进入、锁定或跳出某个函数，则会继续执行此步骤。 这意味着程序将保留单步执行状态，以便它知道如何继续。
 
-   SDM 进行的调用（即 `Step` **Execute**和 **Continue** ）是异步的，这意味着 sdm 需要调用快速返回。 如果在执行、执行或继续返回之前，取消在同一线程上向 SDM 发送停止事件， `Step` 则 sdm 将停止响应。 **Execute** **Continue**
+   SDM 进行的调用（即 `Step` **Execute** 和 **Continue** ）是异步的，这意味着 sdm 需要调用快速返回。 如果在执行、执行或继续返回之前，取消在同一线程上向 SDM 发送停止事件， `Step` 则 sdm 将停止响应。 **Execute** **Continue**
 
 ## <a name="see-also"></a>另请参阅
 - [调试任务](../../extensibility/debugger/debugging-tasks.md)

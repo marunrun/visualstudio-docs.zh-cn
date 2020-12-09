@@ -1,5 +1,7 @@
 ---
 title: 创建自定义调试引擎 |Microsoft Docs
+description: 使用这些文章可了解如何创建允许调试特定运行时体系结构的调试引擎。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 241bc016d8a64905951bffef07ba425f1351a727
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 673b08bf5680e04c90376c9eb3d63f6f03df9723
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903575"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914187"
 ---
 # <a name="create-a-custom-debug-engine"></a>创建自定义调试引擎
  (DE) 的调试引擎是允许调试特定运行时体系结构的组件。 每个运行时环境通常只有一个 DE 实现。
@@ -39,7 +41,7 @@ ms.locfileid: "85903575"
 
 5. 设置终止和分离
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
  [注册自定义调试引擎](../../extensibility/debugger/registering-a-custom-debug-engine.md) 说明向 Visual Studio 注册调试引擎以使其可供使用所需的步骤。
 
  [启用要调试的程序](../../extensibility/debugger/enabling-a-program-to-be-debugged.md) 说明在您的 DE 可以调试程序之前，必须先启动 DE，或将其附加到现有的程序。

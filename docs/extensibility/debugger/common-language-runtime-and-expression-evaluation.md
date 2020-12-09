@@ -1,5 +1,7 @@
 ---
 title: 公共语言运行时和表达式计算 |Microsoft Docs
+description: 了解公共语言运行时如何与调试引擎交互，以及如何将专有编程语言集成到 Visual Studio IDE 中。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 013579473189dd9310501b76d2de0d5cf6fa5822
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a7c120ac1da59ab86e9419bcb031af46f1b3d900
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739121"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914252"
 ---
 # <a name="common-language-runtime-and-expression-evaluation"></a>公共语言运行时和表达式计算
 > [!IMPORTANT]

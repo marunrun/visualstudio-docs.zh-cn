@@ -1,5 +1,7 @@
 ---
-title: 与断点相关的方法 |Microsoft Docs
+title: Breakpoint-Related 方法 |Microsoft Docs
+description: Visual Studio 调试支持绑定的断点，这些断点已成功绑定到代码中的某个位置，并且仍未绑定挂起的断点。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c72ec63e500ac86a4a5bd66a2956fe0fb06c8834
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9472f1ff4105790951ddd687d7e71c3e57fa39da
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739205"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914460"
 ---
 # <a name="breakpoint-related-methods"></a>与断点相关的方法
 调试引擎 (DE) 必须支持断点设置。 Visual Studio 调试支持以下类型的断点：
@@ -25,7 +27,7 @@ ms.locfileid: "80739205"
 
      通过 UI 请求并成功绑定到指定的代码位置
 
-- 挂起
+- 挂起的
 
      通过 UI 请求，但尚未绑定到实际说明
 

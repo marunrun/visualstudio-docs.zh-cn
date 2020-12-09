@@ -1,5 +1,7 @@
 ---
 title: 调试器概念 |Microsoft Docs
+description: 了解设计 Visual Studio 调试包中使用的体系结构概念，以帮助你在该包上构建。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,17 +12,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9ad8a450f9e79c1d44b8e098c8a00bb4b816e1af
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7caecc9c3434afd90462757c9cb544f387df88d3
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738983"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914031"
 ---
 # <a name="debugger-concepts"></a>调试器概念
 若要在 Visual Studio 调试包上构建，需要熟悉设计包时使用的体系结构概念。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
  [调试会话](../../extensibility/debugger/debug-session.md) 说明会话在调试体系结构中的角色。
 
  [服务器](../../extensibility/debugger/servers-visual-studio-sdk.md) 定义服务器在抽象和物理术语方面的调试体系结构。
@@ -44,7 +46,7 @@ ms.locfileid: "80738983"
  [断点](../../extensibility/debugger/breakpoints-visual-studio-sdk.md) 定义三种类型的断点：挂起、绑定和错误（在调试体系结构中）。
 
 ## <a name="related-sections"></a>相关章节
- [调试器上下文](../../extensibility/debugger/debugger-contexts.md) 说明调试引擎 (DE) 如何在代码、文档和表达式计算上下文中同时运行。 描述每个上下文的位置、位置或与之相关的计算。
+ [调试器上下文](../../extensibility/debugger/debugger-contexts.md) 说明调试引擎 (DE) 如何在代码、文档和表达式计算上下文中同时运行。 介绍这三个上下文的位置或相关评估。
 
  [调试器组件](../../extensibility/debugger/debugger-components.md) 概述 Visual Studio 调试组件，其中包括调试引擎 (DE) 、expression 计算器 (EE) 以及符号处理程序 (SH) 。
 

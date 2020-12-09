@@ -1,5 +1,7 @@
 ---
 title: 更改本地 |Microsoft Docs
+description: 了解在 "局部变量" 窗口的 "值" 字段中键入新值时更改本地值的过程。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 565ae9f27b9f5a113e51520724f525599ad5eda7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 08f366162f4031b9cc7aa651bf9eca7aab55a15a
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904269"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914330"
 ---
 # <a name="change-the-value-of-a-local"></a>更改本地的值
 > [!IMPORTANT]
@@ -28,7 +30,7 @@ ms.locfileid: "85904269"
 
 1. 用户输入新值后，Visual Studio 将对与本地关联的[IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md)对象调用[SetValueAsString](../../extensibility/debugger/reference/idebugproperty2-setvalueasstring.md) 。
 
-2. `IDebugProperty2::SetValueAsString` 执行下列任务：
+2. `IDebugProperty2::SetValueAsString` 执行以下任务：
 
    1. 计算用于生成值的字符串。
 
@@ -42,7 +44,7 @@ ms.locfileid: "85904269"
 
    此过程还用于更改 " **监视** " 窗口中变量的值，只不过它是 `IDebugProperty2` 与使用的本地值（而不是 `IDebugProperty2` 与本地关联的对象关联）关联的对象。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
  [更改值的示例实现](../../extensibility/debugger/sample-implementation-of-changing-values.md) 使用 MyCEE 示例来逐步完成更改值的过程。
 
 ## <a name="see-also"></a>另请参阅

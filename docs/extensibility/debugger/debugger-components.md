@@ -1,5 +1,7 @@
 ---
 title: 调试器组件 |Microsoft Docs
+description: 了解组成调试会话的元素，由 Visual Studio 调试器管理，以 VSPackage 的形式实现。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 03c400fd03c5ee0f2629e9f436b65f53f8f2ac8b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2fa0a7feb85437cc8173d52695ddb1ba0d2c06b7
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739011"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914096"
 ---
 # <a name="debugger-components"></a>调试器组件
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]调试器以 VSPackage 的形式实现并管理整个调试会话。 调试会话包含以下元素：
@@ -38,7 +40,7 @@ ms.locfileid: "80739011"
 
   ![调试组件概述](../../extensibility/debugger/media/dbugcompovrview.gif "DBugCompOvrview")
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
  [调试包](../../extensibility/debugger/debug-package.md) 讨论在 shell 中运行 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 并处理所有 UI 的调试包。
 
  [进程调试管理器](../../extensibility/debugger/process-debug-manager.md) 概述 PDM 的功能，这是可以调试的进程的管理器。
@@ -56,11 +58,11 @@ ms.locfileid: "80739011"
  [类型可视化工具和自定义查看器](../../extensibility/debugger/type-visualizer-and-custom-viewer.md) 讨论什么是类型可视化工具和自定义查看器，以及表达式计算器在支持两者时所扮演的角色。
 
 ## <a name="related-sections"></a>相关章节
- [调试器概念](../../extensibility/debugger/debugger-concepts.md) 介绍主要调试体系结构概念。
+ [调试器概念](../../extensibility/debugger/debugger-concepts.md) 介绍主要的调试体系结构概念。
 
- [调试器上下文](../../extensibility/debugger/debugger-contexts.md) 说明如何在代码、文档和表达式计算上下文中执行取消操作。 描述每个上下文的位置、位置或与之相关的计算。
+ [调试器上下文](../../extensibility/debugger/debugger-contexts.md) 说明 DE 如何在代码、文档和表达式评估上下文中同时运行。 介绍这三个上下文的位置或相关评估。
 
  [调试任务](../../extensibility/debugger/debugging-tasks.md) 包含指向各种调试任务的链接，如启动程序和计算表达式。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [入门](../../extensibility/debugger/getting-started-with-debugger-extensibility.md)
