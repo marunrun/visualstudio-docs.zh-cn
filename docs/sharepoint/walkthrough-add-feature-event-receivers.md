@@ -1,5 +1,7 @@
 ---
 title: 演练：添加功能事件接收器 |Microsoft Docs
+description: 在本演练中，添加功能事件接收器，它们是在安装、激活、停用或删除 SharePoint 功能时执行的方法。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -16,15 +18,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f40358c157ec24557947f36b0c6eadb6d8a2622d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 98b85222fca4da6dfca653ad74e1315801798d83
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015356"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915591"
 ---
 # <a name="walkthrough-add-feature-event-receivers"></a>演练：添加功能事件接收器
-  功能事件接收器是在 SharePoint 中发生以下与功能相关的事件之一时执行的方法：
+功能事件接收器是在 SharePoint 中发生以下与功能相关的事件之一时执行的方法：
 
 - 安装了一项功能。
 
@@ -34,7 +36,7 @@ ms.locfileid: "86015356"
 
 - 删除功能。
 
-  本演练演示如何将事件接收器添加到 SharePoint 项目中的功能。 它演示以下任务：
+本演练演示如何将事件接收器添加到 SharePoint 项目中的功能。 它演示以下任务：
 
 - 使用功能事件接收器创建空项目。
 
@@ -109,9 +111,9 @@ ms.locfileid: "86015356"
 
 4. 在 "**站点设置**" 页的 "**站点操作**" 部分下，选择 "**管理站点功能**" 链接。
 
-5. 在 "**功能**" 页上，选择**FeatureEvtTest Feature1**功能旁边的 "**激活**" 按钮。
+5. 在 "**功能**" 页上，选择 **FeatureEvtTest Feature1** 功能旁边的 "**激活**" 按钮。
 
-6. 在 "**功能**" 页上，选择**FeatureEvtTest Feature1**功能旁边的 "**停用**" 按钮，然后选择 "**停用此功能**" 确认链接来停用该功能。
+6. 在 "**功能**" 页上，选择 **FeatureEvtTest Feature1** 功能旁边的 "**停用**" 按钮，然后选择 "**停用此功能**" 确认链接来停用该功能。
 
 7. 选择 " **主页** " 按钮。
 

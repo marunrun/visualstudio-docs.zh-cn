@@ -1,5 +1,7 @@
 ---
 title: 如何：向方法添加参数 |Microsoft Docs
+description: 知道如何将参数添加到业务数据连接 (BDC) 方法，这使你可以将信息传递到方法或从方法返回信息。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6d0496d0fd6a347683d56630990e50af585520ba
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 179109ff4c0def002dac45887fe9491196a70d3e
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016720"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915396"
 ---
 # <a name="how-to-add-a-parameter-to-a-method"></a>如何：向方法添加参数
   使用参数将信息传递到方法或从方法返回信息。 所有方法都必须至少有一个参数。 有关如何设计参数来支持要创建的方法类型的详细信息，请参阅 [设计业务数据连接模型](../sharepoint/designing-a-business-data-connectivity-model.md)。

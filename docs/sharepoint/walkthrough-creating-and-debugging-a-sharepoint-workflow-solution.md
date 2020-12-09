@@ -1,5 +1,7 @@
 ---
 title: 创建 & 调试 SharePoint 工作流解决方案
+description: 在本演练中，创建并调试 SharePoint 工作流解决方案。 创建基本的顺序工作流模板。 创建工作流活动并处理事件。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 65af3cbfc799a90d640579f8eed0e051fd5888f0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3c8d5ca5b941a7ae6e6ebada21f1eafaef2b6f43
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86014622"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915305"
 ---
 # <a name="walkthrough-create-and-debug-a-sharepoint-workflow-solution"></a>演练：创建和调试 SharePoint 工作流解决方案
   本演练演示如何创建基本的顺序工作流模板。 工作流检查共享文档库的属性，以确定是否已查看文档。 如果文档已评审，则工作流将完成。
@@ -57,7 +59,7 @@ ms.locfileid: "86014622"
 
 3. 在 "**库工具**" 功能区上选择 "**库**"，然后选择功能区中的 "**创建列**" 按钮，以创建新列。
 
-4. 命名列 **文档状态**，将其 "类型" 设置为 " **选择 (" 菜单以从) 中进行选择 **，指定以下三个选项，然后选择 " **确定"** 按钮：
+4. 命名列 **文档状态**，将其 "类型" 设置为 " **选择 (" 菜单以从) 中进行选择**，指定以下三个选项，然后选择 " **确定"** 按钮：
 
     - **需要评审**
 
@@ -78,7 +80,7 @@ ms.locfileid: "86014622"
 
 3. 在 " **常规设置** " 部分中，选择 " **版本控制设置** " 链接以显示 " **版本控制设置** " 页。
 
-4. 验证是否**需要签出文档**才能对其进行编辑 **。** 如果不是，则将其更改为 " **否** "，然后选择 **"确定"** 按钮。
+4. 验证是否 **需要签出文档** 才能对其进行编辑 **。** 如果不是，则将其更改为 " **否** "，然后选择 **"确定"** 按钮。
 
 5. 关闭浏览器。
 
@@ -103,11 +105,11 @@ ms.locfileid: "86014622"
 
      此步骤将解决方案的信任级别设置为场解决方案，这是工作流项目的唯一可用选项。 有关详细信息，请参阅 [沙盒解决方案注意事项](../sharepoint/sandboxed-solution-considerations.md)。
 
-7. 在**解决方案资源管理器**中，选择 "项目" 节点，然后在菜单栏上选择 "**项目**" "  >  **添加新项**"。
+7. 在 **解决方案资源管理器** 中，选择 "项目" 节点，然后在菜单栏上选择 "**项目**" "  >  **添加新项**"。
 
-8. 在 " **Visual c #** " 或 " **Visual Basic**下，展开" **SharePoint** "节点，然后选择" **2010** "节点。
+8. 在 " **Visual c #** " 或 " **Visual Basic** 下，展开" **SharePoint** "节点，然后选择" **2010** "节点。
 
-9. 在 " **模板** " 窗格中，选择 " **顺序工作流 (场解决方案仅) ** 模板"，然后选择 " **添加** " 按钮。
+9. 在 " **模板** " 窗格中，选择 " **顺序工作流 (场解决方案仅)** 模板"，然后选择 " **添加** " 按钮。
 
      " **SharePoint 自定义向导** " 随即出现。
 
@@ -126,11 +128,11 @@ ms.locfileid: "86014622"
 
 #### <a name="to-create-workflow-activities"></a>创建工作流活动
 
-1. 工作流应显示在工作流设计器中。 如果不是，则在**解决方案资源管理器**中打开**Workflow1.cs**或**workflow1.xaml。**
+1. 工作流应显示在工作流设计器中。 如果不是，则在 **解决方案资源管理器** 中打开 **Workflow1.cs** 或 **workflow1.xaml。**
 
 2. 在设计器中，选择 " **OnWorkflowActivated1** " 活动。
 
-3. 在 "**属性**" 窗口中，在 "已**调用**" 属性旁边输入**onWorkflowActivated** ，然后选择 enter 键。
+3. 在 "**属性**" 窗口中，在 "已 **调用**" 属性旁边输入 **onWorkflowActivated** ，然后选择 enter 键。
 
      将打开代码编辑器，并将名为 onWorkflowActivated 的事件处理程序方法添加到 Workflow1.xaml 代码文件中。
 
@@ -146,7 +148,7 @@ ms.locfileid: "86014622"
 
 7. 在 " **属性** " 窗口中，将 " **条件** " 设置为 "代码条件"。
 
-8. 展开 " **condition** " 属性，在 "子**条件**" 属性旁边输入**isWorkflowPending** ，然后选择 enter 键。
+8. 展开 " **condition** " 属性，在 "子 **条件**" 属性旁边输入 **isWorkflowPending** ，然后选择 enter 键。
 
      将打开代码编辑器，并将名为 isWorkflowPending 的方法添加到 Workflow1.xaml 代码文件中。
 
@@ -172,7 +174,7 @@ ms.locfileid: "86014622"
 
 #### <a name="to-handle-activity-events"></a>处理活动事件
 
-1. 在 *Workflow1.cs* 或 *workflow1.xaml*中，将以下字段添加到类的顶部 `Workflow1` 。 此字段在活动中用于确定工作流是否已完成。
+1. 在 *Workflow1.cs* 或 *workflow1.xaml* 中，将以下字段添加到类的顶部 `Workflow1` 。 此字段在活动中用于确定工作流是否已完成。
 
     ```vb
     Dim workflowPending As Boolean = True
@@ -200,7 +202,7 @@ ms.locfileid: "86014622"
     }
     ```
 
-3. 将以下代码添加到 `onWorkflowActivated` 和 `onWorkflowItemChanged` 方法，以调用 `checkStatus` 方法。 工作流启动时， `onWorkflowActivated` 方法将调用 `checkStatus` 方法来确定是否已查看文档。 如果尚未查看，工作流将继续。 保存文档后， `onWorkflowItemChanged` 方法 `checkStatus` 再次调用方法以确定是否已查看文档。 当 `workflowPending` 字段设置为 **true**时，工作流将继续运行。
+3. 将以下代码添加到 `onWorkflowActivated` 和 `onWorkflowItemChanged` 方法，以调用 `checkStatus` 方法。 工作流启动时， `onWorkflowActivated` 方法将调用 `checkStatus` 方法来确定是否已查看文档。 如果尚未查看，工作流将继续。 保存文档后， `onWorkflowItemChanged` 方法 `checkStatus` 再次调用方法以确定是否已查看文档。 当 `workflowPending` 字段设置为 **true** 时，工作流将继续运行。
 
     ```vb
     Private Sub onWorkflowActivated(ByVal sender As System.Object, ByVal e As System.Workflow.Activities.ExternalDataEventArgs)
@@ -248,7 +250,7 @@ ms.locfileid: "86014622"
 
 #### <a name="to-test-the-sharepoint-workflow-template"></a>测试 SharePoint 工作流模板
 
-1. 在 *Workflow1.cs* 或 *workflow1.xaml*中，设置 **onWorkflowActivated** 方法旁边的断点。
+1. 在 *Workflow1.cs* 或 *workflow1.xaml* 中，设置 **onWorkflowActivated** 方法旁边的断点。
 
 2. 选择 **F5** 键生成并运行解决方案。
 

@@ -1,5 +1,7 @@
 ---
 title: 计算局部变量 |Microsoft Docs
+description: 了解 Visual Studio 如何访问内存中包含本地值的位置，该位置取决于程序的当前状态。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: aaf140a9ddbc7733da4d05450a024c0f0a713712
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a5d9c25c9b7b32b69983aeec4a1e533cbb927a11
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738822"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915630"
 ---
 # <a name="evaluate-locals"></a>计算局部变量
 > [!IMPORTANT]
@@ -189,7 +191,7 @@ HRESULT FieldGetPrimitiveValue(
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [局部变量的示例实现](../../extensibility/debugger/sample-implementation-of-locals.md)
 - [获取本地值](../../extensibility/debugger/getting-local-values.md)
 - [计算上下文](../../extensibility/debugger/evaluation-context.md)

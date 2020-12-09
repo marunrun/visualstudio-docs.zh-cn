@@ -1,6 +1,8 @@
 ---
 title: 用项目模板创建网站栏项目项（第1部分）
 titleSuffix: ''
+description: 定义用于创建网站列的项目项类型，然后创建用于创建包含项目项的 SharePoint 项目的项目模板。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a740d96fb6ae846188fc4fa457c5baeb7b5e907d
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 32f56f282dc5755b8162c4f19a9c036dc2e9cc5f
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585545"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915207"
 ---
 # <a name="walkthrough-create-a-site-column-project-item-with-a-project-template-part-1"></a>演练：使用项目模板创建网站栏项目项（第1部分）
   SharePoint 项目是一个或多个 SharePoint 项目项的容器。 你可以通过创建自己的 SharePoint 项目项类型，然后将其与项目模板关联，在 Visual Studio 中扩展 SharePoint 项目系统。 在本演练中，您将定义用于创建网站列的项目项类型，然后您将创建一个可用于创建包含网站列项目项的新项目的项目模板。
@@ -41,12 +43,12 @@ ms.locfileid: "91585545"
 > [!NOTE]
 > 有关一系列示例工作流，请参阅 [SharePoint 工作流示例](/sharepoint/dev/general-development/sharepoint-workflow-samples)。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
  若要完成本演练，开发计算机上需要以下组件：
 
 - 支持的 Microsoft Windows、SharePoint 和版本 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 。
 
-- [!include[vssdk_current_long](../sharepoint/includes/vssdk-current-long-md.md)] 本演练使用 SDK 中的 **Vsix 项目** 模板来创建用于部署项目项的 vsix 包。 有关详细信息，请参阅 [在 Visual Studio 中扩展 SharePoint 工具](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)。
+- [!include[vssdk_current_long](../sharepoint/includes/vssdk-current-long-md.md)]。 本演练使用 SDK 中的 **Vsix 项目** 模板来创建用于部署项目项的 vsix 包。 有关详细信息，请参阅 [在 Visual Studio 中扩展 SharePoint 工具](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)。
 
   以下概念的知识非常有用，但并不是必需的，无法完成本演练：
 
@@ -86,7 +88,7 @@ ms.locfileid: "91585545"
 
 #### <a name="to-create-the-project-template-project"></a>创建项目模板项目
 
-1. 在 **解决方案资源管理器**中，打开 "解决方案" 节点的快捷菜单，选择 " **添加**"，然后选择 " **新建项目**"。
+1. 在 **解决方案资源管理器** 中，打开 "解决方案" 节点的快捷菜单，选择 " **添加**"，然后选择 " **新建项目**"。
 
 2. 在 " **新建项目** " 对话框的顶部，确保在 .NET Framework 的版本列表中选择 **.NET Framework 4.5** 。
 
@@ -116,7 +118,7 @@ ms.locfileid: "91585545"
 
 #### <a name="to-create-the-extension-project"></a>创建扩展项目
 
-1. 在 **解决方案资源管理器**中，打开 "解决方案" 节点的快捷菜单，选择 " **添加**"，然后选择 " **新建项目**"。
+1. 在 **解决方案资源管理器** 中，打开 "解决方案" 节点的快捷菜单，选择 " **添加**"，然后选择 " **新建项目**"。
 
 2. 在 " **新建项目** " 对话框的顶部，确保在 .NET Framework 的版本列表中选择 **.NET Framework 4.5** 。
 
@@ -133,7 +135,7 @@ ms.locfileid: "91585545"
 
 #### <a name="to-configure-the-project"></a>配置项目
 
-1. 在 ProjectItemTypeDefinition 项目中，添加一个名为 **SiteColumnProjectItemTypeProvider**的代码文件。
+1. 在 ProjectItemTypeDefinition 项目中，添加一个名为 **SiteColumnProjectItemTypeProvider** 的代码文件。
 
 2. 在菜单栏上，选择“项目” > “添加引用”。
 
@@ -160,18 +162,18 @@ ms.locfileid: "91585545"
 
 1. 使用管理凭据启动的第二个实例 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 。
 
-2. 创建名为 **BaseSharePointProject**的 SharePoint 2010 项目。
+2. 创建名为 **BaseSharePointProject** 的 SharePoint 2010 项目。
 
    > [!IMPORTANT]
-   > 在 **SharePoint 自定义向导**中，选择 " **部署为场解决方案** " 选项按钮。
+   > 在 **SharePoint 自定义向导** 中，选择 " **部署为场解决方案** " 选项按钮。
 
 3. 向项目中添加一个空元素项，然后将该项命名为 **Field1**。
 
 4. 保存项目，然后关闭的第二个实例 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 。
 
-5. 在 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 已打开 SiteColumnProjectItem 解决方案的实例中，在 **解决方案资源管理器**中打开 " **SiteColumnProjectTemplate** " 项目节点的快捷菜单，选择 " **添加**"，然后选择 " **现有项**"。
+5. 在 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 已打开 SiteColumnProjectItem 解决方案的实例中，在 **解决方案资源管理器** 中打开 " **SiteColumnProjectTemplate** " 项目节点的快捷菜单，选择 " **添加**"，然后选择 " **现有项**"。
 
-6. 在 " **添加现有项** " 对话框中，打开文件扩展名列表，然后选择 " **所有文件" (\* " \*) **"。
+6. 在 " **添加现有项** " 对话框中，打开文件扩展名列表，然后选择 " **所有文件" (\* " \*)**"。
 
 7. 在包含 BaseSharePointProject 项目的目录中，选择 "密钥 .snk" 文件，然后选择 " **添加** " 按钮。
 
@@ -196,7 +198,7 @@ ms.locfileid: "91585545"
 
 #### <a name="to-configure-how-developers-discover-the-project-template-in-the-new-project-dialog-box"></a>配置开发人员在 "新建项目" 对话框中发现项目模板的方式
 
-1. 在 **解决方案资源管理器**中，打开 **SiteColumnProjectTemplate** 项目节点的快捷菜单，然后选择 " **卸载项目**"。 如果系统提示你保存对任何文件所做的更改，请选择 " **是"** 按钮。
+1. 在 **解决方案资源管理器** 中，打开 **SiteColumnProjectTemplate** 项目节点的快捷菜单，然后选择 " **卸载项目**"。 如果系统提示你保存对任何文件所做的更改，请选择 " **是"** 按钮。
 
 2. 再次打开 **SiteColumnProjectTemplate** 节点的快捷菜单，然后选择 " **编辑 SiteColumnProjectTemplate** " 或 " **编辑 SiteColumnProjectTemplate .vbproj**"。
 
@@ -218,7 +220,7 @@ ms.locfileid: "91585545"
 
 5. 保存并关闭该文件。
 
-6. 在 **解决方案资源管理器**中，打开 **SiteColumnProjectTemplate** 项目的快捷菜单，然后选择 " **重新加载项目**"。
+6. 在 **解决方案资源管理器** 中，打开 **SiteColumnProjectTemplate** 项目的快捷菜单，然后选择 " **重新加载项目**"。
 
 ## <a name="edit-the-project-template-files"></a>编辑项目模板文件
  在 SiteColumnProjectTemplate 项目中，编辑以下文件以定义项目模板的行为：
@@ -638,7 +640,7 @@ ms.locfileid: "91585545"
 
 #### <a name="to-configure-and-create-the-vsix-package"></a>配置和创建 VSIX 包
 
-1. 在 **解决方案资源管理器**的 **SiteColumnProjectItem** 项目中，在清单编辑器中打开 source.extension.vsixmanifest 文件。
+1. 在 **解决方案资源管理器** 的 **SiteColumnProjectItem** 项目中，在清单编辑器中打开 source.extension.vsixmanifest 文件。
 
      Source.extension.vsixmanifest 文件是所有 VSIX 包都需要的 source.extension.vsixmanifest 文件的基础。 有关此文件的详细信息，请参阅 [VSIX 扩展架构1.0 引用](/previous-versions/dd393700(v=vs.110))。
 
@@ -697,19 +699,19 @@ ms.locfileid: "91585545"
 
 4. 在 " **名称** " 框中，输入 **SiteColumnTest** ，然后选择 " **确定"** 按钮。
 
-     在 **解决方案资源管理器**中，会显示一个新项目，其中包含名为 **Field1**的项目项。
+     在 **解决方案资源管理器** 中，会显示一个新项目，其中包含名为 **Field1** 的项目项。
 
 5. 验证 Visual Studio 的另一个实例中的代码是否在您之前在方法中设置的断点处停止 `InitializeType` ，然后选择 **F5** 键继续调试该项目。
 
-6. 在 **解决方案资源管理器**中，选择 " **Field1** " 节点，然后按 **F4** 键。
+6. 在 **解决方案资源管理器** 中，选择 " **Field1** " 节点，然后按 **F4** 键。
 
-     此时将打开“属性”窗口****。
+     此时将打开“属性”窗口。
 
 7. 在 "属性" 列表中，验证是否显示 "属性 **示例" 属性** 。
 
 #### <a name="to-test-the-site-column-in-sharepoint"></a>在 SharePoint 中测试网站列
 
-1. 在 **解决方案资源管理器**中，选择 " **SiteColumnTest** " 节点。
+1. 在 **解决方案资源管理器** 中，选择 " **SiteColumnTest** " 节点。
 
 2. 在 " **属性** " 窗口中的 " **站点 URL** " 属性旁边的文本框中，输入 **http://localhost** 。
 
@@ -718,7 +720,7 @@ ms.locfileid: "91585545"
     > [!NOTE]
     > 默认情况下，" **网站 URL** " 属性为空，因为 "网站列" 项目模板不提供用于在创建项目时收集此值的向导。 若要了解如何添加向导来向开发人员提供此值，然后在新项目中配置此属性，请参阅 [演练：使用项目模板创建网站栏项目项（第2部分）](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)。
 
-3. 选择 F5****。
+3. 选择 F5。
 
      网站列将打包并部署到在项目的 " **网站 URL** " 属性中指定的 SharePoint 站点。 Web 浏览器将打开此站点的默认页面。
 
@@ -729,7 +731,7 @@ ms.locfileid: "91585545"
 
 5. 在 " **站点设置** " 页上的 " **库** " 列表中，选择 " **网站列** " 链接。
 
-6. 在站点列列表中，验证 **自定义列** 组是否包含名为 **SiteColumnTest**的列。
+6. 在站点列列表中，验证 **自定义列** 组是否包含名为 **SiteColumnTest** 的列。
 
 7. 关闭 Web 浏览器。
 
@@ -740,7 +742,7 @@ ms.locfileid: "91585545"
 
 1. 在 Visual Studio 的实验实例中，在菜单栏上选择 "**工具**" "  >  **扩展和更新**"。
 
-     此时，“扩展和更新”**** 对话框打开。
+     此时，“扩展和更新”对话框打开。
 
 2. 在扩展列表中，选择 " **站点" 列** 扩展，然后选择 " **卸载** " 按钮。
 

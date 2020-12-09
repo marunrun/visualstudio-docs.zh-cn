@@ -1,5 +1,7 @@
 ---
 title: 演练：创建 SharePoint 项目扩展 |Microsoft Docs
+description: 创建 SharePoint 项目扩展，您可以使用它来响应项目级别的事件，例如添加、删除或重命名项目。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,17 +16,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9d79bf66f88a7cbaa5321887b676cc9eca798a92
-ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
+ms.openlocfilehash: b815f8ea4656cc5a144f8cf12396391e55123ece
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90739923"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914863"
 ---
 # <a name="walkthrough-create-a-sharepoint-project-extension"></a>演练：创建 SharePoint 项目扩展
   本演练演示如何创建 SharePoint 项目的扩展。 您可以使用项目扩展来响应项目级别的事件，例如，在添加、删除或重命名项目时。 还可以添加自定义属性，或在属性值更改时进行响应。 与项目项扩展不同，项目扩展不能与特定的 SharePoint 项目类型相关联。 当你创建项目扩展时，将在中打开任何类型的 SharePoint 项目时加载该扩展 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 。
 
- 在本演练中，您将创建一个自定义布尔属性，该属性将添加到在中创建的任何 SharePoint 项目 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 。 当设置为 **True**时，新属性会将 Images 资源文件夹添加到你的项目，或将其映射到你的项目。 如果设置为 **False**，则删除 Images 文件夹（如果存在）。 有关详细信息，请参阅 [如何：添加和删除映射文件夹](../sharepoint/how-to-add-and-remove-mapped-folders.md)。
+ 在本演练中，您将创建一个自定义布尔属性，该属性将添加到在中创建的任何 SharePoint 项目 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 。 当设置为 **True** 时，新属性会将 Images 资源文件夹添加到你的项目，或将其映射到你的项目。 如果设置为 **False**，则删除 Images 文件夹（如果存在）。 有关详细信息，请参阅 [如何：添加和删除映射文件夹](../sharepoint/how-to-add-and-remove-mapped-folders.md)。
 
  本演练演示了下列任务：
 
@@ -40,12 +42,12 @@ ms.locfileid: "90739923"
 
 - 调试和测试项目属性。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
  若要完成本演练，开发计算机上需要以下组件：
 
 - 支持的 [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] 、SharePoint 和版本 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 。
 
-- [!INCLUDE[vssdk_current_long](../sharepoint/includes/vssdk-current-long-md.md)] 本演练使用中的 **Vsix 项目** 模板 [!INCLUDE[TLA2#tla_sdk](../sharepoint/includes/tla2sharptla-sdk-md.md)] 来创建用于部署项目属性扩展的 vsix 包。 有关详细信息，请参阅 [在 Visual Studio 中扩展 SharePoint 工具](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)。
+- [!INCLUDE[vssdk_current_long](../sharepoint/includes/vssdk-current-long-md.md)]。 本演练使用中的 **Vsix 项目** 模板 [!INCLUDE[TLA2#tla_sdk](../sharepoint/includes/tla2sharptla-sdk-md.md)] 来创建用于部署项目属性扩展的 vsix 包。 有关详细信息，请参阅 [在 Visual Studio 中扩展 SharePoint 工具](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)。
 
 ## <a name="create-the-projects"></a>创建项目
  若要完成本演练，您必须创建两个项目：
@@ -71,11 +73,11 @@ ms.locfileid: "90739923"
 
 5. 在 " **名称** " 框中，输入 **ProjectExtensionPackage**，然后选择 " **确定"** 按钮。
 
-     **ProjectExtensionPackage**项目显示在**解决方案资源管理器**中。
+     **ProjectExtensionPackage** 项目显示在 **解决方案资源管理器** 中。
 
 #### <a name="to-create-the-extension-project"></a>创建扩展项目
 
-1. 在 **解决方案资源管理器**中，打开 "解决方案" 节点的快捷菜单，选择 " **添加**"，然后选择 " **新建项目**"。
+1. 在 **解决方案资源管理器** 中，打开 "解决方案" 节点的快捷菜单，选择 " **添加**"，然后选择 " **新建项目**"。
 
 2. 在 " **新建项目** " 对话框中，展开 " **Visual c #** " 或 " **Visual Basic** " 节点，然后选择 " **窗口**"。
 
@@ -100,7 +102,7 @@ ms.locfileid: "90739923"
 
 4. 选择 " **扩展** " 节点，选中 "VisualStudio" 和 "EnvDTE" 程序集旁边的复选框，然后选择 **"确定"** 按钮。
 
-5. 在**解决方案资源管理器**的**存在或者 projectextension.baseprojectextension**项目的 "**引用**" 文件夹下，选择 " **EnvDTE**"。
+5. 在 **解决方案资源管理器** 的 **存在或者 projectextension.baseprojectextension** 项目的 "**引用**" 文件夹下，选择 " **EnvDTE**"。
 
 6. 在 " **属性** " 窗口中，将 " **嵌入互操作类型** " 属性更改为 " **False**"。
 
@@ -119,14 +121,14 @@ ms.locfileid: "90739923"
 
 #### <a name="to-build-the-solution"></a>生成解决方案
 
-1. 在菜单栏上，依次选择“生成” > “生成解决方案” 。
+1. 在菜单栏上，依次选择“生成” > “生成解决方案”   。
 
 ## <a name="create-a-vsix-package-to-deploy-the-project-property-extension"></a>创建 VSIX 包以部署项目属性扩展
  若要部署项目扩展，请使用解决方案中的 VSIX 项目创建 VSIX 包。 首先，通过修改 VSIX 项目中包含的 source.extension.vsixmanifest 文件来配置 VSIX 包。 然后，通过生成解决方案创建 VSIX 包。
 
 #### <a name="to-configure-and-create-the-vsix-package"></a>配置和创建 VSIX 包
 
-1. 在 **解决方案资源管理器**中，打开 source.extension.vsixmanifest 文件的快捷菜单，然后选择 " **打开** " 按钮。
+1. 在 **解决方案资源管理器** 中，打开 source.extension.vsixmanifest 文件的快捷菜单，然后选择 " **打开** " 按钮。
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 在清单设计器中打开文件。 " **元数据** " 选项卡中显示的信息也会出现在 " **扩展和更新**" 中。 所有 VSIX 包都需要 source.extension.vsixmanifest 文件。 有关此文件的详细信息，请参阅 [VSIX 扩展架构1.0 引用](/previous-versions/dd393700(v=vs.110))。
 
@@ -157,9 +159,9 @@ ms.locfileid: "90739923"
 
 11. 在菜单栏上，选择 "**生成**" "生成  >  **解决方案**"，然后确保项目编译时不会出错。
 
-12. 在 **解决方案资源管理器**中，打开 **ProjectExtensionPackage** 项目的快捷菜单，然后选择 " **在文件资源管理器中打开文件夹** " 按钮。
+12. 在 **解决方案资源管理器** 中，打开 **ProjectExtensionPackage** 项目的快捷菜单，然后选择 " **在文件资源管理器中打开文件夹** " 按钮。
 
-13. 在 **文件资源管理器**中，打开 ProjectExtensionPackage 项目的生成输出文件夹，然后验证该文件夹是否包含名为 ProjectExtensionPackage 的文件。
+13. 在 **文件资源管理器** 中，打开 ProjectExtensionPackage 项目的生成输出文件夹，然后验证该文件夹是否包含名为 ProjectExtensionPackage 的文件。
 
      默认情况下，生成输出文件夹为。包含项目文件的文件夹下的 \bin\Debug 文件夹。
 
@@ -170,7 +172,7 @@ ms.locfileid: "90739923"
 
 1. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]用管理凭据重新启动，然后打开 ProjectExtensionPackage 解决方案。
 
-2. 通过选择**F5**键，或在菜单栏上选择 "**调试**" "  >  **启动调试**"，启动项目的调试版本。
+2. 通过选择 **F5** 键，或在菜单栏上选择 "**调试**" "  >  **启动调试**"，启动项目的调试版本。
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 将扩展安装到%UserProfile%\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Contoso\Custom 项目 Property\1.0，并启动的实验实例 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 。
 
@@ -186,7 +188,7 @@ ms.locfileid: "90739923"
 
     4. 选择 " **SharePoint 2010 项目** " 模板，然后输入 **ModuleTest** 作为项目名称。
 
-4. 在 **解决方案资源管理器**中，选择 " **ModuleTest** " 项目节点。
+4. 在 **解决方案资源管理器** 中，选择 " **ModuleTest** " 项目节点。
 
      "**属性**" 窗口中将显示一个新的自定义属性 "**地图图像" 文件夹**，默认值为 " **False**"。
 
@@ -196,11 +198,11 @@ ms.locfileid: "90739923"
 
 6. 将该属性的值更改回 **False**。
 
-     如果在 "**删除图像" 文件夹**中选择 "**是"** 按钮，则会从 SharePoint 项目中删除 images 资源文件夹。
+     如果在 "**删除图像" 文件夹** 中选择 "**是"** 按钮，则会从 SharePoint 项目中删除 images 资源文件夹。
 
 7. 关闭 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 的实验实例。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [扩展 SharePoint 项目](../sharepoint/extending-sharepoint-projects.md)
 - [如何：向 SharePoint 项目添加属性](../sharepoint/how-to-add-a-property-to-sharepoint-projects.md)
 - [在 SharePoint 项目系统类型和其他 Visual Studio 项目类型之间转换](../sharepoint/converting-between-sharepoint-project-system-types-and-other-visual-studio-project-types.md)

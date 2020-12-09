@@ -1,5 +1,7 @@
 ---
 title: 计算监视窗口表达式 |Microsoft Docs
+description: 了解当执行暂停时，Visual Studio 如何调用调试引擎来确定其监视列表中每个表达式的当前值。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9cef2f27eec095ee7b136153ecb764feba9effbb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 97fb2c11b94a97a5c7a00083aa61877bb68d377b
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738836"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915643"
 ---
 # <a name="evaluate-a-watch-window-expression"></a>计算监视窗口表达式
 > [!IMPORTANT]
@@ -47,7 +49,7 @@ ms.locfileid: "80738836"
 > [!NOTE]
 > 尽管 Visual Studio 假定这样做，但不需要将 EE 与此两步过程保持不一样：调用 [EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) 时，EE 可以在同一步骤中分析和评估 (这是 MyCEE 示例的工作方式，例如) 。 如果你的语言可以构成复杂的表达式，你可能需要将分析步骤与评估步骤分离。 当显示许多监视表达式时，这可能会提高 Visual Studio 调试器的性能。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
  [表达式计算的示例实现](../../extensibility/debugger/sample-implementation-of-expression-evaluation.md) 使用 MyCEE 示例逐步完成表达式计算的过程。
 
  [计算监视表达式](../../extensibility/debugger/evaluating-a-watch-expression.md) 说明成功的表达式分析后会发生的情况。
@@ -55,5 +57,5 @@ ms.locfileid: "80738836"
 ## <a name="related-sections"></a>相关章节
  [计算上下文](../../extensibility/debugger/evaluation-context.md) 提供当调试引擎 (DE) 调用表达式计算器 (EE) 时传递的参数。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [编写 CLR 表达式计算器](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)

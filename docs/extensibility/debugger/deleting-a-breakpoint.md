@@ -1,5 +1,7 @@
 ---
 title: 删除断点 |Microsoft Docs
+description: 了解会话调试管理器如何在删除挂起断点时删除挂起的断点以及从该断点绑定的所有绑定断点。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a77be200a11eb7b3985a4c1a47e4cddaa543f900
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 061175326a19af1866262421b381eb14267c7efd
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738949"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915552"
 ---
 # <a name="deleting-a-breakpoint"></a>删除断点
 下面描述了删除挂起断点时的过程：
@@ -27,5 +29,5 @@ ms.locfileid: "80738949"
 > [!NOTE]
 > 还可以通过调用 [IDebugBoundBreakpoint2：:D e) ](../../extensibility/debugger/reference/idebugboundbreakpoint2-delete.md)删除单个绑定断点。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [调用调试器事件](../../extensibility/debugger/calling-debugger-events.md)

@@ -1,6 +1,8 @@
 ---
 title: 打包资源管理器：添加 & 删除 & 项到包的功能
 titleSuffix: ''
+description: 使用 Visual Studio 中的 "打包资源管理器" 在 SharePoint 包中添加和移除功能和项。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9bc4546d598a2fcca822f1921f778034fb768c2b
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: ee9b2a12c9eaa168f0223dff29a3379a12b3d691
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585584"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915344"
 ---
 # <a name="how-to-add-and-remove-features-and-items-to-a-package-by-using-the-packaging-explorer"></a>如何：使用打包资源管理器在包中添加和移除功能和项
   若要将包配置为部署 SharePoint 项和功能，可以使用 "打包资源管理器"。 可以在 .wsp 文件中调整 SharePoint 项目项和功能。
@@ -34,7 +36,7 @@ ms.locfileid: "91585584"
 
 1. 在菜单栏上，选择 "**查看**  >  **其他 Windows**  >  **打包资源管理器**"。
 
-     " **打包资源管理器** " 将出现在 **工具箱**中。
+     " **打包资源管理器** " 将出现在 **工具箱** 中。
 
 ## <a name="adding-a-feature-to-a-package"></a>向包中添加功能
  您可以使用 "打包资源管理器" 将新功能和现有功能添加到包。
