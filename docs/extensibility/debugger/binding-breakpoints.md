@@ -1,5 +1,7 @@
 ---
 title: 绑定断点 |Microsoft Docs
+description: 了解 IDE 如何形成断点请求，并在用户设置断点时提示调试会话创建断点。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,15 +12,15 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e839b6e0e7967c4802bee5617da3334c5d4033c5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 606c1f4cb5559722028b78ef4ef21c41c0ba5556
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903229"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914707"
 ---
 # <a name="bind-breakpoints"></a>绑定断点
-如果用户通过按 **F9**设置断点，则 IDE 会形成请求，并提示调试会话创建断点。
+如果用户通过按 **F9** 设置断点，则 IDE 会形成请求，并提示调试会话创建断点。
 
 ## <a name="set-a-breakpoint"></a>设置断点
  设置断点的过程分为两个步骤，因为受断点影响的代码或数据可能尚未提供。 首先，必须描述断点，然后在代码或数据可用时，必须将其绑定到该代码或数据，如下所示：

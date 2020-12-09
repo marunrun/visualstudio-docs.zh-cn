@@ -1,5 +1,7 @@
 ---
 title: 演练：为 SharePoint 创建 Web 部件 |Microsoft Docs
+description: 为 SharePoint 创建 web 部件。 使用 Web 部件，用户可以使用浏览器直接更改 SharePoint 网站页的内容、外观和行为。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,14 +16,14 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7fe560ae0c639ec8c400719738ea1f52b5315a9a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 98e0c21fa4e3f119b32e19dd1be6e7d9148a17f4
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88247656"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914655"
 ---
-# <a name="walkthrough-create-a-web-part-for-sharepoint"></a>演练：为 SharePoint 创建 web 部件
+# <a name="walkthrough-create-a-web-part-for-sharepoint"></a>演练：为 SharePoint 创建 Web 部件
 
 Web 部件允许用户使用浏览器直接修改 SharePoint 网站页的内容、外观和行为。 本演练演示如何使用 Visual Studio 2010 中的 " **Web 部件** " 项模板创建 web 部件。
 
@@ -52,7 +54,7 @@ Web 部件显示数据网格中的雇员。 用户指定包含员工数据的文
 
 首先，创建一个空 SharePoint 项目。 稍后，你将使用 " **Web 部件** " 项模板将 web 部件添加到项目。
 
-1. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]使用 "以**管理员身份运行**" 选项启动。
+1. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]使用 "以 **管理员身份运行**" 选项启动。
 
 2. 在男人栏上，选择 "**文件**" "  >  **新建**  >  **项目**"。
 
@@ -66,21 +68,21 @@ Web 部件显示数据网格中的雇员。 用户指定包含员工数据的文
 
 ## <a name="add-a-web-part-to-the-project"></a>向项目中添加 web 部件
 
-向项目中添加 **Web 部件** 项。 **Web 部件**项添加 web 部件代码文件。 稍后，您将向 Web 部件代码文件添加代码，以呈现 Web 部件的内容。
+向项目中添加 **Web 部件** 项。 **Web 部件** 项添加 web 部件代码文件。 稍后，您将向 Web 部件代码文件添加代码，以呈现 Web 部件的内容。
 
-1. 在菜单栏上，选择 "**项目**" "  >  **添加新项**"。
+1. 在菜单栏上，依次选择“项目” > “添加新项”。
 
 2. 在 " **添加新项** " 对话框的 " **已安装的模板** " 窗格中，展开 " **SharePoint** " 节点，然后选择 " **2010** " 节点。
 
 3. 在 SharePoint 模板列表中，选择 " **Web 部件** " 模板，然后选择 " **添加** " 按钮。
 
-     **Web 部件**项显示在**解决方案资源管理器**中。
+     **Web 部件** 项显示在 **解决方案资源管理器** 中。
 
 ## <a name="rendering-content-in-the-web-part"></a>在 web 部件中呈现内容
 
 可以通过将控件添加到 Web 部件类的 controls 集合来指定要在 Web 部件中显示的控件。
 
-1. 在**解决方案资源管理器**中，以 c # (中 Visual Basic) 或*WebPart1.cs* ) 打开*WebPart1* (。
+1. 在 **解决方案资源管理器** 中，以 c # (中 Visual Basic) 或 *WebPart1.cs* ) 打开 *WebPart1* (。
 
      Web 部件代码文件将在代码编辑器中打开。
 
@@ -214,7 +216,7 @@ Web 部件显示数据网格中的雇员。 用户指定包含员工数据的文
 
      所有员工都显示在 Web 部件中。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [为 SharePoint](../sharepoint/creating-web-parts-for-sharepoint.md) 
  创建 web 部件[如何：创建 SharePoint web 部件](../sharepoint/how-to-create-a-sharepoint-web-part.md) 

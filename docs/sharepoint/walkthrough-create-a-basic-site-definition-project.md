@@ -1,5 +1,7 @@
 ---
 title: 演练：创建基本网站定义项目 |Microsoft Docs
+description: 在此 SharePoint 演练中，请参阅如何创建包含具有某些控件的可视 Web 部件的基本网站定义。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d1c06f4df5d1efe06ad2537bd2e65f2c239f3be2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0411f027b105622d806e123bd80f38c4b05281ca
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016763"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96913849"
 ---
 # <a name="walkthrough-create-a-basic-site-definition-project"></a>演练：创建基本网站定义项目
   本演练演示如何创建包含可视 Web 部件的基本网站定义，其中包含某些控件。 为清楚起见，你创建的可视 Web 部件只有几个控件。 不过，您可以创建更复杂的 SharePoint 站点定义，这些定义包含更多功能。
@@ -49,7 +51,7 @@ ms.locfileid: "86016763"
 
 1. 在菜单栏上，依次选择“文件” > “新建” > “项目”。 如果 IDE 设置为使用 Visual Basic 开发设置，请在菜单栏上选择 "**文件**" "  >  **新建项目**"。
 
-    此时将出现“新建项目”对话框。
+    此时将出现“新建项目”  对话框。
 
 2. 展开 " **Visual c #** " 节点或 **Visual Basic** "节点，展开" **SharePoint** "节点，然后选择" **2010** "节点。
 
@@ -67,11 +69,11 @@ ms.locfileid: "86016763"
 
 7. 选择 **“完成”** 按钮。
 
-    项目将显示在 **解决方案资源管理器**中。
+    项目将显示在 **解决方案资源管理器** 中。
 
-8. 在**解决方案资源管理器**中，选择 "项目" 节点，然后在菜单栏上选择 "**项目**" "  >  **添加新项**"。
+8. 在 **解决方案资源管理器** 中，选择 "项目" 节点，然后在菜单栏上选择 "**项目**" "  >  **添加新项**"。
 
-9. 在 " **Visual c #** " 或 " **Visual Basic**下，展开" **SharePoint** "节点，然后选择" **2010** "节点。
+9. 在 " **Visual c #** " 或 " **Visual Basic** 下，展开" **SharePoint** "节点，然后选择" **2010** "节点。
 
 10. 在 " **模板** " 窗格中，选择 " **站点定义** " 模板，将 " **名称** " 保留为 " **SiteDefinition1**"，然后选择 " **添加** " 按钮。
 
@@ -80,11 +82,11 @@ ms.locfileid: "86016763"
 
 #### <a name="to-create-a-visual-web-part"></a>创建可视 web 部件
 
-1. 在 **解决方案资源管理器**中，选择 " **显示所有文件** " 按钮。
+1. 在 **解决方案资源管理器** 中，选择 " **显示所有文件** " 按钮。
 
 2. 选择 " **SiteDefinition1** " 项目节点，然后在菜单栏上选择 "**项目**" "  >  **添加新项**"。
 
-     此时会显示“添加新项”对话框。
+     “添加新项”  对话框随即出现。
 
 3. 展开 " **Visual c #** " 节点或 **Visual Basic** "节点，展开" **SharePoint** "节点，然后选择" **2010** "节点。
 
@@ -92,7 +94,7 @@ ms.locfileid: "86016763"
 
      将打开 *VisualWebPart1* 文件。
 
-5. 在 *VisualWebPart1*的底部，添加以下标记，以将三个控件添加到窗体：文本框、按钮和标签：
+5. 在 *VisualWebPart1* 的底部，添加以下标记，以将三个控件添加到窗体：文本框、按钮和标签：
 
     ```aspx-csharp
     <table>
@@ -128,7 +130,7 @@ ms.locfileid: "86016763"
     <%@ Register Tagprefix="MyWebPartControls" Namespace="TestSiteDef.VisualWebPart1" Assembly="$SharePoint.Project.AssemblyFullName$" %>
     ```
 
-     此行将名称 MyWebPartControls 与 Web 部件及其代码相关联。 *命名空间*参数与*VisualWebPart1*代码文件中使用的命名空间相匹配。
+     此行将名称 MyWebPartControls 与 Web 部件及其代码相关联。 *命名空间* 参数与 *VisualWebPart1* 代码文件中使用的命名空间相匹配。
 
 2. 在 `</asp:Content>` 元素后，将整个 `ContentPlaceHolderId="PlaceHolderMain"` 节及其内容替换为以下代码：
 
@@ -140,7 +142,7 @@ ms.locfileid: "86016763"
 
      此代码将创建对你之前创建的可视 Web 部件的引用。
 
-3. 在 **解决方案资源管理器**中，打开 **SiteDefinition1** 节点的快捷菜单，然后选择 " **设为启动项**"。
+3. 在 **解决方案资源管理器** 中，打开 **SiteDefinition1** 节点的快捷菜单，然后选择 " **设为启动项**"。
 
 ## <a name="deploy-and-run-the-site-definition-solution"></a>部署并运行网站定义解决方案
  接下来，将项目部署到 SharePoint，然后运行项目。
@@ -149,7 +151,7 @@ ms.locfileid: "86016763"
 
 - 在菜单栏上，选择 "**生成**" "  >  **部署 TestSiteDef**"。
 
-- 选择 F5****。
+- 选择 F5。
 
      Visual Studio 将编译代码、添加其功能、将所有文件打包到 SharePoint 解决方案 (WSP) 文件中，并将 WSP 文件部署到 SharePoint Server。 然后，SharePoint 将安装这些文件，然后激活这些功能。
 
@@ -162,7 +164,7 @@ ms.locfileid: "86016763"
 
 2. 在 " **标题和说明** " 部分中，输入 " **我的新站点** " 作为标题，并为网站提供说明。
 
-3. 在 "**网站地址**" 部分的 " **URL 名称**" 框中，输入**mynewsite** 。
+3. 在 "**网站地址**" 部分的 " **URL 名称**" 框中，输入 **mynewsite** 。
 
 4. 在 " **模板** " 部分中，选择 " **SharePoint 自定义** " 选项卡。
 
@@ -181,6 +183,6 @@ ms.locfileid: "86016763"
 
      该文本显示在按钮右侧的标签中。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [如何：创建事件接收器](../sharepoint/how-to-create-an-event-receiver.md)
 - [开发 SharePoint 解决方案](../sharepoint/developing-sharepoint-solutions.md)

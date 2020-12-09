@@ -1,5 +1,7 @@
 ---
 title: 如何：生成具有资源的项目 | Microsoft Docs
+description: 了解如何生成包含资源的项目以及如何使用 MSBuild 编译资源。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,20 +15,20 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a76246096eec8779ce331e93f01be5ab791d1cdb
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: e6a71a34b4ce208b093f7982ba3516b0229c8644
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633949"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436675"
 ---
 # <a name="how-to-build-a-project-that-has-resources"></a>如何：生成具有资源的项目
 
-如果你正在构建一个项目的本地化版本，则所有用户界面元素必须都分入不同语言的资源文件。 如果该项目仅使用字符串，则资源文件使用文本文件。 或者，可以将 .resx 文件用作资源文件  。
+如果你正在构建一个项目的本地化版本，则所有用户界面元素必须都分入不同语言的资源文件。 如果该项目仅使用字符串，则资源文件使用文本文件。 或者，可以将 .resx 文件用作资源文件。
 
 ## <a name="compile-resources-with-msbuild"></a>使用 MSBuild 编译资源
 
-随 MSBuild 提供的常见任务库包括可用于编译 .resx  或文本文件中资源的 `GenerateResource` 任务。 此任务包括用于指定要编译的资源文件的 `Sources` 参数，以及用于指定输出资源文件名称的 `OutputResources` 参数。 有关 `GenerateResource` 任务的详细信息，请参阅 [GenerateResource 任务](../msbuild/generateresource-task.md)。
+随 MSBuild 提供的常见任务库包括可用于编译 .resx 或文本文件中资源的 `GenerateResource` 任务。 此任务包括用于指定要编译的资源文件的 `Sources` 参数，以及用于指定输出资源文件名称的 `OutputResources` 参数。 有关 `GenerateResource` 任务的详细信息，请参阅 [GenerateResource 任务](../msbuild/generateresource-task.md)。
 
 #### <a name="to-compile-resources-with-msbuild"></a>使用 MSBuild 编译资源
 
@@ -38,9 +40,9 @@ ms.locfileid: "77633949"
 
 4. 将 `Output` 元素创建的项用作另一项任务的输入。
 
-## <a name="example"></a>示例
+## <a name="example-1"></a>示例 1
 
-以下代码示例演示 `Output` 元素如何指定 `GenerateResource` 任务的 `OutputResources` 属性将包含已编译的资源文件 alpha.resources 和 beta.resources，且这两个文件将放在 `Resources` 项列表内   。 通过将这些 .resources 文件识别为具有相同名称的项的集合，你可以轻松地将它们用作另一个任务（如 [Csc](../msbuild/csc-task.md) 任务）的输入  。
+以下代码示例演示 `Output` 元素如何指定 `GenerateResource` 任务的 `OutputResources` 属性将包含已编译的资源文件 alpha.resources 和 beta.resources，且这两个文件将放在 `Resources` 项列表内。 通过将这些 .resources 文件识别为具有相同名称的项的集合，你可以轻松地将它们用作另一个任务（如 [Csc](../msbuild/csc-task.md) 任务）的输入。
 
 此任务相当于使用适用于 [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) 的 **/compile** 开关：
 
@@ -55,7 +57,7 @@ ms.locfileid: "77633949"
 </GenerateResource>
 ```
 
-## <a name="example"></a>示例
+## <a name="example-2"></a>示例 2
 
 以下示例项目包含两个任务：用于编译资源的 `GenerateResource` 任务和用于编译源代码文件和已编译的资源文件的 `Csc` 任务。 `GenerateResource` 任务编译的资源文件存储在 `Resources` 项中，且传递给 `Csc` 任务。
 
@@ -80,7 +82,7 @@ ms.locfileid: "77633949"
 </Project>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [MSBuild](../msbuild/msbuild.md)
 - [GenerateResource 任务](../msbuild/generateresource-task.md)

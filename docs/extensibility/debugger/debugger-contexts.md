@@ -1,5 +1,7 @@
 ---
 title: 调试器上下文 |Microsoft Docs
+description: 了解 Visual Studio 调试引擎如何在不同的上下文中运行：代码上下文、文档上下文、位置和表达式计算上下文。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 56825fe299147e60c5ed9dfcefa491a427ab59e4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 355ca667f0f909ebedc6f404ded545b3f862a444
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738971"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914681"
 ---
 # <a name="debugger-contexts"></a>调试器上下文
 在 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 调试中，调试引擎 (DE) 在多个不同的上下文中同时运行，如下所示：
@@ -26,7 +28,7 @@ ms.locfileid: "80738971"
 
 - 表达式计算上下文，描述将在其中发生表达式求值的上下文。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
  [代码上下文](../../extensibility/debugger/code-context.md) 在当今的运行时体系结构与 nontraditional 的语言中，将代码上下文讨论为程序指令流中的一个地址，其中，代码可能不由说明表示，而是其他一些方法。
 
  [文档位置](../../extensibility/debugger/document-position.md) 在 Visual Studio 中定义文档位置，方法是通过将源文件中的位置抽象到 IDE 已知的方式进行调试。

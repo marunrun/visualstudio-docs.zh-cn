@@ -1,5 +1,7 @@
 ---
 title: 如何：添加和移除映射文件夹 |Microsoft Docs
+description: 在 SharePoint 中添加和移除映射文件夹到项目。  更改映射文件夹的部署位置。 重命名或删除映射文件夹。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 80fbd3e18b8d440eae2873c73013ad7468073640
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e4d29be9b008bfaa9ad6694725b03e25bf6847df
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86014645"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914799"
 ---
 # <a name="how-to-add-and-remove-mapped-folders"></a>如何：添加和移除映射文件夹
   SharePoint 中的一些常用文件夹（如图像和布局）在文件层次结构中深度嵌入。 您可以将这些文件夹映射到 SharePoint 项目，以便更轻松地对其进行访问。 映射文件夹是 SharePoint 项目中的文件夹，与 SharePoint Server 安装中的文件的物理位置相对应。
@@ -41,13 +43,13 @@ ms.locfileid: "86014645"
 
 4. 在 " **名称** " 框中，输入 **TestProject1**，然后选择 " **确定"** 按钮。
 
-5. 在 **SharePoint 自定义向导**中，选择 " **完成** " 按钮以保留默认设置。
+5. 在 **SharePoint 自定义向导** 中，选择 " **完成** " 按钮以保留默认设置。
 
-6. 在**解决方案资源管理器**中，选择 "项目" 节点，然后在菜单栏上选择 "**项目**"  >  **"添加 SharePoint" "Images" 映射文件夹**。
+6. 在 **解决方案资源管理器** 中，选择 "项目" 节点，然后在菜单栏上选择 "**项目**"  >  **"添加 SharePoint" "Images" 映射文件夹**。
 
      名为 **Images** 的文件夹出现在项目中，并包含名为 TestProject1 的子文件夹。 此映射文件夹将包含可视 web 部件项目的图像。
 
-7. 在**解决方案资源管理器**中，选择 "项目" 节点，然后在菜单栏上选择 "**项目**" "  >  **添加 sharepoint 映射文件夹**" 以显示 "**添加 sharepoint 映射文件夹**" 对话框。
+7. 在 **解决方案资源管理器** 中，选择 "项目" 节点，然后在菜单栏上选择 "**项目**" "  >  **添加 sharepoint 映射文件夹**" 以显示 "**添加 sharepoint 映射文件夹**" 对话框。
 
 8. 在可用于映射的文件夹的树视图中，选择 " **资源** " 文件夹，然后选择 " **确定"** 按钮。
 

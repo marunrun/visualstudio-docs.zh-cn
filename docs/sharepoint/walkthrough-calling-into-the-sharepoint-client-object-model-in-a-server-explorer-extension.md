@@ -1,6 +1,8 @@
 ---
 title: 服务器资源管理器：扩展 SharePoint 连接节点
 titleSuffix: ''
+description: 在本演练中，请参阅如何从服务器资源管理器中的 SharePoint 连接节点的扩展中调用 SharePoint 客户端对象模型。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,21 +16,21 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d7f1ac5b0fb1f25d04139d76efa816ebd059d7da
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: c323f05d341af810eecafae43e8d04d3cba29054
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585571"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96913940"
 ---
 # <a name="walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension"></a>演练：在服务器资源管理器扩展中调入 SharePoint 客户端对象模型
-  本演练演示如何从**服务器资源管理器**中的 " **sharepoint 连接**" 节点的扩展调用 sharepoint 客户端对象模型。 有关如何使用 SharePoint 客户端对象模型的详细信息，请参阅 [调入 sharepoint 对象模型](../sharepoint/calling-into-the-sharepoint-object-models.md)。
+  本演练演示如何从 **服务器资源管理器** 中的 " **sharepoint 连接**" 节点的扩展调用 sharepoint 客户端对象模型。 有关如何使用 SharePoint 客户端对象模型的详细信息，请参阅 [调入 sharepoint 对象模型](../sharepoint/calling-into-the-sharepoint-object-models.md)。
 
  本演练演示了下列任务：
 
-- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]通过以下方式创建扩展**服务器资源管理器**的**SharePoint 连接**节点的扩展：
+- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]通过以下方式创建扩展 **服务器资源管理器** 的 **SharePoint 连接** 节点的扩展：
 
-  - 该扩展在**服务器资源管理器**中的每个 SharePoint 站点节点下添加一个**Web 部件库**节点。 此新节点包含表示站点上 Web 部件库中的每个 Web 部件的子节点。
+  - 该扩展在 **服务器资源管理器** 中的每个 SharePoint 站点节点下添加一个 **Web 部件库** 节点。 此新节点包含表示站点上 Web 部件库中的每个 Web 部件的子节点。
 
   - 扩展定义了表示 Web 部件实例的新节点类型。 此新节点类型是 "新建 **Web 部件库** " 节点下的子节点的基础。 新 Web 部件节点类型在 " **属性** " 窗口中显示有关该节点所表示的 Web 部件的信息。
 
@@ -39,7 +41,7 @@ ms.locfileid: "91585571"
 > [!NOTE]
 > 你在本演练中创建的扩展类似于你在演练中创建的扩展 [： "扩展服务器资源管理器以显示 web 部件](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)。 该演练使用 SharePoint server 对象模型，但本演练使用客户端对象模型完成相同的任务。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
  若要完成本演练，开发计算机上需要以下组件：
 
 - 支持的 Windows、SharePoint 和 Visual Studio 版本。
@@ -84,7 +86,7 @@ ms.locfileid: "91585571"
 
 #### <a name="to-create-the-extension-project"></a>创建扩展项目
 
-1. 在 **解决方案资源管理器**中，打开 "解决方案" 节点的快捷菜单，选择 " **添加**"，然后选择 " **新建项目**"。
+1. 在 **解决方案资源管理器** 中，打开 "解决方案" 节点的快捷菜单，选择 " **添加**"，然后选择 " **新建项目**"。
 
 2. 在 "  **新建项目** " 对话框中，展开 " **Visual c #** " 或 " **Visual Basic** " 节点，然后选择 " **窗口**"。
 
@@ -121,7 +123,7 @@ ms.locfileid: "91585571"
 
      将打开“项目设计器”  。
 
-6. 选择“应用程序”**** 选项卡。
+6. 选择“应用程序”选项卡。
 
 7. 在 " **默认命名空间** " 框中 (c # ) 或 " **根命名空间** " 框 (Visual Basic) 中，输入 **WebPartNode**。
 
@@ -140,7 +142,7 @@ ms.locfileid: "91585571"
 
 4. 输入 " **WebPartsNode** " 作为新图标名称，然后选择 " **添加** " 按钮。
 
-     此时会在 **图像编辑器**中打开 "新建" 图标。
+     此时会在 **图像编辑器** 中打开 "新建" 图标。
 
 5. 编辑该图标的16x16 版本，使其具有可轻松识别的设计。
 
@@ -148,18 +150,18 @@ ms.locfileid: "91585571"
 
 7. 重复步骤3到步骤7，将第二个图标添加到项目资源，并将其命名为 " **Web 部件**"。
 
-8. 在**解决方案资源管理器**的**WebPartNodeExtension**项目的**Resources**文件夹中，选择*WebPartsNode*。
+8. 在 **解决方案资源管理器** 的 **WebPartNodeExtension** 项目的 **Resources** 文件夹中，选择 *WebPartsNode*。
 
 9. 在 " **属性** " 窗口中，打开 " **生成操作** " 列表，然后选择 " **嵌入资源**"。
 
 10. 对于 *WebPart*，重复最后两个步骤。
 
 ## <a name="add-the-web-part-gallery-node-to-server-explorer"></a>将 web 部件库节点添加到服务器资源管理器
- 创建一个类，用于将新的 **Web 部件库** 节点添加到每个 SharePoint 站点节点。 为了添加新节点，类实现 <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension> 接口。 每当要扩展 **服务器资源管理器**中现有节点的行为（例如，将新的子节点添加到节点）时，请实现此接口。
+ 创建一个类，用于将新的 **Web 部件库** 节点添加到每个 SharePoint 站点节点。 为了添加新节点，类实现 <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension> 接口。 每当要扩展 **服务器资源管理器** 中现有节点的行为（例如，将新的子节点添加到节点）时，请实现此接口。
 
 #### <a name="to-add-the-web-part-gallery-node-to-server-explorer"></a>将 web 部件库节点添加到服务器资源管理器
 
-1. 将以下代码粘贴到**WebPartNodeExtension**项目的**SiteNodeExtension**代码文件中。
+1. 将以下代码粘贴到 **WebPartNodeExtension** 项目的 **SiteNodeExtension** 代码文件中。
 
     > [!NOTE]
     > 添加此代码后，项目将会出现一些编译错误。 当你在后续步骤中添加代码时，这些错误将消失。
@@ -170,28 +172,28 @@ ms.locfileid: "91585571"
 ## <a name="define-a-node-type-that-represents-a-web-part"></a>定义表示 web 部件的节点类型
  创建一个类，用于定义表示 Web 部件的新类型的节点。 Visual Studio 使用此新节点类型显示 " **Web 部件库** " 节点下的子节点。 其中每个子节点表示 SharePoint 站点上的单个 Web 部件。
 
- 若要定义新的节点类型，类实现 <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeProvider> 接口。 如果要在 **服务器资源管理器**中定义新类型的节点，请实现此接口。
+ 若要定义新的节点类型，类实现 <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeProvider> 接口。 如果要在 **服务器资源管理器** 中定义新类型的节点，请实现此接口。
 
 #### <a name="to-define-the-web-part-node-type"></a>定义 web 部件节点类型
 
-1. 将以下代码粘贴到**WebPartNodeExtension**项目的**WebPartNodeTypeProvider**代码文件中。
+1. 将以下代码粘贴到 **WebPartNodeExtension** 项目的 **WebPartNodeTypeProvider** 代码文件中。
 
      [!code-csharp[SPExtensibility.SPExplorer.WebPartNode#2](../sharepoint/codesnippet/CSharp/webpartnode/webpartnodeextension/webpartnodetypeprovider.cs#2)]
      [!code-vb[SPExtensibility.SPExplorer.WebPartNode#2](../sharepoint/codesnippet/VisualBasic/spextensibility.spexplorer.webpartnode.webpartnode/webpartnodeextension/webpartnodetypeprovider.vb#2)]
 
-## <a name="checkpoint"></a>检查点
+## <a name="checkpoint"></a>Checkpoint
  在本演练的这一时间点， **Web 部件库** 节点的所有代码现在都在项目中。 生成 **WebPartNodeExtension** 项目以确保它在编译时不会出错。
 
 #### <a name="to-build-the-project"></a>生成项目
 
-1. 在 **解决方案资源管理器**中，打开 **WebPartNodeExtension** 项目的快捷菜单，然后选择 " **生成**"。
+1. 在 **解决方案资源管理器** 中，打开 **WebPartNodeExtension** 项目的快捷菜单，然后选择 " **生成**"。
 
 ## <a name="create-a-vsix-package-to-deploy-the-extension"></a>创建 VSIX 包以部署扩展
  若要部署扩展，请使用解决方案中的 VSIX 项目创建 VSIX 包。 首先，通过修改项目中包含的 source.extension.vsixmanifest 文件来配置 VSIX 包。 然后通过生成解决方案创建 VSIX 包。
 
 #### <a name="to-configure-the-vsix-package"></a>配置 VSIX 包
 
-1. 在 **解决方案资源管理器**的 **WebPartNode** 项目中，在清单编辑器中打开 **source.extension.vsixmanifest** 文件。
+1. 在 **解决方案资源管理器** 的 **WebPartNode** 项目中，在清单编辑器中打开 **source.extension.vsixmanifest** 文件。
 
      Source.extension.vsixmanifest 文件是所有 VSIX 包都需要的 source.extension.vsixmanifest 文件的基础。 有关此文件的详细信息，请参阅 [VSIX 扩展架构1.0 引用](/previous-versions/dd393700(v=vs.110))。
 
@@ -219,7 +221,7 @@ ms.locfileid: "91585571"
      默认情况下，生成输出文件夹为。包含项目文件的文件夹下的 \bin\Debug 文件夹。
 
 ## <a name="test-the-extension"></a>测试扩展
- 你现在已准备好在**服务器资源管理器**中测试新的**Web 部件库**节点。 首先，开始在 Visual Studio 的实验实例中调试扩展项目。 然后，在 Visual Studio 的实验实例中使用新的 **Web 部件** 节点。
+ 你现在已准备好在 **服务器资源管理器** 中测试新的 **Web 部件库** 节点。 首先，开始在 Visual Studio 的实验实例中调试扩展项目。 然后，在 Visual Studio 的实验实例中使用新的 **Web 部件** 节点。
 
 #### <a name="to-start-debugging-the-extension"></a>开始调试扩展
 
@@ -235,7 +237,7 @@ ms.locfileid: "91585571"
 
 1. 在 Visual Studio 的实验实例中，在菜单栏上选择 "**查看**  >  **服务器资源管理器**"。
 
-2. 验证要用于测试的 SharePoint 站点是否显示在**服务器资源管理器**中的 " **sharepoint 连接**" 节点下。 如果未列出，请执行以下步骤：
+2. 验证要用于测试的 SharePoint 站点是否显示在 **服务器资源管理器** 中的 " **sharepoint 连接**" 节点下。 如果未列出，请执行以下步骤：
 
     1. 打开 " **SharePoint 连接**" 的快捷菜单，然后选择 " **添加连接**"。
 
@@ -251,13 +253,13 @@ ms.locfileid: "91585571"
 
 6. 验证 Visual Studio 的另一个实例中的代码是否在您之前在方法中设置的断点处停止 `CreateWebPartNodes` ，然后选择 **F5** 键继续调试该项目。
 
-7. 在 Visual Studio 的实验实例中，验证连接的站点上的所有 Web 部件都显示在 "**服务器资源管理器**中的" **Web 部件库**"节点下。
+7. 在 Visual Studio 的实验实例中，验证连接的站点上的所有 Web 部件都显示在 "**服务器资源管理器** 中的" **Web 部件库**"节点下。
 
 8. 打开 Web 部件的快捷菜单，然后选择 " **属性**"。
 
 9. 在 " **属性** " 窗口中，验证是否显示了有关 Web 部件的详细信息。
 
-10. 在 **服务器资源管理器**中，打开同一 Web 部件的快捷菜单，然后选择 " **显示消息**"。
+10. 在 **服务器资源管理器** 中，打开同一 Web 部件的快捷菜单，然后选择 " **显示消息**"。
 
      在出现的消息框中，选择 " **确定"** 按钮。
 
@@ -268,7 +270,7 @@ ms.locfileid: "91585571"
 
 1. 在 Visual Studio 的实验实例中，在菜单栏上选择 "**工具**" "  >  **扩展和更新**"。
 
-     此时，“扩展和更新”**** 对话框打开。
+     此时，“扩展和更新”对话框打开。
 
 2. 在扩展列表中，选择 " **Web 部件库" 节点服务器资源管理器**，然后选择 " **卸载** " 按钮。
 

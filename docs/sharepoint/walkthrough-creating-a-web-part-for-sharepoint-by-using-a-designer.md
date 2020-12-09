@@ -1,5 +1,7 @@
 ---
 title: 使用设计器创建 SharePoint web 部件
+description: 在本演练中，使用 Visual Studio 中的 "SharePoint 可视 Web 部件" 项目模板以可视化方式创建 web 部件。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,14 +16,14 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 732bd9fe3d34a768e0c6f71315f212c49bdf02af
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cc214e98b2ec0ed6feb31c9aaa6e8170b3ddd2c8
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016395"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96913979"
 ---
-# <a name="walkthrough-create-a-web-part-for-sharepoint-by-using-a-designer"></a>演练：使用设计器为 SharePoint 创建 web 部件
+# <a name="walkthrough-create-a-web-part-for-sharepoint-by-using-a-designer"></a>演练：使用设计器为 SharePoint 创建 Web 部件
 
 如果为 SharePoint 站点创建 web 部件，用户可以使用浏览器直接修改该网站中页面的内容、外观和行为。 本演练演示如何使用 Visual Studio 中的 "SharePoint **可视 Web 部件** " 项目模板以可视化方式创建 web 部件。
 
@@ -47,11 +49,11 @@ ms.locfileid: "86016395"
 
 首先，使用 " **可视 Web 部件** " 项目模板创建 web 部件项目。
 
-1. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]使用 "以**管理员身份运行**" 选项启动。
+1. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]使用 "以 **管理员身份运行**" 选项启动。
 
 2. 在菜单栏上，依次选择“文件” > “新建” > “项目”。
 
-     此时将出现“新建项目”对话框。
+     此时将出现“新建项目”  对话框。
 
 3. 在 " **新建项目** " 对话框中的 " **Visual c #** " 或 " **Visual Basic**" 下，展开 " **Office/SharePoint**"，然后选择 " **SharePoint 解决方案** " 类别。
 
@@ -75,7 +77,7 @@ ms.locfileid: "86016395"
 
     - 打开 **CheckBoxList** 控件的快捷菜单，选择 " **复制**"，打开设计器中第一行的快捷菜单，然后选择 " **粘贴**"。
 
-    - 从**工具箱**中拖动 " **CheckBoxList** " 控件，并将该控件连接到设计器中的第一行。
+    - 从 **工具箱** 中拖动 " **CheckBoxList** " 控件，并将该控件连接到设计器中的第一行。
 
 4. 重复前面的步骤，但将按钮移动到设计器的下一行。
 
@@ -83,7 +85,7 @@ ms.locfileid: "86016395"
 
 6. 在菜单栏上，选择 "**查看**  >  **属性窗口**"。
 
-     此时将打开“属性”窗口****。
+     此时将打开“属性”窗口。
 
 7. 在按钮的 " **文本** " 属性中，输入 **更新**。
 
@@ -147,13 +149,13 @@ ms.locfileid: "86016395"
 
 3. 在 "日历" 页上，选择一天，然后选择所选日期中的 " **添加** " 链接以添加一个事件。
 
-4. 在 " **标题** " 框中，在 **默认日历**中输入事件，然后选择 " **保存** " 按钮。
+4. 在 " **标题** " 框中，在 **默认日历** 中输入事件，然后选择 " **保存** " 按钮。
 
 5. 选择 " **网站内容** " 链接，然后选择 " **添加应用** " 磁贴。
 
 6. 在 " **创建** " 页上，选择 **日历** 类型，为日历命名，然后选择 " **创建** " 按钮。
 
-7. 向新日历添加事件， **在自定义日历中**命名事件事件，然后选择 " **保存** " 按钮。
+7. 向新日历添加事件， **在自定义日历中** 命名事件事件，然后选择 " **保存** " 按钮。
 
 ### <a name="to-add-the-web-part-to-a-web-part-page"></a>将 web 部件添加到 web 部件页
 

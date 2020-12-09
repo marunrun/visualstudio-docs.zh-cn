@@ -1,5 +1,7 @@
 ---
 title: 计算上下文 |Microsoft Docs
+description: 当调试引擎调用表达式计算器时，自变量将确定用于查找和计算符号的上下文： pSymbolProvider、pAddress 和 pBinder。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5e3d02bd652d6c46b5aabe00e049e425f0921c27
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a021d5dfdff5058211f5bafdfd7854611f977c27
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738797"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914512"
 ---
 # <a name="evaluation-context"></a>评估上下文
 > [!IMPORTANT]
@@ -34,7 +36,7 @@ ms.locfileid: "80738797"
 
  `IDebugParsedExpression::EvaluateSync` 返回表示结果值及其类型的 [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) 接口。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [键表达式计算器接口](../../extensibility/debugger/key-expression-evaluator-interfaces.md)
 - [显示局部变量](../../extensibility/debugger/displaying-locals.md)
 - [EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md)

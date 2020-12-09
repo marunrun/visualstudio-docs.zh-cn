@@ -1,5 +1,7 @@
 ---
 title: " (Visual Studio SDK) 的断点 |Microsoft Docs"
+description: 了解下面三种类型的断点：挂起、绑定和错误。 本文列出了用于实现类型的接口。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7c9d61c82886f237e8c9f544a59d8fe167548277
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8d266bb97b6d3086a8f5b74100f5821a5cfca3af
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739188"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914447"
 ---
 # <a name="breakpoints-visual-studio-sdk"></a>断点 (Visual Studio SDK)
 有三种类型的断点： "挂起"、"绑定" 和 "错误"。
@@ -45,7 +47,7 @@ ms.locfileid: "80739188"
 - 由 [IDebugErrorBreakpoint2](../../extensibility/debugger/reference/idebugerrorbreakpoint2.md) 接口表示。
 
 ## <a name="see-also"></a>另请参阅
-- [计划](../../extensibility/debugger/programs.md)
+- Programs 
 - [调试器概念](../../extensibility/debugger/debugger-concepts.md)
 - [代码上下文](../../extensibility/debugger/code-context.md)
 - [IDebugBoundBreakpoint2](../../extensibility/debugger/reference/idebugboundbreakpoint2.md)
