@@ -1,5 +1,7 @@
 ---
 title: Extern 元素 |Microsoft Docs
+description: Extern 元素在编译时引用 () 文件与 .vsct 文件合并的任何外部标头。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,15 +15,15 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2cf6f9db77abaa7034af8d074b9833a4c1560f07
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7e975c3f721d65b64fc7994824406b0c9af13022
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711490"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994519"
 ---
 # <a name="extern-element"></a>Extern 元素
-Extern 元素在编译时 *引用 () * 文件与 *.vsct* 文件合并的任何外部标头。 要合并的文件必须位于 .VSCT 编译器提供的包含路径上，或由 [include 元素](../extensibility/include-element.md)引用。 这些文件可以是其他 *.vsct* 文件或 c + + 头文件。
+Extern 元素在编译时 *引用 ()* 文件与 *.vsct* 文件合并的任何外部标头。 要合并的文件必须位于 .VSCT 编译器提供的包含路径上，或由 [include 元素](../extensibility/include-element.md)引用。 这些文件可以是其他 *.vsct* 文件或 c + + 头文件。
 
  标头文件中的定义的格式必须为 "#define [符号] [值]"。值可以是其他符号（如果以前已定义）。 定义可以在命令项的条件语句中使用。 不实际使用的任何符号将被丢弃。
 

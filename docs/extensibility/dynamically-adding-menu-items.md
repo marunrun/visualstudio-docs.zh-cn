@@ -1,5 +1,7 @@
 ---
 title: 动态添加菜单项 |Microsoft Docs
+description: 了解如何在运行时使用 DynamicItemStart 命令标志添加菜单项。 本文介绍如何在 Visual Studio 解决方案中设置启动项目。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4387c1930e09e49c0ec5c36ccedc1bb83dc273f3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 81fd495c51eff456f66275f33876038d14e43203
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712058"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994805"
 ---
 # <a name="dynamically-add-menu-items"></a>动态添加菜单项
 你可以在运行时添加菜单项，方法是在 `DynamicItemStart` Visual Studio 命令表中的占位符按钮定义上指定命令标志 (*.Vsct*) 文件中，然后在代码中定义 () 要显示的菜单项的数目，并处理 (s 的命令。 加载 VSPackage 时，会将占位符替换为动态菜单项。
@@ -43,7 +45,7 @@ ms.locfileid: "80712058"
 
 - 两个按钮，一个用于作为菜单项的占位符，另一个用于提供工具栏上的图标和工具提示。
 
-1. 在 *DynamicMenuPackage. .vsct*中，定义命令 id。 中转到符号部分并替换 **guidDynamicMenuPackageCmdSet** GuidSymbol 块中的 IDSymbol 元素。 需要为两个组、菜单控制器、占位符命令和定位点命令定义 IDSymbol 元素。
+1. 在 *DynamicMenuPackage. .vsct* 中，定义命令 id。 中转到符号部分并替换 **guidDynamicMenuPackageCmdSet** GuidSymbol 块中的 IDSymbol 元素。 需要为两个组、菜单控制器、占位符命令和定位点命令定义 IDSymbol 元素。
 
     ```xml
     <GuidSymbol name="guidDynamicMenuPackageCmdSet" value="{ your GUID here }">
@@ -142,7 +144,7 @@ ms.locfileid: "80712058"
 ## <a name="implement-the-dynamic-menu-command"></a>实现动态菜单命令
  创建一个从继承的动态菜单命令类 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> 。 在此实现中，构造函数指定用于匹配命令的谓词。 必须重写 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.DynamicItemMatch%2A> 方法，以便使用此谓词来设置 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.MatchedCommandId%2A> 属性，该属性用于标识要调用的命令。
 
-1. 创建一个名为 *DynamicItemMenuCommand.cs*的新 c # 类文件，并添加一个从继承的名为 **DynamicItemMenuCommand** 的类 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> ：
+1. 创建一个名为 *DynamicItemMenuCommand.cs* 的新 c # 类文件，并添加一个从继承的名为 **DynamicItemMenuCommand** 的类 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> ：
 
     ```csharp
     class DynamicItemMenuCommand : OleMenuCommand
@@ -205,7 +207,7 @@ ms.locfileid: "80712058"
 ## <a name="add-the-command"></a>添加命令
  在 DynamicMenu 构造函数中，可以设置菜单命令，包括动态菜单和菜单项。
 
-1. 在 *DynamicMenuPackage.cs*中，添加命令集的 GUID 和命令 ID：
+1. 在 *DynamicMenuPackage.cs* 中，添加命令集的 GUID 和命令 ID：
 
     ```csharp
     public const string guidDynamicMenuPackageCmdSet = "00000000-0000-0000-0000-00000000";  // get the GUID from the .vsct file
@@ -350,12 +352,12 @@ public sealed class DynamicMenuItemsPackage : Package
 
 2. 在实验实例中，打开包含多个项目的解决方案。
 
-     **解决方案资源管理器**工具栏上应会显示箭头图标。 展开此项时，将显示表示解决方案中不同项目的菜单项。
+     **解决方案资源管理器** 工具栏上应会显示箭头图标。 展开此项时，将显示表示解决方案中不同项目的菜单项。
 
 3. 选中其中一个项目时，它将成为启动项目。
 
 4. 关闭解决方案或打开只包含一个项目的解决方案时，工具栏图标应会消失。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [命令、菜单和工具栏](../extensibility/internals/commands-menus-and-toolbars.md)
 - [Vspackage 如何添加用户界面元素](../extensibility/internals/how-vspackages-add-user-interface-elements.md)

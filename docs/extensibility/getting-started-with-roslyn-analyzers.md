@@ -1,5 +1,7 @@
 ---
 title: 入门与 Roslyn 分析器 |Microsoft Docs
+description: 使用以下资源开始在 Visual Studio 中使用 Roslyn 分析器;包括教程和几个示例。
+ms.custom: SEO-VS-2020
 ms.date: 04/02/2018
 ms.topic: conceptual
 ms.assetid: 367c2ec8-3059-46a5-9d1c-57bead0419e7
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4d572c49f7d528b9dbb624bf31ad5e28dc3799aa
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: c63510083f227f617b2a11ddec07510ffd792433
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012238"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994350"
 ---
 # <a name="get-started-with-roslyn-analyzers"></a>Roslyn 分析器入门
 
@@ -31,7 +33,7 @@ ms.locfileid: "90012238"
 
 [GitHub 上的几个示例，分为三类分析器](https://github.com/dotnet/roslyn/blob/master/docs/analyzers/Analyzer%20Samples.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [.NET 编译器平台包版本引用](roslyn-version-support.md)
 - [GitHub OSS 站点上的更多文档](https://github.com/dotnet/roslyn/tree/master/docs/analyzers)

@@ -1,6 +1,7 @@
 ---
 title: 将扩展性项目迁移到 Visual Studio 2017
 titleSuffix: ''
+description: 了解如何将扩展性项目升级到 Visual Studio 2017，以及如何从扩展清单版本2升级到版本 3 VSIX 清单。
 ms.custom: SEO-VS-2020
 ms.date: 11/09/2016
 ms.topic: how-to
@@ -11,12 +12,12 @@ manager: jillfra
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: 9212add38f877e76aa3eaaa98c3d0d863c97d62e
-ms.sourcegitcommit: 13cf7569f62c746708a6ced1187d8173eda7397c
+ms.openlocfilehash: 58d802ad97018a3d84e2b6a9f5e759db3a7cb2e3
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352278"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993960"
 ---
 # <a name="how-to-migrate-extensibility-projects-to-visual-studio-2017"></a>如何：将扩展性项目迁移到 Visual Studio 2017
 
@@ -49,7 +50,7 @@ ms.locfileid: "91352278"
 
 * 右键单击解决方案，然后选择 " **管理解决方案的 NuGet 包**"。
 * 导航到 " **更新** " 选项卡。
-* 选择 **VSSDK. BuildTools (最新版本) **。
+* 选择 **VSSDK. BuildTools (最新版本)**。
 * 按 " **更新**"。
 
 ![VSSDK 生成工具](media/vssdk-build-tools.png)
@@ -109,7 +110,7 @@ ms.locfileid: "91352278"
 
 ## <a name="update-debug-settings-for-the-project"></a>更新项目的调试设置
 
-如果要在 visual studio 的实验实例中调试扩展，请确保 "**调试**  >  **启动操作**的项目设置" 具有 "**启动外部程序：** " 值设置为 Visual studio 2017 安装的*devenv.exe*文件。
+如果要在 visual studio 的实验实例中调试扩展，请确保 "**调试**  >  **启动操作** 的项目设置" 具有 "**启动外部程序：** " 值设置为 Visual studio 2017 安装的 *devenv.exe* 文件。
 
 它的外观可能如下所示： *C:\Program Files (x86) \Microsoft Visual Studio\2017\Enterprise\Common7\IDE\devenv.exe*
 
@@ -122,7 +123,7 @@ ms.locfileid: "91352278"
 
 * 生成 VSIX 项目。
 * 解压缩生成的 VSIX。
-  * 默认情况下，VSIX 文件在 *bin/Debug* 或 *bin/Release* 内处于 *[YourCustomExtension] .vsix*内。
+  * 默认情况下，VSIX 文件在 *bin/Debug* 或 *bin/Release* 内处于 *[YourCustomExtension] .vsix* 内。
   * 将 *.vsix* 重命名为 *.zip* 即可轻松查看内容。
 * 检查是否存在三个文件：
   * *扩展名 source.extension.vsixmanifest*
@@ -187,18 +188,18 @@ WPF | 托管桌面工作负载核心 | Microsoft.VisualStudio.Component.ManagedD
 
 ### <a name="vs2017-componentbinarymappingxlsx"></a>vs2017-ComponentBinaryMapping.xlsx
 
-Excel 工作表中有四列：**组件名称、组件名称**、**版本**和**二进制文件/文件名称**。 **ComponentId**  您可以使用筛选器搜索和查找特定组件和二进制文件。
+Excel 工作表中有四列：**组件名称、组件名称**、**版本** 和 **二进制文件/文件名称**。   您可以使用筛选器搜索和查找特定组件和二进制文件。
 
 对于所有引用，请首先确定哪些 VisualStudio 位于核心编辑器中 (CoreEditor) 组件。  至少需要将核心编辑器组件指定为所有扩展的必备组件。 对于不在核心编辑器中的引用，请在 " **二进制文件/文件名称** " 部分中添加筛选器，以查找具有这些引用的任意子集的组件。
 
-示例：
+例如：
 
-* 如果你有一个调试器扩展，并且知道你的项目具有对 *VSDebugEng.dll* 和 *VSDebug.dll*的引用，请在 " **二进制文件/文件名称** " 标头中单击 "筛选器" 按钮。  搜索 "VSDebugEng.dll"，然后选择 *"确定*"。  接下来，再次单击 " **二进制文件名称** " 标头中的 "筛选器" 按钮，然后搜索 "VSDebug.dll"。  选中 " **添加当前所选内容** " 复选框，然后选择 **"确定"**。  现在，浏览 **组件名称** ，查找与扩展类型最相关的组件。 在此示例中，你将选择实时调试器并将其添加到你的 source.extension.vsixmanifest。
+* 如果你有一个调试器扩展，并且知道你的项目具有对 *VSDebugEng.dll* 和 *VSDebug.dll* 的引用，请在 " **二进制文件/文件名称** " 标头中单击 "筛选器" 按钮。  搜索 "VSDebugEng.dll"，然后选择 *"确定*"。  接下来，再次单击 " **二进制文件名称** " 标头中的 "筛选器" 按钮，然后搜索 "VSDebug.dll"。  选中 " **添加当前所选内容** " 复选框，然后选择 **"确定"**。  现在，浏览 **组件名称** ，查找与扩展类型最相关的组件。 在此示例中，你将选择实时调试器并将其添加到你的 source.extension.vsixmanifest。
 * 如果你知道你的项目处理调试器元素，则可以在筛选器搜索框中搜索 "调试器"，以查看其名称中包含调试器的组件。
 
 ## <a name="specify-a-visual-studio-2017-release"></a>指定 Visual Studio 2017 版本
 
-例如，如果你的扩展需要特定版本的 Visual Studio 2017 （例如，它依赖于15.3 中发布的功能），则必须在 VSIX **InstallationTarget**中指定内部版本号。 例如，版本15.3 的生成号为 "15.0.26730.3"。 可在 [此处](../install/visual-studio-build-numbers-and-release-dates.md)查看生成编号的版本映射。 使用版本号 "15.3" 将不能正常工作。
+例如，如果你的扩展需要特定版本的 Visual Studio 2017 （例如，它依赖于15.3 中发布的功能），则必须在 VSIX **InstallationTarget** 中指定内部版本号。 例如，版本15.3 的生成号为 "15.0.26730.3"。 可在 [此处](../install/visual-studio-build-numbers-and-release-dates.md)查看生成编号的版本映射。 使用版本号 "15.3" 将不能正常工作。
 
 如果扩展需要15.3 或更高版本，则需要将 **InstallationTarget 版本** 声明为 [15.0.26730.3，16.0) ：
 

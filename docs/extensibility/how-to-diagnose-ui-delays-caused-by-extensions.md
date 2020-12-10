@@ -1,17 +1,19 @@
 ---
 title: 诊断 Visual Studio 中的扩展 UI 延迟 |Microsoft Docs
+description: 如果 UI 延迟可能是由扩展引起的，则 Visual Studio 会通知你。 了解如何诊断扩展代码中导致 UI 延迟的内容。
+ms.custom: SEO-VS-2020
 ms.date: 01/26/2018
 ms.topic: conceptual
 author: PooyaZv
 ms.author: pozandev
 manager: jillfra
 ms.workload: multiple
-ms.openlocfilehash: e8b35a566eb0f2457d6eb8ae3a33235df2a64cd3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 965e96a7881e20eca035b61ed7fd6f29398e71c6
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75849145"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994259"
 ---
 # <a name="how-to-diagnose-ui-delays-caused-by-extensions"></a>如何：诊断由扩展引起的 UI 延迟
 
@@ -71,7 +73,7 @@ PerfView 启动跟踪集合后，可以使用步骤 1) 中 (的触发器操作�
 
 ## <a name="examine-the-activity-log-to-get-the-delay-id"></a>检查活动日志以获取延迟 ID
 
-如前文所述，可以在 *%APPDATA%\Microsoft\VisualStudio \<vs_instance_id>\ActivityLog.xml*找到活动日志。 每次 Visual Studio 检测到扩展 UI 延迟时，都会将一个节点作为源写入活动日志 `UIDelayNotifications` 。 此节点包含有关 UI 延迟的四个信息片段：
+如前文所述，可以在 *%APPDATA%\Microsoft\VisualStudio \<vs_instance_id>\ActivityLog.xml* 找到活动日志。 每次 Visual Studio 检测到扩展 UI 延迟时，都会将一个节点作为源写入活动日志 `UIDelayNotifications` 。 此节点包含有关 UI 延迟的四个信息片段：
 
 - UI 延迟 ID，是在 VS 会话中唯一标识 UI 延迟的序列号
 - 会话 ID，它从开始到关闭唯一标识你的 Visual Studio 会话
@@ -102,7 +104,7 @@ PerfView 启动跟踪集合后，可以使用步骤 1) 中 (的触发器操作�
 然后，在左窗格中选择跟踪文件，并通过从右键单击或上下文菜单中选择 " **打开** " 来打开它。
 
 > [!NOTE]
-> 默认情况下，PerfView 将输出 Zip 存档。 打开 *trace.zip*时，它会自动解压缩存档并打开跟踪。 您可以通过在跟踪收集过程中取消选中 **Zip** 框来跳过此过程。 但是，如果您打算在不同的计算机之间传输和使用跟踪，则强烈建议不要取消选中 **Zip** 框。 如果没有此选项，则 Ngen 程序集所需的 Pdb 不会伴随跟踪，因而 Ngen 程序集中的符号将不会在目标计算机上解析。  (查看 [此博客文章](https://devblogs.microsoft.com/devops/creating-ngen-pdbs-for-profiling-reports/) ，了解有关 Ngen for Ngen 程序集的详细信息。 ) 
+> 默认情况下，PerfView 将输出 Zip 存档。 打开 *trace.zip* 时，它会自动解压缩存档并打开跟踪。 您可以通过在跟踪收集过程中取消选中 **Zip** 框来跳过此过程。 但是，如果您打算在不同的计算机之间传输和使用跟踪，则强烈建议不要取消选中 **Zip** 框。 如果没有此选项，则 Ngen 程序集所需的 Pdb 不会伴随跟踪，因而 Ngen 程序集中的符号将不会在目标计算机上解析。  (查看 [此博客文章](https://devblogs.microsoft.com/devops/creating-ngen-pdbs-for-profiling-reports/) ，了解有关 Ngen for Ngen 程序集的详细信息。 ) 
 
 PerfView 处理并打开跟踪可能需要几分钟时间。 打开跟踪后，会在其下显示不同的 "视图" 列表。
 
@@ -110,7 +112,7 @@ PerfView 处理并打开跟踪可能需要几分钟时间。 打开跟踪后，�
 
 首先，我们将使用 **事件** 视图来获取 UI 延迟的时间范围：
 
-1. 通过在**Events**跟踪下选择 " `Events` 节点"，然后从右键单击或上下文菜单中选择 "**打开**"，打开 "事件" 视图。
+1. 通过在跟踪下选择 " `Events` 节点"，然后从右键单击或上下文菜单中选择 "**打开**"，打开 "事件" 视图。
 2. `Microsoft-VisualStudio/ExtensionUIUnresponsiveness`在左窗格中选择 ""。
 3. 按 Enter
 
@@ -126,7 +128,7 @@ PerfView 处理并打开跟踪可能需要几分钟时间。 打开跟踪后，�
 * 延迟开始时间为 12125.679-6143.085 = 5982.594。
 * UI 延迟时间范围为5982.594 到12125.679。
 
-完成时间范围后，可以关闭 **事件** 视图，并 **使用 StartStop 的活动) 堆栈视图打开线程时间 (** 。 此视图尤其方便，因为阻止 UI 线程的扩展通常只是等待其他线程或 i/o 绑定的操作。 因此，在大多数情况下， **CPU 堆栈** 视图（对于大多数情况下为 "执行" 选项）可能无法捕获线程阻塞的时间，因为在该时间段内未使用 cpu。 **线程时间堆栈**通过正确显示阻塞时间来解决此问题。
+完成时间范围后，可以关闭 **事件** 视图，并 **使用 StartStop 的活动) 堆栈视图打开线程时间 (** 。 此视图尤其方便，因为阻止 UI 线程的扩展通常只是等待其他线程或 i/o 绑定的操作。 因此，在大多数情况下， **CPU 堆栈** 视图（对于大多数情况下为 "执行" 选项）可能无法捕获线程阻塞的时间，因为在该时间段内未使用 cpu。 **线程时间堆栈** 通过正确显示阻塞时间来解决此问题。
 
 ![PerfView 摘要视图中包含 StartStop) 活动的线程时间 (堆栈节点](media/perfview-thread-time-with-startstop-activities-stacks.png)
 

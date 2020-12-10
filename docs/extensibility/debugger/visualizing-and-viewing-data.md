@@ -1,5 +1,7 @@
 ---
 title: 可视化和查看数据 |Microsoft Docs
+description: 了解类型可视化工具和自定义查看器如何向开发人员提供数据。 表达式计算器支持第三方类型可视化工具。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2b5f984e6c6a3c1c8f3835dfa93a8679ae16680a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 856788546e10e69a8bb7e2787558505937f9effd
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712375"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995442"
 ---
 # <a name="visualizing-and-viewing-data"></a>可视化和查看数据
 类型可视化工具和自定义查看器以快速向开发人员提供意义的方式显示数据。 表达式计算器 (EE) 可以支持第三方类型的可视化工具，并提供自己的自定义查看器。

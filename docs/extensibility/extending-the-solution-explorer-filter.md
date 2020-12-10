@@ -1,5 +1,7 @@
 ---
 title: 扩展解决方案资源管理器筛选器 |Microsoft Docs
+description: 了解如何扩展解决方案资源管理器筛选功能，以显示或隐藏 Visual Studio SDK 中的不同文件。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,22 +13,22 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: af0824edd4188481bec8c0703d71043354f5dbcc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cde3377582c3bac0c27371e25f28e5151d641db1
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711570"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994558"
 ---
 # <a name="extend-the-solution-explorer-filter"></a>扩展解决方案资源管理器筛选器
-您可以扩展 **解决方案资源管理器** 筛选器功能以显示或隐藏不同文件。 例如，可以创建一个筛选器，该筛选器仅显示 **解决方案资源管理器**中的 c # 类工厂文件，如本演练中所示。
+您可以扩展 **解决方案资源管理器** 筛选器功能以显示或隐藏不同文件。 例如，可以创建一个筛选器，该筛选器仅显示 **解决方案资源管理器** 中的 c # 类工厂文件，如本演练中所示。
 
 ## <a name="prerequisites"></a>先决条件
- 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+ 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 也可稍后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
 ### <a name="create-a-visual-studio-package-project"></a>创建 Visual Studio 包项目
 
-1. 创建一个名为的 VSIX 项目 `FileFilter` 。 添加名为 **FileFilter**的自定义命令项模板。 有关详细信息，请参阅 [使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)。
+1. 创建一个名为的 VSIX 项目 `FileFilter` 。 添加名为 **FileFilter** 的自定义命令项模板。 有关详细信息，请参阅 [使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)。
 
 2. 添加对和的 `System.ComponentModel.Composition` 引用 `Microsoft.VisualStudio.Utilities` 。
 
@@ -65,13 +67,13 @@ ms.locfileid: "80711570"
     public const int FileFilterId = 0x100;
     ```
 
-2. 将类文件添加到名为 *FileNameFilter.cs*的 FileFilter 项目。
+2. 将类文件添加到名为 *FileNameFilter.cs* 的 FileFilter 项目。
 
 3. 将空的命名空间和空类替换为以下代码。
 
      `Task<IReadOnlyObservableSet> GetIncludedItemsAsync(IEnumerable<IVsHierarchyItem rootItems)`方法采用包含解决方案的根的集合 (`rootItems`) 并返回要包含在筛选器中的项的集合。
 
-     `ShouldIncludeInFilter`方法根据你指定的条件筛选**解决方案资源管理器**层次结构中的项。
+     `ShouldIncludeInFilter`方法根据你指定的条件筛选 **解决方案资源管理器** 层次结构中的项。
 
     ```csharp
     using System;
@@ -158,7 +160,7 @@ ms.locfileid: "80711570"
 
     ```
 
-4. 在 *FileFilter.cs*中，删除来自 FileFilter 构造函数的命令放置和处理代码。 结果应如下所示：
+4. 在 *FileFilter.cs* 中，删除来自 FileFilter 构造函数的命令放置和处理代码。 结果应如下所示：
 
     ```csharp
     private FileFilter(Package package)
@@ -174,7 +176,7 @@ ms.locfileid: "80711570"
 
      删除 `ShowMessageBox()` 方法。
 
-5. 在 *FileFilterPackage.cs*中，将方法中的代码替换 `Initialize()` 为以下代码：
+5. 在 *FileFilterPackage.cs* 中，将方法中的代码替换 `Initialize()` 为以下代码：
 
     ```csharp
     protected override void Initialize()
@@ -192,4 +194,4 @@ ms.locfileid: "80711570"
 
 3. 查找在 **解决方案资源管理器** 工具栏上添加的按钮。 它应该是左侧的第四个按钮。
 
-4. 单击该按钮时，所有文件都应该被筛选掉，你应该会看到 **所有项都已从视图中筛选出。** 在 **解决方案资源管理器**中。
+4. 单击该按钮时，所有文件都应该被筛选掉，你应该会看到 **所有项都已从视图中筛选出。** 在 **解决方案资源管理器** 中。

@@ -1,5 +1,7 @@
 ---
 title: 扩展输出窗口 |Microsoft Docs
+description: 了解如何扩展 Visual Studio SDK 中的 "输出" 窗口，以及如何创建和管理自己的自定义窗格。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,22 +12,22 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 800b443b079111d1d09fffdd900b246a020578f4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 39ee69f934a9962d2beefb83b1ada08b920ce53d
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711647"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994649"
 ---
 # <a name="extend-the-output-window"></a>扩展 "输出" 窗口
-" **输出** " 窗口是一组读/写文本窗格。 Visual Studio 包含这些内置窗格： " **生成**"，其中的项目用于传达有关生成的消息 **，并传达**有关 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE 的消息。 项目通过接口方法自动获得对 " **生成** " 窗格的引用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg> ，Visual Studio 通过服务提供对 **常规** 窗格的直接访问 <xref:Microsoft.VisualStudio.Shell.Interop.SVsGeneralOutputWindowPane> 。 除了内置窗格外，还可以创建和管理自己的自定义窗格。
+" **输出** " 窗口是一组读/写文本窗格。 Visual Studio 包含这些内置窗格： " **生成**"，其中的项目用于传达有关生成的消息 **，并传达** 有关 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE 的消息。 项目通过接口方法自动获得对 " **生成** " 窗格的引用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg> ，Visual Studio 通过服务提供对 **常规** 窗格的直接访问 <xref:Microsoft.VisualStudio.Shell.Interop.SVsGeneralOutputWindowPane> 。 除了内置窗格外，还可以创建和管理自己的自定义窗格。
 
- 您可以通过和接口直接控制 " **输出** " 窗口 <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow> <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindowPane> 。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow>接口由 <xref:Microsoft.VisualStudio.Shell.Interop.SVsOutputWindow> 服务提供，用于定义用于创建、检索和销毁**输出**窗口窗格的方法。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindowPane>接口定义用于显示窗格、隐藏窗格和操作其文本的方法。 控制 " **输出** " 窗口的另一种方法是 <xref:EnvDTE.OutputWindow> 通过 <xref:EnvDTE.OutputWindowPane> Visual Studio 自动化对象模型中的和对象。 这些对象封装了和接口的几乎所有功能 <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow> <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindowPane> 。 此外， <xref:EnvDTE.OutputWindow> 和对象还 <xref:EnvDTE.OutputWindowPane> 添加了一些更高级别的功能，使您可以更轻松地枚举 " **输出** " 窗口窗格和从窗格中检索文本。
+ 您可以通过和接口直接控制 " **输出** " 窗口 <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow> <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindowPane> 。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow>接口由 <xref:Microsoft.VisualStudio.Shell.Interop.SVsOutputWindow> 服务提供，用于定义用于创建、检索和销毁 **输出** 窗口窗格的方法。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindowPane>接口定义用于显示窗格、隐藏窗格和操作其文本的方法。 控制 " **输出** " 窗口的另一种方法是 <xref:EnvDTE.OutputWindow> 通过 <xref:EnvDTE.OutputWindowPane> Visual Studio 自动化对象模型中的和对象。 这些对象封装了和接口的几乎所有功能 <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow> <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindowPane> 。 此外， <xref:EnvDTE.OutputWindow> 和对象还 <xref:EnvDTE.OutputWindowPane> 添加了一些更高级别的功能，使您可以更轻松地枚举 " **输出** " 窗口窗格和从窗格中检索文本。
 
 ## <a name="create-an-extension-that-uses-the-output-pane"></a>创建使用 "输出" 窗格的扩展
  您可以使用一个扩展来执行 "输出" 窗格的不同方面。
 
-1. `TestOutput`使用名为**为 testoutput.txt**的菜单命令创建一个名为的 VSIX 项目。 有关详细信息，请参阅 [使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)。
+1. `TestOutput`使用名为 **为 testoutput.txt** 的菜单命令创建一个名为的 VSIX 项目。 有关详细信息，请参阅 [使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)。
 
 2. 添加以下引用：
 
@@ -33,14 +35,14 @@ ms.locfileid: "80711647"
 
     2. EnvDTE80
 
-3. 在 *TestOutput.cs*中，添加以下 using 语句：
+3. 在 *TestOutput.cs* 中，添加以下 using 语句：
 
     ```f#
     using EnvDTE;
     using EnvDTE80;
     ```
 
-4. 在 *TestOutput.cs*中，删除 `ShowMessageBox` 方法。 添加以下方法存根：
+4. 在 *TestOutput.cs* 中，删除 `ShowMessageBox` 方法。 添加以下方法存根：
 
     ```csharp
     private void OutputCommandHandler(object sender, EventArgs e)
@@ -150,7 +152,7 @@ void DeletePane(Guid paneGuid)
  如果将此方法添加到上一部分中给定的扩展，则单击 " **调用为 testoutput.txt** " 命令时，应会看到 "输出" 窗口，其中包含一个标头，其中 **显示 "显示输出来源：新建" 窗格** 和 "在窗格中添加的单词" **窗格** 。 如果再次单击 " **调用为 testoutput.txt** " 命令，该窗格将被删除。
 
 ## <a name="get-the-general-pane-of-the-output-window"></a>获取 "输出" 窗口的 "常规" 窗格
- 此示例演示如何获取 "**输出**" 窗口的内置**一般**窗格。
+ 此示例演示如何获取 "**输出**" 窗口的内置 **一般** 窗格。
 
 ```csharp
 IVsOutputWindowPane GetGeneralPane()

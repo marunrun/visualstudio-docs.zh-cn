@@ -1,5 +1,7 @@
 ---
 title: Groups 元素 |Microsoft Docs
+description: Groups 元素包含用于定义 VSPackage 的命令组的项。 本文包含一个示例。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a6383c3c7a28f9aa7778fddcbfe36b237d21323f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 31b5885ad6e08bd9e22049033d6191c97fdc857b
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711179"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994285"
 ---
 # <a name="groups-element"></a>Groups 元素
 包含定义 VSPackage 的命令组的项。
@@ -50,7 +52,7 @@ ms.locfileid: "80711179"
 
 |元素|说明|
 |-------------|-----------------|
-|[命令元素](../extensibility/commands-element.md)|表示 VSPackage 工具栏上命令的集合。|
+|[Commands 元素](../extensibility/commands-element.md)|表示 VSPackage 工具栏上命令的集合。|
 
 ## <a name="example"></a>示例
 

@@ -1,5 +1,7 @@
 ---
 title: 如何：创建专用库的 Atom 馈送 |Microsoft Docs
+description: 你可以创建 Atom (RSS) 源到包含扩展的 intranet 位置，并将源添加到作为专用库的扩展和更新。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 269161e831fdb176dbfea844e951597efb467312
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 833d75d7dfd18e863664e6d3d17d65a4e08b4d77
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905853"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994142"
 ---
 # <a name="how-to-create-an-atom-feed-for-a-private-gallery"></a>如何：创建专用库的 Atom 馈送
 你可以创建 Atom (RSS) 源到包含扩展的 intranet 位置，并将源添加到作为专用库的 **扩展和更新** 。 有关详细信息，请参阅[专用库](../extensibility/private-galleries.md)。
@@ -24,9 +26,9 @@ ms.locfileid: "85905853"
 ## <a name="create-an-atom-feed"></a>创建 Atom 馈送
  若要创建作为专用库的 Atom 源，首先需要将扩展 (*.vsix* 文件收集) 到文件夹中。 如果需要，可以将它们组织到子文件夹中。 还需要以下资源：
 
-- 一个 *atom.xml* 文件，该文件可将扩展作为专用库提供。 有关如何将 *atom.xml* 文件连接到 **扩展和更新**的信息，请参阅 [私有库](../extensibility/private-galleries.md)。
+- 一个 *atom.xml* 文件，该文件可将扩展作为专用库提供。 有关如何将 *atom.xml* 文件连接到 **扩展和更新** 的信息，请参阅 [私有库](../extensibility/private-galleries.md)。
 
-- 一个文件夹，其中包含从扩展中提取的任何图像文件 (例如，屏幕截图) 。 *atom.xml*文件包含指向这些映像的相对链接，以便它们可用于**扩展和更新**。
+- 一个文件夹，其中包含从扩展中提取的任何图像文件 (例如，屏幕截图) 。 *atom.xml* 文件包含指向这些映像的相对链接，以便它们可用于 **扩展和更新**。
 
   例如，假设你已将以下两个扩展收集到一个文件夹中：
 
@@ -34,7 +36,7 @@ ms.locfileid: "85905853"
 
 - *SelectionHighlight*，它是用于突出显示所选单词的所有实例的工具。
 
-  *atom.xml*文件的内容将与以下示例类似：
+  *atom.xml* 文件的内容将与以下示例类似：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

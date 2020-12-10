@@ -1,5 +1,6 @@
 ---
 title: 语言服务和编辑器扩展入门
+description: 了解如何将语言服务功能添加到任何内容类型，以及如何自定义 Visual Studio 编辑器的外观和行为。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 55d9f018324c32a8b39c96037058593cebf52bc2
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 471acaef0145b3bf1a73925b42e17a6343439ea2
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037759"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994389"
 ---
 # <a name="get-started-with-language-service-and-editor-extensions"></a>语言服务和编辑器扩展入门
 
@@ -48,7 +49,7 @@ ms.locfileid: "90037759"
 
 - 边距和滚动条
 
-- Tags
+- 标记
 
 - 修饰
 

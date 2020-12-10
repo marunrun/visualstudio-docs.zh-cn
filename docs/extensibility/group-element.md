@@ -1,5 +1,7 @@
 ---
 title: Group 元素 |Microsoft Docs
+description: Group 元素定义 VSPackage 命令组。 本文介绍特性、子元素和父元素。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 26479257511d74f122dd4064330f5b6a1e8dadd3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d0d39d4e4f795ddecab21765db43ba1a2f629dd7
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711236"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993849"
 ---
 # <a name="group-element"></a>Group 元素
 定义 VSPackage 命令组。
@@ -45,7 +47,7 @@ ms.locfileid: "80711236"
 
 |元素|说明|
 |-------------|-----------------|
-|Parent|可选。 按钮的父元素。|
+|父级|可选。 按钮的父元素。|
 |Annotation|可选注释。|
 
 ### <a name="parent-elements"></a>父元素
