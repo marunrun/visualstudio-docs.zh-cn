@@ -1,5 +1,7 @@
 ---
 title: 扩展和自定义工具窗口 |Microsoft Docs
+description: 了解如何扩展和自定义 Visual Studio 提供的工具窗口，包括 "属性窗口"、"输出" 窗口和 "任务列表" 窗口。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,18 +13,18 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 76c094ec73a69baa46a5e8313dd26febd57e5887
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ca7f6aa0c029cd3d85ba569aa93d6ae2087afd52
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711820"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995858"
 ---
 # <a name="extend-and-customize-tool-windows"></a>扩展和自定义工具窗口
 Visual Studio 提供多种不同类型的窗口，例如工具窗口、文档窗口和对话框窗口。 其他窗口（如 " **属性** " 窗口、" **输出** " 窗口和 " **任务列表** " 窗口）是工具窗口的类型。
 
 ## <a name="tool-windows"></a>工具窗口
- 通常，Visual Studio 工具窗口是不基于文件的只读窗口。 在这方面，它们不同于文档窗口，文档窗口在读写模式下显示文件。 工具窗口的示例包括“工具箱” ****、“解决方案资源管理器” ****、“属性” **** 窗口和“Web 浏览器” **** 。
+ 通常，Visual Studio 工具窗口是不基于文件的只读窗口。 在这方面，它们不同于文档窗口，文档窗口在读写模式下显示文件。 工具窗口的示例包括“工具箱” 、“解决方案资源管理器” 、“属性”  窗口和“Web 浏览器”  。
 
  若要了解如何创建简单的工具窗口，请参阅 [添加工具窗口](../extensibility/adding-a-tool-window.md)。
 
@@ -30,7 +32,7 @@ Visual Studio 提供多种不同类型的窗口，例如工具窗口、文档窗
 
  工具窗口默认情况下是单实例，这意味着一次只能打开一个工具窗口的实例。 打开单实例工具窗口后，它保持打开状态直到关闭 IDE。 关闭单实例工具窗口时，只有其可见性会发生更改。 你还可以创建多实例工具窗口，以便可以同时打开窗口中的多个实例。 有关详细信息，请参阅 [创建多实例工具窗口](../extensibility/creating-a-multi-instance-tool-window.md) 。
 
- 工具窗口可以是 *动态*的，这意味着只要应用其相关的 UI 上下文，它们就可见。 使用自动可见性可以减少 IDE 中的窗口的混乱。 有关详细信息，请参阅 [打开动态工具窗口](../extensibility/opening-a-dynamic-tool-window.md)。
+ 工具窗口可以是 *动态* 的，这意味着只要应用其相关的 UI 上下文，它们就可见。 使用自动可见性可以减少 IDE 中的窗口的混乱。 有关详细信息，请参阅 [打开动态工具窗口](../extensibility/opening-a-dynamic-tool-window.md)。
 
  工具窗口可以在文档框架中停靠、浮动或呈选项卡式。 工具窗口框架由 IDE 提供，用于控制大小、位置、停靠状态和其他持久性属性。 工具窗口窗格用于显示内容。 仅当首次打开工具窗口时才应用默认大小和位置；在此之后将保留工具窗口状态。
 

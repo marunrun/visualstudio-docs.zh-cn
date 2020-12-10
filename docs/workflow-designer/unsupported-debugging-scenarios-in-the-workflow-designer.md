@@ -1,5 +1,5 @@
 ---
-title: 工作流设计器中不受支持的调试方案
+title: 不支持的调试方案
 description: 了解工作流设计器中不受支持的调试方案，例如，"代码编辑后无法继续执行"。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -10,12 +10,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: TerryGLee
-ms.openlocfilehash: d9ce8d15e44fecca673fdaa9fccd70ff13eb6783
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 4e98e2a75905f4c0a4c007691a99961dbcf1477c
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94433513"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96996261"
 ---
 # <a name="unsupported-debugging-scenarios-in-the-workflow-designer"></a>工作流设计器中不受支持的调试方案
 
@@ -39,7 +39,7 @@ ms.locfileid: "94433513"
 
 - 不能在调用堆栈窗口中设置工作流断点。
 
-- 在设计器中创建断点时，不使用 " **新建断点** " 对话框中的 **行** 和 **字符** 设置。
+- 在设计器中创建断点时，不使用 "**新建断点**" 对话框中的 **行** 和 **字符** 设置。
 
 - “断点”窗口或快捷菜单不支持以下用于工作流调试的列或选项：
 
@@ -53,6 +53,6 @@ ms.locfileid: "94433513"
 
   - 数据
 
-  - 进程
+  - 过程
 
   - 转到反汇编

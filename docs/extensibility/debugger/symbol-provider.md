@@ -1,5 +1,7 @@
 ---
 title: 符号提供程序 |Microsoft Docs
+description: 了解 Visual Studio 提供的用于使表达式计算器计算变量和表达式的符号提供程序。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 31b90846d9494ee046cf9dc4a3e5de9ff033ea3f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 043014ebababd990c9cae03f28cb1b642d576071
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712812"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96996040"
 ---
 # <a name="symbol-provider"></a>符号提供程序
 表达式计算器实现必须访问语言编译器生成的符号调试信息，才能计算变量和表达式。 它通过使用符号提供程序 (SP) （也称为符号处理程序）的接口来实现此目的。
@@ -28,5 +30,5 @@ ms.locfileid: "80712812"
 
  如果您的 SP 只使用您的自定义调试引擎，则可以根据调试引擎的需求，根据您的需要实现 SP。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [调试器组件](../../extensibility/debugger/debugger-components.md)

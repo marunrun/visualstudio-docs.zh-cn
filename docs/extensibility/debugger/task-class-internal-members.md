@@ -1,5 +1,7 @@
 ---
 title: 任务类-内部成员 |Microsoft Docs
+description: 了解帮助您实现自定义调试器的 System.object 类的内部成员。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: dcf278c0248b344cea4be7cf161ecc91581f5f2e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5f18de66a524fbc652b8153c5b34b4464cda60f5
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712739"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96996014"
 ---
 # <a name="task-class---internal-members"></a>任务类-内部成员
 本文介绍 <xref:System.Threading.Tasks.Task?displayProperty=fullName> 可帮助你实现自定义调试器的类的内部成员。 有关此类的常规信息，请参阅 <xref:System.Threading.Tasks.Task> 参考文章。

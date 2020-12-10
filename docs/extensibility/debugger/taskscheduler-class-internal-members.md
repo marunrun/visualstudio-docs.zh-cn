@@ -1,5 +1,7 @@
 ---
 title: TaskScheduler 类-内部成员 |Microsoft Docs
+description: 了解帮助您实现自定义调试器的 TaskScheduler 类的内部成员。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a53abc8b24edb06445c23c19744d00d50de8735d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 10528e57137f8605e7f140d4ab8d4a3399029a5f
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712567"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96996001"
 ---
 # <a name="taskscheduler-class---internal-members"></a>TaskScheduler 类-内部成员
 本文介绍 <xref:System.Threading.Tasks.TaskScheduler?displayProperty=fullName> 可帮助你实现自定义调试器的类的内部成员。 有关此类的常规信息，请参阅 <xref:System.Threading.Tasks.TaskScheduler> 参考文章。
@@ -45,6 +47,6 @@ ms.locfileid: "80712567"
 
 ## <a name="remarks"></a>备注
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - <xref:System.Threading.Tasks.TaskScheduler?displayProperty=fullName>
 - [.NET Framework 的并行扩展内部机制](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)

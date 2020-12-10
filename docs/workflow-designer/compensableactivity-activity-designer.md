@@ -1,6 +1,6 @@
 ---
-title: 工作流设计器 CompensableActivity 活动设计器
-description: 了解如何使用 CompensableActivity 活动设计器创建和配置 CompensableActivity 活动。
+title: CompensableActivity 活动设计器
+description: 了解如何在工作流设计器中使用 "CompensableActivity" 活动设计器来创建和配置 CompensableActivity 活动。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9e170bd47af7c84eb9ddb26a4946422c418365d2
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 3d05809b1e370fee2505470be1c06366f76bf9ca
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94434332"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96996222"
 ---
 # <a name="compensableactivity-activity-designer"></a>CompensableActivity 活动设计器
 
@@ -27,26 +27,26 @@ ms.locfileid: "94434332"
  <xref:System.Activities.Statements.CompensableActivity> 定义可在成功完成之后得到确认或补偿的工作单元。
 
 ### <a name="using-the-compensableactivity-activity-designer"></a>使用 CompensableActivity 活动设计器
- " **CompensableActivity** " 活动设计器可在 " **工具箱** " 的 " **事务** " 类别中找到。 若要打开 **工具箱** ，请选择工作流设计器左侧的 " **工具箱** " 选项卡。 或者，从 " **视图** " 菜单中选择 **"工具箱** "，或按 **Ctrl** + **Alt** + **X** 。
+ " **CompensableActivity** " 活动设计器可在 "**工具箱**" 的 "**事务**" 类别中找到。 若要打开 **工具箱**，请选择工作流设计器左侧的 " **工具箱** " 选项卡。 或者，从 "**视图**" 菜单中选择 **"工具箱**"，或按 **Ctrl** + **Alt** + **X**。
 
  可以将 " **CompensableActivity** " 活动设计器从 **"工具箱** " 拖放到工作流设计器图面上。 您可以将活动设计器放在中 <xref:System.Activities.Statements.Sequence> 。 删除活动设计器将创建一个 <xref:System.Activities.Statements.CompensableActivity> 活动，其默认值为 <xref:System.Activities.Activity.DisplayName%2A> CompensableActivity。 编辑 " <xref:System.Activities.Activity.DisplayName%2A> **CompensableActivity** " 活动设计器的标头中的值。 它还可在属性网格的 " **DisplayName** " 框中进行编辑。
 
 ### <a name="the-compensableactivity-properties"></a>CompensableActivity 属性
  下表列出 <xref:System.Activities.Statements.CompensableActivity> 属性并说明如何在设计器中使用它们。 <xref:System.Activities.Activity.DisplayName%2A>和 <xref:System.Activities.Activity%601.Result%2A> 属性可在属性网格中进行编辑，但其他属性必须在工作流设计器图面上进行编辑。
 
-|属性名称|必选|使用情况|
+|属性名称|必选|用法|
 |-|--------------|-|
 |<xref:System.Activities.Activity.DisplayName%2A>|错误|<xref:System.Activities.Statements.CompensableActivity> 活动的可选友好名称。 默认值为 CompensableActivity。|
 |<xref:System.Activities.Activity%601.Result%2A>|错误|指定 <xref:System.Activities.Statements.CompensableActivity> 的返回值。 此属性必须在属性网格中进行编辑。|
-|<xref:System.Activities.Statements.CompensableActivity.Body%2A>|正确|指定为其提供补偿、取消和确认逻辑的活动。 若要添加 <xref:System.Activities.Statements.CompensableActivity.Body%2A> 活动，请将 **"工具箱** " 中的活动拖放到 " **CompensableActivity** " 活动设计器的 " **正文** " 框中。 添加提示文本 "在此处放置活动"。|
-|<xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A>|错误|指定在取消时执行的活动。 若要添加活动，请将其设计器从 **"工具箱** " 拖到 " **CompensableActivity** " 活动设计器上的 " **CancellationHandler** " 框。 添加提示文本 "在此处放置活动"。|
-|<xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A>|错误|指定补偿 <xref:System.Activities.Statements.CompensableActivity.Body%2A> 活动时要执行的活动。 可使用 <xref:System.Activities.Statements.Compensate> 活动显式调用此处理程序。<br /><br /> 若要添加活动，请将其活动设计器从 **"工具箱** " 拖到 " **CompensableActivity** " 活动设计器上的 " **CompensationHandler** " 框中。 添加提示文本 "在此处放置活动"。|
-|<xref:System.Activities.Statements.CompensableActivity.ConfirmationHandler%2A>|错误|指定确认 <xref:System.Activities.Statements.CompensableActivity.Body%2A> 活动时要执行的活动。 可使用 <xref:System.Activities.Statements.Confirm> 活动显式调用此处理程序。<br /><br /> 若要添加活动，请将其活动设计器从 **"工具箱** " 拖到 " **CompensableActivity** " 活动设计器上的 " **ConfirmationHandler** " 框中。 添加提示文本 "在此处放置活动"。|
+|<xref:System.Activities.Statements.CompensableActivity.Body%2A>|正确|指定为其提供补偿、取消和确认逻辑的活动。 若要添加 <xref:System.Activities.Statements.CompensableActivity.Body%2A> 活动，请将 **"工具箱**" 中的活动拖放到 " **CompensableActivity** " 活动设计器的 "**正文**" 框中。 添加提示文本 "在此处放置活动"。|
+|<xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A>|错误|指定在取消时执行的活动。 若要添加活动，请将其设计器从 **"工具箱**" 拖到 " **CompensableActivity** " 活动设计器上的 " **CancellationHandler** " 框。 添加提示文本 "在此处放置活动"。|
+|<xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A>|错误|指定补偿 <xref:System.Activities.Statements.CompensableActivity.Body%2A> 活动时要执行的活动。 可使用 <xref:System.Activities.Statements.Compensate> 活动显式调用此处理程序。<br /><br /> 若要添加活动，请将其活动设计器从 **"工具箱**" 拖到 " **CompensableActivity** " 活动设计器上的 " **CompensationHandler** " 框中。 添加提示文本 "在此处放置活动"。|
+|<xref:System.Activities.Statements.CompensableActivity.ConfirmationHandler%2A>|错误|指定确认 <xref:System.Activities.Statements.CompensableActivity.Body%2A> 活动时要执行的活动。 可使用 <xref:System.Activities.Statements.Confirm> 活动显式调用此处理程序。<br /><br /> 若要添加活动，请将其活动设计器从 **"工具箱**" 拖到 " **CompensableActivity** " 活动设计器上的 " **ConfirmationHandler** " 框中。 添加提示文本 "在此处放置活动"。|
 
 ## <a name="see-also"></a>另请参阅
 
 - [事务](../workflow-designer/transaction-activity-designers.md)
 - [CancellationScope](../workflow-designer/cancellationscope-activity-designer.md)
 - [Compensate](../workflow-designer/compensate-activity-designer.md)
-- [逐条](../workflow-designer/confirm-activity-designer.md)
+- [确认](../workflow-designer/confirm-activity-designer.md)
 - [TransactionScope](../workflow-designer/transactionscope-activity-designer.md)

@@ -1,5 +1,7 @@
 ---
 title: 终止和分离 |Microsoft Docs
+description: 正常终止意味着正在调试的程序运行到完成，但没有断点、异常、运行时错误或无限循环。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0b88255d618ce42fa55d878f192d31523ba3f83b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 74ef32708374dd3fea4c181e85b9f67a239198ba
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712495"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995962"
 ---
 # <a name="termination-and-detaching"></a>终止和分离
 以下部分介绍了正常终止。

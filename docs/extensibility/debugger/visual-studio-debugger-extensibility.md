@@ -1,5 +1,7 @@
 ---
 title: Visual Studio 调试器扩展性 |Microsoft Docs
+description: 本文介绍 Visual Studio 调试器扩展性，并提供指向有关 Visual Studio 调试的文章的链接。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ff4222b555fab73914776725fc79581f29fa5e53
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a072373ce0cf7633c595eb549455e6ecd62df887
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712499"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995988"
 ---
 # <a name="visual-studio-debugger-extensibility"></a>Visual Studio 调试器扩展性
 Visual Studio 包括一个完全交互式的源代码调试器，它提供了功能强大且易于使用的工具，用于跟踪程序中的 bug。 调试器对 Visual Basic、c #、C/c + + 和 JavaScript 提供完全支持。 但对于，通过 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=21835)提供的，在具有相同功能的调试器中可以支持其他编程语言。
@@ -29,7 +31,7 @@ Visual Studio 包括一个完全交互式的源代码调试器，它提供了功
 
  以下各节介绍如何使用扩展调试器 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] 。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
  [入门](../../extensibility/debugger/getting-started-with-debugger-extensibility.md) 介绍 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 如何提供调试功能以及如何安装 SDK。
 
  [创建自定义调试引擎](../../extensibility/debugger/creating-a-custom-debug-engine.md) 记录自定义的 DE 过程，从准备您的程序进行 DE 以分离解除。

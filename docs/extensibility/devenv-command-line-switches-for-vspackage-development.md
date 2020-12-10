@@ -1,5 +1,7 @@
 ---
-title: Devenv 命令行开关，适用于 VSPackage 开发 |Microsoft Docs
+title: 用于 VSPackage 开发的 Devenv Command-Line 开关 |Microsoft Docs
+description: 了解开发人员如何在执行 devenv.exe （启动 Visual Studio IDE 的文件）时从命令行自动执行任务。
+ms.custom: SEO-VS-2020
 ms.date: 12/10/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +20,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ad3a5125a730b9230959bbf9342b4c0a4823c4d3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b6e2784066c98f8fac696306e455e7cf26b65907
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712195"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96996144"
 ---
 # <a name="devenv-command-line-switches-for-vspackage-development"></a>适用于 VSPackage 开发的 Devenv 命令行开关
 

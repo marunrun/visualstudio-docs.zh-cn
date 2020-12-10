@@ -1,5 +1,7 @@
 ---
 title: 文档锁持有者管理 |Microsoft Docs
+description: 了解如何对正在运行的文档表中的文档设置编辑锁定，而用户在文档窗口中看不到打开的文档。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f9dd520f8ad5cab1f0cfee890c4bcc388c204bb1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c15696d81be92f0549069bad354e65356f7b2e7c
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712125"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995897"
 ---
 # <a name="document-lock-holder-management"></a>文档锁持有者管理
 
@@ -37,13 +39,13 @@ ms.locfileid: "80712125"
 
 ## <a name="additional-document-edit-lock-considerations"></a>其他文档编辑锁定注意事项
 
-如果编辑器 "A" 是在文件 "b" 上具有文档编辑锁定的唯一编辑器，而不是在编辑器 "B" 中也持有文件 "b" 上的文档编辑锁定，则会获得不同的行为。 在中 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ， **类设计器** 是一个可视化设计器的示例，该设计器在关联的代码文件上不持有编辑锁。 也就是说，如果用户在 "设计" 视图中打开一个类图并同时打开关联的代码文件，并且用户修改了代码文件但未保存所做的更改，则这些更改也会丢失到类关系图 ( cd) 文件中。 如果 **类设计器** 在代码文件上只有文档编辑锁定，则在关闭代码文件时不会要求用户保存更改。 IDE 会要求用户在用户关闭 **类设计器**后保存更改。 保存的更改将反映在这两个文件中。 如果 **类设计器** 和代码文件编辑器持有代码文件的文档编辑锁定，则关闭代码文件或窗体时，系统将提示用户保存。 此时，保存的更改将同时反映在窗体和代码文件中。 有关类图的详细信息，请参阅 [使用类图 (类设计器) ](../ide/class-designer/designing-and-viewing-classes-and-types.md)。
+如果编辑器 "A" 是在文件 "b" 上具有文档编辑锁定的唯一编辑器，而不是在编辑器 "B" 中也持有文件 "b" 上的文档编辑锁定，则会获得不同的行为。 在中 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ， **类设计器** 是一个可视化设计器的示例，该设计器在关联的代码文件上不持有编辑锁。 也就是说，如果用户在 "设计" 视图中打开一个类图并同时打开关联的代码文件，并且用户修改了代码文件但未保存所做的更改，则这些更改也会丢失到类关系图 ( cd) 文件中。 如果 **类设计器** 在代码文件上只有文档编辑锁定，则在关闭代码文件时不会要求用户保存更改。 IDE 会要求用户在用户关闭 **类设计器** 后保存更改。 保存的更改将反映在这两个文件中。 如果 **类设计器** 和代码文件编辑器持有代码文件的文档编辑锁定，则关闭代码文件或窗体时，系统将提示用户保存。 此时，保存的更改将同时反映在窗体和代码文件中。 有关类图的详细信息，请参阅 [使用类图 (类设计器) ](../ide/class-designer/designing-and-viewing-classes-and-types.md)。
 
 请注意，如果需要对非编辑器的文档放置编辑锁定，则必须实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsDocumentLockHolder> 接口。
 
 很多时候，以编程方式修改代码文件的 UI 设计器也会对多个文件进行更改。 在这种情况下， <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell2.SaveItemsViaDlg%2A> 方法通过 " **是否要保存对以下项的更改？** " 对话框处理一个或多个文档的保存。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [运行文档表](../extensibility/internals/running-document-table.md)
 - [持久性和正在运行的文档表](../extensibility/internals/persistence-and-the-running-document-table.md)

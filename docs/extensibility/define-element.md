@@ -1,5 +1,7 @@
 ---
 title: Define 元素 |Microsoft Docs
+description: Define 元素定义符号名称和值对。 此符号可以通过条件属性来计算。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: fc09de1d822f41b25397c7a56c7cce4449a9e551
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a427371afe55b6ea4ee20f658e683b9dcdb8fbe2
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712276"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96996235"
 ---
 # <a name="define-element"></a>Define 元素
 定义符号名称和值对。 此符号可以通过条件属性来计算。 有关详细信息，请参阅 [条件特性](../extensibility/vsct-xml-schema-conditional-attributes.md)。 另请参阅 [符号元素](../extensibility/symbols-element.md)。

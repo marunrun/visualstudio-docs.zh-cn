@@ -1,5 +1,7 @@
 ---
 title: 错误处理和返回值 |Microsoft Docs
+description: 了解 Visual Studio SDK 如何提供互操作程序集，以便在收到错误通知时记录丰富的错误信息。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 30b6b9bff9056360f9ea840f47b1488f05bee872
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b8e8385e0b270cd6e359ef03a3060d5eefb97479
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711932"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995845"
 ---
 # <a name="error-handling-and-return-values"></a>错误处理和返回值
 Vspackage 和 COM 使用相同的体系结构来实现错误。 `SetErrorInfo`和 `GetErrorInfo` 函数是 (API) 的 Win32 应用程序编程接口的一部分。  (IDE) 集成开发环境中的任何 VSPackage 都可以调用这些全局 Win32 Api，以便在收到错误通知时记录丰富的错误信息。 [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)]提供互操作程序集来管理错误信息。
