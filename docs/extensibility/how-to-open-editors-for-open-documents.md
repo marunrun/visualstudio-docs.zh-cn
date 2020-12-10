@@ -1,5 +1,7 @@
 ---
 title: 如何：打开打开的文档的编辑器 |Microsoft Docs
+description: 了解如何在标准或特定于项目的编辑器中打开文件。 当项目打开文档窗口时，它必须确定该文件是否已打开。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0f67a7fad5944e82087f520508ef9f4a66b7109d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6d329ce7b4f4b74b8ff77357393ffe9383a3977e
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905818"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993843"
 ---
 # <a name="how-to-open-editors-for-open-documents"></a>如何：打开打开的文档的编辑器
 在项目打开文档窗口之前，项目首先必须确定是否已在另一个编辑器的文档窗口中打开该文件。 此文件可以在特定于项目的编辑器中打开，也可以在向注册的某个标准编辑器中打开 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 。

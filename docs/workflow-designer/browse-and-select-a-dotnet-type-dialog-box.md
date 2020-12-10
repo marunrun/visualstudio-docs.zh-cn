@@ -1,6 +1,6 @@
 ---
-title: 工作流设计器-"浏览并选择 .NET 类型" 对话框
-description: 了解如何使用 "浏览并选择 .NET 类型" 对话框从程序集和项目的树视图中选择类型。
+title: “浏览并选择 .NET 类型”对话框
+description: 了解如何使用 "浏览并选择 .NET 类型" 对话框从工作流设计器中的程序集和项目的树视图中选择类型。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7e887cf339647df9bca7fdc3d07a45dd44901c42
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 9c479cbad884a8a21197c945f8f6f1ae13947991
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94438173"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995481"
 ---
 # <a name="browse-and-select-a-net-type-dialog-box"></a>“浏览并选择 .NET 类型”对话框
 
@@ -53,7 +53,7 @@ ms.locfileid: "94438173"
 
 2. 一旦要使用的类型的名称出现在树中的 " **类型名称** " 框中，请单击相应的类型将其选择为 "导致" 下拉框。
 
-     从下拉框中选择要用于关闭 "常规" 的类型，然后单击 **"确定"** 。
+     从下拉框中选择要用于关闭 "常规" 的类型，然后单击 **"确定"**。
 
 ## <a name="types-displayed-in-the-type-browser"></a>类型浏览器中显示的类型
 

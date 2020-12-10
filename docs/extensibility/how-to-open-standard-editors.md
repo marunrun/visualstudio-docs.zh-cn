@@ -1,5 +1,7 @@
 ---
 title: 如何：打开标准编辑器 |Microsoft Docs
+description: 了解如何使用标准编辑器实现 OpenItem 方法。 IDE 为指定的文件类型确定了标准编辑器。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c12e831654e7e138289d33b6e6f0409328e22c8c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ff03ed508fc11377861556bc27bdc33aaa1ec069
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905785"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993765"
 ---
 # <a name="how-to-open-standard-editors"></a>如何：打开标准编辑器
 打开标准编辑器时，可以让 IDE 为指定的文件类型确定标准编辑器，而不是为文件指定特定于项目的编辑器。

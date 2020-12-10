@@ -1,5 +1,7 @@
 ---
 title: 与 VSIX 项目模板入门 |Microsoft Docs
+description: 了解如何使用 VSIX 项目模板来创建扩展或打包现有扩展以进行部署。
+ms.custom: SEO-VS-2020
 ms.date: 3/16/2019
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 18ca9672b22120718f63638d8668812d0e42e41f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c6c7c2e12f01b008be6937a8c974f2eea183d594
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905886"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994337"
 ---
 # <a name="get-started-with-the-vsix-project-template"></a>VSIX 项目模板入门
 
@@ -33,17 +35,17 @@ ms.locfileid: "85905886"
 
     1. 打开要从中创建模板的项目。 此项目可以是任何项目类型。
 
-    2. 在“项目”菜单上，单击“导出模板”********。 完成向导的步骤。
+    2. 在“项目”菜单上，单击“导出模板”。 完成向导的步骤。
 
-         在 *%USERPROFILE%\My Documents\Visual Studio {version} \My 导出的 \\ 模板*中创建一个 *.zip*文件。
+         在 *%USERPROFILE%\My Documents\Visual Studio {version} \My 导出的 \\ 模板* 中创建一个 *.zip* 文件。
 
 2. 创建一个空 VSIX 项目。
 
-     选择“文件” > “新建” > “项目”。 在搜索框中，键入 "vsix"，然后选择**c #** 或**vsix 项目** **Visual Basic**版本。
+     选择“文件” > “新建” > “项目”  。 在搜索框中，键入 "vsix"，然后选择 **c #** 或 **vsix 项目** **Visual Basic** 版本。
 
 3. 将 *.zip* 文件添加到项目。 将其 " **复制到输出目录** " 属性设置为 `Copy Always` 。
 
-4. 在 **解决方案资源管理器**中，双击 *source.extension.vsixmanifest* 文件以在 **VSIX 清单设计器**中将其打开，然后进行以下更改：
+4. 在 **解决方案资源管理器** 中，双击 *source.extension.vsixmanifest* 文件以在 **VSIX 清单设计器** 中将其打开，然后进行以下更改：
 
     - 将 " **产品名称** " 字段设置为 **"我的项目模板**"。
 
@@ -95,4 +97,4 @@ ms.locfileid: "85905886"
 
 6. 打开 VSIX 清单。
 
-7. 在 VSIX 清单中，更新模板的 **资产** 路径，使其指向包含模板文件的目录树的根。 例如，如果模板位于 *\CSharp\Windows*中，则该引用应指向 *\CSharp*。
+7. 在 VSIX 清单中，更新模板的 **资产** 路径，使其指向包含模板文件的目录树的根。 例如，如果模板位于 *\CSharp\Windows* 中，则该引用应指向 *\CSharp*。

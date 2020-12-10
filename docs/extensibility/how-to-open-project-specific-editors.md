@@ -1,5 +1,7 @@
 ---
-title: 如何：打开项目特定的编辑器 |Microsoft Docs
+title: 如何：打开 Project-Specific 编辑器 |Microsoft Docs
+description: 了解如何使用特定于项目的编辑器实现 OpenItem 方法，使项目可以打开绑定到该项目编辑器的文件。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 22106ea09f86e3d61fe7aaa6e86e6e99c002f32d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4cbba1f4d6cf0a2a5a45dd2999afa5bbf3443fca
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905810"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993778"
 ---
 # <a name="how-to-open-project-specific-editors"></a>如何：打开项目特定的编辑器
 如果项目打开的项文件在本质上绑定到该项目的特定编辑器，则该项目必须使用特定于项目的编辑器打开该文件。 此文件不能被委派到 IDE 用于选择编辑器的机制。 例如，您可以使用特定于项目的编辑器选项来指定特定的位图编辑器，该编辑器可识别您的项目特有的文件中的信息，而不是使用标准的位图编辑器。

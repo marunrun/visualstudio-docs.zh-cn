@@ -1,6 +1,7 @@
 ---
 title: 将基于规则的 UI 上下文用于 Visual Studio 扩展
 titleSuffix: ''
+description: 了解如何使用基于规则的 UI 上下文，使扩展创作者可以在激活 UI 上下文和加载 Vspackage 时定义条件。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -9,12 +10,12 @@ author: acangialosi
 ms.author: anthc
 ms.workload:
 - vssdk
-ms.openlocfilehash: fc24fe3f5b27b3c92f0629ed378c1a97c820cd0a
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 41b804d3f7697890773b4b6888bcffa108b7a11b
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037102"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993453"
 ---
 # <a name="how-to-use-rule-based-ui-context-for-visual-studio-extensions"></a>如何：将基于规则的 UI 上下文用于 Visual Studio 扩展
 
@@ -82,7 +83,7 @@ ms.locfileid: "90037102"
    <GuidSymbol name="UIContextGuid" value="{8B40D5E2-5626-42AE-99EF-3DD1EFF46E7B}" />
    ```
 
-    现在，仅当 "解决方案资源管理器" 中的选定项是 *.config*文件时，才会显示* \* .config*文件的上下文菜单命令，并且在选择其中一个命令之前不会加载包。
+    现在，仅当 "解决方案资源管理器" 中的选定项是 *.config* 文件时，才会显示 *\* .config* 文件的上下文菜单命令，并且在选择其中一个命令之前不会加载包。
 
    接下来，使用调试器确认包仅在预期时加载。 调试 TestPackage：
 
@@ -92,7 +93,7 @@ ms.locfileid: "90037102"
 
 7. 创建一个项目或打开一个项目。
 
-8. 选择扩展名不是 *.config*的任何文件。不应命中断点。
+8. 选择扩展名不是 *.config* 的任何文件。不应命中断点。
 
 9. 选择 *App.Config* 文件。
 

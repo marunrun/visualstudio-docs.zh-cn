@@ -1,5 +1,7 @@
 ---
 title: Visual Studio SDK 中的 Guid 和常量 |Microsoft Docs
+description: VSConstants 类提供对 Visual Studio SDK 中所选的环境 Guid 和常量的访问。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +13,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ecb443f3b5d6dd7b45d8dd77a8739b12b8891832
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 325f1f5e6d276dff1b7b5ec3e34a4dc0a21fd1b9
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711135"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994246"
 ---
 # <a name="guids-and-constants-in-the-visual-studio-sdk"></a>Visual Studio SDK 中的 Guid 和常量
 <xref:Microsoft.VisualStudio.VSConstants>类提供对所选的环境 guid 和常量的访问。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
 - [IDE guid](../extensibility/ide-guids.md) 列出由提供的 Guid <xref:Microsoft.VisualStudio.VSConstants> 。
 
 - [IDE 常量](../extensibility/ide-constants.md) 列出了提供的 SDK 常量 <xref:Microsoft.VisualStudio.VSConstants> 。

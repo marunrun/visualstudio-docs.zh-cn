@@ -1,5 +1,7 @@
 ---
 title: 如何：获取服务 |Microsoft Docs
+description: 了解如何获取用于访问不同功能的 Visual Studio 服务。 可以使用 VSPackage 获取大多数服务。
+ms.custom: SEO-VS-2020
 ms.date: 3/16/2019
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a401103112096a1089b59ba3733d19480f93e891
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0a8f97900f1d400f3208a24ccc45ff9bbd774aeb
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905829"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994064"
 ---
 # <a name="how-to-get-a-service"></a>如何：获取服务
 
@@ -29,9 +31,9 @@ ms.locfileid: "85905829"
 
 1. 每个 Visual Studio 扩展都从一个 VSIX 部署项目开始，该项目将包含扩展资产。 创建一个 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 名为的 VSIX 项目 `GetServiceExtension` 。 可以通过搜索 "vsix" 在 " **新建项目** " 对话框中找到 VSIX 项目模板。
 
-2. 现在，添加一个名为 **GetServiceCommand**的自定义命令项模板。 在 "**添加新项**" 对话框中，选择 " **Visual c #**  >  **扩展性**" 并选择 "**自定义命令**"。 在窗口底部的 " **名称** " 字段中，将命令文件名更改为 *GetServiceCommand.cs*。 有关如何创建自定义命令的详细信息，请 [使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)
+2. 现在，添加一个名为 **GetServiceCommand** 的自定义命令项模板。 在 "**添加新项**" 对话框中，选择 " **Visual c #**  >  **扩展性**" 并选择 "**自定义命令**"。 在窗口底部的 " **名称** " 字段中，将命令文件名更改为 *GetServiceCommand.cs*。 有关如何创建自定义命令的详细信息，请 [使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)
 
-3. 在 *GetServiceCommand.cs*中，删除方法的正文 `MenuItemCommand` 并添加以下代码：
+3. 在 *GetServiceCommand.cs* 中，删除方法的正文 `MenuItemCommand` 并添加以下代码：
 
    ```csharp
    IVsActivityLog activityLog = ServiceProvider.GetService(typeof(SVsActivityLog)) as IVsActivityLog;
@@ -70,7 +72,7 @@ DTE 对象实现 <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> ，�
 下面介绍如何从 DTE 对象获取服务。
 
 ```csharp
-// Start with the DTE object, for example: 
+// Start with the DTE object, for example: 
 // using EnvDTE;
 // DTE dte = (DTE)GetService(typeof(DTE));
 
@@ -85,7 +87,7 @@ if (sp != null)
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：提供服务](../extensibility/how-to-provide-a-service.md)
 - [使用并提供服务](../extensibility/using-and-providing-services.md)

@@ -1,5 +1,7 @@
 ---
 title: 如何：向 VSIX 包添加依赖项 |Microsoft Docs
+description: 了解如何设置用于安装目标计算机上尚不存在的所有依赖项的 VSIX 包部署。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b7ee7cbc4dee800351689386056389d274e07f4f
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: d7ef19bafd0788ed15094979141679625e4e992f
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012225"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993830"
 ---
 # <a name="how-to-add-a-dependency-to-a-vsix-package"></a>如何：向 VSIX 包添加依赖项
 
@@ -26,7 +28,7 @@ ms.locfileid: "90012225"
 
 ## <a name="to-add-a-dependency"></a>添加依赖项
 
-1. 在 "**设计**" 视图中打开*source.extension.vsixmanifest*文件。 单击 " **依赖项** " 选项卡，然后单击 " **新建**"。
+1. 在 "**设计**" 视图中打开 *source.extension.vsixmanifest* 文件。 单击 " **依赖项** " 选项卡，然后单击 " **新建**"。
 
 2. 添加已安装的扩展：在 " **添加新的依赖项** " 对话框中，选择 " **已安装的扩展** "，然后对于 " **名称**"，请在列表中选择一个扩展。
 
@@ -34,7 +36,7 @@ ms.locfileid: "90012225"
 
 ## <a name="require-a-specific-visual-studio-release"></a>需要特定的 Visual Studio 版本
 
-例如，如果你的扩展需要 Visual Studio 2017 的特定版本，则它依赖于在15.3 中发布的功能，你可以在 VSIX **InstallationTarget**中指定内部版本号。 例如，版本15.3 的生成号为 "15.0.26730.3"。 可在 [此处](../install/visual-studio-build-numbers-and-release-dates.md)查看生成编号的版本映射。 请注意，使用版本号 "15.3" 将不能正常工作。
+例如，如果你的扩展需要 Visual Studio 2017 的特定版本，则它依赖于在15.3 中发布的功能，你可以在 VSIX **InstallationTarget** 中指定内部版本号。 例如，版本15.3 的生成号为 "15.0.26730.3"。 可在 [此处](../install/visual-studio-build-numbers-and-release-dates.md)查看生成编号的版本映射。 请注意，使用版本号 "15.3" 将不能正常工作。
 
 如果扩展需要15.3 或更高版本，则需要将 **InstallationTarget 版本** 声明为 [15.0.26730.3，16.0) ：
 
@@ -46,7 +48,7 @@ ms.locfileid: "90012225"
 
 VSIXInstaller 将检测早期版本的 Visual Studio，并通知用户需要进行更高版本的更新。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [VSIX 扩展架构1.0 引用](/previous-versions/dd393700(v=vs.110))
 - [VSIX 包的解析](../extensibility/anatomy-of-a-vsix-package.md)

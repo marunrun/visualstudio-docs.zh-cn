@@ -1,5 +1,6 @@
 ---
 title: 关闭源代码管理插件的警告
+description: 在 Visual Studio 中使用源代码管理时，用户可能会看到几个兼容性警告。 了解如何禁用这些警告。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 406d063bd2df6dd1d831c3a8220d8d513596a79a
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: f5607f4a92a14b692f20d509e014991d461815bd
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037180"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993544"
 ---
 # <a name="how-to-turn-off-compatibility-warnings-for-source-control-plug-ins"></a>如何：关闭源代码管理插件的兼容性警告
 
@@ -27,7 +28,7 @@ ms.locfileid: "90037180"
 
 - 如有必要，请设置以下注册表项 (添加值) ：
 
-   **HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\8.0\SourceControl\DontDisplayCheckDotNETCompatible = dword：00000001**
+   **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl\DontDisplayCheckDotNETCompatible = dword：00000001**
 
    对于所有非插件，都会显示此警告 [!INCLUDE[vsvss](../extensibility/includes/vsvss_md.md)] 。
 
@@ -35,9 +36,9 @@ ms.locfileid: "90037180"
 
 - 设置以下两个注册表值 (如有必要) 添加值：
 
-     **HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\8.0\SourceControl\WarnedOldMSSCCIProvider = dword：00000000**
+     **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl\WarnedOldMSSCCIProvider = dword：00000000**
 
-    **HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\8.0\SourceControl\UseOldSCC = dword：00000001**
+    **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl\UseOldSCC = dword：00000001**
 
      如果源代码管理插件不显式支持多个项目的重入， (即，如果每次只能签入一个文件和项目) ，则会显示此警告。
 

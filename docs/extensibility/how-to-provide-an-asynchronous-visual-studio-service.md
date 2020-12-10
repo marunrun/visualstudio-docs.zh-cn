@@ -1,5 +1,7 @@
 ---
 title: 如何：提供异步 Visual Studio 服务 |Microsoft Docs
+description: 了解如何提供异步 Visual Studio 服务。 此方法允许你在不阻止 UI 线程的情况下获取服务。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 0448274c-d3d2-4e12-9d11-8aca78a1f3f5
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ad178bf93e49c3d695c1ebd0a5d4f6b151175953
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 11639e178f93a1ebfe2fc5231ee2b35df1b63196
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905736"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993635"
 ---
 # <a name="how-to-provide-an-asynchronous-visual-studio-service"></a>如何：提供异步 Visual Studio 服务
 如果要在不阻止 UI 线程的情况下获取服务，则应创建一个异步服务，并在后台线程上加载该包。 出于此目的，你可以使用 <xref:Microsoft.VisualStudio.Shell.AsyncPackage> 而不是 <xref:Microsoft.VisualStudio.Shell.Package> ，并使用异步包的特殊异步方法添加服务。
@@ -24,9 +26,9 @@ ms.locfileid: "85905736"
 
 1. 创建 vsix 项目 (**文件**"  >  **新建**  >  **项目**" "  >  **Visual c #**  >  **所在**  >  **VSIX 项目**") 。 将项目命名为 **TestAsync**。
 
-2. 将 VSPackage 添加到项目。 在**解决方案资源管理器**中选择项目节点，然后单击 "**添加**  >  **新项**" "  >  **visual c # 项目**  >  **扩展性**" "  >  **visual Studio 包**"。 将此文件命名为 *TestAsyncPackage.cs*。
+2. 将 VSPackage 添加到项目。 在 **解决方案资源管理器** 中选择项目节点，然后单击 "**添加**  >  **新项**" "  >  **visual c # 项目**  >  **扩展性**" "  >  **visual Studio 包**"。 将此文件命名为 *TestAsyncPackage.cs*。
 
-3. 在 *TestAsyncPackage.cs*中，将包更改为继承自 `AsyncPackage` 而不是 `Package` ：
+3. 在 *TestAsyncPackage.cs* 中，将包更改为继承自 `AsyncPackage` 而不是 `Package` ：
 
     ```csharp
     public sealed class TestAsyncPackage : AsyncPackage
@@ -120,7 +122,7 @@ public sealed class TestAsyncPackage : AsyncPackage
 
 ## <a name="add-a-service"></a>添加服务
 
-1. 在 *TestAsyncPackage.cs*中，删除 `Initialize()` 方法并重写 `InitializeAsync()` 方法。 添加服务，并添加用于创建服务的回调方法。 下面是异步初始值设定项添加服务的示例：
+1. 在 *TestAsyncPackage.cs* 中，删除 `Initialize()` 方法并重写 `InitializeAsync()` 方法。 添加服务，并添加用于创建服务的回调方法。 下面是异步初始值设定项添加服务的示例：
 
     ```csharp
     protected override async Task InitializeAsync(CancellationToken cancellationToken, IProgress<ServiceProgressData> progress)
@@ -132,7 +134,7 @@ public sealed class TestAsyncPackage : AsyncPackage
     ```
     若要使此服务在此包外可见，请将 "升级标志" 值设置为 " *true* " 作为最后一个参数：  `this.AddService(typeof(STextWriterService), CreateTextWriterService, true);`
 
-2. 添加对 *Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime.dll*的引用。
+2. 添加对 *Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime.dll* 的引用。
 
 3. 实现回调方法，作为创建和返回服务的异步方法。
 
@@ -171,9 +173,9 @@ public sealed class TestAsyncPackage : AsyncPackage
 ## <a name="use-an-asynchronous-service-in-a-command-handler"></a>在命令处理程序中使用异步服务
  下面是如何在菜单命令中使用异步服务的示例。 您可以使用此处所示的过程，在其他非异步方法中使用该服务。
 
-1. 向项目中添加一个菜单命令。  (在**解决方案资源管理器**中，选择 "项目" 节点，右键单击，然后选择 "**添加**  >  **新的项**  >  **扩展性**  >  **自定义命令**"。 ) 命名命令文件*TestAsyncCommand.cs*。
+1. 向项目中添加一个菜单命令。  (在 **解决方案资源管理器** 中，选择 "项目" 节点，右键单击，然后选择 "**添加**  >  **新的项**  >  **扩展性**  >  **自定义命令**"。 ) 命名命令文件 *TestAsyncCommand.cs*。
 
-2. 自定义命令模板会将方法重新添加 `Initialize()` 到 *TestAsyncPackage.cs* 文件，以便初始化命令。 在 `Initialize()` 方法中，复制用于初始化命令的行。 它应如下所示：
+2. 自定义命令模板会将方法重新添加 `Initialize()` 到 *TestAsyncPackage.cs* 文件，以便初始化命令。 在 `Initialize()` 方法中，复制用于初始化命令的行。 应如下所示：
 
     ```csharp
     TestAsyncCommand.Initialize(this);

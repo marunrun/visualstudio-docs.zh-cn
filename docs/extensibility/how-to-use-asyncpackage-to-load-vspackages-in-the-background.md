@@ -1,5 +1,6 @@
 ---
 title: 使用 AsyncPackage 在后台加载 Vspackage
+description: 了解如何使用在后台线程上启用包加载的 AsyncPackage 类，这可以防止磁盘 i/o 的响应能力问题。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -8,18 +9,18 @@ author: acangialosi
 ms.author: anthc
 ms.workload:
 - vssdk
-ms.openlocfilehash: fef717ba7ec135038dcb35348eff870d9eeb3e33
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: e8b5917a42e7083f7357ce76762bf8b51a1b60f9
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037284"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993479"
 ---
 # <a name="how-to-use-asyncpackage-to-load-vspackages-in-the-background"></a>如何：使用 AsyncPackage 在后台加载 Vspackage
 加载和初始化 VS 包可能会导致磁盘 i/o。 如果 UI 线程上发生此类 i/o，则可能导致响应能力问题。 为了解决此情况，Visual Studio 2015 引入了在  <xref:Microsoft.VisualStudio.Shell.AsyncPackage> 后台线程上启用包加载的类。
 
 ## <a name="create-an-asyncpackage"></a>创建 AsyncPackage
- 首先，可以创建一个 VSIX 项目 (**文件**"  >  **新建**  >  **项目**" "  >  **Visual c #**  >  **扩展性**  >  **VSIX 项目**") 并将 VSPackage 添加到项目中 (右键单击该项目，然后**添加**  >  **新项**"  >  **c # 项**  >  **扩展性**"  >  **Visual Studio 包**) 。 然后，可以创建服务并将这些服务添加到包。
+ 首先，可以创建一个 VSIX 项目 (**文件**"  >  **新建**  >  **项目**" "  >  **Visual c #**  >  **扩展性**  >  **VSIX 项目**") 并将 VSPackage 添加到项目中 (右键单击该项目，然后 **添加**  >  **新项**"  >  **c # 项**  >  **扩展性**"  >  **Visual Studio 包**) 。 然后，可以创建服务并将这些服务添加到包。
 
 1. 从派生包 <xref:Microsoft.VisualStudio.Shell.AsyncPackage> 。
 
@@ -74,7 +75,7 @@ public sealed class TestPackage : AsyncPackage
 ```
 
 ## <a name="convert-an-existing-vspackage-to-asyncpackage"></a>将现有 VSPackage 转换为 AsyncPackage
- 大部分工作与创建新的 **AsyncPackage**相同。 按照上面的步骤1到步骤5进行操作。 还需要对以下建议进行额外的小心：
+ 大部分工作与创建新的 **AsyncPackage** 相同。 按照上面的步骤1到步骤5进行操作。 还需要对以下建议进行额外的小心：
 
 1. 请记住删除 `Initialize` 包中的替代。
 
@@ -83,7 +84,7 @@ public sealed class TestPackage : AsyncPackage
 3. 不要过于频繁地在线程之间切换。 尝试本地化后台线程中可能发生的工作以减少加载时间。
 
 ## <a name="querying-services-from-asyncpackage"></a>从 AsyncPackage 查询服务
- **AsyncPackage**可能会（也可能不）以异步方式加载，具体取决于调用方。 例如，
+ **AsyncPackage** 可能会（也可能不）以异步方式加载，具体取决于调用方。 例如，
 
 - 如果调用方调用了 **GetService** 或 **QueryService** (同步 api) 或
 

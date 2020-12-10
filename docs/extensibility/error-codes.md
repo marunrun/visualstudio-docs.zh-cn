@@ -1,5 +1,7 @@
 ---
 title: 错误代码 |Microsoft Docs
+description: 本文包含源代码管理插件 API 函数的错误代码、值和说明的列表。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 34072f6ddbd632f83dd308c6cb63427e02bb110b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a77f869936531dbc41cc3bd1d9b510bf44c35cec
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711839"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994714"
 ---
 # <a name="error-codes"></a>错误代码
 当源代码管理插件 API 函数返回错误时，它应为以下错误代码之一。 所有错误都是否定的、警告或信息错误代码为正值，成功为0。

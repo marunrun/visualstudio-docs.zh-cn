@@ -1,5 +1,7 @@
 ---
 title: 如何：诊断扩展性能 |Microsoft Docs
+description: Visual Studio 向用户通知慢速扩展。 了解如何计算扩展影响以及如何在本地分析扩展影响。
+ms.custom: SEO-VS-2020
 ms.date: 11/08/2016
 ms.topic: how-to
 ms.assetid: 46b0a1e3-7e69-47c9-9d8d-a1815d6c3896
@@ -8,12 +10,12 @@ ms.author: bertaygu
 manager: jillfra
 ms.workload:
 - bertaygu
-ms.openlocfilehash: 542d8a6d6d90091aa7a800ef18f847fea6b1a81c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 03721f2aedd231dd9d4c4edaadf5eeb3a89389c2
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905910"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994194"
 ---
 # <a name="measuring-extension-impact-in-startup"></a>度量扩展对启动的影响
 
@@ -160,7 +162,7 @@ PerfView 提供了有关如何在其自己的 "帮助" 菜单下读取线程时�
 1. 将 **GroupPats** 设置为空文本可以删除默认添加的所有分组。
 2. 除了现有的进程筛选器外，将 **IncPats** 设置为包含部分程序集名称和启动线程。 在这种情况下，它应为 **devenv;启动线程;MakeVsSlowExtension**。
 
-现在，视图将仅显示与与扩展相关的程序集关联的成本。 在此视图中，启动线程的 " **Inc (包含成本) ** " 列下列出的任何时间均与筛选的扩展相关，并将影响启动。
+现在，视图将仅显示与与扩展相关的程序集关联的成本。 在此视图中，启动线程的 " **Inc (包含成本)** " 列下列出的任何时间均与筛选的扩展相关，并将影响启动。
 
 在上面的示例中，一些有趣的调用堆栈是：
 
@@ -176,6 +178,6 @@ PerfView 提供了有关如何在其自己的 "帮助" 菜单下读取线程时�
 
 将加载的程序集的数量降到最少很重要，因为每个附加的程序集都涉及额外的磁盘 i/o，这会使计算机速度变慢的启动。
 
-## <a name="summary"></a>总结
+## <a name="summary"></a>“摘要”
 
 Visual Studio 的启动是我们不断获得反馈的领域之一。 如前所述，我们的目标是让所有用户都拥有一致的启动体验，而不考虑它们所安装的组件和扩展。 我们想要与扩展所有者合作，帮助我们实现这一目标。 上述指南应该有助于理解扩展对启动的影响，并且无需以异步方式自动加载或加载它来最大程度地降低对用户工作效率的影响。

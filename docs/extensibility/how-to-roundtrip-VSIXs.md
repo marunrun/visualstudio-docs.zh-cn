@@ -1,5 +1,7 @@
 ---
 title: 如何往返扩展
+description: 了解如何使 Visual Studio 扩展性项目在 Visual Studio 2015 和 Visual Studio 2019 或 Visual studio 2017 之间往返。
+ms.custom: SEO-VS-2020
 ms.date: 06/25/2017
 ms.topic: how-to
 ms.assetid: 2d6cf53c-011e-4c9e-9935-417edca8c486
@@ -8,12 +10,12 @@ ms.author: madsk
 manager: justinclareburt
 ms.workload:
 - willbrown
-ms.openlocfilehash: ca1f367510aa9730c1b3b212438579a8eaeb0e8f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3db3264bf5226b5679452659928e451e7975b001
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86387273"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993609"
 ---
 # <a name="how-to-make-extensions-compatible-with-visual-studio-20192017-and-visual-studio-2015"></a>如何：使扩展与 Visual Studio 2019/2017 和 Visual Studio 2015 兼容
 
@@ -52,10 +54,10 @@ ms.locfileid: "86387273"
 ## <a name="ensure-there-is-no-reference-to-projectjson"></a>确保没有对 project.js的引用
 
 稍后在本文档中，我们将向你的 **.csproj* 文件中插入条件导入语句。 如果 NuGet 引用存储在 *project.js上*，则此操作不起作用。 因此，建议将所有 NuGet 引用移动到 *packages.config* 文件中。
-如果项目包含文件 * 上的project.js* ：
+如果项目包含文件 *上的project.js* ：
 
-* 记下 *project.js上*的引用。
-* 从 **解决方案资源管理器**中，从项目中删除文件 *project.js* 。 这会删除文件 * 上的project.js* ，并将其从项目中删除。
+* 记下 *project.js上* 的引用。
+* 从 **解决方案资源管理器** 中，从项目中删除文件 *project.js* 。 这会删除文件 *上的project.js* ，并将其从项目中删除。
 * 将 NuGet 引用添加回项目：
   * 右键单击 **解决方案** ，然后选择 " **管理解决方案的 NuGet 包**"。
   * Visual Studio 将自动为你创建 *packages.config* 文件。
@@ -122,7 +124,7 @@ Visual Studio 2019 或2017 | VSSDK. BuildTool
 
 在执行此步骤的同时，强烈建议对修改后的 .csproj 打开引用。 可在 [此处](https://github.com/Microsoft/VSSDK-Extensibility-Samples)找到几个示例。 选择任何扩展性示例，查找 *.csproj* 文件以供参考并执行以下步骤：
 
-* 在 **文件资源管理器**中导航到项目目录。
+* 在 **文件资源管理器** 中导航到项目目录。
 * 使用文本编辑器打开 *myproject* 文件。
 
 ### <a name="1-update-the-minimumvisualstudioversion"></a>1. 更新 I o n
@@ -207,10 +209,10 @@ Visual Studio 2019 或2017 | VSSDK. BuildTool
 * 导航到项目目录。
 * 打开 *\bin\Debug* 文件夹。
 * 双击 VSIX 文件，并在 Visual Studio 2015 和 Visual Studio 2019/2017 上安装扩展。
-* 请确保在**Tools**  >  "**已安装**" 部分的 "工具**扩展和更新**" 中可以看到该扩展。
+* 请确保在  >  "**已安装**" 部分的 "工具 **扩展和更新**" 中可以看到该扩展。
 * 尝试运行/使用该扩展来检查它是否正常工作。
 
 ![查找 VSIX](media/finding-a-VSIX-example.png)
 
 > [!NOTE]
-> 如果项目在 **打开文件**时停止响应，请强制关闭 Visual Studio，导航到项目目录，显示隐藏文件夹，然后删除 *. vs* 文件夹。
+> 如果项目在 **打开文件** 时停止响应，请强制关闭 Visual Studio，导航到项目目录，显示隐藏文件夹，然后删除 *. vs* 文件夹。

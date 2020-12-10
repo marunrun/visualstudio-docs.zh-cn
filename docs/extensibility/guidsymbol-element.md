@@ -1,5 +1,7 @@
 ---
 title: GuidSymbol 元素 |Microsoft Docs
+description: GuidSymbol 元素包含表示菜单、组或命令的 GUID： ID 对的 GUID。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 59068a9ac9f952b5370681b3684ce4234354afc9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 98fd802021f29365b6f338610754214352a996d7
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711130"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994233"
 ---
 # <a name="guidsymbol-element"></a>GuidSymbol 元素
 `GuidSymbol`元素包含表示菜单、组或命令的 guid： ID 对的 guid。 ID 来自 `IDSymbol` 元素中的元素 `GuidSymbol` 。 `GuidSymbol`元素具有 `name` 特性，该特性提供了 GUID 的友好名称，该名称包含在特性中 `value` 。
@@ -50,7 +52,7 @@ ms.locfileid: "80711130"
 
 |元素|说明|
 |-------------|-----------------|
-|[符号元素](../extensibility/symbols-element.md)|`GuidSymbol`对 *.vsct*文件中的元素进行分组。|
+|[符号元素](../extensibility/symbols-element.md)|`GuidSymbol`对 *.vsct* 文件中的元素进行分组。|
 
 ## <a name="remarks"></a>备注
  通常， *.vsct* 文件包含三个 `GuidSymbol` 元素 `Symbols` ，一个用于包本身，一个用于命令集 (包提供) 的菜单、组和命令集，另一个用于为按钮和其他可视组件提供图标的位图。 `IDSymbol`给定元素中的每个元素 `GuidSymbol` 必须具有唯一的 `value` 。但是， `IDSymbol` 具有相同值的元素可以存在于包中，只要它们具有不同的父元素。

@@ -1,5 +1,7 @@
 ---
 title: 映像服务和目录 |Microsoft Docs
+description: 本文包含采用 Visual Studio 映像服务和映像目录的指南和最佳实践。
+ms.custom: SEO-VS-2020
 ms.date: 04/01/2019
 ms.topic: conceptual
 ms.assetid: 34990c37-ae98-4140-9b1e-a91c192220d9
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a098e78e8895aea72d830a88e436a06f15de6133
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 41adcbe97f9d0779fbad465bac673a3f7cf086c7
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584537"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993531"
 ---
 # <a name="image-service-and-catalog"></a>映像服务和目录
 本指南包含的指南和最佳实践适用于 Visual studio 2015 中引入的 Visual Studio 映像服务和映像目录。
@@ -104,7 +106,7 @@ ms.locfileid: "91584537"
 |**子元素**|**定义**|
 |-|-|
 |导入|导入给定清单文件的符号，以便在当前清单中使用|
-|GUID|符号表示 GUID 并且必须与 GUID 格式匹配|
+|Guid|符号表示 GUID 并且必须与 GUID 格式匹配|
 |ID|符号表示 ID，必须为非负整数|
 |字符串|符号表示任意字符串值|
 
@@ -118,14 +120,14 @@ ms.locfileid: "91584537"
 
  某些符号是为所有清单预定义的。 它们可在或元素的 Uri 特性中使用 \<Source> \<Import> ，以引用本地计算机上的路径。
 
-|**符号**|**描述**|
+|**符号**|**说明**|
 |-|-|
 |CommonProgramFiles|% CommonProgramFiles% 环境变量的值|
 |LocalAppData|% LocalAppData% 环境变量的值|
 |ManifestFolder|包含清单文件的文件夹|
 |MyDocuments|当前用户的 "我的文档" 文件夹的完整路径|
 |ProgramFiles|% ProgramFiles% 环境变量的值|
-|系统|*Windows\System32*文件夹|
+|系统|*Windows\System32* 文件夹|
 |WinDir|% WinDir% 环境变量的值|
 
  **图像**
@@ -143,11 +145,11 @@ ms.locfileid: "91584537"
 
 |**Attribute**|**定义**|
 |-|-|
-|GUID|请求图像名字对象的 GUID 部分|
+|Guid|请求图像名字对象的 GUID 部分|
 |ID|请求图像名字对象的 ID 部分|
 |AllowColorInversion|[可选，默认值为 true]指示在深色背景上使用时，图像是否可以通过编程方式进行反转。|
 
- **Source**
+ **源**
 
  \<Source>元素定义单个图像源资产 (XAML 和 PNG) 。
 
@@ -160,11 +162,11 @@ ms.locfileid: "91584537"
 |**Attribute**|**定义**|
 |-|-|
 |Uri|请求一个 URI，用于定义图像的加载位置。 该参数可以是下列值之一：<br /><br /> -使用 application:///机构的[PACK URI](/dotnet/framework/wpf/app-development/pack-uris-in-wpf)<br />-绝对组件资源引用<br />-指向包含本机资源的文件的路径|
-|背景|可有可无指示源要使用的背景类型。<br /><br /> 该参数可以是下列值之一：<br /><br /> *浅：* 源可以在浅色背景上使用。<br /><br /> *深色：* 可以在深色背景上使用源。<br /><br /> *System.windows.forms.systeminformation.highcontrast：* 源可在高对比度模式下的任何背景上使用。<br /><br /> *HighContrastLight：* 在高对比度模式下，可以在浅色背景上使用源。<br /><br /> *HighContrastDark：* 在高对比度模式下，可以在深色背景上使用源。<br /><br /> 如果省略背景属性，则可以在任何背景上使用源。<br /><br /> 如果背景为 *浅*、 *暗*、 *HighContrastLight*或 *HighContrastDark*，则源的颜色永远不会反转。 如果省略背景或将背景设置为 *system.windows.forms.systeminformation.highcontrast*，则源颜色的反转由图像的 **AllowColorInversion** 属性控制。|
+|背景|可有可无指示源要使用的背景类型。<br /><br /> 该参数可以是下列值之一：<br /><br /> *浅：* 源可以在浅色背景上使用。<br /><br /> *深色：* 可以在深色背景上使用源。<br /><br /> *System.windows.forms.systeminformation.highcontrast：* 源可在高对比度模式下的任何背景上使用。<br /><br /> *HighContrastLight：* 在高对比度模式下，可以在浅色背景上使用源。<br /><br /> *HighContrastDark：* 在高对比度模式下，可以在深色背景上使用源。<br /><br /> 如果省略背景属性，则可以在任何背景上使用源。<br /><br /> 如果背景为 *浅*、 *暗*、 *HighContrastLight* 或 *HighContrastDark*，则源的颜色永远不会反转。 如果省略背景或将背景设置为 *system.windows.forms.systeminformation.highcontrast*，则源颜色的反转由图像的 **AllowColorInversion** 属性控制。|
 
 \<Source>元素可以具有以下一个可选子元素：
 
-|**元素**|**属性 (所有必需的) **|**定义**|
+|**元素**|**属性 (所有必需的)**|**定义**|
 |-|-|-|
 |\<Size>|值|源将用于设备单位)  (给定大小的图像。 图像将为方形。|
 |\<SizeRange>|MinSize，MaxSize|源将用于 MinSize 中的到 MaxSize (的图像，) 包括在内。 图像将为方形。|
@@ -195,7 +197,7 @@ ms.locfileid: "91584537"
 
 |**Attribute**|**定义**|
 |-|-|
-|GUID|请求图像名字对象的 GUID 部分|
+|Guid|请求图像名字对象的 GUID 部分|
 |ID|请求图像名字对象的 ID 部分|
 |外部|[可选，默认值为 false]指示图像名字对象是否引用当前清单中的图像。|
 
@@ -228,7 +230,7 @@ ms.locfileid: "91584537"
 
 - *Microsoft.VisualStudio.Utilities.dll*
 
-  - 如果在 WPF UI 中使用**ImageThemingUtilities**的**BrushToColorConverter** ，则是必需的。
+  - 如果在 WPF UI 中使用 **ImageThemingUtilities** 的 **BrushToColorConverter** ，则是必需的。
 
 - *VisualStudio \<VSVersion> 。0*
 
@@ -281,13 +283,13 @@ ms.locfileid: "91584537"
 
 ## <a name="how-do-i-write-new-wpf-ui"></a>如何实现编写新的 WPF UI？
 
-1. 首先将上述第一个步骤部分所需的程序集引用添加到你的项目中。 无需添加所有这些文件，只需添加所需的引用即可。  (注意：如果你使用的是或有权访问 **颜色** 而不是 **画笔**，则可以跳过对 **实用工具**的引用，因为你不需要转换器。 ) 
+1. 首先将上述第一个步骤部分所需的程序集引用添加到你的项目中。 无需添加所有这些文件，只需添加所需的引用即可。  (注意：如果你使用的是或有权访问 **颜色** 而不是 **画笔**，则可以跳过对 **实用工具** 的引用，因为你不需要转换器。 ) 
 
 2. 选择所需的映像，并获取其名字对象。 如果你有自己的自定义映像和名字对象，请使用 **KnownMoniker**，或使用自己的映像。
 
 3. 将 **CrispImages** 添加到 XAML。  (参见下面的示例。 ) 
 
-4. 在 UI 层次结构中设置 **ImageThemingUtilities. ImageBackgroundColor** 属性。  (应在 CrispImage 背景色的位置设置此位置，而不一定在**CrispImage**上。 )  (参见下面的示例。 ) 
+4. 在 UI 层次结构中设置 **ImageThemingUtilities. ImageBackgroundColor** 属性。  (应在 CrispImage 背景色的位置设置此位置，而不一定在上。 )  (参见下面的示例。 ) 
 
 ```xaml
 <Window
@@ -465,7 +467,7 @@ Bitmap bitmap = (Bitmap)GelUtilities.GetObjectData(uiObj); // Use this if you ne
 
  这些是在工具窗口中使用名字对象的关键位置。 按照以下各项的说明操作：
 
-1. 当选项卡变小时，"工具窗口" 选项卡 (也可用于 " **Ctrl** + **" 选项卡**窗口切换器) 。
+1. 当选项卡变小时，"工具窗口" 选项卡 (也可用于 " **Ctrl** + **" 选项卡** 窗口切换器) 。
 
     将以下行添加到从 **ToolWindowPane** 类型派生的类的构造函数：
 
@@ -497,7 +499,7 @@ Bitmap bitmap = (Bitmap)GelUtilities.GetObjectData(uiObj); // Use this if you ne
 
    这些是在工具窗口中使用名字对象的关键位置。 按照以下各项的说明操作：
 
-3. 当选项卡变小时，"工具窗口" 选项卡 (也可用于 " **Ctrl** + **" 选项卡**窗口切换器) 。
+3. 当选项卡变小时，"工具窗口" 选项卡 (也可用于 " **Ctrl** + **" 选项卡** 窗口切换器) 。
 
    1. 如果这些行) 存在于从 **ToolWindowPane** 类型派生的类的构造函数中，则删除这些行 (：
 
@@ -565,26 +567,26 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,1,fda30684-682d-421c-8be4-650a2967058e,100
 b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 ```
 
- CSV 文件随包一起部署，其位置由**ProvideMenuResource**包特性的**IconMappingFilename**属性指定：
+ CSV 文件随包一起部署，其位置由 **ProvideMenuResource** 包特性的 **IconMappingFilename** 属性指定：
 
 ```csharp
 [ProvideMenuResource("MyPackage.ctmenu", 1, IconMappingFilename="IconMappings.csv")]
 ```
 
- **IconMappingFilename**是隐式地以 $PackageFolder $ (（如上面的示例所示）) 的相对路径，或者是以环境变量（如 *@ "% UserProfile% \dir1\dir2\MyMappingFile.csv"*）定义的目录的绝对路径。
+ **IconMappingFilename** 是隐式地以 $PackageFolder $ (（如上面的示例所示）) 的相对路径，或者是以环境变量（如 *@ "% UserProfile% \dir1\dir2\MyMappingFile.csv"*）定义的目录的绝对路径。
 
 ## <a name="how-do-i-port-a-project-system"></a>如何实现移植项目系统？
  **如何为项目提供 ImageMonikers**
 
-1. 在项目的**IVsHierarchy**上实现**VSHPROPID_SupportsIconMonikers** ，并返回 true。
+1. 在项目的 **IVsHierarchy** 上实现 **VSHPROPID_SupportsIconMonikers** ，并返回 true。
 
-2. 如果原始项目**使用的是** **VSHPROPID_IconImgList**) 或**VSHPROPID_IconMonikerGuid**，则实现**VSHPROPID_IconMonikerImageList** (如果**VSHPROPID_OpenFolderIconMonikerGuid**原始项目使用**VSHPROPID_IconMonikerId**和**VSHPROPID_OpenFolderIconMonikerGuid** VSHPROPID_OpenFolderIconMonikerId (**VSHPROPID_IconHandle VSHPROPID_OpenFolderIconHandle) ** 。
+2. 如果原始项目 **使用的是** **VSHPROPID_IconImgList**) 或 **VSHPROPID_IconMonikerGuid**，则实现 **VSHPROPID_IconMonikerImageList** (如果原始项目使用 **VSHPROPID_IconMonikerId** 和 **VSHPROPID_OpenFolderIconMonikerGuid** VSHPROPID_OpenFolderIconMonikerId (**VSHPROPID_IconHandle VSHPROPID_OpenFolderIconHandle)** 。
 
 3. 更改原始 VSHPROPIDs 的图标的实现，以便在扩展点请求时创建图标的 "旧" 版本。 **IVsImageService2** 提供了获取这些图标所需的功能
 
    **VB/c # 项目风格的额外要求**
 
-   如果检测到你的项目是**最外面的风格**，则仅实现**VSHPROPID_SupportsIconMonikers** 。 否则，实际最外面的风格可能不支持图像名字对象，因此，你的基础风格可能会有效地 "隐藏" 自定义图像。
+   如果检测到你的项目是 **最外面的风格**，则仅实现 **VSHPROPID_SupportsIconMonikers** 。 否则，实际最外面的风格可能不支持图像名字对象，因此，你的基础风格可能会有效地 "隐藏" 自定义图像。
 
    **如何实现使用 CPS 中的映像名字对象？**
 
@@ -638,7 +640,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 
    - 建议：重命名 AssetsGuid 符号和图像条符号以适应其用法。
 
-   - 将每个**ContainedImage**的 GUID 替换为 $ (ImageCatalogGuid) ，将每个**ContainedImage**的 ID 替换为 $ (\<moniker>) ，并向每个**ContainedImage**添加 External = "true" 属性。
+   - 将每个 **ContainedImage** 的 GUID 替换为 $ (ImageCatalogGuid) ，将每个 **ContainedImage** 的 ID 替换为 $ (\<moniker>) ，并向每个 **ContainedImage** 添加 External = "true" 属性。
 
        - \<moniker> 应该替换为与图像匹配但带有 "KnownMonikers" 的 **KnownMoniker** 。 从名称中删除。
 
@@ -748,9 +750,9 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 
   - 将 "Include in VSIX" 设置为 True。
 
-- 我正在更新 CPS 项目系统。 **ImageName**和**StockIconService**发生了什么情况？
+- 我正在更新 CPS 项目系统。 **ImageName** 和 **StockIconService** 发生了什么情况？
 
-  - 当 CPS 被更新为使用名字对象时，已将其删除。 不再需要调用**StockIconService**，只需使用 CPS 实用工具中的**ToProjectSystemType ( # B1**扩展方法将所需的**KnownMoniker**传递给方法或属性。 可以在下面找到 **ImageName** 到 **KnownMonikers** 的映射：
+  - 当 CPS 被更新为使用名字对象时，已将其删除。 不再需要调用 **StockIconService**，只需使用 CPS 实用工具中的 **ToProjectSystemType ( # B1** 扩展方法将所需的 **KnownMoniker** 传递给方法或属性。 可以在下面找到 **ImageName** 到 **KnownMonikers** 的映射：
 
     |**ImageName**|**KnownMoniker**|
     |-|-|
@@ -819,7 +821,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 
   - 我正在更新完成列表提供程序。 哪些 **KnownMonikers** 与旧的 **StandardGlyphGroup** 和 **StandardGlyph** 值匹配？
 
-    |“属性”|“属性”|“属性”|
+    |名称|名称|名称|
     |-|-|-|
     |GlyphGroupClass|GlyphItemPublic|ClassPublic|
     |GlyphGroupClass|GlyphItemInternal|ClassInternal|

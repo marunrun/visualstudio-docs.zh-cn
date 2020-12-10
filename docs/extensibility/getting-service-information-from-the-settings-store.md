@@ -1,5 +1,7 @@
 ---
 title: 正在从设置存储获取服务信息 |Microsoft Docs
+description: 了解如何使用设置存储查找所有可用的服务，或确定是否安装了某个特定的服务。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 7028d440-d16d-4b08-9b94-eb8cc93b25fc
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b15d5c9f122ca66d21940b9998969b0d39d1a74d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 15efb14d2cee36e5f2a8559c3ffa3844251aa982
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711375"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994428"
 ---
 # <a name="get-service-information-from-the-settings-store"></a>从设置存储获取服务信息
 您可以使用 "设置存储" 查找所有可用的服务，或确定是否安装了某个特定的服务。 您必须知道服务类的类型。
@@ -22,7 +24,7 @@ ms.locfileid: "80711375"
 
 1. 创建一个名为的 VSIX 项目 `FindServicesExtension` ，然后添加一个名为的自定义命令 `FindServicesCommand` 。 有关如何创建自定义命令的详细信息，请参阅 [使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)
 
-2. 在 *FindServicesCommand.cs*中，添加以下 using 指令：
+2. 在 *FindServicesCommand.cs* 中，添加以下 using 指令：
 
     ```csharp
     using System.Collections.Generic;

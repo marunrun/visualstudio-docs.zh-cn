@@ -1,5 +1,6 @@
 ---
 title: 使用注册表设置管理专用库
+description: 了解如何控制对 Visual Studio 库、示例库或专用库中的控件、模板和工具的访问。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2dcbacbe415eac6829dc51e95442905bba932d6a
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: d15d845f07310e3efcba6f05538a2207d9c416e4
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90038538"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994000"
 ---
 # <a name="how-to-manage-a-private-gallery-by-using-registry-settings"></a>如何：通过使用注册表设置管理专用库
 如果你是独立 Shell 扩展的管理员或开发人员，则可以在 Visual Studio 库、示例库或专用库中控制对控件、模板和工具的访问。 若要使库可用或不可用，请创建一个描述修改后的注册表项及其值的 *.pkgdef* 文件。
@@ -27,7 +28,7 @@ ms.locfileid: "90038538"
 
 ```
 [$RootKey$\ExtensionManager\Repositories\{UniqueGUID}]
-@={URI}  (REG_SZ)
+@={URI}  (REG_SZ)
 Disabled=0 | 1 (DWORD)
 Priority=0 (highest priority) ... MaxInt (lowest priority) (DWORD) (uint)
 Protocol=Atom Feed|Sharepoint (REG_SZ)
