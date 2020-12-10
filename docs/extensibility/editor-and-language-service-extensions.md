@@ -1,5 +1,7 @@
 ---
 title: 编辑器和语言服务扩展 |Microsoft Docs
+description: 你可以扩展 Visual Studio 代码编辑器的大多数功能，该编辑器是使用 Windows Presentation Foundation 实现的，并使用托管代码编写的。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 78d85cd3651f8769104a61586bea1468e1c21cd2
-ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
+ms.openlocfilehash: 2b15d5f970bfc6a32489991b578a54f2eadc96ea
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93414069"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995819"
 ---
 # <a name="editor-and-language-service-extensions"></a>编辑器和语言服务扩展
 可以扩展 Visual Studio 代码编辑器的大多数功能。 该编辑器基于 (WPF) Windows Presentation Foundation，并用托管代码编写。 尽管此设计与 Visual Studio 早期版本中的设计不同，但它提供了大多数相同的功能。 若要扩展编辑器，请使用 (MEF) Managed Extensibility Framework。

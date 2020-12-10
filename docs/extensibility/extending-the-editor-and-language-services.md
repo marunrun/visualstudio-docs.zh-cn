@@ -1,5 +1,7 @@
 ---
 title: 扩展编辑器和语言服务 |Microsoft Docs
+description: 您可以向编辑器添加语言服务功能并扩展 Visual Studio 代码编辑器的功能。 了解 Managed Extensibility Framework。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 321bd82eb83ef37dc3981e38cc23d1d4b5685802
-ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
+ms.openlocfilehash: 49d4b76fe7feadb4458ef68acb351b81c6fa494c
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93413939"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995741"
 ---
 # <a name="extend-the-editor-and-language-services"></a>扩展编辑器和语言服务
 可以将语言服务功能 (例如 IntelliSense) 添加到自己的编辑器中，并扩展 Visual Studio 代码编辑器的大多数功能。  有关可以扩展的内容的完整列表，请参阅 [语言服务和编辑器扩展点](../extensibility/language-service-and-editor-extension-points.md)。

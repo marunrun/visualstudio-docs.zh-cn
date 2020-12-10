@@ -1,5 +1,7 @@
 ---
 title: Include 元素 |Microsoft Docs
+description: Include 元素指定一个文件，该文件可位于提供的包含路径上，用于插入当前文件。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7ea89185d28be2816a690d867dbb3eccbb739e04
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 71da1241863e41529af33bdd5e45dcf0a8bfbdb1
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80710364"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96996339"
 ---
 # <a name="include-element"></a>Include 元素
 Include 元素指定一个文件，该文件可位于提供的包含路径上，用于插入当前文件。  所有定义的符号和类型将成为编译结果的一部分。

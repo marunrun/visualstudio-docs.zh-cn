@@ -1,5 +1,6 @@
 ---
 title: 扩展属性、任务列表、输出、选项窗口
+description: 了解如何将 Visual Studio 中的工具窗口的信息集成到新的 "选项" 页和 "属性" 页上的新设置。
 ms.date: 11/04/2016
 ms.custom: SEO-VS-2020
 ms.topic: conceptual
@@ -16,12 +17,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c968544c6bf52a901052fc7aedbbee66dcc10e62
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 54b78197be71dca9fbabbfded90c4e07660a74db
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90038473"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995793"
 ---
 # <a name="extend-the-properties-task-list-output-and-options-windows"></a>扩展 "属性"、"任务列表"、"输出" 和 "选项" 窗口
 你可以在 Visual Studio 中访问任何工具窗口。 本演练演示如何将有关工具窗口的信息集成到新的 " **选项** " 页和 " **属性** " 页上的新设置，以及如何写入 **任务列表** 和 **输出** 窗口。
@@ -31,7 +32,7 @@ ms.locfileid: "90038473"
 
 ## <a name="create-an-extension-with-a-tool-window"></a>使用工具窗口创建扩展
 
-1. 使用 VSIX 模板创建名为 **TodoList** 的项目，并添加一个名为 **TodoWindow**的自定义工具窗口项模板。
+1. 使用 VSIX 模板创建名为 **TodoList** 的项目，并添加一个名为 **TodoWindow** 的自定义工具窗口项模板。
 
     > [!NOTE]
     > 有关使用工具窗口创建扩展的详细信息，请参阅 [使用工具窗口创建扩展](../extensibility/creating-an-extension-with-a-tool-window.md)。
@@ -39,14 +40,14 @@ ms.locfileid: "90038473"
 ## <a name="set-up-the-tool-window"></a>设置工具窗口
  添加要在其中键入新 ToDo 项的文本框、用于将新项添加到列表的按钮，以及用于显示列表项的列表框。
 
-1. 在 *TodoWindow*中，从 UserControl 中删除按钮、TextBox 和 system.windows.controls.stackpanel> 控件。
+1. 在 *TodoWindow* 中，从 UserControl 中删除按钮、TextBox 和 system.windows.controls.stackpanel> 控件。
 
     > [!NOTE]
     > 这不会删除 **button1_Click** 事件处理程序，你将在后面的步骤中重复使用它。
 
 2. 从 "**工具箱**" 的 "**所有 WPF 控件**" 部分，将 "**画布**" 控件拖动到网格。
 
-3. 将 **文本框**、 **按钮**和 **列表框** 拖动到画布上。 排列元素，使文本框和按钮位于同一级别，列表框将填充其下的剩余窗口，如下图所示。
+3. 将 **文本框**、 **按钮** 和 **列表框** 拖动到画布上。 排列元素，使文本框和按钮位于同一级别，列表框将填充其下的剩余窗口，如下图所示。
 
      ![已完成的工具窗口](../extensibility/media/t5-toolwindow.png "T5-ToolWindow")
 
@@ -80,7 +81,7 @@ ms.locfileid: "90038473"
     }
     ```
 
-3. 在 *TodoWindow.cs*中，更改 TodoWindowControl 构造函数以包括 TodoWindow 参数。 代码应如下所示：
+3. 在 *TodoWindow.cs* 中，更改 TodoWindowControl 构造函数以包括 TodoWindow 参数。 代码应如下所示：
 
     ```csharp
     public TodoWindow() : base(null)
@@ -126,7 +127,7 @@ ms.locfileid: "90038473"
 
 ### <a name="make-the-options-page-available-to-users"></a>使选项页对用户可用
 
-1. 在 *TodoWindowPackage.cs*中，将添加 <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> 到 `TodoWindowPackage` 类：
+1. 在 *TodoWindowPackage.cs* 中，将添加 <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> 到 `TodoWindowPackage` 类：
 
     ```csharp
     [ProvideOptionPage(typeof(ToolsOptions), "ToDo", "General", 101, 106, true)]
@@ -147,7 +148,7 @@ ms.locfileid: "90038473"
 
      当向用户提供工具窗口时，列表框中的项将由 TodoItems 表示。 当用户在列表框中选择其中一项时，" **属性** " 窗口将显示有关项的信息。
 
-     若要使数据在 " **属性** " 窗口中可用，可将数据转换为具有两个特殊属性的公共属性，即 `Description` 和 `Category` 。 `Description` 显示在 " **属性** " 窗口底部的文本。 `Category` 确定当 " **属性** " 窗口显示在 **分类** 视图中时，属性应出现的位置。 在下图中，"**属性**" 窗口处于**分类**视图中，" **ToDo 字段**" 类别中的 "**名称**" 属性处于选中状态，而 "**名称**" 属性的说明显示在窗口的底部。
+     若要使数据在 " **属性** " 窗口中可用，可将数据转换为具有两个特殊属性的公共属性，即 `Description` 和 `Category` 。 `Description` 显示在 " **属性** " 窗口底部的文本。 `Category` 确定当 " **属性** " 窗口显示在 **分类** 视图中时，属性应出现的位置。 在下图中，"**属性**" 窗口处于 **分类** 视图中，" **ToDo 字段**" 类别中的 "**名称**" 属性处于选中状态，而 "**名称**" 属性的说明显示在窗口的底部。
 
      ![“属性”窗口](../extensibility/media/t5properties.png "T5Properties")
 
@@ -231,7 +232,7 @@ ms.locfileid: "90038473"
     }
     ```
 
-5. 由于类的实例 `TodoItem` 将存储在列表框中，并且 listbox 将调用 `ToString` 函数，因此必须重载 `ToString` 函数。 将以下代码添加到 *TodoItem.cs*中的构造函数之后和类的末尾之前。
+5. 由于类的实例 `TodoItem` 将存储在列表框中，并且 listbox 将调用 `ToString` 函数，因此必须重载 `ToString` 函数。 将以下代码添加到 *TodoItem.cs* 中的构造函数之后和类的末尾之前。
 
     ```csharp
     public override string ToString()
@@ -240,7 +241,7 @@ ms.locfileid: "90038473"
     }
     ```
 
-6. 在 *TodoWindowControl.xaml.cs*中，将存根方法添加到 `TodoWindowControl` `CheckForError` 和方法的类 `UpdateList` 。 将其放在文件 System.windows.forms.control.processdialogchar 之后和末尾之前。
+6. 在 *TodoWindowControl.xaml.cs* 中，将存根方法添加到 `TodoWindowControl` `CheckForError` 和方法的类 `UpdateList` 。 将其放在文件 System.windows.forms.control.processdialogchar 之后和末尾之前。
 
     ```csharp
     public void CheckForErrors()
@@ -352,7 +353,7 @@ ms.locfileid: "90038473"
 
      现在，你有了一个 " **属性** " 窗口可以使用的类，接下来可以将 " **属性** " 窗口与工具窗口集成。 当用户单击工具窗口中的列表框中的项时，" **属性** " 窗口应进行相应更新。 同样，当用户在 " **属性** " 窗口中更改 ToDo 项时，应更新关联的项。
 
-7. 现在，在 *TodoWindowControl.xaml.cs*中添加 UpdateList 函数代码的其余部分。 它应删除并重新添加列表框中修改后的 TodoItem。
+7. 现在，在 *TodoWindowControl.xaml.cs* 中添加 UpdateList 函数代码的其余部分。 它应删除并重新添加列表框中修改后的 TodoItem。
 
     ```csharp
     public void UpdateList(TodoItem item)
@@ -377,7 +378,7 @@ ms.locfileid: "90038473"
 ## <a name="add-text-to-the-output-window-and-items-to-the-task-list"></a>向 "输出" 窗口中添加文本，并将项添加到任务列表
  对于 **任务列表**，你将创建一个类型为 Task 的新对象，然后通过调用其方法将该任务对象添加到 **任务列表** 中 `Add` 。 若要写入 " **输出** " 窗口，请调用其 `GetPane` 方法来获取窗格对象，然后调用 `OutputString` 窗格对象的方法。
 
-1. 在*TodoWindowControl.xaml.cs*的方法中 `button1_Click` ，在方法中添加代码以获取 "**输出**" 窗口的 "**常规**" 窗格 (这是默认) ，并向其写入。 方法应如下所示：
+1. 在 *TodoWindowControl.xaml.cs* 的方法中 `button1_Click` ，在方法中添加代码以获取 "**输出**" 窗口的 "**常规**" 窗格 (这是默认) ，并向其写入。 方法应如下所示：
 
     ```csharp
     private void button1_Click(object sender, EventArgs e)
@@ -483,15 +484,15 @@ ms.locfileid: "90038473"
 
 1. 生成项目并启动调试。 这将显示实验实例。
 
-2. 打开**TodoWindow** (**查看**  >  **其他 Windows**  >  **TodoWindow**) 。
+2. 打开 **TodoWindow** (**查看**  >  **其他 Windows**  >  **TodoWindow**) 。
 
 3. 在文本框中键入内容，然后单击 " **添加**"。
 
-     将今天的截止日期添加到列表框。 不会生成任何错误，并且**任务列表** (**视图**  >  **任务列表**) 应没有任何条目。
+     将今天的截止日期添加到列表框。 不会生成任何错误，并且 **任务列表** (**视图**  >  **任务列表**) 应没有任何条目。
 
-4. 现在，将 "**工具**  >  **选项**"  >  **ToDo**页上的设置从**2**更改回**0**。
+4. 现在，将 "**工具**  >  **选项**"  >  **ToDo** 页上的设置从 **2** 更改回 **0**。
 
-5. 键入 **TodoWindow** 中的其他内容，然后再次单击 " **添加** "。 这会触发一个错误，还会触发 **任务列表**中的一个条目。
+5. 键入 **TodoWindow** 中的其他内容，然后再次单击 " **添加** "。 这会触发一个错误，还会触发 **任务列表** 中的一个条目。
 
      添加项时，初始日期设置为现在加上2天。
 

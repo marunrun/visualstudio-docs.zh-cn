@@ -1,5 +1,7 @@
 ---
 title: 如何：更新 Visual Studio 扩展 |Microsoft Docs
+description: 了解如何使用扩展和更新来更新系统上的 Visual Studio 扩展，以便安装更新的版本。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ee81fe30e10253239bc51dd9d2f199340debc65a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: be22ca13fd5af8df88501835c8a030cc6469e179
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905621"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995599"
 ---
 # <a name="how-to-update-a-visual-studio-extension"></a>如何：更新 Visual Studio 扩展
 你可以使用 " **扩展和更新** " 来更新系统上的 Visual Studio 扩展，以便安装更新的版本。 如果你创建扩展的更新版本，则可以通过在 VSIX 清单中递增版本号来将其表示为已更新。
@@ -45,7 +47,7 @@ ms.locfileid: "85905621"
     > [!IMPORTANT]
     > 无符号的所有用户扩展都不会自动更新。 应始终对扩展进行签名。
 
-2. 在 **解决方案资源管理器**中，打开 *源扩展名 .manifest*。
+2. 在 **解决方案资源管理器** 中，打开 *源扩展名 .manifest*。
 
 3. 在清单设计器中，增加 " **版本** " 字段中的数字值。
 
@@ -55,10 +57,10 @@ ms.locfileid: "85905621"
 
      当具有较早版本的扩展的用户打开 " **扩展和更新**" 时，新版本将出现在 **更新** 列表中，前提是该工具设置为 "自动查找更新"。
 
-     你可以启用或禁用 "**更新**" 窗格底部的 "自动检查更新" (**启用/禁用可用更新的自动检测**) ，这将更改 "**工具**选项" **Check for updates**  >  **Options**  >  **环境**  >  **扩展和更新**中的 "检查更新" 设置。
+     你可以启用或禁用 "**更新**" 窗格底部的 "自动检查更新" (**启用/禁用可用更新的自动检测**) ，这将更改 "**工具** 选项"   >    >  **环境**  >  **扩展和更新** 中的 "检查更新" 设置。
 
     > [!NOTE]
-    > 从 Visual Studio 2015 Update 2 开始，你可以在 "**工具**  >  **选项**  >  "**环境**  >  **扩展和更新**中指定 () 是希望每用户扩展的自动更新、所有用户扩展还是同时 (默认设置) 。
+    > 从 Visual Studio 2015 Update 2 开始，你可以在 "**工具**  >  **选项**  >  "**环境**  >  **扩展和更新** 中指定 () 是希望每用户扩展的自动更新、所有用户扩展还是同时 (默认设置) 。
 
 ## <a name="see-also"></a>另请参阅
 - [VSIX 包的解析](../extensibility/anatomy-of-a-vsix-package.md)

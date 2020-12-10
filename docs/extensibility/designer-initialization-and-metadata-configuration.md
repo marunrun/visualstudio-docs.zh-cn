@@ -1,5 +1,7 @@
 ---
 title: 设计器初始化和元数据配置 |Microsoft Docs
+description: 了解 Visual Studio SDK 如何通过 VSPackage 帮助控制设计器或设计器组件的初始化及其元数据。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f48d8ebb285bdc8211f590f49e615042b7029d70
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 9907298cf730d6e51c108dc92f633d0b50451f12
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90011704"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96996157"
 ---
 # <a name="designer-initialization-and-metadata-configuration"></a>设计器初始化和元数据配置
 
@@ -97,7 +99,7 @@ VSPackage 应通过以下方式处理设计器初始化：
 > [!NOTE]
 > 设计图面仅支持创建组件，因此，仅组件可以有本地元数据。 在上面的示例中，我们尝试修改属性，如 `Color` 对象的属性。 如果 `false` 为 global 标志传入了，则 `CustomBrowser` 永远不会出现，因为设计器实际上不会创建的实例 `Color` 。 将全局标志设置为 `false` 对于组件（如控件、计时器和对话框）很有用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension>
 - <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtensionAttribute>

@@ -1,5 +1,7 @@
 ---
 title: 扩展 Visual Studio 的其他部分 |Microsoft Docs
+description: 了解可以扩展的 Visual Studio UI 的各个部分。 你可以创建 VSPackage，写入活动日志，并扩展工具箱和状态栏。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3c9076fbba822a1dfcff1ef13294ebd4dcafd9e9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7cc9a471b141cfd3302814844d63a2ce8d5b74c6
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711766"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995832"
 ---
 # <a name="extend-other-parts-of-visual-studio"></a>扩展 Visual Studio 的其他部分
 

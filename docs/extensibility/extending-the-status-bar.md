@@ -1,5 +1,7 @@
 ---
 title: 扩展状态栏 |Microsoft Docs
+description: 了解如何扩展 IDE 底部的 Visual Studio 状态栏，其中显示了信息。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: aa62326d82d81f7ee4d10a838209364355cc488e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ddce0cdf62d803dac1a5981442424a45d6550193
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711545"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995689"
 ---
 # <a name="extend-the-status-bar"></a>扩展状态栏
 您可以使用 IDE 底部的 Visual Studio 状态栏显示信息。
@@ -32,9 +34,9 @@ ms.locfileid: "80711545"
 
 ### <a name="read-and-write-to-the-status-bar"></a>读取和写入状态栏
 
-1. 创建名为 **TestStatusBarExtension** 的 VSIX 项目，并添加名为 **TestStatusBarCommand**的菜单命令。
+1. 创建名为 **TestStatusBarExtension** 的 VSIX 项目，并添加名为 **TestStatusBarCommand** 的菜单命令。
 
-2. 在 *TestStatusBarCommand.cs*中，将命令处理程序方法代码 (`MenuItemCallback`) 替换为以下代码：
+2. 在 *TestStatusBarCommand.cs* 中，将命令处理程序方法代码 (`MenuItemCallback`) 替换为以下代码：
 
     ```csharp
     private void MenuItemCallback(object sender, EventArgs e)
@@ -110,9 +112,9 @@ ms.locfileid: "80711545"
 
 ### <a name="display-an-animation"></a>显示动画
 
-1. 状态栏显示循环动画，该动画指示长时间运行的操作 (例如，在解决方案) 中生成多个项目。 如果看不到此动画，请确保具有正确的**工具**  >  **选项**设置：
+1. 状态栏显示循环动画，该动画指示长时间运行的操作 (例如，在解决方案) 中生成多个项目。 如果看不到此动画，请确保具有正确的 **工具**  >  **选项** 设置：
 
-     中转到 "**工具**" "选项" "  >  **Options**  >  **常规**" 选项卡，取消选中 "**基于客户端性能自动调整视觉体验"**。 然后选中 " **启用丰富的客户端视觉体验**" 子选项。 在 Visual Studio 的实验实例中生成项目时，现在应能够看到动画。
+     中转到 "**工具**" "选项" "  >    >  **常规**" 选项卡，取消选中 "**基于客户端性能自动调整视觉体验"**。 然后选中 " **启用丰富的客户端视觉体验**" 子选项。 在 Visual Studio 的实验实例中生成项目时，现在应能够看到动画。
 
      在此过程中，我们将显示表示生成项目或解决方案的标准 Visual Studio 动画。
 

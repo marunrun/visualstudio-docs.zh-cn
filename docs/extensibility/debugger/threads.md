@@ -1,5 +1,7 @@
 ---
 title: 线程 |Microsoft Docs
+description: 本文介绍 Visual Studio 的调试器结构中的线程定义和角色。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,14 +13,14 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8ed5c06e0c42dac1f0539cc2c7c5886d95b23ae1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b259ffd7814b42145489ee5990cee6da891a9d10
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712480"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995949"
 ---
-# <a name="threads"></a>线程数
+# <a name="threads"></a>线程
 调试程序体系结构中的 *线程*：
 
 - 是计算的基本单位。 线程按顺序在单个调用堆栈的上下文中执行其说明，并从一个代码上下文移到下一个调用堆栈。
@@ -28,7 +30,7 @@ ms.locfileid: "80712480"
 - 由 [IDebugThread2](../../extensibility/debugger/reference/idebugthread2.md) 接口表示，此接口通常由调试引擎创建 (取消) 或虚拟机作为执行程序的结果。
 
 ## <a name="see-also"></a>另请参阅
-- [计划](../../extensibility/debugger/programs.md)
+- Programs 
 - [堆栈帧](../../extensibility/debugger/stack-frames.md)
 - [调试引擎](../../extensibility/debugger/debug-engine.md)
 - [调试器概念](../../extensibility/debugger/debugger-concepts.md)
