@@ -1,5 +1,7 @@
 ---
 title: 控制图标或修饰器的可见性
+description: 了解如何控制图标或修饰器的可见性，具体取决于模型中的属性的状态。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
@@ -7,18 +9,18 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1d2082f7e26d3e335ed88bbced0f59d6d6c4780c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bdf97cc10543f066665506d3e238386dc39f0d4f
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546636"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363492"
 ---
 # <a name="controlling-the-visibility-of-an-icon-or-decorator"></a>控制图标或修饰器的可见性
-*修饰*器是在特定于域的语言 (DSL) 的形状上显示的图标或文本行。 您可以根据模型中属性的状态，使修饰器出现和消失。 例如，在代表人员的形状上，可能会根据人员的性别、子女数等显示不同的图标。
+*修饰* 器是在特定于域的语言 (DSL) 的形状上显示的图标或文本行。 您可以根据模型中属性的状态，使修饰器出现和消失。 例如，在代表人员的形状上，可能会根据人员的性别、子女数等显示不同的图标。
 
 ## <a name="controlling-the-visibility-of-an-icon-or-decorator"></a>控制图标或修饰器的可见性
- 下面的过程假定您已经定义了一个形状及其到域类的映射。 有关详细信息，请参阅 [如何定义域特定语言](../modeling/how-to-define-a-domain-specific-language.md)。
+ 下面的过程假定您已经定义了一个形状及其到域类的映射。 有关详细信息，请参阅 [如何定义 Domain-Specific 语言](../modeling/how-to-define-a-domain-specific-language.md)。
 
 #### <a name="to-control-the-visibility-of-an-icon-or-text-decorator"></a>控制图标或文本修饰器的可见性
 
@@ -62,7 +64,7 @@ ms.locfileid: "85546636"
 
      **Kind =** `Calculated`**-这意味着你将提供用于计算其值的代码**    
 
-     例如**DecoratorControl**的**名称**
+     例如 **DecoratorControl** 的 **名称**
 
      **类别** = `Boolean`
 
@@ -74,7 +76,7 @@ ms.locfileid: "85546636"
 
     2. 检查 " **可见性筛选器** " 框。
 
-    3. 在 " **筛选器" 属性**中，选择控件属性 " **DecoratorControl**"。
+    3. 在 " **筛选器" 属性** 中，选择控件属性 " **DecoratorControl**"。
 
     4. 在 " **可见性项**" 下，输入 `True` 。
 
@@ -103,7 +105,7 @@ ms.locfileid: "85546636"
 
 8. 重新生成并运行解决方案。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [定义形状和连接线](../modeling/defining-shapes-and-connectors.md)
 - [在图表上设置背景图像](../modeling/setting-a-background-image-on-a-diagram.md)

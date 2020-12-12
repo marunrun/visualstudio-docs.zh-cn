@@ -1,5 +1,7 @@
 ---
 title: 文本模板的安全性
+description: 了解安全性和文本模板，包括任意代码和恶意指令处理器之类的主题。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 25815bcb7f027501fb849dcd29d14b040c24d7fa
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d54421ea4df9c54fd4ec8c1804a1a292061996ab
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75591965"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363791"
 ---
 # <a name="security-of-text-templates"></a>文本模板的安全性
 文本模板具有以下安全问题：

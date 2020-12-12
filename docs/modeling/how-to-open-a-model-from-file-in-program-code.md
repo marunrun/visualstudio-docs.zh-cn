@@ -1,5 +1,7 @@
 ---
 title: 如果：在程序代码中从文件打开模型
+description: 了解，ModelBus 提供了用于引用模型中的模型或元素的标准机制，还提供了用于查找模型（如果该模型已移动）的标准机制。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 19cec066d66b08d3f02f3885908722aad047172b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f854edc45724f0e1f3db5bda22cb6aa006d77e60
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85532478"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363869"
 ---
 # <a name="how-to-open-a-model-from-file-in-program-code"></a>如果：在程序代码中从文件打开模型
 
@@ -20,20 +22,20 @@ ms.locfileid: "85532478"
 
 在 Visual Studio 扩展中，你可以使用 ModelBus 来实现此目的。 ModelBus 提供了用于引用模型或模型中的元素的标准机制，并用于查找模型（如果该模型已移动）。 有关详细信息，请参阅 [使用 Visual Studio 集成模型 Modelbus](../modeling/integrating-models-by-using-visual-studio-modelbus.md)。
 
-## <a name="target-framework"></a>目标 Framework
+## <a name="target-framework"></a>目标框架
 
 将应用程序项目的 **目标框架** 设置为 .NET Framework 4 或更高版本。
 
 1. 打开要在其中读取 DSL 模型的应用程序的 Visual Studio 项目。
 
-2. 在 **解决方案资源管理器**中，右键单击项目，然后单击 " **属性**"。
+2. 在 **解决方案资源管理器** 中，右键单击项目，然后单击 " **属性**"。
 
 3. 在项目的 "属性" 窗口的 " **应用程序** " 选项卡上，将 " **目标框架** " 字段设置为 **.NET Framework 4** (或更高版本) 。
 
 > [!NOTE]
 > 目标框架不 **.NET Framework 4 客户端配置文件**。
 
-## <a name="references"></a>参考
+## <a name="references"></a>参考资料
 
 将这些引用添加到你的 Visual Studio 应用程序项目：
 
@@ -45,7 +47,7 @@ ms.locfileid: "85532478"
 
 ## <a name="important-classes-in-the-dsl"></a>DSL 中的重要类
 
-在编写用于读取 DSL 的代码之前，你应该知道 DSL 生成的某些类的名称。 在 DSL 解决方案中，打开 **dsl** 项目，并在 **GeneratedCode** 文件夹中查找。 或者，在项目 **引用**中双击 dsl 程序集，并在 **对象浏览器**中打开 dsl 命名空间。
+在编写用于读取 DSL 的代码之前，你应该知道 DSL 生成的某些类的名称。 在 DSL 解决方案中，打开 **dsl** 项目，并在 **GeneratedCode** 文件夹中查找。 或者，在项目 **引用** 中双击 dsl 程序集，并在 **对象浏览器** 中打开 dsl 命名空间。
 
 这些是你应该识别的类：
 

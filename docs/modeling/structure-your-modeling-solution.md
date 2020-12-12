@@ -1,5 +1,7 @@
 ---
 title: 安排你的建模解决方案
+description: 了解用于将应用程序划分为与整体分层关系图中各层对应的不同部分的建模方案。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cc4eba7dc4d185cbd8eb4f1b073fce8b0c9fb07e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9d2f865cf66da0bb4496a3d754a49d1f4dcc70ff
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85545036"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363726"
 ---
 # <a name="structure-your-modeling-solution"></a>安排你的建模解决方案
 
@@ -52,7 +54,7 @@ ms.locfileid: "85545036"
 
    现在，每个层都有一个模型，还有一个用于应用程序体系结构的模型。 每个解决方案都包含各自的模型。 这样使团队成员能够同时在各个层上工作。
 
-2. 对于体系结构解决方案中，将添加每个层解决方案的建模项目。 为此，请打开体系结构解决方案。 在 **解决方案资源管理器**中，右键单击解决方案节点，指向 "添加"，然后单击 " **现有项目**"。 在一个层解决方案中导航到建模项目 (.modelproj)。
+2. 对于体系结构解决方案中，将添加每个层解决方案的建模项目。 为此，请打开体系结构解决方案。 在 **解决方案资源管理器** 中，右键单击解决方案节点，指向 "添加"，然后单击 " **现有项目**"。 在一个层解决方案中导航到建模项目 (.modelproj)。
 
    现在，每个模型都在这两个解决方案中可见：其“主”解决方案和体系结构解决方案。
 
@@ -72,9 +74,9 @@ ms.locfileid: "85545036"
 
 #### <a name="use-a-separate-package-for-each-layer"></a>为每个层使用单独的包
 
-1. 在每层的解决方案中，添加体系结构建模项目。 在 **解决方案资源管理器**中，右键单击解决方案节点，指向 " **添加**"，然后单击 " **现有项目**"。 现在从每个解决方案都可以访问这个单一建模项目：体系结构项目以及每层的开发项目。
+1. 在每层的解决方案中，添加体系结构建模项目。 在 **解决方案资源管理器** 中，右键单击解决方案节点，指向 " **添加**"，然后单击 " **现有项目**"。 现在从每个解决方案都可以访问这个单一建模项目：体系结构项目以及每层的开发项目。
 
-2. 在共享模型中，为每个层创建一个包：在 **解决方案资源管理器**中，选择建模项目。 在 " **UML 模型资源管理器**" 中，右键单击 "模型" 根节点，指向 " **添加**"，然后单击 " **包**"。
+2. 在共享模型中，为每个层创建一个包：在 **解决方案资源管理器** 中，选择建模项目。 在 " **UML 模型资源管理器**" 中，右键单击 "模型" 根节点，指向 " **添加**"，然后单击 " **包**"。
 
    每个包都包含描述相应层的要求和设计的关系图。
 
@@ -96,7 +98,7 @@ ms.locfileid: "85545036"
 
 2. 创建你想要用作将来项目的起始点的解决方案结构。
 
-3. 在“文件” **** 菜单上，单击“将模板导出为 VSIX” ****。
+3. 在“文件”  菜单上，单击“将模板导出为 VSIX” 。
 
    将打开 "将 **模板导出为 VSIX" 向导** 。
 
@@ -106,7 +108,7 @@ ms.locfileid: "85545036"
 
 [组织和管理模型](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-9-organizing-and-managing-your-models)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [在你的开发过程中使用模型](../modeling/use-models-in-your-development-process.md)
 - [Visual Studio 体系结构工具指南](../modeling/visual-studio-architecture-tooling-guidance.md)

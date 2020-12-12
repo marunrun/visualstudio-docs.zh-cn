@@ -1,5 +1,7 @@
 ---
 title: 如何：向快捷菜单中添加命令
+description: 了解如何将菜单命令添加到 (DSL) 的域特定语言，以便用户可以执行特定于 DSL 的任务。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6aac779a3c165d10262c078ff431731d9d248f3a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7dc51de28162471262d8c4bd35ddd09bc156896e
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85545712"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363336"
 ---
 # <a name="how-to-add-a-command-to-the-shortcut-menu"></a>如何：向快捷菜单中添加命令
 
@@ -57,9 +59,9 @@ ms.locfileid: "85545712"
 
 ### <a name="to-add-the-command"></a>添加命令
 
-1. 在 **解决方案资源管理器**的 **DslPackage** 项目下，打开 .vsct。
+1. 在 **解决方案资源管理器** 的 **DslPackage** 项目下，打开 .vsct。
 
-2. 在 `Commands` 元素中，定义一个或多个按钮和一个组。 *按钮*是菜单上的一项。 *组*是菜单中的一个部分。 若要定义这些项，请添加以下元素：
+2. 在 `Commands` 元素中，定义一个或多个按钮和一个组。 *按钮* 是菜单上的一项。 *组* 是菜单中的一个部分。 若要定义这些项，请添加以下元素：
 
     ```xml
     <!-- Define a group - a section in the menu -->
@@ -135,7 +137,7 @@ ms.locfileid: "85545712"
 
 ### <a name="to-update-the-packagett-file"></a>更新 Package.tt 文件
 
-1. 在 **解决方案资源管理器**的 " **DslPackage** " 项目的 " **GeneratedCode** " 文件夹中，打开 Package.tt 文件。
+1. 在 **解决方案资源管理器** 的 " **DslPackage** " 项目的 " **GeneratedCode** " 文件夹中，打开 Package.tt 文件。
 
 2. 查找 `ProvideMenuResource` 特性。
 
@@ -157,7 +159,7 @@ DSL 已具有一些在 DslPackage\GeneratedCode\CommandSet.cs 中声明的分部
 
      `{ ...  internal partial class Language1CommandSet : ...`
 
-2. 在 **DslPackage**中，创建一个名为 " **自定义代码**" 的文件夹。 在此文件夹中，创建一个名为的新类文件 `CommandSet.cs` 。
+2. 在 **DslPackage** 中，创建一个名为 " **自定义代码**" 的文件夹。 在此文件夹中，创建一个名为的新类文件 `CommandSet.cs` 。
 
 3. 在该新文件中，编写具有与生成的分部类相同的命名空间和名称的分部声明。 例如：
 
@@ -292,7 +294,7 @@ private const int grpidMyMenuGroup = 0x01001;
 private const int cmdidMyContextMenuCommand = 1;
 ```
 
- 使用与 **.vsct**中插入的 GUID 相同的值。
+ 使用与 **.vsct** 中插入的 GUID 相同的值。
 
 > [!NOTE]
 > 如果更改 VSCT 文件的“符号”部分，还必须更改这些要匹配的声明。 还应在 Package.tt 中递增版本号
@@ -357,7 +359,7 @@ protected override IList<MenuCommand> GetMenuCommands()
 
 - 确保已卸载早期版本的程序包。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [编写代码以自定义域特定语言](../modeling/writing-code-to-customise-a-domain-specific-language.md)
 - [如何：修改标准菜单命令](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)

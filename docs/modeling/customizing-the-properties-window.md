@@ -1,5 +1,7 @@
 ---
 title: 自定义“属性”窗口
+description: 了解如何在 Visual Studio 中 (DSL) 自定义域特定语言中 "属性" 窗口的外观和行为。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4dac40177c3df2a346039a08cf557b6083ed9fc2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3f7d4ac76b8b10fde0c193e3eda73cec611c1441
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85548273"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362869"
 ---
 # <a name="customize-the-properties-window"></a>自定义属性窗口
 
@@ -40,7 +42,7 @@ ms.locfileid: "85548273"
 
 右键单击 DSL 定义中的形状类，指向 "添加" " **添加**"，然后选择一项功能。
 
-在形状上，可以公开 **FillColor**、 **OutlineColor**、 **TextColor**、 **OutlineDashStyle**、 **OutlineThickness** 和 **FillGradientMode** 属性。 在连接器上，可以公开**Color** `,` **TextColor**、 **DashStyle**和**宽窄**属性。 在关系图上，可以公开 **FillColor** 和 **TextColor** 属性。
+在形状上，可以公开 **FillColor**、 **OutlineColor**、 **TextColor**、 **OutlineDashStyle**、 **OutlineThickness** 和 **FillGradientMode** 属性。 在连接器上，可以公开 **Color** `,` **TextColor**、 **DashStyle** 和 **宽窄** 属性。 在关系图上，可以公开 **FillColor** 和 **TextColor** 属性。
 
 ## <a name="forwarding-display-properties-of-related-elements"></a>转发：显示相关元素的属性
 
@@ -62,7 +64,7 @@ ms.locfileid: "85548273"
 
 ### <a name="add-property-forwarding"></a>添加属性转发
 
-若要转发属性，请定义域类型描述符。 如果两个域类之间存在域关系，则可以使用域类型描述符将第一个类中的域属性设置为第二个域类中的域属性的值。 例如，如果您有一个**book**域类和一个**Author**域类之间的关系，则当用户选择该书时，您可以使用域类型描述符来使该书**作者**的**Name**属性显示在属性窗口中。
+若要转发属性，请定义域类型描述符。 如果两个域类之间存在域关系，则可以使用域类型描述符将第一个类中的域属性设置为第二个域类中的域属性的值。 例如，如果您有一个 **book** 域类和一个 **Author** 域类之间的关系，则当用户选择该书时，您可以使用域类型描述符来使该书 **作者** 的 **Name** 属性显示在属性窗口中。
 
 > [!NOTE]
 > 属性转发只会影响用户编辑模型时的属性窗口。 它不会在接收类中定义域属性。 如果要在 DSL 定义或程序代码的其他部分访问转发的域属性，则必须访问转发元素。
@@ -71,13 +73,13 @@ ms.locfileid: "85548273"
 
 #### <a name="forward-a-property-from-another-element"></a>从另一个元素转发属性
 
-1. 创建一个 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 包含至少两个类的解决方案，在此示例中，这两个类称为 " **书籍** 和 **作者**"。 **本书**和**Author**之间应有一种类型的关系。
+1. 创建一个 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 包含至少两个类的解决方案，在此示例中，这两个类称为 " **书籍** 和 **作者**"。 **本书** 和 **Author** 之间应有一种类型的关系。
 
      (在 **本书** 端) 角色的源角色的重数应为 0 ..1 或 1 ..1，以便每 **本书** 都有一个 **作者**。
 
 2. 在 " **DSL 资源管理器**" 中，右键单击 **Book** 域类，然后单击 " **添加新 DomainTypeDescriptor**"。
 
-    自定义**类型描述符**节点下将显示名为**的自定义属性描述符的路径**。
+    自定义 **类型描述符** 节点下将显示名为 **的自定义属性描述符的路径**。
 
 3. 右键单击 " **自定义类型描述符** " 节点，然后单击 " **添加新 PropertyPath**"。
 
@@ -87,7 +89,7 @@ ms.locfileid: "85548273"
 
     通过单击此属性右侧的向下箭头，可以在树视图中编辑路径。 有关域路径的详细信息，请参阅 [域路径语法](../modeling/domain-path-syntax.md)。 编辑后，路径应类似于 **BookReferencesAuthor/！作者**。
 
-5. 将**属性**设置为**Author**的**Name**域属性。
+5. 将 **属性** 设置为 **Author** 的 **Name** 域属性。
 
 6. 将 **显示名称** 设置为 **作者名称**。
 
@@ -113,13 +115,13 @@ ms.locfileid: "85548273"
 
 ### <a name="define-a-domain-property-that-has-an-external-type"></a>定义具有外部类型的域属性
 
-1. 在 **解决方案资源管理器**中，在 **Dsl** 项目中添加对包含外部类型的程序集 (DLL) 的引用。
+1. 在 **解决方案资源管理器** 中，在 **Dsl** 项目中添加对包含外部类型的程序集 (DLL) 的引用。
 
     该程序集可以是 .NET 程序集，也可以是您提供的程序集。
 
 2. 将类型添加到 " **域类型** " 列表中，除非您已执行此操作。
 
-   1. 打开 Dsldefinition.dsl，并在 **Dsl 资源管理器**中右键单击根节点，然后单击 " **添加新的外部类型**"。
+   1. 打开 Dsldefinition.dsl，并在 **Dsl 资源管理器** 中右键单击根节点，然后单击 " **添加新的外部类型**"。
 
         新条目出现在 " **域类型** " 节点下。
 

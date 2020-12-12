@@ -1,5 +1,7 @@
 ---
 title: 使用依赖项关系图验证代码
+description: 请注意，若要确保代码不会与设计发生冲突，应在 Visual Studio 中通过依赖关系图验证代码。
+ms.custom: SEO-VS-2020
 ms.date: 09/28/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +21,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 975fe8eac5657e245027a4811e50bbc93528cfe5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bc8b36768cbac4249b964b167988119b5700d5c7
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80759697"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362543"
 ---
 # <a name="validate-code-with-dependency-diagrams"></a>使用依赖项关系图验证代码
 
@@ -42,7 +44,7 @@ ms.locfileid: "80759697"
 
    查找在将代码移动到其他体系结构时需要工作的代码或依赖项。
 
-**要求**
+**惠?**
 
 - Visual Studio
 
@@ -59,7 +61,7 @@ ms.locfileid: "80759697"
 
 ## <a name="live-dependency-validation"></a>实时依赖项验证
 
-依赖项验证会实时发生，错误会立即显示在 **错误列表**中。
+依赖项验证会实时发生，错误会立即显示在 **错误列表** 中。
 
 * C # 和 Visual Basic 支持实时验证。
 
@@ -86,7 +88,7 @@ ms.locfileid: "80759697"
 
 将项拖动到依赖关系图中时，会自动将对相应 .NET 程序集或项目的引用添加到建模项目中的 " **层引用** " 文件夹。 此文件夹包含对验证过程中分析的程序集和项目的引用。 可以包含其他 .NET 程序集和项目进行验证，而无需手动将其拖到依赖关系图。
 
-1. 在 **解决方案资源管理器**中，右键单击建模项目或 " **层引用** " 文件夹，然后单击 " **添加引用**"。
+1. 在 **解决方案资源管理器** 中，右键单击建模项目或 " **层引用** " 文件夹，然后单击 " **添加引用**"。
 
 2. 在 " **添加引用** " 对话框中，选择程序集或项目，然后单击 **"确定"**。
 
@@ -161,7 +163,7 @@ ms.locfileid: "80759697"
 
 使用以下任务来管理 **错误列表** 窗口中的验证错误：
 
-|**收件人**|**请按照以下步骤操作**|
+|**To**|**需要遵循的步骤**|
 |-|-|
 |禁止在验证过程中显示选定的错误|右键单击一个或多个选定的错误，指向 " **管理验证错误**"，然后单击 " **取消错误**"。<br /><br /> 禁止显示的错误在显示时均带有删除线格式。 在你下次运行验证时，这些错误将不会显示。<br /><br /> 对于相应的依赖关系关系图文件，禁止显示隐藏的错误。|
 |停止禁止显示选定的错误|右键单击选定的抑制错误或错误，指向 " **管理验证错误**"，然后单击 " **停止禁止显示错误**"。<br /><br /> 在你下次运行验证时，这些所选的禁止显示的错误将会显示。|
@@ -182,13 +184,13 @@ ms.locfileid: "80759697"
 
 \- 或 -
 
-1. 在 **解决方案资源管理器**中，右键单击包含依赖关系图或关系图的建模项目，然后单击 " **属性**"。
+1. 在 **解决方案资源管理器** 中，右键单击包含依赖关系图或关系图的建模项目，然后单击 " **属性**"。
 
 2. 在 " **属性** " 窗口中，将建模项目的 " **验证体系结构** " 属性设置为 " **True**"。
 
     这将在验证过程中包括建模项目。
 
-3. 在 **解决方案资源管理器**中，单击要用于验证的 ( microsoft.visualstudio.teamarchitect.layerdesigner.diagrams.layerdiagram.show) 的依赖项关系图。
+3. 在 **解决方案资源管理器** 中，单击要用于验证的 ( microsoft.visualstudio.teamarchitect.layerdesigner.diagrams.layerdiagram.show) 的依赖项关系图。
 
 4. 在 " **属性** " 窗口中，确保已将关系图的 " **生成操作** " 属性设置为 " **验证**"。
 
@@ -200,7 +202,7 @@ ms.locfileid: "80759697"
 
 下表描述了层验证问题及其解决方法。 这些问题不同于代码与设计发生冲突而导致出现的错误。 有关这些错误的详细信息，请参阅 [排除层验证问题](#troubleshoot-layer-validation-issues)。
 
-|**问题**|**可能的原因**|**分辨率**|
+|**问题**|**可能的原因**|**解决方法**|
 |-|-|-|
 |验证错误不按预期发生。|验证不适用于从解决方案资源管理器中的其他依赖关系图复制到同一建模项目中的依赖关系图。 以这种方式复制的依赖项关系图包含与原始依赖关系图相同的引用。|将新的依赖关系图添加到建模项目。<br /><br /> 将源依赖关系图中的元素复制到新关系图中。|
 
@@ -218,10 +220,10 @@ ms.locfileid: "80759697"
 
 |**语法**|**说明**|
 |-|-|
-|*ArtifactN* (*ArtifactTypeN*) |*ArtifactN* 是与依赖关系图上的层关联的项目。<br /><br /> *ArtifactTypeN* 是 *ArtifactN*的类型，例如 **类** 或 **方法**，例如：<br /><br /> MySolution.MyProject.MyClass.MyMethod(Method)|
+|*ArtifactN* (*ArtifactTypeN*) |*ArtifactN* 是与依赖关系图上的层关联的项目。<br /><br /> *ArtifactTypeN* 是 *ArtifactN* 的类型，例如 **类** 或 **方法**，例如：<br /><br /> MySolution.MyProject.MyClass.MyMethod(Method)|
 |*NamespaceNameN*|命名空间的名称。|
 |*LayerNameN*|依赖关系图层的名称。|
-|*DependencyType*|*Artifact1*和*Artifact2*之间的依赖关系的类型。 例如， *Artifact1*具有与*Artifact2*的**调用**关系。|
+|*DependencyType*|*Artifact1* 和 *Artifact2* 之间的依赖关系的类型。 例如， *Artifact1* 具有与 *Artifact2* 的 **调用** 关系。|
 
 | **错误语法** | **错误描述** |
 |-|-|
@@ -238,4 +240,4 @@ ms.locfileid: "80759697"
 
 - [Visual Studio 中的实时依赖项验证](https://devblogs.microsoft.com/devops/live-dependency-validation-in-visual-studio-2017/)
 - [在开发过程中验证系统](../modeling/validate-your-system-during-development.md)
-- [视频：实时验证你的体系结构依赖关系](https://sec.ch9.ms/sessions/69613110-c334-4f25-bb36-08e5a93456b5/170ValidateArchitectureDependenciesWithVisualStudio.mp4)
+- [视频：实时验证你的体系结构依赖项](https://sec.ch9.ms/sessions/69613110-c334-4f25-bb36-08e5a93456b5/170ValidateArchitectureDependenciesWithVisualStudio.mp4)

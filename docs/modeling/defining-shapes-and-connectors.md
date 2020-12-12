@@ -1,5 +1,7 @@
 ---
 title: 定义形状和连接线
+description: 了解可用于在特定于域的语言 (DSL) 的关系图上显示信息的几种基本形状。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bd95c467f0cfcc997fe419abacb1811e02b468b2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fd98e449f674d2841dd41aa88e320468698f4736
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75589664"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363817"
 ---
 # <a name="define-shapes-and-connectors"></a>定义形状和连接线
 
@@ -20,7 +22,7 @@ ms.locfileid: "75589664"
 
 ## <a name="basic-types-of-shapes-and-connectors"></a><a name="shapeTypes"></a> 形状和连接线的基本类型
 
-DSL 关系图显示按线条或*连接符*了的*形状*集合。 通常情况下（但并非总是如此）：
+DSL 关系图显示按线条或 *连接符* 了的 *形状* 集合。 通常情况下（但并非总是如此）：
 
 - 形状是模型元素的可视表示形式。
 
@@ -34,7 +36,7 @@ DSL 关系图显示按线条或*连接符*了的*形状*集合。 通常情况�
 
 提供以下类型的形状：
 
-|形状类型|说明|
+|形状类型|描述|
 |-|-|
 |几何形状|通用矩形或椭圆形形状。 可在相对于形状边界的特定位置中显示文本和图标修饰器。 您还可以将形状嵌套在 geometry 形状中。|
 |隔离舱形状|包含标头和隔离舱的矩形（如 UML 类）。 每个隔离舱都可包含文本行列表。<br /><br /> 这些行通常表示嵌入在由形状表示的元素下方的元素。 有关示例，请从类关系图解决方案模板中创建 DSL。|

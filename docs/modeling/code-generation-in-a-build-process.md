@@ -1,5 +1,7 @@
 ---
 title: 生成过程中的代码生成
+description: 了解如何在 Visual Studio 解决方案的生成过程中调用文本转换。
+ms.custom: SEO-VS-2020
 ms.date: 03/22/2018
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,12 +15,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: af0039fb8c945062bc19fa647b477c40c44d5346
-ms.sourcegitcommit: a876fcc75321f9c30729121cae83f400973f9d9d
+ms.openlocfilehash: 3000a02621f7e2c274522a199cfe499e2335c4c2
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92298207"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363557"
 ---
 # <a name="invoke-text-transformation-in-the-build-process"></a>在生成过程中调用文本转换
 
@@ -57,7 +59,7 @@ ms.locfileid: "92298207"
 
 编辑项目文件以配置 MSBuild 中的某些功能，例如导入文本转换目标。
 
-在 **解决方案资源管理器**中，从项目的右键单击菜单中选择 " **卸载** "。 这允许你在 XML 编辑器中编辑 .csproj 或 .vbproj 文件。 完成编辑后，选择 " **重新加载**"。
+在 **解决方案资源管理器** 中，从项目的右键单击菜单中选择 " **卸载** "。 这允许你在 XML 编辑器中编辑 .csproj 或 .vbproj 文件。 完成编辑后，选择 " **重新加载**"。
 
 ## <a name="import-the-text-transformation-targets"></a>导入文本转换目标
 
@@ -256,9 +258,9 @@ Dim value = Host.ResolveParameterValue("-", "-", "parameterName")
 
 ## <a name="use-project-properties-in-assembly-and-include-directives"></a><a name="msbuild"></a> 在 assembly 和 include 指令中使用项目属性
 
-Visual Studio 宏（如 **$ (SolutionDir) ** 在 MSBuild 中不起作用。 你可以改用项目属性。
+Visual Studio 宏（如 **$ (SolutionDir)** 在 MSBuild 中不起作用。 你可以改用项目属性。
 
-编辑 *.csproj* 或 *.vbproj* 文件以定义项目属性。 此示例定义了一个名为 **myLibFolder**的属性：
+编辑 *.csproj* 或 *.vbproj* 文件以定义项目属性。 此示例定义了一个名为 **myLibFolder** 的属性：
 
 ```xml
 <!-- Define a project property, myLibFolder: -->
@@ -283,7 +285,7 @@ Visual Studio 宏（如 **$ (SolutionDir) ** 在 MSBuild 中不起作用。 你�
 
 这些指令在 MSBuild 和 Visual Studio 主机中都通过 T4parameterValues 获取值。
 
-## <a name="q--a"></a>问与答
+## <a name="q--a"></a>问题解答
 
 **为什么要在生成服务器中转换模板？在我签入我的代码之前，我已经在 Visual Studio 中转换了模板。**
 
@@ -299,7 +301,7 @@ Visual Studio 宏（如 **$ (SolutionDir) ** 在 MSBuild 中不起作用。 你�
 
 - [运行时文本模板](../modeling/run-time-text-generation-with-t4-text-templates.md) 在运行时在应用程序中转换。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 ::: moniker range="vs-2017"
 

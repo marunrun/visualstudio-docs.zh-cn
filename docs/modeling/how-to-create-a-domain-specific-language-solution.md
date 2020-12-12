@@ -1,5 +1,7 @@
 ---
 title: 如何：创建域特定语言解决方案
+description: 了解如何使用专用 Visual Studio 解决方案创建 (DSL) 域特定语言。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c47b16bbb9fe5eb352171e6e1cf4c13890890265
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: c913f3015c56f7872dfe5ef3471578de7075b7d0
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "92298656"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363271"
 ---
 # <a name="how-to-create-a-domain-specific-language-solution"></a>如何：创建域特定语言解决方案
 使用专用 Visual Studio 解决方案创建 (DSL) 域特定语言。
@@ -89,7 +91,7 @@ ms.locfileid: "92298656"
 
      \- 或 -
 
-- 重置 Visual Studio 实验实例。 这会取消注册以前生成的所有 Dsl。 在 " **开始** " 菜单上，依次单击 " **所有程序**"、 **Microsoft Visual Studio 2010 SDK**和 **工具**"，然后 **重置 Microsoft Visual Studio 2010 实验实例**。 你可以重新生成任何其他你想要使用的 Dsl。
+- 重置 Visual Studio 实验实例。 这会取消注册以前生成的所有 Dsl。 在 " **开始** " 菜单上，依次单击 " **所有程序**"、 **Microsoft Visual Studio 2010 SDK** 和 **工具**"，然后 **重置 Microsoft Visual Studio 2010 实验实例**。 你可以重新生成任何其他你想要使用的 Dsl。
 
      \- 或 -
 
@@ -116,7 +118,7 @@ ms.locfileid: "92298656"
 
  有关强命名的详细信息，请参阅 [创建和使用 Strong-Named 程序集](/dotnet/standard/assembly/create-use-strong-named)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [如何定义域特定语言](../modeling/how-to-define-a-domain-specific-language.md)
 - [域特定语言工具术语表](/previous-versions/bb126564(v=vs.100))

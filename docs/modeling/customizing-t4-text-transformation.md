@@ -1,5 +1,7 @@
 ---
 title: 自定义 T4 文本转换
+description: 了解如何通过自定义文本模板指令处理器或文本模板宿主来扩展默认模板转换过程。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8e35c279f397f1228c17fb6a41a18a2fe583ab88
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9b168e0e66b7704c3e78a241f76ee4122278c9ed
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75589729"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362907"
 ---
 # <a name="customize-t4-text-transformation"></a>自定义 T4 文本转换
 
@@ -29,7 +31,7 @@ ms.locfileid: "75589729"
 
  [在 VS 扩展中调用文本转换](../modeling/invoking-text-transformation-in-a-vs-extension.md) 如果要编写 Visual Studio 扩展（如菜单命令或事件处理程序），则扩展可以使用文本模板化服务来转换任何文本模板。 可以使用 Session 对象将参数数据传递到模板，并使用指令从模板内获取值 `<#@parameter#>` 。
 
- [使用自定义宿主处理文本模板](../modeling/processing-text-templates-by-using-a-custom-host.md) 当执行文本模板的代码时，主机提供对外部文件和应用程序状态的访问。 例如，在 Visual Studio 中运行文本转换的宿主可以提供对 **解决方案资源管理器**的访问权限。 它还在错误消息窗口中显示错误。 如果要在不同的上下文中运行文本转换，可以定义自己的主机，以便提供对该上下文中可用服务的访问权限。
+ [使用自定义宿主处理文本模板](../modeling/processing-text-templates-by-using-a-custom-host.md) 当执行文本模板的代码时，主机提供对外部文件和应用程序状态的访问。 例如，在 Visual Studio 中运行文本转换的宿主可以提供对 **解决方案资源管理器** 的访问权限。 它还在错误消息窗口中显示错误。 如果要在不同的上下文中运行文本转换，可以定义自己的主机，以便提供对该上下文中可用服务的访问权限。
 
  如果要编写 Visual Studio 扩展，请考虑使用现有的文本转换服务，而不是编写自己的主机。 有关详细信息，请参阅 [在 VS 扩展中调用文本转换](../modeling/invoking-text-transformation-in-a-vs-extension.md)。
 

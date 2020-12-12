@@ -1,5 +1,7 @@
 ---
 title: T4 模板指令
+description: 了解 Visual Studio T4 文本模板通常以模板指令开头，该指令指定如何处理模板。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2763ca540a6b0518eed8bf757412716616d3ae3e
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 75001da1829f6dafdac68359d1b0f6c7c14ed266
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808059"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363661"
 ---
 # <a name="t4-template-directive"></a>T4 模板指令
 
@@ -231,7 +233,7 @@ This is the common footer.
 
 ### <a name="inheritance-in-a-design-time-text-template"></a>设计时文本模板中的继承
 
-设计时文本模板是 **自定义工具** 设置为 **TextTemplatingFileGenerator**的文件。 该模板将生成代码或文本的输出文件，该文件构成了你的 Visual Studio 项目的一部分。 若要生成输出文件，首先要将模板转换为中间程序代码文件，你通常不会看到该文件。 `inherits` 特性为此中间代码指定基类。
+设计时文本模板是 **自定义工具** 设置为 **TextTemplatingFileGenerator** 的文件。 该模板将生成代码或文本的输出文件，该文件构成了你的 Visual Studio 项目的一部分。 若要生成输出文件，首先要将模板转换为中间程序代码文件，你通常不会看到该文件。 `inherits` 特性为此中间代码指定基类。
 
 对于设计时文本模板来说，可以指定从 <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation?displayProperty=fullName> 派生的任何基类。 使用 `<#@assembly#>` 指令来加载包含基类的程序集或项目。
 

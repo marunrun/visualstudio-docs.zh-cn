@@ -1,5 +1,7 @@
 ---
 title: 使用 T4 文本模板的运行时文本生成
+description: 了解如何通过使用 Visual Studio 运行时文本模板，在运行时在应用程序中生成文本字符串。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 344e15b69bf3e8308c62c6fa1074720b0cd7618d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fcb7048b4319d1edb46911a74e96f440540e4299
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85520830"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363934"
 ---
 # <a name="run-time-text-generation-with-t4-text-templates"></a>使用 T4 文本模板的运行时文本生成
 
@@ -49,22 +51,22 @@ This report is Company Confidential.
 
 在应用程序中使用模板，可以更方便地查看输出的最终形式，这与在中一样（例如，一系列长的 write 语句）更为容易。 对输出格式进行更改更简单、更可靠。
 
-## <a name="creating-a-run-time-text-template-in-any-application"></a>在任何应用程序中创建运行时文本模板
+## <a name="creating-a-run-time-text-template-in-any-application"></a>在任何应用程序中创建 Run-Time 文本模板
 
 ### <a name="to-create-a-run-time-text-template"></a>创建运行时文本模板
 
 1. 在解决方案资源管理器中，在项目的快捷菜单上，选择 "**添加**  >  **新项**"。
 
-2. 在 " **添加新项** " 对话框中，选择 " **运行时文本模板**"。  (在 "**常见项**" "常规" 下 Visual Basic 查看  >  **General**。 ) 
+2. 在 " **添加新项** " 对话框中，选择 " **运行时文本模板**"。  (在 "**常见项**" "常规" 下 Visual Basic 查看  >  。 ) 
 
 3. 键入模板文件的名称。
 
     > [!NOTE]
     > 模板文件名将用作生成的代码中的类名。 因此，它不应包含空格或标点。
 
-4. 选择“添加”。
+4. 选择“添加”  。
 
-    将创建一个扩展名为 **tt**的新文件。 其 " **自定义工具** " 属性设置为 " **TextTemplatingFilePreprocessor**"。 它包含以下行：
+    将创建一个扩展名为 **tt** 的新文件。 其 " **自定义工具** " 属性设置为 " **TextTemplatingFilePreprocessor**"。 它包含以下行：
 
     ```
     <#@ template language="C#" #>
@@ -74,7 +76,7 @@ This report is Company Confidential.
     <#@ import namespace="System.Collections.Generic" #>
     ```
 
-## <a name="converting-an-existing-file-to-a-run-time-template"></a>将现有文件转换为运行时模板
+## <a name="converting-an-existing-file-to-a-run-time-template"></a>将现有文件转换为 Run-Time 模板
 
 创建模板的一种好方法是转换输出的现有示例。 例如，如果您的应用程序将生成 HTML 文件，则可以通过创建一个纯 HTML 文件来开始。 请确保其正常工作，且其外观正确。 然后将其包含在 Visual Studio 项目中，并将其转换为模板。
 
@@ -85,7 +87,7 @@ This report is Company Confidential.
 2. 将文件的 " **自定义工具** " 属性设置为 " **TextTemplatingFilePreprocessor**"。 在解决方案资源管理器的文件的快捷菜单上，选择 " **属性**"。
 
     > [!NOTE]
-    > 如果已设置该属性，请确保它是 **TextTemplatingFilePreprocessor** 而不是 **TextTemplatingFileGenerator**。 如果包含扩展名为 **tt**的文件，则会发生这种情况。
+    > 如果已设置该属性，请确保它是 **TextTemplatingFilePreprocessor** 而不是 **TextTemplatingFileGenerator**。 如果包含扩展名为 **tt** 的文件，则会发生这种情况。
 
 3. 将文件扩展名更改为 **tt**。 尽管此步骤是可选的，但它有助于避免在不正确的编辑器中打开文件。
 
@@ -95,7 +97,7 @@ This report is Company Confidential.
 
     `<#@ template language="C#" #>`
 
-## <a name="the-content-of-the-run-time-template"></a>运行时模板的内容
+## <a name="the-content-of-the-run-time-template"></a>Run-Time 模板的内容
 
 ### <a name="template-directive"></a>模板指令
 
@@ -150,7 +152,7 @@ This report is Company Confidential.
 
 ### <a name="the-code-built-from-the-template"></a>从模板生成的代码
 
-保存 **tt** 文件时，将生成一个子 **.cs** 或 **.vb** 文件。 若要在 **解决方案资源管理器**中查看此文件，请展开 **tt** 文件节点。 在 Visual Basic 项目中，首先选择**解决方案资源管理器**工具栏中的 "**显示所有文件**"。
+保存 **tt** 文件时，将生成一个子 **.cs** 或 **.vb** 文件。 若要在 **解决方案资源管理器** 中查看此文件，请展开 **tt** 文件节点。 在 Visual Basic 项目中，首先选择 **解决方案资源管理器** 工具栏中的 "**显示所有文件**"。
 
 请注意，该子公司文件包含一个分部类，其中包含一个名为的方法 `TransformText()` 。 可以从应用程序中调用此方法。
 
@@ -191,7 +193,7 @@ partial class MyWebPage
     public MyWebPage(MyData data) { this.m_data = data; }}
 ```
 
-在模板文件 **MyWebPage.tt**中，可以编写：
+在模板文件 **MyWebPage.tt** 中，可以编写：
 
 ```html
 <h2>Sales figures</h2>
@@ -294,7 +296,7 @@ System.IO.File.WriteAllText("outputPage.html", pageContent)
 
 Include 指令可用于模板文件文本或包含的文件文本中的任意位置。
 
-### <a name="inheritance-between-run-time-text-templates"></a>运行时文本模板之间的继承
+### <a name="inheritance-between-run-time-text-templates"></a>Run-Time 文本模板之间的继承
 
 可以通过编写一个基类模板来共享运行时模板之间的内容，该模板可以是抽象的。 使用 `inherits` 指令的参数 `<@#template#>` 引用另一个运行时模板类。
 
@@ -427,7 +429,7 @@ End of common template.
 End material for DerivedTemplate1.
 ```
 
-## <a name="related-topics"></a>“相关主题”
+## <a name="related-topics"></a>相关主题
 
 设计时模板：如果要使用模板生成将成为应用程序一部分的代码，请参阅 [使用 T4 文本模板生成设计时代码](../modeling/design-time-code-generation-by-using-t4-text-templates.md)。
 

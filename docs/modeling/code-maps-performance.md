@@ -1,5 +1,7 @@
 ---
 title: 代码图速度缓慢
+description: 了解如何提高代码图的性能以及如何最大程度地减少完成呈现所需的时间。
+ms.custom: SEO-VS-2020
 ms.date: 05/16/2018
 ms.topic: conceptual
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 28cb2c4fd74716aa876c57517bb440fda513de5d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: edcc12b5bd2cb741374acfe44f05c1f9043ebcaa
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75590535"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363505"
 ---
 # <a name="improve-performance-for-code-maps"></a>提高代码图的性能
 
@@ -30,6 +32,6 @@ ms.locfileid: "75590535"
 
 - 直接编辑代码图文件，以删除不需要的节点和链接。 更改代码图不会影响基础代码。 请参阅 [Customize code maps by editing the DGML files](../modeling/customize-code-maps-by-editing-the-dgml-files.md)。
 
-当项目项的 "**复制到输出目录**" 属性设置为 "**始终复制**" 时，可能需要花费更多时间来创建映射或将项添加到**解决方案资源管理器**的映射。 若要提高性能，请将此属性更改为“如果较新则复制” **** 或 `PreserveNewest`。 请参阅 [增量生成](../msbuild/incremental-builds.md)。
+当项目项的 "**复制到输出目录**" 属性设置为 "**始终复制**" 时，可能需要花费更多时间来创建映射或将项添加到 **解决方案资源管理器** 的映射。 若要提高性能，请将此属性更改为“如果较新则复制”  或 `PreserveNewest`。 请参阅 [增量生成](../msbuild/incremental-builds.md)。
 
 完成的地图只显示成功生成的代码的依赖关系。 如果某些组件出现生成错误，这些错误会出现在代码图上。 在基于代码图做出体系结构决策时，请确保组件实际生成并且具有依赖项。

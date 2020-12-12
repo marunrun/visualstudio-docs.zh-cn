@@ -1,5 +1,7 @@
 ---
 title: 自定义元素创建和移动
+description: 了解如何允许将元素从 "工具箱" 或 "粘贴" 或 "移动" 操作拖动到另一个元素。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -11,12 +13,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a94f1e3321d846578ea42c69e50d48713ff618fb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 96ef956980b08e688970ad0a00d7d1a0804da7c3
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547259"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363115"
 ---
 # <a name="customizing-element-creation-and-movement"></a>自定义元素创建和移动
 
@@ -50,13 +52,13 @@ EMD 的责任是决定如何将对象或对象组合并到模型中的特定位�
 
 ![DSL&#45;EMD&#95;详细信息](../modeling/media/dsl-emd_details.png)
 
-**索引类**是可合并到接收类的成员中的元素的域类。 索引类的子类的实例还将通过此 EMD 合并，除非您将应用于 **子类** 设置为 False。
+**索引类** 是可合并到接收类的成员中的元素的域类。 索引类的子类的实例还将通过此 EMD 合并，除非您将应用于 **子类** 设置为 False。
 
 有两种类型的 merge 指令：
 
-- **进程合并**指令指定应将新元素链接到树中的关系。
+- **进程合并** 指令指定应将新元素链接到树中的关系。
 
-- **正向合并**指令将新元素重定向到另一个接收元素，通常是父级。
+- **正向合并** 指令将新元素重定向到另一个接收元素，通常是父级。
 
 您可以将自定义代码添加到合并指令：
 
@@ -87,7 +89,7 @@ EMD 的责任是决定如何将对象或对象组合并到模型中的特定位�
 
 2. 若要允许用户将元素合并到 `ExampleElement` 形状上，请在域类中创建新的 EMD `ExampleElement` ：
 
-   1. 在 **DSL 资源管理器**中，展开 " **域类**"。 右键单击 `ExampleElement` ，然后单击 " **添加新元素合并指令**"。
+   1. 在 **DSL 资源管理器** 中，展开 " **域类**"。 右键单击 `ExampleElement` ，然后单击 " **添加新元素合并指令**"。
 
    2. 确保 " **DSL 详细信息** " 窗口处于打开状态，以便您可以查看新 EMD 的详细信息。  (菜单： " **查看**"、" **其他窗口**"、" **DSL 详细信息**" ) 
 
@@ -200,7 +202,7 @@ EMD 的责任是决定如何将对象或对象组合并到模型中的特定位�
 
         - 从 **示例元素** 工具拖到关系图上。
 
-        - 在 **示例模型资源管理器**中，右键单击根节点，然后单击 " **添加新示例元素**"。
+        - 在 **示例模型资源管理器** 中，右键单击根节点，然后单击 " **添加新示例元素**"。
 
         - 复制并粘贴关系图上的元素。
 
@@ -224,11 +226,11 @@ EMD 的责任是决定如何将对象或对象组合并到模型中的特定位�
 
      例如，在从最小语言解决方案生成的 DSL 中，选择 `ExampleModel` 。
 
-3. 在 "**属性**" 窗口中，设置生成派生为 True 的**双精度****值**。
+3. 在 "**属性**" 窗口中，设置生成派生为 True 的 **双精度****值**。
 
 4. 重新生成解决方案。
 
-5. 检查 **Dsl\Generated Files\DomainClasses.cs**的内容。 搜索名为的方法 `MergeRelate` ，并检查其内容。 这将帮助你编写自己的版本。
+5. 检查 **Dsl\Generated Files\DomainClasses.cs** 的内容。 搜索名为的方法 `MergeRelate` ，并检查其内容。 这将帮助你编写自己的版本。
 
 6. 在新的代码文件中，为接收类编写一个分部类，并重写 `MergeRelate` 方法。 请记住调用基方法。 例如：
 
@@ -258,7 +260,7 @@ EMD 的责任是决定如何将对象或对象组合并到模型中的特定位�
 
 ### <a name="to-write-custom-merge-code"></a>编写自定义合并代码
 
-1. 在 **Dsl\Generated Code\DomainClasses.cs**中，检查名为 `MergeRelate` 的方法。 这些方法在新元素和现有模型之间创建链接。
+1. 在 **Dsl\Generated Code\DomainClasses.cs** 中，检查名为 `MergeRelate` 的方法。 这些方法在新元素和现有模型之间创建链接。
 
     另外，检查名为 `MergeDisconnect` 的方法。 当删除元素时，这些方法会将其从模型中取消链接。
 
@@ -268,7 +270,7 @@ EMD 的责任是决定如何将对象或对象组合并到模型中的特定位�
 
 3. 重新生成解决方案。 这将花费比平时更长的时间，因为生成的代码文件将从模型中更新。
 
-    将显示错误消息。 双击错误消息以查看生成的代码中的说明。 这些说明要求提供两种方法，即 `MergeRelate` *YourDomainClass*和 `MergeDisconnect` *YourDomainClass*
+    将显示错误消息。 双击错误消息以查看生成的代码中的说明。 这些说明要求提供两种方法，即 `MergeRelate` *YourDomainClass* 和 `MergeDisconnect` *YourDomainClass*
 
 4. 在单独的代码文件中编写分部类定义中的方法。 之前检查的示例应该建议所需的内容。
 
@@ -288,11 +290,11 @@ EMD 的责任是决定如何将对象或对象组合并到模型中的特定位�
 
 2. 打开 Dsldefinition.dsl，显示 **Dsl 资源管理器** 。
 
-3. 在 **DSL 资源管理器**中，展开 " **域类**"。
+3. 在 **DSL 资源管理器** 中，展开 " **域类**"。
 
-4. **ComponentPort**抽象域类是**InPort**和**OutPort**的基类。 右键单击 **ComponentPort** ，然后单击 " **添加新元素合并指令**"。
+4. **ComponentPort** 抽象域类是 **InPort** 和 **OutPort** 的基类。 右键单击 **ComponentPort** ，然后单击 " **添加新元素合并指令**"。
 
-    "**元素合并**指令" 节点下将显示一个新的 "**元素合并指令**" 节点。
+    "**元素合并** 指令" 节点下将显示一个新的 "**元素合并指令**" 节点。
 
 5. 选择 " **元素合并指令** " 节点并打开 " **DSL 详细信息** " 窗口。
 
@@ -310,11 +312,11 @@ EMD 的责任是决定如何将对象或对象组合并到模型中的特定位�
 
 10. 生成并运行解决方案。 此时将显示 Visual Studio 的新实例。
 
-11. 在 **解决方案资源管理器**中，打开 mydsl。 将显示关系图和 **ComponentLanguage 工具箱** 。
+11. 在 **解决方案资源管理器** 中，打开 mydsl。 将显示关系图和 **ComponentLanguage 工具箱** 。
 
 12. 将 **输入端口** 从 **工具箱** 拖动到另一个 **输入端口。** 接下来，将 **OutputPort** 拖到 **InputPort** ，然后拖动到另一个 **OutputPort**。
 
-     看不到不可用的指针，并且应该能够在现有的 **输入端口** 上删除现有的。 选择新的 **输入端口** 并将其拖到 **组件**上的另一个点。
+     看不到不可用的指针，并且应该能够在现有的 **输入端口** 上删除现有的。 选择新的 **输入端口** 并将其拖到 **组件** 上的另一个点。
 
 ## <a name="see-also"></a>请参阅
 

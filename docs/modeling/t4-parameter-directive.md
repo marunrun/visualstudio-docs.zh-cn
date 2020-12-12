@@ -1,5 +1,7 @@
 ---
 title: T4 参数指令
+description: 了解，在 Visual Studio 中，参数指令声明模板代码中从外部上下文传入的值初始化的属性。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f833eb651efda0edb837515e1bf2b3567e1a759
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: df739f10764f20b415ac74ee4b4e529433c7dc96
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75591796"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363622"
 ---
 # <a name="t4-parameter-directive"></a>T4 参数指令
 
@@ -82,8 +84,8 @@ string result = t4.ProcessTemplate("",
 //     Test 32 test
 ```
 
-## <a name="passing-values-to-a-run-time-preprocessed-text-template"></a>将值传递给运行时 (预处理) 文本模板
- 通常不需要在 `<#@parameter#>` 运行时 (预处理) 文本模板中使用指令。 相反，您可以为生成的代码定义其他构造函数或可设置的属性，通过这些构造函数传递参数值。 有关详细信息，请参阅 [带有 T4 文本模板的运行时文本生成](../modeling/run-time-text-generation-with-t4-text-templates.md)。
+## <a name="passing-values-to-a-run-time-preprocessed-text-template"></a>将值传递给 Run-Time (预处理) 文本模板
+ 通常不需要在 `<#@parameter#>` 运行时 (预处理) 文本模板中使用指令。 相反，您可以为生成的代码定义其他构造函数或可设置的属性，通过这些构造函数传递参数值。 有关详细信息，请参阅[使用 T4 文本模板的运行时文本生成](../modeling/run-time-text-generation-with-t4-text-templates.md)。
 
  但是，如果要 `<#@parameter>` 在运行时模板中使用，则可以通过使用会话字典将值传递给它。 例如，假设已创建一个名为的预处理模板文件 `PreTextTemplate1` 。 你可以使用以下代码在你的程序中调用该模板。
 

@@ -1,5 +1,7 @@
 ---
 title: 自定义文本和图像字段
+description: 了解如何自定义文本和图像文件。 还应了解到，在形状中定义文本修饰器后，它由一个文本字段表示。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 29210ec667bffd6b632bcfbee0b87c0cbb2d5f38
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6effda90580a184bb8ebfb8c4f4830dc6cb844d5
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85542709"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362851"
 ---
 # <a name="customizing-text-and-image-fields"></a>自定义文本和图像字段
 在形状中定义文本修饰器时，它由一个文本字段表示。 有关 TextFields 和其他在 mapcontrol.shapefields 的初始化示例，请在 DSL 解决方案中检查 Dsl\GeneratedCode\Shapes.cs。
@@ -261,7 +263,7 @@ partial class ExampleShape
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [定义形状和连接线](../modeling/defining-shapes-and-connectors.md)
 - [在图表上设置背景图像](../modeling/setting-a-background-image-on-a-diagram.md)

@@ -1,5 +1,7 @@
 ---
 title: 导出和保存代码图
+description: 了解如何将代码图另存为 Visual Studio 项目、图像或 XPS 文件的一部分。
+ms.custom: SEO-VS-2020
 ms.date: 05/16/2018
 ms.topic: how-to
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ef7f72010623d20e79a327877a512f0b7352bac5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9898b720e51c2750b67054d1f095200372f426da
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85542566"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363765"
 ---
 # <a name="share-code-maps"></a>共享代码图
 
@@ -20,11 +22,11 @@ ms.locfileid: "85542566"
 
 ## <a name="share-a-code-map-with-other-visual-studio-users"></a>与其他 Visual Studio 用户共享代码图
 
-使用“文件” **** 菜单保存代码图。
+使用“文件”  菜单保存代码图。
 
-- 或 -
+-或-
 
-若要将地图保存为特定项目的一部分，请在地图工具栏上**Share**选择 "  >  **将" 移动 \<CodeMapName> 到**"" 共享 "，然后选择要在其中保存地图的项目。
+若要将地图保存为特定项目的一部分，请在地图工具栏上选择 "  >  **将" 移动 \<CodeMapName> 到**"" 共享 "，然后选择要在其中保存地图的项目。
 
 ![将映射移动到另一个项目中](../modeling/media/codemapsmovemapmenu.png)
 
@@ -43,7 +45,7 @@ Visual Studio 将映射保存为 *.dgml* 文件，您可以与 Visual Studio Ent
 
 将代码图导出为图像时，可以将其复制到其他应用程序，如 Microsoft Word 或 PowerPoint。
 
-1. 在代码图工具栏上，选择 "**共享**  >  **电子邮件" 作为图像**或**复制图像**。
+1. 在代码图工具栏上，选择 "**共享**  >  **电子邮件" 作为图像** 或 **复制图像**。
 
 2. 将该图像粘贴到另一个应用程序中。
 
@@ -51,12 +53,12 @@ Visual Studio 将映射保存为 *.dgml* 文件，您可以与 Visual Studio Ent
 
 将代码图导出为 XPS 文件时，可以在 XML 或 XAML 查看器（如 Internet Explorer）中查看它。
 
-1. 在代码图工具栏上，选择**Share**"  >  **以便携式 xps 共享电子邮件**" 或 "**另存为可移植 xps**"。
+1. 在代码图工具栏上，选择"  >  **以便携式 xps 共享电子邮件**" 或 "**另存为可移植 xps**"。
 
 2. 浏览到你要保存文件的位置。
 
-3. 对代码图命名。 请确保将 " **保存类型** " 框设置为 " **xps 文件 (.xps \*) **。 选择 **“保存”** 。
+3. 对代码图命名。 请确保将 " **保存类型** " 框设置为 " **xps 文件 (.xps \*)**。 选择 **“保存”** 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [映射与代码图的依赖项](../modeling/map-dependencies-across-your-solutions.md)

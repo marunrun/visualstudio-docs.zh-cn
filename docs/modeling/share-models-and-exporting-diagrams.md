@@ -1,5 +1,7 @@
 ---
 title: 共享模型和导出关系图
+description: 了解如何使用 Visual Studio 创建和编辑模型、依赖关系图和定向关系图。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2347ad9f01634fe7fee243a7d5e1a24a6d9ba3b3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ecf972974ff2c84cb47cd93d944aced4758d1cb7
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75591913"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363739"
 ---
 # <a name="share-models-and-exporting-diagrams"></a>共享模型和导出关系图
 在 Visual Studio 中，你可以通过多种方式与同事共享模型和关系图。
@@ -43,12 +45,12 @@ ms.locfileid: "75591913"
 
 ## <a name="related-topics"></a>相关主题
 
-|Title|说明|
+|Title|描述|
 |-|-|
 |[安排你的建模解决方案](../modeling/structure-your-modeling-solution.md)|共享大型或中型项目的模型。|
 |[将关系图导出为图像](../modeling/export-diagrams-as-images.md)|你可以将部分关系图复制到 PowerPoint 或 Word 等应用程序，或将关系图打印到 XPS 文件。|
 |[体系结构分析和建模](../modeling/analyze-and-model-your-architecture.md)|模型和关系图概述|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [在你的开发过程中使用模型](../modeling/use-models-in-your-development-process.md)

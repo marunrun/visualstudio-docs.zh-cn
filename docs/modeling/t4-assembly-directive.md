@@ -1,5 +1,7 @@
 ---
 title: T4 程序集指令
+description: 了解，在 Visual Studio 设计时文本模板中，assembly 指令加载一个程序集，以便您的模板代码可以使用其类型。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8d441d74d1ddea5a7b5dd063d302ec93e75fc1c9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 41abd2b5a48f6e5e126747326e9815f3c2f46787
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75591887"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363700"
 ---
 # <a name="t4-assembly-directive"></a>T4 程序集指令
 
@@ -42,7 +44,7 @@ ms.locfileid: "75591887"
 <#@ assembly name="$(SolutionDir)\MyProject\bin\Debug\SomeLibrary.Dll" #>
 ```
 
- 在预处理文本模板中，assembly 指令无效。 相反，请在 Visual Studio 项目的 " **引用** " 部分中包括必要的引用。 有关详细信息，请参阅 [带有 T4 文本模板的运行时文本生成](../modeling/run-time-text-generation-with-t4-text-templates.md)。
+ 在预处理文本模板中，assembly 指令无效。 相反，请在 Visual Studio 项目的 " **引用** " 部分中包括必要的引用。 有关详细信息，请参阅[使用 T4 文本模板的运行时文本生成](../modeling/run-time-text-generation-with-t4-text-templates.md)。
 
 ## <a name="standard-assemblies"></a>标准程序集
  将自动加载以下程序集，您无需为它们编写程序集指令：
@@ -88,6 +90,6 @@ ms.locfileid: "75591887"
 <#@ assembly name="$(myLibFolder)\MyLib.dll" #>
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [T4 包含指令](../modeling/t4-include-directive.md)

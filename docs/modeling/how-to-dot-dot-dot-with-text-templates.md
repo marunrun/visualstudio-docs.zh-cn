@@ -1,5 +1,7 @@
 ---
 title: '如何：使用文本模板 ... '
+description: 了解使用文本模板生成文本时遇到的常见问题的解答。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a7ecabc00f37cb199f203bcd71a1b72bdbfbe1a4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 50844ce8c6943fcf6b2a0b91c7fd2cfcb6184094
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75594651"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363180"
 ---
 # <a name="how-to--with-text-templates"></a>如何：使用文本模板 ... 
 Visual Studio 中的文本模板提供了一种有用的方式来生成任何类型的文本。 您可以使用文本模板，在运行时生成文本作为应用程序的一部分，并在设计时生成某些项目代码。 本主题概述最常问的 "如何实现 ..." 怀疑.
@@ -31,7 +33,7 @@ Visual Studio 中的文本模板提供了一种有用的方式来生成任何类
 ### <a name="generate-files-at-run-time-passing-data-into-the-template"></a>在运行时生成文件，将数据传递到模板
  在运行时，应用程序会生成包含标准文本和数据混合的文本文件（如报表）。 我想避免写入数百条 `write` 语句。
 
-- 将运行时文本模板添加到你的项目。 此模板在您的代码中创建一个类，您可以实例化此类，并使用它来生成文本。 可在构造函数参数中将数据传递给它。 有关详细信息，请参阅 [带有 T4 文本模板的运行时文本生成](../modeling/run-time-text-generation-with-t4-text-templates.md)。
+- 将运行时文本模板添加到你的项目。 此模板在您的代码中创建一个类，您可以实例化此类，并使用它来生成文本。 可在构造函数参数中将数据传递给它。 有关详细信息，请参阅[使用 T4 文本模板的运行时文本生成](../modeling/run-time-text-generation-with-t4-text-templates.md)。
 
 - 如果希望从仅在运行时可用的模板生成，则可以使用标准文本模板。 如果你正在编写 Visual Studio 扩展，则可以调用文本模板化服务。 有关详细信息，请参阅 [在 VS 扩展中调用文本转换](../modeling/invoking-text-transformation-in-a-vs-extension.md)。 在其他上下文中，可以使用文本模板化引擎。 有关详细信息，请参阅 <xref:Microsoft.VisualStudio.TextTemplating.Engine?displayProperty=fullName>。
 
@@ -75,7 +77,7 @@ Visual Studio 中的文本模板提供了一种有用的方式来生成任何类
 
      `foreach (Book book in this.Library) { ... }`
 
-     有关详细信息，请参阅 [使用域特定语言入门](../modeling/getting-started-with-domain-specific-languages.md) 和 [从域特定语言生成代码](../modeling/generating-code-from-a-domain-specific-language.md)。
+     有关详细信息，请参阅 [使用 Domain-Specific 语言入门](../modeling/getting-started-with-domain-specific-languages.md) 和 [从 Domain-Specific 语言生成代码](../modeling/generating-code-from-a-domain-specific-language.md)。
 
 ### <a name="get-data-from-visual-studio"></a>从 Visual Studio 获取数据
  若要使用 Visual Studio 中提供的服务，请设置 `hostSpecific` 属性并加载 `EnvDTE` 程序集。 例如：

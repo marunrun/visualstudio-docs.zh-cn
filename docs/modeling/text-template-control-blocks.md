@@ -1,5 +1,7 @@
 ---
 title: 文本模板控制块
+description: 了解文本模板控制块以及控件块如何允许您在文本模板中编写代码，以便改变输出。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ef39e82ea1abe95b3bea799545ed7fbf5b766fd3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 11cc289f668a674707c584396998ea7abb9e7ea9
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75591783"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363583"
 ---
 # <a name="text-template-control-blocks"></a>文本模板控制块
 控制块可使你在文本模板中编写代码以便改变输出。 有三种类型的控制块，通过其左大括号来区分：

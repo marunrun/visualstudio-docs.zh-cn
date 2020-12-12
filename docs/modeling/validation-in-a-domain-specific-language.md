@@ -1,5 +1,7 @@
 ---
 title: 域特定语言中的验证
+description: 了解如何通过定义验证约束来验证用户创建的模型是否有意义。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a37dbb4d9754641b4bcca826ff0ec77c7298d9b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cb9baced0a4cc38ae175146d3f3779c5b9c28dd2
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75594001"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362530"
 ---
 # <a name="validation-in-a-domain-specific-language"></a>域特定语言中的验证
 作为域特定语言 (DSL) 的作者，你可以定义验证约束，以验证由用户创建的模型是否有意义。 例如，如果你的 DSL 允许用户绘制人员及其祖先的家族树，你可以编写一个约束，用于确保孩子的出生日期在其父母之后。
@@ -125,7 +127,7 @@ public partial class ParentsHaveChildren
 
  请注意有关此代码的以下几点：
 
-- 可以将验证方法添加到域类或域关系。 这些类型的代码在 **Dsl\Generated Code\Domain \* **中。
+- 可以将验证方法添加到域类或域关系。 这些类型的代码在 **Dsl\Generated Code\Domain \*** 中。
 
 - 每个验证方法都将应用到它的类和子类的每个实例。 对于域关系，每个实例都是两个模型元素之间的链接。
 
@@ -193,7 +195,7 @@ if (erroneousLinks.Count < 5) { context.LogError( ... ); }
 
  如果你将域关系的角色的重数设置为 1..* 或 1..1，但用户未创建此关系的链接，则将显示验证错误消息。
 
- 例如，如果 DSL 具有类 Person 和城镇，并具有关系**1 \\ **的关系 PersonLivesInTown。* 在市政角色中，将显示一条错误消息。
+ 例如，如果 DSL 具有类 Person 和城镇，并具有关系 **1 \\** 的关系 PersonLivesInTown。_ 在镇角色中，对于每个没有城镇的人，将显示一条错误消息。
 
 ## <a name="running-validation-from-program-code"></a>从程序代码运行验证
  通过访问或创建 ValidationController，可运行验证。 如果要在错误窗口中向用户显示错误，请使用附加到关系图的 DocData 的 ValidationController。 例如，如果你要编写菜单命令，则命令集类中提供了 `CurrentDocData.ValidationController`：
@@ -233,7 +235,7 @@ if (!validator.Validate(store, ValidationCategories.Save))
 ## <a name="running-validation-when-a-change-occurs"></a>当发生更改时运行验证
  如果你想要确保用户在该模型变为无效时立即收到警告，可以定义运行验证的存储事件。 有关存储事件的详细信息，请参阅 [事件处理程序在模型外部传播更改](../modeling/event-handlers-propagate-changes-outside-the-model.md)。
 
- 除了验证代码外，还应将自定义代码文件添加到 **DslPackage** 项目，其中包含类似于以下示例的内容。 此代码使用附加到文档的 `ValidationController`。 此控制器在 Visual Studio 错误列表中显示验证错误。
+ 除了验证代码外，还将自定义代码文件添加到 _ *DslPackage** 项目，其中包含类似于以下示例的内容。 此代码使用附加到文档的 `ValidationController`。 此控制器在 Visual Studio 错误列表中显示验证错误。
 
 ```csharp
 using System;
@@ -329,12 +331,12 @@ validationController.ValidateCustom
 
  **调整更改以还原模型有效性。** 例如，如果用户将属性设置为允许的最大值之上，则可以将该属性重置为最大值。 若要实现此目的，请定义一个规则。 有关详细信息，请参阅 [规则在模型内部传播更改](../modeling/rules-propagate-changes-within-the-model.md)。
 
- **如果尝试无效的更改，则回滚事务。** 你还可以为此目的定义规则，但在某些情况下，可以重写属性处理程序 **OnValueChanging ( # B1 **，或重写方法（如） `OnDeleted().` 以回滚事务，使用 `this.Store.TransactionManager.CurrentTransaction.Rollback().` 有关详细信息，请参阅 [域属性值更改处理程序](../modeling/domain-property-value-change-handlers.md)。
+ **如果尝试无效的更改，则回滚事务。** 你还可以为此目的定义规则，但在某些情况下，可以重写属性处理程序 **OnValueChanging ( # B1**，或重写方法（如） `OnDeleted().` 以回滚事务，使用 `this.Store.TransactionManager.CurrentTransaction.Rollback().` 有关详细信息，请参阅 [域属性值更改处理程序](../modeling/domain-property-value-change-handlers.md)。
 
 > [!WARNING]
 > 请确保用户知道更改已调整或已回滚。 例如，使用 `System.Windows.Forms.MessageBox.Show("message").`
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [在程序代码中导航和更新模型](../modeling/navigating-and-updating-a-model-in-program-code.md)
 - [事件处理程序在模型外部传播更改](../modeling/event-handlers-propagate-changes-outside-the-model.md)

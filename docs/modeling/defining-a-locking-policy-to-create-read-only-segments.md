@@ -1,5 +1,7 @@
 ---
 title: 定义锁定策略以创建只读段
+description: 了解如何为程序定义策略，以将特定于域的语言 (DSL) 型号锁定，以便可以读取但不能更改它。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0778df98ff5f9665da7220fe40972c9a8f8d8e1d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a76ae38b686e1c77acd9561e9c48fd3444565b0a
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85536079"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363193"
 ---
 # <a name="defining-a-locking-policy-to-create-read-only-segments"></a>定义锁定策略以创建只读段
 Visual Studio 可视化和建模 SDK 的永久性 API 允许程序锁定部分或全部域特定语言 (DSL) 模型，以便可以读取但不能更改它。 例如，可以使用此只读选项，以便用户可以要求同事批注和查看 DSL 模型，但可以禁止它们更改原始模型。
@@ -78,13 +80,13 @@ partition.SetLocks(Locks.Delete);
 |值|如果 `IsLocked(Value)` 为 true，则表示|
 |-|-|
 |无|无限制。|
-|属性|无法更改元素的域属性。 这不适用于由关系中的域类的角色生成的属性。|
+|Property|无法更改元素的域属性。 这不适用于由关系中的域类的角色生成的属性。|
 |添加|无法在分区或存储区中创建新的元素和链接。<br /><br /> 不适用于 `ModelElement` 。|
 |移动|如果为 true，则不能在分区之间移动元素; `element.IsLocked(Move)` 如果为 true，则为 `targetPartition.IsLocked(Move)` 。|
 |删除|如果此锁是在元素本身上设置的，或者是在删除操作将传播到的任何元素（如嵌入元素和形状）上，则不能删除元素。<br /><br /> 您可以使用 `element.CanDelete()` 来发现是否可以删除某个元素。|
 |安排|不能更改 roleplayer 中的链接排序。|
 |RolePlayer|无法更改来源于此元素的链接集。 例如，不能在此元素下嵌入新元素。 这不会影响此元素作为其目标的链接。<br /><br /> 如果此元素是链接，则其源和目标不受影响。|
-|All|其他值的按位 "或"。|
+|全部|其他值的按位 "或"。|
 
 ## <a name="locking-policies"></a>锁定策略
  作为 DSL 的作者，你可以定义 *锁定策略*。 锁定策略 moderates 操作 SetLocks ( # A1，因此你可以防止设置特定锁或强制必须设置特定锁。 通常，你会使用锁定策略来防止用户或开发人员意外 contravening 地使用 DSL，这与声明变量的方式相同 `private` 。

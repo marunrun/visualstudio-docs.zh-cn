@@ -1,5 +1,7 @@
 ---
 title: T4 输出指令
+description: 了解，在 Visual Studio 文本模板中，output 指令用于定义转换文件的文件扩展名和编码。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eb1634da6374ad49f1386be4403e72e8edeff2ca
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b9849a326549aa534d9cd558337b825b7e0b8d1f
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75591809"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363635"
 ---
 # <a name="t4-output-directive"></a>T4 输出指令
 
@@ -22,9 +24,9 @@ ms.locfileid: "75591809"
 
  `<#@output extension=".cs"#>`
 
- 然后，Visual Studio 将生成一个名为**MyTemplate.cs**的文件
+ 然后，Visual Studio 将生成一个名为 **MyTemplate.cs** 的文件
 
- 运行时（预处理）文本模板中不需要 `output` 指令。 相反，应用程序通过调用 `TextTransform()` 来获取已生成的字符串。 有关详细信息，请参阅 [带有 T4 文本模板的运行时文本生成](../modeling/run-time-text-generation-with-t4-text-templates.md)。
+ 运行时（预处理）文本模板中不需要 `output` 指令。 相反，应用程序通过调用 `TextTransform()` 来获取已生成的字符串。 有关详细信息，请参阅[使用 T4 文本模板的运行时文本生成](../modeling/run-time-text-generation-with-t4-text-templates.md)。
 
 ## <a name="using-the-output-directive"></a>使用输出指令
 

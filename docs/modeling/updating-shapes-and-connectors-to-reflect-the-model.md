@@ -1,5 +1,7 @@
 ---
 title: 更新形状和连接线以反映模型
+description: 了解，在 Visual Studio 中的域特定语言中，可以使形状的外观反映基础模型的状态。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 83a43e8570ea65373b8cac0bd3e3e7a8dc1f5791
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e3d16cbc35c468c0101db479799215bcccf64ef6
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76115023"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362595"
 ---
 # <a name="update-shapes-and-connectors-to-reflect-the-model"></a>更新形状和连接线以反映模型
 
@@ -27,7 +29,7 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 
 ## <a name="set-shape-map-properties-to-control-the-visibility-of-a-decorator"></a>设置形状映射属性以控制修饰器的可见性
 
-您可以通过配置 DSL 定义中形状和域类之间的映射来控制修饰器的可见性，而无需编写程序代码。 有关详细信息，请参阅 [如何定义域特定语言](../modeling/how-to-define-a-domain-specific-language.md)。
+您可以通过配置 DSL 定义中形状和域类之间的映射来控制修饰器的可见性，而无需编写程序代码。 有关详细信息，请参阅 [如何定义 Domain-Specific 语言](../modeling/how-to-define-a-domain-specific-language.md)。
 
 ## <a name="expose-the-color-and-style-of-a-shape-as-properties"></a>以属性的形式公开形状的颜色和样式
 
@@ -84,7 +86,7 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 
 ## <a name="use-onchildconfigured-to-initialize-a-shapes-properties"></a>使用 OnChildConfigured 初始化形状的属性
 
-若要在第一次创建时设置形状的属性，请 `OnChildConfigured()` 在关系图类的分部定义中进行重写。 关系图类在 DSL 定义中指定，生成的代码在 **Dsl\Generated Code\Diagram.cs**中。 例如：
+若要在第一次创建时设置形状的属性，请 `OnChildConfigured()` 在关系图类的分部定义中进行重写。 关系图类在 DSL 定义中指定，生成的代码在 **Dsl\Generated Code\Diagram.cs** 中。 例如：
 
 ```csharp
 partial class MyLanguageDiagram

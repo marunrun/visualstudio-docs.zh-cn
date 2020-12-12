@@ -1,5 +1,7 @@
 ---
 title: 自定义文件存储和 XML 序列化
+description: 了解当你在 Visual Studio 中保存域特定语言 (DSL) 的实例或模型时创建或更新的 XML 文件。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -11,29 +13,29 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 07592247e0afb870f3c4774c6f2023a6e8141cd1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e889bb81b4c13d003beb15f733d053ef159b197f
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85542735"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362933"
 ---
 # <a name="customize-file-storage-and-xml-serialization"></a>自定义文件存储和 XML 序列化
 
-当用户在 Visual Studio 中保存特定于域的语言 (DSL) 的实例或 *模型*时，将创建或更新 XML 文件。 可以重新加载该文件以在应用商店中重新创建该模型。
+当用户在 Visual Studio 中保存特定于域的语言 (DSL) 的实例或 *模型* 时，将创建或更新 XML 文件。 可以重新加载该文件以在应用商店中重新创建该模型。
 
 可以通过在 DSL 资源管理器中调整 **Xml 序列化行为** 下的设置，自定义序列化方案。 对于每个域类、属性和关系， **Xml 序列化行为** 下有一个节点。 关系位于其源类下。 还有对应于形状、连接符和关系图类的节点。
 
 你还可以编写程序代码以进行更高级的自定义。
 
 > [!NOTE]
-> 如果要以特定格式保存模型，但不需要从该窗体中重新加载它，请考虑使用文本模板从模型生成输出，而不是使用自定义序列化方案。 有关详细信息，请参阅 [从域特定语言生成代码](../modeling/generating-code-from-a-domain-specific-language.md)。
+> 如果要以特定格式保存模型，但不需要从该窗体中重新加载它，请考虑使用文本模板从模型生成输出，而不是使用自定义序列化方案。 有关详细信息，请参阅 [从 Domain-Specific 语言生成代码](../modeling/generating-code-from-a-domain-specific-language.md)。
 
 ## <a name="model-and-diagram-files"></a>模型和关系图文件
 
 每个模型通常保存在两个文件中：
 
-- 模型文件具有一个名称，例如 **Model1. mydsl**。 它存储模型元素和关系及其属性。 文件扩展名（如**mydsl** ）由 DSL 定义中**编辑器**节点的**FileExtension**属性确定。
+- 模型文件具有一个名称，例如 **Model1. mydsl**。 它存储模型元素和关系及其属性。 文件扩展名（如 **mydsl** ）由 DSL 定义中 **编辑器** 节点的 **FileExtension** 属性确定。
 
 - 关系图文件具有一个名称，例如 **Model1. mydsl**。 它存储形状、连接符及其位置、颜色、线条粗细和关系图外观的其他详细信息。 如果用户删除某个 **关系图** 文件，则模型中的基本信息不会丢失。 仅会丢失关系图的布局。 打开模型文件时，将创建一组默认的形状和连接线。
 
@@ -43,7 +45,7 @@ ms.locfileid: "85542735"
 
 2. 在属性窗口中，编辑 **FileExtension** 属性。 不要包含文件扩展名的初始 "."。
 
-3. 在解决方案资源管理器中，更改 **DslPackage\ProjectItemTemplates**中两个项模板文件的名称。 这些文件的名称遵循以下格式：
+3. 在解决方案资源管理器中，更改 **DslPackage\ProjectItemTemplates** 中两个项模板文件的名称。 这些文件的名称遵循以下格式：
 
      `myDsl.diagram`
 
@@ -116,7 +118,7 @@ ms.locfileid: "85542735"
     <songMoniker title="/My Favorites/Jazz after Teatime/Hot tea" />
     ```
 
-     如果目标类具有域属性（ **Is Moniker Key** `true` 在**Xml 序列化行为**中，此选项为其设置为名字对象键），则将使用限定键名字对象。 在此示例中，为域类 "唱片集" 和 "歌曲" 中名为 "Title" 的域属性设置了此选项。
+     如果目标类具有域属性（  `true` 在 **Xml 序列化行为** 中，此选项为其设置为名字对象键），则将使用限定键名字对象。 在此示例中，为域类 "唱片集" 和 "歌曲" 中名为 "Title" 的域属性设置了此选项。
 
 限定密钥名字对象比 ID 名字对象更易于读取。 如果你想要将模型文件的 XML 作为人员读取，请考虑使用限定的密钥名字。 但是，用户可以将多个元素设置为具有相同的名字对象密钥。 重复键可能导致文件无法正确地重新加载。 因此，如果您定义使用限定密钥名字对象引用的域类，则应考虑阻止用户保存具有重复名字对象的文件的方法。
 
@@ -130,7 +132,7 @@ ms.locfileid: "85542735"
 
     3. 如果域类有一个基类，请重复此类中的过程。
 
-2. 设置域类的**序列化 Id**  =  `true` 。
+2. 设置域类的 **序列化 Id**  =  `true` 。
 
      此属性可在 " **Xml 序列化行为**" 下找到。
 
@@ -146,7 +148,7 @@ ms.locfileid: "85542735"
 
      使用 **命名域类** 工具创建新的域类。
 
-     此工具创建一个新类，该类具有名为 Name 的域属性。 **是元素名称**，并且是此域属性的**名字对象键**属性将初始化为 `true` 。
+     此工具创建一个新类，该类具有名为 Name 的域属性。 **是元素名称**，并且是此域属性的 **名字对象键** 属性将初始化为 `true` 。
 
 - \- 或 -
 
@@ -158,7 +160,7 @@ ms.locfileid: "85542735"
 
 有多种方法可帮助避免这种情况：
 
-- 设置**为**  =  `true` key domain 属性的元素名称。 选择 DSL 定义关系图上的 "域" 属性，然后在 "属性窗口中设置值。
+- 设置 **为**  =  `true` key domain 属性的元素名称。 选择 DSL 定义关系图上的 "域" 属性，然后在 "属性窗口中设置值。
 
      当用户创建类的新实例时，此值将导致自动为域属性分配不同的值。 默认行为向类名的末尾添加一个数字。 这不会阻止用户将该名称更改为重复的名称，但在保存模型之前，用户不设置该值时，这会有所帮助。
 
@@ -166,7 +168,7 @@ ms.locfileid: "85542735"
 
      自动生成的验证方法会检查歧义。 方法位于 `Load` 验证类别中。 这可以确保用户将收到警告，指出可能无法重新打开文件。
 
-     有关详细信息，请参阅 [以域特定语言进行验证](../modeling/validation-in-a-domain-specific-language.md)。
+     有关详细信息，请参阅 [Domain-Specific 语言的验证](../modeling/validation-in-a-domain-specific-language.md)。
 
 ### <a name="moniker-paths-and-qualifiers"></a>名字对象路径和限定符
 
@@ -230,7 +232,7 @@ ms.locfileid: "85542735"
     </familyTreeModel>
     ```
 
-- 设置**表示**  =  **元素**，以将域属性另存为元素而不是属性值。
+- 设置 **表示**  =  **元素**，以将域属性另存为元素而不是属性值。
 
     ```xml
     <person name="Elizabeth I" birthYear="1533">
@@ -244,11 +246,11 @@ ms.locfileid: "85542735"
 
 可以替换部分或全部序列化算法。
 
-建议你在 **Dsl\Generated Code\Serializer.cs** 和 **SerializationHelper.cs**中研究代码。
+建议你在 **Dsl\Generated Code\Serializer.cs** 和 **SerializationHelper.cs** 中研究代码。
 
 ### <a name="to-customize-the-serialization-of-a-particular-class"></a>自定义特定类的序列化
 
-1. 对于**Xml 序列化行为**，此类的节点中的 Set**是 Custom** 。
+1. 对于 **Xml 序列化行为**，此类的节点中的 Set **是 Custom** 。
 
 2. 转换所有模板，生成解决方案，并调查生成的编译错误。 每个错误附近的注释解释了必须提供的代码。
 
@@ -266,37 +268,37 @@ ms.locfileid: "85542735"
 
 这些元素可在 DSL 资源管理器中的 " **Xml 序列化 Behavior\Class 数据**" 下找到。
 
-|属性|说明|
+|Property|描述|
 |-|-|
 |具有自定义元素架构|如果为 True，则指示域类具有自定义元素架构|
 |为自定义|如果要为此域类编写自己的序列化和反序列化代码，请将此值设置为 **True** 。<br /><br /> 构建解决方案并调查错误以发现详细说明。|
 |域类|此类数据节点适用的域类。 只读。|
 |元素名称|此类的元素的 Xml 节点名称。 默认值为域类名称的小写形式。|
 |名字对象特性名称|用于包含引用的名字对象元素中的属性的名称。 如果为空，则使用键属性或 id 的名称。<br /><br /> 在此示例中，为 "name"：  `<personMoniker name="/Mike Nash"/>`|
-|名字对象元素名称|用于引用此类的元素的名字对象的 xml 元素的名称。<br /><br /> 默认值是类名以 "名字对象" 作为后缀的小写形式。 例如，`personMoniker`。|
-|名字对象类型名称|为此类的元素的名字对象生成的 xsd 类型的名称。 XSD 在**Dsl\Generated 代码架构中 \\ \* 。 xsd**|
+|名字对象元素名称|用于引用此类的元素的名字对象的 xml 元素的名称。<br /><br /> 默认值是类名以 "名字对象" 作为后缀的小写形式。 例如 `personMoniker`。|
+|名字对象类型名称|为此类的元素的名字对象生成的 xsd 类型的名称。 XSD 在 **Dsl\Generated 代码架构中 \\ \* 。 xsd**|
 |序列化 Id|如果为 True，则元素 GUID 包含在文件中。 如果没有标记 **为名字对象键** 的属性，并且 DSL 定义了此类的引用关系，则必须为 true。|
 |类型名称|在指定域类的 xsd 中生成的 xml 类型的名称。|
-|说明|与此元素关联的非正式说明|
+|注释|与此元素关联的非正式说明|
 
 ### <a name="xml-property-data"></a>Xml 属性数据
 
 Xml 属性节点位于类节点下。
 
-|属性|说明|
+|Property|描述|
 |-|-|
 |域属性|Xml 序列化配置数据应用到的属性。 只读。|
 |是名字对象键|如果为 True，则将属性用作创建引用此域类的实例的名字对象的键。|
 |是名字对象限定符|如果为 True，则该属性用于在名字对象中创建限定符。 如果为 false，并且对于此域类，如果 SerializeId 不为 true，则名字对象由嵌入树中父元素的名字对象限定。|
 |表示形式|如果特性，则将属性序列化为 xml 特性;如果为元素，则序列化为元素;如果为 Ignore，则不序列化。|
 |Xml 名称|用于表示属性的 xml 特性或元素的名称。 默认情况下，这是域属性名称的小写形式。|
-|说明|与此元素关联的非正式说明|
+|注释|与此元素关联的非正式说明|
 
 ### <a name="xml-role-data"></a>Xml 角色数据
 
 角色数据节点可在源类节点下找到。
 
-|属性|说明|
+|Property|描述|
 |-|-|
 |具有自定义名字对象|如果要提供自己的代码来生成和解析遍历此关系的名字对象，请将此值设置为 true。<br /><br /> 有关详细说明，请生成解决方案，然后双击错误消息。|
 |域关系|指定应用这些选项的关系。 只读。|
@@ -304,7 +306,7 @@ Xml 属性节点位于类节点下。
 |角色元素名称|指定从源角色派生的 XML 元素的名称。 默认值为角色属性名称。|
 |使用完整形式|如果为 true，则每个目标元素或名字对象都包含在表示关系的 XML 节点中。 如果关系具有其自己的域属性，则应将其设置为 true。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [在程序代码中导航和更新模型](../modeling/navigating-and-updating-a-model-in-program-code.md)
 - [从域特定语言生成代码](../modeling/generating-code-from-a-domain-specific-language.md)

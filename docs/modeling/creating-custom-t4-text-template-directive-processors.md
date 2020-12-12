@@ -1,5 +1,7 @@
 ---
 title: 创建自定义 T4 文本模板指令处理器
+description: 了解文本模板转换过程以及如何创建自定义 T4 文本模板指令处理器。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,16 +11,16 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c70aa1853701ef671b7057ad698a0fb63334a1ca
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 283f2122c05a91a5e677293f59e3f6e02d43f63a
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75597173"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363416"
 ---
 # <a name="create-custom-t4-text-template-directive-processors"></a>创建自定义 T4 文本模板指令处理器
 
-*文本模板转换过程*会将*文本模板*文件作为输入，并生成一个文本文件作为输出。 *文本模板转换引擎*控制进程，引擎与文本模板转换主机和一个或多个文本模板*指令处理器*进行交互以完成该过程。 有关详细信息，请参阅 [文本模板转换过程](../modeling/the-text-template-transformation-process.md)。
+*文本模板转换过程* 会将 *文本模板* 文件作为输入，并生成一个文本文件作为输出。 *文本模板转换引擎* 控制进程，引擎与文本模板转换主机和一个或多个文本模板 *指令处理器* 进行交互以完成该过程。 有关详细信息，请参阅 [文本模板转换过程](../modeling/the-text-template-transformation-process.md)。
 
 若要创建自定义指令处理器，需要创建一个从 <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> 或 <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor> 继承的类。
 
@@ -64,7 +66,7 @@ ms.locfileid: "75597173"
 
 - 有关详细信息，请参阅 [演练：创建自定义指令处理器](../modeling/walkthrough-creating-a-custom-directive-processor.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [部署自定义指令处理器](../modeling/deploying-a-custom-directive-processor.md) 介绍了如何注册自定义指令处理器。
 - [演练：创建自定义指令处理器](../modeling/walkthrough-creating-a-custom-directive-processor.md) 介绍了如何创建自定义指令处理器，如何注册和测试指令处理器，以及如何将输出文件的格式设置为 HTML。

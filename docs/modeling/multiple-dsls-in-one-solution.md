@@ -1,5 +1,7 @@
 ---
 title: 一个解决方案中的多个 DSL
+description: 了解如何将多个特定于域的语言 (Dsl) 打包为一个解决方案的一部分，以便将它们一起安装。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f2eef29db24da3be0a9376ea76a9a1a551af9e1a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1fbadc93f6245427284ea10c1cdd7cf99c5a7f68
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85542592"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363087"
 ---
 # <a name="multiple-dsls-in-one-solution"></a>一个解决方案中的多个 DSL
 
@@ -32,7 +34,7 @@ ms.locfileid: "85542592"
 
    - 更改 **Dsl** 和 **DslPackage** 项目的名称，使其完全不同。 例如：`Dsl1`、`DslPackage1`、`Dsl2`、`DslPackage2`。
 
-   - 在每个 **DslPackage \* \ source.extension.tt**中，将以下行更新为正确的 Dsl 项目名称：
+   - 在每个 **DslPackage \* \ source.extension.tt** 中，将以下行更新为正确的 Dsl 项目名称：
 
       `string dslProjectName = "Dsl2";`
 
@@ -44,17 +46,17 @@ ms.locfileid: "85542592"
 
    2. 对于每个 DSL，选择 " **添加内容** " 并添加：
 
-       - `Dsl*`作为**MEF 组件**的项目
+       - `Dsl*`作为 **MEF 组件** 的项目
 
-       - `DslPackage*`作为**MEF 组件**的项目
+       - `DslPackage*`作为 **MEF 组件** 的项目
 
        - `DslPackage*` 项目即 **VS 包**
 
 3. 生成解决方案。
 
-   生成的 VSIX 将安装这两个 DSL。 可以使用 F5 测试它们，或部署_YourVsixProject_**\bin\Debug \\ \* **。
+   生成的 VSIX 将安装这两个 DSL。 可以使用 F5 测试它们，或部署 _YourVsixProject_**\bin\Debug \\ \***。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [使用 Visual Studio Modelbus 集成模型](../modeling/integrating-models-by-using-visual-studio-modelbus.md)
 - [如何：添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md)

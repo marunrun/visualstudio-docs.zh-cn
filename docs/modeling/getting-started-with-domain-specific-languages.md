@@ -1,5 +1,7 @@
 ---
 title: 域特定语言入门
+description: 了解如何定义和使用通过用于 Visual Studio 的建模 SDK (DSL) 来定义和使用特定于域的语言的基本概念。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6a4761703610a87818cd1512f96530a0f865faf0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: eaab198edae66fc334e854ae1f47dae313dce76b
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238538"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363479"
 ---
 # <a name="get-started-with-domain-specific-languages"></a>域特定语言入门
 
@@ -23,7 +25,7 @@ ms.locfileid: "88238538"
 
 如果你不熟悉 Dsl，我们建议你通过 **DSL 工具实验室**，你可以在此网站中找到： [可视化和建模 SDK](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db)
 
-## <a name="what-can-you-do-with-a-domain-specific-language"></a>使用域特定语言可以执行什么操作？
+## <a name="what-can-you-do-with-a-domain-specific-language"></a>使用 Domain-Specific 语言可以做些什么？
 
 域特定语言是一种通常为图形的表示法，用于特定目的。 与此相反，UML 等语言是通用的。 在 DSL 中，可以定义模型元素的类型及其关系，以及如何在屏幕上显示它们。
 
@@ -51,7 +53,7 @@ Dsl 的一个主体应用程序是生成程序代码、配置文件和其他项�
 
 ## <a name="create-a-dsl-solution"></a>创建 DSL 解决方案
 
-若要创建新的域特定语言，请使用 "域特定语言" 项目模板创建一个新的 Visual Studio 解决方案。
+若要创建新的域特定语言，请使用 "Domain-Specific 语言" 项目模板创建一个新的 Visual Studio 解决方案。
 
 1. 在 **“文件”** 菜单上，指向 **“新建”** ，再单击 **“项目”** 。
 
@@ -61,7 +63,7 @@ Dsl 的一个主体应用程序是生成程序代码、配置文件和其他项�
 
      ![“创建 DSL”对话框](../modeling/media/create_dsldialog.png)
 
-4. 在 " **名称** " 框中，键入 **FamilyTree**。 单击“确定”。
+4. 在 " **名称** " 框中，键入 **FamilyTree**。 单击 **“确定”** 。
 
      " **域特定语言向导** " 将打开，并显示模板 DSL 解决方案列表。
 
@@ -88,7 +90,7 @@ Dsl 的一个主体应用程序是生成程序代码、配置文件和其他项�
 
 ![dsl 设计器](../modeling/media/dsl_designer.png)
 
-此解决方案将定义域特定语言。 有关详细信息，请参阅 [特定于域的语言工具用户界面概述](../modeling/overview-of-the-domain-specific-language-tools-user-interface.md)。
+此解决方案将定义域特定语言。 有关详细信息，请参阅 [Domain-Specific 语言工具用户界面概述](../modeling/overview-of-the-domain-specific-language-tools-user-interface.md)。
 
 ## <a name="the-important-parts-of-the-dsl-solution"></a>DSL 解决方案的重要部分
 
@@ -109,15 +111,15 @@ Dsl 的一个主体应用程序是生成程序代码、配置文件和其他项�
 1. 单击 "**解决方案资源管理器**" 工具栏中的 "**转换所有模板**"。 这将从 Dsldefinition.dsl 重新生成大部分源代码。
 
     > [!NOTE]
-    > 更改 *dsldefinition.dsl*时，必须单击 " **转换所有模板** "，然后重新生成解决方案。 可以自动化执行此步骤。 有关详细信息，请参阅 [如何自动转换所有模板](/previous-versions/visualstudio/visual-studio-2012/ff521399\(v\=vs.110\))。
+    > 更改 *dsldefinition.dsl* 时，必须单击 " **转换所有模板** "，然后重新生成解决方案。 可以自动化执行此步骤。 有关详细信息，请参阅 [如何自动转换所有模板](/previous-versions/visualstudio/visual-studio-2012/ff521399\(v\=vs.110\))。
 
-2. 按“F5” ****，或在“调试” **** 菜单上，单击“开始调试” ****。
+2. 按“F5” ，或在“调试”  菜单上，单击“开始调试” 。
 
      DSL 构建并安装在 Visual Studio 的实验实例中。
 
      启动 Visual Studio 的实验实例。 实验实例从注册表的单独子树获取其设置，其中 Visual Studio 扩展注册用于调试目的。 Visual Studio 的普通实例无法访问在此处注册的扩展。
 
-3. 在 Visual Studio 的实验实例中，从**解决方案资源管理器**中打开名为**Test**的模型文件。
+3. 在 Visual Studio 的实验实例中，从 **解决方案资源管理器** 中打开名为 **Test** 的模型文件。
 
      \- 或 -
 
@@ -141,7 +143,7 @@ Dsl 的一个主体应用程序是生成程序代码、配置文件和其他项�
 
 ### <a name="the-content-of-a-model"></a>模型的内容
 
-作为 DSL 实例的文件的内容称为 *模型*。 模型包含*模型*<em>元素</em>和元素之间的*链接*。 DSL 定义指定模型中可以存在的模型元素和链接的类型。 例如，在从最小语言模板创建的 DSL 中，有一种类型的模型元素和一种类型的链接。
+作为 DSL 实例的文件的内容称为 *模型*。 模型包含 *模型*<em>元素</em>和元素之间的 *链接*。 DSL 定义指定模型中可以存在的模型元素和链接的类型。 例如，在从最小语言模板创建的 DSL 中，有一种类型的模型元素和一种类型的链接。
 
 DSL 定义可以指定模型在关系图上的显示方式。 可以从各种形状和连接符样式中进行选择。 您可以指定某些形状显示在其他形状内。
 
@@ -151,7 +153,7 @@ DSL 定义可以指定模型在关系图上的显示方式。 可以从各种形
 
 ### <a name="the-api-of-your-dsl"></a>DSL 的 API
 
-DSL 生成一个 API，该 API 允许你读取和更新作为 DSL 实例的模型。 API 的一个应用是从模型生成文本文件。 有关详细信息，请参阅 [使用 T4 文本模板生成设计时代码](../modeling/design-time-code-generation-by-using-t4-text-templates.md)。
+DSL 生成一个 API，该 API 允许你读取和更新作为 DSL 实例的模型。 API 的一个应用是从模型生成文本文件。 有关详细信息，请参阅[使用 T4 文本模板生成设计时代码](../modeling/design-time-code-generation-by-using-t4-text-templates.md)。
 
 在调试解决方案中，打开扩展名为 "tt" 的模板文件。 这些示例演示如何从模型生成文本，并允许你测试 DSL 的 API。 其中一个示例是用编写 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 的，另一个在中 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 。
 
@@ -169,7 +171,7 @@ DSL 生成一个 API，该 API 允许你读取和更新作为 DSL 实例的模�
 
 2. 请确保每个 tt 文件中的文件名参数是指用于试验的模型文件。 保存 tt 文件。
 
-3. 单击 "**解决方案资源管理器**的工具栏中的"**转换所有模板**"。
+3. 单击 "**解决方案资源管理器** 的工具栏中的"**转换所有模板**"。
 
      \- 或 -
 
@@ -180,7 +182,7 @@ DSL 生成一个 API，该 API 允许你读取和更新作为 DSL 实例的模�
 > [!NOTE]
 > 更改 DSL 定义时，示例文本模板代码将不起作用，除非对其进行更新。
 
-有关详细信息，请参阅 [从域特定语言生成代码](../modeling/generating-code-from-a-domain-specific-language.md) 和 [编写代码以自定义域特定语言](../modeling/writing-code-to-customise-a-domain-specific-language.md)。
+有关详细信息，请参阅 [从 Domain-Specific 语言生成代码](../modeling/generating-code-from-a-domain-specific-language.md) 和 [编写代码以自定义 Domain-Specific 语言](../modeling/writing-code-to-customise-a-domain-specific-language.md)。
 
 ## <a name="customizing-the-dsl"></a>自定义 DSL
 
@@ -191,7 +193,7 @@ DSL 生成一个 API，该 API 允许你读取和更新作为 DSL 实例的模�
 
 你可以向 DSL 提供各种扩展。 下面的示例将为你介绍可能的外观。
 
-每次更改后，保存 DSL 定义，单击 "转换**解决方案资源管理器**中的**所有模板**"，然后按**F5**试验已更改的 DSL。
+每次更改后，保存 DSL 定义，单击 "转换 **解决方案资源管理器** 中的 **所有模板**"，然后按 **F5** 试验已更改的 DSL。
 
 ### <a name="rename-the-types-and-tools"></a>重命名类型和工具
 
@@ -254,7 +256,7 @@ DSL 生成一个 API，该 API 允许你读取和更新作为 DSL 实例的模�
 
    1. 将从 Person 域类延伸到关系图的另一侧的灰色行跟随。 这是一个关系图元素映射。 它将域类链接到一个 shape 类。
 
-   2. 右键单击此 shape 类，指向 " **添加**"，然后单击 " **文本修饰**器"。
+   2. 右键单击此 shape 类，指向 " **添加**"，然后单击 " **文本修饰** 器"。
 
    3. 添加两个名称为的修饰器，例如 **BirthDecorator** 和 **DeathDecorator**。
 
@@ -319,7 +321,7 @@ DSL 生成一个 API，该 API 允许你读取和更新作为 DSL 实例的模�
 
     1. 单击 " **关系图元素映射** " 工具，然后单击 "城镇域" 类，然后单击 "TownShape" 形状类。
 
-    2. 在 " **DSL 详细信息**" 窗口的 "**修饰器映射**" 选项卡中，选中地图连接器，检查 NameDecorator 并将**显示属性**设置为 "名称"。
+    2. 在 " **DSL 详细信息**" 窗口的 "**修饰器映射**" 选项卡中，选中地图连接器，检查 NameDecorator 并将 **显示属性** 设置为 "名称"。
 
 5. 创建连接器以显示 Person 和城镇之间的关系。
 
@@ -331,7 +333,7 @@ DSL 生成一个 API，该 API 允许你读取和更新作为 DSL 实例的模�
 
 6. 创建一个用于创建新的城镇的元素工具。
 
-    1. 在 **DSL 资源管理器**中，依次展开 **编辑器** 和 **工具箱选项卡**。
+    1. 在 **DSL 资源管理器** 中，依次展开 **编辑器** 和 **工具箱选项卡**。
 
     2. 右键单击 *\<your DSL>* ，然后单击 " **添加新元素工具**"。
 
@@ -345,7 +347,7 @@ DSL 生成一个 API，该 API 允许你读取和更新作为 DSL 实例的模�
 
     2. 设置新工具的 "名称" 属性。
 
-    3. 在 **ConnectionBuilder** 属性中，选择包含 Person-城镇关系名称的生成器。
+    3. 在 **ConnectionBuilder** 属性中，选择包含 Person-Town 关系名称的生成器。
 
     4. 设置 " **工具箱" 图标**。
 
@@ -378,10 +380,10 @@ DSL 生成一个 API，该 API 允许你读取和更新作为 DSL 实例的模�
 
     ```
 
-     保存 * tt 文件时，它将创建包含人员列表及其 residences 的附属文件。 有关详细信息，请参阅 [从域特定语言生成代码](../modeling/generating-code-from-a-domain-specific-language.md)。
+     保存 * tt 文件时，它将创建包含人员列表及其 residences 的附属文件。 有关详细信息，请参阅 [从 Domain-Specific 语言生成代码](../modeling/generating-code-from-a-domain-specific-language.md)。
 
 ## <a name="validation-and-commands"></a>验证和命令
- 可以通过添加验证约束来进一步开发此 DSL。 这些约束是可以定义的方法，可确保模型处于正确的状态。 例如，您可以定义一个约束以确保子项的出生日期晚于其父级的出生日期。 如果 DSL 用户尝试保存中断了任何约束的模型，则验证功能将显示警告。 有关详细信息，请参阅 [以域特定语言进行验证](../modeling/validation-in-a-domain-specific-language.md)。
+ 可以通过添加验证约束来进一步开发此 DSL。 这些约束是可以定义的方法，可确保模型处于正确的状态。 例如，您可以定义一个约束以确保子项的出生日期晚于其父级的出生日期。 如果 DSL 用户尝试保存中断了任何约束的模型，则验证功能将显示警告。 有关详细信息，请参阅 [Domain-Specific 语言的验证](../modeling/validation-in-a-domain-specific-language.md)。
 
  还可以定义用户可以调用的菜单命令。 命令可以修改模型。 它们还可以与 Visual Studio 中的其他模型和外部资源交互。 有关详细信息，请参阅 [如何：修改标准菜单命令](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)。
 
@@ -407,7 +409,7 @@ DSL 生成一个 API，该 API 允许你读取和更新作为 DSL 实例的模�
 
 2. 重新生成仍想要使用的任何实验性 Dsl 或其他实验性 Visual Studio 扩展。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [了解模型、类和关系](../modeling/understanding-models-classes-and-relationships.md)
 - [如何定义域特定语言](../modeling/how-to-define-a-domain-specific-language.md)
