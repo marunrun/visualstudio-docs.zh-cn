@@ -1,5 +1,7 @@
 ---
 title: 从域特定语言生成代码
+description: 了解 Domain-Specific 语言工具如何提供一种功能强大的方法，从模型中表示的数据生成代码、文档和其他项目。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 34b834957dfe18e3fc03a86130a95071dda0badf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 58a2537f2c2cab0123bc90e8d0e32a8da89874f6
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75596575"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362187"
 ---
 # <a name="generating-code-from-a-domain-specific-language"></a>从域特定语言生成代码
 

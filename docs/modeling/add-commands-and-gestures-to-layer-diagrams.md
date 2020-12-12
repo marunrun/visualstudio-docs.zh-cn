@@ -1,5 +1,7 @@
 ---
 title: 向依赖项关系图添加命令和手势
+description: 了解如何在 Visual Studio 中的依赖关系图上定义右键单击菜单命令和笔势处理程序。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ff23e07bd6e81b11d94a8256c33b57b4b0c558c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bc91e2c160d2081db868daf8d8dbaeb041172297
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85531386"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362218"
 ---
 # <a name="add-commands-and-gestures-to-dependency-diagrams"></a>向依赖项关系图添加命令和手势
 
@@ -38,7 +40,7 @@ ms.locfileid: "85531386"
 
    模板将创建包含一个小型工作示例的项目。
 
-2. 若要测试扩展，请按**Ctrl** + **F5**或**f5**。
+2. 若要测试扩展，请按 **Ctrl** + **F5** 或 **f5**。
 
     启动 Visual Studio 的实验实例。 在此实例中创建依赖关系图。 命令或笔势扩展应在此关系图中使用。
 
@@ -52,13 +54,13 @@ ms.locfileid: "85531386"
 
 ::: moniker range="vs-2017"
 
-5. 若要在 Visual Studio 的主实例中或另一台计算机上安装扩展，请在*bin*目录中找到 *.vsix*文件。 将此文件复制到想在其上安装它的计算机，然后双击它。 若要卸载它，请在 "**工具**" 菜单上选择 "**扩展和更新**"。
+5. 若要在 Visual Studio 的主实例中或另一台计算机上安装扩展，请在 *bin* 目录中找到 *.vsix* 文件。 将此文件复制到想在其上安装它的计算机，然后双击它。 若要卸载它，请在 "**工具**" 菜单上选择 "**扩展和更新**"。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-5. 若要在 Visual Studio 的主实例中或另一台计算机上安装扩展，请在*bin*目录中找到 *.vsix*文件。 将此文件复制到想在其上安装它的计算机，然后双击它。 若要卸载它，请选择 "**扩展**" 菜单上的 "**管理扩展**"。
+5. 若要在 Visual Studio 的主实例中或另一台计算机上安装扩展，请在 *bin* 目录中找到 *.vsix* 文件。 将此文件复制到想在其上安装它的计算机，然后双击它。 若要卸载它，请选择 "**扩展**" 菜单上的 "**管理扩展**"。
 
 ::: moniker-end
 
@@ -71,17 +73,17 @@ ms.locfileid: "85531386"
    > [!NOTE]
    > 可以在一个类库中定义多个命令或笔势处理程序类，但应在单独的类库中定义层验证类。
 
-2. 在解决方案中添加或创建 VSIX 项目。 VSIX 项目包含名为 **source.extension.vsixmanifest**的文件。
+2. 在解决方案中添加或创建 VSIX 项目。 VSIX 项目包含名为 **source.extension.vsixmanifest** 的文件。
 
-3. 在 **解决方案资源管理器**中，右键单击 VSIX 项目，然后选择 " **设为启动项目**"。
+3. 在 **解决方案资源管理器** 中，右键单击 VSIX 项目，然后选择 " **设为启动项目**"。
 
-4. 在 **source.extension.vsixmanifest**中的“资产” **** 下，以 MEF 组件的形式添加命令或笔势处理程序。
+4. 在 **source.extension.vsixmanifest** 中的“资产” 下，以 MEF 组件的形式添加命令或笔势处理程序。
 
-    1. 在“资产” **** 选项卡中，选择“新建” ****。
+    1. 在“资产” 选项卡中，选择“新建” 。
 
-    2. 在“类型” **** 处，选择“Microsoft.VisualStudio.MefComponent” ****。
+    2. 在“类型” 处，选择“Microsoft.VisualStudio.MefComponent” 。
 
-    3. 在“源” **** 处，选择“当前解决方案中的项目” **** ，然后选择命令或笔势处理程序项目的名称。
+    3. 在“源” 处，选择“当前解决方案中的项目”  ，然后选择命令或笔势处理程序项目的名称。
 
     4. 保存文件。
 
@@ -102,11 +104,11 @@ ms.locfileid: "85531386"
 
      [定义笔势处理程序](#gesture)
 
-7. 若要测试此功能，请按**Ctrl** + **F5**或**f5**。
+7. 若要测试此功能，请按 **Ctrl** + **F5** 或 **f5**。
 
    这将打开一个 Visual Studio 实验实例。 在此实例中，创建或打开依赖关系图。
 
-8. 若要在 Visual Studio 的主实例中或另一台计算机上安装 VSIX，请在 VSIX 项目的**bin**目录中找到 **.vsix**文件。 将此文件复制到想在其上安装 VSIX 的计算机。 在文件资源管理器中双击该 VSIX 文件。
+8. 若要在 Visual Studio 的主实例中或另一台计算机上安装 VSIX，请在 VSIX 项目的 **bin** 目录中找到 **.vsix** 文件。 将此文件复制到想在其上安装 VSIX 的计算机。 在文件资源管理器中双击该 VSIX 文件。
 
 ## <a name="defining-a-menu-command"></a><a name="command"></a> 定义菜单命令
 
@@ -261,6 +263,6 @@ namespace MyLayerExtensions // change to your preference
 
 - 已为某些类型的拖动项定义了处理程序。 例如，用户可以将项从解决方案资源管理器拖动到依赖项关系图上。 无法为这些类型的项定义拖动处理程序。 在这些情况下，不会调用 `DragDrop` 方法。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [向依赖项关系图添加自定义体系结构验证](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)

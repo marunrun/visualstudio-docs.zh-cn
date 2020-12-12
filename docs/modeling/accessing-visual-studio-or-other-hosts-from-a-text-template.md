@@ -1,5 +1,7 @@
 ---
 title: 从文本模板访问 Visual Studio 或其他主机
+description: 了解如何使用文本模板中的方法和属性，该模板由执行模板的主机公开。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -8,12 +10,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 068de3c14240bc7e13be0e2e564c2c4e6034f987
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4c0f19f96ee5f6879ccc3328c29d0e1fa1d2a6d0
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85531412"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362244"
 ---
 # <a name="access-visual-studio-or-other-hosts-from-a-text-template"></a>从文本模板访问 Visual Studio 或其他主机
 

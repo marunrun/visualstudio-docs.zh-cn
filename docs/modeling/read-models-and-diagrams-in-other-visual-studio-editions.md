@@ -1,5 +1,7 @@
 ---
 title: 在其他 Visual Studio 版本中读取模型和关系图
+description: 了解如何在 Visual Studio 中读取模型和关系图，以及在使用不支持模型创建的 Visual Studio 版本时的只读行为。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,12 +12,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ebe4cdcefb7b823090cca8976055de5a3ebb9b1a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ffbf39421f507338d14a6b05a667ec4301375067
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75595405"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97360684"
 ---
 # <a name="read-models-and-diagrams-in-other-visual-studio-editions"></a>在其他 Visual Studio 版本中读取模型和关系图
 
@@ -37,7 +39,7 @@ ms.locfileid: "75595405"
 - 要读取的关系图的两个关系图文件，例如 **MyDiagram. .classdiagram 和 MyDiagram**。
 
     > [!NOTE]
-    > 对于依赖关系图，还应具有名为 _MyDiagram_**. microsoft.visualstudio.teamarchitect.layerdesigner.diagrams.layerdiagram.show**的文件。
+    > 对于依赖关系图，还应具有名为 _MyDiagram_**. microsoft.visualstudio.teamarchitect.layerdesigner.diagrams.layerdiagram.show** 的文件。
 
 - 建模项目文件 (**.modelproj) mymodel>**
 
@@ -55,7 +57,7 @@ ms.locfileid: "75595405"
 
 你可以保存这些更改。 如果要使您的更改对其他用户可见，则至少必须发送更新后的 **. layout** 文件。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [依赖项关系图：参考](../modeling/layer-diagrams-reference.md)
 - [为你的应用程序创建模型](../modeling/create-models-for-your-app.md)

@@ -1,5 +1,7 @@
 ---
 title: 调试 T4 文本模板
+description: 若要调试设计时文本模板，请保存文本模板文件，然后在解决方案资源管理器中该文件的快捷菜单上选择 "调试 T4 模板"。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1570061feb5da034e2e8fab7168658577f6f990d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 26ad1545918a02fbcf530b439e801a656a425864
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75589677"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361464"
 ---
 # <a name="debugging-a-t4-text-template"></a>调试 T4 文本模板
 您可以在文本模板中设置断点。 若要调试设计时文本模板，请保存文本模板文件，然后在解决方案资源管理器中该文件的快捷菜单上选择 " **调试 T4 模板** "。 若要调试运行时文本模板，只需调试其所属的应用程序即可。

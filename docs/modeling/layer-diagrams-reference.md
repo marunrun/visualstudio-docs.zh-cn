@@ -1,5 +1,7 @@
 ---
 title: 依赖关系关系图引用
+description: 了解，在 Visual Studio 中，可以使用依赖关系图来可视化系统的高级逻辑体系结构。
+ms.custom: SEO-VS-2020
 ms.date: 09/28/2018
 ms.topic: reference
 f1_keywords:
@@ -20,12 +22,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 774716dff6562b7792c6fa885c40db2a0a133136
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 265bb31dd95aa3a84bdb497a3306278acfd8838e
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75594560"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97360567"
 ---
 # <a name="dependency-diagrams-reference"></a>依赖项关系图：参考
 
@@ -56,7 +58,7 @@ ms.locfileid: "75594560"
 
 下表描述了可在依赖项关系图上使用的元素。
 
-|**形状**|**Element**|**说明**|
+|**整形**|**元素**|**说明**|
 |-|-|-|
 |1|**层**|系统中的物理项目的逻辑组。 这些项目可以是命名空间、项目、类、方法等。<br /><br /> 若要查看链接到某个层的项目，请打开该层的快捷菜单，然后选择 " **查看链接** " 以打开 " **层资源管理器**"。<br /><br /> 有关详细信息，请参阅 [层资源管理器](#Explorer)。<br /><br /> -   **禁止的命名空间依赖项** -指定与此层关联的项目不能依赖于指定的命名空间。<br />-   **禁止的命名空间** -指定与此层关联的项目不能属于指定的命名空间。<br />-   **必需的命名空间** -指定与此层关联的项目必须属于某个指定的命名空间。|
 |2|**依赖项**|指示某个层可以使用另一层的功能，但反之则不然。<br /><br /> -   **方向** -指定依赖关系的方向。|
@@ -96,6 +98,6 @@ ms.locfileid: "75594560"
 |**支持验证**|如果 **为 True**，则层验证过程可以验证项目是否符合与此元素的依赖关系。<br /><br /> 如果 **为 False**，则链接不参与层验证过程。<br /><br /> 有关详细信息，请参阅 [依赖关系图：准则](../modeling/layer-diagrams-guidelines.md)。|
 |**标识符**|对链接的项目的引用|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [为你的应用程序创建模型](../modeling/create-models-for-your-app.md)

@@ -1,5 +1,7 @@
 ---
 title: 将关系图导出为图像
+description: 了解，你可以将建模图保存为只读格式，以便可以将它们与不使用同一版本 Visual Studio 的用户共享。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e433e47d04a2beb1521aba65be664f7c7efd44f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 12e0036377ed5b67e092ff0cf4588acc39c23525
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547597"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361633"
 ---
 # <a name="export-diagrams-as-images"></a>将关系图导出为图像
 
@@ -38,7 +40,7 @@ ms.locfileid: "85547597"
 
 2. 在 " **名称** " 列表中，选择 " **Microsoft XPS 文档编写器**"，然后单击 **"确定"**。
 
-3. 在 "将 **文件另存为"** 对话框中，将该文件保存为 **xps 文档 (\* .xps) ** file。
+3. 在 "将 **文件另存为"** 对话框中，将该文件保存为 **xps 文档 (\* .xps)** file。
 
 ## <a name="see-also"></a>请参阅
 

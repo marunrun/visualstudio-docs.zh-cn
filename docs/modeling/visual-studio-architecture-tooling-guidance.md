@@ -1,5 +1,7 @@
 ---
 title: 体系结构工具指南
+description: 了解体系结构工具指南是一个可下载的实用指导包，其中介绍了如何在 Visual Studio 2010 中使用建模工具。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 026fe95eb9e32e335832e782ffde72c93f89dc67
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f1d05f9a904df076c437d9e2e5efb9e829cab758
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76111394"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361269"
 ---
 # <a name="visual-studio-architecture-tooling-guidance"></a>Visual Studio 体系结构工具指南
 

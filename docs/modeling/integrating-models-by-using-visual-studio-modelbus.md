@@ -1,5 +1,7 @@
 ---
 title: 使用 Modelbus 集成模型
+description: 了解 Visual Studio ModelBus 提供了一种方法，用于在模型和其他工具之间创建链接到模型。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a222d5f69d19d2891b4aa20239c1874f55a056e0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 46705c7a614cd67d81c9e55c03e937f72c29a2fe
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85536937"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97360719"
 ---
 # <a name="integrate-models-by-using-visual-studio-modelbus"></a>使用 Visual Studio Modelbus 集成模型
 
@@ -40,7 +42,7 @@ ModelBus 允许你创建对模型或模型中特定元素的唯一引用。 此�
 
 2. 在对话框中，选择 **"我想要向 ModelBus 公开此 DSL"**。 如果希望此 DSL 同时公开其模型并使用对其他 DSL 的引用，则可选择这两个选项。
 
-3. 单击“确定”。 新项目“ModelBusAdapter”随即添加到 DSL 解决方案中。
+3. 单击 **“确定”** 。 新项目“ModelBusAdapter”随即添加到 DSL 解决方案中。
 
 4. 如果要从文本模板访问 DSL，则必须修改新项目中的 AdapterManager.tt。 如果要从其他代码（例如命令和事件处理程序）访问 DSL，则忽略此步骤。 有关详细信息，请参阅 [在文本模板中使用 Visual Studio ModelBus](../modeling/using-visual-studio-modelbus-in-a-text-template.md)。
 
@@ -199,7 +201,7 @@ using System.Linq;
 你可以从 AdapterManager 中获取一个适配器，该适配器提供了对模型中各个元素的访问权限。
 
 > [!NOTE]
-> 你必须在使用完适配器后将其公开。 实现此目的的最简便方式是使用 `using` 语句。 下面的示例对此进行了演示。
+> 你必须在使用完适配器后将其公开。 实现此目的的最简便方式是使用 `using` 语句。 下面的示例阐释了这一点。
 
 ```csharp
 // The file path of a model instance of the FamilyTree DSL:
@@ -303,7 +305,7 @@ using (FamilyTreeAdapter adapter =
 
 1. 要访问的 DSL 必须具有 ModelBus 适配器，已配置该适配器以供文本模板访问。 有关详细信息，请参阅 [提供对 DSL 的访问](#provide)。
 
-2. 通常，使用存储在源 DSL 中的模型总线引用 (MBR) 访问目标 DSL。 因此模板包括源 DSL 的指令，以及用于解析 MBR 的代码。 有关文本模板的详细信息，请参阅 [从域特定语言生成代码](../modeling/generating-code-from-a-domain-specific-language.md)。
+2. 通常，使用存储在源 DSL 中的模型总线引用 (MBR) 访问目标 DSL。 因此模板包括源 DSL 的指令，以及用于解析 MBR 的代码。 有关文本模板的详细信息，请参阅 [从 Domain-Specific 语言生成代码](../modeling/generating-code-from-a-domain-specific-language.md)。
 
    ```
    <#@ template debug="true" hostspecific="true"
@@ -486,13 +488,13 @@ ModelBus 扩展将在 DSL 解决方案中进行以下更改。
 
 - 在 DSL 定义中，外部类型引用将添加到：`Microsoft.VisualStudio.Modeling.Integration.ModelBusReference`。
 
-   可以在 **DSL 资源管理器**中的 " **域类型**" 下查看参考。 若要手动添加外部类型引用，请右键单击根节点。
+   可以在 **DSL 资源管理器** 中的 " **域类型**" 下查看参考。 若要手动添加外部类型引用，请右键单击根节点。
 
 - 将添加一个新的模板文件 **Dsl\GeneratedCode\ModelBusReferencesSerialization.tt**。
 
 将域属性的类型设置为 "ModelBusReference" 时，右键单击该属性，然后单击 " **启用 ModelBusReference 特定属性**"：
 
-- 多个 CLR 特性已添加到域属性。 可在“属性”窗口的“自定义特性”字段中查看它们。 在 **Dsl\GeneratedCode\DomainClasses.cs**中，可以在属性声明中查看属性：
+- 多个 CLR 特性已添加到域属性。 可在“属性”窗口的“自定义特性”字段中查看它们。 在 **Dsl\GeneratedCode\DomainClasses.cs** 中，可以在属性声明中查看属性：
 
   ```csharp
   [System.ComponentModel.TypeConverter(typeof(
@@ -512,9 +514,9 @@ ModelBus 扩展将在 DSL 解决方案中进行以下更改。
 
 - 对 `ModelBusAdapter` 的引用已添加到 `DslPackage` 项目。 `ModelBusAdapter` 具有对项目的引用 `Dsl` 。
 
-- 在 **DslPackage\source.extention.tt**中， `|ModelBusAdapter|` 添加为 MEF 组件。
+- 在 **DslPackage\source.extention.tt** 中， `|ModelBusAdapter|` 添加为 MEF 组件。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [如何：在程序代码中从文件打开模型](../modeling/how-to-open-a-model-from-file-in-program-code.md)
 - [如何：添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md)

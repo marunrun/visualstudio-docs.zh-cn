@@ -1,5 +1,7 @@
 ---
 title: 关于域特定语言
+description: 了解域特定语言 (DSL) 如何设计为特定问题空间或域中的语句。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bfd073b07902e3c0a9e33dfe9ae50d4947a50ef2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7a1e9b1f853ad540f65101bffabea922f8fdcef1
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75597264"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97360881"
 ---
 # <a name="about-domain-specific-languages"></a>关于域特定语言
 
@@ -54,11 +56,11 @@ DSL 的典型应用是生成程序代码或其他项目。 定义 DSL 时，可�
 
 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 允许您创建一个域特定语言，该语言具有自己的图形设计器和自己的关系图表示法，然后使用该语言为每个项目生成相应的源代码。
 
-## <a name="domain-specific-development"></a>特定于域的开发
+## <a name="domain-specific-development"></a>Domain-Specific 开发
 
 特定于域的开发是一种过程，该过程通过使用域特定语言，然后构造语言并将其部署到应用程序开发人员来确定可建模的部分应用程序。 开发人员使用域特定语言来构造特定于其应用程序的模型，使用这些模型生成源代码，然后使用源代码来开发应用程序。
 
-## <a name="aspects-of-graphical-domain-specific-development"></a>图形域特定开发的各个方面
+## <a name="aspects-of-graphical-domain-specific-development"></a>图形 Domain-Specific 开发方面的方面
 
 图形域特定语言必须包含以下功能：
 
@@ -94,7 +96,7 @@ DSL 的典型应用是生成程序代码或其他项目。 定义 DSL 时，可�
 
 你还可以为特定于域的语言创建模型总线适配器。 此适配器允许您引用模型中的模型和元素，并使您可以编写可访问和更新 DSL 实例的代码。 使用强大的模型总线机制，可以编写适用于多个模型的 Visual Studio 扩展。 你还可以编写适用于模型的独立应用程序。 有关详细信息，请参阅 [使用 Visual Studio 集成模型 Modelbus](../modeling/integrating-models-by-using-visual-studio-modelbus.md)。
 
-## <a name="benefits-of-domain-specific-development"></a>域特定开发的优点
+## <a name="benefits-of-domain-specific-development"></a>Domain-Specific 开发的优点
 
 域特定语言可以提供以下优点：
 
@@ -110,7 +112,7 @@ DSL 的典型应用是生成程序代码或其他项目。 定义 DSL 时，可�
 
      开发人员可以使用其模型生成的代码来创建可显示给客户端的原型应用程序。
 
-## <a name="the-process-of-domain-specific-development"></a>域特定开发过程
+## <a name="the-process-of-domain-specific-development"></a>Domain-Specific 开发过程
 
 使用域特定语言的大多数软件开发团队按照以下步骤创建并使用其模型：
 

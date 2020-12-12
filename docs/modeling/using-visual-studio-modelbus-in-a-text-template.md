@@ -1,5 +1,6 @@
 ---
 title: 在文本模板中使用 ModelBus
+description: 如果您编写的文本模板读取了包含 Visual Studio ModelBus 引用的模型，则了解如何解析引用以访问目标模型。
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
@@ -7,12 +8,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 22a6c9cb035637347ffd501b5cf3b1038cd09369
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1025e7d35c20dc18c87942e23cf71b598d85637a
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85535936"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361360"
 ---
 # <a name="using-visual-studio-modelbus-in-a-text-template"></a>在文本模板中使用 Visual Studio ModelBus
 
@@ -41,7 +42,7 @@ ms.locfileid: "85535936"
 
     3. 在对话框中，选择 **"我想要向 ModelBus 公开此 DSL"**。 如果希望此 DSL 同时公开其模型并使用对其他 Dsl 的引用，则可以选择这两个选项。
 
-    4. 单击“确定”。 新项目“ModelBusAdapter”随即添加到 DSL 解决方案中。
+    4. 单击 **“确定”** 。 新项目“ModelBusAdapter”随即添加到 DSL 解决方案中。
 
     5. 单击 " **转换所有模板**"。
 
@@ -49,11 +50,11 @@ ms.locfileid: "85535936"
 
 2. 如果要从文本模板和其他代码（如 command）访问 DSL，请复制 **ModelBusAdapter** 项目：
 
-    1. 在 Windows 资源管理器中，复制并粘贴包含 **ModelBusAdapter**的文件夹。
+    1. 在 Windows 资源管理器中，复制并粘贴包含 **ModelBusAdapter** 的文件夹。
 
     2. 将项目文件重命名为 (例如， **T4ModelBusAdapter**) 。
 
-    3. 在 **解决方案资源管理器**中，右键单击解决方案节点，指向 " **添加**"，然后单击 " **现有项目**"。 找到新的适配器项目 **T4ModelBusAdapter**。
+    3. 在 **解决方案资源管理器** 中，右键单击解决方案节点，指向 " **添加**"，然后单击 " **现有项目**"。 找到新的适配器项目 **T4ModelBusAdapter**。
 
     4. 在新项目的每个 `*.tt` 文件中，更改命名空间。
 
@@ -189,7 +190,7 @@ inherits="Microsoft.VisualStudio.TextTemplating.Modeling.ModelBusEnabledTextTran
 
 ### <a name="create-a-modelbus-adapter-that-is-configured-for-text-templates"></a>创建为文本模板配置的 ModelBus 适配器
 
-1. 在文件资源管理器中，复制并粘贴包含 *ModelBusAdapter*的文件夹。
+1. 在文件资源管理器中，复制并粘贴包含 *ModelBusAdapter* 的文件夹。
 
     将文件夹命名为 **T4ModelBusAdapter**。
 
@@ -247,7 +248,7 @@ inherits="Microsoft.VisualStudio.TextTemplating.Modeling.ModelBusEnabledTextTran
 
 9. 单击 "解决方案资源管理器的标题栏中的" **转换所有模板** "。
 
-10. 按 **F5**。
+10. 按 F5 。
 
 11. 验证 DSL 是否正常工作。 在实验性项目中，打开 `Sample.provider` 。 关闭 Visual Studio 的实验实例。
 
@@ -287,7 +288,7 @@ inherits="Microsoft.VisualStudio.TextTemplating.Modeling.ModelBusEnabledTextTran
 
    1. 右键单击 "调试" 项目，指向 " **添加**"，然后单击 " **现有项**"。
 
-   2. 在 " **添加项** " 对话框中，将 "筛选器" 设置为 " **所有文件" (" \* \*) **"。
+   2. 在 " **添加项** " 对话框中，将 "筛选器" 设置为 " **所有文件" (" \* \*)**"。
 
    3. 导航到 `MBProvider\Debugging\Sample.provide` ，然后单击 " **添加**"。
 
@@ -388,7 +389,7 @@ inherits="Microsoft.VisualStudio.TextTemplating.Modeling.ModelBusEnabledTextTran
     }
     ```
 
-3. 按**Ctrl** + **F5**。
+3. 按 **Ctrl** + **F5**。
 
 4. 在 Visual Studio 的实验实例中，打开 `Debugging\Sample.consume` 。
 
@@ -396,7 +397,7 @@ inherits="Microsoft.VisualStudio.TextTemplating.Modeling.ModelBusEnabledTextTran
 
     如果已在该元素上设置了 MBR，则会打开引用的模型，并选择被引用的元素。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [使用 Visual Studio Modelbus 集成模型](../modeling/integrating-models-by-using-visual-studio-modelbus.md)
 - [代码生成和 T4 文本模板](../modeling/code-generation-and-t4-text-templates.md)

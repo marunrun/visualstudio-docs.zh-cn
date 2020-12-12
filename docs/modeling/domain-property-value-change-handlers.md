@@ -1,5 +1,7 @@
 ---
 title: 域属性值更改处理程序
+description: 了解可用于 Visual Studio 域特定语言的域属性值更改处理程序。
+ms.custom: SEO-VS-2020
 ms.date: 03/22/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2f23984d6c4723b020b361e1da30363442966ea7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 34f7dcf97498895f841f2a68fd3bc1abac224824
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75594703"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361724"
 ---
 # <a name="domain-property-value-change-handlers"></a>域属性值更改处理程序
 
@@ -22,7 +24,7 @@ ms.locfileid: "75594703"
 
 ## <a name="override-the-property-handler-methods"></a>重写属性处理程序方法
 
-域特定语言的每个域属性都由嵌入在其父域类内的类处理。 其名称遵循格式 *PropertyName*PropertyHandler。 可以在文件 **Dsl\Generated Code\DomainClasses.cs**中检查此属性处理程序类。 在该类中，在值发生更改前立即调用 `OnValueChanging()`，在值发生更改后立即调用 `OnValueChanged()`。
+域特定语言的每个域属性都由嵌入在其父域类内的类处理。 其名称遵循格式 *PropertyName* PropertyHandler。 可以在文件 **Dsl\Generated Code\DomainClasses.cs** 中检查此属性处理程序类。 在该类中，在值发生更改前立即调用 `OnValueChanging()`，在值发生更改后立即调用 `OnValueChanged()`。
 
 例如，假设你有一个名为的域类 `Comment` ，其中包含一个名为的 string 域属性 `Text` 和一个名为的整数属性 `TextLengthCount` 。 若要使 `TextLengthCount` 始终包含字符串的长度 `Text` ，可在 Dsl 项目的单独文件中编写以下代码：
 
@@ -99,7 +101,7 @@ if (newValue > 10)
 
 相反，你可以考虑将派生属性定义为计算属性。 在这种情况下，该属性不具有其自己的存储，并且将定义每当需要其值时要计算的函数。 有关详细信息，请参阅 [计算的和自定义的存储属性](../modeling/calculated-and-custom-storage-properties.md)。
 
-不是前面的示例，你可以将的 **Kind** 字段设置 `TextLengthCount` 为在 DSL 定义中进行 **计算** 。 您可以为此域属性提供自己的 **Get** 方法。 **Get**方法将返回字符串的当前长度 `Text` 。
+不是前面的示例，你可以将的 **Kind** 字段设置 `TextLengthCount` 为在 DSL 定义中进行 **计算** 。 您可以为此域属性提供自己的 **Get** 方法。 **Get** 方法将返回字符串的当前长度 `Text` 。
 
 但是，计算属性的一个潜在缺点是每当使用该值时都要计算表达式，这可能会出现性能问题。 此外，计算属性上不存在 OnValueChanging() 和 OnValueChanged()。
 
@@ -144,7 +146,7 @@ public partial class MyDomainModel
 
 ## <a name="example"></a>示例
 
-### <a name="description"></a>说明
+### <a name="description"></a>描述
 
 以下示例将重写域属性的属性处理程序，并在 `ExampleElement` 域类的属性已发生更改时通知用户。
 

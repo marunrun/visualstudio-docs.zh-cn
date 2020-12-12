@@ -1,5 +1,7 @@
 ---
 title: 使用代码图分析器查找潜在问题
+description: 了解如何在代码图上运行分析器以帮助识别可能过于复杂或者可能需要改进的代码。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dd20d3c40a4fbe80ac1578275ccd8614eb018d7a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0f31aeb933150f31f4ef9d6a3fbe695dcb5ef174
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75596588"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362179"
 ---
 # <a name="find-potential-problems-using-code-map-analyzers"></a>使用代码图分析器查找潜在问题
 
@@ -34,10 +36,10 @@ ms.locfileid: "75596588"
 
 在地图工具栏上，选择 "**布局**  >  **分析器**"，然后选择要运行的分析器：
 
-|**分析器**|**标识节点**|
+|**Analyzer**|**标识节点**|
 |-|-|
 |**循环引用分析器**|每个其他节点上也具有循环依赖项。 **注意：**  展开组时，不会在映射上显示 **泛型** 组中的循环依赖项。|
-|**查找中心分析器**|位于前 25% 个高度连接的节点当中<br /><br /> **若要隐藏代码图上的所有其他节点**<br /><br /> -打开地图的快捷菜单，选择 " **高级**"、" **选择**"、" **隐藏未选定**项"。<br />     代码图会隐藏未选定的节点，并且分析器会将新节点标识为中心。|
+|**查找中心分析器**|位于前 25% 个高度连接的节点当中<br /><br /> **若要隐藏代码图上的所有其他节点**<br /><br /> -打开地图的快捷菜单，选择 " **高级**"、" **选择**"、" **隐藏未选定** 项"。<br />     代码图会隐藏未选定的节点，并且分析器会将新节点标识为中心。|
 |**未引用的节点分析器**|不具有来自任何其他节点的引用。 **警告：**  在假定未使用代码之前，验证每种情况。 无法在代码中以静态方式找到某些依赖项，如 XAML 依赖项和运行时依赖项。|
 
 在你应用代码图分析器之后，它们将继续运行。 如果更改代码图，应用的任何分析器将自动重新处理更新的代码图。 若要停止运行分析器，请在地图工具栏上选择 "**布局**  >  **分析器**"。 关闭所选的分析器。

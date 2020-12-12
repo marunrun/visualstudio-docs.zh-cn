@@ -1,5 +1,7 @@
 ---
 title: 基于模型开发测试
+description: 了解如何使用要求模型和体系结构模型来帮助组织系统及其组件的测试。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 22c18fd457d4827d3abf3a3494ad622873eb5c7b
-ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
+ms.openlocfilehash: 1f49b52bece0c1dddc65da919d266c4f21b1bf69
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099292"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361828"
 ---
 # <a name="develop-tests-from-a-model"></a>基于模型开发测试
 可以使用要求模型和体系结构模型来帮助组织系统及其组件的测试。 这种做法有助于确保你测试了对于用户和其他利益干系人而言非常重要的要求，并可帮助你在要求发生变化时快速更新测试。 如果你使用 [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)]，还可以维护模型和测试之间的链接。
@@ -155,7 +157,7 @@ Assert (countAfter == countBefore = 1);
 
 3. 添加到测试套件（即验证模型元素中表示的需求的测试用例）。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [为你的应用程序创建模型](../modeling/create-models-for-your-app.md)
 - [建立用户需求模型](../modeling/model-user-requirements.md)

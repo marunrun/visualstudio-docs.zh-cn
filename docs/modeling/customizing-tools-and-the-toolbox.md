@@ -1,5 +1,7 @@
 ---
 title: 自定义工具和工具箱
+description: 了解如何为要使用户添加到其模型的元素定义工具箱项。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 685da1184706e106f3bdd2088b4d937e0aa7cc9f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f02254cc1229ab069277b0fe46a6b825393f682f
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85548286"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361555"
 ---
 # <a name="customizing-tools-and-the-toolbox"></a>自定义工具和工具箱
 
@@ -69,7 +71,7 @@ Editor
 
 3. 设置 " **工具箱" 图标** 属性以引用16x16 位图。
 
-     如果要定义新图标，请在 **Dsl\Resources** 文件夹的解决方案资源管理器中创建一个位图文件。 该文件应具有以下属性值：**生成操作**  =  **内容**;**复制到输出目录**  = 不**复制**。
+     如果要定义新图标，请在 **Dsl\Resources** 文件夹的解决方案资源管理器中创建一个位图文件。 该文件应具有以下属性值：**生成操作**  =  **内容**;**复制到输出目录**  = 不 **复制**。
 
 4. **对于元素工具：** 设置工具的 " **类** " 属性，以引用映射到形状的具体域类。
 
@@ -95,7 +97,7 @@ Editor
 
  以下示例取自 DSL，其中有晶体管类型。 每个晶体管具有三个命名的“终端”。 用于晶体管的元素工具将存储包含四个模型元素和三个关系链接的原型。 当用户将工具拖动到关系图上时，该原型将进行实例化并链接到模型根。
 
- 此代码将重写在 **Dsl\GeneratedCode\ToolboxHelper.cs**中定义的方法。
+ 此代码将重写在 **Dsl\GeneratedCode\ToolboxHelper.cs** 中定义的方法。
 
  有关使用程序代码自定义模型的详细信息，请参阅 [在程序代码中导航和更新模型](../modeling/navigating-and-updating-a-model-in-program-code.md)。
 
@@ -151,15 +153,15 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
  还可为连接生成器编写自定义代码，以便为连接指定源和目标类、定义要进行的连接类型，以及执行与创建连接相关联的其他操作。
 
 ### <a name="the-structure-of-connection-builders"></a>连接生成器的结构
- 连接生成器包含一个或多个链接连接指令，可指定域关系以及源和目标元素。 例如，在 "任务流" 解决方案模板中，可在**DSL 资源管理器**中查看**CommentReferencesSubjectsBuilder** 。 此连接生成器包含一个名为 **CommentReferencesSubjects**的链接连接指令，该指令映射到域关系 **CommentReferencesSubjects**。 此链接连接指令包含一个指向 `Comment` 域类的源角色指令，和一个指向 `FlowElement` 域类的目标角色指令。
+ 连接生成器包含一个或多个链接连接指令，可指定域关系以及源和目标元素。 例如，在 "任务流" 解决方案模板中，可在 **DSL 资源管理器** 中查看 **CommentReferencesSubjectsBuilder** 。 此连接生成器包含一个名为 **CommentReferencesSubjects** 的链接连接指令，该指令映射到域关系 **CommentReferencesSubjects**。 此链接连接指令包含一个指向 `Comment` 域类的源角色指令，和一个指向 `FlowElement` 域类的目标角色指令。
 
 ### <a name="using-connection-builders-to-restrict-source-and-target-roles"></a>使用连接生成器来限制源和目标角色
- 可使用连接生成器限制使某些类显示在给定域关系的源角色或目标角色中。 例如，你可能有一个与另一个域类具有域关系的基域类，但是你可能不希望该基类的所有派生类在该关系中具有相同角色。 在任务流解决方案中，有四个具体的域类 (**StartPoint**、 **EndPoint**、 **MergeBranch**和 **同步**) ，这些类直接从抽象域类 **FlowElement**继承，另外两个具体域类 (任务，以及从它间接继承 **任务** 和 **ObjectInState**) 。 还存在一个在其源角色和目标角色中采用**FlowElement**域类的**流**引用关系。 但是， **终结点** 域类的实例不应是 **flow** 关系的实例的源，也不应是 **StartPoint** 类的实例作为 **flow** 关系的实例的目标。 **FlowBuilder**连接生成器具有一个名为**Flow**的链接连接指令，该指令指定哪些域类可以 (**Task**、 **MergeBranch**、 **StartPoint**和**同步**) 中扮演源角色，并可 (**MergeBranch**、 **Endpoint**和**同步**) 播放目标角色。
+ 可使用连接生成器限制使某些类显示在给定域关系的源角色或目标角色中。 例如，你可能有一个与另一个域类具有域关系的基域类，但是你可能不希望该基类的所有派生类在该关系中具有相同角色。 在任务流解决方案中，有四个具体的域类 (**StartPoint**、 **EndPoint**、 **MergeBranch** 和 **同步**) ，这些类直接从抽象域类 **FlowElement** 继承，另外两个具体域类 (任务，以及从它间接继承 **任务** 和 **ObjectInState**) 。 还存在一个在其源角色和目标角色中采用 **FlowElement** 域类的 **流** 引用关系。 但是， **终结点** 域类的实例不应是 **flow** 关系的实例的源，也不应是 **StartPoint** 类的实例作为 **flow** 关系的实例的目标。 **FlowBuilder** 连接生成器具有一个名为 **Flow** 的链接连接指令，该指令指定哪些域类可以 (**Task**、 **MergeBranch**、 **StartPoint** 和 **同步**) 中扮演源角色，并可 (**MergeBranch**、 **Endpoint** 和 **同步**) 播放目标角色。
 
 ### <a name="connection-builders-with-multiple-link-connect-directives"></a>具有多个链接连接指令的连接生成器
  可向连接生成器添加多个链接连接指令。 这可以帮助用户隐藏用户的某些复杂的域模型，并使 **工具箱** 变得过于杂乱。 可将多种不同的域关系的链接连接指令添加到单个连接生成器。 但是，应在域关系执行大致相同的函数时合并域关系。
 
- 在任务流解决方案中， **流** 连接工具用于绘制 **流** 和 **ObjectFlow** 域关系的实例。 除了前面所述的**流**链接连接指令， **FlowBuilder**连接生成器还具有名为**ObjectFlow**的两个链接连接指令。 这些指令指定 **ObjectFlow** 关系的实例可以在 **ObjectInState** 域类的实例之间进行绘制，或在 **ObjectInState** 的实例之间 **绘制，而**不是在任务的两个实例之间绘制，而不是在 **任务**的实例或从 **任务** 的实例到 **ObjectInState**的实例之间进行绘制。 但是，可以在**任务**的两个实例之间绘制**流**关系的实例。 如果编译并运行任务流解决方案，可以看到从**ObjectInState**实例到**任务**实例的**流**将创建**ObjectFlow**的实例，但在两个**任务**实例之间绘制**流**将创建**流**的实例。
+ 在任务流解决方案中， **流** 连接工具用于绘制 **流** 和 **ObjectFlow** 域关系的实例。 除了前面所述的 **流** 链接连接指令， **FlowBuilder** 连接生成器还具有名为 **ObjectFlow** 的两个链接连接指令。 这些指令指定 **ObjectFlow** 关系的实例可以在 **ObjectInState** 域类的实例之间进行绘制，或在 **ObjectInState** 的实例之间 **绘制，而** 不是在任务的两个实例之间绘制，而不是在 **任务** 的实例或从 **任务** 的实例到 **ObjectInState** 的实例之间进行绘制。 但是，可以在 **任务** 的两个实例之间绘制 **流** 关系的实例。 如果编译并运行任务流解决方案，可以看到从 **ObjectInState** 实例到 **任务** 实例的 **流** 将创建 **ObjectFlow** 的实例，但在两个 **任务** 实例之间绘制 **流** 将创建 **流** 的实例。
 
 ### <a name="custom-code-for-connection-builders"></a>为连接生成器自定义代码
  在用户界面中有四个用于定义不同类型的连接生成器的自定义的复选框：
@@ -188,7 +190,7 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 
  ![连接生成器](../modeling/media/connectionbuilder_3.png)
 
- 因此，你可能想要指定可从嵌套组件传送到 OutPort 的连接。 若要指定此类连接，请在 " **DSL 详细信息**" 窗口中将 " **InPort** " 类型上的 "**自定义接受**" 设置为 "源角色"，并将 " **OutPort**类型" 指定为 "目标角色"，如以下
+ 因此，你可能想要指定可从嵌套组件传送到 OutPort 的连接。 若要指定此类连接，请在 " **DSL 详细信息**" 窗口中将 " **InPort** " 类型上的 "**自定义接受**" 设置为 "源角色"，并将 " **OutPort** 类型" 指定为 "目标角色"，如以下
 
  **DSL 资源管理器中的链接连接指令**
 
@@ -232,7 +234,7 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 
  您可以使用自定义代码应用 "硬" 约束，但应考虑用户是否应该能够暂时建立无效的连接。 如果他们应能够如此，你可以修改约束以使连接不进行验证，直到用户尝试保存更改。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [自定义元素创建和移动](../modeling/customizing-element-creation-and-movement.md)
 - [自定义复制行为](../modeling/customizing-copy-behavior.md)

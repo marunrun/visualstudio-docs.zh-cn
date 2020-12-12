@@ -1,5 +1,7 @@
 ---
 title: 从文本模板访问模型
+description: 了解如何使用文本模板来创建基于域特定语言模型的报表文件、源代码文件和其他文本文件。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,19 +11,19 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a66f160d25ccacbdaaaf2238dfc738ade4a4200f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 64d937f9a63207e16664bbd9254ae60470caeb41
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85531464"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362283"
 ---
 # <a name="access-models-from-text-templates"></a>从文本模板访问模型
 
 通过使用文本模板，你可以创建基于域特定语言模型的报表文件、源代码文件和其他文本文件。 有关文本模板的基本信息，请参阅 [代码生成和 T4 文本模板](../modeling/code-generation-and-t4-text-templates.md)。 调试 DSL 时，文本模板将在实验模式下工作，并且还可在已部署 DSL 的计算机上运行。
 
 > [!NOTE]
-> 创建 DSL 解决方案时，将在调试项目中生成示例文本模板** \* tt**文件。 更改域类的名称时，这些模板将不再工作。 尽管如此，它们包括你需要的基本指令，并提供可进行更新以匹配 DSL 的示例。
+> 创建 DSL 解决方案时，将在调试项目中生成示例文本模板 **\* tt** 文件。 更改域类的名称时，这些模板将不再工作。 尽管如此，它们包括你需要的基本指令，并提供可进行更新以匹配 DSL 的示例。
 
  从文本模板访问模型：
 
@@ -72,7 +74,7 @@ Here is a list of elements in the model:
 <#@ MyLanguage processor="MyLanguageDirectiveProcessor" requires="fileName='Sample.myDsl1'" #>
 ```
 
- 指令 ( 的名称 `MyLanguage` ，在此示例中) 派生自 DSL 的名称。 它调用作为 DSL 的一部分生成的 *指令处理器* 。 可以在 **Dsl\GeneratedCode\DirectiveProcessor.cs**中找到它的源代码。
+ 指令 ( 的名称 `MyLanguage` ，在此示例中) 派生自 DSL 的名称。 它调用作为 DSL 的一部分生成的 *指令处理器* 。 可以在 **Dsl\GeneratedCode\DirectiveProcessor.cs** 中找到它的源代码。
 
  DSL 指令处理器执行两个主要任务：
 

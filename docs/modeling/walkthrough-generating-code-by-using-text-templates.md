@@ -1,5 +1,7 @@
 ---
 title: 演练：使用文本模板生成代码
+description: 了解代码生成允许生成强类型化的程序代码，但在源模型发生更改时，可以轻松地对其进行更改。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 181c1ccbeaff0aadee1b3d5ebd255b854b915277
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a39630f8a12ad2c1d7d2bc89f6830fc694e89087
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85532055"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97360983"
 ---
 # <a name="walkthrough-generate-code-by-using-text-templates"></a>演练：使用文本模板生成代码
 
@@ -85,7 +87,7 @@ foreach (XmlNode artist in catalog.SelectNodes("artist"))
 
 1. 在 " **文件** " 菜单上，单击 " **新建** "，然后单击 " **项目**"。
 
-2. 单击“” **** 节点，然后在“模板” **** 窗格中，单击“控制台应用程序” ****
+2. 单击“”  节点，然后在“模板”  窗格中，单击“控制台应用程序” 
 
 ### <a name="add-a-prototype-xml-file-to-the-project"></a>将原型 XML 文件添加到项目
 
@@ -93,9 +95,9 @@ foreach (XmlNode artist in catalog.SelectNodes("artist"))
 
 该文件应为项目的一部分，以便模板进行读取，但不会将其内置于已编译的应用程序中。
 
-1. 在 **解决方案资源管理器**中，右键单击项目，单击 " **添加** "，然后单击 " **新建项**"。
+1. 在 **解决方案资源管理器** 中，右键单击项目，单击 " **添加** "，然后单击 " **新建项**"。
 
-2. 在“添加新项” **** 对话框，从“模板” **** 窗格选择“XML 文件” **** 。
+2. 在“添加新项”  对话框，从“模板”  窗格选择“XML 文件”  。
 
 3. 将示例内容添加到该文件。
 
@@ -131,9 +133,9 @@ namespace MyProject
 
 添加文本模板文件，并将输出扩展名设置为 *.cs*。
 
-1. 在“解决方案资源管理器” **** 中，右键单击项目，单击“添加” ****，然后单击“新项” ****。
+1. 在“解决方案资源管理器” 中，右键单击项目，单击“添加” ，然后单击“新项” 。
 
-2. 在“添加新项” **** 对话框中，从“模板” **** 窗格选择“文本模板” **** 。
+2. 在“添加新项”  对话框中，从“模板”  窗格选择“文本模板”  。
 
     > [!NOTE]
     > 确保添加的是文本模板，而不是预处理文本模板。
@@ -412,7 +414,7 @@ namespace MyProject
 
 本演练演示了代码生成的几种方法及其优势：
 
-- *代码生成* 是指从 *模型*创建应用程序的部分源代码。 模型包含以适合应用程序域的方式呈现的信息，并可能在应用程序的生存期内发生更改。
+- *代码生成* 是指从 *模型* 创建应用程序的部分源代码。 模型包含以适合应用程序域的方式呈现的信息，并可能在应用程序的生存期内发生更改。
 
 - 强类型化是代码生成的一个优点。 模型以更适合用户的方式呈现信息，而生成的代码允许应用程序的其他部分能够使用一组类型来处理信息。
 
@@ -426,9 +428,9 @@ namespace MyProject
 
 ## <a name="troubleshoot-the-text-template"></a>排查文本模板问题
 
-若在“错误列表”**** 中看到模板转换或编译错误，或者若未正确生成输出文件，可以借助[使用 TextTransform 实用工具生成文件](../modeling/generating-files-with-the-texttransform-utility.md)中所述的技术解决文本模板的问题。
+若在“错误列表”中看到模板转换或编译错误，或者若未正确生成输出文件，可以借助[使用 TextTransform 实用工具生成文件](../modeling/generating-files-with-the-texttransform-utility.md)中所述的技术解决文本模板的问题。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [使用 T4 文本模板生成设计时代码](../modeling/design-time-code-generation-by-using-t4-text-templates.md)
 - [编写 T4 文本模板](../modeling/writing-a-t4-text-template.md)

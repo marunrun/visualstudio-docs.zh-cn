@@ -1,5 +1,7 @@
 ---
 title: 在 VS 扩展中调用文本转换
+description: 了解如何使用文本模板化服务转换文本模板。 还了解如何获取 STextTemplating 服务并将其强制转换为 ITextTemplating。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ab846d1d7121d0c36c4187d937330d2ade52eb1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 40e781e08bba5e01b5e453e4545b5dd19e5a4d16
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75594586"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97360866"
 ---
 # <a name="invoke-text-transformation-in-a-visual-studio-extension"></a>在 Visual Studio 扩展中调用文本转换
 
@@ -138,7 +140,7 @@ Sample text.
 
 ## <a name="related-articles"></a>相关文章
 
-若要从预处理文本模板生成文本，请调用 `TransformText()` 生成的类的方法。 有关详细信息，请参阅 [带有 T4 文本模板的运行时文本生成](../modeling/run-time-text-generation-with-t4-text-templates.md)。
+若要从预处理文本模板生成文本，请调用 `TransformText()` 生成的类的方法。 有关详细信息，请参阅[使用 T4 文本模板的运行时文本生成](../modeling/run-time-text-generation-with-t4-text-templates.md)。
 
 若要在 Visual Studio 扩展外生成文本，请执行以下操作：定义自定义主机。 有关详细信息，请参阅 [使用自定义宿主处理文本模板](../modeling/processing-text-templates-by-using-a-custom-host.md)。
 

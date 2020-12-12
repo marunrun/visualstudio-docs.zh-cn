@@ -1,5 +1,7 @@
 ---
 title: 了解 DSL 代码
+description: 了解 Domain-Specific 语言 (DSL) 解决方案如何生成可用于在 Visual Studio 中读取和更新 DSL 实例的 API。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,16 +11,16 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1196faa5831ae44a93f21ab1808915357690a0ac
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cd739a7780a2a2c858efc14aa72205e9be161900
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75565937"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361451"
 ---
 # <a name="understanding-the-dsl-code"></a>了解 DSL 代码
 
-域特定语言 (DSL) 解决方案生成一个 API，可用于读取和更新 Visual Studio 中 DSL 的实例。 此 API 将定义在从 DSL 定义生成的代码中。 本主题介绍了生成的 API。
+Domain-Specific 语言 (DSL) 解决方案生成一个 API，可用于读取和更新 Visual Studio 中 DSL 的实例。 此 API 将定义在从 DSL 定义生成的代码中。 本主题介绍了生成的 API。
 
 ## <a name="the-example-solution-component-diagrams"></a>示例解决方案：组件图
 
@@ -32,14 +34,14 @@ ms.locfileid: "75565937"
 ![组件及相互连接的端口](../modeling/media/componentsample.png)
 
 ## <a name="the-structure-of-the-dsl-solution"></a>DSL 解决方案的结构
- **Dsl**项目为 DSL 定义 API。 **DslPackage**项目定义它如何与 Visual Studio 集成。 还可添加你自己的项目，这些项目还可包含从模型生成的代码。
+ **Dsl** 项目为 DSL 定义 API。 **DslPackage** 项目定义它如何与 Visual Studio 集成。 还可添加你自己的项目，这些项目还可包含从模型生成的代码。
 
 ### <a name="the-code-directories"></a>代码指令
- 其中每个项目中的大部分代码都是从 **Dsl\DslDefinition.dsl**生成的。 生成的代码在生成的 **代码** 文件夹中。 若要查看生成的文件，请单击生成**tt**文件旁边的 **[+]** 。
+ 其中每个项目中的大部分代码都是从 **Dsl\DslDefinition.dsl** 生成的。 生成的代码在生成的 **代码** 文件夹中。 若要查看生成的文件，请单击生成 **tt** 文件旁边的 **[+]** 。
 
  建议你检查生成的代码以帮助你了解 DSL。 若要查看生成的文件，请在“解决方案资源管理器”中展开 *.tt 文件。
 
- \*Tt 文件包含非常少的生成代码。 相反，它们使用 `<#include>` 指令来包括共享的模板文件。 共享文件可在**\Program Files\Microsoft Visual Studio 10.0 \ COMMON7\IDE\EXTENSIONS\MICROSOFT\DSL SDK\DSL Designer\11.0\TextTemplates**中找到。
+ \*Tt 文件包含非常少的生成代码。 相反，它们使用 `<#include>` 指令来包括共享的模板文件。 共享文件可在 **\Program Files\Microsoft Visual Studio 10.0 \ COMMON7\IDE\EXTENSIONS\MICROSOFT\DSL SDK\DSL Designer\11.0\TextTemplates** 中找到。
 
  在将你自己的程序代码添加到 DSL 解决方案时，请将它添加在“生成的代码”文件夹之外的单独文件中。 你可能需要创建一个 **自定义代码** 文件夹。 （在向自定义文件夹添加新代码文件时，请记住在初始代码主干中更正命名空间。）
 
@@ -66,11 +68,11 @@ ms.locfileid: "75565937"
 
  `ConnectionBuilders.cs`
 
- 连接生成器是用于创建关系的类。 它是位于连接工具后面的代码。 此文件包含一对用于每个连接工具的类。 它们的名称派生自域关系和连接工具的名称： *关系*生成器和 *ConnectorTool*ConnectAction。
+ 连接生成器是用于创建关系的类。 它是位于连接工具后面的代码。 此文件包含一对用于每个连接工具的类。 它们的名称派生自域关系和连接工具的名称： *关系* 生成器和 *ConnectorTool* ConnectAction。
 
  （在组件解决方案示例中，其中一个连接生成器称为 ConnectionBuilder，这是一个巧合，因为域关系名为 Connection。）
 
- 关系是在*关系*方法中创建的 `Builder.Connect()` 。 默认版本将验证源和目标模型元素是否为可接受，然后实例化该关系。 例如：
+ 关系是在 *关系* 方法中创建的 `Builder.Connect()` 。 默认版本将验证源和目标模型元素是否为可接受，然后实例化该关系。 例如：
 
  `CommentReferencesSubject(sourceAccepted, targetAccepted);`
 
@@ -102,7 +104,7 @@ ms.locfileid: "75565937"
 
  此指令处理器可帮助用户编写读取 DSL 实例的文本模板。 该指令处理器将加载用于 DSL 的程序集 (DLL)，并为命名空间有效地插入 `using` 语句。 这将允许文本模板中的代码使用已在 DSL 中定义的类和关系。
 
- 有关详细信息，请参阅 [从域特定语言生成代码](../modeling/generating-code-from-a-domain-specific-language.md) 和 [创建自定义 T4 文本模板指令处理器](../modeling/creating-custom-t4-text-template-directive-processors.md)。
+ 有关详细信息，请参阅 [从 Domain-Specific 语言生成代码](../modeling/generating-code-from-a-domain-specific-language.md) 和 [创建自定义 T4 文本模板指令处理器](../modeling/creating-custom-t4-text-template-directive-processors.md)。
 
  `DomainClasses.cs`
 
@@ -153,7 +155,7 @@ ms.locfileid: "75565937"
 
  在你在其中指定重数为 1..1 或 1..* 的关系角色中，应警告用户至少需要一个关系实例。 此文件提供实现这些警告的验证约束。 指向嵌入父级的 1..1 链接未进行验证。
 
- 若要执行这些约束，你必须已在 DSL 资源管理器的**编辑器 \ 验证**节点中设置 "**使用 ...** " 选项之一。 有关详细信息，请参阅 [以域特定语言进行验证](../modeling/validation-in-a-domain-specific-language.md)。
+ 若要执行这些约束，你必须已在 DSL 资源管理器的 **编辑器 \ 验证** 节点中设置 "**使用 ...** " 选项之一。 有关详细信息，请参阅 [Domain-Specific 语言的验证](../modeling/validation-in-a-domain-specific-language.md)。
 
  `PropertiesGrid.cs`
 
@@ -344,9 +346,9 @@ explorerWindow.TreeContainer.ObjectModelBrowser.SelectedNode = treeNode;
 
  此文件控制将 DSL 打包到 Visual Studio 集成扩展 (VSIX) 中的方式。 有关详细信息，请参阅[部署域特定语言解决方案](msi-and-vsix-deployment-of-a-dsl.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何定义域特定语言](../modeling/how-to-define-a-domain-specific-language.md)
 - [了解模型、类和关系](../modeling/understanding-models-classes-and-relationships.md)
 - [自定义和扩展域特定语言](../modeling/customizing-and-extending-a-domain-specific-language.md)
-- [编写代码以自定义域特定语言](../modeling/writing-code-to-customise-a-domain-specific-language.md)
+- [编写代码以自定义 Domain-Specific 语言](../modeling/writing-code-to-customise-a-domain-specific-language.md)

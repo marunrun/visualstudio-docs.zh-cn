@@ -1,5 +1,7 @@
 ---
 title: 演练：创建自定义指令处理器
+description: 了解如何使用 Visual Studio 编写自定义指令处理器来自定义文本模板。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,16 +15,16 @@ ms.workload:
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 4efe12b9871dc07bd7427e1567973701d3c6c527
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: efe32db6f8d5aadb815d845bdc9f06be36ec06c9
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85532231"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361880"
 ---
 # <a name="walkthrough-create-a-custom-directive-processor"></a>演练：创建自定义指令处理器
 
-*指令处理器* 通过将代码添加到 *生成的转换类*来发挥作用。 如果从*文本模板*调用*指令*，则在文本模板中编写的其余代码都可以依赖于指令提供的功能。
+*指令处理器* 通过将代码添加到 *生成的转换类* 来发挥作用。 如果从 *文本模板* 调用 *指令*，则在文本模板中编写的其余代码都可以依赖于指令提供的功能。
 
 您可以编写自己的自定义指令处理器。 利用它可以自定义文本模板。 若要创建自定义指令处理器，需要创建一个从 <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> 或 <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor> 继承的类。
 
@@ -607,7 +609,7 @@ End Property
 
 ### <a name="build-the-project"></a>生成项目
 
-生成项目。 在“生成”菜单中，单击“生成解决方案”。
+生成项目。 在 **“生成”** 菜单上，单击 **“生成解决方案”** 。
 
 ## <a name="register-the-directive-processor"></a>注册指令处理器
 
@@ -637,9 +639,9 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\*.0\TextTemplatin
 
 1. `regedit`使用 "开始" 菜单或命令行运行该命令。
 
-2. 浏览到位置**HKEY_LOCAL_MACHINE \software\microsoft\visualstudio \\ \* .0 \ TextTemplating\DirectiveProcessors**，并单击该节点。
+2. 浏览到位置 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\ \* .0 \ TextTemplating\DirectiveProcessors**，然后单击该节点。
 
-   在64位系统上，使用**HKEY_LOCAL_MACHINE \software\wow6432node\microsoft\visualstudio \\ \* \ TextTemplating\DirectiveProcessors**
+   在64位系统上，使用 **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\\ \* \ TextTemplating\DirectiveProcessors**
 
 3. 添加名为 CustomDirectiveProcessor 的新项。
 
@@ -668,7 +670,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\*.0\TextTemplatin
    | 类 | REG_SZ | CustomDP.CustomDirectiveProcessor |
    | 程序集 | REG_SZ | CustomDP.dll |
 
-6. 重启 Visual Studio。
+6. 重新启动 Visual Studio。
 
 ## <a name="test-the-directive-processor"></a>测试指令处理器
 
@@ -830,11 +832,11 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\*.0\TextTemplatin
 
 ### <a name="to-test-the-directive-processor"></a>测试指令处理器
 
-1. 在 **解决方案资源管理器**中，右键单击 TestDP.tt，然后单击 " **运行自定义工具**"。
+1. 在 **解决方案资源管理器** 中，右键单击 TestDP.tt，然后单击 " **运行自定义工具**"。
 
    对于 Visual Basic 用户，默认情况下 TestDP.txt 可能不会出现在 **解决方案资源管理器** 中。 若要显示分配给项目的所有文件，请打开 " **项目** " 菜单，然后单击 " **显示所有文件**"。
 
-2. 在 **解决方案资源管理器**中，展开 "TestDP.txt" 节点，然后双击 "TestDP.txt" 以在编辑器中将其打开。
+2. 在 **解决方案资源管理器** 中，展开 "TestDP.txt" 节点，然后双击 "TestDP.txt" 以在编辑器中将其打开。
 
     此时将显示生成的文本输出。 输出应如下所示：
 
@@ -961,6 +963,6 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\*.0\TextTemplatin
 
 2. 在 " **文件** " 菜单上，单击 " **保存 TestDP.txt**。
 
-3. 若要在浏览器中查看输出，请在 **解决方案资源管理器**中右键单击 TestDP.htm，然后单击 " **在浏览器中查看**"。
+3. 若要在浏览器中查看输出，请在 **解决方案资源管理器** 中右键单击 TestDP.htm，然后单击 " **在浏览器中查看**"。
 
    输出应与原始文本相同，只不过它应用了 HTML 格式。 每个项名称都以粗体显示。

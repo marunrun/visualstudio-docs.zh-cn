@@ -1,5 +1,7 @@
 ---
 title: 为 &apos; 应用程序建模
+description: 了解如何在 Visual Studio 中创建模型，作为对软件系统或应用程序的总体结构和行为的说明。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 449f528264f2101a45bc809a5002ce4e88659d05
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c284532a1e7f6407ebea987873665edb4e940019
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88711724"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361022"
 ---
 # <a name="model-your-app39s-architecture"></a>为应用建模&#39;的体系结构
 若要帮助确保软件系统或应用程序满足用户的需求，你可以在 Visual Studio 中创建模型，将其作为软件系统或应用程序的整体结构和行为的说明的一部分。 使用模型，也可以描述在整个设计中使用的模式。 这些模型可你帮助了解现有的体系结构、讨论更改和清楚地传达你的意图。

@@ -1,5 +1,7 @@
 ---
 title: 将跟踪属性添加到 DSL 定义
+description: 了解 "跟踪域" 属性以及如何向域模型中添加跟踪属性。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bfa6c63d9f43c465e5632d40281c1f48fb9d0f0b
-ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
+ms.openlocfilehash: 6709ede3de16a78e0042d035a87a715b9ce4c80c
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91830719"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361204"
 ---
 # <a name="add-a-tracking-property-to-a-domain-specific-language-definition"></a>向域特定语言定义中添加跟踪属性
 
@@ -24,7 +26,7 @@ ms.locfileid: "91830719"
 
 " *跟踪域* " 属性是一个属性，用户可以更新该属性，但该属性有一个默认值，该默认值是使用其他域属性或元素的值计算的。
 
-例如，在特定于域的语言工具 (DSL 工具 ") 中，域类的" 显示名称 "属性的默认值是使用域类的名称计算的，但用户可以在设计时更改值或将其重置为计算的值。
+例如，在 Domain-Specific 语言工具 " (DSL 工具") 中，域类的 "显示名称" 属性的默认值是使用域类的名称计算的，但用户可以在设计时更改值或将其重置为计算的值。
 
 在本演练中，您将创建一个 (DSL) 的域特定语言，该语言具有一个基于该模型的默认命名空间属性的默认值的命名空间跟踪属性。 有关跟踪属性的详细信息，请参阅 [定义跟踪属性](/previous-versions/cc825929(v=vs.100))。
 
@@ -36,7 +38,7 @@ ms.locfileid: "91830719"
 
 - 在按用户状态更新时，跟踪属性的值将保留用户上次设置属性的值。
 
-- 在 " **属性** " 窗口中，仅当属性处于 "按用户状态更新" 时，才会启用 "跟踪属性" 的 " **重置** " 命令。 **Reset**命令将跟踪属性状态设置为 "跟踪"。
+- 在 " **属性** " 窗口中，仅当属性处于 "按用户状态更新" 时，才会启用 "跟踪属性" 的 " **重置** " 命令。 **Reset** 命令将跟踪属性状态设置为 "跟踪"。
 
 - 在 " **属性** " 窗口中，当跟踪属性处于跟踪状态时，其值显示为常规字体。
 
@@ -54,9 +56,9 @@ ms.locfileid: "91830719"
 
 ## <a name="create-the-project"></a>创建项目
 
-1. 创建特定于域的语言设计器项目。 将它命名为 `TrackingPropertyDSL`。
+1. 创建 Domain-Specific 语言设计器项目。 将其命名为 `TrackingPropertyDSL`。
 
-2. 在 **特定于域的语言设计器向导**中，设置以下选项：
+2. 在 **特定于域的语言设计器向导** 中，设置以下选项：
 
     1. 选择 **MinimalLanguage** 模板。
 
@@ -105,11 +107,11 @@ ms.locfileid: "91830719"
 
 4. 对于 **ExampleElement** 域类，添加一个名为的域属性 `IsNamespaceTracking` 。
 
-     在新属性的 "**属性**" 窗口中，将 "可**浏览**" 设置为 " **False**"，将 "**默认值**" 设置为 `true` ，并将 "**类型**" 设置为**Boolean**
+     在新属性的 "**属性**" 窗口中，将 "可 **浏览**" 设置为 " **False**"，将 "**默认值**" 设置为 `true` ，并将 "**类型**" 设置为 **Boolean**
 
 ### <a name="to-update-the-diagram-elements-and-dsl-details"></a>更新关系图元素和 DSL 详细信息
 
-1. 在 DSL 设计器中，右键单击 **ExampleShape** 几何形状，指向 " **添加**"，然后单击 " **文本修饰**器"。
+1. 在 DSL 设计器中，右键单击 **ExampleShape** 几何形状，指向 " **添加**"，然后单击 " **文本修饰** 器"。
 
     1. 命名新的文本修饰器 `NamespaceDecorator` 。
 
@@ -123,7 +125,7 @@ ms.locfileid: "91830719"
 
 3. 在 " **DSL 资源管理器**" 中，展开 " **域类** " 文件夹，右键单击 " **ExampleElement** " 节点，然后单击 " **添加新的域类型描述符**"。
 
-    1. 展开 " **ExampleElement** " 节点，然后选择 " **自定义类型描述符 (域类型描述符) ** " 节点。
+    1. 展开 " **ExampleElement** " 节点，然后选择 " **自定义类型描述符 (域类型描述符)** " 节点。
 
     2. 在域类型描述符的 " **属性** " 窗口中，将 " **自定义编码** " 设置为 " **True**"。
 
@@ -145,7 +147,7 @@ ms.locfileid: "91830719"
 
 您必须提供代码来维护跟踪属性的值和状态。 为了帮助你将自定义代码与生成的代码区分开来，并避免文件命名冲突，请将你的自定义代码文件放在单独的子文件夹中。
 
-1. 在 **解决方案资源管理器**中，右键单击 **DSL** 项目，指向 " **添加**"，然后单击 " **新建文件夹**"。 将新文件夹命名为 `CustomCode` 。
+1. 在 **解决方案资源管理器** 中，右键单击 **DSL** 项目，指向 " **添加**"，然后单击 " **新建文件夹**"。 将新文件夹命名为 `CustomCode` 。
 
 2. 右键单击新的 " **CustomCode** " 文件夹，指向 " **添加**"，然后单击 " **新建项**"。
 
@@ -722,7 +724,7 @@ ms.locfileid: "91830719"
 
     的实验性生成 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] 将打开包含空测试文件的 **调试** 解决方案。
 
-3. 在 **解决方案资源管理器**中，双击 trackingPropertyDsl 文件以在设计器中将其打开，然后单击设计图面。
+3. 在 **解决方案资源管理器** 中，双击 trackingPropertyDsl 文件以在设计器中将其打开，然后单击设计图面。
 
     请注意，在关系图的 " **属性** " 窗口中，" **默认命名空间** " 属性为 " **DefaultNamespace**"，" **自定义元素** " 属性为 **0/0**。
 
@@ -736,7 +738,7 @@ ms.locfileid: "91830719"
 
     将属性的值更改为 **DefaultNamespace**，并以常规字体显示值。
 
-    再次右键单击 **元素命名空间** 。 **重置**命令现已禁用，因为属性当前处于其跟踪状态。
+    再次右键单击 **元素命名空间** 。 **重置** 命令现已禁用，因为属性当前处于其跟踪状态。
 
 7. 将另一个 **ExampleElement** 从 **工具箱** 拖到关系图图面，并将其 **元素命名空间** 更改为 **OtherNamespace**。
 
@@ -746,7 +748,7 @@ ms.locfileid: "91830719"
 
 9. 将关系图的 **默认命名空间** 从 **DefaultNamespace** 更改为 **NewNamespace**。
 
-     第一个元素的 **命名空间** 跟踪 **默认命名空间** 属性，而第二个元素的 **命名** 空间保留其用户更新的 **OtherNamespace**值。
+     第一个元素的 **命名空间** 跟踪 **默认命名空间** 属性，而第二个元素的 **命名** 空间保留其用户更新的 **OtherNamespace** 值。
 
 10. 保存解决方案，然后关闭实验性生成。
 

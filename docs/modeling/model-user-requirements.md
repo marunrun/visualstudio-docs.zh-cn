@@ -1,5 +1,7 @@
 ---
 title: 建立用户需求模型
+description: 了解 Visual Studio 如何帮助你了解、讨论和传达用户的需求，方法是绘制有关活动的关系图。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0c09e45250ad95d50d5d2cd0ca2753a70bb95748
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 40418b2d188ac5482a12dd4ffdddd221bf5d2f97
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75590236"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361958"
 ---
 # <a name="model-user-requirements"></a>建立用户需求模型
 
@@ -96,7 +98,7 @@ ms.locfileid: "75590236"
 
 有关如何开发符合服务质量要求的代码，请参阅为 [应用程序的体系结构建模](../modeling/model-your-app-s-architecture.md) 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [在你的开发过程中使用模型](../modeling/use-models-in-your-development-process.md)
 - [应用体系结构建模](../modeling/model-your-app-s-architecture.md)

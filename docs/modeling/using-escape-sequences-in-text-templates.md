@@ -1,5 +1,7 @@
 ---
 title: 在文本模板中使用转义序列
+description: '了解如何在文本模板中使用转义序列来生成文本模板标记并仅在 c # 代码中转义控制字符和引号。'
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 83e6e5cf163037077d0517e5f7ea460f9124f27c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8b007a9b5ccf41a27cda7d9833064eb60394c4dc
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75594040"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361321"
 ---
 # <a name="use-escape-sequences-in-text-templates"></a>在文本模板中使用转义序列
 
@@ -36,6 +38,6 @@ ms.locfileid: "75594040"
 
 - 如果转义 (\\) 字符出现在除在 c) # 中转义控制字符或引用 (引号以外的任何其他序列中的其他任何位置，则将直接输出该字符。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [如何：使用转义序列基于模板生成模板](../modeling/how-to-generate-templates-from-templates-by-using-escape-sequences.md)

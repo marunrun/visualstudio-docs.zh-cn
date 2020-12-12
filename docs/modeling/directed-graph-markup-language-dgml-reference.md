@@ -1,5 +1,7 @@
 ---
 title: 定向图形标记语言 (DGML) 引用
+description: 了解定向图形标记语言 (DGML) 描述用于可视化的信息以及执行复杂性分析。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6bef53e9288f04c9ed7fce6ff7e5ddd69020798f
-ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
+ms.openlocfilehash: 0812cee6555ecc576f7fb78f3069a0ae69f5a16c
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099279"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361789"
 ---
 # <a name="directed-graph-markup-language-dgml-reference"></a>定向图形标记语言 (DGML) 引用
 
@@ -43,7 +45,7 @@ ms.locfileid: "92099279"
 
    `NeighborhoodDistance` -当映射设置为树布局或快速群集布局时，仅显示与所选节点 (1-7) 链接的指定编号的节点。 请参阅 [更改地图布局](../modeling/browse-and-rearrange-code-maps.md#Selecting)。
 
-   例如：
+   示例：
 
   ```xml
   <?xml version="1.0" encoding="utf-8"?>
@@ -70,7 +72,7 @@ ms.locfileid: "92099279"
   > [!NOTE]
   > 在 `<Link/>` 元素中引用未定义的节点时，代码图会自动创建 `<Node/>` 元素。
 
-   例如：
+   示例：
 
   ```xml
   <?xml version="1.0" encoding="utf-8"?>
@@ -108,7 +110,7 @@ ms.locfileid: "92099279"
 
    `Reference` - 将此特性设置为链接到文档或 URL。 请参阅 [将文档或 Url 链接到代码元素和链接](../modeling/customize-code-maps-by-editing-the-dgml-files.md#AddReferences)。
 
-   例如：
+   示例：
 
   ```xml
   <?xml version="1.0" encoding="utf-8"?>
@@ -133,7 +135,7 @@ ms.locfileid: "92099279"
 
    此元素包含 `<Link>` 元素的列表，这些元素可定义两个节点之间的链接。 有关更多信息，请参见 `<Link/>` 元素。
 
-   例如：
+   示例：
 
   ```xml
   <?xml version="1.0" encoding="utf-8"?>
@@ -167,7 +169,7 @@ ms.locfileid: "92099279"
 
    `Property` -用于标识具有相同属性值的元素的属性的名称。 有关更多信息，请参见 `<Property/>` 元素。
 
-   例如：
+   示例：
 
   ```xml
   <?xml version="1.0" encoding="utf-8"?>
@@ -191,7 +193,7 @@ ms.locfileid: "92099279"
 
    此元素包含 `<Category/>` 元素的列表。 有关更多信息，请参见 `<Category/>` 元素。
 
-   例如：
+   示例：
 
   ```xml
   <?xml version="1.0" encoding="utf-8"?>
@@ -220,7 +222,7 @@ ms.locfileid: "92099279"
 
    类别还提供一些基本模板行为，这些行为用于控制节点和链接在代码图上显示的外观。 请参阅 [Customize code maps by editing the DGML files](../modeling/customize-code-maps-by-editing-the-dgml-files.md)。
 
-   例如：
+   示例：
 
   ```xml
   <?xml version="1.0" encoding="utf-8"?>
@@ -248,7 +250,7 @@ ms.locfileid: "92099279"
 
    此元素包含 `<Property/>` 元素的列表。 有关更多信息，请参见 `<Property/>` 元素。
 
-   例如：
+   示例：
 
   ```xml
   <?xml version="1.0" encoding="utf-8"?>
@@ -273,7 +275,7 @@ ms.locfileid: "92099279"
 
     请参阅向 [代码元素和链接分配类别](../modeling/customize-code-maps-by-editing-the-dgml-files.md#AssignCategories)。
 
-    例如：
+    示例：
 
   ```xml
   <?xml version="1.0" encoding="utf-8"?>

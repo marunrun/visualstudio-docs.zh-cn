@@ -1,5 +1,7 @@
 ---
 title: 重写和扩展生成的类
+description: 了解 DSL 定义是什么平台，你可以在该平台上构建一组基于域特定语言的强大工具。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c3374f67f4fba11543e3dbbca47fef621dd2e714
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c1b36a7524530df7f9a18ce9abe1de2d430156d6
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75595886"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362088"
 ---
 # <a name="override-and-extend-the-generated-classes"></a>重写和扩展生成的类
 
@@ -46,7 +48,7 @@ public partial class Book
 
 若要发现可以重写的方法，请在类中键入 **override** ，后跟一个空格。 IntelliSense 工具提示将告诉您哪些方法可以重写。
 
-### <a name="double-derived-classes"></a>双派生类
+### <a name="double-derived-classes"></a>Double-Derived 类
 
 生成的类中的大多数方法都继承自建模命名空间中的一组固定的类。 但是，某些方法是在生成的代码中定义的。 通常，这意味着你不能重写它们;在一个分部类中，不能重写在同一类的另一个分部定义中定义的方法。
 

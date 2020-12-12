@@ -1,5 +1,7 @@
 ---
 title: 在程序代码中导航和更新模型
+description: 了解如何编写代码以创建和删除模型元素、设置其属性以及创建和删除元素之间的链接。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 521ad703b92133f56d38e061123bf13db13d6375
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fb7c78351ccd03247d458ca403c81d379ec18d29
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75566171"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362205"
 ---
 # <a name="navigate-and-update-a-model-in-program-code"></a>在程序代码中导航和更新模型
 
@@ -55,7 +57,7 @@ ms.locfileid: "75566171"
 
  `henry.Name = "Henry VIII";`
 
- 如果在 DSL 定义中**计算**属性**类型**，则不能对其进行设置。 有关详细信息，请参阅 [计算的和自定义的存储属性](../modeling/calculated-and-custom-storage-properties.md)。
+ 如果在 DSL 定义中 **计算** 属性 **类型**，则不能对其进行设置。 有关详细信息，请参阅 [计算的和自定义的存储属性](../modeling/calculated-and-custom-storage-properties.md)。
 
 ### <a name="relationships"></a>关系
  在 DSL 定义中定义的域关系将成为属性对，每个属性在关系的每个端点上都有一个。 属性的名称将在 Dsldefinition.dsl 关系图中显示为关系的每一侧角色上的标签。 根据角色的重数，属性的类型可以是关系的另一端的类，也可以是该类的集合。
@@ -288,7 +290,7 @@ using (Transaction t =
 ## <a name="locks"></a><a name="locks"></a> 住
  您所做的更改可能会受到锁定的阻止。 可以在单个元素、分区和存储区上设置锁。 如果这些级别中有任何一个锁锁定了您要进行的更改类型，则在您尝试时可能会引发异常。 可以通过使用元素来发现是否设置了锁。GetLocks ( # A1，它是在命名空间中定义的扩展方法 <xref:Microsoft.VisualStudio.Modeling.Immutability> 。
 
- 有关详细信息，请参阅 [定义锁定策略以创建只读段](../modeling/defining-a-locking-policy-to-create-read-only-segments.md)。
+ 有关详细信息，请参阅 [定义锁定策略以创建 Read-Only 段](../modeling/defining-a-locking-policy-to-create-read-only-segments.md)。
 
 ## <a name="copy-and-paste"></a><a name="copy"></a> 复制和粘贴
  可以将元素或元素组复制到 <xref:System.Windows.Forms.IDataObject> ：
@@ -381,7 +383,7 @@ FamilyTreeDiagram diagram =
 
  `connector.FromShape, connector.ToShape`
 
- 许多形状是复合的;它们由一个父形状和一个或多个子级层构成。 相对于另一个形状定位的形状*称为其子级。* 父形状移动时，子元素将随之移动。
+ 许多形状是复合的;它们由一个父形状和一个或多个子级层构成。 相对于另一个形状定位的形状 *称为其子级。* 父形状移动时，子元素将随之移动。
 
  *相对子级* 可以出现在父形状的边界框的外部。 *嵌套* 子级严格显示在父级的边界内。
 

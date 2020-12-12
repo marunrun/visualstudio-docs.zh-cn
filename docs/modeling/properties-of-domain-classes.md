@@ -1,5 +1,7 @@
 ---
 title: 域类的属性
+description: 了解域类的各种属性，例如访问修饰符、自定义属性和生成双精度派生。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -9,17 +11,17 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b3ff1ece9e57239b49c5dcbef5091a14d8b0fa5
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: fd36973a9c355dcaec32b6da4149e6efd88282da
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810023"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97360788"
 ---
 # <a name="properties-of-domain-classes"></a>域类的属性
-域类具有下表中的属性。 有关域类的信息，请参阅 [了解模型、类和关系](../modeling/understanding-models-classes-and-relationships.md)。 有关如何使用这些属性的详细信息，请参阅 [自定义和扩展域特定语言](../modeling/customizing-and-extending-a-domain-specific-language.md)。
+域类具有下表中的属性。 有关域类的信息，请参阅 [了解模型、类和关系](../modeling/understanding-models-classes-and-relationships.md)。 有关如何使用这些属性的详细信息，请参阅 [自定义和扩展 Domain-Specific 语言](../modeling/customizing-and-extending-a-domain-specific-language.md)。
 
-|Property|说明|默认|
+|Property|描述|默认|
 |-|-|-|
 |访问修饰符|域类的访问级别（`public` 或 `internal`）。|`public`|
 |自定义特性|用于将特性添加到从此域类生成的源代码类中。|\<none>|
@@ -27,13 +29,13 @@ ms.locfileid: "90810023"
 |具有自定义构造函数|如果为 `True` ，则在源代码中提供自定义构造函数。 有关详细信息，请参阅 [重写和扩展生成的类](../modeling/overriding-and-extending-the-generated-classes.md)。|`False`|
 |继承修饰符|描述从域类 (或) 生成的源代码类的继承类型 `none` `abstract` `sealed` 。|`none`|
 |基类|如果此域类是派生的，则为基类的名称。|\<none>|
-|“属性”|此域类的名称。|当前名称|
+|名称|此域类的名称。|当前名称|
 |命名空间|此域类的命名空间。|当前命名空间|
 |注释|与此域类相关联的非正式注释。|\<none>|
-|说明|用于为生成的设计器的 UI 记录文档的说明。|\<none>|
+|描述|用于为生成的设计器的 UI 记录文档的说明。|\<none>|
 |显示名称|将在此域类的生成的设计器中显示的名称。|\<none>|
 |帮助关键字|用于索引此域类的 F1 帮助的可选关键字。|\<none>|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [域特定语言工具术语表](/previous-versions/bb126564(v=vs.100))
