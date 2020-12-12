@@ -1,5 +1,7 @@
 ---
 title: 将主机连接到生成的指令处理器
+description: 了解如何扩展自定义主机，使其支持调用指令处理器的文本模板。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.workload:
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 8dfca47159192c1f6fe25f703b54745b55d8e384
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a98e432c7eb9508d32f52e51acc1447035b9058b
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88237992"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362491"
 ---
 # <a name="walkthrough-connect-a-host-to-a-generated-directive-processor"></a>演练：将主机连接到生成的指令处理器
 
@@ -51,9 +53,9 @@ ms.locfileid: "88237992"
 
 此外，还必须在 [演练：创建自定义文本模板宿主](../modeling/walkthrough-creating-a-custom-text-template-host.md)中创建自定义文本模板转换。
 
-## <a name="use-domain-specific-language-tools-to-generate-a-directive-processor"></a>使用特定于域的语言工具生成指令处理器
+## <a name="use-domain-specific-language-tools-to-generate-a-directive-processor"></a>使用 Domain-Specific 语言工具生成指令处理器
 
-在本演练中，将使用特定于域的语言设计器向导为解决方案 DSLMinimalTest 创建域特定语言。
+在本演练中，您将使用 Domain-Specific 语言设计器向导为解决方案 DSLMinimalTest 创建域特定语言。
 
 1. 创建具有以下特征的域特定语言解决方案：
 
@@ -65,9 +67,9 @@ ms.locfileid: "88237992"
 
    - 公司名称： Fabrikam
 
-   有关创建域特定语言解决方案的详细信息，请参阅 [如何：创建特定于域的语言解决方案](../modeling/how-to-create-a-domain-specific-language-solution.md)。
+   有关创建域特定语言解决方案的详细信息，请参阅 [如何：创建 Domain-Specific 语言解决方案](../modeling/how-to-create-a-domain-specific-language-solution.md)。
 
-2. 在“生成”菜单中，单击“生成解决方案”。
+2. 在 **“生成”** 菜单上，单击 **“生成解决方案”** 。
 
    > [!IMPORTANT]
    > 此步骤将生成指令处理器，并在注册表中为其添加密钥。
@@ -76,13 +78,13 @@ ms.locfileid: "88237992"
 
     此时将打开 Visual Studio 的第二个实例。
 
-4. 在实验生成的**解决方案资源管理器**中，双击文件**示例。**
+4. 在实验生成的 **解决方案资源管理器** 中，双击文件 **示例。**
 
     文件将在设计器中打开。 请注意，该模型包含两个元素（ExampleElement1 和 ExampleElement2）以及它们之间的链接。
 
 5. 关闭 Visual Studio 的第二个实例。
 
-6. 保存解决方案，然后关闭特定于域的语言设计器。
+6. 保存解决方案，然后关闭 Domain-Specific 语言设计器。
 
 ## <a name="connect-a-custom-text-template-host-to-a-directive-processor"></a>将自定义文本模板主机连接到指令处理器
 
@@ -327,7 +329,7 @@ ms.locfileid: "88237992"
      `<YOUR PATH>CustomHost\bin\Debug\CustomHost.exe`
 
     > [!NOTE]
-    > 您可以浏览到 **Windows 资源管理器**中 CustomHost.exe 的文件，然后将该文件拖入命令提示符窗口，而不是键入地址。
+    > 您可以浏览到 **Windows 资源管理器** 中 CustomHost.exe 的文件，然后将该文件拖入命令提示符窗口，而不是键入地址。
 
 3. 键入一个空格。
 
@@ -338,11 +340,11 @@ ms.locfileid: "88237992"
      `<YOUR PATH>TestTemplateWithDP.txt`
 
     > [!NOTE]
-    > 您可以浏览到 **Windows 资源管理器**中 TestTemplateWithDP.txt 的文件，然后将该文件拖入命令提示符窗口，而不是键入地址。
+    > 您可以浏览到 **Windows 资源管理器** 中 TestTemplateWithDP.txt 的文件，然后将该文件拖入命令提示符窗口，而不是键入地址。
 
      自定义主机应用程序将运行并启动文本模板转换过程。
 
-5. 在 **Windows 资源管理器**中，浏览到 TestTemplateWithDP.txt 的文件所在的文件夹。
+5. 在 **Windows 资源管理器** 中，浏览到 TestTemplateWithDP.txt 的文件所在的文件夹。
 
      该文件夹还包含 TestTemplateWithDP1.txt 的文件。
 
@@ -360,6 +362,6 @@ ms.locfileid: "88237992"
     Linked from: ExampleElement1
     ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [演练：创建自定义文本模板宿主](../modeling/walkthrough-creating-a-custom-text-template-host.md)

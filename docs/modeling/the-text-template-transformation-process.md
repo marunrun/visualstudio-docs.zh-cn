@@ -1,5 +1,7 @@
 ---
 title: 文本模板转换过程
+description: 了解文本模板转换过程采用文本模板文件作为输入，并生成一个新的文本文件作为输出。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d6cca9a4a98c4afcffa8322acb75a4cef8a7527
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f0caadfe9abf38b2d83995da7efa32d618b4bfe0
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75565859"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362647"
 ---
 # <a name="the-text-template-transformation-process"></a>文本模板转换过程
 文本模板转换过程会将文本模板文件作为输入，并生成一个新的文本文件作为输出。 例如，您可以使用文本模板来生成 Visual Basic 或 c # 代码，也可以生成 HTML 报表。
@@ -25,11 +27,11 @@ ms.locfileid: "75565859"
 
 ## <a name="components"></a>组件
 
-|组件|说明|可自定义 (是/否) |
+|组件|描述|可自定义 (是/否) |
 |-|-|-|
-|引擎|引擎组件控制文本模板转换过程|不是。|
-|主机|宿主是引擎和用户环境之间的接口。 Visual Studio 是文本转换过程的宿主。|是的。 可以编写自定义主机。|
-|指令处理器|指令处理器是在文本模板中处理指令的类。 您可以使用指令向输入源中的文本模板提供数据。|是的。 您可以编写自定义指令处理器|
+|引擎|引擎组件控制文本模板转换过程|错误。|
+|主机|宿主是引擎和用户环境之间的接口。 Visual Studio 是文本转换过程的宿主。|是。 可以编写自定义主机。|
+|指令处理器|指令处理器是在文本模板中处理指令的类。 您可以使用指令向输入源中的文本模板提供数据。|是。 您可以编写自定义指令处理器|
 
 ## <a name="the-engine"></a>引擎
  引擎接收来自主机的模板，该模板用于处理转换进程中使用的所有文件。 然后，引擎会要求主机找到任何自定义指令处理器和环境的其他方面。 然后，引擎将编译并运行生成的转换类。 引擎将生成的文本返回到宿主，这通常会将文本保存到文件中。

@@ -1,5 +1,7 @@
 ---
 title: 计算的和自定义的存储属性
+description: 了解域特定语言中 (DSL) 的所有域属性如何在关系图和语言浏览器中显示给用户。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 52915f0bac2bd172daf909541ecfa86396d90a5d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2c50d205745917b3af7de638a17921f4bcdca509
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76115196"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363544"
 ---
 # <a name="calculated-and-custom-storage-properties"></a>计算的和自定义的存储属性
 域特定语言中 (DSL) 的所有域属性都可以在关系图上和您的语言浏览器中向用户显示，并且可以通过程序代码进行访问。 但是，属性的值存储方式有所不同。
@@ -22,7 +24,7 @@ ms.locfileid: "76115196"
 ## <a name="kinds-of-domain-properties"></a>域属性的种类
  在 DSL 定义中，可以设置域属性的 **类型** ，如下表所示：
 
-|域属性类型|说明|
+|域属性类型|描述|
 |-|-|
 |**标准** (默认值) |保存在 *存储区* 中并序列化为文件的域属性。|
 |**Calculated**|只读域属性，该属性不保存在存储区中，而是从其他值计算而来的。<br /><br /> 例如， `Person.Age` 可以从计算 `Person.BirthDate` 。<br /><br /> 您必须提供执行计算的代码。 通常，您需要计算其他域属性的值。 不过，您也可以使用外部资源。|
@@ -33,21 +35,21 @@ ms.locfileid: "76115196"
 
 #### <a name="to-define-a-calculated-or-custom-storage-property"></a>定义计算或自定义的存储属性
 
-1. 在 Dsldefinition.dsl 中，在关系图中或在 **Dsl 资源管理器**中选择域属性。
+1. 在 Dsldefinition.dsl 中，在关系图中或在 **Dsl 资源管理器** 中选择域属性。
 
-2. 在 "**属性**" 窗口中，将 "**类型**" 字段设置为**计算****存储或自定义存储**。
+2. 在 "**属性**" 窗口中，将 "**类型**" 字段设置为 **计算****存储或自定义存储**。
 
      确保还将其类型设置为所需的 **类型** 。
 
-3. 单击 "**解决方案资源管理器**的工具栏中的"**转换所有模板**"。
+3. 单击 "**解决方案资源管理器** 的工具栏中的"**转换所有模板**"。
 
-4. 在“生成”菜单中，单击“生成解决方案”。
+4. 在 **“生成”** 菜单上，单击 **“生成解决方案”** 。
 
-     收到以下错误消息： "*YourClass* 不包含 Get*yourproperty '* 的定义"。
+     收到以下错误消息： "*YourClass* 不包含 Get *yourproperty '* 的定义"。
 
 5. 双击错误消息。
 
-     此时将打开 Dsl\GeneratedCode\DomainClasses.cs 或 DomainRelationships.cs。 在突出显示的方法调用的上方，注释会提示你提供 Get*yourproperty '* ( # A1 的实现。
+     此时将打开 Dsl\GeneratedCode\DomainClasses.cs 或 DomainRelationships.cs。 在突出显示的方法调用的上方，注释会提示你提供 Get *yourproperty '* ( # A1 的实现。
 
     > [!NOTE]
     > 此文件是从 Dsldefinition.dsl 生成的。 如果编辑此文件，则下次单击 " **转换所有模板**" 时，所做的更改将丢失。 相反，请在单独的文件中添加所需的方法。
@@ -107,7 +109,7 @@ void SetAgeValue(int value)
 
  有关事务的详细信息，请参阅 [在程序代码中导航和更新模型](../modeling/navigating-and-updating-a-model-in-program-code.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [在程序代码中导航和更新模型](../modeling/navigating-and-updating-a-model-in-program-code.md)
 - [域属性的属性](../modeling/properties-of-domain-properties.md)

@@ -1,5 +1,7 @@
 ---
 title: 使用 MEF 扩展 DSL
+description: 了解如何使用 Managed Extensibility Framework (MEF)  (DSL) 来扩展域特定语言。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 04d14b3b17953ef30620d9f616bb471b186e9c9f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 20dc9b6ac1bd4e565fd10793889c611f9b039778
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547636"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363167"
 ---
 # <a name="extend-your-dsl-by-using-mef"></a>使用 MEF 扩展 DSL
 
@@ -24,7 +26,7 @@ ms.locfileid: "85547636"
 
 ### <a name="to-enable-your-dsl-to-be-extended-by-mef"></a>若要使 DSL 能够由 MEF 扩展
 
-1. 在**DslPackage**项目中创建名为**MefExtension**的新文件夹。 将以下文件添加到其中：
+1. 在 **DslPackage** 项目中创建名为 **MefExtension** 的新文件夹。 将以下文件添加到其中：
 
      文件名： `CommandExtensionVSCT.tt`
 
@@ -72,7 +74,7 @@ ms.locfileid: "85547636"
     <#@ include file="DslPackage\PackageExtensionEnablement.tt" #>
     ```
 
-2. 在**Dsl**项目中创建名为**MefExtension**的新文件夹。 将以下文件添加到其中：
+2. 在 **Dsl** 项目中创建名为 **MefExtension** 的新文件夹。 将以下文件添加到其中：
 
      文件名： `DesignerExtensionMetaDataAttribute.tt`
 
@@ -95,7 +97,7 @@ ms.locfileid: "85547636"
     <#@ include file="Dsl\GestureExtensionController.tt" #>
     ```
 
-3. 将以下行添加到名为 **DslPackage\Commands.vsct**的现有文件：
+3. 将以下行添加到名为 **DslPackage\Commands.vsct** 的现有文件：
 
     ```xml
     <Include href="MefExtension\CommandExtensionVSCT.vsct"/>
@@ -129,7 +131,7 @@ DSL 现在已启用 MEF。 可以将菜单命令、笔势处理程序和验证�
 
    - 此程序集通常具有以 ".Dsl.dll" 结尾的名称。
 
-   - 如果有权访问 DSL 项目，可以在目录**DSL \\ 箱 \\ \* **下找到程序集文件
+   - 如果有权访问 DSL 项目，可以在目录 **DSL \\ 箱 \\ \** _ 下找到程序集文件
 
    - 如果有权访问 DSL VSIX 文件，可以通过将 VSIX 文件的文件扩展名更改为 ".zip" 来找到该程序集。 解压缩 .zip 文件。
 
@@ -145,9 +147,9 @@ DSL 现在已启用 MEF。 可以将菜单命令、笔势处理程序和验证�
 
    - System.Windows.Forms.dll
 
-4. 创建新的 **VSIX 项目** 项目。
+4. 创建新的 _ *VSIX 项目** 项目。
 
-5. 在 **解决方案资源管理器**中，右键单击 VSIX 项目，然后选择 " **设为启动项目**"。
+5. 在 **解决方案资源管理器** 中，右键单击 VSIX 项目，然后选择 " **设为启动项目**"。
 
 6. 在新项目中，打开 **source.extension.vsixmanifest**。
 
@@ -155,13 +157,13 @@ DSL 现在已启用 MEF。 可以将菜单命令、笔势处理程序和验证�
 
 8. 向 DSL 添加 VSIX 引用。
 
-   1. 在**source.extension.vsixmanifest**中，单击 "**添加引用**"
+   1. 在 **source.extension.vsixmanifest** 中，单击 "**添加引用**"
 
-   2. 在对话框中，单击 " **添加有效负载** "，然后找到 DSL 的 VSIX 文件。 VSIX 文件是在 DSL 解决方案的**DslPackage \\ bin \\ \* **中生成的。
+   2. 在对话框中，单击 " **添加有效负载** "，然后找到 DSL 的 VSIX 文件。 VSIX 文件是在 DSL 解决方案中构建的，位于 **DslPackage \\ bin \\ \** _ 中。
 
        这允许用户同时安装 DSL 和你的扩展。 如果用户已安装 DSL，则仅安装你的扩展。
 
-9. 查看并更新 **source.extension.vsixmanifest**的其他字段。 单击 " **选择版本** "，并验证是否设置了正确的 Visual Studio 版本。
+9. 查看并更新 _ * source.extension.vsixmanifest * * 的其他字段。 单击 " **选择版本** "，并验证是否设置了正确的 Visual Studio 版本。
 
 10. 将代码添加到类库项目。 使用下一部分中的示例作为指南。
 
@@ -175,7 +177,7 @@ DSL 现在已启用 MEF。 可以将菜单命令、笔势处理程序和验证�
 
 ### <a name="menu-commands"></a>菜单命令
 
-若要编写菜单命令，请 <xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement.ICommandExtension> 使用名为*YOURDSL 可*的 DSL 中定义的属性，定义实现类并为类加前缀的类 `CommandExtension` 。 可以写入多个菜单命令类。
+若要编写菜单命令，请 <xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement.ICommandExtension> 使用名为 *YOURDSL 可* 的 DSL 中定义的属性，定义实现类并为类加前缀的类 `CommandExtension` 。 可以写入多个菜单命令类。
 
 `QueryStatus()` 只要用户右键单击关系图，就会调用。 它应检查当前所选内容，并将其设置 `command.Enabled` 为指示命令适用的时间。
 
@@ -323,7 +325,7 @@ namespace MefExtension
 
 验证方法由 `ValidationExtension` DSL 生成的属性和进行标记 <xref:Microsoft.VisualStudio.Modeling.Validation.ValidationMethodAttribute> 。 方法可以出现在未由特性标记的任何类中。
 
-有关详细信息，请参阅 [以域特定语言进行验证](../modeling/validation-in-a-domain-specific-language.md)。
+有关详细信息，请参阅 [Domain-Specific 语言的验证](../modeling/validation-in-a-domain-specific-language.md)。
 
 ```csharp
 using Company.MyDsl;

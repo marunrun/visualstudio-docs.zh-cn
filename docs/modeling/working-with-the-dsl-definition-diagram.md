@@ -1,5 +1,7 @@
 ---
 title: 使用 DSL 定义图表
+description: 了解 DSL 工具定义关系图是用于定义域特定语言的重要工具。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -16,18 +18,18 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ec9e6fa7262fd389be7f1bb66ed2ed7005d6811
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: d489bfde8b095e35bc652f1cdb7588b07458e48e
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810791"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362829"
 ---
 # <a name="working-with-the-dsl-definition-diagram"></a>使用 DSL 定义图表
 定义关系图 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 是用于定义域特定语言的重要工具。 你可以将元素添加到域模型并定义关系图上的关系，也可以修改关系图的布局以使其更具可读性。
 
 ## <a name="the-layout-of-the-diagram"></a>关系图的布局
- [!INCLUDE[dsl](../modeling/includes/dsl_md.md)]定义关系图有两个分区：**类和关系**分区以及**关系图元素**分区。 **类和关系**分区显示域类、域关系和继承。 **关系图元素**分区显示了形状类、连接器类、泳道类和生成的设计器关系图。
+ [!INCLUDE[dsl](../modeling/includes/dsl_md.md)]定义关系图有两个分区：**类和关系** 分区以及 **关系图元素** 分区。 **类和关系** 分区显示域类、域关系和继承。 **关系图元素** 分区显示了形状类、连接器类、泳道类和生成的设计器关系图。
 
  域类可以出现在 " **类和关系** " 分区的多个位置中。 如果域类是其他域类的基类，则域类定义将显示继承树；如果域类是嵌入或引用关系的源，则其定义将显示关系树。 域类占位符将显示为嵌入或引用关系的目标。 默认情况下，将显示占位符元素，并折叠 " **域属性** " 隔离舱。 它们不显示继承，也不显示嵌入或引用关系。
 
@@ -44,7 +46,7 @@ ms.locfileid: "90810791"
  可以通过使用 **DSL 设计器** 工具栏设置缩放级别来放大或缩小关系图。
 
 ## <a name="hiding-map-lines"></a>隐藏地图线条
- 地图线条是在域类或域关系与其映射到的形状或连接符之间绘制的线条。 通过单击**DSL 设计器**工具栏上的 "**显示地图线条**" 按钮，可以隐藏地图线条。 若要显示这些线条，请再次单击该按钮。
+ 地图线条是在域类或域关系与其映射到的形状或连接符之间绘制的线条。 通过单击 **DSL 设计器** 工具栏上的 "**显示地图线条**" 按钮，可以隐藏地图线条。 若要显示这些线条，请再次单击该按钮。
 
 ## <a name="changing-the-diagram-layout"></a>更改关系图布局
  您可以按如下所示更改 " **类和关系** " 分区的布局。
@@ -70,6 +72,6 @@ ms.locfileid: "90810791"
 ### <a name="show-as-class"></a>显示为类
  如果域关系具有派生关系，或者它具有与其他域关系的嵌入或引用关系，则可以通过右键单击该关系，然后单击 " **显示为类**"，将该关系显示为类。 将显示 " **域属性** " 隔离舱的关系，并显示继承和关系树。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [域特定语言工具术语表](/previous-versions/bb126564(v=vs.100))

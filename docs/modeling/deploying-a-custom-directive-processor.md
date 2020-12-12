@@ -1,5 +1,7 @@
 ---
 title: 部署自定义指令处理器
+description: 了解可用于在 Visual Studio 或任何计算机上部署自定义指令处理器的方法。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4762ad21f117bebe22ecfce1c846f15d154b1bf5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 638367f2c3a1238edc257a255280c5197e11d3f0
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85536014"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363921"
 ---
 # <a name="deploying-a-custom-directive-processor"></a>部署自定义指令处理器
 
@@ -48,7 +50,7 @@ ms.locfileid: "85536014"
 
 1. 创建新的 **VSIX 项目** 项目。
 
-2. 在 **source.extension.vsixmanifest**中，设置内容类型和支持的版本。
+2. 在 **source.extension.vsixmanifest** 中，设置内容类型和支持的版本。
 
     1. 在 VSIX 清单编辑器中的 " **资产** " 选项卡上，选择 " **新建** " 并设置新项的属性：
 
@@ -107,7 +109,7 @@ ms.locfileid: "85536014"
 
 3. 双击 .vsix 文件。 此时将显示 Visual Studio 扩展安装程序。
 
-4. 重启 Visual Studio。 现在，可以运行包含引用自定义指令处理器的指令的文本模板。 每个指令的形式如下：
+4. 重新启动 Visual Studio。 现在，可以运行包含引用自定义指令处理器的指令的文本模板。 每个指令的形式如下：
 
      `<#@ CustomDirective Processor="CustomDirectiveProcessorName" parameter1="value1" ... #>`
 
@@ -124,7 +126,7 @@ ms.locfileid: "85536014"
 
 - `IsDirectiveSupported` 方法在传递 `true` 的名称时必须返回 `CustomDirective`。
 
-- 如果在 "扩展管理器" 中看不到该扩展，但是系统将不允许安装，请从 **%localappdata%\Microsoft\VisualStudio \\ \* .0 \ Extensions \\ **中删除该扩展。
+- 如果在 "扩展管理器" 中看不到该扩展，但是系统将不允许安装，请从 **%localappdata%\Microsoft\VisualStudio \\ \* .0 \ Extensions \\** 中删除该扩展。
 
 - 打开 .vsix 文件并检查其内容。 若要打开该文件，请将文件扩展名更改为 .zip。 确认该文件包含 .dll、.pkgdef 和 extension.vsixmanifest 文件。 extension.vsixmanifest 文件的 SupportedProducts 节点应包含相应的列表，“内容”节点下还应包含 VsPackage 节点：
 
@@ -164,7 +166,7 @@ ms.locfileid: "85536014"
 
 2. 在 regedit 中，定位到
 
-    **HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio \\ \* \ TextTemplating\DirectiveProcessors**
+    **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\ \* 0 \ TextTemplating\DirectiveProcessors**
 
     如果要在 Visual Studio 的实验版本中安装指令处理器，请在 "11.0" 后插入 "Exp"。
 
@@ -196,6 +198,6 @@ ms.locfileid: "85536014"
 |类|REG_SZ|\<**Your Fully Qualified Class Name**>|
 |程序集|REG_SZ|\<**Your Assembly Name in the GAC**>|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [创建自定义 T4 文本模板指令处理器](../modeling/creating-custom-t4-text-template-directive-processors.md)

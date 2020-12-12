@@ -1,5 +1,7 @@
 ---
 title: 在 DSL 中修改标准菜单命令
+description: 了解如何修改 DSL 中自动定义的某些标准命令的行为。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a7236c074bda17023c989c744042db2de4046558
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e04d3d2c5572c0d0b3dbaa25912b7ec59a3bc0fa
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85532491"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363882"
 ---
 # <a name="how-to-modify-a-standard-menu-command-in-a-domain-specific-language"></a>如何：使用域特定语言修改标准的菜单命令
 
@@ -53,7 +55,7 @@ ms.locfileid: "85532491"
 
      `{ ...  internal partial class Language1CommandSet : ...`
 
-2. 在 **DslPackage**中，创建一个名为 " **自定义代码**" 的文件夹。 在此文件夹中，创建一个名为的新类文件 `CommandSet.cs` 。
+2. 在 **DslPackage** 中，创建一个名为 " **自定义代码**" 的文件夹。 在此文件夹中，创建一个名为的新类文件 `CommandSet.cs` 。
 
 3. 在该新文件中，编写具有与生成的分部类相同的命名空间和名称的分部声明。 例如：
 

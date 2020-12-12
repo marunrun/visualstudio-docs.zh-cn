@@ -1,5 +1,7 @@
 ---
 title: 规则在模型内部传播更改
+description: 了解如何创建存储规则，以便在可视化和建模 SDK 中将更改从一个元素传播到另一个 (VMSDK) 。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2050fe0ea2d1a9bb0bf278c13c2beb587412c643
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c4ff2273c8c71582c3ef634eeb398b12e29401d0
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85542553"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363947"
 ---
 # <a name="rules-propagate-changes-within-the-model"></a>规则在模型内部传播更改
 你可以创建一个存储规则，以便在可视化和建模 SDK 中将更改从一个元素传播到另一个 (VMSDK) 。 当存储区中的任何元素发生更改时，将计划执行规则，通常是在最外面的事务提交时执行。 不同类型的事件有不同类型的规则，例如添加元素或删除元素。 您可以将规则附加到特定类型的元素、形状或关系图。 许多内置功能都是由规则定义的：例如，规则确保在模型更改时更新关系图。 可以通过添加自己的规则来自定义域特定语言。
@@ -120,7 +122,7 @@ namespace ExampleNamespace
 
     ```
 
-- 如果你不确定域模型类的名称，请在文件**Dsl\GeneratedCode\DomainModel.cs**中查看。
+- 如果你不确定域模型类的名称，请在文件 **Dsl\GeneratedCode\DomainModel.cs** 中查看。
 
 - 在 DSL 项目的自定义代码文件中编写此代码。
 
@@ -207,6 +209,6 @@ namespace Company.TaskRuleExample
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [事件处理程序在模型外部传播更改](../modeling/event-handlers-propagate-changes-outside-the-model.md)

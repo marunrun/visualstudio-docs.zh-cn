@@ -1,5 +1,7 @@
 ---
 title: DslTextTransform 命令
+description: 了解 DslTextTransform 是一个脚本，它调用 TextTransform.exe 并使用常用选项运行它。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 32c01401eda8fb1bbe2bdcfc2950a51b968e98b7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 74f87f735f5ad6864082046327bc852d5d43fdb6
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76114912"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362712"
 ---
 # <a name="the-dsltexttransform-command"></a>DslTextTransform 命令
 DslTextTransform 是一个脚本，它调用 TextTransform.exe 并使用常用选项运行它。 可以使用 DslTextTransformation 自动执行项目的夜间生成 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 。 有关详细信息，请参阅 [用 TextTransform 实用工具生成文件](../modeling/generating-files-with-the-texttransform-utility.md)。

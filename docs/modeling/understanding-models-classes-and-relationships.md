@@ -1,5 +1,7 @@
 ---
 title: 了解模型、类和关系
+description: 了解域特定语言 (DSL) 是如何由其 DSL 定义文件定义的，以及是否从该文件生成 DSL 解决方案中的大多数程序代码。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 08981e4f63c84d19d4086c75fe33a8b19a515ccf
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: d912e98d01448a378acbed79e2278f70f62436e7
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809971"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362686"
 ---
 # <a name="understanding-models-classes-and-relationships"></a>了解模型、类和关系
 域特定语言 (DSL) 由其 DSL 定义文件定义，以及你可能编写的任何自定义程序代码。 DSL 解决方案中的大多数程序代码都是通过此文件生成的。
@@ -35,7 +37,7 @@ ms.locfileid: "90809971"
  在 DSL 定义中选择 DSL 定义中的项时，请在关系图上或在 DSL 资源管理器中，属性窗口中显示有关该项目的信息。 其他信息可能显示在 "DSL 详细信息" 窗口中。
 
 ### <a name="models-are-instances-of-dsls"></a>模型是 Dsl 的实例
- *模型*是用户创建的 DSL 的实例。 模型包含模型元素，这些元素是你定义的域类的实例，而元素之间的链接是你定义的域关系的实例。 模型还可以具有形状和连接线，它们在关系图上显示模型元素和链接。 DSL 定义包括形状类、连接器类和关系图的类。
+ *模型* 是用户创建的 DSL 的实例。 模型包含模型元素，这些元素是你定义的域类的实例，而元素之间的链接是你定义的域关系的实例。 模型还可以具有形状和连接线，它们在关系图上显示模型元素和链接。 DSL 定义包括形状类、连接器类和关系图的类。
 
  DSL 定义也称为 *域模型*。 DSL 定义或域模型是域特定语言的设计时表示形式，而模型是域特定语言的运行时实例化。
 
@@ -132,7 +134,7 @@ ms.locfileid: "90809971"
 
  通过在关系图上键入或在 `Multiplicity` " **属性** " 窗口中修改属性来配置角色的重数。 下表描述了此属性的设置。
 
-|多重性类型|说明|
+|多重性类型|描述|
 |-|-|
 |0 ... * (零到多个) |域类的每个实例都可以具有关系的多个实例或没有关系的实例。|
 |0 .0 (零到一) |域类的每个实例都不能有多个关系实例，也不能有关系的实例。|
@@ -148,6 +150,6 @@ ms.locfileid: "90809971"
 
  派生关系专门用于其基本关系。 它链接的域类应派生自或与基关系链接的类相同。 在模型中创建派生关系的链接时，它是派生关系和基关系的实例。 在程序代码中，可以使用由基类或派生类生成的属性，导航到链接的另一端。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [域特定语言工具术语表](/previous-versions/bb126564(v=vs.100))

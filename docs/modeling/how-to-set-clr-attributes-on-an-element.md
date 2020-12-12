@@ -1,5 +1,7 @@
 ---
 title: 如何：在元素上设置 CLR 特性
+description: 了解如何添加任何继承自 System.object 类的属性。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -11,12 +13,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 49551a5e96e3c354b54b6b2ba7cedf1ba2ab4470
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: df9f8b16edcbe575ebac67f4acde9111a9511b85
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90811196"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363843"
 ---
 # <a name="how-to-set-clr-attributes-on-an-element"></a>如何：在元素上设置 CLR 特性
 自定义属性是可以添加到域元素、形状、连接符和关系图中的特殊属性。 可以添加从类继承的任何属性 `System.Attribute` 。
@@ -35,12 +37,12 @@ ms.locfileid: "90811196"
 
 5. 在 " **名称属性** " 列中，键入适当的名称，例如 `MyString` 。
 
-6. 单击“确定”。 
+6. 单击 **“确定”** 。
 
      " **自定义属性** " 属性现在按以下格式显示属性：
 
      `[`*AttributeName* `(`*ParameterName* `=`*类型*`)]`
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [域特定语言工具术语表](/previous-versions/bb126564(v=vs.100))

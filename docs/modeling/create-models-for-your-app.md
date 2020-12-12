@@ -1,5 +1,7 @@
 ---
 title: 为你的应用程序创建模型
+description: 了解建模图如何帮助你了解、阐明和传达你的代码的想法以及软件系统必须支持的用户需求。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -21,12 +23,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 452832785db879e75825b1c862e8e9b1b6e69f1d
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: b79496e6762d798db14d7341e71129d5e510c1b0
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810804"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363466"
 ---
 # <a name="create-models-for-your-app"></a>为你的应用程序创建模型
 
@@ -44,7 +46,7 @@ ms.locfileid: "90810804"
 
 ## <a name="related-tasks"></a>Related Tasks
 
-|**主题**|**Task**|
+|**主题**|**任务**|
 |-|-|
 |[代码可视化](../modeling/visualize-code.md)|创建代码图和依赖项关系图，以便更好地了解不熟悉的代码。|
 |[建立用户需求模型](../modeling/model-user-requirements.md)|使用模型来阐明和传达用户的需求。|

@@ -1,5 +1,7 @@
 ---
 title: DslDefinition.dsl 文件
+description: 了解 DSL 工具解决方案的 Dsl 项目中 Dsldefinition.dsl 文件的结构，它定义了域特定语言。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 893f39149a9000f3672c5b3043551bcbd53e6b87
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: c5db379447f39ed3d0c2b82aee23c1ac94aad34d
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808950"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362777"
 ---
 # <a name="the-dsldefinitiondsl-file"></a>DslDefinition.dsl 文件
 
@@ -22,7 +24,7 @@ ms.locfileid: "90808950"
 
 通常，使用 *特定于域的语言设计器* 编辑 dsldefinition.dsl 文件。 但是，它的原始格式为 XML，你可以在 XML 编辑器中打开 DslDefinition.dsl 文件。 在了解该文件所包含的信息以及如何组织它以供调试和扩展时，你会发现该文件很有用。
 
-本主题中的示例取自“组件图”解决方案模板。 若要查看示例，请创建基于“组件模型”解决方案模板的域特定语言解决方案。 在创建该解决方案后，DslDefinition.dsl 文件将显示在域特定语言设计器中。 关闭该文件，在 **解决方案资源管理器**中右键单击该文件，指向 " **打开方式**"，单击 " **XML 编辑器**"，然后单击 **"确定"**。
+本主题中的示例取自“组件图”解决方案模板。 若要查看示例，请创建基于“组件模型”解决方案模板的域特定语言解决方案。 在创建该解决方案后，DslDefinition.dsl 文件将显示在域特定语言设计器中。 关闭该文件，在 **解决方案资源管理器** 中右键单击该文件，指向 " **打开方式**"，单击 " **XML 编辑器**"，然后单击 **"确定"**。
 
 ## <a name="sections-of-the-dsldefinitiondsl-file"></a>DslDefinition.dsl 文件的各个部分
 
@@ -62,7 +64,7 @@ Root 元素的子元素 \<Dsl> 如下所示：
 
 本部分将定义每个连接符工具的连接生成器（用于在任意两个可以连接的类之间建立链接的工具）。 本部分将确定你是否可以连接源类和目标类。
 
-### <a name="diagram"></a>关系图
+### <a name="diagram"></a>图示
 
 本部分将定义一个关系图，你可以使用它来指定背景色和根类等属性。  (根类是由整个关系图表示的域类。 ) 关系图部分还包含 ShapeMap 和 ConnectorMap 元素，这些元素指定表示每个域类或关系的形状或连接符。
 
@@ -267,7 +269,7 @@ Root 元素的子元素 \<Dsl> 如下所示：
 
 ## <a name="designer-and-toolbox-tabs"></a>设计器和工具箱选项卡
 
-Dsldefinition.dsl 文件的 **设计器** 部分的主要部分是 **ToolboxTab** 元素。 一个设计器可以有多个元素，其中每个元素都表示生成的设计器的 **工具箱**中的一个头部分。 每个 **ToolboxTab** 元素可以包含一个或多个 **ElementTool** 元素和/或 **ConnectionTool** 元素。
+Dsldefinition.dsl 文件的 **设计器** 部分的主要部分是 **ToolboxTab** 元素。 一个设计器可以有多个元素，其中每个元素都表示生成的设计器的 **工具箱** 中的一个头部分。 每个 **ToolboxTab** 元素可以包含一个或多个 **ElementTool** 元素和/或 **ConnectionTool** 元素。
 
 元素工具可以创建特定域类的实例。 当用户将元素工具拖到关系图上时，结果将由元素合并指令来确定，如本主题后面中有关元素合并指令的部分所述。
 
@@ -296,7 +298,7 @@ Dsldefinition.dsl 文件的 **设计器** 部分的主要部分是 **ToolboxTab*
 在针对此模型编写 C# 时，可通过使用关系在与以下内容相关的每个类上生成的属性，来一步跳过某个链接：
 
 ```
-     InPort port; ...  Component c = port.Component;
+     InPort port; ...  Component c = port.Component;
 ```
 
 但是，必须在路径语法中显式执行这两次跳跃。 由于此要求，你可以更容易地访问中间链接。 以下代码完成了从链接到 Component 的跳跃：
@@ -364,9 +366,9 @@ ComponentModel（语言的根类）具有适用于组件和注释的元素合并
 
 - 名字对象节点，用于引用数据应用到的类。
 
-- 对类定义的每个属性的**XmlPropertyData** 。
+- 对类定义的每个属性的 **XmlPropertyData** 。
 
-- 每个源自类的关系的**XmlRelationshipData** 。 （关系还具有其自己的 XmlClassData 节点。）
+- 每个源自类的关系的 **XmlRelationshipData** 。 （关系还具有其自己的 XmlClassData 节点。）
 
 - **TypeName** string 特性，它确定生成的代码中序列化帮助器类的名称。
 
@@ -390,13 +392,13 @@ ComponentModel（语言的根类）具有适用于组件和注释的元素合并
 
 ### <a name="xmlpropertydata"></a>XmlPropertyData
 
-**DomainPropertyMoniker**特性标识数据所引用的属性。 此特性必须为封闭 ClassData 的类的属性。
+**DomainPropertyMoniker** 特性标识数据所引用的属性。 此特性必须为封闭 ClassData 的类的属性。
 
-**XmlName**属性提供对应的属性名称，因为它应显示在 XML 中。 根据约定，此字符串与属性名称相同，不同之处在于首字母为小写。
+**XmlName** 属性提供对应的属性名称，因为它应显示在 XML 中。 根据约定，此字符串与属性名称相同，不同之处在于首字母为小写。
 
 默认情况下， **表示形式** 属性设置为 "属性"。 如果将 **表示形式** 设置为元素，则会在 XML 中创建一个子节点。 如果 **表示形式** 设置为 "忽略"，则不序列化属性。
 
-**IsMonikerKey**和**IsMonikerQualifier**属性为属性指定了父类的标识实例的角色。 对于在类中定义或由类继承的属性，可以将 **IsMonikerKey** 设置为 true。 此特性将标识父类的单个实例。 设置为 `IsMonikerKey` 的属性通常为一个名称或其他密钥标识符。 例如，`Name` 字符串属性是 NamedElement 及其派生类的名字对象密钥。 当用户将模型保存到文件中时，此特性必须包含每个实例的值，并且在嵌入关系的树中这些值在同级中是唯一的。
+**IsMonikerKey** 和 **IsMonikerQualifier** 属性为属性指定了父类的标识实例的角色。 对于在类中定义或由类继承的属性，可以将 **IsMonikerKey** 设置为 true。 此特性将标识父类的单个实例。 设置为 `IsMonikerKey` 的属性通常为一个名称或其他密钥标识符。 例如，`Name` 字符串属性是 NamedElement 及其派生类的名字对象密钥。 当用户将模型保存到文件中时，此特性必须包含每个实例的值，并且在嵌入关系的树中这些值在同级中是唯一的。
 
 在序列化模型文件中，元素的完整名字对象是一个路径，该路径从模型根沿着嵌入关系的树向下，从而在每个位置处引用名字对象密钥。 例如，InPorts 嵌入在 Components 中，Components 又反过来嵌入在模型根中。 因此，一个有效的名字对象为：
 
@@ -410,11 +412,11 @@ ComponentModel（语言的根类）具有适用于组件和注释的元素合并
 
 在序列化模型文件中，（嵌入关系和引用关系中的）链接由关系源端的子节点表示。 对于嵌入关系，子节点包含一个子树。 对于引用关系，子节点包含一个引用树的其他部分的名字对象。
 
-**XmlClassData**特性中的**XmlRelationshipData**特性定义子节点在源元素中的嵌套方式。 作为域类上的源的每个关系都具有一个 **XmlRelationshipData** 属性。
+**XmlClassData** 特性中的 **XmlRelationshipData** 特性定义子节点在源元素中的嵌套方式。 作为域类上的源的每个关系都具有一个 **XmlRelationshipData** 属性。
 
-**DomainRelationshipMoniker**特性标识源自类的关系之一。
+**DomainRelationshipMoniker** 特性标识源自类的关系之一。
 
-**RoleElementName**属性提供在序列化数据中包含子节点的 XML 标记名称。
+**RoleElementName** 属性提供在序列化数据中包含子节点的 XML 标记名称。
 
 例如，DslDefinition.dsl 文件包含：
 
@@ -480,7 +482,7 @@ DslDefinition.dsl 文件本身就是一个序列化文件并且符合域特定�
 
 - **Dsl** 是 RootClass 节点和关系图的类。 在 `Dsl` 下方嵌入了 DomainClass、DomainRelationship 和其他元素。
 
-- **类** 是域特定语言和 DomainClass 之间的关系的 **RoleElementName** 。
+- **类** 是 Domain-Specific Language 和 DomainClass 之间的关系的 **RoleElementName** 。
 
 ```xml
 <Dsl Name="CmptDsl5" ...>
@@ -488,7 +490,7 @@ DslDefinition.dsl 文件本身就是一个序列化文件并且符合域特定�
     <DomainClass Name="NamedElement" InheritanceModifier="Abstract" ...
 ```
 
-- **XmlSerializationBehavior**特性嵌入在 `Dsl` 特性下，但已对嵌入关系设置**OmitElement**特性。 因此，不会干扰任何 `RoleElementName` 特性。 与此相反， **ClassData** 属性是 `RoleElementName` **XmlSerializationBehavior** 属性与 **XmlClassData** 特性之间的嵌入关系的属性。
+- **XmlSerializationBehavior** 特性嵌入在 `Dsl` 特性下，但已对嵌入关系设置 **OmitElement** 特性。 因此，不会干扰任何 `RoleElementName` 特性。 与此相反， **ClassData** 属性是 `RoleElementName` **XmlSerializationBehavior** 属性与 **XmlClassData** 特性之间的嵌入关系的属性。
 
 ```xml
 <Dsl Name="CmptDsl5" ...> ...
@@ -577,7 +579,7 @@ ComponentHasPorts . Component / ! Component /    ComponentModelHasComponents . C
 
 连接符映射还可以包含修饰器映射。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [域特定语言工具术语表](/previous-versions/bb126564(v=vs.100))
 - [如何定义域特定语言](../modeling/how-to-define-a-domain-specific-language.md)

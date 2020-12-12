@@ -1,5 +1,7 @@
 ---
 title: 如何：添加拖放处理程序
+description: 了解如何向 DSL 添加拖放事件的处理程序，以便用户可以将项从其他关系图拖动到关系图上。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9272a530eaa15f902a2e295aeaa6d8b34c4eccdd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 337fd73dbe46a97b6f154dfba1714ede834f1e69
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85545660"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363323"
 ---
 # <a name="how-to-add-a-drag-and-drop-handler"></a>如何：添加拖放处理程序
 
@@ -80,7 +82,7 @@ MEF (Managed Extensibility Framework) 允许定义可使用最小配置安装的
 
 ### <a name="to-define-a-mef-gesture-handler"></a>定义 MEF 笔势处理程序
 
-1. 添加到**Dsl**并**DSLPACKAGE**项目[使用 MEF 扩展 Dsl](../modeling/extend-your-dsl-by-using-mef.md)中所述的**MefExtension**文件。
+1. 添加到 **Dsl** 并 **DSLPACKAGE** 项目 [使用 MEF 扩展 Dsl](../modeling/extend-your-dsl-by-using-mef.md)中所述的 **MefExtension** 文件。
 
 2. 现在可以将笔势处理程序定义为 MEF 组件：
 
@@ -160,7 +162,7 @@ MEF (Managed Extensibility Framework) 允许定义可使用最小配置安装的
 
 使源 DSL 可供 Visual Studio 模型总线访问：
 
-1. 在 DSL 设计器中打开源 DSL 的 DSL 定义文件。 右键单击设计图面，然后单击 " **启用 Modelbus**"。 在该对话框中，选择一个或两个选项。  单击“确定”。 新项目“ModelBus”随即添加到 DSL 解决方案中。
+1. 在 DSL 设计器中打开源 DSL 的 DSL 定义文件。 右键单击设计图面，然后单击 " **启用 Modelbus**"。 在该对话框中，选择一个或两个选项。  单击 **“确定”** 。 新项目“ModelBus”随即添加到 DSL 解决方案中。
 
 2. 单击 " **转换所有模板** "，然后重新生成解决方案。
 
@@ -405,7 +407,7 @@ namespace Company.CompartmentDrag  // EDIT.
 
  /// <summary>
  /// Override some methods of the compartment shape.
- /// *** GenerateDoubleDerived must be set for this shape in DslDefinition.dsl. ****
+ /// **_ GenerateDoubleDerived must be set for this shape in DslDefinition.dsl. _***
  /// </summary>
  public partial class ClassShape
  {
@@ -569,7 +571,7 @@ namespace Company.CompartmentDrag  // EDIT.
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [自定义复制行为](../modeling/customizing-copy-behavior.md)
 - [部署域特定语言解决方案](msi-and-vsix-deployment-of-a-dsl.md)

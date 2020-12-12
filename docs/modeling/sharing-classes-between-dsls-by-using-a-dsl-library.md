@@ -1,5 +1,7 @@
 ---
 title: 使用 DSL 库在 DSL 之间共享类
+description: 了解，在 Visual Studio 可视化和建模 SDK 中，可以创建可导入到另一个 DSL 的不完整 DSL 定义。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 38496141d6fcdd33f3bf5185c3f50b1bf961d832
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e1685fe4fc7db6728ebc1ca6a12e27bb6f42589b
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85542540"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363752"
 ---
 # <a name="sharing-classes-between-dsls-by-using-a-dsl-library"></a>使用 DSL 库在 DSL 之间共享类
 在 Visual Studio 可视化和建模 SDK 中，可以创建可导入到另一个 DSL 的不完整 DSL 定义。 这使您可以对类似模型的常见部分进行因式分解。
@@ -45,7 +47,7 @@ ms.locfileid: "85542540"
 
 #### <a name="to-import-a-dsl-library"></a>导入 DSL 库
 
-1. 在其他 DSL 定义中，在 **Dsl 资源管理器**中右键单击 dsl 的根类，然后单击 " **添加新的 DslLibrary 导入**"。
+1. 在其他 DSL 定义中，在 **Dsl 资源管理器** 中右键单击 dsl 的根类，然后单击 " **添加新的 DslLibrary 导入**"。
 
 2. 在属性窗口中，设置库的 **文件路径** 。 您可以使用相对路径或绝对路径。
 
@@ -61,7 +63,7 @@ ms.locfileid: "85542540"
 
    DSL 库可以导入其他库。 导入库时，其导入还会自动显示在 DSL 资源管理器中。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [如何定义域特定语言](../modeling/how-to-define-a-domain-specific-language.md)
 

@@ -1,5 +1,7 @@
 ---
 title: T4 文本模板编写准则
+description: 若要在 Visual Studio 中生成程序代码或其他应用程序资源，请参阅常规指南。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: JoshuaPartlow
@@ -7,20 +9,20 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 24c8afd5e34d4957dac3d9f4d5b0e4409ad20895
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f5f7be4ce9b8beb7699844397de3e1fc206d017c
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75596536"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363401"
 ---
 # <a name="guidelines-for-writing-t4-text-templates"></a>T4 文本模板编写准则
 
 如果要在 Visual Studio 中生成程序代码或其他应用程序资源，则这些常规指南可能会很有帮助。 它们不是固定的规则。
 
-## <a name="guidelines-for-design-time-t4-templates"></a>设计时 T4 模板指南
+## <a name="guidelines-for-design-time-t4-templates"></a>T4 模板 Design-Time 准则
 
-设计时 T4 模板是在设计时在 Visual Studio 项目中生成代码的模板。 有关详细信息，请参阅 [使用 T4 文本模板生成设计时代码](../modeling/design-time-code-generation-by-using-t4-text-templates.md)。
+设计时 T4 模板是在设计时在 Visual Studio 项目中生成代码的模板。 有关详细信息，请参阅[使用 T4 文本模板生成设计时代码](../modeling/design-time-code-generation-by-using-t4-text-templates.md)。
 
 生成应用程序的可变因素。
 
@@ -91,7 +93,7 @@ MyProject
    AnotherClass.cs
 ```
 
-## <a name="guidelines-for-run-time-preprocessed-t4-templates"></a>运行时 (预处理) T4 模板的准则
+## <a name="guidelines-for-run-time-preprocessed-t4-templates"></a>Run-Time (预处理) T4 模板的准则
 
 将常见材料移到继承的模板中。
 
@@ -105,11 +107,11 @@ MyProject
 
 这样做的一个优点是代码更易于编写，因为 IntelliSense 可用。 此外，您还可以在演示和基础逻辑之间实现更好的隔离。
 
-例如，在 **MyReportText.tt**中：
+例如，在 **MyReportText.tt** 中：
 
 `The total is: <#= ComputeTotal() #>`
 
-在 **MyReportText-Methods.cs**中：
+在 **MyReportText-Methods.cs** 中：
 
 `private string ComputeTotal() { ... }`
 

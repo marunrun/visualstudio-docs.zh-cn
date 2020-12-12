@@ -1,5 +1,7 @@
 ---
 title: Customize code maps by editing the DGML files
+description: 了解如何通过编辑代码图的定向关系图标记语言 ( .dgml) 文件自定义代码图。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -20,18 +22,18 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 24afbfcfe31de52ac51329bb67df41cc59dd6f1e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2e9b1126b258e36c0aeffd18b9319b15da2b4639
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547272"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363415"
 ---
 # <a name="customize-code-maps-by-editing-the-dgml-files"></a>Customize code maps by editing the DGML files
 
 若要自定义代码图，可以编辑其定向图形标记语言 ( .dgml) 文件。 例如，可以编辑元素来指定自定义样式，向代码元素和链接分配属性和类别，或将文档（或 URL）链接到代码元素（或链接）。 有关 DGML 元素的详细信息，请参阅 [定向关系图标记语言 (DGML) 引用](../modeling/directed-graph-markup-language-dgml-reference.md)。
 
-在文本编辑器或 XML 编辑器中编辑代码图的 .dgml 文件。 如果该地图是你的 Visual Studio 解决方案的一部分，请在 **解决方案资源管理器**中将其选中，打开快捷菜单，然后选择 " **打开**方式"、" **XML (文本) 编辑器**"。
+在文本编辑器或 XML 编辑器中编辑代码图的 .dgml 文件。 如果该地图是你的 Visual Studio 解决方案的一部分，请在 **解决方案资源管理器** 中将其选中，打开快捷菜单，然后选择 " **打开** 方式"、" **XML (文本) 编辑器**"。
 
 > [!NOTE]
 > 若要创建代码图，必须具有 Visual Studio Enterprise 版本。 在 Visual Studio 中编辑代码图时，Visual Studio 会在保存 .dgml 文件时删除所有未使用的 DGML 元素和属性以进行清理。 当手动添加新链接时，它还将自动创建代码元素。 当你保存 .dgml 文件时，你添加到元素的任何特性可能会按字母顺序重新排列。
@@ -371,7 +373,7 @@ ms.locfileid: "85547272"
 
  基于 `Coverage` 属性设置代码元素的背景色。 类似于 `if-else` 语句，将按样式的出现顺序来计算样式。
 
- 在此示例中：
+ 在本示例中：
 
 1. 如果 `Coverage` 为 > 80，则将 `Background` 属性设置为绿色。
 

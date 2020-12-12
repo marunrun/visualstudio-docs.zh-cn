@@ -1,5 +1,7 @@
 ---
 title: 在图表上设置背景图像
+description: 了解，在 Visual Studio 可视化和建模 SDK 中，可以使用自定义代码设置生成的设计器的背景图像。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7701bf0ba1467b481f6da64d3c2e229be77a7fe7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8f99ce329d4b88037901db2336076bb1d12d411f
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85542579"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363778"
 ---
 # <a name="setting-a-background-image-on-a-diagram"></a>在图表上设置背景图像
 在 Visual Studio 可视化和建模 SDK 中，可以使用自定义代码设置生成的设计器的背景图像。
@@ -23,7 +25,7 @@ ms.locfileid: "85542579"
 
 1. 将要用作关系图的背景的图像文件复制到当前项目的 Dsl\Resources 目录中。
 
-2. 在 **解决方案资源管理器**中，右键单击 Dsl\Resources 文件夹，指向 " **添加**"，然后单击 " **现有项**"。
+2. 在 **解决方案资源管理器** 中，右键单击 Dsl\Resources 文件夹，指向 " **添加**"，然后单击 " **现有项**"。
 
 3. 在 " **添加现有项** " 对话框中，浏览到 Dsl\Resources 文件夹。
 
@@ -41,11 +43,11 @@ ms.locfileid: "85542579"
 
 10. 验证文件 Dsl\Properties\Resources.resx 是否存在，以及该文件下面是否具有文件 Resources.Designer.cs。
 
-11. 如果缺少 Resources.Designer.cs，请单击 **解决方案资源管理器**中的文件资源 .resx。
+11. 如果缺少 Resources.Designer.cs，请单击 **解决方案资源管理器** 中的文件资源 .resx。
 
-12. 在“属性” **** 窗口中，将 `Custom Tool` 属性设置为 `ResXFileCodeGenerator`。
+12. 在“属性”  窗口中，将 `Custom Tool` 属性设置为 `ResXFileCodeGenerator`。
 
-13. 在 **解决方案资源管理器**中，右键单击 Dsl 项目，指向 " **添加**"，然后单击 " **新建文件夹**"。
+13. 在 **解决方案资源管理器** 中，右键单击 Dsl 项目，指向 " **添加**"，然后单击 " **新建文件夹**"。
 
 14. 将文件夹命名为 " **自定义**"。
 
@@ -100,7 +102,7 @@ ms.locfileid: "85542579"
 
      有关使用程序代码自定义模型的详细信息，请参阅 [在程序代码中导航和更新模型](../modeling/navigating-and-updating-a-model-in-program-code.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [定义形状和连接线](../modeling/defining-shapes-and-connectors.md)
 - [自定义文本和图像字段](../modeling/customizing-text-and-image-fields.md)

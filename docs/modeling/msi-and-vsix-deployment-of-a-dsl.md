@@ -1,5 +1,7 @@
 ---
 title: DSL 的 MSI 和 VSIX 部署
+description: 了解如何在自己的计算机或其他计算机上安装 (DSL) 域特定语言。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d4de8d7560cb43115a30e29516e0e88b4d02d21
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 623cbdcfaae6acd1889e265fecafec805e5a9440
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85542611"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363128"
 ---
 # <a name="msi-and-vsix-deployment-of-a-dsl"></a>DSL 的 MSI 和 VSIX 部署
 可以在自己的计算机或其他计算机上安装域特定语言。 必须已在目标计算机上安装 Visual Studio。
@@ -20,7 +22,7 @@ ms.locfileid: "85542611"
 ## <a name="choosing-between-vsix-and-msi-deployment"></a><a name="which"></a> 在 VSIX 和 MSI 部署之间选择
  部署域特定语言的方法有两种：
 
-|方法|优点|
+|方法|好处|
 |-|-|
 |VSX (Visual Studio 扩展) |易于部署：从 DslPackage 项目复制并执行 **.vsix** 文件。<br /><br /> 有关详细信息，请参阅 [使用 VSX 安装和卸载 DSL](#Installing)。|
 |MSI (安装程序文件) |-允许用户通过双击 DSL 文件打开 Visual Studio。<br />-将图标与目标计算机中的 DSL 文件类型相关联。<br />-将 XSD (XML 架构) 与 DSL 文件类型相关联。 这可以避免在将文件加载到 Visual Studio 时出现警告。<br /><br /> 必须将安装项目添加到解决方案才能创建 MSI。<br /><br /> 有关详细信息，请参阅 [使用 MSI 文件部署 DSL](#msi)。|
@@ -33,19 +35,19 @@ ms.locfileid: "85542611"
 
 1. 找到 DSL 包项目生成的 **.vsix** 文件：
 
-   1. 在 **解决方案资源管理器**中，右键单击 **DslPackage** 项目，然后单击 " **在文件资源管理器中打开文件夹**"。
+   1. 在 **解决方案资源管理器** 中，右键单击 **DslPackage** 项目，然后单击 " **在文件资源管理器中打开文件夹**"。
 
-   2. 找到_项目_文件** \\ \* \\ ****。DslPackage**
+   2. 找到 _项目_ 文件 **\\ \* \\****。DslPackage**
 
 2. 将 **.vsix** 文件复制到要安装 DSL 的目标计算机。 该计算机可以是自己的计算机或其他计算机。
 
    - 目标计算机必须具有在 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] 运行时支持 dsl 的版本之一。 有关详细信息，请参阅 [支持的 Visual Studio 版本 & 建模 SDK](../modeling/supported-visual-studio-editions-for-visualization-amp-modeling-sdk.md)。
 
-   - 目标计算机必须具有在 **DslPackage\source.extensions.manifest**中指定的 Visual Studio 版本之一。
+   - 目标计算机必须具有在 **DslPackage\source.extensions.manifest** 中指定的 Visual Studio 版本之一。
 
 3. 在目标计算机上，双击 **.vsix** 文件。
 
-    “”**** 将会打开并安装扩展。
+    “” 将会打开并安装扩展。
 
 4. 启动或重启 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]。
 
@@ -53,9 +55,9 @@ ms.locfileid: "85542611"
 
 ### <a name="to-uninstall-a-dsl-that-was-installed-by-using-vsx"></a>卸载使用 VSX 安装的 DSL
 
-1. 在“工具” **** 菜单上，选择“扩展和更新” ****。
+1. 在“工具”  菜单上，选择“扩展和更新” 。
 
-2. 展开“已安装的扩展” ****。
+2. 展开“已安装的扩展” 。
 
 3. 选择在其中定义 DSL 的扩展，然后单击 " **卸载**"。
 
@@ -92,7 +94,7 @@ ms.locfileid: "85542611"
 
        - 版本
 
-   - 单击 " **编辑器** " 节点，然后在 "属性窗口中，单击" **图标**"。 设置值以引用 **DslPackage\Resources**中的图标文件，如 **file .ico**
+   - 单击 " **编辑器** " 节点，然后在 "属性窗口中，单击" **图标**"。 设置值以引用 **DslPackage\Resources** 中的图标文件，如 **file .ico**
 
    - 在 " **生成** " 菜单上，打开 **Configuration Manager**，然后选择要生成的配置，例如 " **发布** " 或 " **调试**"。
 
@@ -100,13 +102,13 @@ ms.locfileid: "85542611"
 
 5. 将 **CreateMsiSetupProject.tt** 添加到 Dsl 项目。
 
-    Visual Studio 将创建一个名为 **CreateMsiSetupProject. .vdproj**的文件。
+    Visual Studio 将创建一个名为 **CreateMsiSetupProject. .vdproj** 的文件。
 
 6. 在 Windows 资源管理器中，将 Dsl \\ *. .vdproj 复制到名为 Setup 的新文件夹。
 
      (如果需要，现在可以从 Dsl 项目中排除 CreateMsiSetupProject.tt。 ) 
 
-7. 在**解决方案资源管理器**中，**将 \\ \* .vdproj**添加为现有项目。
+7. 在 **解决方案资源管理器** 中，**将 \\ \* .vdproj** 添加为现有项目。
 
 8. 在 " **项目** " 菜单上，单击 " **项目依赖项**"。
 
@@ -134,4 +136,4 @@ ms.locfileid: "85542611"
 
 2. 卸载 DSL。
 
-3. 重启 Visual Studio。
+3. 重新启动 Visual Studio。

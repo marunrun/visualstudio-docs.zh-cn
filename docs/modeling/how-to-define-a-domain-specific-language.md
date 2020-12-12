@@ -1,5 +1,7 @@
 ---
 title: 如何定义域特定语言
+description: 了解如何从模板创建 Visual Studio 解决方案，以定义 (DSL) 的域特定语言。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -16,12 +18,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ca9cc6b853ea95cedcb0ce109b9618fc0eb455ba
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 40dcba1cb83e695f2b02468bdd83a5faa8c25a38
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85542748"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363310"
 ---
 # <a name="how-to-define-a-domain-specific-language"></a>如何定义域特定语言
 若要定义域特定语言 (DSL) ，请从模板创建 Visual Studio 解决方案。 解决方案的重要组成部分是 DSL 定义关系图，它存储在 DslDefinition.dsl 中。 DSL 定义将定义 DSL 的类和形状。 在进行修改并将所做修改添加到这些元素后，可以添加程序代码以更详细地自定义 DSL。
@@ -38,7 +40,7 @@ ms.locfileid: "85542748"
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-若要创建新的域特定语言，请使用 "域特定语言" 项目模板创建一个新的 Visual Studio 解决方案。
+若要创建新的域特定语言，请使用 "Domain-Specific 语言" 项目模板创建一个新的 Visual Studio 解决方案。
 
 ### <a name="to-create-a-dsl-solution"></a>创建 DSL 解决方案
 
@@ -50,7 +52,7 @@ ms.locfileid: "85542748"
 
    ::: moniker-end
 
-    **域特定语言向导**将打开并显示模板 DSL 解决方案列表。
+    **域特定语言向导** 将打开并显示模板 DSL 解决方案列表。
 
 2. 单击每个模板以查看说明。 选择最近似你想要创建的解决方案。
 
@@ -88,7 +90,7 @@ ms.locfileid: "85542748"
 
    ![dsl 设计器](../modeling/media/dsl_designer.png)
 
-   此解决方案将定义域特定语言。 有关详细信息，请参阅 [特定于域的语言工具用户界面概述](../modeling/overview-of-the-domain-specific-language-tools-user-interface.md)。
+   此解决方案将定义域特定语言。 有关详细信息，请参阅 [Domain-Specific 语言工具用户界面概述](../modeling/overview-of-the-domain-specific-language-tools-user-interface.md)。
 
 ### <a name="test-the-solution"></a>测试解决方案
  模板解决方案提供了一个工作 DSL，你可以对其进行修改或按原样使用。
@@ -188,7 +190,7 @@ ms.locfileid: "85542748"
 ### <a name="add-domain-properties-to-each-domain-class"></a>将域属性添加到每个域类
  域属性存储值。 示例为：Name、Title、Publication Date。
 
- 单击类中的 " **域属性** "，按 enter 键，然后键入属性的名称。 域属性的默认类型是 String。 若要更改类型，请选择 "域" 属性，然后在 "**属性**" 窗口中设置**类型**。 如果所需的类型不在下拉列表中，请参阅 [添加属性类型](#addTypes)。
+ 单击类中的 " **域属性** "，按 enter 键，然后键入属性的名称。 域属性的默认类型是 String。 若要更改类型，请选择 "域" 属性，然后在 "**属性**" 窗口中设置 **类型**。 如果所需的类型不在下拉列表中，请参阅 [添加属性类型](#addTypes)。
 
  **设置元素名称属性。** 在语言资源管理器中选择可以用于标识元素的域属性。 例如，在 Song 域类中可以选择 Title 域属性。 在 " **属性** " 窗口中，将 " **为元素名称** " 设置为 `true` 。
 
@@ -261,13 +263,13 @@ ms.locfileid: "85542748"
 
    4. 在属性窗口中，单击 " **图像** " 属性。
 
-   5. 在 " **选择图像** " 对话框中，单击 **"文件名" 下的**下拉菜单，然后选择图像。
+   5. 在 " **选择图像** " 对话框中，单击 **"文件名" 下的** 下拉菜单，然后选择图像。
 
 4. **将文本修饰器添加到形状，以显示域属性。**
 
     若要显示模型元素的名称或标题，将可能需要至少一个文本修饰器。
 
-    右键单击 shape 类的标题，指向 " **添加**"，然后单击 " **文本修饰**器"。 设置修饰器的名称，并在属性窗口设置其 **位置**。
+    右键单击 shape 类的标题，指向 " **添加**"，然后单击 " **文本修饰** 器"。 设置修饰器的名称，并在属性窗口设置其 **位置**。
 
 5. **使用关系图元素映射将每个形状连接到应显示的域类**。
 
@@ -302,9 +304,9 @@ ms.locfileid: "85542748"
 
    5. 将 " **工具箱" 图标** 设置为将显示在工具箱中的图标。 可以将它设置为新图标或已用于其他工具的图标。
 
-        若要创建新图标，请在 **解决方案资源管理器**中打开 Dsl\Resources。 复制并粘贴现有元素工具 BMP 文件之一。 重命名粘贴的副本，然后双击以对其进行编辑。
+        若要创建新图标，请在 **解决方案资源管理器** 中打开 Dsl\Resources。 复制并粘贴现有元素工具 BMP 文件之一。 重命名粘贴的副本，然后双击以对其进行编辑。
 
-        返回到 DSL 定义关系图，选择工具，然后在 "属性窗口单击 **" 工具箱 "图标**中的" **[...]** "。 在 " **选择位图** " 对话框中，选择。下拉菜单中的 "BMP 文件"。
+        返回到 DSL 定义关系图，选择工具，然后在 "属性窗口单击 **" 工具箱 "图标** 中的" **[...]** "。 在 " **选择位图** " 对话框中，选择。下拉菜单中的 "BMP 文件"。
 
    有关详细信息，请参阅 [Geometry 形状的属性](../modeling/properties-of-geometry-shapes.md) 和 [图像形状的属性](../modeling/properties-of-image-shapes.md)。
 
@@ -316,7 +318,7 @@ ms.locfileid: "85542748"
 
 3. **验证元素工具是否显示在工具箱上。**
 
-4. 通过从工具拖到模型关系图上来**创建形状**。
+4. 通过从工具拖到模型关系图上来 **创建形状**。
 
 5. **验证是否显示每个文本修饰器，** 以及：
 
@@ -324,7 +326,7 @@ ms.locfileid: "85542748"
 
    2. 当在“属性”窗口或在修饰器中编辑属性时，将更新其他视图。
 
-   在首次测试形状后，你可能想要调整它的某些属性并添加一些更高级的功能。 有关详细信息，请参阅 [自定义和扩展域特定语言](../modeling/customizing-and-extending-a-domain-specific-language.md)。
+   在首次测试形状后，你可能想要调整它的某些属性并添加一些更高级的功能。 有关详细信息，请参阅 [自定义和扩展 Domain-Specific 语言](../modeling/customizing-and-extending-a-domain-specific-language.md)。
 
 ## <a name="defining-reference-relationships"></a><a name="references"></a> 定义引用关系
  可以在任何源域类和任何目标域类之间定义引用关系。 引用关系通常在关系图上显示为连接符，它们是形状之间的线条。
@@ -342,7 +344,7 @@ ms.locfileid: "85542748"
 
  **考虑重命名角色**。 例如，在 Person 和 Person 之间的关系中，你可能想要将默认名称更改为 Parents 和 Children、Manager 和 Subordinates、Teacher 和 Student 等等。
 
- **调整每个角色**的重数（如有必要）。 如果希望每个 Person 最多只有一个 Manager，则将显示在关系图上的 Manager 标签下的重数设置为 0..1。
+ **调整每个角色** 的重数（如有必要）。 如果希望每个 Person 最多只有一个 Manager，则将显示在关系图上的 Manager 标签下的重数设置为 0..1。
 
  **将域属性添加到关系。** 在该图中，Artist-Album 关系具有角色的属性。
 
@@ -380,9 +382,9 @@ ms.locfileid: "85542748"
 
 - 将 **"工具箱" 图标** 设置为要在工具箱中显示的图标。 可以将它设置为新图标或已用于其他工具的图标。
 
-     若要创建新图标，请在 **解决方案资源管理器**中打开 Dsl\Resources。 复制并粘贴现有元素工具 BMP 文件之一。 重命名粘贴的副本，然后双击以对其进行编辑。
+     若要创建新图标，请在 **解决方案资源管理器** 中打开 Dsl\Resources。 复制并粘贴现有元素工具 BMP 文件之一。 重命名粘贴的副本，然后双击以对其进行编辑。
 
-     返回到 DSL 定义关系图，选择工具，然后在 "属性窗口单击 **" 工具箱 "图标**中的" **[...]** "。 在 " **选择位图** " 对话框中，选择。下拉菜单中的 "BMP 文件"。
+     返回到 DSL 定义关系图，选择工具，然后在 "属性窗口单击 **" 工具箱 "图标** 中的" **[...]** "。 在 " **选择位图** " 对话框中，选择。下拉菜单中的 "BMP 文件"。
 
 ##### <a name="to-test-a-reference-relationship-and-connector"></a>测试引用关系和连接符
 
@@ -392,9 +394,9 @@ ms.locfileid: "85542748"
 
 3. **验证连接工具是否显示在工具箱上。**
 
-4. 通过从工具拖到模型关系图上来**创建形状**。
+4. 通过从工具拖到模型关系图上来 **创建形状**。
 
-5. 在形状之间**创建连接**。 依次单击连接符工具、形状，然后单击另一个形状。
+5. 在形状之间 **创建连接**。 依次单击连接符工具、形状，然后单击另一个形状。
 
 6. **验证是否无法在不适当的类之间创建连接。** 例如，如果存在 Album 和 Artist 之间的关系，则验证是否无法将 Artist 链接到 Artist。
 
@@ -406,7 +408,7 @@ ms.locfileid: "85542748"
 
    2. 当在“属性”窗口或在修饰器中编辑属性时，将更新其他视图。
 
-   在首次测试连接符后，你可能想要调整它的某些属性并添加一些更高级的功能。 有关详细信息，请参阅 [自定义和扩展域特定语言](../modeling/customizing-and-extending-a-domain-specific-language.md)。
+   在首次测试连接符后，你可能想要调整它的某些属性并添加一些更高级的功能。 有关详细信息，请参阅 [自定义和扩展 Domain-Specific 语言](../modeling/customizing-and-extending-a-domain-specific-language.md)。
 
 ## <a name="defining-shapes-that-contain-lists-compartment-shapes"></a><a name="compartments"></a> 定义包含列表的形状：隔离舱形状
  隔离舱形状包含一个或多个项列表。 例如，在“音乐库”DSL 中，可以使用隔离舱形状来表示音乐 Album。 在每个 Album 中，存在一个 Song 列表。
@@ -435,7 +437,7 @@ ms.locfileid: "85542748"
 
      为想要显示的每个列表添加其他列表项域类。
 
-3. **若要在列表中混合使用几种类型的项**，请创建从列表类继承的类。 通过设置类的 **继承修饰符**使列表类成为抽象类。
+3. **若要在列表中混合使用几种类型的项**，请创建从列表类继承的类。 通过设置类的 **继承修饰符** 使列表类成为抽象类。
 
      例如，如果希望古典音乐按作曲家而不是艺术家进行排序，则可以创建 Song 的两个子类：ClassicalSong 和 NonClassicalSong。
 
@@ -445,7 +447,7 @@ ms.locfileid: "85542748"
 
      添加隔离舱并设置其名称。
 
-5. 若要允许用户隐藏列表隔离舱，请右键单击隔离舱形状类、指向 " **添加**"，然后单击 " **展开/折叠修饰**器"。 在“属性”窗口中，设置修饰器的位置。
+5. 若要允许用户隐藏列表隔离舱，请右键单击隔离舱形状类、指向 " **添加**"，然后单击 " **展开/折叠修饰** 器"。 在“属性”窗口中，设置修饰器的位置。
 
 6. 单击 " **关系图元素映射** " 工具，单击容器域类，然后单击隔离舱形状。
 
@@ -481,9 +483,9 @@ ms.locfileid: "85542748"
 
 6. 将 " **工具箱" 图标** 设置为将显示在工具箱中的图标。 可以将它设置为新图标或已用于其他工具的图标。
 
-     若要创建新图标，请在 **解决方案资源管理器**中打开 Dsl\Resources。 复制并粘贴现有元素工具 .BMP 文件之一。 重命名粘贴的副本，然后双击以对其进行编辑。
+     若要创建新图标，请在 **解决方案资源管理器** 中打开 Dsl\Resources。 复制并粘贴现有元素工具 .BMP 文件之一。 重命名粘贴的副本，然后双击以对其进行编辑。
 
-     返回到 DSL 定义关系图，选择工具，然后在 "属性窗口单击 **" 工具箱 "图标**中的" **[...]** "。 在 " **选择位图** " 对话框中，从下拉菜单中选择您的 BMP 文件。
+     返回到 DSL 定义关系图，选择工具，然后在 "属性窗口单击 **" 工具箱 "图标** 中的" **[...]** "。 在 " **选择位图** " 对话框中，从下拉菜单中选择您的 BMP 文件。
 
 #### <a name="to-test-a-compartment-shape"></a>测试隔离舱形状
 
@@ -507,7 +509,7 @@ ms.locfileid: "85542748"
 
    ![生成的 DSL 资源管理器](../modeling/media/music_explorer.png)
 
-   在首次测试隔离舱形状后，你可能想要调整它的某些属性并添加一些更高级的功能。 有关详细信息，请参阅 [自定义和扩展域特定语言](../modeling/customizing-and-extending-a-domain-specific-language.md)。
+   在首次测试隔离舱形状后，你可能想要调整它的某些属性并添加一些更高级的功能。 有关详细信息，请参阅 [自定义和扩展 Domain-Specific 语言](../modeling/customizing-and-extending-a-domain-specific-language.md)。
 
 ### <a name="displaying-a-reference-link-in-a-compartment"></a>在隔离舱中显示引用链接
  通常，在隔离舱中显示的元素是由隔离舱形状表示的元素的子级。 但是有时你可能想要显示使用引用关系链接到它的元素。
@@ -593,9 +595,9 @@ ms.locfileid: "85542748"
 
 1. 使用 DSL 定义的更多功能微调 DSL。 例如，你可以生成可创建多种类型的连接符的单个连接符工具，也可以通过删除一个元素也将删除相关元素的方式来控制规则。 这些技术主要通过在 DSL 定义中设置值来实现，而有些技术则需要几行程序代码。
 
-     有关详细信息，请参阅 [自定义和扩展域特定语言](../modeling/customizing-and-extending-a-domain-specific-language.md)。
+     有关详细信息，请参阅 [自定义和扩展 Domain-Specific 语言](../modeling/customizing-and-extending-a-domain-specific-language.md)。
 
-2. 通过使用程序代码扩展模型工具以实现更高级的效果。 例如，你可以创建可更改模型的菜单命令，也可以创建集成两个或多个 DSL 的工具。 VMSDK 专门用于轻松将扩展和从 DSL 定义生成的代码相集成。  有关详细信息，请参阅 [编写代码以自定义域特定语言](../modeling/writing-code-to-customise-a-domain-specific-language.md)。
+2. 通过使用程序代码扩展模型工具以实现更高级的效果。 例如，你可以创建可更改模型的菜单命令，也可以创建集成两个或多个 DSL 的工具。 VMSDK 专门用于轻松将扩展和从 DSL 定义生成的代码相集成。  有关详细信息，请参阅 [编写代码以自定义 Domain-Specific 语言](../modeling/writing-code-to-customise-a-domain-specific-language.md)。
 
 ### <a name="changing-the-dsl-definition"></a>更改 DSL 定义
  当在 DSL 定义中创建任何项时，将自动设置许多默认值。 设置完这些值后，你可以更改它们。 这将简化 DSL 的开发，同时仍允许强大的自定义。
@@ -604,7 +606,7 @@ ms.locfileid: "85542748"
 
  因此请注意，更改 DSL 定义中的某些关系后，如果你保存了该定义或“转换所有模板”，则收到错误报告可能很正常。 大多数错误都易于修复。 双击错误报告来查看错误的位置。
 
- 另请参阅 [如何：更改域特定语言的命名空间](../modeling/how-to-change-the-namespace-of-a-domain-specific-language.md)。
+ 另请参阅 [如何：更改 Domain-Specific 语言的命名空间](../modeling/how-to-change-the-namespace-of-a-domain-specific-language.md)。
 
 ## <a name="troubleshooting"></a><a name="trouble"></a> 故障排除
  下表列出了在设计 DSL 时遇到的一些最常见问题，以及其解决方案的建议。 [可视化工具扩展性论坛](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=dslvsarchx)上提供了更多建议。
@@ -616,11 +618,11 @@ ms.locfileid: "85542748"
 | 在 DSL 资源管理器中，无法添加到集合。 例如，当右键单击“工具”时，菜单中没有“添加工具”命令。<br /><br /> 在 DSL 的资源管理器中，无法将元素添加到列表。 | 右键单击你正在尝试的节点上方的项。 当你想要添加到列表中时，“添加”命令不在列表节点中，而在其所有者中。 |
 | 已创建域类，但无法在语言资源管理器中创建实例。 | 每个域类（根除外）都必须是嵌入关系的目标。 |
 | 在 DSL 的资源管理器中，只显示元素及其类型名称。 | 在 DSL 定义中，选择类的域属性，然后在 "属性窗口中，将" **元素名称** "设置为" true "。 |
-| 始终在 XML 编辑器中打开 DSL。 | 发生这种情况是由于在读取文件的同时出现一个错误。 但是，即使在修复该错误后，也必须显式将该编辑器重置为 DSL 设计器。<br /><br /> 右键单击项目项，单击 " **打开方式** "，然后选择 "** (默认) 设计器 **"。 |
-| 在更改程序集名称后，不会显示 DSL 的工具箱。 | 检查并更新 **DslPackage\GeneratedCode\Package.tt** 有关详细信息，请参阅 [如何：更改域特定语言的命名空间](../modeling/how-to-change-the-namespace-of-a-domain-specific-language.md)。 |
+| 始终在 XML 编辑器中打开 DSL。 | 发生这种情况是由于在读取文件的同时出现一个错误。 但是，即使在修复该错误后，也必须显式将该编辑器重置为 DSL 设计器。<br /><br /> 右键单击项目项，单击 " **打开方式** "，然后选择 "**(默认) 设计器**"。 |
+| 在更改程序集名称后，不会显示 DSL 的工具箱。 | 检查并更新 **DslPackage\GeneratedCode\Package.tt** 有关详细信息，请参阅 [如何：更改 Domain-Specific 语言的命名空间](../modeling/how-to-change-the-namespace-of-a-domain-specific-language.md)。 |
 | 不会显示 DSL 的工具箱，但并未更改程序集名称。<br /><br /> 或者，显示一个报告加载扩展失败的消息框。 | 重置实验实例，并重新生成解决方案。<br /><br /> 1. 在 Windows "开始" 菜单的 " **所有程序**" 下，依次展开 [!INCLUDE[vssdk_current_long](../misc/includes/vssdk_current_long_md.md)] "工具" 和 " **工具**"，然后单击 **"重置 Microsoft Visual Studio 实验实例"**。<br />2. 在 " **生成** " 菜单上，单击 " **重新生成解决方案**"。 |
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [域特定语言入门](../modeling/getting-started-with-domain-specific-languages.md)
 - [创建基于 Windows 窗体的域特定语言](../modeling/creating-a-windows-forms-based-domain-specific-language.md)
