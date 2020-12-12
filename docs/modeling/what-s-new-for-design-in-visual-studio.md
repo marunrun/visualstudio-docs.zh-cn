@@ -1,5 +1,7 @@
 ---
 title: Visual Studio 2017 中用于设计的新增功能
+description: 了解 Visual Studio 2017 中提供的代码设计的新功能，如实时依赖项验证。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,12 +15,12 @@ manager: jillfra
 ms.workload:
 - multiple
 monikerRange: vs-2017
-ms.openlocfilehash: 6f81cc32604abe6d90ac0d263574e97df35c63bd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bf622d9762e86bcb75a08c60085a15abb6fdca91
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "92299513"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97360970"
 ---
 # <a name="whats-new-for-design-in-visual-studio-2017"></a>Visual Studio 2017 中用于设计的新增功能
 
@@ -73,5 +75,5 @@ Visual Studio 提供多种版本。 并非所有这些都提供对体系结构�
 |-|-|-|-|
 |**代码图**|是|仅支持读取代码图，筛选代码映射，添加新的泛型节点，以及通过选择创建新的定向关系图。|-|
 |**依赖项关系图**|是|仅支持读取依赖项关系图。|仅支持读取依赖项关系图。|
-| (DGML 关系图的**定向关系**图) |是|是|是|
+| (DGML 关系图的 **定向关系** 图) |是|是|是|
 |**代码克隆**|是|-|-|

@@ -1,5 +1,7 @@
 ---
 title: 如何：扩展域特定语言设计器
+description: 了解如何对设计器进行扩展，使用该设计器可以 (DSL) 定义中编辑域特定语言。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aa5b3166606312bb74560f207e6e1d0e6065bb2c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1a7a48c5a314dd52893bc7f0675915f0d68297ab
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85532581"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361503"
 ---
 # <a name="how-to-extend-the-domain-specific-language-designer"></a>如何：扩展域特定语言设计器
 

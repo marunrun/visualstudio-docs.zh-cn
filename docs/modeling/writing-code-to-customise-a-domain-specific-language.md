@@ -1,5 +1,7 @@
 ---
 title: 自定义域特定语言
+description: 了解如何使用自定义代码以域特定语言 (DSL) 来访问、修改或创建模型。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b67a50623eb1924c4a18b57524c409f7eba6ab20
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 31b97b113b763a8f294386d4fa5fe66233a3f980
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546869"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97360450"
 ---
 # <a name="write-code-to-customize-a-domain-specific-language"></a>编写代码以自定义域特定语言
 
@@ -24,15 +26,15 @@ ms.locfileid: "85546869"
 
 - **自定义命令。** 您可以创建一个命令，用户可以通过右键单击该关系图，并可以修改模型。 有关详细信息，请参阅 [如何：向快捷菜单中添加命令](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)。
 
-- **验证。** 您可以编写代码来验证模型是否处于正确的状态。 有关详细信息，请参阅 [以域特定语言进行验证](../modeling/validation-in-a-domain-specific-language.md)。
+- **验证。** 您可以编写代码来验证模型是否处于正确的状态。 有关详细信息，请参阅 [Domain-Specific 语言的验证](../modeling/validation-in-a-domain-specific-language.md)。
 
 - **重写默认行为。** 您可以修改从 Dsldefinition.dsl 生成的代码的许多方面。 有关详细信息，请参阅 [重写和扩展生成的类](../modeling/overriding-and-extending-the-generated-classes.md)。
 
-- **文本转换。** 您可以编写包含访问模型的代码的文本模板并生成文本文件，例如生成程序代码。 有关详细信息，请参阅 [从域特定语言生成代码](../modeling/generating-code-from-a-domain-specific-language.md)。
+- **文本转换。** 您可以编写包含访问模型的代码的文本模板并生成文本文件，例如生成程序代码。 有关详细信息，请参阅 [从 Domain-Specific 语言生成代码](../modeling/generating-code-from-a-domain-specific-language.md)。
 
 - **其他 Visual Studio 扩展。** 可以编写用于读取和修改模型的单独的 VSIX 扩展。 有关详细信息，请参阅 [如何：在程序代码中从文件打开模型](../modeling/how-to-open-a-model-from-file-in-program-code.md)
 
-在 Dsldefinition.dsl 中定义的类的实例将保存在一个名为 *内存中存储* (IMS) 或 *存储*的数据结构中。 在 DSL 中定义的类始终将存储用作构造函数的参数。 例如，如果 DSL 定义了一个名为 Example 的类：
+在 Dsldefinition.dsl 中定义的类的实例将保存在一个名为 *内存中存储* (IMS) 或 *存储* 的数据结构中。 在 DSL 中定义的类始终将存储用作构造函数的参数。 例如，如果 DSL 定义了一个名为 Example 的类：
 
 `Example element = new Example (theStore);`
 
@@ -72,6 +74,6 @@ ms.locfileid: "85546869"
 
 - **序列化**。 存储提供了一种标准方式来将其包含的对象序列化到文件中。 您可以自定义用于序列化和反序列化的规则。 有关详细信息，请参阅 [自定义文件存储和 XML 序列化](../modeling/customizing-file-storage-and-xml-serialization.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [自定义和扩展域特定语言](../modeling/customizing-and-extending-a-domain-specific-language.md)

@@ -1,5 +1,7 @@
 ---
 title: 使用域特定语言资源管理器
+description: 了解 DSL 资源管理器，它是一种工具，可在树视图中显示多种信息，并包括用于定义域特定语言的多个节点。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,15 +11,15 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 971114a95fa43dbbcda985587d08f03ac3c7fd72
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 0bb08f7d6dc6ea41c64cfc9aeb6898eac4df0ae5
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810778"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97360918"
 ---
 # <a name="working-with-the-domain-specific-language-explorer"></a>使用域特定语言资源管理器
-**DSL 资源管理器**在树视图中显示多种类型的信息。 有关 DSL 资源管理器中的大部分项的详细信息，请参阅 [如何定义域特定语言](../modeling/how-to-define-a-domain-specific-language.md)。
+**DSL 资源管理器** 在树视图中显示多种类型的信息。 有关 DSL 资源管理器中的大部分项的详细信息，请参阅 [如何定义 Domain-Specific 语言](../modeling/how-to-define-a-domain-specific-language.md)。
 
  它具有以下节点：
 
@@ -33,7 +35,7 @@ ms.locfileid: "90810778"
 
 - **域类型**。 在模型中使用的内置和外部类型的列表。
 
-- **编辑器**。 **工具箱**选项卡及其包含的项的列表，以及模型的验证设置。 有关验证的详细信息，请参阅 [以域特定语言进行验证](../modeling/validation-in-a-domain-specific-language.md)。
+- **编辑器**。 **工具箱** 选项卡及其包含的项的列表，以及模型的验证设置。 有关验证的详细信息，请参阅 [Domain-Specific 语言的验证](../modeling/validation-in-a-domain-specific-language.md)。
 
 - **资源管理器行为**。 在生成的设计器中指定资源管理器的行为的设置。 有关如何自定义资源管理器的详细信息，请参阅 [自定义模型资源管理器](../modeling/customizing-the-model-explorer.md)。
 
@@ -41,6 +43,6 @@ ms.locfileid: "90810778"
 
 - **Xml 序列化行为**。 用于该模型的序列化设置。 有关序列化的详细信息，请参阅 [自定义文件存储和 XML 序列化](../modeling/customizing-file-storage-and-xml-serialization.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [域特定语言工具术语表](/previous-versions/bb126564(v=vs.100))

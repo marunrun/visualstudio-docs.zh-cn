@@ -1,5 +1,7 @@
 ---
 title: 扩展依赖项关系图
+description: 了解如何编写代码以创建和更新依赖关系图，以及如何在 Visual Studio 中针对依赖关系图验证程序代码的结构。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 305c562c7600dc6955ce0307db92f4e257fc1c21
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d78b7005875f0544354c845cd27d187bdbf40d6d
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "92298420"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361620"
 ---
 # <a name="extend-dependency-diagrams"></a>扩展依赖项关系图
 
@@ -35,7 +37,7 @@ ms.locfileid: "92298420"
 
 你必须在要运行层扩展的计算机上安装合适版本的 Visual Studio。 若要查看支持依赖关系图的 Visual Studio 版本，请参阅 [体系结构和建模工具的版本支持](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [依赖项关系图：参考](../modeling/layer-diagrams-reference.md)
 - [依赖项关系图：指南](../modeling/layer-diagrams-guidelines.md)

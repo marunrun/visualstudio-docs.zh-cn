@@ -1,5 +1,7 @@
 ---
 title: 演练：创建自定义文本模板宿主
+description: 如果要在 Visual Studio 外部使用文本模板转换功能，请了解如何编写自定义主机。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,16 +15,16 @@ ms.workload:
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 3979f93de6040078a5b1e4315cadc4f7faa4728e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1cc1681d7c761aca123217cbf28cc33b0dbb584c
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85532218"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361048"
 ---
 # <a name="walkthrough-create-a-custom-text-template-host"></a>演练：创建自定义文本模板主机
 
-*文本模板宿主*提供了一个环境，该环境允许*文本模板转换引擎*运行。 宿主负责管理引擎与文件系统的交互。 需要文件或程序集的引擎或 *指令处理器* 可以从主机请求资源。 然后，宿主可以搜索目录和全局程序集缓存，以查找请求的资源。 有关详细信息，请参阅 [文本模板转换过程](../modeling/the-text-template-transformation-process.md)。
+*文本模板宿主* 提供了一个环境，该环境允许 *文本模板转换引擎* 运行。 宿主负责管理引擎与文件系统的交互。 需要文件或程序集的引擎或 *指令处理器* 可以从主机请求资源。 然后，宿主可以搜索目录和全局程序集缓存，以查找请求的资源。 有关详细信息，请参阅 [文本模板转换过程](../modeling/the-text-template-transformation-process.md)。
 
 如果要在 Visual Studio 外部使用 *文本模板转换* 功能，或者希望将该功能集成到自定义工具中，则可以编写自定义主机。 若要创建自定义主机，你必须创建一个继承自 [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110))的类。 有关各个方法的文档，请参阅 [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110))。
 
@@ -801,7 +803,7 @@ ms.locfileid: "85532218"
 
      自定义宿主应用程序运行并完成文本模板转换过程。
 
-5. 在 **Windows 资源管理器**中，浏览到包含文件 TestTemplate.tt 的文件夹。
+5. 在 **Windows 资源管理器** 中，浏览到包含文件 TestTemplate.tt 的文件夹。
 
      该文件夹还包含文件 TestTemplate1.txt。
 
@@ -821,6 +823,6 @@ ms.locfileid: "85532218"
 
 在本演练中，你创建了一个支持基本转换功能的文本模板转换主机。 您可以对该宿主进行扩展，以支持可调用自定义或生成的指令处理器的文本模板。 有关详细信息，请参阅 [演练：将主机连接到生成的指令处理器](../modeling/walkthrough-connecting-a-host-to-a-generated-directive-processor.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110))

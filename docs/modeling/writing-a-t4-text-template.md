@@ -1,5 +1,7 @@
 ---
 title: 编写 T4 文本模板
+description: 了解 T4 文本模板，以及如何编写包含指令、文本块和控制块的文本模板。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1990377bffe0c663a70520c07bd3ab60b91f8bbd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 086e7ecf568d043142cdc80f020897ed1793b86c
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75593481"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361217"
 ---
 # <a name="writing-a-t4-text-template"></a>编写 T4 文本模板
 文本模板包含将从其生成的文本。 例如，用于创建网页的模板将包含 " \<html> ..."以及 HTML 页的所有其他标准部分。 插入到模板中的是 *控制块*，它们是程序代码的片段。 控制块提供变化值，允许文本部件是条件和重复的。
@@ -238,7 +240,7 @@ private void WriteSquareLine(int i)
 
  **将文件作为可导航模型加载**。 更有效的方法是将数据作为模型读取，文本模板代码可以导航该模型。 例如，可以加载 XML 文件，然后使用 XPath 表达式对其导航。 你还可以使用 [xsd.exe](/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe) 创建一组可用于读取 XML 数据的类。
 
- **在关系图或窗体中编辑模型文件。** [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 提供使您可以将模型作为关系图或 Windows 窗体进行编辑的工具。 这样便于与生成的应用程序的用户讨论模型。 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 还会创建一组反映模型结构的强类型类。 有关详细信息，请参阅 [从域特定语言生成代码](../modeling/generating-code-from-a-domain-specific-language.md)。
+ **在关系图或窗体中编辑模型文件。** [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 提供使您可以将模型作为关系图或 Windows 窗体进行编辑的工具。 这样便于与生成的应用程序的用户讨论模型。 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 还会创建一组反映模型结构的强类型类。 有关详细信息，请参阅 [从 Domain-Specific 语言生成代码](../modeling/generating-code-from-a-domain-specific-language.md)。
 
 ### <a name="relative-file-paths-in-design-time-templates"></a>设计时模板中的相对文件路径
  在 [设计时文本模板](../modeling/design-time-code-generation-by-using-t4-text-templates.md)中，如果要引用相对于文本模板的位置中的文件，请使用 `this.Host.ResolvePath()` 。 还必须在 `hostspecific="true"` 指令中设置 `template`：

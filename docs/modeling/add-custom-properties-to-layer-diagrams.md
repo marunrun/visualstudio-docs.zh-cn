@@ -1,5 +1,7 @@
 ---
 title: 向依赖项关系图添加自定义属性
+description: 了解在为依赖关系图编写扩展代码时，如何将值与依赖关系图中的任何元素存储在一起。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c68d8a75ca8203a790684506ffd44b3d890648a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d3073a42faf0dcc6fbf586847382ba3a83d88ed4
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546909"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97360762"
 ---
 # <a name="add-custom-properties-to-dependency-diagrams"></a>向依赖项关系图添加自定义属性
 
@@ -22,7 +24,7 @@ ms.locfileid: "85546909"
 
 ## <a name="non-visible-properties"></a>不可见属性
 
-如果只希望代码将值附加到依赖关系图中的任何元素，则无需定义 MEF 组件。 ILayerElement 中有一个名为的字典 `Properties` 。 [ILayerElement](/previous-versions/ff644511(v=vs.140)) 只需将可封送的值添加到任何层元素的字典。 它们将作为依赖关系图的一部分进行保存。
+如果只希望代码将值附加到依赖关系图中的任何元素，则无需定义 MEF 组件。 ILayerElement 中有一个名为的字典 `Properties` 。 [](/previous-versions/ff644511(v=vs.140)) 只需将可封送的值添加到任何层元素的字典。 它们将作为依赖关系图的一部分进行保存。
 
 ## <a name="editable-properties"></a>可编辑属性
 
@@ -43,7 +45,7 @@ ms.locfileid: "85546909"
 >      `devenv /rootSuffix /updateConfiguration`
 >
 >      `devenv /rootSuffix Exp /updateConfiguration`
-> 4. 重启 Visual Studio。
+> 4. 重新启动 Visual Studio。
 
 **确保你的代码在 VSIX 项目中**
 
@@ -160,6 +162,6 @@ namespace MyNamespace
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [扩展依赖项关系图](../modeling/extend-layer-diagrams.md)

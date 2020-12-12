@@ -1,5 +1,7 @@
 ---
 title: 使用代码图调试你的应用程序
+description: 了解如何使用代码图来帮助避免在大型代码库、不熟悉的代码或旧代码中丢失。
+ms.custom: SEO-VS-2020
 ms.date: 09/28/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +18,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e01857878f927c619529d3bbfc63728f84f0b81d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7af24dbbb510fb1d5c9c62b40d5986ea5c74d35b
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75594105"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361646"
 ---
 # <a name="use-code-maps-to-debug-your-applications"></a>使用代码图调试你的应用程序
 
@@ -131,7 +133,7 @@ ms.locfileid: "75594105"
 
  ![缺少方法调用的代码图 &#45; 更新映射](../modeling/media/codemapstoryboardpaint16.png)
 
- 你的地图现在显示 **撤消** 和重 **绘**之间的链接。
+ 你的地图现在显示 **撤消** 和重 **绘** 之间的链接。
 
  ![用方法调用更新映射 &#45; 代码图](../modeling/media/codemapstoryboardpaint17.png)
 
@@ -140,7 +142,7 @@ ms.locfileid: "75594105"
 
  现在，你已经完成了调查。 你通过映射代码成功找到并解决了问题。 你也拥有可帮助你浏览代码的代码图，请记住你所学的内容并演示你用于解决此问题的步骤。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [调试时映射调用堆栈上的方法](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md)
 - [代码可视化](../modeling/visualize-code.md)

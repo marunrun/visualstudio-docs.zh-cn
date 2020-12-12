@@ -1,5 +1,7 @@
 ---
 title: 从模型中生成并配置你的应用程序
+description: 了解模型的含义，以及如何从模型生成或配置应用程序的各个部分。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8ea3fe0027827396a49eec4c6b245a9ea59652b7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 25a0b83d3ac7be95c42ca0c4e53a188569bb5770
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76114895"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361867"
 ---
 # <a name="generate-and-configure-your-app-from-models"></a>从模型中生成并配置你的应用程序
 你可从模型生成或配置你的应用程序的不同部件。
@@ -70,7 +72,7 @@ ms.locfileid: "76114895"
 
      例如，UML 类图是框和箭头的集合；有了这种表示法，你在理论上能定义任何内容。 但是，除非你实际需要描述一组类型，否则我们不建议你使用类图。 例如，您可以修改类图来描述不同类型的网页。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [从域特定语言生成代码](../modeling/generating-code-from-a-domain-specific-language.md)
 - [如何：在程序代码中从文件打开模型](../modeling/how-to-open-a-model-from-file-in-program-code.md)

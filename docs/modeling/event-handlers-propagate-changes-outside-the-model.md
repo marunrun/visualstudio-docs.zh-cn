@@ -1,5 +1,7 @@
 ---
 title: 事件处理程序在模型外部传播更改
+description: 了解，在可视化和建模 SDK 中，可以定义存储事件处理程序，以将更改传播到存储区之外的资源。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 76234eea6c689459728e0da876b6a9cce7c290a5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9b0780007361115aa485b91db70cc413029a6f8f
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76114602"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361672"
 ---
 # <a name="event-handlers-propagate-changes-outside-the-model"></a>事件处理程序在模型外部传播更改
 

@@ -1,5 +1,7 @@
 ---
 title: 建模 SDK 的 API 参考
+description: 了解 Visual Studio 可视化和建模 SDK 如何提供在其上构建域特定语言 (Dsl) 工具的平台。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0e4be65a94892aa87dbc7f146ce3671336a37558
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 721527b71e12b2c6143fa952d663cccc2786b34f
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76113736"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361074"
 ---
 # <a name="api-reference-for-modeling-sdk-for-visual-studio"></a>Visual Studio 的建模 SDK 的 API 参考
 
@@ -20,7 +22,7 @@ Visual Studio 可视化和建模 SDK 提供了一种平台，用于构建域特�
 
 本部分包含名称以 "VisualStudio" 开头的命名空间的参考资料。
 
-|命名空间|内容|
+|命名空间|Content|
 |-|-|
 |<xref:Microsoft.VisualStudio.Modeling?displayProperty=fullName>|诸如 ModelElement 之类的类，该类是在 DSL 中定义的所有域类的基类。|
 |<xref:Microsoft.VisualStudio.Modeling.Design?displayProperty=fullName>|构成 DSL 定义的一部分的类。|
@@ -42,6 +44,6 @@ Visual Studio 可视化和建模 SDK 提供了一种平台，用于构建域特�
 |<xref:Microsoft.VisualStudio.Modeling.Shell.ExtensionEnablement?displayProperty=fullName>|允许您 (上下文) 菜单命令定义快捷方式。|
 |<xref:Microsoft.VisualStudio.Modeling.Validation?displayProperty=fullName>|允许您定义验证约束。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [自定义 T4 文本转换](../modeling/customizing-t4-text-transformation.md)

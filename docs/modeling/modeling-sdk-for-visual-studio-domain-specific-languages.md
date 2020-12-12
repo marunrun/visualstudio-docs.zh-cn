@@ -1,5 +1,7 @@
 ---
 title: Visual Studio 的建模 SDK - 特定于域的语言
+description: 了解到，使用适用于 Visual Studio 的建模 SDK，你可以创建可集成到 Visual Studio 中的功能强大的基于模型的开发工具。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,12 +13,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2abb209943ff14969f71ebdca6982020f30a5d47
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a032e5f6b3f9eda302f65a4d04b196ef55a225f6
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75590197"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97360775"
 ---
 # <a name="modeling-sdk-for-visual-studio---domain-specific-languages"></a>Visual Studio 的建模 SDK - 特定于域的语言
 

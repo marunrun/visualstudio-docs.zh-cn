@@ -1,5 +1,7 @@
 ---
 title: 在 Windows 窗体中嵌入图表
+description: 了解如何在显示在 Visual Studio 窗口中的 Windows 控件中嵌入 DSL 关系图。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3e81a5ff10cd6e309ffbf17e40ffbaa9ec88f185
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4338bfa824b511ee0be40516e1396a75901188a1
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547623"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361698"
 ---
 # <a name="embed-a-diagram-in-a-windows-form"></a>在 Windows 窗体中嵌入图表
 
@@ -67,7 +69,7 @@ ms.locfileid: "85547623"
 
 ## <a name="update-the-form-using-store-events"></a>使用存储事件更新窗体
 
-1. 在窗体设计器中，添加一个名为的 **ListBox** `listBox1` 。 这将显示模型中元素的列表。 它使用 *存储事件*与模型同步。 有关详细信息，请参阅 [事件处理程序在模型外部传播更改](../modeling/event-handlers-propagate-changes-outside-the-model.md)。
+1. 在窗体设计器中，添加一个名为的 **ListBox** `listBox1` 。 这将显示模型中元素的列表。 它使用 *存储事件* 与模型同步。 有关详细信息，请参阅 [事件处理程序在模型外部传播更改](../modeling/event-handlers-propagate-changes-outside-the-model.md)。
 
 2. 在自定义代码文件中，重写 DocView 类的其他方法：
 
@@ -141,7 +143,7 @@ ms.locfileid: "85547623"
 
      请注意，列表框显示模型中元素的列表，并且在任何添加或删除之后以及在撤消和重做之后都是正确的。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [在程序代码中导航和更新模型](../modeling/navigating-and-updating-a-model-in-program-code.md)
 - [编写代码以自定义域特定语言](../modeling/writing-code-to-customise-a-domain-specific-language.md)
