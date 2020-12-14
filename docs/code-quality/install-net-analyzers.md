@@ -11,22 +11,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 60eb4828d4c8450376178c2fdccf7d4c0f63d989
-ms.sourcegitcommit: 208bd1edebfe6dec5d3bb92c63b5c1e093677e35
+ms.openlocfilehash: f7dfa1c79af832cc54d9aee72eeafbf20bbde707
+ms.sourcegitcommit: 40d758f779d42c66cb02ae7face8a62763a8662b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96440381"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97398411"
 ---
 # <a name="enable-or-install-first-party-net-analyzers"></a>启用或安装第一方 .NET 分析器
 
 ## <a name="overview"></a>概述
 
-.NET Compiler Platform (Roslyn) 分析器会检查 C# 或 Visual Basic 代码的代码质量和代码样式问题。 可以通过以下方式之一启用或安装第一方 .NET 分析器：
+.NET Compiler Platform (Roslyn) 分析器会检查 C# 或 Visual Basic 代码的代码质量和代码样式问题。 第一方 .NET 分析器与 **目标平台无关**。 也就是说，你的项目不需要面向特定的 .NET 平台。 分析器适用于目标为的项目以及 `net5.0` 更早的 .net 版本，如 `netcoreapp` 、 `netstandard` 和 `net472` 。
+
+可以通过以下方式之一启用或安装第一方 .NET 分析器：
 
 - **从 .NET Sdk 启用：从** Visual Studio 2019 16.8 和 .Net 5.0 开始， [.net sdk 随附](/dotnet/fundamentals/code-analysis/overview)了这些分析器。 默认情况下，对于面向 .NET 5.0 或更高版本的项目，分析处于启用状态。 通过将属性设置为，可以对面向早期 .NET 版本的项目启用代码分析 `EnableNETAnalyzers` `true` 。 你还可以通过将设置为来对你的项目禁用代码分析 `EnableNETAnalyzers` `false` 。
 
-- **安装为 NuGet 包**：或者，你可以通过 `Microsoft.CodeAnalysis.NetAnalyzers` 在 Visual Studio 2019 上安装 [NuGet 包](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers) 来安装这些分析器。 如果你在 Visual Studio 2017 上，请安装最新 `2.9.x` 版本的 `Microsoft.CodeAnalysis.FxCopAnalyzers` [NuGet 包](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/)。
+- **以 NuGet 包的形式安装**：如果不想移到 .net 5 + SDK，或者想要使用基于 NuGet 包的模型，则可以在 `Microsoft.CodeAnalysis.NetAnalyzers` Visual Studio 2019 上的 [NuGet 包](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers) 中使用该分析器。  对于按需版本更新，你可能更倾向于使用基于包的模型。 如果你在 Visual Studio 2017 上，请改为安装最新 `2.9.x` 版本的 `Microsoft.CodeAnalysis.FxCopAnalyzers` [NuGet 包](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/) 。
 
 > [!NOTE]
 > 建议从 .NET SDK 启用分析器，而不是安装 `Microsoft.CodeAnalysis.NetAnalyzers` [NuGet 包](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers)（如果可能）。 通过从 .NET SDK 启用分析器，可以确保在更新 SDK 后，立即自动获取分析器 bug 修复和新分析器。
