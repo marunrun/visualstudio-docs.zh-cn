@@ -1,5 +1,7 @@
 ---
 title: 编辑并继续 (C++) | Microsoft Docs
+description: C++ 项目可使用“编辑并继续”。 了解支持哪些编辑，以及如何控制是否应用编辑和何时应用编辑。
+ms.custom: SEO-VS-2020
 ms.date: 05/31/2018
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c32c161d1df70fc81eee4186aa9d1ac102afa69
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 2a8cb40850aefe83ac048c708192bc24533a8296
+ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599660"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96863057"
 ---
 # <a name="edit-and-continue-c"></a>编辑并继续 (C++)
 可以在 C++ 项目中使用“编辑并继续”。 请参阅[支持的代码更改 (C++)](../debugger/supported-code-changes-cpp.md)，了解有关 Edit and Continue 的限制的信息。
@@ -72,7 +74,7 @@ ms.locfileid: "89599660"
 ## <a name="how-to-reset-the-point-of-execution"></a><a name="BKMK_How_to_reset_the_point_of_execution"></a> 如何重置执行点
  在“编辑并继续”应用更改时，一些代码更改会使执行点移动到新的位置。 “编辑并继续”尽可能正确地放置执行点，但是并非所有情况下的结果都正确。
 
- 在 C++ 中，当执行点发生更改时，会显示一个对话框来提示此情况。 在继续调试之前，应验证位置是否正确。 如果位置不正确，则使用**设置下一语句**命令。 有关详细信息，请参阅[设置下一个要执行的语句](./navigating-through-code-with-the-debugger.md#BKMK_Set_the_next_statement_to_execute)。
+ 在 C++ 中，当执行点发生更改时，会显示一个对话框来提示此情况。 在继续调试之前，应验证位置是否正确。 如果位置不正确，则使用 **设置下一语句** 命令。 有关详细信息，请参阅[设置下一个要执行的语句](./navigating-through-code-with-the-debugger.md#BKMK_Set_the_next_statement_to_execute)。
 
 ## <a name="how-to-work-with-stale-code"></a><a name="BKMK_How_to_work_with_stale_code"></a> 如何使用陈旧代码
  在某些情况下，“编辑并继续”无法将代码更改立即应用于可执行文件，但如果您继续调试，则可能会在稍后应用代码更改。 当编辑某个调用当前函数的函数，或将多于 64 个字节的新变量添加到调用堆栈上的函数时，就会发生这种情况。

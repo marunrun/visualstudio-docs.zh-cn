@@ -1,5 +1,7 @@
 ---
 title: “编辑并继续”错误消息对话框 | Microsoft Docs
+description: “编辑并继续”可能会报告它无法用于代码更改。 本文介绍可能的原因。
+ms.custom: SEO-VS-2020
 ms.date: 10/15/2018
 ms.topic: reference
 f1_keywords:
@@ -18,16 +20,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7df95eae689f7c3abbb0d75a7557ce749bdceee5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8ef34889b838e2f7eaa92420eec90db9def57e65
+ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73188231"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96862838"
 ---
 # <a name="edit-and-continue-error-message"></a>“编辑并继续”错误消息
 
-当你对支持“编辑并继续”的代码语言进行调试，但“编辑并继续”并不适用于你所做的代码更改时，会显示“编辑并继续”错误消息框。 该错误消息提供了更详细的说明。 若要响应该对话框，选择**确定**按钮以关闭对话框并取消编辑尝试。
+当你对支持“编辑并继续”的代码语言进行调试，但“编辑并继续”并不适用于你所做的代码更改时，会显示“编辑并继续”错误消息框。 该错误消息提供了更详细的说明。 若要响应该对话框，选择 **确定** 按钮以关闭对话框并取消编辑尝试。
 
 此错误消息的可能原因包括：
 

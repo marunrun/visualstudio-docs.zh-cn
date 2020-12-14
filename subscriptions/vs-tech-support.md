@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 2e0fd8bb-8f20-487c-b350-b8fde405ea5e
-ms.date: 11/05/2020
+ms.date: 12/02/2020
 ms.topic: how-to
 description: 了解如何激活 Visual Studio 订阅中包含的技术支持权益。
-ms.openlocfilehash: 9ae88bcc066473752a600284d815378bc8870f64
-ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
+ms.openlocfilehash: ea67dde54dd66af6d20b7f9af84d2bfe80211444
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93413955"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96537963"
 ---
 # <a name="activate-and-use-the-technical-support-benefit-in-visual-studio-subscriptions"></a>激活并使用 Visual Studio 订阅中的技术支持权益
 Visual Studio 订阅中的技术支持权益用于解决仍处于[支持生命周期](https://support.microsoft.com/lifecycle/search)的主流支持阶段产品的“非生产环境”中的中断修复问题。 Visual Studio Enterprise 标准版和年度云订阅接收四个事件，但 Visual Studio Professional 标准版和年度云订阅接收两个事件，从权益激活开始最多一年。 权益激活必须在订阅为最新状态时进行。
@@ -108,9 +108,9 @@ Visual Studio 订阅中的技术支持权益用于解决仍处于[支持生命�
 | 订阅级别                                                 |     信道                                            | 好处                                                          | 是否续订？    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise（标准）   | VL、Azure、零售、所选 NFR<sup>1</sup> | 4 个事件       |  是|
-| 带有 GitHub Enterprise 的 Visual Studio Enterprise | VL | 4 个事件       |  是|
+| 包含 GitHub Enterprise 的 Visual Studio Enterprise 订阅 | VL | 4 个事件       |  是|
 | Visual Studio Professional（标准） | VL、Azure、零售、所选 NFR<sup>2</sup>                                        | 2 个事件                                                          |是         |
-| 带有 GitHub Enterprise 的 Visual Studio Professional | VL                                     | 2 个事件                                                          |是         |
+| 包含 GitHub Enterprise 的 Visual Studio Professional 订阅 | VL                                     | 2 个事件                                                          |是         |
 | Visual Studio Test Professional（标准）                         | VL、零售                                              | 2 个事件                                             |  是         |
 | MSDN 平台（标准）                                          | VL、零售                                              | 2 个事件                                               | 是         |
 | Visual Studio Enterprise、Visual Studio Professional（月度云） | Azure                                       | 不可用                                                           |NA|

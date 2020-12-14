@@ -1,5 +1,7 @@
 ---
 title: 使用 CRT 库查找内存泄漏  |Microsoft Docs
+description: 了解 C/C++ 调试器和 C 运行时库 (CRT) 对查找内存泄露有何帮助。 这些技术包括内存泄漏报告和内存快照比较。
+ms.custom: SEO-VS-2020
 ms.date: 10/04/2018
 ms.topic: how-to
 dev_langs:
@@ -26,12 +28,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5deb42b2ab708bae572aebbcac15af2d077b14fa
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5f5c906bd06fd4107166a45e93bf11be579c2270
+ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350480"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96863070"
 ---
 # <a name="find-memory-leaks-with-the-crt-library"></a>使用 CRT 库查找内存泄漏
 
@@ -112,7 +114,7 @@ Object dump complete.
 
 “CRT 块”是由 CRT 库为自己使用而分配的内存块。 CRT 库处理这些块的解除分配，因此 CRT 块不会显示在内存泄漏报告中，除非 CRT 库存在严重问题。
 
-另外两种类型的内存块绝不会出现在内存泄漏报告中。 *释放的块*是已经释放的内存块，从定义上说不是泄漏的内存。 *忽略的块*是已明确标记要从内存泄漏报告中排除的内存。
+另外两种类型的内存块绝不会出现在内存泄漏报告中。 *释放的块* 是已经释放的内存块，从定义上说不是泄漏的内存。 *忽略的块* 是已明确标记要从内存泄漏报告中排除的内存。
 
 以前的技术使用标准 CRT`malloc`函数确定存在内存泄漏的内存分配。 但是，如果你的程序使用 c + +`new`运算符分配内存，可能只能在内存泄漏报告中看到`operator new`调用`_malloc_dbg`的文件名和行号。 若要创建更有用的内存泄漏报告，可编写如下所示的宏来报告执行分配的行：
 
@@ -156,7 +158,7 @@ void main() {
 }
 ```
 
-在 Visual Studio 调试器中运行此代码时，调用 `_CrtDumpMemoryLeaks` 之后，**输出**窗口中生成的报告类似于如下所示：
+在 Visual Studio 调试器中运行此代码时，调用 `_CrtDumpMemoryLeaks` 之后，**输出** 窗口中生成的报告类似于如下所示：
 
 ```Output
 Detected memory leaks!
@@ -182,9 +184,9 @@ Object dump complete.
 
 1. 在应用程序的起点附近设置断点并开始调试。
 
-1. 当应用程序在断点处暂停时，选择 **调试** > **窗口** > **监视 1**（或**监视 2**、**监视 3**、**监视 4**）打开 **监视** 窗口。
+1. 当应用程序在断点处暂停时，选择 **调试** > **窗口** > **监视 1**（或 **监视 2**、**监视 3**、**监视 4**）打开 **监视** 窗口。
 
-1. 在**监视**窗口的**名称** 列中键入`_crtBreakAlloc`。
+1. 在 **监视** 窗口的 **名称** 列中键入`_crtBreakAlloc`。
 
    如果你使用的是 CRT 库的多线程 DLL 版本（/MD 选项），添加上下文运算符： `{,,ucrtbased.dll}_crtBreakAlloc`
    
@@ -194,7 +196,7 @@ Object dump complete.
 
    调试器将计算调用，并将结果放入”值”列。 如果你尚未在内存分配上设置任何断点，此值将为 **-1** 。
 
-1. 在**值**列中，将该值替换为调试程序要中断处的内存分配的分配编号。
+1. 在 **值** 列中，将该值替换为调试程序要中断处的内存分配的分配编号。
 
 对某个内存分配编号设置断点后，请继续调试。 请确保在相同条件下运行，这样内存分配编号就不会更改。 当程序在指定的内存分配处中断时，使用“调用堆栈”窗口和其他调试器窗口来确定分配内存时的情况。 然后，可以继续执行程序以观察对象会发生什么情况，并确定对象未正确解除分配的原因。
 

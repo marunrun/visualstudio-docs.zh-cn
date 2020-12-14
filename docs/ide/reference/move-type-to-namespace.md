@@ -1,5 +1,7 @@
 ---
 title: 将类型移到命名空间
+description: 了解如何使用“快速操作和重构”菜单将类型移动到不同的命名空间或文件夹。
+ms.custom: SEO-VS-2020
 ms.date: 06/17/2019
 ms.topic: reference
 author: mikadumont
@@ -10,12 +12,12 @@ dev_langs:
 ms.workload:
 - dotnet
 monikerRange: vs-2019
-ms.openlocfilehash: 58d2757fa8798b67c8e597f5f82bc65a279f4a90
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 21e13938bcb19306b897501a4aad11d6b4bd15ea
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80375570"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96616910"
 ---
 # <a name="move-type-to-namespace"></a>将类型移到命名空间
 
@@ -27,13 +29,13 @@ ms.locfileid: "80375570"
 
 **使用时机：** 想要将类型移动到其他命名空间或文件夹。 
 
-操作原因：  想要重构部分解决方案的某些部分，并快速将类型移动到其他命名空间或文件夹。 
+操作原因：想要重构部分解决方案的某些部分，并快速将类型移动到其他命名空间或文件夹。 
 
 ## <a name="how-to"></a>操作说明
 
 1. 请将光标置于类名称。
-2. 按“Ctrl”  + **。** 触发“快速操作和重构”  菜单。
-3. 选择“移动到命名空间”。 
+2. 按“Ctrl”+ **。** 触发“快速操作和重构”  菜单。
+3. 选择“移动到命名空间”。
 
    ![“移动到命名空间”重构](media/move-to-namespace.png)
 
@@ -41,6 +43,6 @@ ms.locfileid: "80375570"
 
    ![“选择命名空间”对话框](media/select-target-namespace.png)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [重构](../refactoring-in-visual-studio.md)

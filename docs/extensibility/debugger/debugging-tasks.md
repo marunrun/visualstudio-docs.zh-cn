@@ -1,5 +1,7 @@
 ---
 title: 调试任务 | Microsoft Docs
+description: 了解调试程序时需要完成的任务，例如将程序附加到调试引擎、生成启动事件以及命中断点。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: overview
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 070068853d962bdf9b209edb9410d33d46ccf853
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 83d351e2b995922d1a8257f7ea9fc0cdad67ab3e
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903558"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915565"
 ---
 # <a name="debug-tasks"></a>调试任务
 要调试程序，必须启动该程序，并将调试引擎 (DE) 附加到该程序，否则 DE 必须附加到先前启动的程序。 附加后，DE 必须生成特定的启动事件。 作为响应，调试包将尝试绑定 IDE 中设置的断点。 当程序命中绑定断点时，它会暂停并等待用户输入。

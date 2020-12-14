@@ -1,18 +1,18 @@
 ---
-title: Visual Studio 订阅中的 Windows 开发者帐户权益 | Microsoft 文档
+title: Visual Studio 订阅中的 Windows 开发者帐户权益 | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 588480a3-8806-4ea5-9915-c25974770069
-ms.date: 10/22/2020
+ms.date: 12/02/2020
 ms.topic: how-to
 description: 了解有关 Visual Studio 订阅中包含的 Windows 开发者帐户。
-ms.openlocfilehash: 46cb22becd8a5ac852c7fddbd2cf8b473cef47bc
-ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
+ms.openlocfilehash: 4b8d2190792f942f808c1fda62a7020fefdca866
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92435823"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96537716"
 ---
 # <a name="windows-developer-account-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 Windows 开发者帐户
 通过所选 Visual Studio 订阅包含的 Windows 开发者帐户，可以将免费和付费的 Windows 应用提交到 Windows 应用商店。
@@ -44,15 +44,15 @@ ms.locfileid: "92435823"
 | 订阅级别                                                 |     信道                                            | 好处                                                          | 是否续订？    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise（标准）   | VL、Azure、零售、所选 NFR<sup>1</sup> | Included       |  是|
-| 带有 GitHub Enterprise 的 Visual Studio Enterprise   | VL  | Included       |  是|
+| 包含 GitHub Enterprise 的 Visual Studio Enterprise 订阅   | VL  | Included       |  是|
 | Visual Studio Professional（标准） | VL、Azure、零售                                       | Included                                                            |是|
-| 带有 GitHub Enterprise 的 Visual Studio Professional | VL                                        | Included                                                            |是|
+| 包含 GitHub Enterprise 的 Visual Studio Professional 订阅 | VL                                        | Included                                                            |是|
 | Visual Studio Test Professional（标准）                         | VL、零售                                              | 不可用                                            |  NA|
 | MSDN 平台（标准）                                          | VL、零售                                              |  不可用                                            |  NA|
 | Visual Studio Enterprise、Visual Studio Professional（月度云） | Azure                                       | 不可用                                                           |NA|
 ||
 
-<sup>1</sup>  包括： *不得转售 (NFR)、FTE、Visual Studio 行业合作伙伴 (VSIP)、BizSpark、MCT 软件和服务开发人员、最有价值专家 (MVP)、区域主管 (RD)。不包括：Microsoft 合作伙伴网络 (MPN)、Imagine、MCT 软件和服务。*
+<sup>1</sup>  包括：*不得转售 (NFR)、FTE、Visual Studio 行业合作伙伴 (VSIP)、BizSpark、MCT 软件和服务开发人员、最有价值专家 (MVP)、区域主管 (RD)。不包括：Microsoft 合作伙伴网络 (MPN)、Imagine、MCT 软件和服务。*
 
 > [!NOTE]
 > Microsoft 不再在云订阅中提供 Visual Studio Professional 年度订阅和 Visual Studio Enterprise 年度订阅。 现有客户体验以及续订、增加、减少或取消订阅的能力不会发生变化。 建议新客户访问 [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/)，查看各 Visual Studio 购买选项。

@@ -7,12 +7,12 @@ ms.assetid: 92e8957f-c690-46bd-a812-3efd06a2bc6b
 ms.date: 10/21/2020
 ms.topic: how-to
 description: 了解有关所选 Visual Studio 订阅中包含的可用 CAST Highlight 权益
-ms.openlocfilehash: a6c1836724f05255c5120a336b8976ccae3cadbd
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.openlocfilehash: fbc7b6278d29d96ed8d97933c295468c7d3e2754
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92353364"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96538132"
 ---
 # <a name="the-cast-highlight-benefit-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 CAST Highlight 权益
 迁移到云时，开发者需要对其软件具有深入的了解。 借助 CAST Highlight，Visual Studio 订阅者可以快速扫描其应用程序源代码，以确定其应用程序的云就绪状态，以便迁移到 Azure 并在迁移期间和迁移后监控其应用的进度。
@@ -78,9 +78,9 @@ ms.locfileid: "92353364"
 | 订阅级别                                                 |     信道                                            | 好处                                                          | 是否续订？    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise（标准）   | VL、Azure、零售、 | 3 个月内评估 5 个应用|  不是。  仅对新订阅者可用          |
-| 带有 GitHub Enterprise 的 Visual Studio Enterprise  | VL | 3 个月内评估 5 个应用|  不是。  仅对新订阅者可用          |
+| 包含 GitHub Enterprise 的 Visual Studio Enterprise 订阅  | VL | 3 个月内评估 5 个应用|  不是。  仅对新订阅者可用          |
 | Visual Studio Professional（标准） | VL、Azure、零售                                       | 3 个月内评估 1 个应用                                                             |  不是。  仅对新订阅者可用                  |
-| 带有 GitHub Enterprise 的 Visual Studio Professional | VL                                       | 3 个月内评估 1 个应用                                                            |  不是。  仅对新订阅者可用                  |
+| 包含 GitHub Enterprise 的 Visual Studio Professional 订阅 | VL                                       | 3 个月内评估 1 个应用                                                            |  不是。  仅对新订阅者可用                  |
 | Visual Studio Test Professional（标准）                         | VL、零售                                              | 不可用                                             |  不可用           |
 | MSDN 平台（标准）                                          | VL、零售                                              | 不可用                                              |  不可用          |
 | Visual Studio Enterprise（标准）  | NFR<sup>1</sup> |不可用  | 不可用 |

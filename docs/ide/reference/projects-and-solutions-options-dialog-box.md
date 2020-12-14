@@ -1,5 +1,7 @@
 ---
 title: “选项”对话框 >“项目和解决方案”
+description: 了解如何使用“项目和解决方案”部分中的“常规”页来定义与项目和解决方案相关的 Visual Studio 行为。
+ms.custom: SEO-VS-2020
 ms.date: 07/26/2019
 ms.topic: reference
 f1_keywords:
@@ -13,32 +15,32 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1ed60e07c625665f92838cfbc671b03c605fda0d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 01ee7e0da5fab8ceba2e5dc0642148033e2415da
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75567640"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96616897"
 ---
 # <a name="options-dialog-box-projects-and-solutions--general"></a>“选项”对话框：“项目和解决方案”\>“常规”
 
-使用此页可定义与项目和解决方案相关的 Visual Studio 行为。 要访问这些选项，请选择“工具” > “选项”，展开“项目和解决方案”，再选择“常规”     。
+使用此页可定义与项目和解决方案相关的 Visual Studio 行为。 要访问这些选项，请选择“工具” > “选项”，展开“项目和解决方案”，再选择“常规”   。
 
-“常规”页上提供了下列选项  。
+“常规”页上提供了下列选项。
 
 ## <a name="always-show-error-list-if-build-finishes-with-errors"></a>如果生成完成时有错误，则始终显示错误列表
 
-仅当项目无法生成时，在完成生成时将打开“错误列表”  窗口。 将显示在生成过程中发生的错误。 如果清除此选项，则仍将发生错误，但在完成生成时窗口将不会打开。 默认情况下会启用此选项。
+仅当项目无法生成时，在完成生成时将打开“错误列表”窗口。 将显示在生成过程中发生的错误。 如果清除此选项，则仍将发生错误，但在完成生成时窗口将不会打开。 默认情况下会启用此选项。
 
 ## <a name="track-active-item-in-solution-explorer"></a>跟踪解决方案资源管理器中的活动项
 
-当选中时，“解决方案资源管理器”  将自动打开，活动项处于选中状态。 选定的项根据您在项目或解决方案中使用的不同文件或设计器中的不同组件而不同。 清除此选项后，“解决方案资源管理器”  中的所选内容不会自动更改。 默认情况下会启用此选项。
+当选中时，“解决方案资源管理器”将自动打开，活动项处于选中状态。 选定的项根据您在项目或解决方案中使用的不同文件或设计器中的不同组件而不同。 清除此选项后，“解决方案资源管理器”中的所选内容不会自动更改。 默认情况下会启用此选项。
 
 ## <a name="show-advanced-build-configurations"></a>显示高级生成配置
 
-当选中时，生成配置选项显示在“项目属性页”  对话框和“解决方案属性页”  对话框中。 如果未选中，对于包含一个配置或两个配置调试和发布的 Visual Basic 和 C# 项目，生成配置选项将不显示在“项目属性页”对话框和“解决方案属性页”对话框中   。 如果一个项目具有用户定义的配置，则会显示生成的配置选项。
+当选中时，生成配置选项显示在“项目属性页”对话框和“解决方案属性页”对话框中。 如果未选中，对于包含一个配置或两个配置调试和发布的 Visual Basic 和 C# 项目，生成配置选项将不显示在“项目属性页”对话框和“解决方案属性页”对话框中。 如果一个项目具有用户定义的配置，则会显示生成的配置选项。
 
-未选中时，“生成”  菜单上的命令（如“生成解决方案”  、“重新生成解决方案”  和“清理解决方案”  ）将在发布配置上执行，“调试”  菜单上的命令（如“启动调试”  和“启动但不调试”  ）将在调试配置上执行。
+未选中时，“生成”菜单上的命令（如“生成解决方案”、“重新生成解决方案”和“清理解决方案”）将在发布配置上执行，“调试”菜单上的命令（如“启动调试”和“启动但不调试”）将在调试配置上执行。
 
 ## <a name="always-show-solution"></a>总是显示解决方案
 
@@ -48,7 +50,7 @@ ms.locfileid: "75567640"
 
 ## <a name="save-new-projects-when-created"></a>创建时保存新项目
 
-当选中时，你可以在“新建项目”  对话框中为你的项目指定位置。 如果未选中，所有新项目将创建为临时项目。 当您正在使用临时项目时，您可以创建和试验项目，无需指定磁盘位置。
+当选中时，你可以在“新建项目”对话框中为你的项目指定位置。 如果未选中，所有新项目将创建为临时项目。 当您正在使用临时项目时，您可以创建和试验项目，无需指定磁盘位置。
 
 ::: moniker-end
 
@@ -66,7 +68,7 @@ ms.locfileid: "75567640"
 
 ## <a name="prompt-before-moving-files-to-a-new-location"></a>将文件移动到新位置之前显示提示
 
-选定后，在通过解决方案资源管理器中的操作更改文件的位置之前，Visual Studio 会显示确认消息框  。
+选定后，在通过解决方案资源管理器中的操作更改文件的位置之前，Visual Studio 会显示确认消息框。
 
 ## <a name="reopen-documents-on-solution-load"></a>加载解决方案时重新打开文档
 
@@ -81,22 +83,22 @@ ms.locfileid: "75567640"
 选择该选项后，将根据解决方案上次打开时是否展开或折叠节点，还原解决方案资源管理器中的节点状态。 取消选择此选项可缩短大型解决方案的解决方案加载时间。
 
 > [!TIP]
-> 如果禁用此选项，要导航到解决方案资源管理器中的活动文档，一种简单的方法就是在“解决方案资源管理器”工具栏上选择“与活动文档同步”   。
+> 如果禁用此选项，要导航到解决方案资源管理器中的活动文档，一种简单的方法就是在“解决方案资源管理器”工具栏上选择“与活动文档同步”。
 >
 > ![与解决方案资源管理器中的活动文档同步](media/sync-active-document.png)
 
 ## <a name="open-sdk-style-project-files-with-double-click-or-the-enter-key"></a>通过双击或按 Enter 打开 SDK 样式项目文件
 
-选择此选项后，双击解决方案资源管理器中的 SDK 样式项目节点或选择它，然后按 Enter，项目文件（例如 .csproj 文件）将在编辑器中以 XML 格式打开  \*。 取消选择后，在解决方案资源管理器中双击 SDK 样式的项目节点或选择它并按 Enter 只可展开或折叠节点  。
+选择此选项后，双击解决方案资源管理器中的 SDK 样式项目节点或选择它，然后按 Enter，项目文件（例如 .csproj 文件）将在编辑器中以 XML 格式打开\*。 取消选择后，在解决方案资源管理器中双击 SDK 样式的项目节点或选择它并按 Enter 只可展开或折叠节点。
 
-如果未选择此选项并且要编辑 SDK 样式的项目文件，请在解决方案资源管理器中右键单击项目节点，然后选择“编辑项目文件”  。 对于其他项目类型，必须先卸载项目，然后才能在 Visual Studio 中进行编辑。
+如果未选择此选项并且要编辑 SDK 样式的项目文件，请在解决方案资源管理器中右键单击项目节点，然后选择“编辑项目文件”。 对于其他项目类型，必须先卸载项目，然后才能在 Visual Studio 中进行编辑。
 
 > [!TIP]
-> SDK 样式的项目或[项目 SDK](../../msbuild/how-to-use-project-sdk.md) 具有较新的、更精简的项目文件格式，该格式已在 MSBuild 15.0 中引入  。 SDK 样式的项目在 `Project` 元素上包含 `Sdk` 属性，例如 `<Project Sdk="Microsoft.NET.Sdk">`。 例如，从 Visual Studio 模板之一创建一个新的 .NET Core 项目时，Visual Studio 将创建一个 SDK 样式的项目。
+> SDK 样式的项目或[项目 SDK](../../msbuild/how-to-use-project-sdk.md) 具有较新的、更精简的项目文件格式，该格式已在 MSBuild 15.0 中引入。 SDK 样式的项目在 `Project` 元素上包含 `Sdk` 属性，例如 `<Project Sdk="Microsoft.NET.Sdk">`。 例如，从 Visual Studio 模板之一创建一个新的 .NET Core 项目时，Visual Studio 将创建一个 SDK 样式的项目。
 
 ::: moniker-end
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [“选项”对话框：“项目和解决方案”\>“位置”](projects-solutions-locations-options.md)
 - [“选项”对话框 ->“项目和解决方案”->“生成和运行”](../../ide/reference/options-dialog-box-projects-and-solutions-build-and-run.md)

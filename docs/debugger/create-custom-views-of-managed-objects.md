@@ -1,5 +1,7 @@
 ---
 title: 创建托管对象的自定义视图 | Microsoft Docs
+description: Visual Studio 调试器在其变量窗口中显示数据。 了解如何自定义数据类型（包括自定义类型）的显示方式。
+ms.custom: SEO-VS-2020
 ms.date: 01/08/2019
 ms.topic: conceptual
 f1_keywords:
@@ -23,12 +25,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: f5247a56667f5715d9f155c662eb333967878d71
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: c2248a361837f664b0f78acfe61f6d7588f5258b
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73188649"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560208"
 ---
 # <a name="create-custom-views-of-managed-objects-c-visual-basic-f-ccli"></a>创建托管对象的自定义视图（C#、Visual Basic、F#、C++/CLI）
 可以在调试器变量窗口中自定义 Visual Studio 显示数据类型的方式。

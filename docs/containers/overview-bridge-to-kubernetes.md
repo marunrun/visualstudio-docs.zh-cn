@@ -9,12 +9,12 @@ monikerRange: '>=vs-2019'
 manager: jillfra
 author: ghogen
 ms.author: ghogen
-ms.openlocfilehash: d1a92433a90e6e6b7f71d0c7db6ced3a52c33315
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+ms.openlocfilehash: c6a85faf2d1451dcab9bc822fcdf228513b90dca
+ms.sourcegitcommit: ab60fd7b4a8219e378d100df1386e1b038ecdafc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95440605"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595261"
 ---
 # <a name="how-bridge-to-kubernetes-works"></a>Kubernetes 桥接的工作原理
 
@@ -72,7 +72,8 @@ Bridge to Kubernetes 与群集建立连接时会执行以下操作：
 如果 Bridge to Kubernetes 检测到已在 Kubernetes 群集上启用 Azure Dev Spaces，系统将提示你禁用 Azure Dev Spaces，然后才能使用 Bridge to Kubernetes。
 
 路由管理器在启动时执行以下操作：
-* 使用子域的 GENERATED_NAME 复制在命名空间中找到的所有流入量。
+
+* 使用子域的 GENERATED_NAME 复制在命名空间中找到的所有流入量（包括负载均衡器流入量）。
 * 使用 GENERATED_NAME 子域为与复制的流入量关联的每个服务创建 envoy pod。
 * 为正在独立使用的服务创建一个额外的 envoy pod。 这允许将包含子域的请求路由到开发计算机。
 * 为每个 envoy pod 配置传递规则，以处理包含子域的服务的路由。
@@ -144,7 +145,7 @@ Bridge to Kubernetes 具有以下限制：
 * 服务必须由单个 pod 支持，才能连接到该服务。 不能连接到具有多个 pod 的服务，例如具有副本的服务。
 * 要使 Bridge to Kubernetes 成功连接，一个 pod 只能有一个容器在该 pod 中运行。 Bridge to Kubernetes 不能连接到具有附加容器（如服务网格注入的 sidecar 容器）的 pod 的服务。
 * 目前，Bridge to Kubernetes pod 必须是 Linux 容器。 不支持 Windows 容器。
-* 隔离不能与 HTTPS 一起使用。
+* 将 Bridge to Kubernetes 用于 Visual Studio 时，无法将隔离用于 HTTPS。 仅当使用 Visual Studio Code 时，才能对 HTTPS 使用隔离模式。
 * Bridge to Kubernetes 需要提升的权限才能在开发计算机上运行，以便编辑主机文件。
 * Bridge to Kubernetes 不能用于已启用 Azure Dev Spaces 的群集。
 

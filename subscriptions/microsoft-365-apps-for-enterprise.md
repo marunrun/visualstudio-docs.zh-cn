@@ -7,12 +7,12 @@ ms.assetid: d1257931-392a-4a65-bf26-177737505122
 ms.date: 06/24/2020
 ms.topic: how-to
 description: 了解和安装 Microsoft 365 应用企业版
-ms.openlocfilehash: 88570806d90ff022ede6f39c16325d8696ef0f9e
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: d23f8cccd284972d05d7085aea7e0b1cab0f275d
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91006119"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96537820"
 ---
 # <a name="microsoft-365-apps-for-enterprise-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 Microsoft 365 应用企业版
 Microsoft 365 应用企业版（旧称 Office 365 Pro Plus）在选定的 Visual Studio 订阅中提供。 
@@ -56,10 +56,10 @@ Microsoft 365 应用企业版（旧称 Office 365 Pro Plus）在选定的 Visual
 | 订阅级别                                                 |     信道                                            | 好处                                                          | 是否续订？    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise（标准）   | VL、Azure、零售| 可用       |  是          |
-| 带有 GitHub Enterprise 的 Visual Studio Enterprise  | VL | 可用       |  是          |
+| 包含 GitHub Enterprise 的 Visual Studio Enterprise 订阅  | VL | 可用       |  是          |
 | Visual Studio Enterprise（标准）   | NFR<sup>1</sup> | 不可用       |  不可用          |
 | Visual Studio Professional（标准） | VL、Azure、零售                                       | 不可用                                                            |  不可用          |
-| 带有 GitHub Enterprise 的 Visual Studio Professional | VL | 不可用         |  不可用          |
+| 包含 GitHub Enterprise 的 Visual Studio Professional 订阅 | VL | 不可用         |  不可用          |
 | Visual Studio Test Professional（标准）                         | VL、零售                                              | 不可用                                             |  不可用          |
 | MSDN 平台（标准）                                          | VL、零售                                              | 不可用                                              |  不可用          |
 | Visual Studio Enterprise、Visual Studio Professional（月度云） | Azure | 不可用 | 不可用 |

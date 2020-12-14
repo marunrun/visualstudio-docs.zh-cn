@@ -1,5 +1,7 @@
 ---
 title: “常规”&gt;“调试”&gt;“选项”对话框 | Microsoft Docs
+description: 设置 Visual Studio 调试器选项以满足调试需求。 可以配置中断行为、调试级别、显示行为等等。
+ms.custom: SEO-VS-2020
 ms.date: 06/04/2020
 ms.topic: reference
 f1_keywords:
@@ -21,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c5b03d7b45e488d7e8026a7d6835bbfba1efa210
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 1b052c2cce3d396debb4fbaf8ce688ede3effb98
+ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85286552"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96863005"
 ---
 # <a name="general-debugging-options"></a>常规调试选项
 
@@ -159,7 +161,7 @@ ms.locfileid: "85286552"
 
 - **针对旧代码发出警告（仅限本机）** ： 收到关于陈旧代码的警告。
 
-**调试时在编辑器中显示“运行以单击”按钮**：选中此选项后，在调试时，将会显示[运行以单击](../debugger/debugger-feature-tour.md#run-to-a-point-in-your-code-quickly-using-the-mouse)按钮。
+**调试时在编辑器中显示“运行以单击”按钮**：选中此选项后，在调试时，将会显示 [运行以单击](../debugger/debugger-feature-tour.md#run-to-a-point-in-your-code-quickly-using-the-mouse)按钮。
 
 **调试停止时自动关闭控制台**：告知 Visual Studio 在调试会话结束时关闭控制台。
 

@@ -1,5 +1,7 @@
 ---
 title: 调试器项目设置 | Microsoft Docs
+description: 有多种项目设置会影响调试。 请访问本文中的链接，了解如何使用“属性页”对话框更改设置。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 77f5ca5dcc1b886ec56b7177dd0d6aa62a8ce4f0
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 6a3a5ba7a1e215fddd5b1127859948496e9b4e1d
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73188630"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96561027"
 ---
 # <a name="debugger-project-settings"></a>调试器项目设置
 某些项目设置也对调试产生影响。 这些设置决定诸如调试器查看的目录、用于启动程序的命令和命令参数以及为程序创建的调试信息的类型等内容。 可以在 **“属性页”** 对话框中更改这些设置。

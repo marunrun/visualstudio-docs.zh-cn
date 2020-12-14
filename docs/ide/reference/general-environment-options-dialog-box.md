@@ -1,5 +1,7 @@
 ---
 title: “选项”对话框 ->“环境”->“常规”
+description: 了解如何通过“环境”部分的“常规”页来更改 IDE 的颜色主题、状态栏设置、文件扩展名关联等内容。
+ms.custom: SEO-VS-2020
 ms.date: 07/26/2019
 ms.topic: reference
 f1_keywords:
@@ -20,16 +22,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dfd1b876e58c05c668fd74087d5131bb1e9fcd40
-ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
+ms.openlocfilehash: 6068f63cc9c2e7abe36b6eac804beaaa6603303e
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96189779"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96617261"
 ---
 # <a name="options-dialog-box-environment--general"></a>“选项”对话框：环境 \> 常规
 
-使用此页更改集成开发环境 (IDE) 的颜色主题、状态栏设置和文件扩展名关联以及其他选项。 可以通过打开“工具”菜单，选择“选项”，打开“环境”文件夹然后选择“常规”页来访问“选项”对话框      。
+使用此页更改集成开发环境 (IDE) 的颜色主题、状态栏设置和文件扩展名关联以及其他选项。 可以通过打开“工具”菜单，选择“选项”，打开“环境”文件夹然后选择“常规”页来访问“选项”对话框。
 
 ## <a name="visual-experience"></a>视觉体验
 
@@ -96,6 +98,6 @@ ms.locfileid: "96189779"
 
 指定在单击“自动隐藏”按钮时，只自动隐藏具有焦点的工具窗口，而不是停靠集中的所有工具窗口。 默认情况下，不选择该选项。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [自定义窗口布局](../../ide/customizing-window-layouts-in-visual-studio.md)

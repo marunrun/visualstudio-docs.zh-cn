@@ -1,5 +1,7 @@
 ---
 title: 在 C++ 项目中启用调试功能 (-D_DEBUG) | Microsoft Docs
+description: 在 Visual C++ 中，通过定义 _DEBUG 启用调试功能。 了解如何执行此操作，并了解如何链接 MFC 程序以便对其进行调试。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -24,12 +26,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19d341cba47e0a3d2259cc57d239c63420095347
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 1a2ead92108d66b54342019fc19702e7a6e53575
+ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72737960"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96862928"
 ---
 # <a name="enabling-debug-features-in-c-projects-d_debug"></a>在 C++ 项目中启用调试功能 (/D_DEBUG)
 在 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] 中，如果在编译程序时定义了 _DEBUG 符号，则将启用某些调试功能（如断言）。 可以用下列两种方法之一定义 _DEBUG：

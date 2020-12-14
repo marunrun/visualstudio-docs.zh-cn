@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: bc8b526c-2fed-4ac8-aaa2-73d2495256fd
-ms.date: 08/04/2020
+ms.date: 12/02/2020
 ms.topic: how-to
 description: 了解有关所选的 Visual Studio 订阅中随附的 Pluralsight 培训订阅。
-ms.openlocfilehash: 26056c823dc4ab67f576eb430b85caac26d854af
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: 02ed0d2417317116182800980206a1fcc7fbfc16
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "91005337"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96537976"
 ---
 # <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 Pluralsight 培训权益
 
@@ -73,9 +73,9 @@ ms.locfileid: "91005337"
 |                          订阅级别                          |     信道      |    好处    |   是否续订？   |
 |----------------------------------------------------------------------|-------------------|---------------|----------------|
 |          Visual Studio Enterprise（标准）           | VL、Azure、零售 |   6 个月    | Yes<sup>2</sup> |
-|          带有 GitHub Enterprise 的 Visual Studio Enterprise          | VL  |   6 个月    | Yes<sup>2</sup> |
+|          包含 GitHub Enterprise 的 Visual Studio Enterprise 订阅          | VL  |   6 个月    | Yes<sup>2</sup> |
 |         Visual Studio Professional（标准）          | VL、Azure、零售 |   3 个月    | Yes<sup>2</sup> |
-|         带有 GitHub Enterprise 的 Visual Studio Professional          | VL  |   3 个月    | Yes<sup>2</sup> |
+|         包含 GitHub Enterprise 的 Visual Studio Professional 订阅          | VL  |   3 个月    | Yes<sup>2</sup> |
 |              Visual Studio Test Professional（标准）              |    VL、零售     |   不可用    | NA  |
 |                      MSDN 平台（标准）                       |    VL、零售     |   不可用    | NA  |
 | Visual Studio Enterprise、Visual Studio Professional（月度云） |       Azure       | 不可用 |       NA       |

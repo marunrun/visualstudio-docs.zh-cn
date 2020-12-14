@@ -1,5 +1,6 @@
 ---
 title: 常规选项卡，窗口属性对话框 |Microsoft 文档
+description: 查看“常规”选项卡，了解有关窗口的信息，包括标题栏、句柄、矩形、应用程序实例句柄、菜单句柄和用户数据。
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c5160c79e2c8dae474927e6af7ebdc9e371e9edc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 125420655af4fb021e264c3885a739fc90cfff59
+ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62849564"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96862745"
 ---
 # <a name="general-tab-window-properties-dialog-box"></a>“窗口属性”对话框 ->“常规”选项卡
 使用“常规”选项卡来显示所选窗口的信息。 若要显示[窗口属性对话框](../debugger/window-properties-dialog-box.md)，将焦点移动到 [Windows 视图](../debugger/windows-view.md)窗口。 在树中选择任意窗口节点，然后从“视图”菜单选择“属性” 。

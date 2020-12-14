@@ -1,5 +1,7 @@
 ---
 title: “查找窗口”对话框 | Microsoft Docs
+description: 使用“查找窗口”对话框以选择一个窗口并显示其属性或消息。  本文将详细介绍使用方法。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,15 +13,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 392c0150c9bfb653a3a52c11c0d31097e04c9cc1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 571cee3b1e3a391a8dc328fcc76a0ca0d06ed14f
+ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62849987"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96863018"
 ---
 # <a name="find-window-dialog-box"></a>“查找窗口”对话框
-使用此对话框以选择一个窗口并显示其属性或消息。 若要显示此对话框，从**Spy**菜单中选择**查找窗口**。
+使用此对话框以选择一个窗口并显示其属性或消息。 若要显示此对话框，从 **Spy** 菜单中选择 **查找窗口**。
 
  提供了下列设置：
 
@@ -37,7 +39,7 @@ ms.locfileid: "62849987"
 
  **矩形** 窗口的边框。
 
- **显示属性或消息** 确定是否按“确定”会显示[“窗口属性”对话框](../debugger/window-properties-dialog-box.md)或打开[消息视图](../debugger/messages-view.md)。
+ **显示属性或消息** 确定是否按“确定”会显示 [“窗口属性”对话框](../debugger/window-properties-dialog-box.md)或打开 [消息视图](../debugger/messages-view.md)。
 
 ## <a name="related-sections"></a>相关章节
  [使用查找程序工具](../debugger/how-to-use-the-finder-tool.md) 介绍此工具如何扫描窗口中的属性或消息。

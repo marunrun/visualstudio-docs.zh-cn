@@ -1,5 +1,5 @@
 ---
-title: 带有 GitHub Enterprise 的 Visual Studio | Microsoft Docs
+title: 带有 GitHub Enterprise 的 Visual Studio 订阅 | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
@@ -7,14 +7,14 @@ ms.assetid: 2249b32a-46d7-4e29-b543-4769c71ceda6
 ms.date: 10/22/2020
 ms.topic: conceptual
 description: 了解如何访问作为 Visual Studio 订阅的一部分的 GitHub Enterprise
-ms.openlocfilehash: fc4c36e72affb94f0707389d219284cc2a652bfd
-ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
+ms.openlocfilehash: 59b665b1da7d46732f1f4e967ae2a98ec54875ff
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92467513"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96537898"
 ---
-# <a name="visual-studio-with-github-enterprise-subscriptions"></a>包含 GitHub Enterprise 订阅的 Visual Studio
+# <a name="visual-studio-subscriptions-with-github-enterprise"></a>带有 GitHub Enterprise 的 Visual Studio 订阅 
 
 与 Microsoft 签订了企业协议 (EA) 的客户有资格购买新的订阅套餐，该套餐将 Visual Studio 标准订阅和 GitHub Enterprise 结合在了一起。 这是 Visual Studio 订阅者获取 GitHub Enterprise 的一种简单而实惠的方式。 
 
@@ -33,13 +33,13 @@ Visual Studio Enterprise、Visual Studio Professional 和 GitHub Enterprise 仍�
 
 要详细了解相关权益和选项，请访问 <https://visualstudio.microsoft.com/subscriptions/visual-studio-github> 。 
 
-## <a name="what-is-the-visual-studio-with-github-enterprise-setup-process"></a>带有 GitHub Enterprise 的 Visual Studio 的设置过程是怎样的？
+## <a name="what-is-the-visual-studio-subscription-with-github-enterprise-setup-process"></a>带有 GitHub Enterprise 的 Visual Studio 订阅的设置过程是怎样的？
 
 带有 GitHub Enterprise 的 Visual Studio 订阅按两部分来管理：
 1. Visual Studio 订阅（Enterprise 或 Professional）
 2. GitHub Enterprise 
 
-向你分配了带有 GitHub 的 Visual Studio 订阅后，你将收到一封电子邮件，其中指出 Visual Studio 订阅管理员已向你分配了一个订阅。  此时，你将能在 <https://my.visualstudio.com/benefits> 上查看可用订阅权益。  这包括 GitHub Enterprise 权益，如下所示。
+向你分配了带有 GitHub Enterprise 的 Visual Studio 订阅后，你将收到一封电子邮件，其中指出 Visual Studio 订阅管理员已向你分配了一个订阅。  此时，你将能在 <https://my.visualstudio.com/benefits> 上查看可用订阅权益。  这包括 GitHub Enterprise 权益，如下所示。
 
    > [!div class="mx-imgBorder"]
    > ![GitHub Enterprise 挂起 Enterprise 帐户设置](_img/access-github/pending-account-setup.png "组织必须首先设置 Enterprise 帐户。")  

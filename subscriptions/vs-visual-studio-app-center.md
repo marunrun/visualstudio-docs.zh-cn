@@ -1,18 +1,18 @@
 ---
-title: Visual Studio 订阅中的 Visual Studio App Center 权益 | Microsoft 文档
+title: Visual Studio 订阅中的 Visual Studio App Center 权益 | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
-manager: lank
+manager: cabushcl
 ms.assetid: badd1d4a-90a6-46de-a037-945a91e6019b
-ms.date: 10/22/2020
+ms.date: 12/02/2020
 ms.topic: how-to
 description: 了解有关 Visual Studio 订阅中包含的 Visual Studio App Center 权益。
-ms.openlocfilehash: 6b1fc94d596f3b771f8354c0857ef533c00e1449
-ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
+ms.openlocfilehash: 8468b7641d12eca4db09d55d8d308ef5a913bc3c
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92435735"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96537768"
 ---
 # <a name="visual-studio-app-center-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 Visual Studio App Center
 
@@ -43,9 +43,9 @@ Visual Studio App Center 入门十分简单。
 | 订阅级别                                                 |     信道                                            | 好处                                                          | 是否续订？    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise（标准、月度云）   | VL、Azure、零售、NFR<sup>1</sup> | Included       |  是          |
-| 带有 GitHub Enterprise 的 Visual Studio Enterprise  | VL | Included       |  是          |
+| 包含 GitHub Enterprise 的 Visual Studio Enterprise 订阅  | VL | Included       |  是          |
 | Visual Studio Professional（标准、月度云） | VL、Azure、零售                                       | Included                                                            |是 |
-| 带有 GitHub Enterprise 的 Visual Studio Professional | VL                                      | Included                                                            |是 |
+| 包含 GitHub Enterprise 的 Visual Studio Professional 订阅 | VL                                      | Included                                                            |是 |
 | Visual Studio Test Professional（标准）                         | VL、零售                                              | Included                                                            |是 |
 | MSDN 平台（标准）                                          | VL、零售                                              | Included                                                            |是 |
 ||

@@ -1,5 +1,7 @@
 ---
 title: C++ 项目设置选项
+description: 了解如何通过“项目和解决方案”部分中的“VC++ 项目设置”页来定义与日志记录、性能和支持文件类型相关的 C++ 生成和项目设置。
+ms.custom: SEO-VS-2020
 ms.date: 08/02/2017
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7acd0d8f9c6d15f9f20c42f59c3bd5562884ac3
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 16226cd66c2cf46d1dc46f1cb3f90dc3bad9658c
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "68918888"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96616273"
 ---
 # <a name="vc-project-settings-projects-and-solutions-options-dialog-box"></a>“选项”对话框 ->“项目和解决方案”->“VC++ 项目设置”
 
@@ -31,9 +33,9 @@ ms.locfileid: "68918888"
 
 ## <a name="to-access-this-dialog-box"></a>访问此对话框
 
-1. 在 **“工具”** 菜单上，单击 **“选项”** 。
+1. 在“工具”  菜单上，单击“选项” 。
 
-2. 依次选择“项目和解决方案”  和“VC++ 项目设置”  。
+2. 依次选择“项目和解决方案”和“VC++ 项目设置”。
 
 ## <a name="build-logging"></a>生成日志
 
@@ -41,7 +43,7 @@ ms.locfileid: "68918888"
 
   启用生成相应的生成日志文件。 此选项可生成位于项目的中间文件目录中的 BuildLog.htm。 每个新的生成文件都会覆盖上一 BuildLog.htm 文件。
 
- **是**
+ 否
 
   禁用生成相应的生成日志文件。
 
@@ -51,7 +53,7 @@ ms.locfileid: "68918888"
 
 在生成日志文件中列出环境变量。 此选项指定在生成 C++ 项目期间，将所有环境变量回显到生成日志文件中。
 
- **是**
+ 否
 
 不在生成日志文件中显示环境变量。
 
@@ -59,9 +61,9 @@ ms.locfileid: "68918888"
 
  **是**
 
-  启用生成计时。 如果选中，输出窗口中会发布生成完成所需的时间。 有关详细信息，请参阅[输出窗口](../../ide/reference/output-window.md)。
+  启用生成计时。 如果选中，输出窗口中会发布生成完成所需的时间。 有关详细信息，请参阅 [输出窗口](../../ide/reference/output-window.md)。
 
- **是**
+ 否
 
 禁用生成计时。
 
@@ -85,11 +87,11 @@ ms.locfileid: "68918888"
 
 **仅显示项目中的文件**
 
-将“解决方案资源管理器”  配置为仅显示项目中的文件。
+将“解决方案资源管理器”配置为仅显示项目中的文件。
 
 **显示所有文件**
 
-将“解决方案资源管理器”  配置为显示项目中的文件和磁盘上项目文件夹中的文件。
+将“解决方案资源管理器”配置为显示项目中的文件和磁盘上项目文件夹中的文件。
 
 ## <a name="enable-project-caching"></a>启用项目缓存
 
@@ -97,7 +99,7 @@ ms.locfileid: "68918888"
 
 使 Visual Studio 能缓存项目数据，以便下次打开该项目时，它能直接加载缓存的数据，而无需通过项目文件重新对其计算。 使用缓存数据可显著缩短项目加载时间。
 
-**是**
+否
 
 不使用缓存的项目数据。 每次加载项目时分析项目文件。
 

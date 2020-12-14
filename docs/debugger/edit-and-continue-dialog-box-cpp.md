@@ -1,5 +1,7 @@
 ---
 title: “编辑并继续”对话框 （c + +） |Microsoft Docs
+description: “编辑并继续”可能会报告它无法应用代码更改。 了解发生这种情况的原因以及可以执行的操作。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba7b133594d016d1a80efae4d18d1fb55a96398d
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: dc1e7a27624cede9ca20295d3dc890f172e35889
+ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599549"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96862979"
 ---
 # <a name="edit-and-continue-dialog-box-c"></a>“编辑并继续”对话框 (C++)
 “编辑并继续”未能应用您对本机代码所做的更改。 这可能是一种临时情况。 有时“编辑并继续”不能立即应用本机代码更改，但稍后可在调试会话期间应用本机代码更改（例如，完成调用正在执行的过程之后）。 有关详细信息，请参阅[编辑并继续](../debugger/edit-and-continue.md)。

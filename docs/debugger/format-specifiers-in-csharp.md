@@ -1,5 +1,7 @@
 ---
 title: 调试器中的格式说明符 (C#) | Microsoft Docs
+description: 使用格式说明符更改值在“监视”窗口中的显示格式。 本文将详细介绍使用方法。
+ms.custom: SEO-VS-2020
 ms.date: 11/21/2018
 ms.topic: conceptual
 dev_langs:
@@ -25,12 +27,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: caaf36e286f1bdc664ebdbb10e3baf7ed28183e7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 31739b9c8fecc862c891173a792986b467730400
+ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62849839"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96862784"
 ---
 # <a name="format-specifiers-in-c-in-the-visual-studio-debugger"></a>Visual Studio 调试器中的 C# 中的格式说明符
 你可以使用格式说明符更改在“监视”窗口中显示值所用的格式。 还可在“即时”窗口、“命令”窗口、[跟踪点](../debugger/using-breakpoints.md#BKMK_Print_to_the_Output_window_with_tracepoints)和源窗口中使用格式说明符。 如果将鼠标悬停在这些窗口中的表达式上，结果将采用指定格式显示出现在[数据提示](../debugger/view-data-values-in-data-tips-in-the-code-editor.md)中。

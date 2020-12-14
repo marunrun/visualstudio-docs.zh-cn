@@ -7,12 +7,12 @@ ms.assetid: fe826200-9600-4b29-a64e-0d66ba3caf3d
 ms.date: 07/22/2020
 ms.topic: conceptual
 description: 了解如何以 Visual Studio 订阅者身份使用 Azure DevOps。
-ms.openlocfilehash: 536941d02b790349d126257e61164d2b0b98d794
-ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
+ms.openlocfilehash: f8cf4cd5f2165a528301d5dc2387a7906f11dcab
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "95970501"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96537690"
 ---
 # <a name="azure-devops-benefits-for-visual-studio-subscribers"></a>Visual Studio 订阅者的 Azure DevOps 权益
 作为权益，有效 Visual Studio 订阅者可使用订阅随附的一系列 Azure DevOps 功能。 可以在所属的每个 Azure DevOps 组织中使用这些相同的功能，无论你是创建了组织，还是被其他人添加到组织中。
@@ -31,9 +31,9 @@ ms.locfileid: "95970501"
 | 订阅级别                                                 |     信道                                            | 好处                                                          | 是否续订？    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise（标准、月度云）   | VL、Azure、零售、所选 NFR<sup>1</sup>  | Azure Boards 和 Azure Repos（基本计划<sup>2</sup>）、Azure Test Plans、自托管并行作业 |  是          |
-| 带有 GitHub Enterprise 的 Visual Studio Enterprise   | VL| Azure Boards 和 Azure Repos（基本计划<sup>2</sup>）、Azure Test Plans、自托管并行作业 |  是          |
+| 包含 GitHub Enterprise 的 Visual Studio Enterprise 订阅   | VL| Azure Boards 和 Azure Repos（基本计划<sup>2</sup>）、Azure Test Plans、自托管并行作业 |  是          |
 | Visual Studio Professional（标准、月度云） | VL、Azure、零售                                        | Azure Boards 和 Azure Repos（基本计划<sup>2</sup>）                                                             |  是          |
-| 带有 GitHub Enterprise 的 Visual Studio Professional | VL| Azure Boards 和 Azure Repos（基本计划<sup>2</sup>）                                                             |  是          |
+| 包含 GitHub Enterprise 的 Visual Studio Professional 订阅 | VL| Azure Boards 和 Azure Repos（基本计划<sup>2</sup>）                                                             |  是          |
 | Visual Studio Test Professional（标准）                         | VL、零售                                              | Azure Boards 和 Azure Repos（基本计划<sup>2</sup>）、Azure Test Plans                                              |  是          |
 | MSDN 平台（标准）                                          | VL、零售                                              | Azure Boards 和 Azure Repos（基本计划<sup>2</sup>）、Azure Test Plans                                             |  是          |
 ||

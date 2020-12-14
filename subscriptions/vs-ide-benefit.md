@@ -1,18 +1,18 @@
 ---
-title: Visual Studio 订阅中的 Visual Studio IDE 权益 | Microsoft 文档
+title: Visual Studio 订阅中的 Visual Studio IDE 权益 | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: c4b13464-76be-40f1-ad60-ed79ee264b12
-ms.date: 10/22/2020
+ms.date: 12/02/2020
 ms.topic: how-to
-description: 了解如何下载并安装包含在 Visual Studio 订阅中的 Visual Studio IDE。
-ms.openlocfilehash: 2baf2e452e86d44d814e3f4a511ebb5442b83578
-ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
+description: 了解如何下载并安装包含在 Visual Studio 订阅中的 Visual Studio IDE
+ms.openlocfilehash: edabaa21e8f8b6c7fe8fee33d2c1a4252efa7a1c
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92435763"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96538054"
 ---
 # <a name="the-visual-studio-2019-benefit"></a>Visual Studio 2019 权益
 
@@ -63,9 +63,9 @@ ms.locfileid: "92435763"
 | 订阅级别                                                 |     信道                                            | 好处                                                          | 是否续订？    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise（标准、月度云）   | VL、Azure、零售、所选 NFR<sup>1</sup> | 可用       |  是          |
-| 带有 GitHub Enterprise 的 Visual Studio Enterprise   | VL | 可用       |  是          |
+| 包含 GitHub Enterprise 的 Visual Studio Enterprise 订阅   | VL | 可用       |  是          |
 | Visual Studio Professional（标准、月度云） | VL、Azure、零售                                       | 可用                                                            |  是          |
-| 带有 GitHub Enterprise 的 Visual Studio Professional | VL   | 可用              |  是          |
+| 包含 GitHub Enterprise 的 Visual Studio Professional 订阅 | VL   | 可用              |  是          |
 | Visual Studio Test Professional（标准）                         | VL、零售                                              | 可用                                             |  是         |
 | MSDN 平台（标准）                                          | VL、零售                                              | 不可用                                              |  不可用          |
 

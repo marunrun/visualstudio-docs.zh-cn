@@ -1,5 +1,7 @@
 ---
 title: 命令别名
+description: 了解如何在要执行命令时利用命令别名减少键入的字符数。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -16,18 +18,18 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b420644672309371ab61f1499e22d4745c69c569
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 9dda564939652a09b64fec65747ca14d1315b3f1
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75596406"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96561066"
 ---
 # <a name="visual-studio-command-aliases"></a>Visual Studio Command Aliases
 
-通过命令别名，可在希望执行命令时键入较少的字符。 可将别名输入“查找/命令”  框或“命令”  窗口。 例如，可以使用预定义别名 `>of`，而不是输入 `>File.OpenFile` 来显示“打开文件”对话框。
+通过命令别名，可在希望执行命令时键入较少的字符。 可将别名输入“查找/命令”框或“命令”窗口。 例如，可以使用预定义别名 `>of`，而不是输入 `>File.OpenFile` 来显示“打开文件”对话框。
 
-在“命令”窗口中键入 `alias` 可显示当前别名及其定义的列表。 键入 `>cls` 可清除“命令”  窗口中的内容。 若要查看特定命令的别名，请键入 `alias <command name>`。
+在“命令”窗口中键入 `alias` 可显示当前别名及其定义的列表。 键入 `>cls` 可清除“命令”窗口中的内容。 若要查看特定命令的别名，请键入 `alias <command name>`。
 
 您可以轻松地为某个 Visual Studio 命令创建您自己的别名（带有或不带参数）。 例如，用于为 `File.NewFile MyFile.txt` 创建别名的语法是 `alias MyAlias File.NewFile MyFile.txt`。 您可以使用 `alias <alias name> /delete` 删除某个别名。
 
@@ -48,7 +50,7 @@ ms.locfileid: "75596406"
 |关闭所有文档|CloseAll|Window.CloseAllDocuments|
 |全部清除|cls|Edit.ClearAll|
 |命令模式|cmd|视图.命令窗口|
-|查看代码|代码|视图.查看代码|
+|查看代码|code|视图.查看代码|
 |[“列出内存”命令](../../ide/reference/list-memory-command.md)|d|Debug.ListMemory|
 |[“列出内存”命令](../../ide/reference/list-memory-command.md)（按 ANSI）|da|Debug.ListMemory /Ansi|
 |[“列表内存”命令](../../ide/reference/list-memory-command.md)（1 字节格式）|db|Debug.ListMemory /Format:OneByte|
@@ -63,9 +65,9 @@ ms.locfileid: "75596406"
 |[“列表内存”命令](../../ide/reference/list-memory-command.md)（8 字节格式）|dq|Debug.ListMemory /Format:EightBytes|
 |[“列出内存”命令](../../ide/reference/list-memory-command.md)（按 Unicode）|du|Debug.ListMemory /Unicode|
 |[“计算语句”命令](../../ide/reference/evaluate-statement-command.md)|eval|Debug.EvaluateStatement|
-|Exit|Exit|文件.退出|
+|Exit|退出|文件.退出|
 |设置选定内容的格式|format|编辑.格式化选定内容|
-|全屏显示|全屏|视图.全屏|
+|全屏显示|FullScreen|视图.全屏|
 |[“启动”命令](../../ide/reference/start-command.md)|g|调试.启动|
 |[“转到”命令](../../ide/reference/go-to-command.md)|GotoLn|编辑.转到|
 |转到大括号|GotoBrace|编辑.转到大括号|
@@ -94,7 +96,7 @@ ms.locfileid: "75596406"
 |折叠到定义/停止大纲显示|OutlineDefs StopOutlining|Edit.CollapseToDefinitions|
 |逐过程|p|调试.逐过程|
 |参数信息|ParamInfo|编辑.参数信息|
-|跳出|pr|调试.跳出|
+|步出|pr|调试.跳出|
 |上一书签|PrevBook|编辑.上一书签|
 |打印文件|print|文件.打印|
 |“属性”窗口|props|视图.属性窗口|
@@ -108,19 +110,19 @@ ms.locfileid: "75596406"
 |[Shell 命令](../../ide/reference/shell-command.md)|shell|Tools.Shell|
 |停止“在文件中查找”|StopFind|Edit.FindInFiles /stop|
 |交换定位点|SwapAnchor|编辑.交换定位点|
-|逐语句|t|调试.逐语句|
+|逐语句|T|调试.逐语句|
 |将选定内容替换为制表符|替换为制表符|Edit.TabifySelection|
 |“任务列表”窗口|TaskList|视图.任务列表|
 |“线程”窗口|线程|调试.线程|
-|水平平铺|TileH|Window.TileHorizontally|
+|横向平铺|TileH|Window.TileHorizontally|
 |垂直平铺|TileV|Window.TileVertically|
 |切换书签|ToggleBook|编辑.切换书签|
 |工具箱窗口|工具箱|视图.工具箱|
 |[“列出反汇编”命令](../../ide/reference/list-disassembly-command.md)|u|Debug.ListDisassembly|
 |转换为大写|Ucase|编辑.转换为大写|
-|撤消|撤消|编辑.取消|
+|撤消|撤消 (undo)|编辑.取消|
 |将所选内容中的制表符替换为空格|Untabify|Edit.UntabifySelection|
-|监视窗口|监视|Debug.WatchN|
+|监视窗口|观看|Debug.WatchN|
 |切换自动换行|WordWrap|编辑.切换自动换行|
 |列出进程|&#124;|Debug.ListProcesses|
 |[“列出线程”命令](../../ide/reference/list-threads-command.md)|~ ~*k ~\*kb|Debug.ListThreads Debug.ListTheads /AllThreads|

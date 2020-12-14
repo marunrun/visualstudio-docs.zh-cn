@@ -1,5 +1,7 @@
 ---
 title: 调试器设置和准备 | Microsoft Docs
+description: 本部分说明如何准备使用 Visual Studio 调试器，并介绍相关属性。 请访问所需信息的链接。
+ms.custom: SEO-VS-2020
 ms.date: 08/01/2018
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2704f4e73b1077f14c89e377453a858d341a2738
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 5ddae505580781c707678e95d9e270c46b86cdae
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738282"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560221"
 ---
 # <a name="debugger-settings-and-preparation"></a>调试器设置和准备
 本节描述与调试器相关的属性设置，以及为了使用 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 调试器调试程序所需要的准备工作。 如果在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中使用项目模板创建程序，则调试配置中将为你正确配置这些设置。

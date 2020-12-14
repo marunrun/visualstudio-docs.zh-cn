@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 8fccb5f6-ff61-488f-a91e-447faeda798d
-ms.date: 11/17/2020
+ms.date: 12/02/2020
 ms.topic: conceptual
 description: 了解所选 Visual Studio 订阅中包含的 Microsoft 技术社区论坛支持权益。
-ms.openlocfilehash: b579f407e61b4cd0b051c603bdef736e7c52fa44
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: 2bdd6b638ba490c2643374b15bc8b9644d519ebd
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94905565"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96537807"
 ---
 # <a name="microsoft-tech-community-forum-support-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 Microsoft 技术社区论坛支持
 与其他用户和 Microsoft 技术专家建立联系并交流互动，了解最佳实践、设计体系结构和最新更新。
@@ -44,9 +44,9 @@ Azure 社区权益的可用性取决于订阅级别，如下所示：
 |                                          订阅级别                                           |     信道      |    好处    | 是否续订？ |
 |-------------------------------------------------------------------------------------------------------|-------------------|---------------|------------|
 |                           Visual Studio Enterprise（标准）、NFR<sup>1</sup>                            | VL、Azure、零售 |   可用    |    是     |
-|                           带有 GitHub Enterprise 的 Visual Studio Enterprise                           | VL、Azure、零售 |   可用    |    是     |
+|                           包含 GitHub Enterprise 的 Visual Studio Enterprise 订阅                           | VL、Azure、零售 |   可用    |    是     |
 |                          Visual Studio Professional（标准）                          | VL、Azure、零售 |   可用    |    是     |
-|                          带有 GitHub Enterprise 的 Visual Studio Professional                          | VL、Azure、零售 |   可用    |    是     |
+|                          包含 GitHub Enterprise 的 Visual Studio Professional 订阅                          | VL、Azure、零售 |   可用    |    是     |
 |                              Visual Studio Test Professional（标准）                               |    VL、零售     |   可用    |    是     |
 |                                       MSDN 平台（标准）                                       |    VL、零售     |   可用    |    是     |
 | Visual Studio Enterprise（月度云）、Visual Studio Professional（月度云）|        全部        | 不可用 |     否     |

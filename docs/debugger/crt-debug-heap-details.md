@@ -1,5 +1,7 @@
 ---
 title: CRT 调试堆详细信息 | Microsoft Docs
+description: 调试堆提供功能强大的工具来帮助解决内存分配问题。 了解这些工具以及它们对解决泄漏和溢出等问题有何帮助。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -73,12 +75,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 22307c44e4f82056887fadf6e8fde9e1449a19a5
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.openlocfilehash: 774c6c03d0485664eb01e1a7967003ef2f5bd2bc
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88247943"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560611"
 ---
 # <a name="crt-debug-heap-details"></a>CRT 调试堆详细信息
 本主题详细描述了 CRT 调试堆。

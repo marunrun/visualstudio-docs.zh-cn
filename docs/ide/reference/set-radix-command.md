@@ -1,5 +1,7 @@
 ---
 title: “设置基数”命令
+description: 了解“设置基数”命令以及它如何设置或返回用于显示整数值的数值进制。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e88dc1318e29ddf35073b78218eb113fe8952aac
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b47c30ed938a83a2b4c47f73f55b5f7ca1db6a62
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85769646"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96616403"
 ---
 # <a name="set-radix-command"></a>“设置基数”命令
 设置或返回用来显示整数值的数值基数。
@@ -46,4 +48,4 @@ Debug.SetRadix [10 | 16 | hex | dec]
 - [Visual Studio 命令](../../ide/reference/visual-studio-commands.md)
 - [“命令”窗口](../../ide/reference/command-window.md)
 - [“查找/命令”框](../../ide/find-command-box.md)
-- [Visual Studio Command Aliases](../../ide/reference/visual-studio-command-aliases.md)
+- [Visual Studio 命令别名](../../ide/reference/visual-studio-command-aliases.md)

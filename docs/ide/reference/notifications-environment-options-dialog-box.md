@@ -1,5 +1,7 @@
 ---
 title: “选项”对话框 ->“环境”->“通知”
+description: 了解如何使用“环境”部分的“通知”页来停止忽略你以前选择通过通知对话框忽略的任何通知。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,13 +13,13 @@ manager: jillfra
 ms.workload:
 - multiple
 monikerRange: vs-2017
-ms.openlocfilehash: ad95a4a40d8f4f2ed0ab1c3fd37e329c850cc03f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1d257f1703615fe4bcc072362326ce48f99f904e
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770898"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96616845"
 ---
 # <a name="notifications-environment-options-dialog-box"></a>“选项”对话框 ->“环境”->“通知”
 
-此选项用于停止忽略你以前选择通过“通知”对话框忽略的任何通知  。 有关详细信息，请参阅[升级 Visual Studio](../../install/update-visual-studio.md)。
+此选项用于停止忽略你以前选择通过“通知”对话框忽略的任何通知。 有关详细信息，请参阅[升级 Visual Studio](../../install/update-visual-studio.md)。

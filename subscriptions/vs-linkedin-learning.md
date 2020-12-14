@@ -1,18 +1,18 @@
 ---
-title: Visual Studio 订阅中的 LinkedIn 学习权益 | Microsoft 文档
+title: Visual Studio 订阅中的 LinkedIn 学习权益 | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 5bba2205-d32f-413d-9b58-724a24993842
-ms.date: 10/21/2020
+ms.date: 12/02/2020
 ms.topic: how-to
 description: 了解有关所选 Visual Studio 订阅中包含的作为 LinkedIn Premium 订阅一部分的 LinkedIn Learning 权益。
-ms.openlocfilehash: 7a5e15ad5d1101123a03b98da30d48895410313b
-ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
+ms.openlocfilehash: b3c8d0b61dbde3f9e45d6000e1de409255750931
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "95970307"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96537885"
 ---
 # <a name="the-linkedin-learning-benefit-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 LinkedIn Learning 权益
 
@@ -72,9 +72,9 @@ ms.locfileid: "95970307"
 | 订阅级别                                                 |     信道                                            | 好处                                                          | 是否续订？    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise（标准）   | VL、Azure、零售<sup>1</sup> | 6 个月       |  不是。  仅对新订阅者可用          |
-| 带有 GitHub Enterprise 的 Visual Studio Enterprise   | VL | 6 个月       |  不是。  仅对新订阅者可用          |
+| 包含 GitHub Enterprise 的 Visual Studio Enterprise 订阅   | VL | 6 个月       |  不是。  仅对新订阅者可用          |
 | Visual Studio Professional（标准） | VL、Azure、零售                                       | 3 个月                                                            |不是。  仅对新订阅者可用         |
-| 带有 GitHub Enterprise 的 Visual Studio Professional | VL | 3 个月      | 不是。  仅对新订阅者可用         |
+| 包含 GitHub Enterprise 的 Visual Studio Professional 订阅 | VL | 3 个月      | 不是。  仅对新订阅者可用         |
 | Visual Studio Test Professional（标准）                         | VL、零售                                              | 不可用                                            |  NA         |
 | MSDN 平台（标准）                                          | VL、零售                                              | 不可用                                              | NA         |
 | Visual Studio Enterprise、Visual Studio Professional（月度云） | Azure                                       | 不可用                                                           |NA|

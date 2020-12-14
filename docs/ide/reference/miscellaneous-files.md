@@ -1,5 +1,7 @@
 ---
 title: 杂项文件
+description: 了解如何处理未包含在 Visual Studio 项目或解决方案中的文件。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 793500faf217c74772506b4b7394d926447ffd40
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dc797fe7676d24a80867cc318cbe02f94e90e7d0
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75585292"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96561092"
 ---
 # <a name="miscellaneous-files"></a>杂项文件
 
@@ -33,12 +35,12 @@ ms.locfileid: "75585292"
 
 ![解决方案项目](../../ide/reference/media/projects_solutions_misc.gif)
 
-如果启用了相应的文件夹选项，则解决方案资源管理器可为这类文件显示一个“杂项文件”文件夹****。 可从[“选项”对话框 ->“环境”->“文档”对话框](../../ide/reference/documents-environment-options-dialog-box.md)中设置这些选项。 关闭某个杂项文件后，该文件与任何特定解决方案或项目都不再关联，除非也启用了使之关联的选项。
+如果启用了相应的文件夹选项，则解决方案资源管理器可为这类文件显示一个“杂项文件”文件夹。 可从[“选项”对话框 ->“环境”->“文档”对话框](../../ide/reference/documents-environment-options-dialog-box.md)中设置这些选项。 关闭某个杂项文件后，该文件与任何特定解决方案或项目都不再关联，除非也启用了使之关联的选项。
 
-“杂项文件”文件夹将文件表示为链接****。 尽管此文件夹不是解决方案的一部分，但当打开某解决方案时，上次关闭该解决方案时打开的部分或全部杂项文件会重新打开，具体取决于该文件夹的设置。
+“杂项文件”文件夹将文件表示为链接。 尽管此文件夹不是解决方案的一部分，但当打开某解决方案时，上次关闭该解决方案时打开的部分或全部杂项文件会重新打开，具体取决于该文件夹的设置。
 
 > [!NOTE]
-> 有些没有在“杂项文件”文件夹中显示的文件是不能在 IDE 中修改的文件，例如 .zip 文件和 .doc 文件****。 IDE 不会跟踪那些只能通过外部编辑器修改的文件。
+> 有些没有在“杂项文件”文件夹中显示的文件是不能在 IDE 中修改的文件，例如 .zip 文件和 .doc 文件。 IDE 不会跟踪那些只能通过外部编辑器修改的文件。
 
 ## <a name="commands-available-in-the-ide"></a>IDE 中可用的命令
 
@@ -46,7 +48,7 @@ ms.locfileid: "75585292"
 
 ## <a name="folder-display-options"></a>文件夹显示选项
 
-可以设置“杂项文件”文件夹的显示选项，以便即使未打开任何杂项文件时也显示该文件夹****。 解决方案文件不永久管理杂项文件列表。 它使用一项可选功能，该功能使它记住每个用户最近使用过 (MRU) 的文件列表。
+可以设置“杂项文件”文件夹的显示选项，以便即使未打开任何杂项文件时也显示该文件夹。 解决方案文件不永久管理杂项文件列表。 它使用一项可选功能，该功能使它记住每个用户最近使用过 (MRU) 的文件列表。
 
 ## <a name="see-also"></a>另请参阅
 

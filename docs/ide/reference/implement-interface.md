@@ -1,5 +1,7 @@
 ---
 title: 实现接口
+description: 了解如何使用“快速操作和重构”菜单即时生成实现接口所需的代码。
+ms.custom: SEO-VS-2020
 ms.date: 01/26/2018
 ms.topic: reference
 author: TerryGLee
@@ -7,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7d420bd0d42e89476696966f7eda94a19893fc23
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 0484ed5f63cd4651669a8e3c1f94f5aad96fcc03
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75595548"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96617105"
 ---
 # <a name="implement-an-interface-in-visual-studio"></a>在 Visual Studio 中实现接口
 
@@ -22,11 +24,11 @@ ms.locfileid: "75595548"
 
 - Visual Basic
 
-**功能：** 快速生成实现接口所需的代码。
+功能：快速生成实现接口所需的代码。
 
-**使用时机：** 想要继承接口时。
+时机：想要继承接口时。
 
-操作原因：  可以手动逐一实现各个接口，但此功能可自动生成所有方法签名。
+原因：可以手动逐一实现各个接口，但此功能可自动生成所有方法签名。
 
 ## <a name="how-to"></a>操作说明
 
@@ -43,19 +45,19 @@ ms.locfileid: "75595548"
 2. 接下来，执行以下操作之一：
 
    - **键盘**
-      - 按“Ctrl”  + **。** 触发“快速操作和重构”  菜单。
+      - 按“Ctrl”+ **。** 触发“快速操作和重构”菜单。
    - **鼠标**
-      - 右键单击并选择“快速操作和重构”菜单  。
+      - 右键单击并选择“快速操作和重构”菜单。
       - 将鼠标悬停在红色波形曲线上，然后单击出现的 ![错误灯泡](media/error-bulb.png) 图标。
       - 单击 ![错误灯泡](media/error-bulb.png) 图标（如果文本光标已在具有红色波形曲线的行上，它会出现在左边缘）。
 
-3. 从下拉菜单中选择“实现接口”  。
+3. 从下拉菜单中选择“实现接口”。
 
    ![“实现接口”预览](media/interface-preview-cs.png)
 
    > [!TIP]
    > - 进行选择前，使用预览窗口底部的“预览更改”链接[查看将发生的所有更改](../../ide/preview-changes.md)。
-   > - 通过预览窗口底部的“文档”、“项目”和“解决方案”链接，跨实现此接口的多个类创建适当的方法签名    。
+   > - 通过预览窗口底部的“文档”、“项目”和“解决方案”链接，跨实现此接口的多个类创建适当的方法签名。
 
    将创建接口的方法签名以供实现。
 
@@ -68,7 +70,7 @@ ms.locfileid: "75595548"
        ![“实现接口”的结果 VB](media/interface-result-vb.png)
 
    > [!TIP]
-   > （仅限 C#）使用“显式实现接口”选项，以接口名称作为各个生成方法的开头，避免名称冲突  。
+   > （仅限 C#）使用“显式实现接口”选项，以接口名称作为各个生成方法的开头，避免名称冲突。
    >
    > ![显式实现接口结果](media/interface-explicitresult-cs.png);
 

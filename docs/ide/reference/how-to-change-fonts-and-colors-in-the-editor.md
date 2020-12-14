@@ -1,5 +1,7 @@
 ---
 title: 更改编辑器字体和颜色
+description: 了解如何在“代码编辑器”中更改默认字体、调整字体大小以及更改不同文本“显示项”的前景色和背景色。
+ms.custom: SEO-VS-2020
 ms.date: 06/01/2020
 ms.topic: how-to
 helpviewer_keywords:
@@ -14,12 +16,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fa56a7ab8b3147cc3e8fbb784211d9a34536189d
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.openlocfilehash: 6ad32d814b67cae9a9a0a538d6c131aecba9c0b8
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85770419"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96617118"
 ---
 # <a name="how-to-change-fonts-and-colors-for-the-editor-in-visual-studio"></a>如何：在 Visual Studio 中更改编辑器中的字体和颜色
 
@@ -36,7 +38,7 @@ ms.locfileid: "85770419"
 
 ## <a name="change-the-default-font-face-size-and-colors"></a>更改默认字体、字体大小和颜色
 
-1. 从“工具”菜单中选择“选项” 。 在“环境”下，选择**字体和颜色**。
+1. 从“工具”菜单中选择“选项” 。 在“环境”下，选择 **字体和颜色**。
 
 1. 在“显示以下对象的设置”中，选择“文本编辑器”。
 

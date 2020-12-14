@@ -1,5 +1,7 @@
 ---
 title: “选项”对话框 ->“环境”->“任务列表”
+description: 了解如何使用“环境”部分的“任务列表”页添加、删除和更改生成任务列表提醒的注释标记。
+ms.custom: SEO-VS-2020
 ms.date: 03/28/2019
 ms.topic: reference
 f1_keywords:
@@ -22,12 +24,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e28b3b9c3fe4d6e89228dc18ba8b98aa5e0d2e76
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.openlocfilehash: 4b7b29c477bf046cfd47db9e39cb57360d999dee
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80233131"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96616286"
 ---
 # <a name="options-dialog-box-environment--task-list"></a>“选项”对话框：环境 \> 任务列表
 

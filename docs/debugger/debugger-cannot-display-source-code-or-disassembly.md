@@ -1,6 +1,7 @@
 ---
 title: 调试器不能显示源代码或反汇编
-ms.custom: seodec18
+description: 查看消息“代码在当前位置停止执行，但调试器不能显示当前位置的源代码或反汇编”的原因。
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d87de3034cb6cb8ba3364fa362eff1c27e6bae9d
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: dd0ed9a798c29010911a1537c99f30ba44e01aea
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738349"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96561040"
 ---
 # <a name="debugger-cannot-display-source-code-or-disassembly"></a>调试器不能显示源代码或反汇编
 此错误显示如下：
