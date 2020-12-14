@@ -1,5 +1,7 @@
 ---
 title: “编辑并继续”对话框 |Microsoft Docs
+description: 如果在调试时编辑了代码，将显示“编辑并继续”对话框。 了解如何控制是否将在不要求权限的情况下应用代码更改。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +19,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 824ee989f17b6a341679f541f95906056cf6f8de
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: ed625d98cc4f3fe793ba0982771b0a57ff189526
+ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599534"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96863096"
 ---
 # <a name="edit-and-continue-dialog-box"></a>“编辑并继续”对话框
-（仅限本机）当你在调试过程中编辑了代码并且**编辑并继续**识别出可以应用代码更改时，会显示该对话框。 有关详细信息，请参阅[编辑并继续](../debugger/edit-and-continue.md)。
+（仅限本机）当你在调试过程中编辑了代码并且 **编辑并继续** 识别出可以应用代码更改时，会显示该对话框。 有关详细信息，请参阅[编辑并继续](../debugger/edit-and-continue.md)。
 
  **不再显示此对话框** 如果选中此复选框，则“编辑并继续”以后将在不请求权限的情况下应用代码更改。 通过转到“选项”对话框，打开“调试”文件夹、单击“编辑并继续”页，然后选择“由调试命令调用”和“首先询问”，即可重新打开此警告    。
 

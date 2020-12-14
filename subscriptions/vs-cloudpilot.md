@@ -2,17 +2,17 @@
 title: Visual Studio 订阅中的 CloudPilot 权益 | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
-manager: lank
+manager: cabuschl
 ms.assetid: 6255b6a3-f101-4b2c-b7fa-851eccc944b2
-ms.date: 03/24/2020
+ms.date: 12/02/2020
 ms.topic: conceptual
 description: 了解有关所选 Visual Studio 订阅中包含的可用 CloudPilot 权益
-ms.openlocfilehash: 642a5b35f41676c76d9eb4e5f1319fbbf57c55df
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 505e4caad5ee6d9b70fc50769c8a008469aa1345
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005919"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96538145"
 ---
 # <a name="the-cloudpilot-benefit-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 CloudPilot 权益
 将应用移至 Microsoft Azure 只需几个简单的步骤。 在几分钟内即可标识所有必需的代码更改（细至代码行），以便成功迁移到：容器、VM、应用服务、SQL Azure 和/或 SQL MI。 然后，通过使用 ASR、DMA 和 DMS 的向导将应用迁移到 Azure。
@@ -60,9 +60,9 @@ ms.locfileid: "91005919"
 | 订阅级别                                                 |     信道                                            | 好处                                                          | 是否续订？    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise（标准）   | VL、Azure、零售、 | 2 个许可证、90 天、无限制扫描       |  不是。  仅对新订阅者可用          |
-| 带有 GitHub Enterprise 的 Visual Studio Enterprise   | VL | 2 个许可证、90 天、无限制扫描       |  不是。  仅对新订阅者可用          |
+| 包含 GitHub Enterprise 的 Visual Studio Enterprise 订阅   | VL | 2 个许可证、90 天、无限制扫描       |  不是。  仅对新订阅者可用          |
 | Visual Studio Professional（标准） | VL、Azure、零售                                       | 1 个许可证、30 天、一次扫描                                                            |  不是。  仅对新订阅者可用           |
-| 带有 GitHub Enterprise 的 Visual Studio Professional | VL | 1 个许可证、30 天、一次扫描                                                            |  不是。  仅对新订阅者可用           |
+| 包含 GitHub Enterprise 的 Visual Studio Professional 订阅 | VL | 1 个许可证、30 天、一次扫描                                                            |  不是。  仅对新订阅者可用           |
 | Visual Studio Test Professional（标准）                         | VL、零售                                              | 不可用                                             |  不可用           |
 | MSDN 平台（标准）                                          | VL、零售                                              | 不可用                                              |  不可用          |
 | Visual Studio Enterprise（标准）  | NFR<sup>1</sup> |不可用  | 不可用 |

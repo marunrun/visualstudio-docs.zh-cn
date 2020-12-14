@@ -1,5 +1,7 @@
 ---
 title: 工具箱，“组件”选项卡
+description: 了解能在“工具箱”窗口的“组件”选项卡中找到的组件。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,18 +15,18 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e5eb8c320a3190121d95395f7b359aa9ed978408
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 40ba84712a343a071d6213dc9cd985727fc20ebf
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75597303"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560936"
 ---
 # <a name="toolbox-components-tab"></a>工具箱，“组件”选项卡
 
 显示可以添加到适用于 Windows 窗体的 Visual Basic 和 C# 设计器的组件。 除 Visual Studio 附带的 .NET 组件（如 <xref:System.Messaging.MessageQueue> 和 <xref:System.Diagnostics.EventLog> 组件）外，还可向此选项卡添加自己的组件或第三方组件。
 
-要显示此选项卡，请打开 Windows 窗体设计器。 选择“视图” > 工具箱”。 在“工具箱”中，选择“组件”选项卡   。
+要显示此选项卡，请打开 Windows 窗体设计器。 选择“视图” > 工具箱” 。 在“工具箱”中，选择“组件”选项卡。
 
 ## <a name="components"></a>组件
 

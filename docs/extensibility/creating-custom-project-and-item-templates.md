@@ -1,5 +1,7 @@
 ---
 title: 创建自定义项目和项模板 | Microsoft Docs
+description: 了解如何通过 Visual Studio SDK 中的模板创建模板在较大的扩展中添加模板。
+ms.custom: SEO-VS-2020
 ms.date: 3/16/2019
 ms.topic: overview
 ms.assetid: 586da5dc-f678-402b-afd0-0332959fd7a6
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: eb6bcd63896a11f9ca1eabddddc17b3e52865e5b
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.openlocfilehash: 78770c74e5b866ad6791db01a448d46231edfd2a
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88801251"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915617"
 ---
 # <a name="create-custom-project-and-item-templates"></a>创建自定义项目和项模板
 

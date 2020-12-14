@@ -1,5 +1,7 @@
 ---
 title: 用于排除错误的资源
+description: 了解如何使用知识库文章、论坛或产品支持来解决 IDE 错误（这些错误消息所含的信息不足以帮助你解决问题）。
+ms.custom: SEO-VS-2020
 ms.date: 07/23/2020
 ms.topic: troubleshooting
 f1_keywords:
@@ -93,12 +95,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f18ef8a0bf8ffc6b7478f307b6c2a37247bef034
-ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
+ms.openlocfilehash: f3fdf18c67be8188bd03c498778fe8e6ad9409ee
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234726"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96616574"
 ---
 # <a name="resources-for-troubleshooting-integrated-development-environment-errors"></a>用于排除集成开发环境错误的资源
 

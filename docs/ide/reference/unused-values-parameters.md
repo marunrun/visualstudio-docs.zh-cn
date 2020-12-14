@@ -1,5 +1,7 @@
 ---
 title: 未使用的值和参数
+description: 了解未使用的值分配、变量和参数以及它们在 Visual Studio 代码编辑器中的显示方式。
+ms.custom: SEO-VS-2020
 ms.date: 02/15/2019
 ms.topic: reference
 author: kendrahavens
@@ -10,12 +12,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: ce2b0f1e0c0db45c478c3917306683b314da0564
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 8768992ce3ef9f40ab0adba1724d43b32e5bde5c
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "65531880"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560702"
 ---
 # <a name="unused-value-assignments-variables-and-parameters"></a>未使用的值分配、变量和参数
 
@@ -28,7 +30,7 @@ ms.locfileid: "65531880"
 
 **使用时机：** 具有从未使用的值分配、参数或表达式值。
 
-操作原因：  有时很难判断是否不再使用某个值分配、变量或参数。 通过渐隐这些值或发出警告，可以直观地了解可删除的代码。
+操作原因：有时很难判断是否不再使用某个值分配、变量或参数。 通过渐隐这些值或发出警告，可以直观地了解可删除的代码。
 
 ## <a name="unused-expression-values-and-parameters-diagnostic"></a>未使用的表达式值和参数诊断
 
@@ -40,7 +42,7 @@ ms.locfileid: "65531880"
   ![未使用的值分配](media/unused-value-assignment.png)
   ![Unused value discard](media/unused-value-discard.png)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [重构](../refactoring-in-visual-studio.md)
 - [针对 .NET 开发人员的提示](../csharp-developer-productivity.md)

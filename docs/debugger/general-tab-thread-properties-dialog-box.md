@@ -1,5 +1,6 @@
 ---
 title: 常规选项卡，线程属性对话框 |Microsoft 文档
+description: 查看“线程属性”对话框，获取有关线程的信息，包括模块名称、线程 ID、进程 ID、线程状态、等待原因和 CPU 时间。
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e8604c2d31f6bb50e9e77efbf6423f56ed719c0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: dd4c2bf24058ce8a69f05d8d2cee17a18ff9505d
+ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62896358"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96862992"
 ---
 # <a name="general-tab-thread-properties-dialog-box"></a>“线程属性”对话框 ->“常规”选项卡
 使用此对话框可详细了解特定线程。 若要显示此对话框，请将焦点移至[线程视图](../debugger/threads-view.md)窗口，或打开[消息视图](../debugger/messages-view.md)并展开消息。 在树中选择任意线程节点，然后从“视图”菜单中选择“属性” 。

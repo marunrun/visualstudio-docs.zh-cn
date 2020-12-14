@@ -1,5 +1,7 @@
 ---
 title: 创建自定义数据可视化工具 | Microsoft Docs
+description: Visual Studio 调试器可视化工具是显示数据的组件。 了解六个标准可视化工具，以及如何编写或下载其他可视化工具。
+ms.custom: SEO-VS-2020
 ms.date: 05/27/2020
 ms.topic: conceptual
 f1_keywords:
@@ -19,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0e184507415810f64060b0d2b2e92a825d642d2e
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 4c39fae399cd735d09218699f10c1eaead8e40ee
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85280871"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560676"
 ---
 # <a name="create-custom-data-visualizers"></a>创建自定义数据可视化工具
 

@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 872c5746-5357-4764-949b-aa525a0adf1a
-ms.date: 09/08/2020
+ms.date: 12/02/2020
 ms.topic: conceptual
 description: 了解如何通过 Visual Studio 订阅利用 Microsoft Windows 虚拟桌面
-ms.openlocfilehash: 4e619b9c1140611be5236edfff70e8b0aa560b23
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 9198f4180a2f98b89540f1eedc0dab4be59558ab
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005041"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96537950"
 ---
 # <a name="access-windows-virtual-desktop-in-subscriptions"></a>在订阅中访问 Windows 虚拟桌面 
 Visual Studio 订阅者现在可以将其 Azure 开发/测试个人额度用于 Microsoft Windows 虚拟桌面服务。  
@@ -47,9 +47,9 @@ Windows 虚拟桌面需要 Azure Active Directory (Azure AD)，VM 将加入到�
 | 订阅级别                                                 |     信道                                            | 好处                                                          | 是否续订？    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise（标准）   | VL、Azure、零售、 | 可用|  是          |
-| 带有 GitHub Enterprise 的 Visual Studio Enterprise  | VL | 可用|  是          |
+| 包含 GitHub Enterprise 的 Visual Studio Enterprise 订阅  | VL | 可用|  是          |
 | Visual Studio Professional（标准） | VL、Azure、零售                                       | 可用                                                             |  是             |
-| 带有 GitHub Enterprise 的 Visual Studio Professional | VL                                       | 可用                                        |  是           |
+| 包含 GitHub Enterprise 的 Visual Studio Professional 订阅 | VL                                       | 可用                                        |  是           |
 | Visual Studio Test Professional（标准）                         | VL、零售                                              | 可用|  是          |
 | MSDN 平台（标准）                                          | VL、零售                                              | 可用                                         |  是          |
 | Visual Studio Enterprise（标准）  | NFR<sup>1</sup> |不可用  | 不可用 |

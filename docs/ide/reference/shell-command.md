@@ -1,5 +1,7 @@
 ---
 title: shell 命令
+description: 了解 Shell 命令以及它如何从 Visual Studio 内启动可执行程序。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5bf13c7624d6c9d8e64b79f653eb83a0c5f3b3f0
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: a6197201ed35520ba8d362b6aa448fe625a2fe3a
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75565872"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96616364"
 ---
 # <a name="shell-command"></a>shell 命令
 从 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 内启动可执行程序。
@@ -34,7 +36,7 @@ ms.locfileid: "75565872"
 Tools.Shell [/command] [/output] [/dir:folder] path [args]
 ```
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 `path`
 
 必需。 要执行的文件或要打开的文档的路径和文件名。 如果在环境变量 PATH 的某个目录中没有指定的文件，则必须使用完整路径。
@@ -43,10 +45,10 @@ Tools.Shell [/command] [/output] [/dir:folder] path [args]
 
 可选。 要传递给被调用的程序的任何参数。
 
-## <a name="switches"></a>开关
+## <a name="switches"></a>交换机
 /commandwindow [或] /command [或] /c [或] /cmd
 
-可选。 指定在“命令”窗口中显示可执行文件的输出  。
+可选。 指定在“命令”窗口中显示可执行文件的输出。
 
 /dir:`folder` [或] /d:`folder`
 
@@ -54,7 +56,7 @@ Tools.Shell [/command] [/output] [/dir:folder] path [args]
 
 /outputwindow [或] /output [或] /out [或] /o
 
-可选。 指定在“输出”窗口中显示可执行文件的输出  。
+可选。 指定在“输出”窗口中显示可执行文件的输出。
 
 ## <a name="remarks"></a>备注
 必须在 `Tools.Shell` 之后立即指定 /dir /o /c 开关。 可执行文件的名称之后指定的任何内容都会作为命令行参数传递给它。
@@ -78,7 +80,7 @@ Tools.Shell """C:\Program Files\SomeFile.exe"""
 > 如果未将路径字符串引在文本引号 (""") 中，Windows 将只使用第一个空格前的字符串部分。 例如，如果上面的路径字符串引用不正确，则 Windows 将查找 C:\ 根目录中的名为“Program”的文件。 如果 C:\Program.exe 可执行文件实际可用，则即使是由非法篡改安装的，Windows 也会尝试执行该程序，而不执行所需的“c:\Program Files\SomeFile.exe”程序。
 
 ## <a name="example"></a>示例
-以下命令使用 xcopy.exe 将文件 `MyText.txt` 复制到 `Text` 文件夹。 xcopy.exe 的输出同时显示在“命令”窗口和“输出”窗口中   。
+以下命令使用 xcopy.exe 将文件 `MyText.txt` 复制到 `Text` 文件夹。 xcopy.exe 的输出同时显示在“命令”窗口和“输出”窗口中。
 
 ```cmd
 >Tools.Shell /o /c xcopy.exe c:\MyText.txt c:\Text\MyText.txt
@@ -88,6 +90,6 @@ Tools.Shell """C:\Program Files\SomeFile.exe"""
 
 - [Visual Studio 命令](../../ide/reference/visual-studio-commands.md)
 - [“命令”窗口](../../ide/reference/command-window.md)
-- [输出窗口](../../ide/reference/output-window.md)
+- [“输出”窗口](../../ide/reference/output-window.md)
 - [“查找/命令”框](../../ide/find-command-box.md)
-- [Visual Studio Command Aliases](../../ide/reference/visual-studio-command-aliases.md)
+- [Visual Studio 命令别名](../../ide/reference/visual-studio-command-aliases.md)

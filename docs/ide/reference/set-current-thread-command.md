@@ -1,5 +1,7 @@
 ---
 title: “设置当前线程”命令
+description: 了解“设置当前线程”命令，以及它如何将指定的线程设置为当前线程。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 54c2dabeea14293fdb86120f822eb396a028757a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3cedd37ece7bcc0eb79ad52cc426b07f8cb2ca57
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85768693"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96616559"
 ---
 # <a name="set-current-thread-command"></a>“设置当前线程”命令
 将指定的线程设置为当前线程。
@@ -29,7 +31,7 @@ ms.locfileid: "85768693"
 Debug.SetCurrentThread index
 ```
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 `index`
 
 必需。 按线程的索引选择线程。
@@ -45,4 +47,4 @@ Debug.SetCurrentThread index
 - [Visual Studio 命令](../../ide/reference/visual-studio-commands.md)
 - [“命令”窗口](../../ide/reference/command-window.md)
 - [“查找/命令”框](../../ide/find-command-box.md)
-- [Visual Studio Command Aliases](../../ide/reference/visual-studio-command-aliases.md)
+- [Visual Studio 命令别名](../../ide/reference/visual-studio-command-aliases.md)

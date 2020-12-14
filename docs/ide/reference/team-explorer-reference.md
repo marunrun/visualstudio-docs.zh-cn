@@ -1,26 +1,28 @@
 ---
 title: 团队资源管理器参考
+description: 了解团队资源管理器中的各种功能，管理工作并与其他团队成员协调工作以开发项目。
+ms.custom: SEO-VS-2020
 ms.date: 12/04/2018
 ms.topic: reference
 ms.author: kaelli
 author: KathrynEE
 ms.manager: jillfra
-ms.openlocfilehash: fa73894d713ded42696f5e47d40dffb2d2405b1a
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: a7089defb41c3ba8379d1020cbf1225d6333b912
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91928077"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560988"
 ---
 # <a name="team-explorer-reference"></a>团队资源管理器参考
 
-本文提供关于团队资源管理器中各种功能的 Azure DevOps 文章的链接  。
+本文提供关于团队资源管理器中各种功能的 Azure DevOps 文章的链接。
 
-使用“团队资源管理器”工具窗口与其他团队成员协调代码工作，以开发项目，并管理分配给你、你的团队或项目的工作  。 团队资源管理器将 Visual Studio 连接到 Git 和 GitHub 存储库、Team Foundation 版本控制 (TFVC) 存储库以及 [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops-services) 或本地 [Azure DevOps Server](/azure/devops/index-all)（以前称为 TFS）上托管的项目。 你可管理源代码、工作项和生成。
+使用“团队资源管理器”工具窗口与其他团队成员协调代码工作，以开发项目，并管理分配给你、你的团队或项目的工作。 团队资源管理器将 Visual Studio 连接到 Git 和 GitHub 存储库、Team Foundation 版本控制 (TFVC) 存储库以及 [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops-services) 或本地 [Azure DevOps Server](/azure/devops/index-all)（以前称为 TFS）上托管的项目。 你可管理源代码、工作项和生成。
 
 ## <a name="home-page"></a>主页
 
-在团队资源管理器中[连接到项目](../connect-team-project.md)后，“项目”部分中提供以下链接   ：
+在团队资源管理器中[连接到项目](../connect-team-project.md)后，“项目”部分中提供以下链接：
 
 - [克隆存储库](/azure/devops/repos/git/clone)
 - [Web 门户](/azure/devops/project/navigation/index)
@@ -31,7 +33,7 @@ ms.locfileid: "91928077"
 > [!TIP]
 > 要比较这两个版本控制系统，请参见[为项目 (Azure DevOps) 选择正确的版本控制](/azure/devops/repos/tfvc/comparison-git-tfvc)。
 
-| Git 附带的**主页** | TFVC 附带的**主页** |
+| Git 附带的 **主页** | TFVC 附带的 **主页** |
 | - | - |
 | ![Visual Studio 2019 中使用 Git 的团队资源管理器主页](media/team-explorer-reference/team-explorer-git.png) | ![Visual Studio 中使用 TFVC 的团队资源管理器主页](media/team-explorer-reference/team-explorer-tfvc.png) |
 
@@ -88,7 +90,7 @@ ms.locfileid: "91928077"
 
 ## <a name="builds-page"></a>“生成”页
 
-通过“生成”页，可以查看项目的生成定义  。
+通过“生成”页，可以查看项目的生成定义。
 
 请参阅：
 
@@ -100,12 +102,12 @@ ms.locfileid: "91928077"
 
 ## <a name="settings-page"></a>“设置”页
 
-通过“设置”页，可以为项目或项目集合配置管理功能  。 请参阅以下文章：
+通过“设置”页，可以为项目或项目集合配置管理功能。 请参阅以下文章：
 
-| 项目 | 项目集合 | 其他 |
+| Project | 项目集合 | 其他 |
 | - | - | - |
 | [安全性，组成员身份](/azure/devops/organizations/security/set-project-collection-level-permissions)<br/>[安全性，源代码管理 (TFVC)](/azure/devops/organizations/security/set-git-tfvc-repository-permissions)<br/>[工作项区域](/azure/devops/organizations/settings/set-area-paths)<br/>[工作项迭代](/azure/devops/organizations/settings/set-iteration-paths-sprints)<br/>[门户设置](/azure/devops/report/sharepoint-dashboards/configure-or-add-a-project-portal)<br/>[项目警报](/azure/devops/notifications/howto-manage-team-notifications) | [安全性，组成员身份](/azure/devops/organizations/security/set-project-collection-level-permissions)<br/>[源代码管理 (TFVC)](/azure/devops/repos/tfvc/decide-between-using-local-server-workspace)<br/>[过程模板管理器](/azure/devops/boards/work-items/guidance/manage-process-templates) | [Git 全局设置](/azure/devops/repos/git/git-config)<br/>[Git 存储库设置](/azure/devops/repos/git/git-config) |
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [连接到团队资源管理器中的项目](../../ide/connect-team-project.md)

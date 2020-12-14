@@ -1,5 +1,7 @@
 ---
 title: 域特定语言工具的概述
+description: 了解如何使用 DSL 工具设计特定于域的语言，然后生成用户创建基于该语言的模型必需的所有内容。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: overview
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0d9f2446aa793fcd80c3c6786bf1b2002a7ccbc0
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: e88a6157e5c9db7914ac6f7470d793be11dfdfc8
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808072"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362023"
 ---
 # <a name="overview-of-domain-specific-language-tools"></a>域特定语言工具的概述
 特定于域的语言工具（DSL 工具）托管在 Visual Studio 中，可用于设计域特定语言，然后生成用户创建基于该语言的模型必需的所有内容。

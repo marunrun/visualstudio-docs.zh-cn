@@ -1,5 +1,7 @@
 ---
 title: “设置当前堆栈帧”命令
+description: 了解“设置当前堆栈帧”命令以及如何通过它设置特定堆栈帧。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f70f5ebfc80933f38f1543d5eb42f01fb470298f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 032602744247ded5cb38d8a3ae3e1157ccbc5cee
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85769721"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96616598"
 ---
 # <a name="set-current-stack-frame-command"></a>“设置当前堆栈帧”命令
 允许设置特定堆栈帧。
@@ -29,7 +31,7 @@ ms.locfileid: "85769721"
 Debug.SetCurrentStackFrame index
 ```
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 `index`
 
 必需。 通过其索引选择堆栈帧。
@@ -45,4 +47,4 @@ Debug.SetCurrentStackFrame index
 - [Visual Studio 命令](../../ide/reference/visual-studio-commands.md)
 - [“命令”窗口](../../ide/reference/command-window.md)
 - [“查找/命令”框](../../ide/find-command-box.md)
-- [Visual Studio Command Aliases](../../ide/reference/visual-studio-command-aliases.md)
+- [Visual Studio 命令别名](../../ide/reference/visual-studio-command-aliases.md)

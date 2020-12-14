@@ -1,5 +1,7 @@
 ---
 title: 工具箱窗口
+description: 了解“工具箱”窗口以及它如何显示可以添加到 Visual Studio 项目的控件。
+ms.custom: SEO-VS-2020
 ms.date: 06/01/2020
 ms.topic: reference
 f1_keywords:
@@ -13,18 +15,18 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9807762a4573cdbc68a4af26bf9d73b46827c7af
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 905288d4a580f5633196273666fbea3954d1767c
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85285320"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560273"
 ---
 # <a name="toolbox"></a>工具箱
 
 “工具箱”窗口显示可以添加到 Visual Studio 项目的控件。 若要打开“工具箱”，请在菜单栏中依次选择“视图” > “工具箱”，或按 Ctrl+Alt+X。
 
-![“工具箱”窗口](media/vs-2019/toolbox.png "“工具箱”窗口的屏幕截图")
+![显示“容器”部分选项的“工具箱”窗口的屏幕截图。](media/vs-2019/toolbox.png "“工具箱”窗口的屏幕截图")
 
 还可以将不同的控件拖到和放置到你使用的设计器的图面上，然后调整控件的大小并将它们定位。
 
@@ -37,7 +39,7 @@ ms.locfileid: "85285320"
 
 ::: moniker range="vs-2019"
 
-![“工具箱”窗口](media/vs-2019/toolbox-change-dotnet-version.png "可以在其中更改 .NET 版本的对话框的屏幕截图")
+![显示“目标框架”下拉框中选项的“应用程序”对话框的屏幕截图。](media/vs-2019/toolbox-change-dotnet-version.png "可以在其中更改 .NET 版本的对话框的屏幕截图")
 
 ::: moniker-end
 

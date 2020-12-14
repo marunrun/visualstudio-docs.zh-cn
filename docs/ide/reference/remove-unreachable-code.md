@@ -1,5 +1,7 @@
 ---
 title: “删除无法访问的代码”重构
+description: 了解如何使用“快速操作和重构”菜单删除永远不执行的代码。
+ms.custom: SEO-VS-2020
 ms.date: 03/10/2020
 ms.topic: reference
 author: mikadumont
@@ -10,12 +12,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: cd827870f07fb3161674d287d20f266942e61afe
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 3af9d0a14b600773c5025fcaad68380c7bb82b29
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79093986"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96616702"
 ---
 # <a name="remove-unreachable-code-refactoring"></a>“删除无法访问的代码”重构
 
@@ -25,11 +27,11 @@ ms.locfileid: "79093986"
 
 - Visual Basic
 
- 功能：删除永远不执行的代码
+功能：删除永远不执行的代码
 
- 时机：程序无法访问代码片段，使得该代码片段没有存在的必要性时。
+时机：程序无法访问代码片段，使得该代码片段没有存在的必要性时。
 
- 原因：通过删除永远不会执行的多余代码来提高可读性和可维护性。
+原因：通过删除永远不会执行的多余代码来提高可读性和可维护性。
 
 ## <a name="how-to"></a>操作说明
 
@@ -40,11 +42,11 @@ ms.locfileid: "79093986"
 1. 接下来，执行以下操作之一：
 
    - **键盘**
-      - 按“Ctrl”  + **。** 触发“快速操作和重构”菜单，然后从“预览”弹出窗口选择“删除无法访问的代码”。  
+      - 按“Ctrl”+ **。** 触发“快速操作和重构”菜单，然后从“预览”弹出窗口选择“删除无法访问的代码”。
    - **鼠标**
-      - 右键单击代码，选择“快速操作和重构”菜单，然后从“预览”弹出窗口选择“删除无法访问的代码”。  
+      - 右键单击代码，选择“快速操作和重构”菜单，然后从“预览”弹出窗口选择“删除无法访问的代码”。
 
-1. 对更改感到满意时，按 Enter  或单击菜单中的修复，即可提交所做的更改。
+1. 对更改感到满意时，按 Enter 或单击菜单中的修复，即可提交所做的更改。
 
 例如：
 

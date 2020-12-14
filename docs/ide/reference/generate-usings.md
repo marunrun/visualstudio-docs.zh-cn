@@ -1,5 +1,7 @@
 ---
 title: 生成 using
+description: 了解如何使用“快速操作和重构”菜单为已复制和粘贴的代码即时添加必要的导入或 using 指令。
+ms.custom: SEO-VS-2020
 ms.date: 03/10/2020
 ms.topic: reference
 author: mikadumont
@@ -12,12 +14,12 @@ ms.workload:
 - dotnet
 helpviewer_keywords:
 - add missing usings
-ms.openlocfilehash: 903b160bac0e8096062e09fd78ff4c92c46cf8ee
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 38996d1cda52dfe98b6ce9cf24e5adcca6a8b069
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "79094319"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96617157"
 ---
 # <a name="add-missing-usings-in-visual-studio"></a>在 Visual Studio 中添加缺少的 usings
 

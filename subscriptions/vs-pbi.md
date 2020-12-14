@@ -1,18 +1,18 @@
 ---
-title: Visual Studio 订阅中的 Power BI Pro 权益 | Microsoft 文档
+title: Visual Studio 订阅中的 Power BI Pro 权益 | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
-manager: lank
+manager: cabuschl
 ms.assetid: 383fc910-3f4c-474a-a3f8-0f13525f05e9
-ms.date: 10/22/2020
+ms.date: 12/02/2020
 ms.topic: how-to
 description: 了解有关所选 Visual Studio 订阅中随附的 Power BI Pro 订阅。
-ms.openlocfilehash: efc7aca0c5729a65a7f622721dbf25931eb89fb8
-ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
+ms.openlocfilehash: 6d64c9e5d15e24dcf53dd5b45261305dffb43353
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92435782"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96538067"
 ---
 # <a name="power-bi-pro-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 Power BI Pro
 
@@ -64,9 +64,9 @@ ms.locfileid: "92435782"
 | 订阅级别                                                 |     信道                                            | 好处                                                          | 是否续订？    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise（标准）   | VL、Azure、零售、所选 NFR<sup>1</sup> | 可用       |  是|
-| 带有 GitHub Enterprise 的 Visual Studio Enterprise  | VL | 可用       |  是|
+| 包含 GitHub Enterprise 的 Visual Studio Enterprise 订阅  | VL | 可用       |  是|
 | Visual Studio Professional（标准、月度云） | VL、Azure、零售                                       | 不可用                                                            |NA         |
-| 带有 GitHub Enterprise 的 Visual Studio Professional | VL                                      | 不可用                                                            |NA         |
+| 包含 GitHub Enterprise 的 Visual Studio Professional 订阅 | VL                                      | 不可用                                                            |NA         |
 | Visual Studio Test Professional（标准）                         | VL、零售                                              | 不可用                                                            |NA         |
 | MSDN 平台（标准）                                          | VL、零售                                              | 可用       |  是|
 | Visual Studio Enterprise（月度云） | Azure                                       | 不可用                                  |NA|

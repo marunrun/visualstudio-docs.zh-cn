@@ -1,5 +1,7 @@
 ---
 title: 在出现异常之后继续执行 | Microsoft Docs
+description: 了解由于未经处理的异常导致调试器中断执行时发生的情况。 可以在同一线程中继续执行。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -25,15 +27,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e94867d845988b787247c32d32afd35af946972
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b7475dff2618a1dfcce598f35b57dbe67d80d254
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350675"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96559376"
 ---
 # <a name="continuing-execution-after-an-exception"></a>在出现异常之后继续执行
-当调试器因异常而中断执行时，默认情况下，你将看到**异常帮助器**。 如果你已在**选项**对话框中禁用了**异常帮助器**，将看到**异常助手**（C# 或 Visual Basic）或**异常**对话框 (C++)。
+当调试器因异常而中断执行时，默认情况下，你将看到 **异常帮助器**。 如果你已在 **选项** 对话框中禁用了 **异常帮助器**，将看到 **异常助手**（C# 或 Visual Basic）或 **异常** 对话框 (C++)。
 
  当出现异常帮助器时，可以尝试修复导致异常的问题。
 

@@ -1,5 +1,7 @@
 ---
 title: “数据集可视化工具”对话框 | Microsoft Docs
+description: Visual Studio 调试器可视化工具是显示数据的组件。 使用数据集可视化工具查看 DataSet、DataTable、DataView 或 DataViewManager 对象的内容。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -19,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e215d4a52965b4e89bc3a01b15da57fc8919437
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 3f57247d23a318da6bf492534c1ff060bb4116bb
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745599"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560468"
 ---
 # <a name="dataset-visualizer-dialog-box"></a>“数据集可视化工具”对话框
 使用 DataSet 可视化工具可以查看 DataSet、DataTable、DataView 或 DataViewManager 对象的内容。 通过在调试器变量窗口或 DataTip 中，单击一个对象的值旁边显示的放大镜图标，即可访问该可视化工具。

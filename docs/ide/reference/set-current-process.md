@@ -1,5 +1,7 @@
 ---
 title: 设置当前进程
+description: 了解“设置当前进程”命令以及它如何将指定的进程设置为调试器中的活动进程。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a3440c66d79fef3eac3744681870c9ce1ed0e97b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 4b6a5c2f010b60546fe1ece16f66bf437d2dc633
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75593546"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96616573"
 ---
 # <a name="set-current-process"></a>设置当前进程
 将指定的进程设置为调试器中的活动进程。
@@ -27,7 +29,7 @@ ms.locfileid: "75593546"
 Debug.SetCurrentProcess index
 ```
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 `index`
 
 必需。 进程的索引。
@@ -45,4 +47,4 @@ Debug.SetCurrentProcess index
 
 - [Visual Studio 命令](../../ide/reference/visual-studio-commands.md)
 - [“命令”窗口](../../ide/reference/command-window.md)
-- [Visual Studio Command Aliases](../../ide/reference/visual-studio-command-aliases.md)
+- [Visual Studio 命令别名](../../ide/reference/visual-studio-command-aliases.md)

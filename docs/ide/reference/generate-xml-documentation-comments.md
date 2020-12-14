@@ -1,5 +1,7 @@
 ---
 title: 插入 XML 文档注释
+description: 了解如何在代码中插入 XML 文档注释，从而能创建编译器生成的 XML 文件，以便与 .NET 程序集一起分发。
+ms.custom: SEO-VS-2020
 ms.date: 01/22/2020
 ms.topic: reference
 author: mikadumont
@@ -7,12 +9,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0e21d0617f954c0cc34975b7f8626b83966f6b5d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 250e07994b04e03b015bf3893633ebce0f36a90d
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77706384"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96617469"
 ---
 # <a name="how-to-insert-xml-comments-for-documentation-generation"></a>如何：为文档生成项插入 XML 注释
 
@@ -46,11 +48,11 @@ Visual Studio 可自动生成标准的 XML 文档注释结构，进而帮助记�
 
 3. 为每个 XML 元素输入说明以完整记录代码元素。
 
-   ![完成的注释](media/doc-result-cs.png)
+   ![此屏幕截图显示了完成的注释。](media/doc-result-cs.png)
 
 你可以在 XML 注释中使用样式，将鼠标悬停在元素上时这些样式将在“快速信息”中呈现。 这些样式包括：斜体、粗体、项目符号和可单击的链接。
 
-   ![完成的注释](media/doc-style-cs.png) 
+   ![此屏幕截图显示了完成的注释，包含斜体、粗体、项目符号和可单击链接的样式标记。](media/doc-style-cs.png) 
 
 > [!NOTE]
 > 在 C# 中键入`///`（或在 Visual Basic 中键入 `'''`）后，可[选择](../../ide/reference/options-text-editor-csharp-advanced.md)切换 XML 文档注释。 在菜单栏中，选择“工具” > “选项”以打开“选项”对话框。 然后，导航到“文本编辑器” > “C#”或导航到“基本” > “高级”。 在“编辑器帮助”部分，查找“生成 XML 文档注释”选项   。

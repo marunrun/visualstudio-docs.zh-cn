@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: fc33d419-78cf-485e-b558-5b7efa900f14
-ms.date: 10/22/2020
+ms.date: 12/02/2020
 ms.topic: how-to
 description: 了解有关所选 Visual Studio 订阅中随附的 DataCamp 培训订阅。
-ms.openlocfilehash: 54f2cf98d6e726e8abf8a0a863a54cc891c12523
-ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
+ms.openlocfilehash: c675d49f1a099c53dfdabe08a71f1c5545010f97
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92435888"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96538080"
 ---
 # <a name="the-datacamp-training-benefit-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 DataCamp 培训权益
 符合条件的 Visual Studio 订阅包括 DataCamp 订阅。  借助 DataCamp，可以通过浏览器舒适地学习需要的所有数据科学技能。 可以选择学习的时间和内容。 无需安装任何软件并且没有任何特殊硬件要求，学习数据科学比以往更加简单。
@@ -60,9 +60,9 @@ ms.locfileid: "92435888"
 | 订阅级别                                                 |     信道                                            | 好处                                                          | 是否续订？    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise（标准）   | VL、Azure、零售、 | 3 个月       |  不是。  仅对新订阅者可用          |
-| 带有 GitHub Enterprise 的 Visual Studio Enterprise   | VL | 3 个月       |  不是。  仅对新订阅者可用          |
+| 包含 GitHub Enterprise 的 Visual Studio Enterprise 订阅   | VL | 3 个月       |  不是。  仅对新订阅者可用          |
 | Visual Studio Professional（标准） | VL、Azure、零售                                       | 3 个月                                                            |  不是。  仅对新订阅者可用           |
-| 带有 GitHub Enterprise 的 Visual Studio Professional| VL | 3 个月                                                            |  不是。  仅对新订阅者可用           |
+| 包含 GitHub Enterprise 的 Visual Studio Professional 订阅| VL | 3 个月                                                            |  不是。  仅对新订阅者可用           |
 | Visual Studio Test Professional（标准）                         | VL、零售                                              | 3 个月                                             |  不是。  仅对新订阅者可用           |
 | MSDN 平台（标准）                                          | VL、零售                                              | 3 个月                                              |  不是。  仅对新订阅者可用           |
 | Visual Studio Enterprise（标准）  | NFR<sup>1</sup> |不可用  | 不可用 |

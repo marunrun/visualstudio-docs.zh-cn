@@ -1,5 +1,7 @@
 ---
 title: 调试器中的上下文运算符 (C++) | Microsoft Docs
+description: 可能需要为位于外部范围中且通过本地名称隐藏的 C++ 名称提供上下文。 了解如何使用上下文运算符执行此操作。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -22,12 +24,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa16bd6f93198e5360139dbc5a6a0d96f02a1e41
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1bc238cc56e1b815e79ba381a7cd4866085d3bef
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62564699"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96559753"
 ---
 # <a name="context-operator-in-the-visual-studio-debugger-c"></a>Visual Studio 调试器中的上下文运算符 (C++)
 可使用 C++ 中的上下文运算符来限定断点位置、变量名称或表达式。 上下文运算符可用于指定来自外部范围的但被本地名称隐藏的名称。
@@ -59,7 +61,7 @@ ms.locfileid: "62564699"
   {,,"a long, long, library name.dll"} g_Var
   ```
 
-- *表达式* 是解析为有效目标（如 *模块*中的函数名、变量名或指针地址）的任何有效的 C++ 表达式。
+- *表达式* 是解析为有效目标（如 *模块* 中的函数名、变量名或指针地址）的任何有效的 C++ 表达式。
 
   当表达式计算器遇到表达式中的符号时，它按下列顺序搜索该符号：
 

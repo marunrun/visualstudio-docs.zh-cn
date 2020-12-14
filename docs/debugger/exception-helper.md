@@ -1,6 +1,8 @@
 ---
 title: 检查异常
 titleSuffix: ''
+description: 了解 Visual Studio 提供的有助于调试异常的信息，并了解如何有选择地禁用异常时中断。
+ms.custom: SEO-VS-2020
 ms.date: 1/18/2020
 ms.topic: how-to
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9d0084abff760ff227b20137cd55d905b57e1a18
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: ddc57d28510fe2e2cd5dbbb3aeea993813546715
+ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852493"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96862810"
 ---
 # <a name="inspect-an-exception-using-the-exception-helper"></a>使用异常帮助程序检查异常 
 

@@ -1,5 +1,7 @@
 ---
 title: 工具箱，“数据”选项卡
+description: 了解能在“工具箱”窗口的“数据”选项卡中找到的数据对象。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -12,27 +14,27 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e79b80890925bdf4d6d191db759516b5545fc403
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 78a697ae8d9f3f551c8bb734c28c1f53551b1f81
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75590249"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96561079"
 ---
 # <a name="toolbox-data-tab"></a>工具箱，“数据”选项卡
 
-显示可添加到窗体和组件的数据对象。 创建具有关联设计器的项目时，将会显示“工具箱”的“数据”选项卡   。 默认情况下，“工具箱”将出现在 Visual Studio 集成开发环境中；如果需要显示“工具箱”，请从“视图”菜单中选择“工具箱”     。
+显示可添加到窗体和组件的数据对象。 创建具有关联设计器的项目时，将会显示“工具箱”的“数据”选项卡。 默认情况下，“工具箱”将出现在 Visual Studio 集成开发环境中；如果需要显示“工具箱”，请从“视图”菜单中选择“工具箱”。
 
 > [!TIP]
 > 运行“数据源配置向导”将自动创建和配置大部分数据项。 有关详细信息，请参阅[添加新数据源](../../data-tools/add-new-data-sources.md)。
 
 ## <a name="ui-element-list"></a>UI 元素列表
 
-要直接转到某个组件的 .NET 引用页，请针对“工具箱”中的项或设计器栏中的组件项按 F1   。
+要直接转到某个组件的 .NET 引用页，请针对“工具箱”中的项或设计器栏中的组件项按 F1。
 
 |名称|说明|
 |----------|-----------------|
-|<xref:System.Data.DataSet>|向窗体或组件中添加类型化或非类型化数据集的实例。 将此对象拖到设计器上后，它将显示一个对话框，可在其中选择一个现有的类型化数据集类或指定希望创建新的非类型化空数据集。 注意：  不要使用“工具箱”上的 <xref:System.Data.DataSet> 对象创建新的类型化数据集架构和类  。 有关详细信息，请参阅[创建和配置数据集](../../data-tools/create-and-configure-datasets-in-visual-studio.md)。|
+|<xref:System.Data.DataSet>|向窗体或组件中添加类型化或非类型化数据集的实例。 将此对象拖到设计器上后，它将显示一个对话框，可在其中选择一个现有的类型化数据集类或指定希望创建新的非类型化空数据集。 注意：不要使用“工具箱”上的 <xref:System.Data.DataSet> 对象创建新的类型化数据集架构和类。 有关详细信息，请参阅[创建和配置数据集](../../data-tools/create-and-configure-datasets-in-visual-studio.md)。|
 |<xref:System.Windows.Forms.DataGridView>|提供一种以表格格式显示数据的功能强大且灵活的方法。|
 |<xref:System.Windows.Forms.BindingSource>|简化将控件绑定到基础数据源的过程。|
 |<xref:System.Windows.Forms.BindingNavigator>|表示窗体上绑定到数据的控件的导航和操作用户界面 (UI)。|

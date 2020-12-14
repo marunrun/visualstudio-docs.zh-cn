@@ -1,5 +1,7 @@
 ---
 title: 编辑并继续 (Visual Basic) | Microsoft Docs
+description: Visual Basic 项目可使用“编辑并继续”。 了解支持哪些编辑，以及如何控制是否应用编辑和何时应用编辑。
+ms.custom: SEO-VS-2020
 ms.date: 10/11/2017
 ms.topic: conceptual
 dev_langs:
@@ -19,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f73b67ac4268c04dfa9ff7ab020891623f528f9b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e4560973cd6ccd2bbfee48028494731935945a4c
+ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62851256"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96862966"
 ---
 # <a name="edit-and-continue-visual-basic"></a>编辑并继续 (Visual Basic)
 “编辑并继续”是 [!INCLUDE [vbprvb](../code-quality/includes/vbprvb_md.md)] 调试中的一项功能，可让你在中断模式下在代码运行时更改代码。 在应用代码编辑后，可以继续执行新编辑过的代码并观察效果。

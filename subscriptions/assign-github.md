@@ -1,18 +1,18 @@
 ---
-title: Visual Studio + GitHub Enterprise 套餐 | Microsoft Docs
+title: 分配带有 GitHub Enterprise 的 Visual Studio 订阅 | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: f271d623-dcde-442a-865c-4dca5ad8a9c5
-ms.date: 10/22/2020
+ms.date: 12/02/2020
 ms.topic: conceptual
-description: 管理 Visual Studio + GitHub Enterprise 套餐中的订阅
-ms.openlocfilehash: ef651a75a0daed1e5e975386a26d1bffcf9b4b82
-ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
+description: 管理带有 GitHub Enterprise 的 Visual Studio 订阅中的订阅
+ms.openlocfilehash: eed2f0636b0751c996da79c54d1a439532bce097
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92467578"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96538119"
 ---
 # <a name="manage-visual-studio-subscriptions-with-github-enterprise"></a>管理带有 GitHub Enterprise 的 Visual Studio 订阅
 与 Microsoft 签订了企业协议 (EA) 的客户有资格购买新的订阅套餐，该套餐将 Visual Studio 标准订阅和 GitHub Enterprise 结合在了一起。 这是 Visual Studio 订阅者获取 GitHub Enterprise 的一种简单而实惠的方式。 
@@ -20,7 +20,7 @@ ms.locfileid: "92467578"
 当你的组织购买带有 GitHub Enterprise 的 Visual Studio 订阅时，这些订阅将按两部分进行预配和管理。
 
 ## <a name="manage-visual-studio-subscriptions"></a>管理 Visual Studio 订阅
-当你的组织购买带有 GitHub Enterprise 的 Visual Studio 订阅时，订阅中的 Visual Studio 部分将立即预配，且可在 Visual Studio [订阅管理](https://manage.visualstudio.com)门户中分配和管理这些订阅。 分配带 GitHub 的 Visual Studio 订阅后，订阅者将收到一封电子邮件，告知他们可以在 <https://my.visualstudio.com/subscriptions> 访问 Visual Studio 订阅。
+当你的组织购买带有 GitHub Enterprise 的 Visual Studio 订阅时，订阅中的 Visual Studio 部分将立即预配，且可在 Visual Studio [订阅管理](https://manage.visualstudio.com)门户中分配和管理这些订阅。 分配带有 GitHub Enterprise 的 Visual Studio 订阅后，订阅者将收到一封电子邮件，告知他们可以在 <https://my.visualstudio.com/subscriptions> 访问 Visual Studio 订阅。
 
 要详细了解如何管理 Visual Studio 订阅，请查看以下主题：
 - [使用管理门户](using-admin-portal.md)
@@ -30,10 +30,10 @@ ms.locfileid: "92467578"
 - [过度分配](handle-overclaimed-license.md)
 
 > [!Important]
-> 如果 Visual Studio 订阅管理员在没有先购买的情况下分配带有 GitHub Enterprise 的 Visual Studio 订阅，则不会通知 GitHub 你要创建 GitHub Enterprise 帐户。  在分配订阅之前，应购买至少一个带 GitHub Enterprise 的 Visual Studio 订阅。
+> 如果 Visual Studio 订阅管理员在没有先购买的情况下分配带有 GitHub Enterprise 的 Visual Studio 订阅，则不会通知 GitHub 你要创建 GitHub Enterprise 帐户。  在分配订阅之前，应购买至少一个带有 GitHub Enterprise 的 Visual Studio 订阅。
 
 ## <a name="what-is-the-visual-studio-with-github-enterprise-setup-process"></a>带有 GitHub Enterprise 的 Visual Studio 的设置过程是怎样的？
-GitHub Enterprise 的设置和管理独立于 Visual Studio 订阅。 购买带有 GitHub Enterprise 的 Visual Studio 后，与在 [manage.visualstudio.com](https://manage.visualstudio.com) 中建立协议的同时（但独立于此），GitHub Enterprise 帐户设置过程将会启动。 建立此 GitHub Enterprise 帐户可能需要一些时间。 
+GitHub Enterprise 的设置和管理独立于 Visual Studio 订阅。 购买带有 GitHub Enterprise 的 Visual Studio 订阅后，与在 [manage.visualstudio.com](https://manage.visualstudio.com) 中建立协议的同时（但独立于此），GitHub Enterprise 帐户设置过程将会启动。 建立此 GitHub Enterprise 帐户可能需要一些时间。 
 
 你的公司设置了 GitHub Enterprise 帐户后，已被分配了带有 GitHub Enterprise 的 Visual Studio 订阅的订阅者将收到来自 GitHub 的一封电子邮件，通知他们其 Visual Studio 订阅已链接。 订阅者收到此电子邮件后，他们可以联系其 GitHub 组织管理员，以收到相应组织的邀请。
 

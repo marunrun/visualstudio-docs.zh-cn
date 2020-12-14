@@ -2,17 +2,17 @@
 title: Visual Studio 订阅中的 Parasoft Virtualize/SOAtest Professional | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
-manager: lank
+manager: cabuschl
 ms.assetid: 00c1f300-d04e-4695-815e-775ffbf0f931
-ms.date: 10/22/2020
+ms.date: 12/02/2020
 ms.topic: how-to
 description: 了解如何激活 Visual Studio 订阅中包含的 Parasoft Virtualize/SOA Test Professional 订阅。
-ms.openlocfilehash: 6209be915d3744e13aad674ea893e77e0b276044
-ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
+ms.openlocfilehash: dbe3ee78d46128a5944ee7b4d0bc69f001270588
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92436036"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96537443"
 ---
 # <a name="parasoft-virtualizesoatest-professional-desktop-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 Parasoft Virtualize/SOAtest Professional 桌面
 
@@ -74,15 +74,15 @@ ms.locfileid: "92436036"
 | 订阅级别                                                 |     信道                                            | 好处                                                          | 是否续订？    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise（标准）   | VL、Azure、零售、所选 NFR<sup>1</sup> | 6 个月       |  是       |
-| 带有 GitHub Enterprise 的 Visual Studio Enterprise | VL | 6 个月       |  是       |
+| 包含 GitHub Enterprise 的 Visual Studio Enterprise 订阅 | VL | 6 个月       |  是       |
 | Visual Studio Professional（标准） | VL、Azure、零售                                       | 不可用                                                           |NA         |
-| 带有 GitHub Enterprise 的 Visual Studio Professional | VL                                      | 不可用                                                           |NA         |
+| 包含 GitHub Enterprise 的 Visual Studio Professional 订阅 | VL                                      | 不可用                                                           |NA         |
 | Visual Studio Test Professional（标准）                         | VL、零售                                              | 不可用                                                           |NA         |
 | MSDN 平台（标准）                                          | VL、零售                                              | 不可用                                                           |NA         |
 | Visual Studio Enterprise、Visual Studio Professional（月度云） | Azure                                       | 不可用                                                           |NA|
 ||
 
-<sup>1</sup>  *包括：Microsoft 合作伙伴网络 (Enterprise)。不包括：不得转售 (NFR)、Visual Studio 行业合作伙伴 (VSIP)、FTE、MCT 软件和服务开发人员、BizSpark、Imagine、最有价值专家 (MVP)、区域总监 (RD)。MCT 软件和服务* 。
+<sup>1</sup>  *包括：Microsoft 合作伙伴网络 (Enterprise)。不包括：不得转售 (NFR)、Visual Studio 行业合作伙伴 (VSIP)、FTE、MCT 软件和服务开发人员、BizSpark、Imagine、最有价值专家 (MVP)、区域总监 (RD)。MCT 软件和服务*。
 
 > [!NOTE]
 > Microsoft 不再在云订阅中提供 Visual Studio Professional 年度订阅和 Visual Studio Enterprise 年度订阅。 现有客户体验以及续订、增加、减少或取消订阅的能力不会发生变化。 建议新客户访问 [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/)，查看各 Visual Studio 购买选项。

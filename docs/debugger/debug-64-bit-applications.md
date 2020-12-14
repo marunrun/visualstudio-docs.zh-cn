@@ -1,5 +1,7 @@
 ---
 title: 调试 64 位应用程序 | Microsoft Docs
+description: 了解如何使用 Visual Studio 调试 64 位应用程序。 有一些用于排查意外调试延迟的提示。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6cc84f690962cd83f45245758f88f7fd8261e500
-ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.openlocfilehash: 29deb50bb57f018d3031ed1065145b6a39abab67
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86386246"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560442"
 ---
 # <a name="debug-64-bit-applications"></a>调试 64 位应用程序
 您可以调试运行于本地计算机或远程计算机上的 64 位应用程序。

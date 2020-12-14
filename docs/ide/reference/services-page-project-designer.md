@@ -1,5 +1,7 @@
 ---
 title: “项目设计器”->“服务”页
+description: 了解如何使用“项目设计器”的“服务”页为项目启用并配置客户端应用程序服务。
+ms.custom: SEO-VS-2020
 ms.date: 01/18/2018
 ms.topic: reference
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d30d8e8ddcdc8c1fa4fe1935da1f1dedd1b18f4b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 3c286dbd632e09a9a9c2c2b62ac2002f2e48f283
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75593559"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560793"
 ---
 # <a name="services-page-project-designer"></a>“项目设计器”->“服务”页
 
@@ -25,7 +27,7 @@ ms.locfileid: "75593559"
 
 通过客户端应用程序服务，可以使用集中式服务器对用户进行验证，确定为每个用户分配的角色，并存储每个用户的应用程序设置，可以在网络上共享这些设置。 有关详细信息，请参阅[客户端应用程序服务](/dotnet/framework/common-client-technologies/client-application-services)。
 
-若要访问“服务”  页，请在“解决方案资源管理器”  中选择项目节点，然后在“项目”  菜单上单击“属性”  。 显示“项目设计器”  时，单击“服务”  选项卡。
+若要访问“服务”页，请在“解决方案资源管理器”中选择项目节点，然后在“项目”菜单上单击“属性”。 显示“项目设计器”时，单击“服务”选项卡。
 
 ## <a name="task-list"></a>任务列表
 
@@ -43,7 +45,7 @@ ms.locfileid: "75593559"
 
  **启用客户端应用程序服务**
 
-选中该项可启用客户端应用程序服务。 必须在“服务”  页上指定服务位置，才能使用客户端应用程序服务。
+选中该项可启用客户端应用程序服务。 必须在“服务”页上指定服务位置，才能使用客户端应用程序服务。
 
  **使用 Windows 身份验证**
 

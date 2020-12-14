@@ -3,15 +3,15 @@ title: 设置 Git 存储库
 description: 使用 Visual Studio for Mac 连接到 Git 存储库。
 author: therealjohn
 ms.author: johmil
-ms.date: 11/09/2020
+ms.date: 12/03/2020
 ms.assetid: E992FA1D-B2AD-4A28-ADC6-47E4FC471060
 ms.topic: how-to
-ms.openlocfilehash: 862f073d3c6d535d612a67f215aee740cea175bd
-ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
+ms.openlocfilehash: bacd533bf5c28c6f431fe7088fad36b6bbd3d04b
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94493122"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96561053"
 ---
 # <a name="set-up-a-git-repository"></a>设置 Git 存储库
 
@@ -44,6 +44,9 @@ Git 是分布式版本控制系统，使团队可以同时在同一文档上工�
 ## <a name="publishing-an-existing-project"></a>发布现有项目
 
 如果现有的一个项目 _不_ 在版本控制中，请使用以下步骤在 Git 中设置该项目：
+
+> [!TIP]
+> 使用 .gitignore 文件来控制使用 Git 跟踪和发布的文件夹和文件。 建议排除生成目录、二进制文件或生成的文件。 如需了解详细信息，请参阅[有关忽略文件的 GitHub 文档](https://docs.github.com/en/free-pro-team@latest/github/using-git/ignoring-files)。
 
 1. 从 Visual Studio for Mac 的解决方案窗口中选择解决方案名称。
 

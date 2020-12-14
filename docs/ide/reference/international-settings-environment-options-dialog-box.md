@@ -1,5 +1,6 @@
 ---
 title: “选项”对话框中的“国际设置”
+description: 了解在已安装多个语言版本的 IDE 时，如何通过“环境”部分的“国际设置”页更改默认语言。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -18,12 +19,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1210f217c9e1dc1f8a90eb99fec9e55970aa8eff
-ms.sourcegitcommit: f1bb1b66ed141837e992b3352ce68ff24c11f53e
+ms.openlocfilehash: 37be8d3e5a652bb55b1d71f66c0e9c8ca4cc2f16
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93102488"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96617365"
 ---
 # <a name="options-dialog-box-environment--international-settings"></a>“选项”对话框：环境 \> 国际设置
 

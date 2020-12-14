@@ -1,5 +1,7 @@
 ---
 title: DebugBreak 和 __debugbreak | Microsoft Docs
+description: 了解如何使用 DebugBreak 函数和 __debugbreak 内部函数使程序中断，就像设置了断点一样。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -19,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 097405f98d1a80b8605b6773bdc675ff2c4ab773
-ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
+ms.openlocfilehash: 376dd75062dc5a78582a23a12e9e025db60b9f3a
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75404654"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96559766"
 ---
 # <a name="debugbreak-and-__debugbreak"></a>DebugBreak 和 __debugbreak
 可以在代码中的任意点调用 [DebugBreak](/windows/win32/api/debugapi/nf-debugapi-debugbreak) Win32 函数或 [__debugbreak](/cpp/intrinsics/debugbreak) 内部函数。 `DebugBreak` 和 `__debugbreak` 具有与在该位置设置断点相同的效果。

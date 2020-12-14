@@ -1,5 +1,7 @@
 ---
 title: 调试器安全性 | Microsoft Docs
+description: 了解调试带来的安全风险 - 调试计算机和被调试的计算机面临的风险。 遵循建议来最大程度地降低风险。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d8b7ac2aed43bcb39b4bb5924ad6f1cf2c438b64
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: f6d0c09a7f54157bd2ace9a6be09a357eb436ceb
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89600084"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96559740"
 ---
 # <a name="debugger-security"></a>调试器安全
 调试其他进程的能力赋予你极广泛的权力，这是无法通过其他途经获得的，在进行远程调试时更是如此。 恶意的调试器可能对正在调试的计算机造成大范围的损害。
