@@ -1,5 +1,7 @@
 ---
 title: 如何：在编辑器中将 URL 显示为链接
+description: 了解如何在代码编辑器中将 URL 显示为链接。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 80ad0fcc7409bd91f24ef197ef12ed64610a2e0b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ead76a3db9ff146aa82347a67e0bf7d52d04f30e
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770341"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96617079"
 ---
 # <a name="how-to-display-urls-as-links-in-the-editor"></a>如何：在编辑器中将 URL 显示为链接
 
@@ -25,23 +27,23 @@ ms.locfileid: "85770341"
 
 - 以带有下划线的形式显示。
 
-- 在鼠标悬停在其上方时会显示“工具提示”  。
+- 在鼠标悬停在其上方时会显示“工具提示”。
 
 - 在按 Ctrl 并单击该链接时，会尝试打开所指示的网站 。 默认情况下，网站在内部 Web 浏览器中显示。
 
 ## <a name="display-urls-as-links"></a>将 URL 显示为链接
 
-1. 在 **“工具”** 菜单上，单击 **“选项”** 。
+1. 在“工具”  菜单上，单击“选项” 。
 
-2. 单击“文本编辑器”  。
+2. 单击 **“文本编辑器”** 。
 
-3. 如果只想更改一种语言的选项，请展开该语言的文件夹，然后选择“常规”  。
+3. 如果只想更改一种语言的选项，请展开该语言的文件夹，然后选择“常规”。
 
      \- 或 -
 
-     若要更改所有语言的选项，请展开“所有”语言文件夹，然后选择“常规”   。
+     若要更改所有语言的选项，请展开“所有”语言文件夹，然后选择“常规”。
 
-4. 在“显示”下，选择“启用单击 URL 定位”   。
+4. 在“显示”下，选择“启用单击 URL 定位”。
 
 ## <a name="see-also"></a>请参阅
 
