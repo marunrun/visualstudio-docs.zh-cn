@@ -1,5 +1,7 @@
 ---
 title: 在运行时在 VSTO 外接程序项目中向工作表添加控件
+description: 了解如何使用功能区来允许用户向工作表添加按钮、NamedRange 和 ListObject。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ec1d1361d7ca58d4292cbbb7bc4ea3b707a748ff
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: e9987e9427c0fe982cf3ddcb88ce8071caab04b0
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584342"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97522778"
 ---
 # <a name="walkthrough-add-controls-to-a-worksheet-at-run-time-in-vsto-add-in-project"></a>演练：在运行时在 VSTO 外接程序项目中向工作表添加控件
   可通过使用 Excel VSTO 外接程序向任何打开的工作表添加控件。 本演练演示如何利用功能区使用户能够向工作表添加 <xref:Microsoft.Office.Tools.Excel.Controls.Button>、<xref:Microsoft.Office.Tools.Excel.NamedRange> 和 <xref:Microsoft.Office.Tools.Excel.ListObject>。 有关信息，请参阅 [在运行时向 Office 文档添加控件](../vsto/adding-controls-to-office-documents-at-run-time.md)。
@@ -50,7 +52,7 @@ ms.locfileid: "91584342"
 
 ### <a name="to-create-a-new-excel-vsto-add-in-project"></a>若要新建 Excel VSTO 外接程序项目
 
-1. 在中 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ，创建一个名为 **ExcelDynamicControls**的 Excel VSTO 外接程序项目。 有关详细信息，请参阅 [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)。
+1. 在中 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ，创建一个名为 **ExcelDynamicControls** 的 Excel VSTO 外接程序项目。 有关详细信息，请参阅 [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)。
 
 2. 向 **Microsoft.Office.Tools.Excel.v4.0.Utilities.dll** 程序集添加引用。 在本演练稍后内容中，需要此引用以编程方式将 Windows 窗体控件添加到工作表。
 
@@ -61,11 +63,11 @@ ms.locfileid: "91584342"
 
 1. 在 **“项目”** 菜单上，单击 **“添加新项”**。
 
-2. 在 " **添加新项** " 对话框中，选择 " **功能区 (可视化设计器") **，然后单击 " **添加**"。
+2. 在 " **添加新项** " 对话框中，选择 " **功能区 (可视化设计器")**，然后单击 " **添加**"。
 
      在功能区设计器中打开名为 **Ribbon1.cs** 或 **ribbon1.mfcribbon-ms** 的文件，并显示默认选项卡和组。
 
-3. 从“工具箱” **** 的“Office 功能区控件” **** 选项卡中将“CheckBox”  控件拖到“group1” **** 上。
+3. 从“工具箱”  的“Office 功能区控件” 选项卡中将“CheckBox”  控件拖到“group1” 上。
 
 4. 单击 **CheckBox1** 以将其选中。
 
@@ -106,7 +108,7 @@ ms.locfileid: "91584342"
      [!code-csharp[Trin_Excel_Dynamic_Controls#2](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/Ribbon1.cs#2)]
      [!code-vb[Trin_Excel_Dynamic_Controls#2](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/Ribbon1.vb#2)]
 
-3. 在 **解决方案资源管理器**中，选择 " *Ribbon1.cs* " 或 " *ribbon1.mfcribbon-ms*"。
+3. 在 **解决方案资源管理器** 中，选择 " *Ribbon1.cs* " 或 " *ribbon1.mfcribbon-ms*"。
 
 4. 在 " **视图** " 菜单上，单击 " **设计器**"。
 
@@ -138,7 +140,7 @@ ms.locfileid: "91584342"
 
 ### <a name="to-remove-controls-from-the-worksheet"></a>若要从工作表中移除控件
 
-1. 在 **解决方案资源管理器**中，选择 " *ThisAddIn.cs* " 或 " *ThisAddIn*"。
+1. 在 **解决方案资源管理器** 中，选择 " *ThisAddIn.cs* " 或 " *ThisAddIn*"。
 
 2. 在 **“视图”** 菜单上，单击 **“代码”**。
 

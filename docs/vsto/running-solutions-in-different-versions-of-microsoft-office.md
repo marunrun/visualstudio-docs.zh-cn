@@ -1,5 +1,7 @@
 ---
 title: 在 Microsoft Office 的不同版本中运行解决方案
+description: 了解如何运行使用 Visual Studio 2010 和更高版本创建的 Microsoft Office 解决方案版本。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 59fce25bd3e167275eb8b19fac828f202c463dda
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 4d70e61e318f0f6afd0a58ed35f912b6a5f2cda8
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91583900"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97523539"
 ---
 # <a name="run-solutions-in-different-versions-of-microsoft-office"></a>在 Microsoft Office 的不同版本中运行解决方案
 
@@ -47,8 +49,8 @@ ms.locfileid: "91583900"
 |用于创建解决方案的 Visual Studio 版本|项目模板面向的 Office 版本|可以运行解决方案的 Office 版本|最终用户计算机上所需的运行时|最终用户计算机上所需的 .NET Framework 版本|
 |----------------------------------------------------------|--------------------------------------------------------|--------------------------------------------------|-------------------------------------------|----------------------------------------------------------|
 |Visual Studio 2008 专业版<br /><br /> 或<br /><br /> Visual Studio Team System 2008|2007 Microsoft Office system|[!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] 和 [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)]<sup>1</sup><br /><br /> 2007 Microsoft Office system|Visual Studio 2010 Tools for Office Runtime<sup>1</sup><br /><br /> 或<br /><br /> Visual Studio Tools for the Microsoft Office System（3.0 版 Runtime）|.NET Framework 3.5|
-|以下版本的 Visual Studio 2005 （安装了 VSTO 2005 SE<sup>2</sup> ）：<br /><br /> -Visual Studio 2005 Tools for Office<br />-Visual Studio Team System 2005<br />-Visual Studio 2005 专业版|2007 Microsoft Office system|[!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)]和 [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)] (仅限32位<sup>3</sup>) <br /><br /> 2007 Microsoft Office system|Visual Studio 2005 Tools for Office Second Edition Runtime|.NET framework 2.0、.NET Framework 3.0 或 .NET Framework 3.5|
-|Visual Studio 以下版本中的任何版本：<br /><br /> -Visual Studio 2008 专业版<br />-Visual Studio Team System 2008<br />-已安装或未安装 VSTO 2005 SE<sup>2</sup> 的 Visual Studio 2005 Tools for Office () <br />-Visual Studio Team System 2005 (安装有或未安装 VSTO 2005 SE<sup>2</sup>) <br />-已安装适用于 VSTO 2005 SE<sup>2</sup> 的 Visual Studio 2005 Professional|Microsoft Office 2003|[!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)]和 [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)] (仅限32位<sup>3</sup>) <br /><br /> 2007 Microsoft Office system<br /><br /> Microsoft Office 2003|Visual Studio 2005 Tools for Office Second Edition Runtime|.NET framework 2.0、.NET Framework 3.0 或 .NET Framework 3.5|
+|以下版本的 Visual Studio 2005 （安装了 VSTO 2005 SE<sup>2</sup> ）：<br /><br /> -Visual Studio 2005 Tools for Office<br />-Visual Studio Team System 2005<br />-Visual Studio 2005 专业版|2007 Microsoft Office system|[!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)]和 [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)] (仅限32位<sup></sup>) <br /><br /> 2007 Microsoft Office system|Visual Studio 2005 Tools for Office Second Edition Runtime|.NET framework 2.0、.NET Framework 3.0 或 .NET Framework 3.5|
+|Visual Studio 以下版本中的任何版本：<br /><br /> -Visual Studio 2008 专业版<br />-Visual Studio Team System 2008<br />-已安装或未安装 VSTO 2005 SE<sup>2</sup> 的 Visual Studio 2005 Tools for Office () <br />-Visual Studio Team System 2005 (安装有或未安装 VSTO 2005 SE<sup>2</sup>) <br />-已安装适用于 VSTO 2005 SE<sup>2</sup> 的 Visual Studio 2005 Professional|Microsoft Office 2003|[!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)]和 [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)] (仅限32位<sup></sup>) <br /><br /> 2007 Microsoft Office system<br /><br /> Microsoft Office 2003|Visual Studio 2005 Tools for Office Second Edition Runtime|.NET framework 2.0、.NET Framework 3.0 或 .NET Framework 3.5|
 
  1. [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] 和 [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)] 应用程序包括 Visual Studio 2010 Tools For Office runtime。 因此，在这种情况下，这些应用程序始终使用 Visual Studio 2010 Tools for Office runtime，而不是 Microsoft Office system (3.0 版运行) 时的 Visual Studio Tools。 2007 Microsoft Office System 中的应用程序可以使用 Visual Studio 2010 Tools Office 运行时或 Visual Studio Tools for Microsoft Office System（3.0 版 Runtime）。
 

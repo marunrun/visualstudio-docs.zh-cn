@@ -1,5 +1,7 @@
 ---
 title: 以编程方式查找和替换文档中的文本
+description: 了解如何使用 Visual Studio 以编程方式搜索和替换 Microsoft Word 文档中的文本。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 18a50d6d4ef52a0c50be0b72b4cab5706da4e2db
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5ad77da419f70a8e513bf152ced41cccdd0474a8
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547038"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524590"
 ---
 # <a name="how-to-programmatically-search-for-and-replace-text-in-documents"></a>如何：以编程方式在文档中搜索和替换文本
   <xref:Microsoft.Office.Interop.Word.Find> 对象是 <xref:Microsoft.Office.Interop.Word.Selection> 和 <xref:Microsoft.Office.Interop.Word.Range> 对象的成员，可使用其中任何一个来搜索 Microsoft Office Word 文档中的文本。 替换命令是查找命令的扩展。
@@ -58,7 +60,7 @@ ms.locfileid: "85547038"
    [!code-csharp[Trin_VstcoreWordAutomation#67](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#67)]
 
 ## <a name="use-a-range-object"></a>使用 Range 对象
- 使用 <xref:Microsoft.Office.Interop.Word.Range> 对象使你能够搜索文本，而无需在用户界面中显示任何内容。 <xref:Microsoft.Office.Interop.Word.Find>如果找到与搜索条件匹配的文本，则对象返回**True** ; 否则，返回**False** 。 如果找到了文本，则它还重新定义 <xref:Microsoft.Office.Interop.Word.Range> 对象以匹配搜索条件。
+ 使用 <xref:Microsoft.Office.Interop.Word.Range> 对象使你能够搜索文本，而无需在用户界面中显示任何内容。 <xref:Microsoft.Office.Interop.Word.Find>如果找到与搜索条件匹配的文本，则对象返回 **True** ; 否则，返回 **False** 。 如果找到了文本，则它还重新定义 <xref:Microsoft.Office.Interop.Word.Range> 对象以匹配搜索条件。
 
 ### <a name="to-find-text-using-a-range-object"></a>使用 Range 对象查找文本
 
@@ -97,7 +99,7 @@ ms.locfileid: "85547038"
    [!code-csharp[Trin_VstcoreWordAutomationAddIn#71](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#71)]
 
 ## <a name="search-for-and-replace-text-in-documents"></a>搜索和替换文档中的文本
- 下面的代码搜索当前所选内容，并将找到 **的字符串的** 所有匹配项替换为 **找到**的字符串。
+ 下面的代码搜索当前所选内容，并将找到 **的字符串的** 所有匹配项替换为 **找到** 的字符串。
 
 ### <a name="to-search-for-and-replace-text-in-documents"></a>在文档中搜索并替换文本
 

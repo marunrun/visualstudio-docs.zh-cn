@@ -1,5 +1,7 @@
 ---
 title: 演练：创建书签的快捷菜单
+description: 了解如何在 Microsoft Word 文档级自定义项中为书签控件创建快捷菜单。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9b4b412d2e9456142c1be1af388e2803634d15c0
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 8b018687ec10eb725ece7d776277ea1c699dbbec
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "91146901"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524218"
 ---
 # <a name="walkthrough-create-shortcut-menus-for-bookmarks"></a>演练：创建书签的快捷菜单
   本演练演示如何 <xref:Microsoft.Office.Tools.Word.Bookmark> 在 Word 的文档级自定义项中创建控件的快捷菜单。 当用户右键单击书签中的文本时，将出现一个快捷菜单，并为用户提供用于设置文本格式的选项。
@@ -51,7 +53,7 @@ ms.locfileid: "91146901"
 
 ### <a name="to-create-a-new-project"></a>创建新项目的步骤
 
-- 创建一个名为 **"我的书签" 快捷菜单**的 Word 文档项目。 在向导中，选择 " **创建新文档**"。 有关详细信息，请参阅 [如何：在 Visual Studio 中创建 Office 项目](../vsto/how-to-create-office-projects-in-visual-studio.md)。
+- 创建一个名为 **"我的书签" 快捷菜单** 的 Word 文档项目。 在向导中，选择 " **创建新文档**"。 有关详细信息，请参阅 [如何：在 Visual Studio 中创建 Office 项目](../vsto/how-to-create-office-projects-in-visual-studio.md)。
 
      Visual Studio 将在设计器中打开新的 Word 文档，并将 " **我的书签" 快捷菜单** 项目添加到 **解决方案资源管理器**。
 
@@ -90,20 +92,20 @@ ms.locfileid: "91146901"
 
 1. 向项目添加 **功能区 XML** 项。 有关详细信息，请参阅 [如何：开始自定义功能区](../vsto/how-to-get-started-customizing-the-ribbon.md)。
 
-2. 在 **解决方案资源管理器**中，选择 " **ThisDocument.cs** " 或 " **ThisDocument**"。
+2. 在 **解决方案资源管理器** 中，选择 " **ThisDocument.cs** " 或 " **ThisDocument**"。
 
-3. 在菜单栏上，选择 "**查看**  >  **代码**"。
+3. 在菜单栏上，选择“视图” > “代码”。
 
-     **ThisDocument**类文件将在代码编辑器中打开。
+     **ThisDocument** 类文件将在代码编辑器中打开。
 
 4. 将以下代码添加到 **ThisDocument** 类。 此代码重写 CreateRibbonExtensibilityObject 方法，并将功能区 XML 类返回到 Office 应用程序。
 
      [!code-csharp[Trin_Word_Document_Menus#1](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs#1)]
      [!code-vb[Trin_Word_Document_Menus#1](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/thisdocument.vb#1)]
 
-5. 在“解决方案资源管理器” **** 中，选择功能区 XML 文件。 默认情况下，功能区 XML 文件命名为 Ribbon1.xml。
+5. 在“解决方案资源管理器” 中，选择功能区 XML 文件。 默认情况下，功能区 XML 文件命名为 Ribbon1.xml。
 
-6. 在菜单栏上，选择 "**查看**  >  **代码**"。
+6. 在菜单栏上，选择“视图” > “代码”。
 
      功能区 XML 文件随即在代码编辑器中打开。
 
@@ -125,16 +127,16 @@ ms.locfileid: "91146901"
 
      此代码将两个按钮添加到快捷菜单中，当您右键单击该文档时，将显示该菜单。
 
-8. 在 **解决方案资源管理器**中，右键单击 `ThisDocument` ，然后单击 " **查看代码**"。
+8. 在 **解决方案资源管理器** 中，右键单击 `ThisDocument` ，然后单击 " **查看代码**"。
 
 9. 在类级别声明以下变量和书签变量。
 
      [!code-csharp[Trin_Word_Document_Menus#2](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs#2)]
      [!code-vb[Trin_Word_Document_Menus#2](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/thisdocument.vb#2)]
 
-10. 在 **解决方案资源管理器**中，选择功能区代码文件。 默认情况下，功能区代码文件命名为 **Ribbon1.cs** 或 **ribbon1.mfcribbon-ms**。
+10. 在 **解决方案资源管理器** 中，选择功能区代码文件。 默认情况下，功能区代码文件命名为 **Ribbon1.cs** 或 **ribbon1.mfcribbon-ms**。
 
-11. 在菜单栏上，选择 "**查看**  >  **代码**"。
+11. 在菜单栏上，选择“视图” > “代码”。
 
      功能区代码文件将在代码编辑器中打开。
 
@@ -152,11 +154,11 @@ ms.locfileid: "91146901"
      [!code-csharp[Trin_Word_Document_Menus#6](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/ribbon1.cs#6)]
      [!code-vb[Trin_Word_Document_Menus#6](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/ribbon1.vb#6)]
 
-2. **解决方案资源管理器**中，选择 " **ThisDocument.cs** " 或 " **ThisDocument**"。
+2. **解决方案资源管理器** 中，选择 " **ThisDocument.cs** " 或 " **ThisDocument**"。
 
-3. 在菜单栏上，选择 "**查看**  >  **代码**"。
+3. 在菜单栏上，选择“视图” > “代码”。
 
-     **ThisDocument**类文件将在代码编辑器中打开。
+     **ThisDocument** 类文件将在代码编辑器中打开。
 
 4. 将以下代码添加到 **ThisDocument** 类。
 

@@ -1,5 +1,7 @@
 ---
 title: 使用 Word 的演练
+description: 了解如何使用文档级自定义项和 VSTO 外接程序来自动执行 Microsoft Word，并 (UI) 自定义用户界面。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c6d3b4ece92bf278ef8d43dca7e449272982381c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cd2685b7fee0534e56c55e2c865d1d7f16423de5
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71254997"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97522582"
 ---
 # <a name="walkthroughs-using-word"></a>使用 Word 的演练
   下列演练演示了如何使用文档级自定义项和 VSTO 外接程序来自动化 Microsoft Office Word 和自定义用户界面 (UI)。
@@ -51,7 +53,7 @@ ms.locfileid: "71254997"
 
 - [演练：使用功能区 XML 创建自定义选项卡](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md) 演示如何使用 VSTO 外接程序中的 XML 描述符文件创建自定义功能区选项卡。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [使用 Excel 的演练](../vsto/walkthroughs-using-excel.md)
 - [Office 解决方案演练中的数据](../vsto/data-in-office-solutions-walkthroughs.md)
 - [Office UI 自定义演练](../vsto/office-ui-customization-walkthroughs.md)

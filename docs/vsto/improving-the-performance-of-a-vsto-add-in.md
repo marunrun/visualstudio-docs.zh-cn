@@ -1,5 +1,7 @@
 ---
 title: 提高 VSTO 外接程序的性能
+description: 了解如何优化为 Office 应用程序创建的 VSTO 外接程序，以便他们快速启动、关闭和打开项，以及执行其他任务。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -10,12 +12,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7529c69270b5f33cde32e8a7907f1b80589c43b7
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 83ba2e9cc2cd55b3e3f6362250ffc1e9489b1626
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "92298515"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524436"
 ---
 # <a name="improve-the-performance-of-a-vsto-add-in"></a>提高 VSTO 外接程序的性能
   可以通过优化为 Office 应用程序创建的 VSTO 外接程序为用户提供更好的体验，以便他们快速启动、关闭和打开项，以及执行其他任务。 如果你的 VSTO 外接程序是用于 Outlook 的，则还可以降低由于性能不佳而禁用 VSTO 外接程序的风险。 可以通过实现以下策略来提高 VSTO 外接程序的性能：
@@ -43,7 +45,7 @@ ms.locfileid: "92298515"
 
 1. 在 **“解决方案资源管理器”** 中，选择项目节点。
 
-2. 在菜单栏上，依次选择“查看” > “属性页”。
+2. 在菜单栏上，依次选择“查看”   > “属性页”  。
 
 3. 在 **“发布”** 选项卡上，选择 **“选项”** 按钮。
 
@@ -51,13 +53,13 @@ ms.locfileid: "92298515"
 
 ### <a name="to-configure-a-windows-installer-solution-to-load-vsto-add-ins-on-demand"></a>配置 Windows Installer 解决方案以按需加载 VSTO 外接程序
 
-1. 在注册表中，将 `LoadBehavior` ** _Root_\Software\Microsoft\Office \\ _ApplicationName_\Addins \\ _外接程序 ID_ **键的条目设置为**0x10**。
+1. 在注册表中，将 `LoadBehavior` **_Root_\Software\Microsoft\Office \\ _ApplicationName_\Addins \\ _外接程序 ID_** 键的条目设置为 **0x10**。
 
      有关详细信息，请参阅 [VSTO 外接程序的注册表项](../vsto/registry-entries-for-vsto-add-ins.md)。
 
 ### <a name="to-configure-a-solution-to-load-vsto-add-ins-on-demand-while-you-debug-the-solution"></a>将解决方案配置为在调试解决方案时按需加载 VSTO 外接程序
 
-1. 创建一个脚本，用于将 `LoadBehavior` **_根_\Software\Microsoft\Office \\ _ApplicationName_\Addins \\ _外接程序 ID_ **键的条目设置为**0x10**。
+1. 创建一个脚本，用于将 `LoadBehavior` **_根_\Software\Microsoft\Office \\ _ApplicationName_\Addins \\ _外接程序 ID_** 键的条目设置为 **0x10**。
 
      下面的代码演示了此脚本的一个示例。
 

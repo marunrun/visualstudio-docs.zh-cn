@@ -1,5 +1,7 @@
 ---
 title: 工作表宿主项
+description: 了解工作表宿主项是一个类型，该类型从 Excel 的主互操作程序集扩展工作表类型。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -20,12 +22,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 301b0a62efae4674432b1051451e5d982899c1b3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b25b921d29bee832ef37b943fd57edc38b7518db
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71254872"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97523221"
 ---
 # <a name="worksheet-host-item"></a>工作表宿主项
   <xref:Microsoft.Office.Tools.Excel.Worksheet> 宿主项这种类型从 Excel 的主互操作程序集扩展 <xref:Microsoft.Office.Interop.Excel.Worksheet> 类型。 <xref:Microsoft.Office.Tools.Excel.Worksheet> 宿主项提供与 <xref:Microsoft.Office.Interop.Excel.Worksheet> 对象完全相同的属性、方法和事件，但它还公开其他事件并充当宿主控件和 Windows 窗体控件的容器。
@@ -44,7 +46,7 @@ ms.locfileid: "71254872"
  在文档级项目中，通过将新工作表添加到设计器中的工作簿，可以在设计时将其他 <xref:Microsoft.Office.Tools.Excel.Worksheet> 宿主项添加到项目。
 
 ### <a name="rename-worksheets"></a>重命名工作表
- 在文档级项目中，可在 Visual Studio 设计器中对工作表进行重命名，但此操作只会更改工作表的显示名称。 编程名称仍是工作表的默认名称。 如果在“属性” **** 窗口中对工作表进行重命名，则只会更改编程名称。
+ 在文档级项目中，可在 Visual Studio 设计器中对工作表进行重命名，但此操作只会更改工作表的显示名称。 编程名称仍是工作表的默认名称。 如果在“属性”  窗口中对工作表进行重命名，则只会更改编程名称。
 
 ### <a name="limitations-of-the-worksheet-host-item-in-document-level-projects"></a>文档级项目中的工作表宿主项的限制
  在文档级项目中，不能在运行时创建新的 <xref:Microsoft.Office.Tools.Excel.Worksheet> 宿主项。 如果在运行时创建新的 Excel 工作表，则该工作表将为类型 <xref:Microsoft.Office.Interop.Excel.Worksheet>。 因为它不是宿主项，所以它不能包含任何宿主控件或 Windows 窗体控件。 有关在运行时创建文档的详细信息，请参阅 [如何：以编程方式向工作簿添加新工作表](../vsto/how-to-programmatically-add-new-worksheets-to-workbooks.md)。
@@ -54,7 +56,7 @@ ms.locfileid: "71254872"
 
  若要生成 <xref:Microsoft.Office.Tools.Excel.Worksheet> 宿主项，请使用 `GetVstoObject` 方法。 有关详细信息，请参阅 [在运行时在 VSTO 外接程序中扩展 Word 文档和 Excel 工作簿](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [Office 开发示例和演练](../vsto/office-development-samples-and-walkthroughs.md)
 - [在运行时在 VSTO 外接程序中扩展 Word 文档和 Excel 工作簿](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)
 - [Office 文档上的控件](../vsto/controls-on-office-documents.md)

@@ -1,5 +1,7 @@
 ---
 title: 演练：文档级项目中的简单数据绑定
+description: 了解文档级项目中的数据绑定基础知识，以及将 SQL Server 数据库中的单个数据字段绑定到 Microsoft Excel 中的命名范围。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0c22947e572a29c2b49a5ce9bb808c3cf2fe2902
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 868a120baa8207d922d3dee55e10c8e903381e19
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584919"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524103"
 ---
 # <a name="walkthrough-simple-data-binding-in-a-document-level-project"></a>演练：文档级项目中的简单数据绑定
   本演练演示了文档级项目中的数据绑定基础知识。 SQL Server 数据库中的单个数据字段绑定到 Microsoft Office Excel 中的命名范围。 本演练还演示如何添加控件，使您可以滚动浏览表中的所有记录。
@@ -82,7 +84,7 @@ ms.locfileid: "91584919"
 
 9. 单击“完成”。
 
-   向导会将 **Customers** 表添加到 " **数据源** " 窗口。 它还将一个类型化数据集添加到你的项目中，该数据集在 **解决方案资源管理器**中可见。
+   向导会将 **Customers** 表添加到 " **数据源** " 窗口。 它还将一个类型化数据集添加到你的项目中，该数据集在 **解决方案资源管理器** 中可见。
 
 ## <a name="add-controls-to-the-worksheet"></a>向工作表添加控件
  对于本演练，您需要在第一个工作表上有两个命名范围和四个按钮。 首先，从 " **数据源** " 窗口添加两个命名范围，以便它们自动绑定到数据源。 接下来，从 " **工具箱**" 中添加按钮。
@@ -97,17 +99,17 @@ ms.locfileid: "91584919"
 
 4. 在下拉列表中选择 " **NamedRange** "，然后将 " **公司名称** " 列拖到单元格 **A1**。
 
-     <xref:Microsoft.Office.Tools.Excel.NamedRange> `companyNameNamedRange` 在单元格**A1**中创建一个名为的控件。 同时，会将一个 <xref:System.Windows.Forms.BindingSource> 名为的 `customersBindingSource` 表适配器和一个 <xref:System.Data.DataSet> 实例添加到该项目中。 控件绑定到 <xref:System.Windows.Forms.BindingSource> ，而后者又绑定到该 <xref:System.Data.DataSet> 实例。
+     <xref:Microsoft.Office.Tools.Excel.NamedRange> `companyNameNamedRange` 在单元格 **A1** 中创建一个名为的控件。 同时，会将一个 <xref:System.Windows.Forms.BindingSource> 名为的 `customersBindingSource` 表适配器和一个 <xref:System.Data.DataSet> 实例添加到该项目中。 控件绑定到 <xref:System.Windows.Forms.BindingSource> ，而后者又绑定到该 <xref:System.Data.DataSet> 实例。
 
 5. 在 "**数据源**" 窗口中选择 " **CustomerID** " 列，然后单击显示的下拉箭头。
 
 6. 在下拉列表中单击 " **NamedRange** "，然后将 " **CustomerID** " 列拖到单元格 **B1**。
 
-7. 名为的另一个 <xref:Microsoft.Office.Tools.Excel.NamedRange> 控件 `customerIDNamedRange` 在单元格 **B1**中创建，并绑定到 <xref:System.Windows.Forms.BindingSource> 。
+7. 名为的另一个 <xref:Microsoft.Office.Tools.Excel.NamedRange> 控件 `customerIDNamedRange` 在单元格 **B1** 中创建，并绑定到 <xref:System.Windows.Forms.BindingSource> 。
 
 ### <a name="to-add-four-buttons"></a>添加四个按钮
 
-1. 从 "**工具箱**" 的 "**公共控件**" 选项卡中，将 <xref:System.Windows.Forms.Button> 控件添加到工作表的单元格**A3** 。
+1. 从 "**工具箱**" 的 "**公共控件**" 选项卡中，将 <xref:System.Windows.Forms.Button> 控件添加到工作表的单元格 **A3** 。
 
     此按钮的名称为 `Button1` 。
 
@@ -126,7 +128,7 @@ ms.locfileid: "91584919"
 
 ### <a name="to-initialize-the-controls"></a>初始化控件
 
-1. 在 **解决方案资源管理器**中，右键单击 " **Sheet1** " 或 " **Sheet1.cs**"，然后单击快捷菜单上的 " **查看代码** "。
+1. 在 **解决方案资源管理器** 中，右键单击 " **Sheet1** " 或 " **Sheet1.cs**"，然后单击快捷菜单上的 " **查看代码** "。
 
 2. 将以下代码添加到 `Sheet1_Startup` 方法以设置每个按钮的文本。
 
@@ -177,9 +179,9 @@ ms.locfileid: "91584919"
 
 1. 按 **F5** 运行项目。
 
-2. 确认第一条记录显示在单元格 **A1** 和 **B1**中。
+2. 确认第一条记录显示在单元格 **A1** 和 **B1** 中。
 
-3. 单击 " **>** (`Button3`) " 按钮，确认下一条记录显示在单元格 **A1** 和 **B1**中。
+3. 单击 " **>** (`Button3`) " 按钮，确认下一条记录显示在单元格 **A1** 和 **B1** 中。
 
 4. 单击其他滚动按钮以确认记录是否按预期方式发生更改。
 

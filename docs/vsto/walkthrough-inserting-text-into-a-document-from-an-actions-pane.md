@@ -1,5 +1,7 @@
 ---
 title: 演练：将文本从操作窗格插入到文档中
+description: 在 Microsoft Word 文档中创建操作窗格。 了解操作窗格包含两个控件，这些控件收集输入，然后将文本发送到文档。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5c65027d7670c4d6789f32eb4d9080df061d904a
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 44fd876dfad99e1a1320a5e5d743ea8e30dfdb98
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584958"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524170"
 ---
 # <a name="walkthrough-insert-text-into-a-document-from-an-actions-pane"></a>演练：将文本从操作窗格插入到文档中
   本演练演示如何在 Microsoft Office Word 文档中创建操作窗格。 操作窗格包含两个控件，这些控件收集输入，然后将文本发送到文档。
@@ -49,7 +51,7 @@ ms.locfileid: "91584958"
 
 ### <a name="to-create-a-new-project"></a>创建新项目的步骤
 
-1. 创建一个名为 **"我的基本操作" 窗格**的 Word 文档项目。 在向导中，选择 " **创建新文档**"。 有关详细信息，请参阅 [如何：在 Visual Studio 中创建 Office 项目](../vsto/how-to-create-office-projects-in-visual-studio.md)。
+1. 创建一个名为 **"我的基本操作" 窗格** 的 Word 文档项目。 在向导中，选择 " **创建新文档**"。 有关详细信息，请参阅 [如何：在 Visual Studio 中创建 Office 项目](../vsto/how-to-create-office-projects-in-visual-studio.md)。
 
      Visual Studio 将在设计器中打开新的 Word 文档，并将 " **我的基本操作" 窗格** 项目添加到 **解决方案资源管理器**。
 
@@ -62,7 +64,7 @@ ms.locfileid: "91584958"
 
     **2008年3月21日**
 
-    **Name**
+    **名称**
 
     **Address**
 
@@ -87,14 +89,14 @@ ms.locfileid: "91584958"
 
 5. 在功能区的 " **插入** " 选项卡上的 " **链接** " 组中，单击 " **书签**"。
 
-6. 在 "**书签**" 对话框中，在 "**书签名称**" 框中键入**ShowAddress** ，然后单击 "**添加**"。
+6. 在 "**书签**" 对话框中，在 "**书签名称**" 框中键入 **ShowAddress** ，然后单击 "**添加**"。
 
 ## <a name="add-controls-to-the-actions-pane"></a>向操作窗格添加控件
  若要设计操作窗格界面，请将操作窗格控件添加到项目，然后将 Windows 窗体控件添加到操作窗格控件。
 
 ### <a name="to-add-an-actions-pane-control"></a>添加操作窗格控件
 
-1. 在**解决方案资源管理器**中选择 "**我的基本操作" 窗格**项目。
+1. 在 **解决方案资源管理器** 中选择 "**我的基本操作" 窗格** 项目。
 
 2. 在 **“项目”** 菜单上，单击 **“添加新项”**。
 
@@ -113,7 +115,7 @@ ms.locfileid: "91584958"
     |properties|值|
     |--------------|-----------|
     |**名称**|**getName**|
-    |**大小**|**130, 20**|
+    |**Size**|**130, 20**|
 
 5. 将第二个 " **标签** " 控件添加到 "操作" 窗格控件，并将 " **Text** " 属性更改为 " **Address**"。
 
@@ -124,14 +126,14 @@ ms.locfileid: "91584958"
     |**名称**|**getAddress**|
     |**接受返回**|**True**|
     |**多行**|**True**|
-    |**大小**|**130, 40**|
+    |**Size**|**130, 40**|
 
 7. 向 "操作" 窗格控件添加 " **按钮** " 控件，并更改以下属性。
 
     |properties|值|
     |--------------|-----------|
     |**名称**|**Shapes.addtext**|
-    |**Text**|**插入**|
+    |**文本**|插入|
 
 ## <a name="add-code-to-insert-text-into-the-document"></a>添加代码以在文档中插入文本
  在 "操作" 窗格中，编写将文本框中的文本插入 <xref:Microsoft.Office.Tools.Word.Bookmark> 文档中相应控件的代码。 您可以使用 `Globals` 类从 "操作" 窗格上的控件访问文档上的控件。 有关详细信息，请参阅 [对 Office 项目中对象的全局访问](../vsto/global-access-to-objects-in-office-projects.md)。

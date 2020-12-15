@@ -1,5 +1,7 @@
 ---
 title: 使用按钮在工作表的文本框中显示文本
+description: 了解在 Microsoft Excel 工作表上使用按钮和文本框的基础知识。 还可使用 Visual Studio 中的 Office 开发工具创建 Excel 项目。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b30eea0152b75cdd0869ececac674ee5aeee7933
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c499800efa783ce252dbf925f307bc64e814420f
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "67328706"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97522651"
 ---
 # <a name="walkthrough-display-text-in-a-text-box-in-a-worksheet-using-a-button"></a>演练：使用按钮在工作表的文本框中显示文本
   本演练演示了在 Microsoft Office Excel 工作表上使用按钮和文本框的基础知识，以及如何使用 Visual Studio 中的 Office 开发工具创建 Excel 项目。 若要查看已完成示例的结果，请参阅 [Office 开发示例和演练](../vsto/office-development-samples-and-walkthroughs.md)中的 Excel 控件示例。
@@ -50,7 +52,7 @@ ms.locfileid: "67328706"
 
 ### <a name="to-create-a-new-project"></a>创建新项目的步骤
 
-1. 使用 " **我的 excel" 按钮**创建一个 Excel 工作簿项目。 请确保已选中 " **创建新文档** "。 有关详细信息，请参阅 [如何：在 Visual Studio 中创建 Office 项目](../vsto/how-to-create-office-projects-in-visual-studio.md)。
+1. 使用 " **我的 excel" 按钮** 创建一个 Excel 工作簿项目。 请确保已选中 " **创建新文档** "。 有关详细信息，请参阅 [如何：在 Visual Studio 中创建 Office 项目](../vsto/how-to-create-office-projects-in-visual-studio.md)。
 
      Visual Studio 将在设计器中打开新的 Excel 工作簿，并将 " **我的 excel" 按钮** 项目添加到 **解决方案资源管理器**。
 
@@ -69,10 +71,10 @@ ms.locfileid: "67328706"
 
 5. 将一个 " **按钮** " 控件拖到上 `Sheet1` ，然后更改以下属性：
 
-   |属性|值|
+   |properties|值|
    |--------------|-----------|
    |**名称**|**insertText**|
-   |**Text**|**插入文本**|
+   |**文本**|**插入文本**|
 
    现在，编写在单击按钮时要运行的代码。
 
@@ -81,7 +83,7 @@ ms.locfileid: "67328706"
 
 ### <a name="to-write-to-the-text-box-when-the-button-is-clicked"></a>在单击按钮时写入文本框
 
-1. 在 **解决方案资源管理器**中，右键单击 **Sheet1**，然后单击快捷菜单上的 " **查看代码** "。
+1. 在 **解决方案资源管理器** 中，右键单击 **Sheet1**，然后单击快捷菜单上的 " **查看代码** "。
 
 2. 将以下代码添加到 <xref:System.Windows.Forms.Control.Click> 按钮的事件处理程序中：
 

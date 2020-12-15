@@ -1,5 +1,7 @@
 ---
 title: 演练：创建您的第一个 Outlook VSTO 外接程序
+description: 创建用于 Microsoft Outlook 的应用程序级外接程序。 此功能可用于应用程序本身，而不管哪个 Outlook 项已打开。
+ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: baedd24b7eba14b3f2fa6496a7a681773b81cb9b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7950858d3205cf910eb09e5b0a99b5f67c71c4bd
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "69547975"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524230"
 ---
 # <a name="walkthrough-create-your-first-vsto-add-in-for-outlook"></a>演练：创建您的第一个 Outlook VSTO 外接程序
   本演练显示如何为 Microsoft Office Outlook 创建 VSTO 外接程序。 在此类解决方案中创建的功能可用于应用程序本身，而与所打开的 Outlook 项无关。 有关详细信息，请参阅 [Office 解决方案开发概述 &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)。
@@ -64,7 +66,7 @@ ms.locfileid: "69547975"
 
 6. 在 **“名称”** 框中，键入 **FirstOutlookAddIn**。
 
-7. 单击“确定”。
+7. 单击“确定”  。
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 创建 **firstexceladdin** 项目，并在编辑器中打开 **ThisAddIn** 代码文件。
 
