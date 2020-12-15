@@ -1,5 +1,7 @@
 ---
 title: 演练：导入在 Outlook 中设计的窗体区域
+description: 了解如何在 Microsoft Outlook 中设计窗体区域，然后通过使用 "新建窗体区域" 向导将窗体区域导入 Outlook VSTO 外接程序项目中。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -14,15 +16,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2a0de1a25a5309e99193b7be8bce2819808665b8
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 9b65502bbf29f6e0df7435f6a27d3c51e8082e41
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584971"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97522671"
 ---
 # <a name="walkthrough-import-a-form-region-that-is-designed-in-outlook"></a>演练：导入在 Outlook 中设计的窗体区域
-  此演练演示如何在 Microsoft Office Outlook 中设计窗体区域，然后通过使用“新建窗体区域” **** 向导将窗体区域导入 Outlook VSTO 外接程序项目。 通过在 Outlook 中设计窗体区域，可以将本机 Outlook 控件添加到绑定到 Outlook 数据的窗体区域。 导入窗体区域后，可以处理每个控件的事件。
+  此演练演示如何在 Microsoft Office Outlook 中设计窗体区域，然后通过使用“新建窗体区域”  向导将窗体区域导入 Outlook VSTO 外接程序项目。 通过在 Outlook 中设计窗体区域，可以将本机 Outlook 控件添加到绑定到 Outlook 数据的窗体区域。 导入窗体区域后，可以处理每个控件的事件。
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
@@ -55,61 +57,61 @@ ms.locfileid: "91584971"
 
 1. 启动 Microsoft Office Outlook。
 
-2. 在 Outlook 中，在“开发人员” **** 选项卡中，单击“设计窗体” ****。 有关详细信息，请参阅 [如何：在功能区上显示 "开发人员" 选项卡](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)。
+2. 在 Outlook 中，在“开发人员”  选项卡中，单击“设计窗体” 。 有关详细信息，请参阅 [如何：在功能区上显示 "开发人员" 选项卡](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)。
 
-3. 在“设计窗体” **** 框中，单击“任务” ****，然后单击“打开” ****。
+3. 在“设计窗体”  框中，单击“任务” ，然后单击“打开” 。
 
-4. 在 Outlook 中，在“开发人员” **** 选项卡中，在“设计” **** 组中，单击“新建窗体区域” ****。
+4. 在 Outlook 中，在“开发人员”  选项卡中，在“设计”  组中，单击“新建窗体区域” 。
 
-     随即会打开一个新窗体区域。 如果未出现 **字段选择器** ，请单击“工具” **** 组中的 **字段选择器** 。
+     随即会打开一个新窗体区域。 如果未出现 **字段选择器** ，请单击“工具”  组中的 **字段选择器** 。
 
-5. 将“主题” **** 字段和“完成百分比” **** 字段从 **字段选择器** 拖动到窗体区域。
+5. 将“主题”  字段和“完成百分比”  字段从 **字段选择器** 拖动到窗体区域。
 
-6. 在“工具” **** 组中，单击 **控件工具箱** 以打开 **工具箱**。
+6. 在“工具”  组中，单击 **控件工具箱** 以打开 **工具箱**。
 
-7. 将控件从 **工具箱** 拖动到窗体区域。 将标签置于“主题” **** 和“完成百分比” **** 字段下方。
+7. 将控件从 **工具箱** 拖动到窗体区域。 将标签置于“主题”  和“完成百分比”  字段下方。
 
-8. 右击该标签，然后单击“高级属性” ****。
+8. 右击该标签，然后单击“高级属性” 。
 
-9. 在“属性” **** 窗口中，将“标题” **** 属性设置为“此任务依赖于以下任务” ****，将“宽度” **** 属性设置为 **200**，然后单击“应用” ****。
+9. 在“属性”  窗口中，将“标题”  属性设置为“此任务依赖于以下任务” ，将“宽度”  属性设置为 **200**，然后单击“应用” 。
 
-10. 将 ListBox 控件从 **工具箱** 拖动到窗体区域。 将列表框置于“此任务依赖于以下任务” **** 标签下方。
+10. 将 ListBox 控件从 **工具箱** 拖动到窗体区域。 将列表框置于“此任务依赖于以下任务”  标签下方。
 
 11. 选择刚才添加的列表框。
 
-12. 在“属性” **** 窗口中，将“宽度” **** 设置为 **300**，然后单击“应用” ****。
+12. 在“属性”  窗口中，将“宽度”  设置为 **300**，然后单击“应用” 。
 
 13. 将控件从 **工具箱** 拖动到窗体区域。 将标签置于列表框下方。
 
 14. 选择刚才添加的标签。
 
-15. 在“属性” **** 窗口中，将“标题” **** 属性设置为“选择一项要添加到依赖任务列表中的任务” ****，将“宽度” **** 属性设置为 **200**，然后单击“应用” ****。
+15. 在“属性”  窗口中，将“标题”  属性设置为“选择一项要添加到依赖任务列表中的任务” ，将“宽度”  属性设置为 **200**，然后单击“应用” 。
 
-16. 将 ComboBox 控件从 **工具箱** 拖动到窗体区域。 将组合框置于“选择一项要添加到依赖任务列表中的任务” **** 标签下方。
+16. 将 ComboBox 控件从 **工具箱** 拖动到窗体区域。 将组合框置于“选择一项要添加到依赖任务列表中的任务”  标签下方。
 
 17. 选择刚才添加的组合框。
 
-18. 在“属性” **** 窗口中，将“宽度” **** 属性设置为 **300**，然后单击“应用” ****。
+18. 在“属性”  窗口中，将“宽度”  属性设置为 **300**，然后单击“应用” 。
 
 19. 将 CommandButton 控件从 **工具箱** 拖动到窗体区域。 将命令按钮置于组合框旁。
 
 20. 选择刚才添加的命令按钮。
 
-21. 在“属性” **** 窗口中，将“名称” **** 设置为 **AddDependentTask**，将“标题” **** 设置为“添加依赖任务” ****，将“宽度” **** 设置为 **100**，然后单击“应用” ****。
+21. 在“属性”  窗口中，将“名称”  设置为 **AddDependentTask**，将“标题”  设置为“添加依赖任务” ，将“宽度”  设置为 **100**，然后单击“应用” 。
 
-22. 在 **字段选择器**中，单击“新建” ****。
+22. 在 **字段选择器** 中，单击“新建” 。
 
-23. 在“新建字段” **** 对话框中，在“名称” **** 字段中键入 **hiddenField** ，然后单击“确定” ****。
+23. 在“新建字段”  对话框中，在“名称”  字段中键入 **hiddenField** ，然后单击“确定” 。
 
-24. 将“hiddenField” **** 字段从 **字段选择器** 拖动到窗体区域。
+24. 将“hiddenField”  字段从 **字段选择器** 拖动到窗体区域。
 
-25. 在“属性” **** 窗口中，将“可见” **** 设置为 **0 - False**，然后单击“应用” ****。
+25. 在“属性”  窗口中，将“可见”  设置为 **0 - False**，然后单击“应用” 。
 
-26. 在 Outlook 中，在“开发人员” **** 选项卡中，在“设计” **** 组中，单击“保存” **** 按钮，然后单击“将窗体区域另存为” ****。
+26. 在 Outlook 中，在“开发人员”  选项卡中，在“设计”  组中，单击“保存”  按钮，然后单击“将窗体区域另存为” 。
 
      命名窗体区域 **TaskFormRegion** 并将其保存到计算机的本地目录中。
 
-     Outlook 会将窗体区域保存为 Outlook 窗体存储 (*.ofs*) 文件。 将用名称 *TaskFormRegion*保存窗体区域。
+     Outlook 会将窗体区域保存为 Outlook 窗体存储 (*.ofs*) 文件。 将用名称 *TaskFormRegion* 保存窗体区域。
 
 27. 退出 Outlook。
 
@@ -118,7 +120,7 @@ ms.locfileid: "91584971"
 
 ### <a name="to-create-a-new-outlook-vsto-add-in-project"></a>创建新的 Outlook VSTO 外接程序项目
 
-1. 在 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]中，创建名为 **TaskAddIn**的 Outlook VSTO 外接程序项目。
+1. 在 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]中，创建名为 **TaskAddIn** 的 Outlook VSTO 外接程序项目。
 
 2. 在 **“新建项目”** 对话框中，选择 **“创建解决方案的目录”**。
 
@@ -127,29 +129,29 @@ ms.locfileid: "91584971"
      有关详细信息，请参阅 [如何：在 Visual Studio 中创建 Office 项目](../vsto/how-to-create-office-projects-in-visual-studio.md)。
 
 ## <a name="import-the-form-region"></a>导入窗体区域
- 可使用“新建 Outlook 窗体区域” **** 向导将 Outlook 中设计的窗体区域导入 Outlook VSTO 外接程序项目。
+ 可使用“新建 Outlook 窗体区域”  向导将 Outlook 中设计的窗体区域导入 Outlook VSTO 外接程序项目。
 
 ### <a name="to-import-the-form-region-into-the-outlook-vsto-add-in-project"></a>向 Outlook VSTO 外接程序项目导入窗体区域
 
-1. 在 **解决方案资源管理器**中右击 **TaskAddIn** 项目，指向“添加” ****，然后单击“新建项” ****。
+1. 在 **解决方案资源管理器** 中右击 **TaskAddIn** 项目，指向“添加” ，然后单击“新建项” 。
 
-2. 在“模板” **** 窗格中，选择“Outlook 窗体区域” ****，将文件命名为 **TaskFormRegion**，然后单击“添加” ****。
+2. 在“模板”  窗格中，选择“Outlook 窗体区域” ，将文件命名为 **TaskFormRegion**，然后单击“添加” 。
 
      " **NewOutlook 窗体区域** " 向导将启动。
 
-3. 在“选择窗体区域的创建方式” **** 页上单击“导入 Outlook 窗体存储 (.ofs) 文件” ****，然后单击“浏览” ****。
+3. 在“选择窗体区域的创建方式”  页上单击“导入 Outlook 窗体存储 (.ofs) 文件” ，然后单击“浏览” 。
 
-4. 在“现有 Outlook 窗体区域文件位置” **** 对话框中，浏览到 *TaskFormRegion.ofs*的位置，选择 **TaskFormRegion.ofs**，单击“打开” ****，然后单击“下一步” ****。
+4. 在“现有 Outlook 窗体区域文件位置”  对话框中，浏览到 *TaskFormRegion.ofs* 的位置，选择 **TaskFormRegion.ofs**，单击“打开” ，然后单击“下一步” 。
 
-5. 在“选择要创建的窗体区域的类型” **** 页上，单击“全部替换” ****，然后单击“下一步” ****。
+5. 在“选择要创建的窗体区域的类型”  页上，单击“全部替换” ，然后单击“下一步” 。
 
-     “全部替换” ** 窗体区域将替换整个 Outlook 窗体。 有关窗体区域类型的详细信息，请参阅 [创建 Outlook 窗体区域](../vsto/creating-outlook-form-regions.md)。
+     “全部替换”  窗体区域将替换整个 Outlook 窗体。 有关窗体区域类型的详细信息，请参阅 [创建 Outlook 窗体区域](../vsto/creating-outlook-form-regions.md)。
 
-6. 在“提供说明性文本并选择显示首选项” **** 页上，单击“下一步” ****。
+6. 在“提供说明性文本并选择显示首选项”  页上，单击“下一步” 。
 
-7. 在“标识将显示此窗体区域的邮件类” **** 页上的 **哪些自定义邮件类将显示此窗体区域** 字段中，键入 **IPM.Task.TaskFormRegion**，然后单击“完成” ****。
+7. 在“标识将显示此窗体区域的邮件类”  页上的 **哪些自定义邮件类将显示此窗体区域** 字段中，键入 **IPM.Task.TaskFormRegion**，然后单击“完成” 。
 
-     *TaskFormRegion.cs*或*TaskFormRegion*文件将添加到你的项目中。
+     *TaskFormRegion.cs* 或 *TaskFormRegion* 文件将添加到你的项目中。
 
 ## <a name="handle-the-events-of-controls-on-the-form-region"></a>处理窗体区域中的控件的事件
  现在，你的项目中有了窗体区域，可以添加代码来处理添加到 Outlook 中窗体区域的按钮的 `Microsoft.Office.Interop.Outlook.OlkCommandButton.Click` 事件。
@@ -158,9 +160,9 @@ ms.locfileid: "91584971"
 
 ### <a name="to-handle-the-events-of-controls-on-the-form-region"></a>若要处理窗体区域中的控件的事件
 
-1. 在 **解决方案资源管理器**中，右键单击 " *TaskFormRegion.cs* " 或 " *TaskFormRegion*"，然后单击 " **查看代码**"。
+1. 在 **解决方案资源管理器** 中，右键单击 " *TaskFormRegion.cs* " 或 " *TaskFormRegion*"，然后单击 " **查看代码**"。
 
-    在代码编辑器中打开*TaskFormRegion.cs*或*TaskFormRegion* 。
+    在代码编辑器中打开 *TaskFormRegion.cs* 或 *TaskFormRegion* 。
 
 2. 将以下代码添加到 `TaskFormRegion` 类。 此代码用 Outlook 任务文件夹中每项任务的主题行来填充窗体区域上的组合框。
 
@@ -187,7 +189,7 @@ ms.locfileid: "91584971"
 
    - 刷新窗体区域的列表框中每项依赖任务的当前完成状态。
 
-   - 分析隐藏的文本字段，以获取每项依赖任务的主题。 然后 `Microsoft.Office.Interop.Outlook.TaskItem` 通过调用*Tasks* `FindTaskBySubjectName` 帮助器方法并传递每个任务的主题，在 Tasks 文件夹中查找每个。
+   - 分析隐藏的文本字段，以获取每项依赖任务的主题。 然后 `Microsoft.Office.Interop.Outlook.TaskItem` 通过调用 `FindTaskBySubjectName` 帮助器方法并传递每个任务的主题，在 Tasks 文件夹中查找每个。
 
    - 将 `Microsoft.Office.Interop.Outlook.TaskItem.Subject` 和 `Microsoft.Office.Interop.Outlook.TaskItem.PercentComplete` 值添加到依赖任务列表框。
 
@@ -212,35 +214,35 @@ ms.locfileid: "91584971"
 
      Outlook 启动。
 
-2. 在 Outlook 中，在“主页” **** 选项卡上，单击“新建项” ****，然后单击“任务” ****。
+2. 在 Outlook 中，在“主页”  选项卡上，单击“新建项” ，然后单击“任务” 。
 
-3. 在任务窗体中，在“主题” **** 字段中键入“依赖任务” **** 。
+3. 在任务窗体中，在“主题”  字段中键入“依赖任务”  。
 
 4. 在功能区的 " **任务** " 选项卡上的 " **操作** " 组中，单击 " **保存 & 关闭**"。
 
-5. 在 Outlook 中，在“主页” **** 选项卡上，依次单击“新建项” ****、“更多项” ****，然后单击“选择窗体” ****。
+5. 在 Outlook 中，在“主页”  选项卡上，依次单击“新建项” 、“更多项” ，然后单击“选择窗体” 。
 
-6. 在“选择窗体” **** 对话框中，单击“TaskFormRegion” ****，然后单击“打开” ****。
+6. 在“选择窗体”  对话框中，单击“TaskFormRegion” ，然后单击“打开” 。
 
-     随即显示“TaskFormRegion” **** 窗体区域。 此窗体将替换整个任务窗体。 用任务文件夹中的其他任务填充“选择一项要添加到依赖任务列表中的任务” **** 组合框。
+     随即显示“TaskFormRegion”  窗体区域。 此窗体将替换整个任务窗体。 用任务文件夹中的其他任务填充“选择一项要添加到依赖任务列表中的任务”  组合框。
 
-7. 在任务窗体中，在“主题” **** 字段中键入“主要任务” ****。
+7. 在任务窗体中，在“主题”  字段中键入“主要任务” 。
 
-8. 在“选择一项要添加到依赖任务列表中的任务” **** 组合框中，选择“依赖任务” ****，然后单击“添加依赖任务” ****。
+8. 在“选择一项要添加到依赖任务列表中的任务”  组合框中，选择“依赖任务” ，然后单击“添加依赖任务” 。
 
-     “此任务依赖于以下任务”**** 列表框中出现“0% 完成 -- 依赖任务” **** 。 这就说明你已成功处理该按钮的 `Microsoft.Office.Interop.Outlook.OlkCommandButton.Click` 事件。
+     “此任务依赖于以下任务” 列表框中出现“0% 完成 -- 依赖任务”  。 这就说明你已成功处理该按钮的 `Microsoft.Office.Interop.Outlook.OlkCommandButton.Click` 事件。
 
-9. 保存并关闭“主要任务” **** 项目。
+9. 保存并关闭“主要任务”  项目。
 
 10. 在 Outlook 中重新打开依赖任务项。
 
-11. 在依赖任务窗体中，将“完成百分比” **** 字段改为 **50%**。
+11. 在依赖任务窗体中，将“完成百分比”  字段改为 **50%**。
 
 12. 在依赖任务功能区的 " **任务** " 选项卡上的 " **操作** " 组中，单击 "保存" **& "关闭**"。
 
-13. 在 Outlook 中重新打开“主要任务” **** 项。
+13. 在 Outlook 中重新打开“主要任务”  项。
 
-     “此任务依赖于以下任务”**** 列表框中出现“50% 完成 -- 依赖任务” **** 。
+     “此任务依赖于以下任务” 列表框中出现“50% 完成 -- 依赖任务”  。
 
 ## <a name="next-steps"></a>后续步骤
  可从以下主题了解有关如何自定义 Outlook 应用程序 UI 的详细信息：

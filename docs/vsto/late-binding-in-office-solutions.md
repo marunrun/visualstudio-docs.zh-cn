@@ -1,5 +1,7 @@
 ---
 title: Office 解决方案中的后期绑定
+description: 了解 Microsoft Office 应用程序中的对象模型中的某些类型如何提供通过后期绑定功能可用的功能。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 62224006d04e0a1e7447053e868dd9946f00c97e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 201b850d8a577f8cc76aff97e2370998b6f885ed
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62583934"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97523570"
 ---
 # <a name="late-binding-in-office-solutions"></a>Office 解决方案中的后期绑定
   Office 应用程序的对象模型中的某些类型提供可通过后期绑定功能获得的功能。 例如，某些方法和属性可以根据 Office 应用程序的上下文返回不同类型的对象，并且某些类型可以在不同的上下文中公开不同的方法或属性。
@@ -52,7 +54,7 @@ ms.locfileid: "62583934"
  Office Pia 中的某些属性和方法只能通过后期绑定提供。 在 **选项 Strict** 处于关闭状态的 Visual Basic 项目或面向或的 Visual c # 项目中 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] ，您可以使用这些语言的后期绑定功能访问后期绑定成员。 在 **选项 Strict** 处于 Visual Basic 的项目中，必须使用反射来访问这些成员。
 
 ### <a name="examples"></a>示例
- 下面的代码示例演示如何访问 Visual Basic 项目中 **Option Strict** 为 off 或面向的 Visual c # 项目中的后期绑定成员 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 。 此示例访问 Word 中 "**文件打开**" 对话框的后期绑定**名称**属性。 若要使用此示例，请从 `ThisDocument` `ThisAddIn` Word 项目中的或类中运行它。
+ 下面的代码示例演示如何访问 Visual Basic 项目中 **Option Strict** 为 off 或面向的 Visual c # 项目中的后期绑定成员 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 。 此示例访问 Word 中 "**文件打开**" 对话框的后期绑定 **名称** 属性。 若要使用此示例，请从 `ThisDocument` `ThisAddIn` Word 项目中的或类中运行它。
 
  [!code-vb[Trin_VstcoreWordAutomation#122](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#122)]
  [!code-csharp[Trin_VstcoreWordAutomation#122](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#122)]

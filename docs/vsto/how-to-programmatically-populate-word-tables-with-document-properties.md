@@ -1,5 +1,7 @@
 ---
 title: 以编程方式用文档属性填充 Word 表
+description: 了解如何使用 Visual Studio 以编程方式使用 Microsoft Word 文档中的文档属性填充表。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2ce4fbdb69aae55bb5b79b6af17a0516a0b8786a
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 78e9968970406cd176a2f5f27305ca0346cf85bf
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585479"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97523784"
 ---
 # <a name="how-to-programmatically-populate-word-tables-with-document-properties"></a>如何：以编程方式用文档属性填充 Word 表
   下面的示例在文档的顶部创建 Microsoft Office Word 表格，并使用主机文档的属性填充它。

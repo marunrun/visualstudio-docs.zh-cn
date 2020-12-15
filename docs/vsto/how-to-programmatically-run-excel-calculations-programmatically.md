@@ -1,5 +1,7 @@
 ---
 title: 如何：以编程方式运行 Excel 计算
+description: 了解如何使用 Visual Studio 以编程方式在 Microsoft Excel 工作簿中运行计算。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a02e86864065d2c626de2f6e7fea7528554f1391
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e9f385e7c58972844c30320c680f42d8394580d8
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547376"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524695"
 ---
 # <a name="how-to-programmatically-run-excel-calculations"></a>如何：以编程方式运行 Excel 计算
   您可以使用类似的过程在 <xref:Microsoft.Office.Tools.Excel.NamedRange> 控件或本机 Excel 范围对象中运行计算。
@@ -56,7 +58,7 @@ ms.locfileid: "85547376"
      [!code-csharp[Trin_VstcoreExcelAutomationAddIn#31](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#31)]
      [!code-vb[Trin_VstcoreExcelAutomationAddIn#31](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#31)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [使用范围](../vsto/working-with-ranges.md)
 - [NamedRange 控件](../vsto/namedrange-control.md)
 - [Office 解决方案中的可选参数](../vsto/optional-parameters-in-office-solutions.md)

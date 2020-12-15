@@ -1,5 +1,7 @@
 ---
 title: 安全和部署演练
+description: 了解如何设置安全策略以允许解决方案运行以及如何部署 Office 解决方案。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 014b59efb945f6390877a2e9764e24b6c4cd639b
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 0a750aa97c371ce25c7b6797ee773e82d8ab8eb6
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810936"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524374"
 ---
 # <a name="security-and-deployment-walkthroughs"></a>安全和部署演练
   以下主题演示了如何设置安全策略以允许解决方案运行，以及如何部署 Office 解决方案。
@@ -41,7 +43,7 @@ ms.locfileid: "90810936"
 
 - [如何：为部署 Office 解决方案准备 IIS](/previous-versions/bb608629(v=vs.110)) 介绍如何在 Microsoft Internet Information Services 上配置 MIME 类型 (IIS) 部署清单。
 
-- [如何：更新部署的 Office 解决方案](/previous-versions/bb157871(v=vs.110)) 提供有关如何使用 **发布向导**更新 Office 解决方案的信息。
+- [如何：更新部署的 Office 解决方案](/previous-versions/bb157871(v=vs.110)) 提供有关如何使用 **发布向导** 更新 Office 解决方案的信息。
 
 - [如何：更改 Office 解决方案的安装路径](/previous-versions/bb608626(v=vs.110)) 提供有关如何更改 Office 解决方案的安装路径的信息。
 

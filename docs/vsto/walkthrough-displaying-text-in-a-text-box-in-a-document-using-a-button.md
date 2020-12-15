@@ -1,5 +1,7 @@
 ---
 title: 使用按钮在文档的文本框中显示文本
+description: 了解如何在 Microsoft Word 的文档级自定义项中使用按钮和文本框。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8f3c467abcee8fb4faafd2da06ba261e7f3039fe
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1cda1fe3e7430ff30dcc3b3921eb2bcd4d31b699
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "67328754"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97522747"
 ---
 # <a name="walkthrough-display-text-in-a-text-box-in-a-document-using-a-button"></a>演练：使用按钮在文档的文本框中显示文本
   本演练演示如何在 Microsoft Office Word 的文档级自定义项中使用按钮和文本框。
@@ -44,7 +46,7 @@ ms.locfileid: "67328754"
 
 ### <a name="to-create-a-new-project"></a>创建新项目的步骤
 
-1. 使用 " **我的单词" 按钮**创建一个 word 文档项目。 在向导中，选择 " **创建新文档**"。
+1. 使用 " **我的单词" 按钮** 创建一个 word 文档项目。 在向导中，选择 " **创建新文档**"。
 
      有关详细信息，请参阅 [如何：在 Visual Studio 中创建 Office 项目](../vsto/how-to-create-office-projects-in-visual-studio.md)。
 
@@ -64,14 +66,14 @@ ms.locfileid: "67328754"
 
 3. 在 **“视图”** 菜单上，单击 **“属性窗口”** 。
 
-4. 在 "**属性**" 窗口下拉框中查找**TextBox1** ，并将文本框的 "**名称**" 属性更改为 **"向下**搜索"。
+4. 在 "**属性**" 窗口下拉框中查找 **TextBox1** ，并将文本框的 "**名称**" 属性更改为 **"向下** 搜索"。
 
 5. 将一个 " **按钮** " 控件拖到文档中，并更改以下属性。
 
-   |属性|值|
+   |properties|值|
    |--------------|-----------|
    |**名称**|**insertText**|
-   |**Text**|**插入文本**|
+   |**文本**|**插入文本**|
 
    现在，你可以编写将在单击该按钮时运行的代码。
 
@@ -80,7 +82,7 @@ ms.locfileid: "67328754"
 
 ### <a name="to-write-to-the-text-box-when-the-button-is-clicked"></a>在单击按钮时写入文本框
 
-1. 在 **解决方案资源管理器**中，右键单击 **ThisDocument**，然后单击快捷菜单上的 " **查看代码** "。
+1. 在 **解决方案资源管理器** 中，右键单击 **ThisDocument**，然后单击快捷菜单上的 " **查看代码** "。
 
 2. 将下列代码添加到按钮的 <xref:System.Windows.Forms.Control.Click> 事件处理程序。
 

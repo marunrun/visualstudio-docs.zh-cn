@@ -1,5 +1,7 @@
 ---
 title: 如何：以编程方式打开 Visio 文档
+description: 了解如何使用 Open 或 Microsoft.office.interop.visio.documents.open 方法以编程方式打开 Visio 文档。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: eb21d201c282461cbe82005f56bed023bb022209
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ec46f4fd7be136d16e15e9fa366b7a4cb921b62e
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85519985"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97523843"
 ---
 # <a name="how-to-programmatically-open-visio-documents"></a>如何：以编程方式打开 Visio 文档
   可以通过两种方法打开现有 Microsoft Office Visio 文档： Open 和 Microsoft.office.interop.visio.documents.open。 Microsoft.office.interop.visio.documents.open 方法与 Open 方法相同，不同之处在于它提供调用方可以在其中指定文档打开方式的参数。

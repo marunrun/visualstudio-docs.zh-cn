@@ -1,5 +1,7 @@
 ---
 title: 如何：使用主机控件中的数据更新数据源
+description: 了解如何将宿主控件绑定到数据源，并使用对控件中的数据所做的更改来更新数据源。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 52540f0cf94a12efda891657ec4aae9452ad6f86
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 2f79b8ae8716631a7adc68446b0c5fe267a30a88
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585114"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97523603"
 ---
 # <a name="how-to-update-a-data-source-with-data-from-a-host-control"></a>如何：使用主机控件中的数据更新数据源
   可以将宿主控件绑定到数据源，然后使用在此控件中对数据所做的更改来更新该数据源。 此过程包括以下两个主要步骤：
@@ -75,20 +77,20 @@ ms.locfileid: "91585114"
 
 2. 单击希望其自动更新数据源的控件。
 
-3. 在“属性” **** 窗口中，展开“(DataBindings)” **** 属性。
+3. 在“属性”  窗口中，展开“(DataBindings)”  属性。
 
-4. 在 " ** (高级) ** " 属性旁边，单击省略号按钮 (" ![VisualStudioEllipsesButton 屏幕快照](../vsto/media/vbellipsesbutton.png "VisualStudioEllipsesButton 屏幕快照") ") 。
+4. 在 " **(高级)** " 属性旁边，单击省略号按钮 (" ![VisualStudioEllipsesButton 屏幕快照](../vsto/media/vbellipsesbutton.png "VisualStudioEllipsesButton 屏幕快照") ") 。
 
-5. 在“格式设置和高级绑定” **** 对话框中，单击“数据源更新模式” **** 下拉列表并选择以下值之一：
+5. 在“格式设置和高级绑定”  对话框中，单击“数据源更新模式”  下拉列表并选择以下值之一：
 
-    - 若要在验证控件时更新数据源，请选择“OnValidation” ****。
+    - 若要在验证控件时更新数据源，请选择“OnValidation” 。
 
-    - 若要在控件的数据绑定属性值更改时更新数据源，请选择“OnPropertyChanged” ****。
+    - 若要在控件的数据绑定属性值更改时更新数据源，请选择“OnPropertyChanged” 。
 
         > [!NOTE]
-        > 因为 Word 不提供文档更改或控件更改通知，所以“OnPropertyChanged” **** 选项不适用于 Word 宿主控件。 但是，此选项可用于 Word 文档中的 Windows 窗体控件。
+        > 因为 Word 不提供文档更改或控件更改通知，所以“OnPropertyChanged”  选项不适用于 Word 宿主控件。 但是，此选项可用于 Word 文档中的 Windows 窗体控件。
 
-6. 关闭“格式设置和高级绑定” **** 对话框。
+6. 关闭“格式设置和高级绑定”  对话框。
 
 ## <a name="update-the-database"></a>更新数据库
  如果内存中数据源与某个数据库关联，则必须使用对该数据源所做的更改来更新此数据库。 有关更新数据库的详细信息，请参阅使用 TableAdapter [将数据保存回数据库](../data-tools/save-data-back-to-the-database.md)  和 [更新数据](../data-tools/update-data-by-using-a-tableadapter.md) 。

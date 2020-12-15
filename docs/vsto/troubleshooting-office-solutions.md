@@ -1,5 +1,7 @@
 ---
 title: 排查 Office 解决方案问题
+description: 了解一些用于解决在使用 Visual Studio 中的 Office 开发工具创建解决方案时可能遇到的常见问题的提示。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: troubleshooting
 dev_langs:
@@ -14,17 +16,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 82fbb41bb1bf0d7ba3da046eb7d22eb8606a7529
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3ee25ea397af3805ac88b51d12a862bffdb20a00
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87234713"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97522830"
 ---
 # <a name="troubleshoot-office-solutions"></a>排查 Office 解决方案问题
   本部分包含用于解决常见问题的提示，你在通过使用 Visual Studio 中的 Office 开发工具创建解决方案时可能会遇到这些问题。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
 - [排查 Office 解决方案中的错误](../vsto/troubleshooting-errors-in-office-solutions.md)
 
  描述你在 Visual Studio 中设计、运行和测试 Office 解决方案时可能会产生的常见问题。

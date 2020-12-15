@@ -1,5 +1,7 @@
 ---
 title: 如何：以编程方式创建新的工作簿
+description: 了解如何使用 Visual Studio 以编程方式创建新的 Microsoft Excel 工作簿。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6a23f4b089d580d482193d278f22e4990d343097
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: daaaedc60988d7f523865d3979207dd1fe43e029
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85545972"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97523144"
 ---
 # <a name="how-to-programmatically-create-new-workbooks"></a>如何：以编程方式创建新的工作簿
   以编程方式创建工作簿时，它是一个本机 <xref:Microsoft.Office.Interop.Excel.Workbook> 对象，而不是 <xref:Microsoft.Office.Tools.Excel.Workbook> 主机项。

@@ -1,5 +1,7 @@
 ---
 title: 如何：以编程方式在工作表单元格中显示字符串
+description: 了解如何通过使用 NamedRange 控件或本机 Excel 范围对象，以编程方式在 Microsoft Excel 工作表单元格中显示字符串。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: eb3dbaec2efd95f63428e8494598720953f791e7
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: a97534b8ac43c9a05cfb59fb911442a87d51c767
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585218"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97523941"
 ---
 # <a name="how-to-programmatically-display-a-string-in-a-worksheet-cell"></a>如何：以编程方式在工作表单元格中显示字符串
   此示例演示如何以编程方式在单元中显示文本。 若要在单元格中显示文本，请使用 <xref:Microsoft.Office.Tools.Excel.NamedRange> 控件或本机 Excel 范围对象。

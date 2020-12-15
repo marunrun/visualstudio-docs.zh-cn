@@ -1,5 +1,7 @@
 ---
 title: Office 解决方案的特定安全注意事项
+description: 了解 Microsoft .NET 框架和 Microsoft Office 提供的安全功能如何帮助保护你的 Office 解决方案免受安全威胁。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 571b604b87fb7fac4e78c83a791c265d910fae94
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0da77067931d35ee63a9ccc9b0de85752157772b
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72985584"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524300"
 ---
 # <a name="specific-security-considerations-for-office-solutions"></a>Office 解决方案的特定安全注意事项
   Microsoft .NET Framework 和 Microsoft Office 提供的安全功能有助于保护你的 Office 解决方案免受可能的安全威胁。 本主题将介绍其中一些威胁并提供有助于免受这些威胁的建议。 还包括有关 Microsoft Office 安全设置如何影响 Office 解决方案的信息。
@@ -63,7 +65,7 @@ ms.locfileid: "72985584"
 
  对象模型防护仅可信任从此对象获取的 Outlook 对象。 与此相反，从新 `Microsoft.Office.Interop.Outlook.Application` 对象获取的对象不受信任，受限的属性和方法将引发安全警告（如果启用了对象模型防护）。
 
- 如果启用了对象模型防护，下面的代码示例将显示一条安全警告。 `Microsoft.Office.Interop.Outlook.MailItem` 类的 `To` 属性受对象模型防护限制。 `Microsoft.Office.Interop.Outlook.MailItem`对象不受信任，因为代码从 `Microsoft.Office.Interop.Outlook.Application` 使用**new**运算符创建的获取该对象，而不是从字段中获取该对象 `Application` 。
+ 如果启用了对象模型防护，下面的代码示例将显示一条安全警告。 `Microsoft.Office.Interop.Outlook.MailItem` 类的 `To` 属性受对象模型防护限制。 `Microsoft.Office.Interop.Outlook.MailItem`对象不受信任，因为代码从 `Microsoft.Office.Interop.Outlook.Application` 使用 **new** 运算符创建的获取该对象，而不是从字段中获取该对象 `Application` 。
 
  [!code-csharp[Trin_VstcoreOutlookSecurity#1](../vsto/codesnippet/CSharp/Trin_VstcoreOutlookSecurity/ThisAddIn.cs#1)]
  [!code-vb[Trin_VstcoreOutlookSecurity#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreOutlookSecurity/ThisAddIn.vb#1)]
@@ -87,9 +89,9 @@ ms.locfileid: "72985584"
  托管 Microsoft Office 应用程序的其他应用程序也可以阻止实行新权限。 当安全策略发生更改时，用户应当退出使用 Office 的所有（托管的或独立的）应用程序。
 
 ## <a name="trust-center-settings-in-the-microsoft-office-system-do-not-affect-add-ins-or-document-level-customizations"></a>Microsoft Office 系统中的 "信任中心" 设置不影响外接程序或文档级自定义项
- 通过设置“信任中心” **** 中的选项，用户可以阻止 VSTO 外接程序加载。 但是，使用 Visual Studio 中的 Office 解决方案创建的 VSTO 外接程序和文档级自定义项不受这些信任设置的影响。
+ 通过设置“信任中心” 中的选项，用户可以阻止 VSTO 外接程序加载。 但是，使用 Visual Studio 中的 Office 解决方案创建的 VSTO 外接程序和文档级自定义项不受这些信任设置的影响。
 
- 如果用户通过使用“信任中心” **** 阻止 VSTO 外接程序加载，则将不会加载以下几种类型的 VSTO 外接程序：
+ 如果用户通过使用“信任中心” 阻止 VSTO 外接程序加载，则将不会加载以下几种类型的 VSTO 外接程序：
 
 - 托管和非托管的 COM VSTO 外接程序。
 
@@ -99,21 +101,21 @@ ms.locfileid: "72985584"
 
 - 托管和非托管的实时数据组件。
 
-  下面的过程介绍用户如何能使用“信任中心” **** 来限制 VSTO 外接程序在 Microsoft [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] 和 Microsoft Office 2010 中加载。 这些过程不影响使用 Visual Studio 中的 Office 开发工具创建的 VSTO 外接程序或自定义项。
+  下面的过程介绍用户如何能使用“信任中心”  来限制 VSTO 外接程序在 Microsoft [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] 和 Microsoft Office 2010 中加载。 这些过程不影响使用 Visual Studio 中的 Office 开发工具创建的 VSTO 外接程序或自定义项。
 
 #### <a name="to-disable-vsto-add-ins-in-microsoft-office-2010-and-microsoft-office_15_short-applications"></a>在 Microsoft Office 2010 和 Microsoft [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] 应用程序中禁用 VSTO 外接程序
 
-1. 选择“文件” **** 选项卡。
+1. 选择“文件”  选项卡。
 
 2. 选择 " *ApplicationName* **选项** " 按钮。
 
-3. 在类别窗格中，选择“信任中心” ****。
+3. 在类别窗格中，选择“信任中心” 。
 
-4. 在细节窗格中，选择“信任中心设置” ****。
+4. 在细节窗格中，选择“信任中心设置” 。
 
-5. 在类别窗格中，选择“外接程序” ****。
+5. 在类别窗格中，选择“外接程序” 。
 
-6. 在细节窗格中，选择“要求应用程序外接程序由受信任的发布者签名” **** 或“禁用所有应用程序外接程序” ****。
+6. 在细节窗格中，选择“要求应用程序外接程序由受信任的发布者签名”  或“禁用所有应用程序外接程序” 。
 
 ## <a name="see-also"></a>另请参阅
 - [保护 Office 解决方案](../vsto/securing-office-solutions.md)

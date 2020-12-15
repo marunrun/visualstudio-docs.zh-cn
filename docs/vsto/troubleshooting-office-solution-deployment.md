@@ -1,5 +1,7 @@
 ---
 title: Office 解决方案部署疑难解答
+description: 了解如何解决在部署 Office 解决方案时可能遇到的常见问题。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: troubleshooting
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4c7db4a699fcc8b28e4f2f423f612738de6a6836
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: b70b03e8342564de828059d1a335f6347c19b5a3
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90806728"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97522972"
 ---
 # <a name="troubleshoot-office-solution-deployment"></a>Office 解决方案部署疑难解答
   本主题包含有关如何解决在部署 Office 解决方案时可能遇到的常见问题的信息。
@@ -30,7 +32,7 @@ ms.locfileid: "90806728"
  你可以使用 Windows 事件查看器来查看当你安装或卸载 Office 解决方案时，由 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 捕捉到的错误消息。 你可使用事件记录器中的这些消息来解决安装和部署问题。 有关详细信息，请参阅 [Office 解决方案的事件日志记录](../vsto/event-logging-for-office-solutions.md)。
 
 ## <a name="change-the-assembly-name-causes-conflicts"></a>更改程序集名称导致冲突
- 如果在部署了解决方案之后，在 "**项目设计器**" 的 "**应用程序**" 页中更改 "**程序集名称**" 值，则发布工具会修改安装程序包，使其包含一个*Setup.exe*文件和两个部署清单。 如果部署两个清单文件，则可能会出现以下条件：
+ 如果在部署了解决方案之后，在 "**项目设计器**" 的 "**应用程序**" 页中更改 "**程序集名称**" 值，则发布工具会修改安装程序包，使其包含一个 *Setup.exe* 文件和两个部署清单。 如果部署两个清单文件，则可能会出现以下条件：
 
 - 如果最终用户同时安装这两个版本，则应用程序会同时加载这两个 VSTO 外接程序。
 
@@ -71,9 +73,9 @@ ms.locfileid: "90806728"
 
 1. 在菜单栏上，依次选择 "项目"、"**项目**_名称_**属性**"。
 
-2. 在“应用程序” **** 页上，选择“程序集信息” ****。
+2. 在“应用程序”  页上，选择“程序集信息” 。
 
-3. 将 **程序集版本**的修订号、第三个字段设置为 () 的通配符 \* 。 例如，"1.0. *"。  然后选择 **"确定"** 按钮。
+3. 将 **程序集版本** 的修订号、第三个字段设置为 () 的通配符 \* 。 例如，"1.0. *"。  然后选择 **"确定"** 按钮。
 
    更改程序集版本之后，可以继续使用强名称对程序集进行签名，Fusion 会加载自定义项的最新版本。
 
@@ -102,7 +104,7 @@ ms.locfileid: "90806728"
   在不运行安装程序的情况下安装解决方案时，安装程序不会检查或安装先决条件。 安装程序会检查是否存在正确版本的先决条件并根据需要安装它们。
 
 ## <a name="manifest-registry-keys-for-add-ins-change-after-an-installshield-limited-edition-project-is-built"></a>生成 InstallShield 限制版本项目之后外接程序的清单注册表项更改
- 当你生成 InstallShield 受限版本项目时，VSTO 外接程序安装程序中的清单注册表项有时会从 *.vsto*更改为 *.dll。*
+ 当你生成 InstallShield 受限版本项目时，VSTO 外接程序安装程序中的清单注册表项有时会从 *.vsto* 更改为 *.dll。*
 
  要解决此问题，请在另一个解决方案中创建 InstallShield Limited Edition 项目，或使用 CompanyName.AddinName 作为包含 VSTO 外接程序名称的注册表项的值。
 

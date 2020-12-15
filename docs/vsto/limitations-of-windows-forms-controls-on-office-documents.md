@@ -1,5 +1,7 @@
 ---
 title: Office 文档 Windows 窗体控件的限制
+description: 了解 Windows 窗体控件方法和属性 Microsoft Office 文档的限制。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -21,12 +23,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ade7da21a8d07fbd429a88303ad2be375877c1ec
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 63459f4daf1f9fe717946491a997ba47510fbab8
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91583731"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524450"
 ---
 # <a name="limitations-of-windows-forms-controls-on-office-documents"></a>Office 文档 Windows 窗体控件的限制
 
@@ -71,7 +73,7 @@ Windows 窗体控件有很多方法和属性，这些方法和属性在文档中
 
 Windows 窗体控件在 Office 文档中的行为通常与 Windows 窗体上的行为相同，但存在一些差异。 下表描述了 Office 文档上 Windows 窗体控件存在的差异。
 
-|功能|差异|
+|功能|差|
 |-------------------|----------------|
 |控件 tab 键顺序|不能通过 tab 键将控件放置在 Excel 工作表或 Word 文档中。|
 |控件分组|不能使用 <xref:System.Windows.Forms.GroupBox> 控件在 Office 文档上包含其他控件。 当您将多个单选按钮直接添加到文档时，单选按钮并不是互相排斥的。 你可以编写代码以使单选按钮互斥;但是，首选方法是将单选按钮添加到用户控件，然后将该用户控件添加到文档中。 有关详细信息，请参阅 [Office 开发示例和演练](../vsto/office-development-samples-and-walkthroughs.md)中的 Word 控件示例或 Excel 控件示例。|
@@ -101,7 +103,7 @@ Windows 窗体控件在 Office 文档中的行为通常与 Windows 窗体上的�
 > [!NOTE]
 > 第三方控件必须将 <xref:System.Runtime.InteropServices.ComVisibleAttribute> 属性设置为 **true** ，才能在 Office 解决方案中使用。
 
-**工具箱**中没有以下控件和组件：
+**工具箱** 中没有以下控件和组件：
 
 - <xref:System.Windows.Forms.BindingNavigator>
 
