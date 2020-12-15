@@ -1,5 +1,7 @@
 ---
 title: VSPackage 结构 (源代码管理 VSPackage) |Microsoft Docs
+description: 了解源代码管理包 SDK，它为与 Visual Studio 集成的源代码管理实施者提供 VSPackage 的准则。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b3f09b189e1e4b47187586e66c74315ee32495c8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f5850dfb2448364124c8f1778eac48ac9c653269
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80703808"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487954"
 ---
 # <a name="vspackage-structure-source-control-vspackage"></a>VSPackage 结构（源代码管理 VSPackage）
 
@@ -72,7 +74,7 @@ Visual Studio 中的每个项目都必须实现 <xref:Microsoft.VisualStudio.She
 
 有关源代码管理 VSPackage 必须考虑的接口的完整列表，请参阅 [相关服务和接口](../../extensibility/internals/related-services-and-interfaces-source-control-vspackage.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [设计元素](../../extensibility/internals/source-control-vspackage-design-elements.md)
 - [相关服务和接口](../../extensibility/internals/related-services-and-interfaces-source-control-vspackage.md)

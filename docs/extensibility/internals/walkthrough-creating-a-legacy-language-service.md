@@ -1,5 +1,7 @@
 ---
 title: 演练：创建旧版语言服务 |Microsoft Docs
+description: '了解如何使用托管包框架语言类在 Visual c # 中实现语言服务。'
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,17 +12,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: dbdad85dd1c0f62b22bb33b5ed6ab2c597e62164
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4fcc4004542f9a566d6c6bfa820cbb8c2e1846fa
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905989"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487928"
 ---
 # <a name="walkthrough-creating-a-legacy-language-service"></a>演练：创建旧版语言服务
 使用托管包框架 (MPF) 语言类实现中的语言服务 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] 非常简单。 你需要一个 VSPackage 来托管语言服务、语言服务本身和语言分析器。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
  要按照本演练的步骤操作，必须安装 Visual Studio SDK。 有关详细信息，请参阅 [Visual STUDIO SDK](../../extensibility/visual-studio-sdk.md)。
 
 ## <a name="locations-for-the-visual-studio-package-project-template"></a>Visual Studio 包项目模板的位置
@@ -42,27 +44,27 @@ ms.locfileid: "85905989"
 
     您可以使用任何所需的名称。 此处详述的这些过程假定 MyLanguagePackage 为名称。
 
-3. 选择 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] 作为语言和选项以生成新的密钥文件。 单击“配置目录分区”  。
+3. 选择 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] 作为语言和选项以生成新的密钥文件。 单击 **“下一步”** 。
 
-4. 输入相应的公司和包信息。 单击“配置目录分区”  。
+4. 输入相应的公司和包信息。 单击 **“下一步”** 。
 
-5. 选择 " **菜单命令**"。 单击“配置目录分区”  。
+5. 选择 " **菜单命令**"。 单击 **“下一步”** 。
 
     如果不打算支持代码片段，只需单击 "完成"，然后忽略下一步。
 
-6. 输入 " **插入代码片段** " 作为 **命令名称** ，并输入 `cmdidInsertSnippet` **命令 ID**。 单击“完成”。
+6. 输入 " **插入代码片段** " 作为 **命令名称** ，并输入 `cmdidInsertSnippet` **命令 ID**。 单击“完成” 。
 
-    **命令名称**和**命令 ID**可以是你想要的任何内容，只是示例。
+    **命令名称** 和 **命令 ID** 可以是你想要的任何内容，只是示例。
 
 ### <a name="create-the-language-service-class"></a>创建语言服务类
 
-1. 在 **解决方案资源管理器**中，右键单击 MyLanguagePackage 项目，选择 " **添加**"、" **引用**"，然后选择 " **添加新引用** " 按钮。
+1. 在 **解决方案资源管理器** 中，右键单击 MyLanguagePackage 项目，选择 " **添加**"、" **引用**"，然后选择 " **添加新引用** " 按钮。
 
 2. 在 "**添加引用**" 对话框的 " **.net** " 选项卡中，选择 " **VisualStudio** "，然后单击 **"确定"**。
 
      对于语言包项目，仅需执行一次此操作。
 
-3. 在 **解决方案资源管理器**中，右键单击 VSPackage 项目，然后选择 " **添加**"、" **类**"。
+3. 在 **解决方案资源管理器** 中，右键单击 VSPackage 项目，然后选择 " **添加**"、" **类**"。
 
 4. 确保在 "模板" 列表中选择 " **类** "。
 
@@ -104,7 +106,7 @@ ms.locfileid: "85905989"
 
 #### <a name="deriving-from-an-mpf-class"></a>从 MPF 类派生
 
-1. 在 **解决方案资源管理器**中，右键单击 VSPackage 项目，然后选择 " **添加**"、" **类**"。
+1. 在 **解决方案资源管理器** 中，右键单击 VSPackage 项目，然后选择 " **添加**"、" **类**"。
 
 2. 确保在 "模板" 列表中选择 " **类** "。
 
@@ -130,5 +132,5 @@ ms.locfileid: "85905989"
 
      例如，键入 `public override` 可以查看可在该类中重写的所有方法的列表。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [实现旧版语言服务](../../extensibility/internals/implementing-a-legacy-language-service1.md)

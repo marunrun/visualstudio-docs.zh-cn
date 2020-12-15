@@ -1,5 +1,7 @@
 ---
-title: .VSCT 编译器命令行标志 |Microsoft Docs
+title: .VSCT 编译器 Command-Line 标志 |Microsoft Docs
+description: Visual Studio 命令表编译器提供了命令行选项，以确保成功编译 .vsct 文件。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,24 +13,24 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e4ee29710049453c3163c366eccf96e257b6028d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8d60b248a4941d176ac6ba4e808a94dbc67efbe7
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80703957"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97488006"
 ---
 # <a name="vsct-compiler-command-line-flags"></a>VSCT 编译器命令行标志
 Visual Studio 命令表 (.VSCT) 编译器提供了命令行开关，以确保成功编译 .vsct 文件。
 
 ## <a name="command-line-parameters"></a>命令行参数
- 若要在命令窗口中查看基本的 .VSCT 帮助 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **Command** ，请导航到*Visual Studio SDK 安装路径*\VisualStudioIntegration\Tools\Bin\ 文件夹，然后键入：
+ 若要在命令窗口中查看基本的 .VSCT 帮助 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]  ，请导航到 *Visual Studio SDK 安装路径*\VisualStudioIntegration\Tools\Bin\ 文件夹，然后键入：
 
 ```
 vsct /?
 ```
 
- 这将返回以下内容：
+ 这样会返回：
 
 ```
 Microsoft (R) Visual Studio (R) Command Table Compiler Version 3.00.2000

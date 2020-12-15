@@ -1,5 +1,7 @@
 ---
 title: 使用自动化模型 |Microsoft Docs
+description: 了解如何在 VSPackage 连接到自动化模型后获取其属性和方法。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d014627161666473d3b674f72cfec339a66fdc05
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: ad8c02f846a946933ac07d4aa546ad3ce3a2a82f
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012485"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97488162"
 ---
 # <a name="using-the-automation-model"></a>使用自动化模型
 将 VSPackage 连接到自动化后，可以通过对对象调用方法来获取属性和方法 <xref:EnvDTE.DTEClass.GetObject%2A> <xref:EnvDTE._DTE> ，同时传递表示要检索的对象的字符串。
@@ -58,7 +60,7 @@ objMyObject = MyPrj.Object 'You call .Object to get to special Project
 objMyObject.MySpecialMethodOrProperty
 ```
 
- 下面的代码列出了 " [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **工具**" 菜单上 "环境**常规**" 选项中所有属性的名称：
+ 下面的代码列出了 " [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **工具**" 菜单上 "环境 **常规**" 选项中所有属性的名称：
 
 ```vb
 dim objDTE

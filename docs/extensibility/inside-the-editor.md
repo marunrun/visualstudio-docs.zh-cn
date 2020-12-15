@@ -1,5 +1,7 @@
 ---
 title: 编辑器内
+description: 了解编辑器的子系统和功能。 可以扩展 Visual Studio 编辑器的功能。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: bba0b5192df53b6ec837b0030c7b236bf8e08dea
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 14193c0806c4b45f721ee97b101969de8437448d
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80710316"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487525"
 ---
 # <a name="inside-the-editor"></a>在编辑器内
 
@@ -59,13 +61,13 @@ ms.locfileid: "80710316"
 
 文本模型子系统 (UI) 概念上没有用户界面。 例如，它不负责文本格式设置或文本布局，并且它不知道可能与文本关联的视觉修饰。
 
-文本模型子系统的公共类型包含在 *Microsoft.VisualStudio.Text.Data.dll* 和 *Microsoft.VisualStudio.CoreUtility.dll*中，后者仅依赖于 .NET Framework 基类库和 Managed Extensibility Framework (MEF) 。
+文本模型子系统的公共类型包含在 *Microsoft.VisualStudio.Text.Data.dll* 和 *Microsoft.VisualStudio.CoreUtility.dll* 中，后者仅依赖于 .NET Framework 基类库和 Managed Extensibility Framework (MEF) 。
 
 ### <a name="text-view-subsystem"></a>文本视图子系统
 
 文本视图子系统负责设置和显示文本格式。 此子系统中的类型划分为两个层，具体取决于这些类型是否依赖于 (WPF) Windows Presentation Foundation。 最重要的类型为 <xref:Microsoft.VisualStudio.Text.Editor.ITextView> 和 <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextView> ，它们控制要显示的文本行集，以及使用 WPF UI 元素装饰文本的插入符号、选择和工具。 此子系统还提供文本显示区域周围的边距。 这些边距可以扩展，并且可以包含不同种类的内容和视觉效果。 边距的示例包括行号显示和滚动条。
 
-文本视图子系统的公共类型包含在 *Microsoft.VisualStudio.Text.UI.dll* 和 *Microsoft.VisualStudio.Text.UI.Wpf.dll*中。 第一个程序集包含独立于平台的元素，第二个程序集包含 WPF 特定的元素。
+文本视图子系统的公共类型包含在 *Microsoft.VisualStudio.Text.UI.dll* 和 *Microsoft.VisualStudio.Text.UI.Wpf.dll* 中。 第一个程序集包含独立于平台的元素，第二个程序集包含 WPF 特定的元素。
 
 ### <a name="classification-subsystem"></a>分类子系统
 
@@ -318,7 +320,7 @@ IntelliSense 支持语句完成、签名帮助 (也称为参数信息) 、快速
 
 语句完成为方法名称、XML 元素以及其他编码或标记元素提供可能的完成的弹出列表。 通常，用户笔势调用完成会话。 该会话将显示可能的完成的列表，用户可以选择一个列表或取消列表。 <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionBroker>负责创建和触发 <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSession> 。 <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource>计算会话的 <xref:Microsoft.VisualStudio.Language.Intellisense.CompletionSet> 完成项的。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [语言服务和编辑器扩展点](../extensibility/language-service-and-editor-extension-points.md)
 - [编辑器导入](../extensibility/editor-imports.md)

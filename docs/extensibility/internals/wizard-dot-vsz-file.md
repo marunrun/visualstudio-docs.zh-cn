@@ -1,5 +1,7 @@
 ---
 title: 向导 (。.Vsz) 文件 |Microsoft Docs
+description: 了解 IDE 用于启动向导的 .vsz 文件。 这些文件包含有关要调用哪个向导以及要传递到向导的内容的信息。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0fedf409c0ca320c054ddf1cc16318d08d25463a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5fe32028f271d02dd518509bb86906197e6acb4e
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80703313"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487733"
 ---
 # <a name="wizard-vsz-file"></a>向导 (.Vsz) 文件
 
@@ -46,7 +48,7 @@ Param="WIZARDUI = FALSE"
 
 若要将默认区域设置 ID 添加到 .vsz 文件，请指定 `FALLBACK_LCID` = xxxx，其中 xxxx 是区域设置 id，例如，1033表示英语。 `FALLBACK_LCID`定义参数时，如果未找到当前 ID，向导将使用提供的回退区域设置 ID。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [自定义参数](../../extensibility/internals/custom-parameters.md)
 - [向导](../../extensibility/internals/wizards.md)

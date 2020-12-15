@@ -1,5 +1,7 @@
 ---
 title: VSIX 颜色编辑器 |Microsoft Docs
+description: 了解 Visual Studio 扩展颜色编辑器工具，它可以为 Visual Studio 创建和编辑自定义颜色并生成主题资源键。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 70879c5d-e0f0-4845-993c-2f4229869706
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: aa3ed1f1a2a761a6602ac891eb78b5a5436abf92
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 66cb163a1943df9deb27ab4fa691b71ee116735e
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704047"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97488058"
 ---
 # <a name="vsix-color-editor"></a>VSIX 颜色编辑器
 Visual Studio 扩展颜色编辑器工具可为 Visual Studio 创建和编辑自定义颜色。 该工具还可以生成主题资源键，以便可以在代码中使用这些颜色。 此工具适用于为支持主题的 Visual Studio 扩展创建颜色。 此工具可以打开 .pkgdef 和 .xml 文件。 可以通过将文件扩展名更改为 .xml，将 visual Studio 主题 ( vstheme 文件) 可与 Visual Studio 扩展颜色编辑器一起使用。 此外，vstheme 文件可以导入到当前的 .xml 文件中。
@@ -65,7 +67,7 @@ Visual Studio 扩展颜色编辑器工具可为 Visual Studio 创建和编辑自
 
    一些常见的状态名称包括：
 
-- 活动
+- 可用
 
 - 非活动
 
@@ -139,7 +141,7 @@ Visual Studio 扩展颜色编辑器工具可为 Visual Studio 创建和编辑自
 
   ![VSIX 颜色编辑器 资源代码查看器](../../extensibility/internals/media/vsix-color-editor-resource-code-viewer.png "VSIX 颜色编辑器 资源代码查看器")
 
-  将此代码包含在项目中的静态类上。 需要将对 ** \<VSVersion>.0.dllVisualStudio ** 的引用添加到项目中，才能使用 **ThemeResourceKey** 类型。
+  将此代码包含在项目中的静态类上。 需要将对 **\<VSVersion>.0.dllVisualStudio** 的引用添加到项目中，才能使用 **ThemeResourceKey** 类型。
 
 ```csharp
 namespace MyCustomColors

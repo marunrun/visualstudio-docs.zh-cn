@@ -1,5 +1,7 @@
 ---
 title: 使用 Visual Studio 互操作程序集 |Microsoft Docs
+description: 了解 Visual Studio 互操作程序集如何允许托管应用程序访问提供 Visual Studio 扩展性的 COM 接口。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5926b2cce217565c889c7ef2eeef877691101ed6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1c52dd2cf8c76cdef9be5080950d5f1b9e621e70
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704135"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487655"
 ---
 # <a name="using-visual-studio-interop-assemblies"></a>使用 Visual Studio 互操作程序集
 Visual Studio 互操作程序集允许托管应用程序访问提供 Visual Studio 扩展性的 COM 接口。 直接 COM 接口和其互操作版本之间存在一些差异。 例如，Hresult 通常表示为 int 值，需要以与异常相同的方式进行处理，并且参数 (特别是处理不同的参数) 。

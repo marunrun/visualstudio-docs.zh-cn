@@ -1,5 +1,7 @@
 ---
 title: VSPackage 注册 |Microsoft Docs
+description: 了解 VSPackage 注册，其中包建议 Visual Studio 已安装，并应通过在注册表中写入信息来加载它们。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5941a0bc5d9f9f983a616dcc22cf1260d0911fa8
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 88c8294042bb61939a52f4053f5b27ae915e01df
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012121"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487980"
 ---
 # <a name="vspackage-registration"></a>VSPackage 注册
 Vspackage 必须建议 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 安装并加载它们。 此过程是通过在注册表中写入信息来完成的。 这是安装程序的典型作业。
@@ -40,7 +42,7 @@ Vspackage 必须建议 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.m
 > [!NOTE]
 > RegPkg 工具不可再发行，无法用于在用户系统上注册 VSPackage。
 
-## <a name="why-vspackages-should-not-self-register-at-install-time"></a>为什么 Vspackage 不应在安装时自行注册
+## <a name="why-vspackages-should-not-self-register-at-install-time"></a>为什么 Vspackage 不应在安装时 Self-Register
  VSPackage 安装程序不应依赖于自行注册。 乍一看，仅将 VSPackage 的注册表值保留在 VSPackage 中，这似乎是一个不错的想法。 假设开发人员需要可用于其日常工作和测试的注册表值，则可避免在安装程序中维护注册表数据的单独副本。 安装程序可以依赖于 VSPackage 本身来写入注册表值。
 
  尽管理论上如此良好，但自注册有几个瑕疵使其不适用于 VSPackage 安装：

@@ -1,5 +1,7 @@
 ---
 title: Visual Studio 2015 SDK 中源代码管理的新增功能 |Microsoft Docs
+description: 了解源代码管理 Vspackage 的功能并查看实现步骤的概述。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f90ae3e1d327b10e99713ad28aa2d5a06c0be34b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2af2c321eb91407808e71f4c0126b86d79980c53
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80703400"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487811"
 ---
 # <a name="whats-new-in-source-control-for-the-visual-studio-2015-sdk"></a>Visual Studio 2015 SDK 的源代码管理中的新增功能
 

@@ -1,5 +1,7 @@
 ---
 title: 网站支持模板 |Microsoft Docs
+description: 了解网站支持模板。 Visual Studio 网站项目和项模板提供可重用且可自定义的网站项目和项存根。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0e3c139ae6f2f9ec618e6382a1551a9e35eee7ec
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d7bb3d669dadf7c33fa81231adf26ae30e999c51
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80703453"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487850"
 ---
 # <a name="web-site-support-templates"></a>网站支持模板
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 网站项目和项模板提供可重用且可自定义的网站项目和项存根，可通过无需从头开始创建新的网站项目和项来加速开发过程。 有关模板的详细信息 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ，请参阅 [创建项目和项模板](../../ide/creating-project-and-item-templates.md)。
@@ -40,7 +42,7 @@ ms.locfileid: "80703453"
 - Web 服务项目
 
 ### <a name="empty-web-site-projects"></a>空网站项目
- 这些文件会创建一个新的空网站来响应**空**的网站命令，该命令在选择 "**文件**" "新建网站" 后提供  >  **New Web Site**：
+ 这些文件会创建一个新的空网站来响应 **空** 的网站命令，该命令在选择 "**文件**" "新建网站" 后提供  >  ：
 
 - EmptyWeb
 
@@ -51,7 +53,7 @@ ms.locfileid: "80703453"
      此文件是项目模板系统的项目。 它满足 EmptyWeb 文件中的项目文件引用。
 
 ### <a name="web-site-projects"></a>网站项目
- 这些文件会创建一个新网站来响应**ASP.NET**网站命令，该命令在选择 "**文件**" "新建网站" 后提供  >  **New Web Site**：
+ 这些文件会创建一个新网站来响应 **ASP.NET** 网站命令，该命令在选择 "**文件**" "新建网站" 后提供  >  ：
 
 - Default.aspx
 
@@ -74,13 +76,13 @@ ms.locfileid: "80703453"
      此文件是项目模板系统的项目。 它满足 WebApplication 文件中的项目文件引用。
 
 ### <a name="web-service-projects"></a>Web 服务项目
- 在选择 "**文件**" "新建网站" 后，这些文件会创建一个新网站来响应**ASP.NET Web 服务**命令，该命令可用  >  **New Web Site**：
+ 在选择 "**文件**" "新建网站" 后，这些文件会创建一个新网站来响应 **ASP.NET Web 服务** 命令，该命令可用  >  ：
 
 - 服务 .asmx
 
      新 Web 服务的 HTML 页。 Language 特性指定了代码隐藏语言，而代码隐藏特性指定了包含与此服务关联的代码隐藏代码的依赖文件。
 
-- 服务。 *extension*
+- Service。 *extension*
 
      实现服务类的依赖文件。 代码隐藏语言确定此文件的 *扩展名* 。
 
@@ -184,5 +186,5 @@ ms.locfileid: "80703453"
 
      确定新母版页的内容及其依赖文件（如果有）的模板文件。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [网站支持](../../extensibility/internals/web-site-support.md)
