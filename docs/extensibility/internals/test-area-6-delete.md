@@ -1,5 +1,7 @@
 ---
 title: 测试区域6：删除 |Microsoft Docs
+description: 此源代码管理测试区域涉及 Visual Studio 源代码管理插件的解决方案资源管理器中的删除操作。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +13,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9902ab9d1cb9c28ddf67b83590a4cccd5f6562f2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1371472a4dec265b5e476d96a32cb725e91ce7fe
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704512"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487551"
 ---
 # <a name="test-area-6-delete"></a>测试区域 6：删除
 此源代码管理插件测试区域包含删除操作。
 
- 源代码管理响应 **解决方案资源管理器**中的删除操作。
+ 源代码管理响应 **解决方案资源管理器** 中的删除操作。
 
  下面是可以删除的项列表：
 
@@ -29,14 +31,14 @@ ms.locfileid: "80704512"
 
 - 文件夹
 
-- 项目
+- Project
 
-  根据项目类型，可以选择 **删除** 项目 (将文件保留在磁盘上) 或 **删除** 项目 (删除磁盘上的文件) 。 任一操作都从 **解决方案资源管理器**中删除项目或项。
+  根据项目类型，可以选择 **删除** 项目 (将文件保留在磁盘上) 或 **删除** 项目 (删除磁盘上的文件) 。 任一操作都从 **解决方案资源管理器** 中删除项目或项。
 
 ## <a name="expected-behavior"></a>预期行为
  删除测试区域中的测试用例的预期行为如下：
 
-- **解决方案资源管理器**中不再显示已删除的项。
+- **解决方案资源管理器** 中不再显示已删除的项。
 
 - 所删除的项目或项的父项会根据需要签出 (可能有提示。 ) 
 
@@ -52,5 +54,5 @@ ms.locfileid: "80704512"
 |删除文件系统 Web 项目|1. 创建文件系统 Web 项目 (使用 "浏览" 按钮指定 UNC 路径) 。<br />2. 将解决方案添加到源代码管理。<br />3. 从解决方案中删除整个项目。<br />4. 为本地 Web 项目重复步骤1到 3 (在代码中执行不同的路径，但具有相同的外部接口和行为) 。|常见的预期行为。|
 |从文件系统 Web 项目中删除文件|1. 创建文件系统 Web 项目。<br />2. 将解决方案添加到源代码管理。<br />3. 从项目中删除文件。<br />4. 为本地 Web 项目重复步骤1到 3 (在代码中执行不同的路径，但具有相同的外部接口和行为) 。|常见的预期行为。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [源代码管理插件的测试指南](../../extensibility/internals/test-guide-for-source-control-plug-ins.md)

@@ -1,5 +1,7 @@
 ---
 title: Windows Installer 基础知识 |Microsoft Docs
+description: 了解用于安装 VSPackage 的 Windows Installer，包括将 VSPackage 功能组织到 Windows Installer 组件中。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: aeea0b17a3c234bb7670642fb9ae0a442c9d60cd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1f4ca1908fbd54c0e8d12212bed19fc77e1dff51
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80703418"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487772"
 ---
 # <a name="windows-installer-basics"></a>Windows Installer 基本知识
 Windows Installer 将在用户计算机上安装和卸载应用程序或软件产品，以 Windows Installer 组件的单元执行这些任务， (有时称为 WICs 或只是组件) 。 GUID 标识每个 WIC，这是使用 Windows Installer 安装程序的基本安装和引用计数。
@@ -55,17 +57,17 @@ Windows Installer 将在用户计算机上安装和卸载应用程序或软件�
 > [!NOTE]
 > 仅当你运行 .msi 文件的验证时，才会执行 Windows Installer 规则。 不过，您注意事项将这些规则视为最佳做法。 有关详细信息，请参阅 [验证安装数据库](/windows/desktop/Msi/validating-an-installation-database) 和 [包验证](/windows/desktop/Msi/package-validation)。
 
-#### <a name="installer-enforced-rules"></a>安装程序强制执行的规则
+#### <a name="installer-enforced-rules"></a>Installer-Enforced 规则
 
 - 指定组件中的所有文件都必须安装在同一个目录中。 相反，安装到不同文件夹的文件必须属于单独的组件。
 
 - 每个组件只能有一个密钥路径。 密钥路径只是表示整个组件的文件或注册表项。
 
-#### <a name="component-provider-responsibilities"></a>组件提供者责任
+#### <a name="component-provider-responsibilities"></a>Component-Provider 职责
 
 - 可能会在后续版本中单独交付的任意两个资源都存在于单独的组件中。 只有确信这些资源不会单独交付时，才应将资源分组到同一个组件中。 事实上，建议所有主资源 (Dll，例如) 在单独的 WICs 中始终存在。 有关详细信息，请参阅 [定义安装程序组件](/windows/desktop/Msi/defining-installer-components)。
 
 - 不应在多个 WIC 中交付版本控制资源。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [如果组件规则中断，会发生什么情况？](/windows/desktop/Msi/what-happens-if-the-component-rules-are-broken)

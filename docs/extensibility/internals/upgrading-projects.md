@@ -1,5 +1,7 @@
 ---
 title: 升级项目 |Microsoft Docs
+description: 了解 Visual Studio SDK 提供的用于在项目中实现升级支持的接口。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a99207fc14cf9f462bc1abc88d6fed166ea6523f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5d42a912761f04fb122551dc14ec077f1869f6bf
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704258"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487577"
 ---
 # <a name="upgrading-projects"></a>升级项目
 
@@ -50,7 +52,7 @@ ms.locfileid: "80704258"
 > [!NOTE]
 > 该 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory.UpgradeProject%2A> 方法不提供 SVsUpgradeLogger 服务。 可以通过调用来获取此服务 <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider.QueryService%2A> 。
 
-## <a name="best-practices"></a>最佳实践
+## <a name="best-practices"></a>最佳方案
 
 使用 <xref:Microsoft.VisualStudio.Shell.Interop.SVsQueryEditQuerySave> 服务检查是否可以在编辑文件之前对其进行编辑，并在保存之前保存文件。 这将帮助你的备份和升级实现处理源代码管理下的项目文件、权限不足的文件等。
 
@@ -60,7 +62,7 @@ ms.locfileid: "80704258"
 
 ## <a name="upgrading-custom-projects"></a><a name="upgrading-custom-projects"></a> 升级自定义项目
 
-如果你更改保留在产品的不同 Visual Studio 版本之间的项目文件中的信息，则你需要支持将项目文件从旧版本升级到新版本。 若要支持允许你参与 **Visual Studio 转换向导**的升级，请实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory> 接口。 此接口包含可用于复制升级的唯一机制。 项目的升级作为解决方案打开的一部分而发生。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory> 接口由项目工厂实现或至少应从项目工厂获得。
+如果你更改保留在产品的不同 Visual Studio 版本之间的项目文件中的信息，则你需要支持将项目文件从旧版本升级到新版本。 若要支持允许你参与 **Visual Studio 转换向导** 的升级，请实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory> 接口。 此接口包含可用于复制升级的唯一机制。 项目的升级作为解决方案打开的一部分而发生。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory> 接口由项目工厂实现或至少应从项目工厂获得。
 
 仍支持使用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade> 接口的旧机制，但该机制将会把项目系统作为项目打开的一部分进行概念上的升级。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade>因此，即使调用或实现了接口，Visual Studio 环境也会调用接口 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory> 。 此方法允许你使用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory> 来实现复制、仅规划升级的部分并通过 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade> 接口委派要就地（可能在新位置）完成的剩余工作。
 
@@ -179,6 +181,6 @@ ms.locfileid: "80704258"
 
 2. 当项目项收到项目升级通知时，仍然会显示 **Visual Studio 转换向导** 。 因此，应使用接口的方法向 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUpgradeLogger> 向导 UI 提供升级消息。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [项目](../../extensibility/internals/projects.md)

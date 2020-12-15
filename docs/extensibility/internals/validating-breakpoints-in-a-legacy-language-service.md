@@ -1,5 +1,7 @@
 ---
 title: 验证旧版语言服务中的断点 |Microsoft Docs
+description: 了解如何重写旧版语言服务中的 ValidateBreakpointLocation 方法，以便在启动调试器之前验证断点。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: af09e4f8f2156100bea9267c92ffebeb64ce1aa3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9d48db7397e2f9a5921315036bea15551fb7baa9
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704096"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97488019"
 ---
 # <a name="validating-breakpoints-in-a-legacy-language-service"></a>验证旧版语言服务中的断点
 断点指示当程序在调试器中运行时，程序执行应在某个特定时间点停止。 用户可以在源文件中的任意行上放置一个断点，因为该编辑器并不知道哪些内容构成了断点的有效位置。 启动调试器时，所有标记的断点 (称为挂起断点) 被绑定到正在运行的程序中的适当位置。 同时对断点进行验证，以确保它们标记有效的代码位置。 例如，注释上的断点无效，因为源代码中的该位置没有代码。 调试器将禁用无效断点。
@@ -98,5 +100,5 @@ namespace TestLanguagePackage
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [旧版语言服务功能](../../extensibility/internals/legacy-language-service-features1.md)

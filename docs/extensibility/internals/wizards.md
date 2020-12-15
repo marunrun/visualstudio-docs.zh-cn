@@ -1,5 +1,7 @@
 ---
 title: 向导 |Microsoft Docs
+description: 了解如何在 Visual Studio 中的可用向导和模板中列出向导，以及向导在 IDE 中必须满足的要求。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,17 +12,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d65cf2dcc10380b0ac750c8e1b0e7fd56eab95b5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f367723a3c819635f2d7cf20ed812a36cda12830
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80703213"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487746"
 ---
 # <a name="wizards"></a>向导
-创建向导后，通常需要将其添加到 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 集成开发环境中 (IDE) ，以便其他人可以使用它。 添加的向导随后会出现在 " **添加新项目** " 或 " **添加新项** " 对话框中。 若要查看 " **添加新项目** " 或 " **添加新项** " 对话框，请在 **解决方案资源管理器**中右键单击打开的解决方案，指向 " **添加**"，然后单击 " **新建项目** " 或 " **新建项**"。
+创建向导后，通常需要将其添加到 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 集成开发环境中 (IDE) ，以便其他人可以使用它。 添加的向导随后会出现在 " **添加新项目** " 或 " **添加新项** " 对话框中。 若要查看 " **添加新项目** " 或 " **添加新项** " 对话框，请在 **解决方案资源管理器** 中右键单击打开的解决方案，指向 " **添加**"，然后单击 " **新建项目** " 或 " **新建项**"。
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]当用户打开 "**添加新项目**" 对话框或 "**添加新项**" 对话框，或在**解决方案资源管理器**中右键单击某项时，可以在中实现，以允许用户从可用值的树视图中进行选择。
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]当用户打开 "**添加新项目**" 对话框或 "**添加新项**" 对话框，或在 **解决方案资源管理器** 中右键单击某项时，可以在中实现，以允许用户从可用值的树视图中进行选择。
 
  在向导中，您可以提供对新项目或 ites 的名称进行本地化的选项，并且可以确定用户在选择该向导时将看到的图标。 您还可以控制新项相对于其他可用项的显示顺序;不需要按字母顺序对项进行组织。
 

@@ -1,5 +1,7 @@
 ---
 title: Web 项目基础知识 |Microsoft Docs
+description: 了解有关 web 项目在 Visual Studio 中的工作方式的内部详细信息。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 09e33248ca264fefa79a8d5d5fa5d0cfa3d2da1d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1bf16582cdc9bba6529d237d74d56ebded299fb9
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80703551"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487915"
 ---
 # <a name="web-project-essentials"></a>Web 项目基础知识
 Web 项目创建 Web 应用程序。 您可以使用 Web 项目来创建包含智能网页的 Web 应用程序。 智能网页包含按需呈现网页的服务器端代码。
@@ -57,5 +59,5 @@ Web 项目创建 Web 应用程序。 您可以使用 Web 项目来创建包含�
 
   - 应始终在代码编辑器的主缓冲区中创建错误标记 (红色标记) 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [Web 项目](../../extensibility/internals/web-projects.md)

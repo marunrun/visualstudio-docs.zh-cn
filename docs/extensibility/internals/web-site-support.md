@@ -1,5 +1,7 @@
 ---
 title: 网站支持 |Microsoft Docs
+description: 了解网站项目系统，这些系统是通过将模板和注册属性添加到现有项目系统创建的。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 22047ad1b0709cefa200656e61f8e0d39ace94c9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 06f8ffdd504182dd82b11d4b5ce5f57e0a7629c3
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80703445"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487837"
 ---
 # <a name="web-site-support"></a>网站支持
 网站项目系统是用于创建 Web 项目的项目系统。 Web 项目，然后创建 Web 应用程序。 网站项目为每个包含关联代码的网页生成一个可执行文件。 其他可执行文件是从/App_Code 文件夹中的源代码文件生成的。
@@ -25,7 +27,7 @@ ms.locfileid: "80703445"
  用于编译网页的语言编译器必须注册到 [!INCLUDE[vstecasp](../../code-quality/includes/vstecasp_md.md)] 。 您可以使用 Web.config 文件中的[ \<compiler> 元素](/dotnet/framework/configure-apps/file-schema/compiler/compiler-element)来注册编译器，如以下示例中所示：
 
 ```
-<system.codedom>  <compilers>    <compiler language="py;IronPython" extension=".py"       type="IronPython.CodeDom.PythonProvider, IronPython,       Version=1.0.2391.18146, Culture=neutral,       PublicKeyToken=b03f5f7f11d50a3a" />  </compilers></system.codedom>
+<system.codedom>  <compilers>    <compiler language="py;IronPython" extension=".py"       type="IronPython.CodeDom.PythonProvider, IronPython,       Version=1.0.2391.18146, Culture=neutral,       PublicKeyToken=b03f5f7f11d50a3a" />  </compilers></system.codedom>
 ```
 
 ## <a name="in-this-section"></a>本节内容

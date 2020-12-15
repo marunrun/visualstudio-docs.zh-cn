@@ -1,5 +1,7 @@
 ---
 title: 使用 MSBuild | Microsoft Docs
+description: MSBuild 提供一个可扩展的 XML 格式，用于创建完全描述要生成的项目项、生成任务和生成配置的项目文件。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f961249ff584f7767dc2505bb20b1fb0961b7dd3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0d5168d739e49ebfc78054ea695f8b73a3e06fbc
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704291"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487668"
 ---
 # <a name="using-msbuild"></a>使用 MSBuild
 MSBuild 提供定义完善的可扩展 XML 格式，用于创建完全描述要生成的项目项、生成任务和生成配置的项目文件。
@@ -53,7 +55,7 @@ MSBuild 提供定义完善的可扩展 XML 格式，用于创建完全描述要�
 #### <a name="single-file-generators-vs-msbuild-tasks"></a>单个文件生成器与 MSBuild 任务
  单个文件生成器只能在设计时进行访问，但 MSBuild 任务可在设计时和生成时使用。 因此，为了最大限度地提高灵活性，请使用 MSBuild 任务来转换和生成代码。 有关详细信息，请参阅 [自定义工具](../../extensibility/internals/custom-tools.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [MSBuild 引用](../../msbuild/msbuild-reference.md)
 - [MSBuild](../../msbuild/msbuild.md)
 - [自定义工具](../../extensibility/internals/custom-tools.md)

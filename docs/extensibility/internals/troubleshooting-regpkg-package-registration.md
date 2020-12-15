@@ -1,5 +1,7 @@
 ---
 title: RegPkg 包注册疑难解答 |Microsoft Docs
+description: 使用此信息对 Visual Studio 中的 RegPkg 包注册进行故障排除。 使用适用于你的包的 RegPkg 版本。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: troubleshooting
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b5266579ff235a0f6c4f3e555d79d5a00de2c194
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: eef67b86925bc38a317196bbf00860b75a6ee15c
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87234856"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487707"
 ---
 # <a name="troubleshooting-regpkg-package-registration"></a>RegPkg 包注册疑难解答
 > [!NOTE]
@@ -36,6 +38,6 @@ ms.locfileid: "87234856"
 
    RegPkg 的早期版本可以注册使用 Microsoft.VisualStudio.Shell.dll 程序集生成的包。 但是，它无法注册使用该程序集的更高版本生成的包。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [VSPackages](../../extensibility/internals/vspackages.md)
 - [Visual Studio 故障排除](/troubleshoot/visualstudio/welcome-visual-studio/)

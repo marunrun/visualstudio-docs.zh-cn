@@ -1,5 +1,7 @@
 ---
 title: Web 项目 |Microsoft Docs
+description: 在 Visual Studio 中了解有关 web 项目系统如何适用于要扩展 Visual Studio 的开发人员的内部详细信息。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 23194ba5ad59a113e5599b7fe1f5f39bed557351
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6afdbff1e844f45cac56b68909e1327a190f7a74
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80703533"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487876"
 ---
 # <a name="web-projects"></a>Web 项目
 Web 项目系统是用于创建 Web 项目的项目系统。 Web 项目，然后创建 Web 应用程序。 您可以使用传统的编程语言（如 [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] 或）来编写网页 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] ，以便从用户那里收集和处理信息，将其存储在数据库中，等等。 具有关联代码的网页称为智能网页。

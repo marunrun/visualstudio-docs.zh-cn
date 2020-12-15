@@ -1,5 +1,7 @@
 ---
 title: IntelliSenseHostFlags |Microsoft Docs
+description: IntelliSenseHostFlags 枚举指定 IntelliSense 主机标志。 本文介绍枚举值。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a0df05e7363db01bd4f16fee5d75141dc93df1c0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b206cc4aa7c1ff388d6868fa8a0533d15da094ff
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80710273"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487499"
 ---
 # <a name="intellisensehostflags"></a>IntelliSenseHostFlags
 指定 IntelliSense 主机标志。
@@ -36,7 +38,7 @@ enum IntellisenseHostFlags
 };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |成员|说明|
 |-------------|-----------------|
@@ -49,5 +51,5 @@ enum IntellisenseHostFlags
 ## <a name="requirements"></a>要求
  SingleFileeditor .idl
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - <xref:Microsoft.VisualStudio.TextManager.Interop>

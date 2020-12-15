@@ -1,5 +1,7 @@
 ---
 title: 何时创建项目类型 |Microsoft Docs
+description: 了解如何确定是否需要新的项目类型来为用户自定义 Visual Studio。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: cd5caea4d07ff34af8c8cee83c24ae20e8b8f108
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 458ca77ebcd8017b9834a8925edec255ca04cc13
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012004"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487824"
 ---
 # <a name="when-to-create-project-types"></a>何时创建项目类型
 创建新的项目类型提供了为用户自定义的基础 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。 但是，对于所有自定义项，不需要创建新的项目类型 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。 以下准则可帮助您确定方案是否需要新的项目类型。
@@ -27,7 +29,7 @@ ms.locfileid: "90012004"
 
 - 提供调试支持。
 
-- 在 **解决方案资源管理器**中显示项目项。
+- 在 **解决方案资源管理器** 中显示项目项。
 
 - 使用 " **打开项目** " 或 " **新建项目** " 对话框。
 
@@ -47,7 +49,7 @@ ms.locfileid: "90012004"
 ## <a name="use-an-existing-project-type"></a>使用现有的项目类型
  有时不需要创建新项目。 下表显示了不需要为其创建项目类型的任务。
 
-|任务|描述|
+|任务|说明|
 |----------|-----------------|
 |处理命令|任何 VSPackage 都可以处理命令。|
 |生成编辑器|可以注册自定义编辑器。 有关详细信息，请参阅 [Document Windows And 编辑器](/previous-versions/bb165691(v=vs.100))。|
