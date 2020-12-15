@@ -1,5 +1,6 @@
 ---
 title: '对 c # (的项目类型使用托管包框架 ) '
+description: 了解托管包框架，该框架提供可用于实现自己的项目类型的 .NET 类，您可以使用这些类或从继承这些类。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: fca3f95780d548b4482c502f5b3eaa44005fd2e2
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 4b425962ed0f664b8255b6489ac8f0d38be7c13c
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90038642"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487538"
 ---
 # <a name="using-the-managed-package-framework-to-implement-a-project-type-c"></a>使用托管包框架实现项目类型 (C#)
 托管包框架 (MPF) 提供可用于实现自己的项目类型的 c # 类。 MPF 实现了许多 Visual Studio 所需的接口，从而让你自由地集中精力实现项目类型的细节。
@@ -84,7 +85,7 @@ ms.locfileid: "90038642"
 |`Microsoft.VisualStudio.Package.AssemblyReferenceNode`|
 |`Microsoft.VisualStudio.Package.BuildDependency`|
 
-## <a name="document-handling-classes"></a>文档处理类
+## <a name="document-handling-classes"></a>Document-Handling 类
  下表列出了支持文档处理的 MPF 中的类。 有关详细信息，请参阅 [打开和保存项目项](../../extensibility/internals/opening-and-saving-project-items.md)。
 
 |类名|
@@ -103,7 +104,7 @@ ms.locfileid: "90038642"
 |`Microsoft.VisualStudio.Package.OutputGroup`|
 |`Microsoft.VisualStudio.Package.ProjectElement`|
 
-## <a name="automation-support-classes"></a>自动化-支持类
+## <a name="automation-support-classes"></a>Automation-Support 类
  下表列出了支持自动化的 MPF 中的类，以便您的项目类型的用户可以编写外接程序。
 
 |类名|
