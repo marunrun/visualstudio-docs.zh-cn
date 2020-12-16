@@ -1,5 +1,7 @@
 ---
 title: 宿主项和宿主控件的编程限制
+description: 了解宿主项和宿主控件的行为与本机 Office 对象在运行时的基本差异。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -31,12 +33,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 098145ca901b1f16974058513d3781fc4621f217
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 08205473636a04dbc742b6c09c99e9771094f61c
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584472"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525125"
 ---
 # <a name="programmatic-limitations-of-host-items-and-host-controls"></a>宿主项和宿主控件的编程限制
   每个宿主项和宿主控件的行为都类似于相应的本机 Microsoft Office Word 或 Microsoft Office Excel 对象，并且具有附加功能。 但是，在运行时宿主项和宿主控件的行为与本机 Office 对象之间存在一些本质区别。

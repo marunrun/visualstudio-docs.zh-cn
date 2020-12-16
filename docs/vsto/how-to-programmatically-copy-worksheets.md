@@ -1,5 +1,7 @@
 ---
 title: 如何：以编程方式复制工作表
+description: 了解如何创建工作表的副本，并在工作簿中的现有工作表之前或之后插入该工作表。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8226f337994c686d4d370e91831bc1262d3ef85e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d4b2f16cfc8855f2adff3a4614c38eb70fbe7db5
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546076"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524795"
 ---
 # <a name="how-to-programmatically-copy-worksheets"></a>如何：以编程方式复制工作表
   你可以创建一份工作表的副本，并将该工作表插入工作簿中现有的工作表之前或之后。 如果不指定要插入工作表的位置，则 Excel 将创建一个新的工作簿来容纳新工作表。

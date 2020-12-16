@@ -1,5 +1,7 @@
 ---
 title: IWefDebuggingSupport 接口
+description: 了解如何使用 Visual Studio 之类的调试环境，以便对 Microsoft Office 应用程序进行调试。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: interface
 dev_langs:
@@ -10,12 +12,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0a4883d36c1833c66a2539380184521b070f5c2a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6a818973bdc2f62194d6ed0026c0798806fe5f2a
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85544724"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525329"
 ---
 # <a name="iwefdebuggingsupport-interface"></a>IWefDebuggingSupport 接口
   由调试环境（如 Visual Studio）实现，以便为 Office 应用程序进行调试。 Office 应用程序（如 Word 或 Excel）从 Visual Studio 获取此接口，然后在调试会话过程中的特定点调用接口上的方法。

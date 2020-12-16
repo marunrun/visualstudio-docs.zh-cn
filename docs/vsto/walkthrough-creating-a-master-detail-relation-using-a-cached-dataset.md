@@ -1,5 +1,7 @@
 ---
 title: 使用缓存的数据集创建主/从关系
+description: 了解如何在工作表上创建主/从关系以及缓存数据，以便可以脱机使用该解决方案。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0acf84dd983a8c10f2af526ae0bb904eaa90a360
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: de7bf3ba34a2a7dd3e7db9ff549e4a839800d524
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "67328353"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524870"
 ---
 # <a name="walkthrough-create-a-master-detail-relation-using-a-cached-dataset"></a>演练：使用缓存的数据集创建主/从关系
   本演练演示如何在工作表上创建主/从关系以及缓存数据，以便可以脱机使用该解决方案。
@@ -54,7 +56,7 @@ ms.locfileid: "67328353"
 
 ### <a name="to-create-a-new-project"></a>创建新项目的步骤
 
-1. 使用 Visual Basic 或 c # 创建一个名为 **Master-Detail**的 Excel 工作簿项目。 请确保已选中 " **创建新文档** "。 有关详细信息，请参阅 [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)。
+1. 使用 Visual Basic 或 c # 创建一个名为 **Master-Detail** 的 Excel 工作簿项目。 请确保已选中 " **创建新文档** "。 有关详细信息，请参阅 [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)。
 
    Visual Studio 将在设计器中打开新的 Excel 工作簿，并将 **我的母版页-Detail** 项目添加到 **解决方案资源管理器**。
 
@@ -81,7 +83,7 @@ ms.locfileid: "67328353"
 
 9. 单击“完成”。
 
-   向导将两个表添加到 " **数据源** " 窗口。 它还将一个类型化数据集添加到你的项目中，该数据集在 **解决方案资源管理器**中可见。
+   向导将两个表添加到 " **数据源** " 窗口。 它还将一个类型化数据集添加到你的项目中，该数据集在 **解决方案资源管理器** 中可见。
 
 ## <a name="add-controls-to-the-worksheet"></a>向工作表添加控件
  在此步骤中，您将向第一个工作表添加命名范围、列表对象和两个按钮。 首先，从 " **数据源** " 窗口添加命名范围和列表对象，以便将其自动绑定到数据源。 接下来，从 " **工具箱**" 中添加按钮。
@@ -96,17 +98,17 @@ ms.locfileid: "67328353"
 
 4. 在下拉列表中单击 " **NamedRange** "，然后将 " **订单 id** " 列拖到单元格 **A2**。
 
-     <xref:Microsoft.Office.Tools.Excel.NamedRange> `OrderIDNamedRange` 在单元**A2**中创建名为的控件。 同时，会将一个 <xref:System.Windows.Forms.BindingSource> 名为的 `OrdersBindingSource` 表适配器和一个 <xref:System.Data.DataSet> 实例添加到该项目中。 控件绑定到 <xref:System.Windows.Forms.BindingSource> ，而后者又绑定到该 <xref:System.Data.DataSet> 实例。
+     <xref:Microsoft.Office.Tools.Excel.NamedRange> `OrderIDNamedRange` 在单元 **A2** 中创建名为的控件。 同时，会将一个 <xref:System.Windows.Forms.BindingSource> 名为的 `OrdersBindingSource` 表适配器和一个 <xref:System.Data.DataSet> 实例添加到该项目中。 控件绑定到 <xref:System.Windows.Forms.BindingSource> ，而后者又绑定到该 <xref:System.Data.DataSet> 实例。
 
 5. 向下滚动到 " **Orders** " 表下的列。 列表底部是 **Order Details** 表;这是因为它是 **Orders** 表的子表。 选择此 **订单详细信息** 表，而不是与 **Orders** 表处于同一级别的表，然后单击显示的下拉箭头。
 
 6. 在下拉列表中单击 " **ListObject** "，然后将 " **OrderDetails** " 表拖到单元格 **A6**。
 
-7. <xref:Microsoft.Office.Tools.Excel.ListObject>名为**Order_DetailsListObject**的控件在单元格**A6**中创建，并绑定到 <xref:System.Windows.Forms.BindingSource> 。
+7. <xref:Microsoft.Office.Tools.Excel.ListObject>名为 **Order_DetailsListObject** 的控件在单元格 **A6** 中创建，并绑定到 <xref:System.Windows.Forms.BindingSource> 。
 
 ### <a name="to-add-two-buttons"></a>添加两个按钮
 
-1. 从 "**工具箱**" 的 "**公共控件**" 选项卡中，将 <xref:System.Windows.Forms.Button> 控件添加到工作表的单元格**A3** 。
+1. 从 "**工具箱**" 的 "**公共控件**" 选项卡中，将 <xref:System.Windows.Forms.Button> 控件添加到工作表的单元格 **A3** 。
 
     此按钮的名称为 `Button1` 。
 
@@ -136,7 +138,7 @@ ms.locfileid: "67328353"
 
 ### <a name="to-initialize-the-data-and-the-controls"></a>初始化数据和控件
 
-1. 在 **解决方案资源管理器**中，右键单击 " **Sheet1** " 或 " **Sheet1.cs**"，然后单击快捷菜单上的 " **查看代码** "。
+1. 在 **解决方案资源管理器** 中，右键单击 " **Sheet1** " 或 " **Sheet1.cs**"，然后单击快捷菜单上的 " **查看代码** "。
 
 2. 将以下代码添加到 `Sheet1_Startup` 方法以设置按钮的文本。
 
@@ -167,7 +169,7 @@ ms.locfileid: "67328353"
 
 ### <a name="to-test-the-data-caching"></a>测试数据缓存
 
-1. 按 **F5**。
+1. 按 F5 。
 
 2. 验证命名范围和列表对象是否用数据源中的数据进行填充。
 
@@ -177,7 +179,7 @@ ms.locfileid: "67328353"
 
 5. 禁用与数据库的连接。 如果数据库位于服务器上，则从计算机拔下网线，如果数据库位于开发计算机上，则停止 SQL Server 服务。
 
-6. 打开 "Excel"，然后从*\bin*目录中打开 **"我的 Master-Detail.xlsx** (*\My Master-Detail\bin* in c # ) 中的 Visual Basic 或*\My Master-Detail\bin\debug* 。
+6. 打开 "Excel"，然后从 *\bin* 目录中打开 **"我的 Master-Detail.xlsx** (*\My Master-Detail\bin* in c # ) 中的 Visual Basic 或 *\My Master-Detail\bin\debug* 。
 
 7. 滚动查看一些记录，查看在断开连接时工作表的运行是否正常。
 

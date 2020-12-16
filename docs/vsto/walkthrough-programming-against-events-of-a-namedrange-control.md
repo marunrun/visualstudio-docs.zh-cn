@@ -1,5 +1,7 @@
 ---
 title: 演练：针对 NamedRange 控件的事件进行编程
+description: 了解如何使用 Visual Studio 中的 Office 开发工具将 NamedRange 控件添加到 Microsoft Excel 工作表并针对其事件进行编程。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2e5ce12e2de8274afd2c27d4ece36529563a6386
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 9e311a567d32ee083bcc13f417c248f5f3d3ee5a
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584932"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526128"
 ---
 # <a name="walkthrough-program-against-events-of-a-namedrange-control"></a>演练：针对 NamedRange 控件的事件进行编程
   本演练演示如何 <xref:Microsoft.Office.Tools.Excel.NamedRange> 使用 Visual Studio 中的 Office 开发工具将控件添加到 Microsoft Office Excel 工作表并针对其事件进行编程。
@@ -52,14 +54,14 @@ ms.locfileid: "91584932"
 
 ### <a name="to-create-a-new-project"></a>创建新项目的步骤
 
-1. 使用名称 **命名范围事件**创建 Excel 工作簿项目。 请确保已选中 " **创建新文档** "。 有关详细信息，请参阅 [如何：在 Visual Studio 中创建 Office 项目](../vsto/how-to-create-office-projects-in-visual-studio.md)。
+1. 使用名称 **命名范围事件** 创建 Excel 工作簿项目。 请确保已选中 " **创建新文档** "。 有关详细信息，请参阅 [如何：在 Visual Studio 中创建 Office 项目](../vsto/how-to-create-office-projects-in-visual-studio.md)。
 
      Visual Studio 将在设计器中打开新的 Excel 工作簿，并将 " **我的命名范围事件** " 项目添加到 **解决方案资源管理器**。
 
 ## <a name="add-text-and-named-ranges-to-the-worksheet"></a>向工作表添加文本和命名范围
  由于主机控件是扩展的 Office 对象，因此可以采用与添加本机对象相同的方式将其添加到文档中。 例如，可以 <xref:Microsoft.Office.Tools.Excel.NamedRange> 通过打开 " **插入** " 菜单，指向 " **名称**"，然后选择 " **定义**"，将 Excel 控件添加到工作表中。 还可以 <xref:Microsoft.Office.Tools.Excel.NamedRange> 通过将控件从 " **工具箱** " 拖到工作表上来添加控件。
 
- 在此步骤中，您将使用 **工具箱**向工作表添加两个命名范围控件，然后向工作表添加文本。
+ 在此步骤中，您将使用 **工具箱** 向工作表添加两个命名范围控件，然后向工作表添加文本。
 
 ### <a name="to-add-a-range-to-your-worksheet"></a>向工作表添加范围
 
@@ -71,21 +73,21 @@ ms.locfileid: "91584932"
 
 3. 验证 "可编辑" 文本框中是否显示 **$A $1** ，并选中 " **A1** 单元格"。 如果不是，请单击单元格 **A1** 将其选中。
 
-4. 单击“确定”。
+4. 单击“确定”  。
 
      单元格 **A1** 变为名为的范围 `namedRange1` 。 工作表上没有可见的指示，但 `namedRange1` 显示在 " **名称** " 框中 (在选择单元格 **A1** 时) 左侧工作表的上方。
 
-5. 向 <xref:Microsoft.Office.Tools.Excel.NamedRange> 单元格 **B3**添加另一个控件。
+5. 向 <xref:Microsoft.Office.Tools.Excel.NamedRange> 单元格 **B3** 添加另一个控件。
 
 6. 验证 "可编辑" 文本框中是否显示了 **$B $3** ，并选中了 "单元格 **B3** "。 如果不是，请单击单元格 **B3** 将其选中。
 
-7. 单击“确定”。
+7. 单击“确定”  。
 
      单元格 **B3** 成为名为的范围 `namedRange2` 。
 
 ### <a name="to-add-text-to-your-worksheet"></a>向工作表添加文本
 
-1. 在单元格 **A1**中，键入以下文本：
+1. 在单元格 **A1** 中，键入以下文本：
 
     **这是 NamedRange 控件的一个示例。**
 
@@ -99,7 +101,7 @@ ms.locfileid: "91584932"
 
 ### <a name="to-insert-text-into-namedrange2-based-on-the-beforedoubleclick-event"></a>基于 BeforeDoubleClick 事件向 NamedRange2 插入文本
 
-1. 在 **解决方案资源管理器**中，右键单击 " **Sheet1** " 或 " **Sheet1.cs** "，然后选择 " **查看代码**"。
+1. 在 **解决方案资源管理器** 中，右键单击 " **Sheet1** " 或 " **Sheet1.cs** "，然后选择 " **查看代码**"。
 
 2. 添加代码，以便 `namedRange1_BeforeDoubleClick` 事件处理程序如下所示：
 

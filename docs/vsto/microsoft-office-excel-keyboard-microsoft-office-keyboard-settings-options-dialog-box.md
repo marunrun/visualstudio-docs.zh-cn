@@ -1,5 +1,7 @@
 ---
 title: Office Excel 键盘、"设置"、"选项" 对话框
+description: 了解如何通过选择动态键盘方案，使 Microsoft Excel 在文档具有焦点时接收快捷方式键命令。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8b590f82d5f28c3a71e86e18dfe16b1c3e6c4c5a
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: b3422cb53fb454b3585e0b8ba936ce692dfc68a4
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584511"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525309"
 ---
 # <a name="microsoft-office-excel-keyboard-settings-options-dialog-box"></a>Microsoft Office Excel 键盘、"设置"、"选项" 对话框
   Microsoft Office Excel 和 Visual Studio 均处理快捷键。 在 Excel 和 Visual Studio 中，同一快捷键组合可用于不同的命令。 当在 Visual Studio 中的文档级项目中打开 Excel 时，一次只能有一个应用程序收到快捷键命令。 默认情况下，Visual Studio 会接收所有快捷键命令，但你可以通过选择 " **动态键盘方案**" 使 Excel 在文档具有焦点时接收它们。

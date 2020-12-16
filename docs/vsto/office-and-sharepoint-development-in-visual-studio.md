@@ -1,5 +1,7 @@
 ---
 title: Visual Studio 中的 Office 和 SharePoint 开发
+description: 了解如何通过创建用户从 Office 应用商店下载的轻型应用或外接程序来扩展 Microsoft Office 和 SharePoint。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -21,12 +23,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: bc1241a39707eedc4b34e0ef3531ab65e49b8238
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: abd9d3aac289df702554790673cb6561a6e2488d
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90811027"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525338"
 ---
 # <a name="office-and-sharepoint-development-in-visual-studio"></a>Visual Studio 中的 Office 和 SharePoint 开发
   可以通过创建用户从 [Office 应用商店](https://store.office.com/) 或组织目录中下载的轻量级应用程序或外接程序来扩展 Microsoft Office 和 SharePoint，或者通过创建用户在计算机上安装的基于 .NET Framework 的解决方案来扩展。

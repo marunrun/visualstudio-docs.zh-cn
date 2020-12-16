@@ -1,5 +1,7 @@
 ---
 title: 演练：使用功能区 XML 创建自定义选项卡
+description: 了解如何将按钮添加到 Add-Ins 选项卡，以及如何使用功能区 (XML) 自动完成 Microsoft Word。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -17,15 +19,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e05bd9173b83ec3303a058dcf61ea48a7ef7675c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e81d20dc179df76b759223c1460ca13bfceb5706
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "90840386"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524875"
 ---
 # <a name="walkthrough-create-a-custom-tab-by-using-ribbon-xml"></a>演练：使用功能区 XML 创建自定义选项卡
-  本演练演示如何使用 **功能区 (XML) ** 项创建自定义功能区选项卡。
+  本演练演示如何使用 **功能区 (XML)** 项创建自定义功能区选项卡。
 
  [!INCLUDE[appliesto_ribbon](../vsto/includes/appliesto-ribbon-md.md)]
 
@@ -50,40 +52,40 @@ ms.locfileid: "90840386"
 
 ### <a name="to-create-a-new-project"></a>创建新项目的步骤
 
-1. 创建名为**MyRibbonAddIn**的**Word 外接程序**项目。
+1. 创建名为 **MyRibbonAddIn** 的 **Word 外接程序** 项目。
 
      有关详细信息，请参阅 [如何：在 Visual Studio 中创建 Office 项目](../vsto/how-to-create-office-projects-in-visual-studio.md)。
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 打开 **ThisAddIn.cs** 或 **ThisAddIn** 代码文件，并将 **MyRibbonAddIn** 项目添加到 **解决方案资源管理器**。
 
 ## <a name="create-the-vsto-add-ins-tab"></a>创建 VSTO 外接程序选项卡
- 若要创建 " **外接程序** " 选项卡，请在项目中添加一个 ** (XML) 项的功能区 ** 。 在本演练的稍后部分中，将向此选项卡添加一些按钮。
+ 若要创建 " **外接程序** " 选项卡，请在项目中添加一个 **(XML) 项的功能区** 。 在本演练的稍后部分中，将向此选项卡添加一些按钮。
 
 ### <a name="to-create-the-add-ins-tab"></a>创建 "外接程序" 选项卡
 
 1. 在 **“项目”** 菜单上，单击 **“添加新项”**。
 
-2. 在 " **添加新项** " 对话框中，选择 " **功能区 (XML) **。
+2. 在 " **添加新项** " 对话框中，选择 " **功能区 (XML)**。
 
 3. 将新功能区更名为 **“MyRibbon”**，然后单击 **“添加”**。
 
-     **MyRibbon.cs**或**myribbon.vb**文件将在设计器中打开。 名为 **MyRibbon.xml** 的 XML 文件也会添加到你的项目中。
+     **MyRibbon.cs** 或 **myribbon.vb** 文件将在设计器中打开。 名为 **MyRibbon.xml** 的 XML 文件也会添加到你的项目中。
 
-4. 在 **解决方案资源管理器**中，右键单击 " **ThisAddin.cs** " 或 " **ThisAddin**"，然后单击 " **查看代码**"。
+4. 在 **解决方案资源管理器** 中，右键单击 " **ThisAddin.cs** " 或 " **ThisAddin**"，然后单击 " **查看代码**"。
 
 5. 将下面的代码添加到 **ThisAddin** 类中。 此代码可替代 `CreateRibbonExtensibilityObject` 方法，并将功能区 XML 类返回到 Office 应用程序。
 
      [!code-csharp[Trin_Ribbon_Custom_Tab_XML#1](../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab_XML_O12/ThisAddIn.cs#1)]
      [!code-vb[Trin_Ribbon_Custom_Tab_XML#1](../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab_XML_O12/ThisAddIn.vb#1)]
 
-6. 在 **解决方案资源管理器**中，右键单击 **MyRibbonAddIn** 项目，然后单击 " **生成**"。 验证此项目是否已生成且未发生错误。
+6. 在 **解决方案资源管理器** 中，右键单击 **MyRibbonAddIn** 项目，然后单击 " **生成**"。 验证此项目是否已生成且未发生错误。
 
 ## <a name="add-buttons-to-the-add-ins-tab"></a>将按钮添加到 "外接程序" 选项卡
  此 VSTO 外接程序旨在为用户提供一种将样板文本和特定表格添加到活动文档的方法。 若要提供用户界面，请通过修改功能区 XML 文件将两个按钮添加到 " **外接程序** " 选项卡。 在本演练的稍后部分中，将定义这些按钮的回叫方法。 有关功能区 XML 文件的详细信息，请参阅 [功能区 xml](../vsto/ribbon-xml.md)。
 
 ### <a name="to-add-buttons-to-the-add-ins-tab"></a>将按钮添加到 "外接程序" 选项卡
 
-1. 在 **解决方案资源管理器**中，右键单击 **MyRibbon.xml** ，然后单击 " **打开**"。
+1. 在 **解决方案资源管理器** 中，右键单击 **MyRibbon.xml** ，然后单击 " **打开**"。
 
 2. 将 **选项卡** 元素的内容替换为以下 XML。 此 XML 将默认控件组的标签更改为 " **内容**"，并添加两个带有 "标签" " **插入文本** " 和 " **插入表格**" 的新按钮。
 
@@ -105,7 +107,7 @@ ms.locfileid: "90840386"
 
 ### <a name="to-add-callback-methods-for-the-buttons"></a>添加按钮的回叫方法
 
-1. 在 **解决方案资源管理器**中，右键单击 **MyRibbon.cs** 或 **Myribbon.vb**，然后单击 " **打开**"。
+1. 在 **解决方案资源管理器** 中，右键单击 **MyRibbon.cs** 或 **Myribbon.vb**，然后单击 " **打开**"。
 
 2. 将以下代码添加到 **MyRibbon.cs** 或 **myribbon.vb** 文件的顶部。 此代码将为 <xref:Microsoft.Office.Interop.Word> 命名空间创建别名。
 
@@ -135,11 +137,11 @@ ms.locfileid: "90840386"
 
 4. 确认 " **内容** " 组在功能区上可见。
 
-5. 单击**内容**组中的 "**插入文本**" 按钮。
+5. 单击 **内容** 组中的 "**插入文本**" 按钮。
 
      在光标当前位置向文档添加一个字符串。
 
-6. 单击**内容**组中的 "**插入表格**" 按钮。
+6. 单击 **内容** 组中的 "**插入表格**" 按钮。
 
      在光标当前位置向文档添加一个表格。
 
@@ -154,7 +156,7 @@ ms.locfileid: "90840386"
 
 - 使用 Outlook 窗体区域自定义 Microsoft Office Outlook 的 UI。 有关详细信息，请参阅 [演练：设计 Outlook 窗体区域](../vsto/walkthrough-designing-an-outlook-form-region.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [功能区概述](../vsto/ribbon-overview.md)
 - [Ribbon XML](../vsto/ribbon-xml.md)
 - [演练：使用功能区设计器创建自定义选项卡](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)

@@ -1,5 +1,7 @@
 ---
 title: 演练：从服务器上的工作簿中检索缓存的数据
+description: 了解如何从 Microsoft Excel 工作簿中缓存的数据集检索数据，而无需使用 ServerDocument 类启动 Excel。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 69d5a9932a781260609a0b00c8576c9ecc85ad1d
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: f32ad4ffe44eb725953bc664acf4c4c38da4b11e
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584945"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524839"
 ---
 # <a name="walkthrough-retrieve-cached-data-from-a-workbook-on-a-server"></a>演练：从服务器上的工作簿中检索缓存的数据
   本演练演示如何从 Microsoft Office Excel 工作簿中缓存的数据集检索数据，而无需通过使用类启动 Excel <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> 。
@@ -78,11 +80,11 @@ ms.locfileid: "91584945"
 
 7. 在 " **新建项目** " 对话框中，确保未选中 " **创建解决方案的目录** " 复选框。
 
-8. 单击“确定”。
+8. 单击“确定”  。
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 将 **AdventureWorksDataSet** 项目添加到 **解决方案资源管理器** ，并打开 *Class1.cs* 或 *Class1* 代码文件。
 
-9. 在 **解决方案资源管理器**中，右键单击 *Class1.cs* 或 *Class1*，然后单击 " **删除**"。 对于本演练，不需要此文件。
+9. 在 **解决方案资源管理器** 中，右键单击 *Class1.cs* 或 *Class1*，然后单击 " **删除**"。 对于本演练，不需要此文件。
 
 ## <a name="define-a-dataset-in-the-class-library-project"></a>在类库项目中定义数据集
  定义一个类型化数据集，其中包含 AdventureWorksLT 数据库中 SQL Server 2005 的数据。 稍后在本演练中，你将从 Excel 工作簿项目和控制台应用程序项目引用此数据集。
@@ -91,25 +93,25 @@ ms.locfileid: "91584945"
 
 ### <a name="define-a-typed-dataset-in-the-class-library-project"></a>定义类库项目中的类型化数据集
 
-1. 在 **解决方案资源管理器**中，单击 **AdventureWorksDataSet** 项目。
+1. 在 **解决方案资源管理器** 中，单击 **AdventureWorksDataSet** 项目。
 
 2. 如果 "**数据源**" 窗口不可见，请在菜单栏上选择 "**查看**  >  **其他 Windows**  >  **数据源**"，将其显示出来。
 
 3. 选择 **“添加新数据源”** 以启动 **“数据源配置向导”**。
 
-4. 单击“数据库” ****，然后单击“下一步” ****。
+4. 单击“数据库” ，然后单击“下一步” 。
 
 5. 如果有与 AdventureWorksLT 数据库的连接，请选择此连接，然后单击 " **下一步**"。
 
-    否则，单击“新建连接” ****，然后使用“添加连接” **** 对话框创建新连接。 有关详细信息，请参阅 [添加新连接](../data-tools/add-new-connections.md)。
+    否则，单击“新建连接” ，然后使用“添加连接”  对话框创建新连接。 有关详细信息，请参阅 [添加新连接](../data-tools/add-new-connections.md)。
 
-6. 在“将连接字符串保存到应用程序配置文件中” **** 页中，单击“下一步” ****。
+6. 在“将连接字符串保存到应用程序配置文件中”  页中，单击“下一步” 。
 
-7. 在 " **选择数据库对象** " 页上，展开 " **表** "，然后选择 " **Product (SalesLT) **"。
+7. 在 " **选择数据库对象** " 页上，展开 " **表** "，然后选择 " **Product (SalesLT)**"。
 
 8. 单击“完成”。
 
-    *Adventureworksltdataset.xsd*文件将添加到**AdventureWorksDataSet**项目中。 此文件定义以下各项：
+    *Adventureworksltdataset.xsd* 文件将添加到 **AdventureWorksDataSet** 项目中。 此文件定义以下各项：
 
    - 一个名为 `AdventureWorksLTDataSet`的类型化数据集。 此数据集表示 AdventureWorksLT 数据库中的 Product 表的内容。
 
@@ -117,7 +119,7 @@ ms.locfileid: "91584945"
 
      在本演练后面的部分中，你将使用这两个对象。
 
-9. 在 **解决方案资源管理器**中，右键单击 **AdventureWorksDataSet** ，然后单击 " **生成**"。
+9. 在 **解决方案资源管理器** 中，右键单击 **AdventureWorksDataSet** ，然后单击 " **生成**"。
 
      验证此项目是否已生成且未发生错误。
 
@@ -126,7 +128,7 @@ ms.locfileid: "91584945"
 
 ### <a name="create-the-excel-workbook-project"></a>创建 Excel 工作簿项目
 
-1. 在 **解决方案资源管理器**中，右键单击 **AdventureWorksDataSet** 解决方案，指向 " **添加**"，然后单击 " **新建项目**"。
+1. 在 **解决方案资源管理器** 中，右键单击 **AdventureWorksDataSet** 解决方案，指向 " **添加**"，然后单击 " **新建项目**"。
 
 2. 在模板窗格中，展开 **“Visual C#”** 或 **“Visual Basic”**，然后展开 **“Office/SharePoint”**。
 
@@ -136,9 +138,9 @@ ms.locfileid: "91584945"
 
 5. 在 " **名称** " 框中，键入 **AdventureWorksReport**。 请勿修改位置。
 
-6. 单击“确定”。
+6. 单击“确定”  。
 
-     将打开“Visual Studio Tools for Office 项目向导” **** 。
+     将打开“Visual Studio Tools for Office 项目向导”  。
 
 7. 确保已选中 " **创建新文档** "，然后单击 **"确定"**。
 
@@ -147,7 +149,7 @@ ms.locfileid: "91584945"
 ## <a name="add-the-dataset-to-data-sources-in-the-excel-workbook-project"></a>将数据集添加到 Excel 工作簿项目中的数据源
  在 Excel 工作簿中显示数据集之前，必须先将该数据集添加到 Excel 工作簿项目中的数据源。
 
-1. 在**解决方案资源管理器**中，双击**AdventureWorksReport**项目下的 " *Sheet1.cs* " 或 " *Sheet1"。*
+1. 在 **解决方案资源管理器** 中，双击 **AdventureWorksReport** 项目下的 " *Sheet1.cs* " 或 " *Sheet1"。*
 
      工作簿将在设计器中打开。
 
@@ -161,14 +163,14 @@ ms.locfileid: "91584945"
 
 5. 在 " **项目** " 选项卡上，单击 " **AdventureWorksDataSet** "，然后单击 **"确定"**。
 
-6. 在**AdventureWorksDataSet**程序集的**AdventureWorksDataSet**命名空间下，单击 " **adventureworksltdataset.xsd** "，然后单击 "**完成**"。
+6. 在 **AdventureWorksDataSet** 程序集的 **AdventureWorksDataSet** 命名空间下，单击 " **adventureworksltdataset.xsd** "，然后单击 "**完成**"。
 
      此时将打开 " **数据源** " 窗口，并将 **adventureworksltdataset.xsd** 添加到数据源列表。
 
 ## <a name="create-a-listobject-that-is-bound-to-an-instance-of-the-dataset"></a>创建绑定到数据集实例的 ListObject
  若要在工作簿中显示数据集，请创建一个 <xref:Microsoft.Office.Tools.Excel.ListObject> 绑定到数据集实例的。 有关将控件绑定到数据的详细信息，请参阅将 [数据绑定到 Office 解决方案中的控件](../vsto/binding-data-to-controls-in-office-solutions.md)。
 
-1. 在 "**数据源**" 窗口中，展开 " **AdventureWorksDataSet**" 下的**adventureworksltdataset.xsd**节点。
+1. 在 "**数据源**" 窗口中，展开 " **AdventureWorksDataSet**" 下的 **adventureworksltdataset.xsd** 节点。
 
 2. 选择 " **产品** " 节点，单击显示的下拉箭头，然后在下拉列表中选择 " **ListObject** "。
 
@@ -190,7 +192,7 @@ ms.locfileid: "91584945"
 ## <a name="initialize-the-dataset-in-the-workbook"></a>初始化工作簿中的数据集
  必须先使用数据填充缓存的数据集，然后才能使用控制台应用程序从缓存的数据集中检索数据。
 
-1. 在 **解决方案资源管理器**中，右键单击 *Sheet1.cs* 或 *Sheet1 .vb* 文件，然后单击 " **查看代码**"。
+1. 在 **解决方案资源管理器** 中，右键单击 *Sheet1.cs* 或 *Sheet1 .vb* 文件，然后单击 " **查看代码**"。
 
 2. 将 `Sheet1_Startup` 事件处理程序替换为以下代码。 此代码使用 `ProductTableAdapter` 在 **AdventureWorksDataSet** 项目中定义的类的实例，用数据填充缓存的数据集（如果该数据集当前为空）。
 
@@ -202,7 +204,7 @@ ms.locfileid: "91584945"
 
 ### <a name="build-and-run-the-project"></a>生成并运行项目
 
-1. 在 **解决方案资源管理器**中，右键单击 **AdventureWorksReport** 项目，选择 " **调试**"，然后单击 " **启动新实例**"。
+1. 在 **解决方案资源管理器** 中，右键单击 **AdventureWorksReport** 项目，选择 " **调试**"，然后单击 " **启动新实例**"。
 
      项目已生成，工作簿在 Excel 中打开。 检查下列各项：
 
@@ -217,7 +219,7 @@ ms.locfileid: "91584945"
 ## <a name="create-a-console-application-project"></a>创建控制台应用程序项目
  创建一个控制台应用程序项目，用于修改工作簿中缓存的数据集中的数据。
 
-1. 在 **解决方案资源管理器**中，右键单击 **AdventureWorksDataSet** 解决方案，指向 " **添加**"，然后单击 " **新建项目**"。
+1. 在 **解决方案资源管理器** 中，右键单击 **AdventureWorksDataSet** 解决方案，指向 " **添加**"，然后单击 " **新建项目**"。
 
 2. 在 " **项目类型** " 窗格中，展开 " **Visual c #** " 或 " **Visual Basic**"，然后单击 " **Windows**"。
 
@@ -225,7 +227,7 @@ ms.locfileid: "91584945"
 
 4. 在 " **名称** " 框中，键入 **DataReader**。 请勿修改位置。
 
-5. 单击“确定”。
+5. 单击“确定”  。
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 将 **DataReader** 项目添加到 **解决方案资源管理器** 并打开 *Program.cs* 或 *Module1* 代码文件。
 
@@ -234,28 +236,28 @@ ms.locfileid: "91584945"
 
 ### <a name="retrieve-data-from-the-cached-dataset"></a>从缓存的数据集中检索数据
 
-1. 在 **解决方案资源管理器**中，右键单击 **DataReader** 项目，然后单击 " **添加引用**"。
+1. 在 **解决方案资源管理器** 中，右键单击 **DataReader** 项目，然后单击 " **添加引用**"。
 
 2. 在 " **.net** " 选项卡上，选择 " **VisualStudio**"。
 
-3. 单击“确定”。
+3. 单击“确定”  。
 
-4. 在 **解决方案资源管理器**中，右键单击 **DataReader** 项目，然后单击 " **添加引用**"。
+4. 在 **解决方案资源管理器** 中，右键单击 **DataReader** 项目，然后单击 " **添加引用**"。
 
 5. 在 " **项目** " 选项卡上，选择 " **AdventureWorksDataSet**"，然后单击 **"确定"**。
 
 6. 在代码编辑器中打开 *Program.cs* 或 *Module1* 文件。
 
-7. **使用**适用于 c # 的 (添加以下代码 ) 或将 Visual Basic) 语句的 (**导入**到代码文件的顶部。
+7. **使用** 适用于 c # 的 (添加以下代码 ) 或将 Visual Basic) 语句的 (**导入** 到代码文件的顶部。
 
     [!code-csharp[Trin_CachedDataWalkthroughs#1](../vsto/codesnippet/CSharp/AdventureWorksDataSet/DataWriter/Program.cs#1)]
     [!code-vb[Trin_CachedDataWalkthroughs#1](../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/DataWriter/Module1.vb#1)]
 
 8. 将以下代码添加到 `Main` 方法中。 此代码声明了下列对象：
 
-   - `AdventureWorksLTDataSet`在**AdventureWorksDataSet**项目中定义的类型的实例。
+   - `AdventureWorksLTDataSet`在 **AdventureWorksDataSet** 项目中定义的类型的实例。
 
-   - **AdventureWorksReport**项目的 build 文件夹中 AdventureWorksReport 工作簿的路径。
+   - **AdventureWorksReport** 项目的 build 文件夹中 AdventureWorksReport 工作簿的路径。
 
    - 用于 <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> 访问工作簿中的数据缓存的对象。
 
@@ -283,7 +285,7 @@ ms.locfileid: "91584945"
 
 ### <a name="test-the-workbook"></a>测试工作簿
 
-1. 在 **解决方案资源管理器**中，右键单击 **DataReader** 项目，指向 " **调试**"，然后单击 " **启动新实例**"。
+1. 在 **解决方案资源管理器** 中，右键单击 **DataReader** 项目，指向 " **调试**"，然后单击 " **启动新实例**"。
 
      验证应用程序是否报告本地数据集包含295行。
 

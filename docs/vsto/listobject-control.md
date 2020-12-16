@@ -1,5 +1,7 @@
 ---
 title: ListObject 控件
+description: ListObject 控件是公开事件并且可以绑定到数据的列表。 此外，还可以在设计时或运行时向工作表添加 ListObject 控件。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3b5286a4bddff2b529abd0a565bb4dbeef7ffaf3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1a80b56134f59975a39d24e824b6c83b2513b163
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71251869"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526601"
 ---
 # <a name="listobject-control"></a>ListObject 控件
   <xref:Microsoft.Office.Tools.Excel.ListObject> 控件是公开事件并且可以绑定到数据的列表。 当将列表添加到工作表时，Visual Studio 将创建 <xref:Microsoft.Office.Tools.Excel.ListObject> 控件，你可以直接针对此控件编程而无需遍历 Microsoft Office Excel 对象模型。

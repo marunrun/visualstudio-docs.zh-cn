@@ -1,5 +1,7 @@
 ---
 title: 如何：调整工作表单元格中的控件大小
+description: 了解如何在设计时和运行时使用 Visual Studio 在 Microsoft Excel 工作表单元格中调整控件的大小。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f2d22973e13ee77b66de303041f8b6a765b4b93a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ba2a77dc44618c0415e645718aff3ead542b4b48
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85545868"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525355"
 ---
 # <a name="how-to-resize-controls-within-worksheet-cells"></a>如何：调整工作表单元格中的控件大小
   当调整工作表中的列或行的大小时，单元中的所有主机控件都将自动调整大小，以调整调整后的单元格的高度或宽度。 默认情况下，Windows 窗体控件不自动调整大小。

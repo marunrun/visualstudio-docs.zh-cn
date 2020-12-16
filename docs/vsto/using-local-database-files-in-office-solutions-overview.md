@@ -1,5 +1,7 @@
 ---
 title: 在 Office 解决方案中使用本地数据库文件概述
+description: 了解如何在 Office 解决方案中包括数据库文件，如 SQL Server Express ( .mdf) 文件或 Microsoft Office Access ( 文件。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,15 +16,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ea260a6286c8a923d56ab7a5088b55de57004489
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1a3166a88080eaee1042187c171c4938d236058a
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62982236"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526563"
 ---
 # <a name="use-local-database-files-in-office-solutions-overview"></a>在 Office 解决方案中使用本地数据库文件概述
-  你可以在 Office 解决方案中包括数据库文件，如 SQL Server Express (*.mdf*) 文件或 Microsoft Office*访问 (文件。* 这使最终用户能够在不需要维护集中数据库的情况下维护本地数据库，例如，在仅在一台计算机上使用的本地清单解决方案中。
+  你可以在 Office 解决方案中包括数据库文件，如 SQL Server Express (*.mdf*) 文件或 Microsoft Office *访问 (文件。* 这使最终用户能够在不需要维护集中数据库的情况下维护本地数据库，例如，在仅在一台计算机上使用的本地清单解决方案中。
 
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 

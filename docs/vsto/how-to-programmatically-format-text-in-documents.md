@@ -1,5 +1,7 @@
 ---
 title: 如何：以编程方式在文档中设置文本格式
+description: 了解如何使用 Range 对象以编程方式设置 Microsoft Word 文档中文本的格式。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 76af290b0e32126689dbe7b60f27889d9742ea7f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 931991529b160fedfe65a92e8243183792abf518
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85519842"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525729"
 ---
 # <a name="how-to-programmatically-format-text-in-documents"></a>如何：以编程方式在文档中设置文本格式
   你可以使用 <xref:Microsoft.Office.Interop.Word.Range> 对象来格式化 Microsoft Office Word 文档中的文本。

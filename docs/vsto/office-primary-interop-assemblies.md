@@ -1,5 +1,7 @@
 ---
 title: Office 主互操作程序集
+description: 了解如何使用主互操作程序集 (PIA) 从 Office 项目访问 Microsoft Office 应用程序的功能。
+ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 25dad2d4601974e70e80377e634d05b60523318e
-ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
+ms.openlocfilehash: 190c5785be9d17ee0a25d16ad6342368b658f252
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91830757"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525221"
 ---
 # <a name="office-primary-interop-assemblies"></a>Office 主互操作程序集
 
@@ -127,7 +129,7 @@ Visual Studio 中的每个 Office 项目模板旨在与单个 Microsoft Office �
 
 有关详细信息，请参阅 [如何：启用和禁用自动绑定重定向](/dotnet/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：通过主互操作程序集面向 Office 应用程序](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)
 - [Excel 对象模型概述](../vsto/excel-object-model-overview.md)

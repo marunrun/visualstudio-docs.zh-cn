@@ -1,5 +1,7 @@
 ---
 title: 如何：以编程方式在 Outlook 中移动项
+description: 了解如何以编程方式在 Microsoft Outlook 中移动项。 此示例将收件箱中的未读电子邮件移动到名为 Test 的文件夹中。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -12,15 +14,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 97f686a47d18fa91909de489f12f9c7a8c1306d1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7b247df68827767a53d8d066f4750dfa9da52ac7
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85519907"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525566"
 ---
 # <a name="how-to-programmatically-move-items-in-outlook"></a>如何：以编程方式在 Outlook 中移动项
-  此示例将 **收件箱** 中的未读电子邮件移动到名为 **Test**的文件夹中。 此示例仅移动字段中包含单词 **Test** 的消息 `Subject` 。
+  此示例将 **收件箱** 中的未读电子邮件移动到名为 **Test** 的文件夹中。 此示例仅移动字段中包含单词 **Test** 的消息 `Subject` 。
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
@@ -30,7 +32,7 @@ ms.locfileid: "85519907"
 ## <a name="compile-the-code"></a>编译代码
  此示例需要：
 
-- 名为 **Test**的 Outlook 邮件文件夹。
+- 名为 **Test** 的 Outlook 邮件文件夹。
 
 - 一封电子邮件，它在字段中使用字词 **Test** `Subject` 。
 

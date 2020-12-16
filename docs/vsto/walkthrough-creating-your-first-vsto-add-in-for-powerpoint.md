@@ -1,5 +1,7 @@
 ---
 title: 演练：创建您的第一个 PowerPoint VSTO 外接程序
+description: 创建用于 Microsoft PowerPoint 的应用程序级外接程序。 此功能可用于应用程序本身，无论打开的演示文稿是什么。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a50a47a813891151427707c371f1ebf3f75c336f
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 3e02da3484ce7c2beb35e643d3d90d8e37225e11
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584303"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524854"
 ---
 # <a name="walkthrough-create-your-first-vsto-add-in-for-powerpoint"></a>演练：创建您的第一个 PowerPoint VSTO 外接程序
   本演练演示如何创建用于 Microsoft Office PowerPoint 的 VSTO 外接程序。 你在此类解决方案中创建的功能可用于应用程序本身，而与所打开的演示文稿无关。 有关详细信息，请参阅 [Office 解决方案开发概述 &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)。
@@ -63,7 +65,7 @@ ms.locfileid: "91584303"
 
 6. 在 " **名称** " 框中，键入 **FirstPowerPointAddIn**。
 
-7. 单击“确定”。
+7. 单击“确定”  。
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 创建 **FirstPowerPointAddIn** 项目，并在编辑器中打开 **ThisAddIn** 代码文件。
 
@@ -76,14 +78,14 @@ ms.locfileid: "91584303"
 
 ### <a name="to-add-a-text-box-to-each-new-slide"></a>若要将文本框添加到每张新建幻灯片中
 
-1. 在 ThisAddIn 代码文件中，将下面的代码添加到 `ThisAddIn` 类中。 此代码 EApplication_Event 为[应用程序](/previous-versions/office/developer/office-2010/ff764034(v=office.14))对象的[PresentationNewSlide](/previous-versions/office/developer/office-2010/ff762876(v%3doffice.14))事件定义了一个事件处理程序。
+1. 在 ThisAddIn 代码文件中，将下面的代码添加到 `ThisAddIn` 类中。 此代码为[应用程序](/previous-versions/office/developer/office-2010/ff764034(v=office.14))对象的[Microsoft.Office.Interop.PowerPoint.EApplication_Event PresentationNewSlide](/previous-versions/office/developer/office-2010/ff762876(v%3doffice.14))事件定义事件处理程序。
 
     当用户将新的幻灯片添加到活动演示文稿中时，此事件处理程序会将文本框添加到该新幻灯片的顶部，并添加文本到文本框中。
 
     [!code-vb[Trin_PowerPointAddInTutorial#1](../vsto/codesnippet/VisualBasic/Trin_PowerPointAddInTutorial/ThisAddIn.vb#1)]
     [!code-csharp[Trin_PowerPointAddInTutorial#1](../vsto/codesnippet/CSharp/Trin_PowerPointAddInTutorial/ThisAddIn.cs#1)]
 
-2. 如果你使用的是 C#，请将以下代码添加到 `ThisAddIn_Startup` 事件处理程序中。 若要将 `Application_PresentationNewSlide` 事件处理程序 [EApplication_Event 与 PresentationNewSlide](/previous-versions/office/developer/office-2010/ff762876(v%3doffice.14)) 事件连接起来，此代码是必需的。
+2. 如果你使用的是 C#，请将以下代码添加到 `ThisAddIn_Startup` 事件处理程序中。 若要将 `Application_PresentationNewSlide` 事件处理程序 [Microsoft.Office.Interop.PowerPoint.EApplication_Event 与 PresentationNewSlide](/previous-versions/office/developer/office-2010/ff762876(v%3doffice.14)) 事件连接起来，此代码是必需的。
 
     [!code-csharp[Trin_PowerPointAddInTutorial#2](../vsto/codesnippet/CSharp/Trin_PowerPointAddInTutorial/ThisAddIn.cs#2)]
 
@@ -91,7 +93,7 @@ ms.locfileid: "91584303"
 
 - `Application` 类的 `ThisAddIn` 字段。 该 `Application` 字段返回一个 [应用程序](/previous-versions/office/developer/office-2010/ff764034(v=office.14)) 对象，该对象表示 PowerPoint 的当前实例。
 
-- `Sld`EApplication_Event 事件的事件处理程序的参数。 [PresentationNewSlide](/previous-versions/office/developer/office-2010/ff762876(v%3doffice.14))事件的事件处理程序。 `Sld`参数是一个表示新幻灯片的[slide](/previous-versions/office/developer/office-2010/ff763417(v=office.14))对象。 有关详细信息，请参阅 [PowerPoint 解决方案](../vsto/powerpoint-solutions.md)。
+- `Sld`PresentationNewSlide 事件的事件处理[Microsoft.Office.Interop.PowerPoint.EApplication_Event](/previous-versions/office/developer/office-2010/ff762876(v%3doffice.14))程序的参数。 `Sld`参数是一个表示新幻灯片的[slide](/previous-versions/office/developer/office-2010/ff763417(v=office.14))对象。 有关详细信息，请参阅 [PowerPoint 解决方案](../vsto/powerpoint-solutions.md)。
 
 ## <a name="test-the-project"></a>测试项目
  当生成和运行项目时，请验证添加到演示文稿的新幻灯片中是否出现文本框。

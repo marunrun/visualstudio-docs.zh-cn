@@ -1,5 +1,7 @@
 ---
 title: 如何：以编程方式对工作表中的行进行分组
+description: 了解如何通过使用 NamedRange 控件或本机 Excel 范围对象，以编程方式在 Microsoft Excel 中对一个或多个整行进行分组。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -20,12 +22,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 759ba8c6e0796b25a87e8bf0b08795aed5bade05
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 203ea7d17a02a224c290e5dd3c6070c06a1d26e4
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85537873"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525719"
 ---
 # <a name="how-to-programmatically-group-rows-in-a-worksheet"></a>如何：以编程方式对工作表中的行进行分组
   您可以对一个或多个整行进行分组。 若要在工作表中创建组，请使用 <xref:Microsoft.Office.Tools.Excel.NamedRange> 控件或本机 Excel 范围对象。

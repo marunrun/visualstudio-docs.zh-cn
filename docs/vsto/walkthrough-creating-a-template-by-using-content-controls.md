@@ -1,5 +1,6 @@
 ---
 title: 演练：使用内容控件创建模板
+description: 了解如何创建一个文档级自定义项，该文档级自定义项使用内容控件在 Microsoft Word 模板中创建结构化且可重复使用的内容。
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -15,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 30f2443c724d547afe3c510e64f2c50fd9dd4db9
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 2dd7e75048a84a4e235390b99d17d48dfad039ec
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585023"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524982"
 ---
 # <a name="walkthrough-create-a-template-by-using-content-controls"></a>演练：使用内容控件创建模板
   本演练演示如何创建使用内容控件在 Microsoft Office Word 模板中创建可重用结构化内容的文档级自定义项。
@@ -57,7 +58,7 @@ ms.locfileid: "91585023"
 
 ### <a name="to-create-a-new-word-template-project"></a>创建新的 Word 模板项目
 
-1. 创建名为 **MyBuildingBlockTemplate**的 Word 模板项目。 在向导中，选择在解决方案中创建新的文档。 有关详细信息，请参阅 [如何：在 Visual Studio 中创建 Office 项目](../vsto/how-to-create-office-projects-in-visual-studio.md)。
+1. 创建名为 **MyBuildingBlockTemplate** 的 Word 模板项目。 在向导中，选择在解决方案中创建新的文档。 有关详细信息，请参阅 [如何：在 Visual Studio 中创建 Office 项目](../vsto/how-to-create-office-projects-in-visual-studio.md)。
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 在设计器中打开新的 Word 模板，然后将 **MyBuildingBlockTemplate** 项目添加到 **解决方案资源管理器**。
 
@@ -138,7 +139,7 @@ ms.locfileid: "91585023"
 
 ### <a name="to-modify-the-ui-of-the-content-controls-programmatically"></a>以编程方式修改内容控件的 UI
 
-1. 在 **解决方案资源管理器**中，右键单击 " **ThisDocument.cs** " 或 " **ThisDocument**"，然后单击 " **查看代码**"。
+1. 在 **解决方案资源管理器** 中，右键单击 " **ThisDocument.cs** " 或 " **ThisDocument**"，然后单击 " **查看代码**"。
 
 2. 将以下代码添加到 `ThisDocument` 类。 此代码声明了几个对象，你稍后将在本演练中使用它们。
 

@@ -1,5 +1,7 @@
 ---
 title: 如何：以编程方式在打印预览中显示文档
+description: 了解如何在 Microsoft Word 文档中以编程方式在打印预览中显示文档。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 17671ab5d544341cbd3a02713a8b29b55863f5ac
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 69c5014958d137b534a283b0d07fa048966092be
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585205"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525860"
 ---
 # <a name="how-to-programmatically-display-documents-in-print-preview"></a>如何：以编程方式在打印预览中显示文档
   如果你的解决方案生成了报告，你可能需要以打印预览模式向用户显示报告。
