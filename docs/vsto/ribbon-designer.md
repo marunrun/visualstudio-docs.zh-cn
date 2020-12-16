@@ -1,5 +1,7 @@
 ---
 title: 功能区设计器
+description: 了解如何使用功能区设计器将自定义选项卡、组和控件添加到 Microsoft Office 应用程序的功能区。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -26,19 +28,19 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e1c2941b0c088a832540fd3380c993fe2c380b44
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b72270da75d27ed2837540369f74e9c5e87b417b
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72985626"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527996"
 ---
 # <a name="ribbon-designer"></a>功能区设计器
   功能区设计器是一个可视化设计画布。 使用功能区设计器将自定义选项卡、组和控件添加到 Microsoft Office 应用程序的功能区。
 
  [!INCLUDE[appliesto_ribbon](../vsto/includes/appliesto-ribbon-md.md)]
 
- 若要打开功能区设计器，请在项目中添加一个 **功能区 (可视化设计器) ** 项。 然后，您可以对以下任务使用设计工具：
+ 若要打开功能区设计器，请在项目中添加一个 **功能区 (可视化设计器)** 项。 然后，您可以对以下任务使用设计工具：
 
 - [设计功能区布局](#DesigningRibbonLayout)
 
@@ -50,26 +52,26 @@ ms.locfileid: "72985626"
 > 某些任务无法通过使用功能区设计器完成。 有关这些任务以及如何完成这些任务的详细信息，请参阅 [功能区概述](../vsto/ribbon-overview.md)。
 
 ## <a name="add-a-ribbon-visual-designer-item-to-a-project"></a>向项目添加功能区 (可视化设计器) 项
- 若要使用功能区设计器，请将新的 **功能区添加 (可视化设计器) ** 项添加到项目。 有关详细信息，请参阅 [如何：开始自定义功能区](../vsto/how-to-get-started-customizing-the-ribbon.md)。
+ 若要使用功能区设计器，请将新的 **功能区添加 (可视化设计器)** 项添加到项目。 有关详细信息，请参阅 [如何：开始自定义功能区](../vsto/how-to-get-started-customizing-the-ribbon.md)。
 
- 当你将新 **功能区添加 (可视化设计器 ") ** 项时，Visual Studio 会自动将以下文件添加到项目中：
+ 当你将新 **功能区添加 (可视化设计器 ")** 项时，Visual Studio 会自动将以下文件添加到项目中：
 
-- 功能区代码文件。 此文件具有你在 "**添加新项**" 对话框中** (可视化设计器 ") **项指定的名称。 将用于处理功能区事件的代码添加到此文件。
+- 功能区代码文件。 此文件具有你在 "**添加新项**" 对话框中 **(可视化设计器 ")** 项指定的名称。 将用于处理功能区事件的代码添加到此文件。
 
 - 功能区设计器代码文件。 此文件包含由功能区设计器生成的代码，不应直接编辑。
 
 - 资源文件。 此文件包含功能区上每个控件的属性值。
 
-  如果你已有 **功能区 (可视化设计器) ** 其他项目中的项，则可以通过使用 " **添加现有项** " 对话框在当前项目中重复使用它。
+  如果你已有 **功能区 (可视化设计器)** 其他项目中的项，则可以通过使用 " **添加现有项** " 对话框在当前项目中重复使用它。
 
 ## <a name="design-a-ribbon"></a><a name="DesigningRibbonLayout"></a> 设计功能区
  可以通过三种方式打开功能区设计器：
 
-- 在 **解决方案资源管理器**中，双击功能区代码文件。
+- 在 **解决方案资源管理器** 中，双击功能区代码文件。
 
-- 在 **解决方案资源管理器**中，右键单击功能区代码文件，然后单击 " **视图设计器**"。
+- 在 **解决方案资源管理器** 中，右键单击功能区代码文件，然后单击 " **视图设计器**"。
 
-- 在**解决方案资源管理器**中，选择功能区代码文件，然后在 "**视图**" 菜单上单击 "**设计器**"。
+- 在 **解决方案资源管理器** 中，选择功能区代码文件，然后在 "**视图**" 菜单上单击 "**设计器**"。
 
   功能区设计器包含一个默认选项卡和组。 可以从功能区设计器中删除默认选项卡和组。 若要删除默认组，请右键单击 " **Group1**"，然后单击 " **删除**"。 若要删除默认选项卡，请右键单击设计图面的空白区域，然后单击 " **删除功能区选项卡**"。
 
@@ -79,7 +81,7 @@ ms.locfileid: "72985626"
 
 - 单击控件，然后单击功能区设计器中的相应区域。
 
-- 在设计器中选择相应的区域，然后双击 **工具箱**中的控件。
+- 在设计器中选择相应的区域，然后双击 **工具箱** 中的控件。
 
 ### <a name="ribbon-design-workflow"></a>功能区设计工作流
  按照以下基本步骤来设计功能区布局：
@@ -99,7 +101,7 @@ ms.locfileid: "72985626"
 ### <a name="add-custom-tabs-to-the-ribbon"></a><a name="AddTabToRibbon"></a> 向功能区添加自定义选项卡
  向功能区添加自定义选项卡的方法有三种：
 
-- 从 **工具箱**添加一个选项卡。
+- 从 **工具箱** 添加一个选项卡。
 
 - 右键单击功能区设计器，然后单击 " **添加功能区选项卡**"。
 
@@ -146,9 +148,9 @@ ms.locfileid: "72985626"
 |**DropDown**|用户可以选择的项的列表。 用户不能在下拉列表中键入新项。<br /><br /> 使用 <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Items%2A> 属性可向列表中添加项。 您可以在运行时添加和移除项。<br /><br /> 使用 <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Buttons%2A> 属性可向列表中添加按钮。 但是，在功能区加载到 Office 应用程序中之后，不能在运行时添加和删除按钮。|
 |**"编辑框**|一个框，用户可以在其中键入文本。|
 |**库**|一个菜单，该菜单显示用户可从中选择的可视化选项的数组或网格。 可以在菜单中控制选择的布局。 使用 <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ColumnCount%2A> 和 <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.RowCount%2A> 属性来指定将显示库的项和按钮的行数和列数。|
-|**标签**|可以用来标识功能区上控件的文本。|
+|**Label**|可以用来标识功能区上控件的文本。|
 |**菜单**|一个下拉列表，其中可以包含以下任何控件：<br /><br /> -按钮<br />-复选框<br />-库<br />-菜单<br />-拆分按钮<br />-切换按钮<br />-分隔符<br /><br /> 若要将控件添加到功能区设计器中的菜单，请单击菜单中的向下箭头以显示菜单设计图面。 然后，您可以将功能区控件从 **工具箱** 拖至菜单上。 若要排列控件，请将其拖到所需的位置。<br /><br /> 若要在 <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu> 功能区加载到 Office 应用程序中之后将控件添加到中，则必须在 <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Dynamic%2A> 加载功能区之前将属性设置为 **true** 。 有关如何执行此操作的信息，请参阅 [功能区对象模型概述](../vsto/ribbon-object-model-overview.md)。|
-|**机**|用于分隔列表中的项的窄条。 添加到组时，条形是垂直的。 添加到菜单时，条形是水平的。|
+|**Separator**|用于分隔列表中的项的窄条。 添加到组时，条形是垂直的。 添加到菜单时，条形是水平的。|
 |**SplitButton**|附加了菜单的按钮。 拆分按钮可以包含以下任何控件：<br /><br /> -按钮<br />-复选框<br />-库<br />-菜单<br />-拆分按钮<br />-切换按钮<br />-分隔符<br /><br /> 与菜单类似，"拆分" 按钮具有其自己的设计图面。 但是，与菜单不同，在功能区加载到 Office 应用程序中之前，只能更新拆分按钮中的项。 有关如何更新拆分按钮中的项的信息，请参阅 [功能区对象模型概述](../vsto/ribbon-object-model-overview.md)。|
 |**ToggleButton**|显示为按下或未按下的按钮。|
 
@@ -157,14 +159,14 @@ ms.locfileid: "72985626"
 
  您可以双击设计器上的任何控件，打开控件的默认事件的事件处理程序。 您可以使用 " **属性** " 窗口为所有其他控件事件创建事件处理程序。
 
- 功能区事件和属性位于 <xref:Microsoft.Office.Tools.Ribbon> 命名空间中。 **功能区 (可视化设计器) **项会自动在项目中添加对此程序集的引用，并在功能区代码文件的顶部插入适当的**using**或**Imports**语句。
+ 功能区事件和属性位于 <xref:Microsoft.Office.Tools.Ribbon> 命名空间中。 **功能区 (可视化设计器)** 项会自动在项目中添加对此程序集的引用，并在功能区代码文件的顶部插入适当的 **using** 或 **Imports** 语句。
 
  有关处理功能区事件和在运行时设置功能区控件的属性的信息，请参阅 [功能区对象模型概述](../vsto/ribbon-object-model-overview.md)。
 
 ## <a name="customize-backstage-view"></a><a name="CustomizingMicrosoftOfficeButton"></a> 自定义 Backstage 视图
  您可以使用功能区设计器将控件添加到单击 " **文件** " 选项卡时打开的菜单。此菜单称为 Backstage 视图。
 
- 不能使用功能区设计器在内置控件之前或之后放置控件。 内置控件是已在 Backstage 视图中显示的控件。 如果要将控件放置在内置控件之前或之后，必须使用功能区 XML。 有关 **功能区 (XML) **的详细信息，请参阅 [功能区 XML](../vsto/ribbon-xml.md)。 有关自定义 Backstage 视图的详细信息，请参阅面向 [开发人员的 office 2010 backstage 视图的简介](/previous-versions/office/developer/office-2010/ee691833(v=office.14)) 和 [为开发人员自定义 office 2010 backstage 视图](/previous-versions/office/developer/office-2010/ee815851(v=office.14))。
+ 不能使用功能区设计器在内置控件之前或之后放置控件。 内置控件是已在 Backstage 视图中显示的控件。 如果要将控件放置在内置控件之前或之后，必须使用功能区 XML。 有关 **功能区 (XML)** 的详细信息，请参阅 [功能区 XML](../vsto/ribbon-xml.md)。 有关自定义 Backstage 视图的详细信息，请参阅面向 [开发人员的 office 2010 backstage 视图的简介](/previous-versions/office/developer/office-2010/ee691833(v=office.14)) 和 [为开发人员自定义 office 2010 backstage 视图](/previous-versions/office/developer/office-2010/ee815851(v=office.14))。
 
  [!INCLUDE[appliesto_ribbon_2010](../vsto/includes/appliesto-ribbon-2010-md.md)]
 
@@ -180,14 +182,14 @@ ms.locfileid: "72985626"
 |将控件移动到列表中上一个控件之前。|**Ctrl** +**向上**<br /><br /> **Ctrl** +**左**|
 |将控件移动到列表中的下一个控件之后。|**Ctrl** +**下**<br /><br /> **Ctrl** +**向右**|
 |将所选内容从一个控件移到同一个组中的另一个控件。 对于下拉面板，请在父控件和下拉面板中的控件之间移动。|**Up**<br /><br /> **向下**|
-|向前循环访问所有控件。|**选项卡**|
+|向前循环访问所有控件。|Tab |
 |循环访问所有控件。|**Shift**+**Tab**|
 |删除所选的一个或一组控件。|**删除**|
 |复制选定的控件。|**Ctrl** +**C**|
 |剪切选定的控件。|**Ctrl** +**X**|
 |从剪贴板粘贴控件。|**Ctrl** +**V**|
 |选择 " **工具箱**"。|**Ctrl** +**Alt** +**X**|
-|选择父组件。|**Esc**|
+|选择父组件。|Esc |
 
  <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu>下表显示了仅适用于 Microsoft Office 菜单、和的键盘快捷方式 <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton> 。
 
@@ -197,7 +199,7 @@ ms.locfileid: "72985626"
 |如果下拉面板处于打开状态并且选中了父控件，则关闭下拉面板。|**Left**|
 |打开下拉面板。|**Right**|
 |如果下拉面板已打开，请选择下拉面板上的第一个控件。|**Right**|
-|关闭下拉面板。|**Esc**|
+|关闭下拉面板。|Esc |
 
 ## <a name="see-also"></a>另请参阅
 

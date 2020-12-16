@@ -1,5 +1,7 @@
 ---
 title: '演练：在 Visual c # 项目中调用 VBA 中的代码'
+description: 了解如何在 Microsoft Excel 的文档级自定义项中调用方法，以便从工作簿中 Visual Basic for Applications (VBA) 代码中调用。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -19,12 +21,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1c089a3156d005da7d49976f6c96bb10daac0662
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: daf25a1e2e80d2c5918d0d11c4b31c75a2e40c87
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "92297950"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527297"
 ---
 # <a name="walkthrough-call-code-from-vba-in-a-visual-c-project"></a>演练：在 Visual c # 项目中调用 VBA 中的代码
   此演练演示如何从工作簿的 Visual Basic for Applications (VBA) 代码调用 Microsoft Office Excel 文档级自定义项中的方法。 该过程包括三个基本步骤：向 `Sheet1` 主机项类添加方法、向工作簿中的 VBA 代码公开方法，然后从工作簿的 VBA 代码中调用该方法。
@@ -66,7 +68,7 @@ ms.locfileid: "92297950"
 
 1. 启动 Excel。
 
-2. 将活动文档另存为名为**WorkbookWithVBA**的**Excel Macro-Enabled 工作簿 (\* xlsm) ** 。 将其保存在一个方便的位置，例如桌面。
+2. 将活动文档另存为名为 **WorkbookWithVBA** 的 **Excel Macro-Enabled 工作簿 (\* xlsm)** 。 将其保存在一个方便的位置，例如桌面。
 
 3. 在功能区上，单击 **“开发人员”** 选项卡。
 
@@ -101,15 +103,15 @@ ms.locfileid: "92297950"
 
 3. 在模板窗格中，展开 **“Visual C#”**，然后展开 **“Office/SharePoint”**。
 
-4. 选择“Office 外接程序” **** 节点。
+4. 选择“Office 外接程序”  节点。
 
 5. 在项目模板列表中，选择 **“Excel 2010 工作簿”** 或 **“Excel 2013 工作簿”** 项目。
 
-6. 在“名称” **** 框中，键入 **CallingCodeFromVBA**。
+6. 在“名称”  框中，键入 **CallingCodeFromVBA**。
 
-7. 单击“确定”。
+7. 单击“确定”  。
 
-     将打开“Visual Studio Tools for Office 项目向导” **** 。
+     将打开“Visual Studio Tools for Office 项目向导”  。
 
 8. 选择 **“复制现有文档”**，然后在 **“现有文档的完整路径”** 框中，指定先前创建的 **WorkbookWithVBA** 工作薄的位置。 如果正在使用自己的启用宏的工作簿，则改为指定此工作簿的位置。
 
@@ -136,7 +138,7 @@ ms.locfileid: "92297950"
 
 7. 在细节窗格中，单击 **“添加新位置”**。
 
-8. 在“Microsoft Office 受信任位置” **** 对话框中，浏览到包含 **CallingCodeFromVBA** 项目的文件夹。
+8. 在“Microsoft Office 受信任位置”  对话框中，浏览到包含 **CallingCodeFromVBA** 项目的文件夹。
 
 9. 选择 **“同时信任此位置的子文件夹”**。
 
@@ -180,7 +182,7 @@ ms.locfileid: "92297950"
 
 3. 在 **“提取接口”** 对话框中，在 **“选择构成接口的公共成员”** 框中，单击 `CreateVstoNamedRange` 方法项。
 
-4. 单击“确定”。
+4. 单击“确定”  。
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 会生成名为 `ISheet1`的新接口，并修改 `Sheet1` 的定义，以便实现 `ISheet1` 接口。 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 还将在代码编辑器中打开 **ISheet1.cs** 文件。
 
@@ -195,7 +197,7 @@ ms.locfileid: "92297950"
 
 ### <a name="to-expose-the-method-to-vba-code"></a>向 VBA 代码公开方法
 
-1. 在 **解决方案资源管理器**中，双击 **Sheet1.cs**。
+1. 在 **解决方案资源管理器** 中，双击 **Sheet1.cs**。
 
      **WorkbookWithVBA** 文件将在设计器中打开，并且 Sheet1 可见。
 
@@ -233,7 +235,7 @@ ms.locfileid: "92297950"
     End Sub
     ```
 
-5. 按 F5 ****。
+5. 按 F5 。
 
 6. 在打开的工作簿中，单击 **“Sheet1”** 上的单元格 **“A1”**。 验证是否显示消息框。
 

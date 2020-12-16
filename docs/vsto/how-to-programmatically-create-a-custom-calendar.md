@@ -1,5 +1,7 @@
 ---
 title: 如何：以编程方式创建自定义日历
+description: 使用此示例以编程方式创建名为 PersonalCalendar 的新日历文件夹，然后创建新的约会项并将其添加到 Calendar 文件夹中。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,15 +16,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: aab9e14c7fa4b4c70b2e61eca382af2ce787148c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6d0a76189e96a6551408abe49b6e08a26c91ffa8
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546050"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527830"
 ---
 # <a name="how-to-programmatically-create-a-custom-calendar"></a>如何：以编程方式创建自定义日历
-  此示例创建名为 **PersonalCalendar**的新日历文件夹，然后创建新的约会项并将其添加到 Calendar 文件夹中。 然后，该代码将显示日历文件夹。
+  此示例创建名为 **PersonalCalendar** 的新日历文件夹，然后创建新的约会项并将其添加到 Calendar 文件夹中。 然后，该代码将显示日历文件夹。
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 

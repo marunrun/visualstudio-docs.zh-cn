@@ -1,5 +1,7 @@
 ---
 title: 如何：以编程方式在搜索后还原选定内容
+description: 了解如何使用 Visual Studio 以编程方式在 Microsoft Word 文档中搜索后还原选定内容。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 452e483600f6da0eacd5337b42c728145bcfe8aa
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: d396602a5d2bc0c3a90d32256bf226348abff3f3
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584776"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528269"
 ---
 # <a name="how-to-programmatically-restore-selections-after-searches"></a>如何：以编程方式在搜索后还原选定内容
   如果查找并替换文档中的文本，则可能需要在搜索完成后还原用户的原始选择。

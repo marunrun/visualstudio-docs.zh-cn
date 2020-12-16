@@ -1,5 +1,7 @@
 ---
 title: 保护部署
+description: 了解如何通过使用证书对解决方案进行签名，或使用 ClickOnce 信任提示密钥，来提供信任决策所依据的证据。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c838eddea5b3118c28fb33411a8c58a19d7b4a2d
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: b47a18aa3e791d446abc2a57b6aad1f139924ebf
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810949"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528474"
 ---
 # <a name="secure-deployment"></a>保护部署
   当你创建 Office 解决方案时，你的开发计算机会自动更新，以允许你的项目中的代码运行。 但是，在部署解决方案时，必须通过使用证书或使用信任提示密钥对解决方案进行签名，来提供信任决策所依据的证据 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] 。 有关详细信息，请参阅 [向 Office 解决方案授予信任](../vsto/granting-trust-to-office-solutions.md)。
@@ -32,9 +34,9 @@ ms.locfileid: "90810949"
 ## <a name="prevent-office-solutions-from-running-code"></a>阻止 Office 解决方案运行代码
  管理员可以使用注册表来阻止所有 Office 解决方案在计算机上运行。 当打开具有托管代码扩展的 Office 解决方案时，Visual Studio Tools for Office 运行时将检查 `Disabled` 计算机上是否存在以下注册表项之一的具有该名称的条目：
 
-- **HKEY_CURRENT_USER \Software\Microsoft\VSTO**
+- **HKEY_CURRENT_USER\Software\Microsoft\VSTO**
 
-- **HKEY_LOCAL_MACHINE \Software\Microsoft\VSTO**
+- **HKEY_LOCAL_MACHINE\Software\Microsoft\VSTO**
 
   若要阻止 Office 解决方案运行代码，请 `Disabled` 在其中一个或两个注册表项下创建一个条目，并为以下数据类型和值指定以下数据类型之一 `Disabled` ：
 

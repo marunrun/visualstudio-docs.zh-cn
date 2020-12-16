@@ -1,5 +1,7 @@
 ---
 title: 演练：文档级项目中的复杂数据绑定
+description: 了解如何将 Microsoft Excel 工作表中的多个单元格绑定到 Northwind SQL Server 数据库中的字段。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7aba307bcd76cc055e42c11418d42f3dd0cfba1f
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 988394595e8aa4710a22e1fedf22a921481c7396
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584316"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527111"
 ---
 # <a name="walkthrough-complex-data-binding-in-a-document-level-project"></a>演练：文档级项目中的复杂数据绑定
   本演练演示文档级项目中的复杂数据绑定的基本知识。 可以将 Microsoft Office Excel 工作表中的多个单元格绑定到 Northwind SQL Server 数据库中的字段。
@@ -83,7 +85,7 @@ ms.locfileid: "91584316"
 
 9. 单击“完成”。
 
-   向导将 " **Employees** " 表添加到 " **数据源** " 窗口。 它还将一个类型化数据集添加到你的项目中，该数据集在 **解决方案资源管理器**中可见。
+   向导将 " **Employees** " 表添加到 " **数据源** " 窗口。 它还将一个类型化数据集添加到你的项目中，该数据集在 **解决方案资源管理器** 中可见。
 
 ## <a name="add-controls-to-the-worksheet"></a>向工作表添加控件
  打开工作簿时，工作表将显示 **Employees** 表。 用户可以对数据进行更改，然后通过单击按钮将这些更改保存回数据库。
@@ -102,11 +104,11 @@ ms.locfileid: "91584316"
 
 5. 将 **Employees** 表拖到单元格 **A6**。
 
-     <xref:Microsoft.Office.Tools.Excel.ListObject> `EmployeesListObject` 在单元格**A6**中创建了一个名为的控件。 同时，会将一个 <xref:System.Windows.Forms.BindingSource> 名为的 `EmployeesBindingSource` 表适配器和一个 <xref:System.Data.DataSet> 实例添加到该项目中。 控件绑定到 <xref:System.Windows.Forms.BindingSource> ，而后者又绑定到该 <xref:System.Data.DataSet> 实例。
+     <xref:Microsoft.Office.Tools.Excel.ListObject> `EmployeesListObject` 在单元格 **A6** 中创建了一个名为的控件。 同时，会将一个 <xref:System.Windows.Forms.BindingSource> 名为的 `EmployeesBindingSource` 表适配器和一个 <xref:System.Data.DataSet> 实例添加到该项目中。 控件绑定到 <xref:System.Windows.Forms.BindingSource> ，而后者又绑定到该 <xref:System.Data.DataSet> 实例。
 
 ### <a name="to-add-a-button"></a>添加按钮
 
-1. 从 "**工具箱**" 的 "**公共控件**" 选项卡中，将 <xref:System.Windows.Forms.Button> 控件添加到工作表的单元格**A4** 。
+1. 从 "**工具箱**" 的 "**公共控件**" 选项卡中，将 <xref:System.Windows.Forms.Button> 控件添加到工作表的单元格 **A4** 。
 
    下一步是在工作表打开时向按钮添加文本。
 
@@ -115,7 +117,7 @@ ms.locfileid: "91584316"
 
 ### <a name="to-initialize-the-control"></a>初始化控件
 
-1. 在 **解决方案资源管理器**中，右键单击 " **Sheet1** " 或 " **Sheet1.cs**"，然后单击快捷菜单上的 " **查看代码** "。
+1. 在 **解决方案资源管理器** 中，右键单击 " **Sheet1** " 或 " **Sheet1.cs**"，然后单击快捷菜单上的 " **查看代码** "。
 
 2. 将以下代码添加到 `Sheet1_Startup` 方法以设置 b 的文本 `utton` 。
 
@@ -143,19 +145,19 @@ ms.locfileid: "91584316"
 
 ### <a name="to-test-the-data-binding"></a>测试数据绑定
 
-- 按 **F5**。
+- 按 F5 。
 
      验证在打开工作簿时，列表对象是否用 **Employees** 表中的数据进行填充。
 
 ### <a name="to-modify-data"></a>修改数据
 
-1. 单击应包含名称**李小明**的单元格**B7**。
+1. 单击应包含名称 **李小明** 的单元格 **B7**。
 
 2. 键入名称 **Anderson**，然后按 **enter**。
 
 ### <a name="to-modify-a-column-header"></a>修改列标题
 
-1. 单击包含列标题 **LastName**的单元格。
+1. 单击包含列标题 **LastName** 的单元格。
 
 2. 键入 " **姓氏**"，其中包含两个单词之间的空格，然后按 **enter**。
 
@@ -175,17 +177,17 @@ ms.locfileid: "91584316"
 
 1. 选择列表对象内的单元格。
 
-    新行显示在列表的底部， **\*** 在新行的第一个单元格中) 星号 (。
+    新行显示在列表的底部， *\** 在新行的第一个单元格中，星号 ( * _) 。
 
 2. 在空行中添加以下信息。
 
-   |EmployeeID|LastName|FirstName|标题|
+   |EmployeeID|LastName|FirstName|Title|
    |----------------|--------------|---------------|-----------|
    |10|Ito|Shu|销售经理|
 
 ### <a name="to-delete-rows"></a>删除行
 
-- 右键单击工作表最左侧第16行 (第16行) ，然后单击 " **删除**"。
+- 右键单击工作表最左侧第16行 (第16行) ，然后单击 "_" "删除"。
 
 ### <a name="to-sort-the-rows-in-the-list"></a>对列表中的行进行排序
 
@@ -207,11 +209,11 @@ ms.locfileid: "91584316"
 
 3. 单击 " **销售代表**"。
 
-     此列表仅显示在 "**标题**" 列中有**销售代表**的那些行。
+     此列表仅显示在 "**标题**" 列中有 **销售代表** 的那些行。
 
 4. 再次单击 " **标题** " 列标题中的箭头按钮。
 
-5. 单击 " ** (所有) **"。
+5. 单击 " **(所有)**"。
 
      删除筛选并显示所有行。
 

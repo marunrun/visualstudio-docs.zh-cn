@@ -1,5 +1,7 @@
 ---
 title: 如何：使用内容控件保护文档的某些部分
+description: 了解如何使用 Visual Studio 通过使用内容控件来保护 Microsoft Word 文档的某些部分。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -19,12 +21,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 813bb829e3be243a9812a8856bf4fcfa6de2fd22
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 83052ca3c61fe931c3360a1092ca23740ddcff3f
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91581073"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528229"
 ---
 # <a name="how-to-protect-parts-of-documents-by-using-content-controls"></a>如何：使用内容控件保护文档的某些部分
   当你保护文档的一部分时，将阻止用户更改或删除文档该部分中的内容。 通过使用内容控件，有以下几种方法来保护 Microsoft Office Word 文档的各个部分：
@@ -50,7 +52,7 @@ ms.locfileid: "91581073"
 
     - 若要防止用户删除控件，请将 **LockContentControl** 设置为 **True**。
 
-3. 单击“确定”。
+3. 单击“确定”  。
 
 ### <a name="to-protect-a-content-control-at-run-time"></a>若要在运行时保护内容控件
 

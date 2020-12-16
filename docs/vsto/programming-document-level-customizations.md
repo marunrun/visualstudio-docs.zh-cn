@@ -1,5 +1,7 @@
 ---
 title: 程序文档级自定义项
+description: 了解如何使用文档级自定义项扩展 Microsoft Word 或 Excel，以便您可以执行各种任务。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -27,12 +29,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7d1908f72bce01956bbb2eeb62bb9bbc30a64b0d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 58dd8e1803fc0bd06f5c2295b29e9586e1f8eb68
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71254024"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527517"
 ---
 # <a name="program-document-level-customizations"></a>程序文档级自定义项
   在使用文档级自定义项扩展 Microsoft Office Word 或 Microsoft Office Excel 时，可以执行以下任务：
@@ -96,7 +98,7 @@ Me.Save()
 this.Save();
 ```
 
- 若要从 `ThisDocument` 类的外部执行相同操作，请使用 `Globals` 对象访问 `ThisDocument` 类。 例如，如果希望在操作窗格 UI 中包括“保存” **** 按钮，你可以将此代码添加到操作窗格代码文件中。
+ 若要从 `ThisDocument` 类的外部执行相同操作，请使用 `Globals` 对象访问 `ThisDocument` 类。 例如，如果希望在操作窗格 UI 中包括“保存”  按钮，你可以将此代码添加到操作窗格代码文件中。
 
 ```vb
 Globals.ThisDocument.Save()

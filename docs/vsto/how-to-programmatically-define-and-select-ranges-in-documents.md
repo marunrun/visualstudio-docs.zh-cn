@@ -1,5 +1,7 @@
 ---
 title: 如何：以编程方式在文档中定义和选择范围
+description: 了解如何使用 Range 对象以编程方式在 Microsoft Word 文档中定义和选择范围。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5af4ceeb37574fef6eb55d80f3c173b71ac090e0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d1cc0475f7b25550b85018477d7c842f012445e2
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85545946"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528326"
 ---
 # <a name="how-to-programmatically-define-and-select-ranges-in-documents"></a>如何：以编程方式在文档中定义和选择范围
   你也可以通过使用 <xref:Microsoft.Office.Interop.Word.Range> 对象在 Microsoft Office Word 文档中定义一个范围。 您可以通过多种方式（例如，通过使用 <xref:Microsoft.Office.Interop.Word.Range.Select%2A> 对象的方法 <xref:Microsoft.Office.Interop.Word.Range> ，或者通过使用 <xref:Microsoft.Office.Tools.Word.Document> 文档级自定义项中的类 (的 Content 属性) 或 <xref:Microsoft.Office.Interop.Word.Document> VSTO 外接程序) 中的类 (来选择整个文档。

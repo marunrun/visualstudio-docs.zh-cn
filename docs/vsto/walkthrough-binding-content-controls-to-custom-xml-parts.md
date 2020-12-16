@@ -1,5 +1,7 @@
 ---
 title: 演练：将内容控件绑定到自定义 XML 部件
+description: 了解如何将 Word 的文档级自定义项中的内容控件绑定到文档中存储的 XML 数据。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a80488408f680530ed3c9b4094b2997e97484ce3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a82a8fd98bbf1a735661f3e1cf01e2452eb7ee58
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85544438"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527967"
 ---
 # <a name="walkthrough-bind-content-controls-to-custom-xml-parts"></a>演练：将内容控件绑定到自定义 XML 部件
   本演练演示如何将对 Word 的文档级自定义项中的内容控件绑定到存储在文档中的 XML 数据。
@@ -59,7 +61,7 @@ ms.locfileid: "85544438"
 
 ### <a name="to-create-a-new-word-document-project"></a>创建新的 Word 文档项目
 
-1. 创建名为 **employeecontrols.docx**的 Word 文档项目。 创建解决方案的新文档。 有关详细信息，请参阅 [如何：在 Visual Studio 中创建 Office 项目](../vsto/how-to-create-office-projects-in-visual-studio.md)。
+1. 创建名为 **employeecontrols.docx** 的 Word 文档项目。 创建解决方案的新文档。 有关详细信息，请参阅 [如何：在 Visual Studio 中创建 Office 项目](../vsto/how-to-create-office-projects-in-visual-studio.md)。
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 在设计器中打开新的 Word 文档，并将 **employeecontrols.docx** 项目添加到 **解决方案资源管理器**。
 
@@ -106,13 +108,13 @@ ms.locfileid: "85544438"
 
 1. 在 **“项目”** 菜单上选择 **“添加新项”** 。
 
-     此时会显示“添加新项”对话框。
+     “添加新项”  对话框随即出现。
 
 2. 在 " **模板** " 窗格中选择 " **XML 文件**"。
 
 3. 将该文件命名 **employees.xml**，然后选择 " **添加** " 按钮。
 
-     **employees.xml**文件将在代码编辑器中打开。
+     **employees.xml** 文件将在代码编辑器中打开。
 
 4. 用以下文本替换 **employees.xml** 文件的内容。
 
@@ -127,7 +129,7 @@ ms.locfileid: "85544438"
     </employees>
     ```
 
-5. 在 **解决方案资源管理器**中，选择 **employees.xml** 文件。
+5. 在 **解决方案资源管理器** 中，选择 **employees.xml** 文件。
 
 6. 在 " **属性** " 窗口中，选择 " **生成操作** " 属性，然后将值更改为 " **嵌入的资源**"。
 
@@ -140,7 +142,7 @@ ms.locfileid: "85544438"
 
 1. 在 **“项目”** 菜单上选择 **“添加新项”** 。
 
-     此时会显示“添加新项”对话框。
+     “添加新项”  对话框随即出现。
 
 2. 在 " **模板** " 窗格中选择 " **XML 架构**"。
 
@@ -148,7 +150,7 @@ ms.locfileid: "85544438"
 
      架构设计器随即打开。
 
-4. 在 **解决方案资源管理器**中，打开 "  **employees**" 的快捷菜单，然后选择 "  **查看代码**"。
+4. 在 **解决方案资源管理器** 中，打开 "  **employees**" 的快捷菜单，然后选择 "  **查看代码**"。
 
 5. 将 **employees .xsd** 文件的内容替换为以下架构。
 
@@ -225,7 +227,7 @@ ms.locfileid: "85544438"
 
 ### <a name="to-add-a-custom-xml-part-to-the-document"></a>如要向文档添加自定义 XML 部件
 
-1. 在 **解决方案资源管理器**中，打开  **ThisDocument.cs** 或 **ThisDocument**的快捷菜单，然后选择 " **查看代码**"。
+1. 在 **解决方案资源管理器** 中，打开  **ThisDocument.cs** 或 **ThisDocument** 的快捷菜单，然后选择 " **查看代码**"。
 
 2. 将以下声明添加到 `ThisDocument` 类。 此代码声明了将自定义 XML 部件添加到对象所用的几个对象。
 
@@ -273,7 +275,7 @@ ms.locfileid: "85544438"
 
 2. 验证文档中的表格类似于下表。 第二列中的每个字符串的均来自文档的自定义 XML 部件中的元素。
 
-    |列|“值”|
+    |列|值|
     |-|-|
     |**员工姓名**|**Karina Leal**|
     |**雇佣日期**|**1999 年 4 月 1 日**|
@@ -293,7 +295,7 @@ ms.locfileid: "85544438"
 
 9. 将该文件命名 **EmployeeControls.docx.zip**。
 
-     **EmployeeControls.docx**文档以 Open XML 格式保存。 通过使用 *.zip* 文件扩展名重命名此文档，可以检查文档的内容。 有关 Open XML 的详细信息，请参阅 [Office (2007) OPEN XML 文件格式介绍的](/previous-versions/office/developer/office-2007/aa338205(v=office.12))技术文章。
+     **EmployeeControls.docx** 文档以 Open XML 格式保存。 通过使用 *.zip* 文件扩展名重命名此文档，可以检查文档的内容。 有关 Open XML 的详细信息，请参阅 [Office (2007) OPEN XML 文件格式介绍的](/previous-versions/office/developer/office-2007/aa338205(v=office.12))技术文章。
 
 10. 打开 **EmployeeControls.docx.zip** 文件。
 

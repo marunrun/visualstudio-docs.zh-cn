@@ -1,5 +1,7 @@
 ---
 title: 使用范围
+description: 了解 NamedRange 和 Range 类包含用于执行具有范围的任务的方法和属性。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d64e774fe418bb7373a6e632b1e8c2cebecc2854
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 168774f031e992db62b4173bd8d27652aa21b82f
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62815019"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526903"
 ---
 # <a name="work-with-ranges"></a>使用范围
   <xref:Microsoft.Office.Tools.Excel.NamedRange> 和 <xref:Microsoft.Office.Interop.Excel.Range> 类包含用于对范围执行任务的方法和属性。

@@ -1,5 +1,7 @@
 ---
 title: 如何：以编程方式删除 Outlook 联系人
+description: 了解如何以编程方式删除 Microsoft Outlook 中的联系人。 此示例将删除一个联系人。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,15 +15,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4412c86652d08fb1c415b4753bfb18a903a0b0d9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f1398a631db77704a89a06b5e66ef4cb370280e4
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85545933"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528298"
 ---
 # <a name="how-to-programmatically-delete-outlook-contacts"></a>如何：以编程方式删除 Outlook 联系人
-  此示例演示如何删除联系人。 此示例假设“联系人” **** 文件夹中存在名为“Armando Pinto”的联系人。
+  此示例演示如何删除联系人。 此示例假设“联系人”  文件夹中存在名为“Armando Pinto”的联系人。
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 

@@ -1,5 +1,7 @@
 ---
 title: 如何：对 Office 解决方案进行签名
+description: 了解如何通过使用证书作为证据向 Microsoft Office 解决方案授予信任。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 23afc171fd97620b3e6801b8d199da6890198d8b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7451630570e6d557dc5d2b635d149ebc07cfb388
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85545751"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528117"
 ---
 # <a name="how-to-sign-office-solutions"></a>如何：对 Office 解决方案进行签名
   如果对解决方案进行签名，则可以使用证书作为证据向解决方案授予信任。 你可以为多个解决方案使用相同的证书，并且所有解决方案都将受信任，且无其他安全策略更新。

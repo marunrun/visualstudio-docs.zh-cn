@@ -1,5 +1,7 @@
 ---
 title: XMLNodes 控件
+description: 了解只有在将重复架构元素映射到 Microsoft Word 文档时，才会创建 XMLNodes 控件。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9ad16165924a33a25dab2b1cfb49a0a7bbfe0875
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cd82b4bac36d648bee3f6735cf844691ef6d58b2
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "90840805"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527842"
 ---
 # <a name="xmlnodes-control"></a>XMLNodes 控件
   **重要提示** 本主题中的关于 Microsoft Word 的信息是专门为其提供的个人和美国组织的权益和使用的，也就是在 Microsoft word 产品（在2010年1月之前）中运行的、microsoft Word 产品，microsoft Word 产品在年1月之前获得的 microsoft Word 产品，microsoft word 产品在 microsoft word 中删除了与自定义 与 Microsoft Word 有关的信息可能不会被美国或其所在区域中的个人或组织阅读或使用，或开发在 Microsoft Word 产品上运行的、2010年1月10日之后的 microsoft Word 产品。对于该日期之前许可的产品，这些产品的行为并不相同，也不会在美国之外购买和许可。
@@ -35,7 +37,7 @@ ms.locfileid: "90840805"
 ## <a name="bind-data-to-the-control"></a>将数据绑定到控件
  <xref:Microsoft.Office.Tools.Word.XMLNodes>控件不支持数据绑定。 这是因为该 <xref:Microsoft.Office.Tools.Word.XMLNodes> 控件没有复杂的数据绑定功能，并且简单的数据绑定不能表示重复数据。
 
-## <a name="formatting"></a>格式化
+## <a name="formatting"></a>格式设置
  可应用于文档中的文本的任何格式设置都可以应用于 <xref:Microsoft.Office.Tools.Word.XMLNodes> 控件。
 
 ## <a name="events"></a>事件
@@ -79,7 +81,7 @@ ms.locfileid: "90840805"
 
  事件与事件之间的差异相同 <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave> <xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect> 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [主机项和主机控件概述](../vsto/host-items-and-host-controls-overview.md)
 - [使用扩展对象实现 Word 自动化](../vsto/automating-word-by-using-extended-objects.md)
 - [XMLNode 控件](../vsto/xmlnode-control.md)

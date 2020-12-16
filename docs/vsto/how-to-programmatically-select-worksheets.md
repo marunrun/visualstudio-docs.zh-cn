@@ -1,5 +1,7 @@
 ---
 title: 如何：以编程方式选择工作表
+description: 使用 Visual Studio，通过工作表主机项或 Excel 工作簿的表集合以编程方式选择 Microsoft Excel 工作表。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6134b23e7b398794529ee43a428ee8b8962ccf38
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5ddef833feeb4e59f5e9e9b2c95a2170ee3c2530
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546999"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528548"
 ---
 # <a name="how-to-programmatically-select-worksheets"></a>如何：以编程方式选择工作表
   <xref:Microsoft.Office.Tools.Excel.Worksheet.Select%2A> 方法选择指定的对象，从而将用户的选择移到新对象上。 如果想要将焦点移到对象上，而不更改用户的选择，请使用 <xref:Microsoft.Office.Tools.Excel.Worksheet.Activate%2A> 方法。
@@ -28,7 +30,7 @@ ms.locfileid: "85546999"
  如果要在 VSTO 外接程序中选择现有工作表，或者如果工作表是在运行时在文档级自定义项中创建的，则必须使用 <xref:Microsoft.Office.Interop.Excel.Sheets> excel 工作簿的 excel 集合进行访问; 否则，您可以 <xref:Microsoft.Office.Tools.Excel.Worksheet> 直接访问主机项。
 
 ## <a name="use-the-worksheet-host-item"></a>使用工作表主机项
- 在文档级自定义项中，将以下代码添加到 *Sheet1 .vb* 或 *Sheet1.cs*中。
+ 在文档级自定义项中，将以下代码添加到 *Sheet1 .vb* 或 *Sheet1.cs* 中。
 
 ### <a name="to-select-the-first-worksheet-in-a-workbook-using-a-host-item"></a>使用主机项选择工作簿中的第一个工作表
 

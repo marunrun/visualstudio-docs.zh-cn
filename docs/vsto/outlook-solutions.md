@@ -1,5 +1,7 @@
 ---
 title: Outlook 解决方案
+description: 了解如何使用 VSTO 外接程序自动执行 Outlook、扩展 Outlook 功能或自定义 Outlook 用户界面)  (UI。
+ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 21e6478bb0f02383066a2c63dad1bdaf980a0b5b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ded4652704a47252f0839aed151f0557ae5e6766
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72985675"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527540"
 ---
 # <a name="outlook-solutions"></a>Outlook 解决方案
   Visual Studio 提供可用于创建 Microsoft Office Outlook 的 VSTO 外接程序的项目模板。 VSTO 外接程序可用于自动执行 Outlook、扩展 Outlook 功能或自定义 Outlook 用户界面 (UI)。 有关 VSTO 外接程序的详细信息，请参阅 [Architecture of VSTO Add-ins](../vsto/architecture-of-vsto-add-ins.md)。
@@ -70,5 +72,5 @@ ms.locfileid: "72985675"
 |-----------|-----------------|
 |[Outlook 对象模型概述](../vsto/outlook-object-model-overview.md)|提供了由 Outlook 对象模型提供的对象概述。|
 |[创建 Outlook 窗体区域](../vsto/creating-outlook-form-regions.md)|介绍了 Visual Studio 提供的工具，可使你更轻松地设计、开发和调试窗体区域。|
-|[演练：创建您的第一个 Outlook VSTO 外接程序](../vsto/walkthrough-creating-your-first-vsto-add-in-for-outlook.md)|显示如何为 Microsoft Office Outlook 创建 VSTO 外接程序。|
+|[演练：创建您的第一个适用于 Outlook 的 VSTO Add-In](../vsto/walkthrough-creating-your-first-vsto-add-in-for-outlook.md)|显示如何为 Microsoft Office Outlook 创建 VSTO 外接程序。|
 |[Office 开发中的 Outlook 2010](/previous-versions/office/developer/office-2010/ff458122(v=office.14))|MSDN Library 区域，可在其中找到有关开发 Outlook 解决方案的文章和参考文档（非特定于使用 Visual Studio 进行的 Office 开发）。|

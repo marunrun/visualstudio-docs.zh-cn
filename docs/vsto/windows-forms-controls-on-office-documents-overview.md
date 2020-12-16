@@ -1,5 +1,7 @@
 ---
 title: Office 文档上的 Windows 窗体控件概述
+description: 了解 Windows 窗体控件是用户可与之交互以便输入或操作数据的对象。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -27,12 +29,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a101f22bccb3624eccff1edcea502c9350991392
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0309ea22444062b117d3684e32b56960585aa184
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71254913"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527055"
 ---
 # <a name="windows-forms-controls-on-office-documents-overview"></a>Office 文档上的 Windows 窗体控件概述
   Windows 窗体控件是用户可与之交互以便输入或操作数据的对象。 在 Microsoft Office Excel 和 Microsoft Office Word 的文档级项目中，你可以在设计时向项目中的文档或工作簿添加 Windows 窗体控件，也可以在运行时以编程方式添加这些控件。 在 Excel 或 Word 的 VSTO 外接程序中，可以在运行时以编程方式将这些控件添加到任何打开的文档或工作表。
@@ -79,7 +81,7 @@ ms.locfileid: "71254913"
  在文档上使用 Windows 窗体控件的某些方面是特定于文档级项目的，它们允许你使用 Visual Studio 设计器设计文档的 UI。
 
 ### <a name="create-custom-user-controls"></a>创建自定义用户控件
- 可以将用户控件添加到项目中，然后将其添加到“工具箱” ****。 然后可以将用户控件直接拖动到文档中，与向文档添加 Windows 窗体控件的操作一样。 在创建用户控件时，需要注意以下事项：
+ 可以将用户控件添加到项目中，然后将其添加到“工具箱” 。 然后可以将用户控件直接拖动到文档中，与向文档添加 Windows 窗体控件的操作一样。 在创建用户控件时，需要注意以下事项：
 
 - 请勿创建 **sealed** 用户控件。 将控件拖到文档中时，Visual Studio 会生成一个从该用户控件派生的包装类，以扩展该用户控件并支持在文档上使用该用户控件。 如果该用户控件为 **sealed**，则 Visual Studio 不能生成包装类。
 
@@ -88,7 +90,7 @@ ms.locfileid: "71254913"
 - 向文档添加了用户控件后，请不要在项目内重命名或删除 <xref:System.Windows.Forms.UserControl> 类。 如果需要更改用户控件的名称，必须首先将其从文档中删除，更改了名称后，再将其添加到文档中。
 
 ### <a name="arrange-controls-at-design-time"></a>在设计时排列控件
- 如果在设计时将多个控件添加到 Word 和 Excel 文档中，则可以在 Visual Studio 中使用“Microsoft Office Word” **** 和“Microsoft Office Excel” **** 工具栏来快速设置所有选定控件的排列。 仅当文档或工作表在设计器中打开时，这些工具栏才可用。
+ 如果在设计时将多个控件添加到 Word 和 Excel 文档中，则可以在 Visual Studio 中使用“Microsoft Office Word”  和“Microsoft Office Excel”  工具栏来快速设置所有选定控件的排列。 仅当文档或工作表在设计器中打开时，这些工具栏才可用。
 
  在设计器中选定多个控件后，可以使用这些工具栏上的以下按钮来排列这些控件：
 
@@ -128,7 +130,7 @@ ms.locfileid: "71254913"
  当在 Excel 中选择一个控件时， **“公式栏”** 中将显示 **=EMBED("WinForms.Control.Host","")**。 此文本是必需的并且不应删除。
 
 ### <a name="layout-style-of-controls-on-a-word-document"></a>Word 文档中控件的布局样式
- 如果在文档级项目中使用 Visual Studio 设计器向 Word 文档添加控件，该控件将与文本对齐。 若要更改控件的布局样式，请右击控件，然后单击“设置控件格式” ****。 在“设置对象格式” **** 对话框的“布局” **** 页上，选择换行样式。
+ 如果在文档级项目中使用 Visual Studio 设计器向 Word 文档添加控件，该控件将与文本对齐。 若要更改控件的布局样式，请右击控件，然后单击“设置控件格式” 。 在“设置对象格式”  对话框的“布局”  页上，选择换行样式。
 
  在运行时向 Word 文档添加控件时，可以通过使用类的不同方法重载来指定新控件的布局样式 `Add` \<*control class*> <xref:Microsoft.Office.Tools.Word.ControlCollection> 。
 
@@ -138,7 +140,7 @@ ms.locfileid: "71254913"
 
   有关详细信息，请参阅 [在运行时向 Office 文档添加控件](../vsto/adding-controls-to-office-documents-at-run-time.md)。
 
-  如果在 Visual Studio 设计器中打开 Word 模板，则模板上的非内联控件可能不可见，因为 Visual Studio 在“普通” **** 视图中打开该模板。 若要查看控件，请将视图更改为“打印布局” ****。
+  如果在 Visual Studio 设计器中打开 Word 模板，则模板上的非内联控件可能不可见，因为 Visual Studio 在“普通”  视图中打开该模板。 若要查看控件，请将视图更改为“打印布局” 。
 
 ### <a name="controls-outside-the-main-document-body"></a>主文档正文外的控件
  页眉或页脚内、或子文档内不支持 Windows 窗体控件。

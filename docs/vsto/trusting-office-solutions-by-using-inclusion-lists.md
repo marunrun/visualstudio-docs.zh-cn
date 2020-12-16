@@ -1,5 +1,7 @@
 ---
 title: 使用包含列表信任 Office 解决方案
+description: 了解包含列表如何使用户能够向使用标识发布者的证书进行签名的 Office 解决方案授予信任。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a4787831be31e2f91d668d4e3e7ca91496d7595a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3bb5c111b4c75298ee55bc64dfbb2d0dd4b6c8b5
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72985546"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527472"
 ---
 # <a name="trust-office-solutions-by-using-inclusion-lists"></a>使用包含列表信任 Office 解决方案
   包含列表让用户能够向使用标识发布者的证书进行签名的 Office 解决方案授予信任。 包含列表是用户特定的，并可用于文档级自定义项和 VSTO 外接程序。

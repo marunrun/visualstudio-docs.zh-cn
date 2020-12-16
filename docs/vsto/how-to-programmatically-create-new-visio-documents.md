@@ -1,5 +1,7 @@
 ---
 title: 如何：以编程方式创建新的 Visio 文档
+description: 了解如何以编程方式创建新的 Microsoft Visio 绘图文档并将其添加到打开的 Visio 文档的文档集合中。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 171ad93caf6b5c13d000073a0d7f7e82282b9b4a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 59c1fe0264a294692bea04b05e5e143fa28be801
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85541526"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526844"
 ---
 # <a name="how-to-programmatically-create-new-visio-documents"></a>如何：以编程方式创建新的 Visio 文档
   创建新的 Microsoft Office Visio 绘图文档时，会将其添加到所打开 Visio 文档的 `Microsoft.Office.Interop.Visio.Documents` 集合中。 随后，`Microsoft.Office.Interop.Visio.Documents.Add` 方法会创建一个新的 Visio 绘图文档。 有关详细信息，请参阅 [Microsoft.Office.Interop.Visio.Documents.Add](/office/vba/api/Visio.Documents.Add) 方法的 VBA 参考文档。
@@ -53,7 +55,7 @@ ms.locfileid: "85541526"
      [!code-vb[Trin_VstcoreVisioAutomationAddIn#3](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#3)]
 
 ## <a name="create-documents-based-on-existing-templates"></a>基于现有模板创建文档
- `Microsoft.Office.Interop.Visio.Documents.Add`方法可以 (一个基于现有 Visio 模板 () 文件) *的* *.vsd*文件创建新文档。 此方法会复制作为模板工作区一部分的模具、样式和设置。 你必须提供模板的文件名称和完全限定路径。
+ `Microsoft.Office.Interop.Visio.Documents.Add`方法可以 (一个基于现有 Visio 模板 () 文件) *的* *.vsd* 文件创建新文档。 此方法会复制作为模板工作区一部分的模具、样式和设置。 你必须提供模板的文件名称和完全限定路径。
 
 ### <a name="to-create-a-new-document-that-is-based-on-an-existing-template"></a>创建基于现有模板的新文档
 

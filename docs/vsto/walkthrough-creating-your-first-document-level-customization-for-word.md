@@ -1,5 +1,6 @@
 ---
 title: 创建 Word 的第一个文档级自定义项
+description: 创建 Microsoft Word 的文档级自定义项。 仅在特定文档处于打开状态时，才可提供你在这种解决方案中创建的功能。
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -15,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c1f5d1d6d373a5bbcd3f10d600175a88e88823ad
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: c1f827346c30720cefd781dade3039416504b9c0
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584984"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527077"
 ---
 # <a name="walkthrough-create-your-first-document-level-customization-for-word"></a>演练：创建您的第一个 Word 文档级自定义项
 
@@ -66,7 +67,7 @@ ms.locfileid: "91584984"
 
 6. 在 " **名称** " 框中，键入 **FirstDocumentCustomization**。
 
-7. 单击“确定”。
+7. 单击“确定”  。
 
 8. 从 " **Visual Studio Tools for Office 项目向导**" 中选择 "**创建新文档**"，然后单击 **"确定"**。
 ::: moniker-end
@@ -75,13 +76,13 @@ ms.locfileid: "91584984"
 
      [!INCLUDE[new-project-dialog-search](../vsto/includes/new-project-dialog-search-md.md)]
 
-4. 单击“下一步”。
+4. 单击 **下一步**。
 
-5. 在 "**配置新项目**" 对话框的 "**名称**" 框中键入**FirstWorkbookCustomization** ，然后单击 "**创建**"。
+5. 在 "**配置新项目**" 对话框的 "**名称**" 框中键入 **FirstWorkbookCustomization** ，然后单击 "**创建**"。
 
 6. 从 " **Visual Studio Tools for Office 项目向导**" 中选择 "**创建新文档**"，然后单击 **"确定"**。
 ::: moniker-end
-   - [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 创建 **FirstDocumentCustomization** 项目，并将 **FirstDocumentCustomization** 文档和 ThisDocument 代码文件添加到项目。 **FirstDocumentCustomization**文档会在设计器中自动打开。
+   - [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 创建 **FirstDocumentCustomization** 项目，并将 **FirstDocumentCustomization** 文档和 ThisDocument 代码文件添加到项目。 **FirstDocumentCustomization** 文档会在设计器中自动打开。
 
 ## <a name="close-and-reopen-the-document-in-the-designer"></a>在设计器中关闭并重新打开文档
 
@@ -91,11 +92,11 @@ ms.locfileid: "91584984"
 
 1. 单击 " **关闭** " 按钮，关闭文档，方法是单击 "设计器" 窗口 (X) 。
 
-2. 在 **解决方案资源管理器**中，右键单击 **ThisDocument** 代码文件，然后单击 " **查看设计器**"。
+2. 在 **解决方案资源管理器** 中，右键单击 **ThisDocument** 代码文件，然后单击 " **查看设计器**"。
 
      \- 或 -
 
-     在 **解决方案资源管理器**中，双击 " **ThisDocument** " 代码文件。
+     在 **解决方案资源管理器** 中，双击 " **ThisDocument** " 代码文件。
 
 ## <a name="add-text-to-the-document-in-the-designer"></a>在设计器中向文档添加文本
 
@@ -117,7 +118,7 @@ ms.locfileid: "91584984"
 
 ### <a name="to-add-a-second-paragraph-of-text-to-the-document-by-using-code"></a>若要使用代码向文档添加文本的第二个段落
 
-1. 在 **解决方案资源管理器**中，右键单击 **ThisDocument**，然后单击 " **查看代码**"。
+1. 在 **解决方案资源管理器** 中，右键单击 **ThisDocument**，然后单击 " **查看代码**"。
 
      将在 Visual Studio 中打开代码文件。
 

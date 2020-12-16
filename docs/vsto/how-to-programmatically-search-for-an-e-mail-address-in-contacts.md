@@ -1,5 +1,7 @@
 ---
 title: 以编程方式在联系人中查找电子邮件地址
+description: 了解如何使用 Visual Studio 以编程方式在 Microsoft Outlook 联系人中查找电子邮件地址。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a4a9d52ae16b77b40461a314c6008f8cdd741bcd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7fa6578612fb81d9d025e613697c4342bac11bee
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85537639"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528227"
 ---
 # <a name="how-to-programmatically-search-for-an-email-address-in-contacts"></a>如何：以编程方式在联系人中搜索电子邮件地址
   以下示例将在联系人文件夹搜索电子邮件地址中具有域名 **example.com** 的联系人。

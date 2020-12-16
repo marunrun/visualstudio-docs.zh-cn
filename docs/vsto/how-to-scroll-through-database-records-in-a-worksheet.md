@@ -1,5 +1,7 @@
 ---
 title: 如何：在工作表中滚动查看数据库记录
+description: 了解如何使用设计器在 Microsoft Excel 工作表的数据库表中显示单个字段
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8127a5f61e292fb777be4854796535bbe01226aa
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 536a3cca0337e8879e64cbc3ffc15b8411c201b6
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85545790"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528176"
 ---
 # <a name="how-to-scroll-through-database-records-in-a-worksheet"></a>如何：在工作表中滚动查看数据库记录
   下面的过程演示如何使用设计器在 Microsoft Office Excel 工作表中的数据库表中显示单个字段，以及使最终用户能够滚动浏览所有记录的控件。

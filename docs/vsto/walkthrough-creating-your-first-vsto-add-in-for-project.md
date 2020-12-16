@@ -1,5 +1,7 @@
 ---
 title: 演练：创建你的第一个 Project VSTO 外接程序
+description: 为 Microsoft Project 创建应用程序级外接程序。 此功能可用于应用程序本身，而不管打开了哪些项目。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4a84d295a47d3391f27e7101ad815dca0c910aa6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6f4774b8f5ba55d54e05e3a9ef18f8ea13fd48fc
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62981384"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527896"
 ---
 # <a name="walkthrough-create-your-first-vsto-add-in-for-project"></a>演练：创建你的第一个 Project VSTO 外接程序
   本演练演示如何为 Microsoft Office 项目创建 VSTO 外接程序。 你在此类解决方案中创建的功能可用于应用程序本身，而与所打开的项目无关。 有关详细信息，请参阅 [Office 解决方案开发概述 &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)。
@@ -62,7 +64,7 @@ ms.locfileid: "62981384"
 
 6. 在 **“名称”** 框中，键入 **FirstProjectAddIn**。
 
-7. 单击" **确定**"。
+7. 单击“确定”  。
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 创建 **FirstProjectAddIn** 项目，并在编辑器中打开 **ThisAddIn** 代码文件。
 

@@ -1,5 +1,7 @@
 ---
 title: 文档级自定义项中的 XML 架构和数据
+description: Microsoft Excel 和 Word 提供将架构映射到文档的功能，可以简化在文档中导入和导出 XML 数据的操作。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: eb8bc9b9d3149112517d893cd3a704826b6d92d1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 57fad7982f762c4837399e12552cd109c9a9086c
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "90840582"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527852"
 ---
 # <a name="xml-schemas-and-data-in-document-level-customizations"></a>文档级自定义项中的 XML 架构和数据
   **重要提示** 本主题中的关于 Microsoft Word 的信息是专门为其提供的个人和美国组织的权益和使用的，也就是在 Microsoft word 产品（在2010年1月之前）中运行的、microsoft Word 产品，microsoft Word 产品在年1月之前获得的 microsoft Word 产品，microsoft word 产品在 microsoft word 中删除了与自定义 与 Microsoft Word 有关的信息可能不会被美国或其所在区域中的个人或组织阅读或使用，或开发在 Microsoft Word 产品上运行的、2010年1月10日之后的 microsoft Word 产品。对于该日期之前许可的产品，这些产品的行为并不相同，也不会在美国之外购买和许可。
@@ -40,9 +42,9 @@ ms.locfileid: "90840582"
 
  主要有两个对象：
 
-- XML 架构 (XSD 文件) 。 对于工作簿中的每个架构，Visual Studio 会向项目中添加架构。 它在 **解决方案资源管理器**中显示为具有 XSD 扩展的项目项。
+- XML 架构 (XSD 文件) 。 对于工作簿中的每个架构，Visual Studio 会向项目中添加架构。 它在 **解决方案资源管理器** 中显示为具有 XSD 扩展的项目项。
 
-- 类型化 <xref:System.Data.DataSet> 类。 此类是基于架构创建的。 此数据集类在 **类视图**中可见。
+- 类型化 <xref:System.Data.DataSet> 类。 此类是基于架构创建的。 此数据集类在 **类视图** 中可见。
 
 ## <a name="objects-created-when-schema-elements-are-mapped-to-excel-worksheets"></a>将架构元素映射到 Excel 工作表时创建的对象
  将架构元素从 " **XML 源** " 任务窗格映射到工作表时，Visual Studio 会自动创建多个对象并将其添加到项目中：
@@ -79,7 +81,7 @@ ms.locfileid: "90840582"
  [!code-vb[Trin_VstcoreDataWord#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataWordVB/ThisDocument.vb#1)]
  [!code-csharp[Trin_VstcoreDataWord#1](../vsto/codesnippet/CSharp/Trin_VstcoreDataWordCS/ThisDocument.cs#1)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：将架构映射到 Visual Studio 中的 Word 文档](../vsto/how-to-map-schemas-to-word-documents-inside-visual-studio.md)
 - [如何：将架构映射到 Visual Studio 内部的工作表](../vsto/how-to-map-schemas-to-worksheets-inside-visual-studio.md)

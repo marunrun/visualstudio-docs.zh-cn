@@ -1,5 +1,7 @@
 ---
 title: 保护 Office 解决方案
+description: 了解 Office 解决方案的安全模型如何涉及多种技术，包括 Visual Studio Tools for Office 运行时和 ClickOnce。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 31a17fdf51e838405c93efca79d7994cd40ece5c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bedb49a6d5d17e3c9f79a652183c2b4cd748ff6c
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62978576"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528484"
 ---
 # <a name="secure-office-solutions"></a>保护 Office 解决方案
   Office 解决方案的安全模型涉及几种技术： [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 、 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] 、Microsoft Office 中的信任中心以及 Internet Explorer 受限站点区域。 以下各节介绍不同安全功能的工作方式：
@@ -62,7 +64,7 @@ ms.locfileid: "62978576"
 ### <a name="document-level-solutions"></a>文档级解决方案
  如果要开发以下类型的项目，则必须将文档的完全限定的路径添加到 Microsoft Office 应用程序中的可信位置列表：
 
-- 位于网络文件共享上的文档级解决方案，如* \\ \servername\sharename ....*。
+- 位于网络文件共享上的文档级解决方案，如 *\\ \servername\sharename ....*。
 
 - 使用 *.doc* 或 *Docm* 文件的 Word 文档级解决方案。
 
@@ -71,7 +73,7 @@ ms.locfileid: "62978576"
 ### <a name="temporary-certificates"></a>临时证书
  如果不存在签名证书，则 Visual Studio 会创建一个临时证书。 只应在开发过程中使用此临时证书，在部署时应该购买正式证书。
 
- 该临时证书是在首次生成 Office 项目之后生成的。 下次按 **F5**时，将重新生成项目，因为在添加证书时，项目标记为已更改。
+ 该临时证书是在首次生成 Office 项目之后生成的。 下次按 **F5** 时，将重新生成项目，因为在添加证书时，项目标记为已更改。
 
  在经过一段时间后，可能会有很多临时证书，因此应不定期地清除临时证书。
 
@@ -110,5 +112,5 @@ ms.locfileid: "62978576"
 - [Office 解决方案安全性疑难解答](../vsto/troubleshooting-office-solution-security.md)
 - [Office 解决方案的应用程序清单](../vsto/application-manifests-for-office-solutions.md)
 - [Office 解决方案的部署清单](../vsto/deployment-manifests-for-office-solutions.md)
-- [ClickOnce 引用](../deployment/clickonce-reference.md)
+- [ClickOnce 参考](../deployment/clickonce-reference.md)
 - [部署 Office 解决方案](../vsto/deploying-an-office-solution.md)

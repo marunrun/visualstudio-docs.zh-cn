@@ -1,5 +1,7 @@
 ---
 title: 如何：以编程方式在 Word 中设置搜索选项
+description: 了解如何使用 Visual Studio 以编程方式为 Microsoft Word 中的选择设置搜索选项。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 434dfc85ed6c4e03c7c610a497bd063ce1826c62
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 45af6a801a146838919402c31be502cf4825e718
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546986"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528564"
 ---
 # <a name="how-to-programmatically-set-search-options-in-word"></a>如何：以编程方式在 Word 中设置搜索选项
   可以通过两种方式为 Microsoft Office Word 文档中的选择设置搜索选项：

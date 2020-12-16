@@ -1,5 +1,7 @@
 ---
 title: 如何：以编程方式创建会议请求
+description: 了解如何以编程方式在 Microsoft Outlook 中创建会议请求并将请求发送到必需与会者。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 48233a051b42b01d5dce2c1a0fb4819882897d3f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 83a8ba1ddabccd307a31ffc3508e3c39fcdffbff
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546011"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527806"
 ---
 # <a name="how-to-programmatically-create-a-meeting-request"></a>如何：以编程方式创建会议请求
   此示例在 Microsoft Office Outlook 中创建会议请求并将请求发送到指定与会者。

@@ -1,5 +1,7 @@
 ---
 title: 如何：以编程方式保护工作簿
+description: 了解如何保护 Microsoft Excel 工作簿，使用户无法添加或删除工作表，还可以通过编程方式取消保护工作簿。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ee7444c63c2d774e9b22ea612049f09429729c79
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3b35b0fc234c3015275650ddb51e8ea3011c97a6
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85537626"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528289"
 ---
 # <a name="how-to-programmatically-protect-workbooks"></a>如何：以编程方式保护工作簿
   您可以保护 Microsoft Office Excel 工作簿，使用户不能添加或删除工作表，也不能以编程方式取消保护工作簿。 您可以选择指定一个密码，指出您是否希望 (受保护的结构，以使用户不能在) 周围移动工作表，并指示是否要保护工作簿的 windows。

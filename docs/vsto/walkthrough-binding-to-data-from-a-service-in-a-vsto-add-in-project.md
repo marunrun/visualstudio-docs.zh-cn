@@ -1,5 +1,7 @@
 ---
 title: 从 VSTO 外接程序项目中的服务绑定到数据
+description: 了解如何向 Microsoft Word 文档添加控件，如何将控件绑定到从 MSDN Content Service 检索到的数据，以及如何在运行时对事件做出响应。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 75d984617b56525e640a74aa4badd6f520c0b892
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6b65308cfc0ba4dee33dd6b20d3fd4028e9ea22e
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72381316"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527477"
 ---
 # <a name="walkthrough-bind-to-data-from-a-service-in-a-vsto-add-in-project"></a>演练：在 VSTO 外接程序项目中绑定到服务中的数据
   可以将数据绑定到 VSTO 外接程序项目中的宿主控件。 本演练演示如何在运行时将控件添加到 Microsoft Office Word 文档中、将控件绑定到从 MSDN Content Service 检索到的数据以及响应事件。
@@ -48,11 +50,11 @@ ms.locfileid: "72381316"
 
 ### <a name="to-create-a-new-project"></a>创建新项目的步骤
 
-1. 使用 Visual Basic 或 C# 创建一个名为 **MTPS Content Service**的 Word VSTO 外接程序项目。
+1. 使用 Visual Basic 或 C# 创建一个名为 **MTPS Content Service** 的 Word VSTO 外接程序项目。
 
      有关详细信息，请参阅 [如何：在 Visual Studio 中创建 Office 项目](../vsto/how-to-create-office-projects-in-visual-studio.md)。
 
-     Visual Studio 会打开 `ThisAddIn.vb` 或 `ThisAddIn.cs` 文件并将项目添加到“解决方案资源管理器” **** 中。
+     Visual Studio 会打开 `ThisAddIn.vb` 或 `ThisAddIn.cs` 文件并将项目添加到“解决方案资源管理器” 中。
 
 ## <a name="add-a-web-service"></a>添加 web 服务
  对于本演练，请使用名为 MTPS Content Service 的 web 服务。 此 web 服务以 XML 字符串或纯文本的形式返回指定 MSDN 文章中的信息。 下一步演示如何在内容控件中显示返回的信息。
@@ -61,17 +63,17 @@ ms.locfileid: "72381316"
 
 1. 在 **“数据”** 菜单上，单击 **“添加新数据源”**。
 
-2. 在“数据源配置向导” **** 中单击“服务” ****，再单击“下一步” ****。
+2. 在“数据源配置向导” 中单击“服务” ，再单击“下一步” 。
 
-3. 在“地址” **** 字段中键入下面的 URL：
+3. 在“地址”  字段中键入下面的 URL：
 
    `http://services.msdn.microsoft.com/ContentServices/ContentService.asmx`
 
-4. 单击“转到”****。
+4. 单击“转到”。
 
-5. 在“命名空间” **** 字段中键入“ContentService” ****，再单击“确定” ****。
+5. 在“命名空间”  字段中键入“ContentService” ，再单击“确定” 。
 
-6. 在“添加引用向导” **** 对话框中单击“完成” ****。
+6. 在“添加引用向导”  对话框中单击“完成” 。
 
 ## <a name="add-a-content-control-and-bind-to-data-at-run-time"></a>在运行时添加内容控件并绑定到数据
  在 VSTO 外接程序项目中，在运行时添加和绑定控件。 对于本演练，请将内容控件配置为当用户在控件内单击时，从 web 服务检索数据。
@@ -108,7 +110,7 @@ ms.locfileid: "72381316"
 
 ### <a name="to-test-the-vsto-add-in"></a>若要测试 VSTO 外接程序
 
-1. 按 **F5**。
+1. 按 F5 。
 
 2. 在内容控件内单击。
 

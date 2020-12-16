@@ -1,5 +1,7 @@
 ---
 title: 演练：在 Visual Basic 项目中调用 VBA 中的代码
+description: 了解如何在 Microsoft Word 的文档级自定义项中调用方法，Visual Basic for Applications 文档中的 (VBA) 代码。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -20,12 +22,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ad50ed0f55a148a05c0fedc6fe0ccb0dd5b890b9
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 6016dbf53413f6e55c88edfe930af677472bdaf5
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "92298264"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527378"
 ---
 # <a name="walkthrough-call-code-from-vba-in-a-visual-basic-project"></a>演练：在 Visual Basic 项目中调用 VBA 中的代码
   本演练演示如何在 Microsoft Office Word 的文档级自定义项中从文档的 Visual Basic for Applications (VBA) 代码中调用方法。 该过程包括三个基本步骤：向 `ThisDocument` 主机项类添加方法，向 VBA 代码公开方法，然后从文档中的 VBA 代码调用方法。
@@ -65,7 +67,7 @@ ms.locfileid: "92298264"
 
 1. 启动 Word。
 
-2. 将活动文档另存为 **启用宏的 Word 文档 (\*) ** 名称为 **DocumentWithVBA**的 docm。 将它保存在一个方便的位置，例如桌面。
+2. 将活动文档另存为 **启用宏的 Word 文档 (\*)** 名称为 **DocumentWithVBA** 的 docm。 将它保存在一个方便的位置，例如桌面。
 
 3. 在功能区上，单击 **“开发人员”** 选项卡。
 
@@ -100,15 +102,15 @@ ms.locfileid: "92298264"
 
 3. 在模板窗格中，展开 **“Visual Basic”**，然后展开 **“Office/SharePoint”**。
 
-4. 选择“Office 外接程序” **** 节点。
+4. 选择“Office 外接程序”  节点。
 
 5. 在项目模板列表中，选择 **“Word 2010 文档”** 或 **“Word 2013 文档”** 项目。
 
-6. 在“名称” **** 框中，键入 **CallingCodeFromVBA**。
+6. 在“名称”  框中，键入 **CallingCodeFromVBA**。
 
-7. 单击“确定”。
+7. 单击“确定”  。
 
-     将打开“Visual Studio Tools for Office 项目向导” **** 。
+     将打开“Visual Studio Tools for Office 项目向导”  。
 
 8. 选择 **“复制现有文档”**，然后在 **“现有文档的完整路径”** 框中，指定先前创建的 **DocumentWithVBA** 文档的位置。 如果使用你自己的启用宏的文档，请改为指定此文档的位置。
 
@@ -135,7 +137,7 @@ ms.locfileid: "92298264"
 
 7. 在细节窗格中，单击 **“添加新位置”**。
 
-8. 在“Microsoft Office 受信任位置” **** 对话框中，浏览到包含 **CallingCodeFromVBA** 项目的文件夹。
+8. 在“Microsoft Office 受信任位置”  对话框中，浏览到包含 **CallingCodeFromVBA** 项目的文件夹。
 
 9. 选择 **“同时信任此位置的子文件夹”**。
 
@@ -203,7 +205,7 @@ ms.locfileid: "92298264"
     End Sub
     ```
 
-5. 按 F5 ****。
+5. 按 F5 。
 
 6. 验证新表格已添加到文档。
 

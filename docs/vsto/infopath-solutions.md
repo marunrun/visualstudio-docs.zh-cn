@@ -1,5 +1,7 @@
 ---
 title: InfoPath 解决方案
+description: 了解如何使用 Visual Studio 为 Microsoft InfoPath 2013 和 InfoPath 2010 创建 VSTO 外接程序。
+ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: bf3223b5c8211719ad04b2ea7af8079932f6631e
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 8d5e26614c7f06c803093cd7e19b7e9842b397fb
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808797"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527738"
 ---
 # <a name="infopath-solutions"></a>InfoPath 解决方案
   Visual Studio 提供了一些项目模板，你可以使用这些模板来创建用于 Microsoft Office InfoPath 2013 和 InfoPath 2010 的 VSTO 外接程序。 InfoPath 在 Office 2016 中不可用。

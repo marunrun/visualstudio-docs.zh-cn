@@ -1,5 +1,7 @@
 ---
 title: Office UI 自定义
+description: 了解如何使用 Visual Studio 中的 Office 开发人员工具，自定义用户界面 (UI) Microsoft Office 应用程序。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 257f87aedf5d4337e81fb6f251cc8df07f4e577c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 289b055ab84dd9c2c440b55f3d64fe1fe39b8e1b
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88041059"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527590"
 ---
 # <a name="office-ui-customization"></a>Office UI 自定义
   可以使用 Visual Studio 中的 Office 开发人员工具自定义 Microsoft Office 应用程序的用户界面 (UI)。 本主题介绍自定义的 UI 功能，分为以下几个部分：
@@ -74,7 +76,7 @@ ms.locfileid: "88041059"
 ## <a name="backstage-view"></a><a name="Backstage"></a> Backstage 视图
  在 Office 应用程序中，单击 " **文件** " 选项卡将打开 Backstage 视图。 Backstage 视图提供的用户界面可将文件级别任务和操作组合到一起，从而代替可通过 2007 Microsoft Office system 中 Microsoft Office 按钮使用的类似功能。 Backstage 视图可通过使用 XML 完全扩展。
 
- Visual Studio 不提供用于自定义 Backstage 视图的设计器或 API。 但是，如果将 **功能区 (xml) ** 项添加到 Office 项目，则可以向功能区 xml 文件添加 xml 以自定义 Backstage 视图。 有关 **功能区 (XML) ** 项的详细信息，请参阅 [功能区 xml](../vsto/ribbon-xml.md)。
+ Visual Studio 不提供用于自定义 Backstage 视图的设计器或 API。 但是，如果将 **功能区 (xml)** 项添加到 Office 项目，则可以向功能区 xml 文件添加 xml 以自定义 Backstage 视图。 有关 **功能区 (XML)** 项的详细信息，请参阅 [功能区 xml](../vsto/ribbon-xml.md)。
 
  有关自定义 Backstage 视图的详细信息，请参阅面向 [开发人员的 office 2010 backstage 视图的简介](/previous-versions/office/developer/office-2010/ee691833(v=office.14)) 和 [为开发人员自定义 office 2010 backstage 视图](/previous-versions/office/developer/office-2010/ee815851(v=office.14))。
 
@@ -93,7 +95,7 @@ ms.locfileid: "88041059"
  有关详细信息，请参阅 [主机项和主机控件概述](../vsto/host-items-and-host-controls-overview.md) 和 [Office 文档上的 Windows 窗体控件概述](../vsto/windows-forms-controls-on-office-documents-overview.md)。
 
 ## <a name="shortcut-menus"></a><a name="Shortcut"></a> 快捷菜单
- 在文档或应用程序窗口中右键单击时，将出现一个快捷菜单。 可以设置在发生某事件后显示快捷菜单，例如，当用户右键单击文档、工作簿或主机控件时。 可以向快捷菜单添加大量不同的菜单命令或控件。 使用 XML 创建快捷菜单。 如果向 Office 项目添加 **功能区 (xml) ** 项，则可以向功能区 xml 文件添加 XML 以创建快捷菜单。 有关使用 XML 创建快捷菜单的详细信息，请参阅 [如何：将命令添加到快捷菜单](../vsto/how-to-add-commands-to-shortcut-menus.md)。
+ 在文档或应用程序窗口中右键单击时，将出现一个快捷菜单。 可以设置在发生某事件后显示快捷菜单，例如，当用户右键单击文档、工作簿或主机控件时。 可以向快捷菜单添加大量不同的菜单命令或控件。 使用 XML 创建快捷菜单。 如果向 Office 项目添加 **功能区 (xml)** 项，则可以向功能区 xml 文件添加 XML 以创建快捷菜单。 有关使用 XML 创建快捷菜单的详细信息，请参阅 [如何：将命令添加到快捷菜单](../vsto/how-to-add-commands-to-shortcut-menus.md)。
 
 ## <a name="see-also"></a>另请参阅
 - [功能区概述](../vsto/ribbon-overview.md)

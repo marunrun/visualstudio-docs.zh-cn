@@ -1,5 +1,7 @@
 ---
 title: 使用文件夹
+description: 了解 MAPIFolder 类包含用于访问、创建和自定义文件夹的方法和属性。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,19 +18,19 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 32dca296ef286e4c892791a1e71cfc765df80f19
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1ca2d6c690e094884313bc128291dd7295103d54
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62815492"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526968"
 ---
 # <a name="work-with-folders"></a>使用文件夹
   <xref:Microsoft.Office.Interop.Outlook.MAPIFolder> 类包含可用于访问、创建和自定义文件夹的方法和属性。
 
 |任务|过程|
 |----------|---------------|
-|在“收件箱” **** 中邮件的主题字段中搜索字符串。|[如何：以编程方式在特定文件夹中搜索](../vsto/how-to-programmatically-search-within-a-specific-folder.md)|
+|在“收件箱” 中邮件的主题字段中搜索字符串。|[如何：以编程方式在特定文件夹中搜索](../vsto/how-to-programmatically-search-within-a-specific-folder.md)|
 |获取文件夹的引用并显示内容。|[如何：以编程方式按名称检索文件夹](../vsto/how-to-programmatically-retrieve-a-folder-by-name.md)|
 |创建在“预览”窗格中显示网页的文件夹。|[如何：以编程方式将网页与 Outlook 文件夹关联](../vsto/how-to-programmatically-associate-a-web-page-with-an-outlook-folder.md)|
 |创建将当前用户 ID 用作名称的文件夹。|[如何：以编程方式创建自定义文件夹项](../vsto/how-to-programmatically-create-custom-folder-items.md)|
