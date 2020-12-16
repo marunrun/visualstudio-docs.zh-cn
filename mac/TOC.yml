@@ -202,6 +202,8 @@
       href: visual-studio-experience-improvement-program.md
     - name: 报告问题
       href: report-a-problem.md
+    - name: 疑难解答：如何发布现有扩展的新版本？
+      href: migrate-extensions.md
     - name: 疑难解答：Visual Studio for Mac 是否支持 Team Foundation 版本控制？
       href: tf-version-control.md
     - name: 疑难解答：我为什么看不到部分模板？

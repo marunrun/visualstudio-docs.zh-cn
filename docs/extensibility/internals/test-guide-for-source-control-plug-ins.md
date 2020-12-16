@@ -1,5 +1,7 @@
 ---
 title: 源代码管理插件的测试指南 | Microsoft Docs
+description: 了解如何使用 Visual Studio 测试源代码管理插件。 此概述包括常见的测试区域。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: overview
 helpviewer_keywords:
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 321d61175068f135aae87bff73f13ac800f4793c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a288beb618b0b539f53270928366349f47aee9e9
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905155"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487720"
 ---
 # <a name="test-guide-for-source-control-plug-ins"></a>源代码管理插件的测试指南
 本节提供使用 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 测试源代码管理插件的指南。 概述性介绍了最常见的测试区域以及可能存在问题的一些更复杂的区域。 此概述并未提供测试用例的详尽列表。
