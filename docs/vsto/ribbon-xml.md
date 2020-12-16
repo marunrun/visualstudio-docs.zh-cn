@@ -1,5 +1,7 @@
 ---
 title: Ribbon XML
+description: 如果要以功能区 (可视化设计器) 项不支持的方式自定义功能区，请参阅如何使用功能区 (XML) 项。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -23,12 +25,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e9ce2388dbf61ef3af524f0debc776891dca004f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1c9e1cf4c6af266495b3d85d96aa8cce1697cca7
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "90840437"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528416"
 ---
 # <a name="ribbon-xml"></a>Ribbon XML
   功能区 (XML) 项使你可以通过使用 XML 来自定义功能区。 如果要以功能区 (可视化设计器) 项不支持的方式自定义功能区，请使用功能区 (XML) 项。 有关可对每个项执行的操作的比较，请参阅 [功能区概述](../vsto/Ribbon-overview.md)。
@@ -45,7 +47,7 @@ ms.locfileid: "90840437"
   默认情况下，这些文件会在功能区的 " **外接程序** " 选项卡中添加一个自定义组。
 
 ## <a name="display-the-custom-ribbon-in-a-microsoft-office-application"></a>在 Microsoft Office 应用程序中显示自定义功能区
- 将 **功能区 (XML) ** 项添加到项目后，必须将代码添加到 **ThisAddin**、 **ThisWorkbook**或 **ThisDocument** 类，以便重写方法， `CreateRibbonExtensibilityObject` 并将功能区 XML 类返回到 Office 应用程序。
+ 将 **功能区 (XML)** 项添加到项目后，必须将代码添加到 **ThisAddin**、 **ThisWorkbook** 或 **ThisDocument** 类，以便重写方法， `CreateRibbonExtensibilityObject` 并将功能区 XML 类返回到 Office 应用程序。
 
  下面的代码示例替代 `CreateRibbonExtensibilityObject` 方法并返回名为 MyRibbon 的功能区 XML 类。
 
@@ -53,7 +55,7 @@ ms.locfileid: "90840437"
  [!code-vb[Trin_Ribbon_Custom_Tab_XML#1](../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab_XML_O12/ThisAddIn.vb#1)]
 
 ## <a name="define-the-behavior-of-the-custom-ribbon"></a>定义自定义功能区的行为
- 您可以通过创建 *回调方法*来响应用户操作，例如单击功能区上的按钮。 回叫方法类似于 Windows 窗体控件中的事件，但它们由 UI 元素的 XML 中的特性标识。 可在功能区类中编写方法，并且控件调用名称与特性值相同的方法。 例如，你可以创建一个在用户单击功能区上的按钮时调用的回调方法。 创建回叫方法需要两个步骤：
+ 您可以通过创建 *回调方法* 来响应用户操作，例如单击功能区上的按钮。 回叫方法类似于 Windows 窗体控件中的事件，但它们由 UI 元素的 XML 中的特性标识。 可在功能区类中编写方法，并且控件调用名称与特性值相同的方法。 例如，你可以创建一个在用户单击功能区上的按钮时调用的回调方法。 创建回叫方法需要两个步骤：
 
 - 将特性分配给功能区 XML 文件中的控件，该文件标识代码中的回叫方法。
 
@@ -71,7 +73,7 @@ ms.locfileid: "90840437"
 <toggleButton id="toggleButton1" onAction="OnToggleButton1" />
 ```
 
- 用户执行与特定控件关联的主要任务时调用**onAction** 。 例如，用户单击切换按钮时调用该按钮的 **onAction** 回叫方法。
+ 用户执行与特定控件关联的主要任务时调用 **onAction** 。 例如，用户单击切换按钮时调用该按钮的 **onAction** 回叫方法。
 
  在特性中指定的方法可具有任何名称。 但该名称必须与在功能区代码文件中定义的方法的名称相匹配。
 
@@ -143,7 +145,7 @@ ms.locfileid: "90840437"
 |`OnLoad`|将 <xref:Microsoft.Office.Core.IRibbonControl> 参数分配给 `Ribbon` 字段。 Microsoft Office 应用程序在加载自定义功能区时调用此方法。 您可以使用此字段动态更新自定义功能区。 有关详细信息，请参阅技术文章 [为开发人员自定义 Office (2007) 功能区用户界面 (第1部分（共) 3 部分 ](/previous-versions/office/developer/office-2007/aa338202(v=office.12))）。|
 |`GetResourceText`|由 `GetCustomUI` 方法调用，以获取功能区 XML 文件的内容。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [功能区概述](../vsto/ribbon-overview.md)
 - [演练：使用功能区 XML 创建自定义选项卡](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md)
 - [Office UI 自定义](../vsto/office-ui-customization.md)

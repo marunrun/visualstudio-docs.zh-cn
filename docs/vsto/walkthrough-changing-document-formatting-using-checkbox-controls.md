@@ -1,5 +1,7 @@
 ---
 title: 使用 CheckBox 控件更改文档格式
+description: 了解如何在 Microsoft Word 的文档级自定义项中使用 Windows 窗体控件来更改文本格式。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 24c3cb8d76551bb477f9c13cc56c313519f3b617
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 931e9554a10e0e1525d9ee4a10505633b211610b
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "67328729"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527253"
 ---
 # <a name="walkthrough-change-document-formatting-using-checkbox-controls"></a>演练：使用 CheckBox 控件更改文档格式
   本演练演示如何在 Microsoft Office Word 的文档级自定义项中使用 Windows 窗体控件来更改文本格式。
@@ -50,7 +52,7 @@ ms.locfileid: "67328729"
 
 ### <a name="create-a-new-project"></a>创建新项目
 
-1. 创建一个名为 **My Word 格式**的 word 文档项目。 在向导中，选择 " **创建新文档**"。
+1. 创建一个名为 **My Word 格式** 的 word 文档项目。 在向导中，选择 " **创建新文档**"。
 
      有关详细信息，请参阅 [如何：在 Visual Studio 中创建 Office 项目](../vsto/how-to-create-office-projects-in-visual-studio.md)。
 
@@ -67,28 +69,28 @@ ms.locfileid: "67328729"
 
 3. 在 **“属性”** 窗口中，更改下列属性。
 
-    |属性|值|
+    |properties|值|
     |--------------|-----------|
     |**名称**|**applyBoldFont**|
-    |**Text**|**加粗**|
+    |**文本**|**加粗**|
 
 4. 按 **enter** 将插入点移动到第一个复选框下。
 
 5. 将第二个复选框添加到该复选框下的文档中 `ApplyBoldFont` ，并更改以下属性。
 
-    |属性|值|
+    |properties|值|
     |--------------|-----------|
     |**名称**|**applyItalicFont**|
-    |**Text**|**斜体**|
+    |**文本**|**斜体**|
 
 6. 按 **enter** 将插入点移动到第二个复选框下。
 
 7. 将第三个复选框添加到该复选框下的文档中 `ApplyItalicFont` ，并更改以下属性。
 
-    |属性|值|
+    |properties|值|
     |--------------|-----------|
     |**名称**|**applyUnderlineFont**|
-    |**Text**|**划线**|
+    |**文本**|**下划线**|
 
 ### <a name="add-text-and-a-bookmark-control"></a>添加文本和书签控件
 
@@ -102,9 +104,9 @@ ms.locfileid: "67328729"
 
 3. 选择已添加到文档中的文本，然后单击 **"确定"**。
 
-    <xref:Microsoft.Office.Tools.Word.Bookmark>名为**Bookmark1**的控件将添加到文档中的选定文本。
+    <xref:Microsoft.Office.Tools.Word.Bookmark>名为 **Bookmark1** 的控件将添加到文档中的选定文本。
 
-4. 在 " **属性** " 窗口中，将 " ** (名称) ** " 属性的值更改为 " **fontText"。**
+4. 在 " **属性** " 窗口中，将 " **(名称)** " 属性的值更改为 " **fontText"。**
 
    接下来，在选中或清除复选框时编写代码以设置文本格式。
 

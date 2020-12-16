@@ -1,5 +1,7 @@
 ---
 title: Office 项目中的属性
+description: 了解可通过属性窗口在 Visual Studio 中使用 Office 项目的属性。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9fc2a0774206eac0c9295a425d81555ffdd3cac8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cdc54de3935646e36f9d4f09727037de4c373c92
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62561355"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528021"
 ---
 # <a name="properties-in-office-projects"></a>Office 项目中的属性
   有几个重要属性可用于 Visual Studio 中的 Office 项目。 可在 **“属性”** 窗口中访问这些属性。
@@ -31,7 +33,7 @@ ms.locfileid: "62561355"
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
 ## <a name="namespace-for-host-item"></a>主机项的命名空间
- 使用 " **主机项的命名空间** " 属性可以更改主机项类的命名空间 (例如， `ThisAddIn` `ThisWorkbook` `ThisDocument` 在 Visual c # 项目中) 的、或类。 选择文档级项目中的 "文档" 节点时，此属性将出现在 " **属性** " 窗口中 (例如 *ExcelWorkbook1.xlsx* 或 *WordDocument1.docx*) 或 VSTO 外接程序项目中的应用程序节点 (例如 **) **中的 Excel 或 Word 解决方案资源管理器等。
+ 使用 " **主机项的命名空间** " 属性可以更改主机项类的命名空间 (例如， `ThisAddIn` `ThisWorkbook` `ThisDocument` 在 Visual c # 项目中) 的、或类。 选择文档级项目中的 "文档" 节点时，此属性将出现在 " **属性** " 窗口中 (例如 *ExcelWorkbook1.xlsx* 或 *WordDocument1.docx*) 或 VSTO 外接程序项目中的应用程序节点 (例如 **)** 中的 Excel 或 Word 解决方案资源管理器等。
 
  创建 Visual C# Office 项目时，将根据项目名称为主机项指定命名空间。 建议使用 **“主机项的命名空间”** 属性来更改命名空间，而不要直接编辑代码文件。 使用此属性时，将在生成的（隐藏）代码文件中和可见代码文件中更改命名空间。
 

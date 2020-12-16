@@ -1,5 +1,7 @@
 ---
 title: 演练：使用单选按钮更新文档中的图表
+description: 了解如何在 Microsoft Word 的文档级自定义项中使用单选按钮，以使用户可以选择在文档中选择图表样式。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f4b39949deb3bcbf3d9330ca8d820a5841b0f4c4
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: df2996d99e752fbe0f7f36bcab537ee8c19d4f06
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584290"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528390"
 ---
 # <a name="walkthrough-update-a-chart-in-a-document-using-radio-buttons"></a>演练：使用单选按钮更新文档中的图表
   此演练演示如何使用 Microsoft Office Word 文档级自定义中的单选按钮，为用户提供在文档中选择图表样式的选项。
@@ -50,7 +52,7 @@ ms.locfileid: "91584290"
 
 ### <a name="to-create-a-new-project"></a>创建新项目的步骤
 
-1. 创建一个名为 **"我的图表" 选项**的 Word 文档项目。 在向导中，选择 " **创建新文档**"。 有关详细信息，请参阅 [如何：在 Visual Studio 中创建 Office 项目](../vsto/how-to-create-office-projects-in-visual-studio.md)。
+1. 创建一个名为 **"我的图表" 选项** 的 Word 文档项目。 在向导中，选择 " **创建新文档**"。 有关详细信息，请参阅 [如何：在 Visual Studio 中创建 Office 项目](../vsto/how-to-create-office-projects-in-visual-studio.md)。
 
      Visual Studio 将在设计器中打开新的 Word 文档，并将 " **我的图表选项** " 项目添加到 **解决方案资源管理器**。
 
@@ -64,7 +66,7 @@ ms.locfileid: "91584290"
 
      此时将打开 " **对象** " 对话框。
 
-3. 在 **"新建" 选项卡**上的 "**对象类型**" 列表中，选择**Microsoft Graph 图表**，然后单击 **"确定"**。
+3. 在 **"新建" 选项卡** 上的 "**对象类型**" 列表中，选择 **Microsoft Graph 图表**，然后单击 **"确定"**。
 
      将在文档中的插入点处添加一个图表，并且 " **数据表** " 窗口将显示某些默认数据。
 
@@ -79,7 +81,7 @@ ms.locfileid: "91584290"
 
 ### <a name="to-add-a-user-control"></a>要添加用户控件
 
-1. 在**解决方案资源管理器**中选择 "**我的图表选项**" 项目。
+1. 在 **解决方案资源管理器** 中选择 "**我的图表选项**" 项目。
 
 2. 在 **“项目”** 菜单上，单击 **“添加新项”**。
 
@@ -87,35 +89,35 @@ ms.locfileid: "91584290"
 
 ### <a name="to-add-windows-form-controls-to-the-user-control"></a>向用户控件添加 Windows 窗体控件
 
-1. 如果用户控件在设计器中不可见，请在**解决方案资源管理器**中双击 " **ChartOptions** "。
+1. 如果用户控件在设计器中不可见，请在 **解决方案资源管理器** 中双击 " **ChartOptions** "。
 
-2. 从 "**工具箱**" 的 "**公共控件**" 选项卡中，将第一个**单选按钮**控件拖到用户控件，并更改以下属性。
+2. 从 "**工具箱**" 的 "**公共控件**" 选项卡中，将第一个 **单选按钮** 控件拖到用户控件，并更改以下属性。
 
     |properties|值|
     |--------------|-----------|
     |**名称**|**columnChart**|
-    |**Text**|**柱形图**|
+    |**文本**|**柱形图**|
 
 3. 将第二个 **单选按钮** 添加到用户控件，并更改以下属性。
 
     |properties|值|
     |--------------|-----------|
     |**名称**|**barChart**|
-    |**Text**|**条形图**|
+    |**文本**|**条形图**|
 
 4. 将第三个 **单选按钮** 添加到用户控件，并更改以下属性。
 
     |properties|值|
     |--------------|-----------|
     |**名称**|**lineChart**|
-    |**Text**|**折线图**|
+    |**文本**|**折线图**|
 
 5. 将第四个 **单选按钮** 添加到用户控件，并更改以下属性。
 
     |properties|值|
     |--------------|-----------|
     |**名称**|**areaBlockChart**|
-    |**Text**|**面积图**|
+    |**文本**|**面积图**|
 
 ## <a name="add-references"></a>添加引用
  若要从文档中的用户控件访问图表，您必须对 `Microsoft.Office.Interop.Graph` 项目中的程序集具有引用。
@@ -133,7 +135,7 @@ ms.locfileid: "91584290"
 
 ### <a name="to-create-an-event-and-property-on-a-user-control"></a>创建用户控件的事件和属性
 
-1. 在 **解决方案资源管理器**中，右键单击用户控件，然后单击 " **查看代码**"。
+1. 在 **解决方案资源管理器** 中，右键单击用户控件，然后单击 " **查看代码**"。
 
 2. 向 `SelectionChanged` 类添加代码以创建 `Selection` 事件和 `ChartOptions` 属性。
 
@@ -171,11 +173,11 @@ ms.locfileid: "91584290"
 
 ### <a name="to-add-the-user-control-your-document"></a>向文档添加用户控件
 
-1. 在“生成”菜单中，单击“生成解决方案”。
+1. 在 **“生成”** 菜单上，单击 **“生成解决方案”** 。
 
      将 **ChartOptions** 用户控件添加到 " **工具箱**"。
 
-2. 在 **解决方案资源管理器**中，右键单击 " **ThisDocument** " 或 " **ThisDocument.cs**"，然后单击 " **视图设计器**"。
+2. 在 **解决方案资源管理器** 中，右键单击 " **ThisDocument** " 或 " **ThisDocument.cs**"，然后单击 " **视图设计器**"。
 
 3. 将 `ChartOptions` 控件从 " **工具箱** " 拖动到文档。
 
@@ -186,7 +188,7 @@ ms.locfileid: "91584290"
 
 ### <a name="to-change-the-type-of-chart-that-is-displayed-in-the-document"></a>更改文档中显示的图表类型
 
-1. 向 `ThisDocument` 类添加以下事件处理程序。
+1. 将以下事件处理程序添加到 `ThisDocument` 类。
 
      [!code-vb[Trin_VstcoreProgrammingControlsWord#15](../vsto/codesnippet/VisualBasic/my chart options/ThisDocument.vb#15)]
      [!code-csharp[Trin_VstcoreProgrammingControlsWord#15](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#15)]

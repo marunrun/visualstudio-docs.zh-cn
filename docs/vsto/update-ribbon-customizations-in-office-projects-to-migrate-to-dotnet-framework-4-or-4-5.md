@@ -1,5 +1,7 @@
 ---
 title: 更新已迁移到 .NET Framework 4.5 的功能区自定义项
+description: 了解在目标框架更改为 .NET Framework 4 或更高版本时，必须对项目代码进行更改。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -13,16 +15,16 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8024d6fba419dfe437ca8492010c7e4786861862
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: a831bced793f13394a89d278a6be1cda959c775a
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "92298604"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527941"
 ---
 # <a name="update-ribbon-customizations-migrated-to-net-framework-45"></a>更新已迁移到 .NET Framework 4.5 的功能区自定义项
 
-  如果你的项目包含使用 **功能区 (可视化设计器 ** 创建的功能区自定义项) 项目项，则在目标框架更改为 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 或更高版本时，必须对项目代码进行以下更改。
+  如果你的项目包含使用 **功能区 (可视化设计器** 创建的功能区自定义项) 项目项，则在目标框架更改为 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 或更高版本时，必须对项目代码进行以下更改。
 
 - 修改生成的功能区代码。
 
@@ -31,9 +33,9 @@ ms.locfileid: "92298604"
 ## <a name="update-the-generated-ribbon-code"></a>更新生成的功能区代码
  如果已将项目的目标框架更改为 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 或更高版本，则必须通过执行以下步骤更改功能区项的生成代码。 你需要更新的代码文件取决于编程语言和你创建项目的方式：
 
-- 在 Visual Basic 项目或在中创建的 Visual c # 项目中， [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)] 或 [!INCLUDE[vs_dev10_long](../sharepoint/includes/vs-dev10-long-md.md)] 执行功能区代码隐藏文件中的所有步骤 (*YourRibbonItem*。Designer.cs 或 *YourRibbonItem*。设计器 .vb) 。 若要查看 Visual Basic 项目中的代码隐藏文件，请单击**解决方案资源管理器**中的 "**显示所有文件**" 按钮。
+- 在 Visual Basic 项目或在中创建的 Visual c # 项目中， [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)] 或 [!INCLUDE[vs_dev10_long](../sharepoint/includes/vs-dev10-long-md.md)] 执行功能区代码隐藏文件中的所有步骤 (*YourRibbonItem*。Designer.cs 或 *YourRibbonItem*。设计器 .vb) 。 若要查看 Visual Basic 项目中的代码隐藏文件，请单击 **解决方案资源管理器** 中的 "**显示所有文件**" 按钮。
 
-- 在 visual Studio 2008 中创建的 Visual c # 项目中，然后升级到 [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] ，在功能区代码文件中执行前两个步骤 (*YourRibbonItem*或 *YourRibbonItem*) ，并执行功能区代码隐藏文件中的剩余步骤。
+- 在 visual Studio 2008 中创建的 Visual c # 项目中，然后升级到 [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] ，在功能区代码文件中执行前两个步骤 (*YourRibbonItem* 或 *YourRibbonItem*) ，并执行功能区代码隐藏文件中的剩余步骤。
 
 ### <a name="to-change-the-generated-ribbon-code"></a>若要更改生成的功能区代码
 

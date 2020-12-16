@@ -1,5 +1,7 @@
 ---
 title: 使用表
+description: 了解有关使用 Microsoft Word 的对象模型处理 Office 项目中的表的分步过程和代码示例。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f1102a996f06634396f8bec3a02400fa952810e5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 27fdc776589879af6757967b18a7cac47f9f66df
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62815347"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526853"
 ---
 # <a name="work-with-tables"></a>使用表
   本部分中的主题提供有关使用 Microsoft Office Word 的对象模型处理 Office 项目中的表的分步过程和代码示例。 某些情况下，在 VSTO 外接程序中执行这些任务的方式与在文档级自定义项中执行它们的方式是不同的。

@@ -1,5 +1,7 @@
 ---
 title: 创建您的第一个 Excel 文档级自定义项
+description: 创建用于 Microsoft Excel 的文档级自定义项。 仅在特定工作簿处于打开状态时，才可使用你在这种解决方案中创建的功能。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b75bf6894bff4e5fa8d6ac17ed537f15041b3ede
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 4183e84a930957b7cf87a6cc1e6fabcb21420785
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584997"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527946"
 ---
 # <a name="walkthrough-create-your-first-document-level-customization-for-excel"></a>演练：创建您的第一个 Excel 文档级自定义项
 
@@ -66,7 +68,7 @@ ms.locfileid: "91584997"
 
 6. 在 " **名称** " 框中，键入 **FirstWorkbookCustomization**。
 
-7. 单击“确定”。
+7. 单击“确定”  。
 
 8. 从 " **Visual Studio Tools for Office 项目向导**" 中选择 "**创建新文档**"，然后单击 **"确定"**。
 ::: moniker-end
@@ -75,9 +77,9 @@ ms.locfileid: "91584997"
 
      [!INCLUDE[new-project-dialog-search](../vsto/includes/new-project-dialog-search-md.md)]
 
-4. 单击“下一步”。
+4. 单击 **下一步**。
 
-5. 在 "**配置新项目**" 对话框的 "**名称**" 框中键入**FirstWorkbookCustomization** ，然后单击 "**创建**"。
+5. 在 "**配置新项目**" 对话框的 "**名称**" 框中键入 **FirstWorkbookCustomization** ，然后单击 "**创建**"。
 
 6. 从 " **Visual Studio Tools for Office 项目向导**" 中选择 "**创建新文档**"，然后单击 **"确定"**。
 ::: moniker-end
@@ -85,13 +87,13 @@ ms.locfileid: "91584997"
 
    - *FirstWorkbookCustomization*-表示项目中的 Excel 工作簿。 包含所有工作表和图表。
 
-   - Sheet1 (适用于 Visual c # 的 Visual Basic 或 *.cs*文件的 *.vb*文件 ) -一个工作表，用于提供工作簿中第一个工作表的设计图面和代码。 有关详细信息，请参阅 [工作表主机项](../vsto/worksheet-host-item.md)。
+   - Sheet1 (适用于 Visual c # 的 Visual Basic 或 *.cs* 文件的 *.vb* 文件 ) -一个工作表，用于提供工作簿中第一个工作表的设计图面和代码。 有关详细信息，请参阅 [工作表主机项](../vsto/worksheet-host-item.md)。
 
-   - Sheet2 为 Visual c # 的 Visual Basic 或 *.cs*文件 (*.vb*文件 ) -一个工作表，提供工作簿中第二个工作表的设计图面和代码。
+   - Sheet2 为 Visual c # 的 Visual Basic 或 *.cs* 文件 (*.vb* 文件 ) -一个工作表，提供工作簿中第二个工作表的设计图面和代码。
 
    - Sheet3 (Visual Basic 的 *.vb* 文件或 Visual c # 的 *.cs* 文件 ) -一个工作表，用于提供工作簿中第三个工作表的设计图面和代码。
 
-   - 适用于 Visual c # 的 Visual Basic 或 *.cs*文件的 ThisWorkbook (*.Vb* ) -包含用于工作簿级自定义项的设计图面和代码。 有关详细信息，请参阅 [工作簿主机项](../vsto/workbook-host-item.md)。
+   - 适用于 Visual c # 的 Visual Basic 或 *.cs* 文件的 ThisWorkbook (*.Vb* ) -包含用于工作簿级自定义项的设计图面和代码。 有关详细信息，请参阅 [工作簿主机项](../vsto/workbook-host-item.md)。
 
      将在设计器中自动打开 Sheet1 代码文件。
 
@@ -103,11 +105,11 @@ ms.locfileid: "91584997"
 
 1. 单击 " **关闭** " 按钮，关闭工作簿， (X) 用于设计器窗口。
 
-2. 在 **解决方案资源管理器**中，右键单击 " **Sheet1** " 代码文件，然后单击 " **视图设计器**"。
+2. 在 **解决方案资源管理器** 中，右键单击 " **Sheet1** " 代码文件，然后单击 " **视图设计器**"。
 
      \- 或 -
 
-     在 **解决方案资源管理器**中，双击 **Sheet1** 代码文件。
+     在 **解决方案资源管理器** 中，双击 **Sheet1** 代码文件。
 
 ## <a name="add-text-to-a-worksheet-in-the-designer"></a>向设计器中的工作表添加文本
 
@@ -132,7 +134,7 @@ ms.locfileid: "91584997"
 
 ### <a name="to-add-a-second-line-of-text-to-the-worksheet-by-using-code"></a>使用代码向工作表添加第二行文本
 
-1. 在 **解决方案资源管理器**中，右键单击 **Sheet1**，然后单击 " **查看代码**"。
+1. 在 **解决方案资源管理器** 中，右键单击 **Sheet1**，然后单击 " **查看代码**"。
 
      将在 Visual Studio 中打开代码文件。
 

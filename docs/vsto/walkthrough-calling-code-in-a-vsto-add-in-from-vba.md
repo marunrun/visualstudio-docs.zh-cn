@@ -1,5 +1,7 @@
 ---
 title: 演练：从 VBA 调用 VSTO 外接程序中的代码
+description: 了解如何将 VSTO 外接程序中的对象公开给其他 Microsoft Office 解决方案，包括 Visual Basic for Applications (VBA) 和 COM VSTO 外接程序。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6fdbd2cf85086bac0aa7bb56c128a7ad6fe36f94
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0cbf03ef234ea6cf4eab790d96082d23b7ed5199
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72650788"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527282"
 ---
 # <a name="walkthrough-call-code-in-a-vsto-add-in-from-vba"></a>演练：从 VBA 调用 VSTO 外接程序中的代码
   本演练演示如何向其他 Microsoft Office 解决方案（包括 Visual Basic for Applications (VBA) 和 COM VSTO 外接程序）公开 VSTO 外接程序中的对象。
@@ -54,7 +56,7 @@ ms.locfileid: "72650788"
 
 ### <a name="to-create-a-new-project"></a>创建新项目的步骤
 
-1. 使用 Excel VSTO 外接程序项目模板，创建一个名为 **ExcelImportData**的 Excel VSTO 外接程序项目。 有关详细信息，请参阅 [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)。
+1. 使用 Excel VSTO 外接程序项目模板，创建一个名为 **ExcelImportData** 的 Excel VSTO 外接程序项目。 有关详细信息，请参阅 [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)。
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 打开 **ThisAddIn.cs** 或 **ThisAddIn** 代码文件，并将 **ExcelImportData** 项目添加到 **解决方案资源管理器**。
 
@@ -97,7 +99,7 @@ ms.locfileid: "72650788"
      [!code-csharp[Trin_AddInInteropWalkthrough#1](../vsto/codesnippet/CSharp/Trin_AddInInteropWalkthrough/ThisAddIn.cs#1)]
      [!code-vb[Trin_AddInInteropWalkthrough#1](../vsto/codesnippet/VisualBasic/Trin_AddInInteropWalkthrough/ThisAddIn.vb#1)]
 
-4. 在“生成”菜单中，单击“生成解决方案”。
+4. 在 **“生成”** 菜单上，单击 **“生成解决方案”** 。
 
      验证解决方案已生成且未发生错误。
 
@@ -135,7 +137,7 @@ ms.locfileid: "72650788"
     End Sub
     ```
 
-7. 按 **F5**。
+7. 按 F5 。
 
 8. 验证是否已将新的 **Imported Data** 表添加到工作簿。 此外，请验证 A1 单元格是否包含字符串 **This is my data**。
 
@@ -155,5 +157,5 @@ ms.locfileid: "72650788"
 - [从其他 Office 解决方案调用 VSTO 外接程序中的代码](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)
 - [开发 Office 解决方案](../vsto/developing-office-solutions.md)
 - [如何：在 Visual Studio 中创建 Office 项目](../vsto/how-to-create-office-projects-in-visual-studio.md)
-- [Architecture of VSTO Add-ins](../vsto/architecture-of-vsto-add-ins.md)
+- [VSTO 外接程序的体系结构](../vsto/architecture-of-vsto-add-ins.md)
 - [使用扩展性接口自定义 UI 功能](../vsto/customizing-ui-features-by-using-extensibility-interfaces.md)

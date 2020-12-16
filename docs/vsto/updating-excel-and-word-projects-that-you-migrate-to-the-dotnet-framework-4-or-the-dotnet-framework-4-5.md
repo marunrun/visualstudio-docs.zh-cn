@@ -1,5 +1,7 @@
 ---
 title: 更新 Excel 或 Word 项目已迁移到 .NET Framework 4。5
+description: 如果有使用特定功能的 Excel 或 Word 项目，则必须修改代码，前提是目标框架更改为 .NET Framework 4 或更高版本。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 06f4742317e3702273c5fe7c91ccc76a153c1b3e
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 7bc79a53b62cf9fb0ca0ba533a2ce0d542b08c72
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584407"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528432"
 ---
 # <a name="update-excel-and-word-projects-that-you-migrate-to-the-net-framework-45"></a>更新迁移到 .NET Framework 4.5 的 Excel 和 Word 项目
   如果你的一个 Excel 或 Word 项目使用以下任何功能，且如果目标框架更改为 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 或更高版本，则必须修改你的代码：
@@ -68,7 +70,7 @@ ms.locfileid: "91584407"
 
 1. 在 Visual Studio 中打开该项目，然后打开 **“解决方案资源管理器”**。
 
-2. 在 **解决方案资源管理器**中，打开适用于 c # ) 的 *ThisAddin.cs* (的快捷菜单或 Visual Basic) 的 *ThisAddin* (，然后选择 " **查看代码**"。
+2. 在 **解决方案资源管理器** 中，打开适用于 c # ) 的 *ThisAddin.cs* (的快捷菜单或 Visual Basic) 的 *ThisAddin* (，然后选择 " **查看代码**"。
 
 3. 在代码编辑器的 `VSTO generated code` 区域中，删除或注释禁用以下代码行。
 
@@ -189,7 +191,7 @@ private void DoSomethingToSheet(Microsoft.Office.Tools.Excel.Worksheet worksheet
     ```
 
 ## <a name="update-code-that-uses-windows-forms-controls-on-documents"></a><a name="winforms"></a> 更新使用文档上 Windows 窗体控件的代码
- 必须 **使用** (c # ) ** (或将** 或命名空间的 Visual Basic) 语句添加 <xref:Microsoft.Office.Tools.Excel> <xref:Microsoft.Office.Tools.Word> 到使用 Controls 属性以编程方式将 Windows 窗体控件添加到文档或工作表的任何代码文件的顶部。
+ 必须 **使用** (c # ) **(或将** 或命名空间的 Visual Basic) 语句添加 <xref:Microsoft.Office.Tools.Excel> <xref:Microsoft.Office.Tools.Word> 到使用 Controls 属性以编程方式将 Windows 窗体控件添加到文档或工作表的任何代码文件的顶部。
 
  在面向 .NET Framework 3.5 的项目中，添加 Windows 窗体控件的方法（如 `AddButton` 方法）在 <xref:Microsoft.Office.Tools.Excel.ControlCollection> 和 <xref:Microsoft.Office.Tools.Word.ControlCollection> 类中定义。
 

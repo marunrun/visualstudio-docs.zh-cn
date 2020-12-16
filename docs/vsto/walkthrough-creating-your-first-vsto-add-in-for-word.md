@@ -1,5 +1,7 @@
 ---
 title: 演练：创建您的第一个 Word VSTO 外接程序
+description: 创建用于 Microsoft Word 的应用程序级外接程序。 此功能可用于应用程序本身，无论打开的是哪个文档。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ed5c5e5b03ce7ee0ffbd361b896f288f6b93a806
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6dc136b1c58f9c627787045b1259d07e27a6b8ad
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "90840370"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527865"
 ---
 # <a name="walkthrough-create-your-first-vsto-add-in-for-word"></a>演练：创建您的第一个 Word VSTO 外接程序
   本介绍性演练说明如何创建 Microsoft Office Word 的 VSTO 外接程序。 你在此类解决方案中创建的功能可用于应用程序本身，而与所打开的文档无关。
@@ -62,7 +64,7 @@ ms.locfileid: "90840370"
 
 6. 在 " **名称** " 框中，键入 **FirstWordAddIn**。
 
-7. 单击“确定”。 
+7. 单击“确定”  。
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 创建 **FirstWordAddIn** 项目，并在编辑器中打开 ThisAddIn 代码文件。
 
@@ -133,7 +135,7 @@ ms.locfileid: "90840370"
 
 - 部署 Word 的 VSTO 外接程序： [部署 Office 解决方案](../vsto/deploying-an-office-solution.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [Office 解决方案开发概述 &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)
 - [Word 解决方案](../vsto/word-solutions.md)
 - [程序 VSTO 外接程序](../vsto/programming-vsto-add-ins.md)

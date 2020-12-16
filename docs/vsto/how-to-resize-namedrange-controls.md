@@ -1,5 +1,7 @@
 ---
 title: 如何：调整 NamedRange 控件的大小
+description: 了解如何使用 Visual Studio 以编程方式在 Microsoft Excel 工作簿中调整 NamedRange 控件的大小。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7762e67b1676f72030cae8d958bef19c501660c3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 043def019d30ee629e672a081cd5aea73bca4304
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85545816"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528182"
 ---
 # <a name="how-to-resize-namedrange-controls"></a>如何：调整 NamedRange 控件的大小
   将 <xref:Microsoft.Office.Tools.Excel.NamedRange> 控件添加到 Microsoft Office Excel 文档时，可以设置该控件的大小；但是，你可能需要在以后调整其大小。
@@ -37,15 +39,15 @@ ms.locfileid: "85545816"
 - [在运行时在 VSTO 外接程序项目中调整 NamedRange 控件的大小](#runtimeaddin)
 
 ## <a name="resize-namedrange-controls-at-design-time"></a><a name="designtime"></a> 在设计时调整 NamedRange 控件的大小
- 可以通过在“定义名称” **** 对话框中重新定义其大小来调整命名范围的大小。
+ 可以通过在“定义名称”  对话框中重新定义其大小来调整命名范围的大小。
 
 ### <a name="to-resize-a-named-range-by-using-the-define-name-dialog-box"></a>使用“定义名称”对话框来调整命名范围的大小
 
 1. 右击 <xref:Microsoft.Office.Tools.Excel.NamedRange> 控件。
 
-2. 在快捷菜单上单击“管理命名范围” **** 。
+2. 在快捷菜单上单击“管理命名范围”  。
 
-     “定义名称” **** 对话框随即出现。
+     “定义名称”  对话框随即出现。
 
 3. 选择要调整大小的命名范围。
 
@@ -53,13 +55,13 @@ ms.locfileid: "85545816"
 
 5. 选择要用来定义命名范围大小的单元格。
 
-6. 单击“确定”。
+6. 单击“确定”  。
 
 ## <a name="resize-namedrange-controls-at-run-time-in-a-document-level-project"></a><a name="runtimedoclevel"></a> 在运行时在文档级项目中调整 NamedRange 控件的大小
  可以通过编程的方式，使用 <xref:Microsoft.Office.Tools.Excel.NamedRange.RefersTo%2A> 属性调整命名范围的大小。
 
 > [!NOTE]
-> 在“属性” **** 窗口中， <xref:Microsoft.Office.Tools.Excel.NamedRange.RefersTo%2A> 属性标记为“只读”。
+> 在“属性”  窗口中， <xref:Microsoft.Office.Tools.Excel.NamedRange.RefersTo%2A> 属性标记为“只读”。
 
 ### <a name="to-resize-a-named-range-programmatically"></a>以编程方式调整命名范围大小
 

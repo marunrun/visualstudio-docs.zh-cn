@@ -1,5 +1,7 @@
 ---
 title: 为 Office 解决方案设置配置信息
+description: 了解如何使用配置文件来配置特定于 Microsoft Office 解决方案的设置。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e47ad00e3f9e90913784196894d514a755699864
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 3cff5e6f559245e361eda0db6623312917891969
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91581034"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528151"
 ---
 # <a name="how-to-set-up-configuration-information-for-an-office-solution"></a>如何：为 Office 解决方案设置配置信息
   你可以使用配置文件来配置特定于 Office 解决方案的设置。 可以指定设置，例如程序集绑定策略、远程处理对象、调试和跟踪设置。
@@ -36,9 +38,9 @@ ms.locfileid: "91581034"
 
 3. 在 " **模板** " 窗格中，选择 " **应用程序配置文件**"。
 
-4. 在 " **名称** " 框中，键入与程序集和扩展名 *.config*相同的名称。例如，名为 *ExcelWorkbook1.dll* 的 Excel 项目程序集的配置文件将命名为 *ExcelWorkbook1.dll.config*。
+4. 在 " **名称** " 框中，键入与程序集和扩展名 *.config* 相同的名称。例如，名为 *ExcelWorkbook1.dll* 的 Excel 项目程序集的配置文件将命名为 *ExcelWorkbook1.dll.config*。
 
-5. 单击“添加”。
+5. 单击 **添加**。
 
 6. 根据应用程序配置文件架构创建配置文件。 有关详细信息，请参阅 [.NET Framework 的配置文件架构](/dotnet/framework/configure-apps/file-schema/index)。
 

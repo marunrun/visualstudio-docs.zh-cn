@@ -1,5 +1,7 @@
 ---
 title: 如何：调整书签控件的大小
+description: 了解在将书签控件添加到 Microsoft Word 文档中时，如何使用 Visual Studio 设置该控件的大小。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6cc7b26bb767c233ed8699519261d4b5b708306b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0d577f825337862de4ef967bb4f92f61ebbb0b45
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85545855"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528196"
 ---
 # <a name="how-to-resize-bookmark-controls"></a>如何：调整书签控件的大小
   当你将 <xref:Microsoft.Office.Tools.Word.Bookmark> 控件添加到 Microsoft Office Word 文档时，可以设置它的大小。 稍后还可以重设其大小。
@@ -47,7 +49,7 @@ ms.locfileid: "85545855"
 
 ### <a name="to-resize-a-bookmark-in-a-document-level-project-at-design-time"></a>在设计时重设文档级项目中的书签大小
 
-1. 在“属性” **** 窗口中选择书签。
+1. 在“属性”  窗口中选择书签。
 
 2. 增大或减小 <xref:Microsoft.Office.Tools.Word.Bookmark.Start%2A> 属性的值。
 
@@ -83,9 +85,9 @@ ms.locfileid: "85545855"
 
 1. 选择要包含在新 <xref:Microsoft.Office.Tools.Word.Bookmark> 控件中的文本。
 
-2. 在“插入” **** 菜单上，单击“书签” ****。
+2. 在“插入”  菜单上，单击“书签” 。
 
-3. 在“书签” **** 对话框中，选择想要重设其大小的书签的名称，并单击“添加” ****。
+3. 在“书签”  对话框中，选择想要重设其大小的书签的名称，并单击“添加” 。
 
 ## <a name="see-also"></a>另请参阅
 - [如何：向 Word 文档添加书签控件](../vsto/how-to-add-bookmark-controls-to-word-documents.md)

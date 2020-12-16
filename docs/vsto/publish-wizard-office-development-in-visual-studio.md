@@ -1,5 +1,7 @@
 ---
 title: '发布向导 (Visual Studio 中的 Office 开发) '
+description: 了解如何使用发布向导将解决方案文件复制到指定位置、创建清单文件，以及在 Visual Studio 中创建安装程序。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -18,17 +20,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: be5742533280ab2ff7da04ee287b0534980d9436
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 25821a0f245f2f0ed30fcbfb10137a772dd0dd01
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810975"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528015"
 ---
 # <a name="publish-wizard-office-development-in-visual-studio"></a>发布向导 (Visual Studio 中的 Office 开发) 
   使用 **发布向导** 将解决方案文件复制到指定位置、创建清单文件并创建安装程序。
 
- 若要访问此向导，请在 "**生成**" 菜单上选择 "**发布***解决方案名称*"。 您还可以从**解决方案资源管理器**访问**发布向导**。 打开项目节点的快捷菜单，然后选择 " **发布**"。
+ 若要访问此向导，请在 "**生成**" 菜单上选择 "**发布***解决方案名称*"。 您还可以从 **解决方案资源管理器** 访问 **发布向导**。 打开项目节点的快捷菜单，然后选择 " **发布**"。
 
  以下各节介绍向导的一页。
 
@@ -39,19 +41,19 @@ ms.locfileid: "90810975"
 
 - 标准 Windows 格式的相对路径或绝对路径，例如 *C:\Deploy\MyApplication* 或 *\MyApplication*。
 
-- 通用命名约定 (UNC) 路径，例如* \\ \ServerName\MyApplication \\ *。
+- 通用命名约定 (UNC) 路径，例如 *\\ \ServerName\MyApplication \\*。
 
 - 网站的 URL，例如 `http://www.contoso.com/MyApplication` 。
 
   默认情况下，如果安装了 IIS，则发布位置为; *http://localhost/projectname/* 如果未安装 iis，则为发布目录。
 
 > [!NOTE]
-> 如果目标计算机运行的是 Windows Vista，则有更多注意事项。 只有 Windows Vista 计算机上的管理员才能使用本地发布选项。 此外，无论是否安装了 IIS，默认位置始终为*发布 \\ *目录。
+> 如果目标计算机运行的是 Windows Vista，则有更多注意事项。 只有 Windows Vista 计算机上的管理员才能使用本地发布选项。 此外，无论是否安装了 IIS，默认位置始终为 *发布 \\* 目录。
 
 ## <a name="what-is-the-default-installation-path-on-end-user-computers"></a>最终用户计算机上的默认安装路径是什么？
  安装路径是可选的。 以后可以根据需要设置安装路径。 有关详细信息，请参阅 [如何：更改 Office 解决方案的安装路径](/previous-versions/bb608626(v=vs.110))。
 
- 安装路径是最终用户将从其中安装自定义项的目录。 这也是解决方案将用于检查更新的路径。 **发布向导**不会将解决方案部署到此位置，除非该路径与您在前一页上的 "**指定发布此应用程序的位置**" 框中输入的路径相同。
+ 安装路径是最终用户将从其中安装自定义项的目录。 这也是解决方案将用于检查更新的路径。 **发布向导** 不会将解决方案部署到此位置，除非该路径与您在前一页上的 "**指定发布此应用程序的位置**" 框中输入的路径相同。
 
  **从** 网站指定最终用户将用于安装解决方案的 URL。
 

@@ -1,5 +1,7 @@
 ---
 title: Office 项目模板概述
+description: 了解 Microsoft Office Visual Studio 中的开发人员工具如何包含用于创建不同类型的 Office 解决方案的项目模板。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -30,12 +32,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d83b04795386cfec80a8a309a9a84da04f6df105
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5e3203eb4bbd7339f5e59ecffea8436b02180b8b
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "68926591"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528073"
 ---
 # <a name="office-project-templates-overview"></a>Office 项目模板概述
   Visual Studio 中的 Microsoft Office 开发人员工具包括用于创建以下类型的 Office 解决方案的项目模板：
@@ -164,7 +166,7 @@ ms.locfileid: "68926591"
  当 Microsoft Office Word 模板具有托管代码扩展时，如果该模板作为全局模板附加或者从 Word 的 Startup 目录中加载，则不会调用项目程序集。 此外，文档不识别属于 Office 解决方案的模板的格式。
 
 ## <a name="excel-add-ins-xla-files"></a>Excel 外接程序 ( bam.xla 文件) 
- 没有用于创建 Excel VSTO 外接程序的 Office 项目 (*bam.xla* 文件) 。 可以将工作簿另存为 .xla 文件，但这不是一种受支持的操作，建议你不要这样做。 如果将具有托管代码扩展的工作簿另存为 **Microsoft Office Excel 外接程序 (\* bam.xla) ** 文件，则可以在 " **外接程序** " 对话框中选择该工作簿以应用于另一个工作簿。 在某些情况下，应用 VSTO 外接程序后，你的代码将在目标工作簿中运行，但不支持此类 Office 解决方案的使用。
+ 没有用于创建 Excel VSTO 外接程序的 Office 项目 (*bam.xla* 文件) 。 可以将工作簿另存为 .xla 文件，但这不是一种受支持的操作，建议你不要这样做。 如果将具有托管代码扩展的工作簿另存为 **Microsoft Office Excel Add-In (\* bam.xla)** 文件，则可以在 " **外接程序** " 对话框中将其选中以应用于另一个工作簿。 在某些情况下，应用 VSTO 外接程序后，你的代码将在目标工作簿中运行，但不支持此类 Office 解决方案的使用。
 
 ## <a name="see-also"></a>另请参阅
 - [设计和创建 Office 解决方案](../vsto/designing-and-creating-office-solutions.md)

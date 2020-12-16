@@ -1,5 +1,7 @@
 ---
 title: NamedRange 控件
+description: 了解 NamedRange 控件是具有唯一名称的范围，公开事件，并且可以绑定到数据。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e2b5b5d246e1033148bc199da6e7d2bdfb7aa9b3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f1881afb0dd718eec3815ab9de3becbeaf070f5d
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71254719"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528089"
 ---
 # <a name="namedrange-control"></a>NamedRange 控件
   <xref:Microsoft.Office.Tools.Excel.NamedRange> 控件是一个具有唯一名称的范围，可用于公开事件且可以绑定到数据。 有关详细信息，请参阅 [Excel 对象模型概述](../vsto/excel-object-model-overview.md)。
@@ -50,7 +52,7 @@ ms.locfileid: "71254719"
  可应用于 <xref:Microsoft.Office.Interop.Excel.Range> 的格式设置也可应用于 <xref:Microsoft.Office.Tools.Excel.NamedRange> 控件。 这包括边框、字体、数字格式和样式。
 
 ## <a name="rename-the-control"></a>重命名控件
- 当你将 <xref:Microsoft.Office.Tools.Excel.NamedRange> 控件从“工具箱” **** 添加到工作表时，Visual Studio 会自动生成该控件的名称。 你可以在“属性” **** 窗口中更改名称。
+ 当你将 <xref:Microsoft.Office.Tools.Excel.NamedRange> 控件从“工具箱” 添加到工作表时，Visual Studio 会自动生成该控件的名称。 你可以在“属性”  窗口中更改名称。
 
 ## <a name="events"></a>事件
  以下事件可用于 <xref:Microsoft.Office.Tools.Excel.NamedRange> 控件：
@@ -71,7 +73,7 @@ ms.locfileid: "71254719"
 
 - <xref:Microsoft.Office.Tools.Excel.NamedRange.SelectionChange>
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [使用扩展对象实现 Excel 自动化](../vsto/automating-excel-by-using-extended-objects.md)
 - [Office 开发示例和演练](../vsto/office-development-samples-and-walkthroughs.md)
 - [将数据绑定到 Office 解决方案中的控件](../vsto/binding-data-to-controls-in-office-solutions.md)

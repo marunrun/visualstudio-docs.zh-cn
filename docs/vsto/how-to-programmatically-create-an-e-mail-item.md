@@ -1,5 +1,7 @@
 ---
 title: 如何：以编程方式创建电子邮件项
+description: 了解如何使用 Visual Studio 以编程方式在 Microsoft Outlook 中创建电子邮件。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d22808b8d68c0fdb3b6a2374985ae25a539f0e8c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 786526841d5ffc5cdd6241f93043284a4be515fd
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546037"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527815"
 ---
 # <a name="how-to-programmatically-create-an-email-item"></a>如何：以编程方式创建电子邮件项
   此示例在 Microsoft Office Outlook 中创建一封电子邮件。

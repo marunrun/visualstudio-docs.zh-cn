@@ -1,5 +1,7 @@
 ---
 title: 功能区对象模型概述
+description: 了解 Visual Studio Tools for Office 运行时如何公开一个强类型对象模型，你可以使用该模型在运行时获取和设置功能区控件的属性。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6ca22704345fefb4944bda7dd9f71942fe8dfb50
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f97bbbab4b867f503e5b5befff27844df8a4b4bc
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71256017"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527993"
 ---
 # <a name="ribbon-object-model-overview"></a>功能区对象模型概述
   [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]公开了一个强类型对象模型，可用于在运行时获取和设置功能区控件的属性。 例如，可以动态填充菜单控件，或显示和隐藏控件根据上下文。 你还可以将选项卡、组和控件添加到功能区，但在 Office 应用程序加载功能区之前。 有关信息，请参阅 [设置变成只读属性](#SettingReadOnlyProperties)。
@@ -27,12 +29,12 @@ ms.locfileid: "71256017"
  此功能区对象模型主要包含 [功能区类](#RibbonClass)、 [功能区事件](#RibbonEvents)和 [功能区控件类](#RibbonControlClasses)。
 
 ## <a name="ribbon-class"></a><a name="RibbonClass"></a> 功能区类
- 向项目中添加新的 **功能区 (可视化设计器) ** 项添加到项目中时，Visual Studio 会将 **功能区** 类添加到项目。 **功能区**类从类继承 <xref:Microsoft.Office.Tools.Ribbon.RibbonBase> 。
+ 向项目中添加新的 **功能区 (可视化设计器)** 项添加到项目中时，Visual Studio 会将 **功能区** 类添加到项目。 **功能区** 类从类继承 <xref:Microsoft.Office.Tools.Ribbon.RibbonBase> 。
 
  此类显示为在功能区代码文件和功能区设计器代码文件之间拆分的分部类。
 
 ## <a name="ribbon-events"></a><a name="RibbonEvents"></a> 功能区事件
- **功能区**类包含以下三个事件：
+ **功能区** 类包含以下三个事件：
 
 |事件|说明|
 |-----------|-----------------|
@@ -56,11 +58,11 @@ ms.locfileid: "71256017"
 |**"编辑框**|<xref:Microsoft.Office.Tools.Ribbon.RibbonEditBox>|
 |**库**|<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>|
 |**组**|<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup>|
-|**标签**|<xref:Microsoft.Office.Tools.Ribbon.RibbonLabel>|
+|**Label**|<xref:Microsoft.Office.Tools.Ribbon.RibbonLabel>|
 |**菜单**|<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu>|
-|**机**|<xref:Microsoft.Office.Tools.Ribbon.RibbonSeparator>|
+|**Separator**|<xref:Microsoft.Office.Tools.Ribbon.RibbonSeparator>|
 |**SplitButton**|<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>|
-|**选项卡**|<xref:Microsoft.Office.Tools.Ribbon.RibbonTab>|
+|Tab |<xref:Microsoft.Office.Tools.Ribbon.RibbonTab>|
 |**ToggleButton**|<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>|
 
  <xref:Microsoft.Office.Tools.Ribbon>命名空间对这些类型使用 "功能区" 前缀，以避免名称与命名空间中的控件类的名称冲突 <xref:System.Windows.Forms> 。
@@ -85,7 +87,7 @@ ms.locfileid: "71256017"
 |获取 <xref:Microsoft.Office.Tools.Ribbon.RibbonBox> 、、 <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown> <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery> 或中的项<br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton> 控件.|使用 Items 属性。|
 |向 <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox> 、 <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown> 或控件添加项 <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery> 。|使用 Items 属性。|
 |向添加控件 <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu> 。|使用 Items 属性。<br /><br /> 若要在 <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu> 功能区加载到 office 应用程序中之后将控件添加到中，则必须在 <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Dynamic%2A> 功能区加载到 office 应用程序中之前将属性设置为 **true** 。 有关信息，请参阅 [设置变成只读属性](#SettingReadOnlyProperties)。|
-|获取的选定项 <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox> ，<br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>、或 <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery> 。|使用 SelectedItem 属性。 对于 <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox> ，请使用 <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Text%2A> 属性。|
+|获取的选定项 <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox> ，<br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown> 或 <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery> 中的一项。|使用 SelectedItem 属性。 对于 <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox> ，请使用 <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Text%2A> 属性。|
 |获取上的组 <xref:Microsoft.Office.Tools.Ribbon.RibbonTab> 。|使用 <xref:Microsoft.Office.Tools.Ribbon.RibbonTab.Groups%2A> 属性。|
 |指定在中显示的行数和列数 <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery> 。|使用 <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.RowCount%2A> 和 <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ColumnCount%2A> 属性。|
 
@@ -132,14 +134,14 @@ ms.locfileid: "71256017"
 > [!NOTE]
 > 你可以随时在动态菜单上设置控件的属性。 此表不适用于这种情况。
 
-|属性|功能区控件类|
+|properties|功能区控件类|
 |--------------|--------------------------|
 |**BoxStyle**|<xref:Microsoft.Office.Tools.Ribbon.RibbonBox>|
 |**ButtonType**|<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>|
 |**ColumnCount**|<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>|
 |**ControlId**|<xref:Microsoft.Office.Tools.Ribbon.RibbonTab>|
 |**DialogLauncher**|<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup>|
-|**Dynamic**|<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu>|
+|**动态**|<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu>|
 |**全球**|<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon>|
 |**组**|<xref:Microsoft.Office.Tools.Ribbon.RibbonTab>|
 |**ImageName**|<xref:Microsoft.Office.Tools.Ribbon.RibbonButton><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonEditBox><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>|
@@ -148,7 +150,7 @@ ms.locfileid: "71256017"
 |**名称**|<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent>|
 |**位置**|<xref:Microsoft.Office.Tools.Ribbon.RibbonButton><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonGroup><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonSeparator><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonTab><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>|
 |**RibbonType**|<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon>|
-|**RowCount**|<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>|
+|**数**|<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>|
 |**ShowItemImage**|<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>|
 |**ShowItemLabel**|<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>|
 |**ShowItemSelection**|<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>|
@@ -181,7 +183,7 @@ ms.locfileid: "71256017"
 
 |参数|说明|
 |---------------|-----------------|
-|*sender*|一个 <xref:System.Object>，表示引发事件的控件。|
+|*寄信*|一个 <xref:System.Object>，表示引发事件的控件。|
 |*e*|一个包含 <xref:Microsoft.Office.Tools.Ribbon.RibbonControlEventArgs> 的 <xref:Microsoft.Office.Core.IRibbonControl>。 使用此控件可访问提供的功能区对象模型中不可用的任何属性 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 。|
 
 ## <a name="see-also"></a>另请参阅

@@ -1,5 +1,7 @@
 ---
 title: 在 Office 文档中保存动态控件
+description: 了解如何向解决方案中添加代码，以便在用户重新打开已关闭的文档时重新创建永久性动态控件。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5d48dfab18ec2165753ac19330f7fbe18c923da9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b6efb00571a9f594de6045860621fb840076e8f5
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71256009"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527531"
 ---
 # <a name="persist-dynamic-controls-in-office-documents"></a>在 Office 文档中保存动态控件
 

@@ -1,5 +1,7 @@
 ---
 title: 以编程方式保护文档和文档的某些部分
+description: 了解如何向 Microsoft Word 文档添加保护，以防止用户对文档进行任何编辑。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: beab8c2e1b18d56dc7b71688e0ff2ec5b74ac596
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 1dbb001a8c350b376f30047dbafbf747f043e91d
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584841"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527771"
 ---
 # <a name="how-to-programmatically-protect-documents-and-parts-of-documents"></a>如何：以编程方式保护文档和文档的某些部分
   你可以为 Microsoft Office Word 文档添加保护，以防止用户对文档进行任何编辑操作。

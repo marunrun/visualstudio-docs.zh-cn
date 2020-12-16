@@ -1,5 +1,7 @@
 ---
 title: XMLNode 控件
+description: 了解 XMLNode 控件是一个映射的 XML 节点对象，该对象公开事件并可绑定到数据。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a8bd5c4612b59f909ae623eb4092a209798f98c5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 58f9c5db883f55c00236bc202797dcf2ec3003f6
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62975726"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528333"
 ---
 # <a name="xmlnode-control"></a>XMLNode 控件
   **重要提示** 本主题中的关于 Microsoft Word 的信息是专门为其提供的个人和美国组织的权益和使用的，也就是在 Microsoft word 产品（在2010年1月之前）中运行的、microsoft Word 产品，microsoft Word 产品在年1月之前获得的 microsoft Word 产品，microsoft word 产品在 microsoft word 中删除了与自定义 与 Microsoft Word 有关的信息可能不会被美国或其所在区域中的个人或组织阅读或使用，或开发在 Microsoft Word 产品上运行的、2010年1月10日之后的 microsoft Word 产品。对于该日期之前许可的产品，这些产品的行为并不相同，也不会在美国之外购买和许可。
@@ -31,7 +33,7 @@ ms.locfileid: "62975726"
 ## <a name="bind-data-to-the-control"></a>将数据绑定到控件
  <xref:Microsoft.Office.Tools.Word.XMLNode>控件支持简单数据绑定。 XML 节点应使用属性绑定到数据源 <xref:System.Windows.Forms.IBindableComponent.DataBindings%2A> 。 如果更新绑定数据集内的数据，则 <xref:Microsoft.Office.Tools.Word.XMLNode> 控件会反映所做的更改。
 
-## <a name="formatting"></a>格式化
+## <a name="formatting"></a>格式设置
  可应用于对象的格式设置 <xref:Microsoft.Office.Interop.Word.XMLNode> 可应用于 <xref:Microsoft.Office.Tools.Word.XMLNode> 控件。 其中包括字体、下划线样式和字符样式。
 
 ## <a name="events"></a>事件
