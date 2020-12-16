@@ -1,5 +1,7 @@
 ---
 title: XmlMappedRange 控件
+description: 了解 XmlMappedRange 控件是一个范围，该范围仅在非重复架构元素映射到 Microsoft Excel 中的单元格上时创建。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 01417d9c08491edc882f7f758bb36e6184500e52
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f3b3fd140787d44cdd8364ce77d5292dfcd83f54
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72985363"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525897"
 ---
 # <a name="xmlmappedrange-control"></a>XmlMappedRange 控件
   <xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件是仅当非重复架构元素映射到 Microsoft Office Excel 中的单元格时创建的范围。 例如， `maxOccurs` 架构元素的属性等于1时。 在 Visual Studio 创建 XML 映射范围之后，可以直接对其进行编程，而无需遍历 Excel 对象模型。 删除元素映射后，只能删除 <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> Excel 中的控件。
@@ -55,7 +57,7 @@ ms.locfileid: "72985363"
 
 - <xref:Microsoft.Office.Tools.Excel.XmlMappedRange.SelectionChange>
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [使用扩展对象实现 Excel 自动化](../vsto/automating-excel-by-using-extended-objects.md)
 - [如何：向工作表添加 XMLMappedRange 控件](../vsto/how-to-add-xmlmappedrange-controls-to-worksheets.md)
 - [将数据绑定到 Office 解决方案中的控件](../vsto/binding-data-to-controls-in-office-solutions.md)

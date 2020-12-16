@@ -1,5 +1,7 @@
 ---
 title: 在 Excel 工作表中使用 Windows 窗体控件
+description: 了解如何以将控件添加到 Windows 窗体的相同方式将 Windows 窗体控件添加到 Microsoft Excel 工作簿。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 032ee551ff04590ccdb8744c1274b137dec0b756
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 015fffa51358c3a7a13d98950392d0749560c089
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62982322"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526514"
 ---
 # <a name="use-windows-forms-controls-on-excel-worksheets"></a>在 Excel 工作表中使用 Windows 窗体控件
   可以采用与将控件添加到 Windows 窗体相同的方式将 Windows 窗体控件添加到 Microsoft Office Excel 工作簿。 有关使用文档上的控件的一般信息，请参阅 [Office 文档中的 Windows 窗体控件概述](../vsto/windows-forms-controls-on-office-documents-overview.md)。

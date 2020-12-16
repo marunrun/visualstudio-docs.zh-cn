@@ -1,5 +1,7 @@
 ---
 title: 使用单选按钮更新工作表中的图表
+description: 了解在 Microsoft Excel 工作表上使用单选按钮的基本知识，使用户能够在选项之间快速切换。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e63d7d09a09fe4c051d8137428fdae90490cbae5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4e375f394cd3d8be35ace8e3df07920fb824a07e
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238811"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526064"
 ---
 # <a name="walkthrough-updating-a-chart-in-a-worksheet-using-radio-buttons"></a>演练：使用单选按钮更新工作表中的图表
   本演练演示如何在 Microsoft Office Excel 工作表上使用单选按钮，以使用户能够在两个选项之间快速切换。 在这种情况下，选项更改图表的样式。
@@ -45,7 +47,7 @@ ms.locfileid: "88238811"
 - [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] 或 [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)]。
 
 ## <a name="add-a-chart-to-a-worksheet"></a>向工作表添加图表
- 您可以创建自定义现有工作簿的 Excel 工作簿项目。 在本演练中，您将向工作簿添加一个图表，然后在新的 Excel 解决方案中使用此工作簿。 此演练中的数据源是一个名为 " **图表" 的数据**工作表。
+ 您可以创建自定义现有工作簿的 Excel 工作簿项目。 在本演练中，您将向工作簿添加一个图表，然后在新的 Excel 解决方案中使用此工作簿。 此演练中的数据源是一个名为 " **图表" 的数据** 工作表。
 
 ### <a name="to-add-the-data"></a>添加数据
 
@@ -80,7 +82,7 @@ ms.locfileid: "88238811"
 
 6. 在 " **选择数据源** " 对话框中，单击 **"确定"**。
 
-7. 重新定位图表，使右上角与单元格 **E2**对齐。
+7. 重新定位图表，使右上角与单元格 **E2** 对齐。
 
 8. 将文件保存到驱动器 C，并将其命名 **ExcelChart.xlsx**。
 
@@ -97,7 +99,7 @@ ms.locfileid: "88238811"
 
 2. 单击 " **浏览** " 按钮，浏览到本演练前面部分创建的工作簿。
 
-3. 单击“确定”。
+3. 单击“确定”  。
 
      Visual Studio 将在设计器中打开新的 Excel 工作簿，并将 **我的 Excel 图表** 项目添加到 **解决方案资源管理器**。
 
@@ -108,7 +110,7 @@ ms.locfileid: "88238811"
 
 1. <xref:Microsoft.Office.Tools.Excel.Chart>在设计器中选择控件，并在 "**属性**" 窗口中更改以下属性。
 
-    |属性|值|
+    |properties|值|
     |--------------|-----------|
     |**名称**|**dataChart**|
     |**HasLegend**|**false**|
@@ -120,7 +122,7 @@ ms.locfileid: "88238811"
 
 ### <a name="to-add-a-user-control"></a>要添加用户控件
 
-1. 在**解决方案资源管理器**中选择 "**我的 Excel Chart** " 项目。
+1. 在 **解决方案资源管理器** 中选择 "**我的 Excel Chart** " 项目。
 
 2. 在 **“项目”** 菜单上，单击 **“添加新项”**。
 
@@ -128,35 +130,35 @@ ms.locfileid: "88238811"
 
 ### <a name="to-add-radio-buttons-to-the-user-control"></a>向用户控件添加单选按钮
 
-1. 如果用户控件在设计器中不可见，请在**解决方案资源管理器**中双击 " **ChartOptions** "。
+1. 如果用户控件在设计器中不可见，请在 **解决方案资源管理器** 中双击 " **ChartOptions** "。
 
-2. 从 "**工具箱**" 的 "**公共控件**" 选项卡中，将**单选按钮**控件拖到用户控件，并更改以下属性。
+2. 从 "**工具箱**" 的 "**公共控件**" 选项卡中，将 **单选按钮** 控件拖到用户控件，并更改以下属性。
 
-   | 属性 | 值 |
+   | properties | 值 |
    |----------|------------------|
    | **名称** | **columnChart** |
-   | **Text** | **柱形图** |
+   | **文本** | **柱形图** |
 
 3. 将第二个单选按钮添加到用户控件，并更改以下属性。
 
-   | 属性 | 值 |
+   | properties | 值 |
    |----------|---------------|
    | **名称** | **barChart** |
-   | **Text** | **条形图** |
+   | **文本** | **条形图** |
 
 4. 将第三个单选按钮添加到用户控件，并更改以下属性。
 
-   | 属性 | 值 |
+   | properties | 值 |
    |----------|----------------|
    | **名称** | **lineChart** |
-   | **Text** | **折线图** |
+   | **文本** | **折线图** |
 
 5. 将第四个单选按钮添加到用户控件，并更改以下属性。
 
-   |属性|值|
+   |properties|值|
    |--------------|-----------|
    |**名称**|**areaBlockChart**|
-   |**Text**|**面积图**|
+   |**文本**|**面积图**|
 
    接下来，在单击单选按钮时编写代码以更新图表。
 
@@ -165,7 +167,7 @@ ms.locfileid: "88238811"
 
 ### <a name="to-create-an-event-and-property-on-a-user-control"></a>创建用户控件的事件和属性
 
-1. 在 **解决方案资源管理器**中，右键单击用户控件，然后单击 " **查看代码**"。
+1. 在 **解决方案资源管理器** 中，右键单击用户控件，然后单击 " **查看代码**"。
 
 2. 向类添加代码 `ChartOptions` 以创建 `SelectionChanged` 事件和 `Selection` 属性。
 
@@ -203,11 +205,11 @@ ms.locfileid: "88238811"
 
 ### <a name="to-add-the-user-control-your-worksheet"></a>向工作表添加用户控件
 
-1. 在“生成”菜单中，单击“生成解决方案”。
+1. 在 **“生成”** 菜单上，单击 **“生成解决方案”** 。
 
      将 **ChartOptions** 用户控件添加到 " **工具箱**"。
 
-2. 在 **解决方案资源管理器**中，右键单击 " **Sheet1** " 或 " **Sheet1.cs**"，然后单击 " **视图设计器**"。
+2. 在 **解决方案资源管理器** 中，右键单击 " **Sheet1** " 或 " **Sheet1.cs**"，然后单击 " **视图设计器**"。
 
 3. 将 **ChartOptions** 控件从 **工具箱** 拖到工作表中。
 
@@ -220,7 +222,7 @@ ms.locfileid: "88238811"
 
 ### <a name="to-change-the-type-of-chart-that-is-displayed-in-the-worksheet"></a>更改工作表中显示的图表的类型
 
-1. 向 `Sheet1` 类添加以下事件处理程序。
+1. 将以下事件处理程序添加到 `Sheet1` 类。
 
      [!code-vb[Trin_VstcoreProgrammingControlsExcel#19](../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb#19)]
      [!code-cs[Trin_VstcoreProgrammingControlsExcel#19](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#19)]

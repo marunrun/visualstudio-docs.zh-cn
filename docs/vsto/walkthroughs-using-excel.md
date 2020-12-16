@@ -1,5 +1,7 @@
 ---
 title: 使用 Excel 的演练
+description: 了解如何使用文档级自定义项和 VSTO 外接程序来自动执行 Microsoft Excel。 还可以自定义用户界面)  (UI。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b802d61c4e30fa9dd13279c54c2a9bfa343f322f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ba8a52e615a8e3d40b5c76be66f4b639aec6c07e
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71255055"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525956"
 ---
 # <a name="walkthroughs-using-excel"></a>使用 Excel 的演练
   下列演练演示了使用文档级自定义项和 VSTO 外接程序来自动化 Microsoft Office Excel 和自定义用户界面 (UI) 的方式。

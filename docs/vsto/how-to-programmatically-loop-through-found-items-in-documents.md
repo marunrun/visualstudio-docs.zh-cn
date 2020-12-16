@@ -1,5 +1,7 @@
 ---
 title: 如何：以编程方式遍历在文档中找到的项
+description: 了解如何使用 Visual Studio 以编程方式循环访问 Microsoft Word 文档中找到的项。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -15,15 +17,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e033b3d43f40736d7c77d11b489c0a6c2e91434e
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 634012cae7f12f5346ec83bbd2b41c1019ef066d
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585140"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525619"
 ---
 # <a name="how-to-programmatically-loop-through-found-items-in-documents"></a>如何：以编程方式遍历在文档中找到的项
-  <xref:Microsoft.Office.Interop.Word.Find>类具有一个 <xref:Microsoft.Office.Interop.Word.Find.Found%2A> 属性，该属性将在每次找到搜索项时返回**true** 。 你可以使用 <xref:Microsoft.Office.Interop.Word.Range> 方法循环访问在 <xref:Microsoft.Office.Interop.Word.Find.Execute%2A> 中找到的所有实例。
+  <xref:Microsoft.Office.Interop.Word.Find>类具有一个 <xref:Microsoft.Office.Interop.Word.Find.Found%2A> 属性，该属性将在每次找到搜索项时返回 **true** 。 你可以使用 <xref:Microsoft.Office.Interop.Word.Range> 方法循环访问在 <xref:Microsoft.Office.Interop.Word.Find.Execute%2A> 中找到的所有实例。
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 

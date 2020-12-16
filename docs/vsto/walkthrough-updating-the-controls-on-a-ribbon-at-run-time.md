@@ -1,5 +1,7 @@
 ---
 title: 演练：在运行时更新功能区上的控件
+description: 了解如何使用功能区对象模型在功能区加载到 Office 应用程序中之后更新功能区上的控件。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9c2e870f028b3337fd162adde881281d7050e142
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 2246dcdca1e754c885dd610f98986306a256228c
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "92298048"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526050"
 ---
 # <a name="walkthrough-update-the-controls-on-a-ribbon-at-run-time"></a>演练：在运行时更新功能区上的控件
 
@@ -60,7 +62,7 @@ ms.locfileid: "92298048"
 
 ### <a name="to-create-a-new-outlook-vsto-add-in-project"></a>创建新的 Outlook VSTO 外接程序项目
 
-1. 在中 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ，创建一个名为 **Ribbon_Update_At_Runtime**的 Outlook VSTO 外接程序项目。
+1. 在中 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ，创建一个名为 **Ribbon_Update_At_Runtime** 的 Outlook VSTO 外接程序项目。
 
 2. 在 **“新建项目”** 对话框中，选择 **“创建解决方案的目录”**。
 
@@ -80,7 +82,7 @@ ms.locfileid: "92298048"
 
 3. 将新功能区的名称更改为 **CustomerRibbon**，然后单击 " **添加**"。
 
-     *CustomerRibbon.cs*或*CustomerRibbon*文件将在功能区设计器中打开，并显示一个默认选项卡和组。
+     *CustomerRibbon.cs* 或 *CustomerRibbon* 文件将在功能区设计器中打开，并显示一个默认选项卡和组。
 
 4. 单击功能区设计器以将其选定。
 
@@ -92,13 +94,13 @@ ms.locfileid: "92298048"
 
 7. 在 " **属性** " 窗口中，将 " **标签** " 设置为 " **客户购买**"。
 
-8. 从 "**工具箱**" 的 " **Office 功能区控件**" 选项卡中，将**ComboBox**拖到 "**客户采购**" 组。
+8. 从 "**工具箱**" 的 " **Office 功能区控件**" 选项卡中，将 **ComboBox** 拖到 "**客户采购**" 组。
 
 9. 单击 **combobox1.location** 以将其选中。
 
 10. 在 " **属性** " 窗口中，将 " **标签** " 设置为 " **客户**"。
 
-11. 从 "**工具箱**" 的 " **Office 功能区控件**" 选项卡中，将**菜单**拖到 "**客户采购**" 组。
+11. 从 "**工具箱**" 的 " **Office 功能区控件**" 选项卡中，将 **菜单** 拖到 "**客户采购**" 组。
 
 12. 在 " **属性** " 窗口中，将 " **标签** " 设置为 " **购买产品**"。
 
@@ -112,7 +114,7 @@ ms.locfileid: "92298048"
 
 ### <a name="to-add-the-custom-group-to-a-built-in-tab"></a>将自定义组添加到内置选项卡
 
-1. 单击 " **成 tabaddins (内置) ** " 选项卡以将其选中。
+1. 单击 " **成 tabaddins (内置)** " 选项卡以将其选中。
 
 2. 在 " **属性** " 窗口中，展开 " **ControlId** " 属性，然后将 " **OfficeId** " 设置为 " **TabNewMailMessage**"。
 
@@ -178,7 +180,7 @@ ms.locfileid: "92298048"
 
     此程序集包含有关使用语言集成查询 (LINQ) 的类。 你将通过 LINQ 使用 Northwind 数据库中的数据填充自定义组中的控件。
 
-3. 在 **解决方案资源管理器**中，单击 " **CustomerRibbon.cs** " 或 " **CustomerRibbon** " 以将其选中。
+3. 在 **解决方案资源管理器** 中，单击 " **CustomerRibbon.cs** " 或 " **CustomerRibbon** " 以将其选中。
 
 4. 在 **“视图”** 菜单上，单击 **“代码”**。
 
@@ -219,7 +221,7 @@ ms.locfileid: "92298048"
      [!code-csharp[Trin_Ribbon_Update_At_Runtime#6](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#6)]
      [!code-vb[Trin_Ribbon_Update_At_Runtime#6](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#6)]
 
-10. 在 **解决方案资源管理器**中，双击功能区代码文件。
+10. 在 **解决方案资源管理器** 中，双击功能区代码文件。
 
      功能区设计器随即打开。
 
@@ -254,7 +256,7 @@ ms.locfileid: "92298048"
 
 当你在 Outlook 中打开一个新邮件窗体时，功能区的 "**消息**" 选项卡上将显示名为 "**客户购买**" 的自定义组。
 
-若要创建客户跟进电子邮件，请选择一个客户，然后选择客户购买的产品。 **客户购买**组中的控件将在运行时与 Northwind 数据库中的数据进行更新。
+若要创建客户跟进电子邮件，请选择一个客户，然后选择客户购买的产品。 **客户购买** 组中的控件将在运行时与 Northwind 数据库中的数据进行更新。
 
 ### <a name="to-test-the-controls-in-the-custom-group"></a>测试自定义组中的控件
 

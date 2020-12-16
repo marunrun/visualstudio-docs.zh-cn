@@ -1,5 +1,7 @@
 ---
 title: 演练：使用功能区设计器创建自定义选项卡
+description: 了解如何创建自定义选项卡，然后使用功能区设计器在其上添加和放置控件。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5f311f35ba4a8c443f47941a905ee4cf4d3ebfb2
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 539f75b7770abab75e912a28bc62ed51b7fb61d8
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585010"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524832"
 ---
 # <a name="walkthrough-create-a-custom-tab-by-using-the-ribbon-designer"></a>演练：使用功能区设计器创建自定义选项卡
   使用功能区设计器，可以创建自定义选项卡，然后在其中添加和放置控件。
@@ -53,7 +55,7 @@ ms.locfileid: "91585010"
 
 ### <a name="to-create-an-excel-workbook-project"></a>创建 Excel 工作簿项目
 
-- 创建名为 **MyExcelRibbon**的 Excel 工作簿项目。 有关详细信息，请参阅 [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)。
+- 创建名为 **MyExcelRibbon** 的 Excel 工作簿项目。 有关详细信息，请参阅 [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)。
 
      Visual Studio 将在设计器中打开新的工作簿，并将 **MyExcelRibbon** 项目添加到 **解决方案资源管理器**。
 
@@ -66,7 +68,7 @@ ms.locfileid: "91585010"
 
 2. 在 " **添加新项** " 对话框中，选择 " **ActionsPaneControl**"，然后选择 " **添加**"。
 
-     **ActionsPaneControl1.cs**或**actionspanecontrol1.vb**文件将在设计器中打开。
+     **ActionsPaneControl1.cs** 或 **actionspanecontrol1.vb** 文件将在设计器中打开。
 
 3. 从 "**工具箱**" 的 "**公共控件**" 选项卡中，将一个标签添加到设计器图面。
 
@@ -75,7 +77,7 @@ ms.locfileid: "91585010"
 5. 重复步骤 1 至 5，再创建一个操作窗格和标签。 将第二个标签的 " **Text** " 属性设置为 " **操作窗格 2**"。
 
 ## <a name="create-a-custom-tab"></a><a name="BKMK_CreateCustomTab"></a> 创建自定义选项卡
- Office 应用程序的设计准则之一是：用户应始终能控制 Office 应用程序 UI。 若要为操作窗格添加此功能，可以添加用于从功能区上的自定义选项卡显示和隐藏每个操作窗格的按钮。 若要创建自定义选项卡，请向项目添加 **功能区 (可视化设计器) ** 项。 设计器可帮助你添加和放置控件、设置控件属性以及处理控件事件。
+ Office 应用程序的设计准则之一是：用户应始终能控制 Office 应用程序 UI。 若要为操作窗格添加此功能，可以添加用于从功能区上的自定义选项卡显示和隐藏每个操作窗格的按钮。 若要创建自定义选项卡，请向项目添加 **功能区 (可视化设计器)** 项。 设计器可帮助你添加和放置控件、设置控件属性以及处理控件事件。
 
 ### <a name="to-create-a-custom-tab"></a>创建自定义选项卡
 
@@ -105,7 +107,7 @@ ms.locfileid: "91585010"
 
 12. 将第二个按钮添加到 " **group1**"，并将 " **标签** " 属性设置为 " **显示操作窗格 2**"。
 
-13. 从 "**工具箱**" 的 " **Office 功能区控件**" 选项卡中，将**切换按钮**控件拖到 " **group1**"。
+13. 从 "**工具箱**" 的 " **Office 功能区控件**" 选项卡中，将 **切换按钮** 控件拖到 " **group1**"。
 
 14. 将 " **标签** " 属性设置为 " **隐藏操作窗格**"。
 
@@ -114,7 +116,7 @@ ms.locfileid: "91585010"
 
 ### <a name="to-hide-and-show-actions-panes-by-using-buttons-in-the-custom-tab"></a>使用自定义选项卡中的按钮隐藏和显示操作窗格
 
-1. 在 **解决方案资源管理器**中，打开 *MyRibbon.cs* 或 *myribbon.vb*的快捷菜单，然后选择 " **查看代码**"。
+1. 在 **解决方案资源管理器** 中，打开 *MyRibbon.cs* 或 *myribbon.vb* 的快捷菜单，然后选择 " **查看代码**"。
 
 2. 将下面的代码添加到 `MyRibbon` 类的顶部。 这段代码可以创建两个操作窗格对象。
 

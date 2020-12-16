@@ -1,5 +1,7 @@
 ---
 title: " (Visual Studio 中的 Office 开发的用户界面参考) "
+description: 了解 Visual Studio 中的 Office 开发以及哪些用户界面元素是 Office 项目的一部分。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -13,17 +15,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 17366c4901c6fa28036d089f74402768721e1a8d
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: dc58e106a24b857f4702876085a8ab986b6c5c92
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584381"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526548"
 ---
 # <a name="user-interface-reference-office-development-in-visual-studio"></a> (Visual Studio 中的 Office 开发的用户界面参考) 
   以下用户界面元素是 Visual Studio 中的 Office 项目的一部分。
 
-## <a name="in-this-section"></a>在此部分中
+## <a name="in-this-section"></a>在本节中
 - [发布页，项目设计器 &#40;Visual Studio 中的 Office 开发&#41;](../vsto/publish-page-project-designer-office-development-in-visual-studio.md)
 
  描述用于配置属性以部署 Office 解决方案的属性页。

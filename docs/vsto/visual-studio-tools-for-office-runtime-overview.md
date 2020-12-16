@@ -1,5 +1,7 @@
 ---
 title: Visual Studio Tools for Office 运行时概述
+description: 要运行通过使用 Microsoft Office 开发人员工具创建的解决方案，必须在最终用户计算机上安装 Visual Studio 2010 Tools for Office runtime。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -26,12 +28,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 31d2244796282aaad56011d5b9963232d3438ce9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 16431a9ba2fe56b88f9f6b7f2c874c75bfad61c3
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71253990"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526268"
 ---
 # <a name="visual-studio-tools-for-office-runtime-overview"></a>Visual Studio Tools for Office 运行时概述
   若要运行通过使用 Visual Studio 中的 Microsoft Office 开发人员工具创建的解决方案，必须在最终用户计算机上安装 Visual Studio 2010 Tools for Office runtime。 有关详细信息，请参阅 [如何：安装 Visual Studio Tools for Office 运行时可再发行组件](../vsto/how-to-install-the-visual-studio-tools-for-office-runtime-redistributable.md)。 Visual Studio 2010 Tools for Office runtime 包括两个主要组件：
@@ -53,7 +55,7 @@ ms.locfileid: "71253990"
  大多数情况下，无论你的解决方案面向 .NET Framework 3.5 还是 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]，在 Office 解决方案中编写的代码都是相同的。 但是，如果面向 .NET Framework 的不同版本，则某些功能需要不同的代码。 有关详细信息，请参阅 [将 Office 解决方案迁移到 .NET Framework 4 或更高版本](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md)。
 
 ### <a name="interfaces-in-the-office-extensions-for-the-net-framework-4-or-later"></a>.NET Framework 4 或更高版本的 Office 扩展中的接口
- [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 或更高版本的的 Office 扩展中的大多数接口不应由用户代码实现。 用户只能实现名称以字母 **I**开头的接口，如 <xref:Microsoft.Office.Tools.Excel.ISmartTagExtension>。
+ [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 或更高版本的的 Office 扩展中的大多数接口不应由用户代码实现。 用户只能实现名称以字母 **I** 开头的接口，如 <xref:Microsoft.Office.Tools.Excel.ISmartTagExtension>。
 
  不以字母 **I** 开头的所有接口均由 Visual Studio 2010 Tools for Office runtime 在内部实现，并且这些接口可能会在将来的版本中更改。 若要创建实现这些接口的对象，请在项目使用由 `Globals.Factory` 对象提供的方法。 例如，若要获取实现 <xref:Microsoft.Office.Tools.Excel.SmartTag> 接口的对象，请使用 `Globals.Factory.CreateSmartTag` 方法。 有关的详细信息 `Globals.Factory` ，请参阅 [对 Office 项目中对象的全局访问](../vsto/global-access-to-objects-in-office-projects.md)。
 
@@ -85,7 +87,7 @@ ms.locfileid: "71253990"
  *VSTOEE.dll* 确保为 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 解决方案和安装的 Office 版本加载的正确版本。 尽管 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 可以在同一台计算机上安装多个版本的，但是一次只安装一个 *VSTOEE.dll* 实例。 这是安装在计算机上的最新运行时版本附带的 *VSTOEE.dll* 。 有关可用于其他解决方案的不同版本的的详细信息 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] ，请参阅 [在 Microsoft Office 的不同版本中运行解决方案](../vsto/running-solutions-in-different-versions-of-microsoft-office.md)。
 
 ### <a name="vstoloaderdll"></a>VSTOLoader.dll
- *VSTOEE.dll*加载的适当版本后 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] ， *VSTOLoader.dll*执行加载解决方案程序集所需的大部分工作。 *VSTOLoader.dll* 执行以下操作：
+ *VSTOEE.dll* 加载的适当版本后 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] ， *VSTOLoader.dll* 执行加载解决方案程序集所需的大部分工作。 *VSTOLoader.dll* 执行以下操作：
 
 - 它为每个解决方案程序集创建一个应用程序域。
 
@@ -115,11 +117,11 @@ ms.locfileid: "71253990"
 ## <a name="repair-the-visual-studio-2010-tools-for-office-runtime"></a>修复 Visual Studio 2010 Tools for Office runtime
  如果需要修复此运行时，请在“控制面板”中打开 **“程序和功能”** 或 **“添加或删除程序”** ，在程序列表中选择 **“Microsoft Visual Studio 2010 Tools for Office Runtime”** ，然后单击 **“卸载”**。 通过运行的安装程序即可修复此运行时。 如果单击 **“更改”**，则不会向你提供用于修复此运行时的选项。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [Visual Studio Tools for Office 运行时安装方案](../vsto/visual-studio-tools-for-office-runtime-installation-scenarios.md)
 - [Visual Studio Tools for Office 运行时中的程序集](../vsto/assemblies-in-the-visual-studio-tools-for-office-runtime.md)
 - [Visual Studio 中 Office 解决方案的体系结构](../vsto/architecture-of-office-solutions-in-visual-studio.md)
 - [文档级自定义项的体系结构](../vsto/architecture-of-document-level-customizations.md)
-- [Architecture of VSTO Add-ins](../vsto/architecture-of-vsto-add-ins.md)
+- [VSTO 外接程序的体系结构](../vsto/architecture-of-vsto-add-ins.md)
 - [如何：在 Visual Studio 中创建 Office 项目](../vsto/how-to-create-office-projects-in-visual-studio.md)
 - [升级和迁移 Office 解决方案](../vsto/upgrading-and-migrating-office-solutions.md)

@@ -1,5 +1,7 @@
 ---
 title: Visual Studio 中的 VBA 和 Office 解决方案比较
+description: 了解 Microsoft Visual Basic for Applications Visual Studio 中 (VBA) 和 Microsoft Office 解决方案之间的差异。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 24e7d3674712a17d940b94637db808c0d91d2d6a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4d07975061a7b2f5f655bf7f4339671f28fe14c9
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62982126"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526418"
 ---
 # <a name="vba-and-office-solutions-in-visual-studio-compared"></a>Visual Studio 中的 VBA 和 Office 解决方案比较
   Microsoft Visual Basic for Applications (VBA) 使用与 Office 应用程序紧密集成的非托管代码。 你可以通过使用 Visual Studio 创建 Microsoft Office 项目以便充分利用 .NET Framework 和 Visual Studio 设计工具。
@@ -50,6 +52,6 @@ ms.locfileid: "62982126"
 - [从其他 Office 解决方案调用 VSTO 外接程序中的代码](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)
 - [合并 VBA 和文档级自定义项](../vsto/combining-vba-and-document-level-customizations.md)
 - [文档级自定义项的体系结构](../vsto/architecture-of-document-level-customizations.md)
-- [Architecture of VSTO Add-ins](../vsto/architecture-of-vsto-add-ins.md)
+- [VSTO 外接程序的体系结构](../vsto/architecture-of-vsto-add-ins.md)
 - [保护 Office 解决方案](../vsto/securing-office-solutions.md)
 - [开始 &#40;Visual Studio 中的 Office 开发&#41;](../vsto/getting-started-office-development-in-visual-studio.md)

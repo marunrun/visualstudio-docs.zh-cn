@@ -1,5 +1,7 @@
 ---
 title: Office UI 自定义演练
+description: 了解如何使用文档级自定义项和 VSTO 外接程序来自定义 Microsoft Office 应用程序 (UI) 的用户界面。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e961479fc500e53133c62337478368878bf26893
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5e9cd19687e15cd30c8196183f43709d4ba5149d
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71254127"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525099"
 ---
 # <a name="office-ui-customization-walkthroughs"></a>Office UI 自定义演练
   下列演练演示了如何使用文档级自定义项和 VSTO 外接程序来自定义 Microsoft Office 应用程序的用户界面 (UI)。

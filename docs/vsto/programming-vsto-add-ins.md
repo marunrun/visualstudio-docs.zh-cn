@@ -1,5 +1,7 @@
 ---
 title: 程序 VSTO 外接程序
+description: 了解如何使用 ThisAddIn 类来执行任务，例如访问 Microsoft Office 主机应用程序的对象模型。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -32,12 +34,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 240995eb744f8107503c108cbcdbbb8522748b79
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7c3a4b14a1935d1d276f0884234fcd121b838f39
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87115329"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525114"
 ---
 # <a name="program-vsto-add-ins"></a>程序 VSTO 外接程序
   通过创建 VSTO 外接程序扩展 Microsoft Office 应用程序时，可以直接接针对项目中的 `ThisAddIn` 类编写代码。 此类可用于执行下列任务，例如：访问 Microsoft Office 主机应用程序的对象模型、自定义应用程序的用户界面 (UI) 和向其他 Office 解决方公开 VSTO 外接程序中的对象。
@@ -49,7 +51,7 @@ ms.locfileid: "87115329"
  有关可以通过使用 Visual Studio 中的 Office 开发工具创建的 VSTO 外接程序和其他类型的解决方案的常规信息，请参阅 [office 解决方案开发概述 &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)。
 
 ## <a name="use-the-thisaddin-class"></a>使用 ThisAddIn 类
- 你可以在 `ThisAddIn` 类中开始编写 VSTO 外接程序代码。 Visual Studio 会自动在*ThisAddIn.vb* [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] VSTO 外接程序项目中的) 或 ThisAddIn.cs () 代码文件中的 (ThisAddIn 或*ThisAddIn.cs*中生成此类。 当 Microsoft Office 应用程序加载 VSTO 外接程序时， [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 将为你自动实例化此类。
+ 你可以在 `ThisAddIn` 类中开始编写 VSTO 外接程序代码。 Visual Studio 会自动在 [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] VSTO 外接程序项目中的) 或 ThisAddIn.cs () 代码文件中的 (ThisAddIn 或中生成此类。 当 Microsoft Office 应用程序加载 VSTO 外接程序时， [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 将为你自动实例化此类。
 
  `ThisAddIn` 类中有两个默认的事件处理程序。 若要在加载 VSTO 外接程序后运行代码，请将代码添加到 `ThisAddIn_Startup` 事件处理程序。 若要在卸载 VSTO 外接程序前运行代码，请将代码添加到 `ThisAddIn_Shutdown` 事件处理程序。 有关这些事件处理程序的详细信息，请参阅 [Office 项目中的事件](../vsto/events-in-office-projects.md)。
 
@@ -150,5 +152,5 @@ Excel.Workbook newWorkbook = Globals.ThisAddIn.Application.Workbooks.Add(System.
 - [演练：从 VBA 调用 VSTO 外接程序中的代码](../vsto/walkthrough-calling-code-in-a-vsto-add-in-from-vba.md)
 - [使用扩展性接口自定义 UI 功能](../vsto/customizing-ui-features-by-using-extensibility-interfaces.md)
 - [如何：在 Visual Studio 中创建 Office 项目](../vsto/how-to-create-office-projects-in-visual-studio.md)
-- [Architecture of VSTO Add-ins](../vsto/architecture-of-vsto-add-ins.md)
+- [VSTO 外接程序的体系结构](../vsto/architecture-of-vsto-add-ins.md)
 - [在 Office 解决方案中编写代码](../vsto/writing-code-in-office-solutions.md)

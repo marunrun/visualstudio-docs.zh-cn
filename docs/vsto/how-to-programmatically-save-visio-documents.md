@@ -1,5 +1,7 @@
 ---
 title: 如何：以编程方式保存 Visio 文档
+description: 了解如何使用 Visual Studio 以编程方式保存尚未保存的 Microsoft Visio 现有文档和新文档。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 891a5c44159d10aacbb767cbc5376ae1d62252b0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 29f8cbc8aa7b2ea796109a8143d348905df671f7
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547051"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525391"
 ---
 # <a name="how-to-programmatically-save-visio-documents"></a>如何：以编程方式保存 Visio 文档
   可通过几种方法来保存 Microsoft Office Visio 文档：

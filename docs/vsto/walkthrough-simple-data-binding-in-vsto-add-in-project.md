@@ -1,5 +1,7 @@
 ---
 title: 演练： VSTO 外接程序项目中的简单数据绑定
+description: 了解如何向 Microsoft Word 文档添加控件，以及如何在运行时将控件绑定到数据。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 67264800fd2baa1ca685bcc578fb4d400e6538dd
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: bc0b4f18e0f9a45f19148fde9e3d289ccad9e73f
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584906"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526159"
 ---
 # <a name="walkthrough-simple-data-binding-in-vsto-add-in-project"></a>演练： VSTO 外接程序项目中的简单数据绑定
 
@@ -58,7 +60,7 @@ ms.locfileid: "91584906"
 
 ### <a name="to-create-a-new-project"></a>创建新项目的步骤
 
-1. 使用 Visual Basic 或 C# 创建一个名为“从数据库填充文档” **** 的 Word VSTO 外接程序项目。
+1. 使用 Visual Basic 或 C# 创建一个名为“从数据库填充文档” 的 Word VSTO 外接程序项目。
 
      有关详细信息，请参阅 [如何：在 Visual Studio 中创建 Office 项目](../vsto/how-to-create-office-projects-in-visual-studio.md)。
 
@@ -76,21 +78,21 @@ ms.locfileid: "91584906"
 
 2. 选择 **“添加新数据源”** 以启动 **“数据源配置向导”**。
 
-3. 单击“数据库” ****，然后单击“下一步” ****。
+3. 单击“数据库” ，然后单击“下一步” 。
 
-4. 如果已与 `AdventureWorksLT` 数据库建立连接，请选择此连接，然后单击“下一步” ****。
+4. 如果已与 `AdventureWorksLT` 数据库建立连接，请选择此连接，然后单击“下一步” 。
 
-    否则，单击“新建连接” ****，然后使用“添加连接” **** 对话框创建新连接。 有关详细信息，请参阅 [添加新连接](../data-tools/add-new-connections.md)。
+    否则，单击“新建连接” ，然后使用“添加连接”  对话框创建新连接。 有关详细信息，请参阅 [添加新连接](../data-tools/add-new-connections.md)。
 
-5. 在“将连接字符串保存到应用程序配置文件中” **** 页中，单击“下一步” ****。
+5. 在“将连接字符串保存到应用程序配置文件中”  页中，单击“下一步” 。
 
-6. 在“选择数据库对象” **** 页中展开“表” **** ，再选择“Customer (SalesLT)” ****。
+6. 在“选择数据库对象”  页中展开“表”  ，再选择“Customer (SalesLT)” 。
 
 7. 单击“完成”。
 
     将 *adventureworksltdataset.xsd* 文件添加到 **解决方案资源管理器**。 此文件定义以下各项：
 
-   - 一个名为 `AdventureWorksLTDataSet`的类型化数据集。 此数据集表示 AdventureWorksLT 数据库中的“Customer (SalesLT)” **** 表的内容。
+   - 一个名为 `AdventureWorksLTDataSet`的类型化数据集。 此数据集表示 AdventureWorksLT 数据库中的“Customer (SalesLT)”  表的内容。
 
    - 名为的 TableAdapter `CustomerTableAdapter` 。 此 TableAdapter 可用于在中读取和写入数据 `AdventureWorksLTDataSet` 。 有关详细信息，请参阅 [TableAdapter 概述](../data-tools/fill-datasets-by-using-tableadapters.md#tableadapter-overview)。
 
@@ -141,15 +143,15 @@ ms.locfileid: "91584906"
 
 ## <a name="test-the-add-in"></a>测试外接程序
 
-打开 Word 后，内容控件随即显示 `AdventureWorksLTDataSet` 数据集中的数据。 通过单击“下一条” **** 和“上一条” **** 按钮来滚动查看数据库记录。
+打开 Word 后，内容控件随即显示 `AdventureWorksLTDataSet` 数据集中的数据。 通过单击“下一条”  和“上一条”  按钮来滚动查看数据库记录。
 
 ### <a name="to-test-the-vsto-add-in"></a>若要测试 VSTO 外接程序
 
-1. 按 **F5**。
+1. 按 F5 。
 
      即会创建一个名为 `customerContentControl` 的内容控件，并向该控件填充数据。 同时，向项目添加了一个名为 `adventureWorksLTDataSet` 的数据集对象和一个名为 <xref:System.Windows.Forms.BindingSource> 的 `customerBindingSource` 。 已将 <xref:Microsoft.Office.Tools.Word.ContentControl> 绑定到 <xref:System.Windows.Forms.BindingSource>，而后者又绑定到该数据集对象。
 
-2. 单击“下一条” **** 和“上一条” **** 按钮来滚动查看数据库记录。
+2. 单击“下一条”  和“上一条”  按钮来滚动查看数据库记录。
 
 ## <a name="see-also"></a>另请参阅
 

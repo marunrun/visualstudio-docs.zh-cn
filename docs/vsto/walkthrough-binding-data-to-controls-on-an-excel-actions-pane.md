@@ -1,5 +1,7 @@
 ---
 title: 演练：将数据绑定到 Excel 操作窗格上的控件
+description: 将数据绑定到 Microsoft Excel 中的操作窗格上的控件。 控件演示 SQL Server 数据库中表之间的主/从关系。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3801aff53a5bf9a9a8d77263ab74127c1b2a9846
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 6c53f4c1dfe9838fe4522dcc71b675a7f6b868d4
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585049"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524976"
 ---
 # <a name="walkthrough-bind-data-to-controls-on-an-excel-actions-pane"></a>演练：将数据绑定到 Excel 操作窗格上的控件
   本演练演示如何将数据绑定到 Microsoft Office Excel 中操作窗格上的控件。 控件演示 SQL Server 数据库中表之间的主/从关系。
@@ -59,7 +61,7 @@ ms.locfileid: "91585049"
 
 ### <a name="to-create-a-new-project"></a>创建新项目的步骤
 
-1. 使用 " **我的 Excel 操作" 窗格**创建一个 Excel 工作簿项目。 在向导中，选择 " **创建新文档**"。 有关详细信息，请参阅 [如何：在 Visual Studio 中创建 Office 项目](../vsto/how-to-create-office-projects-in-visual-studio.md)。
+1. 使用 " **我的 Excel 操作" 窗格** 创建一个 Excel 工作簿项目。 在向导中，选择 " **创建新文档**"。 有关详细信息，请参阅 [如何：在 Visual Studio 中创建 Office 项目](../vsto/how-to-create-office-projects-in-visual-studio.md)。
 
      Visual Studio 将在设计器中打开新的 Excel 工作簿，并将 " **我的 Excel 操作" 窗格** 项目添加到 **解决方案资源管理器**。
 
@@ -75,7 +77,7 @@ ms.locfileid: "91585049"
 
 4. 选择与 Northwind 示例 SQL Server 数据库的数据连接，或使用 " **新建连接** " 按钮添加新连接。
 
-5. 单击“下一步”。
+5. 单击 **下一步**。
 
 6. 清除该选项以保存连接（如果已选中），然后单击 " **下一步**"。
 
@@ -87,7 +89,7 @@ ms.locfileid: "91585049"
 
 10. 单击“完成”。
 
-    向导将 " **供应商** 表和 **产品** " 表添加到 " **数据源** " 窗口。 它还将一个类型化数据集添加到你的项目中，该数据集在 **解决方案资源管理器**中可见。
+    向导将 " **供应商** 表和 **产品** " 表添加到 " **数据源** " 窗口。 它还将一个类型化数据集添加到你的项目中，该数据集在 **解决方案资源管理器** 中可见。
 
 ## <a name="add-controls-to-the-worksheet"></a>向工作表添加控件
  接下来，将一个 <xref:Microsoft.Office.Tools.Excel.NamedRange> 控件和一个 <xref:Microsoft.Office.Tools.Excel.ListObject> 控件添加到第一个工作表。
@@ -102,13 +104,13 @@ ms.locfileid: "91585049"
 
 4. 将 **公司名称** 从 " **数据源** " 窗口拖到中的单元格 **A2** `Sheet1` 。
 
-     <xref:Microsoft.Office.Tools.Excel.NamedRange>已创建一个名为的控件 `CompanyNameNamedRange` ，并且该文本 \<CompanyName> 显示在**A2**单元格中。 同时，将一个 <xref:System.Windows.Forms.BindingSource> 名为的 `suppliersBindingSource` 、一个表适配器和 <xref:System.Data.DataSet> 添加到该项目中。 控件绑定到 <xref:System.Windows.Forms.BindingSource> ，而后者又绑定到该 <xref:System.Data.DataSet> 实例。
+     <xref:Microsoft.Office.Tools.Excel.NamedRange>已创建一个名为的控件 `CompanyNameNamedRange` ，并且该文本 \<CompanyName> 显示在 **A2** 单元格中。 同时，将一个 <xref:System.Windows.Forms.BindingSource> 名为的 `suppliersBindingSource` 、一个表适配器和 <xref:System.Data.DataSet> 添加到该项目中。 控件绑定到 <xref:System.Windows.Forms.BindingSource> ，而后者又绑定到该 <xref:System.Data.DataSet> 实例。
 
 5. 在 " **数据源** " 窗口中，向下滚动到 " **供应商** " 表下的列。 列表底部是 **Products** 表;因为它是 " **供应商** " 表的子站点。 选择 "此 **产品** " 表，而不是与 **供应商** 表处于同一级别的表，然后单击显示的下拉箭头。
 
 6. 在下拉列表中单击 " **ListObject** "，然后将 **Products** 表拖到中的单元格 **A6** `Sheet1` 。
 
-     <xref:Microsoft.Office.Tools.Excel.ListObject> `ProductNameListObject` 在单元格**A6**中创建了一个名为的控件。 同时，会向项目中 <xref:System.Windows.Forms.BindingSource> 添加一个名为的 `productsBindingSource` 和一个表适配器。 控件绑定到 <xref:System.Windows.Forms.BindingSource> ，而后者又绑定到该 <xref:System.Data.DataSet> 实例。
+     <xref:Microsoft.Office.Tools.Excel.ListObject> `ProductNameListObject` 在单元格 **A6** 中创建了一个名为的控件。 同时，会向项目中 <xref:System.Windows.Forms.BindingSource> 添加一个名为的 `productsBindingSource` 和一个表适配器。 控件绑定到 <xref:System.Windows.Forms.BindingSource> ，而后者又绑定到该 <xref:System.Data.DataSet> 实例。
 
 7. 仅适用于 c #，在组件栏上选择 " **suppliersBindingSource** "，然后在 "**属性**" 窗口中将 "**修饰符**" 属性更改为 "**内部**"。
 
@@ -117,7 +119,7 @@ ms.locfileid: "91585049"
 
 ### <a name="to-add-an-actions-pane-control"></a>添加操作窗格控件
 
-1. 在**解决方案资源管理器**中选择 "**我的 Excel 操作窗格**" 项目。
+1. 在 **解决方案资源管理器** 中选择 "**我的 Excel 操作窗格**" 项目。
 
 2. 在 **“项目”** 菜单上，单击 **“添加新项”**。
 
@@ -152,7 +154,7 @@ ms.locfileid: "91585049"
 
 #### <a name="to-show-the-actions-pane"></a>显示操作窗格
 
-1. 在 **解决方案资源管理器**中，右键单击 " *ThisWorkbook* " 或 " *ThisWorkbook.cs*"，然后单击 " **查看代码**"。
+1. 在 **解决方案资源管理器** 中，右键单击 " *ThisWorkbook* " 或 " *ThisWorkbook.cs*"，然后单击 " **查看代码**"。
 
 2. 在类中创建用户控件的新实例 `ThisWorkbook` 。
 

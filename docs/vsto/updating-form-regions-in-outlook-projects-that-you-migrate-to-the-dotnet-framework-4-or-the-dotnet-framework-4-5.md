@@ -1,5 +1,7 @@
 ---
 title: 迁移到 .NET Framework 4.5 时更新 Outlook 窗体区域
+description: 如果具有窗体区域的 Outlook VSTO 外接程序项目的目标框架更改为 .NET Framework 4 或更高版本，则必须修改代码。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9d8978703630e99ecb930e18e7d128eddff8792f
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 507132a28526e4ce008957fa0b988c23c09d686f
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584394"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526580"
 ---
 # <a name="update-outlook-form-regions-when-migrated-to-net-framework-45"></a>迁移到 .NET Framework 4.5 时更新 Outlook 窗体区域
 
@@ -105,13 +107,13 @@ ms.locfileid: "91584394"
     }
     ```
 
-5. 将新的 Outlook 窗体区域项添加到项目。 打开新窗体区域的代码隐藏文件，在文件中找到*YourNewFormRegion* `Factory` 和 `WindowFormRegionCollection` 类，然后将这些类复制到剪贴板。
+5. 将新的 Outlook 窗体区域项添加到项目。 打开新窗体区域的代码隐藏文件，在文件中找到 *YourNewFormRegion* `Factory` 和 `WindowFormRegionCollection` 类，然后将这些类复制到剪贴板。
 
 6. 删除添加到项目的新窗体区域。
 
-7. 在要更新的窗体区域的代码隐藏文件中，将其放在重定目标的项目中，找到*YourOriginalFormRegion* `Factory` 和 `WindowFormRegionCollection` 类并将它们替换为从新的窗体区域复制的代码。
+7. 在要更新的窗体区域的代码隐藏文件中，将其放在重定目标的项目中，找到 *YourOriginalFormRegion* `Factory` 和 `WindowFormRegionCollection` 类并将它们替换为从新的窗体区域复制的代码。
 
-8. 在*YourNewFormRegion* `Factory` 和 `WindowFormRegionCollection` 类中，搜索对*YourNewFormRegion*类的所有引用并改为更改对*YourOriginalFormRegion*类的每个引用。 例如，如果正在更新的窗体区域名为 `SalesDataFormRegion` 且在步骤 5 中创建的新窗体区域名为 `FormRegion1`，则将 `FormRegion1` 的所有引用更改为 `SalesDataFormRegion`。
+8. 在 *YourNewFormRegion* `Factory` 和 `WindowFormRegionCollection` 类中，搜索对 *YourNewFormRegion* 类的所有引用并改为更改对 *YourOriginalFormRegion* 类的每个引用。 例如，如果正在更新的窗体区域名为 `SalesDataFormRegion` 且在步骤 5 中创建的新窗体区域名为 `FormRegion1`，则将 `FormRegion1` 的所有引用更改为 `SalesDataFormRegion`。
 
 #### <a name="to-update-the-generated-code-for-a-form-region-that-you-imported-from-outlook"></a>若要更新从 Outlook 导入的窗体区域的生成代码
 
@@ -177,13 +179,13 @@ ms.locfileid: "91584394"
     this.olkTextBox1 = (Microsoft.Office.Interop.Outlook.OlkTextBox)GetFormRegionControl("OlkTextBox1");
     ```
 
-5. 将新的 Outlook 窗体区域项添加到项目。 打开新窗体区域的代码隐藏文件，在文件中找到*YourNewFormRegion* `Factory` 和 `WindowFormRegionCollection` 类，然后将这些类复制到剪贴板。
+5. 将新的 Outlook 窗体区域项添加到项目。 打开新窗体区域的代码隐藏文件，在文件中找到 *YourNewFormRegion* `Factory` 和 `WindowFormRegionCollection` 类，然后将这些类复制到剪贴板。
 
 6. 删除添加到项目的新窗体区域。
 
-7. 在要更新的窗体区域的代码隐藏文件中，将其放在重定目标的项目中，找到*YourOriginalFormRegion* `Factory` 和 `WindowFormRegionCollection` 类并将它们替换为从新的窗体区域复制的代码。
+7. 在要更新的窗体区域的代码隐藏文件中，将其放在重定目标的项目中，找到 *YourOriginalFormRegion* `Factory` 和 `WindowFormRegionCollection` 类并将它们替换为从新的窗体区域复制的代码。
 
-8. 在*YourNewFormRegion* `Factory` 和 `WindowFormRegionCollection` 类中，搜索对*YourNewFormRegion*类的所有引用并改为更改对*YourOriginalFormRegion*类的每个引用。 例如，如果正在更新的窗体区域名为 `SalesDataFormRegion` 且在步骤 5 中创建的新窗体区域名为 `FormRegion1`，则将 `FormRegion1` 的所有引用更改为 `SalesDataFormRegion`。
+8. 在 *YourNewFormRegion* `Factory` 和 `WindowFormRegionCollection` 类中，搜索对 *YourNewFormRegion* 类的所有引用并改为更改对 *YourOriginalFormRegion* 类的每个引用。 例如，如果正在更新的窗体区域名为 `SalesDataFormRegion` 且在步骤 5 中创建的新窗体区域名为 `FormRegion1`，则将 `FormRegion1` 的所有引用更改为 `SalesDataFormRegion`。
 
 ## <a name="instantiate-form-region-classes"></a>实例化窗体区域类
  必须修改动态实例化某些窗体区域类的任何代码。 在面向 .NET Framework 3.5 的项目中，你可以直接实例化窗体区域类（比如 `Microsoft.Office.Tools.Outlook.FormRegionManifest`）。 在面向 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 或更高版本的项目中，这些类是你无法直接实例化的接口。

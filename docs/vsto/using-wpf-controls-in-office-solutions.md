@@ -1,5 +1,7 @@
 ---
 title: 在 Office 解决方案中使用 WPF 控件
+description: 了解如何使用 Windows Presentation Foundation (WPF) 控件在 Visual Studio 中设计用户界面。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 717e24315d1f6e57eda224ef17cc4ea5b5d550c9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e041cda914cbf8aced4b19adfc80c601984c30e0
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73189748"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526447"
 ---
 # <a name="use-wpf-controls-in-office-solutions"></a>在 Office 解决方案中使用 WPF 控件
 
@@ -37,13 +39,13 @@ ms.locfileid: "73189748"
 
 ## <a name="add-wpf-controls-to-office-projects-at-design-time"></a>在设计时将 WPF 控件添加到 Office 项目
 
-不能直接将 WPF 控件添加到 Office 解决方案中的 UI 元素。 相反，请将 ** (WPF) 项的用户控件 ** 添加到项目中，并将其用作 wpf 控件的设计图面。 然后，将 WPF 用户控件添加到项目中的 UI 元素。
+不能直接将 WPF 控件添加到 Office 解决方案中的 UI 元素。 相反，请将 **(WPF) 项的用户控件** 添加到项目中，并将其用作 wpf 控件的设计图面。 然后，将 WPF 用户控件添加到项目中的 UI 元素。
 
 ### <a name="to-add-wpf-controls-to-an-actions-pane-custom-task-pane-or-form-region"></a>若要将 WPF 控件添加到操作窗格、自定义任务窗格中或窗体区域
 
 1. 打开要向其中添加自定义任务窗格、操作窗格或窗体区域的项目。
 
-2. 将 ** (WPF) 项的用户控件 ** 添加到项目。
+2. 将 **(WPF) 项的用户控件** 添加到项目。
 
 3. 从 " **工具箱**" 中，将 wpf 控件添加到 wpf 用户控件设计图面。
 
@@ -69,7 +71,7 @@ ms.locfileid: "73189748"
 
 1. 打开 Word 或 Excel 文档级项目。
 
-2. 将 ** (WPF) 项的用户控件 ** 添加到项目。
+2. 将 **(WPF) 项的用户控件** 添加到项目。
 
 3. 从 " **工具箱**" 中，将 wpf 控件添加到 wpf 用户控件设计图面。
 
@@ -79,7 +81,7 @@ ms.locfileid: "73189748"
 
 6. 打开 Windows 窗体用户控件的设计器。
 
-7. 从 "**工具箱**" 的 "*项目名称*" **wpf 用户控件**选项卡中，将 WPF 用户控件拖动到设计器。
+7. 从 "**工具箱**" 的 "*项目名称*" **wpf 用户控件** 选项卡中，将 WPF 用户控件拖动到设计器。
 
      Visual Studio 将自动创建一个在 Windows 窗体用户控件中承载 WPF 用户控件 <xref:System.Windows.Forms.Integration.ElementHost> 的对象。
 
@@ -92,7 +94,7 @@ ms.locfileid: "73189748"
 
 ## <a name="host-wpf-controls-by-using-the-elementhost-class"></a>使用 ElementHost 类承载 WPF 控件
 
-Visual Studio 提供了有助于你在 Office 解决方案中使用 Windows 窗体控件的功能，但不提供针对 WPF 控件的类似功能。 例如，你可以在设计时通过从 **工具箱**中拖动控件或在运行时使用 helper 方法将 Windows 窗体控件添加到文档和工作表。 但是，这些工具不可用于 WPF 控件。
+Visual Studio 提供了有助于你在 Office 解决方案中使用 Windows 窗体控件的功能，但不提供针对 WPF 控件的类似功能。 例如，你可以在设计时通过从 **工具箱** 中拖动控件或在运行时使用 helper 方法将 Windows 窗体控件添加到文档和工作表。 但是，这些工具不可用于 WPF 控件。
 
 WPF 控件使用 <xref:System.Windows.Forms.Integration.ElementHost> 类，作为一个 Windows 窗体控件或窗体与 WPF 控件之间的集成层。 当在设计时将 WPF 控件添加到解决方案时，Visual Studio 会为你自动生成 <xref:System.Windows.Forms.Integration.ElementHost> 对象。
 

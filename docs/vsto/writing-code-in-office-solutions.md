@@ -1,5 +1,7 @@
 ---
 title: 在 Office 解决方案中编写代码
+description: 了解如何在 Microsoft Office 解决方案中编写代码，并了解如何向托管代码公开 Office 对象模型。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -33,12 +35,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: cead0569ae067fcc503f7f2074807c609e6eed75
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 40ea589cb4406a383876b1f16721f18fc48ebadd
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71255048"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526028"
 ---
 # <a name="write-code-in-office-solutions"></a>在 Office 解决方案中编写代码
   编写 Office 项目代码与编写 Visual Studio 中其他类型的代码在某些方面存在不同。 其中许多差异与 Office 对象模型公开给托管代码的方式相关。 其他差异与 Office 项目的设计相关。

@@ -1,5 +1,7 @@
 ---
 title: 如何：以编程方式隐藏文档中的文本
+description: 了解如何在 Microsoft Word 文档中隐藏文本，方法是为特定范围的文本设置字体的隐藏属性。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4dae19d196f830e5187fa395473c0a5482cb1d03
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a375e8b844f82b5d310841d7b4cdc092b18ff6c3
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85543307"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525705"
 ---
 # <a name="how-to-programmatically-hide-text-in-documents"></a>如何：以编程方式隐藏文档中的文本
   通过将 <xref:Microsoft.Office.Interop.Word._Font.Hidden%2A> 属性设置为某个特定范围文本的 <xref:Microsoft.Office.Interop.Word.Range.Font%2A> 。

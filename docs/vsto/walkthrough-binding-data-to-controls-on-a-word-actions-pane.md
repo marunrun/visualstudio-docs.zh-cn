@@ -1,5 +1,7 @@
 ---
 title: 演练：将数据绑定到 Word 操作窗格上的控件
+description: 在 Microsoft Word 中，将数据绑定到操作窗格上的控件。 控件演示 SQL Server 数据库中表之间的主/从关系。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 05df38bf6056b392c0b991617316ba2c1c657306
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 76dffda9b332b9b76d6c0e0a423073959bcc7a56
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585062"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526204"
 ---
 # <a name="walkthrough-bind-data-to-controls-on-a-word-actions-pane"></a>演练：将数据绑定到 Word 操作窗格上的控件
   本演练演示如何将数据绑定到 Word 中操作窗格上的控件。 控件演示 SQL Server 数据库中表之间的主/从关系。
@@ -57,7 +59,7 @@ ms.locfileid: "91585062"
 
 ### <a name="to-create-a-new-project"></a>创建新项目的步骤
 
-1. 使用 " **我的 Word 操作" 窗格**创建 word 文档项目。 在向导中，选择 " **创建新文档**"。
+1. 使用 " **我的 Word 操作" 窗格** 创建 word 文档项目。 在向导中，选择 " **创建新文档**"。
 
      有关详细信息，请参阅 [如何：在 Visual Studio 中创建 Office 项目](../vsto/how-to-create-office-projects-in-visual-studio.md)。
 
@@ -68,7 +70,7 @@ ms.locfileid: "91585062"
 
 ### <a name="to-add-an-actions-pane-control"></a>添加操作窗格控件
 
-1. 在**解决方案资源管理器**中选择 "**我的 Word 操作" 窗格**项目。
+1. 在 **解决方案资源管理器** 中选择 "**我的 Word 操作" 窗格** 项目。
 
 2. 在 **“项目”** 菜单上，单击 **“添加新项”**。
 
@@ -87,7 +89,7 @@ ms.locfileid: "91585062"
 
 4. 选择与 Northwind 示例 SQL Server 数据库的数据连接，或使用 " **新建连接** " 按钮添加新连接。
 
-5. 单击“下一步”。
+5. 单击 **下一步**。
 
 6. 清除 "保存连接" 选项，然后单击 " **下一步**"。
 
@@ -97,7 +99,7 @@ ms.locfileid: "91585062"
 
 9. 单击“完成”。
 
-   向导将 " **供应商** 表和 **产品** " 表添加到 " **数据源** " 窗口。 它还将一个类型化数据集添加到你的项目中，该数据集在 **解决方案资源管理器**中可见。
+   向导将 " **供应商** 表和 **产品** " 表添加到 " **数据源** " 窗口。 它还将一个类型化数据集添加到你的项目中，该数据集在 **解决方案资源管理器** 中可见。
 
 ### <a name="to-add-data-bound-windows-forms-controls-to-an-actions-pane-control"></a>向操作窗格控件添加数据绑定 Windows 窗体控件
 
@@ -132,8 +134,8 @@ ms.locfileid: "91585062"
 
     |properties|值|
     |--------------|-----------|
-    |**名称**|**插入**|
-    |**Text**|**插入**|
+    |**名称**|插入|
+    |**文本**|插入|
 
 12. 调整用户控件的大小以适应控件。
 
@@ -202,7 +204,7 @@ ms.locfileid: "91585062"
 
 ### <a name="to-show-the-actions-pane"></a>显示操作窗格
 
-1. 在 **解决方案资源管理器**中，右键单击 " **ThisDocument** " 或 " **ThisDocument.cs**"，然后单击快捷菜单上的 " **查看代码** "。
+1. 在 **解决方案资源管理器** 中，右键单击 " **ThisDocument** " 或 " **ThisDocument.cs**"，然后单击快捷菜单上的 " **查看代码** "。
 
 2. 在类的顶部创建控件的新实例， `ThisDocument` 使其类似于下面的示例。
 

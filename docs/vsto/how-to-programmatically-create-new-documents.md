@@ -1,5 +1,7 @@
 ---
 title: 如何：以编程方式创建新文档
+description: 了解如何使用 Visual Studio 以编程方式在 Microsoft Word 中创建新文档。
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8e82c5ca62c407481b73de9394c584c3039a8f57
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a7168c6b80657fe0e5ba7c8ae8511c1e000db4cb
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85545985"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525876"
 ---
 # <a name="how-to-programmatically-create-new-documents"></a>如何：以编程方式创建新文档
   当以编程方式创建文档时，新文档是一个本机 <xref:Microsoft.Office.Interop.Word.Document> 对象。 此对象不具有 <xref:Microsoft.Office.Tools.Word.Document> 主机项的其他事件和数据绑定功能。 有关详细信息，请参阅 [主机项和主机控件的编程限制](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)。

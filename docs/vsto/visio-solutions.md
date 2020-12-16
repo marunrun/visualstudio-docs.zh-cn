@@ -1,5 +1,7 @@
 ---
 title: Visio 解决方案
+description: 了解如何使用 VSTO 外接程序自动执行 Visio、扩展 Visio 功能或自定义 Visio 用户界面 (UI) 。
+ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a79b3c9964a24daf0a12ab90f47fb5903d89cdd0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d5b4cbdfe6cceff279ae20518edf83b4f4ec8912
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72985507"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526378"
 ---
 # <a name="visio-solutions"></a>Visio 解决方案
   Visual Studio 提供可用于创建 Microsoft Office Visio 的 VSTO 外接程序的项目模板。 VSTO 外接程序可用于自动运行 Visio、扩展 Visio 功能或自定义 Visio 用户界面 (UI)。
@@ -67,7 +69,7 @@ ms.locfileid: "72985507"
 ## <a name="see-also"></a>另请参阅
 - [VSTO 外接程序编程入门](../vsto/getting-started-programming-vsto-add-ins.md)
 - [Office 解决方案开发概述 &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)
-- [Architecture of VSTO Add-ins](../vsto/architecture-of-vsto-add-ins.md)
+- [VSTO 外接程序的体系结构](../vsto/architecture-of-vsto-add-ins.md)
 - [如何：在 Visual Studio 中创建 Office 项目](../vsto/how-to-create-office-projects-in-visual-studio.md)
 - [程序 VSTO 外接程序](../vsto/programming-vsto-add-ins.md)
 - [在 Office 解决方案中编写代码](../vsto/writing-code-in-office-solutions.md)
