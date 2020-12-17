@@ -1,5 +1,7 @@
 ---
 title: 正在加载 Vspackage |Microsoft Docs
+description: 了解如何在 Visual Studio 中加载 Vspackage，包括延迟加载，尽可能使用它来提高性能。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b1c221bf06ef3b7e37e2afc1856f3e54fe5ad95e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0aeab78a2f64be2df6f601ad8ed224f13071eb8c
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80702964"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97616099"
 ---
 # <a name="load-vspackages"></a>Load Vspackage
 仅当需要功能时，Vspackage 才会加载到 Visual Studio 中。 例如，当 Visual Studio 使用项目工厂或 VSPackage 实现的服务时，将加载 VSPackage。 此功能称为延迟加载，尽可能使用它来提高性能。
@@ -35,7 +37,7 @@ ms.locfileid: "80702964"
     [PackageRegistration(UseManagedResourcesOnly = true)]
     [ProvideAutoLoad(UIContextGuids80.SolutionExists)]
     [Guid("00000000-0000-0000-0000-000000000000")] // your specific package GUID
-    public class MyAutoloadedPackage : Package
+    public class MyAutoloadedPackage : Package
     {. . .}
     ```
 
@@ -71,5 +73,5 @@ ms.locfileid: "80702964"
 
      不应将强制加载用于 VSPackage 通信。 请改用 [和提供服务](../extensibility/using-and-providing-services.md) 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [VSPackages](../extensibility/internals/vspackages.md)

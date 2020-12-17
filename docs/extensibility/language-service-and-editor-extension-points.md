@@ -1,5 +1,7 @@
 ---
 title: 语言服务和编辑器扩展点 |Microsoft Docs
+description: 了解可扩展的 Visual Studio 代码编辑器中的扩展点，包括大多数语言服务功能。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 28bb086eb99e4b8128c04f62f9b370eb2eab8fa3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 06329fcfcefe3ea75b772495f6a7e0dd14ced087
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80703048"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97615546"
 ---
 # <a name="language-service-and-editor-extension-points"></a>语言服务和编辑器扩展点
 编辑器提供了扩展点，您可以将其作为 Managed Extensibility Framework (MEF) 组件部件（包括大多数语言服务功能）扩展。 下面是主要扩展点类别：
@@ -26,7 +28,7 @@ ms.locfileid: "80703048"
 
 - 边距和滚动条
 
-- Tags
+- 标记
 
 - 修饰
 
@@ -491,7 +493,7 @@ internal sealed class TestOption : EditorOptionDefinition<bool>
 
 - IntelliSense *源* 提供内容并确定最佳匹配项。
 
-- *IntelliSense 显示器负责显示*内容。
+- *IntelliSense 显示器负责显示* 内容。
 
   在大多数情况下，建议至少提供源和控制器。 如果要自定义显示，还可以提供表示器。
 

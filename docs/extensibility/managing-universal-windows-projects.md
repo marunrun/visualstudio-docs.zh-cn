@@ -1,5 +1,7 @@
 ---
 title: 管理通用 Windows 项目 |Microsoft Docs
+description: 为了支持通用 Windows 应用程序，管理项目的 Visual Studio 扩展应知道通用 Windows 应用程序项目结构。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 47926aa1-3b41-410d-bca8-f77fc950cbe7
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 83e3b07bc3373070953709ffe913f37529e74bc7
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: f86edd33e7719dc326aa2c5d252d11322509de64
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012303"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97615559"
 ---
 # <a name="manage-universal-windows-projects"></a>管理通用 Windows 项目
 
@@ -25,9 +27,9 @@ ms.locfileid: "90012303"
 
 ### <a name="navigate-the-shared-project"></a>导航共享项目
 
-1. 创建一个名为 **TestUniversalProject**的 c # VSIX 项目。  ("**文件**" "  >  **新建**  >  **项目**"，然后 " **c #**  >  **扩展性**"  >  **Visual Studio 包**) 。 添加**自定义命令**项目项模板 (在**解决方案资源管理器**上，右键单击项目节点并选择 "**添加**  >  **新项**"，然后中转到 "**扩展性**) "。 将该文件命名为 **TestUniversalProject**。
+1. 创建一个名为 **TestUniversalProject** 的 c # VSIX 项目。  ("**文件**" "  >  **新建**  >  **项目**"，然后 " **c #**  >  **扩展性**"  >  **Visual Studio 包**) 。 添加 **自定义命令** 项目项模板 (在 **解决方案资源管理器** 上，右键单击项目节点并选择 "**添加**  >  **新项**"，然后中转到 "**扩展性**) "。 将该文件命名为 **TestUniversalProject**。
 
-2. 在) 的 "**扩展**" 部分中添加对*Microsoft.VisualStudio.Shell.Interop.12.1.DesignTime.dll*和*Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime.dll* (的引用。
+2. 在) 的 "**扩展**" 部分中添加对 *Microsoft.VisualStudio.Shell.Interop.12.1.DesignTime.dll* 和 *Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime.dll* (的引用。
 
 3. 打开 *TestUniversalProject.cs* ，添加以下 `using` 指令：
 
@@ -233,7 +235,7 @@ ms.locfileid: "90012303"
     ```
 
     > [!IMPORTANT]
-    > 如果用户已在实验实例中打开 c + + 通用 Windows 应用项目，则上述代码将引发异常。 这是已知问题。 若要避免此异常，请将 `foreach` 上面的块替换为以下内容：
+    > 如果用户已在实验实例中打开 c + + 通用 Windows 应用项目，则上述代码将引发异常。 这是一个已知问题。 若要避免此异常，请将 `foreach` 上面的块替换为以下内容：
 
     ```csharp
     var importingProjects = sharedAssetsProject.EnumImportingProjects();
@@ -291,7 +293,7 @@ ms.locfileid: "90012303"
     output.OutputStringThreadSafe("set active project: " + platformCaption +'\n');
     ```
 
-16. 现在试试看。按 F5 启动实验实例。  (在 "新建项目" 对话框中的 "**新建项目**" 对话框中，在**Visual c #**  >  **windows**  >  **windows 8**  >  **通用**  >  **集线器应用**) 中创建 c # 通用中心应用程序项目。 加载解决方案后，请切换到 " **工具** " 菜单，单击 " **调用 TestUniversalProject**"，然后在 " **输出** " 窗格中查看文本。 会看到下面这样的内容：
+16. 现在试试看。按 F5 启动实验实例。  (在 "新建项目" 对话框中的 "**新建项目**" 对话框中，在 **Visual c #**  >  **windows**  >  **windows 8**  >  **通用**  >  **集线器应用**) 中创建 c # 通用中心应用程序项目。 加载解决方案后，请切换到 " **工具** " 菜单，单击 " **调用 TestUniversalProject**"，然后在 " **输出** " 窗格中查看文本。 会看到下面这样的内容：
 
     ```
     Found shared project: HubApp.Shared
@@ -304,7 +306,7 @@ ms.locfileid: "90012303"
 
 ### <a name="manage-the-shared-items-in-the-platform-project"></a>管理平台项目中的共享项
 
-1. 在平台项目中查找共享项。 共享项目中的项在平台项目中显示为共享项。 你无法在 **解决方案资源管理器**中查看它们，但你可以浏览项目层次结构来查找它们。 下面的方法遍历层次结构并收集所有共享项。 它还可以输出每个项的标题。 共享项由新的属性标识 <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID7.VSHPROPID_IsSharedItem> 。
+1. 在平台项目中查找共享项。 共享项目中的项在平台项目中显示为共享项。 你无法在 **解决方案资源管理器** 中查看它们，但你可以浏览项目层次结构来查找它们。 下面的方法遍历层次结构并收集所有共享项。 它还可以输出每个项的标题。 共享项由新的属性标识 <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID7.VSHPROPID_IsSharedItem> 。
 
     ```csharp
     private void InspectHierarchyItems(IVsHierarchy hier, uint itemid, int level, List<uint> itemIds, bool getSharedItems, bool printItems)
@@ -353,7 +355,7 @@ ms.locfileid: "90012303"
     output.OutputStringThreadSafe(string.Format("Shared item full path: {0}\n", fullPath));
     ```
 
-4. 现在试试看。按 **F5** 启动实验实例。  (在 "**新建项目**" 对话框的 "新建项目" 对话框中的 " **Visual c #** windows 8 通用中心应用程序" 中，创建一个 c # 通用中心应用程序项目，  >  **Windows**  >  **Windows 8**  >  **Universal**  >  **Hub App**) 中转到 "**工具**" 菜单，单击 "**调用 TestUniversalProject**"，然后在 "**输出**" 窗格中检查文本。 会看到下面这样的内容：
+4. 现在试试看。按 **F5** 启动实验实例。  (在 "**新建项目**" 对话框的 "新建项目" 对话框中的 " **Visual c #** windows 8 通用中心应用程序" 中，创建一个 c # 通用中心应用程序项目，  >    >    >    >  ) 中转到 "**工具**" 菜单，单击 "**调用 TestUniversalProject**"，然后在 "**输出**" 窗格中检查文本。 会看到下面这样的内容：
 
     ```
     Found shared project: HubApp.Shared
@@ -417,7 +419,7 @@ ms.locfileid: "90012303"
 
    2. 项目文件将更新为包含文件的新名称。
 
-       (的层次结构事件例如， <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents>) 通常跟踪 UI 中显示的更改，如 **解决方案资源管理器**中所示。 层次结构事件将文件重命名操作视为包含文件删除和文件添加操作。 但是，当不可见项发生更改时，层次结构事件系统将引发一个 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> 事件，但不会引发 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> 事件。 因此，如果重命名平台项目中的文件，则会同时获取 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> 和 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> ，但如果重命名共享项目中的文件，则只会获得 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> 。
+       (的层次结构事件例如， <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents>) 通常跟踪 UI 中显示的更改，如 **解决方案资源管理器** 中所示。 层次结构事件将文件重命名操作视为包含文件删除和文件添加操作。 但是，当不可见项发生更改时，层次结构事件系统将引发一个 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> 事件，但不会引发 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> 事件。 因此，如果重命名平台项目中的文件，则会同时获取 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> 和 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> ，但如果重命名共享项目中的文件，则只会获得 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> 。
 
       若要跟踪项目项中的更改，你可以处理 DTE 项目项事件 (在) 中找到的事件 <xref:EnvDTE.ProjectItemsEventsClass> 。 但是，如果要处理大量事件，可以在中更好地处理事件 <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2> 。 在本演练中，我们只显示层次结构事件和 DTE 事件。 在此过程中，您将向共享项目和平台项目中添加一个事件侦听器。 然后，当你重命名共享项目中的一个文件和平台项目中的另一个文件时，可以查看为每个重命名操作触发的事件。
 

@@ -1,5 +1,7 @@
 ---
 title: 菜单元素 |Microsoft Docs
+description: 菜单元素定义 VSPackage 实现的所有菜单和工具栏。 本文包含一个示例。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a6382abed36aba66087066bf5664ae55682e39e2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: abc5621784579c295393d77c792013dd0c737871
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80702579"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97615572"
 ---
 # <a name="menus-element"></a>菜单元素
 定义 VSPackage 实现的所有菜单和工具栏。
@@ -50,7 +52,7 @@ ms.locfileid: "80702579"
 
 |元素|说明|
 |-------------|-----------------|
-|[命令元素](../extensibility/commands-element.md)|表示 VSPackage 中命令的集合。|
+|[Commands 元素](../extensibility/commands-element.md)|表示 VSPackage 中命令的集合。|
 
 ## <a name="example"></a>示例
 

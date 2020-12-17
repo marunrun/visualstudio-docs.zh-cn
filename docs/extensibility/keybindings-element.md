@@ -1,5 +1,7 @@
 ---
 title: 键绑定元素 |Microsoft Docs
+description: 键绑定元素将键绑定元素和其他键绑定组分组。 本文包含一个示例。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: df1720286007d8f6acf073c21f5b2dcc8486782c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 928637d8103a69eafd3bda4446a55bb7523f83a8
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80703127"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97616086"
 ---
 # <a name="keybindings-element"></a>键绑定元素
 键绑定元素将键绑定元素和其他键绑定组分组。
@@ -65,6 +67,6 @@ ms.locfileid: "80703127"
 </KeyBindings>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [键绑定元素](../extensibility/keybinding-element.md)
 - [Visual Studio 命令表 ( .vsct) 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

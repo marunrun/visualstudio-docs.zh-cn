@@ -1,5 +1,7 @@
 ---
 title: 管理并行文件关联 |Microsoft Docs
+description: 如果你的 VSPackage 提供文件关联，请决定如何处理在其中特定版本的 Visual Studio 中打开文件的并行安装。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6c284fe7ef4c2d07051a8524860583cb634e13bf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 477afbd5bc4586d8c46db11b036364f8058133b0
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80702765"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97616339"
 ---
 # <a name="manage-side-by-side-file-associations"></a>管理并行文件关联
 
@@ -65,7 +67,7 @@ ms.locfileid: "80702765"
   |CA_SetDevenvLatest_2003|DEVENV_EXE_2003 且不 DEVENV_EXE_2005|420|
   |CA_SetDevenvLatest_2005|DEVENV_EXE_2005|430|
 
-   您可以使用 Windows Installer 包的注册表表中的 DEVENV_EXE_LATEST 属性来写入 **HKEY_CLASSES_ROOT*ProgId*ShellOpenCommand** 密钥的默认值 [DEVENV_EXE_LATEST] "%1"
+   您可以使用 Windows Installer 包的注册表表中的 DEVENV_EXE_LATEST 属性来写入 **HKEY_CLASSES_ROOT *ProgId* ShellOpenCommand** 密钥的默认值 [DEVENV_EXE_LATEST] "%1"
 
 - 运行共享启动器程序，以便从可用的 VSPackage 版本中做出最佳选择。
 

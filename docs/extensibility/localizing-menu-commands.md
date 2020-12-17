@@ -1,5 +1,7 @@
 ---
 title: 本地化菜单命令 |Microsoft Docs
+description: 了解如何通过为 VSPackage 创建本地化的 .vsct 文件和本地化的 .resx 文件来提供菜单和工具栏命令的本地化文本。
+ms.custom: SEO-VS-2020
 ms.date: 10/08/2019
 ms.topic: how-to
 helpviewer_keywords:
@@ -15,12 +17,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1c1c158fd689cbcae18fec5d3306e6d6fadb169f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 51f3692a4539eddbf35e24de8024eadd39031080
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904560"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97615598"
 ---
 # <a name="localize-menu-commands"></a>"本地化" 菜单命令
 
@@ -32,7 +34,7 @@ ms.locfileid: "85904560"
 
 在 Vspackage 中，将在 *.vsct* 文件中定义菜单命令和工具栏按钮。
 
-1. 在 **解决方案资源管理器**中，将 *.vsct* 文件的名称从 *.vsct* 更改为 *.vsct*。
+1. 在 **解决方案资源管理器** 中，将 *.vsct* 文件的名称从 *.vsct* 更改为 *.vsct*。
 
 2. 为每种本地化语言的 *.vsct* 副本。
 
@@ -112,7 +114,7 @@ ms.locfileid: "85904560"
 
 必须修改 *assemblyinfo.cs* 文件和项目文件以合并已本地化的资源。
 
-1. 在**解决方案资源管理器**的 "**属性**" 节点中，在编辑器中打开*assemblyinfo.cs*或*assemblyinfo* 。
+1. 在 **解决方案资源管理器** 的 "**属性**" 节点中，在编辑器中打开 *assemblyinfo.cs* 或 *assemblyinfo* 。
 
 2. 添加以下条目。
 
@@ -138,7 +140,7 @@ ms.locfileid: "85904560"
 
 6. 找到 `ItemGroup` 包含元素的元素 `EmbeddedResource` 。
 
-7. 在 `EmbeddedResource` 调用 *VSPackage*的元素中，将元素替换为 `ManifestResourceName` `LogicalName` 设置为的元素 `VSPackage.en-US.Resources` ，如下所示：
+7. 在 `EmbeddedResource` 调用 *VSPackage* 的元素中，将元素替换为 `ManifestResourceName` `LogicalName` 设置为的元素 `VSPackage.en-US.Resources` ，如下所示：
 
     ```xml
     <EmbeddedResource Include="VSPackage.en-US.resx">
@@ -165,7 +167,7 @@ ms.locfileid: "85904560"
 
      这会为每种语言创建主程序集和资源程序集。 有关本地化部署过程的信息，请参阅 [本地化 VSIX 包](../extensibility/localizing-vsix-packages.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [扩展菜单和命令](../extensibility/extending-menus-and-commands.md)
 - [全球化和本地化应用程序](../ide/globalizing-and-localizing-applications.md)

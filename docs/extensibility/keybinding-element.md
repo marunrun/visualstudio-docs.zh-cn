@@ -1,5 +1,7 @@
 ---
 title: 键绑定元素 |Microsoft Docs
+description: 键绑定元素指定命令的键盘快捷方式。 命令可以有与之关联的单键和双键绑定。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +13,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b458e70a9a85c11707c50da2e16e3aa73f51bc12
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 33b2c1638b41afbdae56e0c4374937e7230dfffe
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80703147"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97616112"
 ---
 # <a name="keybinding-element"></a>键绑定元素
 键绑定元素指定命令的键盘快捷方式。
 
- 命令可以有与之关联的单键和双键绑定。 "保存" 命令的一个键绑定示例是**Ctrl** + **S** 。 **Save** 双键绑定需要两个连续的键组合来触发命令。 例如 <strong>，按 ctrl *+</strong> k<strong>、</strong>ctrl <strong>+</strong> k** 来设置书签。
+ 命令可以有与之关联的单键和双键绑定。 "保存" 命令的一个键绑定示例是 **Ctrl** + **S** 。  双键绑定需要两个连续的键组合来触发命令。 例如 <strong>，按 ctrl *+</strong> k <strong>、</strong>ctrl <strong>+</strong> k** 来设置书签。
 
 ## <a name="syntax"></a>语法
 
@@ -40,9 +42,9 @@ ms.locfileid: "80703147"
 |id|必需。|
 |编辑器|必需。 编辑器 GUID 指示此键盘快捷键将处于活动状态的编辑上下文。 全局绑定范围值为 "guidVSStd97"。|
 |key1|必需。 有效值包括所有 typable 字母数字，以及以0x 和 [VK_constants](/windows/desktop/inputdev/virtual-key-codes)开头的两位数十六进制值。|
-|mod1|可选。 由空格分隔的 **Ctrl**、 **Alt**和 **Shift** 的任意组合。|
+|mod1|可选。 由空格分隔的 **Ctrl**、 **Alt** 和 **Shift** 的任意组合。|
 |key2|可选。 有效值包括所有 typable 字母数字，以及以0x 和 [VK_constants](/windows/desktop/inputdev/virtual-key-codes)开头的两位数十六进制值。|
-|mod2|可选。 由空格分隔的 **Ctrl**、 **Alt**和 **Shift** 的任意组合。|
+|mod2|可选。 由空格分隔的 **Ctrl**、 **Alt** 和 **Shift** 的任意组合。|
 |模拟器|可选。|
 |条件|可选。 请参阅 [条件特性](../extensibility/vsct-xml-schema-conditional-attributes.md)。|
 
@@ -50,8 +52,8 @@ ms.locfileid: "80703147"
 
 |元素|说明|
 |-------------|-----------------|
-|Parent||
-|Annotation||
+|父级||
+|批注||
 
 ### <a name="parent-elements"></a>父元素
 

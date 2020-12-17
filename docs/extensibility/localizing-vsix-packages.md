@@ -1,5 +1,7 @@
 ---
 title: 本地化 VSIX 包 |Microsoft Docs
+description: 了解如何通过创建每个目标语言的 vsixlangpack 文件并将其放在正确的文件夹中，来本地化 VSIX 包。
+ms.custom: SEO-VS-2020
 ms.date: 10/26/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7d2d4222e45d56447951e86d558af9983a0d1cc9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cc9f7055145748e0625788e7487bb978911bae7f
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80702903"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97615533"
 ---
 # <a name="localizing-vsix-packages"></a>本地化 VSIX 包
 
@@ -41,19 +43,19 @@ ms.locfileid: "80702903"
 ```
 
 > [!NOTE]
-> [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)]生成 vsix 清单并将其命名为*source.extension.vsixmanifest*的支持 vsix 的项目模板。 当 Visual Studio 生成项目时，它会将该文件的内容复制到 VSIX 包的 Source.extension.vsixmanifest 中。
+> [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)]生成 vsix 清单并将其命名为 *source.extension.vsixmanifest* 的支持 vsix 的项目模板。 当 Visual Studio 生成项目时，它会将该文件的内容复制到 VSIX 包的 Source.extension.vsixmanifest 中。
 
 ## <a name="the-extensionvsixlangpack-file"></a>Vsixlangpack 文件
 
-*Vsixlangpack*文件遵循[VSIX 语言包架构 2.0](../extensibility/vsix-language-pack-schema-2-0-reference.md)。 此架构具有一个 `PackageLanguagePackManifest` ，它后面紧跟一个 `Metadata` 子元素。 Metadata 元素最多可以包含6个子元素： `DisplayName` 、、、、 `Description` `MoreInfo` `License` `ReleaseNotes` 和 `Icon` 。 这些子元素对应于 source.extension.vsixmanifest 文件的元素的、、、、 `DisplayName` `Description` `MoreInfo` `License` `ReleaseNotes` 和 `Icon` 子元素 `Metadata` 。 *Extension.vsixmanifest*
+*Vsixlangpack* 文件遵循 [VSIX 语言包架构 2.0](../extensibility/vsix-language-pack-schema-2-0-reference.md)。 此架构具有一个 `PackageLanguagePackManifest` ，它后面紧跟一个 `Metadata` 子元素。 Metadata 元素最多可以包含6个子元素： `DisplayName` 、、、、 `Description` `MoreInfo` `License` `ReleaseNotes` 和 `Icon` 。 这些子元素对应于 source.extension.vsixmanifest 文件的元素的、、、、 `DisplayName` `Description` `MoreInfo` `License` `ReleaseNotes` 和 `Icon` 子元素 `Metadata` 。 
 
 创建 vsixlangpack 文件时，必须将 `Include in Vsix` 属性设置为 `true` 。 否则，将忽略本地化安装文本。
 
 ### <a name="to-set-the-include-in-vsix-property"></a>设置 Include in Vsix 属性
 
-1. 在 **解决方案资源管理器**中，右键单击 vsixlangpack 文件，然后单击 " **属性**"。
+1. 在 **解决方案资源管理器** 中，右键单击 vsixlangpack 文件，然后单击 " **属性**"。
 
-2. 在 " **属性" 网格**中，单击 " **在 Vsix 中包含**"，并将其值设置为 `true` 。
+2. 在 " **属性" 网格** 中，单击 " **在 Vsix 中包含**"，并将其值设置为 `true` 。
 
 ## <a name="example"></a>示例
 
