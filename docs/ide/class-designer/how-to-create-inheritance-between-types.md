@@ -1,5 +1,5 @@
 ---
-title: 如何：创建类型之间的继承（类设计器）
+title: 创建类型之间的继承
 description: 了解如何使用类设计器在类图上的两种类型之间创建继承关系。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -15,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 199f220529b28d4ca0c668d30564da65f6553e0e
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: 064ae443c264187e7666b7aaabde27d6705388a4
+ms.sourcegitcommit: 60e5a8a7ee91854356797d05f3b502572c4a4884
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94901461"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96933474"
 ---
 # <a name="how-to-create-inheritance-between-types-in-class-designer"></a>如何：在类设计器中创建类型之间的继承
 

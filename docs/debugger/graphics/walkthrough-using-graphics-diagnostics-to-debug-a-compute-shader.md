@@ -1,5 +1,7 @@
 ---
 title: 使用图形诊断来调试计算着色器
+description: 请参阅计算着色器故障排除示例。 你将了解如何使用图形事件列表、图形事件调用堆栈和图形管道阶段。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 69287456-644b-4aff-bd03-b1bbb2abb82a
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 19ae8472aaafbad1a04485ff2e3a2637f345bc00
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 939b1906a32c48aa1ad32f2fb03372a74afc43ec
+ms.sourcegitcommit: 40d758f779d42c66cb02ae7face8a62763a8662b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "66262865"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97398709"
 ---
 # <a name="walkthrough-using-graphics-diagnostics-to-debug-a-compute-shader"></a>演练：使用图形诊断来调试计算着色器
 本演练演示如何使用 Visual Studio 图形诊断工具来调查生成错误结果的计算着色器。

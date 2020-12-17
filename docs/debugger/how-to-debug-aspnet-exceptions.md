@@ -1,5 +1,7 @@
 ---
 title: 调试 ASP.NET 异常 | Microsoft Docs
+Description: 了解如何配置，以使调试器因 ASP.NET 应用程序中未经处理的异常而停止。 可以确保中断发生在非系统代码中。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - aspnet
-ms.openlocfilehash: 011094eed88245e3cd83b092a3f1b2e47bc77ae8
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 945e289f3da55c8884f4ec2cd115c65dbe3be237
+ms.sourcegitcommit: 40d758f779d42c66cb02ae7face8a62763a8662b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852147"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97398644"
 ---
 # <a name="how-to-debug-aspnet-exceptions"></a>如何：调试 ASP.NET 异常
 调试异常是开发可靠的 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 应用程序的重要一步。 有关如何调试异常的常规信息，请参阅[使用调试器管理异常](../debugger/managing-exceptions-with-the-debugger.md)。

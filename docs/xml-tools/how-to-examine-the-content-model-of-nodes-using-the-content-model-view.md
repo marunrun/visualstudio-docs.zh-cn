@@ -1,5 +1,5 @@
 ---
-title: 在 XML 架构设计器中使用“内容模型”视图检查节点
+title: 检查节点的内容模型
 description: 了解如何在 XML 架构设计器中使用“内容模型”视图检查 XML 架构中节点的内容模型。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -10,14 +10,14 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ef330e6e189b9cee1126d5de48d55622fe8d9046
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: f3ce3d1a47125c446521ceb60a851322c37209d0
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399504"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995273"
 ---
-# <a name="how-to-examine-the-content-model-of-nodes-using-the-content-model-view"></a>如何：使用“内容模型”视图检查节点的内容模型
+# <a name="how-to-examine-the-content-model-of-nodes-by-using-the-content-model-view"></a>操作说明：使用内容模型视图检查节点的内容模型
 
 本主题介绍如何使用[内容模型视图](../xml-tools/content-model-view.md)浏览节点。
 

@@ -1,6 +1,6 @@
 ---
-title: 如何：将类图元素复制到 Microsoft Office 文档（类设计器）
-description: 了解如何将形状从 .NET 类图复制到其他文档中。 你将获得该形状或其基础代码的副本。
+title: 将类图元素复制到 Office 文档
+description: 了解如何使用类设计器将形状从 .NET 类图复制到其他文档；你将获得该形状的副本或其基础代码。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fe473dfdfdf78934ad018a507c6386a1da9babb6
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: 35776073679e43be99260108a72a22f33017a682
+ms.sourcegitcommit: 60e5a8a7ee91854356797d05f3b502572c4a4884
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94901617"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96933591"
 ---
 # <a name="how-to-copy-class-diagram-elements-to-a-microsoft-office-document"></a>如何：将类图元素复制到 Microsoft Office 文档
 

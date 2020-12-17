@@ -1,7 +1,7 @@
 ---
 title: 图形诊断概述 | Microsoft Docs
-description: Visual Studio 图形诊断综合概述
-ms.custom: seodec18
+description: Visual Studio 图形诊断是一套工具，用于记录 Direct3D 活动，并分析日志以故障排除呈现和性能问题。
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 02/09/2017
 ms.topic: conceptual
 author: mikejo5000
@@ -9,18 +9,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6f9193555ef3c9c69f494a78ac779a3724417f63
-ms.sourcegitcommit: a1cb4e2025045c2ad79167645c4c0f33b94b1152
+ms.openlocfilehash: 1ccf3b77c9b1f4dee7183aac32e8810417ba69c5
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671401"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96996131"
 ---
 # <a name="overview-of-visual-studio-graphics-diagnostics"></a>Visual Studio 图形诊断概述
 Visual Studio“图形诊断”是一套工具，用于记录、然后分析 Direct3D 应用中的呈现问题和性能问题。 可对在 Windows 电脑上或在远程电脑或设备上本地运行的应用使用图形诊断。
 
 ## <a name="using-graphics-diagnostics-to-debug-rendering-problems"></a>使用图形诊断调试呈现问题
- 对于图形丰富的应用程序，调试其中的呈现问题并不如启动调试器并逐句通过某些代码的方式直接。 在每个帧中，将生成数十万个唯一像素，每个像素都是根据一组复杂的状态、数据、参数和代码生成的，其中，可能只有少量像素会展示出你尝试诊断的问题。 生成每个像素的代码在并行处理数百个像素的专用硬件上执行，这使问题更加复杂。 传统调试工具和技术难以在包含少量线程的代码中使用，在处理大量数据时较为低效。
+ 对于图形丰富的应用，调试其中的呈现问题并不如启动调试器并逐句通过某些代码的方式直接。 在每个帧中，将生成数十万个唯一像素，每个像素都是根据一组复杂的状态、数据、参数和代码生成的，其中，可能只有少量像素会展示出你尝试诊断的问题。 生成每个像素的代码在并行处理数百个像素的专用硬件上执行，这使问题更加复杂。 传统调试工具和技术难以在包含少量线程的代码中使用，在处理大量数据时较为低效。
 
  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 中的图形诊断工具旨在通过启动指示问题的视觉效果，然后仅关注应用程序自有源代码中的相关着色器代码、管道阶段、绘图调用、资源和设备状态来进行反向跟踪，帮助你找到呈现问题。
 

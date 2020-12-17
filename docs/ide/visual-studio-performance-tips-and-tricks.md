@@ -2,19 +2,19 @@
 title: 有关提高性能的提示
 description: 了解如何优化某些可能没有使用的 Visual Studio 功能，从而帮助提高性能。
 ms.custom: SEO-VS-2020
-ms.date: 08/13/2020
+ms.date: 12/14/2020
 ms.topic: conceptual
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6f4c36987e198be576d843b984be14ddea824919
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: b3655407ce94395f74ebe5362e7006075ef1e790
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96479610"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97488175"
 ---
 # <a name="visual-studio-performance-tips-and-tricks"></a>Visual Studio 性能提示和技巧
 
@@ -71,7 +71,7 @@ Visual Studio 会自动重新打开上一个会话中处于打开状态的文档
 
     建议在使用 CPU 分析后将其禁用。 此功能可能会占用大量资源。 CPU 分析处于启用状态后，后续调试会话中会一直保持启用状态，因此可在其完成时将其显示关闭。 如果不需要提供的功能，可以通过在调试时禁用诊断工具节省一些资源。
 
-    要禁用“诊断工具”  ，请启动一个调试会话，选择“工具”   > “选项”   > “启用诊断工具”  ，并取消选择该选项。
+    若要禁用“诊断工具”，请启动调试会话，选择“工具” > “选项” > “调试” > “常规”，然后取消选中“调试时启用诊断工具”选项。
 
     有关详细信息，请参阅[分析工具](../profiling/profiling-feature-tour.md)。
 

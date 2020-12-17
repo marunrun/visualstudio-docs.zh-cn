@@ -1,5 +1,7 @@
 ---
 title: 调试 ActiveX 控件 | Microsoft Docs
+Description: 了解如何调试 ActiveX 控件。 必须指定一个包含可执行文件，可在项目属性页中或在开始调试时执行此操作。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -24,12 +26,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fc15d42aa2984a7257687eeb051ce754bace9e81
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: a0458fb4981642d3f8386edd4c3605ae7b902a14
+ms.sourcegitcommit: 40d758f779d42c66cb02ae7face8a62763a8662b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852160"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97398670"
 ---
 # <a name="how-to-debug-an-activex-control"></a>如何：调试 ActiveX 控件
 

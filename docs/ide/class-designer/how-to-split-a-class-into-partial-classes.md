@@ -1,6 +1,6 @@
 ---
-title: 如何：将类拆分为分部类（类设计器）
-description: 了解如何使用 partial 关键字将类或结构的声明划分到多个声明。
+title: 将类拆分为分部类
+description: 了解如何使用 Partial 关键字在类设计器中将类或结构的声明划分到多个声明。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -16,12 +16,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: ac0726851aec0d86223c2d95027b92137682c8a9
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: d6eb6e72dc409a642dcf8e1a4c7a7389529375c7
+ms.sourcegitcommit: 60e5a8a7ee91854356797d05f3b502572c4a4884
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94901344"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96933514"
 ---
 # <a name="how-to-split-a-class-into-partial-classes-in-class-designer"></a>如何：在类设计器中将类拆分为分部类
 

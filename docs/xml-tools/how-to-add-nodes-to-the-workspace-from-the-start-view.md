@@ -1,5 +1,5 @@
 ---
-title: 在 XML 架构设计器中将起始视图中的节点添加到工作区
+title: 从起始视图将节点添加到工作区
 description: 了解如何使用“开始”视图中的命令将节点添加到 XML 架构设计器工作区。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0c456220ecf8fbe17ce65372c4f7904f54181fe2
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: b2a30297cd2ede7293929604046550f78427b2a0
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93049269"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995312"
 ---
 # <a name="how-to-add-nodes-to-the-workspace-from-the-start-view"></a>如何：将起始视图中的节点添加到工作区
 

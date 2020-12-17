@@ -8,12 +8,12 @@ ms.author: tglee
 author: TerryGLee
 ms.manager: jillfra
 monikerRange: vs-2019
-ms.openlocfilehash: e640d19659861a03d0f97abc799344bebb14b936
-ms.sourcegitcommit: f78960320798e2c6b33145cee77a2221f031603c
+ms.openlocfilehash: 7eed02ffda47de9c6a788d186d41dcc087852e64
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94878304"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524082"
 ---
 # <a name="git-experience-in-visual-studio"></a>Visual Studio 中的 Git 体验
 
@@ -187,9 +187,9 @@ Visual Studio 中的合并编辑器是一种三向合并工具，用于显示传
 
 :::image type="content" source="media/git-options-settings.png" alt-text="Visual Studio IDE 中“选项”对话框，可以在该对话框中选择个性化设置和自定义设置 ":::
 
-## <a name="how-to-use-the-legacy-team-explorer-experience-in-visual-studio"></a>如何在 Visual Studio 中使用旧的团队资源管理器体验
+## <a name="how-to-use-the-full-team-explorer-experience-in-visual-studio"></a>如何在 Visual Studio 中使用完整的团队资源管理器体验
 
-从[版本 16.8](/visualstudio/releases/2019/release-notes/) 开始，新的 Git 体验是 Visual Studio 2019 中的默认版本控制系统。 但是，可以在需要时将它关闭。 转到“工具” > “选项” > “环境” > “预览功能”，然后切换“新的 Git 用户体验”复选框    ，这会使你切换回旧的团队资源管理器体验。
+从[版本 16.8](/visualstudio/releases/2019/release-notes/) 开始，新的 Git 体验是 Visual Studio 2019 中的默认版本控制系统。 但是，可以在需要时将它关闭。 转到“工具” > “选项” > “环境” > “预览功能”，然后切换“新的 Git 用户体验”复选框，这会使你切换回用于 Git 的团队资源管理器。
 
 :::image type="content" source="media/git-opt-new-user-experience.png" alt-text="Visual Studio 中“选项”对话框的“预览功能”部分 ":::
 

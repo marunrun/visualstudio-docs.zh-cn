@@ -1,5 +1,7 @@
 ---
 title: Mip-map 生成变量 | Microsoft Docs
+description: 如果 mip-map 生成显示显著的性能提升，则表示你使用的是纹理，而未启用 mip-map，因此无法充分利用纹理缓存。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 3b4b3583-0b01-4f5d-aacb-3f96d19111d9
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 422a68f4e33733aa2874c639f0dcc799cd3ec795
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: d939fb537ac6aed75d9b0f7bda2970a85f9175ad
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72734892"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994962"
 ---
 # <a name="mip-map-generation-variant"></a>Mip-map 生成变量
 对非呈现器目标的纹理启用 mip 贴图。
