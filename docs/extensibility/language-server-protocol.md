@@ -1,5 +1,7 @@
 ---
 title: 语言服务器协议概述 |Microsoft Docs
+description: 了解语言服务器协议如何提供用于向各种工具公开语言功能的有用框架。
+ms.custom: SEO-VS-2020
 ms.date: 11/14/2017
 ms.topic: conceptual
 ms.assetid: 6a7d93c2-31ea-4bae-8b29-6988a567ddf2
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c3bd5dce3cfb7022a8abb6397dc87b418144cbe1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2d642d1168cbd2a8bd7abadbcdbd7c1e2851b00e
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80703105"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97616125"
 ---
 # <a name="language-server-protocol"></a>语言服务器协议
 
@@ -55,7 +57,7 @@ VS Code 团队通过实现几个 linter 语言服务器来对协议进行原型�
 
 * **用户在编辑器中的符号上执行 "跳到定义"**：该工具将发送带有两个参数的 "textDocument/definition" 请求： (1) 文档 URI， (2) 从其启动到定义请求的文本位置到服务器。 服务器在文档中以文档 URI 和符号定义的位置进行响应。
 
-* **用户关闭文档 (文件) **：从工具发送 "TextDocument/didClose" 通知，告知语言服务器文档现在不再处于内存中，并且当前内容现已在文件系统上保持最新状态。
+* **用户关闭文档 (文件)**：从工具发送 "TextDocument/didClose" 通知，告知语言服务器文档现在不再处于内存中，并且当前内容现已在文件系统上保持最新状态。
 
 此示例演示了协议在编辑器功能（如 "中转到定义"、"查找所有引用"）级别上与语言服务器进行通信的方式。 协议使用的数据类型是编辑器或 IDE "数据类型"，如当前打开的文本文档和光标位置。 数据类型不是编程语言域模型的级别，通常会提供抽象语法树和编译器符号 (例如，解析类型、命名空间 ) 。这大大简化了协议。
 

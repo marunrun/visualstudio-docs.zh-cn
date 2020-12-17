@@ -1,5 +1,7 @@
 ---
 title: LPTEXTOUTPROC |Microsoft Docs
+description: 了解 LPTEXTOUTPROC 函数指针。 Visual Studio IDE 实现了用于显示错误和状态的函数。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +18,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 38c3e8263b9a30058c2de019e5e92160b716aa71
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a04f47a6500c0cd2174d0567029a4f5c86d9f62d
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80702793"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97615722"
 ---
 # <a name="lptextoutproc"></a>LPTEXTOUTPROC
 
@@ -71,7 +73,7 @@ mesg_type
 ## <a name="example"></a>示例
  假设 IDE 调用了包含二十个文件名的 [SccGet](../extensibility/sccget-function.md) 。 源代码管理插件希望阻止在文件获取过程中取消该操作。 获取每个文件后，它会调用并向 `lpTextOutProc` 其传递每个文件的状态信息，并在 `SCC_MSG_DOCANCEL` 消息没有要报告的状态时发送消息。 如果插件从 IDE 中收到返回值 `SCC_MSG_RTN_CANCEL` ，则会立即取消 get 操作，以便不会再检索文件。
 
-## <a name="structures"></a>结构
+## <a name="structures"></a>結構
 
 ### <a name="sccmsgdataiscancelled"></a><a name="LinkSccMsgDataIsCancelled"></a> SccMsgDataIsCancelled
 

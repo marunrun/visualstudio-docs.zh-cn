@@ -1,5 +1,7 @@
 ---
 title: 在编辑器中 Managed Extensibility Framework |Microsoft Docs
+description: 了解 Managed Extensibility Framework，它允许您构建自己的组件，以便在 Visual Studio SDK 中扩展编辑器。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 888c5206b87079cf9fa91cb68e9801cb3c4f8c1a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dd6ed0e495056bf2924e46bfdfcd074daf1faf87
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80702870"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97615585"
 ---
 # <a name="managed-extensibility-framework-in-the-editor"></a>编辑器中的 Managed Extensibility Framework
 编辑器是通过使用 Managed Extensibility Framework (MEF) 组件生成的。 您可以构建自己的 MEF 组件来扩展编辑器，代码还可以使用编辑器组件。
@@ -82,7 +84,7 @@ internal IClassificationTypeRegistryService ClassificationRegistry;
 
 #### <a name="to-consume-editor-functionality-from-a-mef-component-part"></a>从 MEF 组件部分使用编辑器功能
 
-1. 向全局程序集缓存中添加对 *System.Composition.ComponentModel.dll*的引用，该程序集位于全局程序集缓存 (GAC) 和编辑器程序集。
+1. 向全局程序集缓存中添加对 *System.Composition.ComponentModel.dll* 的引用，该程序集位于全局程序集缓存 (GAC) 和编辑器程序集。
 
 2. 添加相关的 using 指令。
 

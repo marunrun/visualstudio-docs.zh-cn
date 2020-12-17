@@ -1,5 +1,7 @@
 ---
 title: 使用 DTE 启动 Visual Studio
+description: 了解如何使用 DTE 启动 Visual Studio 以支持主要版本的并行安装。 本文包括代码示例。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 04/26/2019
 ms.topic: conceptual
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3217835571ac659ac2cef2b46cb45a1c02ba2584
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c84d44b3f775f384ed15a0ede1ef9c68ad2fd5a6
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80703041"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97615872"
 ---
 # <a name="launch-visual-studio-using-dte"></a>使用 DTE 启动 Visual Studio
 
@@ -185,7 +187,7 @@ namespace ConsoleLauncherApp
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [找到 Visual Studio](locating-visual-studio.md)
 - [演练：从编辑器扩展访问 DTE 对象](walkthrough-accessing-the-dte-object-from-an-editor-extension.md)

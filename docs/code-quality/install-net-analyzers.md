@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: f7dfa1c79af832cc54d9aee72eeafbf20bbde707
-ms.sourcegitcommit: 40d758f779d42c66cb02ae7face8a62763a8662b
+ms.openlocfilehash: ea13fde64f6214cf3c219de45c79458b75e1caf8
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97398411"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97615520"
 ---
 # <a name="enable-or-install-first-party-net-analyzers"></a>启用或安装第一方 .NET 分析器
 
@@ -31,9 +31,9 @@ ms.locfileid: "97398411"
 - **以 NuGet 包的形式安装**：如果不想移到 .net 5 + SDK，或者想要使用基于 NuGet 包的模型，则可以在 `Microsoft.CodeAnalysis.NetAnalyzers` Visual Studio 2019 上的 [NuGet 包](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers) 中使用该分析器。  对于按需版本更新，你可能更倾向于使用基于包的模型。 如果你在 Visual Studio 2017 上，请改为安装最新 `2.9.x` 版本的 `Microsoft.CodeAnalysis.FxCopAnalyzers` [NuGet 包](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/) 。
 
 > [!NOTE]
-> 建议从 .NET SDK 启用分析器，而不是安装 `Microsoft.CodeAnalysis.NetAnalyzers` [NuGet 包](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers)（如果可能）。 通过从 .NET SDK 启用分析器，可以确保在更新 SDK 后，立即自动获取分析器 bug 修复和新分析器。
+> 建议从 .NET SDK 启用分析器，而不是安装 `Microsoft.CodeAnalysis.NetAnalyzers` [NuGet 包](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers)（如果可能）。 通过从 .NET SDK 启用分析器，可以确保在更新 SDK 后，立即自动获取分析器 bug 修复和新分析器。 在 NuGet 模型中，每次需要最新的 bug 修复时，都需要更新 NuGet 包。 NuGet 包会更频繁地更新。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 中的代码分析器概述](roslyn-analyzers-overview.md)
 - [在 Visual Studio 中使用代码分析器](use-roslyn-analyzers.md)

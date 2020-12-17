@@ -1,5 +1,7 @@
 ---
 title: 管理 Vspackage |Microsoft Docs
+description: 了解如何管理 Vspackage，以便知道何时可以简单地使用 Visual Studio 提供的默认 VSPackage 管理，以及如何以及何时对其进行自定义。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 60745d07679ae53b85d169473ed37ab314b67624
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6a040777671a5d6a4378e9b2ad68b2ffa2fabaeb
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80702654"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97615735"
 ---
 # <a name="manage-vspackages"></a>管理 VSPackage
 在大多数情况下，你无需担心如何管理 Vspackage，因为项目和项模板会自动注册并加载包。 但是，在某些情况下，你可能需要更多地了解，才能管理包。

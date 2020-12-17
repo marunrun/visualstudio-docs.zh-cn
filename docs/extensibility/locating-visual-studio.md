@@ -1,5 +1,7 @@
 ---
 title: 正在查找 Visual Studio |Microsoft Docs
+description: 可以安装同一版本的 Visual Studio 的多个实例。 了解如何使用 COM 查询 API 查找所需的实例。
+ms.custom: SEO-VS-2020
 ms.date: 08/21/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: heaths
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 93a6f39a9240002cd8008c9368799e10ab63b78d
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 8935af62b16ed6dd6d0d5d61412f347a95f32f23
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012472"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97616283"
 ---
 # <a name="locate-visual-studio"></a>找到 Visual Studio
 
@@ -39,7 +41,7 @@ ms.locfileid: "90012472"
 | [Vssetup.powershell cmdlet](https://github.com/Microsoft/vssetup.powershell) | PowerShell cmdlet 支持2.0 和更高版本，以对象的形式返回丰富信息，你可以使用这些对象基于与 _vswhere_ 相同的条件查找实例，并发现有关实例的更多属性。 有关示例，请参阅 [wiki](https://github.com/Microsoft/vssetup.powershell/wiki) 。 |
 | [VSIXBootstrapper](https://github.com/Microsoft/vsixbootstrapper) | 自动查找 _VSIXInstaller_ ，并通过传递命令行来安装 **.vsix* 文件。 此功能在不直接支持查询 Api 的安装程序中很有用。 有关示例，请参阅 [wiki](https://github.com/Microsoft/vsixbootstrapper/wiki) 。 |
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 * [Visual Studio 2017 安装程序的更改](https://devblogs.microsoft.com/setup/changes-to-visual-studio-15-setup/)
 * [使用 DTE 启动 Visual Studio](launch-visual-studio-dte.md)

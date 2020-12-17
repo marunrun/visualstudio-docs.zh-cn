@@ -1,5 +1,7 @@
 ---
 title: 旧版语言服务中的单词完成 |Microsoft Docs
+description: Visual Studio SDK 中的旧版语言服务可以支持 Word 完成功能。 了解如何在 VSPackage 中实现旧版语言服务。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 948751cde5b6b710d911a30ca26a61e5411bba4d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 489b43c825e3512e1bd33bc732833de84aed54c3
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80703164"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97616270"
 ---
 # <a name="word-completion-in-a-legacy-language-service"></a>旧版语言服务中的文字完成
 单词完成填写部分类型的单词上缺少的字符。 如果只有一个可能的完成，则在输入完成字符时将完成单词。 如果部分单词匹配多个可能的完成，则会显示一个可能的完成列表。 完成字符可以是任何不用于标识符的字符。
@@ -29,7 +31,7 @@ ms.locfileid: "80703164"
 
 ## <a name="implementation-steps"></a>实现步骤
 
-1. 当用户从**IntelliSense**菜单中选择 "**完成单词**" 时，该 <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> 命令将发送到语言服务。
+1. 当用户从 **IntelliSense** 菜单中选择 "**完成单词**" 时，该 <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> 命令将发送到语言服务。
 
 2. <xref:Microsoft.VisualStudio.Package.ViewFilter>类捕获命令并调用 <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> 方法，分析原因为 <xref:Microsoft.VisualStudio.Package.ParseReason> 。
 
