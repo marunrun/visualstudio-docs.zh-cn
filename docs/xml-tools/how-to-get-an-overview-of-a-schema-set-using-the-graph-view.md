@@ -1,6 +1,6 @@
 ---
-title: XML 架构设计器：使用图形视图获取架构集概览
-description: 了解如何使用 XML 架构资源管理器中的图形视图来查看架构集中节点的简要视图以及节点间的关系。
+title: 获取架构集的概述
+description: XML 架构设计器：了解如何使用 XML 架构资源管理器中的图形视图来查看架构集中节点的简要视图以及节点间的关系。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -10,14 +10,14 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 553b9f2d84f70c75ebcee40cdffe044237c23a5f
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 699167f8fe3662bbb162706f3f9fc6e5d53d82dc
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93398483"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995286"
 ---
-# <a name="how-to-get-an-overview-of-a-schema-set-using-the-graph-view"></a>如何：使用图形视图获取架构集概览
+# <a name="how-to-get-an-overview-of-a-schema-set-by-using-the-graph-view"></a>操作说明：使用图形视图获取架构集概览
 
 本主题介绍如何使用[图形视图](../xml-tools/graph-view.md)来查看架构集中节点的简要视图以及节点间的关系。
 

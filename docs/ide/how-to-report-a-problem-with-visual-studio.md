@@ -9,12 +9,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d8e0718eb01f422ad435492304e77d73c14b4dee
-ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
+ms.openlocfilehash: 2956372882d4449345d026e691a12afb2988054a
+ms.sourcegitcommit: 6ef4e46c786c5bbcc52cd9c30e5ddfca12ea8b3c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91211170"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97050817"
 ---
 # <a name="how-to-report-a-problem-with-visual-studio-or-visual-studio-installer"></a>如何报告 Visual Studio 或 Visual Studio 安装程序的问题
 
@@ -65,7 +65,7 @@ ms.locfileid: "91211170"
 
 如果问题缺少重要信息，我们将分配“需要更多信息”状态。 我们将在问题上评论称我们需要该特定信息，你也将收到电子邮件通知。 如果我们在 7 天内未收到该信息，将向你发送提醒。 之后，如果你 14 天内未操作，我们将关闭该票证。
 
-1. 访问电子邮件中指向问题报告的链接，或者转到“我的反馈”，以查看处于“需要详细信息”状态的所有报告。
+1. 访问电子邮件中指向问题报表的链接，或者转到主页，以查看处于“需要详细信息”状态的所有报表。
 
     ![我的反馈](../ide/media/feedback-my-feedback.png)
 

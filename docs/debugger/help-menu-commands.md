@@ -1,5 +1,7 @@
 ---
 title: “帮助”菜单命令 | Microsoft Docs
+description: 查看 Spy++“帮助”菜单中提供的命令。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c58bc069b3d38c4086a5642d13bb907528923bb5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 492062a5ba53eb277263e4284b74710786e13993
+ms.sourcegitcommit: 40d758f779d42c66cb02ae7face8a62763a8662b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62895093"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97398605"
 ---
 # <a name="help-menu-commands"></a>“帮助”菜单命令
 “帮助”菜单提供用于打开帮助文件的命令。

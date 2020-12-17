@@ -1,5 +1,6 @@
 ---
 title: HLSL 着色器调试器 | Microsoft Docs
+description: 使用图形分析器中的 HLSL 调试器来了解 HLSL 代码在应用中的运行情况。 调试器可以模拟你感兴趣的确切 HLSL 线程。
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -10,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 164c404f3bce6b8216092635e3489843039fb1eb
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 65f643d0f03f9754d580de8be95fb5c1f65a940d
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72735306"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995130"
 ---
 # <a name="hlsl-shader-debugger"></a>HLSL 着色器调试器
 Visual Studio 图形分析器中的 HLSL 调试器可帮助了解 HLSL 着色器代码在应用的实际条件下如何运行。

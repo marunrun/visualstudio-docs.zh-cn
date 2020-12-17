@@ -1,7 +1,8 @@
 ---
 title: 调试不属于 Visual Studio 解决方案的应用
 titleSuffix: ''
-ms.custom: ''
+Description: 了解如何调试不属于 Visual Studio 解决方案的应用程序。 可以附加 Visual Studio 调试器。
+ms.custom: SEO-VS-2020
 ms.date: 02/21/2020
 ms.topic: how-to
 dev_langs:
@@ -20,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c8cb71acb9c1c332f269f77129fa2d11a9a874f8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fd4d5497a4c29502fe4d7e4825b1767991c79298
+ms.sourcegitcommit: 40d758f779d42c66cb02ae7face8a62763a8662b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350142"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97398657"
 ---
 # <a name="debug-an-app-that-isnt-part-of-a-visual-studio-solution-c-c-visual-basic-f"></a>调试不属于 Visual Studio 解决方案的应用（C++、C#、Visual Basic、F#）
 

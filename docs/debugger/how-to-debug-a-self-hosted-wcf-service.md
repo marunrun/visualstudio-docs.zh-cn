@@ -1,5 +1,7 @@
 ---
 title: 调试自承载 WCF 服务 | Microsoft Docs
+Description: 了解如何调试自承载 WCF 服务。 最简单的方法（但并非总是可行）是将 Visual Studio 配置为同时启动客户端和服务器。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ac58c187e147040c5ef82320a3b44e86912ed5b8
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 983c053ca6bd1370cf67cb04eeb2626c2b1217aa
+ms.sourcegitcommit: 40d758f779d42c66cb02ae7face8a62763a8662b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852186"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97398722"
 ---
 # <a name="how-to-debug-a-self-hosted-wcf-service"></a>如何：调试自托管 WCF 服务
 “自承载服务”是指不在 IIS、WCF 服务主机或 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 开发服务器内部运行的 WCF 服务。 调试自承载 WCF 的最简单方法是配置 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]，以便当你在“调试”菜单中选择“启动调试”时同时启动客户端和服务器。

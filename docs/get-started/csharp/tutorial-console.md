@@ -15,12 +15,12 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 691e6c3b994649a9f0fa2d0e92a990f317a16208
-ms.sourcegitcommit: 8e5b0106061bb43247373df33d0850ae68457f5e
+ms.openlocfilehash: b28d87cc0842d5a3de8634ae50378915196366ff
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88508173"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527922"
 ---
 # <a name="tutorial-create-a-simple-c-console-app-in-visual-studio"></a>教程：在 Visual Studio 中创建一个简单的 C# 控制台应用程序
 
@@ -71,7 +71,7 @@ ms.locfileid: "88508173"
 
 1. 取消“新建项目”对话框，再从顶部菜单栏中选择“工具”>“获取工具和功能”  。
 
-1. Visual Studio 安装程序启动。 选择“.NET Core 跨平台开发”工作负载，然后选择“修改” 。
+1. Visual Studio 安装程序启动。 选择“.NET Core 跨平台开发”工作负载，然后选择“修改”   。
 
 ::: moniker-end
 
@@ -79,7 +79,7 @@ ms.locfileid: "88508173"
 
 1. 打开 Visual Studio 2019。
 
-1. 在“开始”窗口上，选择“创建新项目”。
+1. 在“开始”窗口上，选择“创建新项目”  。
 
    ![查看“创建新项目”窗口](../../get-started/media/vs-2019/create-new-project-dark-theme.png)
 
@@ -90,7 +90,7 @@ ms.locfileid: "88508173"
    ![为“控制台应用(.NET Framework)”选择 C# 模板](./media/vs-2019/csharp-create-new-project-search-console-net-core-filtered.png)
 
    > [!NOTE]
-   > 如果未看到“控制台应用(.NET Core)”模板，则可以通过“创建新项目”窗口安装该模板 。 在“找不到所需内容?”消息中，选择“安装更多工具和功能”链接 。
+   > 如果未看到“控制台应用(.NET Core)”模板，则可以通过“创建新项目”窗口安装该模板 。 在“找不到所需内容?”消息中，选择“安装更多工具和功能”链接   。
    >
    > ![“创建新项目”窗口内“找不到所需内容”消息中的“安装更多工具和功能”链接](../../get-started/media/vs-2019/not-finding-what-looking-for.png) 
    > 
@@ -311,7 +311,7 @@ ms.locfileid: "88508173"
 
 现在，当用任何数字除以 0 时，应用会请求除以另一个数字。 更好的是：应用不会停止请求，直到提供非零数字。
 
-   ![Visual Studio 代码编辑器显示“被零除”错误](./media/csharp-console-calculator-dividebyzero.png)
+   ![修复了被零除错误](./media/csharp-console-calculator-dividebyzero.png)
 
 ### <a name="fix-the-format-error"></a>修复“格式”错误
 
@@ -600,10 +600,25 @@ namespace Calculator
 
 ## <a name="next-steps"></a>后续步骤
 
+:::moniker range="vs-2017"
+
+继续学习更多教程：
+
+> [!div class="nextstepaction"]
+> [C# 教程](/dotnet/csharp/tutorials)
+
+> [!div class="nextstepaction"]
+> [学习 Visual Studio IDE 教程](../visual-studio-ide.md)
+
+:::moniker-end
+
+:::moniker range="vs-2019"
+
 继续学习本教程的第二部分：
 
 > [!div class="nextstepaction"]
 > [继续学习第 2 部分](tutorial-console-part-2.md)
+:::moniker-end
 
 ## <a name="see-also"></a>请参阅
 

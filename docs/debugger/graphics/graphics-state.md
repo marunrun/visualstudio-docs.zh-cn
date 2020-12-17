@@ -1,5 +1,7 @@
 ---
 title: 图形状态 | Microsoft Docs
+description: 通过查看每个绘图调用的图形状态来故障排除呈现问题。 将突出显示从上一个调用中更改的状态部分。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a07e198c6ff4e432f708ac1751e69bbef77a22c4
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: de8f3c356cfe05aade3e4f2197b3f7429967a259
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67823773"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994002"
 ---
 # <a name="graphics-state"></a>图形状态
 Visual Studio 图形诊断中的“状态”窗口可帮助你了解当前事件（如绘图调用）时为活动状态的图形状态。
@@ -48,7 +50,7 @@ Visual Studio 图形诊断中的“状态”窗口可帮助你了解当前事件
 ### <a name="state-table-format"></a>状态表格式
  “状态”窗口显示了多个信息列。
 
-|列|描述|
+|列|说明|
 |------------|-----------------|
 |“属性”|状态项的名称。 如果此项表示状态的捆绑包，则可以展开该项以显示它。<br /><br /> 在“API 输入状态视图”和“逻辑状态视图”状态中，缩进名称以显示状态之间的层次结构关系 。<br /><br /> 在“固定状态视图”状态中，完全限定名显示在简单列表中。|
 |“值”|状态项的值。|

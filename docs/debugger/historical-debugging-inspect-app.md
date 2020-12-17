@@ -1,5 +1,7 @@
 ---
 title: 使用历史调试检查应用程序 |Microsoft Docs
+description: 执行调查，使用 IntelliTrace 历史调试来跟踪 C# 控制台应用程序中的 bug。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 629b5d93-39b2-430a-b8ba-d2a47fdf2584
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: efabc8cd185daed4f018e3e4209e391b5bc39f44
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.openlocfilehash: d51327f67429071d08f6dfd02c0ec0a1fc55822f
+ms.sourcegitcommit: 40d758f779d42c66cb02ae7face8a62763a8662b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85350441"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97398696"
 ---
 # <a name="inspect-your-app-with-intellitrace-historical-debugging-in-visual-studio-c-visual-basic-c"></a>在 Visual Studio 中使用 IntelliTrace 历史调试检查应用程序 (C#，Visual Basic、 c + +)
 

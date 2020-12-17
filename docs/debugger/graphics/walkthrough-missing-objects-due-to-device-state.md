@@ -1,5 +1,7 @@
 ---
 title: 演练：因设备状态而缺少对象 | Microsoft Docs
+description: 执行调查，查找配置错误的设备状态。 它演示如何使用图形事件列表、图形管道阶段和图形像素历史记录。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 1b0d2bbd-0729-4aa5-8308-70c5bf1468c5
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0e85aa8fc5af3f32f117b112e8624962a49d90c6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c29e240d4be2f66fb0684bf5372d59fe5d4d825a
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62895438"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995052"
 ---
 # <a name="walkthrough-missing-objects-due-to-device-state"></a>演练：因设备状态而缺少对象
 本演练演示了如何使用 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 图形诊断工具调查由于设备状态配置错误而缺失的对象。

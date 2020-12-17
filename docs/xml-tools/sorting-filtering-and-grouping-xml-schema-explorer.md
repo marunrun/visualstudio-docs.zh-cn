@@ -1,5 +1,5 @@
 ---
-title: XML 架构资源管理器中的排序、筛选和分组
+title: 排序、筛选和分组
 description: 了解通过 XML 架构资源管理器工具栏上的“排序、筛选和分组选项”菜单可用的选项。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 172226334622b830db79b79f7eaae2c5fe7efc79
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 41f0aff39350b0307db6b02a148fb70022fb51ca
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94351487"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96996248"
 ---
 # <a name="sorting-filtering-and-grouping-xml-schema-explorer"></a>排序、筛选和分组（XML 架构资源管理器）
 
