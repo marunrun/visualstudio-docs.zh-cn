@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 567af541b819186bda3dc869628c2812be9888b8
-ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
+ms.openlocfilehash: 48dcb2d01e53502c371595048666fd94c267b6ec
+ms.sourcegitcommit: fed8782b2fb2ca18a90746b6e7e0b33f3fde10f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96039583"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97646380"
 ---
 # <a name="code-analysis-faq"></a>代码分析常见问题解答
 
@@ -100,9 +100,9 @@ ms.locfileid: "96039583"
 
 **问**：解决方案的 "代码分析" 属性页在哪里？
 
-**答**：解决方案级别的 "代码分析" 属性页已删除，以支持更可靠的共享属性组。 对于在项目级别管理代码分析，"代码分析" 属性页仍可用。 对于托管项目 (，我们还建议从规则集迁移到 EditorConfig，以便进行规则配置。 ) 用于在解决方案或存储库中的多个/所有项目间共享规则集，我们建议使用共享属性/目标文件或属性/文件中的 CodeAnalysisRuleSet 属性定义属性组。 如果你没有任何项目导入的公共属性或目标，则应考虑 [将此类属性组添加到属性或顶级解决方案目录下的目录，该目录将自动导入到目录或其子目录中定义的所有项目文件中](../msbuild/customize-your-build.md)。
+**答**：解决方案级别的 "代码分析" 属性页已删除，以支持更可靠的共享属性组。 对于在项目级别管理代码分析，"代码分析" 属性页仍可用。 对于托管项目 (，我们还建议从规则集迁移到 EditorConfig，以便进行规则配置。 ) 用于在解决方案或存储库中的多个/所有项目间共享规则集，我们建议使用共享属性/目标文件或 *属性/* 文件中的 [CodeAnalysisRuleSet](../code-quality/using-rule-sets-to-group-code-analysis-rules.md#specify-a-rule-set-for-a-project)属性定义属性组。 如果你没有任何项目导入的公共属性或目标，则应考虑将此类属性组添加到顶级解决方案目录下的 [属性或目录 .targets 文件](../msbuild/customize-your-build.md) 中，该目录会自动导入到目录或其子目录中定义的所有项目文件中。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [分析器概述](roslyn-analyzers-overview.md)
 - [EditorConfig 的 .NET 编码约定设置](/dotnet/fundamentals/code-analysis/code-style-rule-options)
