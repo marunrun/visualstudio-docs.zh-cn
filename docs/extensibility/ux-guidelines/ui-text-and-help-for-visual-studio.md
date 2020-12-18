@@ -1,5 +1,6 @@
 ---
 title: Visual Studio 的 UI 文本和帮助 |Microsoft Docs
+description: 了解 Visual Studio 帮助信息中使用的 UI 文本和术语。
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: e8747d07-6c90-46cc-b425-55b589f7e9e4
@@ -8,12 +9,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b3247aeaa702b59722471c7d28e98957f04f3e07
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2795d766c43d6119fa50a12c4dcd1e2c72d79186
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80698299"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668594"
 ---
 # <a name="ui-text-and-help-for-visual-studio"></a>Visual Studio 的 UI 文本和帮助
 ## <a name="ui-text-and-terminology"></a><a name="BKMK_UITextAndTerminology"></a> UI 文本和术语
@@ -60,11 +61,11 @@ ms.locfileid: "80698299"
 #### <a name="supplemental-instructions"></a>补充说明
  补充说明提供有助于用户理解控件或控制分组的其他信息。 这还可能包括必要的提示文本，以了解输入控件所需的格式。 请慎用补充说明。 如果用户可能不会完全了解所做选择的后果，请保留它们。
 
- ![Visual Studio 中的补充文本](../../extensibility/ux-guidelines/media/0601-b_supplementaltext1.png "0601-b_SupplementalText1")
+ ![屏幕截图：显示带有下面补充文本的 Internet Explorer 选项按钮，用于描述更改选项设置的影响。](../../extensibility/ux-guidelines/media/0601-b_supplementaltext1.png "0601-b_SupplementalText1")
 
  **Visual Studio 中的补充文本**
 
- ![Visual Studio 中的补充文本](../../extensibility/ux-guidelines/media/0601-c_supplementaltext2.png "0601-c_SupplementalText2")
+ ![Visual Studio 中的 "选择源代码管理" 对话框的屏幕截图，显示描述每个源代码管理系统选项的补充文本。](../../extensibility/ux-guidelines/media/0601-c_supplementaltext2.png "0601-c_SupplementalText2")
 
  **Visual Studio 中的补充文本**
 
@@ -123,7 +124,7 @@ ms.locfileid: "80698299"
 
 - 决不要链接 "此处" 一词。 这对于某些屏幕读取器是有问题的，它只会语音显示超链接字。
 
-     错误： "在 **此处**查找有关 Microsoft Azure 移动服务的信息"
+     错误： "在 **此处** 查找有关 Microsoft Azure 移动服务的信息"
 
      正确： "适用于 Windows Azure 移动服务的哪些定价选项？"
 
@@ -136,15 +137,15 @@ ms.locfileid: "80698299"
 
 - 代替控件标签：
 
-     ![Visual Studio 中的提示文本](../../extensibility/ux-guidelines/media/0601-f_hinttext1.png "0601-f_HintText1")
+     ![带有提示文本的下拉控件屏幕截图，用于显示 "Search 解决方案资源管理器 (Ctrl +; ) " 的控件标签。](../../extensibility/ux-guidelines/media/0601-f_hinttext1.png "0601-f_HintText1")
 
 - 对于谓词，提供说明：
 
-     ![Visual Studio 中的提示文本](../../extensibility/ux-guidelines/media/0601-g_hinttext2.png "0601-g_HintText2")
+     ![文本框中的屏幕截图，其中显示了控件中的提示文本 "输入您的姓名"。](../../extensibility/ux-guidelines/media/0601-g_hinttext2.png "0601-g_HintText2")
 
 - 带有指示必需条目的文本：
 
-     ![Visual Studio 中的提示文本](../../extensibility/ux-guidelines/media/0601-h_hinttext3.png "0601-h_HintText3")
+     ![控件中的提示文本显示为 "Required" 的文本框屏幕截图 \< \> 。](../../extensibility/ux-guidelines/media/0601-h_hinttext3.png "0601-h_HintText3")
 
 #### <a name="watermark-text"></a>水印文本
  在空设计图面上，文本应指示要执行的操作，并提供用于打开其他相关窗口的链接（如果适用）：
@@ -155,14 +156,14 @@ ms.locfileid: "80698299"
 
 ### <a name="common-terminology"></a>常见术语
 
-|术语|说明|备注|
+|术语|说明|评论|
 |----------|-----------------|-------------|
 |登录/注销|谓词使用同义词将身份验证表示为 web 属性。 在客户端中，我们使用这一一次，作为用于登录和退出 IDE 用户连接的顶级概念，此类代表提供高级功能（如漫游和许可）的顶级标识，这些功能在所有其他连接中都不可用。|IDE 用户是唯一应该表示登录/注销谓词的功能，因为它表示顶级 IDE 用户。|
 |连接/断开连接|在功能维护与联机服务的单一连接的位置使用。|服务器资源管理器，一次只能有一个活动的 Azure 连接，这是一个连接/断开连接的示例。|
 |添加/删除|非破坏性。 添加或删除列表中的内容时使用。|"TFS 连接管理器服务器列表" 对话框是 "添加/删除" 的一个示例。|
 |删除|破坏. 仅当要删除的元素将被永久丢弃或从磁盘中删除时使用。|如果结果是从磁盘中删除文件，"删除" 通常需要提示。|
 
-## <a name="error-messages"></a>Error messages
+## <a name="error-messages"></a>错误消息
 
 ### <a name="overview"></a>概述
  出现错误。 在阻止能够避免错误消息的第一步是，设置对用户可以执行的操作的限制。 但是，当发生错误时，可能会出现一条写入错误消息，以解决问题。 错误消息可能是用户看到的最重要的通知类型之一，因为它们是同步的，指出需要解决的问题。 编写不当的错误消息会让用户自行决定错误和任何可能的解决方案的原因。
@@ -217,7 +218,7 @@ ms.locfileid: "80698299"
 ### <a name="components-of-a-well-written-error-message"></a>编写良好的错误消息的组成部分
 
 #### <a name="use-the-shell-dialog-service-for-error-messages"></a>使用 shell 对话框服务获取错误消息。
- 使用 shell 对话框服务，可以控制消息的外观、特定字体，而不会对单个元素进行重大更改。 使用 **IErrorInfo** 机制并使用 **IVsUIShell：： SetErrorInfo/ReportErrorInfo**报告它们。
+ 使用 shell 对话框服务，可以控制消息的外观、特定字体，而不会对单个元素进行重大更改。 使用 **IErrorInfo** 机制并使用 **IVsUIShell：： SetErrorInfo/ReportErrorInfo** 报告它们。
 
 #### <a name="choose-an-effective-and-appropriate-notification-presentation"></a>选择有效的合适通知演示。
  如果需要立即采取措施来避免丢失数据 (同步通知) ，请使用带有严重警告的模式对话框。 关键图标为关闭消息但不读取消息的情况保留，这可能会导致负面后果。 数据丢失是需要警报级别响应的一项关键情况。 过度利用关键图标 desensitizes 用户的重要性。 如果错误消息本质上是信息性的，请考虑将模式对话框 (异步通知) 的替代项。
@@ -300,9 +301,9 @@ ms.locfileid: "80698299"
 ##### <a name="dialogs-created-through-the-environment"></a>通过环境创建的对话框
  许多 shell 对话框是通过 **VBDialogBoxParam** 函数创建的。 已更新此共享函数，以帮助你将 " **帮助** " 按钮从对话框移动到 **？** 按钮，同时保留向后兼容并可扩展的体系结构。
 
- 具体来说， **VBDialogBoxParam** 函数会查看 ID 为 **IDHELP** (9) 或标签为 **help** 或 **&帮助**的按钮的对话框模板。 如果找到了 "帮助" 按钮，则会将其隐藏并将 **WS_EX_CONTEXTHELP** 样式添加到对话框中，这会将 **？** 对话框的标题栏中的按钮。
+ 具体来说， **VBDialogBoxParam** 函数会查看 ID 为 **IDHELP** (9) 或标签为 **help** 或 **&帮助** 的按钮的对话框模板。 如果找到了 "帮助" 按钮，则会将其隐藏并将 **WS_EX_CONTEXTHELP** 样式添加到对话框中，这会将 **？** 对话框的标题栏中的按钮。
 
- 创建对话框时，它会将对话进程推送到堆栈上，并使用名为 **DialogPreProc**的预处理对话框过程调用该对话框。 当 **？** 按钮后，它会将 SC_CONTEXTHELP **WM_SYSCOMMAND**发送**SC_CONTEXTHELP**到该对话框。 **DialogPreProc**捕获此命令并将其更改为传递到原始对话过程的**WM_HELP**消息。
+ 创建对话框时，它会将对话进程推送到堆栈上，并使用名为 **DialogPreProc** 的预处理对话框过程调用该对话框。 当 **？** 按钮后，它会将 SC_CONTEXTHELP **WM_SYSCOMMAND** 发送到该对话框。 **DialogPreProc** 捕获此命令并将其更改为传递到原始对话过程的 **WM_HELP** 消息。
 
  大多数环境创建的对话框在对话框中都有 "帮助" 按钮。 显示对话框时，"帮助" 按钮会自动隐藏并且只有 **？** 按钮正常工作。 如果 **？** 按钮在 Windows 中被删除或更改，则此解决方案使你可以快速返回到原始的 "帮助" 按钮。
 
@@ -420,7 +421,7 @@ public class HelpForm : Form
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [Visual Studio 的字体和格式](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md)
 - [Visual Studio 的布局](../../extensibility/ux-guidelines/layout-for-visual-studio.md)
 - [Visual Studio 的通知和进度](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md)

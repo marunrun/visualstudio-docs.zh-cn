@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c6ad55d3d678a26489983bf276359f2141688272
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 69af1534740ddec2c804f0b7dafec61d985a4b24
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94348809"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97667879"
 ---
 # <a name="customize-a-rule-set"></a>自定义规则集
 
@@ -28,7 +28,7 @@ ms.locfileid: "94348809"
 
 若要创建自定义规则集，可以在 **规则集编辑器** 中打开内置规则集。 在此处，你可以添加或删除特定的规则，并且可以更改违反规则时发生的操作 &mdash; （例如，显示警告或错误）。
 
-1. 在 **解决方案资源管理器** 中，右键单击项目，然后选择 " **属性** "。
+1. 在 **解决方案资源管理器** 中，右键单击项目，然后选择 " **属性**"。
 
 2. 在 " **属性** " 页上，选择 " **代码分析** " 选项卡。
 
@@ -53,32 +53,32 @@ ms.locfileid: "94348809"
 4. 选择 " **打开** " 以在规则集编辑器中显示规则。
 
 > [!NOTE]
-> 如果你有 .NET Core 或 .NET Standard 项目，该过程会稍有不同，因为没有 **代码分析** 属性选项卡。按照以下步骤将 [预定义的规则集复制到项目中，并将其设置为活动规则集](/dotnet/fundamentals/code-analysis/code-quality-rule-options)。 复制规则集之后，可以 [在 Visual Studio 规则集编辑器中进行编辑](working-in-the-code-analysis-rule-set-editor.md) ，方法是从 **解决方案资源管理器** 中打开它。
+> 如果你有一个 .NET Core 或 .NET Standard 项目，该过程会稍有不同，因为项目属性中的 " **代码分析** " 选项卡不支持相同的选项。 按照以下步骤将 [预定义的规则集复制到项目中，并将其设置为活动规则集](/dotnet/fundamentals/code-analysis/code-quality-rule-options)。 复制规则集之后，可以 [在 Visual Studio 规则集编辑器中进行编辑](working-in-the-code-analysis-rule-set-editor.md) ，方法是从 **解决方案资源管理器** 中打开它。
 
 ## <a name="create-a-new-rule-set"></a>创建新规则集
 
 您可以通过 " **新建文件** " 对话框创建新的规则集文件：
 
-1. 选择 **File**  >  **New**  >  "文件" "新建 **文件** "，或按 **Ctrl** + **N** 。
+1. 选择  >    >  "文件" "新建 **文件**"，或按 **Ctrl** + **N**。
 
-2. 在 " **新建文件** " 对话框中，选择左侧的 " **常规** " 类别，然后选择 " **代码分析规则集** "。
+2. 在 " **新建文件** " 对话框中，选择左侧的 " **常规** " 类别，然后选择 " **代码分析规则集**"。
 
-3. 选择“打开”  。
+3. 选择“打开”。
 
    *新的* 文件组文件将在规则集编辑器中打开。
 
 ## <a name="create-a-custom-rule-set-from-multiple-rule-sets"></a>从多个规则集创建自定义规则集
 
 > [!NOTE]
-> 以下过程不适用于没有 **代码分析** 属性选项卡的 .net Core 项目。
+> 以下过程不适用于 .NET Core 或 .NET Standard 项目，这些项目不支持 **代码分析** 属性选项卡中的相同功能。
 
-1. 在 **解决方案资源管理器** 中，右键单击项目，然后选择 " **属性** "。
+1. 在 **解决方案资源管理器** 中，右键单击项目，然后选择 " **属性**"。
 
 2. 在 " **属性** " 页上，选择 " **代码分析** " 选项卡。
 
 ::: moniker range="vs-2017"
 
-3. 选择 **\<Choose multiple rule sets>** " **运行此规则集** "。
+3. 选择 **\<Choose multiple rule sets>** " **运行此规则集**"。
 
 ::: moniker-end
 
@@ -92,7 +92,7 @@ ms.locfileid: "94348809"
 
    !["添加或删除规则集" 对话框](media/add-remove-rule-sets.png)
 
-5. 选择 " **另存为** "，输入 *. 规则* 文件文件的名称，然后选择 " **保存** "。
+5. 选择 " **另存为**"，输入 *. 规则* 文件文件的名称，然后选择 " **保存**"。
 
    此时将在 " **运行此规则集** " 列表中选择新规则集。
 
@@ -138,7 +138,7 @@ ms.locfileid: "94348809"
 
 ## <a name="name-and-description"></a>名称和说明
 
-若要更改编辑器中打开的规则集的显示名称，请在菜单栏上选择 " **查看** 属性" 窗口以打开 " **属性** " 窗口  >  **Properties Window** 。 在 " **名称** " 框中输入显示名称。 还可以输入规则集的说明。
+若要更改编辑器中打开的规则集的显示名称，请在菜单栏上选择 "**查看** 属性" 窗口以打开 "**属性**" 窗口  >   。 在 " **名称** " 框中输入显示名称。 还可以输入规则集的说明。
 
 ## <a name="next-steps"></a>后续步骤
 
@@ -147,7 +147,7 @@ ms.locfileid: "94348809"
 > [!div class="nextstepaction"]
 > [修改规则集编辑器中的规则](../code-quality/working-in-the-code-analysis-rule-set-editor.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：配置托管代码项目的代码分析](../code-quality/how-to-configure-code-analysis-for-a-managed-code-project.md)
 - [代码分析规则集参考](../code-quality/rule-set-reference.md)

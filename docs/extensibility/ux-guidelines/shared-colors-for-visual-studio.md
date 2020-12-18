@@ -1,5 +1,6 @@
 ---
 title: Visual Studio 的共享颜色 |Microsoft Docs
+description: 了解如何使用常见的 Visual Studio shell 元素和主题来设计你自己的自定义 UI，该 UI 与 Visual Studio 环境一致。
 ms.date: 04/26/2017
 ms.topic: conceptual
 ms.assetid: 8d11b9a0-6175-4f2e-8e7f-79daee1bfd41
@@ -8,12 +9,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3e31e5d9c3d1dc284694bd2db2a9f37d863462ad
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 939a327100b1fcf0908c56a4fc67540e646eac7e
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699934"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668906"
 ---
 # <a name="shared-colors-for-visual-studio"></a>Visual Studio 的共享颜色
 设计使用常见 Visual Studio shell 元素的 UI，或者希望 interface 元素与类似功能一致时，可使用包定义文件中的现有标记名称来选择和分配颜色。 这可确保 UI 与整体 Visual Studio 环境保持一致，并确保它在添加或更新主题时自动更新。
@@ -481,7 +482,7 @@ ms.locfileid: "80699934"
 | --- | --- |
 | 前景 (文本)  | `Infobar.HyperlinkMouseDown`<br />带下划线的 ()  |
 
-** () 句子中的信息栏内联超链接：默认状态**
+**() 句子中的信息栏内联超链接：默认状态**
 
 ![默认内联信息栏超链接按钮](../../extensibility/ux-guidelines/media/0303_InfobarHyperlinkButtonDefault.png "0303_InfobarHyperlinkButtonDefault.png")<br />默认内联信息栏超链接按钮
 
@@ -489,7 +490,7 @@ ms.locfileid: "80699934"
 | --- | --- |
 | 前景 (文本)  | `InfoBar.Hyperlink` |
 
-** (句子中的信息栏内联超链接) ：悬停状态**
+**(句子中的信息栏内联超链接) ：悬停状态**
 
 ![悬停时的 "信息栏" 内联超链接按钮](../../extensibility/ux-guidelines/media/0303_InfobarHyperlinkInlineHover.png "0303_InfobarHyperlinkInlineHover.png")<br />悬停时的 "信息栏" 内联超链接按钮
 
@@ -497,7 +498,7 @@ ms.locfileid: "80699934"
 | --- | --- |
 | 前景 (文本)  | `Infobar.HyperlinkMouseOver`<br />带下划线的 ()  |
 
-** (中的信息栏内联超链接) ：按下状态**
+**(中的信息栏内联超链接) ：按下状态**
 
 ![按下信息栏内联超链接按钮](../../extensibility/ux-guidelines/media/0303_InfobarHyperlinkInlinePressed.png "0303_InfobarHyperlinkInlinePressed.png")<br />按下信息栏内联超链接按钮
 
@@ -671,7 +672,7 @@ ms.locfileid: "80699934"
 | 边框 | `SearchControl.UnfocusedBorder` |
 | Separator | `SearchControl.DropDownSeparator` |
 
-**突出显示的搜索输入字段 (纯文本) **
+**突出显示的搜索输入字段 (纯文本)**
 
 ![突出显示的搜索输入字段](../../extensibility/ux-guidelines/media/0303-120_searchinputfieldhighlight.png "0303-120_SearchInputFieldHighlight")<br />突出显示的搜索输入字段
 
@@ -1333,7 +1334,7 @@ ms.locfileid: "80699934"
 
  **命令栏下拉按钮：悬停状态**
 
-![悬停时的命令栏下拉按钮](../../extensibility/ux-guidelines/media/0303-034_comboboxdropdownbuttonhover.png "0303-034_ComboBoxDropdownButtonHover")<br />悬停时的命令栏下拉按钮
+![悬停时的 "命令栏" 组合框下拉按钮](../../extensibility/ux-guidelines/media/0303-034_comboboxdropdownbuttonhover.png "0303-034_ComboBoxDropdownButtonHover")<br />悬停时的命令栏下拉按钮
 
 | 元素 | 标记名称：Category.color |
 | --- | --- |
@@ -1342,7 +1343,7 @@ ms.locfileid: "80699934"
 
 **命令栏下拉列表：悬停状态**
 
- ![悬停时的命令栏下拉列表](../../extensibility/ux-guidelines/media/0303-035_comboboxdropdownlisthover.png "0303-035_ComboBoxDropdownListHover")<br />悬停时的命令栏下拉列表
+ ![悬停时的 "命令栏" 组合框下拉列表](../../extensibility/ux-guidelines/media/0303-035_comboboxdropdownlisthover.png "0303-035_ComboBoxDropdownListHover")<br />悬停时的命令栏下拉列表
 
 | 元素 | 标记名称：Category.color |
 | --- | --- |
@@ -1383,7 +1384,7 @@ ms.locfileid: "80699934"
 
 **命令栏下拉按钮：按下状态**
 
-![按下的命令栏下拉按钮](../../extensibility/ux-guidelines/media/0303-039_comboboxdropdownbuttonpressed.png "0303-039_ComboBoxDropdownButtonPressed")<br />按下的命令栏下拉按钮
+![按下的 "命令栏" 组合框下拉按钮](../../extensibility/ux-guidelines/media/0303-039_comboboxdropdownbuttonpressed.png "0303-039_ComboBoxDropdownButtonPressed")<br />按下的命令栏下拉按钮
 
 | 元素 | 标记名称：Category.color |
 | --- | --- |
@@ -1403,7 +1404,7 @@ ms.locfileid: "80699934"
 
 **命令栏下拉按钮：禁用状态**
 
-![禁用的命令栏下拉按钮](../../extensibility/ux-guidelines/media/0303-040_comboboxdropdownbuttondisabled.png "0303-040_ComboBoxDropdownButtonDisabled")<br />禁用的命令栏下拉按钮
+![禁用的 "命令栏" 组合框下拉按钮](../../extensibility/ux-guidelines/media/0303-040_comboboxdropdownbuttondisabled.png "0303-040_ComboBoxDropdownButtonDisabled")<br />禁用的命令栏下拉按钮
 
 | 元素 | 标记名称：Category.color |
 | --- | --- |
@@ -1867,7 +1868,7 @@ Visual Studio 支持标记，这使用户可以声明可搜索的关键字以用
 | --- | --- |
 | ...适用于支持标记的 UI。 | ...适用于任何其他类型的 UI。 |
 
-#### <a name="tags"></a>Tags
+#### <a name="tags"></a>标记
 
 **标记：默认状态**
 
