@@ -182,11 +182,11 @@
       href: ide/visual-studio-search.md
     - name: 解决方案和项目
       items:
-        - name: 使用解决方案和项目
+        - name: 了解有关解决方案和项目的信息
           href: ide/solutions-and-projects-in-visual-studio.md
         - name: 创建新项目
           href: ide/create-new-project.md
-        - name: 创建解决方案和项目
+        - name: 使用解决方案和项目
           href: ide/creating-solutions-and-projects.md
         - name: 打开存储库中的项目
           href: get-started/tutorial-open-project-from-repo.md

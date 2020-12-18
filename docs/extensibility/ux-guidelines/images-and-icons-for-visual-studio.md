@@ -1,5 +1,6 @@
 ---
 title: Visual Studio 的图像和图标 | Microsoft Docs
+description: 了解用于创建 Visual Studio 图像和图标的设计概念。
 ms.date: 04/26/2017
 ms.topic: overview
 ms.assetid: f410325e-9cf2-4f39-b6d7-b672121c2691
@@ -8,12 +9,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: edbf1542277189f37565e7ff415a52025094e595
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f29fd0a69ceafa33c00593b67f6775a723780c26
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85906111"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668646"
 ---
 # <a name="images-and-icons-for-visual-studio"></a>Visual Studio 的图像和图标
 ## <a name="image-use-in-visual-studio"></a><a name="BKMK_ImageUseInVisualStudio"></a> Visual Studio 中的图像使用
@@ -308,7 +309,7 @@ ms.locfileid: "85906111"
 
 |运行|停止|删除|保存|向后导航|
 |-|-|-|-|-|
-|![“运行”图标](../../extensibility/ux-guidelines/media/0405-03_actionmodifierrun.png "0405-03_ActionModifierRun")|![“停止”图标](../../extensibility/ux-guidelines/media/0405-19_stop.png "0405-19_Stop")|![删除图标](../../extensibility/ux-guidelines/media/0405-20_delete.png "0405-20_Delete")|![“保存”图标](../../extensibility/ux-guidelines/media/0405-21_save.png "0405-21_Save")|![“向后导航”图标](../../extensibility/ux-guidelines/media/0405-22_navigateback.png "0405-22_NavigateBack")|
+|![“运行”图标](../../extensibility/ux-guidelines/media/0405-03_actionmodifierrun.png "0405-03_ActionModifierRun")|![停止图标 - 实心红色正方形。](../../extensibility/ux-guidelines/media/0405-19_stop.png "0405-19_Stop")|![删除图标](../../extensibility/ux-guidelines/media/0405-20_delete.png "0405-20_Delete")|![“保存”图标](../../extensibility/ux-guidelines/media/0405-21_save.png "0405-21_Save")|![“向后导航”图标](../../extensibility/ux-guidelines/media/0405-22_navigateback.png "0405-22_NavigateBack")|
 
 ### <a name="code-hierarchy-palette"></a>代码层次结构调色板
 
@@ -335,7 +336,7 @@ ms.locfileid: "85906111"
 
 ##### <a name="examples-of-icons-with-language-modifiers"></a>带有语言修饰符的图标示例
 
-|VB|C#|F#|Javascript|Python|
+|VB|C#|F#|JavaScript|Python|
 |-|-|-|-|-|-|
 |!["Visual Basic" 图标](../../extensibility/ux-guidelines/media/0405-25_vb.png "0405-25_VB")|![C&#35; 图标](../../extensibility/ux-guidelines/media/0405-26_csharp.png "0405-26_CSharp")|![C&#43;&#43; 图标](../../extensibility/ux-guidelines/media/0405-27_cplusplus.png "0405-27_CPlusPlus")|![F&#35; 图标](../../extensibility/ux-guidelines/media/0405-28_fsharp.png "0405-28_FSharp")|!["JavaScript" 图标](../../extensibility/ux-guidelines/media/0405-29_javascript.png "0405-29_JavaScript")|!["Python" 图标](../../extensibility/ux-guidelines/media/0405-30_python.png "0405-30_Python")|
 
@@ -380,4 +381,4 @@ ms.locfileid: "85906111"
 
 |警报|警告|完成|停止|
 |-|-|-|-|
-|![警报图标](../../extensibility/ux-guidelines/media/0405-45_alert.png "0405-45_Alert")|![警告图标](../../extensibility/ux-guidelines/media/0405-48_warning.png "0405-48_Warning")|![“完成”图标](../../extensibility/ux-guidelines/media/0405-46_complete.png "0405-46_Complete")|![“停止”图标](../../extensibility/ux-guidelines/media/0405-47_stop.png "0405-47_Stop")|
+|![警报图标](../../extensibility/ux-guidelines/media/0405-45_alert.png "0405-45_Alert")|![警告图标](../../extensibility/ux-guidelines/media/0405-48_warning.png "0405-48_Warning")|![“完成”图标](../../extensibility/ux-guidelines/media/0405-46_complete.png "0405-46_Complete")|![停止图标 - 实心红色的圆中有一个白色正方形。](../../extensibility/ux-guidelines/media/0405-47_stop.png "0405-47_Stop")|
