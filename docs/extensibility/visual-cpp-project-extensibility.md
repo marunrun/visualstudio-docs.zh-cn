@@ -10,12 +10,12 @@ ms.author: corob
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f9427895644686c5c3b50311c8a3ab3ee036a6f4
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: 6ba78ff7d38d993394072aa9dd18a7a8fa8cbb9d
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862459"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668698"
 ---
 # <a name="visual-studio-c-project-system-extensibility-and-toolset-integration"></a>Visual Studio c + + 项目系统扩展性和工具集集成
 
@@ -68,21 +68,21 @@ Visual C++ 项目系统用于 .vcxproj 文件。 它基于 [Visual Studio 公共
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*PlatformToolsets*\\ \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(PlatformToolset)`
 
-`$(VCTargetsPath)` \\ *Platforms* \\ `$(ApplicationType)` 对于 Windows 桌面项目，在为空时使用平台文件夹。
+`$(VCTargetsPath)` \\  \\ `$(ApplicationType)` 对于 Windows 桌面项目，在为空时使用平台文件夹。
 
 ### <a name="add-a-new-platform-toolset"></a>添加新平台工具集
 
-若要为现有的 Win32 平台添加新的工具集（例如，"MyToolset"）， *MyToolset*请在 "平台 Win32 PlatformToolsets" 下创建一个 "MyToolset" 文件夹， `$(VCTargetsPath)` 并在其中创建 "*属性*" 和 "*工具集*" 文件* \\ \\ \\ \\ *。
+若要为现有的 Win32 平台添加新的工具集（例如，"MyToolset"）， 请在 "平台 Win32 PlatformToolsets" 下创建一个 "MyToolset" 文件夹， `$(VCTargetsPath)` 并在其中创建 "*属性*" 和 "*工具集*" 文件 *\\ \\ \\ \\*。
 
-" *PlatformToolsets* " 下的每个文件夹名称将作为指定平台的可用**平台工具集**出现在 "**项目属性**" 对话框中，如下所示：
+" *PlatformToolsets* " 下的每个文件夹名称将作为指定平台的可用 **平台工具集** 出现在 "**项目属性**" 对话框中，如下所示：
 
 !["项目属性页" 对话框中的 "平台工具集" 属性](media/vc-project-extensibility-platform-toolset-property.png ""项目属性页" 对话框中的 "平台工具集" 属性")
 
-创建此工具集支持的每个现有平台文件夹*中的类似* *MyToolset* *文件夹和工具集。*
+创建此工具集支持的每个现有平台文件夹 *中的类似* *MyToolset* *文件夹和工具集。*
 
 ### <a name="add-a-new-platform"></a>添加新平台
 
-若要添加新平台（例如 "MyPlatform"），请在 " *MyPlatform*平台 `$(VCTargetsPath)` * \\ \\ *" 下创建一个 MyPlatform 文件夹，并在其中创建*属性*、*属性*和*platform .targets*文件。 同时创建 `$(VCTargetsPath)` * \\ \\ 平台*<strong><em>MyPlatform</em></strong>* \\ PlatformToolsets \\ *文件夹，并在其中至少创建一个工具集。
+若要添加新平台（例如 "MyPlatform"），请在 " 平台 `$(VCTargetsPath)` *\\ \\*" 下创建一个 MyPlatform 文件夹，并在其中创建 *属性*、*属性* 和 *platform .targets* 文件。 同时创建 `$(VCTargetsPath)` *\\ \\ 平台*<strong><em>MyPlatform</em></strong>*\\ PlatformToolsets \\* 文件夹，并在其中至少创建一个工具集。
 
 每个文件夹的 " *平台* " 文件夹下的所有文件夹名称都 `$(ApplicationType)` `$(ApplicationTypeRevision)` 作为项目的可用 **平台** 选项显示在 IDE 中。
 
@@ -90,7 +90,7 @@ Visual C++ 项目系统用于 .vcxproj 文件。 它基于 [Visual Studio 公共
 
 ### <a name="add-a-new-application-type"></a>添加新的应用程序类型
 
-若要添加新的应用程序类型， *MyApplicationType*请在 " `$(VCTargetsPath)` * \\ 应用程序 \\ 类型*" 下创建 MyApplicationType 文件夹，并在其中创建一个*属性*文件。 应用程序类型至少需要一个修订版本，因此，请创建一个 `$(VCTargetsPath)` * \\ \\ MyApplicationType \\ 1.0 文件夹的应用程序类型*，并在其中创建一个*属性*文件。 还应创建 `$(VCTargetsPath)` * \\ ApplicationType \\ MyApplicationType \\ 1.0 \\ 平台*文件夹，并在其中至少创建一个平台。
+若要添加新的应用程序类型， 请在 " `$(VCTargetsPath)` *\\ 应用程序 \\ 类型*" 下创建 MyApplicationType 文件夹，并在其中创建一个 *属性* 文件。 应用程序类型至少需要一个修订版本，因此，请创建一个 `$(VCTargetsPath)` *\\ \\ MyApplicationType \\ 1.0 文件夹的应用程序类型*，并在其中创建一个 *属性* 文件。 还应创建 `$(VCTargetsPath)` *\\ ApplicationType \\ MyApplicationType \\ 1.0 \\ 平台* 文件夹，并在其中至少创建一个平台。
 
 `$(ApplicationType)` 和 `$(ApplicationTypeRevision)` 属性在用户界面中不可见。 它们是在项目模板中定义的，并且在创建项目后不能更改。
 
@@ -103,7 +103,7 @@ Microsoft c + + 属性和目标文件的导入简化树如下所示：
 &nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*ImportBefore* \\*默认值* \\ \* 。*属性* \
 &nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*应用程序类型* \\ `$(ApplicationType)` \\*属性* \
 &nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*应用程序* \\ `$(ApplicationType)` \\ 类型 `$(ApplicationTypeRevision)` \\*属性* \
-&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*应用程序* \\ `$(ApplicationType)` \\ 类型 `$(ApplicationTypeRevision)` \\*Platforms* \\ `$(Platform)` 平台 \\*属性* \
+&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*应用程序* \\ `$(ApplicationType)` \\ 类型 `$(ApplicationTypeRevision)` \\ \\ `$(Platform)` 平台 \\*属性* \
 &nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*ImportAfter* \\*默认值* \\ \* 。*属性*
 
 Windows 桌面项目未定义 `$(ApplicationType)` ，因此它们只导入
@@ -111,7 +111,7 @@ Windows 桌面项目未定义 `$(ApplicationType)` ，因此它们只导入
 > `$(VCTargetsPath)`\\*属性。* \
 &nbsp;&nbsp;&nbsp;&nbsp;`$(MSBuildExtensionsPath)`\\`$(MSBuildToolsVersion)`\\*属性* \
 &nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*ImportBefore* \\*默认值* \\ \* 。*属性* \
-&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Platforms* \\ `$(Platform)` 平台 \\*属性* \
+&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\ \\ `$(Platform)` 平台 \\*属性* \
 &nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*ImportAfter* \\*默认值* \\ \* 。*属性*
 
 我们将使用 `$(_PlatformFolder)` 属性来保存 `$(Platform)` 平台文件夹位置。 此属性为
@@ -130,7 +130,7 @@ Windows 桌面项目未定义 `$(ApplicationType)` ，因此它们只导入
 &nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*属性* \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Microsoft 属性* \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*ImportBefore* \\ \* 。*属性* \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*PlatformToolsets* \\ `$(PlatformToolset)` PlatformToolsets \\*工具集. 属性* \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\ \\ `$(PlatformToolset)` PlatformToolsets \\*工具集. 属性* \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*ImportAfter* \\ \* 。*属性*
 
 目标文件按以下顺序导入：
@@ -140,14 +140,14 @@ Windows 桌面项目未定义 `$(ApplicationType)` ，因此它们只导入
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*Platform.string* \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Microsoft .Cpp。* \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*ImportBefore* \\ \* 。*目标* \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*PlatformToolsets* \\ `$(PlatformToolset)` PlatformToolsets \\*工具集. 目标* \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\ \\ `$(PlatformToolset)` PlatformToolsets \\*工具集. 目标* \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*ImportAfter* \\ \* 。*目标*
 
 如果需要为工具集定义一些默认属性，可以将文件添加到相应的 ImportBefore 和 ImportAfter 文件夹。
 
 ## <a name="author-toolsetprops-and-toolsettargets-files"></a>创作工具集. 属性和工具集文件
 
-使用此工具集时，*属性*和*工具集*文件可以完全控制在生成过程中所发生的情况。 它们还可以控制可用的调试器、某些 IDE 用户界面（如 " **属性页** " 对话框中的内容），以及项目行为的其他方面。
+使用此工具集时，*属性* 和 *工具集* 文件可以完全控制在生成过程中所发生的情况。 它们还可以控制可用的调试器、某些 IDE 用户界面（如 " **属性页** " 对话框中的内容），以及项目行为的其他方面。
 
 尽管工具集可以重写整个生成过程，但通常您只希望工具集修改或添加一些生成步骤，或使用不同的生成工具作为现有生成过程的一部分。 为实现此目标，工具集可以导入许多常见的属性和目标文件。 根据你希望工具集执行的操作，这些文件可能会很有用，可用作导入或示例：
 
@@ -171,7 +171,7 @@ Windows 桌面项目未定义 `$(ApplicationType)` ，因此它们只导入
 
 ### <a name="integrate-toolset-specific-targets-with-the-default-c-build-process"></a>将工具集特定目标与默认 c + + 生成过程集成
 
-*CppCommon*中定义了默认 c + + 生成过程。 目标不会调用任何特定的生成工具;它们指定主要的生成步骤、顺序和依赖项。
+*CppCommon* 中定义了默认 c + + 生成过程。 目标不会调用任何特定的生成工具;它们指定主要的生成步骤、顺序和依赖项。
 
 C + + 生成具有三个主要步骤，这些步骤由以下目标表示：
 
@@ -227,13 +227,13 @@ C + + 生成具有三个主要步骤，这些步骤由以下目标表示：
 </Target>
 ```
 
-`ClCompile` 和其他生成工具特定目标在 *CppBuild*中定义为空目标：
+`ClCompile` 和其他生成工具特定目标在 *CppBuild* 中定义为空目标：
 
 ```xml
 <Target Name="ClCompile"/>
 ```
 
-由于 `ClCompile` 目标为空，除非它被工具集重写，否则不会执行实际的生成操作。 工具集目标可以重写 `ClCompile` 目标，也就是说，在 `ClCompile` 导入 *CppBuild*后，它们可以包含其他定义：
+由于 `ClCompile` 目标为空，除非它被工具集重写，否则不会执行实际的生成操作。 工具集目标可以重写 `ClCompile` 目标，也就是说，在 `ClCompile` 导入 *CppBuild* 后，它们可以包含其他定义：
 
 ```xml
 <Target Name="ClCompile"
@@ -285,13 +285,13 @@ Microsoft.Cpp.Common.Tasks.dll 实现以下任务：
 
    - Xaml 任务 (自定义生成规则) 
 
-     有关 Xaml 任务声明的示例，请参阅 `$(VCTargetsPath)` \\ *BuildCustomizations* \\ *masm.xml*及其用法，请参阅 `$(VCTargetsPath)` \\ *BuildCustomizations* \\ *masm*。
+     有关 Xaml 任务声明的示例，请参阅 `$(VCTargetsPath)` \\ *BuildCustomizations* \\ *masm.xml* 及其用法，请参阅 `$(VCTargetsPath)` \\ *BuildCustomizations* \\ *masm*。
 
    - [代码任务](../msbuild/msbuild-inline-tasks.md)
 
 1. 如果希望获得更好的任务性能或只需要更复杂的功能，请使用常规的 MSBuild [任务编写](../msbuild/task-writing.md) 过程。
 
-   如果该工具的所有输入和输出都不会在工具命令行上列出（如 `CL` 、 `MIDL` 和事例）， `RC` 并且如果需要自动输入和输出文件跟踪并创建 tlog 文件，则从类派生任务 `Microsoft.Build.CPPTasks.TrackedVCToolTask` 。 目前，在存在基本 [ToolTask](/dotnet/api/microsoft.build.utilities.tooltask) 类的文档时，没有关于类详细信息的示例或文档 `TrackedVCToolTask` 。 如果这是特别感兴趣的，请将你的语音添加到 [developercommunity.visualstudio.com](https://developercommunity.visualstudio.com/spaces/62/index.html)上的请求。
+   如果该工具的所有输入和输出都不会在工具命令行上列出（如 `CL` 、 `MIDL` 和事例）， `RC` 并且如果需要自动输入和输出文件跟踪并创建 tlog 文件，则从类派生任务 `Microsoft.Build.CPPTasks.TrackedVCToolTask` 。 目前，在存在基本 [ToolTask](/dotnet/api/microsoft.build.utilities.tooltask) 类的文档时，没有关于类详细信息的示例或文档 `TrackedVCToolTask` 。 如果是特别感兴趣，请向 [开发人员社区](https://aka.ms/feedback/suggest?space=62)中的请求添加语音。
 
 ## <a name="incremental-builds-and-up-to-date-checks"></a>增量生成和最新检查
 
@@ -304,11 +304,11 @@ Microsoft.Cpp.Common.Tasks.dll 实现以下任务：
 Microsoft.Build.CPPTasks.Common.dll 定义 `TrackedVCToolTask` 公共抽象基类。 大多数本机工具任务都是从此类派生的。
 
 从 Visual Studio 2017 更新15.8 开始，你可以使用 `GetOutOfDateItems` Microsoft.Cpp.Common.Tasks.dll 中实现的任务为具有已知输入和输出的自定义目标生成 tlog 文件。
-或者，您可以使用任务创建它们 `WriteLinesToFile` 。 请参阅 `_WriteMasmTlogs` BuildCustomizations 中的目标 `$(VCTargetsPath)` \\ *BuildCustomizations* \\ *masm.targets*作为示例。
+或者，您可以使用任务创建它们 `WriteLinesToFile` 。 请参阅 `_WriteMasmTlogs` BuildCustomizations 中的目标 `$(VCTargetsPath)` \\  \\ 作为示例。
 
 ## <a name="tlog-files"></a>tlog 文件
 
-有三种类型的 tlog 文件： *读取*、 *写入*和 *命令行*。 读取和写入 tlog 文件由增量生成和 IDE 中的最新检查使用。 命令行。 tlog 文件仅用于增量生成。
+有三种类型的 tlog 文件： *读取*、 *写入* 和 *命令行*。 读取和写入 tlog 文件由增量生成和 IDE 中的最新检查使用。 命令行。 tlog 文件仅用于增量生成。
 
 MSBuild 提供这些帮助器类来读取和写入 tlog 文件：
 
@@ -328,7 +328,7 @@ MSBuild 提供这些帮助器类来读取和写入 tlog 文件：
 
 依赖项文件在源之后列出，每个依赖项文件位于各自的行上。 所有文件名都是完整路径。
 
-例如，假设你的项目源位于 *F： \\ test \\ ConsoleApplication1 \\ ConsoleApplication1*中。 如果源文件（ *Class1*）包含，
+例如，假设你的项目源位于 *F： \\ test \\ ConsoleApplication1 \\ ConsoleApplication1* 中。 如果源文件（ *Class1*）包含，
 
 ```cpp
 #include "stdafx.h" //precompiled header
@@ -353,7 +353,7 @@ F:\TEST\CONSOLEAPPLICATION1\CONSOLEAPPLICATION1\CLASS1.H
 
 从源生成的输出文件应在源后列出，每个输出文件位于各自的行上。 所有文件名必须是完整路径。
 
-例如，对于具有额外的源文件 *Class1*的简单控制台应用程序项目 *，该文件* 可能包含以下内容：
+例如，对于具有额外的源文件 *Class1* 的简单控制台应用程序项目 *，该文件* 可能包含以下内容：
 
 ```tlog
 ^F:\TEST\CONSOLEAPPLICATION1\CONSOLEAPPLICATION1\DEBUG\CLASS1.OBJ|F:\TEST\CONSOLEAPPLICATION1\CONSOLEAPPLICATION1\DEBUG\CONSOLEAPPLICATION1.OBJ|F:\TEST\CONSOLEAPPLICATION1\CONSOLEAPPLICATION1\DEBUG\STDAFX.OBJ
@@ -372,7 +372,7 @@ F:\TEST\CONSOLEAPPLICATION1\DEBUG\CONSOLEAPPLICATION1.PDB
 
 ### <a name="design-time-targets-for-intellisense-information"></a>IntelliSense 信息的设计时目标
 
-.Vcxproj 项目中使用的设计时目标是在 DesignTime 中定义的 `$(VCTargetsPath)` \\ *Microsoft.Cpp.DesignTime.targets*。
+.Vcxproj 项目中使用的设计时目标是在 DesignTime 中定义的 `$(VCTargetsPath)` \\ 。
 
 `GetClCommandLines`目标为 IntelliSense 收集编译器选项：
 
@@ -397,7 +397,7 @@ F:\TEST\CONSOLEAPPLICATION1\DEBUG\CONSOLEAPPLICATION1.PDB
 msbuild /p:SolutionDir=*solution-directory-with-trailing-backslash*;Configuration=Debug;Platform=Win32;BuildingInsideVisualStudio=true;DesignTimebuild=true /t:\_PerfIntellisenseInfo /v:d /fl /fileloggerparameters:PerformanceSummary \*.vcxproj
 ```
 
-此命令将生成详细的生成日志 *，该日志包含*有关目标和结束任务的性能摘要。
+此命令将生成详细的生成日志 *，该日志包含* 有关目标和结束任务的性能摘要。
 
 请确保 `Condition ="'$(DesignTimeBuild)' != 'true'"` 在仅适用于常规生成而不适用于设计时生成的所有操作中使用。
 
@@ -409,13 +409,13 @@ msbuild /p:SolutionDir=*solution-directory-with-trailing-backslash*;Configuratio
 
 ::: moniker range="vs-2017"
 
-例如，若要在 .xaml 文件中自动生成 .cpp 或 .h 文件，则 `$(VSInstallDir)` \\ *MSBuild* \\ *microsoft* \\ *WindowsXaml* \\ *v 15.0* \\ \* \\ *Microsoft.Windows.UI.Xaml.CPP.Targets*文件将定义这些实体，如下所示：
+例如，若要在 .xaml 文件中自动生成 .cpp 或 .h 文件，则 `$(VSInstallDir)` \\ *MSBuild* \\ *microsoft* \\ *WindowsXaml* \\ *v 15.0* \\ \* \\ 文件将定义这些实体，如下所示：
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-例如，若要在 .xaml 文件中自动生成 .cpp 或 .h 文件，则 `$(VSInstallDir)` \\ *MSBuild* \\ *microsoft* \\ *WindowsXaml* \\ *v 16.0* \\ \* \\ *Microsoft.Windows.UI.Xaml.CPP.Targets*文件将定义这些实体，如下所示：
+例如，若要在 .xaml 文件中自动生成 .cpp 或 .h 文件，则 `$(VSInstallDir)` \\ *MSBuild* \\ *microsoft* \\ *WindowsXaml* \\ *v 16.0* \\ \* \\ 文件将定义这些实体，如下所示：
 
 ::: moniker-end
 
@@ -493,7 +493,7 @@ CPS 支持上下文类型的其他值，但这些值不用于 Visual C++ 项目�
 
 `PageTemplate`特性定义规则在 "**属性页**" 对话框中的显示方式。 该属性可以具有以下值之一：
 
-| 属性 | 说明 |
+| 特性 | 说明 |
 |------------| - |
 | `generic` | 所有属性都显示在一页上的类别标题下面<br/>规则对 `Project` 和 `PropertySheet` 上下文可见，但不可见 `File` 。<br/><br/> 示例： `$(VCTargetsPath)` \\ *1033* \\ *general.xml* |
 | `tool` | 类别显示为子页。<br/>此规则可在所有上下文中显示： `Project` 、 `PropertySheet` 和 `File` 。<br/>仅当项目具有中定义的项时，才会在项目属性中看到该规则 `ItemType` `Rule.DataSource` ，除非该规则名称包含在 `ProjectTools` 项组中。<br/><br/>示例： `$(VCTargetsPath)` \\ *1033* \\ *clang.xml* |
@@ -516,9 +516,9 @@ CPS 支持上下文类型的其他值，但这些值不用于 Visual C++ 项目�
 
 #### <a name="project-items"></a>项目项
 
-*ProjectItemsSchema.xml*文件定义 `ContentType` `ItemType` 被视为项目项的项的和值，并定义 `FileExtension` 元素以确定将新文件添加到的项组。
+*ProjectItemsSchema.xml* 文件定义 `ContentType` `ItemType` 被视为项目项的项的和值，并定义 `FileExtension` 元素以确定将新文件添加到的项组。
 
-默认的 ProjectItemsSchema 文件位于 `$(VCTargetsPath)` \\ *1033* \\ *ProjectItemsSchema.xml*中。 若要对其进行扩展，必须创建一个具有新名称的架构文件，如 *MyProjectItemsSchema.xml*：
+默认的 ProjectItemsSchema 文件位于 `$(VCTargetsPath)` \\ *1033* \\ *ProjectItemsSchema.xml* 中。 若要对其进行扩展，必须创建一个具有新名称的架构文件，如 *MyProjectItemsSchema.xml*：
 
 ```xml
 <ProjectSchemaDefinitions xmlns="http://schemas.microsoft.com/build/2009/properties">

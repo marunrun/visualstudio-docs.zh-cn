@@ -8,12 +8,12 @@ ms.author: svukel
 manager: viveis
 ms.workload:
 - vssdk
-ms.openlocfilehash: d213a7add358c46f7088f504d8c54352cda44a1c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 964b360806f6f834aa57c475d2117c124f2cf8af
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905970"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668633"
 ---
 # <a name="open-folder-extensibility"></a>打开文件夹扩展性
 
@@ -51,7 +51,7 @@ ms.locfileid: "85905970"
 
 ## <a name="feedback-comments-issues"></a>反馈、意见、问题
 
-打开文件夹和 `Microsoft.VisualStudio.Workspace.*` API 处于积极开发阶段。 如果你发现意外行为，请查看相关版本的已知问题。 建议在[开发者社区](https://developercommunity.visualstudio.com)中进行投票和创建任何问题。 对于每个反馈，我们强烈建议你提供详细的问题描述。 包括你正在开发的 Visual Studio 版本、正在使用的 API（已实现的 API 和正在交互的 API）、预期结果和实际结果。 如果可能，请包括 devenv.exe 进程的转储。 使用 GitHub 的问题跟踪提供有关此文档和相关文档的反馈。
+打开文件夹和 `Microsoft.VisualStudio.Workspace.*` API 处于积极开发阶段。 如果你发现意外行为，请查看相关版本的已知问题。 建议在[开发者社区](https://aka.ms/feedback/suggest?space=8)中进行投票和创建任何问题。 对于每个反馈，我们强烈建议你提供详细的问题描述。 包括你正在开发的 Visual Studio 版本、正在使用的 API（已实现的 API 和正在交互的 API）、预期结果和实际结果。 如果可能，请包括 devenv.exe 进程的转储。 使用 GitHub 的问题跟踪提供有关此文档和相关文档的反馈。
 
 ## <a name="next-steps"></a>后续步骤
 

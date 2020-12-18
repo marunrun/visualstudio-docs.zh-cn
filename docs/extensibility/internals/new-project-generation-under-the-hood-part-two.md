@@ -1,5 +1,6 @@
 ---
 title: 新项目生成：在幕后，第二部分 |Microsoft Docs
+description: 详细了解 Visual Studio 集成开发环境中所发生的情况 (IDE) 创建自己的项目类型 (第2部分（共) 2 部分）。
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8692f2012e5f2733982f04e35a7fed415e49c636
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9e45c9643a1fd2e6dcf9d5520fbb2982736b5109
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707019"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668841"
 ---
 # <a name="new-project-generation-under-the-hood-part-two"></a>生成新项目：揭秘，第 2 部分
 
@@ -62,13 +63,13 @@ namespace Simple
 }
 ```
 
- 有关模板参数的完整列表，请参阅[模板参数](../../ide/template-parameters.md)。
+ 有关模板参数的完整列表，请参阅 [模板参数](../../ide/template-parameters.md)。
 
 ## <a name="a-look-inside-a-vstemplate-file"></a>中的外观。.Vstemplate 文件
  基本的 .vstemplate 文件具有此格式
 
 ```xml
-<VSTemplate Version="2.0.0"     xmlns="http://schemas.microsoft.com/developer/vstemplate/2005"     Type="Project">
+<VSTemplate Version="2.0.0"     xmlns="http://schemas.microsoft.com/developer/vstemplate/2005"     Type="Project">
     <TemplateData>
     </TemplateData>
     <TemplateContent>
@@ -90,13 +91,13 @@ namespace Simple
     <ProjectItem TargetFileName="Properties\Resources.resx">
       Resources.resx
     </ProjectItem>
-    <ProjectItem ReplaceParameters="true"       TargetFileName="Properties\Resources.Designer.cs">
+    <ProjectItem ReplaceParameters="true"       TargetFileName="Properties\Resources.Designer.cs">
       Resources.Designer.cs
     </ProjectItem>
     <ProjectItem TargetFileName="Properties\Settings.settings">
       Settings.settings
     </ProjectItem>
-    <ProjectItem ReplaceParameters="true"       TargetFileName="Properties\Settings.Designer.cs">
+    <ProjectItem ReplaceParameters="true"       TargetFileName="Properties\Settings.Designer.cs">
       Settings.Designer.cs
     </ProjectItem>
     <ProjectItem ReplaceParameters="true" OpenInEditor="true">
@@ -118,7 +119,7 @@ namespace Simple
 
  生成的 Windows 应用程序文件夹结构如下所示：
 
- ![SimpleSolution](../../extensibility/internals/media/simplesolution.png "SimpleSolution")
+ ![Visual Studio 解决方案资源管理器中 "简单" 解决方案的 Windows 应用程序文件夹结构的屏幕截图。](../../extensibility/internals/media/simplesolution.png)
 
  模板中的第一个和唯一的 \<Project> 标记将读取：
 
