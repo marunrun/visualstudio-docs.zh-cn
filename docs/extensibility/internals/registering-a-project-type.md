@@ -1,5 +1,7 @@
 ---
 title: 注册项目类型 |Microsoft Docs
+description: 了解如何创建注册表项，以使 Visual Studio 能够识别和使用你的新项目类型。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7267060f2207b0842885dc3001c3926874be30a9
-ms.sourcegitcommit: 023f52f10fb91850824558478cbfd2ec965054f0
+ms.openlocfilehash: 9a34f5c7f1ae3a214a0a72932ae80dbc44845a45
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94407726"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875184"
 ---
 # <a name="registering-a-project-type"></a>注册项目类型
 当你创建新的项目类型时，你必须创建允许 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 识别和使用你的项目类型的注册表项。 通常使用注册表脚本 () 文件创建这些注册表项。
@@ -81,7 +83,7 @@ ms.locfileid: "94407726"
 
 |名称|类型|数据|说明|
 |----------|----------|----------|-----------------|
-|`@`（默认）|REG_SZ|`FigPrj Project VSPackage`|此注册的 VSPackage (项目类型) 的可本地化的名称。|
+|`@`（默认值）|REG_SZ|`FigPrj Project VSPackage`|此注册的 VSPackage (项目类型) 的可本地化的名称。|
 |`InprocServer32`|REG_SZ|`%MODULE%`|项目类型 DLL 的路径。 IDE 将加载此 DLL，并将 VSPackage CLSID 传递到 `DllGetClassObject` 来 <xref:Microsoft.VisualStudio.OLE.Interop.IClassFactory> 构造 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage> 对象。|
 |`CompanyName`|REG_SZ|`Microsoft`|开发项目类型的公司的名称。|
 |`ProductName`|REG_SZ|`Figure Project Sample`|项目类型的名称。|
@@ -264,7 +266,7 @@ ms.locfileid: "94407726"
 
  这意味着，如果在 .vsz 文件中包含 PROJECT_TYPE = EF 条目，环境将在前面指定的 ProductDir 目录中找到 .vsz 文件。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [清单：创建新的项目类型](../../extensibility/internals/checklist-creating-new-project-types.md)
 - [项目模型的元素](../../extensibility/internals/elements-of-a-project-model.md)
 - [使用项目工厂创建项目实例](../../extensibility/internals/creating-project-instances-by-using-project-factories.md)

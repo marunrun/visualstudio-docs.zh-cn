@@ -1,5 +1,7 @@
 ---
 title: 注册旧版语言 Service1 |Microsoft Docs
+description: 了解如何通过添加注册表项和条目，从 VSPackage 向 Visual Studio 注册旧版语言服务。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f0076eeee0ebcb0a80925efdde212097a3ec3e7e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e92c831ad3d2f4d75d57c48cfc7ba666d19b7a5e
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238876"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875194"
 ---
 # <a name="registering-a-legacy-language-service-1"></a>注册旧版语言服务1
 在 (MPF) 的托管包框架中，语言服务由 VSPackage (请参阅 [vspackage](../../extensibility/internals/vspackages.md)) ，并 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 通过添加注册表项和条目向注册。 此注册过程是在安装过程中的一部分执行的，并且在运行时部分完成。
@@ -128,7 +130,7 @@ namespace TestLanguagePackage
  此属性注册将在 " **选项** " 对话框中的 " **文本编辑器** " 类别下显示的属性页。 对于要为语言服务显示的每一页，请使用这些属性中的一个。 如果需要以树结构组织页面，请使用其他属性来定义树的每个节点。
 
 ### <a name="example"></a>示例
- 此示例显示了两个属性页、 **选项** 和 **缩进**以及一个包含第二个属性页的节点。
+ 此示例显示了两个属性页、 **选项** 和 **缩进** 以及一个包含第二个属性页的节点。
 
 ```csharp
 using Microsoft.VisualStudio.Shell;
@@ -160,7 +162,7 @@ namespace TestLanguagePackage
 ```
 
 ## <a name="proffer-the-language-service-at-run-time"></a>在运行时提供语言服务
- 加载语言包时，必须告知 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 语言服务已准备就绪。 为此，可 proffering 服务。 这是在方法中完成的 <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> 。 此外，还需要启动在空闲期间调用语言服务的计时器，以便能够完成后台分析。 如果通过类实现了任何，则此空闲计时器还用于更新文档属性 <xref:Microsoft.VisualStudio.Package.DocumentProperties> 。 为了支持计时器，包必须实现 <xref:Microsoft.VisualStudio.OLE.Interop.IOleComponent> 接口 (只 <xref:Microsoft.VisualStudio.OLE.Interop.IOleComponent.FDoIdle%2A> 需完全实现方法; 其余方法可以) 返回默认值。
+ 加载语言包时，必须告知 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 语言服务已准备就绪。 为此，可 proffering 服务。 这可以在 <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> 方法中完成。 此外，还需要启动在空闲期间调用语言服务的计时器，以便能够完成后台分析。 如果通过类实现了任何，则此空闲计时器还用于更新文档属性 <xref:Microsoft.VisualStudio.Package.DocumentProperties> 。 为了支持计时器，包必须实现 <xref:Microsoft.VisualStudio.OLE.Interop.IOleComponent> 接口 (只 <xref:Microsoft.VisualStudio.OLE.Interop.IOleComponent.FDoIdle%2A> 需完全实现方法; 其余方法可以) 返回默认值。
 
 ### <a name="example"></a>示例
  此示例显示了 proffering 服务和提供空闲计时器的典型方法。

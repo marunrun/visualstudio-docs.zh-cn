@@ -1,5 +1,7 @@
 ---
 title: VSIX 清单设计器 |Microsoft Docs
+description: 了解 VSIX 清单设计器如何修改 VSIX 包清单文件，该文件用于为 Visual Studio 扩展设置安装行为。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -14,25 +16,25 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 30620e0fe91d0e90995d2d2f721950f878c65fdc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6323b4330279848bc0453bdc7413904e2582d13a
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80697894"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863965"
 ---
 # <a name="vsix-manifest-designer"></a>VSIX 清单设计器
 修改 VSIX 包清单文件，该文件用于为 Visual Studio 扩展设置安装行为。
 
- **Vsix 清单设计器**映射到基础 VSIX 架构。 架构中的每个元素都可以通过使用设计器中的相应控件进行设置。 有关架构的详细信息，请参阅 [VSIX 扩展架构2.0 引用](../extensibility/vsix-extension-schema-2-0-reference.md)。
+ **Vsix 清单设计器** 映射到基础 VSIX 架构。 架构中的每个元素都可以通过使用设计器中的相应控件进行设置。 有关架构的详细信息，请参阅 [VSIX 扩展架构2.0 引用](../extensibility/vsix-extension-schema-2-0-reference.md)。
 
- 若要打开**VSIX 清单设计器**，请在**解决方案资源管理器**中找到*source.extension.vsixmanifest*文件，然后打开该文件。 如果该文件不包含有效的 XML，则清单设计器将不会打开。
+ 若要打开 **VSIX 清单设计器**，请在 **解决方案资源管理器** 中找到 *source.extension.vsixmanifest* 文件，然后打开该文件。 如果该文件不包含有效的 XML，则清单设计器将不会打开。
 
 > [!NOTE]
-> 生成包时， *source.extension.vsixmanifest*文件会输出到*source.extension.vsixmanifest。*
+> 生成包时， *source.extension.vsixmanifest* 文件会输出到 *source.extension.vsixmanifest。*
 
 ## <a name="uielement-list"></a>UIElement 列表
- **VSIX 清单设计器**包含四个部分，这些部分对应于架构的这些顶级元素：
+ **VSIX 清单设计器** 包含四个部分，这些部分对应于架构的这些顶级元素：
 
 - 元数据
 
@@ -60,9 +62,9 @@ ms.locfileid: "80697894"
 
   **许可证** 指定包含用户许可证（如果存在）的文本文件。
 
-  **图标**指定包含在**扩展管理器**中显示的图标 (*.jpeg* *.png*、 *.bmp*、 *.ico*) 的图形文件（如果存在图标）。 图标图像必须是32x32 像素或调整其大小。 如果未指定图标，则 **扩展管理器** 将使用默认图标。
+  **图标** 指定包含在 **扩展管理器** 中显示的图标 ( *.png*、 *.bmp*、 *.ico*) 的图形文件（如果存在图标）。 图标图像必须是32x32 像素或调整其大小。 如果未指定图标，则 **扩展管理器** 将使用默认图标。
 
-  **预览图像**指定包含要在 "**扩展管理器**" 中显示 *.jpeg*的预览图像 (*.png*、 *.bmp*、 *.ico*) 的图形文件（如果存在预览图像）。 预览图像必须为200x200 大小像素。 如果未指定预览图像， **扩展管理器** 将使用默认映像。
+  **预览图像** 指定包含要在 "**扩展管理器**" 中显示的预览图像 (*.png*、 *.bmp*、 *.ico*) 的图形文件（如果存在预览图像）。 预览图像必须为200x200 大小像素。 如果未指定预览图像， **扩展管理器** 将使用默认映像。
 
   **标记** 添加用于搜索提示的文本标记。
 
@@ -76,7 +78,7 @@ ms.locfileid: "80697894"
 
   **安装类型** 将 **Visual Studio 扩展** 和 **扩展 SDK** 列为目标安装类型。 选项会有所不同，具体取决于你选择的类型。
 
-  **Visual Studio 扩展** 列出了 **InstallationTarget** 元素，这些元素描述如何安装包以及如何将此扩展安装到哪些 Visual Studio 产品。 每个产品都按名称和版本或版本范围单独标识。 产品可添加到列表、修改和删除。 产品的名称和版本与关联的**InstallationTarget**元素的**Id**和**版本**特性相对应。
+  **Visual Studio 扩展** 列出了 **InstallationTarget** 元素，这些元素描述如何安装包以及如何将此扩展安装到哪些 Visual Studio 产品。 每个产品都按名称和版本或版本范围单独标识。 产品可添加到列表、修改和删除。 产品的名称和版本与关联的 **InstallationTarget** 元素的 **Id** 和 **版本** 特性相对应。
 
   **版本范围** 为 [12.0，14.0]，并使用以下表示法：
 
@@ -92,7 +94,7 @@ ms.locfileid: "80697894"
 
   **扩展 SDK** 指定非特定产品和版本的全局安装。 **目标平台标识符** 是目标平台，如 "Windows"。 **目标平台版本** 是目标平台的版本，例如8.0。 **Sdk 名称** 和 **sdk 版本** 分别是 sdk 的名称和版本号。
 
-  **将为所有用户安装此 VSIX， (需要在安装时提升) ** 如果选中此复选框，则将为所有用户安装扩展;否则，只会为当前用户安装此程序。
+  **将为所有用户安装此 VSIX， (需要在安装时提升)** 如果选中此复选框，则将为所有用户安装扩展;否则，只会为当前用户安装此程序。
 
   **此 VSIX 由安装 Windows Installer** 如果选中此复选框，则会通过 Windows Installer (*.msi* 文件来安装扩展) ;否则，它将作为典型的 VSIX 包安装 (*.vsix* 文件) 。
 

@@ -1,5 +1,7 @@
 ---
 title: Visual Studio SDK 参考 |Microsoft Docs
+description: 这些文章包含有关 Visual Studio 命名空间、相关命名空间以及使用 Visual Studio SDK 的开发人员感兴趣的其他区域的信息。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,18 +13,18 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 93c1f6eaa2019e602efc760003c960a9b62f9ebd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8f53d122138845c0b9711a78d2237972512710cb
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80698102"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863869"
 ---
 # <a name="visual-studio-sdk-reference"></a>Visual Studio SDK 参考
 
 本部分包含有关 Visual Studio 命名空间、相关命名空间以及使用 Visual Studio SDK 的开发人员感兴趣的其他区域的信息。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
 
 - <xref:Microsoft.VisualStudio.TextManager.Interop> 用于编辑器和语言服务的旧版互操作接口。
 

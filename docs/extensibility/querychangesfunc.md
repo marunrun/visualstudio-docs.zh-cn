@@ -1,5 +1,7 @@
 ---
 title: QUERYCHANGESFUNC |Microsoft Docs
+description: QUERYCHANGESFUNC 回调函数用于枚举文件名的集合，并确定每个文件的状态。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 30864cae95672f4026084a94c5474d165b124cba
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b7ce5d9fa8e1c3cfc3eaedb55d69ca382e937e45
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80701633"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97864025"
 ---
 # <a name="querychangesfunc"></a>QUERYCHANGESFUNC
 这是 [SccQueryChanges](../extensibility/sccquerychanges-function.md) 操作用于枚举文件名集合并确定每个文件的状态的回调函数。

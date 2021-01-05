@@ -1,5 +1,7 @@
 ---
 title: 运行文档表 |Microsoft Docs
+description: 了解 Visual Studio IDE 如何维护正在运行的文档表，其中包括内存中所有打开的文档。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9e6aa882921786b1592922372581beae8c4c2443
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bd166626d6043da4ac94658bdd35219efc7a37c2
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705557"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875643"
 ---
 # <a name="running-document-table"></a>运行文档表
 IDE 将在名为正在运行的文档表 (RDT) 的内部结构中维护所有当前打开的文档的列表。 此列表包括内存中所有打开的文档，无论当前是否正在编辑这些文档。 文档是保存的任何项，包括项目中的文件或主项目文件 (例如，.vcxproj 文件) 。

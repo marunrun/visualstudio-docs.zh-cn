@@ -1,5 +1,7 @@
 ---
 title: IDE 中的选择和货币 |Microsoft Docs
+description: 了解 Vspackage 如何参与货币跟踪。 Visual Studio IDE 使用选择上下文维护当前选定对象的相关信息。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,15 +15,15 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f580b7c8e1651dcbcd053476ae756399a0ac3482
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b2d745619be8bff77503bc14a1d7a87d84cc7864
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705573"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875591"
 ---
 # <a name="selection-and-currency-in-the-ide"></a>IDE 中的选择和货币
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]集成开发环境 (IDE) 使用选择*上下文*维护用户当前选择的对象的相关信息。 使用选择上下文，Vspackage 可以通过两种方式参与货币跟踪：
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]集成开发环境 (IDE) 使用选择 *上下文* 维护用户当前选择的对象的相关信息。 使用选择上下文，Vspackage 可以通过两种方式参与货币跟踪：
 
 - 将有关 Vspackage 的货币信息传播到 IDE。
 

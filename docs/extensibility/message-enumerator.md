@@ -1,5 +1,7 @@
 ---
 title: 消息枚举器 |Microsoft Docs
+description: 此枚举器的成员用于 TEXTOUTPROC 函数，该函数是 IDE 在调用 SccOpenProject 时提供的回调函数。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0e09b72bd228839268cffc228dd0dc503cc82bd9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1a7d4607afd9b46d35db416baed73007c67a7832
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80702507"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863730"
 ---
 # <a name="message-enumerator"></a>消息枚举器
 以下标志用于 `TEXTOUTPROC` 函数，该函数是 IDE 在调用 [SccOpenProject](../extensibility/sccopenproject-function.md) 时提供的回调函数 (请参阅 [LPTEXTOUTPROC](../extensibility/lptextoutproc.md) ，以获取回调函数) 的详细信息。
@@ -26,16 +28,16 @@ ms.locfileid: "80702507"
 ## <a name="syntax"></a>语法
 
 ```
-enum { 
-   SCC_MSG_RTN_CANCEL = -1, 
-   SCC_MSG_RTN_OK = 0, 
-   SCC_MSG_INFO = 1 
-   SCC_MSG_WARNING, 
-   SCC_MSG_ERROR, 
-   SCC_MSG_STATUS, 
-   SCC_MSG_DOCANCEL, 
-   SCC_MSG_STARTCANCEL, 
-   SCC_MSG_STOPCANCEL 
+enum { 
+   SCC_MSG_RTN_CANCEL = -1, 
+   SCC_MSG_RTN_OK = 0, 
+   SCC_MSG_INFO = 1 
+   SCC_MSG_WARNING, 
+   SCC_MSG_ERROR, 
+   SCC_MSG_STATUS, 
+   SCC_MSG_DOCANCEL, 
+   SCC_MSG_STARTCANCEL, 
+   SCC_MSG_STOPCANCEL 
 };
 ```
 

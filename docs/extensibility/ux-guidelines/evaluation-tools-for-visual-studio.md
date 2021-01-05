@@ -1,5 +1,7 @@
 ---
 title: 适用于 Visual Studio 的评估工具 |Microsoft Docs
+description: 使用此清单评估针对 visual Studio 设计的新功能的视觉对象和交互详细信息的用户体验质量。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 94e0e9a3-440c-4943-ad7b-772ed742e034
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6ae5ae2d3be49a797ff1d594aab4517efab53330
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 42c8ef3033d1c9f897f891310c4ddea89ab0074e
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80698419"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863464"
 ---
 # <a name="evaluation-tools-for-visual-studio"></a>Visual Studio 的计算工具
 ## <a name="craftsmanship-checklist-for-visual-studio"></a>Visual Studio 的追求清单
@@ -39,17 +41,17 @@ ms.locfileid: "80698419"
 
 - 验证所有标签都是句子或标题大小写，并且没有文本完全小写。
 
-    ||正确|错误|
+    ||正确|不正确|
     |-|-------------|---------------|
-    |**命令文本 (所有) **|句型 case：<br /><br /> **目录名称：**|目录名称：|
-    |** (客户端) 的按钮文本 **|词首大写：<br /><br /> **[设为默认值]**|设为默认值|
-    |**按钮文本 (联机) **|句型 case：<br /><br /> **[设为默认值]**||
+    |**命令文本 (所有)**|句型 case：<br /><br /> **目录名称：**|目录名称：|
+    |**(客户端) 的按钮文本**|词首大写：<br /><br /> **[设为默认值]**|设为默认值|
+    |**按钮文本 (联机)**|句型 case：<br /><br /> **[设为默认值]**||
 
 - 验证所有标签（组标头和按钮除外）都以冒号结尾，并在与它们配对的控件之前。
 
 - 验证用于启动 UI 的按钮、命令和命令链接是否在省略号 **[...]** 中捕获用户输入端。
 
-  示例：
+  示例:
 
   - 对话框上的 " **高级 ...** " 按钮。
 
@@ -219,4 +221,4 @@ ms.locfileid: "80698419"
 
 - 验证最常使用的控件大小至少为 **40x40 像素** 。
 
-- 验证交互式控件之间至少有**5 个像素的间距**
+- 验证交互式控件之间至少有 **5 个像素的间距**

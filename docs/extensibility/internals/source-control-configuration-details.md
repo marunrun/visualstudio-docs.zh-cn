@@ -1,5 +1,7 @@
 ---
 title: 源代码管理配置详细信息 |Microsoft Docs
+description: 了解如何对 Visual Studio 中的项目类型实现源代码管理，这涉及到配置项目系统或编辑器来请求权限。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7cf4a5c55e8093e5dcd6406cde1c60f642188495
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: efed4592bfa0b697d66f377430cc5998d3e9e5d3
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705285"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875500"
 ---
 # <a name="source-control-configuration-details"></a>源代码管理配置详细信息
 若要实现源代码管理，需要将项目系统或编辑器正确配置为执行以下操作：

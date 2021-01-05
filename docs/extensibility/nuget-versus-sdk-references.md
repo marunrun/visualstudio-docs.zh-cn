@@ -1,5 +1,7 @@
 ---
 title: 使用 NuGet 与扩展 SDK 添加引用
+description: 了解如何在 Visual Studio 项目中引用打包软件作为 NuGet 包或软件开发工具包。
+ms.custom: SEO-VS-2020
 ms.date: 08/02/2019
 ms.topic: conceptual
 author: acangialosi
@@ -7,12 +9,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ad7fc9132647988aee46a2bb07e992505109d33c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 50197eeda1828156113fbbfa507447484618861a
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80702432"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863773"
 ---
 # <a name="nuget-versus-sdk-as-a-project-reference"></a>作为项目引用的 NuGet 与 SDK
 
@@ -28,21 +30,21 @@ ms.locfileid: "80702432"
 
 | 功能 | SDK 支持 | SDK 说明 | NuGet 支持 | NuGet 说明 |
 | - | - | - |---------------| - |
-| 机制引用一个实体后，便可使用所有文件和功能。 | Y | 因此，可以使用“引用管理器”**** 对话框添加 SDK，以便在开发工作流期间使用所有文件和功能。 | Y | |
-| MSBuild 自动使用程序集和 Windows 元数据 (.winmd) 文件**。 | Y | SDK 中的引用会自动传递给编译器。 | Y | |
-| MSBuild 自动使用的 .h 或 .lib 文件。 | Y | *SDKName*文件告知 Visual Studio 如何设置 Visual C++ 目录等，以实现自动 *.h*或 *.lib*文件的使用。 | N | |
-| MSBuild 自动使用 .js 或 .css 文件****。 | Y | 在 **解决方案资源管理器**中，可展开 JavaScript SDK 引用节点以显示单个 *.js* 或 *.css* 文件，然后 `<source include/>` 通过将这些文件拖动到它们的源文件来生成标记。 SDK 支持 F5 和包自动安装。 | Y | |
-| MSBuild 自动添加“工具箱”**** 中的控件。 | Y | “工具箱”**** 可使用 SDK 并在指定的选项卡中显示控件。 | N | |
+| 机制引用一个实体后，便可使用所有文件和功能。 | Y | 因此，可以使用“引用管理器”对话框添加 SDK，以便在开发工作流期间使用所有文件和功能。 | Y | |
+| MSBuild 自动使用程序集和 Windows 元数据 (.winmd) 文件。 | Y | SDK 中的引用会自动传递给编译器。 | Y | |
+| MSBuild 自动使用的 .h 或 .lib 文件。 | Y | *SDKName* 文件告知 Visual Studio 如何设置 Visual C++ 目录等，以实现自动 *.h* 或 *.lib* 文件的使用。 | N | |
+| MSBuild 自动使用 .js 或 .css 文件。 | Y | 在 **解决方案资源管理器** 中，可展开 JavaScript SDK 引用节点以显示单个 *.js* 或 *.css* 文件，然后 `<source include/>` 通过将这些文件拖动到它们的源文件来生成标记。 SDK 支持 F5 和包自动安装。 | Y | |
+| MSBuild 自动添加“工具箱”中的控件。 | Y | “工具箱”可使用 SDK 并在指定的选项卡中显示控件。 | N | |
 | 该机制支持扩展的 Visual Studio 安装程序 (VSIX)。 | Y | VSIX 具有特殊的清单和逻辑，用于创建 SDK 包 | Y | VSIX 可嵌入另一安装程序中。 |
-| “对象浏览器”**** 可枚举引用。 | Y | “对象浏览器”**** 自动获取 SDK 中的引用列表并枚举它们。 | N | |
-| 文件和链接自动被添加到“引用管理器”**** 对话框（帮助链接等自动填充） | Y | “引用管理器”**** 对话框连同帮助链接和 SDK 依赖项列表一起自动枚举 SDK。 | N | NuGet 提供其自身的“管理 NuGet 包”**** 对话框。 |
+| “对象浏览器”可枚举引用。 | Y | “对象浏览器”自动获取 SDK 中的引用列表并枚举它们。 | N | |
+| 文件和链接自动被添加到“引用管理器”对话框（帮助链接等自动填充） | Y | “引用管理器”对话框连同帮助链接和 SDK 依赖项列表一起自动枚举 SDK。 | N | NuGet 提供其自身的“管理 NuGet 包”对话框。 |
 | 该机制支持多个体系结构。 | Y | SDK 可以提供多个配置。 MSBuild 针对每个项目配置使用相应的文件。 | N | |
 | 该机制支持多个配置。 | Y | SDK 可以提供多个配置。 根据项目体系结构，MSBuild 针对每个项目体系结构使用相应的文件。 | N | |
 | 该机制可指定“不复制”。 | Y | 根据是将文件放在 *\redist* 文件夹还是 *\designtime* 文件夹中，可以控制将哪些文件复制到使用的应用程序的包中。 | N | 需要声明包清单中要复制的文件。 |
 | 内容显示在本地化文件中。 | Y | 自动包含 SDK 中已本地化的 XML 文档，以提供更好的设计时体验。 | N | |
 | MSBuild 支持同时使用多个版本的 SDK。 | Y | SDK 支持同时使用多个版本。 | N | 这不会引用。 项目中不能一次同时拥有多个版本的 NuGet 文件。 |
-| 该机制支持指定适用的目标框架、Visual Studio 版本和项目类型。 | Y | “引用管理器”**** 对话框和“工具箱”**** 仅显示适用于项目的 SDK，以便用户更轻松地选择适当的 SDK。 | Y（部分） | 透视是目标框架。 用户界面上没有筛选。 安装时可能会返回错误。 |
-| 该机制支持为本机 WinMD 指定注册信息。 | Y | 可以在 *SDKManifest.xml*中指定 winmd 文件和 .dll 文件之间的相关性。 | N | |
+| 该机制支持指定适用的目标框架、Visual Studio 版本和项目类型。 | Y | “引用管理器”对话框和“工具箱”仅显示适用于项目的 SDK，以便用户更轻松地选择适当的 SDK。 | Y（部分） | 透视是目标框架。 用户界面上没有筛选。 安装时可能会返回错误。 |
+| 该机制支持为本机 WinMD 指定注册信息。 | Y | 可以在 *SDKManifest.xml* 中指定 winmd 文件和 .dll 文件之间的相关性。 | N | |
 | 该机制支持指定其他 SDK 上的依赖关系。 | Y | SDK 仅通知用户；用户仍需手动安装和引用它们。 | Y | NuGet 自动提取它们；用户不会收到通知。 |
 | 该机制与 [!INCLUDE[win8_appstore_long](../debugger/includes/win8_appstore_long_md.md)] 概念（如应用清单和框架 ID）集成。 | Y | SDK 必须传递特定于 [!INCLUDE[win8_appstore_short](../ide/includes/win8_appstore_short_md.md)] 的概念，以便包装和 F5 可以与 [!INCLUDE[win8_appstore_short](../ide/includes/win8_appstore_short_md.md)] 提供的 SDK 一起正常工作。 | N | |
 | 该机制与 [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] 应用的调试管道集成。 | Y | SDK 必须传递特定于 [!INCLUDE[win8_appstore_short](../ide/includes/win8_appstore_short_md.md)] 的概念，以便包装和 F5 可以与 [!INCLUDE[win8_appstore_short](../ide/includes/win8_appstore_short_md.md)] 提供的 SDK 一起正常工作。 | Y | NuGet 内容是项目的一部分。 无需特殊的 F5 考虑。 |
@@ -59,7 +61,7 @@ ms.locfileid: "80702432"
 | 该机制包含独立的 *.exe* 文件，用于创建和使用包。 | Y | SDK 包含 *MSBuild.exe*。 | Y | |
 | 包可签入到版本控制。 | Y | 无法签入“文档”节点外的任何内容，这意味着可能无法签入扩展 SDK。 扩展 SDK 可能较大。 | Y | |
 | 可使用 PowerShell 界面创建和使用包。 | Y（使用），N（创建） | 没有用于创建 SDK 的工具。 使用在命令行上正在执行 MSBuild。 | Y | |
-| 可使用符号包调试支持。 | Y | 如果将 .pdb 文件放入 SDK 中，系统将自动提取它们**。 | Y | |
+| 可使用符号包调试支持。 | Y | 如果将 .pdb 文件放入 SDK 中，系统将自动提取它们。 | Y | |
 | 该机制支持程序包管理器自动更新。 | 空值 | SDK 通过 MSBuild 进行修订。 | Y | |
 | 该机制支持轻型清单格式。 | Y | *SDKManifest.xml* 支持多个属性，但通常需要一小部分。 | Y | |
 | 该机制适用于所有 Visual Studio 版本。 | Y | SDK 支持所有 Visual Studio 版本。 | Y | NuGet 支持所有 Visual Studio 版本。 |

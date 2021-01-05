@@ -1,5 +1,7 @@
 ---
 title: 为 Vspackage 提供自动化 |Microsoft Docs
+description: 了解如何通过实现 VSPackage 特定对象并实现标准自动化对象，为 Vspackage 提供自动化。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +13,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6364f9cbaf3409e076eeb77365e5d793c7be96cb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 939de72d672b750d2f2fc61a6c412368df5523d8
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705953"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875396"
 ---
 # <a name="providing-automation-for-vspackages"></a>提供适用于 VSPackage 的自动化
 可通过两种主要方式为 Vspackage 提供自动化：通过实现 VSPackage 特定的对象并实现标准自动化对象。 通常，它们一起用于扩展环境的自动化模型。
 
-## <a name="vspackage-specific-objects"></a>特定于 VSPackage 的对象
+## <a name="vspackage-specific-objects"></a>VSPackage-Specific 对象
  自动化模型中的某些位置需要提供 VSPackage 独有的自动化对象。 例如，新项目需要只有你的 VSPackage 提供的不同对象。 这些对象的名称是在注册表中输入的，并通过调用环境对象来获取 `DTE` 。
 
  当自动化使用者使用通过标准对象的对象属性提供的对象时，也可以获取 VSPackage 特定的对象。 例如，标准 `Window` 对象有一个 `Object` 属性，该属性通常称为 `Windows.Object` 属性。 当使用者在 `Window.Object` VSPackage 中实现的窗口上调用时，会将自己的特定自动化对象传递回自己的设计。

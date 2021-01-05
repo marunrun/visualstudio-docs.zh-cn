@@ -1,5 +1,7 @@
 ---
 title: VSIX 扩展架构2.0 引用 |Microsoft Docs
+description: VSIX 扩展架构2.0 定义了 VSIX 部署清单文件的文件格式，该文件描述了 VSIX 包的内容。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 78e260c62d67afc10fea25d52169c48b64c82f72
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b2edd0349555380f6d98d24f7a40c22e48797d12
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80697905"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863766"
 ---
 # <a name="vsix-extension-schema-20-reference"></a>VSIX 扩展架构2.0 引用
 VSIX 部署清单文件描述 VSIX 包的内容。 文件格式由架构控制。 此架构的版本2.0 支持添加自定义类型和属性。  清单的架构是可扩展的。 清单加载程序将忽略不理解的 XML 元素和属性。
@@ -49,7 +51,7 @@ VSIX 部署清单文件描述 VSIX 包的内容。 文件格式由架构控制�
 
   - `Version` -定义此包及其内容的版本。 此属性遵循 CLR 程序集版本控制格式： "1.2.40308.00" (") "。 版本号较高的包被视为对包的更新，并且可以安装在现有的已安装版本上。
 
-  - `Language` -此属性是包的默认语言，对应于此清单中的文本数据。 此属性遵循资源程序集的 CLR 区域设置代码约定，例如 en-us、en、fr。 您可以指定 `neutral` 来声明将在任何 Visual Studio 版本上运行的非特定语言的扩展。 默认值是 `neutral`。
+  - `Language` -此属性是包的默认语言，对应于此清单中的文本数据。 此属性遵循资源程序集的 CLR 区域设置代码约定，例如 en-us、en、fr。 您可以指定 `neutral` 来声明将在任何 Visual Studio 版本上运行的非特定语言的扩展。 默认值为 `neutral`。
 
   - `Publisher` -此属性标识此包的发行者，无论是公司名称还是单个名称。 `Publisher`特性限制为100个字符。
 

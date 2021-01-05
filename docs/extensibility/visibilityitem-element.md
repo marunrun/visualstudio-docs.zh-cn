@@ -1,5 +1,7 @@
 ---
 title: VisibilityItem 元素 |Microsoft Docs
+description: VisibilityItem 元素确定命令和工具栏的静态可见性。 条目用于标识命令或菜单，以及关联的命令 UI 上下文。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9129d64e430d661bbdd8f7682e64c93650570211
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 637fea7d203e58c59f85794eeb0f8894eb62e777
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80698151"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863896"
 ---
 # <a name="visibilityitem-element"></a>VisibilityItem 元素
 `VisibilityItem`元素确定命令和工具栏的静态可见性。 每个条目标识一个命令或菜单，以及一个关联的命令 UI 上下文。 Visual Studio 会检测命令、菜单和工具栏及其可见性，而无需加载定义它们的 Vspackage。 IDE 使用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.IsCmdUIContextActive%2A> 方法来确定命令用户界面上下文是否处于活动状态。
@@ -41,7 +43,7 @@ ms.locfileid: "80698151"
 
 ### <a name="attributes"></a>特性
 
-|特性|说明|
+|属性|说明|
 |---------------|-----------------|
 |guid|必需。 GUID/ID 命令标识符的 GUID。|
 |id|必需。 GUID/ID 命令标识符的 ID。|
@@ -64,7 +66,7 @@ ms.locfileid: "80698151"
 
 ```xml
 <VisibilityConstraints>
-  <VisibilityItem guid="cmdSetGuidMyProductCommands"     id="cmdidAddWidget"
+  <VisibilityItem guid="cmdSetGuidMyProductCommands"     id="cmdidAddWidget"
     context="guidNotViewSourceMode"/>
 </VisibilityConstraints>
 ```

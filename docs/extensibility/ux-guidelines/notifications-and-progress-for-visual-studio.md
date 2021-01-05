@@ -1,5 +1,7 @@
 ---
 title: Visual Studio 的通知和进度 |Microsoft Docs
+description: 了解如何通过多种方式来通知用户在 Visual Studio 中发生了哪些有关软件开发任务的信息。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: f0ef65e9-0f1f-45f4-9f25-6e2398691168
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5f6a7ddd5d1a5a7257617b03098722e1341017b6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 56acfd96f8d9be575f6e13c727a294f28301bef4
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699887"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863792"
 ---
 # <a name="notifications-and-progress-for-visual-studio"></a>Visual Studio 的通知和进度
 ## <a name="notification-systems"></a><a name="BKMK_NotificationSystems"></a> 通知系统
@@ -152,8 +154,8 @@ ms.locfileid: "80699887"
 |进度类型|何时以及如何使用|说明|
 |-------------------|-------------------------|-----------|
 |进度栏 (确定性) |预期持续时间为 >5 秒。<br /><br /> 可能包括进程详细信息的文本说明。|**不要** 将文本嵌入动画。|
-|信息栏|与上下文 UI 关联的消息。 请参阅 [信息栏](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_Infobars)。<br /><br /> 可能包括进程详细信息的文本说明。|如果需要指出多个进程，请**不要**使用多个信息栏。 请改用堆积进度栏。|
-|输出窗口|暂时性通知：用户在完成后要 **查看** 其详细信息的应用程序级进程。|如果用户稍后需要引用数据，请**不要**使用。|
+|信息栏|与上下文 UI 关联的消息。 请参阅 [信息栏](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_Infobars)。<br /><br /> 可能包括进程详细信息的文本说明。|如果需要指出多个进程，请 **不要** 使用多个信息栏。 请改用堆积进度栏。|
+|输出窗口|暂时性通知：用户在完成后要 **查看** 其详细信息的应用程序级进程。|如果用户稍后需要引用数据，请 **不要** 使用。|
 |日志文件|当完成后 **保存** 详细信息很重要时，与 intransient 通知配对。||
 |状态栏|暂时性通知：用户在完成后 **不需要** 详细信息的应用程序级进程。<br /><br /> 包括嵌入的进度栏。<br /><br /> 可能包括进程详细信息的文本说明。||
 
@@ -162,9 +164,9 @@ ms.locfileid: "80699887"
 |进度类型|何时以及如何使用|说明|
 |-------------------|-------------------------|-----------|
 |进度栏 (不确定) |预期持续时间为 >5 秒。<br /><br /> 可能包括进程详细信息的文本说明。|**不要** 将文本嵌入动画。|
-|蚂蚁 (动态水平点) |到服务器的往返。<br /><br /> 放置在父容器顶部的上下文附近。|如果不是整个容器的父级，请**不要**使用。|
+|蚂蚁 (动态水平点) |到服务器的往返。<br /><br /> 放置在父容器顶部的上下文附近。|如果不是整个容器的父级，请 **不要** 使用。|
 |微调 (进度环形) |与上下文 UI 相关联的进程，或者需要考虑空间的进程。<br /><br /> 可能包括进程详细信息的文本说明。||
-|信息栏|与上下文 UI 关联的消息。 请参阅 [信息栏](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_Infobars)。|如果需要指出多个进程，请**不要**使用多个信息栏。 请改用堆积进度栏。|
+|信息栏|与上下文 UI 关联的消息。 请参阅 [信息栏](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_Infobars)。|如果需要指出多个进程，请 **不要** 使用多个信息栏。 请改用堆积进度栏。|
 |输出窗口|暂时性通知：用户需要在完成后 **查看** 其详细信息的应用程序级进程。|**不要** 用于需要跨会话保持的信息。|
 |日志文件|当完成后 **保存** 详细信息很重要时，与 intransient 通知配对。||
 |状态栏|暂时性通知：用户在完成后 **不需要** 详细信息的应用程序级进程。<br /><br /> 包括嵌入的进度栏。<br /><br /> 可能包括进程详细信息的文本说明。||
@@ -181,9 +183,9 @@ ms.locfileid: "80699887"
  "不确定" 表示无法确定操作或进程的总体进度。 对于需要无限长的时间或访问未知数量对象的操作，请使用不确定的进度栏。 使用文本说明伴随发生的情况。 使用超时可为基于时间的操作指定边界。 不确定的进度栏使用动画显示正在进行的进度，但不提供任何其他信息。 不要选择不确定的进度栏，只基于可能缺少准确性的情况。
 
 ##### <a name="determinate"></a>确定性
- ![确定的进度栏](../../extensibility/ux-guidelines/media/0901-05_determinate.png "0901-05_Determinate")
+ ![确定性进度栏](../../extensibility/ux-guidelines/media/0901-05_determinate.png "0901-05_Determinate")
 
- **确定的进度栏**
+ **确定性进度栏**
 
  "确定性" 表示操作或进程需要有限的时间，即使无法准确预测该时间量也是如此。 清楚地指示已完成。 如果操作已完成，则不允许进度栏到达100%。 确定性进度栏动画从0到100% 左右移动。
 
@@ -286,7 +288,7 @@ ms.locfileid: "80699887"
 ### <a name="overview"></a>概述
  信息栏为用户指定接近关注点的指示器，并使用共享的信息栏控件确保视觉外观和交互的一致性。
 
- ![信息栏](../../extensibility/ux-guidelines/media/0904-01_infobar.png "0904-01_Infobar")
+ ![靠近](../../extensibility/ux-guidelines/media/0904-01_infobar.png "0904-01_Infobar")
 
  **Visual Studio 中的信息栏**
 
@@ -409,7 +411,7 @@ private bool TryCreateInfoBarUI(IVsInfoBar infoBar, out IVsInfoBarUIElement uiEl
 }
 ```
 
-### <a name="placement"></a>定位
+### <a name="placement"></a>放置
  信息栏可显示在以下一个或多个位置：
 
 - 工具窗口

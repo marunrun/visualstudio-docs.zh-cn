@@ -1,5 +1,7 @@
 ---
 title: Visual Studio 模板清单架构参考 |Microsoft Docs
+description: 此架构引用描述为 Visual Studio 项目或项模板生成的 Visual Studio 模板清单文件的格式。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: bc7d0a81-0df5-41a9-a912-1b30e5da1d13
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: dbe46851d9df85569be796b4147217bd7db450ed
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d712f2cb95b2df9680c4476805e9dfb6809cf038
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80697986"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863835"
 ---
 # <a name="visual-studio-template-manifest-schema-reference"></a>Visual Studio 模板清单架构参考
 此架构描述为 Visual Studio 项目或项模板 *生成) 文件* (visual studio 模板清单的格式。 该架构还介绍了该模板的位置和其他相关信息。
@@ -45,7 +47,7 @@ ms.locfileid: "80697986"
  模板清单元素的容器。 清单为其定义的每个模板都有一个模板容器。
 
 ### <a name="attributes"></a>属性
- **VSTemplateType**：一个字符串值，指定模板 (`"Project"` 、或) 的类型 `"Item"` `"ProjectGroup"` 。 必需
+ **VSTemplateType**：一个字符串值，指定模板 (`"Project"` 、或) 的类型 `"Item"` `"ProjectGroup"` 。 必须
 
 ### <a name="child-elements"></a>子元素
 
