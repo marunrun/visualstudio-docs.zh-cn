@@ -13,12 +13,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 96ef956980b08e688970ad0a00d7d1a0804da7c3
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: b84f638876270658be2f08a7e375540f0329a1d6
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97363115"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729335"
 ---
 # <a name="customizing-element-creation-and-movement"></a>自定义元素创建和移动
 
@@ -40,7 +40,7 @@ ms.locfileid: "97363115"
 
 EMD 的责任是决定如何将对象或对象组合并到模型中的特定位置。 具体而言，它会确定应实例化哪些关系以将合并组链接到模型。 您还可以对其进行自定义以设置属性和创建其他对象。
 
-![DSL&#45;EMD&#95;合并](../modeling/media/dsl-emd_merge.png)
+![当 E M D 确定如何添加新元素时，显示一个前后的元素树及其引用关系的关系图。](../modeling/media/dsl-emd_merge.png)
 
 当您定义嵌入关系时，将自动生成 EMD。 当用户将新的子实例添加到父级时，此默认 EMD 将创建关系的实例。 可以通过添加自定义代码来修改这些默认 EMDs。
 
@@ -50,7 +50,7 @@ EMD 的责任是决定如何将对象或对象组合并到模型中的特定位�
 
 您可以向域类、域关系、形状、连接符和关系图添加元素合并指令。 可以在 "接收域" 类下的 "DSL 资源管理器" 中添加或查找它们。 接收类是已在模型中的元素的域类，新的或复制的元素将合并到该类中。
 
-![DSL&#45;EMD&#95;详细信息](../modeling/media/dsl-emd_details.png)
+![DSL 资源管理器的屏幕截图，显示要添加的 ExampleElement 被选为索引类并选中 "应用于子类" 选项。](../modeling/media/dsl-emd_details.png)
 
 **索引类** 是可合并到接收类的成员中的元素的域类。 索引类的子类的实例还将通过此 EMD 合并，除非您将应用于 **子类** 设置为 False。
 
@@ -318,7 +318,7 @@ EMD 的责任是决定如何将对象或对象组合并到模型中的特定位�
 
      看不到不可用的指针，并且应该能够在现有的 **输入端口** 上删除现有的。 选择新的 **输入端口** 并将其拖到 **组件** 上的另一个点。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在程序代码中导航和更新模型](../modeling/navigating-and-updating-a-model-in-program-code.md)
 - [自定义工具和工具箱](../modeling/customizing-tools-and-the-toolbox.md)

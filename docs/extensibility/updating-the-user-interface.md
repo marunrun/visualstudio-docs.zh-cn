@@ -1,5 +1,7 @@
 ---
 title: 更新用户界面 |Microsoft Docs
+description: 了解如何在 VSPackage 中实现新命令后添加代码以更新用户界面。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1c51ae790eb35645fbe9aec5d9c422e1051aaa69
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fae228b3fab1e25f92c02da2512abdd78edda0db
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80698886"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97716024"
 ---
 # <a name="updating-the-user-interface"></a>更新用户接口
 实现命令后，可以添加代码以使用新命令的状态更新用户界面。

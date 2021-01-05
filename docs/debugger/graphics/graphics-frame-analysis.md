@@ -1,5 +1,7 @@
 ---
 title: 图形帧分析 | Microsoft Docs
+description: 使用 Visual Studio 图形分析器中的图形帧分析可分析并优化你的 Direct3D 游戏或应用的呈现性能。
+ms.custom: SEO-VS-2020
 ms.date: 02/09/2017
 ms.topic: conceptual
 f1_keywords:
@@ -9,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 943436a64f50523905a03ed2a87e91508d1b7471
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: f87686290842e0bbc3c575b5c72e3d1eeb24f351
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911486"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727718"
 ---
 # <a name="graphics-frame-analysis"></a>图形帧分析
 使用 Visual Studio 图形分析器中的图形帧分析可分析并优化你的 Direct3D 游戏或应用的呈现性能。

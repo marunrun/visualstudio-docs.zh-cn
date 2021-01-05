@@ -1,5 +1,7 @@
 ---
 title: 扩展语言服务以支持 EditorConfig
+description: 了解更新语言服务以支持 EditorConfig 文件所做的更改。 将特定于全局语言的选项替换为上下文选项。
+ms.custom: SEO-VS-2020
 ms.date: 11/22/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ddfe0e30904d000b4fd70c85371d29a2ee486932
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0c635df2301822fc1bb982df44912527d53c9ef6
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699587"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97716102"
 ---
 # <a name="supporting-editorconfig-for-your-language-service"></a>支持语言服务的 EditorConfig
 
