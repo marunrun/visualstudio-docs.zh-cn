@@ -1,5 +1,7 @@
 ---
 title: 保存标准文档 |Microsoft Docs
+description: 了解针对添加到 Visual Studio IDE 的项目类型的标准文档所发生的过程。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,15 +14,15 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e8d50a9e62e69f925564717020a51f88620f5f3b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 81c79ece83bc8aaaf7ca4dd28642de5973ad94c1
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705555"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875661"
 ---
 # <a name="saving-a-standard-document"></a>保存标准文档
-环境处理 "保存"、"另存为" 和 "保存所有" 命令。 当用户从 "**文件**" 菜单**中选择 "保存"**、"**另存为**" 或 "全部保存" 或 "**全部保存**" 时，如果出现 "**全部保存**"，则会发生以下过程。
+环境处理 "保存"、"另存为" 和 "保存所有" 命令。 当用户从 "**文件**" 菜单 **中选择 "保存"**、"**另存为**" 或 "全部保存" 或 "**全部保存**" 时，如果出现 "**全部保存**"，则会发生以下过程。
 
  ![标准编辑器](../../extensibility/internals/media/public.gif "公用") 保存、保存为标准编辑器并保存所有命令处理
 
@@ -56,6 +58,6 @@ ms.locfileid: "80705555"
 
 2. 调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsExternalFilesManager2.TransferDocument%2A> (`pszMkDocumentNew` ， `punkWindowFrame`) 方法将文档传输到新层次结构。 执行 "另存为" 命令的层次结构将调用此方法。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>
 - [打开和保存项目项](../../extensibility/internals/opening-and-saving-project-items.md)

@@ -1,5 +1,7 @@
 ---
 title: VSIX 项目模板 |Microsoft Docs
+description: 了解如何使用 VSIX 项目模板来包装 VSIX 项目中的 Visual Studio 扩展，然后在 Visual Studio Marketplace 上发布包。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 74791a77ee1c720fb60876a1efa6bd58fa94f68b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 76e4301843cc318b60940948fee4b618860e7bae
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80697925"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863880"
 ---
 # <a name="vsix-project-template"></a>VSIX 项目模板
 
@@ -52,7 +54,7 @@ VSIX 项目模板有两个主要用途：
 
 2. 使用 **Vsix 项目** 模板创建一个 vsix 项目。
 
-    *Source.extension.vsixmanifest* 在 **清单设计器**中打开。
+    *Source.extension.vsixmanifest* 在 **清单设计器** 中打开。
 
 3. 在 " **资产** " 选项卡上，选择 " **新建** " 按钮。
 

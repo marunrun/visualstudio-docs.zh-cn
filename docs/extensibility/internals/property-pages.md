@@ -1,5 +1,7 @@
 ---
 title: 属性页 |Microsoft Docs
+description: 了解如何使用 Visual Studio SDK 中新项目类型的属性页，这允许用户查看和更改项目属性。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ac788f51bcdc52cd39469a272909890333c5016b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5d446e731c08b85c2c903c2414528ac2a7370c26
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706055"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875526"
 ---
 # <a name="property-pages"></a>属性页
 用户可以使用属性页查看和更改与项目配置相关的属性和独立属性。 "属性 **页** " 按钮在 " **属性** " 窗口中或在为所选对象提供属性页视图的对象的解决方案资源管理器工具栏上启用。 属性页由环境创建，可用于解决方案和项目。 但是，它们也可以提供给使用依赖于配置的属性的项目项。 当项目中的文件需要不同的编译器开关设置才能正确生成时，可以使用此功能。

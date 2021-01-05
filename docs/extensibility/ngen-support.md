@@ -1,5 +1,7 @@
 ---
 title: VSIX v3 中的 Ngen 支持 |Microsoft Docs
+description: 了解如何启用本机映像生成器，这是一个扩展开发人员可以用来提高托管应用程序性能的工具。
+ms.custom: SEO-VS-2020
 ms.date: 11/09/2016
 ms.topic: conceptual
 ms.assetid: 1472e884-c74e-4c23-9d4a-6d8bdcac043b
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: cb75b9256ca937106235fa7a7d66d9cec71c9c60
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 064176a0a28e3621e796bf60ede552f9cda155b0
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80702404"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97864036"
 ---
 # <a name="ngen-support-in-vsix-v3"></a>VSIX v3 中的 Ngen 支持
 
@@ -37,7 +39,7 @@ ms.locfileid: "80702404"
 
 1. **Ngen** (布尔) -如果为 true，则 Visual Studio 安装程序将 "Ngen" 程序集。
 2. **Ngen 应用程序** (字符串) -Ngen 提供了使用应用程序的 *app.config* 文件来解析程序集依赖项的机会。 应将此值设置为要使用的应用程序，该应用程序的 *app.config* 需要使用 (相对于 Visual Studio 安装目录的) 。
-3. **Ngen 体系结构** (枚举) -本机编译程序集的体系结构。 选项为：。 NotSpecified b。 X86 c。 X64 d。 All
+3. **Ngen 体系结构** (枚举) -本机编译程序集的体系结构。 选项为：。 NotSpecified b。 X86 c。 X64 d。 全部
 4. **Ngen 优先级** (1 到 3) 之间的整数-ngen 优先级别记录在 [Ngen.exe 优先级别](/dotnet/framework/tools/ngen-exe-native-image-generator#priority-levels)。
 
 下面是 " **属性** " 窗口中的 "操作"：

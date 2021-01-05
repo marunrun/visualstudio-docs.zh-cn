@@ -1,5 +1,7 @@
 ---
 title: 专用库 |Microsoft Docs
+description: 了解如何通过将其发布到专用库，来共享在 Visual Studio SDK 中开发的控件、模板和工具。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: afd1d79d7f1846e60386d2a9478466bf7eae72e4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1ec7390acf753af20bc0edbe20194ba17c2d9d80
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81444643"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863496"
 ---
 # <a name="private-galleries"></a>专用库
 你可以共享你开发的控件、模板和工具，方法是将其发布到组织 intranet 上的 *专用库* ，如下所示：
@@ -51,7 +53,7 @@ ms.locfileid: "81444643"
 
 ```
 [$RootKey$\ExtensionManager\Repositories\{UniqueGUID}]
-@={URI}  (REG_SZ)
+@={URI}  (REG_SZ)
 Disabled=0 | 1 (DWORD)
 Priority=0 (highest priority) ... MaxInt (lowest priority) (DWORD) (uint)
 Protocol=Atom|Sharepoint (REG_SZ)
@@ -89,6 +91,6 @@ DisplayNamePackageGuid={GUID} (REG_SZ)
 
 3. 在右侧窗格中，选择一个扩展，然后选择 " **更新** " 按钮。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [查找和使用 Visual Studio 扩展](../ide/finding-and-using-visual-studio-extensions.md)
 - [提供 Visual Studio 扩展](../extensibility/shipping-visual-studio-extensions.md)

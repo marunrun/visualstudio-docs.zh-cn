@@ -1,5 +1,7 @@
 ---
 title: 选择上下文对象 |Microsoft Docs
+description: 了解 Visual Studio IDE 如何使用全局选择上下文对象来确定应在 IDE 中显示的内容。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4e4f33dd0168a667b8f266ea606cecf0c26d62f1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bf5e54f00ecbac03eaebe68c6fb4de410987b63f
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705513"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875565"
 ---
 # <a name="selection-context-objects"></a>选择上下文对象
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]集成开发环境 (IDE) 使用全局选择上下文对象来确定应在 IDE 中显示的内容。 IDE 中的每个窗口都可以有自己的选择上下文对象，并将其推送到全局选择上下文。 IDE 使用窗口中的值从窗口中的值更新全局选择上下文。 有关详细信息，请参阅 [向用户反馈](../../extensibility/internals/feedback-to-the-user.md)。

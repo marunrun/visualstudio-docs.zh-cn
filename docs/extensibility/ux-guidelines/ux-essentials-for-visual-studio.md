@@ -1,5 +1,7 @@
 ---
 title: 适用于 Visual Studio 的 UX Essentials |Microsoft Docs
+description: 查看这些用户体验适用于你为 Visual Studio 开发的新功能的最佳做法，包括了解屏幕分辨率。
+ms.custom: SEO-VS-2020
 ms.date: 04/26/2017
 ms.topic: conceptual
 ms.assetid: a793cf7a-f230-43ce-88d0-fa5d6f1aa9c7
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c6c329eda477d77ab73be2ad913ac18d67ff3c08
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 616837c358c804198818df659cb7b7ee76716305
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80698329"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97864041"
 ---
 # <a name="ux-essentials-for-visual-studio"></a>Visual Studio 用户体验基础知识
 
@@ -85,7 +87,7 @@ ms.locfileid: "80698329"
 
  ![默认情况下，将 UI 置于错误状态是 Visual Studio 的反模式。](../../extensibility/ux-guidelines/media/manifestdesignererrordeclarationsanti-pattern.png "ManifestDesignererrordeclarationsanti-模式")<br />默认情况下，将 UI 置于错误状态是 Visual Studio 的反模式。
 
-#### <a name="alternatives"></a>备选方法
+#### <a name="alternatives"></a>备选项
 
 此问题的更好解决方案是：
 
@@ -120,11 +122,11 @@ ms.locfileid: "80698329"
 
 ![图 A：命令栏反模式](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figurea.png "Commandbaranti-FigureA")<br />图 A：命令栏反模式
 
-稍微好一点，但仍不希望将此类型的设置放在工具栏中，如 **图 B**所示。虽然拆分按钮需要较少的空间，因此，这种改进对下拉控制，但这两种设计仍使用工具栏来升级不是真正的命令的内容。
+稍微好一点，但仍不希望将此类型的设置放在工具栏中，如 **图 B** 所示。虽然拆分按钮需要较少的空间，因此，这种改进对下拉控制，但这两种设计仍使用工具栏来升级不是真正的命令的内容。
 
 ![图 B：更好，但仍然是命令栏反模式](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figureb.png "Commandbaranti-FigureB")<br />图 B：更好，但仍然是命令栏反模式
 
-在 **图 C**中所示的正确方法中，设置与一系列命令相关联。 没有设置全局设置，我们只是在四个命令之间切换。 在这种情况下，工具栏中的命令是可接受的。
+在 **图 C** 中所示的正确方法中，设置与一系列命令相关联。 没有设置全局设置，我们只是在四个命令之间切换。 在这种情况下，工具栏中的命令是可接受的。
 
 ![图 C：正确使用 Visual Studio 命令栏模式](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figurec.png "Commandbaranti-FigureC")<br />图 C：正确使用 Visual Studio 命令栏模式
 

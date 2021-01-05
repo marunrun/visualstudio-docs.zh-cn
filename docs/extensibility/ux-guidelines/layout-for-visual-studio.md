@@ -1,5 +1,7 @@
 ---
 title: Visual Studio 布局 |Microsoft Docs
+description: 了解 Visual Studio 对话框的布局，包括 unthemed 对话框和具有主题外观的新对话框。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: c19e3022-047c-43b6-a046-a82717efed4f
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4eb8eb7468751d46b922c15530389c554a8d3e36
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3e6c90831c39f0e378dd9060397c68592ec73384
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80698395"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863667"
 ---
 # <a name="layout-for-visual-studio"></a>Visual Studio 的布局
 大多数 Visual Studio 对话框都是 [实用工具对话框布局](../../extensibility/ux-guidelines/layout-for-visual-studio.md#BKMK_UtilityDialogLayout)，它是遵循标准 [Windows 桌面对话框布局原则](/windows/desktop/uxguide/win-dialog-box)的 unthemed 对话框。 当 Visual Studio 移动以刷新其 UI 时，一些更突出的对话框会有一种新的设计，可将它们建立为产品定义经验。 这些 [主题对话框布局](../../extensibility/ux-guidelines/layout-for-visual-studio.md#BKMK_ThemedDialogLayout) 具有主题外观。
@@ -103,11 +105,11 @@ ms.locfileid: "80698395"
 #### <a name="interior-command-buttons"></a><a name="BKMK_InteriorCommandButtons"></a> 内部命令按钮
  在更复杂的对话框中，内部控件可能有自己的相关按钮，这可能会影响对话框的提交按钮所在的位置。
 
-- **在** / **Cancel**右下角水平方向上水平方向时，使用垂直对齐 (列) 内部按钮。
+- **在** / 右下角水平方向上水平方向时，使用垂直对齐 (列) 内部按钮。
 
 - 当 **"确定** / **取消**" 在右上角垂直方向时，使用水平对齐 (行) 内部按钮。 这种情况不太常见。
 
-- 内部按钮大小应以75x23 像素的标准按钮大小为目标，如果可能，匹配 **"确定"** / **取消**按钮的大小。 如果按钮标签使按钮超过标准按钮大小，则该集合中的其他按钮应该与更大的大小一致。
+- 内部按钮大小应以75x23 像素的标准按钮大小为目标，如果可能，匹配 **"确定"** / **取消** 按钮的大小。 如果按钮标签使按钮超过标准按钮大小，则该集合中的其他按钮应该与更大的大小一致。
 
   ![水平“确定”和“取消”按钮](../../extensibility/ux-guidelines/media/0801-f_horizokcan.png "0801-f_HorizOKCan")
 

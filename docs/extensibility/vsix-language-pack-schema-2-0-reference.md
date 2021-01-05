@@ -1,5 +1,7 @@
 ---
 title: VSIX 语言包架构2.0 引用 |Microsoft Docs
+description: VSIX 语言包架构为 VSIX 包提供本地化的安装信息。 版本2.0 支持其他本地化元素。
+ms.custom: SEO-VS-2020
 ms.date: 10/26/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.assetid: 2a2932bc-cdbe-4d32-91fa-a3e0474f9098
 author: acangialosi
 ms.author: anthc
 manager: jillfra
-ms.openlocfilehash: f0eee51c0654c6e517209e23baf43c6b262d8f73
-ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
+ms.openlocfilehash: fc9c3c1aa7f8cf77ebf165a3e10a67ccbd5887f7
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91830703"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863824"
 ---
 # <a name="vsix-language-pack-schema-20-reference"></a>VSIX 语言包架构2.0 引用
 
@@ -30,7 +32,7 @@ VSIX 语言包架构为 VSIX 包提供本地化的安装信息。 此架构的�
 
 在 `<PackageLanguagePackManifest>` 元素中，以下元素必须存在：
 
-|标题|说明|
+|Title|说明|
 |-----------|-----------------|
 |`<Metadata>`| 所有本地化包元数据的包含元素
 
@@ -38,7 +40,7 @@ VSIX 语言包架构为 VSIX 包提供本地化的安装信息。 此架构的�
 
 在 `<Metadata>` 元素中，可以包含以下元素：
 
-|标题|说明|
+|Title|说明|
 |-----------|-----------------|
 |`<DisplayName>`|要安装的扩展的本地化名称|
 |`<Description>`|要安装的扩展的本地化说明|

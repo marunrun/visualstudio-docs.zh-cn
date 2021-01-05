@@ -1,5 +1,7 @@
 ---
 title: .VSCT XML 架构参考 |Microsoft Docs
+description: .VSCT XML 架构参考文章介绍了命令表编译器架构元素，其中每个元素都允许使用子元素和属性。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 923a0c4b64fcae3a409a2298d6d481f6e1bb14db
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 56d6c1309dc5b9a52de0bc0b54a764eceaf37d96
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80697906"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863986"
 ---
 # <a name="vsct-xml-schema-reference"></a>.VSCT XML 架构引用
 提供一个表，其中包含命令表编译器架构元素，每个元素都允许使用子元素和属性。
@@ -24,7 +26,7 @@ ms.locfileid: "80697906"
  一个基于 XML 的命令表配置 (. .vsct) file 定义 VSPackage 向集成开发环境 (IDE) 提供的命令元素。 这些元素包括菜单项、菜单、工具栏和组合框。
 
 > [!NOTE]
-> .VSCT 编译器可以对 .vsct 文件运行预处理器。 由于这通常是 c + + 预处理器，因此你可以定义具有与 c + + 文件中所用语法相同的语法的包含和宏。 **新项目**向导为 VSPackage 项目创建的 .vsct 文件中提供了这种情况的示例。
+> .VSCT 编译器可以对 .vsct 文件运行预处理器。 由于这通常是 c + + 预处理器，因此你可以定义具有与 c + + 文件中所用语法相同的语法的包含和宏。 **新项目** 向导为 VSPackage 项目创建的 .vsct 文件中提供了这种情况的示例。
 
 ## <a name="optional-elements"></a>可选元素
  某些 .VSCT 元素是可选的。 如果 `Parent` 未指定参数，则 Group_Undefined：0将隐式。 如果 `Icon` 未指定参数，则将隐式 guidOfficeIcon： msotcidNoIcon。 定义快捷键后，通常不使用的仿真是可选的。
@@ -50,7 +52,7 @@ ms.locfileid: "80697906"
 
 - [Define 元素](../extensibility/define-element.md)
 
-- [命令元素](../extensibility/commands-element.md)
+- [Commands 元素](../extensibility/commands-element.md)
 
 - [CommandPlacements 元素](../extensibility/commandplacements-element.md)
 

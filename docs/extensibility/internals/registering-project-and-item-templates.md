@@ -1,5 +1,7 @@
 ---
 title: 注册项目和项模板 |Microsoft Docs
+description: 了解 Visual Studio 如何为你的项目类型使用注册信息，以确定要在 "添加新项目" 和 "添加新项" 对话框中显示的内容。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b64504c39b1fc3c4a82530b265cfd0e96832b4f2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 999b435719113883201b7619daca9a84d095294e
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705827"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875266"
 ---
 # <a name="registering-project-and-item-templates"></a>注册项目和项模板
 项目类型必须注册其项目和项目项模板所在的目录。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 使用与你的项目类型关联的注册信息来确定要在 " **添加新项目** " 和 " **添加新项** " 对话框中显示的内容。
@@ -27,7 +29,7 @@ ms.locfileid: "80705827"
  有关模板的详细信息，请参阅 [添加项目和项目项模板](../../extensibility/internals/adding-project-and-project-item-templates.md)。
 
 ## <a name="registry-entries-for-projects"></a>项目的注册表项
- 以下示例显示 HKEY_LOCAL_MACHINE \software\microsoft\visualstudio \\ < *版本*> 下的注册表项。 随附的表解释了示例中使用的元素。
+ 以下示例显示 HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\\ < *版本*> 下的注册表项。 随附的表解释了示例中使用的元素。
 
 ```
 [Projects\{ProjectGUID}]
@@ -65,9 +67,9 @@ ms.locfileid: "80705827"
 ### <a name="registering-file-filters"></a>注册文件筛选器
  或者，你可以注册在 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 提示输入文件名时使用的筛选器。 例如， [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] " **打开文件** " 对话框的 "筛选器" 是：
 
- **Visual c # 文件 (\* .cs， \* .resx，. \* settings， \* .xsd， \* .wsdl) ; \* 。cs、 \* .resx、 \* . settings、 \* .xsd、 \* .wsdl) **
+ **Visual c # 文件 (\* .cs， \* .resx，. \* settings， \* .xsd， \* .wsdl) ; \* 。cs、 \* .resx、 \* . settings、 \* .xsd、 \* .wsdl)**
 
- 为了支持注册多个筛选器，每个筛选器都在 HKEY_LOCAL_MACHINE \software\microsoft\visualstudio \\ < *Version*> \projects \\ { \<*ProjectGUID*> } \Filters \\ < *子项*> 下的其自己的子项中进行注册。 子项名称为任意; [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 忽略子项的名称，并只使用其值。
+ 为了支持注册多个筛选器，每个筛选器都在 HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\\ < *版本*> \projects \\ { \<*ProjectGUID*> } \Filters \\ < *子项*> 下的其子子项中进行注册。 子项名称为任意; [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 忽略子项的名称，并只使用其值。
 
  您可以通过设置标志来控制使用筛选器的上下文，如下表所示。 如果筛选器没有设置任何标志，则该筛选器将在 " **添加现有项** " 对话框和 " **打开文件** " 对话框中的常见筛选器后列出，但不会在 "在 **文件中查找** " 对话框中使用。
 

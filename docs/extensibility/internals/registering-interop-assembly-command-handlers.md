@@ -1,5 +1,7 @@
 ---
 title: 注册互操作程序集命令处理程序 |Microsoft Docs
+description: 了解使用互操作程序集的所有 Vspackage 实现命令所使用的基本命令协定。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: dfff8e4e6cc8ba3974ec70e6466b25e9ff7432e4
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: b45fe06722b190569e067dccd325ba4acac4fb0f
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012043"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875149"
 ---
 # <a name="registering-interop-assembly-command-handlers"></a>注册互操作程序集命令处理程序
 VSPackage 必须向注册， [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 使集成开发环境 (IDE) 正确路由其命令。
@@ -28,10 +30,10 @@ VSPackage 必须向注册， [!INCLUDE[vsprvs](../../code-quality/includes/vsprv
 - [命令表格式引用](/previous-versions/bb164647(v=vs.100)) 资源位于非托管附属 UI dll 中。
 
 ## <a name="command-handler-registration-of-a-vspackage"></a>命令处理程序注册 VSPackage
- 用作用户界面 (UI) 命令的处理程序的 VSPackage 需要名为 VSPackage 的注册表项 `GUID` 。 此注册表项指定 VSPackage 的 UI 资源文件的位置以及该文件中的菜单资源。 注册表项本身位于 HKEY_LOCAL_MACHINE \Software\Microsoft\VisualStudio \\ *\<Version>* \Menus 下，其中 *\<Version>* 是的版本 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ，例如9.0。
+ 用作用户界面 (UI) 命令的处理程序的 VSPackage 需要名为 VSPackage 的注册表项 `GUID` 。 此注册表项指定 VSPackage 的 UI 资源文件的位置以及该文件中的菜单资源。 注册表项本身位于 HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\\ *\<Version>* \Menus 下，其中 *\<Version>* 是的版本 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ，例如9.0。
 
 > [!NOTE]
-> \\ *\<Version>* 初始化 shell 时，可以使用备用根替换 HKEY_LOCAL_MACHINE \software\microsoft\visualstudio 的根路径 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。 有关根路径的详细信息，请参阅 [安装带有 Windows Installer 的 vspackage](../../extensibility/internals/installing-vspackages-with-windows-installer.md)。
+> \\ *\<Version>* 初始化 shell 时，可以使用备用根覆盖 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio的根路径 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。 有关根路径的详细信息，请参阅 [安装带有 Windows Installer 的 vspackage](../../extensibility/internals/installing-vspackages-with-windows-installer.md)。
 
 ### <a name="the-ctmenu-resource-registry-entry"></a>CTMENU 资源注册表项
  注册表项的结构是：
@@ -50,7 +52,7 @@ HKEY_LOCAL_MACHINE\Software\VisualStudio\<Version>\
 
  下表对的字段进行了说明 \<*Resource Information*> 。
 
-| 元素 | 描述 |
+| 元素 | 说明 |
 |---------------------------| - |
 | \<*Path to Resource DLL*> | 这是包含菜单资源的资源 DLL 的完整路径，或留空，这表示将使用 VSPackage 的资源 DLL， (在 VSPackage 本身) 注册到的 "包" 子项中指定。<br /><br /> 建议将此字段留空。 |
 | \<*Menu Resource ID*> | 这是资源的资源 ID `CTMENU` ，其中包含 VSPackage 的所有 UI 元素，这些元素是从 [.vsct](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md) 文件编译而来的。 |
@@ -66,6 +68,6 @@ HKEY_LOCAL_MACHINE\Software\VisualStudio\9.0Exp\
     {1b027a40-8f43-11d0-8d11-00a0c91bc942} = , 10211, 3
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [VSPackage 如何添加用户界面元素](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)
 - [使用互操作程序集的命令和菜单](../../extensibility/internals/commands-and-menus-that-use-interop-assemblies.md)

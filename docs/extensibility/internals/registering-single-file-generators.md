@@ -1,5 +1,7 @@
 ---
 title: 注册单个文件生成器 |Microsoft Docs
+description: 了解如何在 Visual Studio 中注册自定义工具，以便对其进行实例化并将其与特定的项目类型相关联。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 185e60daac2aef2c8aeeb4f087547984e6fcf510
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 7a0ce4afeddebdec8519467e1f4249095ce98f6b
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012030"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875253"
 ---
 # <a name="registering-single-file-generators"></a>注册单个文件生成器
 若要在中提供自定义工具 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ，你必须注册它，以便可以对其进行 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 实例化并将其与特定的项目类型关联。
@@ -36,7 +38,7 @@ ms.locfileid: "90012030"
    "Assembly"="Microsoft.VSDesigner, Version=14.0.0.0, Culture=Neutral, PublicKeyToken=b03f5f7f11d50a3a"
    ```
 
-2. 在生成器 guid 下的所需配置单元中创建注册表项 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] \\ *GUID* ，其中*guid*是特定语言的项目系统或服务定义的 guid。 密钥名称将成为自定义工具的编程名称。 自定义工具键具有以下值：
+2. 在生成器 guid 下的所需配置单元中创建注册表项 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] \\  ，其中 *guid* 是特定语言的项目系统或服务定义的 guid。 密钥名称将成为自定义工具的编程名称。 自定义工具键具有以下值：
 
    - （默认值）
 
@@ -67,7 +69,7 @@ ms.locfileid: "90012030"
    "GeneratesDesignTimeSource"=dword:00000001
    ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator>
 - [实现单个文件生成器](../../extensibility/internals/implementing-single-file-generators.md)
 - [向可视化设计器公开类型](../../extensibility/internals/exposing-types-to-visual-designers.md)

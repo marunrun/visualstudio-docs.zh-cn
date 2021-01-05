@@ -1,5 +1,7 @@
 ---
 title: Visual Studio SDK |Microsoft Docs
+description: Visual Studio SDK 可帮助你扩展功能或向 Visual Studio 添加新功能。 了解可用于扩展 Visual Studio 的一些方式。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2dbe2832d52d17047795d1898f0e0bfd8a275bb9
-ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
+ms.openlocfilehash: 4be4b07e322b5be148593c70136eb44ec7fcfdf7
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93414379"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863847"
 ---
 # <a name="visual-studio-sdk"></a>Visual Studio SDK
 Visual Studio SDK 可帮助你扩展 Visual Studio 的功能，或将新功能集成到 Visual Studio 中。 可以将扩展分发给其他用户以及 Visual Studio Marketplace。 以下是一些扩展 Visual Studio 的方式：
@@ -54,7 +56,7 @@ Visual Studio SDK 可帮助你扩展 Visual Studio 的功能，或将新功能�
  利用 [映像服务和目录](../extensibility/image-service-and-catalog.md) 获得极佳的图像管理，并提供高 DPI 和主题的支持。
 
 ## <a name="find-and-install-existing-visual-studio-extensions"></a>查找并安装现有的 Visual Studio 扩展
- 可以在 " **工具** " 菜单上的 " **扩展和更新** " 对话框中找到 Visual Studio 扩展。 有关详细信息，请参阅 [查找和使用 Visual Studio 扩展](../ide/finding-and-using-visual-studio-extensions.md)。 你还可以在[Visual Studio Marketplace](https://marketplace.visualstudio.com/)中找到扩展
+ 可以在 "**工具**" 菜单上的 "**扩展和更新**" 对话框中找到 Visual Studio 扩展。 有关详细信息，请参阅 [查找和使用 Visual Studio 扩展](../ide/finding-and-using-visual-studio-extensions.md)。 你还可以在[Visual Studio Marketplace](https://marketplace.visualstudio.com/)中找到扩展
 
 ## <a name="visual-studio-sdk-reference"></a>Visual Studio SDK 参考
  可在 [Visual STUDIO Sdk 参考](../extensibility/visual-studio-sdk-reference.md)中找到 VISUAL STUDIO sdk API 参考。
