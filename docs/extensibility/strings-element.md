@@ -1,5 +1,7 @@
 ---
 title: String 元素 |Microsoft Docs
+description: String 元素包含 ButtonText 子元素和其他可选的子元素。 文本字符串中的 "and" 符指定了键盘快捷方式。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: db44db8926b523665a21c00b710dcee55749ab89
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f517d350f3383dcaeb99d651872ffb8ed09814fe
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699723"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715244"
 ---
 # <a name="strings-element"></a>Strings 元素
 String 元素必须包含至少一个 **ButtonText** 子元素。 所有其他子元素都是可选的。 无效的 XML 字符（如 "&" 和 "<"）必须编码为实体 ( " &amp; " 和 " &lt;) " 等。
@@ -37,7 +39,7 @@ String 元素必须包含至少一个 **ButtonText** 子元素。 所有其他�
 
 ### <a name="attributes"></a>特性
 
-|特性|说明|
+|属性|说明|
 |---------------|-----------------|
 |语言|可选。 Language = "."。|
 

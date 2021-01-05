@@ -11,12 +11,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 639b68c4d999a5e491f6e52a2cf3a7960563ed17
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: d72ee803389c692233478d742dadbcf514a3a036
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96329427"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668061"
 ---
 # <a name="warnings-and-errors"></a>警告和错误
 
@@ -346,4 +346,4 @@ IntelliTest 不知道未检测中间方法的作用，因此无法生成与嵌�
 
 ## <a name="got-feedback"></a>有反馈？
 
-在[开发人员社区](https://developercommunity.visualstudio.com/content/idea/post.html?space=8)上发布想法和功能请求。
+在[开发人员社区](https://aka.ms/feedback/suggest?space=8)上发布想法和功能请求。

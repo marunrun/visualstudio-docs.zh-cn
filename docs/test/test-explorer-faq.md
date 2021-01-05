@@ -16,12 +16,12 @@ ms.workload:
 - multiple
 author: kendrahavens
 manager: jillfra
-ms.openlocfilehash: ef6c6bf3cedcccd156e7ae9ae02c2e5f70805521
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: b69274058ea939251a772dfb30ddf7b42861542c
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96330168"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668581"
 ---
 # <a name="visual-studio-test-explorer-faq"></a>Visual Studio 测试资源管理器常见问题解答
 
@@ -97,13 +97,13 @@ UWP 测试面向的是部署应用时的另一个运行时。 这表示，你需
 
 测试资源管理器搜索框中不再有“文件路径”筛选器。
 
-Visual Studio 2017 版本 15.7 已删除“测试资源管理器”搜索框中的文件路径筛选器。 此功能的使用率较低，测试资源管理器省去此功能后可提升测试方法的检索速度。 如果此更改会中断你的开发流，请通过[开发人员社区](https://developercommunity.visualstudio.com/)向我们提供反馈。
+Visual Studio 2017 版本 15.7 已删除“测试资源管理器”搜索框中的文件路径筛选器。 此功能的使用率较低，测试资源管理器省去此功能后可提升测试方法的检索速度。 如果此更改会中断你的开发流，请通过[开发人员社区](https://aka.ms/feedback/suggest?space=8)向我们提供反馈。
 
 ## <a name="remove-undocumented-interfaces"></a>删除未记录的接口
 
 Visual Studio 2019 中不再出现一些与测试相关的 API。进行了哪些更改？
 
-在 Visual Studio 2019 中，将删除以前标记为公开但从未正式记录过的某些测试窗口 API。 它们在 Visual Studio 2017 中被标记为“弃用”，提前通告扩展维护人员。 据我们所知，很少有扩展找过这些 API 并依赖于它们。 它们包括 `IGroupByProvider`、 `IGroupByProvider<T>`、 `KeyComparer`、`ISearchFilter`、 `ISearchFilterToken`、 `ISearchToken` 和 `SearchFilterTokenType`。 若此更改影响了你的扩展，请在[开发者社区](https://developercommunity.visualstudio.com)上提交一个 bug 告知我们。
+在 Visual Studio 2019 中，将删除以前标记为公开但从未正式记录过的某些测试窗口 API。 它们在 Visual Studio 2017 中被标记为“弃用”，提前通告扩展维护人员。 据我们所知，很少有扩展找过这些 API 并依赖于它们。 它们包括 `IGroupByProvider`、 `IGroupByProvider<T>`、 `KeyComparer`、`ISearchFilter`、 `ISearchFilterToken`、 `ISearchToken` 和 `SearchFilterTokenType`。 若此更改影响了你的扩展，请在[开发者社区](https://aka.ms/feedback/suggest?space=8)上提交一个 bug 告知我们。
 
 ## <a name="test-adapter-nuget-reference"></a>测试适配器 NuGet 引用
 

@@ -1,5 +1,7 @@
 ---
 title: 支持多个文档视图 |Microsoft Docs
+description: 了解如何通过使用 Visual Studio SDK 中的自定义编辑器的单独文档数据和文档视图对象来提供文档的多个视图。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a952414fa7156d80675564e519e556ccedd524a3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1c1d99f4beb000d4b48435b9215a01f31ef8e936
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699541"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97716089"
 ---
 # <a name="supporting-multiple-document-views"></a>支持多个文档视图
 可以通过为编辑器创建单独的文档数据和文档视图对象来提供文档的多个视图。 在某些情况下，其他文档视图会很有用：

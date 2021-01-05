@@ -19,12 +19,12 @@ helpviewer_keywords:
 - conversion, projects
 - asset compatibility
 - projects, conversion
-ms.openlocfilehash: f13500c4d65287dfbafdb681a3fc47ffcd2c397e
-ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
+ms.openlocfilehash: ca13ff5263ab43fd6fbdf5764b506091dd9aa3bd
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93414316"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97667983"
 ---
 # <a name="project-migration-and-upgrade-reference-for-visual-studio"></a>Visual Studio 的项目迁移和升级参考
 
@@ -32,7 +32,7 @@ ms.locfileid: "93414316"
 
 Visual Studio 的每个版本通常都支持大部分以前的项目、文件和其他资产类型。 可以[照常](../ide/solutions-and-projects-in-visual-studio.md)使用这些类型。如果不依赖新功能，Visual Studio 会尝试保留与旧版本（如 Visual Studio 2015、Visual Studio 2013 和 Visual Studio 2012）的向后兼容性。 （若要了解哪些功能特定于哪个版本，请参阅[发行说明](/visualstudio/releasenotes/vs2017-relnotes/)。）
 
-对某些项目类型的支持也会随着时间的推移而更改。 较新版本的 Visual Studio 可能不再支持某些项目，或者需要更新项目，使其不再向后兼容。 有关迁移问题的当前状态，请参阅 [Visual Studio 开发人员社区站点](https://developercommunity.visualstudio.com)。
+对某些项目类型的支持也会随着时间的推移而更改。 较新版本的 Visual Studio 可能不再支持某些项目，或者需要更新项目，使其不再向后兼容。 有关迁移问题的当前状态，请参阅 [Visual Studio 开发人员社区站点](https://aka.ms/feedback/suggest?space=8)。
 
 本文仅详细介绍 Visual Studio 2017 可迁移的项目类型。 本文不包括 Visual Studio 2017 中不再支持且因此无法迁移的项目类型。 本文也不包括没有迁移问题的受支持项目类型；此列表位于[平台目标以及兼容性](/visualstudio/productinfo/vs2017-compatibility-vs)中。
 
@@ -118,7 +118,7 @@ Visual Studio 的每个新版本都支持大部分项目、文件和其他资产
 我们尝试保留与早期版本的向后兼容性，如 Visual Studio 2017、Visual Studio 2015、Visual Studio 2013 和 Visual Studio 2012。 但是，对某些项目类型的支持会随着时间的推移而更改。 较新版本的 Visual Studio 可能根本不支持某些项目，或者可能需要更新项目，使其不再向后兼容。
 
 > [!NOTE]
-> 有关迁移问题的当前状态，请参阅 [Visual Studio 开发人员社区](https://developercommunity.visualstudio.com)。 若要详细了解哪些功能特定于对应的 Visual Studio 版本，请参阅[发行说明](/visualstudio/releases/2019/release-notes/)。
+> 有关迁移问题的当前状态，请参阅 [Visual Studio 开发人员社区](https://aka.ms/feedback/suggest?space=8)。 若要详细了解哪些功能特定于对应的 Visual Studio 版本，请参阅[发行说明](/visualstudio/releases/2019/release-notes/)。
 
 > [!IMPORTANT]
 > 某些项目类型需要特定工作负载。 如果尚未安装工作负荷，Visual Studio 将报告未知的或不兼容的项目类型。 在这种情况下，请检查 [Visual Studio 安装程序中的安装选项](../install/modify-visual-studio.md)，然后重试。 有关 Visual Studio 2019 中项目支持的详细信息，请参阅[平台目标和兼容性](/visualstudio/releases/2019/compatibility)页。
@@ -157,7 +157,7 @@ Visual Studio 的每个新版本都支持大部分项目、文件和其他资产
 | SQL - Redgate | Visual Studio 安装程序中不再随附 Redgate 的 SQL Change Automation Core（以前称为 ReadyRoll Core）、SQL Prompt Core 和 SQL 搜索。<br/><br/>可以继续使用 Visual Studio 2017 获取这些功能。 在 Visual Studio 2019 中，可以升级到 Redgate 的 SQL Toolbelt 中提供的付费 SQL Change Automation 和 SQL Prompt 产品。|
 | SQL Server Reporting Services 和 SQL Server Analysis Services（SSRS、SSDT、SSAS、MSAS） | 通过 Visual Studio 库中的两个扩展提供对这些项目类型的支持：[Microsoft Analysis Services 建模项目](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects)和 [Microsoft Reporting Services 项目](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio)。 Visual Studio 2019 的数据存储和处理工作负载中还包括 SSDT 支持。 有关详细信息，请参阅[下载并安装 SQL Server Data Tools (SSDT) for Visual Studio](/sql/ssdt/download-sql-server-data-tools-ssdt) 页。 |
 | SQL Server Integration Services (SSIS) | Visual Studio 2019 的支持现已推出。 有关详细信息，请参阅商城上的[下载并安装 SQL Server Data Tools (SSDT) for Visual Studio](/sql/ssdt/download-sql-server-data-tools-ssdt) 页、[SQL Server Integration Services (SSIS)](https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-p/SSIS) 团队博客和 [SQL Server Integration Services 项目](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects&ssr=false#overview)页。 |
-| 测试窗口扩展 | 在 Visual Studio 2019 中，删除了一些以前标记为公开但从未正式记录过的测试窗口 API。 在 Visual Studio 2017 中，广泛可见的 API 被标记为已弃用，以便为扩展维护人员提供早期警告。 据我们所知，很少有扩展依赖这些 API。 有关详细信息和更新，请查看[已弃用的与测试相关的 API 完整列表](https://github.com/Microsoft/vstest/issues/1830)。 如果这会影响你的方案，请在[开发人员社区](https://developercommunity.visualstudio.com)上告诉我们。 |
+| 测试窗口扩展 | 在 Visual Studio 2019 中，删除了一些以前标记为公开但从未正式记录过的测试窗口 API。 在 Visual Studio 2017 中，广泛可见的 API 被标记为已弃用，以便为扩展维护人员提供早期警告。 据我们所知，很少有扩展依赖这些 API。 有关详细信息和更新，请查看[已弃用的与测试相关的 API 完整列表](https://github.com/Microsoft/vstest/issues/1830)。 如果这会影响你的方案，请在[开发人员社区](https://aka.ms/feedback/suggest?space=8)上告诉我们。 |
 | Visual C++ | Visual Studio 2019 可用于在 Visual Studio 的早期版本中（追溯到 Visual Studio 2010）创建的项目中工作。 首次打开项目时，可以选择升级到最新的编译器和工具集，或者继续使用原始编译器和工具集。 如果选择继续使用原始编译器和工具集，Visual Studio 2019 将不会修改项目文件，并使用早期版本 Visual Studio 安装中的工具集来生成项目。 选择继续使用原始编译器和工具集意味着你仍可以在 Visual Studio 的原始版本中打开项目（如有必要）。 有关详细信息，请参阅 [使用 Visual Studio 中的本机多重目标生成旧项目](/cpp/porting/use-native-multi-targeting)。 |
 | Visual Studio 扩展性/VSIX | 更新 MinimumVersion 14.0 或更低版本中的项目以声明 MinimumVersion 15.0，这样可防止在早期版本的 Visual Studio 中打开该项目。 若要允许在早期版本中打开项目，请将 MinimumVersion 设置为 `$(VisualStudioVersion)`。 另请参阅[如何：将扩展性项目迁移到 Visual Studio 2017](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md)。 |
 | Visual Studio 实验室管理工具版 | 你可以使用 Microsoft 测试管理器或 Visual Studio 2010 SP1 及更高版本打开在以上任一版本中创建的环境。 但对于 Visual Studio 2010 SP1，在可以创建环境之前，Microsoft 测试管理器的版本必须与 Team Foundation Server 的版本匹配。 |

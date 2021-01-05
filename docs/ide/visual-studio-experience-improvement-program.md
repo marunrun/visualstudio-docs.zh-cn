@@ -8,12 +8,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b6c785b755b64f0dd7e367a01d9c05c1981ea558
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: eae7e4726f720b1c9974682525bbe2a28ee38d5f
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71693015"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97667931"
 ---
 # <a name="visual-studio-customer-experience-improvement-program"></a>Visual Studio 客户体验改善计划
 
@@ -29,9 +29,9 @@ VSCEIP 默认开启。 可以按照以下步骤将其关闭或者再次打开：
 
 1. 在 Visual Studio 中，选择“帮助” > “发送反馈”，然后选择“设置”。
 
-   “Visual Studio 体验改善计划”对话框随即打开****。
+   “Visual Studio 体验改善计划”对话框随即打开。
 
-1. 若要选择退出，请选择“否，我不想参加”，然后选择“确定”********。 若要选择加入，请选择“是，我愿意参加”，然后选择“确定”********。
+1. 若要选择退出，请选择“否，我不想参加”，然后选择“确定”。 若要选择加入，请选择“是，我愿意参加”，然后选择“确定”。
 
    ![“Visual Studio 体验改善计划”对话框](media/experience-improvement-program.png)
 
@@ -43,16 +43,16 @@ VSCEIP 默认开启。 可以按照以下步骤将其关闭或者再次打开：
 
 ::: moniker range="vs-2017"
 
-- 在 64 位操作系统上，Key = HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VSCommon\15.0\SQM****
-- 在 32 位操作系统上，Key = HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSCommon\15.0\SQM****
+- 在 64 位操作系统上，Key = HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VSCommon\15.0\SQM
+- 在 32 位操作系统上，Key = HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSCommon\15.0\SQM
 - 启用“组策略”时，Key = HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-- 在 64 位操作系统上，Key = HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VSCommon\16.0\SQM****
-- 在 32 位操作系统上，Key = HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSCommon\16.0\SQM****
+- 在 64 位操作系统上，Key = HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VSCommon\16.0\SQM
+- 在 32 位操作系统上，Key = HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSCommon\16.0\SQM
 - 启用“组策略”时，Key = HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM
 
 ::: moniker-end
@@ -74,5 +74,5 @@ Entry = OptIn
 * [Visual Studio 收集的诊断信息](diagnostic-data-collection.md)
 * [Visual Studio 反馈选项](../ide/feedback-options.md)
 * [如何报告 Visual Studio 的问题](../ide/how-to-report-a-problem-with-visual-studio.md)
-* [Visual Studio 开发者社区](https://developercommunity.visualstudio.com/)
+* [Visual Studio 开发者社区](https://aka.ms/feedback/suggest?space=8)
 * [Microsoft 隐私声明](https://privacy.microsoft.com/privacystatement)

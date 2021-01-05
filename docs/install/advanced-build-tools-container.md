@@ -12,12 +12,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 5103d9a053a1a2a8bd3a672c33037695ee3d2836
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: d21784169e541e2f4353fd6d16772b5315940166
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91928692"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668828"
 ---
 # <a name="advanced-example-for-containers"></a>容器的高级示例
 
@@ -213,7 +213,7 @@ The command 'cmd /S /C C:\TEMP\Install.cmd C:\TEMP\vs_buildtools.exe ...' return
 
 ::: moniker-end
 
-最后一行完成执行之后，在计算机上打开“%TEMP%\vslogs.zip”，或在[开发者社区](https://developercommunity.visualstudio.com)网站上提交问题。
+最后一行完成执行之后，在计算机上打开“%TEMP%\vslogs.zip”，或在[开发者社区](https://aka.ms/feedback/suggest?space=8)网站上提交问题。
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 

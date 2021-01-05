@@ -15,16 +15,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5d6b9bb2eb6169de2bbbf41b6d4e96a5960e40fe
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5cd7bb050204d65bb78a597c1ae3c7eea36ac184
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85348244"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729348"
 ---
 # <a name="navigate-through-code-with-the-visual-studio-debugger"></a>使用 Visual Studio 调试器浏览代码
 
-Visual Studio 调试器可帮助你浏览代码，以检查应用的状态并显示其执行流。 可以使用键盘快捷方式、调试命令、断点和其他功能来快速访问要检查的代码。 熟悉调试器导航命令和快捷方式有助于更快、更轻松地查找和解决应用问题。  如果是首次尝试调试代码，那么在阅读本文前，可能需要阅读[零基础调试](../debugger/debugging-absolute-beginners.md)和[调试技术和工具](../debugger/write-better-code-with-visual-studio.md)。
+Visual Studio 调试器可帮助你浏览代码，以检查应用的状态并显示其执行流。 可以使用键盘快捷方式、调试命令、断点和其他功能来快速访问要检查的代码。 熟悉调试器导航命令和快捷方式有助于更快、更轻松地查找和解决应用问题。
+
+> [!NOTE]
+> 如果是首次尝试调试代码，那么在阅读本文前，可能需要阅读[零基础调试](../debugger/debugging-absolute-beginners.md)和[调试技术和工具](../debugger/write-better-code-with-visual-studio.md)。
 
 ## <a name="get-into-break-mode"></a>进入“中断模式”
 

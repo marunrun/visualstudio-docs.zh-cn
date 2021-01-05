@@ -1,5 +1,7 @@
 ---
 title: 符号元素 |Microsoft Docs
+description: 符号元素定义其他 .VSCT 元素使用的 Guid 和 Id。 本文包含一个示例。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5c24c3f84df23a07b6b16272b66b29e32ad7b911
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8e86406c4c10c2f65e8e43d8f3cb67f413ed3c63
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699353"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715556"
 ---
 # <a name="symbols-element"></a>Symbols 元素
 定义其他 .VSCT 元素使用的 Guid 和 Id。 对于非托管代码，此信息通常来自 [Extern 元素](../extensibility/extern-element.md)指定的标头文件。 托管代码使用符号元素的子元素来定义此信息。
@@ -39,7 +41,7 @@ ms.locfileid: "80699353"
 
 ### <a name="attributes"></a>特性
 
-|特性|说明|
+|属性|说明|
 |---------------|-----------------|
 |无||
 

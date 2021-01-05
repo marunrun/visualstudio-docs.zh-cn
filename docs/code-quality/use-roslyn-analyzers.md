@@ -13,12 +13,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: f5ca27d44e611ab3b541dfb5992ef37d230513c3
-ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
+ms.openlocfilehash: fc74a556fe6baf21b6270b21951018fc246aa962
+ms.sourcegitcommit: 74b67f102d243e3b74a93563e834f49df298e4b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96040636"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97696629"
 ---
 # <a name="overview"></a>概述
 
@@ -333,7 +333,7 @@ dotnet_diagnostic.CA2231.severity = warning
 
 - 从 " **分析** " 菜单
 
-  **Analyze**  >  在菜单栏上选择 "分析 **生成并取消活动问题**" 可禁止显示所有当前冲突。 这有时称为 "基线"。
+    >  在菜单栏上选择 "分析 **生成并取消活动问题**" 可禁止显示所有当前冲突。 这有时称为 "基线"。
 
 ::: moniker-end
 
@@ -341,7 +341,7 @@ dotnet_diagnostic.CA2231.severity = warning
 
 - 从 " **分析** " 菜单
 
-  **Analyze**  >  在菜单栏上选择 "分析 **运行代码分析" 和 "取消活动问题**"，禁止显示所有当前冲突。 这有时称为 "基线"。
+    >  在菜单栏上选择 "分析 **运行代码分析" 和 "取消活动问题**"，禁止显示所有当前冲突。 这有时称为 "基线"。
 
 ::: moniker-end
 
@@ -355,13 +355,13 @@ dotnet_diagnostic.CA2231.severity = warning
 
 - 从 **代码编辑器**
 
-  将光标放在包含冲突的代码行中，然后按 **Ctrl** + **Period (。 )** 打开 "**快速操作**" 菜单。 选择 **Suppress CAXXXX**  >  **"在源/禁止显示文件中** 取消 CAXXXX"。
+  将光标放在包含冲突的代码行中，然后按 **Ctrl** + **Period (。 )** 打开 "**快速操作**" 菜单。 选择  >  **"在源/禁止显示文件中** 取消 CAXXXX"。
 
   ![禁止显示 "快速操作" 菜单中的诊断](media/suppress-diagnostic-from-editor.png)
 
 - 从 **错误列表**
 
-  选择要禁止显示的规则，然后右键单击并选择 "在 **Suppress**  >  **源/隐藏文件** 中取消"。
+  选择要禁止显示的规则，然后右键单击并选择 "在  >  **源/隐藏文件** 中取消"。
 
   - 如果在 " **源" 中** 取消，则会打开 " **预览更改** " 对话框，并显示 c # [#pragma 警告](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning) 或 Visual Basic 添加到源代码中 [#Disable 警告](/dotnet/visual-basic/language-reference/directives/directives) 指令的预览。
 
@@ -382,7 +382,9 @@ dotnet_diagnostic.CA2231.severity = warning
 
 当你在命令行中生成项目时，如果满足以下条件，则会在生成输出中显示规则冲突：
 
-- 分析器以 NuGet 包的形式安装，而不是作为 VSIX 扩展。
+- 分析器与 .NET SDK 一起安装，或者作为 NuGet 包进行安装，而不是作为 VSIX 扩展。
+
+  对于使用 .NET SDK 安装的分析器，可能需要 [启用分析器](../code-quality/install-net-analyzers.md)。 对于代码样式，还可以通过设置 MSBuild 属性 [在生成上强制实施代码样式](/dotnet/fundamentals/code-analysis/overview#code-style-analysis) 。
 
 - 项目的代码中违反了一个或多个规则。
 
@@ -411,7 +413,7 @@ msbuild myproject.csproj /target:rebuild /verbosity:minimal
 <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="5.0.0" PrivateAssets="all" />
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 中的代码分析器概述](../code-quality/roslyn-analyzers-overview.md)
 - [提交代码分析器 bug](https://github.com/dotnet/roslyn-analyzers/issues)

@@ -1,5 +1,7 @@
 ---
 title: 订阅事件 |Microsoft Docs
+description: 了解如何创建响应 Visual Studio SDK 中正在运行的文档表中的事件的工具窗口。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,24 +13,24 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6aefe2efce897aefc26f63835844b0cc705fb5b1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c739dad7be8d2a000662eca478bc117699694c8a
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699689"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715868"
 ---
 # <a name="subscribing-to-an-event"></a>订阅事件
 本演练介绍如何创建一个工具窗口，该窗口对运行的文档表中的事件进行响应 (RDT) 。 工具窗口承载实现的用户控件 <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents> 。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.AdviseRunningDocTableEvents%2A>方法将接口连接到事件。
 
 ## <a name="prerequisites"></a>先决条件
- 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+ 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 也可稍后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
 ## <a name="subscribing-to-rdt-events"></a>订阅 RDT 事件
 
 #### <a name="to-create-an-extension-with-a-tool-window"></a>使用工具窗口创建扩展
 
-1. 使用 VSIX 模板创建名为 **RDTExplorer** 的项目，并添加一个名为 **RDTExplorerWindow**的自定义工具窗口项模板。
+1. 使用 VSIX 模板创建名为 **RDTExplorer** 的项目，并添加一个名为 **RDTExplorerWindow** 的自定义工具窗口项模板。
 
      有关使用工具窗口创建扩展的详细信息，请参阅 [使用工具窗口创建扩展](../extensibility/creating-an-extension-with-a-tool-window.md)。
 

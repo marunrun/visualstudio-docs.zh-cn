@@ -1,5 +1,7 @@
 ---
 title: Visual Studio 的常见控件模式 |Microsoft Docs
+description: 了解 Visual Studio 常见控件如何遵循 Windows 桌面交互指导原则，以及有关增强这些准则的特殊情况。
+ms.custom: SEO-VS-2020
 ms.date: 04/26/2017
 ms.topic: conceptual
 ms.assetid: 3e893949-6398-42f1-9eab-a8d8c2b7f02d
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b0b5a1904c01f5688a00e45de7feed7ae326d9b3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3c1caccebf1dc14146bef214a4d33e1216243780
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80698717"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715881"
 ---
 # <a name="common-control-patterns-for-visual-studio"></a>Visual Studio 的公共控件模式
 ## <a name="common-controls"></a><a name="BKMK_CommonControls"></a> 公共控件
@@ -185,7 +187,7 @@ ms.locfileid: "80698717"
 
 - 空工具窗口或对话框中的水印文本，用于说明内容不可见的原因。
 
-- 说明窗格，如 **属性窗口**的底部。
+- 说明窗格，如 **属性窗口** 的底部。
 
 - 空编辑器中的水印文本，用于说明用户开始使用的操作。
 
@@ -363,7 +365,7 @@ Visual Studio 中的大多数按钮将出现在实用工具对话框中，不应
 
 ![生成上下文菜单的项获得焦点，以通知用户已选择了哪个项。](../../extensibility/ux-guidelines/media/070705-5_contextmenu.png "070705-5_ContextMenu")<br />生成上下文菜单的项获得焦点，以通知用户已选择了哪个项。
 
-#### <a name="keyboard"></a>Keyboard
+#### <a name="keyboard"></a>键盘
 树视图应提供选择项和使用键盘展开/折叠节点的功能。 这可以确保导航满足我们的辅助功能要求。
 
 ##### <a name="tree-view-control"></a>树视图控件

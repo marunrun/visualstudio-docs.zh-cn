@@ -18,12 +18,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7af24dbbb510fb1d5c9c62b40d5986ea5c74d35b
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: d935ee5c4341a2d625c6f85226cc649d696d6e6e
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97361646"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729387"
 ---
 # <a name="use-code-maps-to-debug-your-applications"></a>使用代码图调试你的应用程序
 
@@ -62,9 +62,9 @@ ms.locfileid: "97361646"
 ## <a name="navigate-and-examine-code-from-the-map"></a>浏览并检查映射中的代码
  若要查看每个字段的代码定义，请双击地图上的字段，或选择该字段并按 **F12**。 绿色箭头在代码图上的各项之间移动。 代码编辑器中的光标也会自动移动。
 
- ![代码图 &#45; 检查字段定义](../modeling/media/codemapstoryboardpaint5.png)
+ !["代码图" 窗口的屏幕截图，其中选择了 "历史记录" 字段和 "代码编辑器" 窗口，其中突出显示了历史记录的所有实例。](../modeling/media/codemapstoryboardpaint5.png)
 
- ![代码图 &#45; 检查字段定义](../modeling/media/codemapstoryboardpaint5a.png)
+ !["代码图" 窗口的屏幕截图，其中选择了 "paintObjects" 字段和 "代码编辑器" 窗口，其中 paintObjects 的所有实例都会突出显示。](../modeling/media/codemapstoryboardpaint5a.png)
 
 > [!TIP]
 > 你还可以通过在代码编辑器中移动光标来移动代码图上的绿色箭头。
@@ -81,24 +81,24 @@ ms.locfileid: "97361646"
 
  更改布局以重新排列关系流并使代码图更容易阅读。 你还可以通过在代码图上拖动各个项来移动它们。
 
- ![代码图 &#45; 更改布局](../modeling/media/codemapstoryboardpaint7a.png)
+ ![代码图窗口的屏幕截图，其中打开了布局菜单并选中了 "左侧到 Rgiht" 命令。](../modeling/media/codemapstoryboardpaint7a.png)
 
 > [!TIP]
 > 默认情况下，" **增量布局** " 处于打开状态。 当你添加新的项时，这会尽可能少地重新排列代码图。 若要在每次添加新项时重新排列整个映射，请关闭 " **增量布局**"。
 
- ![代码图 &#45; 更改布局](../modeling/media/codemapstoryboardpaint7.png)
+ ![在从左到右的字段之间有 relationshiop 箭头的代码图窗口的屏幕截图。](../modeling/media/codemapstoryboardpaint7.png)
 
  让我们检查这些方法。 在地图上，双击 " **PaintCanvas** " 方法，或选择此方法并按 " **F12**"。 你将了解到，此方法将以空列表的形式创建 `history` 和 `paintObjects`。
 
- ![代码图 &#45; 检查方法定义](../modeling/media/codemapstoryboardpaint8.png)
+ ![代码图窗口的屏幕截图，其中选择了 PaintCanvas 方法，并显示了显示 PainCanvas 方法名称的代码段图像。](../modeling/media/codemapstoryboardpaint8.png)
 
  现在请重复相同的步骤以检查 `clear` 方法定义。 你将了解到，`clear` 会通过 `paintObjects` 和 `history` 执行某些任务， 然后它将调用 `Repaint` 方法。
 
- ![代码图 &#45; 检查方法定义](../modeling/media/codemapstoryboardpaint9.png)
+ ![代码图窗口的屏幕截图，其中选择了 Clear 方法，并显示了显示 Clear 方法代码的代码段图像。](../modeling/media/codemapstoryboardpaint9.png)
 
  现在请检查 `addPaintObject` 方法定义。 它也使用 `history` 和 `paintObjects` 执行某些任务， 它还调用 `Repaint`。
 
- ![代码图 &#45; 检查方法定义](../modeling/media/codemapstoryboardpaint10.png)
+ !["代码图" 窗口的屏幕截图，其中选择了 addPaintObject 方法和一个显示 addPaintObject 方法代码的代码段图像。](../modeling/media/codemapstoryboardpaint10.png)
 
 ## <a name="find-the-problem-by-examining-the-map"></a>通过检查映射找到问题
  似乎修改 `history` 和 `paintObjects` 的所有方法都会调用 `Repaint`。 但是，`undo` 方法不会调用 `Repaint`，即使 `undo` 修改相同的字段。 因此，你认为可以通过从 `Repaint` 调用 `undo` 来解决此问题。
@@ -142,7 +142,7 @@ ms.locfileid: "97361646"
 
  现在，你已经完成了调查。 你通过映射代码成功找到并解决了问题。 你也拥有可帮助你浏览代码的代码图，请记住你所学的内容并演示你用于解决此问题的步骤。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [调试时映射调用堆栈上的方法](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md)
 - [代码可视化](../modeling/visualize-code.md)

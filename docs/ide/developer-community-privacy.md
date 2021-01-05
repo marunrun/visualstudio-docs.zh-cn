@@ -12,16 +12,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 82c89f2f6ec2a1a9bc6c87a600c355226b2f3da4
-ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
+ms.openlocfilehash: dccf962aef39227388f86134a9dd1f8c96440a3c
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95005933"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668542"
 ---
 # <a name="developer-community-data-privacy"></a>开发人员社区数据隐私
 
-默认情况下，[开发者社区](https://developercommunity.visualstudio.com/)公开显示问题报告的所有信息，包括所有评论和回复。 这非常有用，因为这让整个社区都能看到其他用户发现的问题、绕过方法和解决方案。 但是，如果担心数据或身份隐私，可选择其他方式。
+默认情况下，[开发者社区](https://aka.ms/feedback/suggest?space=8)公开显示问题报告的所有信息，包括所有评论和回复。 这非常有用，因为这让整个社区都能看到其他用户发现的问题、绕过方法和解决方案。 但是，如果担心数据或身份隐私，可选择其他方式。
 
 ## <a name="identity-privacy"></a>身份隐私
 

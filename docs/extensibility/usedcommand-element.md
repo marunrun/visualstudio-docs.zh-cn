@@ -1,5 +1,7 @@
 ---
 title: UsedCommand 元素 |Microsoft Docs
+description: UsedCommand 元素允许 VSPackage 访问在另一个 .vsct 文件中定义的命令。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 65030c3fe24c3456b0c4c99a667362d2a4c67703
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6d1dcef25413bddbb1eb5c35a47a9dc0d30f4a8f
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80698829"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715959"
 ---
 # <a name="usedcommand-element"></a>UsedCommand 元素
 允许 VSPackage 访问在 .vsct 文件中定义的命令。 例如，如果你的 VSPackage 使用由 shell 定义的标准 **复制** 命令， [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 则可以将命令添加到菜单或工具栏，而无需重新实现它。
@@ -32,7 +34,7 @@ ms.locfileid: "80698829"
 
 ### <a name="attributes"></a>特性
 
-|特性|说明|
+|属性|说明|
 |---------------|-----------------|
 |guid|必需。 标识命令的 GUID ID 对的 GUID。|
 |id|必需。 标识命令的 GUID ID 对的 ID。|

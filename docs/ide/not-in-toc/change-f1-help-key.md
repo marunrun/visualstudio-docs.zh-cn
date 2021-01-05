@@ -3,17 +3,17 @@ title: 更改 F1 帮助键
 description: 介绍如何重新映射或删除 F1 键映射
 ms.date: 08/20/2020
 ms.topic: how-to
-ms.custom: contperfq1
+ms.custom: contperf-fy21q1
 robots: noindex,nofollow
 manager: jillfra
 author: mikejo5000
 ms.author: mikejo
-ms.openlocfilehash: debf469248a8ec1906f3692c37835d9f96476f54
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.openlocfilehash: d9add6996949a97d6140ab6d063f13e02b677e79
+ms.sourcegitcommit: c558d8a0f02ed2c932c8d6f70756d8d2cedb10b3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88802289"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97684080"
 ---
 # <a name="change-the-f1-help-key-in-visual-studio"></a>在 Visual Studio 中更改 F1 帮助键
 

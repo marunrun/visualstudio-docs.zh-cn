@@ -11,12 +11,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: bdb053218b65924abfa64053a8a3c7e9e0543d49
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: 2ca1cdcc1da97f8fa0d5def89e4f437607b36dd9
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96329505"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668750"
 ---
 # <a name="settings-waterfall"></a>设置瀑布图
 
@@ -50,4 +50,4 @@ namespace MyTests
 
 ## <a name="got-feedback"></a>有反馈？
 
-在[开发人员社区](https://developercommunity.visualstudio.com/content/idea/post.html?space=8)上发布想法和功能请求。
+在[开发人员社区](https://aka.ms/feedback/suggest?space=8)上发布想法和功能请求。

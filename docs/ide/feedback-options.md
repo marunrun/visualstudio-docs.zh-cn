@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-ms.openlocfilehash: 3b50ec910c6d5880ead2df48db2ef763753379bb
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 11caf55a8412477ac94d290add667b9393435fb6
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90807880"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668737"
 ---
 # <a name="visual-studio-feedback-options"></a>Visual Studio 反馈选项
 
@@ -34,7 +34,7 @@ ms.locfileid: "90807880"
 
 ![Visual Studio 2019 IDE 的发送反馈图标](./media/vs-2019/send-feedback-icon.png)
 
-接下来，Visual Studio 打开[开发者社区](https://developercommunity.visualstudio.com)界面。在此界面中，可以在登录后报告问题。 有关详细信息，请参阅[如何报告 Visual Studio 的问题](how-to-report-a-problem-with-visual-studio.md)。
+接下来，Visual Studio 打开[开发者社区](https://aka.ms/feedback/suggest?space=8)界面。在此界面中，可以在登录后报告问题。 有关详细信息，请参阅[如何报告 Visual Studio 的问题](how-to-report-a-problem-with-visual-studio.md)。
 
 ::: moniker-end
 
@@ -44,7 +44,7 @@ ms.locfileid: "90807880"
 
 ![Visual Studio 2019 IDE 的发送反馈图标](./media/send-feedback-icon.png)
 
-接下来，Visual Studio 打开[开发者社区](https://developercommunity.visualstudio.com)界面。在此界面中，可以在登录后报告问题。 有关详细信息，请参阅[如何报告 Visual Studio 的问题](how-to-report-a-problem-with-visual-studio.md)。
+接下来，Visual Studio 打开[开发者社区](https://aka.ms/feedback/suggest?space=8)界面。在此界面中，可以在登录后报告问题。 有关详细信息，请参阅[如何报告 Visual Studio 的问题](how-to-report-a-problem-with-visual-studio.md)。
 
 ::: moniker-end
 
@@ -54,7 +54,7 @@ ms.locfileid: "90807880"
 
 如果你有改进 Visual Studio 的想法或建议，请使用“建议功能”  工具告诉我们。 在 Visual Studio 中，选择右上角的反馈图标，或依次选择菜单栏中的“帮助” > “发送反馈” > “功能建议”。
 
-接下来，Visual Studio 打开[开发者社区](https://developercommunity.visualstudio.com)界面。在此界面中，可以在登录后分享想法。 有关详细信息，请参阅[提出 Visual Studio 功能建议](suggest-a-feature.md)。
+接下来，Visual Studio 打开[开发者社区](https://aka.ms/feedback/suggest?space=8)界面。在此界面中，可以在登录后分享想法。 有关详细信息，请参阅[提出 Visual Studio 功能建议](suggest-a-feature.md)。
 
 ::: moniker-end
 
@@ -62,7 +62,7 @@ ms.locfileid: "90807880"
 
 如果你有改进 Visual Studio 的想法或建议，请使用“提供建议”  工具告诉我们。 在 Visual Studio 中，选择搜索框旁边的反馈图标，或依次选择菜单栏中的“帮助” > “发送反馈” > “提供建议”。
 
-接下来，Visual Studio 打开[开发者社区](https://developercommunity.visualstudio.com)页面。在此页面中，可以在登录后分享想法。 有关详细信息，请参阅[提出 Visual Studio 功能建议](suggest-a-feature.md)。
+接下来，Visual Studio 打开[开发者社区](https://aka.ms/feedback/suggest?space=8)页面。在此页面中，可以在登录后分享想法。 有关详细信息，请参阅[提出 Visual Studio 功能建议](suggest-a-feature.md)。
 
 ::: moniker-end
 

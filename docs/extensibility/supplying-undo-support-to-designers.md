@@ -1,5 +1,7 @@
 ---
 title: 为设计器提供撤消支持 |Microsoft Docs
+description: 了解如何在设计器中使用 Visual Studio SDK 中的功能自动或提供撤消支持。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0580f974c362a71c3e400946f2ad34f565ad1232
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4108e259fb0a2e60c2719df8a7fb76f273634799
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699678"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715570"
 ---
 # <a name="supply-undo-support-to-designers"></a>为设计器提供撤消支持
 
@@ -29,7 +31,7 @@ ms.locfileid: "80699678"
 
 - 通过实现和类提供持久性和 CodeDOM <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationService> 支持  <xref:System.ComponentModel.Design.IComponentChangeService> 。
 
-有关使用 .NET Framework 编写设计器的详细信息，请参阅 [扩展设计时支持](/previous-versions/37899azc(v=vs.140))。
+有关使用 .NET Framework 编写设计器的详细信息，请参阅 [扩展 Design-Time 支持](/previous-versions/37899azc(v=vs.140))。
 
 [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)]通过以下方式提供默认的撤消基础结构：
 
@@ -99,8 +101,8 @@ ms.locfileid: "80699678"
 
 - 设计器选择使用由的实现提供的标准撤消单元 <xref:System.ComponentModel.Design.UndoEngine.UndoUnit> 或从派生的 Visual Studio 特定实现来显式创建撤消单元， <xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine.UndoUnit> <xref:System.ComponentModel.Design.UndoEngine.UndoUnit> 同时还提供和的实现 <xref:Microsoft.VisualStudio.OLE.Interop.IOleUndoUnit> <xref:Microsoft.VisualStudio.OLE.Interop.IOleParentUndoUnit> 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.ComponentModel.Design.UndoEngine>
 - <xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine>
-- [扩展设计时支持](/previous-versions/37899azc(v=vs.140))
+- [扩展 Design-Time 支持](/previous-versions/37899azc(v=vs.140))

@@ -1,5 +1,7 @@
 ---
 title: 自定义编辑器中的语法着色 |Microsoft Docs
+description: 了解 Visual Studio 环境 SDK 自定义编辑器中的语法着色，其中显示给定文档视图的指定颜色。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 72749d3a58b4adae149baefff9e9ae77f6b05f18
-ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
+ms.openlocfilehash: 8aac72cbc26ff5e6abf96259fd161cba63b3b2af
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93414173"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97716063"
 ---
 # <a name="syntax-coloring-in-custom-editors"></a>自定义编辑器中的语法着色
 Visual Studio 环境 SDK 编辑器（包括核心编辑器）使用语言服务来识别特定的语法项，并为给定的文档视图以指定的颜色显示它们。

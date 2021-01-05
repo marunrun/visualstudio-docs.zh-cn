@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 52eee3535590842db53cd80ac761286fb4a23fa9
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 1fc40c826499b36d5d713d0842a2c0e8dae462d1
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93398990"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668360"
 ---
 # <a name="install-and-use-visual-studio-and-azure-services-behind-a-firewall-or-proxy-server"></a>在防火墙或代理服务器后面安装和使用 Visual Studio 和 Azure 服务
 
@@ -155,7 +155,7 @@ ms.locfileid: "93398990"
 下面是另外几个支持选项：
 
 * 通过[报告问题](../ide/how-to-report-a-problem-with-visual-studio.md)工具（会出现在 Visual Studio 安装程序和 Visual Studio IDE 中）向我们报告产品问题。
-* 在 [Visual Studio 开发人员社区](https://developercommunity.visualstudio.com/)中，可提出功能建议、跟踪产品问题，并能找到答案。
+* 在 [Visual Studio 开发人员社区](https://aka.ms/feedback/suggest?space=8)中，可提出功能建议、跟踪产品问题，并能找到答案。
 * 使用你的 [GitHub](https://github.com/) 帐户，通过 [Gitter 社区的 Visual Studio 对话](https://gitter.im/Microsoft/VisualStudio)与我们和其他 Visual Studio 开发人员进行交流。
 
 ## <a name="see-also"></a>请参阅

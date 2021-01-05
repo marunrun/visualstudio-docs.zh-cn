@@ -8,12 +8,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dfcdcfc309fb951b2f7e490f0d03dcfe9d381b83
-ms.sourcegitcommit: 54ec951bcfa87fd80a42e3ab4539084634a5ceb4
+ms.openlocfilehash: 3e30dcb6a9d65cb562851ed90e350530759975d2
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92116145"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668555"
 ---
 # <a name="developer-community-guidelines"></a>开发者社区指南
 
@@ -21,7 +21,7 @@ ms.locfileid: "92116145"
 
 ## <a name="submitting-problems-and-suggestions"></a>提交问题和建议
 
-[Visual Studio 开发者社区](https://developercommunity.visualstudio.com/)负责跟踪 Visual Studio 的问题和功能建议。
+[Visual Studio 开发者社区](https://aka.ms/feedback/suggest?space=8)负责跟踪 Visual Studio 的问题和功能建议。
 
 ### <a name="before-submitting-an-issue"></a>提交问题前
 
@@ -117,4 +117,4 @@ ms.locfileid: "92116145"
 
 ## <a name="next-steps"></a>后续步骤
 
-前往 [Visual Studio 开发者社区](https://developercommunity.visualstudio.com/)报告问题、建议功能或浏览现有票证。 请尽情体验吧！
+前往 [Visual Studio 开发者社区](https://aka.ms/feedback/suggest?space=8)报告问题、建议功能或浏览现有票证。 请尽情体验吧！

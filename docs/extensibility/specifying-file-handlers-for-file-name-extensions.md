@@ -1,5 +1,7 @@
 ---
 title: 指定文件扩展名的文件处理程序 |Microsoft Docs
+description: 了解如何通过使用 OpenWithList 和 OpenWithProgids 来确定哪些应用程序处理 Visual Studio SDK 中的文件扩展名。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: af195aea09c91696843c6be42c20053bb8c095a2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 421244cd88af43e7602298e7384a632c8aa51833
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699755"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715595"
 ---
 # <a name="specifying-file-handlers-for-file-name-extensions"></a>指定文件扩展名的文件处理程序
 可以通过多种方式来确定处理具有特定文件扩展名的文件的应用程序。 OpenWithList 和 OpenWithProgids 谓词是在文件扩展名的注册表项下指定文件处理程序的两种方法。
@@ -34,7 +36,7 @@ HKEY_CLASSES_ROOT\
 ```
 
 > [!NOTE]
-> 指定应用程序的键来自 HKEY_CLASSES_ROOT \Applications. 下的列表。
+> 指定应用程序的键来自 HKEY_CLASSES_ROOT\Applications 下的列表。
 
  通过添加 OpenWithList 密钥，你可以声明应用程序支持文件扩展名，即使其他应用程序获得扩展的所有权。 这可能是你的应用程序或其他应用程序的未来版本。
 
@@ -75,7 +77,7 @@ HKEY_CLASSES_ROOT\
          VisualStudio.vcproj.14.0 //new progid
 ```
 
- 如果旧 ProgID 具有与之关联的谓词，则这些谓词还将显示在快捷菜单中的 "**以***产品名称*打开" 下。
+ 如果旧 ProgID 具有与之关联的谓词，则这些谓词还将显示在快捷菜单中的 "**以***产品名称* 打开" 下。
 
 ## <a name="see-also"></a>另请参阅
 - [关于文件扩展名](../extensibility/about-file-name-extensions.md)

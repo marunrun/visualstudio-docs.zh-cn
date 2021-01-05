@@ -1,5 +1,7 @@
 ---
 title: 发布 Visual Studio 扩展 |Microsoft Docs
+description: 了解如何发布和维护 Visual Studio SDK 扩展，包括处理 .vsix 文件、发布、本地化和更新。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 767bb24bb5cb47f1af1452aa04ebdc91c778e284
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 812fc4f4e2f8dcf54876e2764f0c091f16348496
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80700109"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715998"
 ---
 # <a name="shipping-visual-studio-extensions"></a>传送 Visual Studio 扩展
 完成扩展开发后，可以将其安装在其他计算机上，与朋友和同事共享，或将其发布到 Visual Studio Marketplace。 在本部分中，我们将介绍需要执行哪些操作才能发布和维护扩展：使用 .vsix 文件、发布、本地化和更新。
@@ -30,7 +32,7 @@ ms.locfileid: "80700109"
  VSIX 格式不支持安装代码片段。 它也不支持某些其他方案，例如向全局程序集缓存写入 (GAC) 或系统注册表。 如果需要写入 GAC 或安装中的注册表，则必须使用 Windows Installer。 有关详细信息，请参阅 [准备 Windows Installer 部署扩展](../extensibility/preparing-extensions-for-windows-installer-deployment.md)。
 
 ## <a name="publishing-your-extension-to-the-visual-studio-marketplace"></a>将扩展发布到 Visual Studio Marketplace
- 只需通过向用户发送 .vsix 文件或将其放在服务器上，即可将扩展分发给其他人。 但很多人都要将您的代码放在 [Visual Studio Marketplace](https://marketplace.visualstudio.com/vs)上。 Visual Studio Marketplace 扩展可通过 **扩展和更新**提供给 Visual Studio 用户。 有关详细信息，请参阅 [查找和使用 Visual Studio 扩展](../ide/finding-and-using-visual-studio-extensions.md)。
+ 只需通过向用户发送 .vsix 文件或将其放在服务器上，即可将扩展分发给其他人。 但很多人都要将您的代码放在 [Visual Studio Marketplace](https://marketplace.visualstudio.com/vs)上。 Visual Studio Marketplace 扩展可通过 **扩展和更新** 提供给 Visual Studio 用户。 有关详细信息，请参阅[查找和使用 Visual Studio 扩展](../ide/finding-and-using-visual-studio-extensions.md)。
 
  有关演示如何将扩展上载到 Visual Studio Marketplace 的完整示例，请参阅 [演练：发布 Visual Studio 扩展](../extensibility/walkthrough-publishing-a-visual-studio-extension.md)。
 
@@ -57,6 +59,6 @@ ms.locfileid: "80700109"
 |[如何：将依赖项添加到 VSIX 包](../extensibility/how-to-add-a-dependency-to-a-vsix-package.md)|介绍如何添加对 VSIX 部署包的引用。|
 |[准备 Windows Installer 部署的扩展](../extensibility/preparing-extensions-for-windows-installer-deployment.md)|说明如何通过 Windows Installer 部署扩展。|
 |[对 VSIX 包进行签名](../extensibility/signing-vsix-packages.md)|说明如何对 VSIX 包进行签名。|
-|[Private Galleries](../extensibility/private-galleries.md)|说明如何为扩展创建专用库。|
+|[专用库](../extensibility/private-galleries.md)|说明如何为扩展创建专用库。|
 |[支持多个版本的 Visual Studio](../extensibility/supporting-multiple-versions-of-visual-studio.md)|演示如何使你的扩展支持多个版本的 Visual Studio。|
 |[查找 Visual Studio](locating-visual-studio.md)|描述如何查找用于自定义扩展部署的 Visual Studio 实例。|

@@ -3,7 +3,7 @@ title: 更改主题、字体、文本和对比度以提供辅助功能
 description: 了解如何更改 Visual Studio 颜色主题、字体颜色、文本大小和额外的对比度颜色，以提供辅助功能。
 ms.date: 08/20/2020
 ms.topic: how-to
-ms.custom: contperfq1
+ms.custom: contperf-fy21q1
 helpviewer_keywords:
 - Visual Studio, color themes
 - color themes, Visual Studio
@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b2410974ed95b1aa8dca3dc3e31a39c39df2d4a0
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.openlocfilehash: 7c52be25c007a16d7e6221663c434767c02d8d50
+ms.sourcegitcommit: c558d8a0f02ed2c932c8d6f70756d8d2cedb10b3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88801433"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97683902"
 ---
 # <a name="how-to-change-fonts-colors-and-themes-in-visual-studio"></a>如何：在 Visual Studio 中更改字体、颜色和主题
 
@@ -116,7 +116,7 @@ ms.locfileid: "88801433"
 若要详细了解可供使用的其他 Visual Studio 辅助功能选项，请参阅 [Visual Studio 的辅助功能](../ide/reference/accessibility-features-of-visual-studio.md)页。
 
 > [!TIP]
-> 如果有你认为可能有用但当前在 Visual Studio 中不可用的颜色或字体辅助功能选项，请通过选择 [Visual Studio 开发者社区](https://developercommunity.visualstudio.com/)中的“建议功能”来告知我们。 有关此论坛及其工作原理的详细信息，请参阅[建议功能](../ide/suggest-a-feature.md)页。
+> 如果有你认为可能有用但当前在 Visual Studio 中不可用的颜色或字体辅助功能选项，请通过选择 [Visual Studio 开发者社区](https://aka.ms/feedback/suggest?space=8)中的“建议功能”来告知我们。 有关此论坛及其工作原理的详细信息，请参阅[建议功能](../ide/suggest-a-feature.md)页。
 
 ## <a name="next-steps"></a>后续步骤
 

@@ -1,5 +1,7 @@
 ---
 title: 简化的嵌入 |Microsoft Docs
+description: 了解简化嵌入功能，当其文档视图对象为 Visual Studio 的子级时，可以在编辑器中启用此功能。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b9bc9619ae1ed75aed3656ff014296f7c7d88fa0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 99aaf5070646bbbb95c6be98eb8ac2f7a5948ff2
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80700075"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715270"
 ---
 # <a name="simplified-embedding"></a>简化的嵌入
 如果在编辑器的文档视图对象的父级为 (即成为) 的子级，则在编辑器中启用简化嵌入， [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 并 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> 实现接口以处理其窗口命令。 简化的嵌入编辑器无法承载活动控件。 下图显示了用于创建具有简化嵌入的编辑器的对象。
@@ -27,12 +29,12 @@ ms.locfileid: "80700075"
 
  为创建具有简化嵌入的编辑器而实现的所有接口都包含在 `CYourEditorDocument` 对象中。 但是，若要支持文档数据的多个视图，请将接口拆分为单独的数据并查看对象，如下表所示。
 
-|接口|接口的位置|使用|
+|接口|接口的位置|用途|
 |---------------|---------------------------|---------|
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane>|查看|提供与父窗口的连接。|
-|<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>|查看|处理命令。|
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser>|查看|启用状态栏更新。|
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsToolboxUser>|查看|启用 **工具箱** 项。|
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane>|视图|提供与父窗口的连接。|
+|<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>|视图|处理命令。|
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser>|视图|启用状态栏更新。|
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsToolboxUser>|视图|启用 **工具箱** 项。|
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsFileChangeEvents>|数据|当文件发生更改时发送通知。|
 |<xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat>|数据|为文件类型启用 "另存为" 功能。|
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2>|数据|实现文档持久性。|
