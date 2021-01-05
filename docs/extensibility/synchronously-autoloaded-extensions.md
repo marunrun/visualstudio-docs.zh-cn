@@ -1,5 +1,7 @@
 ---
 title: 以同步方式加载了扩展
+description: 了解从 Visual Studio 2019 开始的默认行为，该行为会阻止从任何扩展同步加载包。
+ms.custom: SEO-VS-2020
 ms.date: 12/11/2019
 ms.topic: conceptual
 ms.assetid: 822e3cf8-f723-4ff1-8467-e0fb42358a1f
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ab62d235fd6ed4e47e765fc23868acd5c56efcb2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 506c098f1f385ddf39c5d000f4571a8ee92c09fc
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699374"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715439"
 ---
 # <a name="synchronously-autoloaded-extensions"></a>以同步方式加载了扩展
 
@@ -21,7 +23,7 @@ ms.locfileid: "80699374"
 
 ![扩展兼容性警告](media/extension-compatibility-warning-16-1.png.png)
 
-你可以：
+可以执行以下操作：
 
 - 单击 " **允许同步 autoload** 以允许扩展到 autoload"。 若要在 Visual Studio 的 "选项" 中更改此设置，请单击 "环境"，然后单击 "扩展"，然后选中 "允许同步扩展 autoload" 复选框。 
 
@@ -42,7 +44,7 @@ ms.locfileid: "80699374"
 
 管理员可以允许组策略允许同步 autoload。 为此，请在以下键上设置基于注册表的策略：
 
-**HKEY_LOCAL_MACHINE \SOFTWARE\Policies\Microsoft\VisualStudio\SynchronousAutoload**
+**HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\VisualStudio\SynchronousAutoload**
 
 Entry = **允许**
 

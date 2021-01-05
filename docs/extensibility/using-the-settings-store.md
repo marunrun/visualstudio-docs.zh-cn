@@ -1,5 +1,7 @@
 ---
 title: 使用设置存储 |Microsoft Docs
+description: 了解如何从配置设置存储中读取数据，这些数据是只读的 Visual Studio 和 VSPackage 设置。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b3bbc09586f883e067e32f525a0331c1a9e253f5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: aeb147c245f7dc09cf91db8a1b810a7c5f30b46b
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80698520"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715907"
 ---
 # <a name="using-the-settings-store"></a>使用设置存储
 有两种类型的设置存储：
@@ -31,7 +33,7 @@ ms.locfileid: "80698520"
 
 1. 每个 Visual Studio 扩展都从包含扩展资产的 VSIX 部署项目开始。 创建一个 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 名为的 VSIX 项目 `SettingsStoreExtension` 。 可以在 " **新项目** " 对话框中的 " **Visual c #/扩展性**" 下找到 VSIX 项目模板。
 
-2. 现在，添加一个名为 **SettingsStoreCommand**的自定义命令项模板。 在 " **添加新项** " 对话框中，切换到 " **Visual c #/扩展性** "，然后选择 " **自定义命令**"。 在窗口底部的 " **名称** " 字段中，将命令文件名更改为 **SettingsStoreCommand.cs**。 有关如何创建自定义命令的详细信息，请参阅 [使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)
+2. 现在，添加一个名为 **SettingsStoreCommand** 的自定义命令项模板。 在 " **添加新项** " 对话框中，切换到 " **Visual c #/扩展性** "，然后选择 " **自定义命令**"。 在窗口底部的 " **名称** " 字段中，将命令文件名更改为 **SettingsStoreCommand.cs**。 有关如何创建自定义命令的详细信息，请参阅 [使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)
 
 ## <a name="using-the-configuration-settings-store"></a>使用配置设置存储
  本部分说明如何检测和显示配置设置。
@@ -79,9 +81,9 @@ ms.locfileid: "80698520"
 
 1. 打开 Regedit.exe。
 
-2. 导航到 HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\14. 0Exp_Config \InstalledProducts \\ 。
+2. 导航到 HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0Exp_Config\InstalledProducts\\ 。
 
     > [!NOTE]
-    > 请确保正在查看包含 \ 14. 0Exp_Config 的密钥，而不是 \ 14. 0_Config \\ 。 运行 Visual Studio 的实验实例时，配置设置位于注册表配置单元 "14. 0Exp_Config" 中。
+    > 请确保正在查看包含 \ 14.0Exp_Config 的密钥，而非 14.0_Config \\ 。 运行 Visual Studio 的实验实例时，配置设置位于注册表配置单元 "14.0Exp_Config" 中。
 
 3. 展开 "\Installed Products \" 节点。 如果前面步骤中的消息是 " **microsoft Windows Phone 开发人员工具已安装： True**，则 \Installed Products \ 应包含 microsoft Windows Phone 开发人员工具节点。 如果消息为 **Microsoft Windows Phone 开发人员工具已安装： False**，则 \Installed Products \ 不应包含 microsoft Windows Phone 开发人员工具节点。

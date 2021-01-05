@@ -10,12 +10,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 6aacd4639e440998a5123dae8c38a64c84ebb948
-ms.sourcegitcommit: d9dd86c421532cfca6c0c5761d160f35829419c6
+ms.openlocfilehash: 367b3681d2ff8a828ee45f59359043b5fede3d26
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90026299"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668100"
 ---
 # <a name="visual-studio-on-arm-powered-devices"></a>ARM 支持的设备上的 Visual Studio
 
@@ -42,4 +42,4 @@ Visual Studio 生成为基于 x86 体系结构匹配处理器，并且没有适�
 并非所有 Visual Studio 项目都配置为从 ARM 设备开始调试 (F5) 时在本地启动项目。 即使你的应用在本地运行，也可能需要配置 Visual Studio 以进行远程调试。 有关详细信息，请参阅[远程调试](../debugger/remote-debugging.md)。
 
 ## <a name="we-need-your-help"></a>我们需要你的帮助！
-如果希望 Visual Studio 在 ARM 设备上以本机方式运行，我们非常期待得到所需的方案和支持。 可以通过在[开发者社区](https://developercommunity.visualstudio.com/idea/1161018/native-arm-support-for-visual-studio.html)上发布来联系我们。 
+如果希望 Visual Studio 在 ARM 设备上以本机方式运行，我们非常期待得到所需的方案和支持。 可以通过在[开发者社区](https://developercommunity.visualstudio.com/idea/1161018/native-arm-support-for-visual-studio.html)上发布来联系我们。

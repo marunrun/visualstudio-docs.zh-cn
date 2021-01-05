@@ -3,18 +3,18 @@ title: 设置 Visual Studio 深色主题并更改文本颜色
 description: 了解如何在代码编辑器中将默认 Visual Studio 颜色主题更改为深色模式，以及如何更改字体颜色。
 ms.date: 08/20/2020
 ms.topic: how-to
-ms.custom: contperfq1
+ms.custom: contperf-fy21q1
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d58bf3a00d3db208abfad23a67bd115914f14a15
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.openlocfilehash: d261d6c13572be6df80ca36f37e19792d53e2a32
+ms.sourcegitcommit: c558d8a0f02ed2c932c8d6f70756d8d2cedb10b3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88801394"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97684042"
 ---
 # <a name="how-to-personalize-the-visual-studio-ide-and-the-editor"></a>如何：个性化设置 Visual Studio IDE 和编辑器
 

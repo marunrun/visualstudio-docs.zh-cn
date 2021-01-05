@@ -1,5 +1,7 @@
 ---
 title: 在项目文件中保存数据 |Microsoft Docs
+description: 了解托管包框架提供的用于保存和检索项目文件中特定于子类型的数据的接口。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,17 +14,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5fd6cfaa450bc268665ae0f58109c99002da6152
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4746ebb4a92d5c2688063336cb3772de8d72ee1b
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80701344"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715686"
 ---
 # <a name="save-data-in-project-files"></a>在项目文件中保存数据
 项目子类型可以保存并检索项目文件中特定于子类型的数据。 管理包框架 (MPF) 提供两个接口以完成此任务：
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage>接口允许从项目文件的**MSBuild**部分访问属性值。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage>每当用户需要加载或保存与生成相关的数据时，由提供的方法均可由任何用户调用。
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage>接口允许从项目文件的 **MSBuild** 部分访问属性值。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage>每当用户需要加载或保存与生成相关的数据时，由提供的方法均可由任何用户调用。
 
 - <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment>用于以自由格式的 XML 保存非生成相关数据。 提供的方法 <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment> 是 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 在需要保留项目文件中与非生成相关的数据时调用的。
 

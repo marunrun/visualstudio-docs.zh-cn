@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ab66089de25b7648b13e1ba05f88ab55b7868df
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.openlocfilehash: d7e2a05fe84b023a60ef75f0cb262a08fc02587a
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85348023"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727419"
 ---
 # <a name="watch-variables-with-watch-windows-and-quickwatch"></a>使用“监视”和“快速监视”窗口监视变量
 
@@ -30,7 +30,8 @@ ms.locfileid: "85348023"
 
 “监视”窗口在调试时可以一次显示多个变量。 “快速监视”对话框一次显示一个变量，且必须先关闭然后才能继续调试。
 
-如果是首次尝试调试代码，那么在阅读本文前，可能需要阅读[零基础调试](../debugger/debugging-absolute-beginners.md)和[调试技术和工具](../debugger/write-better-code-with-visual-studio.md)。
+> [!NOTE]
+> 如果是首次尝试调试代码，那么在阅读本文前，可能需要阅读[零基础调试](../debugger/debugging-absolute-beginners.md)和[调试技术和工具](../debugger/write-better-code-with-visual-studio.md)。
 
 ## <a name="observe-variables-with-a-watch-window"></a>使用“监视”窗口观察变量
 

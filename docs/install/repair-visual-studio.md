@@ -12,12 +12,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 7b2fd0a49a235827d3a9094aad6cc0f59a0cd403
-ms.sourcegitcommit: 172aaf05596a9d8ded298b7b104569c1cce6160e
+ms.openlocfilehash: f27ccf9440d0f01a5a41d69e753a6d83f81c5263
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92007109"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668529"
 ---
 # <a name="repair-visual-studio"></a>修复 Visual Studio
 
@@ -32,7 +32,7 @@ Visual Studio 安装有时会损毁或损坏。 修复对于修复所有安装�
 > 如果安装问题是由基础 Windows 服务（如 Windows Installer）中的问题引起的，则修复可能会遇到相同的问题。 系统问题可能包括，损坏的 Windows Installer ，或不稳定的 Internet 连接。 若要检查是否有系统问题，请使用通过安装操作生成的错误报告。
 
 > [!NOTE] 
-> 修复 Visual Studio 会重置用户设置，并重新安装已有的程序集。 如果遇到产品问题，请创建 [Visual Studio 反馈票证](https://developercommunity.visualstudio.com/content/problem/post.html?space=8)，因为修复可能无法解决此问题。
+> 修复 Visual Studio 会重置用户设置，并重新安装已有的程序集。 如果遇到产品问题，请创建 [Visual Studio 反馈票证](https://aka.ms/feedback/suggest?space=8)，因为修复可能无法解决此问题。
 
 ## <a name="how-to-repair"></a>如何修复
 ::: moniker range="vs-2017"
@@ -42,7 +42,7 @@ Visual Studio 安装有时会损毁或损坏。 修复对于修复所有安装�
      例如，在运行 Windows 10 周年更新或更高版本的计算机上，选择“开始”，再滚动到字母“V”（其中它被列为“Visual Studio 安装程序”）。
 
    > [!NOTE]
-   > 对于某些计算机，Visual Studio 安装程序可能列在字母 **“M”** 下，即 **Microsoft Visual Studio 安装程序** 。
+   > 对于某些计算机，Visual Studio 安装程序可能列在字母 **“M”** 下，即 **Microsoft Visual Studio 安装程序**。
    >
    > 或者，可以在以下位置找到 Visual Studio 安装程序：`C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe`
 

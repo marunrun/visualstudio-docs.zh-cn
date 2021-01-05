@@ -1,5 +1,7 @@
 ---
 title: 使用和提供服务 |Microsoft Docs
+description: 了解 Visual Studio IDE 为提供和使用的 Vspackage 提供的服务。 这些文章介绍了如何获取和提供服务。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8741d8d66af96ad4c6abea44b238393a34c5aa95
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6a7c1d9f3632d8b710ac238c372ed4456183a8d1
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80698737"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715933"
 ---
 # <a name="using-and-providing-services"></a>使用并提供服务
 服务是两个 Vspackage 之间的协定。 一个 VSPackage 为其他要使用的 VSPackage 提供一组特定的接口。 例如， [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] <xref:Microsoft.VisualStudio.Shell.Interop.SVsActivityLog> 为它加载的任何 VSPackage 提供服务。 此服务提供 <xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog> 接口，该接口可用于写入活动日志。 有关详细信息，请参阅 [如何：使用活动日志](../extensibility/how-to-use-the-activity-log.md)。

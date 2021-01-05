@@ -1,5 +1,7 @@
 ---
 title: 源代码管理插件 API 函数 |Microsoft Docs
+description: 了解源代码管理插件 API 提供的函数，该函数必须由源代码管理插件实现。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ce685729dda8750d772e244398b736cff4951b72
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 114862bb3358cc2a5400d6f40031deb030e4e4df
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699926"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715985"
 ---
 # <a name="source-control-plug-in-api-functions"></a>源代码管理插件 API 函数
 源代码管理插件 API 提供以下函数，这些函数必须根据此 API 由源代码管理插件实现。 此参考中详细介绍了每个函数的签名以及与位标志和其他参数关联的语义。

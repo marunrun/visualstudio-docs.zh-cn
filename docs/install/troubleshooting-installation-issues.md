@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 418cc9f75842cb4f3e9d8c0c0753084e2f0633c2
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.openlocfilehash: 54bd53f5c63a2f126f4aeae264c4dff745633cf6
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85350805"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668308"
 ---
 # <a name="troubleshoot-visual-studio-installation-and-upgrade-issues"></a>Visual Studio 安装和升级问题疑难解答
 
@@ -53,7 +53,7 @@ Visual Studio 安装程序存在一些已知问题，Microsoft 正在努力修�
 
 ### <a name="step-3---check-with-the-developer-community"></a>第 3 步 - 通过开发人员社区获取帮助
 
-在 [Visual Studio 开发人员社区](https://developercommunity.visualstudio.com/spaces/8/index.html)中搜索错误消息。 社区的其他成员可能已记录下你遇到的问题的解决方案。
+在 [Visual Studio 开发人员社区](https://aka.ms/feedback/suggest?space=8)中搜索错误消息。 社区的其他成员可能已记录下你遇到的问题的解决方案。
 
 ### <a name="step-4---delete-the-visual-studio-installer-directory-to-fix-upgrade-problems"></a>第 4 步 - 删除 Visual Studio 安装程序目录以修复升级问题
 
@@ -141,11 +141,11 @@ Visual Studio 安装程序引导程序是最轻型的可执行文件，用于安
 4. 在 `%TEMP%` 目录中查找生成的 `vslogs.zip` 文件，例如，`C:\Users\YourName\AppData\Local\Temp\vslogs.zip`。
 
 > [!NOTE]
-> 工具必须在安装失败时使用的同一用户帐户下运行。 若要从其他用户帐户运行工具，请设置 `–user:<name>` 选项，以指定安装失败时使用的用户帐户。 有关其他选项和使用情况信息，请通过管理员命令提示符运行 `Collect.exe -?` 获取。
+> 工具必须在安装失败时使用的同一用户帐户下运行。 若要从其他用户帐户运行工具，请设置 `–user:<name>` 选项，以指定安装失败时使用的用户帐户。 有关其他选项和使用情况信息，请通过管理员命令提示符运行 `Collect.exe -?`。
 
 ## <a name="live-help"></a>实时帮助
 
-如果本疑难解答指南中列出的解决方案无法帮助你成功安装或升级 Visual Studio，请使用我们的[**实时聊天**](https://visualstudio.microsoft.com/vs/support/#talktous)支持选项（仅英语）以获取进一步的帮助。
+如果本疑难解答指南中列出的解决方案无法帮助你成功安装或升级 Visual Studio，请使用我们的 [**实时聊天**](https://visualstudio.microsoft.com/vs/support/#talktous)支持选项（仅英语）以获取进一步的帮助。
 
 ## <a name="see-also"></a>请参阅
 

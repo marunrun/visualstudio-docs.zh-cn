@@ -1,6 +1,8 @@
 ---
 title: 升级 Visual Studio 2017 的自定义项目和项模板
 titleSuffix: ''
+description: 了解如何从早期版本的 Visual Studio SDK 更新自定义项目和项模板，以便与 Visual Studio 2017 及更高版本配合使用。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: ad02477b-e101-4f32-aeb7-292bf95d5c2f
@@ -10,12 +12,12 @@ manager: jillfra
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: 5f807e142b376d05e5a44600e8f6b24ddb3593be
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 089baadcb60afcc8b32e287095b10ab30196ce17
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80698850"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715972"
 ---
 # <a name="upgrade-custom-project-and-item-templates-for-visual-studio-2017"></a>升级自定义 Visual Studio 项目和项模板2017
 
@@ -27,7 +29,7 @@ ms.locfileid: "80698850"
 
 ## <a name="template-scanning"></a>模板扫描
 
-在以前版本的 Visual Studio 中， **devenv/setup** 或 **devenv/installvstemplates** 扫描了本地磁盘以查找项目和项模板。 从 Visual Studio 2017 开始，仅对用户级位置执行扫描。 默认用户级位置是 **%USERPROFILE%\Documents \\<Visual Studio version \> \Templates \\ **。 **Project**  >  如果在向导中选择 "**自动将模板导入 Visual Studio** " 选项，则此位置用于 "项目**导出模板 ...** " 命令生成的模板。
+在以前版本的 Visual Studio 中， **devenv/setup** 或 **devenv/installvstemplates** 扫描了本地磁盘以查找项目和项模板。 从 Visual Studio 2017 开始，仅对用户级位置执行扫描。 默认用户级位置是 **%USERPROFILE%\Documents \\<Visual Studio version \> \Templates \\**。   >  如果在向导中选择 "**自动将模板导入 Visual Studio** " 选项，则此位置用于 "项目 **导出模板 ...** " 命令生成的模板。
 
 对于其他 (非用户) 位置，必须包括一个清单 ( vstman) 文件，该文件指定模板的位置和其他特性。 Vstman 文件随用于模板的 .vstemplate 文件一起生成。 如果使用 .vsix 安装扩展，则可以通过在 Visual Studio 2017 中重新编译扩展来实现此目的。 但如果使用 .msi，则需要手动进行更改。 有关进行这些更改所需执行的操作的列表，请参阅  **使用安装的扩展的升级。MSI** 。
 

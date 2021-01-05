@@ -18,12 +18,12 @@ ms.topic: conceptual
 ms.workload:
 - multiple
 monikerRange: vs-2017
-ms.openlocfilehash: 2c2381211c628a9a405706859b3c80bfc50aa692
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: ab0d5cc497709a690c88b16771f2c12651e5aed0
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400216"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668659"
 ---
 # <a name="whats-new-in-visual-studio-2017"></a>Visual Studio 2017 中的新增功能
 
@@ -66,13 +66,13 @@ ms.locfileid: "93400216"
 
 * 想要选择自己的组件而不是使用工作负载？ 请从安装程序选择“单个组件”选项卡。
 * 想要在不更改 Windows 语言选项的情况下立即安装语言包？ 选择安装程序的“语言包”选项卡。
-* **15.7 中的新增功能** ：想要更改 Visual Studio 的安装位置？ 选择安装程序的“安装选项”选项卡。
+* **15.7 中的新增功能**：想要更改 Visual Studio 的安装位置？ 选择安装程序的“安装选项”选项卡。
 
 若要更深入地了解新的安装体验，包括指导你进行演练的分步说明，请参阅[安装 Visual Studio](../install/install-visual-studio.md) 页。
 
 ### <a name="a-focus-on-accessibility"></a>聚焦辅助功能
 
-**15.3 中的新增功能** ，我们进行了超过 1,700 处目标修补，以提高 Visual Studio 与许多客户使用的辅助技术的兼容性。 在十几种情况下，我们提高了与屏幕阅读器、高对比度主题和其他辅助技术的兼容性，比以往更兼容。 同时，我们还对调试程序、编辑器和 shell 进行了重大改进。
+**15.3 中的新增功能**，我们进行了超过 1,700 处目标修补，以提高 Visual Studio 与许多客户使用的辅助技术的兼容性。 在十几种情况下，我们提高了与屏幕阅读器、高对比度主题和其他辅助技术的兼容性，比以往更兼容。 同时，我们还对调试程序、编辑器和 shell 进行了重大改进。
 
 有关详细信息，请参阅博文 [Visual Studio 2017 版本 15.3 中的辅助功能改进](https://devblogs.microsoft.com/visualstudio/accessibility-improvements-in-visual-studio-2017-version-15-3/)。
 
@@ -108,11 +108,11 @@ Visual Studio 可以移动自身的扩展（以及第三方扩展），从而根
 
 使用漫游扩展管理器时，列表中会出现 3 种图标类型：
 
-* ![“漫游”图标](media/vs2017ide-roamedicon.png) **漫游** ：存在于漫游列表中，但未在计算机上安装的扩展。
+* ![“漫游”图标](media/vs2017ide-roamedicon.png) **漫游**：存在于漫游列表中，但未在计算机上安装的扩展。
   （可通过“下载”按钮安装这些扩展。）
-* ![“漫游且已安装”图标](media/vs2017ide-roamedinstalledicon.png) **漫游且已安装** ：存在于漫游列表中且已在此环境中安装的所有扩展。
+* ![“漫游且已安装”图标](media/vs2017ide-roamedinstalledicon.png) **漫游且已安装**：存在于漫游列表中且已在此环境中安装的所有扩展。
   （如果确定不希望漫游，可通过“停止漫游”按钮删除它们。）
-* ![“已安装”图标](media/vs2017ide-installedicon.png) **已安装** ：此环境中已安装、但不属于漫游列表的所有扩展。
+* ![“已安装”图标](media/vs2017ide-installedicon.png) **已安装**：此环境中已安装、但不属于漫游列表的所有扩展。
   （可通过“启动漫游”按钮将扩展添加到漫游列表。）
 
 在登录时下载的任何扩展将作为“漫游且已安装”添加到列表中。 该扩展随即成为“漫游”列表的一部分，可以从任何计算机访问它。
@@ -139,13 +139,13 @@ Visual Studio 可以移动自身的扩展（以及第三方扩展），从而根
 
 #### <a name="multi-caret-editing"></a>多个插入点编辑
 
-**15.8 中的新增功能** ：现在很容易就能同时编辑文件中的多个位置。 首先在文件的多个位置创建插入点并选择内容。 然后，使用“多个插入点编辑”功能同时在两个或多个位置进行相同编辑。
+**15.8 中的新增功能**：现在很容易就能同时编辑文件中的多个位置。 首先在文件的多个位置创建插入点并选择内容。 然后，使用“多个插入点编辑”功能同时在两个或多个位置进行相同编辑。
 
 有关详细信息，请参阅[查找和替换文本](finding-and-replacing-text.md)页面上的[多个插入点选择内容](finding-and-replacing-text.md#multi-caret-selection)部分。
 
 #### <a name="keep-keybinding-profiles-consistent"></a>保证键绑定配置文件的一致性
 
-**15.8 中的新增功能** ：现可让不同工具中的键绑定与这两个新的键盘配置文件保持一致：Visual Studio Code 和 ReSharper (Visual Studio)。 可单击“工具” > “选项” > “常规” > “键盘”，在顶部下拉菜单下找到这些方案   。
+**15.8 中的新增功能**：现可让不同工具中的键绑定与这两个新的键盘配置文件保持一致：Visual Studio Code 和 ReSharper (Visual Studio)。 可单击“工具” > “选项” > “常规” > “键盘”，在顶部下拉菜单下找到这些方案   。
 
   ![适用于 Visual Studio Code 和 ReSharper 的新的键绑定配置文件](media/vs-keyboard-mappings-code-resharper.png)
 
@@ -174,11 +174,11 @@ Visual Studio 可以移动自身的扩展（以及第三方扩展），从而根
 
 我们改善了导航体验，可让你更自信地从 A 导航到 B，同时减少此过程中的干扰。
 
-* **15.4 中的新增功能** ：转到定义（Ctrl+单击或 F12）&ndash; 鼠标用户按 Ctrl，然后单击成员，可以更轻松地导航到成员定义    。 通过按 **Ctrl** 并将鼠标悬停在代码符号上方，可在符号下方加下划线并将其转换为链接。 有关详细信息，请参阅[转到定义和查看定义](go-to-and-peek-definition.md)。
+* **15.4 中的新增功能**：转到定义（Ctrl+单击或 F12）&ndash; 鼠标用户按 Ctrl，然后单击成员，可以更轻松地导航到成员定义    。 通过按 **Ctrl** 并将鼠标悬停在代码符号上方，可在符号下方加下划线并将其转换为链接。 有关详细信息，请参阅[转到定义和查看定义](go-to-and-peek-definition.md)。
 
 * **转到实现** (Ctrl+F12) &ndash; 从任何基类型或基成员转到各种实现 。
 
-* **转到全部** （Ctrl+T 或 Ctrl+,）&ndash; 直接导航到任何文件/类型/成员/符号声明   。 可以筛选结果列表，也可以使用查询语法（例如使用“f searchTerm”导航到文件，使用“t searchTerm”导航到类型等）。
+* **转到全部**（Ctrl+T 或 Ctrl+,）&ndash; 直接导航到任何文件/类型/成员/符号声明   。 可以筛选结果列表，也可以使用查询语法（例如使用“f searchTerm”导航到文件，使用“t searchTerm”导航到类型等）。
 
   ![改进后的“转到全部”](media/vs2017ide-navigation-go-to.png)
 
@@ -196,7 +196,7 @@ Visual Studio 可以移动自身的扩展（以及第三方扩展），从而根
 
 Visual Studio 中的若干改进包括：使用 Visual Studio 分发 C++ 核心准则、通过添加对 C++11 和 C++ 功能的增强支持更新编译器以及添加和更新 C++ 库中的功能等。 我们还改进了 C++ IDE 的性能和安装工作负载等。
 
-我们还修复了编译器和工具中的超过 250 个 bug 和已报告问题，其中很多是客户通过 [C++ 开发人员社区](https://developercommunity.visualstudio.com/spaces/62/index.html "C++ 开发人员社区")提交的。
+我们还修复了编译器和工具中的超过 250 个 bug 和已报告问题，其中很多是客户通过 [C++ 开发人员社区](https://aka.ms/feedback/report?space=62 "C++ 开发人员社区")提交的。
 
 有关完整的详细信息，请参阅 [Visual 2017 中 Visual C++ 的新增功能](/cpp/top/what-s-new-for-visual-cpp-in-visual-studio)页。
 
@@ -218,7 +218,7 @@ Visual Studio 中的若干改进包括：使用 Visual Studio 分发 C++ 核心�
 
 #### <a name="snapshots-and-intellitrace-step-back"></a>快照和 IntelliTrace 后退
 
-**15.5 中的新增功能** ：IntelliTrace 后退会在每个断点处及调试器步骤事件发生时自动拍摄应用程序的快照。 凭借记录的快照便可以返回到上一个断点或步骤，并查看当时应用程序的状态。 如果希望查看以前的应用程序状态，但不想重新启动调试或重新创建所需应用状态，使用 IntelliTrace 后退可以节省时间。
+**15.5 中的新增功能**：IntelliTrace 后退会在每个断点处及调试器步骤事件发生时自动拍摄应用程序的快照。 凭借记录的快照便可以返回到上一个断点或步骤，并查看当时应用程序的状态。 如果希望查看以前的应用程序状态，但不想重新启动调试或重新创建所需应用状态，使用 IntelliTrace 后退可以节省时间。
 
 可以通过使用“调试”工具栏中的“后退”和前进”按钮浏览和查看快照  。 这些按钮用于浏览“诊断工具”窗口中“事件”选项卡上显示的事件。  后退或前进到某个事件会自动激活所选事件的历史调试。
 
@@ -232,7 +232,7 @@ Visual Studio 中的若干改进包括：使用 Visual Studio 分发 C++ 核心�
 
 #### <a name="docker-container-tooling"></a>Docker 容器工具
 
-**15.5 中的新增功能** ：
+**15.5 中的新增功能**：
 
 * Visual Studio 包含现在支持多阶段 Dockerfile 的用于 Docker 容器的工具，简化了创建优化容器映像的过程。
 * 默认情况下，当打开具有 Docker 支持的项目时，Visual Studio 会在后台自动拉取、生成并运行必要的容器映像。 可以通过 Visual Studio 中的“在后台自动启动容器”设置禁用此操作。
@@ -247,7 +247,7 @@ Visual Studio 中的若干改进包括：使用 Visual Studio 分发 C++ 核心�
 
 ### <a name="debug-live-aspnet-apps-using-snappoints-and-logpoints-in-live-azure-applications"></a>在实时 Azure 应用程序中使用 snappoints 和 logpoints 调试实时 ASP.NET 应用
 
-**15.5 中的新增功能** ：当执行感兴趣的代码时，Snapshot Debugger 会为生产中的应用拍摄快照。 若要指示该调试器拍摄快照，可以在代码中设置快照点和记录点。 通过该调试器，可精确查看出错的内容，而不会影响生产应用程序的流量。 快照调试程序有助于大幅减少用于解决生产环境中发生的问题的时间。
+**15.5 中的新增功能**：当执行感兴趣的代码时，Snapshot Debugger 会为生产中的应用拍摄快照。 若要指示该调试器拍摄快照，可以在代码中设置快照点和记录点。 通过该调试器，可精确查看出错的内容，而不会影响生产应用程序的流量。 快照调试程序有助于大幅减少用于解决生产环境中发生的问题的时间。
 
 快照集合适用于在 Azure App Service 中运行的以下 Web 应用：
 
@@ -266,7 +266,7 @@ Visual Studio 中的若干改进包括：使用 Visual Studio 分发 C++ 核心�
 
 &mdash;从 C#、Visual Basic、C++ 或 JavaScript 中&mdash;选择首选的开发语言用来为 Windows 10 设备创建通用 Windows 平台应用。 Visual Studio 2017 提供所有语言的 UWP 应用模板，借助该模板可创建一个适用于所有设备的项目。 工作完成后，可以生成应用包，并从 Visual Studio 中将其提交到 Microsoft Store，以面向任何使用 Windows 10 设备的客户推出应用。
 
-**15.5 中的新增功能** ：Visual Studio 2017 版本 15.5 提供对 Windows 10 Fall Creators Update SDK (10.0.16299.0) 的最佳支持。 Windows 10 Fall Creators Update 也为 UWP 开发人员推出了许多改进内容。 以下是其中最重大的一些改进： 
+**15.5 中的新增功能**：Visual Studio 2017 版本 15.5 提供对 Windows 10 Fall Creators Update SDK (10.0.16299.0) 的最佳支持。 Windows 10 Fall Creators Update 也为 UWP 开发人员推出了许多改进内容。 以下是其中最重大的一些改进： 
 
 * **支持 .NET Standard 2.0**<br/>除了简化的应用部署，Windows 10 Fall Creators Update 还是 Windows 10 第一个提供 .NET Standard 2.0 支持的版本。 实际上，[.NET Standard](https://devblogs.microsoft.com/dotnet/introducing-net-standard/) 是对任何 .NET 平台均可实现的基类库的引用实现。 .NET Standard 的设计目的是让 .NET 开发人员能够尽可能轻松地在其选择使用的任何 .NET 平台上共享代码。
 * **最佳 UWP 和 Win32**<br/>已通过 [Desktop Bridge](/windows/uwp/porting/desktop-to-uwp-root) 改善 Windows 10 平台，以便 Windows 10 能为 .NET 开发人员提供更好的使用体验，无论他们当前关注的对象是 UWP、WPF、Windows Forms 还是 Xamarin。 使用 Visual Studio 2017 版本 15.5 中新的应用打包项目类型，可为 WPF 或 Windows 窗体项目创建 Windows 应用包，正如为 UWP 项目创建那样。 打包应用程序后，便获得所有 Windows 10 应用部署权益，并可选择通过 Microsoft Store（消费者应用）或商业版和教育版 Microsoft Store 进行分发。 由于打包的应用可在桌面上访问完整的 UWP API 界面和 Win32 API，因此现在可以使用 UWP API 和 Windows 10 功能逐渐实现 WPF 和 Windows 窗体应用程序的现代化。 此外，可将 Win32 组件包括在 UWP 应用程序中，凭借各种 Win32 功能，它们将在桌面上大放光彩。
@@ -283,25 +283,25 @@ Visual Studio 中的若干改进包括：使用 Visual Studio 分发 C++ 核心�
 
 ### <a name="entitlements-editor"></a>权利编辑器
 
-**15.3 中的新增功能** ：为满足 iOS 开发需求，我们添加了独立的权利编辑器。 它包含便于浏览、用户友好的 UI。 要启动它，请双击 entitlements.plist 文件。
+**15.3 中的新增功能**：为满足 iOS 开发需求，我们添加了独立的权利编辑器。 它包含便于浏览、用户友好的 UI。 要启动它，请双击 entitlements.plist 文件。
 
 ![Xamarin 的权利编辑器](media/xamarin-entitlements-editor.png)
 
 ### <a name="visual-studio-tools-for-xamarin"></a>Visual Studio Tools for Xamarin
 
-**15.4 中的新增功能** ：通过 Xamarin Live，开发人员可直接在 iOS 和 Android 设备上持续部署、测试和调试应用。 下载 Xamarin Live Player &mdash; 可在 App Store 或 Google Play 中获取 &mdash; 后，可将设备与 Visual Studio 配对，彻底改变生成移动应用的方式。 此功能现已包含在 Visual Studio 中，转到“工具” > “选项” > “Xamarin” > “其他” > “启用 Xamarin Live Player”即可启用此功能    。
+**15.4 中的新增功能**：通过 Xamarin Live，开发人员可直接在 iOS 和 Android 设备上持续部署、测试和调试应用。 下载 Xamarin Live Player &mdash; 可在 App Store 或 Google Play 中获取 &mdash; 后，可将设备与 Visual Studio 配对，彻底改变生成移动应用的方式。 此功能现已包含在 Visual Studio 中，转到“工具” > “选项” > “Xamarin” > “其他” > “启用 Xamarin Live Player”即可启用此功能    。
 
 ![Xamarin Live Player 对、部署和实时编辑模式的动画](media/xamarinliveplayer.gif)
 
 ### <a name="support-for-google-android-emulator"></a>对 Google Android Emulator 的支持
 
-**15.8 中的新增功能** ：现在使用 Hyper-V 时，可将 Google Android Emulator 与其他基于 Hyper-V 的技术（例如 Hyper-V 虚拟机、Docker 工具和 HoloLens 模拟器等）并行使用。 （此功能需要 Windows 10 的 2018 年 4 月更新或更高版本。）
+**15.8 中的新增功能**：现在使用 Hyper-V 时，可将 Google Android Emulator 与其他基于 Hyper-V 的技术（例如 Hyper-V 虚拟机、Docker 工具和 HoloLens 模拟器等）并行使用。 （此功能需要 Windows 10 的 2018 年 4 月更新或更高版本。）
 
 ![基于 Hyper-V 技术的 Google Android Emulator](media/xamarin-hyperv-android-emulator.png)
 
 #### <a name="xamarinandroid-designer-split-view-editor"></a>Xamarin.Android 设计器拆分视图编辑器
 
-**15.8 中的其他新增功能** ：显著改善了 Xamarin.Android 的设计器体验。 重点是新增的拆分视图编辑器，可用于同时创建、编辑和预览布局。
+**15.8 中的其他新增功能**：显著改善了 Xamarin.Android 的设计器体验。 重点是新增的拆分视图编辑器，可用于同时创建、编辑和预览布局。
 
 ![Xamarin.Android 设计器拆分视图编辑器](media/android-designer-split-view.png)
 
@@ -309,7 +309,7 @@ Visual Studio 中的若干改进包括：使用 Visual Studio 分发 C++ 核心�
 
 ### <a name="visual-studio-app-center"></a>Visual Studio 应用中心
 
-**15.5 中的新增功能** ：Visual Studio 应用中心（&mdash;已正式发布面向 Android、iOS、macOS 和 Windows 应用的版本&mdash;）提供用于管理应用生命周期的一切内容，包括自动生成、在云中对真实设备进行测试、面向 beta 测试人员和应用商店的分发以及通过故障和分析数据对实际使用情况进行监视。 所有功能都支持使用 Objective-C、Swift、Java、C#、Xamarin 和 React Native 编写的应用。
+**15.5 中的新增功能**：Visual Studio 应用中心（&mdash;已正式发布面向 Android、iOS、macOS 和 Windows 应用的版本&mdash;）提供用于管理应用生命周期的一切内容，包括自动生成、在云中对真实设备进行测试、面向 beta 测试人员和应用商店的分发以及通过故障和分析数据对实际使用情况进行监视。 所有功能都支持使用 Objective-C、Swift、Java、C#、Xamarin 和 React Native 编写的应用。
 
   ![Visual Studio 应用中心测试环境](media/app-center-test-env.png)
 
@@ -340,7 +340,7 @@ Visual Studio 2017 所有版本随附：
 
 当前，它还包括 Docker 支持。
 
-**15.3 中的新增功能** ：Visual Studio 2017 版本 15.3 支持 .NET Core 2.0 开发。 使用 .NET Core 2.0 前需分别下载并安装 .NET Core 2.0 SDK。
+**15.3 中的新增功能**：Visual Studio 2017 版本 15.3 支持 .NET Core 2.0 开发。 使用 .NET Core 2.0 前需分别下载并安装 .NET Core 2.0 SDK。
 
 有关详细信息，请参阅 [.NET Core 指南](/dotnet/core/index)页。
 
@@ -356,7 +356,7 @@ Visual Studio 2017 所有版本随附：
 
 ### <a name="visual-studio-tools-for-ai"></a>Visual Studio Tools for AI
 
-**15.5 中的新增功能** ：立即使用 Visual Studio 的高效功能加快 AI 创新。 使用内置代码编辑器功能，如语法突出显示、IntelliSense 和文本自动格式设置。 可以通过对本地变量和模型使用单步调试，在本地环境中以交互方式测试深入学习应用程序。
+**15.5 中的新增功能**：立即使用 Visual Studio 的高效功能加快 AI 创新。 使用内置代码编辑器功能，如语法突出显示、IntelliSense 和文本自动格式设置。 可以通过对本地变量和模型使用单步调试，在本地环境中以交互方式测试深入学习应用程序。
 
   ![深入学习 IDE](../ai/media/about/ide.png)
 

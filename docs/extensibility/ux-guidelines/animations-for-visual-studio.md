@@ -1,5 +1,7 @@
 ---
 title: Visual Studio 的动画 |Microsoft Docs
+description: 了解有助于确保跨 Visual Studio IDE 的一致和用户友好动画样式的规则。
+ms.custom: SEO-VS-2020
 ms.date: 04/26/2017
 ms.topic: conceptual
 ms.assetid: 446773a9-e6f7-4c0c-8dbc-9e303bf32eb1
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: dc11eb7bab69728be5ceaa55143f56e93cd1fca4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c86b033986511100415989e76f4f1e6ef7702f10
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80698610"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715946"
 ---
 # <a name="animations-for-visual-studio"></a>Visual Studio 的动画
 ## <a name="animation-fundamentals"></a>动画基础知识
@@ -33,7 +35,7 @@ ms.locfileid: "80698610"
 
   - 使用可变计时来强调重要性。 例如，当在类图上通过一系列项进行导航时，将加快项之间的转换速度，并使其更慢，以重点关注重要项。
 
-- 从一种状态到另一种状态**使用逐步非线性缓动**，提供冷静和自然运动。
+- 从一种状态到另一种状态 **使用逐步非线性缓动**，提供冷静和自然运动。
 
 - 如果可能，请 **在悬停时使用细小动画** 来指示鼠标下的交互式元素。
 
@@ -43,9 +45,9 @@ ms.locfileid: "80698610"
 
 - **个很微妙非常重要。** 在大多数情况下，动画不需要用户注意来提供其目的。 计时、排序和行为方面的细微变化可能会显著影响感知，并可以在有效和低效动画之间产生差别。
 
-- 当使用动画吸引事情时，请 **确保有必要中断用户**的想法训练。
+- 当使用动画吸引事情时，请 **确保有必要中断用户** 的想法训练。
 
-- 通过动画**显示进度或状态时**：
+- 通过动画 **显示进度或状态时**：
 
   - 当基础进程不前进时，停止显示进度移动。
 
@@ -118,7 +120,7 @@ ms.locfileid: "80698610"
 
 - 受限一个元素
 
-##### <a name="state"></a>状态
+##### <a name="state"></a>州省/自治区/直辖市
 
 - 内容更新
 

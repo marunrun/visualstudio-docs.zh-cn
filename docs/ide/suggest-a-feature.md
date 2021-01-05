@@ -8,16 +8,16 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2d8106463f306ddbc3fe6aefb337935cbe0d316c
-ms.sourcegitcommit: d9254e54079ae01cdf2d07b11f988faf688f80fc
+ms.openlocfilehash: a17f196f48b053f8b834b8fd25b8c0295e42b547
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88114200"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668893"
 ---
 # <a name="suggest-a-feature-for-visual-studio"></a>建议 Visual Studio 功能
 
-[Visual Studio 开发人员社区](https://developercommunity.visualstudio.com)除了提供当前的问题报告功能，还引入了全新的功能建议体验。 通过这种新方法，你可以直接参与 Visual Studio 的工程工作流。
+[Visual Studio 开发人员社区](https://aka.ms/feedback/suggest?space=8)除了提供当前的问题报告功能，还引入了全新的功能建议体验。 通过这种新方法，你可以直接参与 Visual Studio 的工程工作流。
 
 ![开发者社区中的“功能建议”按钮](media/suggest-a-feature/suggest-feature-button.png)
 
@@ -25,7 +25,7 @@ ms.locfileid: "88114200"
 
 ![Visual Studio 中的“提供建议”菜单](media/suggest-a-feature/provide-suggestion.png)
 
-选择“提供建议”会转到[开发人员社区](https://developercommunity.visualstudio.com)，可在其中输入建议  。
+选择“提供建议”会转到[开发人员社区](https://aka.ms/feedback/suggest?space=8)，可在其中输入建议  。
 
 ## <a name="user-voice"></a>UserVoice
 

@@ -4,7 +4,7 @@ titleSuffix: ''
 description: 了解如何逐步修改 Visual Studio。
 ms.date: 10/12/2020
 ms.topic: how-to
-ms.custom: contperfq2
+ms.custom: contperf-fy21q2
 helpviewer_keywords:
 - modify Visual Studio
 - change visual studio
@@ -18,12 +18,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: dad71e4f52350357106ee9a9ef9ce90d18204bfb
-ms.sourcegitcommit: 4eb8fe6eb7f1dc639f1d213db05a7a3007e8087e
+ms.openlocfilehash: 17a02fb8c05c6f1720aa1b352e30c46e04a8b69d
+ms.sourcegitcommit: c558d8a0f02ed2c932c8d6f70756d8d2cedb10b3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92157370"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97684095"
 ---
 # <a name="modify-visual-studio-by-adding-or-removing-workloads-and-components"></a>通过添加或删除工作负载和组件修改 Visual Studio
 
@@ -60,7 +60,7 @@ ms.locfileid: "92157370"
      ![Visual Studio 安装程序](media/locate-the-visual-studio-installer.png "找到 Microsoft Visual Studio 安装程序")
 
      >[!TIP]
-     >对于某些计算机，Visual Studio 安装程序可能列在字母 **“M”** 下，即 **Microsoft Visual Studio 安装程序** 。<br/><br/> 或者，可以在以下位置找到 Visual Studio 安装程序：`C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe`
+     >对于某些计算机，Visual Studio 安装程序可能列在字母 **“M”** 下，即 **Microsoft Visual Studio 安装程序**。<br/><br/> 或者，可以在以下位置找到 Visual Studio 安装程序：`C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe`
 
 1. 打开安装程序，然后选择“修改”  。
 

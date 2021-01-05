@@ -6,12 +6,12 @@ ms.date: 03/23/2020
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: f8f4645c9b69ff0fa7aa332f0716cc07b7a46e8a
-ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
+ms.openlocfilehash: b00b728e24dc3051c08e9050d761d74a2ced0c69
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96190196"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668387"
 ---
 ## <a name="get-support"></a>获取支持
 
@@ -22,5 +22,5 @@ ms.locfileid: "96190196"
 下面是另外几个支持选项：
 
 * 通过[报告问题](../../ide/how-to-report-a-problem-with-visual-studio.md)工具（会出现在 Visual Studio 安装程序和 Visual Studio IDE 中）向我们报告产品问题。
-* 在 [Visual Studio 开发人员社区](https://developercommunity.visualstudio.com/)中，可提出功能建议、跟踪产品问题，并能找到答案。
+* 在 [Visual Studio 开发人员社区](https://aka.ms/feedback/suggest?space=8)中，可提出功能建议、跟踪产品问题，并能找到答案。
 * 使用你的 [GitHub](https://github.com/) 帐户，通过 [Gitter 社区的 Visual Studio 对话](https://gitter.im/Microsoft/VisualStudio)与我们和其他 Visual Studio 开发人员进行交流。
