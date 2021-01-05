@@ -1,5 +1,7 @@
 ---
 title: 演练：创建自定义编辑器 |Microsoft Docs
+description: 若要了解如何使用此演练，VSPackage 项目模板可在 c + + 中创建简单的自定义编辑器。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4713931d70fd91dd57b85bc6fc749e62e03eb20b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 188c02471e8921e66faefe9668ec3f54c935b50b
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905915"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863119"
 ---
 # <a name="walkthrough-create-a-custom-editor"></a>演练：创建自定义编辑器
 VSPackage 项目模板可使用 c + + 创建一个简单的自定义编辑器。 VSPackage 项目模板不再支持 c # 或 Visual Basic 项目。 有关详细信息，请参阅 [Visual STUDIO SDK](../extensibility/visual-studio-sdk.md)。
@@ -34,7 +36,7 @@ VSPackage 项目模板可使用 c + + 创建一个简单的自定义编辑器。
 
 3. 在编辑器的 " **名称** " 框中，键入编辑器的名称。 在 " **文件扩展名** " 框中，键入要与编辑器关联的文件扩展名。 编辑器可用于具有此扩展名的文件。 文件扩展名仅为 Visual Studio 注册，不适用于 Windows。 在 " **默认** 文件名" 框中键入用编辑器创建的新文档的默认文件名。
 
-4. 单击“完成” **** 以在指定的文件夹中创建 VSPackage。
+4. 单击“完成”  以在指定的文件夹中创建 VSPackage。
 
 ### <a name="to-test-your-custom-editor"></a>测试自定义编辑器
 

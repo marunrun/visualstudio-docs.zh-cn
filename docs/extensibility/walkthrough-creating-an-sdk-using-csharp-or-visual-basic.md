@@ -1,5 +1,7 @@
 ---
 title: '演练：使用 c # 或 Visual Basic 创建 SDK |Microsoft Docs'
+description: '了解如何使用 Visual c # 创建简单的数学库 SDK，然后使用本演练将 SDK 打包为 Visual Studio 扩展。'
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: ef96a249-5eef-402a-a8d5-d74cb49239bd
@@ -11,12 +13,12 @@ ms.workload:
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 73cd76445adb798be078461e5b209e35f8b8163c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b9000290b146275ca495b49211c9823422b0a32f
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904977"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97862948"
 ---
 # <a name="walkthrough-create-an-sdk-using-c-or-visual-basic"></a>演练：使用 c # 或 Visual Basic 创建 SDK
 在本演练中，你将学习如何使用 Visual c # 创建一个简单的数学库 SDK，然后将 SDK 打包为 Visual Studio 扩展 (VSIX) 。 你将完成以下过程：
@@ -37,14 +39,14 @@ ms.locfileid: "85904977"
 
 3. 在 " **名称** " 框中，指定 **SimpleMath**，然后选择 " **确定"** 按钮。
 
-4. 在 **解决方案资源管理器**中，打开 **SimpleMath** 项目节点的快捷菜单，然后选择 " **属性**"。
+4. 在 **解决方案资源管理器** 中，打开 **SimpleMath** 项目节点的快捷菜单，然后选择 " **属性**"。
 
 5. 将 **Class1.cs** 重命名为 **Arithmetic.cs** ，并对其进行更新以匹配以下代码：
 
     [!code-csharp[CreatingAnSDKUsingWinRT#3](../extensibility/codesnippet/CSharp/walkthrough-creating-an-sdk-using-csharp-or-visual-basic_1.cs)]
     [!code-vb[CreatingAnSDKUsingWinRT#3](../extensibility/codesnippet/VisualBasic/walkthrough-creating-an-sdk-using-csharp-or-visual-basic_1.vb)]
 
-6. 在 **解决方案资源管理器**中，打开 **解决方案 "SimpleMath"** 节点的快捷菜单，然后选择 " **Configuration Manager**"。
+6. 在 **解决方案资源管理器** 中，打开 **解决方案 "SimpleMath"** 节点的快捷菜单，然后选择 " **Configuration Manager**"。
 
     此时将打开 " **Configuration Manager** " 对话框。
 
@@ -55,33 +57,33 @@ ms.locfileid: "85904977"
    > [!IMPORTANT]
    > SimpleMath 组件的 SDK 只包含一个配置。 此配置必须是发布版本，或使用组件的应用不会通过证书 [!INCLUDE[win8_appstore_long](../debugger/includes/win8_appstore_long_md.md)] 。
 
-9. 在 **解决方案资源管理器**中，打开 **SimpleMath** 项目节点的快捷菜单，然后选择 " **生成**"。
+9. 在 **解决方案资源管理器** 中，打开 **SimpleMath** 项目节点的快捷菜单，然后选择 " **生成**"。
 
 ## <a name="to-create-the-simplemathvsix-extension-project"></a><a name="createVSIX"></a> 创建 SimpleMathVSIX 扩展项目
 
-1. 在**解决方案 "SimpleMath"** 节点的快捷菜单上，选择 "**添加**  >  **新项目**"。
+1. 在 **解决方案 "SimpleMath"** 节点的快捷菜单上，选择 "**添加**  >  **新项目**"。
 
 2. 在模板列表中，展开 " **Visual c #** " 或 " **Visual Basic**"，选择 " **扩展性** " 节点，然后选择 " **VSIX 项目** " 模板。
 
 3. 在 " **名称** " 框中，指定 **SimpleMathVSIX**，然后选择 " **确定"** 按钮。
 
-4. 在 **解决方案资源管理器**中，选择 **source.extension.vsixmanifest** 项。
+4. 在 **解决方案资源管理器** 中，选择 **source.extension.vsixmanifest** 项。
 
-5. 在菜单栏上，选择 "**查看**  >  **代码**"。
+5. 在菜单栏上，选择“视图” > “代码”。
 
 6. 将现有的 XML 替换为以下 XML：
 
      [!code-xml[CreatingAnSDKUsingWinRT#1](../extensibility/codesnippet/XML/walkthrough-creating-an-sdk-using-csharp-or-visual-basic_2.xml)]
 
-7. 在 **解决方案资源管理器**中，选择 " **SimpleMathVSIX** " 项目。
+7. 在 **解决方案资源管理器** 中，选择 " **SimpleMathVSIX** " 项目。
 
-8. 在菜单栏上，选择 "**项目**" "  >  **添加新项**"。
+8. 在菜单栏上，依次选择“项目” > “添加新项”。
 
-9. 在 **常见项**列表中，展开 " **数据**"，然后选择 " **XML 文件**"。
+9. 在 **常见项** 列表中，展开 " **数据**"，然后选择 " **XML 文件**"。
 
 10. 在 " **名称** " 框中，指定 `SDKManifest.xml` ，然后选择 " **添加** " 按钮。
 
-11. 在 **解决方案资源管理器**中，打开的快捷菜单 `SDKManifest.xml` ，选择 " **属性**"，然后将 " **包括在 VSIX 中** " 属性的值更改为 " **True**"。
+11. 在 **解决方案资源管理器** 中，打开的快捷菜单 `SDKManifest.xml` ，选择 " **属性**"，然后将 " **包括在 VSIX 中** " 属性的值更改为 " **True**"。
 
 12. 用下列 XML 替换该文件的内容：
 
@@ -111,7 +113,7 @@ ms.locfileid: "85904977"
     </FileList>
     ```
 
-13. 在 **解决方案资源管理器**中，打开 **SimpleMathVSIX** 项目的快捷菜单，选择 " **添加**"，然后选择 " **新建文件夹**"。
+13. 在 **解决方案资源管理器** 中，打开 **SimpleMathVSIX** 项目的快捷菜单，选择 " **添加**"，然后选择 " **新建文件夹**"。
 
 14. 将文件夹重命名为 `references` 。
 
@@ -128,29 +130,29 @@ ms.locfileid: "85904977"
     redist\commonconfiguration\neutral
     ```
 
-18. 在 **解决方案资源管理器**中，打开 **SimpleMath** 项目的快捷菜单，然后选择 " **在文件资源管理器中打开文件夹**"。
+18. 在 **解决方案资源管理器** 中，打开 **SimpleMath** 项目的快捷菜单，然后选择 " **在文件资源管理器中打开文件夹**"。
 
-19. 在 **文件资源管理器**中，导航到 *bin\Release* 文件夹，打开 **SimpleMath** 文件的快捷菜单，然后选择 " **复制**"。
+19. 在 **文件资源管理器** 中，导航到 *bin\Release* 文件夹，打开 **SimpleMath** 文件的快捷菜单，然后选择 " **复制**"。
 
-20. 在**解决方案资源管理器**中，将该文件粘贴到**SimpleMathVSIX**项目的*references\commonconfiguration\neutral*文件夹中。
+20. 在 **解决方案资源管理器** 中，将该文件粘贴到 **SimpleMathVSIX** 项目的 *references\commonconfiguration\neutral* 文件夹中。
 
-21. 重复上一步，将**SimpleMath**文件粘贴到**SimpleMathVSIX**项目中的*redist\commonconfiguration\neutral*文件夹。
+21. 重复上一步，将 **SimpleMath** 文件粘贴到 **SimpleMathVSIX** 项目中的 *redist\commonconfiguration\neutral* 文件夹。
 
-22. 在 **解决方案资源管理器**中，选择 " **SimpleMath**"。
+22. 在 **解决方案资源管理器** 中，选择 " **SimpleMath**"。
 
-23. 在菜单栏上，选择 "**查看**  >  **属性**" (键盘：选择**F4**键) 。
+23. 在菜单栏上，选择 "**查看**  >  **属性**" (键盘：选择 **F4** 键) 。
 
 24. 在 " **属性** " 窗口中，将 " **生成操作** " 属性更改为 " **内容**"，然后将 " **包括在 VSIX 中** " 属性更改为 **True**。
 
-25. 在 **解决方案资源管理器**中，对 **SimpleMath**重复此过程。
+25. 在 **解决方案资源管理器** 中，对 **SimpleMath** 重复此过程。
 
-26. 在 **解决方案资源管理器**中，选择 " **SimpleMathVSIX** " 项目。
+26. 在 **解决方案资源管理器** 中，选择 " **SimpleMathVSIX** " 项目。
 
 27. 在菜单栏上，选择 "**生成**  >  **生成 SimpleMathVSIX**"。
 
-28. 在 **解决方案资源管理器**中，打开 **SimpleMathVSIX** 项目的快捷菜单，然后选择 " **在文件资源管理器中打开文件夹**"。
+28. 在 **解决方案资源管理器** 中，打开 **SimpleMathVSIX** 项目的快捷菜单，然后选择 " **在文件资源管理器中打开文件夹**"。
 
-29. 在 **文件资源管理器**中，导航到 *\bin\Release* 文件夹，然后运行 *SimpleMathVSIX* 安装。
+29. 在 **文件资源管理器** 中，导航到 *\bin\Release* 文件夹，然后运行 *SimpleMathVSIX* 安装。
 
 30. 选择 " **安装** " 按钮，等待安装完成，然后重启 Visual Studio。
 
@@ -162,7 +164,7 @@ ms.locfileid: "85904977"
 
 3. 选择 " **空白应用** " 模板，将项目命名为 " **ArithmeticUI**"，然后选择 **"确定"** 按钮。
 
-4. 在**解决方案资源管理器**中，打开**ArithmeticUI**项目的快捷菜单，然后选择 "**添加**  >  **引用**"。
+4. 在 **解决方案资源管理器** 中，打开 **ArithmeticUI** 项目的快捷菜单，然后选择 "**添加**  >  **引用**"。
 
 5. 在引用类型列表中，展开 " **Windows**"，然后选择 " **扩展**"。
 
@@ -178,7 +180,7 @@ ms.locfileid: "85904977"
 
      你现在可以浏览 SDK 中的内容。
 
-10. 在 **解决方案资源管理器**中，打开 **MainPage**，并将其内容替换为以下 xaml：
+10. 在 **解决方案资源管理器** 中，打开 **MainPage**，并将其内容替换为以下 xaml：
 
     **C#**
 

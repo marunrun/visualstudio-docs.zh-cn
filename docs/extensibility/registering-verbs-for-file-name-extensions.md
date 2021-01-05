@@ -1,5 +1,7 @@
 ---
 title: 正在为文件扩展名注册谓词 |Microsoft Docs
+description: 了解如何使用 Shell 键注册与文件扩展名的编程标识符关联的谓词。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,17 +12,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ac2854f1799075cc14d9beb557335be5228be21d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: df0dfe90bd5e3bccbb6bb0f9dab400082f539fbf
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80701537"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863045"
 ---
 # <a name="register-verbs-for-file-name-extensions"></a>注册文件扩展名的谓词
 与应用程序的文件扩展名的关联通常具有一个在用户双击文件时发生的首选操作。 此首选操作链接到对应于操作的谓词，例如 "open"。
 
- 你可以通过使用位于 **HKEY_CLASSES_ROOT \{ progid} \Shell**的 Shell 键，来注册与编程标识符关联的谓词 (ProgID) 。 有关详细信息，请参阅 [文件类型](/windows/desktop/shell/fa-file-types)。
+ 你可以通过使用位于 **HKEY_CLASSES_ROOT \{ progid} \Shell** 的 Shell 键，来注册与编程标识符关联的谓词 (ProgID) 。 有关详细信息，请参阅 [文件类型](/windows/desktop/shell/fa-file-types)。
 
 ## <a name="register-standard-verbs"></a>注册标准谓词
  操作系统可识别以下标准谓词：
@@ -29,7 +31,7 @@ ms.locfileid: "80701537"
 
 - 编辑
 
-- 显示
+- 播放
 
 - 打印
 
@@ -71,7 +73,7 @@ ms.locfileid: "80701537"
 @="\"C:\\Program Files\\Common Files\\Microsoft Shared\\MSEnv\\VSLauncher.exe\" \"%1\""
 ```
 
- 若要在的现有实例中打开文件 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ，请注册 DDEEXEC 键。 下面的示例演示 .cs 文件的标准谓词注册 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] *.cs* 。
+ 若要在的现有实例中打开文件 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ，请注册 DDEEXEC 键。 下面的示例演示 .cs 文件的标准谓词注册 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]  。
 
 ```
 [HKEY_CLASSES_ROOT\.cs]
@@ -106,7 +108,7 @@ ms.locfileid: "80701537"
 ```
 
 ## <a name="set-the-default-verb"></a>设置默认谓词
- 默认谓词是用户在 Windows 资源管理器中双击文件时执行的操作。 默认谓词是指定为**HKEY_CLASSES_ROOT \\ *progid*\Shell**密钥的默认值的谓词。 如果未指定任何值，则默认谓词是在**HKEY_CLASSES_ROOT \\ *progid*\Shell**键列表中指定的第一个谓词。
+ 默认谓词是用户在 Windows 资源管理器中双击文件时执行的操作。 默认谓词是指定为 **HKEY_CLASSES_ROOT \\ *progid*\Shell** 密钥的默认值的谓词。 如果未指定任何值，则默认谓词是在 **HKEY_CLASSES_ROOT \\ *progid*\Shell** 键列表中指定的第一个谓词。
 
 > [!NOTE]
 > 如果计划在并行部署中更改扩展的默认谓词，请考虑对安装和删除的影响。 在安装期间，将覆盖原始默认值。

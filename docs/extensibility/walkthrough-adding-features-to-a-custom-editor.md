@@ -1,5 +1,7 @@
 ---
 title: 演练：向自定义编辑器添加功能 |Microsoft Docs
+description: 了解如何在使用此演练创建编辑器后将更多功能添加到自定义编辑器。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 12f585a3e7dd4a8182d7ed80cf65a20d0a82da83
-ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
+ms.openlocfilehash: c08af63eaf68701f1a6703ac41fec20368d78931
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93414017"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863207"
 ---
 # <a name="walkthrough-add-features-to-a-custom-editor"></a>演练：向自定义编辑器添加功能
 创建自定义编辑器后，可以向其添加更多功能。
@@ -51,7 +53,7 @@ ms.locfileid: "93414017"
         > [!NOTE]
         > 调用 `QueryService` <xref:Microsoft.VisualStudio.Shell.Interop.SVsFileChangeEx> 以获取指向的指针 `IVsFileChangeEx` 。
 
-7. 用源代码管理协调文档编辑事件。 请执行以下步骤：
+7. 用源代码管理协调文档编辑事件。 执行以下步骤：
 
     1. 通过调用来获取指向 `IVsQueryEditQuerySave2` 的 `QueryService` 指针 <xref:Microsoft.VisualStudio.Shell.Interop.SVsQueryEditQuerySave> 。
 
@@ -63,21 +65,21 @@ ms.locfileid: "93414017"
 
          如果文件尚未保存或自上次保存后发生更改，则此方法将提示用户保存该文件。
 
-8. 启用 " **属性** " 窗口，以显示在编辑器中选定的文本的属性。 请执行以下步骤：
+8. 启用 " **属性** " 窗口，以显示在编辑器中选定的文本的属性。 执行以下步骤：
 
     1. <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection.OnSelectChange%2A>每次更改文本选择时调用，并传入的实现 <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> 。
 
     2. 对 `QueryService` <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection> 服务调用以获取指向的指针 <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection> 。
 
-9. 使用户能够在编辑器和 **工具箱** 之间，或在外部编辑器 (如 Microsoft Word) 和 **工具箱** 之间拖放项。 请执行以下步骤：
+9. 使用户能够在编辑器和 **工具箱** 之间，或在外部编辑器 (如 Microsoft Word) 和 **工具箱** 之间拖放项。 执行以下步骤：
 
     1. `IDropTarget`在您的编辑器上实现以提醒 IDE 您的编辑器是拖放目标。
 
-    2. 在 <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolboxUser> 视图上实现接口，以便您的编辑器能够启用和禁用 " **工具箱** " 中的项。
+    2. 在 <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolboxUser> 视图上实现接口，以便您的编辑器能够启用和禁用 " **工具箱**" 中的项。
 
     3. 实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.ResetDefaults%2A> 并调用 `QueryService` <xref:Microsoft.VisualStudio.Shell.Interop.SVsToolbox> 服务，以获取指向 <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolbox2> 和接口的指针 <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolbox3> 。
 
-         这些步骤使你的 VSPackage 可以将新项添加到 " **工具箱** "。
+         这些步骤使你的 VSPackage 可以将新项添加到 " **工具箱**"。
 
 10. 确定是否要为编辑器提供任何其他可选功能。
 
@@ -138,7 +140,7 @@ ms.locfileid: "93414017"
   > [!NOTE]
   > `IOleInPlaceComponent`接口用于避免 OLE 2 菜单合并。
 
-   `IOleCommandTarget`实现会处理 **剪切** 、 **复制** 和 **粘贴** 等命令。 实现时 `IOleCommandTarget` ，确定编辑器是否需要其自己的 *.vsct* 文件来定义其自己的命令菜单结构，或者是否可以实现由定义的标准命令 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 。 通常，编辑器使用和扩展 IDE 的菜单，并定义自己的工具栏。 但是，除了使用 IDE 的标准命令集外，编辑器还需要定义自己的特定命令。 编辑器必须声明它使用的标准命令，然后在 *.vsct* 文件中定义任何新命令、上下文菜单、顶级菜单和工具栏。 如果创建就地激活编辑器，请 <xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponent> 在 *.vsct* 文件中实现和定义编辑器的菜单和工具栏，而不是使用 OLE 2 菜单合并。
+   `IOleCommandTarget`实现会处理 **剪切**、**复制** 和 **粘贴** 等命令。 实现时 `IOleCommandTarget` ，确定编辑器是否需要其自己的 *.vsct* 文件来定义其自己的命令菜单结构，或者是否可以实现由定义的标准命令 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 。 通常，编辑器使用和扩展 IDE 的菜单，并定义自己的工具栏。 但是，除了使用 IDE 的标准命令集外，编辑器还需要定义自己的特定命令。 编辑器必须声明它使用的标准命令，然后在 *.vsct* 文件中定义任何新命令、上下文菜单、顶级菜单和工具栏。 如果创建就地激活编辑器，请 <xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponent> 在 *.vsct* 文件中实现和定义编辑器的菜单和工具栏，而不是使用 OLE 2 菜单合并。
 
 - 若要在 UI 中阻止菜单命令 crowding，应在发明新命令之前使用 IDE 中的现有命令。 共享命令在 *SharedCmdDef. .vsct* 和 *ShellCmdDef* 中定义。 默认情况下，这些文件安装在安装的 VisualStudioIntegration\Common\Inc 子目录中 [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] 。
 

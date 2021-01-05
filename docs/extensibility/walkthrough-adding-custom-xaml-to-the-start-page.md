@@ -1,5 +1,7 @@
 ---
 title: 演练：将自定义 XAML 添加到起始页 |Microsoft Docs
+description: 了解如何使用本演练创建包含 web 浏览器的自定义 Visual Studio 起始页。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ manager: jillfra
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: 85cc6520ea86db664de676232e8d61a643483ca4
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 8f23b1331b2c083a38f6b11d9a4a3647474b2f04
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012069"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97862779"
 ---
 # <a name="walkthrough-add-custom-xaml-to-the-start-page"></a>演练：将自定义 XAML 添加到起始页
 
@@ -61,7 +63,7 @@ ms.locfileid: "90012069"
 
 ## <a name="test-the-custom-start-page"></a>测试自定义起始页
 
-1. 按 **F5**。
+1. 按 F5 。
 
      此时将打开 Visual Studio 的实验实例，其中安装了自定义起始页但未选中。
 
@@ -69,7 +71,7 @@ ms.locfileid: "90012069"
 
 3. 选择 " **启动**"。 在 " **自定义起始页** " 列表中，选择您 *的 .xaml* 文件，然后单击 **"确定"**。
 
-4. 在“视图” **** 菜单上，单击“起始页” ****。
+4. 在“视图”  菜单上，单击“起始页” 。
 
 5. 单击 " **必应** " 选项卡。
 
@@ -81,13 +83,13 @@ ms.locfileid: "90012069"
 
 7. 关闭实验实例。
 
-若要应用自定义起始页，请在 "**工具**  >  **选项**  >  "**环境**中选择 "**启动**"。 在 " **自定义起始页** " 列表中，选择您 *的 .xaml* 文件，然后单击 **"确定"**。
+若要应用自定义起始页，请在 "**工具**  >  **选项**  >  "**环境** 中选择 "**启动**"。 在 " **自定义起始页** " 列表中，选择您 *的 .xaml* 文件，然后单击 **"确定"**。
 
 ## <a name="next-steps"></a>后续步骤
 
 Visual Studio 起始页现在包含一个选项卡，其中显示了 "Web 浏览器" 选项卡和 "Mybutton.src" 选项卡。通过使用 *代码隐藏* 模型添加自定义 .dll，可以创建具有其他功能的自定义起始页，如 [将用户控件添加到起始页](../extensibility/adding-user-control-to-the-start-page.md)中所示。 可以通过将生成的 .vsix 文件发布到 [Visual Studio Marketplace](https://marketplace.visualstudio.com/) 网站或其他网站或网络共享来与其他用户共享自定义起始页。 有关更多信息，请参见 [Deploying Custom Start Pages](../extensibility/deploying-custom-start-pages.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [自定义起始页](../ide/customizing-the-start-page-for-visual-studio.md)
 - [WPF 容器控件](/previous-versions/bb675291(v=vs.110))
