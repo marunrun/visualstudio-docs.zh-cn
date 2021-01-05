@@ -1,5 +1,7 @@
 ---
 title: POPLISTFUNC |Microsoft Docs
+description: 了解 POPLISTFUNC 回调函数，该函数由源代码管理插件用来更新文件或目录的列表。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6c5f8c1683a993915476ff23f1f5d5f2c2aba462
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 239f1aa5a55c3a5ce3a0f2a3ec9145f3cdb0630e
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80702066"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863164"
 ---
 # <a name="poplistfunc"></a>POPLISTFUNC
 此回调由 IDE 提供给 [SccPopulateList](../extensibility/sccpopulatelist-function.md) ，由源代码管理插件用来更新) 提供给函数的文件或 (目录的列表 `SccPopulateList` 。

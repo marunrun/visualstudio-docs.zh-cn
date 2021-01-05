@@ -1,5 +1,7 @@
 ---
 title: 演练：创建边距标志符号 |Microsoft Docs
+description: 使用本演练，了解如何使用自定义编辑器扩展自定义编辑器边距的外观。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,18 +12,18 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b94ab61f56d74537758c189adc9c104516f67f92
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d8a2ac481ebf76fc2b34be841cd20d15b97fcfa9
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905044"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863078"
 ---
 # <a name="walkthrough-create-a-margin-glyph"></a>演练：创建边距标志符号
 您可以使用自定义编辑器扩展自定义编辑器边距的外观。 此演练在代码注释中出现 "todo" 一词时，将自定义标志符号放置在指示器边距上。
 
 ## <a name="prerequisites"></a>先决条件
- 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+ 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 也可稍后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
 ## <a name="create-a-mef-project"></a>创建 MEF 项目
 
@@ -132,7 +134,7 @@ ms.locfileid: "85905044"
 
 1. 生成解决方案。
 
-2. 按 **F5**运行项目。 将启动 Visual Studio 的第二个实例。
+2. 按 **F5** 运行项目。 将启动 Visual Studio 的第二个实例。
 
 3. 确保显示指示器边距。  (单击 " **工具** " 菜单上的 " **选项**"。 在 " **文本编辑器** " 页上，确保已选择 " **指示器边距** "。 ) 
 

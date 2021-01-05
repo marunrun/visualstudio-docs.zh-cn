@@ -1,5 +1,6 @@
 ---
 title: 为并行 Ide 注册文件扩展名
+description: 了解如何为并行部署注册文件扩展名，这允许用户在适当版本的 Visual Studio 中打开文件。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c5ebedd2861ca96d1ad96c74a54da06578d33960
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: c66413890f0aaa08e09a291f5bf31a44e7c24706
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036946"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863032"
 ---
 # <a name="register-file-name-extensions-for-side-by-side-deployments"></a>为并行部署注册文件扩展名
 对于在并行环境中部署的 Vspackage，必须注册文件扩展名，以便将文件与正确版本的相关联 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 。 如果你使用特定于版本的文件扩展名，则注册使用户能够在适当版本的中打开你的项目和项目项文件 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 。

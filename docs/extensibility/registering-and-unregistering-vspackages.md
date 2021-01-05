@@ -1,5 +1,7 @@
 ---
 title: 注册和注销 Vspackage |Microsoft Docs
+description: 了解注册和注销 Vspackage，包括所用的属性和 .pkgdef 文件。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f345bdbd3cf5858d495937c743b580abf5e3dd50
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9b60844826387c2807eedcb47fe24c11a58af80f
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80701583"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97862882"
 ---
 # <a name="register-and-unregister-vspackages"></a>注册和注销 Vspackage
 使用特性来注册 VSPackage，但
@@ -29,7 +31,7 @@ ms.locfileid: "80701583"
 ```csharp
 [PackageRegistration(UseManagedResourcesOnly = true)]
 [Guid("0B81D86C-0A85-4f30-9B26-DD2616447F95")]
-public sealed class BasicPackage : Package
+public sealed class BasicPackage : Package
 {
     // ...
 }
@@ -42,7 +44,7 @@ public sealed class BasicPackage : Package
 <location of Visual Studio 2015 install>\"Microsoft Visual Studio 14.0\VSSDK\VisualStudioIntegration\Tools\Bin\CreateExpInstance.exe" /Reset /VSInstance=14.0 /RootSuffix=Exp
 ```
 
- 如果要卸载已安装在 Visual Studio 开发实例上的扩展，请依次单击 "工具" " **Tools**  >  **扩展和更新**" 和 "**卸载**"。
+ 如果要卸载已安装在 Visual Studio 开发实例上的扩展，请依次单击 "工具" "   >  **扩展和更新**" 和 "**卸载**"。
 
  如果出于某种原因，这两种方法都不会在卸载扩展时成功完成，您可以从命令行中注销 VSPackage 程序集，如下所示：
 

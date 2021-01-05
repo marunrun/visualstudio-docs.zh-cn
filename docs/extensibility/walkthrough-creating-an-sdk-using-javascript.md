@@ -1,5 +1,7 @@
 ---
 title: 演练：使用 JavaScript 创建 SDK |Microsoft Docs
+description: 了解如何通过使用此演练，使用 JavaScript 将简单的数学 SDK 创建为 Visual Studio 扩展。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: a8c89d5d-5b78-4435-817f-c5f25ca6d715
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 29dac6cca7936dde8be2ebc57366f6370b8bcbc6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cd138638a1f8bb4c0fe8dc73504059f0c9dd4023
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904948"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97862917"
 ---
 # <a name="walkthrough-create-an-sdk-using-javascript"></a>演练：使用 JavaScript 创建 SDK
 本演练介绍了如何使用 JavaScript 来创建简单的数学 SDK，作为 Visual Studio 扩展 (VSIX) 。  本演练分为以下几个部分：
@@ -35,11 +37,11 @@ ms.locfileid: "85904948"
 
 3. 在 " **名称** " 文本框中，指定 `SimpleMathVSIX` 并选择 " **确定"** 按钮。
 
-4. 如果显示**Visual Studio 包向导**，请选择 "**欢迎**" 页上的 "**下一步**" 按钮，然后在**第1页**，单击 "**完成**" 按钮。
+4. 如果显示 **Visual Studio 包向导**，请选择 "**欢迎**" 页上的 "**下一步**" 按钮，然后在 **第1页**，单击 "**完成**" 按钮。
 
      尽管 **清单设计器** 会打开，但我们将通过直接修改清单文件来简化本演练。
 
-5. 在 **解决方案资源管理器**中，打开 **source.extension.vsixmanifest** 文件的快捷菜单，然后选择 " **查看代码**"。 使用此代码替换文件中的现有内容。
+5. 在 **解决方案资源管理器** 中，打开 **source.extension.vsixmanifest** 文件的快捷菜单，然后选择 " **查看代码**"。 使用此代码替换文件中的现有内容。
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -61,11 +63,11 @@ ms.locfileid: "85904948"
     </PackageManifest>
     ```
 
-6. 在**解决方案资源管理器**中，打开**SimpleMathVSIX**项目的快捷菜单，然后选择 "**添加**  >  **新项**"。
+6. 在 **解决方案资源管理器** 中，打开 **SimpleMathVSIX** 项目的快捷菜单，然后选择 "**添加**  >  **新项**"。
 
 7. 在 " **数据** " 类别中，选择 " **XML 文件**"，为文件命名 `SDKManifest.xml` ，然后选择 " **添加** " 按钮。
 
-8. 在 **解决方案资源管理器**中，打开 **SDKManifest.xml** 文件的快捷菜单，然后选择 " **打开** " 以在 **XML 编辑器**中显示该文件。
+8. 在 **解决方案资源管理器** 中，打开 **SDKManifest.xml** 文件的快捷菜单，然后选择 " **打开** " 以在 **XML 编辑器** 中显示该文件。
 
 9. 将以下代码添加到 **SDKManifest.xml** 文件中。
 
@@ -84,17 +86,17 @@ ms.locfileid: "85904948"
 
     ```
 
-10. 在 **解决方案资源管理器**的 **SDKManifest.xml** 文件的快捷菜单上，选择 " **属性**"。
+10. 在 **解决方案资源管理器** 的 **SDKManifest.xml** 文件的快捷菜单上，选择 " **属性**"。
 
 11. 在 " **属性** " 窗口中，将 " **包括在 VSIX 中** " 属性设置为 " **True**"。
 
-12. 在**解决方案资源管理器**的**SimpleMathVSIX**项目的快捷菜单上，选择 "**添加**  >  **新文件夹**"，然后命名文件夹 `Redist` 。
+12. 在 **解决方案资源管理器** 的 **SimpleMathVSIX** 项目的快捷菜单上，选择 "**添加**  >  **新文件夹**"，然后命名文件夹 `Redist` 。
 
 13. 添加已再发行的子文件夹，以创建此文件夹结构：
 
      *\Redist\CommonConfiguration\Neutral\SimpleMath\js\\*
 
-14. 在**\js \\ **文件夹的快捷菜单上，选择 "**添加**  >  **新项**"。
+14. 在 **\js \\** 文件夹的快捷菜单上，选择 "**添加**  >  **新项**"。
 
 15. 在 " **Visual c # 项**" 下，选择 " **Web** " 类别，然后选择 **JavaScript 文件** 项。 命名该文件 `arithmetic.js` ，然后选择 " **添加** " 按钮。
 
@@ -124,19 +126,19 @@ ms.locfileid: "85904948"
 
     ```
 
-17. 在 **解决方案资源管理器**的 **arithmetic.js** 文件的快捷菜单上，选择 " **属性**"。 进行这些属性更改：
+17. 在 **解决方案资源管理器** 的 **arithmetic.js** 文件的快捷菜单上，选择 " **属性**"。 进行这些属性更改：
 
     - 将 " **包括在 VSIX 中** " 属性设置为 " **True**"。
 
     - 将 " **复制到输出目录** " 属性设置为 " **始终复制**"。
 
-18. 在 **解决方案资源管理器**的 **SimpleMathVSIX** 项目的快捷菜单上，选择 " **生成**"。
+18. 在 **解决方案资源管理器** 的 **SimpleMathVSIX** 项目的快捷菜单上，选择 " **生成**"。
 
-19. 成功完成生成后，在项目的快捷菜单上，选择 " **在文件资源管理器中打开文件夹**"。 导航到**\bin\debug \\ **，然后运行 `SimpleMathVSIX.vsix` 安装。
+19. 成功完成生成后，在项目的快捷菜单上，选择 " **在文件资源管理器中打开文件夹**"。 导航到 **\bin\debug \\**，然后运行 `SimpleMathVSIX.vsix` 安装。
 
 20. 选择 " **安装** " 按钮，让安装完成。
 
-21. 重启 Visual Studio。
+21. 重新启动 Visual Studio。
 
 ## <a name="to-create-a-sample-app-that-uses-the-sdk"></a><a name="createSampleApp"></a> 创建使用 SDK 的示例应用
 
@@ -146,15 +148,15 @@ ms.locfileid: "85904948"
 
 3. 在 " **名称** " 框中，指定 `ArithmeticUI` 。 选择“确定”  按钮。
 
-4. 在**解决方案资源管理器**中，打开**ArithmeticUI**项目的快捷菜单，然后选择 "**添加**  >  **引用**"。
+4. 在 **解决方案资源管理器** 中，打开 **ArithmeticUI** 项目的快捷菜单，然后选择 "**添加**  >  **引用**"。
 
 5. 在 " **Windows**" 下，选择 " **扩展**"，并注意显示了 **简单的数学** 。
 
 6. 选中 " **简单数学** " 复选框，然后选择 **"确定"** 按钮。
 
-7. 在 **解决方案资源管理器**的 " **引用**" 下，请注意显示了 **简单的数学** 引用。 展开它，请注意，有一个**\js \\ **文件夹，其中包含**arithmetic.js**。 可以打开 **arithmetic.js** 以确认是否已安装源代码。
+7. 在 **解决方案资源管理器** 的 " **引用**" 下，请注意显示了 **简单的数学** 引用。 展开它，请注意，有一个 **\js \\** 文件夹，其中包含 **arithmetic.js**。 可以打开 **arithmetic.js** 以确认是否已安装源代码。
 
-8. 使用以下代码替换 *default.htm*的内容。
+8. 使用以下代码替换 *default.htm* 的内容。
 
    ```html
    <!DOCTYPE html>
@@ -192,7 +194,7 @@ ms.locfileid: "85904948"
    </html>
    ```
 
-9. 使用以下代码替换 *\js\default.js*的内容。
+9. 使用以下代码替换 *\js\default.js* 的内容。
 
     ```csharp
     (function () {
