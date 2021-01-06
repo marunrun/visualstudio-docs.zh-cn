@@ -1,5 +1,7 @@
 ---
 title: 将项目文件夹与源代码管理存储进行比较 |Microsoft Docs
+description: 在源代码管理插件 API 中，本地项目文件夹和源控件之间的比较是使用 SccDirQueryInfo 和 SccDirDiff 实现的。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +13,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: facb3b656e0ac50b50fdb0291307aa2fe98b1df4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ed69c6e503614cd1b2ed8e21716a5edcb4babd2b
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706868"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877580"
 ---
 # <a name="optional-comparison-of-local-project-folder-to-source-control-store"></a>本地项目文件夹与源代码管理存储之间的可选比较
 在源代码管理插件 API 1.2 中，本地项目文件夹和源控件之间的比较是通过使用函数 [SccDirQueryInfo](../../extensibility/sccdirqueryinfo-function.md) 和 [SccDirDiff](../../extensibility/sccdirdiff-function.md)来完成的。
 
- 在 **解决方案资源管理器**中，如果选择了文件夹而不是单个文件，则 " **比较版本** " 快捷菜单将在源代码管理插件中调用新的 [SccDirQueryInfo](../../extensibility/sccdirqueryinfo-function.md) 和 [SccDirDiff](../../extensibility/sccdirdiff-function.md) 。
+ 在 **解决方案资源管理器** 中，如果选择了文件夹而不是单个文件，则 " **比较版本** " 快捷菜单将在源代码管理插件中调用新的 [SccDirQueryInfo](../../extensibility/sccdirqueryinfo-function.md) 和 [SccDirDiff](../../extensibility/sccdirdiff-function.md) 。
 
 ## <a name="new-capability-flags"></a>新功能标志
  `SCC_CAP_DIRECTORYDIFF`

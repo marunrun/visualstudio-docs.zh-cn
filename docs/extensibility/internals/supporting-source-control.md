@@ -1,5 +1,7 @@
 ---
 title: 支持源代码管理 |Microsoft Docs
+description: 了解 Visual Studio 如何支持项目或编辑器的文件签出、签入和其他源代码管理操作。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 84de3120783528d209b1475477aee5087edac42b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4e722770ad1db4b85dbc2a5a8754d9158b6ee436
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704734"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876449"
 ---
 # <a name="supporting-source-control"></a>支持源代码管理
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 支持项目或编辑器的文件签出、签入和其他源代码管理操作。 作为源代码管理客户端， [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 旨在与源代码管理包交互，如 [!INCLUDE[vsvss](../../extensibility/includes/vsvss_md.md)] ，后者为动态定义的文件集提供存档、版本控制和控制功能。

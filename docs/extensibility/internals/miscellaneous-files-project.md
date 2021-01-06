@@ -1,5 +1,7 @@
 ---
 title: 杂项文件项目 |Microsoft Docs
+description: 了解可用于在 Visual Studio 项目中打开文件的两种类型的编辑器，以及用于确定要使用的编辑器的项目角色。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,19 +15,19 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 95cc1312fb7b381e1e20df834698480295fadcc8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a963b4d452a5d8ea9e0556b232f488e93dc0a29c
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707102"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876774"
 ---
 # <a name="miscellaneous-files-project"></a>杂项文件项目
 当用户打开项目项时，IDE 会将所有不属于解决方案中项目的成员的项分配给杂项文件项目。
 
  项目在确定用户打开项目项时所使用的编辑器方面扮演着重要的角色。 项目可设计为使用特定于项目的编辑器或标准编辑器打开某些文件。
 
- 特定于项目的编辑器通常要求用户具有特定的知识或使用项目中的特殊接口。 有关详细信息，请参阅 [如何：打开项目特定的编辑器](../../extensibility/how-to-open-project-specific-editors.md)。
+ 特定于项目的编辑器通常要求用户具有特定的知识或使用项目中的特殊接口。 有关详细信息，请参阅 [如何：打开 Project-Specific 编辑器](../../extensibility/how-to-open-project-specific-editors.md)。
 
  标准编辑器可在任何项目中打开特定扩展的任何文件。 用户可以为项目自定义一些标准编辑器（如 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 文本编辑器），但仍保留其公共字符。 标准编辑器是使用方法创建的 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> 。
 
@@ -35,7 +37,7 @@ ms.locfileid: "80707102"
 
  "杂项文件" 项目不要求用户在 " **新建项目** " 对话框中显式创建它。 此外，杂项文件项目不会永久管理项目成员的列表。 它使用可选功能来记录每个用户最近使用过的文件的列表。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3>
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument>
 - <xref:Microsoft.VisualStudio.Shell.Interop.VSDOCUMENTPRIORITY>

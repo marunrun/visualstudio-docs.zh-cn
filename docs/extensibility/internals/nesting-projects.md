@@ -1,5 +1,7 @@
 ---
 title: 嵌套项目 |Microsoft Docs
+description: 了解嵌套项目，这允许使用 VSPackage 的应用程序开发人员在 Visual Studio 中将相似类型的项目组合在一起。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 814780fa8e7e57a022a75b2e09115cfa55a1b8be
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 464538d7f7be68737715cb6fd10fda4017a5556a
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707031"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876657"
 ---
 # <a name="nesting-projects"></a>嵌套项目
 使用 VS 包的企业应用程序开发人员可以 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 通过使用 *项目嵌套*，在中轻松地将相似类型的项目组合在一起。 例如，企业模板项目使用嵌套项目将项目分组到类别中。 业务外观项目、Web UI 项目等在一个类别中组合在一起。

@@ -1,5 +1,6 @@
 ---
 title: 从 proj 和 .sln 文件中删除源代码管理信息
+description: 源代码管理插件 API 中的 SCC 信息存储在 MSSCCPRJ.SCC 中。SCC 文件，而不是项目和解决方案文件。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7a5f9b6ac83df104c381d7100a5e8fda5ac48a61
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 798179a48c24c61fa40c2519624e22a077003b56
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90034671"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876956"
 ---
 # <a name="removal-of-source-control-information-from-proj-and-sln-files"></a>从 proj 和 .sln 文件中删除源代码管理信息
 

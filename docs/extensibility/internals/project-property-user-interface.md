@@ -1,5 +1,7 @@
 ---
 title: 项目属性用户界面 |Microsoft Docs
+description: 了解项目子类型如何按基本项目的提供方式修改 "项目属性页" 对话框。
+ms.custom: SEO-VS-2020
 ms.date: 03/22/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f15895a7dab5c57d8312787b1276acac89c28796
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 2c9bba8b163b7fd21cfa829bb26e06cf37b887bd
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90011848"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877385"
 ---
 # <a name="project-property-user-interface"></a>项目属性用户界面
 
@@ -57,7 +59,7 @@ ms.locfileid: "90011848"
 
 项目子类型添加的新属性页将从基本项目实现中传递项目配置浏览对象。 此项目配置浏览对象支持自动化扩展程序。 有关 AutomationExtenders 的详细信息，请参阅 [实现和使用自动化扩展](/previous-versions/0y92k2w2(v=vs.140))程序。 由项目子类型调用实现的属性页 <xref:EnvDTE.Project.Extender%2A> 检索其自己的项目子类型配置浏览对象，该对象扩展了基项目的配置浏览对象。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:EnvDTE.IFilterProperties>
 - ["属性页" 对话框](/previous-versions/visualstudio/visual-studio-2010/as5chysf(v=vs.100))

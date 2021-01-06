@@ -1,5 +1,7 @@
 ---
 title: 支持旧版语言服务中的代码片段 |Microsoft Docs
+description: 了解旧版语言服务如何支持代码片段。 代码段是插入到源文件中的代码片段。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ad871eb73341f6ab87229687e2a6df898ffda32d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 781633a995027ee9938a0c579af32373c06207c2
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704911"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876605"
 ---
 # <a name="support-for-code-snippets-in-a-legacy-language-service"></a>旧版语言服务中的代码片段支持
 代码段是插入到源文件中的代码片段。 代码段本身是一个基于 XML 的模板，其中包含一组字段。 在插入代码段后，这些字段将突出显示，并且可能会有不同的值，具体取决于代码段插入到的上下文。 在插入代码段后，语言服务可以立即设置代码段的格式。
@@ -92,7 +94,7 @@ ms.locfileid: "80704911"
 |%TestDocs%|文件夹，例如，C:\documents and 和 Settings \\ *[username]* \My Documents\Visual Studio\8。|
 
 ### <a name="enabling-code-snippets-for-your-language-service"></a>启用语言服务的代码片段
- 可以通过将属性添加到 VSPackage 来启用语言服务的代码片段 <xref:Microsoft.VisualStudio.Shell.ProvideLanguageCodeExpansionAttribute> (参阅 [注册旧版语言服务](../../extensibility/internals/registering-a-legacy-language-service1.md) 获取详细信息) 。 <xref:Microsoft.VisualStudio.Shell.ProvideLanguageCodeExpansionAttribute.ShowRoots%2A>和 <xref:Microsoft.VisualStudio.Shell.ProvideLanguageCodeExpansionAttribute.SearchPaths%2A> 参数是可选的，但你应该包含 `SearchPaths` 命名参数，以便向**代码段管理器通知代码**段的位置。
+ 可以通过将属性添加到 VSPackage 来启用语言服务的代码片段 <xref:Microsoft.VisualStudio.Shell.ProvideLanguageCodeExpansionAttribute> (参阅 [注册旧版语言服务](../../extensibility/internals/registering-a-legacy-language-service1.md) 获取详细信息) 。 <xref:Microsoft.VisualStudio.Shell.ProvideLanguageCodeExpansionAttribute.ShowRoots%2A>和 <xref:Microsoft.VisualStudio.Shell.ProvideLanguageCodeExpansionAttribute.SearchPaths%2A> 参数是可选的，但你应该包含 `SearchPaths` 命名参数，以便向 **代码段管理器通知代码** 段的位置。
 
  下面的示例演示如何使用此属性：
 

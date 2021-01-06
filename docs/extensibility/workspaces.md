@@ -1,5 +1,7 @@
 ---
 title: Visual Studio 中的工作区 |Microsoft Docs
+description: 了解 Visual Studio 如何使用工作区来表示打开的文件夹中的文件集合，包括工作区提供程序和服务。
+ms.custom: SEO-VS-2020
 ms.date: 02/21/2018
 ms.topic: conceptual
 author: vukelich
@@ -7,12 +9,12 @@ ms.author: svukel
 manager: viveis
 ms.workload:
 - vssdk
-ms.openlocfilehash: 011781b434c4d005e473c5f97c60a9269dc5d034
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1ed660a5f52aba548d087b28f7caea4d1966fe45
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62952758"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876943"
 ---
 # <a name="workspaces"></a>工作区
 
@@ -76,7 +78,7 @@ ms.locfileid: "62952758"
 }
 ```
 
-假设这些设置位于用户 _VSWorkspaceSettings.js上_的，则可以访问数据，如下所示：
+假设这些设置位于用户 _VSWorkspaceSettings.js上_ 的，则可以访问数据，如下所示：
 
 ```csharp
 using System.Collections.Generic;
@@ -179,13 +181,13 @@ UI 上下文可用于自动加载包。 该值为 `4646B819-1AE0-4E79-97F4-8A817
 
 ::: moniker range="vs-2017"
 
-可以在 _%localappdata%\microsoft\visualstudio\15. 0_id \componentmodelcache\microsoft.visualstudio.default.err_中找到错误详细信息。 解决扩展插件实现的任何错误。
+可以在 _%localappdata%\microsoft\visualstudio\ 15.0_Id \componentmodelcache\microsoft.visualstudio.default.err_ 中找到错误详细信息。 解决扩展插件实现的任何错误。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-可以在 _%localappdata%\microsoft\visualstudio\16. 0_id \componentmodelcache\microsoft.visualstudio.default.err_中找到错误详细信息。 解决扩展插件实现的任何错误。
+可以在 _%localappdata%\microsoft\visualstudio\ 16.0_Id \componentmodelcache\microsoft.visualstudio.default.err_ 中找到错误详细信息。 解决扩展插件实现的任何错误。
 
 ::: moniker-end
 

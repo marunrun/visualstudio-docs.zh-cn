@@ -1,5 +1,7 @@
 ---
 title: 旧版语言服务中的大纲显示和隐藏文本 |Microsoft Docs
+description: 本文链接到用于在旧版语言服务中实现大纲显示和隐藏文本的资源。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b1f05d42de0201a7556046d19baf55830fa62c22
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1bd0b48292a448d70b266e598df561fdff2e8ab4
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706829"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877398"
 ---
 # <a name="outlining-and-hidden-text-in-a-legacy-language-service"></a>旧版语言服务中的大纲显示和隐藏文本
 大纲显示可将一系列文本行折叠成一行。 例如，在 c + + 中，所有方法都可以折叠为单个行，只显示方法签名。 隐藏文本是可以显示或隐藏的文本行的序列。

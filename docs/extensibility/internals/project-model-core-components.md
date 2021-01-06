@@ -1,5 +1,7 @@
 ---
 title: 项目模型核心组件 |Microsoft Docs
+description: 本文包含在项目模型核心中标识的接口和服务的说明，以及与对象关联的接口和服务。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +13,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8e29a9d40531b32f127054fe02f61c72738e508e
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: c6aeb24b2aee5b0abb3e5d803004ba97725bb707
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012407"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876891"
 ---
 # <a name="project-model-core-components"></a>项目模型核心组件
 下表在项目模型上展开。 这些表显示了模型中标识的接口和服务的简短说明，以及与特定对象关联的接口和服务。 此外，这些表详细说明了在创建和维护项目时可以选择的其他接口，具体取决于特定的项目类型的要求。
 
- 有关详细信息，请参阅 [支持符号浏览工具](../../extensibility/internals/supporting-symbol-browsing-tools.md)。
+ 有关详细信息，请参阅 [支持 Symbol-Browsing 工具](../../extensibility/internals/supporting-symbol-browsing-tools.md)。
 
 ### <a name="package-object"></a>Package 对象
 
@@ -99,7 +101,7 @@ ms.locfileid: "90012407"
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsExtensibility3>|用于实现自动化模型。 在您的项目模型中，您将返回一个 properties 对象，该对象可用于创建该对象的实例。|
 |<xref:Microsoft.VisualStudio.Shell.Interop.SVsUIHierWinClipboardHelper>|用于在层次结构中的项目对象上实现剪贴板事件。 `SVsUIHierWinClipboardHelper` 允许您正确处理剪切、复制和粘贴操作。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>
 - [清单：创建新的项目类型](../../extensibility/internals/checklist-creating-new-project-types.md)
 - [不在生成中：使用 HierUtil7 项目类实现项目类型 (c + +) ](/previous-versions/bb166212(v=vs.100))

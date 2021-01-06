@@ -1,5 +1,6 @@
 ---
 title: 支持旧版语言服务中的 "自动" 窗口
+description: 了解如何实现对 "自动" 窗口的支持，该窗口显示在正在调试的程序被暂停时处于范围内的表达式。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,18 +13,18 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b5eb4a7201888dc52dfe2f801ebc446786ec3274
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: c97ab4db9b71c91689abe0afb85230e5b0242962
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90038291"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876501"
 ---
 # <a name="support-for-the-autos-window-in-a-legacy-language-service"></a>支持旧版语言服务中的 "自动" 窗口
 
 " **自动" 窗口** 显示一些表达式，如正在调试的程序 (由于断点或异常) 而暂停的变量和参数。 表达式可以包括局部变量、局部变量或全局参数，以及在局部范围内已更改的参数。 "自动" 窗口还可以包括类、结构或其他 **类型的实例** 化。 表达式计算器可以评估的任何内容可能会显示 **在 "自动** " 窗口中。
 
- 托管包框架 (MPF) 不提供 **对 "自动" 窗口的直接** 支持。 但是，如果你重写 <xref:Microsoft.VisualStudio.Package.LanguageService.GetProximityExpressions%2A> 方法，则可以返回要显示在 "自动" 窗口中的**Autos**表达式列表。
+ 托管包框架 (MPF) 不提供 **对 "自动" 窗口的直接** 支持。 但是，如果你重写 <xref:Microsoft.VisualStudio.Package.LanguageService.GetProximityExpressions%2A> 方法，则可以返回要显示在 "自动" 窗口中的表达式列表。
 
 ## <a name="implementing-support-for-the-autos-window"></a>实现对 "自动" 窗口的支持
 

@@ -1,5 +1,7 @@
 ---
 title: 演练：实现代码段 |Microsoft Docs
+description: 你可以创建代码片段，并将其包含在编辑器扩展中。 了解如何使用本演练创建/注册代码片段。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: adbc5382-d170-441c-9fd0-80faa1816478
@@ -11,17 +13,17 @@ dev_langs:
 - VB
 ms.workload:
 - vssdk
-ms.openlocfilehash: e06e97acc77b4701e02b0ca54de589830a768669
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5a36590c0e56f1e1a2c01f8e084f0b95442607a5
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904718"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877112"
 ---
 # <a name="walkthrough-implement-code-snippets"></a>演练：实现代码片段
 你可以创建代码片段并将它们包含在编辑器扩展中，以便扩展的用户可以将其添加到自己的代码中。
 
- 代码段是可以在文件中合并的代码片段或其他文本。 若要查看已注册特定编程语言的所有代码段，请在 " **工具** " 菜单上单击 " **代码片段管理器**"。 若要在文件中插入代码片段，请右键单击要在其中放置代码片段的位置，单击 "插入代码片段" 或 " **外侧**代码"，找到所需的代码段，然后双击它。 按**tab**或**Shift** + **tab**修改代码段的相关部分，然后按**enter**或**Esc**来接受它。 有关详细信息，请参阅 [代码片段](../ide/code-snippets.md)。
+ 代码段是可以在文件中合并的代码片段或其他文本。 若要查看已注册特定编程语言的所有代码段，请在 " **工具** " 菜单上单击 " **代码片段管理器**"。 若要在文件中插入代码片段，请右键单击要在其中放置代码片段的位置，单击 "插入代码片段" 或 " **外侧** 代码"，找到所需的代码段，然后双击它。 按 **tab** 或 **Shift** + **tab** 修改代码段的相关部分，然后按 **enter** 或 **Esc** 来接受它。 有关详细信息，请参阅 [代码片段](../ide/code-snippets.md)。
 
  代码片段包含在具有代码片段 * 文件扩展名的 XML 文件中。 代码段可以包含在插入代码段之后突出显示的字段，以便用户可以查找并更改它们。 代码片段文件还为 **代码片段管理器** 提供信息，以便它可以在正确的类别中显示代码片段名称。 有关代码片段架构的信息，请参阅 [代码片段架构参考](../ide/code-snippets-schema-reference.md)。
 
@@ -36,7 +38,7 @@ ms.locfileid: "85904718"
    本演练基于 [演练：显示语句完成](../extensibility/walkthrough-displaying-statement-completion.md)。
 
 ## <a name="prerequisites"></a>先决条件
- 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+ 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 也可稍后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
 ## <a name="create-and-register-code-snippets"></a>创建和注册代码段
  通常，代码片段与注册的语言服务相关联。 但是，您不必实现 <xref:Microsoft.VisualStudio.Package.LanguageService> 来注册代码段。 相反，只需在代码段索引文件中指定一个 GUID，然后在添加到项目的中使用相同的 GUID <xref:Microsoft.VisualStudio.Shell.ProvideLanguageCodeExpansionAttribute> 。
@@ -66,7 +68,7 @@ ms.locfileid: "85904718"
    </SnippetCollection>
    ```
 
-3. 在 "代码段" 文件夹中创建一个文件，将其命名为**test** `.snippet` ，然后添加以下文本：
+3. 在 "代码段" 文件夹中创建一个文件，将其命名为 **test** `.snippet` ，然后添加以下文本：
 
    ```xml
    <?xml version="1.0" encoding="utf-8" ?>
@@ -143,7 +145,7 @@ ms.locfileid: "85904718"
      [!code-csharp[VSSDKCompletionTest#24](../extensibility/codesnippet/CSharp/walkthrough-implementing-code-snippets_3.cs)]
      [!code-vb[VSSDKCompletionTest#24](../extensibility/codesnippet/VisualBasic/walkthrough-implementing-code-snippets_3.vb)]
 
-9. 生成并运行该项目。 在运行项目时启动的 Visual Studio 的实验实例中，你刚注册的代码段应在**TestSnippets**语言下显示在**代码段管理器**中。
+9. 生成并运行该项目。 在运行项目时启动的 Visual Studio 的实验实例中，你刚注册的代码段应在 **TestSnippets** 语言下显示在 **代码段管理器** 中。
 
 ## <a name="add-the-insert-snippet-command-to-the-shortcut-menu"></a>将 "插入代码段" 命令添加到快捷菜单
  " **插入代码段** " 命令不包含在文本文件的快捷菜单中。 因此，您必须启用命令。
@@ -160,7 +162,7 @@ ms.locfileid: "85904718"
 2. 生成并运行该项目。 在实验实例中，打开文件扩展名为 *zzz* 的文件，然后右键单击其中的任意位置。 " **插入代码段** " 命令应出现在快捷菜单上。
 
 ## <a name="implement-snippet-expansion-in-the-snippet-picker-ui"></a>在代码段选取器 UI 中实现代码段扩展
- 本部分演示如何实现代码片段扩展，以便在快捷菜单上单击 **插入代码段** 时显示代码段选取器 UI。 用户键入代码段快捷方式，然后按 **Tab 键**时，还会展开代码片段。
+ 本部分演示如何实现代码片段扩展，以便在快捷菜单上单击 **插入代码段** 时显示代码段选取器 UI。 用户键入代码段快捷方式，然后按 **Tab 键** 时，还会展开代码片段。
 
  若要显示代码段选取器 UI 并启用导航和插入后代码段接受，请使用 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> 方法。 插入本身由方法进行处理 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionClient.OnItemChosen%2A> 。
 
@@ -198,7 +200,7 @@ ms.locfileid: "85904718"
      [!code-csharp[VSSDKCompletionTest#31](../extensibility/codesnippet/CSharp/walkthrough-implementing-code-snippets_10.cs)]
      [!code-vb[VSSDKCompletionTest#31](../extensibility/codesnippet/VisualBasic/walkthrough-implementing-code-snippets_10.vb)]
 
-7. 如果代码段包含可导航的字段，扩展会话将一直保持打开状态，直到显式接受扩展;如果代码段没有字段，则会话将关闭并 `null` 按 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionManager.InvokeInsertionUI%2A> 方法返回。 在 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> 方法中，在上一步中添加的代码段选取器 UI 代码之后，添加以下代码以处理代码段导航 (当用户在**Tab** **Shift** + 代码段插入) 后按 tab 或 Shift**Tab**键。
+7. 如果代码段包含可导航的字段，扩展会话将一直保持打开状态，直到显式接受扩展;如果代码段没有字段，则会话将关闭并 `null` 按 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionManager.InvokeInsertionUI%2A> 方法返回。 在 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> 方法中，在上一步中添加的代码段选取器 UI 代码之后，添加以下代码以处理代码段导航 (当用户在  + 代码段插入) 后按 tab 或 Shift **Tab** 键。
 
      [!code-csharp[VSSDKCompletionTest#32](../extensibility/codesnippet/CSharp/walkthrough-implementing-code-snippets_11.cs)]
      [!code-vb[VSSDKCompletionTest#32](../extensibility/codesnippet/VisualBasic/walkthrough-implementing-code-snippets_11.vb)]
@@ -243,9 +245,9 @@ ms.locfileid: "85904718"
 
      不要按 **enter** 或 **Esc 键**。
 
-5. 按**tab**键和**Shift** + **tab**在 "first" 和 "second" 之间切换。
+5. 按 **tab** 键和 **Shift** + **tab** 在 "first" 和 "second" 之间切换。
 
-6. 按 **enter** 或 **Esc**接受插入。
+6. 按 **enter** 或 **Esc** 接受插入。
 
 7. 在文本的其他部分中，键入 "test"，然后按 **tab**。由于 "test" 是代码段快捷方式，因此应再次插入代码段。
 

@@ -1,5 +1,7 @@
 ---
 title: 解决方案概述
+description: 了解解决方案的内部机制，适用于想要在 Visual Studio 扩展中使用解决方案的扩展开发人员。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 767db749d953855cd5c6f81f356a195c830aa838
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b2888f2fd0b2c9b7bfb530cc3fd46708ca13422f
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705298"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876722"
 ---
 # <a name="solutions-overview"></a>解决方案概述
 
@@ -45,7 +47,7 @@ ms.locfileid: "80705298"
 > [!NOTE]
 > 如果要创建包含两个项目的配置的新解决方案配置，并从生成中排除第三个，则需要使用属性页 UI 或自动化。 不能直接更改解决方案生成管理器的配置和属性，但可以使用 `SolutionBuild` 自动化模型中的 DTE 类操作解决方案生成管理器。 有关配置解决方案的详细信息，请参阅 [解决方案配置](../../extensibility/internals/solution-configuration.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage>
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts>

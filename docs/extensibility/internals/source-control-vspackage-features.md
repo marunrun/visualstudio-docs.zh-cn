@@ -1,5 +1,7 @@
 ---
 title: 源代码管理 VSPackage 功能 |Microsoft Docs
+description: 了解源代码管理 VSPackage 的功能，包括注册/选择详细信息，以及一些与源代码管理相关的主要功能。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,15 +12,15 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a01b9d8fbf5f8d0645b5245d21b05aba9e7dacea
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8dd887488adc5813ad51c9fa2a25648e25ab4876
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705020"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876215"
 ---
 # <a name="source-control-vspackage-features"></a>源代码管理 VSPackage 功能
-本部分介绍源代码管理 VSPackage 的各种功能。 其中概述了此类 VSPackage 的注册和选择详细信息，并讨论了三个与源代码管理相关的功能：处理查询编辑查询-Save (QEQS) 事件、符号替换和自定义用户界面 (UI) 用于源代码管理函数。
+本部分介绍源代码管理 VSPackage 的各种功能。 其中概述了此类 VSPackage 的注册和选择详细信息，并讨论了三个源代码管理相关的功能：处理 Query-Edit Query-Save (QEQS) 事件、符号替换和自定义用户界面 (UI) 用于源代码管理函数。
 
 ## <a name="in-this-section"></a>本节内容
 - [注册和选择](../../extensibility/internals/registration-and-selection-source-control-vspackage.md)
@@ -27,7 +29,7 @@ ms.locfileid: "80705020"
 
 - [查询编辑查询保存](../../extensibility/internals/query-edit-query-save-source-control-vspackage.md)
 
- 说明查询编辑查询-保存事件的角色，以及源代码管理 VSPackage 如何处理这些事件。
+ 说明 Query-Edit Query-Save 事件的角色，以及源代码管理 VSPackage 如何处理这些事件。
 
 - [图形控件](../../extensibility/internals/glyph-control-source-control-vspackage.md)
 

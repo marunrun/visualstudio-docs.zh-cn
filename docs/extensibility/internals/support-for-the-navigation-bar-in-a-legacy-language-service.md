@@ -1,5 +1,6 @@
 ---
 title: 旧版语言服务中的支持导航栏
+description: 了解如何在旧版语言服务中支持导航栏。 编辑器视图中的导航栏显示文件中的类型和成员。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0011e9dac5438715571d1df76ba379fb9ed122df
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 325789c3b7210c87d5c1b0414434af27c266c31c
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036556"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876523"
 ---
 # <a name="support-for-the-navigation-bar-in-a-legacy-language-service"></a>旧版语言服务中的导航栏支持
 编辑器视图顶部的导航栏显示文件中的类型和成员。 类型显示在左侧的下拉框中，成员显示在右侧下拉框中。 当用户选择某一类型时，插入符号会置于该类型的第一行。 当用户选择某个成员时，插入符号会被放置在该成员的定义上。 下拉框会进行更新，以反映插入符号的当前位置。

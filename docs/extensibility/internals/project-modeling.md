@@ -1,5 +1,7 @@
 ---
 title: 项目建模 |Microsoft Docs
+description: 了解为你的新项目类型和项目自动化遵循的路径创建自动化所需的标准项目对象。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c1ac89baf5bc7582d3430532938a5e5a0c35a4c0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7a481e731f01230139ec4342231479606c49bd11
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706544"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877411"
 ---
 # <a name="project-modeling"></a>项目建模
 为项目提供自动化的下一步是实现标准项目对象： <xref:EnvDTE.Projects> 和 `ProjectItems` 集合; 和 `Project` <xref:EnvDTE.ProjectItem> 对象; 以及对实现唯一的剩余对象。 这些标准对象在 Dteinternal 文件中定义。 BscPrj 示例中提供了标准对象的实现。 您可以使用这些类作为模型来创建自己的标准项目对象，这些对象与其他项目类型的项目对象并行。

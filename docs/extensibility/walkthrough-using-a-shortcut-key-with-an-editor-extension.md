@@ -1,5 +1,6 @@
 ---
 title: 结合使用快捷键和编辑器扩展
+description: 了解如何使用快捷键将视图修饰添加到文本视图。 本演练基于视口修饰编辑器模板。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -11,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 78bbf84f6b11451c8b1a09e6883ba76b19cec757
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 4c939328e1ef8e517821db8622e7383cab90c384
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037453"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875838"
 ---
 # <a name="walkthrough-use-a-shortcut-key-with-an-editor-extension"></a>演练：在编辑器扩展中使用快捷键
 您可以在编辑器扩展中响应快捷键。 下面的演练演示如何使用快捷键将视图修饰添加到文本视图。 本演练基于视口修饰编辑器模板，它允许您使用 + 字符添加修饰。
@@ -78,7 +79,7 @@ public AdornmentLayerDefinition editorAdornmentLayer;
 3. 名为 KeyBindingCommandFilter 的类应继承自 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> 。
 
     ```csharp
-    internal class KeyBindingCommandFilter : IOleCommandTarget
+    internal class KeyBindingCommandFilter : IOleCommandTarget
     ```
 
 4. 为文本视图、命令链中的下一个命令添加私有字段，并添加一个标志来表示是否已添加命令筛选器。
@@ -86,8 +87,8 @@ public AdornmentLayerDefinition editorAdornmentLayer;
     ```csharp
     private IWpfTextView m_textView;
     internal IOleCommandTarget m_nextTarget;
-    internal bool m_added;
-    internal bool m_adorned;
+    internal bool m_added;
+    internal bool m_adorned;
     ```
 
 5. 添加设置文本视图的构造函数。
@@ -198,7 +199,7 @@ public AdornmentLayerDefinition editorAdornmentLayer;
 
 1. 右键单击该项目，然后选择 " **管理 Nuget 包**"。
 
-2. 在 **Nuget 包管理器**中，选择 " **更新** " 选项卡，选中 " **选择所有包** " 复选框，然后选择 " **更新**"。
+2. 在 **Nuget 包管理器** 中，选择 " **更新** " 选项卡，选中 " **选择所有包** " 复选框，然后选择 " **更新**"。
 
 命令处理程序是的实现 <xref:Microsoft.VisualStudio.Commanding.ICommandHandler%601> ，它通过实例化修饰来处理命令。
 

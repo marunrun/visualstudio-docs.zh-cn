@@ -1,5 +1,7 @@
 ---
 title: "\"属性\" 窗口字段和接口 |Microsoft Docs"
+description: 了解根据在 Visual Studio IDE 中具有焦点的窗口确定属性窗口中显示哪些信息的选择。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,18 +12,18 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9529708c781e7fdb04c3b4c5ee143b7605857e84
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 21bc3a7f1d46a1afe579a67afa09097fd04458ff
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706163"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875760"
 ---
 # <a name="properties-window-fields-and-interfaces"></a>Properties Window Fields and Interfaces
 用于确定在 " **属性** " 窗口中显示哪些信息的选择模型基于 IDE 中具有焦点的窗口。 所选窗口中的每个窗口和对象都可以将其选择上下文对象推送到全局选择上下文。 当窗口具有焦点时，环境将使用窗口框架中的值更新全局选择上下文。 焦点发生变化时，选择上下文。
 
 ## <a name="tracking-selection-in-the-ide"></a>在 IDE 中跟踪选定内容
- IDE 拥有的窗口框架或站点具有一个名为的服务 <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection> 。 下面的步骤演示了选择如何更改（由用户将焦点更改为其他打开的窗口或在 **解决方案资源管理器**中选择其他项目项），以更改在 " **属性** " 窗口中显示的内容。
+ IDE 拥有的窗口框架或站点具有一个名为的服务 <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection> 。 下面的步骤演示了选择如何更改（由用户将焦点更改为其他打开的窗口或在 **解决方案资源管理器** 中选择其他项目项），以更改在 " **属性** " 窗口中显示的内容。
 
 1. 由你的 VSPackage 创建的对象，该对象被放置在选定窗口中，并调用 <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider.QueryService%2A> 来调用 <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection> <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection> 。
 
@@ -44,7 +46,7 @@ ms.locfileid: "80706163"
    最后，" **属性** " 窗口的底部还包含 " **属性** " 窗口网格中所选字段的说明。 有关详细信息，请参阅 ["属性" 窗口中的获取字段说明](#getting-field-descriptions-from-the-properties-window)。
 
 ## <a name="updating-property-values-in-the-properties-window"></a><a name="updating-property-values-in-the-properties-window"></a> 在 "属性" 窗口中更新属性值
-有两种方法可以保持“属性” **** 窗口与属性值更改同步。 第一种是调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell> 接口，从而提供对基本窗口化功能的访问，包括访问和创建由环境提供的工具窗口和文档窗口。 下面的步骤介绍了此同步过程。
+有两种方法可以保持“属性”  窗口与属性值更改同步。 第一种是调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell> 接口，从而提供对基本窗口化功能的访问，包括访问和创建由环境提供的工具窗口和文档窗口。 下面的步骤介绍了此同步过程。
 
 ### <a name="updating-property-values-using-ivsuishell"></a>使用 IVsUIShell 更新属性值
 
@@ -57,13 +59,13 @@ ms.locfileid: "80706163"
 3. 实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> 方法 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.AdviseHierarchyEvents%2A> 和 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.UnadviseHierarchyEvents%2A> 分别创建和禁用层次结构事件的客户端通知，而不要求层次结构实现 <xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPointContainer>。
 
 ### <a name="updating-property-values-using-iconnection"></a>使用 IConnection 更新属性值
- 第二种保持“属性” **** 窗口与属性值更改同步的方法是，实现可连接对象上的 `IConnection` ，以指示输出接口是否存在。 如果希望本地化属性名，请从 <xref:System.ComponentModel.ICustomTypeDescriptor> 派生对象。 <xref:System.ComponentModel.ICustomTypeDescriptor> 实现可以修改其返回的属性说明符和更改属性名。 若要本地化说明，请创建一个派生自 <xref:System.ComponentModel.DescriptionAttribute> 的属性并重写 Description 属性。
+ 第二种保持“属性”  窗口与属性值更改同步的方法是，实现可连接对象上的 `IConnection` ，以指示输出接口是否存在。 如果希望本地化属性名，请从 <xref:System.ComponentModel.ICustomTypeDescriptor> 派生对象。 <xref:System.ComponentModel.ICustomTypeDescriptor> 实现可以修改其返回的属性说明符和更改属性名。 若要本地化说明，请创建一个派生自 <xref:System.ComponentModel.DescriptionAttribute> 的属性并重写 Description 属性。
 
 #### <a name="considerations-in-implementing-the-iconnection-interface"></a>实现 IConnection 接口的注意事项
 
 1. `IConnection` 提供对具有 <xref:Microsoft.VisualStudio.OLE.Interop.IEnumConnectionPoints> 接口的枚举器子对象的访问权限。 它还提供对所有连接点的子对象的访问权限，每个子对象均实现 <xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPoint> 接口。
 
-2. 任何浏览对象都对实现 <xref:Microsoft.VisualStudio.OLE.Interop.IPropertyNotifySink> 事件负责。 **** “属性”窗口通过 `IConnection`为事件集提供建议。
+2. 任何浏览对象都对实现 <xref:Microsoft.VisualStudio.OLE.Interop.IPropertyNotifySink> 事件负责。  “属性”窗口通过 `IConnection`为事件集提供建议。
 
 3. 连接点用于控制在其实现 <xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPoint.Advise%2A> 时允许的连接数（一个还是多个）。 只允许一个接口的连接点可以通过 <xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPoint.EnumConnections%2A> 方法返回 <xref:Microsoft.VisualStudio.VSConstants.E_NOTIMPL>。
 
@@ -72,7 +74,7 @@ ms.locfileid: "80706163"
 5. 此外，还可以调用 `IConnection` 从而为每个输出 IID 获取对具有 <xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPoint> 接口的连接点子对象的访问权限。 通过 <xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPoint> 接口，客户端使用可连接对象和客户端自己的同步启动或终止通知循环。客户端还可以调用 <xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPoint> 接口，以获取具有接口的枚举器对象， <xref:Microsoft.VisualStudio.OLE.Interop.IEnumConnections> 以枚举它知道的连接。
 
 ## <a name="getting-field-descriptions-from-the-properties-window"></a><a name="getting-field-descriptions-from-the-properties-window"></a> 从 "属性" 窗口获取字段说明
-在“属性” **** 窗口底部，说明区域显示了与所选属性字段相关的信息。 默认情况下此功能处于开启状态。 如果你想要隐藏说明字段，右键单击“属性” **** 窗口并单击“说明” ****。 执行此操作还会删除“菜单”窗口中“说明” **** 标题旁的复选标记。 你可以按照将“说明” **** 切换回开启状态的步骤来再次显示该字段。
+在“属性”  窗口底部，说明区域显示了与所选属性字段相关的信息。 默认情况下此功能处于开启状态。 如果你想要隐藏说明字段，右键单击“属性”  窗口并单击“说明” 。 执行此操作还会删除“菜单”窗口中“说明”  标题旁的复选标记。 你可以按照将“说明”  切换回开启状态的步骤来再次显示该字段。
 
  说明字段中的信息来自 <xref:Microsoft.VisualStudio.OLE.Interop.ITypeInfo>。 每个方法、接口、组件类等在类型库中均可拥有一个未本地化的 `helpstring` 特性。 " **属性** " 窗口从中检索字符串 <xref:Microsoft.VisualStudio.OLE.Interop.ITypeInfo.GetDocumentation%2A> 。
 
@@ -108,7 +110,7 @@ STDAPI DLLGetDocumentation
 
  就 .olb 文件而言， `helpstringdll` 特性是可选的，因为它是包含 .tlb 文件本身的同一文件。
 
- 若要获取显示在“说明” **** 窗格中的字符串，为此你至少需要在类型库中指定 `helpstring` 特性。 如果你希望本地化这些字符串，则必须指定 `helpstringdll` （可选）特性和 `helpstringcontext` （必需）特性，并实现 `DLLGetDocumentation`。
+ 若要获取显示在“说明”  窗格中的字符串，为此你至少需要在类型库中指定 `helpstring` 特性。 如果你希望本地化这些字符串，则必须指定 `helpstringdll` （可选）特性和 `helpstringcontext` （必需）特性，并实现 `DLLGetDocumentation`。
 
  通过 idl 的 `helpstringcontext` 特性和 `DLLGetDocumentation`获取本地化的信息时，没有需要实现的其他接口。
 
