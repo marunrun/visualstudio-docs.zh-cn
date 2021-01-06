@@ -1,5 +1,7 @@
 ---
 title: 用于生成的项目配置 |Microsoft Docs
+description: 了解如何通过新的项目类型中的 "解决方案配置" 对话框管理特定解决方案的解决方案配置列表。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: bdd084053e06206a99298b234b4d51c8504119a2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7768de1b57142e201c4108f5ef0c0768c57a8639
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706730"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877996"
 ---
 # <a name="project-configuration-for-building"></a>用于生成的项目配置
 给定解决方案的解决方案配置列表由 "解决方案配置" 对话框管理。
@@ -55,7 +57,7 @@ ms.locfileid: "80706730"
 
  此外，您可以在 "项目依赖项" 窗口中提供网格。 有关详细信息，请参阅 [属性显示网格](../../extensibility/internals/properties-display-grid.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [管理配置选项](../../extensibility/internals/managing-configuration-options.md)
 - [用于管理部署的项目配置](../../extensibility/internals/project-configuration-for-managing-deployment.md)
 - [用于输出的项目配置](../../extensibility/internals/project-configuration-for-output.md)

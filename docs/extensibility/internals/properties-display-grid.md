@@ -1,5 +1,7 @@
 ---
 title: 属性显示网格 |Microsoft Docs
+description: 了解 "属性名称" 和 "属性值" 字段在属性窗口的网格中的位置，以及如何在扩展属性中使用网格。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d094c32ba8a64fc636f3fb6dfb2944dc3955628a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 418501ada340614d084e9796a59a46f8612aa743
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706185"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97878022"
 ---
 # <a name="properties-display-grid"></a>属性显示网格
 
@@ -29,7 +31,7 @@ ms.locfileid: "80706185"
 
 2. 将 `pfHide` 参数设置 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.HideProperty%2A> 为 `TRUE` 。
 
-为了将信息推送到 " **属性** " 窗口，IDE 使用 <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> 。 <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> 由 Vspackage 为每个窗口调用，其中包含具有相关属性的可选择对象，这些对象将显示在 " **属性** " 窗口中。 使用 __VSHPROPID**解决方案资源管理器**的 <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> 调用 `GetProperty` 实现[。](<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_BrowseObject>)在项目层次结构中 VSHPROPID_BrowseObject，以获取层次结构中的可浏览对象。
+为了将信息推送到 " **属性** " 窗口，IDE 使用 <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> 。 <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> 由 Vspackage 为每个窗口调用，其中包含具有相关属性的可选择对象，这些对象将显示在 " **属性** " 窗口中。 使用 __VSHPROPID **解决方案资源管理器** 的 <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> 调用 `GetProperty` 实现 [。](<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_BrowseObject>)在项目层次结构中 VSHPROPID_BrowseObject，以获取层次结构中的可浏览对象。
 
 如果 VSPackage 不支持 [__VSHPROPID。VSHPROPID_BrowseObject](<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_BrowseObject>)，IDE <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> 使用 __VSHPROPID 的值尝试使用 [。VSHPROPID_SelContainer](<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_SelContainer>) 层次结构项提供的内容。
 

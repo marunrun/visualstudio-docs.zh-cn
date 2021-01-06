@@ -1,5 +1,7 @@
 ---
 title: 使用命令行发布扩展
+description: 了解如何使用命令行将扩展发布到 Visual Studio Marketplace，这允许开发人员浏览新扩展和已更新的扩展。
+ms.custom: SEO-VS-2020
 ms.date: 07/12/2018
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5108f4afa382c00376424432d2086f0494e34a03
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c4132d878ff1ec7689be890446a1849577fafd30
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904675"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877918"
 ---
 # <a name="walkthrough-publishing-a-visual-studio-extension-via-command-line"></a>演练：通过命令行发布 Visual Studio 扩展
 
@@ -84,7 +86,7 @@ VsixPublisher.exe deletePublisher -publisherName "{Publisher Name}" -personalAcc
 VsixPublisher.exe deleteExtension -extensionName "{Extension Name}" -publisherName "{Publisher Name}"
 ```
 
-### <a name="login"></a>登录
+### <a name="login"></a>login
 
 将发布服务器记录到计算机中。
 

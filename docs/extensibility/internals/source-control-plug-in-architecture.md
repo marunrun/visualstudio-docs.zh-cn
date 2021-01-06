@@ -1,5 +1,7 @@
 ---
 title: 源代码管理插件体系结构 |Microsoft Docs
+description: 了解如何通过实现和附加源代码管理插件向 Visual Studio IDE 添加源代码管理支持。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,15 +12,15 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f549ad2c4ee456860a08fbf20ccda813934a8582
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e154e91ce552df9e54d45ea9210a0679edae5f28
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705113"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97878061"
 ---
 # <a name="source-control-plug-in-architecture"></a>源代码管理插件体系结构
-通过实现和附加源代码管理插件，你可以将源代码管理支持添加到 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 集成开发环境 (IDE) 。 IDE 通过定义完善的源代码管理插件 API 连接到源代码管理插件。 IDE 通过提供由工具栏和菜单命令组成的用户界面 (UI) 来公开源代码管理系统的版本控制功能。 源代码管理插件实现源代码管理功能。
+通过实现和附加源代码管理插件，你可以将源代码管理支持添加到 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 集成开发环境 (IDE) 。 IDE 通过定义完善的源代码管理 Plug-In API 连接到源代码管理插件。 IDE 通过提供由工具栏和菜单命令组成的用户界面 (UI) 来公开源代码管理系统的版本控制功能。 源代码管理插件实现源代码管理功能。
 
 ## <a name="source-control-plug-in-resources"></a>源代码管理插件资源
  源代码管理插件提供了一些资源，可帮助创建版本控制应用程序并将其连接到 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE。 源代码管理插件包含必须由源代码管理插件实现的 API 规范，以便可以将其集成到 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE 中。 它还包含以 c + + 编写的代码示例 () 实现了一个框架源代码管理插件，该插件演示实现符合源代码管理插件 API 的基本函数的实现。

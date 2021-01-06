@@ -1,5 +1,7 @@
 ---
 title: 用于管理部署的项目配置 |Microsoft Docs
+description: 了解如何部署到预期的调试和安装位置，以及两种 Visual Studio 支持支持部署的项目的方式。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 62f7bf6535a89e46799ade88fe8976974b3019c5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5c322e320e193acd25a011cc85173c1c80e2d29d
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706701"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877983"
 ---
 # <a name="project-configuration-for-managing-deployment"></a>用于管理部署的项目配置
 部署是指以物理方式将输出项从生成过程移动到预期位置以便进行调试和安装的操作。 例如，Web 应用程序可以在本地计算机上生成，然后放在服务器上。
@@ -37,7 +39,7 @@ ms.locfileid: "80706701"
 
   配置可以指定影响其生成或部署操作的依赖项。 生成或部署依赖项是在生成或部署配置之前或之后必须生成或部署的项目。 项目之间的生成依赖项与接口一起说明 <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildDependency> ，并部署与接口的依赖关系 <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployDependency> 。 有关详细信息，请参阅 [用于生成的项目配置](../../extensibility/internals/project-configuration-for-building.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [管理配置选项](../../extensibility/internals/managing-configuration-options.md)
 - [用于生成的项目配置](../../extensibility/internals/project-configuration-for-building.md)
 - [用于输出的项目配置](../../extensibility/internals/project-configuration-for-output.md)

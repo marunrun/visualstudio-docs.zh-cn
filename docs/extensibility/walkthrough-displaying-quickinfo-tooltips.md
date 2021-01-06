@@ -1,5 +1,7 @@
 ---
 title: 演练：显示 QuickInfo 工具提示 |Microsoft Docs
+description: 了解如何使用本演练显示文本内容的 QuickInfo。 QuickInfo 显示方法名称的方法签名和说明。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.workload:
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 0eb70e5d39708ffd532fe39d6d597043621158d5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 34e1bb2c92cd387e979fdaa5746a34ea8d3995fc
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904833"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877931"
 ---
 # <a name="walkthrough-display-quickinfo-tooltips"></a>演练：显示 QuickInfo 工具提示
 QuickInfo 是一项 IntelliSense 功能，当用户将指针移到方法名称上时，它将显示方法签名和说明。 可以通过定义要为其提供 QuickInfo 说明的标识符，然后创建用于显示内容的工具提示，来实现基于语言的功能（如 QuickInfo）。 你可以在语言服务的上下文中定义 QuickInfo，或者可以定义自己的文件扩展名和内容类型，并只为该类型显示 QuickInfo，也可以为现有内容类型 (如 "text" ) 显示 QuickInfo。 本演练演示如何为 "文本" 内容类型显示 QuickInfo。
@@ -38,7 +40,7 @@ QuickInfo 是一项 IntelliSense 功能，当用户将指针移到方法名称�
   在此示例中，QuickInfo 源使用方法名称和说明的硬编码列表，但在完整实现中，语言服务和语言文档负责提供该内容。
 
 ## <a name="prerequisites"></a>先决条件
- 从 Visual Studio 2015 开始，不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+ 从 Visual Studio 2015 开始，不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 也可稍后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
 ## <a name="create-a-mef-project"></a>创建 MEF 项目
 
@@ -57,7 +59,7 @@ QuickInfo 是一项 IntelliSense 功能，当用户将指针移到方法名称�
 
 1. 添加一个类文件并将其命名为 `TestQuickInfoSource`。
 
-2. 添加对 *VisualStudio*的引用。
+2. 添加对 *VisualStudio* 的引用。
 
 3. 添加以下 import 语句。
 

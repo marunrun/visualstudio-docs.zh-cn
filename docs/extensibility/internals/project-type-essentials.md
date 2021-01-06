@@ -1,5 +1,7 @@
 ---
 title: 项目类型基础 |Microsoft Docs
+description: 了解何时必须创建项目类型，以及何时可以使用项目子类型扩展现有项目类型。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,17 +12,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b7634802899d72eb6abcb0aa837b8fb6a532b966
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: d55a4be044c44567f65e312d013ebdb61314ea00
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012056"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877788"
 ---
 # <a name="project-type-essentials"></a>项目类型基础知识
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 包含多种语言的项目类型，如 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] 或 [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] 。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 还允许您创建自己的项目类型。
 
- 如果只是想要将自定义命令、编辑器或工具窗口添加到 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ，则可以执行此操作，而无需创建新的项目类型。 有关详情，请参阅以下主题：
+ 如果只是想要将自定义命令、编辑器或工具窗口添加到 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ，则可以执行此操作，而无需创建新的项目类型。 有关详细信息，请参阅下列主题：
 
 - [命令、菜单和工具栏](../../extensibility/internals/commands-menus-and-toolbars.md)
 
@@ -64,5 +66,5 @@ ms.locfileid: "90012056"
 
 - 项目类型可以支持多个配置，例如调试和发布。 用户可以使用所提供的属性页更改项目的不同配置。 有关详细信息，请参阅 [管理配置选项](../../extensibility/internals/managing-configuration-options.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [部署项目类型](../../extensibility/internals/deploying-project-types.md)

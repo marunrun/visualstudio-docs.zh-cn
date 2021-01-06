@@ -1,5 +1,7 @@
 ---
 title: 选项和选项页 |Microsoft Docs
+description: 了解对 "选项" 页的支持，它允许您更改确定 VSPackage 状态的选项的值。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7d21bf6d5ab7e23047a02e1188fff9a47d0cbd58
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c4699063d753539c72c373266b3fce9a0fdf8f00
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706839"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877866"
 ---
 # <a name="options-and-options-pages"></a>选项和选项页
 单击 "**工具**" 菜单上的 "**选项**" 将打开 "**选项**" 对话框。 此对话框中的选项统称为 "选项页"。 导航窗格中的树控件包含选项类别，每个类别都包含 "选项" 页。 选择某个页面后，其选项将显示在右窗格中。 这些页面使你可以更改用于确定 VSPackage 状态的选项的值。
@@ -37,9 +39,9 @@ ms.locfileid: "80706839"
  [!code-csharp[VSSDKSupportForOptionsPages#1](../../extensibility/internals/codesnippet/CSharp/options-and-options-pages_1.cs)]
  [!code-vb[VSSDKSupportForOptionsPages#1](../../extensibility/internals/codesnippet/VisualBasic/options-and-options-pages_1.vb)]
 
- 如果 <xref:Microsoft.VisualStudio.Shell.Package.UserRegistryRoot%2A> 是 HKEY_CURRENT_USER \software\microsoft\visualstudio\8.0exp，则属性名称和值对是 HKEY_CURRENT_USER \software\microsoft\visualstudio\8.0exp\dialogpage\company.optionspage.optionspagegeneral. 的子项。
+ 如果 <xref:Microsoft.VisualStudio.Shell.Package.UserRegistryRoot%2A> HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0Exp，则属性名称和值对是 HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0Exp\DialogPage\Company.OptionsPage.OptionsPageGeneral 的子项。
 
- "选项" 页本身的注册表路径由 " <xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A> 单词"、"ToolsOptionsPages" 和 "选项" 页类别和名称确定。 例如，如果 "自定义选项" 页具有 "类别"、"我的选项" 页，并且 " <xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A> HKEY_LOCAL_MACHINE \software\microsoft\visualstudio\8.0exp"，则 "选项" 页具有注册表项，HKEY_LOCAL_MACHINE \Software\microsoft\visualstudio\8.0exp\toolsoptionspages\my 选项 Pages\Custom。
+ "选项" 页本身的注册表路径由 " <xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A> 单词"、"ToolsOptionsPages" 和 "选项" 页类别和名称确定。 例如，如果自定义选项页具有 "类别"、"我的选项页" 和 " <xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp"，则 "选项" 页将包含注册表项，HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\ToolsOptionsPages\My Option Pages\Custom。
 
 ## <a name="toolsoptions-page-attributes-and-layout"></a>"工具/选项" 页属性和布局
  <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute>特性确定将自定义选项页分组到 "**选项**" 对话框的导航树中的类别。 <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute>属性将选项页与提供接口的 VSPackage 相关联。 考虑以下代码片断：
@@ -66,7 +68,7 @@ ms.locfileid: "80706839"
   [!code-csharp[VSSDKSupportForOptionsPages#3](../../extensibility/internals/codesnippet/CSharp/options-and-options-pages_3.cs)]
   [!code-vb[VSSDKSupportForOptionsPages#3](../../extensibility/internals/codesnippet/VisualBasic/options-and-options-pages_3.vb)]
 
-  "选项" 页上的 "OptionInteger" 选项显示为 "**我的选项**" 类别中的**整数选项**。 如果选择了该选项，则 "说明" 框中会显示 " **我的整数" 选项**。
+  "选项" 页上的 "OptionInteger" 选项显示为 "**我的选项**" 类别中的 **整数选项**。 如果选择了该选项，则 "说明" 框中会显示 " **我的整数" 选项**。
 
 ## <a name="accessing-options-pages-from-another-vspackage"></a>访问其他 VSPackage 的选项页
  承载和管理选项页的 VSPackage 可以通过使用自动化模型以编程方式从另一个 VSPackage 访问。 例如，在以下代码中，VSPackage 注册为承载选项页。
@@ -81,7 +83,7 @@ ms.locfileid: "80706839"
 
  当 <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> 属性注册选项页时，如果该特性的参数为，则该页将在 automationproperties.livesetting 项下进行注册 `SupportsAutomation` `true` 。 自动检查此注册表项以查找关联的 VSPackage，然后通过 "托管选项" 页（在本例中为 "我的网格" 页）访问属性。
 
- 自动化属性的注册表路径由 " <xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A> 单词"、"automationproperties.livesetting" 和 "选项" 页类别和名称确定。 例如，如果 "选项" 页具有 "我的类别" 类别、"我的网格" 页名称和 <xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A> HKEY_LOCAL_MACHINE \software\microsoft\visualstudio\8.0exp，则自动化属性具有注册表项，HKEY_LOCAL_MACHINE \Software\microsoft\visualstudio\8.0exp\automationproperties\my Category\My 网格页。
+ 自动化属性的注册表路径由 " <xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A> 单词"、"automationproperties.livesetting" 和 "选项" 页类别和名称确定。 例如，如果 "选项" 页具有 "我的类别" 类别、"我的网格" 页名称和 <xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp，则自动化属性具有注册表项，HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\AutomationProperties\My Category\My Grid Page。
 
 > [!NOTE]
 > 规范名称 "我的 Category.My" 网格页是此项的 Name 子项的值。

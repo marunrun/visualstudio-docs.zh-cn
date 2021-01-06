@@ -1,5 +1,6 @@
 ---
 title: 将内容类型链接到文件扩展名
+description: 在本演练中，了解如何使用编辑器 Managed Extensibility Framework 扩展名将您自己的内容类型链接到文件扩展名。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -11,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3d59ae0b5eb2411ff9e41466e8b87dbe20b835ba
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 478ecc6c2238703d1cacc8e649072d669a41c590
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90034658"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877905"
 ---
 # <a name="walkthrough-link-a-content-type-to-a-file-name-extension"></a>演练：将内容类型链接到文件扩展名
 你可以定义自己的内容类型，并使用编辑器 Managed Extensibility Framework (MEF) 扩展将文件扩展名链接到该类型。 在某些情况下，文件扩展名已由语言服务定义。 但是，若要将其与 MEF 一起使用，还必须将其链接到内容类型。

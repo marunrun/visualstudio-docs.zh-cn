@@ -1,5 +1,7 @@
 ---
 title: Microsoft Help Viewer SDK |Microsoft Docs
+description: 了解 Visual Studio 帮助查看器任务，例如创建项目、创建帮助查看器内容品牌包以及部署一组文章。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 620d7dcd-d462-475e-a449-fbfa06ff12c5
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 901a5a5eea7835720ab9d5963f0ab1be36df3685
-ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
+ms.openlocfilehash: 9e77d06900a17aca4c2630587a45a9b144accde2
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97668854"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877840"
 ---
 # <a name="microsoft-help-viewer-sdk"></a>Microsoft Help Viewer SDK
 
@@ -449,17 +451,17 @@ Branding.xml 文件包含一个元素列表，其中的元素用于在主题包�
 | - | - |
 | 功能： | **CollapsibleArea** |
 | 使用： | 展开折叠内容控件文本 |
-| **元素** | **值** |
+| **元素** | 值 |
 | ExpandText | 展开 |
 | CollapseText | 折叠 |
 | 功能： | **CodeSnippet** |
 | 使用： | 代码片段控件文本。  注意： "不间断" 空间的代码片段内容将更改为空间。 |
-| **元素** | **值** |
+| **元素** | 值 |
 | CopyToClipboard | 复制到剪贴板 |
 | ViewColorizedText | 查看着色 |
 | CombinedVBTabDisplayLanguage | Visual Basic (示例)  |
 | VBDeclaration | 声明 |
-| VBUsage | 使用情况 |
+| VBUsage | 用法 |
 | 功能： | **反馈、页脚和徽标** |
 | 使用： | 为客户提供反馈控制，以通过电子邮件提供当前主题的反馈。  内容的版权文本。  徽标定义。 |
 | **元素** | **值 (可以修改这些字符串以满足所采纳的内容。 )** |
@@ -471,7 +473,7 @@ Branding.xml 文件包含一个元素列表，其中的元素用于在主题包�
 | LogoFileNameHC | vs_logo_wh.gif |
 | 功能： | **否认** |
 | 使用： | 计算机翻译内容的一组案例特定免责声明。 |
-| **元素** | **值** |
+| **元素** | 值 |
 | MT_Editable | 本文进行了机器翻译。 如果你有 Internet 连接，请选择 "联机查看本主题" 以在可编辑模式下查看此页面，同时提供原始英语内容。 |
 | MT_NonEditable | 本文进行了机器翻译。 如果你有 Internet 连接，请选择 "联机查看本主题" 以在可编辑模式下查看此页面，同时提供原始英语内容。 |
 | MT_QualityEditable | 本文已手动翻译。 如果你有 Internet 连接，请选择 "联机查看本主题" 以在可编辑模式下查看此页面，同时提供原始英语内容。 |
@@ -480,14 +482,14 @@ Branding.xml 文件包含一个元素列表，其中的元素用于在主题包�
 | MT_BetaRecycledContents | 本文是针对初步版本手动翻译的。 如果你有 Internet 连接，请选择 "联机查看本主题" 以在可编辑模式下查看此页面，同时提供原始英语内容。 |
 | 功能： | **LinkTable** |
 | 使用： | 支持联机主题链接 |
-| **元素** | **值** |
+| **元素** | 值 |
 | LinkTableTitle | 链接表 |
 | TopicEnuLinkText | 查看 \</a> 计算机上提供的本主题的英文版。 |
 | TopicOnlineLinkText | 联机查看本主题 \<a href="{0}" {1}>\</a> |
 | OnlineText | 联机 |
 | 功能： | **视频音频控件** |
 | 使用： | 显示视频内容的元素和文本 |
-| **元素** | **值** |
+| **元素** | 值 |
 | MultiMediaNotSupported | 必须安装 Internet Explorer 9 或更高版本才能支持 {0} 内容。 |
 | VideoText | 显示视频 |
 | AudioText | 流式传输音频 |
@@ -495,25 +497,25 @@ Branding.xml 文件包含一个元素列表，其中的元素用于在主题包�
 | OnlineAudioLinkText | \<p>若要收听与本主题相关的音频，请单击 {0} \<a href="{1}"> {2} 此处 \</a> 。\</p> |
 | 功能： | **内容未安装控件** |
 | 使用： | 文本元素 (字符串) 用于呈现 contentnotinstalled.htm |
-| **元素** | **值** |
+| **元素** | 值 |
 | ContentNotInstalledTitle | 在您的计算机上找不到任何内容。 |
 | ContentNotInstalledDownloadContentText | \<p>若要将内容下载到您的计算机，请 \<a href="{0}" {1}> 单击 "管理" 选项卡 \</a> 。\</p> |
 | ContentNotInstalledText | \<p>计算机上未安装任何内容。 请参阅管理员以获取本地帮助内容安装。\</p> |
 | 功能： | **找不到主题控件** |
 | 使用： | 文本元素 (字符串) 用于呈现 topicnotfound.htm |
-| **元素** | **值** |
+| **元素** | 值 |
 | TopicNotFoundTitle | 在您的计算机上找不到请求的主题。 |
 | TopicNotFoundViewOnlineText | \<p>您在计算机上找不到您请求的主题，但您可以 \<a href="{0}" {1}> 联机查看该主题 \</a> 。\</p> |
 | TopicNotFoundDownloadContentText | \<p>请参阅导航窗格以获取指向类似主题的链接，或 \<a href="{0}" {1}> 单击 "管理" 选项卡 \</a> 将内容下载到您的计算机。\</p> |
 | TopicNotFoundText | \<p>在您的计算机上找不到您请求的主题。\</p> |
 | 功能： | **主题损坏控件** |
 | 使用： | 文本元素 (字符串) 用于呈现 topiccorrupted.htm |
-| **元素** | **值** |
+| **元素** | 值 |
 | TopicCorruptedTitle | 无法显示请求的主题。 |
 | TopicCorruptedViewOnlineText | \<p>Help Viewer 无法显示请求的主题。 主题的内容或基础系统依赖项中可能存在错误。\</p> |
 | 功能： | **主页控件** |
 | 使用： | 支持显示帮助查看器顶层节点内容的文本。 |
-| **元素** | **值** |
+| **元素** | 值 |
 | HomePageTitle | Help Viewer 主页 |
 | HomePageIntroduction | \<p>欢迎使用 Microsoft Help Viewer，这是使用 Microsoft 工具、产品、技术和服务的所有用户的重要信息来源。 帮助查看器可让你访问操作方法和参考信息、示例代码、技术文章等。 若要查找所需的内容，请浏览目录、使用全文搜索或使用关键字索引在内容中导航。\</p> |
 | HomePageContentInstallText | \<p>\<br />使用 " \<a href="{0}" {1}> 管理内容" \</a> 选项卡执行以下操作： \<ul> \<li> 向计算机添加内容。 \</li> \<li>检查本地内容的更新。 \</li> \<li>从计算机中删除内容。\</li>\</ul>\</p> |
@@ -698,7 +700,7 @@ Visual Studio 内容显示 Visual Studio 徽标和其他图形。  Visual Studio
 
 本演练演示如何将帮助内容纳入 Visual Studio Shell 应用程序，然后将其部署。
 
-**惠?**
+**要求**
 
 1. [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)]
 

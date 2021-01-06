@@ -1,5 +1,7 @@
 ---
 title: 在 MSBuild 项目文件中保留数据 |Microsoft Docs
+description: 了解如何保存项目文件中的数据，以及如何使用 IPersistXMLFragment 跨项目子类型聚合级别维护项目文件中的数据。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e83526007f676ae94ddce57936b627bcb4308c2a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 20c6d79e6ea59b4993b4d6bfc5e165bdd952a3f9
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706695"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97878074"
 ---
 # <a name="persisting-data-in-the-msbuild-project-file"></a>保留 MSBuild 项目文件中的数据
 项目子类型可能需要将特定于子类型的数据保存到项目文件中供以后使用。 项目子类型使用项目文件暂留满足以下要求：
@@ -36,7 +38,7 @@ ms.locfileid: "80706695"
 
     2. 依赖于配置的数据。
 
-## <a name="persisting-build-related-information"></a>保持与生成相关的信息
+## <a name="persisting-build-related-information"></a>保留 Build-Related 信息
  用于生成项目的数据的持久性是通过 MSBuild 处理的。 MSBuild 系统维护与生成相关的信息的主表。 项目子类型负责访问此数据以获取和设置属性值。 项目子类型还可以通过添加要保存的附加属性和通过删除属性使其不会被保留，从而增加与生成相关的数据表。
 
  为了修改 MSBuild 数据，项目子类型负责通过从基本项目系统中检索 MSBuild 属性对象 <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage> 。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage> 是在核心项目系统中实现的接口，并且通过运行对其执行聚合项目子类型查询 `QueryInterface` 。
@@ -76,5 +78,5 @@ ms.locfileid: "80706695"
       </ProjectExtensions>
     ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [项目子类型](../../extensibility/internals/project-subtypes.md)

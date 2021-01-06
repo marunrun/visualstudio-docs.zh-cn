@@ -1,5 +1,7 @@
 ---
 title: 演练：大纲显示 |Microsoft Docs
+description: 了解如何在语言服务的上下文或你自己的文件扩展名和内容类型中定义和显示大纲区域。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,18 +15,18 @@ ms.workload:
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 6e3e60fe873d7bcb512e56c844e76fcbef037d42
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: ea0f16deee17e2cd249c0ee1de0861a936abc75c
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89508920"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877892"
 ---
 # <a name="walkthrough-outlining"></a>演练：大纲显示
 通过定义要展开或折叠的文本区域的类型，设置基于语言的功能，如大纲显示。 可在语言服务的上下文中定义区域，或定义自己的文件扩展名和内容类型，并将区域定义仅应用于该类型，或者将区域定义应用于现有内容类型 (如 "text" ) 。 此演练演示如何定义和显示大纲显示区域。
 
 ## <a name="prerequisites"></a>先决条件
- 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+ 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 也可稍后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
 ## <a name="create-a-managed-extensibility-framework-mef-project"></a>创建 Managed Extensibility Framework (MEF) 项目
 

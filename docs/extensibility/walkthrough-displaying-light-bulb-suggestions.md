@@ -1,5 +1,7 @@
 ---
 title: 演练：显示灯泡建议 |Microsoft Docs
+description: 了解如何在 Visual Studio 编辑器中创建在当前单词上显示的灯泡，并使用此演练提供两个建议的操作。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 99e5566d-450e-4660-9bca-454e1c056a02
@@ -8,17 +10,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 86412b82b291ee395b35d654d3cde6d326e956f0
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 8d8d498c1d9a5e5142672bcd561ac0749bbf8d75
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89508946"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877957"
 ---
 # <a name="walkthrough-display-light-bulb-suggestions"></a>演练：显示灯泡建议
 轻型电灯泡是 Visual Studio 编辑器中的图标，可展开以显示一组操作，例如对内置代码分析器或代码重构标识的问题的修补程序。
 
- 在 Visual c # 和 Visual Basic 编辑器中，还可以使用 .NET Compiler Platform ( "Roslyn" ) 来编写和打包自己的代码分析器，其中包含自动电灯泡显示的操作。 有关详情，请参阅：
+ 在 Visual c # 和 Visual Basic 编辑器中，还可以使用 .NET Compiler Platform ( "Roslyn" ) 来编写和打包自己的代码分析器，其中包含自动电灯泡显示的操作。 有关详细信息，请参阅：
 
 - [如何：编写 c # 诊断和代码修补程序](https://github.com/dotnet/roslyn/blob/master/docs/wiki/How-To-Write-a-C%23-Analyzer-and-Code-Fix.md)
 
@@ -37,7 +39,7 @@ ms.locfileid: "89508946"
   可以使用轻型电灯泡来提供自己的建议操作。 例如，可以提供将左大括号移动到新行或将其移动到上一行末尾的操作。 下面的演练演示如何创建出现在当前单词上的灯泡，并提供两个建议的操作： " **转换为大写** " 和 " **转换为小写**"。
 
 ## <a name="prerequisites"></a>先决条件
- 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+ 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 也可稍后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
 ## <a name="create-a-managed-extensibility-framework-mef-project"></a>创建 Managed Extensibility Framework (MEF) 项目
 
@@ -222,8 +224,8 @@ ms.locfileid: "89508946"
 2. 创建两个类，第一个名为 `UpperCaseSuggestedAction` ，第二个名为 `LowerCaseSuggestedAction`。 两个类都实现 <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction>。
 
     ```csharp
-    internal class UpperCaseSuggestedAction : ISuggestedAction
-    internal class LowerCaseSuggestedAction : ISuggestedAction
+    internal class UpperCaseSuggestedAction : ISuggestedAction
+    internal class LowerCaseSuggestedAction : ISuggestedAction
     ```
 
      这两个类相似，只不过其中一个调用 <xref:System.String.ToUpper%2A>，另一个调用 <xref:System.String.ToLower%2A>。 以下步骤仅说明大写操作类，但你必须实现这两个类。 将实现大写操作的步骤用作实现小写操作的模式。
@@ -243,8 +245,8 @@ ms.locfileid: "89508946"
 
     ```csharp
     private ITrackingSpan m_span;
-    private string m_upper;
-    private string m_display;
+    private string m_upper;
+    private string m_display;
     private ITextSnapshot m_snapshot;
     ```
 
@@ -288,7 +290,7 @@ ms.locfileid: "89508946"
     {
         get { return false; }
     }
-    public string DisplayText
+    public string DisplayText
     {
         get { return m_display; }
     }
@@ -319,14 +321,14 @@ ms.locfileid: "89508946"
 9. 通过将范围中的文本替换为其大写形式来实现 <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction.Invoke%2A> 方法。
 
     ```csharp
-    public void Invoke(CancellationToken cancellationToken)
+    public void Invoke(CancellationToken cancellationToken)
     {
         m_span.TextBuffer.Replace(m_span.GetSpan(m_snapshot), m_upper);
     }
     ```
 
     > [!WARNING]
-    > 灯泡操作 **调用** 方法不应显示 UI。 如果你的操作会引入新的 UI (例如，) 的预览或选择对话框，请不要直接从 **invoke** 方法中显示 ui，而是计划在从 **invoke**返回后显示 ui。
+    > 灯泡操作 **调用** 方法不应显示 UI。 如果你的操作会引入新的 UI (例如，) 的预览或选择对话框，请不要直接从 **invoke** 方法中显示 ui，而是计划在从 **invoke** 返回后显示 ui。
 
 10. 若要完成实现，请添加 `Dispose()` 和 `TryGetTelemetryId()` 方法。
 

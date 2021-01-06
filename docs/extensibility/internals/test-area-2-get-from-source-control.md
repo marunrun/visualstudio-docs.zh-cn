@@ -1,5 +1,7 @@
 ---
 title: 测试区域2：从源代码管理获取 |Microsoft Docs
+description: 此测试区域涵盖了用 Get 从版本存储中检索项的测试用例。 这些测试用例可同时应用于本地项目和 web 项目。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c213e2774730596db8b8e4f2d0691472495222e7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 98ed765f78a9e7330e5e1d3864c8a91b63239a3f
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704605"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877697"
 ---
 # <a name="test-area-2-get-from-source-control"></a>测试区域 2：从源代码管理获取
 此测试区域涵盖通过 Get 命令从版本存储区中检索项的测试用例。 这些测试用例可同时应用于本地项目和 Web 项目。

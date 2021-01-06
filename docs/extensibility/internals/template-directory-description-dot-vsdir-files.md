@@ -1,5 +1,7 @@
 ---
 title: 模板目录说明 (。Vsdir) 文件 |Microsoft Docs
+description: 了解模板目录说明文件如何使 Visual Studio IDE 能够显示与项目关联的文件夹、.vsz 文件和模板。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 16ba609d5b05d565a12b38bd19e9a777851ced5b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: edc4b4bcfe1ac1a85524517ba467e207a792e3cd
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704691"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877723"
 ---
 # <a name="template-directory-description-vsdir-files"></a>模板目录说明 (.Vsdir) 文件
 模板目录说明文件 () 是一个文本文件，该文件可使集成开发环境 (IDE) 显示与对话框中的项目相关联的文件夹、向导 .vsz 文件和模板文件。 内容包含每个文件或文件夹的一条记录。 尽管仅提供了一个 vsdir 文件来描述多个文件夹、向导或模板文件，但引用的位置中的所有 vsdir 文件都将合并。
