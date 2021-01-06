@@ -1,5 +1,7 @@
 ---
 title: 旧版语言服务中的语法着色 |Microsoft Docs
+description: 了解如何通过提供可标识词汇元素或标记类型的分析器或扫描程序来支持旧版语言服务中的语法着色。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 02723a09254255b98291cb921ae5ec091d8b9859
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c51885e593fabffab80d11c930100f3cc719dff8
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704706"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877749"
 ---
 # <a name="syntax-colorizing-in-a-legacy-language-service"></a>旧版语言服务中的语法着色
 语法着色是一项功能，它使编程语言的不同元素显示在不同颜色和样式的源文件中。 若要支持此功能，需要提供可在文件中标识词法元素类型或标记的分析器或扫描程序。 许多语言将关键字、分隔符 (如圆括号或大括号) 以及注释通过以不同方式着色来区分。
@@ -34,7 +36,7 @@ ms.locfileid: "80704706"
  返回到编辑器的颜色信息是可着色项列表中的索引。 每个可着色项指定一个颜色值和一组字体特性，例如粗体或删除线。 编辑器提供您的语言服务可以使用的一组默认可着色项。 只需为每个标记类型指定相应的颜色索引。 但是，你可以提供一组自定义可着色项和你为令牌提供的索引，并引用你自己的可着色项列表，而不是引用默认列表。 还必须将 `RequestStockColors` 注册表项设置为 0 (或不要指定 `RequestStockColors` 所有) 中的项以支持自定义颜色。 可以使用命名参数将此注册表项设置为 <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> 用户定义的属性。 有关注册语言服务并设置其选项的详细信息，请参阅 [注册旧版语言服务](../../extensibility/internals/registering-a-legacy-language-service1.md)。
 
 ## <a name="custom-colorable-items"></a>自定义可着色项
- 若要提供自己的自定义可着色项，必须重 <xref:Microsoft.VisualStudio.Package.LanguageService.GetItemCount%2A> 写 <xref:Microsoft.VisualStudio.Package.LanguageService.GetColorableItem%2A> 类的和方法 <xref:Microsoft.VisualStudio.Package.LanguageService> 。 第一种方法返回语言服务支持的自定义可着色项的数量，第二种方法按索引获取自定义可着色项。 创建自定义可着色项的默认列表。 在语言服务的构造函数中，只需为每个可着色项提供一个名称。 Visual Studio 会自动处理用户选择一组不同的可着色项的情况。 此名称显示在 "**选项**" 对话框中的 "**字体和颜色**" 属性页中， (Visual Studio "**工具**" 菜单中提供) ，此名称确定用户重写的颜色。 用户的选择存储在注册表的缓存中，并由颜色名称访问。 " **字体和颜色** " 属性页按字母顺序列出所有颜色名称，因此你可以通过将每个颜色名称放在你的语言名称前面来分组自定义颜色;例如，"**TestLanguage**" 和 "**TestLanguage**"。 或者，可以按类型 "**Comment (TestLanguage) **" 和 "**关键字 (TestLanguage) **" 对可着色项分组。 首选按语言名称进行分组。
+ 若要提供自己的自定义可着色项，必须重 <xref:Microsoft.VisualStudio.Package.LanguageService.GetItemCount%2A> 写 <xref:Microsoft.VisualStudio.Package.LanguageService.GetColorableItem%2A> 类的和方法 <xref:Microsoft.VisualStudio.Package.LanguageService> 。 第一种方法返回语言服务支持的自定义可着色项的数量，第二种方法按索引获取自定义可着色项。 创建自定义可着色项的默认列表。 在语言服务的构造函数中，只需为每个可着色项提供一个名称。 Visual Studio 会自动处理用户选择一组不同的可着色项的情况。 此名称显示在 "**选项**" 对话框中的 "**字体和颜色**" 属性页中， (Visual Studio "**工具**" 菜单中提供) ，此名称确定用户重写的颜色。 用户的选择存储在注册表的缓存中，并由颜色名称访问。 " **字体和颜色** " 属性页按字母顺序列出所有颜色名称，因此你可以通过将每个颜色名称放在你的语言名称前面来分组自定义颜色;例如，"**TestLanguage**" 和 "**TestLanguage**"。 或者，可以按类型 "**Comment (TestLanguage)**" 和 "**关键字 (TestLanguage)**" 对可着色项分组。 首选按语言名称进行分组。
 
 > [!CAUTION]
 > 强烈建议在可着色项名称中包含语言名称，以避免与现有可着色项名称冲突。

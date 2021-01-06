@@ -13,12 +13,12 @@ manager: crdun
 ms.workload:
 - unity
 zone_pivot_groups: platform
-ms.openlocfilehash: ba95e15be083e0bb1274e01a986f4139d9443240
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 1f8cbe1629aab6a177a46888fe25cf8e3565d91d
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "94341136"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903748"
 ---
 # <a name="get-started-with-visual-studio-and-unity"></a>Visual Studio 和 Unity 入门
 
@@ -34,7 +34,7 @@ Visual Studio Tools for Unity 是一种免费扩展，它为编写和调试 c # 
 > [!NOTE]
 > 本安装指南适用于 Visual Studio。 如果你正在使用 Visual Studio Code，请 [使用 VS Code 文档访问 Unity 开发](https://code.visualstudio.com/docs/other/unity)。
 
-1. [下载 Visual Studio 安装程序](/docs/install/install-visual-studio.md)，或者在已安装的情况下运行它。
+1. [下载 Visual Studio 安装程序](/visualstudio/docs/install/install-visual-studio.md)，或者在已安装的情况下运行它。
 2. 为所需的 Visual Studio 版本单击“修改”（如已安装）或“安装”（适用于新安装）。
 3. 在 " **工作负荷** " 选项卡上，滚动到 " **游戏** " 部分，选择 " **包含 Unity 的游戏开发** " 工作负荷。
 
@@ -46,7 +46,7 @@ Visual Studio Tools for Unity 是一种免费扩展，它为编写和调试 c # 
 > [!NOTE]
 > 本安装指南适用于 Visual Studio for Mac。 如果你正在使用 Visual Studio Code，请 [使用 VS Code 文档访问 Unity 开发](https://code.visualstudio.com/docs/other/unity)。
 
-适用于 Unity 的工具包含在 Visual Studio for Mac 安装中，无需单独安装步骤。 可以在 **Visual Studio for Mac > 扩展 > 游戏开发** "菜单中对此进行验证。 应启用 **Unity Visual Studio for Mac 工具** 。
+适用于 Unity 的工具包含在 Visual Studio for Mac 安装中，无需单独安装步骤。 可以在 **Visual Studio for Mac > 扩展 > 游戏开发** "菜单中对此进行验证。 应启用 **Unity Visual Studio for Mac 工具**。
 
 ![显示已启用 Unity Visual Studio for Mac 工具的 "扩展管理器" 视图](../media/vsm/unity-workload.png)
 
@@ -84,7 +84,7 @@ Visual Studio Tools for Unity 是一种免费扩展，它为编写和调试 c # 
 
     ![Windows 上 Unity 编辑器中的 "外部工具" 首选项菜单](../media/vs/preferences-external-tools.png)
 
-4. 如果已选择 **Browse...** ，请导航到 Visual Studio 安装目录中的 **Common7/IDE** 目录，然后选择 **devenv.exe** 。 然后单击 " **打开** "。
+4. 如果已选择 **Browse...** ，请导航到 Visual Studio 安装目录中的 **Common7/IDE** 目录，然后选择 **devenv.exe**。 然后单击 " **打开**"。
 5. 在 **External Script Editor** 列表中选择 Visual Studio 后，确认已选中 **Editor Attaching** 复选框。
 6. 关闭 **Preferences** 对话框以完成配置过程。
 

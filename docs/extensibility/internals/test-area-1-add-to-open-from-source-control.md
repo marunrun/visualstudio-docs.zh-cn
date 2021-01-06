@@ -1,5 +1,7 @@
 ---
-title: 测试区域1：从源代码管理添加到-打开 |Microsoft Docs
+title: 测试区域1：从源控件添加 To-Open |Microsoft Docs
+description: 此源代码管理插件测试区域涵盖了如何将解决方案或项目置于源代码管理下，以及如何从源代码管理中检索它们。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,14 +13,14 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6ac7b8e5a60fe25ac22272cc28fc3ed6f903b058
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 608d3489f657cf38d310e67a17bdd48a529de3e5
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704682"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877736"
 ---
-# <a name="test-area-1-add-toopen-from-source-control"></a>测试区域1：从源代码管理添加到/打开
+# <a name="test-area-1-add-toopen-from-source-control"></a>测试区域 1：添加到源代码管理/从源代码管理打开
 此源代码管理插件测试区域涵盖了如何将解决方案或项目置于源代码管理下，以及如何从源代码管理中检索它们。
 
 ## <a name="command-menu-access"></a>命令菜单访问
@@ -54,7 +56,7 @@ ms.locfileid: "80704682"
 ## <a name="test-cases"></a>测试用例
  下面是 "从源代码管理中添加/打开" 测试区域的特定测试用例。
 
-### <a name="case-1a-add-solution-to-source-control"></a>情况1a：将解决方案添加到源代码管理
+### <a name="case-1a-add-solution-to-source-control"></a>案例 1a：将解决方案添加到源代码管理中
  此测试用例重点介绍如何将解决方案添加到源代码管理。
 
 |操作|测试步骤|要验证的预期结果|
@@ -74,7 +76,7 @@ ms.locfileid: "80704682"
 |从源代码管理中打开包含本地或 IIS Web 项目的解决方案|1. 创建本地或 IIS Web 项目。<br />2. 将解决方案添加到源代码管理。<br />3. 关闭解决方案。<br />4. 将解决方案从源代码管理打开到新位置。|从源代码管理打开的解决方案/项目。|
 |从源代码管理打开包含远程网站 Web 项目的解决方案|1. 创建远程网站 Web 项目。<br />2. 将解决方案添加到源代码管理。 如果此步骤成功，则继续下一步。<br />3. 关闭解决方案。<br />4. 将解决方案从源代码管理打开到新位置。|`Result from Step 2:`<br /><br /> 远程站点 Web 不受源代码管理。<br /><br /> `Result from Step 4:`<br /><br /> 从源代码管理打开的解决方案。<br /><br /> 远程站点项目已加载，但它不受源代码管理。|
 
-### <a name="case-1c-add-solution-from-source-control"></a>Case 1c：从源控件添加解决方案
+### <a name="case-1c-add-solution-from-source-control"></a>案例 1c：从源代码管理添加解决方案
  此测试用例重点介绍如何从源代码管理中添加解决方案。
 
 |操作|测试步骤|要验证的预期结果|

@@ -1,5 +1,7 @@
 ---
 title: "\"属性\" 窗口按钮 |Microsoft Docs"
+description: 了解属性窗口工具栏上默认显示的按钮以及这些按钮的实现。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,15 +12,15 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: aaa4db159ccb0ecf3d0e9c9243e23fcd0dacc455
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e99c362904bc40a2937c030f1ee2bb1c4d32a113
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706176"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97878009"
 ---
 # <a name="properties-window-buttons"></a>属性窗口按钮
-默认情况下，在 " **属性** " 窗口的工具栏上显示某些按钮，具体取决于开发语言和产品类型。 在所有情况下，将显示 "已**分类**"、"按**字母顺序** **" 和 "****属性页**" 按钮。 在 Visual c # 和 Visual Basic 中，还会显示 " **事件** " 按钮。 在某些 Visual C++ 的项目中，将显示 " **vc + +" 消息** 和 " **vc 替代** " 按钮。 对于其他项目类型，可能会显示其他按钮。 有关 " **属性** " 窗口中的按钮的详细信息，请参阅 " [属性" 窗口](../../ide/reference/properties-window.md)。
+默认情况下，在 " **属性** " 窗口的工具栏上显示某些按钮，具体取决于开发语言和产品类型。 在所有情况下，将显示 "已 **分类**"、"按 **字母顺序** **" 和 "****属性页**" 按钮。 在 Visual c # 和 Visual Basic 中，还会显示 " **事件** " 按钮。 在某些 Visual C++ 的项目中，将显示 " **vc + +" 消息** 和 " **vc 替代** " 按钮。 对于其他项目类型，可能会显示其他按钮。 有关 " **属性** " 窗口中的按钮的详细信息，请参阅 " [属性" 窗口](../../ide/reference/properties-window.md)。
 
 ## <a name="implementation-of-properties-window-buttons"></a>"属性" 窗口按钮的实现
  单击 " **分类** " 按钮时，Visual Studio 将调用 <xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties> 对象上的接口，该接口具有焦点以便按类别对其属性进行排序。 <xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties> 在 `IDispatch` 呈现到 " **属性** " 窗口的对象上实现。

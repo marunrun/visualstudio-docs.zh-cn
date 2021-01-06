@@ -1,5 +1,7 @@
 ---
 title: 迁移旧版语言服务 |Microsoft Docs
+description: 了解如何通过更新项目并添加 source.extension.vsixmanifest 文件，将语言服务更新到最新版本的 Visual Studio。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9e2eff3f3a27b7d8a276c8ed776c1e11d5ce332e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ced200ff24b17f312e63642c8083f038a6fc6a4d
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707112"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877827"
 ---
 # <a name="migrating-a-legacy-language-service"></a>迁移旧版语言服务
 你可以通过更新项目并将 source.extension.vsixmanifest 文件添加到项目中，将旧版语言服务迁移到更高版本的 Visual Studio。 语言服务本身将像以前一样继续工作，因为 Visual Studio 编辑器会改编它。
@@ -51,13 +53,13 @@ ms.locfileid: "80707112"
 
 4. 打开 RegExLangServ 解决方案。
 
-5. 此时将显示单向 **升级** 窗口。 单击 **“确定”** 。
+5. 此时将显示单向 **升级** 窗口。 单击“确定”。
 
-6. 更新项目属性。 通过选择 "**解决方案资源管理器**中的项目节点，右键单击，然后选择"**属性**"，打开"**项目属性**"窗口。
+6. 更新项目属性。 通过选择 "**解决方案资源管理器** 中的项目节点，右键单击，然后选择"**属性**"，打开"**项目属性**"窗口。
 
     - 在 " **应用程序** " 选项卡上，将 " **目标框架** " 更改为 **4.6.1**。
 
-    - 在 "**调试**" 选项卡上的 "**启动外部程序**" 框中，键入** \<Visual Studio installation path>\Common7\IDE\devenv.exe。**
+    - 在 "**调试**" 选项卡上的 "**启动外部程序**" 框中，键入 **\<Visual Studio installation path>\Common7\IDE\devenv.exe。**
 
          在 " **命令行参数** " 框中，键入/**rootsuffix Exp**。
 
@@ -87,9 +89,9 @@ ms.locfileid: "80707112"
 
     - 将此文件添加到项目。
 
-    - 在文件的 **属性**中，将 " **生成操作** " 设置为 " **无**"。
+    - 在文件的 **属性** 中，将 " **生成操作** " 设置为 " **无**"。
 
-    - 在 **VSIX 清单编辑器**中打开文件。
+    - 在 **VSIX 清单编辑器** 中打开文件。
 
     - 更改以下字段：
 
@@ -99,13 +101,13 @@ ms.locfileid: "80707112"
 
     - **说明**：正则表达式语言服务。
 
-    - 在 **"资产**" 下，单击 "**新建**"，选择 " **VisualStudio. VsPackage**"**类型**，将 "**源**" 设置为 "**当前解决方案中的项目**"，然后将**项目**设置为 " **RegExLangServ**"。
+    - 在 **"资产**" 下，单击 "**新建**"，选择 " **VisualStudio. VsPackage**"**类型**，将 "**源**" 设置为 "**当前解决方案中的项目**"，然后将 **项目** 设置为 " **RegExLangServ**"。
 
     - 保存并关闭该文件。
 
-11. 生成解决方案。 生成的文件将部署到 **%USERPROFILE%\AppData\Local\Microsoft\VisualStudio\14.0Exp\Extensions\MSIT\ RegExLangServ \\ **。
+11. 生成解决方案。 生成的文件将部署到 **%USERPROFILE%\AppData\Local\Microsoft\VisualStudio\14.0Exp\Extensions\MSIT\ RegExLangServ \\**。
 
 12. 开始调试。 已打开 Visual Studio 的第二个实例。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [旧版语言服务扩展性](../../extensibility/internals/legacy-language-service-extensibility.md)

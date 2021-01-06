@@ -1,5 +1,7 @@
 ---
 title: 源代码管理运行时详细信息 |Microsoft Docs
+description: 了解当用户将文件添加到源代码管理中的项目或通过自动化控制器添加文件时，如何将项目添加到源代码管理。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 92ce5e822ec7360b3b1a4010d250a4349443c142
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bbe1e0e915a28412fcfd411e72b6d622e065b8f8
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705042"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877970"
 ---
 # <a name="source-control-runtime-details"></a>源代码管理运行时详细信息
 当用户将项目中的文件添加到源代码管理中，或通过自动化控制器（如向导）添加项目时，会将项目添加到源代码管理。 项目不会自行指定它处于源代码管理下;它支持源代码管理，但必须手动添加。

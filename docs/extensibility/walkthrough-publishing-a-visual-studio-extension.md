@@ -1,5 +1,7 @@
 ---
 title: 演练：发布 Visual Studio 扩展 |Microsoft Docs
+description: 了解如何将 Visual Studio 扩展发布到 Visual Studio Marketplace，这允许开发人员浏览新扩展和已更新的扩展。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d6bd7a5d9622f7aea7382522dcf69ce660b61ae7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cbdd283c5d147c53e7d82843207b48d0dbf6e6e9
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904733"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877879"
 ---
 # <a name="walkthrough-publish-a-visual-studio-extension"></a>演练：发布 Visual Studio 扩展
 
@@ -68,21 +70,21 @@ ms.locfileid: "85904733"
 
 6. 选择要用于上传扩展的发布者。 可以通过单击左侧列出的发布者名称来更改发布者。 单击 " **新扩展** "，然后选择 " **Visual Studio**"。
 
-7. 在 **1：上传扩展**中，你可以选择将 VSIX 文件直接上载到 Visual Studio Marketplace 或只是将链接添加到你自己的网站。 在此示例中，将上传 *TestPublish* 扩展名。 拖放扩展，或使用 **单击** 链接浏览文件。 在项目的 \bin\Release 文件夹中查找扩展。  单击 **“继续”** 。
+7. 在 **1：上传扩展** 中，你可以选择将 VSIX 文件直接上载到 Visual Studio Marketplace 或只是将链接添加到你自己的网站。 在此示例中，将上传 *TestPublish* 扩展名。 拖放扩展，或使用 **单击** 链接浏览文件。 在项目的 \bin\Release 文件夹中查找扩展。  单击“继续” 。
 
-8. 在 **2：提供扩展详细信息**时，某些字段是从你的扩展中的 *source.extension.vsixmanifest* 文件自动填充的。 查找以下各项的更多详细信息：
+8. 在 **2：提供扩展详细信息** 时，某些字段是从你的扩展中的 *source.extension.vsixmanifest* 文件自动填充的。 查找以下各项的更多详细信息：
 
     * **内部名称** 用于扩展的详细信息页的 URL。 例如，在发布服务器名称为 "myname" 的情况下发布一个扩展，并将内部名称指定为 "my extension" 会生成一个 URL，其中 "visualstudio \. com/items = myname" 用于扩展的详细信息页。
 
     * **显示** 扩展的名称。 此名称是从 *source.extension.vsixmanifest* 文件自动填充的。
 
-    * 要上载的扩展的**版本号**。 此版本是从 *source.extension.vsixmanifest* 文件自动填充的。
+    * 要上载的扩展的 **版本号**。 此版本是从 *source.extension.vsixmanifest* 文件自动填充的。
 
     * **VSIX ID** 是 Visual Studio 用于扩展的唯一标识符。 如果希望自动更新扩展，则需要此标识符。 此标识符是从 *source.extension.vsixmanifest* 文件自动填充的。
 
-    * 用于扩展的**徽标**。 如果提供了 *source.extension.vsixmanifest* 文件，则会自动填充此徽标。
+    * 用于扩展的 **徽标**。 如果提供了 *source.extension.vsixmanifest* 文件，则会自动填充此徽标。
 
-    * 扩展功能的**简短说明**。 此说明是从 *source.extension.vsixmanifest* 文件自动填充的。
+    * 扩展功能的 **简短说明**。 此说明是从 *source.extension.vsixmanifest* 文件自动填充的。
 
     * **概述** 非常适合提供屏幕截图以及有关扩展功能的详细信息。
 
@@ -148,7 +150,7 @@ Marketplace 支持向其他用户授予访问和管理发布者帐户的权限�
 
 1. 打开 [Visual Studio Marketplace](https://marketplace.visualstudio.com/vs) 网站。
 
-2. 在右上角，单击 " **发布** 扩展"。 选择发布 **TestPublish**时所用的发布服务器。 此时将显示 **TestPublish** 的列表。
+2. 在右上角，单击 " **发布** 扩展"。 选择发布 **TestPublish** 时所用的发布服务器。 此时将显示 **TestPublish** 的列表。
 
 3. 右键单击该扩展条目，然后单击 " **删除**"。 系统会要求确认是否要删除该扩展。 单击“确定”。
 

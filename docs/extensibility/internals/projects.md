@@ -1,5 +1,7 @@
 ---
 title: 项目 |Microsoft Docs
+description: 了解 Vspackage 可以扩展 Visual Studio 项目系统的方式，包括项目类型、项目子类型和自定义工具。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,20 +16,20 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6b7a9299321d2aa80eebb564bf9b926f07ab0108
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ffc2dc28ed3d45194ba7738da58fa36dd022c79f
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706218"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97878048"
 ---
 # <a name="projects"></a>项目
-在 Visual Studio 中，项目是开发人员用来组织 **解决方案资源管理器**中显示的源代码文件和其他资源的容器。 通常，项目是文件 (例如，c # 项目的 .csproj 文件) 用于存储对源代码文件和资源（如位图文件）的引用。 项目使你可以组织、构建、调试和部署源代码，引用 Web 服务和数据库以及其他资源。 Vspackage 可以通过以下三种主要方式扩展 Visual Studio 项目系统： *项目类型*、 *项目子类型*和 *自定义工具*。
+在 Visual Studio 中，项目是开发人员用来组织 **解决方案资源管理器** 中显示的源代码文件和其他资源的容器。 通常，项目是文件 (例如，c # 项目的 .csproj 文件) 用于存储对源代码文件和资源（如位图文件）的引用。 项目使你可以组织、构建、调试和部署源代码，引用 Web 服务和数据库以及其他资源。 Vspackage 可以通过以下三种主要方式扩展 Visual Studio 项目系统： *项目类型*、 *项目子类型* 和 *自定义工具*。
 
 ## <a name="in-this-section"></a>本节内容
 - [项目类型](../../extensibility/internals/project-types.md)
 
- *项目类型* 添加了对新类型的项目（如编程语言）的支持。 例如，Visual Studio 支持的每种语言都有其自己的项目类型，IronPython 集成示例包含 IronPython 语言的项目类型。 您必须为 c # 或 Visual Basic 以外的语言创建项目类型，以自定义项目在 **解决方案资源管理器**中的生成、调试、部署和显示方式。 有关详细信息，请参阅 [项目类型](../../extensibility/internals/project-types.md)。
+ *项目类型* 添加了对新类型的项目（如编程语言）的支持。 例如，Visual Studio 支持的每种语言都有其自己的项目类型，IronPython 集成示例包含 IronPython 语言的项目类型。 您必须为 c # 或 Visual Basic 以外的语言创建项目类型，以自定义项目在 **解决方案资源管理器** 中的生成、调试、部署和显示方式。 有关详细信息，请参阅 [项目类型](../../extensibility/internals/project-types.md)。
 
 - [项目子类型](../../extensibility/internals/project-subtypes.md)
 

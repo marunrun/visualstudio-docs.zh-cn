@@ -1,5 +1,7 @@
 ---
 title: 演练：显示匹配的大括号 |Microsoft Docs
+description: 了解如何在语言上下文中定义大括号，并使用此演练将大括号匹配标记应用于文本内容类型。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,18 +12,18 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 65a0bc2c53d5d6e970b4aaa956170bc06c24e7c9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ce40f5673a8aba4ab3f7714a3aafdc3de4697cc4
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904836"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877944"
 ---
 # <a name="walkthrough-display-matching-braces"></a>演练：显示匹配的大括号
 通过定义要匹配的大括号来实现基于语言的功能（例如，大括号匹配），并在插入符号位于一个大括号中时向匹配大括号添加文本标记标记。 你可以在语言上下文中定义大括号，定义自己的文件扩展名和内容类型，并将标记应用到该类型，或者将标记应用于现有内容类型 (如 "text" ) 。 下面的演练演示如何将大括号匹配标记应用于 "text" 内容类型。
 
 ## <a name="prerequisites"></a>先决条件
- 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+ 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 也可稍后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
 ## <a name="create-a-managed-extensibility-framework-mef-project"></a>创建 Managed Extensibility Framework (MEF) 项目
 
