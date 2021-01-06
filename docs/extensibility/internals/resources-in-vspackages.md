@@ -1,5 +1,7 @@
 ---
 title: Vspackage 中的资源 |Microsoft Docs
+description: 了解可在 Vspackage 中嵌入哪些类型的本地化资源。 你还可以在本机附属 UI Dll 或托管附属 Dll 中嵌入资源。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 493e9834e3d7cf6d82cebb8dd93d5369678c7be0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2693d25e0b175a075bcc644077895076b75b7578
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705606"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875721"
 ---
 # <a name="resources-in-vspackages"></a>VSPackage 中的资源
 可以将本地化的资源嵌入到本机附属 UI Dll、托管的附属 Dll 或托管的 VSPackage 本身中。
@@ -87,4 +89,4 @@ type="System.Resources.ResXFileRef,System.Windows.Forms">
 
 ## <a name="see-also"></a>另请参阅
 - [管理 VSPackages](../../extensibility/managing-vspackages.md)
-- [MFC 应用程序中已本地化的资源：附属 Dll](/cpp/build/localized-resources-in-mfc-applications-satellite-dlls)
+- [MFC 应用程序中已本地化的资源：附属 DLL](/cpp/build/localized-resources-in-mfc-applications-satellite-dlls)

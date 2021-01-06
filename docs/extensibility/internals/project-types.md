@@ -1,5 +1,7 @@
 ---
 title: 项目类型 |Microsoft Docs
+description: 'Visual Studio 包含多种语言的项目类型，例如 Visual c # 和 Visual Basic。 Visual Studio 还允许您创建自己的项目类型。'
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6b343eeeee0912a6e9cad57ca6d35c33845e4dd4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 35e38649f825e0dfa554d9fbc90c57f63370b31f
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706264"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877190"
 ---
 # <a name="project-types"></a>项目类型
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 包含多种语言的项目类型，例如 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] 和 [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] 。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 还允许您创建自己的项目类型。
@@ -32,7 +34,7 @@ ms.locfileid: "80706264"
 
 - [将命令添加到解决方案资源管理器工具栏](../../extensibility/adding-a-command-to-the-solution-explorer-toolbar.md)
 
- 详细说明在将按钮添加到解决方案资源管理器工具栏时必须执行的步骤 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **Solution Explorer** 。
+ 详细说明在将按钮添加到解决方案资源管理器工具栏时必须执行的步骤 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]  。
 
 - [添加项目和项目项模板](../../extensibility/internals/adding-project-and-project-item-templates.md)
 
@@ -52,7 +54,7 @@ ms.locfileid: "80706264"
 
 - [嵌套项目](../../extensibility/internals/nesting-projects.md)
 
- 说明项目类型如何支持 *嵌套*，使项目可以在 **解决方案资源管理器**中组合在一起。
+ 说明项目类型如何支持 *嵌套*，使项目可以在 **解决方案资源管理器** 中组合在一起。
 
 - [升级项目](../../extensibility/internals/upgrading-projects.md)
 

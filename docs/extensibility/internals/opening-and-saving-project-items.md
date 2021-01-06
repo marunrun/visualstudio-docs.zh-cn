@@ -1,5 +1,7 @@
 ---
 title: 打开和保存项目项 |Microsoft Docs
+description: 了解在 Visual Studio IDE 中打开和保存新项目类型的文件的不同方法。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: bbb89d99e401be6bae7d8ee9be8ee33fa7574723
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 971fef7939c91bdcdea9098da530c7ecb2daf9ec
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706971"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877619"
 ---
 # <a name="opening-and-saving-project-items"></a>打开和保存项目项
 添加新的项目类型时，必须在集成开发环境中打开和保存项目文件， [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] (IDE) 。 以下主题介绍了打开和保存文件的不同方法。
@@ -49,7 +51,7 @@ ms.locfileid: "80706971"
 
 - [保存自定义文档](../../extensibility/internals/saving-a-custom-document.md)
 
- 提供一个关系图，并详细说明 IDE 如何处理在自定义编辑器中打开的文档的 **保存**、 **另存为**和 **保存所有** 命令。
+ 提供一个关系图，并详细说明 IDE 如何处理在自定义编辑器中打开的文档的 **保存**、 **另存为** 和 **保存所有** 命令。
 
 - [确定使用哪个编辑器打开项目中的文件](../../extensibility/internals/determining-which-editor-opens-a-file-in-a-project.md)
 

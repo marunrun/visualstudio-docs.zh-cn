@@ -1,5 +1,7 @@
 ---
 title: 源代码管理 |Microsoft Docs
+description: 这些文章介绍了通过插件或 VSPackage 将源代码管理作为 Visual Studio 的集成功能实现的选项。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8ff7904e9abc3df8ed36f8c196ce4c1175b4d9af
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 33437994770ee78327d130f288d9d2e9689774fe
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704986"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876098"
 ---
 # <a name="source-control"></a>源代码管理
 本部分介绍了 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 通过源代码管理插件或源代码管理 VSPackage 实现源代码管理作为集成功能的选项。

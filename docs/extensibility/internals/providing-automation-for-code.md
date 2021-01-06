@@ -1,5 +1,7 @@
 ---
 title: 为代码提供自动化 |Microsoft Docs
+description: 了解如何实现代码模型，这需要实现由您的内部数据结构确定的接口。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: bd13b7db2065069ff1540dbfc921570c2b230b8a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dd8d0745ae971f4039ffccf3431614325236e63f
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705995"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875851"
 ---
 # <a name="providing-automation-for-code"></a>提供适用于 Code 的自动化
 不需要为代码创建自动化模型。 环境 SDK 并不提供用于执行此操作的示例。 若要深入了解代码模型，请参阅 <xref:EnvDTE.CodeModel> 对象。

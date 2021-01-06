@@ -1,5 +1,7 @@
 ---
 title: 演练：显示语句完成 |Microsoft Docs
+description: 了解如何使用本演练实现纯文本内容的基于语言的语句完成。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,22 +15,22 @@ dev_langs:
 - VB
 ms.workload:
 - vssdk
-ms.openlocfilehash: 472ff8c10e1346f25e7bc72ed5fd4ee9f31bbafa
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d05d33074f48e59e365792fda63897b1d38cd585
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904789"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877151"
 ---
 # <a name="walkthrough-display-statement-completion"></a>演练：显示语句完成
 您可以通过定义要为其提供完成的标识符，然后触发完成会话来实现基于语言的语句完成。 您可以在语言服务的上下文中定义语句结束，定义自己的文件扩展名和内容类型，然后仅为该类型显示完成。 或者，可以触发现有内容类型（例如，"纯文本"）的完成。 本演练演示如何为 "纯文本" 内容类型（文本文件的内容类型）触发语句结束。 "Text" 内容类型是所有其他内容类型（包括代码和 XML 文件）的上级。
 
- 语句完成通常通过键入特定字符来触发，例如键入标识符的开头（例如 "using"）。 通常通过按 **空格键**、 **Tab**或 **Enter** 键来提交选择。 使用命令处理程序 (<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> 接口) 和实现接口的处理程序提供程序时，可以实现触发的 IntelliSense 功能 <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener> 。 若要创建完成源（即参与完成的标识符列表），请 <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource> (接口) 中实现接口和完成源提供程序 <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSourceProvider> 。 提供程序 Managed Extensibility Framework (MEF) 组件部件。 它们负责导出源和控制器类，并导入服务和代理，例如，可 <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> 在文本缓冲区中启用导航，后者用于 <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionBroker> 触发完成会话。
+ 语句完成通常通过键入特定字符来触发，例如键入标识符的开头（例如 "using"）。 通常通过按 **空格键**、 **Tab** 或 **Enter** 键来提交选择。 使用命令处理程序 (<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> 接口) 和实现接口的处理程序提供程序时，可以实现触发的 IntelliSense 功能 <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener> 。 若要创建完成源（即参与完成的标识符列表），请 <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource> (接口) 中实现接口和完成源提供程序 <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSourceProvider> 。 提供程序 Managed Extensibility Framework (MEF) 组件部件。 它们负责导出源和控制器类，并导入服务和代理，例如，可 <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> 在文本缓冲区中启用导航，后者用于 <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionBroker> 触发完成会话。
 
  此演练演示如何为硬编码的标识符集实现语句结束。 在完整实现中，语言服务和语言文档负责提供该内容。
 
 ## <a name="prerequisites"></a>先决条件
- 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+ 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 也可稍后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
 ## <a name="create-a-mef-project"></a>创建 MEF 项目
 
@@ -202,7 +204,7 @@ ms.locfileid: "85904789"
 
 3. 创建一个文本文件并键入一些文本，其中包括 "添加" 一词。
 
-4. 键入第一个 "a" 和 "d" 时，应显示包含 "加法" 和 "适配" 的列表。 请注意，选择 "添加"。 如果键入其他 "d"，则该列表应仅包含 "加法"，此时将选择此选项。 可以按 **空格键**、 **Tab**或 **Enter** 键提交 "加法"，也可以通过键入 Esc 或其他任何键来关闭列表。
+4. 键入第一个 "a" 和 "d" 时，应显示包含 "加法" 和 "适配" 的列表。 请注意，选择 "添加"。 如果键入其他 "d"，则该列表应仅包含 "加法"，此时将选择此选项。 可以按 **空格键**、 **Tab** 或 **Enter** 键提交 "加法"，也可以通过键入 Esc 或其他任何键来关闭列表。
 
 ## <a name="see-also"></a>另请参阅
 - [演练：将内容类型链接到文件扩展名](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)

@@ -1,5 +1,7 @@
 ---
 title: 解决方案配置 |Microsoft Docs
+description: 了解如何实现项目类型支持的解决方案配置，该配置指示开始 (F5) 键和生成命令的行为。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7c96b73747ef8b136a74a7256cde7fef8d1c42de
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5ad298a44eedea0681a554add74bd67ed22cad41
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705380"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876023"
 ---
 # <a name="solution-configuration"></a>解决方案配置
 解决方案配置存储解决方案级属性。 它们定向 **开始** (F5) 键和 **生成** 命令的行为。 默认情况下，这些命令生成并启动调试配置。 这两个命令都在解决方案配置的上下文中执行。 这意味着，用户可能希望按 F5 启动并生成通过设置配置的任何活动解决方案。 环境旨在针对解决方案而不是在生成和运行时进行优化。

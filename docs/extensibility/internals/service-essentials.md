@@ -1,5 +1,7 @@
 ---
 title: 服务基础 |Microsoft Docs
+description: 了解服务，这些服务是其他 VSPackage 要使用的接口。 VSPackage 中的服务可以替代内置或其他服务。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0e2947cb4cd6a347d8e010340f8689eb1907a28a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 54d785d665122fd5c5fa1709aa9348777e3c730b
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705498"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875799"
 ---
 # <a name="service-essentials"></a>服务基础知识
 服务是两个 Vspackage 之间的协定。 一个 VSPackage 为其他要使用的 VSPackage 提供一组特定的接口。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 本身是 Vspackage 的集合，可向其他 Vspackage 提供服务。

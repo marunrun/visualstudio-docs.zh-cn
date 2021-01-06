@@ -1,5 +1,7 @@
 ---
 title: 旧版语言 Service2 中的参数信息 |Microsoft Docs
+description: 了解如何支持 IntelliSense 参数信息操作，用于显示方法签名，因为在旧版语言服务中键入方法。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: dff6e871320d0727ed2fbec4188e8f7af2e5c5fe
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fc239d5b0d580d420683c6940ac2bbd5198335d7
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88237953"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875942"
 ---
 # <a name="parameter-info-in-a-legacy-language-service-2"></a>旧版语言服务中的参数信息2
 IntelliSense 参数信息是一个工具提示，当用户键入参数列表开始字符时，该工具会显示方法的签名 (通常为方法参数列表的左括号) 。 在输入每个参数并且参数分隔符 (通常是键入逗号) 时，工具提示将更新以显示以粗体显示的下一个参数。

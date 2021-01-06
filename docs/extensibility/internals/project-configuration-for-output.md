@@ -1,5 +1,7 @@
 ---
 title: 用于输出的项目配置 |Microsoft Docs
+description: 了解每个配置可以支持的生成过程，以及可使输出项可用的接口和方法。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 78b95457af4c5d806fdfcc20f49ac4e82df36488
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ffe5cb6477808f892b8d36aa5fd616a5a0ea7969
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706673"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876319"
 ---
 # <a name="project-configuration-for-output"></a>用于输出的项目配置
 每个配置都可以支持生成可执行文件或资源文件等输出项的一组生成过程。 这些输出项专用于用户，并且可放置在链接相关类型的输出（如可执行文件 ( .exe、.dll、.lib) 和源文件 ( .idl 文件) 中的组。
@@ -43,7 +45,7 @@ ms.locfileid: "80706673"
 
  有关详细信息，请参阅 `IVsOutputGroup` [用于项目的 MPF](https://github.com/tunnelvisionlabs/MPFProj10)上的自定义项目示例中的的实现。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [管理配置选项](../../extensibility/internals/managing-configuration-options.md)
 - [用于生成的项目配置](../../extensibility/internals/project-configuration-for-building.md)
 - [项目配置对象](../../extensibility/internals/project-configuration-object.md)

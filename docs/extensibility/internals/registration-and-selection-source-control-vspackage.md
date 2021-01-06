@@ -1,5 +1,7 @@
 ---
 title: 注册和选择 (源控件 VSPackage) |Microsoft Docs
+description: 了解如何使用 Visual Studio 注册源代码管理 VSPackage，以及如何选择要从多个已注册源代码管理包加载的包。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 973eb19916a737dfa775fe79ee62cb3d11fe0123
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 76f0bd737eff52706cf73c9a1105b79e08c556f0
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705722"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877346"
 ---
 # <a name="registration-and-selection-source-control-vspackage"></a>注册和选择（源代码管理 VSPackage）
 必须注册源代码管理 VSPackage，才能将其公开给 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。 如果注册了多个源代码管理 VSPackage，则用户可以选择要在适当的时间加载的 VSPackage。 有关更多详细信息，请参阅 [vspackage](../../extensibility/internals/vspackages.md) 和注册方式。
@@ -24,7 +26,7 @@ ms.locfileid: "80705722"
 ## <a name="registering-a-source-control-package"></a>注册源代码管理包
  已注册源代码管理包，以便 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 环境可以找到它并查询其支持的功能。 这取决于延迟加载方案，在此方案中，仅当包的一个实例是必需的或显式请求时，才会创建包的实例。
 
- Vspackage 将信息放在特定于版本的注册表项中 HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio \\ *X. y*，其中*X*是主要版本号， *Y*是次版本号。 这种做法提供支持并行安装多个版本的的功能 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。
+ Vspackage 将信息放在特定于版本的注册表项中 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\ *x. Y*，其中 *X* 是主要版本号， *Y* 是次版本号。 这种做法提供支持并行安装多个版本的的功能 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。
 
  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]用户界面 (UI) 支持从多个已安装的源代码管理插件 (通过源代码管理适配器包) 以及源代码管理 vspackage 进行选择。 一次只能有一个活动源代码管理插件或 VSPackage。 但是，如下所述，IDE 允许通过基于解决方案的自动包交换机制在源代码管理插件和 Vspackage 之间切换。 对于源代码管理 VSPackage 的部分，需要满足一些要求，才能启用此选择机制。
 

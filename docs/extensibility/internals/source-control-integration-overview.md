@@ -1,5 +1,7 @@
 ---
 title: 源代码管理集成概述 |Microsoft Docs
+description: 了解将源代码管理集成到 Visual Studio 的两种方法之间的差异：源代码管理插件和 VSPackage。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d80363286f5f0cac9a5ceb2e8ac9d20345df9e6f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6bbd385c7089504949d2437091b0a2ea002fafdd
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705122"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876007"
 ---
 # <a name="source-control-integration-overview"></a>源代码管理集成概述
 本部分比较了集成到 Visual Studio 源代码管理的两种方法：源代码管理插件和 VSPackage，它提供源代码管理解决方案并突出显示新的源代码管理功能。 Visual Studio 允许在源控件 Vspackage 和源代码管理插件之间手动切换，以及基于解决方案的自动切换。

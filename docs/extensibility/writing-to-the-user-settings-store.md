@@ -1,5 +1,7 @@
 ---
 title: 正在写入用户设置存储 |Microsoft Docs
+description: 了解如何使用此演练，通过读取和写入用户设置存储，将记事本作为外部工具添加到 Visual Studio。
+ms.custom: SEO-VS-2020
 ms.date: 05/23/2019
 ms.topic: how-to
 ms.assetid: efd27f00-7fe5-45f8-9b97-371af732be97
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ec4d9cdda975d0f80e9d8523ec18a19c24c9418a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 55e17693bee1ced0354b21ee5cc736961a994c6f
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85906209"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876917"
 ---
 # <a name="writing-to-the-user-settings-store"></a>写入用户设置存储
 用户设置是 " **工具/选项** " 对话框、"属性" 窗口和某些其他对话框中的可写设置。 Visual Studio 扩展可以使用这些扩展来存储少量数据。 本演练演示如何通过读取和写入用户设置存储，将记事本作为外部工具添加到 Visual Studio。

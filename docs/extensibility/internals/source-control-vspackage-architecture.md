@@ -1,5 +1,7 @@
 ---
 title: 源代码管理 VSPackage 体系结构 |Microsoft Docs
+description: 了解源代码管理包的体系结构，它是一个 VSPackage，它提供 Visual Studio 的功能作为源代码管理服务。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,19 +12,19 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d6e62aa9e2d725e982f0605e2721f0bfeb3cc5ee
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c03482ff489c356ddcbe28ccc26c69c5936be6c5
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705082"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877671"
 ---
 # <a name="source-control-vspackage-architecture"></a>源代码管理 VSPackage 体系结构
 源代码管理包是使用 IDE 提供的服务的 VSPackage [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。 在返回时，源代码管理包将其功能作为源代码管理服务提供。 此外，源代码管理包的替代方法比用于将源代码管理集成到的源代码管理插件更通用 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。
 
  实现源代码管理插件 API 的源代码管理插件 API 由严格协定遵守美国。 例如，插件不能 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] (UI) 替换默认用户界面。 此外，源代码管理插件 API 不会启用插件来实现其自己的源代码管理模型。 但源代码管理包克服了这两个限制。 源代码管理包完全控制用户的源代码管理体验 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。 此外，源代码管理包可以使用其自己的源代码管理模型和逻辑，并可以定义所有与源代码管理相关的用户界面。
 
-## <a name="source-control-package-components"></a>源代码管理包组件
+## <a name="source-control-package-components"></a>Source-Control 包组件
  如体系结构关系图中所示， [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 名为源代码管理存根的组件是一种集成了源代码管理包的 VSPackage [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。
 
  源代码管理存根处理以下任务。
@@ -37,7 +39,7 @@ ms.locfileid: "80705082"
 
   源代码管理适配器包是提供的特殊源代码管理包 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。 此包是支持基于源代码管理插件 API 的源代码管理插件的中心组件。 当源代码管理插件为活动插件时，源代码管理存根会将其事件发送到源代码管理适配器包。 接下来，源代码管理适配器包通过使用源代码管理插件 API 与源代码管理插件通信，还提供了一个适用于所有源代码管理插件的默认 UI。
 
-  另一方面，如果源代码管理包是活动包，则源代码管理存根会使用 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] 源代码管理包接口直接与包通信。 源代码管理包负责承载其自己的源代码管理 UI。
+  另一方面，如果源代码管理包是活动包，则源代码管理存根会使用 Source-Control 包接口直接与包通信 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] 。 源代码管理包负责承载其自己的源代码管理 UI。
 
   ![源代码管理体系结构图](../../extensibility/internals/media/vsipsccarch.gif "VSIPSCCArch")
 

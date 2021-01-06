@@ -1,5 +1,7 @@
 ---
-title: 支持符号浏览工具 |Microsoft Docs
+title: 支持 Symbol-Browsing 工具 |Microsoft Docs
+description: Visual Studio 在 Visual Studio 中提供符号浏览功能。 了解如何在组件中将这些功能与库进行扩展。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,17 +20,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4998e47ccd6f99df2710833c18975d57e3bb92f5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0adf586831e21c2448931215d4ef4a89d16a63f8
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704770"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876436"
 ---
 # <a name="supporting-symbol-browsing-tools"></a>支持符号浏览工具
 **对象浏览器**、 **类视图**、 **调用浏览器** 和 **查找符号结果** 工具在 Visual Studio 中提供符号浏览功能。 这些工具显示符号的分层树视图，并显示树中符号之间的关系。 符号可以表示各个组件中包含的命名空间、对象、类、类成员和其他语言元素。 组件包括 Visual Studio 项目、外部 .NET Framework 组件和 ( .tlb) 库。 有关详细信息，请参阅 [查看代码的结构](../../ide/viewing-the-structure-of-code.md)。
 
-## <a name="symbol-browsing-libraries"></a>符号浏览库
+## <a name="symbol-browsing-libraries"></a>Symbol-Browsing 库
  作为语言实施者，你可以通过创建跟踪组件中的符号的库，并通过一组接口向 Visual Studio 对象管理器提供符号列表，来扩展 Visual Studio 符号浏览功能。 库由 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleLibrary2> 接口描述。 Visual Studio 对象管理器通过从库中获取数据并对其进行组织，响应来自符号浏览工具的新数据请求。 然后，它会用请求的数据填充或更新工具。 若要获取对 Visual Studio 对象管理器的引用， <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2> 请将 <xref:Microsoft.VisualStudio.Shell.Interop.SVsObjectManager> 服务 ID 传递给 `GetService` 方法。
 
  每个库必须向 Visual Studio 对象管理器注册，该对象管理器会收集所有库中的信息。 若要注册库，请调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterSimpleLibrary%2A> 方法。 根据启动请求的工具，Visual Studio 对象管理器将查找相应的库并请求数据。 数据 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 在接口所描述的符号列表中在库和对象管理器之间传输 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2> 。

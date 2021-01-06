@@ -1,5 +1,7 @@
 ---
 title: Visual Studio 中的工作区生成 |Microsoft Docs
+description: 了解为工作区提供索引和文件上下文数据以支持打开的文件夹方案的扩展程序。
+ms.custom: SEO-VS-2020
 ms.date: 02/21/2018
 ms.topic: conceptual
 author: vukelich
@@ -7,12 +9,12 @@ ms.author: svukel
 manager: viveis
 ms.workload:
 - vssdk
-ms.openlocfilehash: 82660ee772280563b91830aaf1a18da0bc742b28
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e44c2398b873bbca95c971ae1b44ac3de831b2ae
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62553323"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877099"
 ---
 # <a name="workspace-build"></a>工作区生成
 
@@ -88,7 +90,7 @@ private static void OutputBuildMessage(IWorkspace workspace)
 }
 ```
 
-`BuildMessage.Type` 并 `BuildMessage.LogMessage` 控制向用户显示信息的行为。 `BuildMessage.TaskType`除以外的任何值 `None` 都将生成具有给定详细信息的**错误列表**条目。 `LogMessage`将始终在**输出**工具窗口的**生成**窗格中输出。
+`BuildMessage.Type` 并 `BuildMessage.LogMessage` 控制向用户显示信息的行为。 `BuildMessage.TaskType`除以外的任何值 `None` 都将生成具有给定详细信息的 **错误列表** 条目。 `LogMessage`将始终在 **输出** 工具窗口的 **生成** 窗格中输出。
 
 或者，扩展可以直接与 **错误列表** 或 **生成** 窗格进行交互。 Visual Studio 2017 版本15.7 之前的版本中存在一个 bug，其中的 `pszProjectUniqueName` 参数 <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindowPane2.OutputTaskItemStringEx2*> 被忽略。
 

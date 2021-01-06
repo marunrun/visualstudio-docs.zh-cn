@@ -1,5 +1,7 @@
 ---
 title: 演练：在起始页上保存用户设置 |Microsoft Docs
+description: 了解如何通过使用本演练将设置保存到注册表来持久保存起始页的用户设置。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 754b9bf3-8681-4c77-b0a4-09146a4e1d2d
@@ -9,20 +11,20 @@ manager: jillfra
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: 8dd20513defd1db8848cf6a80a29e04c127c9dd4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 17dfb844733a15b1607d2daa2ce24a8f6e0be420
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903161"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876176"
 ---
 # <a name="walkthrough-save-user-settings-on-a-start-page"></a>演练：在起始页上保存用户设置
 
 你可以保留起始页的用户设置。 按照此演练操作，你可以创建一个控件，用于在用户单击按钮时将设置保存到注册表，然后在每次加载起始页时检索该设置。 由于起始页项目模板包含一个可自定义的用户控件，并且默认起始页 XAML 调用了该控件，因此您无需修改起始页本身。
 
-此演练中实例化的设置存储是接口的实例，该实例在 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWritableSettingsStore> 调用时读取并写入以下注册表位置： **HKCU\Software\Microsoft\VisualStudio\14.0 \\ \<CollectionName> **
+此演练中实例化的设置存储是接口的实例，该实例在 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWritableSettingsStore> 调用时读取并写入以下注册表位置： **HKCU\Software\Microsoft\VisualStudio\14.0 \\ \<CollectionName>**
 
-在 Visual Studio 的实验实例中运行时，设置会将读取和写入操作存储到**HKCU\Software\Microsoft\VisualStudio\14.0Exp \\ \<CollectionName> 。**
+在 Visual Studio 的实验实例中运行时，设置会将读取和写入操作存储到 **HKCU\Software\Microsoft\VisualStudio\14.0Exp \\ \<CollectionName> 。**
 
 有关如何保存设置的详细信息，请参阅 [扩展用户设置和选项](../extensibility/extending-user-settings-and-options.md)。
 
@@ -37,7 +39,7 @@ ms.locfileid: "85903161"
 
 1. 如 [创建自定义起始页](creating-a-custom-start-page.md)中所述，创建起始页项目。 将项目命名为 **SaveMySettings**。
 
-2. 在 **解决方案资源管理器**中，将以下程序集引用添加到 StartPageControl 项目：
+2. 在 **解决方案资源管理器** 中，将以下程序集引用添加到 StartPageControl 项目：
 
     - EnvDTE
 
@@ -150,7 +152,7 @@ ms.locfileid: "85903161"
 
 6. 生成用户控件。
 
-7. 在 **解决方案资源管理器**中，打开 *source.extension.vsixmanifest*。
+7. 在 **解决方案资源管理器** 中，打开 *source.extension.vsixmanifest*。
 
 8. 在清单编辑器中，将 " **产品名称** " 设置为 **"保存我的设置" "起始页**"。
 
@@ -160,7 +162,7 @@ ms.locfileid: "85903161"
 
 ## <a name="test-the-control"></a>测试控件
 
-1. 按 **F5**。
+1. 按 F5 。
 
      此时将打开 Visual Studio 的实验实例。
 

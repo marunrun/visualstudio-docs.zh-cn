@@ -1,5 +1,7 @@
 ---
 title: 项目持久性 |Microsoft Docs
+description: 了解项目设计中的持久性，包括使用 IPersistFileFormat 来持久保存文件和非基于文件的项目对象。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +13,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 10a9cde91c0181fbfefbaa353c7c3702f4b36819
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b6ffa60508eba02a4442bacb63b05abb39202ab9
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706461"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877437"
 ---
 # <a name="project-persistence"></a>项目持久性
 持久性是项目的重要设计注意事项。 大多数项目使用代表文件的项目项; [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 还支持其数据不是基于文件的项目。 项目和项目文件所拥有的文件必须保存。 IDE 指示项目保存自身或项目项。
 
- 项目模板会传递到项目工厂。 模板应支持根据特定项目类型的要求初始化所有项目项。 这些模板以后可以保存为项目文件，并由 IDE 通过解决方案进行管理。 有关详细信息，请参阅[使用项目工厂和解决方案创建项目实例](../../extensibility/internals/creating-project-instances-by-using-project-factories.md)。 [Solutions](../../extensibility/internals/solutions-overview.md)
+ 项目模板会传递到项目工厂。 模板应支持根据特定项目类型的要求初始化所有项目项。 这些模板以后可以保存为项目文件，并由 IDE 通过解决方案进行管理。 有关详细信息，请参阅[使用项目工厂和解决方案创建项目实例](../../extensibility/internals/creating-project-instances-by-using-project-factories.md)。 [](../../extensibility/internals/solutions-overview.md)
 
  项目项可以是基于文件的，也可以是不基于文件的：
 

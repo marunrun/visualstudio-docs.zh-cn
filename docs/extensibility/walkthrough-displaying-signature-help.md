@@ -1,5 +1,7 @@
 ---
 title: 演练：显示签名帮助 |Microsoft Docs
+description: 了解如何使用本演练显示文本内容类型的签名帮助。 签名帮助在工具提示中显示方法的签名。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b88c8555904bb31c2804579459ad3096d640b0c2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: be324ab48d42e859678ccf01d8c75faae6cea381
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904819"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876241"
 ---
 # <a name="walkthrough-display-signature-help"></a>演练：显示签名帮助
 签名帮助 (也称为 *参数信息*) 当用户键入参数列表开始字符时，将在工具提示中显示方法的签名， (通常为左括号) 。 作为参数和参数分隔符 (通常会键入逗号) ，工具提示将更新以以粗体显示下一个参数。 可以通过以下方式定义签名帮助：在语言服务的上下文中，定义自己的文件扩展名和内容类型，并为现有内容类型显示签名帮助 (例如，"text" ) 。 本演练演示如何为 "文本" 内容类型显示签名帮助。
@@ -25,7 +27,7 @@ ms.locfileid: "85904819"
  本演练演示如何为硬编码的标识符集设置签名帮助。 在完整实现中，语言负责提供该内容。
 
 ## <a name="prerequisites"></a>先决条件
- 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+ 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 也可稍后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
 ## <a name="creating-a-mef-project"></a>创建 MEF 项目
 

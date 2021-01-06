@@ -1,5 +1,7 @@
 ---
 title: 解决方案 (。.Sln) 文件
+description: 了解 .sln 文件，该文件是在 Visual Studio 中维护项目的状态信息的文件之一。
+ms.custom: SEO-VS-2020
 ms.date: 03/15/2019
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9f4eee1f0a5e8371d239b3c33d10e1d9d7998095
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 903b33d72d3a97eb4ed3f7ad0bc865999bee54cf
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705333"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877502"
 ---
 # <a name="solution-sln-file"></a>解决方案 ( .sln) 文件
 
@@ -160,7 +162,7 @@ EndGlobal
 
 只有 .sln 文件包含和节中的条目 `preSolution` `postSolution` 。 .Suo 文件中没有类似的部分，因为解决方案需要此信息才能正确加载。 .Suo 文件包含特定于用户的选项，如专用说明，这些选项不应在源代码管理下共享或放置。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps>
 - [解决方案用户选项 (.Suo) 文件](../../extensibility/internals/solution-user-options-dot-suo-file.md)

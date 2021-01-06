@@ -1,5 +1,7 @@
 ---
 title: 项目和配置属性支持 |Microsoft Docs
+description: 了解如何在 Visual Studio IDE 中为自己的项目类型提供属性页，该属性页可以显示项目和配置扩展属性。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +13,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: be9d9a6e0976ab1ff336fc6754fa44d26c031378
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: fd5f15f16894faf6d47700e34db4d99a1fa3cb5a
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012017"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876590"
 ---
 # <a name="support-for-project-and-configuration-properties"></a>支持项目和配置属性
 集成开发环境中的 " **属性** " 窗口 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] (IDE) 可以显示项目和配置属性。 您可以为自己的项目类型提供属性页，以便用户可以设置您的应用程序的属性。
 
- 通过在**解决方案资源管理器**中选择项目节点，然后单击 "**项目**" 菜单上的 "**属性**"，可以打开一个包含 "项目" 和 "配置" 属性的对话框。 在 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] 和中， [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] 以及从这些语言派生的项目类型中，此对话框在 " [常规"、"环境"、"选项" 对话框](../../ide/reference/general-environment-options-dialog-box.md)中显示为选项卡式页面。 有关详细信息，请参阅 [不在生成中：演练： )  (公开项目和配置属性 ](/previous-versions/bb166517(v=vs.100))。
+ 通过在 **解决方案资源管理器** 中选择项目节点，然后单击 "**项目**" 菜单上的 "**属性**"，可以打开一个包含 "项目" 和 "配置" 属性的对话框。 在 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] 和中， [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] 以及从这些语言派生的项目类型中，此对话框在 " [常规"、"环境"、"选项" 对话框](../../ide/reference/general-environment-options-dialog-box.md)中显示为选项卡式页面。 有关详细信息，请参阅 [不在生成中：演练： )  (公开项目和配置属性 ](/previous-versions/bb166517(v=vs.100))。
 
   (MPFProj 的项目的托管包框架) 提供用于创建和管理新项目系统的帮助程序类。 可以在适用于项目的 MPF 上查找源代码和编译说明 [-Visual Studio 2013](https://github.com/tunnelvisionlabs/MPFProj10)。
 
@@ -75,7 +77,7 @@ ms.locfileid: "90012017"
 
  附加属性的 VSPackage 是不重要的。 当向注册 VSPackage 时 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ，将注册可创建的任何对象的类 id (CLSID) ，以便调用 <xref:Microsoft.VisualStudio.Shell.Interop.ILocalRegistry.CreateInstance%2A> 可以创建它。
 
- 可以创建的对象的注册表路径是通过组合 <xref:Microsoft.VisualStudio.Shell.Package.UserRegistryRoot%2A> 、字、CLSID 和对象类型的 guid 确定的。 如果 `MyProjectPropertyPage` 类具有 {3c693da2-5bca-49b3-bd95-ffe0a39dd723} 的 guid 并且 UserRegistryRoot 为 HKEY_CURRENT_USER \software\microsoft\visualstudio\8.0exp，则注册表路径将为 HKEY_CURRENT_USER \software\microsoft\visualstudio\8.0exp\clsid \\ {3c693da2-5bca-49b3-bd95-ffe0a39dd723}。
+ 可以创建的对象的注册表路径是通过组合 <xref:Microsoft.VisualStudio.Shell.Package.UserRegistryRoot%2A> 、字、CLSID 和对象类型的 guid 确定的。 如果 `MyProjectPropertyPage` 类具有 {3c693da2-5bca-49b3-bd95-ffe0a39dd723} 的 guid 并且 HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0Exp 了 UserRegistryRoot，则注册表路径将为 HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0Exp\CLSID\\ {3c693da2-5bca-49b3-bd95-ffe0a39dd723}。
 
 ## <a name="project-and-configuration-property-attributes-and-layout"></a>项目和配置属性和布局
  <xref:System.ComponentModel.CategoryAttribute>、 <xref:System.ComponentModel.DisplayNameAttribute> 和 <xref:System.ComponentModel.DescriptionAttribute> 特性确定泛型属性页中的项目和配置属性的布局、标签和说明。 这些属性分别决定了选项的类别、显示名称和说明。
@@ -88,9 +90,9 @@ ms.locfileid: "90012017"
  [!code-vb[VSSDKSupportProjectConfigurationProperties#2](../../extensibility/internals/codesnippet/VisualBasic/support-for-project-and-configuration-properties_2.vb)]
  [!code-csharp[VSSDKSupportProjectConfigurationProperties#2](../../extensibility/internals/codesnippet/CSharp/support-for-project-and-configuration-properties_2.cs)]
 
- 配置属性在 `MyConfigProp` "配置" 属性页上显示为 **"我**的类别" 类别中的**my Config 属性**。 如果选择了该选项，说明面板中将显示 " **我的描述**"。
+ 配置属性在 `MyConfigProp` "配置" 属性页上显示为 **"我** 的类别" 类别中的 **my Config 属性**。 如果选择了该选项，说明面板中将显示 " **我的描述**"。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [添加和删除属性页](../../extensibility/adding-and-removing-property-pages.md)
 - [项目](../../extensibility/internals/projects.md)
 - [模板目录说明 (.Vsdir) 文件](../../extensibility/internals/template-directory-description-dot-vsdir-files.md)

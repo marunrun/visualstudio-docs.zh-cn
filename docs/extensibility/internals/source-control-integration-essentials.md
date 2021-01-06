@@ -1,5 +1,7 @@
 ---
 title: 源代码管理集成基础知识 |Microsoft Docs
+description: 了解 Visual Studio 支持的两种源代码管理集成类型：源代码管理插件和基于 VSPackage 的源代码管理解决方案。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e56658d644720f1563d71d3d08bf35268119112f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a4dd5186b20dfac4ad5a027e4519700ff8ac1f77
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705235"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876020"
 ---
 # <a name="source-control-integration-essentials"></a>源代码管理集成基础知识
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 支持两种类型的源代码管理集成：一个源代码管理插件，它提供基本功能，并使用源代码管理插件 API 构建 (以前称为 MSSCCI API) ，后者是一种基于 VSPackage 的源代码管理集成解决方案，提供了更强大的功能。
