@@ -20,12 +20,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 7dee7965d1c98dbdb05f0edc83c6c8799047acde
-ms.sourcegitcommit: c558d8a0f02ed2c932c8d6f70756d8d2cedb10b3
+ms.openlocfilehash: 2c3302499ec44d7a97ca66532428e0af117e3a7e
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97684049"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903774"
 ---
 # <a name="install-visual-studio"></a>安装 Visual Studio
 
@@ -267,3 +267,4 @@ ms.locfileid: "97684049"
 * [创建 Visual Studio 的脱机安装](create-an-offline-installation-of-visual-studio.md)
 * [使用命令行参数安装 Visual Studio](use-command-line-parameters-to-install-visual-studio.md)
 * [安装 Visual Studio for Mac](/visualstudio/mac/installation)
+ 
