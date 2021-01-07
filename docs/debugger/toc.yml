@@ -6,8 +6,6 @@
       href: what-is-debugging.md
     - name: 调试技术和工具
       href: write-better-code-with-visual-studio.md
-    - name: 查找调试任务
-      href: find-your-debugging-task.md
 - name: 快速入门
   items:
     - name: 初探调试器
@@ -944,5 +942,7 @@
                   href: copyright-notice-for-spy-increment-help.md
 - name: 资源
   items:
+    - name: 常见问题解答 - 查找调试功能
+      href: find-your-debugging-task.md
     - name: Visual Studio 中调试器的新增功能
       href: what-s-new-for-the-debugger-in-visual-studio.md
