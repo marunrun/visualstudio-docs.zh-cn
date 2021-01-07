@@ -11,16 +11,19 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 6317f7a1f81e6eb6916c10b2f8ce0df91f57a7de
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: 6853ef6040df943ac3050621a5b3a2528d599d9f
+ms.sourcegitcommit: 4e28314dc2be59b4c5fd44545c0653f625e74489
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96329947"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97756612"
 ---
 # <a name="overview-of-microsoft-intellitest"></a>Microsoft IntelliTest 的概述
 
 IntelliTest 使你能够尽早发现 bug，降低测试维护成本。 IntelliTest 使用一种自动化透明的测试方法，为 .NET 代码生成备用的测试套件。 测试套件生成可由指定的“正确性属性”  进行进一步引导。 IntelliTest 甚至会随受测代码的变化而自动完善测试套件。
+
+> [!NOTE]
+> 只有企业版中提供 IntelliTest。 面向 .NET Framework 的 C# 代码支持它。 当前不支持 .NET Core 和 .NET Standard。
 
 **表征测试** 通过 IntelliTest 可确定传统单元测试套件方面的代码行为。
 这类测试套件可用作回归套件，为处理重构旧代码或陌生代码相关的复杂问题奠定基础。
