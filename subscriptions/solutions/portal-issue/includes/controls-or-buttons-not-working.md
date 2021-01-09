@@ -9,13 +9,13 @@ ms.date: 08/14/2020
 user.type: subscriber
 tags: portal-error
 subscription.type: vl, cloud, retail, partner
-sap.id: 17a2bf94-0d03-2629-dfd8-e8935f9126ec
-ms.openlocfilehash: 9cbba2b84e8cb4764b6e173b38d6bcc6cc75cdf9
-ms.sourcegitcommit: 60e5a8a7ee91854356797d05f3b502572c4a4884
+sap.id: 8250612f-7446-20c5-7473-16d089f2280d
+ms.openlocfilehash: e463a4e3c5ed78cd7886238cd71477a205b5c63d
+ms.sourcegitcommit: cfc984316ded3396db6722ad90f9378dfb7661ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96915846"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98024401"
 ---
 ## <a name="were-sorry-to-hear-that-youre-experiencing-an-issue-with-controls-or-buttons-while-using-the-visual-studio-subscriptions-portal"></a>对于你在使用 Visual Studio 订阅门户时遇到的控件或按钮问题，我们深表歉意。 
 
