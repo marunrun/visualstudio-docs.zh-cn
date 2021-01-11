@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a5e7ee628f5a48f573afed9753f4fad17f85e33a
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 6f843df01059adef3a94bb46501e4e75bd67d5a7
+ms.sourcegitcommit: b1f7e7d7a0550d5c6f46adff3bddd44bc1d6ee1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94348640"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98069482"
 ---
 # <a name="code-metrics-values"></a>代码度量值
 
@@ -36,19 +36,19 @@ ms.locfileid: "94348640"
 
 以下列表显示了 Visual Studio 计算的代码度量结果：
 
-- 可 **维护性索引** -计算0到100之间的索引值，它表示维护代码的相对轻松程度。 较高的值表示更好的可维护性。 颜色编码分级可用于快速标识代码中的问题点。 绿色评级介于20和100之间，表示代码具有良好的可维护性。 黄色评分介于10和19之间，表示代码适度维护。 红色评分是0到9之间的评分，表示可维护性低。 有关详细信息，请参阅可 [维护性索引范围和含义](/archive/blogs/codeanalysis/maintainability-index-range-and-meaning) 博客文章。
+- 可 **维护性索引**-计算0到100之间的索引值，它表示维护代码的相对轻松程度。 较高的值表示更好的可维护性。 颜色编码分级可用于快速标识代码中的问题点。 绿色评级介于20和100之间，表示代码具有良好的可维护性。 黄色评分介于10和19之间，表示代码适度维护。 红色评分是0到9之间的评分，表示可维护性低。 有关详细信息，请参阅可 [维护性索引范围和含义](code-metrics-maintainability-index-range-and-meaning.md)。
 
 - **圈复杂度** -度量代码的结构复杂性。 它通过计算程序流中的不同代码路径的数目来创建。 具有复杂控制流的程序需要进行更多测试才能实现良好的代码覆盖率，并且维护性更少。 有关详细信息，请参阅 [圈复杂度的维基百科条目](https://wikipedia.org/wiki/Cyclomatic_complexity)。
 
 - **继承深度** -指示不同类的数量，这些类彼此继承，并回到基类。 继承深度类似于类耦合，因为基类中的更改可能会影响其任何继承的类。 此数字越大，继承越深入，导致重大更改的可能性越高，导致重大更改。 若要深入了解继承，值越小，值就越小。
 
-- **类耦合** -通过参数、本地变量、返回类型、方法调用、泛型或模板实例化、基类、接口实现、在外部类型上定义的字段和特性修饰来度量与唯一类的耦合。 优秀的软件设计要求类型和方法应具有较高的聚合和低耦合。 高耦合性表明，由于它对其他类型的互依关系，难于重复使用和维护的设计。 有关详细信息，请参阅 [类耦合](/archive/blogs/zainnab/code-metrics-class-coupling) 博客文章。
+- **类耦合** -通过参数、本地变量、返回类型、方法调用、泛型或模板实例化、基类、接口实现、在外部类型上定义的字段和特性修饰来度量与唯一类的耦合。 优秀的软件设计要求类型和方法应具有较高的聚合和低耦合。 高耦合性表明，由于它对其他类型的互依关系，难于重复使用和维护的设计。 有关详细信息，请参阅 [类耦合](code-metrics-class-coupling.md)。
 
 ::: moniker range=">=vs-2019"
 
 - **源代码行** 数-表示源文件中存在的源代码行的确切数目，包括空行。 从 Visual Studio 2019 版本16.4 和 CodeAnalysis (2.9.5) 开始提供此指标。
 
-- **可执行代码的行** 数-表示可执行代码行或操作的大致数目。 这是可执行代码中的操作数。 从 Visual Studio 2019 版本16.4 和 CodeAnalysis (2.9.5) 开始提供此指标。 值通常与上一个度量值（即在旧模式下使用的基于 MSIL 指令的度量值的 **行** ）接近。
+- **可执行代码的行** 数-表示可执行代码行或操作的大致数目。 这是可执行代码中的操作数。 从 Visual Studio 2019 版本16.4 和 CodeAnalysis (2.9.5) 开始提供此指标。 值通常与上一个度量值（即在旧模式下使用的基于 MSIL 指令的度量值的 **行**）接近。
 ::: moniker-end
 ::: moniker range="vs-2017"
 

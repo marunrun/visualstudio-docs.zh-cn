@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 660fc893eb22d0c40805a8bf7b2efc86fd83c3b1
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: cf02fda50678d9de4eb01dc28b4825844e33063e
+ms.sourcegitcommit: b1f7e7d7a0550d5c6f46adff3bddd44bc1d6ee1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94350863"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98069495"
 ---
 # <a name="ltinstallchecksgt-element-bootstrapper"></a>&lt;InstallChecks &gt; 元素 (引导程序) 
 `InstallChecks`元素支持对本地计算机启动各种测试，以确保已安装应用程序的所有适当的先决条件。
@@ -74,7 +74,7 @@ ms.locfileid: "94350863"
 ## <a name="assemblycheck"></a>AssemblyCheck
  此元素是的可选子元素 `InstallChecks` 。 对于每个实例 `AssemblyCheck` ，引导程序将确保由元素标识的程序集存在于全局程序集缓存中 (GAC) 。 它不包含任何元素，并且具有以下属性。
 
-|特性|说明|
+|属性|描述|
 |---------------|-----------------|
 |`Property`|必需。 要存储结果的属性的名称。 可以从元素下的测试中引用此属性 `InstallConditions` ，该元素是元素的子元素 `Command` 。 有关详细信息，请参阅 [\<Commands> 元素](../deployment/commands-element-bootstrapper.md)。|
 |`Name`|必需。 要检查的程序集的完全限定名称。|
@@ -88,7 +88,7 @@ ms.locfileid: "94350863"
 
  `ExternalCheck` 不包含任何元素，并且具有以下属性。
 
-|特性|说明|
+|属性|描述|
 |---------------|-----------------|
 |`Property`|必需。 要存储结果的属性的名称。 可以从元素下的测试中引用此属性 `InstallConditions` ，该元素是元素的子元素 `Command` 。 有关详细信息，请参阅 [\<Commands> 元素](../deployment/commands-element-bootstrapper.md)。|
 |`PackageFile`|必需。 要执行的外部程序。 此程序必须是安装分发包的一部分。|
@@ -99,20 +99,20 @@ ms.locfileid: "94350863"
 
  `FileCheck` 不包含任何元素，并且具有以下属性。
 
-| 特性 | 说明 |
+| 属性 | 描述 |
 |-----------------| - |
 | `Property` | 必需。 要存储结果的属性的名称。 可以从元素下的测试中引用此属性 `InstallConditions` ，该元素是元素的子元素 `Command` 。 有关详细信息，请参阅 [\<Commands> 元素](../deployment/commands-element-bootstrapper.md)。 |
 | `FileName` | 必需。 要查找的文件的名称。 |
 | `SearchPath` | 必需。 要在其中查找文件的磁盘或文件夹。 如果分配了，则此路径必须是相对路径 `SpecialFolder` ; 否则，它必须是绝对路径。 |
 | `SpecialFolder` | 可选。 对 Windows 或的具有特殊意义的文件夹 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 。 默认值是解释 `SearchPath` 为绝对路径。 有效值包括以下值：<br /><br /> `AppDataFolder`. 此应用程序的应用程序数据文件夹 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] ; 特定于当前用户。<br /><br /> `CommonAppDataFolder`. 所有用户使用的应用程序数据文件夹。<br /><br /> `CommonFilesFolder`. 当前用户的 "公共文件" 文件夹。<br /><br /> `LocalDataAppFolder`. 非漫游应用程序的数据文件夹。<br /><br /> `ProgramFilesFolder`. 32位应用程序的标准 Program Files 文件夹。<br /><br /> `StartUpFolder`. 包含系统启动时启动的所有应用程序的文件夹。<br /><br /> `SystemFolder`. 包含32位系统 Dll 的文件夹。<br /><br /> `WindowsFolder`. 包含 Windows 系统安装的文件夹。<br /><br /> `WindowsVolume`. 包含 Windows 系统安装的驱动器或分区。 |
-| `SearchDepth` | 可选。 在其中搜索指定文件的子文件夹的深度。 搜索深度优先。 默认值为0，该值将搜索限制为由和 SearchPath 指定的顶层文件夹 `SpecialFolder` 。 **SearchPath** |
+| `SearchDepth` | 可选。 在其中搜索指定文件的子文件夹的深度。 搜索深度优先。 默认值为0，该值将搜索限制为由和 SearchPath 指定的顶层文件夹 `SpecialFolder` 。  |
 
 ## <a name="msiproductcheck"></a>MsiProductCheck
  此元素是的可选子元素 `InstallChecks` 。 对于每个实例 `MsiProductCheck` ，引导程序将进行检查，以确定指定的 Microsoft Windows Installer 安装是否已运行完毕。 根据安装的产品的状态设置属性值。 正值表示已安装产品，0或-1 表示未安装该产品。  (有关详细信息，请参阅 Windows Installer SDK 函数 MsiQueryFeatureState。 ) 。 如果未在计算机上安装 Windows Installer， `Property` 则不设置。
 
  `MsiProductCheck` 不包含任何元素，并且具有以下属性。
 
-|特性|说明|
+|属性|描述|
 |---------------|-----------------|
 |`Property`|必需。 要存储结果的属性的名称。 可以从元素下的测试中引用此属性 `InstallConditions` ，该元素是元素的子元素 `Command` 。 有关详细信息，请参阅 [\<Commands> 元素](../deployment/commands-element-bootstrapper.md)。|
 |`Product`|必需。 已安装产品的 GUID。|
@@ -123,7 +123,7 @@ ms.locfileid: "94350863"
 
  `RegistryCheck` 不包含任何元素，并且具有以下属性。
 
-|特性|说明|
+|属性|描述|
 |---------------|-----------------|
 |`Property`|必需。 要存储结果的属性的名称。 可以从元素下的测试中引用此属性 `InstallConditions` ，该元素是元素的子元素 `Command` 。 有关详细信息，请参阅 [\<Commands> 元素](../deployment/commands-element-bootstrapper.md)。|
 |`Key`|必需。 注册表项的名称。|
@@ -134,7 +134,7 @@ ms.locfileid: "94350863"
 
  `RegistryFileCheck` 不包含任何元素，并且具有以下属性。
 
-|特性|说明|
+|属性|描述|
 |---------------|-----------------|
 |`Property`|必需。 要存储结果的属性的名称。 可以从元素下的测试中引用此属性 `InstallConditions` ，该元素是元素的子元素 `Command` 。 有关详细信息，请参阅 [\<Commands> 元素](../deployment/commands-element-bootstrapper.md)。|
 |`Key`|必需。 注册表项的名称。 它的值被解释为文件的路径，除非 `File` 已设置该属性。 如果此项不存在， `Property` 则不设置。|
@@ -158,7 +158,7 @@ ms.locfileid: "94350863"
 ## <a name="installconditions"></a>InstallConditions
  `InstallChecks`计算时，它们将生成属性。 然后使用这些属性 `InstallConditions` 来确定包是否应安装、绕过或失败。 下表列出了 `InstallConditions` ：
 
-|条件|说明|
+|条件|描述|
 |-|-|
 |`FailIf`|如果任何 `FailIf` 条件的计算结果都为 true，包将失败。 其余条件将不会进行计算。|
 |`BypassIf`|如果任何 `BypassIf` 条件的计算结果都为 true，则将绕过包。 其余条件将不会进行计算。|
@@ -177,10 +177,20 @@ ms.locfileid: "94350863"
  例如，若要在运行 Windows 95 的计算机上阻止安装，请使用如下所示的代码：
 
 ```xml
-<!-- Block install on Windows 95 -->
+    <!-- Block install on Windows 95 -->
     <FailIf Property="Version9X" Compare="VersionLessThan" Value="4.10" String="InvalidPlatform"/>
 ```
 
+ 若要跳过运行安装检查，请使用 BeforeInstallChecks 属性。  例如：
+
+```xml
+    <!-- Block install and do not evaluate install checks if user does not have admin privileges -->
+    <FailIf Property="AdminUser" Compare="ValueEqualTo" Value="false" String="AdminRequired" BeforeInstallChecks="true"/>
+```
+
+>[!NOTE]
+>`BeforeInstallChecks`从 Visual Studio 2019 Update 9 版本开始，支持属性。
+
 ## <a name="see-also"></a>请参阅
-- [\<Commands> element](../deployment/commands-element-bootstrapper.md)
+- [\<Commands> 元素](../deployment/commands-element-bootstrapper.md)
 - [产品和包架构引用](../deployment/product-and-package-schema-reference.md)
