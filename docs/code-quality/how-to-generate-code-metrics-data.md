@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c72e53266eae11fb060ac117c4a6dc0a1c37e2e
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 631ce51df5d985e02e8ccabca258c0ef1c1318f4
+ms.sourcegitcommit: b1f7e7d7a0550d5c6f46adff3bddd44bc1d6ee1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94434787"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98069469"
 ---
 # <a name="how-to-generate-code-metrics-data"></a>如何：生成代码度量数据
 
@@ -39,22 +39,17 @@ ms.locfileid: "94434787"
 - [CA1505](/dotnet/fundamentals/code-analysis/quality-rules/ca1505)
 - [CA1506](/dotnet/fundamentals/code-analysis/quality-rules/ca1506)
 
-默认情况下，这些规则是禁用的，但你可以从 [**解决方案资源管理器**](use-roslyn-analyzers.md#set-rule-severity-from-solution-explorer) 或 [规则集](using-rule-sets-to-group-code-analysis-rules.md) 文件中启用它们。 例如，若要启用规则 CA1502 作为警告，你的文件将包含以下条目：
+默认情况下，这些规则是禁用的，但你可以在 [**解决方案资源管理器**](use-roslyn-analyzers.md#set-rule-severity-from-solution-explorer) 或 [EditorConfig](use-roslyn-analyzers.md#set-rule-severity-in-an-editorconfig-file) 文件中启用它们。 例如，若要启用规则 CA1502 作为警告，EditorConfig 文件将包含以下条目：
 
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<RuleSet Name="Rules" Description="Rules" ToolsVersion="16.0">
-  <Rules AnalyzerId="Microsoft.CodeQuality.Analyzers" RuleNamespace="Microsoft.CodeQuality.Analyzers">
-    <Rule Id="CA1502" Action="Warning" />
-  </Rules>
-</RuleSet>
+```cs
+dotnet_diagnostic.CA1502.severity = warning
 ```
 
-### <a name="configuration"></a>Configuration
+### <a name="configuration"></a>配置
 
 你可以配置触发代码度量规则的阈值。
 
-1. 创建文本文件。 例如，你可以将其命名为 *CodeMetricsConfig.txt* 。
+1. 创建文本文件。 例如，你可以将其命名为 *CodeMetricsConfig.txt*。
 
 2. 将所需阈值添加到文本文件，格式如下：
 
@@ -74,15 +69,15 @@ ms.locfileid: "94434787"
 
 ## <a name="calculate-code-metrics-menu-command"></a>"计算代码度量值" 菜单命令
 
-使用 " **分析**  >  **计算代码度量值** " 菜单为 IDE 中的一个或所有打开的项目生成代码度量值。
+使用 "**分析**  >  **计算代码度量值**" 菜单为 IDE 中的一个或所有打开的项目生成代码度量值。
 
 ### <a name="generate-code-metrics-results-for-an-entire-solution"></a>为整个解决方案生成代码度量结果
 
 可以通过以下任一方式生成整个解决方案的代码度量结果：
 
-- 从菜单栏中，选择 " **分析**  >  为解决方案 **计算代码度量值** "  >  **For Solution** 。
+- 从菜单栏中，选择 "**分析**  >  为解决方案 **计算代码度量值**"  >  。
 
-- 在 **解决方案资源管理器** 中，右键单击解决方案，然后选择 " **计算代码度量值** "。
+- 在 **解决方案资源管理器** 中，右键单击解决方案，然后选择 " **计算代码度量值**"。
 
 - 在 " **代码度量值结果** " 窗口中，选择 " **计算解决方案的代码度量值** " 按钮。
 
@@ -92,7 +87,7 @@ ms.locfileid: "94434787"
 
 1. 在 **解决方案资源管理器** 中，选择一个或多个项目。
 
-1. 从菜单栏中，选择 " **分析**  >  计算 **Calculate Code Metrics**  >  **所选项目 (的** 代码度量值") 。
+1. 从菜单栏中，选择 "**分析**  >  计算  >  **所选项目 (的** 代码度量值") 。
 
 将生成结果，并显示 " **代码度量结果** " 窗口。 若要查看结果详细信息，请在 **层次结构** 中展开树。
 
@@ -284,7 +279,7 @@ Build succeeded.
 1. 克隆 [dotnet/roslyn](https://github.com/dotnet/roslyn-analyzers) 存储库。
 2. 以管理员身份打开 Visual Studio 开发人员命令提示。
 3. 从 **roslyn** 存储库的根目录中执行以下命令： `Restore.cmd`
-4. 将目录更改为 *src\Tools* 。
+4. 将目录更改为 *src\Tools*。
 5. 执行以下命令以生成 **度量值 .csproj** 项目：
 
    ```shell
@@ -295,7 +290,7 @@ Build succeeded.
 
 #### <a name="metricsexe-usage"></a>Metrics.exe 用法
 
-若要运行 *Metrics.exe* ，请将项目或解决方案和输出 XML 文件作为参数提供。 例如：
+若要运行 *Metrics.exe*，请将项目或解决方案和输出 XML 文件作为参数提供。 例如：
 
 ```shell
 C:\>Metrics.exe /project:ConsoleApp20.csproj /out:report.xml
@@ -315,14 +310,14 @@ msbuild /m /v:m /t:rebuild /p:LEGACY_CODE_METRICS_MODE=true Metrics.csproj
 
 有关详细信息，请参阅 [在传统模式下启用生成代码度量值](https://github.com/dotnet/roslyn-analyzers/pull/1841)。
 
-### <a name="previous-versions"></a>旧版
+### <a name="previous-versions"></a>以前的版本
 
 ::: moniker range=">=vs-2019"
-Visual Studio 2015 附带了一个命令行代码度量工具，该工具也称为 *Metrics.exe* 。 此工具的以前版本执行二进制分析，即基于程序集的分析。 较新版本的 *Metrics.exe* 工具改为分析源代码。 由于较新 *Metrics.exe* 工具是基于源代码的，因此，命令行代码度量结果可能与 VISUAL Studio IDE 和以前版本的 *Metrics.exe* 所生成的结果不同。 从 Visual Studio 2019 开始，Visual Studio IDE 将分析类似于命令行工具的源代码，结果应相同。
+Visual Studio 2015 附带了一个命令行代码度量工具，该工具也称为 *Metrics.exe*。 此工具的以前版本执行二进制分析，即基于程序集的分析。 较新版本的 *Metrics.exe* 工具改为分析源代码。 由于较新 *Metrics.exe* 工具是基于源代码的，因此，命令行代码度量结果可能与 VISUAL Studio IDE 和以前版本的 *Metrics.exe* 所生成的结果不同。 从 Visual Studio 2019 开始，Visual Studio IDE 将分析类似于命令行工具的源代码，结果应相同。
 
 ::: moniker-end
 ::: moniker range="vs-2017"
-Visual Studio 2015 附带了一个命令行代码度量工具，该工具也称为 *Metrics.exe* 。 此工具的以前版本执行二进制分析，即基于程序集的分析。 新的 *Metrics.exe* 工具改为分析源代码。 由于新的 *Metrics.exe* 工具是基于源代码的，因此，命令行代码度量结果与 VISUAL Studio IDE 和以前版本的 *Metrics.exe* 生成的结果不同。
+Visual Studio 2015 附带了一个命令行代码度量工具，该工具也称为 *Metrics.exe*。 此工具的以前版本执行二进制分析，即基于程序集的分析。 新的 *Metrics.exe* 工具改为分析源代码。 由于新的 *Metrics.exe* 工具是基于源代码的，因此，命令行代码度量结果与 VISUAL Studio IDE 和以前版本的 *Metrics.exe* 生成的结果不同。
 ::: moniker-end
 
 即使存在源代码错误，新的命令行代码度量工具也会计算度量值，前提是解决方案和项目可以加载。
@@ -338,7 +333,7 @@ Visual Studio 2015 附带了一个命令行代码度量工具，该工具也称�
 
 其他指标（例如 `CyclomaticComplexity` 和） `MaintainabilityIndex` 使用与 *Metrics.exe* 以前版本相同的公式，但新的工具会对 (逻辑源指令的数量进行计数， `IOperations` 而不是) 中间语言 (IL) 说明。 这些数字将与 Visual Studio IDE 和以前版本的 *Metrics.exe* 生成的数字略有不同。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [使用 "代码度量结果" 窗口](../code-quality/working-with-code-metrics-data.md)
 - [代码度量值](../code-quality/code-metrics-values.md)
