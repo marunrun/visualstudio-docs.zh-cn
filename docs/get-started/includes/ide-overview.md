@@ -6,12 +6,12 @@ ms.author: tglee
 author: TerryGLee
 manager: jillfra
 ms.topic: include
-ms.openlocfilehash: 03e5f806b428b7ecf08038ef34d6b1dddcd92f9e
-ms.sourcegitcommit: cea9e5787ff33e0e18aa1942bf4236748e0ef547
+ms.openlocfilehash: fbbd2278a59197601afe02e777e89245fc6bb421
+ms.sourcegitcommit: d526af3642163180e0cc3e1e73b0a00f02542683
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92210888"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97844786"
 ---
 Visual Studio 集成开发环境是一种创新启动板，可用于编辑、调试并生成代码，然后发布应用  。 集成开发环境 (IDE) 是一个功能丰富的程序，可用于软件开发的许多方面。 除了大多数 IDE 提供的标准编辑器和调试器之外，Visual Studio 还包括编译器、代码完成工具、图形设计器和许多其他功能，以简化软件开发过程。
 
@@ -198,7 +198,7 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
    Visual Studio 生成应用，控制台窗口随即打开并显示消息“Hello World!”。 现在你拥有了一个正在运行的应用！
 
-   ![控制台窗口](../media/overview-console-window.png)
+   ![cmd.exe 控制台窗口的屏幕截图，其中显示输出“Hello Word!” 以及“Press any key to continue”。](../media/overview-console-window.png)
 
 1. 要关闭控制台窗口，请在键盘上按任意键。
 
@@ -267,7 +267,7 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
    Visual Studio 生成应用，控制台窗口随即打开并显示消息“Hello World!”。 现在你拥有了一个正在运行的应用！
 
-   ![控制台窗口](../media/vs-2019/overview-console-window.png)
+   ![Microsoft Visual Studio 调试控制台窗口的屏幕截图，其中显示输出“Hello Word!” 以及“Press any key to close this window”。](../media/vs-2019/overview-console-window.png)
 
 1. 要关闭控制台窗口，请在键盘上按任意键。
 
@@ -292,7 +292,7 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
 1. 在控制台窗口中输入姓名，并按 Enter。
 
-   ![控制台窗口](../media/vs-2019/overview-console-input.png)
+   ![Microsoft Visual Studio 调试控制台窗口的屏幕截图，其中显示输入姓名的提示、所输入的姓名以及输出“Hello Georgette!”。](../media/vs-2019/overview-console-input.png)
 
 1. 按任意键关闭控制台窗口，并停止正在运行的程序。
 
@@ -366,7 +366,7 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
 10. 按 Ctrl+F5 重新运行程序 。 输出的内容与以下类似：
 
-    ![显示程序输出的控制台窗口](../media/overview-console-final.png)
+    !cmd.exe 控制台窗口的屏幕截图，其中显示输入姓名的提示、所输入的姓名以及输出“Hello Georgette! Day of year:151”。](../media/overview-console-final.png)
 
 ::: moniker-end
 
@@ -374,7 +374,7 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
 10. 按 Ctrl+F5 重新运行程序 。 输出的内容与以下类似：
 
-    ![显示程序输出的控制台窗口](../media/vs-2019/overview-console-final.png)
+    ![Microsoft Visual Studio 调试控制台窗口的屏幕截图，其中显示输入姓名的提示、所输入的姓名以及输出“Hello Georgette! Day of year:43”。](../media/vs-2019/overview-console-final.png)
 
 ::: moniker-end
 

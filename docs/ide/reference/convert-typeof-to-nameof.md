@@ -1,5 +1,6 @@
 ---
 title: 将 typeof 转换为 nameof
+description: 了解如何使用 Visual Studio 中的“快速操作和重构”菜单，在 C# 中将 typeof 转换为 nameof，在 Visual Basic 中将 GetType 转换为 NameOf。
 ms.date: 08/12/2020
 ms.topic: reference
 author: m-redding
@@ -10,12 +11,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 96bd4d67302fb09e5c1cb7837ad73b345ad88c81
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: ce76b82e2ebc68634be7cf4d463f6b8216d81e06
+ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400319"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97761194"
 ---
 # <a name="convert-typeof-to-nameof"></a>将 `typeof` 转换为 `nameof`
 
@@ -39,11 +40,11 @@ ms.locfileid: "93400319"
 3. 选择以下选项之一：
 
     - C#
-      <br>选择“将 'typeof' 转换为 'nameof'”：![将 typeof 转换为 nameof](media/convert-type-of.PNG)
+      <br>选择“将 'typeof' 转换为 'nameof'”：![Visual Studio 中“快速操作和重构”菜单的屏幕截图，其中选中了“将 'typeof' 转换为 'nameof'”，并显示了 C# 代码更改。](media/convert-type-of.PNG)
 
     - Visual Basic
-      <br>选择“将 'GetType' 转换为 'NameOf'”：![将 typeof 转换为 nameof](media/convert-get-type.PNG)
+      <br>选择“将 'GetType' 转换为 'NameOf'”：![Visual Studio 中“快速操作和重构”菜单的屏幕截图，其中选中了“将 'GetTyp' 转换为 'NameOf'”，并显示了 Visual Basic 代码更改。](media/convert-get-type.PNG)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [重构](../refactoring-in-visual-studio.md)

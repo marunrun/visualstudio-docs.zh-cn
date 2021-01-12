@@ -1,5 +1,6 @@
 ---
 title: 性能不佳的多线程应用的常见模式
+description: 了解 Visual Studio 并发可视化工具中包含的性能不佳的多线程应用程序的常见模式。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f45c22684ef737de7235caebd4ad0b1b4189155
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 36e14640da4d66134ca961607f66f6a355f6b9d9
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808937"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815784"
 ---
 # <a name="common-patterns-for-poorly-behaved-multithreaded-applications"></a>性能不佳的多线程应用程序的常见模式
 
@@ -37,17 +38,17 @@ ms.locfileid: "90808937"
 
 ## <a name="uneven-workload-distribution"></a>不均匀的工作负载分布
 
-![不均匀的工作负载](../profiling/media/unevenworkload_1.png "UnevenWorkLoad_1")
+![并发可视化工具中并行线程的工作负载图的屏幕截图。 线程以不同时间结束，显示阶梯状模式。](../profiling/media/unevenworkload_1.png)
 
 如上图所示，应用程序中多个并行线程之间的工作分布不规则时，在每个线程完成其工作时会出现典型的阶梯状模式。 并发可视化工具最常为每个并发线程显示非常接近的启动时间。 但是，这些线程通常以不规则的方式结束，而不是同时结束。 这种模式表示一组并行线程间不规则的工作分配，这可能导致性能下降。 解决此类问题的最佳方式是重新评估在并行线程中划分工作的算法。
 
 如下图所示，并发可视化工具在 CPU 使用率视图中以 CPU 使用率逐步下降的方式公开此症状。
 
-![不均匀的工作负载](../profiling/media/unevenworkload_2.png "UnevenWorkload_2")
+![并发可视化工具中 CPU 使用率视图的屏幕截图，在 CPU 使用率图的末尾显示阶梯状模式。](../profiling/media/unevenworkload_2.png)
 
 ## <a name="oversubscription"></a>过度订阅
 
-![过度订阅](../profiling/media/oversubscription.png "过度订阅")
+![并发可视化工具中所有活动线程的工作负载图的屏幕截图。 图例显示了“执行”和“抢占”所花费的时间。](../profiling/media/oversubscription.png)
 
 在出现过度订阅的情况下，进程中活动线程的数量将超出系统上可用的逻辑内核数。 上图显示过度订阅的结果，以及所有活动线程中明显的抢占区段。 此外，图例显示了抢占占用了大部分的时间（在本例中为 84%）。 这可能表示进程正在要求系统执行多于逻辑核心数的并发线程。 但是，这也可能表示系统上的其他进程正在使用假设为此进程所提供的资源。
 

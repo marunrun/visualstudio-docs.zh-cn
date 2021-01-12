@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f563d37e6456ec775b2e70d59e07b0627c82994b
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: 5660d67ac2c8c3bff589c34dd4303d36a3e20cff
+ms.sourcegitcommit: d526af3642163180e0cc3e1e73b0a00f02542683
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96330194"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97833307"
 ---
 # <a name="unit-test-basics"></a>单元测试基础知识
 
@@ -24,17 +24,17 @@ ms.locfileid: "96330194"
 
 作为软件开发工作流的组成部分时，单元测试对代码质量的影响最大。 只要你编写了一个函数或其他应用程序代码块，就可以创建单元测试用于验证对应于输入数据的标准、边界和不正确情况的代码的行为，而且用于检查代码所做的任何显式或隐式假设。 通过 *测试驱动开发*，你需要在编写代码前创建单元测试，这样你可以将单元测试用作设计文档和功能规范。
 
-你可以从代码快速生成测试项目和测试方法，或者根据你的需要手动创建测试。 当使用 IntelliTest 浏览你的 .NET 代码时，可以生成测试数据和单元测试套件。 对于代码中的每个语句，将生成执行该语句的测试输入。 了解如何 [为你的代码生成单元测试](generate-unit-tests-for-your-code-with-intellitest.md)。
-
 测试资源管理器还可以运行第三方和开放源代码单元测试框架，它们实现了测试资源管理器外接程序接口。 你可以通过 Visual Studio Extension Manager 和 Visual Studio 库添加其中许多框架。 有关详细信息，请参阅[安装第三方单元测试框架](../test/install-third-party-unit-test-frameworks.md)。
+
+你可以从代码快速生成测试项目和测试方法，或者根据你的需要手动创建测试。 当使用 IntelliTest 浏览 .NET 代码时，可以生成测试数据和单元测试套件。 对于代码中的每个语句，将生成执行该语句的测试输入。 了解如何[为 .NET 代码生成单元测试](generate-unit-tests-for-your-code-with-intellitest.md)。
 
 ## <a name="get-started"></a>入门
 
 关于直接进入编码的单元测试的简介，请参阅以下主题之一：
 
-- [演练：创建并运行托管代码的单元测试](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)
+- [演练：创建并运行 .NET 代码的单元测试](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)
 
-- [快速入门：通过测试资源管理器进行测试驱动开发](../test/quick-start-test-driven-development-with-test-explorer.md)
+- [演练：通过测试资源管理器进行测试驱动开发](../test/quick-start-test-driven-development-with-test-explorer.md)
 
 - [在 Visual Studio 中编写 C/C++ 单元测试](../test/writing-unit-tests-for-c-cpp.md)
 
@@ -85,7 +85,7 @@ public void Withdraw(double amount)
 
 ## <a name="create-unit-test-projects-and-test-methods"></a>创建单元测试项目和测试方法
 
-通常从你的代码生成单元测试项目和单元测试存根速度更快。 或者，你可以选择创建单元测试项目和根据你的要求进行手动测试。 如果要使用第三方框架创建单元测试，则需要安装以下任一扩展：[NUnit](https://marketplace.visualstudio.com/items?itemName=NUnitDevelopers.TestGeneratorNUnitextension-18371) 或 [xUnit](https://marketplace.visualstudio.com/items?itemName=YowkoTsai.xUnitnetTestGenerator)。
+对于 C#，通常从你的代码生成单元测试项目和单元测试存根速度更快。 或者，你可以选择创建单元测试项目和根据你的要求进行手动测试。 如果要使用第三方框架从代码创建单元测试，则需要安装以下任一扩展：[NUnit](https://marketplace.visualstudio.com/items?itemName=NUnitDevelopers.TestGeneratorNUnitextension-18371) 或 [xUnit](https://marketplace.visualstudio.com/items?itemName=YowkoTsai.xUnitnetTestGenerator)。 如果未使用 C#，请跳过此部分，转到[手动创建单元测试项目和单元测试](#create-the-unit-test-project-and-unit-tests-manually)。
 
 ### <a name="generate-unit-test-project-and-unit-test-stubs"></a>生成单元测试项目和单元测试存根
 
@@ -101,7 +101,7 @@ public void Withdraw(double amount)
    ![从编辑器窗口查看上下文菜单](../test/media/vs-2019/basics-create-unit-tests.png)
 
    > [!NOTE]
-   > “创建单元测试”菜单命令仅适用于托管代码。
+   > “创建单元测试”菜单命令仅适用于 C# 代码  。
    ::: moniker-end
 
 2. 单击“确定”接受默认值以创建单元测试，或更改用于创建并命名单元测试项目和单元测试的值。 你可以选择默认添加到单元测试方法的代码。
@@ -264,7 +264,7 @@ public void My_Test ()
 
 ::: moniker range="vs-2017"
 
-如果各个测试没有防止其以任何顺序运行的依赖项，则可使用工具栏上的 ![UTE&#95;parallelicon&#45;small](../test/media/ute_parallelicon-small.png) 切换按钮来打开并行测试执行。 这可以显著降低运行所有测试所需的时间。
+如果各个测试没有防止其以任何顺序运行的依赖项，则可使用工具栏上的 ![Visual Studio 测试资源管理器工具栏上“并行测试执行”切换按钮的屏幕截图。](../test/media/ute_parallelicon-small.png) 切换按钮来打开并行测试执行。 这可以显著降低运行所有测试所需的时间。
 
 ::: moniker-end
 

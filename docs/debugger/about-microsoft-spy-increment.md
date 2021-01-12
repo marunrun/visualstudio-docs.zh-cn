@@ -1,5 +1,7 @@
 ---
 title: 关于 Microsoft Spy++ | Microsoft Docs
+description: 在 Visual Studio 中查看“关于 Microsoft Spy++”对话框，以显示有关 Spy++ 调试实用工具的版权、版本、所有权和其他信息。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 54877dfd5164cae2c256f21fc2886d779ecf64a4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7d3488e3eb21cdd564c17040e7d29868473575ac
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62564263"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729127"
 ---
 # <a name="about-microsoft-spy"></a>关于 Microsoft Spy++
 此对话框用于显示有关 Spy++ 的版权、版本、所有权和其他信息。

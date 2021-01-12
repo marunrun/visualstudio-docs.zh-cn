@@ -1,5 +1,7 @@
 ---
 title: 使用“仅我的代码”调试用户代码 | Microsoft Docs
+description: “仅我的代码”是一项调试功能，可自动单步跳过非用户代码调用。 了解如何启用、禁用和使用此功能。
+ms.custom: SEO-VS-2020
 ms.date: 02/13/2019
 ms.topic: how-to
 ms.assetid: 0f0df097-bbaf-46ad-9ad1-ef5f40435079
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 867477fd3e490f91e81fb91c8be267ede83c8d2c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2c902147bd1b7761bb6fdab1bc577af6a1990bed
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85536560"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903878"
 ---
 # <a name="debug-only-user-code-with-just-my-code"></a>使用“仅我的代码”仅调试用户代码
 
@@ -141,20 +143,20 @@ ms.locfileid: "85536560"
 
  **模块元素属性**
 
-|特性|描述|
+|特性|说明|
 |---------------|-----------------|
 |`Name`|必需。 模块的完整路径。 可以使用 Windows 通配符 `?`（零个或一个字符）和 `*`（零个或多个字符）。 例如，应用于对象的<br /><br /> `<Module Name="?:\3rdParty\UtilLibs\*" />`<br /><br /> 告知调试器中的所有模块都视为 *\3rdParty\UtilLibs* 外部代码的任何驱动器上。|
 |`Company`|可选。 发布在可执行文件中嵌入的模块的公司的名称。 可以使用此特性消除模块歧义。|
 
  **文件元素属性**
 
-|特性|描述|
+|特性|说明|
 |---------------|-----------------|
 |`Name`|必需。 要视为外部代码的源文件的完整路径。 可以在指定路径时使用 Windows 通配符 `?` 和 `*`。|
 
  **函数元素属性**
 
-|特性|描述|
+|特性|说明|
 |---------------|-----------------|
 |`Name`|必需。 要视为外部代码的函数的完全限定的名称。|
 |`Module`|可选。 包含函数的模块的名称或完整路径。 可以使用此特性区分具有相同名称的函数。|
@@ -185,7 +187,7 @@ ms.locfileid: "85536560"
 
 ```
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
 |`Function`|必需。 将一个或多个函数指定为非用户函数。|
 |`Name`|必需。 ECMA-262 格式的正则表达式，指定要匹配的完整函数名。 例如：<br /><br /> `<Name>MyNS::MyClass.*</Name>`<br /><br /> 告知调试器将 `MyNS::MyClass` 中的所有方法都视为非用户代码。 匹配区分大小写。|

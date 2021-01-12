@@ -9,12 +9,12 @@ manager: markl
 ms.workload:
 - cplusplus
 author: corob-msft
-ms.openlocfilehash: 178fef548bc52346a78c7f9e4607aad7b1c56f65
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+ms.openlocfilehash: 2d145e1383e8f6c0d7c25ae72232fdbe2a8d703d
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95598401"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727536"
 ---
 # <a name="how-to-write-unit-tests-for-c-dlls"></a>如何：编写 C/C++ DLL 单元测试
 
@@ -328,7 +328,7 @@ ms.locfileid: "95598401"
 ::: moniker range="vs-2017"
 
 > [!TIP]
-> 如果各个测试没有防止其以任何顺序运行的依赖项，则可使用工具栏上的 ![UTE_parallelicon - 小](../test/media/ute_parallelicon-small.png)切换按钮来打开并行测试执行。 这可以显著降低运行所有测试所需的时间。
+> 如果各个测试没有防止其以任何顺序运行的依赖项，请使用“测试资源管理器”工具栏上的“并行测试执行”切换按钮的 ![ 屏幕截图来打开并行测试执行。 选择此按钮后，测试将并行运行。](../test/media/ute_parallelicon-small.png) 切换按钮来打开并行测试执行。 这可以显著降低运行所有测试所需的时间。
 
 ::: moniker-end
 

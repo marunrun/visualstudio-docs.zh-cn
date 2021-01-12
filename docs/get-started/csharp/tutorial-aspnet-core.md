@@ -16,12 +16,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: a6b089309ca7202c01028b3323ccabfd3668e909
-ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
+ms.openlocfilehash: 15fcc5981c5711c7c3ddcf7262649a9d3473ee55
+ms.sourcegitcommit: d526af3642163180e0cc3e1e73b0a00f02542683
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91780977"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97833320"
 ---
 # <a name="tutorial-get-started-with-c-and-aspnet-core-in-visual-studio"></a>教程：Visual Studio 中的 C# 和 ASP.NET Core 入门
 
@@ -154,7 +154,7 @@ ms.locfileid: "91780977"
 
  1. 查看代码编辑器中的“About.cshtml”  文件。
 
-     ![查看 Visual Studio 代码编辑器中的 About.cshtml 文件](media/csharp-aspnet-razor-aboutcshtml-mycoreapp-code.png)
+     ![显示 Visual Studio 代码编辑器中 About.cshtml 文件的前 10 行的屏幕截图。](media/csharp-aspnet-razor-aboutcshtml-mycoreapp-code.png)
 
  1. 选择“About.cshtml.cs”  文件。
 
@@ -162,7 +162,7 @@ ms.locfileid: "91780977"
 
  1. 查看代码编辑器中的“About.cshtml.cs”  文件。
 
-     ![查看 Visual Studio 代码编辑器中的 About.cshtml 文件](media/csharp-aspnet-razor-aboutcshtmlcs-mycoreapp-code.png)
+     ![显示 Visual Studio 代码编辑器中 About.cshtml.cs 文件的前 18 行的屏幕截图。 ](media/csharp-aspnet-razor-aboutcshtmlcs-mycoreapp-code.png)
 
  1. 该项目包含一个 wwwroot  文件夹，它是网站的根。 展开文件夹以查看其内容。
 

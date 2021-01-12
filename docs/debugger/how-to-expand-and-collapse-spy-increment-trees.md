@@ -1,5 +1,7 @@
 ---
 title: 展开和折叠 Spy++ 树| Microsoft Docs
+description: 了解用于展开和折叠“窗口”、“进程”和“线程”视图的两种方法。 可以单击窗口中的图标或使用“树”菜单。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e9a8735613ad4f84c45190a5d0fa21b71d3a2658
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: c4939a77fffdd5701cf1b9b4ac50995ce6995bb2
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852082"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903423"
 ---
 # <a name="how-to-expand-and-collapse-spy-trees"></a>如何：展开和折叠 Spy++ 树
 可以使用两种方法展开和折叠窗口、进程和线程视图：单击窗口中的图标或使用“树”菜单。 树中 + 和 - 图标的用途与它们在 C++ 项目窗口中的用途相同。

@@ -11,12 +11,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: d801f052cb02e6a5b53189eeae342b9015d30f9b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: d8a98ebd1fa1e8a9ec937cf4e0965d804a8a9387
+ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79093883"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97761220"
 ---
 # <a name="wrap-indent-and-align-refactorings"></a>自动换行、缩进和对齐重构
 
@@ -40,7 +40,7 @@ ms.locfileid: "79093883"
 2. 按“Ctrl”  + **。** 触发“快速操作和重构”  菜单。
 3. 选择“对调用链进行自动换行”或“自动换行并对齐调用链”以接受重构   。
 
-   ![自动换行并对齐调用链](media/wrap-call-chain.png)
+   ![Visual Studio 中“快速操作和重构”菜单的屏幕截图，其中选中了“对调用链进行自动换行”，并显示了 C# 代码更改。](media/wrap-call-chain.png)
 
 ## <a name="wrap-indent-and-align-parameters-or-arguments"></a>换行、缩进和对齐参数
 
@@ -85,7 +85,7 @@ ms.locfileid: "79093883"
 2. 按“Ctrl”  + **。** 触发“快速操作和重构”  菜单。
 3. 选择“包装表达式”以接受重构  。
 
-   ![自动换行并对齐调用链](media/wrap-binary-expression.png)
+   ![Visual Studio 中“快速操作和重构”菜单的屏幕截图，其中选中了“对表达式进行自动换行”，并显示了 C# 代码更改。](media/wrap-binary-expression.png)
 
 ## <a name="see-also"></a>请参阅
 

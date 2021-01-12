@@ -1,5 +1,7 @@
 ---
 title: 图形日志文档 | Microsoft Docs
+description: 了解 Visual Studio 中的图形日志文档，该文档记录在图形诊断会话下运行应用时所发生的图形事件。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d9bdfdb23d199c50b8d7ec6520964043dee8aa6
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 38dc7452493ebcd39bee5ee55c59fc70e0a6493c
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72735522"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727653"
 ---
 # <a name="graphics-log-document"></a>图形日志文档
 图形日志文档是对你的应用在图形诊断会话下运行时发生的图形事件的记录。 在记录后，你可以在 Visual Studio 图形分析器中检查日志，以诊断呈现和性能问题。
@@ -61,7 +63,7 @@ ms.locfileid: "72735522"
 
  **显示信息**：列出有关在捕获会话期间使用的显示适配器的信息。
 
-|Property|描述|
+|Property|说明|
 |--------------|-----------------|
 |**说明**|显示适配器描述字符串。|
 |**显示内存**|安装在图形适配器上的内存量。|

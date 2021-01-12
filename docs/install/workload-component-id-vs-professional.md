@@ -1,7 +1,7 @@
 ---
 title: Visual Studio Professional 工作负载和组件 ID
 titleSuffix: ''
-description: 使用工作负载和组件 ID 通过命令行安装 Visual Studio 或指定为 VSIX 清单中的依赖项
+description: 使用 Visual Studio Professional 工作负载和组件 ID 通过命令行安装 Visual Studio 或在 VSIX 清单中指定一个依赖项。
 keywords: ''
 author: ornellaalt
 ms.author: ornella
@@ -16,12 +16,12 @@ ms.assetid: 5719032b-2c2e-416e-a281-a4573ec74e38
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 open_to_public_contributors: false
-ms.openlocfilehash: 6ac189de45248d277969be3f38e60daba2985ebc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6274396d35756682ad929b051d155897bcafb8e7
+ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84184323"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97847000"
 ---
 # <a name="visual-studio-professional-component-directory"></a>Visual Studio Professional 组件目录
 

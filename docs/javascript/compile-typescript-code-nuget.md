@@ -1,6 +1,6 @@
 ---
 title: 使用 NuGet 编译和生成 TypeScript 代码
-description: 了解如何在 Visual Studio 中编译和生成 TypeScript。
+description: 了解如何使用 NuGet 包向 Visual Studio 项目添加 Typescript 支持。
 ms.date: 7/23/2020
 ms.topic: conceptual
 author: mikejo5000
@@ -10,12 +10,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 16ff335fdf8ca76889562cfd94807ec1adc516d2
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: 929c17c9cbd2a0987bebca02c70b3b751c19fc9a
+ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91927921"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97846825"
 ---
 # <a name="compile-typescript-code-aspnet-core"></a>编译 TypeScript 代码 (ASP.NET Core)
 

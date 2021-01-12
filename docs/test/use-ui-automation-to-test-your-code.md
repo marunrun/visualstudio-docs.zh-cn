@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c3da0a3868b410fbb78ed98265eb8f0920e6482b
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: 68d6d2823a4944ec74aaa477fb7b3913943a7296
+ms.sourcegitcommit: d526af3642163180e0cc3e1e73b0a00f02542683
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96330103"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97833268"
 ---
 # <a name="use-coded-ui-test-to-test-your-code"></a>使用编码的 UI 测试来测试代码
 
@@ -217,7 +217,7 @@ ms.locfileid: "96330103"
 
 有时，添加控件并验证它们的属性时，可能必须使用键盘。 例如，在尝试录制使用右键单击菜单控件的已编码 UI 测试时，如果你尝试从“编码的 UI 测试生成器”中选择“添加断言”工具，控件中的菜单项列表会失去焦点并消失   。 下图证明了这一点，如果你尝试使用“添加断言”  工具选择右键单击菜单，Internet Explorer 中的右键单击菜单就会失去焦点并消失。
 
-![CodedUITest&#95;SelectControlKeyboard](../test/media/codeduitest_selectcontrolkeyboard.png)
+![显示“编码的 UI 测试”生成器中的“添加断言”工具的屏幕截图，该工具与 Internet Explorer 中的右键单击菜单重叠。](../test/media/codeduitest_selectcontrolkeyboard.png)
 
 若要使用键盘选择 UI 控件，请使用鼠标悬停在该控件上。 然后，同时按住“Ctrl”  键和“I”  键。 释放这些键。 此控件由“编码的 UI 测试生成器”录制  。
 
@@ -229,7 +229,7 @@ ms.locfileid: "96330103"
 
 当你执行编码的 UI 测试时，在该控件上悬停。 在键盘上按住 Shift 和 R 键时，同时按住 Ctrl 键    。 释放这些键。 鼠标悬停事件由“编码的 UI 测试生成器”录制  。
 
-![CodedUI&#95;Hover](../test/media/codedui_hover.png)
+![“编码的 UI 测试”生成器命令栏的屏幕截图，其中选中了“暂停”图标。 工具提示窗口显示鼠标悬停事件的位置。](../test/media/codedui_hover.png)
 
 生成测试方法后，类似于以下示例的代码将添加到 UIMap.Designer.cs 文件  ：
 

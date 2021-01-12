@@ -1,5 +1,7 @@
 ---
 title: 调试托管代码 | Microsoft Docs
+description: 查看 Visual Studio 中托管应用程序或以面向公共语言运行时的语言编写的应用的常见调试问题和技术。
+ms.custom: SEO-VS-2020
 ms.date: 09/23/2019
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 76b841d94aee93a1bc88f6d01161239828dee166
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: e7dadfbc6a02382165b623aeff9d866e9edc975a
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73188411"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727016"
 ---
 # <a name="debug-managed-code-c-visual-basic-f-ccli"></a>调试托管代码（C#、Visual Basic、F#、C++/CLI）
 

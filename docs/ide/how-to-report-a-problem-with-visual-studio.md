@@ -9,12 +9,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2956372882d4449345d026e691a12afb2988054a
-ms.sourcegitcommit: 6ef4e46c786c5bbcc52cd9c30e5ddfca12ea8b3c
+ms.openlocfilehash: a6f0d126853c518692725d495586b3adfa57c9aa
+ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97050817"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97761350"
 ---
 # <a name="how-to-report-a-problem-with-visual-studio-or-visual-studio-installer"></a>如何报告 Visual Studio 或 Visual Studio 安装程序的问题
 
@@ -24,8 +24,9 @@ ms.locfileid: "97050817"
 可以通过 Visual Studio 或其安装程序报告问题。 利用内置的反馈工具，你可以轻松添加可帮助 Visual Studio 团队诊断和修复问题的诊断信息。 下面是报告问题的步骤。
 
 1. 在 Visual Studio 中，选择右上角的反馈图标并选择“报告问题”。 此外可以从菜单“帮助” > “发送反馈” > “报告问题”来访问反馈工具。
-![Visual Studio 开发人员社区中的“报告问题”弹出窗口](media/feedback-button.png) 或者，如果无法安装 Visual Studio 或无法访问 Visual Studio 中的反馈工具，则在 Visual Studio 安装程序中报告问题。  在安装程序中，选择右上角的反馈图标并选择“报告问题”。
-![Visual Studio 开发人员社区中的“报告问题”弹出窗口](media/installer.png)
+![屏幕截图显示在 Visual Studio 窗口右上角已选中“反馈”图标，并且已在下文菜单中选中“报告问题”。](media/feedback-button.png)
+或者，如果无法安装 Visual Studio 或无法访问 Visual Studio 中的反馈工具，则在 Visual Studio 安装程序中报告问题。  在安装程序中，选择右上角的反馈图标并选择“报告问题”。
+![屏幕截图显示在 Visual Studio 安装程序右上角已选中“反馈”图标，并且已在下文菜单中选中“报告问题”。](media/installer.png)
 
 1. 单击“报告问题”将打开默认浏览器，并使用登录 Visual Studio 时使用的同一帐户登录
 
@@ -67,11 +68,11 @@ ms.locfileid: "97050817"
 
 1. 访问电子邮件中指向问题报表的链接，或者转到主页，以查看处于“需要详细信息”状态的所有报表。
 
-    ![我的反馈](../ide/media/feedback-my-feedback.png)
+    ![Visual Studio 反馈窗口主页的屏幕截图。 列出了一个反馈项，并使用红色的“需要更多信息”标签进行了标记。](../ide/media/feedback-my-feedback.png)
 
 1. 选择问题报告上的“提供详细信息”链接将导航到新屏幕。 在该屏幕中，可以看到请求的信息。
 
-   ![我的反馈](../ide/media/feedback-need-more-info.png)
+   ![Visual Studio 反馈窗口的屏幕截图，其中显示 Microsoft 为解决问题而请求的信息。](../ide/media/feedback-need-more-info.png)
 
 1. 可以通过添加注释、附件或记录步骤来提供更多信息。 此体验类似于报告新问题或在对问题进行投票时提供其他信息。
 
@@ -81,9 +82,9 @@ ms.locfileid: "97050817"
 
 ## <a name="search-for-solutions-or-provide-feedback"></a>搜索解决方案或提供反馈
 
-如果不希望或不能使用 Visual Studio 报告问题，可能 [Visual Studio 开发人员社区](https://developercommunity.visualstudio.com/)页上已报告此问题并且已发布解决方案。
+如果不希望或不能使用 Visual Studio 报告问题，可能 [Visual Studio 开发人员社区](https://developercommunity2.visualstudio.com/search?space=8)页上已报告此问题并且已发布解决方案。
 
-如果没有要报告的问题但希望建议一项功能，也可以在此处提供反馈。 有关详细信息，请参阅[建议一项功能](https://developercommunity.visualstudio.com/content/idea/post.html?space=8)页面。
+如果没有要报告的问题但希望建议一项功能，也可以在此处提供反馈。 有关详细信息，请参阅[建议一项功能](https://aka.ms/feedback/suggest?space=8)页面。
 
 ## <a name="see-also"></a>请参阅
 
@@ -91,5 +92,5 @@ ms.locfileid: "97050817"
 * [Visual Studio 反馈选项](../ide/feedback-options.md)
 * [报告 Visual Studio for Mac 的问题](/visualstudio/mac/report-a-problem)
 * [报告 C++ 问题](/cpp/how-to-report-a-problem-with-the-visual-cpp-toolset)
-* [Visual Studio 开发者社区](https://developercommunity.visualstudio.com/)
+* [Visual Studio 开发者社区](https://aka.ms/feedback/suggest?space=8)
 * [开发人员社区数据隐私](developer-community-privacy.md)

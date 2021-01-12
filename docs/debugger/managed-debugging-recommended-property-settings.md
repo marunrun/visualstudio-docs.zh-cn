@@ -1,6 +1,7 @@
 ---
 title: C#、VB 的推荐调试器属性设置 | Microsoft Docs
-ms.custom: seodec18
+description: 请参阅在所有托管调试中都应相同的生成和编译属性设置。 其他设置可因项目类型而异。
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 07c63a70de9d633ccd73d1d0d3bd23196d421543
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 57740c05e31bde2ae4e5143735e3bba1f3fc112c
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72731374"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903800"
 ---
 # <a name="managed-debugging-recommended-property-settings"></a>托管调试：推荐的属性设置
 某些属性应该在所有托管调试方案中采用相同的设置。

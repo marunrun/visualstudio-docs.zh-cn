@@ -1,5 +1,7 @@
 ---
 title: 1x1 视区大小变体 | Microsoft Docs
+description: 应用 1x1 视区大小变体，将所有呈现器目标上的视区尺寸缩小为 1x1 像素。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 3dbc3247-00f5-4644-8ff9-72e9febcf09a
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a5b2c96b11c2075ce88b43cdebc34b905141c973
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d1041f3a8016500a6e1f217849654d9710a508d8
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62848740"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726483"
 ---
 # <a name="1x1-viewport-size-variant"></a>1x1 视口大小变量
 将所有呈现器目标上的视口尺寸缩小为 1x1 像素。

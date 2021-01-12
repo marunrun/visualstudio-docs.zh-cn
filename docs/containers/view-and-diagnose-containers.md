@@ -7,12 +7,12 @@ ms.topic: how-to
 ms.date: 01/20/2020
 ms.technology: vs-azure
 monikerRange: vs-2019
-ms.openlocfilehash: 626666fc912fcff85fcfcc49425d59018778d1f6
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: fd876e86cefcd0ce50aab02de8e7f4cf37d3ab51
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89742783"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729218"
 ---
 # <a name="how-to-view-and-diagnose-containers-and-images-in-visual-studio"></a>如何在 Visual Studio 中查看和诊断容器与图像
 
@@ -27,7 +27,7 @@ ms.locfileid: "89742783"
 
 启动容器化 .NET 项目时，自动打开“容器”窗口  。 若要随时在 Visual Studio 中查看容器，请使用 Ctrl+Q 激活 Visual Studio 搜索框，键入 `Containers` 并选择第一项   。 还可以从主菜单中打开“容器”窗口  。 使用菜单路径“查看” > “其他 Windows” > “容器”    。  
 
-![“容器”窗口中“环境”选项卡的屏幕截图](media/view-and-diagnose-containers/container-window.png)
+![Visual Studio 中“容器”窗口的屏幕截图，其中在左窗格中选中了一个容器，在右窗格中选中了“环境”选项卡。](media/view-and-diagnose-containers/container-window.png)
 
 在左侧，可看到本地计算机上的容器列表。 与解决方案关联的容器显示在“解决方案容器”下  。 在右侧，可看到一个窗格，其中包含“环境”、“端口”、“日志”和“文件”选项卡     。
 
@@ -38,7 +38,7 @@ ms.locfileid: "89742783"
 
 “环境”选项卡显示容器中的环境变量  。 对于应用的容器，可以通过多种方式设置这些变量，例如，在 Dockerfile 中，在 .env 文件中，或使用 Docker 命令启动容器时使用 -e 选项进行设置。
 
-![“容器”窗口中“环境”选项卡的屏幕截图](media/view-and-diagnose-containers/containers-environment-vars.png)
+![Visual Studio 中“容器”窗口的屏幕截图，其中显示容器 WebApplication11 的“环境”变量。](media/view-and-diagnose-containers/containers-environment-vars.png)
 
 > [!NOTE]
 > 对环境变量所做的任何更改都不会实时反映出来。 此外，此选项卡中的环境变量是容器上的系统环境变量，不反映应用程序的本地用户环境变量。

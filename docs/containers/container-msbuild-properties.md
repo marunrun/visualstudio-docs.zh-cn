@@ -1,17 +1,17 @@
 ---
 title: Visual Studio 容器工具生成属性
 author: ghogen
-description: 容器工具生成过程概述
+description: 了解如何编辑容器工具生成属性以自定义 Visual Studio 生成和运行容器项目的方式。
 ms.author: ghogen
 ms.date: 06/06/2019
 ms.technology: vs-azure
 ms.topic: reference
-ms.openlocfilehash: 427a70d9bc4f6ef326ffb16e7d26df9d8fae2365
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4e8675bd0ea12b30ce678ce454bcedee457ddacd
+ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85283198"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97846732"
 ---
 # <a name="container-tools-build-properties"></a>容器工具生成属性
 

@@ -1,5 +1,7 @@
 ---
 title: 调试用户界面参考 | Microsoft Docs
+description: 查看有关在 Visual Studio 的调试用户界面中可能遇到的各种对话框的参考信息的链接。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 318ab9263b530ac283d210f59aa8ca29733c6e8d
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 6bfd91e91b89e5a6409bf0c34245a6d37eba905e
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738059"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726795"
 ---
 # <a name="debugging-user-interface-reference"></a>调试用户界面参考
 您在调试应用程序时可能会遇到以下对话框。

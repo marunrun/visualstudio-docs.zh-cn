@@ -1,5 +1,7 @@
 ---
 title: “消息搜索”对话框 | Microsoft Docs
+description: 使用“消息搜索”在“消息视图”中查找并选择特定消息的节点。 可以按句柄、消息类型和消息 ID 进行搜索。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8fed7fe9bf9e10bf893159a11d28f991a255791c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3d100b36ff706752f1855939d4c45b5b7793ccfa
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62931301"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903046"
 ---
 # <a name="message-search-dialog-box"></a>“消息搜索”对话框
 使用此对话框可以在[消息视图](../debugger/messages-view.md)中查找并选择特定消息的节点。 若要显示此对话框，请将焦点移至消息视图窗口。 然后在“搜索”菜单中选择“查找消息” 。

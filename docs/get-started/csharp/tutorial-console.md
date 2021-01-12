@@ -15,12 +15,12 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b28d87cc0842d5a3de8634ae50378915196366ff
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 484cb82a3659e306bd4c6bd14a3133c4677160db
+ms.sourcegitcommit: d526af3642163180e0cc3e1e73b0a00f02542683
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97527922"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97833333"
 ---
 # <a name="tutorial-create-a-simple-c-console-app-in-visual-studio"></a>教程：在 Visual Studio 中创建一个简单的 C# 控制台应用程序
 
@@ -282,7 +282,7 @@ ms.locfileid: "97527922"
 
 尝试用数字除以零时，控制台应用可能会冻结，并在代码编辑器中显示错误的内容。
 
-   ![Visual Studio 代码编辑器显示“被零除”错误](./media/csharp-console-calculator-dividebyzero-error.png)
+   ![Visual Studio 代码编辑器的屏幕截图，其中以黄色突出显示了一行，并显示了“尝试除以零”的“未经处理的异常”错误。](./media/csharp-console-calculator-dividebyzero-error.png)
 
 > [!NOTE]
 > 有时，应用不会冻结且调试程序不会显示被零除错误。 相反，应用可能会返回意外的非数字结果，如无穷符号。 以下代码修复仍然适用。
@@ -311,7 +311,7 @@ ms.locfileid: "97527922"
 
 现在，当用任何数字除以 0 时，应用会请求除以另一个数字。 更好的是：应用不会停止请求，直到提供非零数字。
 
-   ![修复了被零除错误](./media/csharp-console-calculator-dividebyzero.png)
+   ![Visual Studio 代码编辑器的屏幕截图，其中显示了 switch 语句的代码，该代码中添加了对非零除数条目的检查。](./media/csharp-console-calculator-dividebyzero.png)
 
 ### <a name="fix-the-format-error"></a>修复“格式”错误
 

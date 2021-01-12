@@ -1,8 +1,8 @@
 ---
-title: 用于排除错误的资源
+title: 用于排除 IDE 错误的资源
 description: 了解如何使用知识库文章、论坛或产品支持来解决 IDE 错误（这些错误消息所含的信息不足以帮助你解决问题）。
 ms.custom: SEO-VS-2020
-ms.date: 07/23/2020
+ms.date: 12/18/2020
 ms.topic: troubleshooting
 f1_keywords:
 - VS.Message.0x00005A89
@@ -95,16 +95,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f3fdf18c67be8188bd03c498778fe8e6ad9409ee
-ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
+ms.openlocfilehash: 081b36767388da4f78e1fd8f1e0f279d7ca201c9
+ms.sourcegitcommit: 74b67f102d243e3b74a93563e834f49df298e4b8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96616574"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97696555"
 ---
-# <a name="resources-for-troubleshooting-integrated-development-environment-errors"></a>用于排除集成开发环境错误的资源
+# <a name="resources-for-troubleshooting-ide-errors"></a>用于排除 IDE 错误的资源
 
-并非所有错误消息都有特定的相关帮助主题。 如果错误消息里的信息不能帮助解决问题，可以参考其他资源，如知识库文章、论坛或产品支持。
+并非所有错误消息都有特定的相关帮助主题。 如果错误消息中的信息不能帮助解决问题，可以参考其他资源，如知识库文章、论坛或产品支持。
 
 > [!NOTE]
 > 本主题适用于 Visual Studio  Windows 版。 对于 Visual Studio for Mac，请参阅 [Visual Studio for Mac 中的故障排除](/visualstudio/mac/troubleshooting)。
@@ -115,9 +115,14 @@ ms.locfileid: "96616574"
 
 ## <a name="developer-forums"></a>开发人员论坛
 
-可通过论坛与其他开发人员以及 Microsoft 员工进行互动。 如果遇到无法解决的问题，可在论坛中发布有关该问题的帖子。 还可搜索讨论组，查看其他人是否已发布有关该问题的帖子。
+可通过论坛与其他开发人员以及 Microsoft 员工进行互动。 如果遇到无法解决的问题，可在论坛中发布有关该问题的帖子。 还可搜索论坛，查看其他人是否已发布有关该问题的帖子。
 
-可以访问 [Microsoft 技术社区](https://techcommunity.microsoft.com/t5/Communities/ct-p/communities)网站上的论坛、博客、聊天和其他资源。
+下面是论坛资源的列表：
+
+- [Visual Studio 问答](/answers/products/vs/)
+- [Visual Studio MSDN 论坛](https://social.msdn.microsoft.com/Forums/vstudio)
+- [Stack Overflow](https://stackoverflow.com/search?q=%22visual+studio%22)
+- [Reddit](https://www.reddit.com/r/VisualStudio)
 
 ## <a name="product-support"></a>产品支持
 

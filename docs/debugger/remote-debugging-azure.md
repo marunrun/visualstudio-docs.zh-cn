@@ -1,5 +1,6 @@
 ---
 title: IIS 和 Azure 上的远程调试 ASP.NET Core |Microsoft Docs
+description: 了解如何设置和配置 Visual Studio ASP.NET Core 应用，使用 Azure 将其部署到 IIS，并从 Visual Studio 连接远程调试器。
 ms.custom: remotedebugging
 ms.date: 05/06/2020
 ms.topic: conceptual
@@ -11,12 +12,12 @@ ms.workload:
 - aspnet
 - dotnetcore
 - azure
-ms.openlocfilehash: 926bd4a6630d9d99726ee6c1479d04c476756c18
-ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
+ms.openlocfilehash: b6535bb52221de780b9a8862be22a6a4deb79b57
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "92298752"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815836"
 ---
 # <a name="remote-debug-aspnet-core-on-iis-in-azure-in-visual-studio"></a>在 Azure 中的 IIS 上的 Visual Studio 中远程调试 ASP.NET Core
 
@@ -29,13 +30,13 @@ ms.locfileid: "92298752"
 
     在这种情况下，必须将应用从 Visual Studio 部署到 Azure，但不需要手动安装或配置 IIS 或远程调试器（这些组件以虚线表示），如下图所示。
 
-    ![远程调试器组件](../debugger/media/remote-debugger-azure-app-service.png "Remote_debugger_components")
+    ![显示 Visual Studio、Azure 应用服务和 ASP.NET 应用之间关系的图表。 IIS 和远程调试器用虚线表示。](../debugger/media/remote-debugger-azure-app-service.png)
 
 * 若要在 Azure VM 上调试 IIS，请按照本主题中的步骤进行操作（请参阅 [Azure VM 上的远程调试](#remote_debug_azure_vm)一节）。 这样就可以使用 IIS 的自定义配置，但设置和部署步骤会更复杂。
 
     对于 Azure VM，必须将应用从 Visual Studio 部署到 Azure，并且还需要手动安装 IIS 角色和远程调试器，如下图所示。
 
-    ![远程调试器组件](../debugger/media/remote-debugger-azure-vm.png "Remote_debugger_components")
+    ![显示 Visual Studio、Azure VM 和 ASP.NET 应用之间关系的图表。 IIS 和远程调试器用实线表示。](../debugger/media/remote-debugger-azure-vm.png)
 
 * 若要调试 Azure Service Fabric 上的 ASP.NET，请参阅[调试远程 Service Fabric 应用程序](/azure/service-fabric/service-fabric-debugging-your-application#debug-a-remote-service-fabric-application)。
 
@@ -207,7 +208,7 @@ ms.locfileid: "92298752"
 
 ### <a name="optional-publish-and-deploy-the-app-by-publishing-to-a-local-folder-from-visual-studio"></a>（可选）通过从 Visual Studio 发布到本地文件夹来发布和部署应用
 
-如果未使用 Web 部署，则必须使用文件系统或其他工具发布和部署应用。 首先可以使用文件系统创建包，然后手动部署包，也可以使用 PowerShell、RoboCopy 或 XCopy 等其他工具。 在本部分中，假设你要在不使用 Web 部署的情况下手动复制包。
+如果未使用 Web 部署，则必须使用文件系统或其他工具发布和部署应用。 首先可以使用文件系统创建包，然后手动部署包，也可以使用 PowerShell、Robocopy 或 XCopy 等其他工具。 在本部分中，假设你要在不使用 Web 部署的情况下手动复制包。
 
 [!INCLUDE [remote-debugger-deploy-app-local](../debugger/includes/remote-debugger-deploy-app-local.md)]
 

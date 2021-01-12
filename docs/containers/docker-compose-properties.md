@@ -1,18 +1,18 @@
 ---
 title: Docker Compose 生成设置
 author: ghogen
-description: 容器工具生成过程概述
+description: 了解如何编辑 Docker Compose 生成属性以自定义 Visual Studio 生成和运行 Docker Compose 应用程序的方式。
 ms.custom: SEO-VS-2020
 ms.author: ghogen
 ms.date: 08/12/2019
 ms.technology: vs-azure
 ms.topic: reference
-ms.openlocfilehash: a25aca5082d8a55eccff861d542d16095c178a4f
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 0a27535e9c07f87391b3cdfd8440578e36feee9e
+ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036296"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97846817"
 ---
 # <a name="docker-compose-build-properties"></a>Docker Compose 生成属性
 

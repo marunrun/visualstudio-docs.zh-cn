@@ -1,5 +1,7 @@
 ---
 title: 消息视图 | Microsoft Docs
+description: 每个窗口、线程和进程都有一个关联的消息流，可在“消息视图”窗口中进行查看。 了解如何打开和控制“消息视图”。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b20ed28518c9156e82c6fe75ecceda74c66615d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 692902b2d2b612c71c2d1dc0f936c7550f430847
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62845842"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903398"
 ---
 # <a name="messages-view"></a>消息视图
 每个窗口都有一个关联的消息流。 消息视图窗口显示此消息流。 窗口句柄、消息代码和消息会进行显示。 也可以为线程或进程创建消息视图。 这使你可以查看发送到特定进程或线程所拥有的所有窗口的消息，这对于捕获窗口初始化消息特别有用。

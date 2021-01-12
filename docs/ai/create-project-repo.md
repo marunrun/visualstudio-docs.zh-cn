@@ -10,12 +10,12 @@ ms.date: 11/13/2017
 ms.topic: how-to
 ms.workload:
 - multiple
-ms.openlocfilehash: 58e6bdae7ef85545d0790782f5ad825b8f27659c
-ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
+ms.openlocfilehash: 303c410bf519561844d95cc13fa036534ddb2aa7
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099240"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726613"
 ---
 # <a name="clone-a-repository-of-python-code-in-visual-studio"></a>在 Visual Studio 中克隆 Python 代码存储库
 
@@ -36,15 +36,15 @@ ms.locfileid: "92099240"
     > [!Tip]
     > 在团队资源管理器中指定的文件夹是用于接收克隆文件的特定文件夹。 与 `git clone` 命令不同，在团队资源管理器中创建克隆时不会使用存储库名称自动创建一个子文件夹。
 
-5. 完成克隆后，双击团队资源管理器底部的存储库文件夹，导航到存储库仪表板。 在“解决方案”下面，选择“新建”。 
+5. 完成克隆后，双击团队资源管理器底部的存储库文件夹，导航到存储库仪表板。 在“解决方案”下面，选择“新建”。
 
     ![“团队资源管理器”窗口, 从克隆创建新项目](media/create-project-repo/team-explorer-new-project.png)
 
-6. 在随即出现的“新建项目”对话框中，选择“从现有的 Python 代码”，为项目指定名称，将“位置”设置为与存储库相同的文件夹，并选择“确定”  。 在随即出现的向导中选择“完成”  。
+6. 在随即出现的“新建项目”对话框中，选择“从现有的 Python 代码”，为项目指定名称，将“位置”设置为与存储库相同的文件夹，并选择“确定”。 在随即出现的向导中选择“完成”。
 
-7. 从菜单中选择“视图”>“解决方案资源管理器”  。
+7. 从菜单中选择“视图”>“解决方案资源管理器”。
 
-8. 在解决方案资源管理器中，展开 `TensorFlow Examples> MNIST` 节点，右键单击 `convolutional.py`，然后选择“设置为启动文件”  。 此步骤指示 Visual Studio 在运行项目时应使用哪个文件。
+8. 在解决方案资源管理器中，展开 `TensorFlow Examples> MNIST` 节点，右键单击 `convolutional.py`，然后选择“设置为启动文件”。 此步骤指示 Visual Studio 在运行项目时应使用哪个文件。
 
 9. 按 Ctrl+F5，或依次选择“调试”>“启动但不调试”，以运行程序。 如果发现错误，请在上一步中重新检查工作目录设置。
 
@@ -55,10 +55,10 @@ ms.locfileid: "92099240"
    > [!NOTE]
    > 如果使用的是 Anaconda，并遇到指明缺少 numpy 的错误，可能需要[将 Python 环境更改为使用 Anaconda](../python/selecting-a-python-environment-for-a-project.md)。
 
-11. 可以使用 TensorBoard 可视化进程。 右键单击项目，单击“运行 TensorBoard”，然后选择输出 TensorBoard 日志所在的目录  。
+11. 可以使用 TensorBoard 可视化进程。 右键单击项目，单击“运行 TensorBoard”，然后选择输出 TensorBoard 日志所在的目录。
 
-   ![运行 tensorboard](media/create-project-repo/run-tensorboard.png)
+   ![Visual Studio 解决方案资源管理器屏幕截图，其中已选中 MNIST 项目并在上下文菜单中选中“运行 TensorBoard”选项。](media/create-project-repo/run-tensorboard.png)
 
 12. 请注意，错误随着时间推移而减少，这意味着质量在不断提高。
 
-   ![运行 tensorboard](media/create-project-repo/tensorboard.png)
+   ![主 TensorBoard 窗口的屏幕截图，其中显示了对 TensorBoard 日志中的数据进行可视化的四个关系图。](media/create-project-repo/tensorboard.png)

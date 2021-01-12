@@ -1,5 +1,6 @@
 ---
 title: 远程调试 C# 或 VB 项目 | Microsoft Docs
+description: 遵循以下分步说明，了解如何从远程计算机调试 Visual Studio C# 或 Visual Basic 应用程序。
 ms.custom:
 - remotedebugging"=
 - seodec18
@@ -19,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5f147acae956ad380c6e85984de29d5316394c0a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 76364dd6817774c38daa62463cd5bc635075ba73
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "92298721"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815693"
 ---
 # <a name="remote-debugging-a-c-or-visual-basic-project-in-visual-studio"></a>在 Visual Studio 中远程调试 C# 或 Visual Basic 项目
 若要调试已部署到另一台计算机上的 Visual Studio 应用程序，请在部署了应用的计算机上安装并运行远程工具，将项目配置为从 Visual Studio 连接到远程计算机，然后运行应用。
@@ -67,7 +68,7 @@ Windows 7 和更高版本（非电话）以及从 Windows Server 2008 Service Pa
 
 4. 在“属性”页上，选择"调试"选项卡 。
 
-    ![RemoteDebuggerCSharp](../debugger/media/remotedebuggercsharp.png "RemoteDebuggerCSharp")
+    ![Visual Studio 解决方案资源管理器的“属性”中“调试”选项卡的屏幕截图。 “使用远程计算机”属性设置为“MJO-DL:4022”。](../debugger/media/remotedebuggercsharp.png)
 
 5. 请确保“工作目录”文本框为空。
 
@@ -92,11 +93,11 @@ Windows 7 和更高版本（非电话）以及从 Windows Server 2008 Service Pa
     > [!CAUTION]
     > 不要对代码进行更改或重新生成（否则必须重复此步骤）。 复制到远程计算机的可执行文件必须与你的本地源和符号完全匹配。
 
-    可手动复制项目，使用 Xcopy、Robocopy、Powershell 或其他选项。
+    可手动复制项目，使用 XCopy、Robocopy、Powershell 或其他选项。
 
 11. 请确保远程调试器正在目标计算机上运行（如果没有，请在“开始”菜单中搜索“远程调试器”） 。 远程调试器窗口如下所示。
 
-     ![RemoteDebuggerWindow](../debugger/media/remotedebuggerwindow.png "RemoteDebuggerWindow")
+     ![Visual Studio 2017 远程调试器窗口的屏幕截图。 列出了一个操作，指示调试器正在目标计算机上运行。](../debugger/media/remotedebuggerwindow.png)
 
 12. 在 Visual Studio 中，开始调试（单击“调试”>“启动调试”，或按 F5） 。
 

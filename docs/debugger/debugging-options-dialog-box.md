@@ -1,5 +1,7 @@
 ---
 title: “选项”对话框 ->“调试”| Microsoft Docs
+description: 查找描述在 Visual Studio 中进行常规调试、实时调试、输出窗口调试和符号调试的“选项”对话框的链接。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -21,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 407da10e5a10ea08a75618046189a87a4ad6c5f3
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: ae93f22249540da0121472ce07db52e3747abf85
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738148"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726899"
 ---
 # <a name="debugging-options-dialog-box"></a>“选项”对话框 ->“调试”
 “工具”菜单上的“选项”对话框中的“调试”文件夹提供以下页，可以使用它们来指定调试器工具选项  。

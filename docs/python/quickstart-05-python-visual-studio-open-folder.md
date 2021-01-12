@@ -11,12 +11,12 @@ ms.workload:
 - python
 - data-science
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: a7bf174191a6a2fb013aa3d25880b01bc2e7f070
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.openlocfilehash: d11ffcb2c43d2c519d75d43afad6383e0bfaa44a
+ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88801667"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97761272"
 ---
 # <a name="quickstart-open-and-run-python-code-in-a-folder"></a>快速入门：打开并运行文件夹中的 Python 代码
 
@@ -70,11 +70,11 @@ ms.locfileid: "88801667"
 
 1. 在解决方案资源管理器中右键单击 Python (.py  ) 启动文件  ，然后选择“调试和启动设置”  。
 
-    ![用于 Python 文件的“调试和启动设置”命令](media/quickstart-open-folder/09-debug-launch-settings-menu-command.png)
+    ![解决方案资源管理器“文件夹视图”的屏幕截图，其中选中了 contemplate-koans.py 文件，并且在上下文菜单上选择了“调试和启动设置”。](media/quickstart-open-folder/09-debug-launch-settings-menu-command.png)
 
 1. 在出现的“选择调试程序”  对话框中，选择“默认”  ，然后选择“选择”  。
 
-    ![用于 Python 文件的“调试和启动设置”命令](media/quickstart-open-folder/10-select-debugger.png)
+    ![“选择调试器”对话框的屏幕截图，其中选中了“默认”调试器和“选择”按钮。](media/quickstart-open-folder/10-select-debugger.png)
 
     > [!Note]
     > 如果没有看到“默认”选项，请确保在选择“调试和启动设置”命令时选择了 Python .py 文件。 Visual Studio 利用文件类型来确定要显示的调试程序选项。

@@ -1,6 +1,7 @@
 ---
 title: 启用 ASP.NET 应用调试 | Microsoft Docs
-ms.custom: ''
+description: 了解如何在 Visual Studio 中启用对 ASP.NET 和 ASP.NET Core 应用的调试。 可以在 IIS Express 服务器或本地 IIS 服务器上运行该进程。
+ms.custom: SEO-VS-2020
 ms.date: 10/29/2020
 ms.topic: how-to
 dev_langs:
@@ -18,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - aspnet
-ms.openlocfilehash: 3755489332bcc174e70e193a836db05e672907e1
-ms.sourcegitcommit: f1bb1b66ed141837e992b3352ce68ff24c11f53e
+ms.openlocfilehash: 28f74c449e196d5eb0b3380d0ff1392db17e0b23
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93102566"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903592"
 ---
 # <a name="debug-aspnet-or-aspnet-core-apps-in-visual-studio"></a>在 Visual Studio 中调试 ASP.NET 或 ASP.NET Core 应用
 
@@ -159,7 +160,7 @@ ASP.NET 项目默认有 web.config 文件，其中包含应用配置、启动信
 
 3. 选择“IIS、FTP 等”并单击“发布” 。
 
-    ![发布到 IIS](media/dbg-aspnet-local-iis.png "发布到 IIS")
+    ![Visual Studio 中“选择发布目标”对话框的屏幕截图。 已选中“IIS、FTP、Web 部署”且突出显示了“发布”按钮。](media/dbg-aspnet-local-iis.png)
 
 4. 在 CustomProfile 对话框中，对于“发布方法”，请选择“文件系统”  。
 
@@ -181,7 +182,7 @@ ASP.NET 项目默认有 web.config 文件，其中包含应用配置、启动信
 
 1. 选择“发布”。
 
-    ![发布到 IIS](media/dbg-aspnet-local-iis-select-site.png "发布到 IIS")
+    ![“发布”对话框的屏幕截图，其中选中了“CustomProfile”应用，突出显示了“发布”按钮，并将“LastBuildConfiguration”设置为“调试”。](media/dbg-aspnet-local-iis-select-site.png)
 
 > [!IMPORTANT]
 > 调试模式会极大地降低应用的性能。 为了获得最佳性能，请在 web.config 文件中设置 `debug="false"`，并在部署生产应用或执行性能度量时指定发布版本。

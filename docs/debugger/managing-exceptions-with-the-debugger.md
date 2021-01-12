@@ -1,6 +1,7 @@
 ---
 title: 使用调试器管理异常 | Microsoft Docs
-ms.custom: seodec18
+description: 了解如何指定调试器中断的异常、希望调试器在何时中断以及如何处理中断。
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 10/09/2018
 ms.topic: how-to
 f1_keywords:
@@ -33,12 +34,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ff28944a36d338230a17cd533a4832452e42885b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 210f2b2fc3e037f58fed19031d7ae9762185a640
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85348452"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903842"
 ---
 # <a name="manage-exceptions-with-the-debugger-in-visual-studio"></a>在 Visual Studio 中使用调试器管理异常
 
@@ -184,7 +185,7 @@ ms.locfileid: "85348452"
 
 异常设置保留在解决方案的 .suo 文件中，因此适用于特定解决方案。 无法跨解决方案重用特定异常设置。 此时，仅保留添加的异常，而不保留删除的异常。 你可以添加一个异常，然后关闭并重新打开解决方案，该异常仍然存在。 但是，如果删除一个异常，然后关闭/重新打开解决方案，异常将消失。
 
-**“异常设置”** 窗口在 C# 中支持通用异常类型，但在 Visual Basic 中不支持。 要对类似 `MyNamespace.GenericException<T>`的异常执行中断操作，则必须将异常作为 **MyNamespace.GenericException`1**添加。 也就是说，如果已经创建了类似以下代码的异常：
+**“异常设置”** 窗口在 C# 中支持通用异常类型，但在 Visual Basic 中不支持。 要对类似 `MyNamespace.GenericException<T>`的异常执行中断操作，则必须将异常作为 **MyNamespace.GenericException`1** 添加。 也就是说，如果已经创建了类似以下代码的异常：
 
 ```csharp
 public class GenericException<T> : Exception
@@ -216,9 +217,9 @@ public class GenericException<T> : Exception
 
    ![异常的额外条件](../debugger/media/extraconditionsforanexception.png "ExtraConditionsForAnException")
 
-3. 对于每个条件行，键入模块的名称，然后将比较运算符列表更改为“等于”或“不等于”   。 你可以在名称中指定通配符 (\\\*)，以指定多个模块  。
+3. 对于每个条件行，键入模块的名称，然后将比较运算符列表更改为“等于”或“不等于”   。 可以在名称中指定通配符 (\\\*)，以指定多个模块。
 
-4. 如果需要删除条件，请选择条件行末尾的 X  。
+4. 如果需要删除条件，请选择条件行末尾的 X。
 
 ## <a name="see-also"></a>请参阅
 

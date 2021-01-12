@@ -1,5 +1,7 @@
 ---
 title: 在调试时反向编译 .NET 代码 | Microsoft Docs
+description: 在 Visual Studio 中进行调试时，从 .NET 程序集生成并嵌入源代码。 提取和查看嵌入的源代码。
+ms.custom: SEO-VS-2020
 ms.date: 2/2/2020
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ manager: jillfra
 ms.workload:
 - multiple
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: 87f8fbec389e3735b6f1c39cdd671a391c7334d7
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 8ad919b14642dff98746c194ad8c05bbb3aea529
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89600106"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726730"
 ---
 # <a name="generate-source-code-from-net-assemblies-while-debugging"></a>在调试时从 .NET 程序集生成源代码
 

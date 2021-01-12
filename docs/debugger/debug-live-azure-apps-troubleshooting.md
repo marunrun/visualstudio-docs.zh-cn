@@ -1,6 +1,7 @@
 ---
 title: 快照调试疑难解答 | Microsoft Docs
-ms.custom: ''
+description: 了解 Visual Studio 中快照调试的疑难解答和已知问题。 在不导致生产站点出现停机的情况下，加载 ICorProfiler。
+ms.custom: SEO-VS-2020
 ms.date: 04/24/2019
 ms.topic: troubleshooting
 helpviewer_keywords:
@@ -11,16 +12,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 16d55c4e729a39f46b4b038490e92f7cb43bf98d
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: b5a76c1cae508acd08e5f077d466facf02e0211a
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84182867"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728639"
 ---
 # <a name="troubleshooting-and-known-issues-for-snapshot-debugging-in-visual-studio"></a>Visual Studio 中的快照调试疑难解答和已知问题
 
-如果本文中所述的步骤不能解决问题，请在[开发者社区](https://developercommunity.visualstudio.com/spaces/8/index.html)中搜索相应问题，或者通过在 Visual Studio 中选择“帮助” > “发送反馈” > “报告问题”来报告新问题  。
+如果本文中所述的步骤不能解决问题，请在[开发者社区](https://aka.ms/feedback/suggest?space=8)中搜索相应问题，或者通过在 Visual Studio 中选择“帮助” > “发送反馈” > “报告问题”来报告新问题  。
 
 ## <a name="issue-attach-snapshot-debugger-encounters-an-http-status-code-error"></a>问题：“附加 Snapshot Debugger”遇到 HTTP 状态代码错误
 

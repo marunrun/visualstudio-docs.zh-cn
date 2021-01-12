@@ -10,12 +10,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: a033c0fe1fd80edc7959c5f49993714982ecc805
-ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
+ms.openlocfilehash: bd1b12be2dba1526301cd0ea9a4356fb9cc14c14
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88238175"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815732"
 ---
 # <a name="learn-to-use-the-code-editor-for-javascript"></a>了解如何使用 JavaScript 版代码编辑器
 
@@ -40,11 +40,11 @@ ms.locfileid: "88238175"
 
 编写代码时，IntelliSense 是非常宝贵的资源。 它可显示某个类型的可用成员信息，或某个方法不同重载的参数详情。 在下面的代码中，键入 `Router()` 时，会显示可以传递的参数类型。 这称为签名帮助。
 
-![使用 IntelliSense](../javascript/media/write-code-signature-checking.png)
+![正在输入 JavaScript 代码的 Visual Studio 代码窗口的屏幕截图。 对于 Router() 函数，将显示 IntelliSense 信息。](../javascript/media/write-code-signature-checking.png)
 
 还可用于完成单词，从而在输入大量字符后消除字符带来的歧义。 如果将光标放在下列代码中的 `data` 字符串之后并键入 `get`，则 IntelliSense 将显示之前在代码中定义的函数，或者在已添加到项目中的第三方库中定义的函数。
 
-![使用 IntelliSense](../javascript/media/write-code-intellisense.png)
+![正在输入“get”一词的 Visual Studio 代码窗口的屏幕截图。 对于以“get”开头的所有函数，将显示 IntelliSense 信息。](../javascript/media/write-code-intellisense.png)
 
 鼠标悬停在编程元素上时，IntelliSense 还可以显示关于类型的信息。
 

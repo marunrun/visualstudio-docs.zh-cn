@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - dotnet
 author: mikejo5000
-ms.openlocfilehash: 6badbb7723bf4d8ed0c9385558204c2dc4907574
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+ms.openlocfilehash: 3f90a3d42eb1390adbb242242172aea152a0a54f
+ms.sourcegitcommit: d526af3642163180e0cc3e1e73b0a00f02542683
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95441243"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97833229"
 ---
 # <a name="how-to-configure-unit-tests-to-target-an-earlier-version-of-the-net-framework"></a>如何：配置单元测试以面向 .NET Framework 的早期版本
 
@@ -62,7 +62,7 @@ ms.locfileid: "95441243"
 
 4. 使用“目标框架 (所有配置)”下拉列表，将目标框架更改为 **.NET Framework 3.5** 或更高版本，如下图中的标注 B 所示。 不应指定客户端版本。
 
-     ![目标框架下拉列表](../test/media/howtoconfigureunitest35frameworkstepb.png)
+     ![“高级编译器设置”对话框的屏幕截图。 其中突出显示了“目标框架”下拉列表，并且值设置为“.NET Frameowrk 3.5”。](../test/media/howtoconfigureunitest35frameworkstepb.png)
 
 ## <a name="retargeting-for-c-unit-test-projects"></a>重定向 C# 单元测试项目
 
@@ -74,7 +74,7 @@ ms.locfileid: "95441243"
 
 3. 在“应用程序”选项卡上，选择“目标框架”。 从下拉列表中，选择“.NET Framework 3.5”或更高版本，如下图中所示。 不应指定客户端版本。
 
-   ![目标框架下拉列表](../test/media/howtoconfigureunittest35frameworkcsharp.png)
+   ![解决方案资源管理器“属性”窗格中“应用程序”选项卡的插图，其中突出显示了“目标框架”下拉列表的位置。](../test/media/howtoconfigureunittest35frameworkcsharp.png)
 
 ## <a name="retargeting-for-ccli-unit-test-projects"></a>重定向 C++/CLI 单元测试项目
 

@@ -1,17 +1,17 @@
 ---
 title: Visual Studio 容器工具启动设置
 author: ghogen
-description: 容器工具生成过程概述
+description: 了解与 Visual Studio 处理容器化应用的方式相关的容器工具的启动设置。
 ms.author: ghogen
 ms.date: 08/15/2019
 ms.technology: vs-azure
 ms.topic: reference
-ms.openlocfilehash: a1fdfbd3bf1f0969061365cd592f6054c7116b67
-ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
+ms.openlocfilehash: 24a36bdbe0d3c6ac57b7595883301841ffa138e1
+ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91780879"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97846708"
 ---
 # <a name="container-tools-launch-settings"></a>容器工具启动设置
 

@@ -1,5 +1,6 @@
 ---
 title: 使用并发可视化工具标记 SDK | Microsoft Docs
+description: 了解如何在 Visual Studio 中使用并发可视化工具标记 SDK 来创建范围并编写标志、消息和警报。
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 19a45032-f8a7-4137-890e-2ceeec938b8d
@@ -8,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9cf33ad094716ee0f8f4c8cc4bb06220db1237e5
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 24659a101da59ed3a8ca6389debfde6c08a038ed
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851575"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815602"
 ---
 # <a name="how-to-use-the-concurrency-visualizer-markers-sdk"></a>如何：使用并发可视化工具标记 SDK
 本主题演示如何使用并发可视化工具 SDK 来创建范围并编写标志、消息和警报。
@@ -70,7 +71,7 @@ ms.locfileid: "90851575"
 
 6. 启动当前项目以显示并发可视化工具。 在“线程”视图中，两个标记系列显示在其各自的通道中。 下图显示两个新范围。
 
-     ![具有 3 个自定义标记序列的并发可视化工具](../profiling/media/cvmarkerseriesnative.png "CvMarkerSeriesNative")
+     ![并发可视化工具中“线程”视图的屏幕截图，显示了标记、标志和消息序列，其中包含标志范围和消息范围。](../profiling/media/cvmarkerseriesnative.png "CvMarkerSeriesNative")
 
 ### <a name="to-use-visual-basic-or-c"></a>使用 Visual Basic 或 C\#
 
@@ -164,7 +165,7 @@ ms.locfileid: "90851575"
 
 6. 启动当前项目以显示并发可视化工具。 在“线程”视图中，三个标记系列显示在其各自的通道中。 下图显示三个新范围。
 
-     ![具有 3 个自定义标记序列的并发可视化工具](../profiling/media/cvmarkerseriesmanaged.png "CvMarkerSeriesManaged")
+     ![并发可视化工具中的“线程”视图的屏幕截图，显示了标记、标志和消息序列，其中包含消息、警报和标志范围。](../profiling/media/cvmarkerseriesmanaged.png "CvMarkerSeriesManaged")
 
 ## <a name="see-also"></a>请参阅
 - [并发可视化工具 SDK](../profiling/concurrency-visualizer-sdk.md)

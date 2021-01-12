@@ -1,6 +1,7 @@
 ---
 title: 准备调试 C#、F# 和 VB 项目 | Microsoft Docs
-ms.custom: seodec18
+description: 获取有关准备调试由 Visual Studio 项目模板创建的 C#、F# 和 Visual Basic 项目类型的信息。
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -21,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 90e108ddd64a9b520c8ae1d0c86e416dea64e5be
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 1536c00f68232bb9e4aa92102b605b59ec58b196
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738122"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726847"
 ---
 # <a name="debugging-preparation-c-f-and-visual-basic-project-types"></a>调试准备：C#、F# 和 Visual Basic 项目类型
 本节主题描述如何调试由 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 项目模板创建的 C#、F# 和 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 项目类型。

@@ -12,12 +12,12 @@ manager: jillfra
 monikerRange: '>= vs-2019'
 ms.workload:
 - multiple
-ms.openlocfilehash: 5b32b402e2bbf85cf5c028ec2dc94821ec463644
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: f6e2b851057d924353e6e1e9a211fcbb294353c8
+ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94674787"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97761259"
 ---
 # <a name="attach-to-a-process-running-on-a-docker-container"></a>附加到在 Docker 容器上运行的进程 
 
@@ -34,7 +34,7 @@ ms.locfileid: "94674787"
 
 1. 在 Visual Studio 中，选择“调试 > 附加到进程”(CTRL+ALT+P)，打开“附加到进程”对话框 。
 
-![“附加到进程”菜单](../debugger/media/attach-process-menu.png "Attach_To_Process_Menu")
+![Visual Studio 中“附加到进程”对话框的屏幕截图，其中显示“Docker (Linux 容器)”连接类型。](../debugger/media/attach-process-menu.png "Attach_To_Process_Menu")
 
 2. 将“连接类型”设置为“Docker (Linux 容器)”。
 3. 通过“选择 Docker 容器”对话框选择“查找...”，以设置“连接目标”。
@@ -63,7 +63,7 @@ ms.locfileid: "94674787"
 
 4. 从“可用进程”列表中选择相应的容器进程并选择“附加”，开始在 Visual Studio 中调试 C# 容器进程！
 
-    ![已完成的 Docker 附加菜单](../debugger/media/docker-attach-complete.png "已完成的 Linux Docker 附加菜单")
+    ![Visual Studio 中“附加到进程”对话框的屏幕截图。连接类型设置为“Docker (Linux 容器)”，并且已选中 dotnet 进程。](../debugger/media/docker-attach-complete.png "已完成的 Linux Docker 附加菜单")
 
 ## <a name="attach-to-a-process-running-on-a-windows-docker-container"></a> 附加到正在 Windows Docker 容器上运行的进程
 
@@ -76,7 +76,7 @@ ms.locfileid: "94674787"
 
 1. 在 Visual Studio 中，选择“调试 > 附加到进程”（或 CTRL+ALT+P），打开“附加到进程”对话框  。
 
-   ![“附加到进程”菜单](../debugger/media/attach-process-menu-docker-windows.png "Attach_To_Process_Menu")
+   ![Visual Studio 中“附加到进程”对话框的屏幕截图，其中显示“Docker (Windows 容器)”连接类型。](../debugger/media/attach-process-menu-docker-windows.png "Attach_To_Process_Menu")
 
 2. 将“连接类型”设置为“Docker (Windows 容器)”。
 3. 使用“选择 Docker 容器”对话框选择“查找...”，以设置“连接目标”。
@@ -93,6 +93,6 @@ ms.locfileid: "94674787"
 
 4. 从“可用进程”列表中选择相应的容器进程并选择“附加”，以开始调试 C# 容器进程。
 
-    ![已完成的 Docker 附加菜单](../debugger/media/docker-attach-complete-windows.png "已完成的 Windows Docker 附加菜单")
+    ![Visual Studio 中“附加到进程”对话框的屏幕截图。连接类型设置为“Docker (Windows 容器)”，并且已选中 dotnet.exe 进程。](../debugger/media/docker-attach-complete-windows.png "已完成的 Windows Docker 附加菜单")
 
-5.  从可用进程列表中选择相应的容器进程并选择“附加”，以开始调试 C# 容器进程。
+5. 从可用进程列表中选择相应的容器进程并选择“附加”，以开始调试 C# 容器进程。

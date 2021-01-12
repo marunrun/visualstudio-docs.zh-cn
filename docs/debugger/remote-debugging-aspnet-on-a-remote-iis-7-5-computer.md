@@ -1,5 +1,6 @@
 ---
 title: 远程调试 IIS 计算机上的 ASP.NET
+description: 了解如何设置和配置 Visual Studio ASP.NET MVC 4.5.2 应用程序，将其部署到 IIS，并从 Visual Studio 附加远程调试器。
 ms.custom:
 - remotedebugging
 - seodec18
@@ -11,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - aspnet
-ms.openlocfilehash: cd2b787fe546b9c53332fcdc548d3da829759755
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 8a3520220da15ef771c8cecbd7962e4448727910
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84173910"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815706"
 ---
 # <a name="remote-debug-aspnet-on-a-remote-iis-computer"></a>远程调试远程 IIS 计算机上的 ASP.NET
 若要调试已部署到 IIS 的 ASP.NET 应用程序，请在部署了应用的计算机上安装并运行远程工具，然后从 Visual Studio 附加到正在运行的应用。
@@ -91,7 +92,7 @@ ms.locfileid: "84173910"
 
 1. 使用 Web 平台安装程序 (WebPI) 安装 ASP.NET 4.5（从 Windows Server 2012 R2 的服务器节点，选择“获取新 Web 平台组件”，然后搜索 ASP.NET）
 
-    ![RemoteDBG_IIS_AspNet_45](../debugger/media/remotedbg_iis_aspnet_45.png "RemoteDBG_IIS_AspNet_45")
+    ![Web 平台安装程序 5.0 的屏幕截图，显示了 asp.net 的搜索结果，其中用红色圈出了 Web 平台组件 IIS:ASP.NET 4.5。](../debugger/media/remotedbg_iis_aspnet_45.png)
 
     > [!NOTE]
     > 如果使用 Windows Server 2008 R2，请改为使用以下命令安装 ASP.NET 4：

@@ -1,5 +1,6 @@
 ---
 title: 分析性能探查器中的内存使用情况
+description: 了解如何使用 Visual Studio 性能探查器中不含调试器的“内存使用情况”工具来监视应用的内存使用情况。
 ms.custom: ''
 ms.date: 04/02/2020
 ms.topic: how-to
@@ -13,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e6e1bd3d38e6303f11ec5da0e88816d56dd43d98
-ms.sourcegitcommit: ae9145b32fc8e1e663e504c315a5df5dd302fee9
+ms.openlocfilehash: 65ac088d52b4e7a288965bb75e1bc6a00da40f7b
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92918222"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815810"
 ---
 # <a name="analyze-memory-usage-without-debugging-in-the-performance-profiler"></a>在进行调试的情况下分析性能探查器中的内存使用情况
 
@@ -46,7 +47,7 @@ ms.locfileid: "92918222"
 
 启动诊断会话时，应用将启动，并且“诊断工具”窗口将显示此应用的内存使用情况的时间线图。
 
-![内存使用量概述页](../profiling/media/memuse__reportoverview.png "MEMUSE__ReportOverview")
+![Visual Studio 性能探查器中“诊断工具”窗口的屏幕截图，其中显示应用内存使用情况的时间线图。](../profiling/media/memuse__reportoverview.png "MEMUSE__ReportOverview")
 
 时间线图显示应用运行时的内存波动情况。 该关系图中的峰值通常表明一些代码正在收集或创建数据，然后在处理完成后放弃它。 较大的峰值表明能够进行优化的区域。 更需关注的是未返回的内存消耗中出现增加，因为这可能表明低效的内存使用情况或甚至表明出现内存泄露。
 
@@ -66,7 +67,7 @@ ms.locfileid: "92918222"
 
 停止收集数据后，“内存使用情况”工具将停止应用并显示“内存使用情况”概述页 。
 
-![内存使用量概述页](../profiling/media/memuse__reportoverview1.png "内存使用量概述页")
+![Visual Studio 性能探查器中“内存使用情况”工具中概述页的屏幕截图，其中显示内存使用情况图和两个快照窗格。](../profiling/media/memuse__reportoverview1.png "内存使用量概述页")
 
 ### <a name="memory-usage-snapshots"></a><a name="BKMK_Memory_Usage_snapshot_views"></a> 内存使用情况快照
 

@@ -11,12 +11,12 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 monikerRange: vs-2019
-ms.openlocfilehash: f253ba9b7e46f809bc107aa2b3e26f635d778770
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: 68fbdef0e86b125971480ae1bd6a7ba6d3108cd8
+ms.sourcegitcommit: 74b67f102d243e3b74a93563e834f49df298e4b8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91928549"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97696536"
 ---
 # <a name="supported-visual-studio-features-preview"></a>受支持的 Visual Studio 功能（预览）
 
@@ -27,7 +27,7 @@ ms.locfileid: "91928549"
 这并不是一个详尽的列表，只是介绍了 Visual Studio 在连接到 codespace 时的一般功能。
 
 > [!NOTE]
-> 如果在 Visual Studio 中使用 codespace 时缺少某个功能，请在 https://developercommunity.visualstudio.com/ 上创建问题，告知我们。 这有助于我们优先考虑最需要的功能。
+> 如果在 Visual Studio 中使用 codespace 时缺少某个功能，请在 [Visual Studio 开发者社区](https://aka.ms/feedback/suggest?space=8)上创建问题来告知我们。 这有助于我们优先考虑最需要的功能。
 
 > [!NOTE]
 > 下述功能适用于 Visual Studio，而不适用于其他两个 GitHub Codespaces 客户端：Visual Studio Code 和浏览器内部编辑器。
@@ -108,8 +108,8 @@ ms.locfileid: "91928549"
 
 使用连接到 codespace 的 Visual Studio 时，可以获取与在本地使用时相同的辅助功能。
 
-* 源代码管理 - 通过新的 [Git 窗口](https://devblogs.microsoft.com/visualstudio/improved-git-experience-in-visual-studio-2019/)完全支持 Git。
-* 辅助功能 - 辅助技术存在一个已知问题，即无法访问已调试应用的应用广播。 除此限制外，我们认为本地 Visual Studio 体验中还会存在其他兼容性问题。 如果你发现了 bug，请在[开发者社区](https://developercommunity.visualstudio.com/)上提交问题以告知我们。
+* 源代码管理 - 通过新的[集成 Git 体验](../git-with-visual-studio.md)完全支持 Git。
+* 辅助功能 - 辅助技术存在一个已知问题，即无法访问已调试应用的应用广播。 除此限制外，我们认为本地 Visual Studio 体验中还会存在其他兼容性问题。 如果你发现了 bug，请在[开发者社区](https://aka.ms/feedback/report?space=8)上提交问题以告知我们。
 * 发布 - 支持通过 GitHub 操作发布到 Azure。
 * 连接服务 - 部分支持应用见解、KeyVault、存储、SQL、Redis、Cosmos、openAPI 和 gRPC。
 * 测试资源管理器* - 大部分都支持。

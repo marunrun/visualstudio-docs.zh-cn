@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5c3cf9d5e4d72ed316344d1bda930d0416e9efe5
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 6202fa019aed8e6fc9eb9ff93bdb390bf22f2911
+ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "77416389"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97761246"
 ---
 # <a name="how-to-debug-for-absolute-beginners"></a>零基础调试的方法
 
@@ -78,7 +78,7 @@ ms.locfileid: "77416389"
 
 1. 必须已安装 Visual Studio 以及“NET 桌面开发”工作负载或“.NET Core 跨平台开发”工作负载，具体取决于要创建的应用类型   。
 
-    如果尚未安装 Visual Studio，请转到  [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/) 页免费安装。
+    如果尚未安装 Visual Studio，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/)页免费安装。
 
     如果需要安装工作负载但已安装 Visual Studio，请单击“工具” > “获取工具和功能”   。 Visual Studio 安装程序启动。 选择“.NET Core 桌面开发”或“.NET Core 跨平台开发”工作负载，然后选择“修改”    。
 
@@ -229,17 +229,17 @@ ms.locfileid: "77416389"
 
 1. 将鼠标悬停在右侧的 `GalaxyType` 变量上，然后在扳手图标的左侧展开 `theGalaxy.GalaxyType`。 可以看到 `GalaxyType` 包含属性 `MyGType`，并且属性值设置为 `Spiral`。
 
-    ![检查变量](../debugger/media/beginners-inspect-variable.png)
+    ![Visual Studio 调试器的屏幕截图，其中显示了一个黄色的代码行，代码行末尾的 theGalaxy.GalaxyType 属性下展开了一个菜单。](../debugger/media/beginners-inspect-variable.png)
 
     “螺旋”实际上是想要打印到控制台的正确值！ 因此，运行应用时，可以在此代码中访问此值，这是一个良好的开端。 在这种情况下，我们使用的 API 不正确。 在调试程序中运行代码时，我们将查看是否可解决此问题。
 
 1. 在相同的代码中进行调试时，将光标放在 `theGalaxy.GalaxyType` 的末尾并将其更改为 `theGalaxy.GalaxyType.MyGType`。 虽然可进行此更改，但代码编辑器会显示一条错误，指示无法编译此代码。
 
-    ![语法错误](../debugger/media/beginners-edit.png)
+    ![Visual Studio 调试器的屏幕截图，其中以红色突出显示了一个代码行，并显示了一个“编辑并继续”消息框，其中“编辑”按钮处于选中状态。](../debugger/media/beginners-edit.png)
 
 1. 单击“编辑并继续”消息框中的“编辑”   。 现在在“错误列表”窗口中出现一条错误消息  。 该错误表示 `'object'` 不包含 `MyGType` 的定义。
 
-    ![语法错误](../debugger/media/beginners-no-definition.png)
+    ![Visual Studio 调试器的屏幕截图，其中以红色突出显示了一个代码行，并显示了一个列出了两个错误的“错误列表”窗口。](../debugger/media/beginners-no-definition.png)
 
     即使我们使用类型为 `GType` 的对象（具有 `MyGType` 属性）来设置每个星系，调试程序也不会将 `theGalaxy` 对象识别成类型为 `GType` 的对象。 这是怎么回事？ 想查看设置星系类型的任何代码。 执行此操作时，你会发现 `GType` 类肯定具有 `MyGType` 的属性，但某些内容不正确。 关于 `object` 的错误消息证明是线索；对于语言解释器，类型似乎是类型为 `object` 的对象，而不是类型为 `GType` 的对象。
 
@@ -288,7 +288,7 @@ ms.locfileid: "77416389"
 
 1. 按 F5 并再次将鼠标悬停在 `type` 变量上  。 重复此步骤，直到在 `type` 变量中看到 `I` 的值。
 
-    ![检查变量](../debugger/media/beginners-inspecting-data.png)
+    ![Visual Studio 调试器的屏幕截图，其中包括了一个黄色的代码行和一个显示类型变量值为 73 'I' 的小窗口。](../debugger/media/beginners-inspecting-data.png)
 
 1. 现在，请按 F11（“调试” > “单步执行”或调试工具栏上的“单步执行”按钮）。    
 

@@ -1,5 +1,7 @@
 ---
 title: 快照调试的常见问题解答 | Microsoft Docs
+description: 查看在 Visual Studio 中使用 Snapshot Debugger 调试实时 Azure 应用程序时可能出现的常见问题解答 (FAQ) 列表。
+ms.custom: SEO-VS-2020
 ms.date: 11/07/2017
 ms.topic: reference
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f8afc67b92a943dd571847bb1a00fb7e4db4514b
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 5276127f0d6755b9fdabdfa965b5c1b8c4d94823
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851094"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727198"
 ---
 # <a name="frequently-asked-questions-for-snapshot-debugging-in-visual-studio"></a>在 Visual Studio 中进行快照调试的常见问答解答
 

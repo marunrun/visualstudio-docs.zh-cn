@@ -1,5 +1,6 @@
 ---
 title: 使用 IntelliTrace 查看事件 | Microsoft Docs
+description: 了解如何在 Visual Studio Enterprise 中使用 IntelliTrace 来收集有关特定事件、事件类别和单个函数调用的数据。
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: e1c9c91a-0009-4c4e-9b4f-c9ab3a6022a7
@@ -8,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ffbe0b8365948dc5a69edca390f308cb55ba5a3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6fef839b5473881450581db77a885da158e67bbc
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62929409"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815745"
 ---
 # <a name="view-events-with-intellitrace-in-visual-studio-enterprise-c-visual-basic"></a>在 Visual Studio Enterprise 中使用 IntelliTrace 查看事件（C#、Visual Basic）
 
@@ -64,13 +65,13 @@ ms.locfileid: "62929409"
 
     以下屏幕截图取自 Visual Studio 2015 Update 1。
 
-    ![IntelliTrace&#45;Update1](../debugger/media/intellitrace-update1.png "IntelliTrace-Update1")
+    ![Visual Studio 代码窗口的屏幕截图。 执行在断点处停止，且“诊断工具”窗口中的“事件”选项卡列出了事件。](../debugger/media/intellitrace-update1.png)
 
 3. 选择该事件以展开其详细信息。
 
     以下屏幕截图取自 Visual Studio 2015 Update 1。
 
-    ![IntelliTraceUpdate1&#45;SingleEvent](../debugger/media/intellitraceupdate1-singleevent.png "IntelliTraceUpdate1 SingleEvent")
+    ![Visual Studio 诊断工具窗口中“事件”选项卡的屏幕截图。 选中并展开了一个事件以显示其详细信息。](../debugger/media/intellitraceupdate1-singleevent.png)
 
     你可以选择路径名链接以打开文件。 如果完整的路径名不可用，则将显示 **“打开文件”** 对话框。
 
@@ -78,7 +79,7 @@ ms.locfileid: "62929409"
 
     以下屏幕截图取自 Visual Studio 2015 Update 1。
 
-    ![HistoricalDebugging&#45;Update1](../debugger/media/historicaldebugging-update1.png "HistoricalDebugging-Update1")
+    ![Visual Studio 代码窗口的屏幕截图。 执行在断点处停止，已选中一个事件，并突出显示了相应的代码行。](../debugger/media/historicaldebugging-update1.png)
 
 4. 如果找不到 bug，请尝试检查导致 bug 的其他事件。 还可以让 IntelliTrace 记录调用信息，以便你可以单步执行函数调用。
 

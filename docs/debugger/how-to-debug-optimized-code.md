@@ -1,5 +1,7 @@
 ---
 title: 调试优化的代码 | Microsoft Docs
+description: 如果可能，在调试程序之前请不要生成 Win32 Release 目标，因为优化可能会使调试变得复杂。 请参阅本文中的详细信息。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -21,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: da0a9c40a2c4887b2798e908ad0c12d6c9a85b32
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 971ceb59a17788076a1188e42d834f7b4bd704cc
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852382"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903176"
 ---
 # <a name="how-to-debug-optimized-code"></a>如何：调试优化的代码
 
@@ -58,7 +60,7 @@ ms.locfileid: "90852382"
 
 ## <a name="to-turn-on-optimization-in-a-debug-build-configuration"></a>在“Debug”生成配置中打开优化
 
-1. 创建新项目时，请选择 `Win32 Debug`目标。 接下来要一直使用 `Win32``Debug` 目标，直至程序已进行全面调试并可以生成 `Win32 Release` 目标为止。 调试器并不优化 `Win32 Debug`目标。
+1. 创建新项目时，请选择 `Win32 Debug`目标。 接下来要一直使用 `Win32 Debug` 目标，直至程序已进行全面调试并可以生成 `Win32 Release` 目标为止。 调试器并不优化 `Win32 Debug`目标。
 
 2. 在解决方案资源管理器中选择项目。
 

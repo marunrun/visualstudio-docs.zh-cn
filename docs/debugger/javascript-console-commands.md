@@ -1,6 +1,7 @@
 ---
 title: JavaScript 控制台命令 | Microsoft Docs
-ms.custom: ''
+description: 在“JavaScript 控制台”窗口中使用命令发送消息和执行其他任务。 本文适用于 Node.js 应用、UWP 应用和 Apache Cordova 应用。
+ms.custom: SEO-VS-2020
 ms.date: 10/17/2019
 ms.topic: reference
 helpviewer_keywords:
@@ -14,12 +15,12 @@ monikerRange: vs-2017
 ms.workload:
 - uwp
 - cordova
-ms.openlocfilehash: 301461caa15321b5a77f42872c93f52f3ec2c9c1
-ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
+ms.openlocfilehash: 2877b3ca9fb644ae4dae1af27e79e6ee52423b97
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91211269"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903904"
 ---
 # <a name="javascript-console-commands-in-visual-studio"></a>Visual Studio 中的 JavaScript 控制台命令
 
@@ -41,7 +42,7 @@ ms.locfileid: "91211269"
 > [!TIP]
 > 较旧版本的 Visual Studio 不支持完整的命令集。 使用控制台对象上的 IntelliSense 快速获取有关支持命令的信息。
 
-|命令|描述|示例|
+|命令|说明|示例|
 |-------------|-----------------|-------------|
 |`assert(expression, message)`|如果 `expression` 计算结果为 **false**，则发送消息。|`console.assert((x == 1), "assert message: x != 1");`|
 |`clear()`|清除控制台窗口中的消息（包括脚本错误消息）以及控制台窗口中显示的脚本。 不清除你在控制台输入提示中输入的脚本。|`console.clear();`|
@@ -67,7 +68,7 @@ ms.locfileid: "91211269"
 ## <a name="miscellaneous-commands"></a>杂项命令
 JavaScript 控制台窗口中也提供这些命令（它们不能通过代码启用）。
 
-|命令|描述|示例|
+|命令|说明|示例|
 |-------------|-----------------|-------------|
 |`$0`, `$1`, `$2`, `$3`, `$4`|将指定元素返回到控制台窗口。 `$0` 返回当前在 DOM 资源管理器中选择的元素，`$1` 返回以前在 DOM 资源管理器中选择的元素，依此类推，最多可返回第四个以前选择的元素。|$3|
 |`$(id)`|按 ID 返回元素。 这是 `document.getElementById(id)`的快捷方式命令，其中 `id` 是一个表示元素 ID 的字符串。|`$("contenthost")`|

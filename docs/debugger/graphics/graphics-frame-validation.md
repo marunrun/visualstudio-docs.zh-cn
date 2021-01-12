@@ -1,5 +1,7 @@
 ---
 title: 图形帧验证 | Microsoft Docs
+description: 了解 Visual Studio 中用于图形的帧验证工具。 此工具显示与事件列表关联的错误和警告。
+ms.custom: SEO-VS-2020
 ms.date: 03/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 49248c6209f9e56e51551f6cd3d4af66ecac8b56
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 0fe9b1ed3acbe588b342ba6550bc45558a2070d2
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72735499"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727640"
 ---
 # <a name="graphics-frame-validation"></a>图形帧验证
 <!-- VERSIONLESS -->

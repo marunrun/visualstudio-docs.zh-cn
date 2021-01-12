@@ -1,5 +1,7 @@
 ---
 title: 调试 DLL 项目 | Microsoft Docs
+description: 在 Visual Studio 中调试动态链接库 (DLL) 文件。 使用 Visual Studio 创建、构建、配置和调试 DLL。
+ms.custom: SEO-VS-2020
 ms.date: 11/06/2018
 ms.topic: conceptual
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 898eb0eb1489d83e97ec9f0a5b38b475bda0199d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ec78e9a04062699ea699f45671e1210fc2306631
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89315065"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728481"
 ---
 # <a name="debug-dlls-in-visual-studio-c-c-visual-basic-f"></a>在 Visual Studio 中调试 DLL 项目（C#、C++、Visual Basic、F#）
 
@@ -72,7 +74,7 @@ DLL （动态链接库） 是包含可被多个程序使用的代码和数据的
 
 **若要设置 C/C++ 标头和 LIB 文件位置：**
 
-1. 在**解决方案资源管理器**中选择该 C/C++ DLL 项目，然后选择**属性**图标，或右键单击该项目并选择**属性**。
+1. 在 **解决方案资源管理器** 中选择该 C/C++ DLL 项目，然后选择 **属性** 图标，或右键单击该项目并选择 **属性**。
 
 1. 在“属性”窗格顶部的“配置”下，选择“所有配置”。
 
@@ -125,16 +127,16 @@ DLL （动态链接库） 是包含可被多个程序使用的代码和数据的
 
 ### <a name="use-the-immediate-window"></a><a name="vxtskdebuggingdllprojectstheimmediatewindow"></a> 使用“即时”窗口
 
-你可以使用**即时**窗口，以在设计时计算 DLL 函数或方法。 **即时**窗口充当调用应用的角色。
+你可以使用 **即时** 窗口，以在设计时计算 DLL 函数或方法。 **即时** 窗口充当调用应用的角色。
 
 >[!NOTE]
 >在设计时，可以对大多数项目类型使用“即时”窗口。 SQL、Web 项目或脚本不支持该窗口。
 
 例如，若要在 `Class1` 类中测试名为 `Test` 的方法:
 
-1. 打开 DLL 项目， 通过选择**调试** > **窗口** > **即时**或按**Ctrl**+**Alt**+**I** 打开 **即时** 窗口。
+1. 打开 DLL 项目， 通过选择 **调试** > **窗口** > **即时** 或按 **Ctrl**+**Alt**+**I** 打开 **即时** 窗口。
 
-1. 在 **即时**窗口中键入以下 C# 代码并按**Enter**，以实例化`Class1`类型的对象。 此托管代码也适用于 C# 和 Visual Basic，只需进行合适的语法更改：
+1. 在 **即时** 窗口中键入以下 C# 代码并按 **Enter**，以实例化`Class1`类型的对象。 此托管代码也适用于 C# 和 Visual Basic，只需进行合适的语法更改：
 
    ```csharp
    Class1 obj = new Class1();

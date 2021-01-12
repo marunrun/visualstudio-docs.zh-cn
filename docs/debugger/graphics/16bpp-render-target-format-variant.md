@@ -1,5 +1,7 @@
 ---
 title: 16bpp 呈现器目标格式变体 | Microsoft Docs
+description: 通过将所有呈现器目标和后台缓冲区的像素格式设置为 DXGI_FORMAT_B5G6R5_UNORM，应用 16 位/像素 (bpp) 呈现器目标格式变体。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 24b22ad9-5ad0-4161-809a-9b518eb924bf
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8a63261a4ef8a6304bec8c2bdde1d9ec9113405e
-ms.sourcegitcommit: 8530d15aa72fe058ee3a3b4714c36b8638f8b494
+ms.openlocfilehash: aa73637244469d781ac77acba362886b5656f8d8
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74188594"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728039"
 ---
 # <a name="16-bpp-render-target-format-variant"></a>16 bpp 呈现器目标格式变体
 将所有呈现器目标和后台缓冲区的像素格式设置为 DXGI_FORMAT_B5G6R5_UNORM。

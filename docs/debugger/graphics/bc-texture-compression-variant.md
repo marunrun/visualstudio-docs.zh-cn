@@ -1,5 +1,7 @@
 ---
 title: BC 纹理压缩变体 | Microsoft Docs
+description: 使用 BC 纹理压缩变体，允许对像素格式为 B8G8R8X8、B8G8R8A8 或 R8G8B8A8 变体的纹理进行块压缩 (BC)。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 2d0f5305-585b-4b01-bc9a-7a32d6e991da
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c5faf19632d746105deed3a36af6943627594175
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: e767268073f896de590386854a0d2c9ce2803073
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72736163"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726444"
 ---
 # <a name="bc-texture-compression-variant"></a>BC 纹理压缩变量
 对采用像素格式（B8G8R8X8、B8G8R8A8 或 R8G8B8A8 的变体）的纹理启用块压缩。

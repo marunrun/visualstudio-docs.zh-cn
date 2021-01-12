@@ -1,5 +1,7 @@
 ---
 title: 用于报告的宏 | Microsoft Docs
+description: 了解 CRTDBG.H 中提供的调试宏 _RPTn 和 _RPTFn，以及如何创建自己的调试宏。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -22,20 +24,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c2129db98293cef678527fb331992c6c5960d8f9
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 1920b4eddcbffa5cd51d548ade9af3a3a2f208d0
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72731387"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903787"
 ---
 # <a name="macros-for-reporting"></a>用于报告的宏
 可以使用在 CRTDBG.H 中定义的 _RPTn 和 _RPTFn 宏替换 `printf` 语句进行调试 。 未定义 _DEBUG 时，不必将它们括在 #ifdef 内，因为它们会在发布版本中自动消失 。
 
 |宏|描述|
 |-----------|-----------------|
-|_RPT0、_RPT1、_RPT2、_RPT3、_RPT4    |向四个自变量输出一个消息字符串和零。 对于从 _RPT1 到 _RPT4，消息字符串作为参数的 printf 样式的格式化字符串。|
-|_RPTF0、_RPTF1、_RPTF2、_RPTF4   |与 _RPTn 相同，但这些宏还输出其所在的文件名和行号。|
+|_RPT0、_RPT1、_RPT2、_RPT3、_RPT4    |向四个自变量输出一个消息字符串和零。 对于从 _RPT1 到 _RPT4，消息字符串用作参数的 printf 样式的格式化字符串 。|
+|_RPTF0、_RPTF1、_RPTF2、_RPTF3、_RPTF4    |与 _RPTn 相同，但这些宏还输出其所在的文件名和行号。|
 
  请看下面的示例：
 

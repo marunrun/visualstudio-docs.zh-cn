@@ -17,12 +17,12 @@ manager: jillfra
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 99274d3884d002f6dee29a632f8a7c08ac90a56f
-ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
+ms.openlocfilehash: fc6260bdac6f4313daddc1ca59f8541bc4fda7c8
+ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91211123"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97761298"
 ---
 # <a name="options-for-python-in-visual-studio"></a>Visual Studio 中的 Python 选项
 
@@ -75,7 +75,7 @@ ms.locfileid: "91211123"
 | --- | --- | --- |
 | **Conda 可执行文件路径** | (空白) | 指定 conda.exe  可执行文件的准确路径，而不是依赖于 Python 工作负载随附的默认 Miniconda 安装。 如果此处提供了其他路径，则会优先于默认安装和注册表中指定的任何其他 conda.exe 可执行文件。 如果手动安装较新版本的 Anaconda 或 Miniconda，或者想要使用 32 位发行版（而不是默认 64 位发行版），则可能会更改此设置。 |
 
-![“Python 选项”对话框，“语言服务器”选项卡](media/options-conda.png)
+![Visual Studio Tools“选项”对话框的屏幕截图，其中在 Python 选项中选择了“Conda”，在右窗格中显示了“Conda 可执行文件路径”字段。](media/options-conda.png)
 
 ::: moniker-end
 
@@ -135,7 +135,7 @@ ms.locfileid: "91211123"
 | **从 Typeshed 禁用完成** | Off | Visual Studio IntelliSense 通常使用捆绑版本的 Typeshed（一组 .pyi  文件）来查找 Python 2 和 Python 3 的标准库和第三方库的类型提示。 设置此选项将禁用捆绑的 TypeShed 行为。 |
 | **自定义 Typeshed 路径** | (空白) | 如果已设置，则 Visual Studio 会在此路径（而不是其捆绑版本）中使用 Typeshed 文件。 如果已设置“从 Typeshed 禁用完成”  ，则忽略。 |
 
-![“Python 选项”对话框，“语言服务器”选项卡](media/options-language-server.png)
+![Visual Studio Tools“选项”对话框的屏幕截图，其中在 Python 选项中选择了“语言服务器”，在右窗格中显示了语言服务器选项。](media/options-language-server.png)
 
 ::: moniker-end
 
@@ -173,6 +173,6 @@ ms.locfileid: "91211123"
 
 （“文本编辑器”  组中的“环境”   > “字体和颜色”  选项卡。）
 
-Python 选项的名称都带有“Python”  前缀，且一目了然。 所有 Visual Studio 颜色主题的默认字体都为 10pt Consolas 常规体（不以粗体显示）。 默认颜色因主题而异。 通常情况下，当你在默认的字体或颜色设置下难以阅读文本时，你会对字体或颜色进行更改。
+Python 选项的名称都带有“Python”  前缀，且一目了然。 所有 Visual Studio 颜色主题的默认字体都为 10 pt Consolas 常规体（不以粗体显示）。 默认颜色因主题而异。 通常情况下，当你在默认的字体或颜色设置下难以阅读文本时，你会对字体或颜色进行更改。
 
 ![Python 字体和颜色选项](media/options-fonts-and-colors.png)

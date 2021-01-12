@@ -1,5 +1,6 @@
 ---
 title: “消息选项”对话框 | Microsoft Docs
+description: 在“消息选项”中指定将在消息视图中列出的消息，以及要显示的消息数据。
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 97704675e1135959744e60724e4e3381bccf2b30
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f066dd687f4bfbb6b286667abe0bb67224a7b763
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62931321"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903579"
 ---
 # <a name="message-options-dialog-box"></a>“消息选项”对话框
 使用此对话框可选择在[消息视图](../debugger/messages-view.md)中列出的消息。 若要显示此对话框，请在“监视”菜单中选择“日志消息” 。

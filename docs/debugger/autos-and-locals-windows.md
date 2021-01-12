@@ -1,6 +1,7 @@
 ---
 title: 检查变量 -“自动”和“局部变量”窗口 | Microsoft Docs
-ms.custom: seodec18
+description: '在 Visual Studio 中进行调试时，检查“自动”和“局部变量”窗口中的变量。 在调试时，“自动变量”和“局部变量”窗口会显示变量值。 '
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 10/18/2018
 ms.topic: how-to
 f1_keywords:
@@ -15,16 +16,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3ae67fadf5d9710f2088f47617b74eeeb8212826
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b57c27d038193a5c73bee48814a2aa457a94b6a6
+ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350740"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97760908"
 ---
 # <a name="inspect-variables-in-the-autos-and-locals-windows"></a>检查自动和局部变量窗口中的变量
 
-在调试时，“自动变量”和“局部变量”窗口会显示变量值。  仅在调试会话期间，这两个窗口才可用。 “自动变量”窗口显示当前断点周围使用的变量。 “局部变量”窗口显示在局部范围内定义的变量，通常是当前函数或方法。 如果是首次尝试调试代码，那么在阅读本文前，可能需要阅读[零基础调试](../debugger/debugging-absolute-beginners.md)和[调试技术和工具](../debugger/write-better-code-with-visual-studio.md)。
+在调试时，“自动变量”和“局部变量”窗口会显示变量值。  仅在调试会话期间，这两个窗口才可用。 “自动变量”窗口显示当前断点周围使用的变量。 “局部变量”窗口显示在局部范围内定义的变量，通常是当前函数或方法。
+
+> [!NOTE]
+> 如果是首次尝试调试代码，那么在阅读本文前，可能需要阅读[零基础调试](../debugger/debugging-absolute-beginners.md)和[调试技术和工具](../debugger/write-better-code-with-visual-studio.md)。
 
  “自动变量”窗口可用于 C#、Visual Basic、C++ 和 Python 代码，但不可用于 JavaScript 或 F#  。
 
@@ -39,7 +43,7 @@ ms.locfileid: "85350740"
 
 数组和对象在“自动变量”和“局部变量”窗口中显示为树形控件。  选择变量名称左侧的箭头可展开视图，以显示字段和属性。 以下是“局部变量”窗口中 <xref:System.IO.FileStream?displayProperty=fullName> 对象的示例：
 
-![Locals-FileStream](../debugger/media/locals-filestream.png "Locals-FileStream")
+![“局部变量”窗口的屏幕截图，其中的文件设置为 System.IO.FileStream 值。](../debugger/media/locals-filestream.png)
 
 “局部变量”或“自动变量”窗口中的红色值表示自上次评估后值已更改。  此更改可能是在上一个调试会话中进行的，也可能是在窗口中更改了值。
 
@@ -116,7 +120,7 @@ ms.locfileid: "85350740"
 
    在 `c = 3;` 行上设置断点并启动调试器。 当执行暂停时，“自动”窗口将显示：
 
-   ![Autos-CSharp](../debugger/media/autos-csharp.png "Autos-CSharp")
+   ![“自动”窗口的屏幕截图，其值 c 设置为 0。](../debugger/media/autos-csharp.png)
 
    `c` 的值为 0，因为尚未执行 `c = 3` 行。
 
@@ -136,7 +140,7 @@ ms.locfileid: "85350740"
 
     在 `e = 5;` 行上设置断点并运行调试器。 当执行停止时，“自动”窗口将显示：
 
-    ![Autos-C++](../debugger/media/autos-cplus.png "Autos-C++")
+    ![“自动”窗口的屏幕截图，其中突出显示的行显示了值为 3 的 int c。](../debugger/media/autos-cplus.png)
 
     未初始化变量 `e`，因为尚未执行 `e = 5` 行。
 

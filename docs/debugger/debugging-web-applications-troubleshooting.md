@@ -1,6 +1,7 @@
 ---
 title: 调试 Web 应用 | Microsoft Docs
-ms.custom: seodec18
+description: 发现可用于调试和解决 Web 应用程序中的错误的常见过程链接。
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -18,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6907ba5f0b48721646c57964012bf0aaa0838b60
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 569b967a91ea3a93ff75bc45aec8974f5474ce84
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73188315"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728150"
 ---
 # <a name="debugging-web-applications-troubleshooting"></a>调试 Web 应用程序：疑难解答
 本节包含可用于解决错误的公共过程。

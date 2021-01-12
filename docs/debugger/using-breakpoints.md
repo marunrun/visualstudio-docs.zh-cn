@@ -34,19 +34,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9ae9ba7618416ae6db71861eebbff41d32035eb0
-ms.sourcegitcommit: f1bb1b66ed141837e992b3352ce68ff24c11f53e
+ms.openlocfilehash: 52c95749d5d7e2909fbff6da0a3a45bc36cd73c6
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93102579"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729322"
 ---
 # <a name="use-breakpoints-in-the-visual-studio-debugger"></a>在 Visual Studio 调试器中使用断点
 
 在开发人员的工具箱中，断点是最重要的调试技术之一。 你可以在希望暂停调试器执行的任何位置设置断点。 例如，你可能想要查看代码变量的状态，或查看某个断点处的调用堆栈。  如果你正在尝试解决使用断点时出现的警告或问题，请参阅 [Visual Studio 调试器中的断点排除故障](../debugger/troubleshooting-breakpoints.md)。
 
 > [!NOTE]
-> 如果知道要解决的任务或问题，但想要了解应使用哪种断点，请参见[查找调试任务](../debugger/find-your-debugging-task.md#pause-running-code)。
+> 如果知道要解决的任务或问题，但想要了解应使用哪种断点，请参阅[常见问题解答 - 查找调试功能](../debugger/find-your-debugging-task.md#pause-running-code)。
 
 ## <a name="set-breakpoints-in-source-code"></a><a name="BKMK_Overview"></a> 在源代码中设置断点
 
@@ -196,7 +196,7 @@ ms.locfileid: "93102579"
 
 1. 在“语言”下拉列表中，选择函数的语言。
 
-1. 选择“确定”  。
+1. 选择“确定”。
 
 ### <a name="set-a-function-breakpoint-using-a-memory-address-native-c-only"></a>使用内存地址设置函数断点（仅限本机 C++）
  你还可以使用对象的地址在类的特定实例调用的方法上设置函数断点。  例如，给定一个类型为 `my_class` 的可寻址对象，可以在实例调用的 `my_method` 方法上设置函数断点。
@@ -248,7 +248,7 @@ ms.locfileid: "93102579"
 
 2. 在“地址”框中，键入内存地址或计算结果为内存地址的表达式。 例如，键入 `&avar` 以在变量 `avar` 的内容更改时执行中断操作。
 
-3. 在 **“字节计数”** 下拉菜单中，选择你想要调试程序监视的字节数。 例如，如果选择 **4** ，则调试程序将监视从 `&avar` 开始的四个字节，并在其中任何字节的值发生更改时执行中断操作。
+3. 在 **“字节计数”** 下拉菜单中，选择你想要调试程序监视的字节数。 例如，如果选择 **4**，则调试程序将监视从 `&avar` 开始的四个字节，并在其中任何字节的值发生更改时执行中断操作。
 
 数据断点在下列情况下无效：
 - 将未经调试的进程写入内存位置。

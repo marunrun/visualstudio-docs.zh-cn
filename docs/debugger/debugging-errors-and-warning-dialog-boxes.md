@@ -1,5 +1,7 @@
 ---
 title: “调试错误和警告”对话框 | Microsoft Docs
+description: 查看在 Visual Studio 中调试应用程序时可能会遇到的错误和警告对话框的列表。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -21,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: beeba55c873e008b3e096da66f888695d719c882
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 73432c1693db1543095643a998396967b7aa2bdf
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599935"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726977"
 ---
 # <a name="debugging-errors-and-warning-dialog-boxes"></a>“调试错误和警告”对话框
 以下是在调试应用程序时可能遇到的错误和警告对话框。

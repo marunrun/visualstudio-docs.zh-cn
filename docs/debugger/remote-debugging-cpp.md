@@ -1,5 +1,6 @@
 ---
 title: 远程调试 C++ 项目 | Microsoft Docs
+description: 遵循以下分步说明，了解如何从远程计算机调试 Visual Studio C ++ 应用程序。
 ms.custom: remotedebugging
 ms.date: 08/14/2018
 ms.topic: conceptual
@@ -17,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0173ed557afa47129e0cc92d9ef9b2d94a7b198f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a8d3b578e62b917a7553b42a04e53062c406c4fd
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "92298736"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815797"
 ---
 # <a name="remote-debugging-a-c-project-in-visual-studio"></a>在 Visual Studio 中远程调试 C++ 项目
 若要调试其他计算机上的 Visual Studio 应用程序，请在将要部署应用的计算机上安装和运行远程工具，将项目配置为从 Visual Studio 连接到远程计算机，然后部署和运行应用。
@@ -63,7 +64,7 @@ Windows 7 和更高版本（非电话）以及从 Windows Server 2008 Service Pa
 
 4. 将“要启动的调试器”更改为“远程 Windows 调试器” 。
 
-    ![RemoteDebuggingCPlus](../debugger/media/remotedebuggingcplus.png "RemoteDebuggingCPlus")
+    ![Visual Studio 解决方案资源管理器“属性”中“调试”选项卡的屏幕截图。 将“要启动的调试器”属性设置为“远程 Windows 调试器”。](../debugger/media/remotedebuggingcplus.png)
 
 5. 对属性进行以下更改：
 
@@ -83,7 +84,7 @@ Windows 7 和更高版本（非电话）以及从 Windows Server 2008 Service Pa
 
 7. 对于“调试”配置，请选中“部署”复选框 。
 
-    ![RemoteDebugCplusDeploy](../debugger/media/remotedebugcplusdeploy.png "RemoteDebugCplusDeploy")
+    ![Visual Studio 解决方案资源管理器中的“配置管理器”的屏幕截图。 其中选中了“调试”配置和“部署”。](../debugger/media/remotedebugcplusdeploy.png)
 
 8. 开始调试（单击“调试”>“启动调试”，或按 F5） 。
 

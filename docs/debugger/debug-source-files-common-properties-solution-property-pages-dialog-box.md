@@ -1,5 +1,6 @@
 ---
 title: 调试源文件/解决方案属性页面
+description: 访问 Visual Studio 中的“调试源文件”属性页，方法是在“解决方案资源管理器”中右键单击你的解决方案，然后选择“属性”>“通用属性”。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -23,12 +24,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3057a6a94edb09018836493257e8d875d938b839
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: be57355c8fc38758080ebde344db0b4224bc3df8
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809539"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728520"
 ---
 # <a name="debug-source-files-common-properties-solution-property-pages-dialog-box"></a>“解决方案属性页”对话框 ->“通用属性”->“调试源文件”
 该属性页指定调试器调试解决方案时查找源文件的位置。

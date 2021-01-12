@@ -9,35 +9,35 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 7b36b7e2469aa5d4ef6e11cff2580e0fb0c8ff03
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+ms.openlocfilehash: 76224ce191354e05c2220af23aabe010403b35cb
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95441399"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815758"
 ---
 # <a name="enable-coded-ui-testing-of-your-controls"></a>启用控件的编码的 UI 测试
 
 实现对编码的 UI 测试框架的支持，可使控件更易测试。 您能够以增量方式增加支持级别。 先从支持记录、播放和属性验证开始。 然后，在此基础上启用编码的 UI 测试生成器，以识别控件的自定义属性。 提供自定义类以便从生成的代码访问这些属性。 你还可以帮助编码的 UI 测试生成器，使之以一种与所录制操作的目的更为接近的方法来捕获操作。
 
-![CUIT&#95;Full](../test/media/cuit_full.png)
+!图表显示了如何通过 CreateAccessabilityInstance 类将 ChartControl 中的类扩展到 ChartControlExtensionPackage 中的类。](../test/media/cuit_full.png)
 
-[!INCLUDE [coded-ui-test-deprecation](includes/coded-ui-test-deprecation.md)]
+[!INCLUDE[coded-ui-test-deprecation](../test/includes/coded-ui-test-deprecation.md)]
 
 ## <a name="support-record-and-playback-and-property-validation-by-implementing-accessibility"></a>通过实现辅助功能来支持记录和播放以及属性验证
 
 编码的 UI 测试生成器可捕获与它在录制期间所遇到的控件有关的信息，然后生成代码以重播该会话。 如果控件不支持辅助功能，则编码的 UI 测试生成器使用屏幕坐标来捕获操作（例如，鼠标单击）。 播放测试时，生成的代码在同一屏幕坐标释放这些操作。 在播放测试时，如果控件出现在屏幕上的其他位置，则生成的代码将无法执行该操作。 在不实现控件的辅助功能的情况下，如果在不同屏幕配置上、不同环境中播放测试或者 UI 布局更改时，测试可能失败。
 
-![CUIT&#95;RecordNoSupport](../test/media/cuit_recordnosupport.png)
+![编码的 UI 测试生成器中录制窗口的屏幕截图。 突出显示了“暂停”按钮，且“单击 'ChartControl' 客户端”显示在工具提示中。](../test/media/cuit_recordnosupport.png)
 
 如果实现辅助功能，则编码的 UI 测试生成器在记录测试时，使用这一辅助功能来捕获有关控件的信息。 然后，当您运行测试时，生成的代码将针对您的控件重播这些事件，即使它位于用户界面中的其他位置。 测试作者还可以使用控件的基本属性创建断言。
 
-![CUIT&#95;Record](../test/media/cuit_record.png)
+![编码的 UI 测试生成器中录制窗口的屏幕截图。 突出显示了“暂停”按钮，且“单击 'A' 标签”显示在工具提示中。](../test/media/cuit_record.png)
 
 ### <a name="to-support-record-and-playback-property-validation-and-navigation-for-a-windows-forms-control"></a>支持记录和播放、属性验证以及 Windows 窗体控件的导航
 根据以下过程中的概述和 <xref:System.Windows.Forms.AccessibleObject> 中的详细介绍，为您的控件实现辅助功能。
 
-![CUIT&#95;Accessible](../test/media/cuit_accessible.png)
+![ChartControl 中类的图示，其中显示 CreateAccessabilityInstance 和 ChartControl.CurveLegend 类之间的关系。](../test/media/cuit_accessible.png)
 
 1. 实现一个从 <xref:System.Windows.Forms.Control.ControlAccessibleObject> 派生的类，并重写 <xref:System.Windows.Forms.Control.AccessibilityObject%2A> 属性以便返回类的对象。
 
@@ -77,11 +77,11 @@ ms.locfileid: "95441399"
 
 在实现对记录、播放和属性验证的基本支持后，可以通过实现 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider> 插件，使控件的自定义属性可供编码的 UI 测试使用。 例如，下面的过程将创建一个属性提供程序，该程序允许编码的 UI 测试访问图表控件的 CurveLegend 子控件的 State 属性：
 
-![CUIT&#95;CustomProps](../test/media/cuit_customprops.png)
+![编码的 UI 测试生成器主窗口的屏幕截图，该主窗口被一个已选中“文本”控件的“状态”属性的“添加断言”窗口部分覆盖。](../test/media/cuit_customprops.png)
 
 ### <a name="to-support-custom-property-validation"></a>支持自定义属性验证
 
-![CUIT&#95;Props](../test/media/cuit_props.png)
+![ChartControl 和 ChartControlExtension 中类的图示，其中突出显示了 ChartControlExtensionPackage 和 ChartControlIPropertyProvider 类。](../test/media/cuit_props.png)
 
 1. 重写曲线图可访问对象的 <xref:System.Windows.Forms.AccessibleObject.Description%2A> 属性，以此在描述字符串中传递丰富的属性值。 用分号 (;) 分隔多个值。
 
@@ -149,7 +149,7 @@ ms.locfileid: "95441399"
 
 ### <a name="to-add-a-specialized-class-to-access-your-control"></a>添加专用类以访问您的控件
 
-![CUIT&#95;CodeGen](../test/media/cuit_codegen.png)
+![ChartControl 和 ChartControlExtension 中类的图示，其中 CurveLegend 类在 ChartControlExtensionPackage 下突出显示。](../test/media/cuit_codegen.png)
 
 1. 实现派生自 <xref:Microsoft.VisualStudio.TestTools.UITesting.WinControls.WinControl> 类，并将控件的类型添加到构造函数中的搜索属性集合。
 
@@ -165,7 +165,7 @@ ms.locfileid: "95441399"
 
 ### <a name="to-support-intent-aware-actions"></a>支持目的感知操作
 
-![CUIT&#95;Actions](../test/media/cuit_actions.png)
+![ChartControl 和 ChartControlExtensionPackage 类的图示，其中 ChartControlActionFilter 类在 ChartControlExtensionPackage 下突出显示。](../test/media/cuit_actions.png)
 
 1. 实现从 [UITestActionFilter](/previous-versions/visualstudio/visual-studio-2012/dd985757(v=vs.110)) 派生的操作筛选器类，并重写属性 [ApplyTimeout](/previous-versions/visualstudio/visual-studio-2012/dd984649%28v%3dvs.110%29)、[Category](/previous-versions/visualstudio/visual-studio-2012/dd986905(v=vs.110))、[Enabled](/previous-versions/visualstudio/visual-studio-2012/dd985633(v=vs.110))、[FilterType](/previous-versions/visualstudio/visual-studio-2012/dd778726(v=vs.110))、[Group](/previous-versions/visualstudio/visual-studio-2012/dd779219(v=vs.110)) 和 [Name](/previous-versions/visualstudio/visual-studio-2012/dd998334(v=vs.110))。
 

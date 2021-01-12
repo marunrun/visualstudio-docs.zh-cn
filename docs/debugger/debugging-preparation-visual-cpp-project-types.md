@@ -1,6 +1,7 @@
 ---
 title: 准备调试 C++ 项目 | Microsoft Docs
-ms.custom: seodec18
+description: 获取有关准备调试由 Visual Studio 中的 Visual C++ 项目模板创建的基本项目类型的信息。
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -19,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc663115e98d7553e03a186874d59b75eb68cb90
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1e399b28d3ddce07cae263550b536c21ad1db028
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75916311"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728299"
 ---
 # <a name="debugging-preparation-c-project-types"></a>调试准备：C++ 项目类型
 本节描述如何调试用 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] 项目模板创建的基本项目类型。
