@@ -7,12 +7,12 @@ monikerRange: vs-2019
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 6421fd0139b04262ac5f1e835f010c1372c034ee
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 29fa854ab00764fc0166a53d8b48989f2c74f036
+ms.sourcegitcommit: d526af3642163180e0cc3e1e73b0a00f02542683
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85329175"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97833294"
 ---
 # <a name="xaml-code-editor"></a>XAML 代码编辑器
 
@@ -136,7 +136,7 @@ ms.locfileid: "85329175"
 
 在 XAML 代码编辑器中编辑代码时，可以使用右键单击上下文菜单访问多个功能。 这些功能中的大多数在 Visual Studio IDE 中都是通用的，有些功能是在结合使用代码编辑器和设计窗口时使用的。
 
-![Visual Studio 中的 XAML 代码编辑器的右键单击上下文菜单](media/xaml-code-editor-right-click-menu.png "Visual Studio 2019 中 XAML 代码编辑器的右键单击上下文菜单的屏幕截图")
+![Visual Studio 2019 中 XAML 代码编辑器的右键单击上下文菜单的屏幕截图。](media/xaml-code-editor-right-click-menu.png)
 
 以下是每个功能的作用以及它们的用途：
 
@@ -163,7 +163,7 @@ ms.locfileid: "85329175"
 
 在代码编辑器的滚动条中，右上角有一个“拆分”按钮。 选择它后，可以打开另一个代码编辑器窗格。 这很有用，因为它们彼此独立操作，因此可以使用它们在不同位置处理代码。
 
-![Visual Studio 中的 XAML 代码编辑器（仅中间窗格）](media/code-editor-split-window-button.png "Visual Studio 2019 中 XAML 代码编辑器的屏幕截图（仅中间窗格）")
+![显示 Visual Studio 2019 中 XAML 代码编辑器的中间窗格的屏幕截图，其中突出显示了窗格右上角的“拆分”按钮。](media/code-editor-split-window-button.png)
 
 有关如何拆分编辑器窗口的详细信息，请参阅[管理编辑器窗口](../ide/how-to-manage-editor-windows.md)页面。
 

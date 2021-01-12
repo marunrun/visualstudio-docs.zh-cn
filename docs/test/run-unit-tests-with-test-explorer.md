@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 58faf100c61a25ae014bdcc0b09d161e924ad5c9
-ms.sourcegitcommit: 21ac4a0c8ffac3964b75604678b12e0955e0159b
+ms.openlocfilehash: b934c6cb7c2a6ba98113a5e68091ab53f54b1423
+ms.sourcegitcommit: d526af3642163180e0cc3e1e73b0a00f02542683
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97098522"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97833359"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>使用测试资源管理器运行单元测试
 
@@ -70,7 +70,7 @@ Visual Studio 包含适用于托管和本机代码的 Microsoft 单元测试框�
 
 - 选择要运行的各个测试，打开选定测试的右键单击菜单，再选择“运行选定测试”。
 
-- 如果各个测试没有防止其以任何顺序运行的依赖项，则可使用工具栏上的 ![UTE&#95;parallelicon&#45;small](../test/media/ute_parallelicon-small.png) 切换按钮来打开并行测试执行。 这可以显著降低运行所有测试所需的时间。
+- 如果各个测试没有防止其以任何顺序运行的依赖项，则可使用工具栏上的 ![Visual Studio 测试资源管理器工具栏上“并行测试执行”切换按钮的屏幕截图。 选择此按钮后，测试将并行运行。](../test/media/ute_parallelicon-small.png) 切换按钮来打开并行测试执行。 这可以显著降低运行所有测试所需的时间。
 
 测试运行时，测试资源管理器窗口顶部的“通过/失败”条将动态显示 。 测试运行结束时，如果所有测试均通过，则“通过/失败”条将变为绿色；如果有测试失败，则变为红色。
 ::: moniker-end
@@ -150,7 +150,7 @@ Visual Studio 包含适用于托管和本机代码的 Microsoft 单元测试框�
 
 你可以定义自己的层次结构级别，然后通过按喜欢的顺序选择“分组依据”选项来依次按“状态”和“类”进行分组 。
 
-![依次按“状态”和“类”分组](../test/media/vs-2019/test-explorer-groupby-state-16-2.png)
+![Visual Studio 测试资源管理器的屏幕截图，其中一个窗格显示测试层次结构，另一个窗格显示“分组依据”菜单，其中选中了“类”和“状态”选项。](../test/media/vs-2019/test-explorer-groupby-state-16-2.png)
 ::: moniker-end
 
 ### <a name="test-explorer-groups"></a>测试资源管理器组
@@ -207,7 +207,7 @@ Visual Studio 包含适用于托管和本机代码的 Microsoft 单元测试框�
 
 若要打开播放列表，请从 Visual Studio 菜单中选择“测试”>“播放列表”，然后从“最近使用的播放列表”列表中选择，或选择“打开播放列表”以指定播放列表的名称和位置。
 
-如果各个测试没有防止其以任何顺序运行的依赖项，则可使用工具栏上的 ![UTE&#95;parallelicon&#45;small](../test/media/ute_parallelicon-small.png) 切换按钮来打开并行测试执行。 这可以显著降低运行所有测试所需的时间。
+如果各个测试没有防止其以任何顺序运行的依赖项，则可使用工具栏上的 ![Visual Studio 测试资源管理器工具栏上“并行测试执行”切换按钮的屏幕截图。](../test/media/ute_parallelicon-small.png) 切换按钮来打开并行测试执行。 这可以显著降低运行所有测试所需的时间。
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 你可以创建和保存想要作为组运行或查看的测试列表。 选择播放列表时，列表中的测试将显示在新的“测试资源管理器”选项卡中。可以将一个测试添加到多个播放列表中。
@@ -264,7 +264,7 @@ Visual Studio 包含适用于托管和本机代码的 Microsoft 单元测试框�
 
 除了特征、堆栈跟踪、错误消息和完全限定名以外，[组](#test-explorer-groups)也可用作测试资源管理器中的列。 默认情况下，大多数列不可见，你可以自定义要显示的列及其显示顺序。
 
-![依次按“状态”和“类”分组](../test/media/vs-2019/test-explorer-columns-16-2.png)
+![Visual Studio 测试资源管理器的屏幕截图，其中显示已选中“列”的菜单和已选中“持续时间”、“特征”和“错误消息”的子菜单。](../test/media/vs-2019/test-explorer-columns-16-2.png)
 
 ### <a name="filter-sort-and-rearrange-test-columns"></a>对测试列进行筛选、排序和重新排列
 

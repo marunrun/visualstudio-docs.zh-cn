@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: b47b59c8d45d76fae1e61584510ae39fe5a91784
-ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
+ms.openlocfilehash: 6e6a37301477b43063169143456fc21a3c783968
+ms.sourcegitcommit: 4976419fae731860295dbcd072e6778832f7255d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94973805"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97917921"
 ---
 # <a name="profile-python-code"></a>分析 Python 代码
 
@@ -32,7 +32,7 @@ ms.locfileid: "94973805"
 ![分析性能报告](media/profiling-results.png)
 
 > [!Note]
-> 目前，Visual Studio 仅支持此级别的全应用程序分析，但是我们当然希望听到你关于未来功能的反馈。 使用此页底部的“产品反馈”  按钮。
+> 分析 Python 应用程序时，Visual Studio 将收集进程生存期的数据。 目前不能暂停分析。 我们希望收到你对未来功能的反馈。 使用此页底部的“产品反馈”  按钮。
 
 ## <a name="profiling-for-ironpython"></a>IronPython 的分析
 

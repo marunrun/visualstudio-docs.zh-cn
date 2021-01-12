@@ -1,5 +1,7 @@
 ---
 title: WCF 调试的限制 | Microsoft Docs
+description: 了解开始调试 WCF 服务的方法、所需条件和调试限制。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e8612bd2423849c61f21a5c184a3e1d39da0302b
-ms.sourcegitcommit: 023f52f10fb91850824558478cbfd2ec965054f0
+ms.openlocfilehash: 30ca43483c352a4f102ab196dc5ea8e8650cdf81
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94407739"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903839"
 ---
 # <a name="limitations-on-wcf-debugging"></a>WCF 调试的限制
 有三种开始 WCF 服务调试的方式：
@@ -32,7 +34,7 @@ ms.locfileid: "94407739"
 
 - 使用“附加到进程”可附加到当前正在运行的服务。 调试将在该服务内部开始。
 
-  本主题描述了有关这些方案的限制。
+本主题描述了有关这些方案的限制。
 
 ## <a name="limitations-on-stepping-into-a-service"></a>单步执行服务的限制
  若要从正在调试的客户端应用程序单步执行服务，必须满足下列条件：

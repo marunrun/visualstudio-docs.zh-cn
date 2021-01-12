@@ -1,5 +1,6 @@
 ---
 title: GPU 使用情况 | Microsoft Docs
+description: 了解如何在性能探查器中使用“GPU 使用情况”工具，更好地了解 Direct3D 应用的高级硬件使用情况。
 ms.date: 11/01/2018
 ms.topic: conceptual
 author: mikejo5000
@@ -7,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1a738490933c6f2d1cdf89e7e974a268540af991
-ms.sourcegitcommit: 14637be49401f56341c93043eab560a4ff6b57f6
+ms.openlocfilehash: a6b143cc0b3001f0a182de43f1b6eea554025eda
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90074964"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815647"
 ---
 # <a name="gpu-usage"></a>GPU 使用情况
 
@@ -62,11 +63,11 @@ ms.locfileid: "90074964"
 
 1. 选择“诊断会话”窗口底部的“停止收集”链接，或选择左上角的“停止”。
 
-   ![“诊断会话”窗口的屏幕截图](media/gfx_diag_gpu_usage_collect.png "gfx_diag_gpu_usage_collect")
+   ![GPU 使用情况工具中诊断会话窗口的屏幕截图，其中显示每秒帧数、GPU 使用率、“停止”按钮和“停止收集”链接。](media/gfx_diag_gpu_usage_collect.png "gfx_diag_gpu_usage_collect")
 
 2. 在报告的顶部，从显示要调查问题的图形中选择一个。 最长可选择 3 秒。 如果选择的部分较长，则会在开头处截断。
 
-   ![“诊断会话”窗口的屏幕截图](media/gfx_diag_gpu_usage_select1.png "gfx_diag_gpu_usage_select1")
+   ![GPU 使用情况工具中诊断会话窗口的屏幕截图，其中选择了部分诊断会话时间线。](media/gfx_diag_gpu_usage_select1.png "gfx_diag_gpu_usage_select1")
 
 3. 若要查看所选部分的详细时间线，请选择报告底部“...单击此处查看此范围内的 GPU 使用情况详细信息”消息中的“查看详细信息”。
 
@@ -84,7 +85,7 @@ ms.locfileid: "90074964"
 
 ## <a name="use-the-gpu-usage-report"></a>使用 GPU 使用情况报告
 
-GPU 使用情况报告的上半部分显示了 CPU 处理活动、GPU 呈现活动和 GPU 复制活动的时间线。 这些时间线由表示显示器垂直同步的浅灰色竖线分隔。 竖线的频率与从中收集 GPU 使用情况数据的显示器之一（使用“显示器”下拉列表选择）的刷新频率一致。
+GPU 使用情况报告的上半部分显示了 CPU 处理活动、GPU 呈现活动和 GPU 复制活动的时间线。 这些时间线由表示显示器垂直同步 (vsync) 的浅灰色竖线分隔。 竖线的频率与从中收集 GPU 使用情况数据的显示器之一（使用“显示器”下拉列表选择）的刷新频率一致。
 
 由于显示器的刷新率可能高于应用的性能目标，因此垂直同步与你希望达到的帧速率不一定具有一一对应关系。 为了达到性能目标，应用必须完成所有处理、执行呈现，并以目标帧速率执行 `Present()` 调用。 不过，已呈现的帧直到 `Present()` 后的下一次垂直同步才会显示。
 

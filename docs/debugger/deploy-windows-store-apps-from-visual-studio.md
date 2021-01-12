@@ -1,6 +1,7 @@
 ---
 title: 部署 UWP 应用 | Microsoft Docs
-ms.custom: seodec18
+description: 从 Visual Studio 部署通用 Windows 平台 (UWP) 应用。 指定本地或远程目标设备以进行部署。 了解部署选项。
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 01/16/2018
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 4c58dbb32ef0a476ac7e22a840e27e389c710f97
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 70b4d862b69eeb34028fb0f782cc5c8d6acbdbce
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73188276"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728195"
 ---
 # <a name="deploy-uwp-apps-from-visual-studio"></a>从 Visual Studio 部署 UWP 应用
 
@@ -41,7 +42,7 @@ Visual Studio 部署功能在目标设备上构建并注册使用 Visual Studio 
 
 1. 如果你要部署到远程设备，请在应用的启动项目的属性项目页中指定设备的名称或 IP 地址。 （执行此操作的步骤在本主题靠后的位置列出)。
 
-2. 在调试器的 Visual Studio 工具栏上，从**开始调试**按钮旁的下拉列表中选择部署目标。
+2. 在调试器的 Visual Studio 工具栏上，从 **开始调试** 按钮旁的下拉列表中选择部署目标。
 
      ![在本地计算机上运行](../debugger/media/vsrun_f5_local.png "VSRUN_F5_Local")
 
@@ -68,13 +69,13 @@ Visual Studio 部署功能在目标设备上构建并注册使用 Visual Studio 
 
 4. 对于“目标设备”，选择“远程计算机”。
 
-5. 在**远程计算机** 下，单击**查找**。
+5. 在 **远程计算机** 下，单击 **查找**。
 
-6. 您可以键入远程设备的名称或 IP 地址，也可以从**远程连接**对话框选择设备。
+6. 您可以键入远程设备的名称或 IP 地址，也可以从 **远程连接** 对话框选择设备。
 
     ![“选择远程调试器连接”对话框](../debugger/media/vsrun_selectremotedebuggerdlg.png "VSRUN_SelectRemoteDebuggerDlg")
 
-    **远程连接**对话框中显示本地网络子网上的设备，和通过以太网电缆直接连接到 Visual Studio 计算机的任何设备。
+    **远程连接** 对话框中显示本地网络子网上的设备，和通过以太网电缆直接连接到 Visual Studio 计算机的任何设备。
 
    在 C++ 项目页中指定远程设备
 
@@ -88,7 +89,7 @@ Visual Studio 部署功能在目标设备上构建并注册使用 Visual Studio 
 
    ![用于远程调试的托管项目属性](../debugger/media/vsrun_managed_projprop_remote.png "VSRUN_Managed_ProjProp_Remote")
 
-9. 对于**目标设备**，选择**远程计算机**。
+9. 对于 **目标设备**，选择 **远程计算机**。
 
 10. 在 **“远程计算机”** 框中输入远程设备的网络名称，或单击 **“查找”** ，从 **“选择远程调试器连接”** 对话框中选择该设备。
 

@@ -8,12 +8,12 @@ ms.topic: include
 ms.date: 05/23/2018
 ms.author: mikejo
 ms.custom: include file
-ms.openlocfilehash: 3fa0569739ee81ec4b2aa0eec8157068ffc949cd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1d049bc8b74b83028e04fe92e7ce96f45907d042
+ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89323641"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97762588"
 ---
 1. 在“解决方案资源管理器”  中，右键单击项目节点并选择“发布”  （对于 Web Forms，选择“发布 Web 应用”  ）。
 
@@ -21,7 +21,7 @@ ms.locfileid: "89323641"
 
 1. 在“发布”  对话框中，选择“文件夹”  ，单击“浏览”  ，然后创建一个新文件夹“C:\Publish”  。
 
-    ![RemoteDBG_Publish_Local](../media/remotedbg_publish_local.png "RemoteDBG_Publish_Local")
+    ![Visual Studio 中“选取发布目标”对话框的屏幕截图，其中选择了文件夹“bin\Release\Publish”作为发布目标。](../media/remotedbg_publish_local.png)
 
     对于 Web Forms 应用，请在“发布”对话框中选择“自定义”  ，输入配置文件名称，然后选择“确定”  。
 
@@ -36,7 +36,7 @@ ms.locfileid: "89323641"
 
 1. 单击“发布”  。
 
-    ![RemoteDBG_Publish_Debug_Config](../media/remotedbg_publish_debug_config.png "RemoteDBG_Publish_Debug_Config")
+    ![“发布”对话框中“设置”选项卡的屏幕截图。 “配置”设置为“调试”，并选中了“发布”按钮。](../media/remotedbg_publish_debug_config.png)
 
     应用程序将项目的“调试”  配置发布到本地文件夹。 “输出”窗口中将显示进度。
 

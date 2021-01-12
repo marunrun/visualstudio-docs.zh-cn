@@ -1,6 +1,8 @@
 ---
 title: 尝试联系远程计算机时出现 DCOM 错误。 拒绝访问。
 titleSuffix: ''
+description: “尝试联系远程计算机时出现 DCOM 错误。 拒绝访问。” 查看有关此 Visual Studio 远程调试错误引用的信息。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -21,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 093f2e46178d8734e7499c9f7a340396bbbdc9ed
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: c430462a224cb4604c09984a5397e540ce752b8a
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851627"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729192"
 ---
 # <a name="a-dcom-error-occurred-trying-to-contact-the-remote-computer-access-is-denied"></a>尝试联系远程计算机时出现 DCOM 错误。 拒绝访问。
 在以下情况下，远程调试使用 DCOM 在本地和远程计算机之间进行通信：

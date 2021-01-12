@@ -1,5 +1,7 @@
 ---
 title: 使用实时调试器进行调试 | Microsoft Docs
+description: 在 Visual Studio 中使用实时调试器进行调试。 实时调试可以在应用发生错误或崩溃时自动启动 Visual Studio。
+ms.custom: SEO-VS-2020
 ms.date: 09/24/2018
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 40b6a0e43a8d0980615087c946e5dd14deef1b0b
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.openlocfilehash: a03afa64d19e3ccd0efbb170b4305049f6bfee30
+ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85350571"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97761337"
 ---
 # <a name="debug-using-the-just-in-time-debugger-in-visual-studio"></a>在 Visual Studio 中使用实时调试器进行调试
 
@@ -29,7 +31,7 @@ ms.locfileid: "85350571"
 ## <a name="enable-or-disable-just-in-time-debugging-in-visual-studio"></a><a name="BKMK_Enabling"></a> 在 Visual Studio 中启用或禁用实时调试
 
 >[!NOTE]
->若要启用或禁用实时调试，必须以管理员身份运行 Visual Studio。 启用或禁用实时调试会设置一个注册表项，可能需要管理员权限来更改此注册表项。 若要以管理员身份打开 Visual Studio，右键单击 Visual Studio 应用程序，然后选择**以管理员身份运行**。
+>若要启用或禁用实时调试，必须以管理员身份运行 Visual Studio。 启用或禁用实时调试会设置一个注册表项，可能需要管理员权限来更改此注册表项。 若要以管理员身份打开 Visual Studio，右键单击 Visual Studio 应用程序，然后选择 **以管理员身份运行**。
 
 可从 Visual Studio 的“工具” > “选项”（或“调试” > “选项”）对话框中配置实时调试。
 
@@ -124,15 +126,15 @@ ms.locfileid: "85350571"
 
    有关生成配置的详细信息，请参阅[了解生成配置](../ide/understanding-build-configurations.md)。
 
-1. 在 C# 项目文件夹 ( *...\ThrowsNullException\ThrowsNullException\bin\Debug*或 *...\ThrowsNullException\ThrowsNullException\bin\Release*) 中打开生成的应用 *ThrowsNullException.exe*。
+1. 在 C# 项目文件夹 ( *...\ThrowsNullException\ThrowsNullException\bin\Debug* 或 *...\ThrowsNullException\ThrowsNullException\bin\Release*) 中打开生成的应用 *ThrowsNullException.exe*。
 
    应看到以下命令窗口：
 
-   ![ThrowsNullExceptionConsole](../debugger/media/throwsnullexceptionconsole.png "ThrowsNullExceptionConsole")
+   ![ThrowsNullException.exe 控制台的屏幕截图，其中引发了一个未处理的空引用异常 (System.NullReferenceException)。](../debugger/media/throwsnullexceptionconsole.png)
 
 1. “选择实时调试器”对话框将打开。
 
-   ![JustInTimeDialog](../debugger/media/justintimedialog.png "JustInTimeDialog")
+   ![“选择实时调试器”对话框的屏幕截图，该对话框在 ThrowsNullException.exe 控制台窗口中出现异常之后显示。](../debugger/media/justintimedialog.png)
 
    在“可用调试器”下，选择“\<your preferred Visual Studio version/edition> 的新实例”（如果尚未选择） 。
 
@@ -140,7 +142,7 @@ ms.locfileid: "85350571"
 
    ThrowsNullException 项目会在 Visual Studio 的新实例中打开，并在引发异常的代码行处停止执行：
 
-   ![NullReferenceSecondInstance](../debugger/media/nullreferencesecondinstance.png "NullReferenceSecondInstance")
+   ![Visual Studio 中 ThrowsNullException 项目的屏幕截图，其中突出显示了引发异常的源代码行。](../debugger/media/nullreferencesecondinstance.png)
 
 可以从此时开始调试。 如果调试的是真实应用，则需要找出代码引发异常的原因。
 

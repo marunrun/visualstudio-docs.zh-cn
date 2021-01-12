@@ -10,12 +10,12 @@ ms.date: 11/13/2017
 ms.topic: how-to
 ms.workload:
 - multiple
-ms.openlocfilehash: 4bcc1932bad5b34d9695257feb163654f6b99514
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a6813e834af00330b4018f16d4a19be945be2be9
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85371620"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726639"
 ---
 # <a name="create-an-ai-project-from-the-azure-machine-learning-gallery-in-visual-studio"></a>在 Visual Studio 中通过 Azure 机器学习库创建 AI 项目
 
@@ -52,12 +52,12 @@ Azure 机器学习与 Visual Studio Tools for AI 集成在一起。 可以使用
 
 5. Visual Studio 随即创建项目文件（磁盘上的 `.pyproj` 文件）以及示例中定义的其他文件。 对于“MNIST”模板，项目包含多个文件。
 
-    ![mnist](media/create-project-gallery/azml-mnist.png)
+    ![Visual Studio 解决方案资源管理器的屏幕截图，其中显示了 TensorFlowMNIST 项目的文件。 主窗口中显示 tf_mnist.py 的代码。](media/create-project-gallery/azml-mnist.png)
 
 6. 将作业提交到 Azure 机器学习。
 
-    ![mnist](media/create-project-gallery/submit-azml.png)
+    ![Visual Studio 解决方案资源管理器的屏幕截图，其中显示已选中“提交作业…”的 TensorFlowMNIST 项目的上下文菜单。](media/create-project-gallery/submit-azml.png)
 
 7. 在 Docker 容器中或本地计算机上运行
 
-    ![mnist](media/create-project-gallery/azml-local.png)
+    ![“提交作业”对话框的屏幕截图，其中将“使用群集”设置为“azureml:/local”，并将“启动脚本”设置为“tf_mnist.py”。](media/create-project-gallery/azml-local.png)

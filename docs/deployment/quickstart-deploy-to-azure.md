@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - azure
-ms.openlocfilehash: 83446ab87af07e3ac46594beeecec781f596ecff
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: cf32e0aa1f19bb4398bc5600ae7fc9fbf151c76c
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94349576"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815589"
 ---
 # <a name="publish-a-web-app-to-azure-app-service-using-visual-studio"></a>使用 Visual Studio 将 Web 应用发布到 Azure 应用服务
 
@@ -53,11 +53,11 @@ ms.locfileid: "94349576"
 
 1. 在“创建 Azure 应用服务(Windows)”对话框中，填写“应用名称”、“资源组”和“应用服务计划”输入字段   。 可以保留这些名称，也可以进行更改。 准备就绪后，选择“创建”。
 
-    ![选择 Azure 应用服务](../deployment/media/quickstart-publish-windows-create-new-dialog.png)
+    ![“创建 Azure 应用服务(Windows)”对话框的屏幕截图，其中已填写“名称”、“订阅”、“资源组”和“托管计划”字段。](../deployment/media/quickstart-publish-windows-create-new-dialog.png)
 
 1. 在“发布”对话框中，将自动选择新创建的实例。 准备就绪后，选择“完成”。
 
-    ![选择 Azure 应用服务](../deployment/media/quickstart-publish-windows-select-instance.png)
+    ![从 Visual Studio 解决方案资源管理器访问的“发布”窗口的屏幕截图。 选择 Azure 作为发布目标。](../deployment/media/quickstart-publish-windows-select-instance.png)
 
 1. 选择“发布”。 Visual Studio 将应用部署到 Azure 应用服务，并且 Web 应用将在浏览器中加载。 项目属性“发布”窗格显示了站点 URL 和其他详细信息。
 

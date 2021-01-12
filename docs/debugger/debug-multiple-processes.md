@@ -1,5 +1,7 @@
 ---
 title: 调试多个进程 | Microsoft Docs
+description: 在 Visual Studio 中调试多个进程。 启动和切换进程，中断、继续、逐步执行源代码以及结束单个进程或与进程分离。
+ms.custom: SEO-VS-2020
 ms.date: 11/20/2018
 ms.topic: how-to
 f1_keywords:
@@ -19,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 94a61e0083b17fa095b419a2066a4f8b9c39dfb7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 214025c2d128443223594fdb00fcf730e5a8091a
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350597"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728626"
 ---
 # <a name="debug-multiple-processes-c-visual-basic-c"></a>调试多个进程（C#、Visual Basic、C++）
 

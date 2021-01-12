@@ -12,12 +12,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: f5eff2257988a4210e7f4cd8a8a37c66c57c185d
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: 0029321ddfc3ff12bb9c40dac9de64a9eb067a95
+ms.sourcegitcommit: 4e28314dc2be59b4c5fd44545c0653f625e74489
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96328686"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97756638"
 ---
 # <a name="first-look-at-testing-tools-in-visual-studio"></a>首先介绍 Visual Studio 中的测试工具
 
@@ -51,11 +51,17 @@ Visual Studio 也可扩展，并支持第三方单元测试适配器，如 NUnit
 
 [Live Unit Testing](../test/live-unit-testing.md) 会自动在后台运行单元测试，并在 Visual Studio 代码编辑器中以图形方式显示代码覆盖率和测试结果。
 
+> [!NOTE]
+> Live Unit Testing 仅在企业版中提供，并且仅支持 .NET 代码。
+
 ## <a name="intellitest"></a>IntelliTest
 
 IntelliTest 会自动为托管代码生成单元测试和测试数据。 IntelliTest 提高了覆盖率且大大减少了创建和维护新代码或现有代码的单元测试的工作量。
 
 ![操作中的 IntelliTest](media/devtest-intellitest.png)
+
+> [!NOTE]
+> 只有企业版提供 IntelliTest。 面向 .NET Framework 的 C# 代码支持它。 当前不支持 .NET Core 和 .NET Standard。
 
 * [使用 IntelliTest 为代码生成单元测试](generate-unit-tests-for-your-code-with-intellitest.md)
 * [IntelliTest – One test to rule them all](https://devblogs.microsoft.com/devops/intellitest-one-test-to-rule-them-all/)（IntelliTest - 一个测试掌控所有情况）
@@ -64,6 +70,9 @@ IntelliTest 会自动为托管代码生成单元测试和测试数据。 Intelli
 ## <a name="code-coverage"></a>代码覆盖率
 
 [代码覆盖率](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)确定正在由编码的测试（例如单元测试）实际进行测试的项目代码的比例。 若要有效防止 Bug，测试应作用于或“覆盖”你的大部分代码。
+
+> [!NOTE]
+> 只有企业版中提供代码覆盖率。
 
 可将代码覆盖率分析应用于托管和非托管（本机）代码。
 
@@ -77,9 +86,15 @@ IntelliTest 会自动为托管代码生成单元测试和测试数据。 Intelli
 
 [Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md) 将应用程序的其余部分替换为存根或填充码，有助于隔离受测代码。
 
+> [!NOTE]
+> Microsoft Fakes 仅在企业版中提供，并且仅支持 .NET 代码。
+
 ## <a name="user-interface-testing-with-coded-ui-and-selenium"></a>通过编码的 UI 和 Selenium 进行用户界面测试
 
 编码的 UI 测试提供了一种方法来创建完全自动化的测试，用来验证应用程序用户界面的功能和行为。 它们可在各种技术（包括基于 XAML 的 UWP 应用、浏览器应用和 SharePoint 应用）中自动进行 UI 测试。
+
+> [!NOTE]
+> 编码的 UI 是已弃用的功能。
 
 无论选择最适用的编码 UI 测试还是使用 Selenium 进行的基于泛型浏览器的 UI 测试，Visual Studio 均提供所有所需的工具。
 
@@ -89,10 +104,6 @@ IntelliTest 会自动为托管代码生成单元测试和测试数据。 Intelli
 * [创建、编辑和维护编码的 UI 测试入门](walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)
 * [使用编码的 UI 测试来测试 UWP 应用](test-uwp-app-with-coded-ui-test.md)
 * [使用 Visual Studio Enterprise（实验室）进行编码的 UI 测试简介](https://www.boost.org/doc/libs/1_71_0/libs/test/doc/html/index.html)
-
-## <a name="load-testing"></a>负载测试
-
-[负载测试](../test/quickstart-create-a-load-test-project.md)通过运行单元测试和 Web 性能测试来模拟服务器应用程序上的负载。
 
 ## <a name="related-scenarios"></a>相关方案
 

@@ -1,6 +1,6 @@
 ---
 title: 调试实时 ASP.NET Azure VM 和规模集
-description: 了解如何使用 Snapshot Debugger 设置快照点并查看快照。
+description: 了解如何在 Azure VM 和规模集上调试实时 ASP.NET 应用时使用 Visual Studio 中的 Snapshot Debugger 来设置快照点并拍摄快照。
 ms.custom: SEO-VS-2020
 ms.date: 02/06/2019
 ms.topic: how-to
@@ -13,12 +13,12 @@ monikerRange: '>= vs-2019'
 ms.workload:
 - aspnet
 - azure
-ms.openlocfilehash: 040fdee43262279a834978a4619b62fb62b10345
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 9ed85616080859cd69c44c66b442f3f46d81f51a
+ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809552"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97846951"
 ---
 # <a name="debug-live-aspnet-apps-on-azure-virtual-machines-and-azure-virtual-machine-scale-sets-using-the-snapshot-debugger"></a>使用 Snapshot Debugger 在 Azure 虚拟机和 Azure 虚拟机规模集上调试实时 ASP.NET 应用
 

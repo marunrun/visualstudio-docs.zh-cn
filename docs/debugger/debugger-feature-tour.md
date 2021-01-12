@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ffaeff850c739cd81569a88ae980acf837c413c1
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: c6d451735042374f0e3c6fb2154cd54520a069fc
+ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84184206"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97761428"
 ---
 # <a name="first-look-at-the-visual-studio-debugger"></a>初步了解 Visual Studio 调试器
 
@@ -64,17 +64,17 @@ F11 是一种以最详尽方式检查执行流的好方法。 （为了更快地
 
 右键单击属性或字段，选择“单步执行特定内容”，然后选择一个可用选项。
 
-![单步执行特定内容](../debugger/media/dbg-tour-step-into-specific.png "单步执行特定内容")
+![Visual Studio 调试器的屏幕截图，其中突出显示了一个代码行。 在上下文菜单上选中了“单步执行特定内容”，并且已选择 Path.set 方法。](../debugger/media/dbg-tour-step-into-specific.png)
 
 在此示例中，通过“单步执行特定内容”将转到 `Path.set` 的代码。
 
-![单步执行特定内容](../debugger/media/dbg-tour-step-into-specific-2.png "单步执行特定内容")
+![显示 Path.set 代码的 Visual Studio 调试器屏幕截图。 set 函数周围的大括号以黄色突出显示。](../debugger/media/dbg-tour-step-into-specific-2.png)
 
 ## <a name="run-to-a-point-in-your-code-quickly-using-the-mouse"></a>使用鼠标快速运行到代码中的某个点
 
-在调试器中，将鼠标悬停在代码行上，直到“运行到单击处”（将执行运行到此处）按钮![运行到单击处](../debugger/media/dbg-tour-run-to-click.png "运行时单击")出现在左侧。
+在调试器中，将鼠标悬停在代码行上，直到“运行到单击处”（将执行运行到此处）按钮 ![Visual Studio 调试器中的“运行到单击处”按钮的屏幕截图。 此按钮指示执行应该运行到按钮所在的行。](../debugger/media/dbg-tour-run-to-click.png) 显示在左侧。
 
-![运行到单击处](../debugger/media/dbg-tour-run-to-click-2.png "运行时单击")
+![Visual Studio 调试器的屏幕截图，其中显示“运行到单击处”按钮出现在 Update 函数的调用的左侧。](../debugger/media/dbg-tour-run-to-click-2.png)
 
 > [!NOTE]
 > 自 [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] 起，可用使用“运行到单击位置”（将执行运行到此处）按钮。

@@ -11,20 +11,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8afbc73e8c778829a9a1ce5a59d30df6de2f0daa
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+ms.openlocfilehash: c9bdbd545a3509927dd13a800e22b9aaaab2cb2b
+ms.sourcegitcommit: 4e28314dc2be59b4c5fd44545c0653f625e74489
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95441854"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97756625"
 ---
-# <a name="create-unit-test-method-stubs-with-the-create-unit-tests-command"></a>使用“创建单元测试”命令创建单元测试方法存根
+# <a name="create-unit-test-method-stubs-from-code"></a>从代码创建单元测试方法存根
 
 “创建单元测试”命令创建单元测试方法存根  。 借助此功能，可以轻松地配置测试项目、测试类和其中的测试方法存根。
 
 ::: moniker range="vs-2017"
 > [!NOTE]
-> “创建单元测试”菜单命令仅适用于面向 .NET Framework（但不是 .NET Core）的 C# 代码  。
+> “创建单元测试”菜单命令仅适用于面向 .NET Framework（但不是 .NET Core 或 .NET Standard）的 C# 代码。
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 > [!NOTE]
@@ -38,6 +38,8 @@ ms.locfileid: "95441854"
 首先，在代码编辑器中选择要测试项目中的方法、类型或命名空间，右键单击，然后选择“创建单元测试”  。 “创建单元测试”对话框随即打开，可在其中配置创建测试的方式  。
 
 ![使用“创建单元测试”命令](media/createunittestcommand.png)
+
+如果未显示用于 NUnit 或 xUnit 的测试框架选项，请参阅[使用第三方单元测试框架](#use-third-party-unit-test-frameworks)。
 
 ## <a name="set-unit-test-traits"></a>设置单元测试特征
 

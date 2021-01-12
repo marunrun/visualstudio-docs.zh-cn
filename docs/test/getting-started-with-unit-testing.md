@@ -1,9 +1,9 @@
 ---
 title: 单元测试入门
-description: 使用 Visual Studio 定义和运行单元测试，使代码保持正常运行、确保代码覆盖率并在客户之前找到错误和缺陷。
+description: 使用 Visual Studio 定义和运行单元测试，使代码保持正常运行并在客户之前找到错误和缺陷。
 ms.custom: SEO-VS-2020
 ms.date: 04/07/2020
-ms.topic: conceptual
+ms.topic: tutorial
 helpviewer_keywords:
 - unit testing, create unit test plans
 author: mikejo5000
@@ -11,16 +11,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3daff1a7b7c2e62b4ca4a508c5c8dd31261a40dd
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+ms.openlocfilehash: 31314a669815d38ed408a28e033e4943df0f75d3
+ms.sourcegitcommit: 4e28314dc2be59b4c5fd44545c0653f625e74489
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95441776"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97756651"
 ---
 # <a name="get-started-with-unit-testing"></a>单元测试入门
 
 使用 Visual Studio 定义和运行单元测试，使代码保持正常运行、确保代码覆盖率并在客户之前找到错误和缺陷。 经常运行单元测试，确保代码正常运行。
+
+在本文中，代码和图例使用 C#，但是概念和特征适用于 .NET 语言、C++、Python、JavaScript 和 TypeScript。
 
 ## <a name="create-unit-tests"></a>创建单元测试
 
@@ -28,7 +30,7 @@ ms.locfileid: "95441776"
 
 1. 在 Visual Studio 中，打开要测试的项目。
 
-   为了演示示例单元测试，本文测试了简单的“Hello World”项目（名为“HelloWorldCore”）。 此类项目的示例代码如下所示：
+   出于演示示例单元测试的目的，本文测试简单的“Hello World”C# 项目（名为“HelloWorldCore”）。 此类项目的示例代码如下所示：
 
    ```csharp
    namespace HelloWorldCore
@@ -44,7 +46,14 @@ ms.locfileid: "95441776"
 
 1. 在“解决方案资源管理器”中，选择解决方案节点。 然后，在顶部菜单栏中，选择“文件” > “添加” > “新项目”  。
 
-1. 在新项目对话框中，找到并选择要使用的测试框架的单元测试项目模板。
+1. 在新项目对话框中，找到要使用的测试框架的单元测试项目模板（如 MSTest），并选择它。
+
+   从 Visual Studio 2017 14.8 版本开始，.NET 语言包括适用于 NUnit 和 xUnit 的内置模板。 对于 C++，需要选择该语言支持的测试框架。 对于 Python，请参阅[在 Python 代码中设置单元测试](../python/unit-testing-python-in-visual-studio.md)以设置测试项目。
+
+   > [!TIP]
+   > 对于 C#，可以使用更快的方法基于代码创建单元测试项目。 有关详细信息，请参阅[创建单元测试项目和测试方法](../test/unit-test-basics.md#create-unit-test-projects-and-test-methods)。 若要将此方法与 .NET Core 或 .NET Standard 一起使用，需要 Visual Studio 2019。
+
+   下图显示了 .NET 中支持的 MSTest 单元测试。
 
    ::: moniker range=">=vs-2019"
 
@@ -58,7 +67,7 @@ ms.locfileid: "95441776"
 
    ![Visual Studio 2019 中的单元测试项目模板](media/mstest-test-project-template.png)
 
-   选择测试项目的名称，然后单击“确定”。
+   选择测试项目的名称（例如 HelloWorldTests），然后单击“确定”。
 
    ::: moniker-end
 
@@ -74,7 +83,9 @@ ms.locfileid: "95441776"
 
 1. 向单元测试方法添加代码。
 
-   例如，对于 MSTest 项目，可以使用以下代码。
+   例如，你可以通过选择与测试框架匹配的正确文档选项卡来使用以下代码：MSTest、NUnit 或 xUnit（仅在 .NET 上受支持）。
+
+   # <a name="mstest"></a>[MSTest](#tab/mstest)
 
    ```csharp
    using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -103,7 +114,7 @@ ms.locfileid: "95441776"
    }
    ```
 
-   或者，对于 NUnit 项目，可以使用以下代码。
+   # <a name="nunit"></a>[NUnit](#tab/nunit)
 
    ```csharp
    using NUnit.Framework;
@@ -136,8 +147,33 @@ ms.locfileid: "95441776"
    }
    ```
 
-> [!TIP]
-> 有关创建单元测试的更详细信息，请参阅[创建并运行托管代码的单元测试](walkthrough-creating-and-running-unit-tests-for-managed-code.md)。
+    # <a name="xunit"></a>[xUnit](#tab/xunit)
+
+    ```csharp
+    using System;
+    using Xunit;
+    using System.IO;
+    
+    namespace HelloWorldTests
+    {
+        public class UnitTest1
+        {
+            private const string Expected = "Hello World!";
+            [Fact]
+            public void Test1()
+            {
+                using (var sw = new StringWriter())
+                {
+                    Console.SetOut(sw);
+                    HelloWorldCore.Program.Main();
+    
+                    var result = sw.ToString().Trim();
+                    Assert.Equal(Expected, result);
+                }
+            }
+        }
+    }
+    ```
 
 ## <a name="run-unit-tests"></a>运行单元测试
 
@@ -161,12 +197,12 @@ ms.locfileid: "95441776"
 > [!TIP]
 > 可以使用[测试资源管理器](../test/run-unit-tests-with-test-explorer.md)从内置测试框架 (MSTest) 或第三方测试框架运行单元测试。 可以将测试分组为不同类别、筛选测试列表，以及创建、保存和运行测试播放列表。 你还可以调试测试并分析测试性能和代码覆盖率。
 
-## <a name="view-live-unit-test-results"></a>查看实时单元测试结果
+## <a name="view-live-unit-test-results-visual-studio-enterprise"></a>查看实时单元测试结果 (Visual Studio Enterprise)
 
 如果在 Visual Studio 2017 或更高版本中使用 MSTest、xUnit 或 NUnit 测试框架，可查看单元测试的实时结果。
 
 > [!NOTE]
-> 只有企业版中提供 Live Unit Testing 功能。
+> 若要执行这些步骤，需要 Visual Studio Enterprise。
 
 1. 选择“测试” > “Live Unit Testing” > “启动”，从“测试”菜单启用 Live Unit Testing。
 
@@ -192,30 +228,25 @@ ms.locfileid: "95441776"
 
 有关 Live Unit Testing 的详细信息，请参阅 [Live Unit Testing](../test/live-unit-testing-intro.md)。
 
-## <a name="generate-unit-tests-with-intellitest"></a>使用 IntelliTest 生成单元测试
-
-运行 IntelliTest 时，可以看到哪些测试会失败，并可添加任何必要的代码来修复它们。 你可选择要保存到测试项目中的已生成测试，以提供回归套件。 当你更改代码时，重新运行 IntelliTest，以使生成的测试与你的代码更改同步。 若要了解如何操作，请参阅[使用 IntelliTest 为你的代码生成单元测试](../test/generate-unit-tests-for-your-code-with-intellitest.md)。
-
-> [!TIP]
-> IntelliTest 仅适用于面向 .NET Framework 的托管代码。
-
-![使用 IntelliTest 生成单元测试](media/intellitest.png)
-
-## <a name="analyze-code-coverage"></a>分析代码覆盖率
-
-若要确定正在由编码的测试（例如单元测试）实际进行测试的项目代码的比例，则可以使用 Visual Studio 的代码覆盖率功能。 若要有效防止 Bug，测试应作用于你的大部分代码。 若要了解如何操作，请参阅[使用代码覆盖率确定所测试的代码量](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)。
-
 ## <a name="use-a-third-party-test-framework"></a>使用第三方测试框架
 
-通过使用第三方测试框架（如 Boost、Google、和 NUnit），可以在 Visual Studio 中运行单元测试。 使用 NuGet 包管理器为所选框架安装 NuGet 包。 或者，对于 NUnit 和 xUnit 测试框架，Visual Studio 包含预配置的测试项目模板，其中包含必要的 NuGet 包。
+通过使用第三方测试框架（如 Boost、Google、和 NUnit），可以在 Visual Studio 中运行单元测试，具体取决于你的编程语言。 使用第三方框架：
 
-创建使用 [NUnit](https://nunit.org/) 的单元测试：
+- 使用 NuGet 包管理器为所选框架安装 NuGet 包  。
+
+- (.NET) 从 Visual Studio 2017 14.6 版本开始，Visual Studio 包括适用于 NUnit 和 xUnit 测试框架的预配置测试项目模板。 这些模板还包括必要的 NuGet 包以实现支持。
+
+- (C++) 在 Visual Studio 2017 及更高版本中，已经包含了一些类似 Boost 的框架。 有关详细信息，请参阅[在 Visual Studio 中编写适用于 C/C++ 的单元测试](../test/writing-unit-tests-for-c-cpp.md)。
+
+添加单元测试项目：
 
 1. 打开包含待测试代码的解决方案。
 
 2. 右键单击“解决方案资源管理器”中的解决方案，然后选择“添加” > “新建项目”。
 
-3. 选择“NUnit 测试项目”项目模板。
+3. 选择单元测试项目模板。
+
+   在本例中，选择 [NUnit](https://nunit.org/)
 
    ::: moniker range=">=vs-2019"
 
@@ -245,10 +276,10 @@ ms.locfileid: "95441776"
 
 6. 从测试资源管理器运行测试，或右键单击测试代码并选择“运行测试”。
 
-## <a name="see-also"></a>另请参阅
+## <a name="next-steps"></a>后续步骤
 
-* [演练：创建并运行托管代码的单元测试](walkthrough-creating-and-running-unit-tests-for-managed-code.md)
-* [创建单元测试命令](create-unit-tests-menu.md)
-* [使用 IntelliTest 生成测试](generate-unit-tests-for-your-code-with-intellitest.md)
-* [使用测试资源管理器运行测试](run-unit-tests-with-test-explorer.md)
-* [分析代码覆盖率](using-code-coverage-to-determine-how-much-code-is-being-tested.md)
+> [!div class="nextstepaction"]
+> [单元测试基础知识](../test/unit-test-basics.md)
+
+> [!div class="nextstepaction"]
+> [创建并运行托管代码的单元测试](walkthrough-creating-and-running-unit-tests-for-managed-code.md)

@@ -14,12 +14,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 1873c11d8f2e6243a0dc0f867e579f1927cd1607
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 7e7c6eec178d0ba3b2934e390cc02310044c4dfa
+ms.sourcegitcommit: d526af3642163180e0cc3e1e73b0a00f02542683
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "77579959"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97833346"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-aspnet-core-web-app"></a>快速入门：使用 Visual Studio 创建首个 ASP.NET Core Web 应用
 
@@ -124,29 +124,29 @@ ms.locfileid: "77579959"
 
 1. 在“解决方案资源管理器”中，展开“Pages”文件夹，然后选择“About.cshtml”    。
 
-   ![从“解决方案资源管理器”中选择 About.cshtml 文件](../ide/media/csharp-aspnet-about-page-html-file.png)
+   ![Visual Studio 解决方案资源管理器的屏幕截图，其中显示了 HelloWorld 项目中的文件。 展开了“Pages”文件夹，并选中了“About.cshtml”。](../ide/media/csharp-aspnet-about-page-html-file.png)
 
-   此文件对应于 Web 应用中名为“关于”的页  ，该页在 Web 浏览器中运行。
+   此文件对应于 Web 应用中名为“关于”的页，该页在 Web 浏览器中运行。
 
    ![Web 应用中的“About”页](../ide/media/csharp-aspnet-about-page.png)
 
-   在编辑器中，你将看到“About”  页的“其他信息”区域的 HTML 代码。
+   在编辑器中，你将看到“About”页的“其他信息”区域的 HTML 代码。
 
    ![Visual Studio 编辑器中“其他信息”区域的 HTML 代码](../ide/media/csharp-aspnet-about-cshtml-page.png)
 
-1. 将“其他信息”文本更改为“Hello World!”。 
+1. 将“其他信息”文本更改为“Hello World!”。
 
    ![更改 Visual Studio 编辑器中“其他信息”区域的默认 HTML 代码](../ide/media/csharp-aspnet-about-cshtml-page-hello-world.png)
 
-1. 在“解决方案资源管理器”中，展开“About.cshtml”，然后选择“About.cshtml.cs”    。 （此文件也对应于 web 浏览器中的“关于”  页。）
+1. 在“解决方案资源管理器”中，展开“About.cshtml”，然后选择“About.cshtml.cs”。 （此文件也对应于 web 浏览器中的“关于”页。）
 
-   ![从“解决方案资源管理器”中选择 About.cshtml 文件](../ide/media/csharp-aspnet-about-page-code-file.png)
+   ![Visual Studio 解决方案资源管理器的屏幕截图，其中显示了 HelloWorld 项目中的文件。 展开了“About.cshtml”，并选中了“About.cshtml.cs”。](../ide/media/csharp-aspnet-about-page-code-file.png)
 
-   在编辑器中，你将看到包含“关于”  页的“应用程序说明”区域的文本的 C# 代码。
+   在编辑器中，你将看到包含“关于”页的“应用程序说明”区域的文本的 C# 代码。
 
    ![Visual Studio 编辑器中“应用程序说明”区域的 C# 代码](../ide/media/csharp-aspnet-about-cshtml-cs-code.png)
 
-1. 将“应用程序说明”消息文本更改为“我的消息是什么？  ”。
+1. 将“应用程序说明”消息文本更改为“我的消息是什么？”。
 
    ![更改 Visual Studio 编辑器中“应用程序说明”区域的默认消息文本](../ide/media/csharp-aspnet-about-cshtml-cs-message.png)
 
@@ -155,9 +155,9 @@ ms.locfileid: "77579959"
    ![在 Visual Studio 中选择“IIS Express”按钮](../ide/media/csharp-aspnet-helloworld-iisbutton.png)
 
    > [!NOTE]
-   > 如果收到错误消息“无法连接到 Web 服务器 "IIS Express"”，或者收到提及 SSL 证书的错误消息，请关闭 Visual Studio  。 接下来，右键单击上下文菜单，使用其中的“以管理员身份运行”选项打开 Visual Studio  。 然后，再次运行应用。
+   > 如果收到错误消息“无法连接到 Web 服务器 "IIS Express"”，或者收到提及 SSL 证书的错误消息，请关闭 Visual Studio。 接下来，右键单击上下文菜单，使用其中的“以管理员身份运行”选项打开 Visual Studio。 然后，再次运行应用。
 
-1. 在 Web 浏览器中，验证“关于”页是否包含更新的文本  。
+1. 在 Web 浏览器中，验证“关于”页是否包含更新的文本。
 
    ![查看更新的“关于”页，其中包含你所做的更改](../ide/media/csharp-aspnet-about-page-hello-world.png)
 
@@ -175,19 +175,19 @@ ms.locfileid: "77579959"
 
 ::: moniker range="vs-2019"
 
-1. 在解决方案资源管理器中，展开“Pages”文件夹，然后选择“Index.cshtml”    。
+1. 在解决方案资源管理器中，展开“Pages”文件夹，然后选择“Index.cshtml”。
 
    ![从解决方案资源管理器中选择 Index.cshtml 文件](../ide/media/vs-2019/csharp-aspnet-index-page-cshtml-file.png)
 
-   此文件与 Web 应用中名为“主页”的页面相对应，该页在 Web 浏览器中运行  。
+   此文件与 Web 应用中名为“主页”的页面相对应，该页在 Web 浏览器中运行。
 
    ![Web 应用中的“About”页](../ide/media/vs-2019/csharp-aspnet-index-page.png)
 
-   在编辑器，你将看到主页上显示的文本的 HTML 代码  。
+   在编辑器，你将看到主页上显示的文本的 HTML 代码。
 
    ![Visual Studio 编辑器中主页的 Index.cshtml 文件中的 HTML 代码](../ide/media/vs-2019/csharp-aspnet-index-cshtml-page.png)
 
-1. 更改“欢迎”文本，使其读作“Hello World!”  。
+1. 更改“欢迎”文本，使其读作“Hello World!”。
 
    ![在 Visual Studio 编辑器中，更改默认 HTML 代码，使其不显示“欢迎”一词而是显示“Hello World”](../ide/media/vs-2019/csharp-aspnet-index-cshtml-page-hello-world.png)
 
@@ -196,9 +196,9 @@ ms.locfileid: "77579959"
    ![在 Visual Studio 中选择“IIS Express”按钮](../ide/media/vs-2019/csharp-aspnet-generic-iisbutton.png)
 
    > [!NOTE]
-   > 如果收到错误消息“无法连接到 Web 服务器 "IIS Express"”，或者收到提及 SSL 证书的错误消息，请关闭 Visual Studio  。 接下来，右键单击上下文菜单，使用其中的“以管理员身份运行”选项打开 Visual Studio  。 然后，再次运行应用。
+   > 如果收到错误消息“无法连接到 Web 服务器 "IIS Express"”，或者收到提及 SSL 证书的错误消息，请关闭 Visual Studio。 接下来，右键单击上下文菜单，使用其中的“以管理员身份运行”选项打开 Visual Studio。 然后，再次运行应用。
 
-1. 在 Web 浏览器中，验证主页是否包含更新后的文本  。
+1. 在 Web 浏览器中，验证主页是否包含更新后的文本。
 
    ![查看更新后的主页，其中包含你所做的更改](../ide/media/vs-2019/csharp-aspnet-index-page-hello-world.png)
 

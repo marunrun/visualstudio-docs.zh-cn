@@ -7,12 +7,12 @@ ms.author: ghogen
 ms.date: 01/10/2020
 ms.technology: vs-azure
 ms.topic: include
-ms.openlocfilehash: 0fa7d186623b69fd83c3ed7e4ab9cc12128847d2
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 93f9d5ba8bd84341e1b314c1fabca07690114e39
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037206"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729283"
 ---
 # <a name="tutorial-create-a-multi-container-app-with-docker-compose"></a>教程：使用 Docker Compose 创建多容器应用
 
@@ -46,11 +46,11 @@ ms.locfileid: "90037206"
 
 ::: moniker range="vs-2019"
 
-![创建 Web 项目的屏幕截图](./media/tutorial-multicontainer/vs-2019/new-aspnet-core-project1.png)
+![ASP.NET Core Web 应用程序的“配置新项目”屏幕的屏幕截图，其中“项目名称”和“解决方案名称”字段设置为“WebFrontEnd”。](./media/tutorial-multicontainer/vs-2019/new-aspnet-core-project1.png)
 
 请不要选择“启用 Docker 支持”  。 稍后添加 Docker 支持。
 
-![创建 Web 项目的屏幕截图](./media/tutorial-multicontainer/vs-2019/new-aspnet-core-project.png)
+![“新建 ASP.NET Core Web 应用程序”屏幕的屏幕截图，其中选中了“Web 应用程序”。 未选择“启用 Docker 支持”选项。](./media/tutorial-multicontainer/vs-2019/new-aspnet-core-project.png)
 
 ::: moniker-end
 
@@ -107,7 +107,7 @@ ms.locfileid: "90037206"
       </div>
       ```
 
-1. （仅限 ASP.NET 2.x）现在在 Web API 项目中，将代码添加到“值”控制器以自定义 API 针对从 webfrontend** 添加的调用返回的消息。
+1. （仅限 ASP.NET 2.x）现在在 Web API 项目中，将代码添加到“值”控制器以自定义 API 针对从 webfrontend 添加的调用返回的消息。
     
       ```csharp
         // GET api/values/5
@@ -118,25 +118,25 @@ ms.locfileid: "90037206"
         }
       ```
 
-    使用 .NET Core 3.1 则不需要执行此操作，因为你可以使用已存在的 WeatherForecast API。 但是，你需要在 Startup.cs 的 `Configure` 方法中注释掉对 <xref:Microsoft.AspNetCore.Builder.HttpsPolicyBuilderExtensions.UseHttpsRedirection*> 的调用，因为此代码使用 HTTP 而不是 HTTPS 来调用 Web API**。
+    使用 .NET Core 3.1 则不需要执行此操作，因为你可以使用已存在的 WeatherForecast API。 但是，你需要在 Startup.cs 的 `Configure` 方法中注释掉对 <xref:Microsoft.AspNetCore.Builder.HttpsPolicyBuilderExtensions.UseHttpsRedirection*> 的调用，因为此代码使用 HTTP 而不是 HTTPS 来调用 Web API。
 
     ```csharp
                 //app.UseHttpsRedirection();
     ```
 
-1. 在 `WebFrontEnd` 项目中，依次选择“添加”、“容器业务流程协调程序支持”****。 此时显示“Docker 支持选项”对话框****。
+1. 在 `WebFrontEnd` 项目中，依次选择“添加”、“容器业务流程协调程序支持”。 此时显示“Docker 支持选项”对话框。
 
-1. 选择“Docker Compose”****。
+1. 选择“Docker Compose”。
 
 1. 选择目标操作系统，例如 Linux。
 
    ![选择目标操作系统的屏幕截图](media/tutorial-multicontainer/docker-tutorial-docker-support-options.PNG)
 
-   Visual Studio 会在解决方案中的“docker-compose”节点上创建 docker-compose.yml 文件和 .dockerignore 文件，该项目以粗体字体显示，表明其为启动项目********。
+   Visual Studio 会在解决方案中的“docker-compose”节点上创建 docker-compose.yml 文件和 .dockerignore 文件，该项目以粗体字体显示，表明其为启动项目。
 
    ![添加了 docker-compose 项目的解决方案资源管理器的屏幕截图](media/tutorial-multicontainer/multicontainer-solution-explorer.png)
 
-   显示 docker-compose.yml，如下所示**：
+   显示 docker-compose.yml，如下所示：
 
    ```yaml
    version: '3.4'
@@ -149,11 +149,11 @@ ms.locfileid: "90037206"
           dockerfile: WebFrontEnd/Dockerfile
    ```
 
-   .dockerignore 文件包含你不希望 Docker 在容器中包含的文件类型和扩展名**。 这些文件通常与开发环境和源代码管理相关联，并不属于正在开发的应用或服务。
+   .dockerignore 文件包含你不希望 Docker 在容器中包含的文件类型和扩展名。 这些文件通常与开发环境和源代码管理相关联，并不属于正在开发的应用或服务。
 
-   查看“输出”窗格的“容器工具”部分，深入了解正在运行的命令****。  可看到命令行工具 docker-compose 用于配置和创建运行时容器。
+   查看“输出”窗格的“容器工具”部分，深入了解正在运行的命令。  可看到命令行工具 docker-compose 用于配置和创建运行时容器。
 
-1. 在 Web API 项目中，再次右键单击项目节点，然后选择“添加” > “容器业务流程协调程序支持” 。 选择“Docker Compose”，然后选择相同的目标操作系统****。  
+1. 在 Web API 项目中，再次右键单击项目节点，然后选择“添加” > “容器业务流程协调程序支持” 。 选择“Docker Compose”，然后选择相同的目标操作系统。  
 
     > [!NOTE]
     > 在此步中，Visual Studio 会创建 Dockerfile。 如果对已具有 Docker 支持的项目执行此操作，系统将提示是否要覆盖现有的 Dockerfile。 如果已在 Dockerfile 中进行了所需的更改，请选择“否”。
@@ -179,7 +179,7 @@ ms.locfileid: "90037206"
 
 1. 立即在本地运行站点（按 F5 或 Ctrl+F5），验证站点是否按预期方式工作。 如果 .NET Core 2.x 版本中的所有内容配置正确，你将看到消息“来自 webfrontend 和 webapi 的问候(值为 1)。”  通过 .NET Core 3，可以看到天气预测数据。
 
-   添加容器业务流程时使用的第一个项目设置为在运行或调试时启动。 可以在 docker-compose 项目的“项目属性”中配置启动操作****。  在 docker-compose 项目节点上，右键单击以打开上下文菜单，然后选择“属性”，或使用 Alt+Enter****。  以下屏幕截图显示需要解决方案在此使用的属性。  例如，可以通过自定义“服务 URL”属性来更改已加载的页面****。
+   添加容器业务流程时使用的第一个项目设置为在运行或调试时启动。 可以在 docker-compose 项目的“项目属性”中配置启动操作。  在 docker-compose 项目节点上，右键单击以打开上下文菜单，然后选择“属性”，或使用 Alt+Enter。  以下屏幕截图显示需要解决方案在此使用的属性。  例如，可以通过自定义“服务 URL”属性来更改已加载的页面。
 
    ![docker-compose 项目属性的屏幕截图](media/tutorial-multicontainer/launch-action.png)
 

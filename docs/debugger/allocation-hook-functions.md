@@ -1,5 +1,7 @@
 ---
 title: 分配挂钩函数 | Microsoft Docs
+description: 了解当需要在 Visual Studio 中执行 C 运行时 (CRT) 调试时，如何使用通过 _CrtSetAllocHook 安装的分配挂钩函数。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -22,12 +24,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f684c6c66448fdab2ee7607a81ff7ed769a5e607
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: b0bea73a044dabce5270c06f68658f85c612574c
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745824"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729179"
 ---
 # <a name="allocation-hook-functions"></a>分配挂钩函数
 每次分配、重新分配或释放内存时，都会调用通过 [_CrtSetAllocHook](/cpp/c-runtime-library/reference/crtsetallochook) 安装的分配挂钩函数。 这种挂钩可用于多种不同用途。 可用它测试应用程序处理内存不足情况的方式，例如检查分配模式，或记录分配信息以供将来分析。

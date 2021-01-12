@@ -16,12 +16,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 6852ac1148c9a8001476eb9bb68e9e97d66e3eed
-ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
+ms.openlocfilehash: 21052d59205c7ddc14247f180348fea3b8d5652a
+ms.sourcegitcommit: d526af3642163180e0cc3e1e73b0a00f02542683
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91780989"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97833242"
 ---
 # <a name="step-2-create-your-first-aspnet-core-web-app"></a>步骤 2：创建首个 ASP.NET Core Web 应用
 
@@ -94,7 +94,7 @@ public void OnGet()
 
 再次运行该应用程序。 你可看到此页面现在显示当前时间，但始终是午夜！ 这不正确。
 
-![Visual Studio 2019 浏览器中的 ASP.NET Core 项目](media/vs-2019/vs2019-app-in-browser.png)
+![浏览器窗口中应用程序主页的屏幕截图。 该页面的内容为：“现在服务器上的时间为凌晨 12:00!”。](media/vs-2019/vs2019-app-in-browser.png)
 
 ## <a name="debug-the-application"></a>调试应用程序
 
@@ -102,7 +102,7 @@ public void OnGet()
 
 执行过程在包含该断点的行处停止，可看到 `DateTime.Today` 包括日期，但时间始终是午夜，因为它不包括时间数据。
 
-![Visual Studio 2019 浏览器中的 ASP.NET Core 项目](media/vs-2019/vs2019-breakpoint.png)
+![显示了 Visual Studio 中 Index.cshtml.cs 的代码的屏幕截图。 “Time = DateTime.Today.ToShortTimeString();”行上设置了一个断点。](media/vs-2019/vs2019-breakpoint.png)
 
 将其更改为使用 `DateTime.Now` 并继续执行。 `OnGet` 的新代码应为：
 
@@ -118,7 +118,7 @@ public void OnGet()
 > [!NOTE]
 > 输出可能与映像不同，因为 ToShortDateTimeString 的输出格式取决于当前区域性设置。 请参阅 <xref:System.DateTime.ToShortTimeString>。
 
-![Visual Studio 2019 浏览器中的 ASP.NET Core 项目](media/vs-2019/vs2019-app-fixed-in-browser.png)
+![浏览器窗口中应用程序主页的屏幕截图。 该页面的内容为：“现在服务器上的时间为凌晨 1:46!”。](media/vs-2019/vs2019-app-fixed-in-browser.png)
 
 ## <a name="next-steps"></a>后续步骤
 
@@ -126,6 +126,6 @@ public void OnGet()
 
 [教程：在 ASP.NET Core 应用中处理数据](tutorial-aspnet-core-ef-step-03.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [教程：使用 ASP.NET Core 创建 Razor Pages Web 应用](/aspnet/core/tutorials/razor-pages/?view=aspnetcore-2.1&preserve-view=true)

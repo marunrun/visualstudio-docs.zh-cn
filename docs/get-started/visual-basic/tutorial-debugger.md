@@ -1,6 +1,6 @@
 ---
 title: 教程：调试 Visual Basic 代码
-description: 了解如何启动 Visual Studio 调试器、单步执行代码以及检查数据。
+description: 了解 Visual Studio 调试器的功能以及如何启动调试器、逐步执行代码以及检查 Visual Basic 应用程序中的数据。
 ms.custom: debug-experiment, seodec18, get-started
 ms.date: 02/03/2020
 ms.technology: vs-ide-debug
@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 84ed0de3542822597c64e0866c04f719ed6c2ab7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 000b46223811490695562159822f61240d0cea66
+ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77027233"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97847012"
 ---
 # <a name="tutorial-learn-to-debug-visual-basic-code-using-visual-studio"></a>教程：学习使用 Visual Studio 调试 Visual Basic 代码
 
@@ -73,7 +73,7 @@ ms.locfileid: "77027233"
 
 2. 从顶部菜单栏中选择“文件”>“新建”>“项目”    。
 
-3. 在“新建项目”对话框左侧的窗格中，展开“Visual Basic”，然后选择“.NET Core”************。 在中间窗格中，选择“控制台应用(.NET Core)”  。 然后将项目命名为 get-started-debugging  。
+3. 在“新建项目”对话框左侧的窗格中，展开“Visual Basic”，然后选择“.NET Core”。 在中间窗格中，选择“控制台应用(.NET Core)”  。 然后将项目命名为 get-started-debugging  。
 
      如果看不到“控制台应用(.NET Core)”  项目模板，请选择“新建项目”  对话框左侧窗格中的“打开 Visual Studio 安装程序”  链接。
 
@@ -89,7 +89,7 @@ ms.locfileid: "77027233"
 
 1. 在“开始”窗口上，选择“创建新项目”  。
 
-1. 在“创建新项目”窗口的搜索框中输入或键入“控制台”   。 接下来，从“语言”列表中选择 Visual Basic，然后从“平台”列表中选择“Windows”********。 
+1. 在“创建新项目”窗口的搜索框中输入或键入“控制台”   。 接下来，从“语言”列表中选择 Visual Basic，然后从“平台”列表中选择“Windows”。 
 
    应用语言和平台筛选器之后，选择“控制台应用(.NET Core)”模板，然后选择“下一步”   。
 
@@ -106,7 +106,7 @@ ms.locfileid: "77027233"
 
 ## <a name="create-the-application"></a>创建应用程序
 
-1. 在 Program.cs 中，使用以下代码替换所有默认代码**：
+1. 在 Program.cs 中，使用以下代码替换所有默认代码：
 
     ```vb
     Imports System
@@ -181,9 +181,9 @@ ms.locfileid: "77027233"
 
 大多数情况下，我们使用键盘快捷方式，因为这是在调试器中快速执行应用的好方法（括号中显示了等效的命令，如菜单命令）。
 
-1. 在 `Main` 方法中的 `For` 循环中暂停时，按两次 F11（或选择“调试”>“单步执行”）前进到 `SendMessage` 方法调用********。
+1. 在 `Main` 方法中的 `For` 循环中暂停时，按两次 F11（或选择“调试”>“单步执行”）前进到 `SendMessage` 方法调用。
 
-     按两次 F11 后，应位于以下代码行****：
+     按两次 F11 后，应位于以下代码行：
 
      `SendMessage(name, a(i))`
 
@@ -203,13 +203,13 @@ ms.locfileid: "77027233"
 
      你应当回到 `Main` 方法的 `For` 循环，在 `SendMessage` 方法调用处暂停。
 
-1. 多按几次 F11，直到再次返回到 `SendMessage` 方法调用****。
+1. 多按几次 F11，直到再次返回到 `SendMessage` 方法调用。
 
-1. 在方法调用处暂停时，按一次 F10（或选择“调试”>“单步跳过”）********。
+1. 在方法调用处暂停时，按一次 F10（或选择“调试”>“单步跳过”）。
 
      ![使用 F10 单步跳过代码](../visual-basic/media/get-started-step-over-vb.png "F10 单步跳过")
 
-     请注意，这次调试器不会单步执行 `SendMessage` 方法。 按 F10 将使调试器前进，但不会单步执行应用代码中的函数或方法（代码仍将执行）。 通过在进行 `SendMessage` 方法调用时按“F10”（而不是“F11”），我们跳过了 `SendMessage` 的实现代码（我们现在可能对此不感兴趣）********。 有关在代码中进行移动的不同方法的详细信息，请参阅[浏览调试器中的代码](../../debugger/navigating-through-code-with-the-debugger.md)。
+     请注意，这次调试器不会单步执行 `SendMessage` 方法。 按 F10 将使调试器前进，但不会单步执行应用代码中的函数或方法（代码仍将执行）。 通过在进行 `SendMessage` 方法调用时按“F10”（而不是“F11”），我们跳过了 `SendMessage` 的实现代码（我们现在可能对此不感兴趣）。 有关在代码中进行移动的不同方法的详细信息，请参阅[浏览调试器中的代码](../../debugger/navigating-through-code-with-the-debugger.md)。
 
 ## <a name="navigate-code-using-run-to-click"></a>使用“运行时单击”导航代码
 
@@ -244,7 +244,7 @@ ms.locfileid: "77027233"
 
 1. 接下来，将鼠标悬停在 `name` 变量上，会看到其当前值为空字符串。
 
-1. 多按几次 F5（或“调试” > “继续”），通过 `For` 循环执行多次循环访问，再次在断点处暂停，每次都将鼠标悬停在 `name` 变量上以检查其值************。
+1. 多按几次 F5（或“调试” > “继续”），通过 `For` 循环执行多次循环访问，再次在断点处暂停，每次都将鼠标悬停在 `name` 变量上以检查其值。
 
      ![查看数据提示](../visual-basic/media/get-started-data-tip-vb.png "查看数据提示")
 

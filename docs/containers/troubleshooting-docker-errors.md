@@ -11,12 +11,12 @@ ms.topic: troubleshooting
 ms.workload: multiple
 ms.date: 01/27/2020
 ms.author: ghogen
-ms.openlocfilehash: 31b9d8649abed0f9901aa872ff3939c25e3025b8
-ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
+ms.openlocfilehash: 9535a7d88cb375d97867092eddf969095c327329
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87235103"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729234"
 ---
 # <a name="troubleshoot-visual-studio-development-with-docker"></a>使用 Docker 排查 Visual Studio 开发方面的问题
 
@@ -24,22 +24,15 @@ ms.locfileid: "87235103"
 
 ## <a name="volume-sharing-is-not-enabled-enable-volume-sharing-in-the-docker-ce-for-windows-settings--linux-containers-only"></a>未启用卷共享。 启用“Docker CE for Windows”设置中的卷共享（仅 Linux 容器）
 
-若要解决此问题，请执行以下操作：
+只有在将 Hyper-V 与 Docker 一起使用时，才需要管理文件共享。 如果使用的是 WSL 2，则无需执行以下步骤，并且文件共享选项将不可见。 若要解决此问题，请执行以下操作：
 
 1. 右键单击通知区域中的“Docker for Windows”  ，并选择“设置”  。
-1. 选择“共享驱动器”  ，并共享系统驱动器和项目所在的驱动器。
+1. 选择“资源” > “文件共享”并共享需要访问的文件夹 。 可以共享整个系统驱动器，但不建议这样做。
 
-> [!NOTE]
-> 如果文件显示“已共享”，可能仍需要单击对话框底部的“重置凭据...”链接，以便重新启用卷共享。 若要在重置凭据后继续，可能必须重启 Visual Studio。
-
-![共享驱动器](media/troubleshooting-docker-errors/shareddrives.png)
+    ![共享驱动器](media/troubleshooting-docker-errors/docker-settings-image.png)
 
 > [!TIP]
-> 如果未配置共享驱动器，Visual Studio 2017 版本 15.6 之后的版本会发出提示  。
-
-### <a name="container-type"></a>容器类型
-
-向项目添加 Docker 支持后，请选择 Windows 或 Linux 容器。 Docker 主机必须运行类型相同的容器。 要更改正在运行的 Docker 实例中的容器类型，请右键单击系统托盘中的 Docker 图标，再选择“切换到 Windows 容器...”或“切换到 Linux 容器...”   。
+> 如果未配置共享驱动器，Visual Studio 2017 版本 15.6 之后的版本将发出提示。
 
 ## <a name="unable-to-start-debugging"></a>无法开始调试
 
@@ -54,7 +47,7 @@ ms.locfileid: "87235103"
 
 ## <a name="mounts-denied"></a>装载被拒绝
 
-使用 Docker for macOS 时，可能会遇到引用文件夹 /usr/local/share/dotnet/sdk/NuGetFallbackFolder 错误。 将文件夹添加到 Docker 中的“文件共享”选项卡
+使用 Docker for macOS 时，可能会遇到引用文件夹 /usr/local/share/dotnet/sdk/NuGetFallbackFolder 错误。 将文件夹添加到 Docker 中的“文件共享”选项卡。
 
 ## <a name="docker-users-group"></a>Docker 用户组
 
@@ -83,15 +76,29 @@ net localgroup docker-users DOMAIN\username /add
 
 ## <a name="low-disk-space"></a>磁盘空间不足
 
-默认情况下，Docker 将映像存储在 %ProgramData%/Docker/ 文件夹中，该文件夹通常位于系统驱动器 *C:\ProgramData\Docker\*。 若要防止映像占用系统驱动器上的宝贵空间，可以更改映像文件夹位置。  从任务栏上的 Docker 图标，打开“Docker 设置”，选择“守护程序”，并从“基本”切换到“高级”    。 在编辑窗格中，添加带有 Docker 映像所需位置值的 `graph` 属性设置：
+默认情况下，Docker 将映像存储在 %ProgramData%/Docker/ 文件夹中，该文件夹通常位于系统驱动器 *C:\ProgramData\Docker\*。 若要防止映像占用系统驱动器上的宝贵空间，可以更改映像文件夹位置。 为此，请执行以下操作：
+
+ 1. 右键单击任务栏上的 Docker 图标并选择“设置”。
+ 1. 选择“Docker 引擎”。 
+ 1. 在编辑窗格中，添加带有 Docker 映像所需位置值的 `graph` 属性设置：
 
 ```json
     "graph": "D:\\mypath\\images"
 ```
 
-![Docker 映像位置设置的屏幕截图](media/troubleshooting-docker-errors/docker-settings-image-location.png)
+![Docker 文件共享的屏幕截图](media/troubleshooting-docker-errors/docker-daemon-settings.png)
 
-单击“应用”以重新启动 Docker  。 这些步骤会修改 %ProgramData%\docker\config\daemon.json 的配置文件  。 以前生成的映像不会移动。
+单击“应用和重启”。 这些步骤会修改 %ProgramData%\docker\config\daemon.json 的配置文件  。 以前生成的映像不会移动。
+
+## <a name="container-type-mismatch"></a>容器类型不匹配
+
+向项目添加 Docker 支持后，请选择 Windows 或 Linux 容器。 如果 Docker 服务器主机未配置为运行与项目目标相同的容器类型，则你可能会看到类似以下错误：
+
+![Docker 主机和项目不匹配的屏幕截图](media/troubleshooting-docker-errors/docker-host-config-change-linux-to-windows.png)
+
+要解决此问题：
+
+- 右键单击系统栏中的“用于 Windows 的 Docker”图标，然后选择“切换到 Windows 容器…”或“切换到 Linux 容器…” 。
 
 ## <a name="microsoftdockertools-github-repo"></a>Microsoft/DockerTools GitHub 存储库
 

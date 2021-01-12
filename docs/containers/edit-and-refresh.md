@@ -9,12 +9,12 @@ ms.topic: how-to
 ms.workload: multiple
 ms.date: 07/25/2019
 ms.technology: vs-azure
-ms.openlocfilehash: 32f6535e92f41d8030b6e060960940339da91fc9
-ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
+ms.openlocfilehash: de7065ebdf5426077418e50d2c03118de9f9d68f
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92298216"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729296"
 ---
 # <a name="debug-apps-in-a-local-docker-container"></a>在本地 Docker 容器中调试应用
 
@@ -130,7 +130,7 @@ Docker 容器可用于 .NET Framework 和 .NET Core 项目。 请看以下两个
 4. 要启动调试并命中断点，请按 F5。
 5. 切换到 Visual Studio 以查看断点。 检查值。
 
-   ![断点](media/edit-and-refresh/breakpoint.png)
+   ![显示 Visual Studio 中 Index.cshtml.cs 的部分代码的屏幕截图，其中在以黄色突出显示的代码行的左侧设置了一个断点。](media/edit-and-refresh/breakpoint.png)
 
 ## <a name="create-a-net-framework-console-app"></a>创建 .NET Framework 控制台应用
 
@@ -152,7 +152,7 @@ Docker 容器可用于 .NET Framework 和 .NET Core 项目。 请看以下两个
 4. 要启动调试并命中断点，请按 F5。
 5. 切换到 Visual Studio 以查看断点，并检查值。
 
-   ![断点](media/edit-and-refresh/breakpoint-console.png)
+   ![Visual Studio 中 Program.cs 的代码窗口的屏幕截图，其中在以黄色突出显示的代码行的左侧设置了一个断点。](media/edit-and-refresh/breakpoint-console.png)
 
 ## <a name="container-reuse"></a>容器重复使用
 

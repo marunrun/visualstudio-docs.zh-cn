@@ -1,5 +1,7 @@
 ---
 title: “窗口属性”对话框 ->“类别”选项卡 | Microsoft Docs
+description: 在 Visual Studio 中选择“类”选项卡，将焦点移到“窗口视图”窗口，选择窗口节点，然后选择“查看”>“属性”以查看“窗口属性”对话框。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0917c9a038b42e6302ec1f1782f095ca397a92ef
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3bf37d9e5d672f0ecce262699fdd5d704cde9efe
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62565008"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729023"
 ---
 # <a name="class-tab-window-properties-dialog-box"></a>“窗口属性”对话框 ->“类”选项卡
 使用“类别”选项卡可显示有关所选窗口类别的信息。 若要显示[窗口属性对话框](../debugger/window-properties-dialog-box.md)，将焦点移动到 [Windows 视图](../debugger/windows-view.md)窗口。 在树中选择任意窗口节点，然后从“视图”菜单选择“属性” 。

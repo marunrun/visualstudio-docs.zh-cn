@@ -1,6 +1,6 @@
 ---
 title: 调试实时 ASP.NET Azure Kubernetes 服务
-description: 了解如何使用 Snapshot Debugger 设置快照点并查看快照。
+description: 了解如何在调试实时 ASP.NET Azure Kubernetes 服务时使用 Visual Studio 中的 Snapshot Debugger 来设置快照点并拍摄快照。
 ms.custom: ''
 ms.date: 02/11/2019
 ms.topic: how-to
@@ -13,12 +13,12 @@ monikerRange: '>= vs-2019'
 ms.workload:
 - aspnet
 - azure
-ms.openlocfilehash: e0f062108f19b38c6bf6514eda78098f493b3f78
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 823da6da0a842766739cb50c700bb723a47d0309
+ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350649"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97846970"
 ---
 # <a name="debug-live-aspnet-azure-kubernetes-services-using-the-snapshot-debugger"></a>使用 Snapshot Debugger 调试实时 ASP.NET Azure Kubernetes 服务
 

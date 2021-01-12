@@ -1,6 +1,7 @@
 ---
 title: 使用调试器附加到运行的进程
-ms.custom: seodec18
+description: 了解如何将 Visual Studio 调试器附加到正在本地或远程计算机上运行的进程上。
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 06/12/2020
 ms.topic: conceptual
 f1_keywords:
@@ -28,12 +29,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a33af839406497a2a30fba2f5103a64a1da36ed7
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: 1fd1ff5ff0f8c7510185236c425ddd870f8b500f
+ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94671441"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97760921"
 ---
 # <a name="attach-to-running-processes-with-the-visual-studio-debugger"></a>使用 Visual Studio 调试器附加到正在运行的进程
 
@@ -58,7 +59,7 @@ ms.locfileid: "94671441"
 
 1. 将“连接目标”设置为本地计算机名。
 
-   ![DBG_Basics_Attach_To_Process](../debugger/media/DBG_Basics_Attach_To_Process.png "DBG_Basics_Attach_To_Process")
+   ![“附加到进程”对话框的屏幕截图，其中连接目标设置为本地计算机名称。](../debugger/media/DBG_Basics_Attach_To_Process.png)
 
 1. 在“可用进程”列表中，查找并选择要附加到的一个或多个进程。
 

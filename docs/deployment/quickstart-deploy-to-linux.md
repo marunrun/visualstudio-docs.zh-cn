@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - azure
-ms.openlocfilehash: 4e474cc96e4b950aee2f509a8e2879b0c31f912a
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 27002d9360d36330249167b2cc8b75b7cd832135
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94350717"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815628"
 ---
 # <a name="publish-an-aspnet-core-app-to-app-service-on-linux-using-visual-studio"></a>使用 Visual Studio 将 ASP.NET Core 应用发布到 Linux 上的应用服务
 
@@ -52,11 +52,11 @@ ms.locfileid: "94350717"
 
 1. 在“创建 Azure 应用服务(Linux)”对话框中，填写“应用名称”、“资源组”和“应用服务计划”输入字段   。 可以保留这些名称，也可以进行更改。 准备就绪后，选择“创建”。
 
-    ![选择 Azure 应用服务](../deployment/media/quickstart-publish-linux-create-new-dialog.png)
+    ![“创建 Azure 应用服务(Linux)”对话框的屏幕截图，其中已填写“名称”、“订阅”、“资源组”和“托管计划”字段。](../deployment/media/quickstart-publish-linux-create-new-dialog.png)
 
 1. 在“发布”对话框中，将自动选择新创建的实例。 准备就绪后，单击“完成”。
 
-    ![选择 Azure 应用服务](../deployment/media/quickstart-publish-linux-select-instance.png)
+    ![“发布”对话框的屏幕截图，其中选择了新创建的 MyASpCoreWebAppOnAzure 服务作为用于发布的应用服务。](../deployment/media/quickstart-publish-linux-select-instance.png)
 
 1. 选择“发布”。 Visual Studio 将应用部署到 Azure 应用服务，并且 Web 应用将在浏览器中加载。 项目属性“发布”窗格显示了站点 URL 和其他详细信息。
 

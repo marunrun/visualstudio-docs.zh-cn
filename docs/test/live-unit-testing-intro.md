@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3f3a5e97153997908a0360bc123fd1b88fb5c009
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 8716e980581ffe1103adddbc3c776def1166ff94
+ms.sourcegitcommit: 4e28314dc2be59b4c5fd44545c0653f625e74489
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75596835"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97756599"
 ---
 # <a name="live-unit-testing-overview"></a>Live Unit Testing 概述
 
@@ -26,7 +26,7 @@ Live Unit Testing 指示单元测试是否充分覆盖代码。 它以图形方�
 如果有包含一个或多个单元测试项目的解决方案，可从 Visual Studio 的顶级菜单栏中依次选择“测试” > “Live Unit Testing” > “启动”来启用 Live Unit Testing    。
 
 > [!NOTE]
-> 只有 Visual Studio Enterprise Edition 中提供 Live Unit Testing。
+> Live Unit Testing 仅在 Visual Studio Enterprise 版本中提供，并且仅在 .NET 中受支持。
 
 了解有关 Live Unit Testing 的详细信息：
 

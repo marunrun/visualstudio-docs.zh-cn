@@ -8,12 +8,12 @@ ms.author: kraigb
 manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: be0ba7b32af5247bb0dccccb68d900cb6797cc13
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.openlocfilehash: 8be766e078a04d713ed69aa0b9cc464433dcb73d
+ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88801173"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97761389"
 ---
 # <a name="get-started-with-r-tools-for-visual-studio"></a>Visual Studio 中的 R 工具入门
 
@@ -62,7 +62,7 @@ ms.locfileid: "88801173"
 
 1. 如果无法在交互窗口中直接显示输出，某些命令（如 `plot(1:100)`）将在 Visual Studio 中打开一个新窗口：
 
-    ![Visual Studio 中的绘图显示](media/getting-started-07-plot-window.png)
+    ![显示图形函数绘图 (1:100) 输出的 Visual Studio R 绘图窗口的屏幕截图。](media/getting-started-07-plot-window.png)
 
 使用交互窗口，还可查看历史记录、加载和保存工作区、附加到调试器，以及与源代码文件交互，无需复制粘贴操作。 有关详细信息，请参阅 [Working with the R Interactive Window](interactive-repl-for-r-in-visual-studio.md)（使用 R 交互窗口）。
 
@@ -86,7 +86,7 @@ ms.locfileid: "88801173"
 
 1. 若要快速查看结果，请选择所有代码 (Ctrl+A)，然后按 Ctrl+Enter，或右键单击并选择“交互执行”。 所有选定代码都在交互窗口中运行，就像直接键入一样，并且绘图窗口中将显示结果：
 
-    ![Visual Studio 中的绘图显示](media/getting-started-08-plot1.png)
+    ![显示人口密度图的 Visual Studio R 绘图窗口的屏幕截图。](media/getting-started-08-plot1.png)
 
 1. 对于单行，可随时通过按 Ctrl+Enter 在交互窗口中运行该行。
 

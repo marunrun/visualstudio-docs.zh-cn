@@ -11,12 +11,12 @@ ms.date: 11/13/2017
 ms.topic: how-to
 ms.workload:
 - azure
-ms.openlocfilehash: 110468de264370b22d64dae40cf55e9766804c31
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 72f5fa5aab9f9afa6268f8acd737430af0568928
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036608"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727354"
 ---
 # <a name="train-ai-models-in-azure-batch-ai"></a>在 Azure Batch AI 中训练 AI 模型
 
@@ -30,7 +30,7 @@ Batch AI 是一种托管服务，使数据科学家和 AI 研究人员可以在 
 
 2. 展开“AI 工具”。 你具有的任何 Batch AI 资源都会自动检测到并出现在服务器资源管理器中。
 
-    ![示例库](media/train-model/batchai.png)
+    ![服务器资源管理器中 AI 工具的扩展文件夹树的屏幕截图，其中显示 Azure Batch AI 和 Azure 机器学习的扩展子文件夹。](media/train-model/batchai.png)
 
 3. 选择“视图”>“团队资源管理器...”，打开“团队资源管理器”窗口，可在该窗口中连接到 GitHub 或 Azure DevOps Services，或者克隆存储库 。
 
@@ -43,19 +43,19 @@ Batch AI 是一种托管服务，使数据科学家和 AI 研究人员可以在 
 
 5. 克隆完成后，单击“文件”>“打开解决方案”>“项目/解决方案”
 
-    ![示例库](media/train-model/open-solution.png)
+    ![显示服务器资源管理器文件菜单的一部分的屏幕截图，其中已选中“打开”命令并在上下文菜单上选中了“项目/解决方案”。](media/train-model/open-solution.png)
 
 6. 打开克隆存储库的目录中的 samples-for-ai\TensorFlowExamples\TensorFlowExamples.sln
 
-    ![示例库](media/train-model/tensorflowexamples.png)
+    ![显示解决方案文件 TensorflowExamples.sln 的屏幕截图，该文件列在 samples-for-ai 存储库中 TensorflowExamples 文件夹的内容中。](media/train-model/tensorflowexamples.png)
 
 7. 将 MNIST 项目设置为“启动项目”
 
-    ![示例库](media/train-model/mnist-startup.png)
+    ![屏幕截图显示在解决方案资源管理器中的 MNIST 项目的上下文菜单中已选择“设置为启动项目”。](media/train-model/mnist-startup.png)
 
 8. 右键单击“MNIST 项目”的“提交作业” 
 
-    ![示例库](media/train-model/submit-job.png)
+    ![屏幕截图显示在解决方案资源管理器中的 MNIST 项目的上下文菜单中已选择“提交作业”。](media/train-model/submit-job.png)
 9. 选择“Azure Batch AI”群集，然后单击“导入”。 选择 `AzureBatchAI_TF_MNIST.json` 文件以快速填充一些默认值，如要使用的 Docker 映像。 然后单击“提交”
 
-    ![示例库](media/train-model/submit-batch.png)
+    ![“提交作业”对话框的屏幕截图，其中填充了“使用群集”、“启动脚本”、“作业名称”、“映像名称”、“StdOutErr 路径前缀”和“CLI 参数”的值。](media/train-model/submit-batch.png)

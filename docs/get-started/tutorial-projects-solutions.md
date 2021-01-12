@@ -12,14 +12,14 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8b22695dac3f75b9e90950ee5428bb906436d661
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: 3aa347b7f789e24e7cdd3baa19a6267f0ecdf2e5
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94903931"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727510"
 ---
-# <a name="learn-about-projects-and-solutions"></a>了解项目和解决方案
+# <a name="introduction-to-projects-and-solutions"></a>项目和解决方案简介
 
 在这篇介绍性的文章中，我们将探讨在 Visual Studio 中创建解决方案和项目的含义   。 解决方案是一个容器，用于组织一个或多个相关的代码项目，例如，一个类库项目和一个对应的测试项目。 我们会介绍项目的属性和其中包含的一些文件。 此外，我们还会在一个项目中创建对另一项目的引用。
 
@@ -52,11 +52,11 @@ ms.locfileid: "94903931"
 
 1. 打开 Visual Studio。
 
-1. 在顶部菜单栏上，依次选择“文件”**“新建”** > **“项目”** > 。
+1. 从顶部菜单栏中选择“文件”>“新建”>“项目”  。
 
    **“新建项目”** 对话框随即打开。
 
-1. 在左侧窗格中，展开“其他项目类型”，然后选择“Visual Studio 解决方案”   。 在中间窗格中，选择“空白解决方案”模板  。 将解决方案命名为“QuickSolution”，然后选择“确定”按钮。
+1. 在左侧窗格中，展开“其他项目类型”，然后选择“Visual Studio 解决方案” 。 在中间窗格中，选择“空白解决方案”模板。 将解决方案命名为“QuickSolution”，然后选择“确定”按钮 。
 
    ![Visual Studio 2017 中的空白解决方案模板](media/tutorial-projects-new-solution.png "Visual Studio 2017 中的空白解决方案模板。")
 
@@ -68,16 +68,16 @@ ms.locfileid: "94903931"
 
 1. 打开 Visual Studio。
 
-2. 在“开始”窗口上，选择“创建新项目”  。
+2. 在“开始”窗口中，选择“创建新项目”。
 
-3. 在“创建新项目”页上，  在搜索框中输入“空白解决方案”  ，选择“空白解决方案”模板，然后选择“下一步”   。
+3. 在“创建新项目”页上，在搜索框中输入“空白解决方案”，选择“空白解决方案”模板，然后选择“下一步”   。
 
    ![Visual Studio 2019 中的空白解决方案模板](media/vs-2019/tutorial-projects-blank-solution-template.png "Visual Studio 2019 中的空白解决方案模板。")
 
     > [!TIP]
     > 如果你安装了多个工作负载，那么“空白解决方案”模板可能不会出现在搜索结果列表的顶部。 尝试滚动到列表的“基于你搜索的其他结果”部分。 它应该出现在那里。
 
-4. 将解决方案命名为“QuickSolution”  ，然后选择“创建”  。
+4. 将解决方案命名为“QuickSolution”，然后选择“创建” 。
 
    解决方案将显示在 Visual Studio 窗口右侧的解决方案资源管理器中  。 你可能会经常使用“解决方案资源管理器”来浏览项目的内容  。
 
@@ -89,16 +89,16 @@ ms.locfileid: "94903931"
 
 ::: moniker range="vs-2017"
 
-1. 在“解决方案资源管理器”  中的“解决方案‘QuickSolution’”  的右键菜单或上下文菜单中，依次选择“添加”  >“新建项目”  。
+1. 在“解决方案资源管理器”中的“解决方案 'QuickSolution'”的右键菜单或上下文菜单中，依次选择“添加”>“新建项目”   。
 
    此时会打开 **“添加新项目”** 对话框。
 
-1. 在左侧窗格中，展开“Visual C#”，然后选择“Windows 桌面”。 然后在中间窗格中，选择“空项目(.NET Framework)”模板  。 将项目命名为“QuickDate”，然后选择“确定”。
+1. 在左侧窗格中，展开“Visual C#”，然后选择“Windows 桌面” 。 然后在中间窗格中，选择“空项目 (.NET Framework)”模板。 将项目命名为“QuickDate”，然后选择“确定” 。
 
    随后名为“QuickDate”的项目出现在“解决方案资源管理器”中的解决方案下  。 目前它包含一个名为“App.config”的文件  。
 
    > [!NOTE]
-   > 如果在对话框的左侧窗格中看不到“Visual C#”，则需安装 .NET 桌面开发 Visual Studio 工作负载 。 Visual Studio 使用基于工作负载的安装旨在仅安装所执行的开发类型需要的组件。 一种安装新工作负载的简单方法是选择“添加新项目”对话框左下角的“打开 Visual Studio 安装程序”链接   。 在“Visual Studio 安装程序”启动后，选择“.NET 桌面开发”工作负载，再单击“修改”按钮   。
+   > 如果在对话框的左侧窗格中看不到“Visual C#”，则需安装 .NET 桌面开发 Visual Studio 工作负载 。 Visual Studio 使用基于工作负载的安装旨在仅安装所执行的开发类型需要的组件。 一种安装新工作负载的简单方法是选择“添加新项目”对话框左下角的“打开 Visual Studio 安装程序”链接 。 在“Visual Studio 安装程序”启动后，选择“.NET 桌面开发”工作负载，再单击“修改”按钮 。
    >
    > ![“打开 Visual Studio 安装程序”链接](media/tutorial-projects-open-installer.png "Visual Studio 2017 中“添加新项目”对话框中的“打开 Visual Studio 安装程序”链接。")
 
@@ -106,22 +106,22 @@ ms.locfileid: "94903931"
 
 ::: moniker range=">=vs-2019"
 
-1. 在“解决方案资源管理器”  中的“解决方案‘QuickSolution’”  的右键菜单或上下文菜单中，依次选择“添加”  >“新建项目”  。
+1. 在“解决方案资源管理器”中的“解决方案 'QuickSolution'”的右键菜单或上下文菜单中，依次选择“添加”>“新建项目”   。
 
    随即打开显示“添加新项目”的对话框  。
 
 1. 在顶部的搜索框中输入文本“空”，然后在“语言”下选择“C#”。
 
-1. 然后选择“空项目 (.NET Framework)”模板并选择“下一步”   。
+1. 然后选择“空项目 (.NET Framework)”模板并选择“下一步” 。
 
-1. 将项目命名为“QuickDate”，然后选择“创建”   。
+1. 将项目命名为“QuickDate”，然后选择“创建” 。
 
    随后名为“QuickDate”的项目出现在“解决方案资源管理器”中的解决方案下  。 目前它包含一个名为“App.config”的文件  。
 
    > [!NOTE]
    > 如果没有看到“空项目(.NET Framework)”模板，则需要安装 .NET 桌面开发 Visual Studio 工作负载 。 Visual Studio 使用基于工作负载的安装旨在仅安装所执行的开发类型需要的组件。
    >
-   >在创建新项目时安装新工作负载的简便方法是，在显示“未找到你要查找的内容”的文本下选择“安装更多工具和功能”链接   。 在“Visual Studio 安装程序”启动后，选择“.NET 桌面开发”工作负载，再单击“修改”按钮   。
+   >在创建新项目时安装新工作负载的简便方法是，在显示“未找到你要查找的内容”的文本下选择“安装更多工具和功能”链接 。 在“Visual Studio 安装程序”启动后，选择“.NET 桌面开发”工作负载，再单击“修改”按钮 。
    >
    > ![“打开 Visual Studio 安装程序”链接](media/vs-2019/tutorial-projects-open-installer.png "Visual Studio 中“新建项目”对话框中的“打开 Visual Studio 安装程序”链接。")
 
@@ -131,11 +131,11 @@ ms.locfileid: "94903931"
 
 我们有一个空项目。 我们来添加代码文件。
 
-1. 在“解决方案资源管理器”中的“QuickDate”项目的右键菜单或上下文菜单中，依次选择“添加” > “新建项”     。
+1. 在“解决方案资源管理器”中的“QuickDate”项目的右键菜单或上下文菜单中，依次选择“添加” > “新建项”   。
 
-   此时将打开“添加新项”  对话框。
+   此时将打开“添加新项”对话框。
 
-1. 展开“Visual C# 项”，然后选择“代码”。 在中间窗格中，选择“类”项模板。 将类命名为“Calendar”，然后选择“添加”按钮   。
+1. 展开“Visual C# 项”，然后选择“代码” 。 在中间窗格中，选择“类”项模板。 将类命名为“Calendar”，然后选择“添加”按钮 。
 
    名为“Calendar.cs”的文件已添加到项目。 末尾的 .cs 是 C# 代码文件的文件扩展名。 文件出现在“解决方案资源管理器”中的可视项目层次结构中，其内容在编辑器中打开。
 
@@ -171,11 +171,11 @@ ms.locfileid: "94903931"
 
 我们来向解决方案添加单元测试项目。 这次我们从项目模板开始，所以不需要向项目添加额外的代码文件。
 
-1. 在“解决方案资源管理器”中的“解决方案‘QuickSolution’”的右键菜单或上下文菜单中，依次选择“添加” > “新建项目”   。
+1. 在“解决方案资源管理器”中的“解决方案 'QuickSolution'”的右键菜单或上下文菜单中，依次选择“添加” > “新建项目”   。
 
 ::: moniker range="vs-2017"
 
-2. 在左侧窗格中，展开 Visual C#，然后选择“测试”类别。 在中间窗格中，选择“MSTest 测试项目 (.NET Core)”项目模板。 将项目命名为“QuickTest”，然后选择“确定”。
+2. 在左侧窗格中，展开 Visual C#，然后选择“测试”类别 。 在中间窗格中，选择“MSTest 测试项目(.NET Core)”项目模板。 将项目命名为“QuickTest”，然后选择“确定” 。
 
    第二个项目已添加到“解决方案资源管理器”，且编辑器中打开了名为 UnitTest1.cs 的文件。
 
@@ -187,9 +187,9 @@ ms.locfileid: "94903931"
 
 2. 在“添加新项目”对话框中，在顶部的搜索框输入文本“单元测试”，然后在“语言”下选择“C#”。
 
-3. 选择“MSTest 测试项目(.NET Core)”项目模板，然后选择“下一步”。
+3. 选择“MSTest 测试项目(.NET Core)”项目模板，然后选择“下一步” 。
 
-4. 将项目命名为“QuickTest”，然后选择“创建”。
+4. 将项目命名为“QuickTest”，然后选择“创建” 。
 
    第二个项目已添加到“解决方案资源管理器”，且编辑器中打开了名为 UnitTest1.cs 的文件。
 
@@ -201,15 +201,33 @@ ms.locfileid: "94903931"
 
 我们将使用新的单元测试项目测试“QuickDate”项目中的方法，因此需要添加对该项目的引用。 创建引用会在两个项目间创建生成依赖关系，这意味着生成解决方案时，会先生成“QuickDate”，再生成“QuickTest”。
 
-1. 选择“QuickTest”项目中的“依赖关系”节点，然后在右键菜单或上下文菜单中选择“添加引用”。
+::: moniker range="vs-2017"
+
+1. 选择“QuickTest”项目中的“依赖关系”节点，然后在右键菜单或上下文菜单中选择“添加引用”  。
 
    打开“引用管理器”对话框。
 
-1. 在左侧窗格中，展开“项目”，然后选择“解决方案”。 在中间窗格中，选择“QuickDate”旁的复选框，然后选择“确定” 。
+1. 在左侧窗格中，展开“项目”，选择“解决方案” 。 在中间窗格中，选择“QuickDate”旁的复选框，然后选择“确定” 。
 
    已添加对“QuickDate”项目的引用。
 
-   ![显示项目引用的 Visual Studio 2019 解决方案资源管理器](media/vs-2019/tutorial-projects-solution-explorer-reference.png "Visual Studio 中显示项目引用的解决方案资源管理器。")
+   ![Visual Studio 中显示项目引用的解决方案资源管理器的屏幕截图](media/vs-2019/tutorial-projects-solution-explorer-reference.png "Visual Studio 中显示项目引用的解决方案资源管理器的屏幕截图。")
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+1. 选择“QuickTest”项目中的“依赖关系”节点，然后在右键菜单或上下文菜单中选择“添加项目引用…”  。
+
+   打开“引用管理器”对话框。
+
+1. 在左侧窗格中，展开“项目”，然后选择“解决方案” 。 在中间窗格中，选择“QuickDate”旁的复选框，然后选择“确定” 。
+
+   已添加对“QuickDate”项目的引用。
+
+   ![Visual Studio 2019 中显示项目引用的解决方案资源管理器的屏幕截图](media/vs-2019/tutorial-projects-solution-explorer-reference.png)
+
+::: moniker-end
 
 ## <a name="add-test-code"></a>添加测试代码
 
@@ -261,7 +279,17 @@ ms.locfileid: "94903931"
 
 ## <a name="next-steps"></a>后续步骤
 
+::: moniker range="vs-2017"
+
 若希望检查单元测试是否正常工作，请从菜单栏依次选择“测试” > “运行” > “所有测试”  。 此时名为“测试资源管理器”的窗口打开，你应该会看到“TestGetCurrentDate”测试通过。
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+若希望检查单元测试是否正常工作，请从菜单栏依次选择“测试” > “运行所有测试” 。 此时名为“测试资源管理器”的窗口打开，你应该会看到“TestGetCurrentDate”测试通过。
+
+::: moniker-end
 
 ![Visual Studio 中显示已通过的测试的文本资源管理器](media/tutorial-projects-test-explorer.png "Visual Studio 中显示已通过的测试的测试资源管理器。")
 
@@ -281,7 +309,7 @@ ms.locfileid: "94903931"
 
 ## <a name="see-also"></a>另请参阅
 
-- [创建项目和解决方案](../ide/creating-solutions-and-projects.md)
+- [使用项目和解决方案](../ide/creating-solutions-and-projects.md)
 - [管理项目和解决方案属性](../ide/managing-project-and-solution-properties.md)
 - [管理项目中的引用](../ide/managing-references-in-a-project.md)
 - [在 Visual Studio 中开发代码而无需创建项目或解决方案](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md)

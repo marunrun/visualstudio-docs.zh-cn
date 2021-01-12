@@ -1,5 +1,7 @@
 ---
 title: 将消息发送到“输出”窗口 | Microsoft Docs
+description: 在 Visual Studio 中，使用 Debug 类或 Trace 类（属于 类库）将运行时消息写到“输出”窗口。
+ms.custom: SEO-VS-2020
 ms.date: 11/08/2018
 ms.topic: how-to
 helpviewer_keywords:
@@ -21,16 +23,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 85d3c146775ac06b3118186738ee74932a4c452a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 345efabedca63187fd9f16b4ed9622de8e320e89
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350467"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728078"
 ---
 # <a name="send-messages-to-the-output-window"></a>将消息发送到“输出”窗口
 
-可以使用 <xref:System.Diagnostics.Debug> 类或 <xref:System.Diagnostics.Trace> 类将运行时消息发送到**输出**窗口中，这两个类是 <xref:System.Diagnostics> 类库的一部分。 如果只想在程序的*调试*版本中输出，使用 <xref:System.Diagnostics.Debug> 类。 如果想同时在*调试*和*发行*版本中输出，使用 <xref:System.Diagnostics.Trace> 类。
+可以使用 <xref:System.Diagnostics.Debug> 类或 <xref:System.Diagnostics.Trace> 类将运行时消息发送到 **输出** 窗口中，这两个类是 <xref:System.Diagnostics> 类库的一部分。 如果只想在程序的 *调试* 版本中输出，使用 <xref:System.Diagnostics.Debug> 类。 如果想同时在 *调试* 和 *发行* 版本中输出，使用 <xref:System.Diagnostics.Trace> 类。
 
 ## <a name="output-methods"></a>输出方法
  <xref:System.Diagnostics.Trace> 和 <xref:System.Diagnostics.Debug> 类提供下列输出方法：
@@ -41,7 +43,7 @@ ms.locfileid: "85350467"
 
 - <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=fullName> 和 <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=fullName> 方法，它们总是中断执行并输出信息。 默认情况下，在对话框中显示 `Fail` 方法信息。
 
-**输出**窗口还可以显示下列信息：
+**输出** 窗口还可以显示下列信息：
 
 - 调试器已经加载或卸载的模块。
 

@@ -13,12 +13,12 @@ manager: crdun
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 24af3c279115322b0592faa3b9fa6049bc0c0b62
-ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
+ms.openlocfilehash: 62c2b69edf6868d1559df2a861a85e286f8ffa15
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91878912"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729205"
 ---
 # <a name="troubleshoot-the-visual-studio-emulator-for-android"></a>适用于 Android 的 Visual Studio 模拟器疑难解答
 本主题包含的信息有助于解决使用适用于 Android 的 Visual Studio 仿真程序时可能会遇到的一些问题。
@@ -70,7 +70,7 @@ ms.locfileid: "91878912"
 ## <a name="emulator-fails-to-install"></a><a name="NoInstall"></a> 仿真程序安装失败
  如果未安装 Hyper-V，则当你尝试安装仿真程序时将看到以下消息。 你的计算机必须支持并启用了 HyperV。
 
- ![Android&#95;Emu&#95;Install&#95;Issue](../cross-platform/media/android_emu_install_issue.png "Android_Emu_Install_Issue")
+ ![Visual Studio 消息的屏幕截图，该消息表示适用于 Android 的 Microsoft Visual Studio 模拟器的设置被阻止，因为该计算机不支持 Hyper-V。](../cross-platform/media/android_emu_install_issue.png "Android_Emu_Install_Issue")
 
 > [!NOTE]
 > 对于适用于 Android 的 Visual Studio 仿真程序和 Windows Phone 仿真程序，此消息均适用。 Windows 8.1 和 Windows 10 支持仿真程序。
@@ -135,7 +135,7 @@ ms.locfileid: "91878912"
 
 - 在 Hyper-V 管理器中，打开虚拟交换机管理器并检查确认有两个网络交换机；并且第一个是内部交换机，第二个是外部交换机。
 
-     ![Android&#95;Emu&#95;V&#95;Switch&#95;Man](../cross-platform/media/android_emu_v_switch_man.png "Android_Emu_V_Switch_Man")
+     ![Hyper-V 管理器中的虚拟交换机管理器的屏幕截图。其中突出显示了新的虚拟交换机，其属性显示它是外部网络交换机。](../cross-platform/media/android_emu_v_switch_man.png "Android_Emu_V_Switch_Man")
 
      如果安装不正确，并且使用的是 Windows 10，则可以尝试[使用 netcfg – d 命令重新安装网络设备](https://support.microsoft.com/help/10741/windows-fix-network-connection-issues)（第 6 节）。
 

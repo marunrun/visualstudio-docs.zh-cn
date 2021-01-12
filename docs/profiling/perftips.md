@@ -1,5 +1,6 @@
 ---
 title: 性能提示 | Microsoft Docs
+description: 了解如何使用 Visual Studio 调试器性能提示和集成的诊断工具在调试时监视和分析应用的性能。
 ms.date: 9/11/2020
 ms.topic: how-to
 ms.assetid: 509d2d4f-48a5-4cdf-acad-6f7b75421303
@@ -8,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f260307b677046be54e6d80b0d8fe122b13292e4
-ms.sourcegitcommit: 14637be49401f56341c93043eab560a4ff6b57f6
+ms.openlocfilehash: 481113e9f5e2f5b66aec5f4dad29f581462165ca
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90075465"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815823"
 ---
 # <a name="perftips"></a>性能提示
 
@@ -33,7 +34,7 @@ Visual Studio 调试器 *性能提示* 和调试器集成的 **“诊断工具�
 
 下图所示为“诊断工具”窗口。
 
-![DiagnosticTools&#45;Update1](../profiling/media/diagnostictools-update1.png "DiagnosticTools-Update1")
+![Visual Studio 调试器中“诊断工具”窗口的屏幕截图，其中显示了用于内存和 CPU 使用情况的事件时间线和图形。](../profiling/media/diagnostictools-update1.png)
 
 - **“中断事件”** 时间线会标记在调试会话中命中的断点。 在 **“调试器”** 详细信息列表中单击事件以选择它。
 

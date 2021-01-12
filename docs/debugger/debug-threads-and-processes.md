@@ -1,5 +1,7 @@
 ---
 title: 调试线程和进程的工具 |Microsoft Docs
+description: 查看 Visual Studio 中用于调试线程和进程的工具。 线程和进程表示必须按特定顺序执行的指令序列。
+ms.custom: SEO-VS-2020
 ms.date: 04/21/2018
 ms.topic: conceptual
 dev_langs:
@@ -19,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dcdaf083462b75485449cae05894681e2bb5c900
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 51917065e8764f7edbebbdb3bfcc7a03cc9723d4
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738384"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727146"
 ---
 # <a name="tools-to-debug-threads-and-processes-in-visual-studio"></a>Visual Studio 中用于调试线程和进程的工具
 在计算机科学中，“线程”和“进程”是两个相关的概念 。 二者都表示必须按特定顺序执行的指令序列。 但是不同线程或进程中的指令可以并行执行。

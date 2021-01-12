@@ -1,5 +1,7 @@
 ---
 title: 调试 F# | Microsoft Docs
+description: 查看调试 F# 与调试 Visual Studio 中的其他托管语言之间的差异列表。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e7bc3934136f0966439bec2e4368488e52099602
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: f2dcacff924386cc279708c34d2232e50aa92c55
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738272"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728416"
 ---
 # <a name="debugging-f"></a>调试 F\#
 调试 F# 与调试任何托管语言类似，但有以下几种例外情况：

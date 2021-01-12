@@ -12,12 +12,12 @@ ms.assetid: 92dff25c-36ee-4135-acdd-315c4962fa11
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 713d711847d798c617074d2d620e09f914c1a147
-ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
+ms.openlocfilehash: 9f670c9cf543ae209ebed63ce185fadfbbe253d0
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96190223"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815719"
 ---
 # <a name="fix-non-detectable-dynamic-parameters-in-a-web-performance-test"></a>在 Web 性能测试中修复无法检测的动态参数
 
@@ -190,13 +190,13 @@ ms.locfileid: "96190223"
 
 3. 返回到 Web 性能测试结果查看器，然后选择失败的 JScriptQuery.aspx 页。  然后，选择请求选项卡并验证是否清除“显示原始数据”复选框，向下滚动并选择“在 CustomQueryString 上快速查找”。
 
-     ![使用快速查找隔离该动态参数](../test/media/web_test_dynamicparameter_runresultsquckfind.png)
+     ![Web 性能测试结果查看器中的“请求”选项卡的屏幕截图。 选中了一个 QueryString 参数，并在上下文菜单中突出显示了“快速查找”。](../test/media/web_test_dynamicparameter_runresultsquckfind.png)
 
 4. 从测试编辑器中可以看到，已为 JScriptQuery.aspx 请求的 CustomQueryString 分配值：`jScriptQueryString___1v0yhyiyr0raa2w4j4pwf5zl`，并且怀疑的动态部分为“1v0yhyiyr0raa2w4j4pwf5zl”。 在“查找内容”下拉列表中，移除该搜索字符串的可疑部分。 该字符串应为“CustomQueryString=jScriptQueryString___”。
 
      动态参数将存在错误的请求前面的一个请求中进行赋值。 因此，请选中“向上搜索”复选框，然后选择“查找下一个”，直到 Querystring.aspx 前面的请求突出显示在“请求”面板中。  此情况应在您选择“查找下一个”三次后发生。
 
-     ![使用快速查找隔离该动态参数](../test/media/web_test_dynamicparameter_runresultsquckfind4.png)
+     ![Web 性能测试结果查看器的屏幕截图。 选中了一个查询字符串，并显示“查找”对话框，其中选中了“向上搜索”和“查找下一个”。](../test/media/web_test_dynamicparameter_runresultsquckfind4.png)
 
      正如“响应”选项卡和以下显示的之前实现的 JavaScript 所示，向查询字符串参数 CustomQueryString 分配值“jScriptQueryString___”，并且该字符串参数还会与变量 sessionId 的返回值串联。
 

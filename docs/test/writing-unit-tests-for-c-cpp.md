@@ -8,12 +8,12 @@ manager: markl
 ms.workload:
 - cplusplus
 author: corob-msft
-ms.openlocfilehash: 0eaf41dc0bf3e21dfbf4018261844181d594f0d5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cf6287ebdb4c2df6145a0e60e22ac1197a517fde
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81649605"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729361"
 ---
 # <a name="write-unit-tests-for-cc-in-visual-studio"></a>在 Visual Studio 中编写 C/C++ 单元测试
 
@@ -37,7 +37,7 @@ C++ 单元测试项目支持 [CodeLens](../ide/find-code-changes-and-other-histo
 
 **Visual Studio 2017 及更高版本（所有版本）**
 
-- **Google Test 适配器**作为“使用 C++ 的桌面开发”  工作负荷的默认组件包含在内。 它具有可添加到解决方案的项目模板。 要添加它，可使用解决方案资源管理器中“解决方案”节点上的“添加新项目”右键单击菜单   。 它还提供了可通过“工具” > “选项”进行配置的选项   。 有关详细信息，请参阅[如何：在 Visual Studio 中使用 Google Test](how-to-use-google-test-for-cpp.md)。
+- **Google Test 适配器** 作为“使用 C++ 的桌面开发”  工作负荷的默认组件包含在内。 它具有可添加到解决方案的项目模板。 要添加它，可使用解决方案资源管理器中“解决方案”节点上的“添加新项目”右键单击菜单   。 它还提供了可通过“工具” > “选项”进行配置的选项   。 有关详细信息，请参阅[如何：在 Visual Studio 中使用 Google Test](how-to-use-google-test-for-cpp.md)。
 
 - **Boost.Test** 作为“使用 C++ 的桌面开发”  工作负荷的默认组件包含在内。 它与测试资源管理器集成，但当前没有项目模板  。 必须手动配置它。 有关详细信息，请参阅[如何：在 Visual Studio 中使用 Boost.Test](how-to-use-boost-test-for-cpp.md)。
 
@@ -85,7 +85,7 @@ C++ 单元测试项目支持 [CodeLens](../ide/find-code-changes-and-other-histo
 
 接下来，在单元测试 .cpp 文件中，为声明要测试的类型和函数的任何头文件添加 `#include` 指令  。 输入 `#include "`，随后 IntelliSense 会激活以帮助进行选择。 对任何其他头文件重复此操作。
 
-![添加 include 指令](media/cpp-add-includes-test-project.png)
+![解决方案资源管理器的屏幕截图，其中显示了一个正在通过 IntelliSense 添加的 #include 指令，突出显示了要包含的头文件。](media/cpp-add-includes-test-project.png)
 
 若要避免必须在源文件的每个 include 语句中键入完整路径，可以在“项目”   > “属性”   > “C/C++”   > “常规”   > “附加包含目录”  中添加所需的文件夹。
 
@@ -96,7 +96,7 @@ C++ 单元测试项目支持 [CodeLens](../ide/find-code-changes-and-other-histo
 
 测试项目中的 .cpp 文件有一个为你定义的存根类和方法  。 其中显示了如何编写测试代码的示例。 签名使用 TEST_CLASS 和 TEST_METHOD 宏，它们使方法可在“测试资源管理器”窗口中被发现  。
 
-![添加 include 指令](media/cpp-write-test-methods.png)
+![测试资源管理器窗口的屏幕截图，其中显示 unittest1.cpp 代码文件，该文件包含一个存根类和使用 TEST_CLASS 和 TEST_METHOD 宏的方法。](media/cpp-write-test-methods.png)
 
 TEST_CLASS 和 TEST_METHOD 是 [Microsoft 本机策略框架](microsoft-visualstudio-testtools-cppunittestframework-api-reference.md)的一部分。 “测试资源管理器”  以类似方式发现其他受支持框架中的测试方法。
 

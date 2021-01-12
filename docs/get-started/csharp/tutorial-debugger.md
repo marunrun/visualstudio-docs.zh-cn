@@ -1,6 +1,6 @@
 ---
 title: 教程：调试 C# 代码
-description: 了解如何启动 Visual Studio 调试器、单步执行代码以及检查数据。
+description: 了解 Visual Studio 调试器的功能，以及如何启动调试器、单步调试代码并检查 C# 应用程序中的数据。
 ms.custom: debug-experiment, seodec18, get-started
 ms.date: 04/23/2020
 ms.technology: vs-ide-debug
@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3d6e9ee79602f3a0db8f68d701120c450bfee721
-ms.sourcegitcommit: dab57cebd484228e6f0cf7ab1b9685c575410c06
+ms.openlocfilehash: 435564a9bf4e90dd25ed5fee3a44d0578c201a99
+ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82153066"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97846941"
 ---
 # <a name="tutorial-learn-to-debug-c-code-using-visual-studio"></a>教程：了解如何使用 Visual Studio 调试 C# 代码
 
@@ -89,7 +89,7 @@ ms.locfileid: "82153066"
 
 1. 在“开始”窗口上，选择“创建新项目”  。
 
-1. 在“创建新项目”窗口的搜索框中输入或键入“控制台”   。 接下来，从“语言”列表中选择 C#，然后从“平台”列表中选择 Windows   。 
+1. 在“创建新项目”窗口的搜索框中输入或键入“控制台”   。 接下来，从“语言”列表中选择 C#，然后从“平台”列表中选择 Windows 。 
 
    应用语言和平台筛选器之后，选择“控制台应用(.NET Core)”模板，然后选择“下一步”   。
 
@@ -187,7 +187,7 @@ ms.locfileid: "82153066"
 
 1. 展开 `letters` 变量，查看其属性，其中包括变量包含的所有元素。
 
-     ![查看数据提示](../csharp/media/get-started-view-data-tip.png "查看数据提示")
+     ![Visual Studio 调试器的屏幕截图，其中突出显示了“name+= letters[I]”语句，并且图中包括一个显示了字母数组中的元素的下拉列表。](../csharp/media/get-started-view-data-tip.png)
 
 1. 接下来，将鼠标悬停在 `name` 变量上，会看到其当前值为空字符串。
 
@@ -197,7 +197,7 @@ ms.locfileid: "82153066"
 
 1. 多按几次 F10（或“调试” > “单步跳过”），通过 `for` 循环执行多次循环访问，再次在断点处暂停，每次都将鼠标悬停在 `name` 变量上以检查其值    。
 
-     ![查看数据提示](../csharp/media/get-started-data-tip.gif "查看数据提示")
+     ![Visual Studio 调试器的动画屏幕截图，其中显示在调试期间按 F10 以“单步执行”并迭代循环的效果。](../csharp/media/get-started-data-tip.gif)
 
      变量的值随 `for` 循环的每次迭代而更改，显示的值依次为 `f`、`fr`、`fre`，依此类推。 要在此方案中更快地前进到循环，可以按 F5 （或选择“调试器” > “继续”），此操作会使你前进到断点，而不是下一条语句    。
 

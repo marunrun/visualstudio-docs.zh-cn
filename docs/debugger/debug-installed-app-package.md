@@ -1,6 +1,7 @@
 ---
 title: 调试已安装的 UWP 应用包 | Microsoft Docs
-ms.custom: ''
+description: 在 Visual Studio 中调试 Windows 10 计算机、Xbox 和物联网 (IoT) 设备上已安装的通用 Windows 平台 (UWP) 应用包。
+ms.custom: SEO-VS-2020
 ms.date: 11/07/2018
 ms.topic: how-to
 f1_keywords:
@@ -20,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: eabc694665bede7d193a360a01c42366568e33c5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 04ed043dbcb09c862fcdfc5f34d77fd938bd24dc
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350727"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728919"
 ---
 # <a name="debug-an-installed-uwp-app-package-in-visual-studio"></a>在 Visual Studio 中调试已安装的 UWP 应用包
 

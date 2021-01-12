@@ -26,12 +26,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64166768dea1da015c223a74c74440ae09a0d106
-ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
+ms.openlocfilehash: 74b6b6b6a8f7a9f5f234a9b46c799e6e0580536f
+ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96863031"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97761324"
 ---
 # <a name="format-specifiers-for-c-in-the-visual-studio-debugger"></a>Visual Studio 调试器中的 C++ 格式说明符
 你可以使用格式说明符更改在“监视”、“自动”和“局部变量”窗口中显示的值所用的格式。
@@ -54,7 +54,7 @@ int main() {
 
 调试期间，将 `my_var1` 变量添加到“监视”窗口，“调试” > “窗口” > “监视” > “监视 1”。 接下来，右键单击变量，然后选择“十六进制显示”。 现在，“监视”窗口显示值 0x0065。 若要查看以字符而不是整数形式表达的此值，请先右键单击并取消选择“十六进制显示”。 然后，在“名称”列的变量名称之后添加字符格式说明符“, c”。 现在，“值”列显示“101 'e'”。
 
-![WatchFormatCPlus1](../debugger/media/watchformatcplus1.png "WatchFormatCPlus1")
+![Visual Studio“监视”窗口的屏幕截图，其中选中的行显示 my_var1.c，值为 101 'e'，类型为 int。](../debugger/media/watchformatcplus1.png)
 
 ::: moniker range=">= vs-2019" 
 可以通过将逗号 (,) 追加到“监视”窗口中的值来查看可用格式说明符列表并从中进行选择。 

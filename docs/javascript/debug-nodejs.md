@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 801ea23430d13dbefd9498c57b07881235275961
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 369fa3c080705f552aed25ecef6bd87a3db43a64
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85285187"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815615"
 ---
 # <a name="debug-a-javascript-or-typescript-app-in-visual-studio"></a>在 Visual Studio 中调试 JavaScript 或 TypeScript 应用
 
@@ -29,7 +29,7 @@ ms.locfileid: "85285187"
 
 1. 在 Visual Studio 中打开项目，然后打开服务器端 JavaScript 文件（例如“server.js”），单击左侧滚动条槽以设置断点：
 
-    ![设置断点](../javascript/media/tutorial-nodejs-react-set-breakpoint.png)
+    ![显示 JavaScript 代码的 Visual Studio 代码窗口的屏幕截图。 左侧滚动条中的红点指示设置了断点。](../javascript/media/tutorial-nodejs-react-set-breakpoint.png)
 
     断点是可靠调试的最基本和最重要的功能。 断点指示 Visual Studio 应在哪个位置挂起你的运行代码，以使你可以查看变量的值或内存的行为，或确定代码的分支是否运行。
 
@@ -107,7 +107,7 @@ Visual Studio 仅为 Chrome 和 Internet 资源管理器提供客户端调试支
 
 1. 切换到 Visual Studio，然后在源代码中设置断点，该断点可能是 JavaScript 文件、TypeScript 文件或 JSX 文件。 （在允许断点的代码行中设置断点，例如 return 语句或 var 声明。）
 
-    ![设置断点](../javascript/media/tutorial-nodejs-react-set-breakpoint-client-code.png)
+    ![Visual Studio 代码窗口的屏幕截图。 选中了 return 语句，左侧滚动条中的红点指示设置了断点。](../javascript/media/tutorial-nodejs-react-set-breakpoint-client-code.png)
 
     若要在转译的文件中查找特定代码，请使用 Ctrl+F（“编辑” > “查找和替换” > “快速查找”）。    
 

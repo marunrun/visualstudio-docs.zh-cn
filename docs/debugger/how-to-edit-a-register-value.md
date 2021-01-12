@@ -1,5 +1,7 @@
 ---
 title: 编辑寄存器值 | Microsoft Docs
+description: 了解如何通过在“寄存器”窗口（仅在启用了地址级调试时才可用）中编辑寄存器的值来修改寄存器的内容。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -19,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a0ccbfbc0ede95fe93974474f4917e1b141797e6
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 4f83f67f57e67080f97a6df434f8dfc008e36892
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851640"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903540"
 ---
 # <a name="how-to-edit-a-register-value-c-c-visual-basic-f"></a>如何：编辑寄存器值（C#、C++、Visual Basic、F#）
 

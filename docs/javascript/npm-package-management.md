@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: fed525f62466d096aa7868cc57c7fd7c75bf46f8
-ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
+ms.openlocfilehash: d2c7ec425767e432105bfcec493599197e2fd5ec
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91781026"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815680"
 ---
 # <a name="manage-npm-packages-in-visual-studio"></a>在 Visual Studio 中管理 npm 包
 
@@ -55,7 +55,7 @@ Visual Studio 与 npm 的集成因项目类型而异。
 
 在此窗口中可以搜索包、指定选项并安装。
 
-![搜索 npm 包](../javascript/media/search-package.png)
+![“安装新 npm 包”对话框的屏幕截图。 已选择 azure 2.2.1-preview 包，并显示了该包的详细信息和选项。](../javascript/media/search-package.png)
 
 * 依赖项类型 - 在“标准”、“开发”和“可选”包间进行选择     。 “标准”指定包是一个运行时依赖项，而“开发”指定只在开发过程中需要包。
 * **添加到 package.json** - 建议。 此可配置选项已被弃用。
@@ -73,7 +73,7 @@ Visual Studio 与 npm 的集成因项目类型而异。
 
 npm 包显示在解决方案资源管理器中。 “npm”节点下的条目模拟 package.json 文件中的依赖项   。
 
-![搜索 npm 包](../javascript/media/solution-explorer-status.png)
+![解决方案资源管理器中 npm 节点的屏幕截图，其中显示 npm 包的安装状态。](../javascript/media/solution-explorer-status.png)
 
 ### <a name="package-status"></a>包状态
 
@@ -86,12 +86,12 @@ npm 包显示在解决方案资源管理器中。 “npm”节点下的条目模
 
 * **安装新的 npm 包** 打开 UI 以安装新的包。
 * **安装 npm 包** 运行 npm 安装命令以安装 package.json 中列出的所有包  。 （运行 `npm install`。）
-* **更新 npm 包** 根据 package.json 指定的语义版本控制 (semver) 范围，将包更新到最新版本。 （运行 `npm update --save`。）。 通常使用“~”或“^”指定 SemVer 范围。 有关详细信息，请参阅 [package.json 配置](../javascript/configure-packages-with-package-json.md)。
+* “更新 npm 包”根据 package.json 中指定的语义版本控制 (SemVer) 范围，将包更新到最新版本。 （运行 `npm update --save`。）。 通常使用“~”或“^”指定 SemVer 范围。 有关详细信息，请参阅 [package.json 配置](../javascript/configure-packages-with-package-json.md)。
 
 右键单击包节点，执行以下操作之一：
 
 * **安装 npm 包** 运行 npm 安装命令以安装 package.json 中列出的所有包版本  。 （运行 `npm install`。）
-* **更新 npm 包** 根据 package.json 指定的 SemVer 范围，将包更新到最新版本。 （运行 `npm update --save`。）通常使用“~”或“^”指定 SemVer 范围。
+* “更新 npm 包”根据 package.json 中指定的 SemVer 范围，将包更新到最新版本。 （运行 `npm update --save`。）通常使用“~”或“^”指定 SemVer 范围。
 * **卸载 npm 包** 卸载包并将其从 package.json 中删除（运行 `npm uninstall --save`。） 
 ::: moniker-end
 ::: moniker range="vs-2017"
@@ -160,11 +160,11 @@ npm 包显示在解决方案资源管理器中。 “npm”节点下的条目模
 
 对于包含 npm 的项目，可以使用 `package.json` 配置 npm 包。 右键单击解决方案资源管理器中的 npm 节点，并选择“打开 package.json”  。
 
-![搜索 npm 包](../javascript/media/npm-add-package.png)
+![选中 npm 节点的解决方案资源管理器的屏幕截图。 已打开右键单击上下文菜单，并且已选中“打开 package.json”。](../javascript/media/npm-add-package.png)
 
 package.json 中的 IntelliSense 可帮助选择特定版本的 npm 包  。
 
-:::image type="content" source="../javascript/media/npm-add-package-intellisense.png" alt-text="从解决方案资源管理器安装新的 npm 包" border="true":::
+:::image type="content" source="../javascript/media/npm-add-package-intellisense.png" alt-text="选择 npm 包版本" border="true":::
 
 保存文件时，Visual Studio 会将包添加到解决方案资源管理器中的“依赖项/npm”节点下  。 如果未显示该节点，请右键单击“package.json”并选择“还原包”   。
 

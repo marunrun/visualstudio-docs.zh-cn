@@ -1,5 +1,7 @@
 ---
 title: 键盘快捷键（HTML 和 JavaScript）| Microsoft Docs
+description: 请参阅用于调试使用 HTML 和 JavaScript 的 UWP 应用的键盘快捷方式。 包含“JavaScript 控制台”窗口和“DOM 资源管理器”的快捷方式。
+ms.custom: SEO-VS-2020
 ms.date: 10/17/2019
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +15,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 32a3dcc48e34cc3ecc429f7f2b4ca62221263fe0
-ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
+ms.openlocfilehash: a65cf7eea0541464a013a72377f439dd53ebf685
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91211334"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903813"
 ---
 # <a name="keyboard-shortcuts-html-and-javascript"></a>键盘快捷键（HTML 和 JavaScript）
 
