@@ -453,6 +453,12 @@
           href: how-to-generate-code-metrics-data.md
         - name: 使用代码度量数据
           href: working-with-code-metrics-data.md
+        - name: 资源
+          items:
+            - name: 可维护性指数的范围和含义
+              href: code-metrics-maintainability-index-range-and-meaning.md
+            - name: 类耦合
+              href: code-metrics-class-coupling.md
 - name: C++ 代码分析
   items:
     - name: 分析 C 和 C++ 代码
