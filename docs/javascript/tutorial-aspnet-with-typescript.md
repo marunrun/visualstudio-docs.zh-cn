@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 58e3557d260b821055c533fc703a1f47949c5bfb
-ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
+ms.openlocfilehash: ef287616f5b214566a273817c229d9105bf253c5
+ms.sourcegitcommit: cd7f122c6850cf442a4ca42d51d05c7a8fe9038d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91781061"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98129479"
 ---
 # <a name="tutorial-create-an-aspnet-core-app-with-typescript-in-visual-studio"></a>教程：在 Visual Studio 中使用 TypeScript 创建 ASP.NET Core 应用
 
@@ -47,10 +47,10 @@ ms.locfileid: "91781061"
 * 必须安装 Visual Studio 且具有 ASP.NET Web 开发工作负载。
 
     ::: moniker range=">=vs-2019"
-    如果尚未安装 Visual Studio 2019，请转到  [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/) 页免费安装。
+    如果尚未安装 Visual Studio 2019，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/)页免费安装。
     ::: moniker-end
     ::: moniker range="vs-2017"
-    如果尚未安装 Visual Studio 2017，请转到  [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/) 页免费安装。
+    如果尚未安装 Visual Studio 2017，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/)页免费安装。
     ::: moniker-end
 
     如果需要安装工作负载但已有 Visual Studio，请转到“工具” > “获取工具和功能...”，这会打开 Visual Studio 安装程序。 选择“ASP.NET 和 web 开发”工作负载，然后选择“修改” 。
@@ -100,6 +100,7 @@ Visual Studio 管理项目中的单个应用程序的文件。 该项目包括�
 
    ```json
    {
+     "compileOnSave": true,
      "compilerOptions": {
        "noImplicitAny": false,
        "noEmitOnError": true,

@@ -29,12 +29,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1fd1ff5ff0f8c7510185236c425ddd870f8b500f
-ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
+ms.openlocfilehash: 6fb2fde5d5629b84ccd0e136c132a200b154ea71
+ms.sourcegitcommit: dc71e9030ff35bb26916572b431d4d9e78df3d6f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97760921"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98031037"
 ---
 # <a name="attach-to-running-processes-with-the-visual-studio-debugger"></a>使用 Visual Studio 调试器附加到正在运行的进程
 
@@ -199,7 +199,7 @@ ms.locfileid: "97760921"
 |调试本地计算机上的 C#、Visual Basic 或 C++ 应用|使用标准调试 (F5) 或“附加到进程”|\<appname>.exe|在大多数情况下，请使用标准调试，而不是“附加到进程”。|
 |远程调试 Windows 桌面应用|远程工具|不可用| 请参阅[远程调试 C# 或 Visual Basic 应用](../debugger/remote-debugging-csharp.md)或[远程调试 C++ 应用](../debugger/remote-debugging-cpp.md)|
 |调试 Linux 上的 .NET Core|使用“附加到进程”|dotnet.exe 或唯一进程名称|若要使用 SSH，请参阅[使用 SSH 远程调试正在 Linux 上运行的 .NET Core](../debugger/remote-debugging-dotnet-core-linux-with-ssh.md)。 对于容器化应用，请参阅[附加到在 Docker 容器上运行的进程](../debugger/attach-to-process-running-in-docker-container.md#attach-to-a-process-running-on-a-linux-docker-container)。|
-|调试容器化应用|dotnet.exe 或唯一进程名称|请参阅[附加到在 Docker 容器上运行的进程](../debugger/attach-to-process-running-in-docker-container.md)|
+|调试容器化应用|使用“附加到进程”|dotnet.exe 或唯一进程名称|请参阅[附加到在 Docker 容器上运行的进程](../debugger/attach-to-process-running-in-docker-container.md)|
 |在 Linux 上远程调试 Python|使用“附加到进程”|debugpy|请参阅[从 Python 工具远程附加](../python/debugging-python-code-on-remote-linux-machines.md#attach-remotely-from-python-tools)|
 |在没有调试器的情况下，在启动本地计算机上的 ASP.NET 应用后调试该应用|使用“附加到进程”|*iiexpress.exe*|这可能有助于加快应用加载速度，例如在进行分析时。 |
 |在服务器进程上调试其他受支持的应用类型|如果是远程服务器，请使用远程工具和“附加到进程”|chrome.exe、iexplore.exe 或其他进程|如有必要，请使用资源监视器来帮助识别进程。 请参阅[远程调试](../debugger/remote-debugging.md)。|
@@ -243,7 +243,7 @@ ms.locfileid: "97760921"
 
     3. 在 **“选择代码类型”** 对话框中，选择 **“调试以下代码类型”** 和未能附加的代码类型。 取消选择其他代码类型。
 
-    4. 选择“确定”。
+    4. 选择“确定”  。
 
     5. 在“附加到进程”对话框中，选择“附加”。
 
