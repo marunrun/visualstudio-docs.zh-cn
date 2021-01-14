@@ -10,12 +10,12 @@ user.type: subscriber, admin
 tags: purchasing
 subscription.type: vl, cloud, retail, partner
 sap.id: c374762c-640b-8b2c-d049-bda9545e903c
-ms.openlocfilehash: b16123ef691036c027ac6046616699624e53b10a
-ms.sourcegitcommit: 60e5a8a7ee91854356797d05f3b502572c4a4884
+ms.openlocfilehash: 90c56d7be8e4f3e687ff602619b5eda80807b030
+ms.sourcegitcommit: cd7f122c6850cf442a4ca42d51d05c7a8fe9038d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96915913"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98147449"
 ---
 ## <a name="purchase-subscriptions-through-microsoft-store"></a>通过 Microsoft Store 购买订阅 
 
@@ -37,7 +37,7 @@ ms.locfileid: "96915913"
 1. 单击“下载 - 新建”，并将其添加到购物车。 注意：有时，商店会默认显示续订价格，请确保你购买的是新订阅。 以续订价格购买时，商店将不会验证你是否具有当前订阅。 如果没有当前匹配的订阅，将无法激活续订。
 1. 签出。在“确认”页上，你将获得一个产品密钥，并将需要用它来激活订阅。 请参阅下面的说明。 
 
-## <a name="how-to-activate"></a>如何激活  
+## <a name="how-to-activate-your-subscription"></a>如何激活订阅 
 
 通过 Microsoft Store 购买了 Visual Studio 订阅后，可从“付款确认”页或在购买后收到的确认电子邮件中开始激活过程。 
 
@@ -47,7 +47,7 @@ ms.locfileid: "96915913"
 
 该订阅现应显示在 [“订阅”页](https://my.visualstudio.com/subscriptions)上，并且你应能够访问所有订阅权益。 
 
-## <a name="more-information"></a>详细信息 
+## <a name="compare-subscription-benefits"></a>比较订阅权益
 
 [比较订阅权益和定价](https://visualstudio.microsoft.com/vs/pricing/) ，了解每种 Visual Studio 订阅的优点。 
 

@@ -10,12 +10,12 @@ user.type: subscriber
 tags: renewing
 subscription.type: retail
 sap.id: b324c31f-5d44-4cc2-537a-9c354bc5fbfc
-ms.openlocfilehash: c888f89c7fa6a02a18539493e2fda5afc5298712
-ms.sourcegitcommit: 60e5a8a7ee91854356797d05f3b502572c4a4884
+ms.openlocfilehash: f518f4458181d39a140ee5652b08ea861f2130ee
+ms.sourcegitcommit: cd7f122c6850cf442a4ca42d51d05c7a8fe9038d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96915909"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98147395"
 ---
 ## <a name="renewing-subscriptions-through-microsoft-store"></a>通过 Microsoft Store 续订订阅 
 
@@ -23,7 +23,7 @@ ms.locfileid: "96915909"
 
 如果订阅未过期，则将可通过在[订阅门户](https://my.visualstudio.com/subscriptions)中查看订阅来找到到期日期。 
 
-## <a name="subscriptions-available"></a>可用订阅 
+## <a name="subscriptions-available-for-renewal"></a>可续订订阅
 
 可通过 Microsoft Store 进行续订的零售 Visual Studio 订阅包括： 
 
