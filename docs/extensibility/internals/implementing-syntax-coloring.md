@@ -1,5 +1,7 @@
 ---
 title: 实现语法着色 |Microsoft Docs
+description: 了解如何使用托管包框架的语言服务功能 (MPF) 在 Visual Studio 中实现语法着色。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: bb3f26f59d7cbc994da1d2537e0ab352ce12205e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 195cf7a26b1615b7c56f3f0d06cfd9e0d44a4384
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905211"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98204665"
 ---
 # <a name="implementing-syntax-coloring"></a>实现语法着色
 当语言服务提供语法着色时，分析器会将一行文本转换为可着色项的数组，并返回对应于这些可着色项的标记类型。 分析器应返回属于可着色项列表的标记类型。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 根据 colorizer 对象分配给相应标记类型的属性，在代码窗口中显示每个可着色项。

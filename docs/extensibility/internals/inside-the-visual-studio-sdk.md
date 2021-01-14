@@ -1,5 +1,7 @@
 ---
 title: 在 Visual Studio SDK 内 |Microsoft Docs
+description: 了解 Visual Studio SDK 中的扩展，包括 Visual Studio 体系结构、组件、服务、架构和实用工具。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0e72020795bc3181e11f0f90eff580a2365d4000
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 73bbb1beb30677711b8b517262b48465e7529585
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707574"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205328"
 ---
 # <a name="inside-the-visual-studio-sdk"></a>深入探究 Visual Studio SDK
 
@@ -26,7 +28,7 @@ ms.locfileid: "80707574"
 ## <a name="extensibility-architecture"></a>扩展性体系结构
  下图显示了 Visual Studio 扩展性体系结构。 Vspackage 提供应用程序功能，该功能在 IDE 中作为服务共享。 标准 IDE 还提供了各种服务，例如 <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell> ，提供对 IDE 窗口功能的访问。
 
- ![环境体系结构图](../../extensibility/internals/media/environment.gif "environment") Visual Studio 体系结构的通用视图
+ ![环境体系结构图](../../extensibility/internals/media/environment.gif "环境") Visual Studio 体系结构的通用视图
 
 ## <a name="vspackages"></a>VSPackages
  VSPackage 是软件模块，它们通过 UI 元素、服务、项目、编辑器和设计器来组成并扩展 Visual Studio。 Vspackage 是 Visual Studio 的中央体系结构单元。 有关更多信息，请参见 [VSPackages](../../extensibility/internals/vspackages.md)。
@@ -47,7 +49,7 @@ ms.locfileid: "80707574"
  有关详细信息，请参阅 [命令、菜单和工具栏](../../extensibility/internals/commands-menus-and-toolbars.md)。
 
 ## <a name="menus-and-toolbars"></a>菜单和工具栏
- 菜单和工具栏提供了一种方法，使用户可以调用命令。 菜单是通常在工具窗口顶部显示为单个文本项的命令行或列。 子菜单是当用户单击包括小箭头的命令时显示的辅助菜单。 当用户右键单击某些 UI 元素时，将显示上下文菜单。 一些常见的菜单名包括 **文件**、 **编辑**、 **视图**和 **窗口**。 有关详细信息，请参阅 [扩展菜单和命令](../../extensibility/extending-menus-and-commands.md)。
+ 菜单和工具栏提供了一种方法，使用户可以调用命令。 菜单是通常在工具窗口顶部显示为单个文本项的命令行或列。 子菜单是当用户单击包括小箭头的命令时显示的辅助菜单。 当用户右键单击某些 UI 元素时，将显示上下文菜单。 一些常见的菜单名包括 **文件**、 **编辑**、 **视图** 和 **窗口**。 有关详细信息，请参阅 [扩展菜单和命令](../../extensibility/extending-menus-and-commands.md)。
 
  工具栏是按钮和其他控件（如组合框、列表框和文本框）的行或列。 工具栏按钮通常具有图标图像，例如 " **打开文件** " 命令的文件夹图标或用于 **打印** 命令的打印机。 所有工具栏元素都与命令关联。 单击工具栏按钮时，其关联的命令将运行。 对于下拉控件，下拉列表中的每一项都与不同的命令相关联。 某些工具栏控件（如拆分控件）是混合的。 控件的一端是工具栏按钮，另一端是在单击时显示多个命令的向下箭头。
 
@@ -87,7 +89,7 @@ ms.locfileid: "80707574"
 
 在 Visual Studio 中，项目是开发人员用来组织和生成源代码和其他资源的容器。 项目使你可以组织、构建、调试和部署源代码，引用 Web 服务和数据库以及其他资源。 Vspackage 可以通过提供项目类型、项目子类型和自定义工具来扩展 Visual Studio 项目系统。
 
-还可以在解决方案中一起收集项目，该 *解决方案*是一个或多个项目的分组，可协同工作以创建应用程序。 与解决方案有关的项目和状态信息存储在两个解决方案文件中，基于文本的 [解决方案 ( .sln) 文件](solution-dot-sln-file.md) ，而二进制 [解决方案用户选项 ( .suo) 文件](solution-user-options-dot-suo-file.md)中。 这些文件类似于在 Visual Basic 早期版本中使用的组 () 文件以及工作区 (. dsw) 和用户选项 ( 在早期版本的 c + + 中使用) 文件。
+还可以在解决方案中一起收集项目，该 *解决方案* 是一个或多个项目的分组，可协同工作以创建应用程序。 与解决方案有关的项目和状态信息存储在两个解决方案文件中，基于文本的 [解决方案 ( .sln) 文件](solution-dot-sln-file.md) ，而二进制 [解决方案用户选项 ( .suo) 文件](solution-user-options-dot-suo-file.md)中。 这些文件类似于在 Visual Basic 早期版本中使用的组 () 文件以及工作区 (. dsw) 和用户选项 ( 在早期版本的 c + + 中使用) 文件。
 
 有关详细信息，请参阅 [项目](../../extensibility/internals/projects.md) 和 [解决方案](../../extensibility/internals/solutions-overview.md)。
 

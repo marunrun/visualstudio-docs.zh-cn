@@ -1,5 +1,7 @@
 ---
 title: 截获旧版语言服务命令 |Microsoft Docs
+description: 了解如何使用 Visual Studio 中的命令筛选器来截获旧版语言服务命令并添加特定于语言的行为。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5206bced8b4bfae32498434765e5c3f61801b386
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b67ffab5935b0e52ee6c403f2e38e7bbafab2d06
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707442"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205185"
 ---
 # <a name="intercepting-legacy-language-service-commands"></a>截获旧版语言服务命令
 使用 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ，你可以让语言服务截获文本视图要处理的命令。 这对于文本视图不管理的特定于语言的行为很有用。 可以通过将一个或多个命令筛选器添加到语言服务中的文本视图来截获这些命令。
