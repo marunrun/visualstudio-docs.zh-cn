@@ -1,5 +1,7 @@
 ---
 title: 旧版语言服务概述 |Microsoft Docs
+description: 了解 Visual Studio 中的旧版语言服务以及托管包框架支持的功能 (MPF) 语言服务类。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: aed653ec200063e72434fc758c7920e6caabafe1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c1ec349e38acbdb0271ecfb0c081b4f1aadadcd9
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707362"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98204938"
 ---
 # <a name="legacy-language-service-overview"></a>旧版语言服务概述
 语言服务提供编辑器支持，使你能够实现某些 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 功能。 托管包框架 (MPF) 语言服务类为常用功能提供完全支持，并对其他功能提供部分支持。
@@ -89,6 +91,6 @@ ms.locfileid: "80707362"
 
 - [验证旧版语言服务中的断点](../../extensibility/internals/validating-breakpoints-in-a-legacy-language-service.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [实现旧版语言服务](../../extensibility/internals/implementing-a-legacy-language-service1.md)
 - [旧版语言服务扩展性](../../extensibility/internals/legacy-language-service-extensibility.md)

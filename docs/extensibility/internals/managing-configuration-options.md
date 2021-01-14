@@ -1,5 +1,7 @@
 ---
 title: 管理配置选项 |Microsoft Docs
+description: 了解如何在 Visual Studio 中管理项目和解决方案配置设置，以控制项目的生成、打包、部署和运行方式。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e18c308d74f8c20267c286c47d0e89bf82cd2850
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a34f772b780cda825861e11e6816d1d88405f74e
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707299"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98204522"
 ---
 # <a name="managing-configuration-options"></a>管理配置选项
 当你创建新的项目类型时，你必须管理项目和解决方案配置设置，这些设置确定如何生成、打包、部署和运行你的项目。 以下主题讨论项目和解决方案配置。

@@ -1,5 +1,7 @@
 ---
 title: 旧版语言服务 Features1 |Microsoft Docs
+description: 了解 (MPF) 语言服务的托管包框架支持的 Visual Studio 功能。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c1f2a4010529d3d9727ceb76d6a34f2cbc41b959
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6e099798ff5fcc96e798742b16ba88e522a4bc0b
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238473"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205055"
 ---
 # <a name="legacy-language-service-features-1"></a>旧版语言服务功能1
 管理包框架 (MPF) 语言服务可以支持一个或多个 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 功能，例如语法突出显示、IntelliSense 和断点验证。 每个功能都可以独立于其他功能来实现，但除语法突出显示之外，还需要一个分析器和一个扫描程序，这只需要一个扫描程序。

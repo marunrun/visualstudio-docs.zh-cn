@@ -1,5 +1,7 @@
 ---
 title: 用于调试的语言服务支持 |Microsoft Docs
+description: 了解 IVsLanguageDebugInfo 接口中的语言服务功能，这些功能在 Visual Studio 中提供对调试的支持。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8c80e8e1f584b1728f342cb596b689f6a22c9297
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c17b11ce3639664a8097abeaa2a2de9a6faaadc7
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707434"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205159"
 ---
 # <a name="language-service-support-for-debugging"></a>用于调试的语言服务支持
 语言服务可以提供通过接口支持调试器的功能 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageDebugInfo> 。 这些功能包括验证断点并向 **自动窗口提供** 表达式列表。

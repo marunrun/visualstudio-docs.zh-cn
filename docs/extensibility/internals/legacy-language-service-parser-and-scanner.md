@@ -1,5 +1,7 @@
 ---
 title: 旧版语言服务分析器和扫描程序 |Microsoft Docs
+description: 了解用于选择要显示的代码信息的旧版语言服务分析器和扫描程序。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c87f447a4b8bca804d27aae4967f4adaf389c627
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 20c8c58a98887e5509026641ba0295fc167435e3
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707317"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98204600"
 ---
 # <a name="legacy-language-service-parser-and-scanner"></a>旧版语言服务分析器和扫描程序
 分析器是语言服务的核心。 托管包框架 (MPF) 语言类需要语言分析器来选择要显示的代码的相关信息。 分析器将文本分为词法标记，然后按类型和功能标识这些标记。
@@ -42,10 +44,10 @@ namespace MyNamespace
 |令牌名称|令牌类型|
 |----------------|----------------|
 |namespace、class、public、void、int|关键字 (keyword)|
-|=|运算符后的表达式|
+|=|operator|
 |{ } ( ) ;|delimiter|
 |MyNamespace、MyClass、MyFunction、arg1、var1|标识符 (identifier)|
-|MyNamespace|命名空间|
+|MyNamespace|namespace|
 |MyClass|class|
 |MyFunction|method|
 |arg1|参数|
@@ -68,7 +70,7 @@ namespace MyNamespace
 > [!CAUTION]
 > <xref:Microsoft.VisualStudio.Package.ParseRequest>结构包含对对象的引用 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> 。 此 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> 对象不能在后台线程中使用。 事实上，许多基本 MPF 类不能在后台线程中使用。 其中包括 <xref:Microsoft.VisualStudio.Package.Source> 、 <xref:Microsoft.VisualStudio.Package.ViewFilter> 、类以及 <xref:Microsoft.VisualStudio.Package.CodeWindowManager> 直接或间接与视图通信的任何其他类。
 
- 此分析器通常在第一次调用时或在给定的分析原因值时，分析整个源文件 <xref:Microsoft.VisualStudio.Package.ParseReason> 。 对方法的后续调用将 <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> 处理一小部分分析的代码，并使用上一次完全分析操作的结果可以更快地执行。 <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>方法通过和对象传达分析操作的结果 <xref:Microsoft.VisualStudio.Package.AuthoringSink> <xref:Microsoft.VisualStudio.Package.AuthoringScope> 。 <xref:Microsoft.VisualStudio.Package.AuthoringSink>对象用于收集特定分析原因的信息，例如，有关包含参数列表的匹配大括号或方法签名的范围的信息。 <xref:Microsoft.VisualStudio.Package.AuthoringScope>提供声明和方法签名的集合，还支持 "跳到高级" 编辑选项 ("跳到**定义**"、"**开始到声明**"、"**引用**) "。
+ 此分析器通常在第一次调用时或在给定的分析原因值时，分析整个源文件 <xref:Microsoft.VisualStudio.Package.ParseReason> 。 对方法的后续调用将 <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> 处理一小部分分析的代码，并使用上一次完全分析操作的结果可以更快地执行。 <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>方法通过和对象传达分析操作的结果 <xref:Microsoft.VisualStudio.Package.AuthoringSink> <xref:Microsoft.VisualStudio.Package.AuthoringScope> 。 <xref:Microsoft.VisualStudio.Package.AuthoringSink>对象用于收集特定分析原因的信息，例如，有关包含参数列表的匹配大括号或方法签名的范围的信息。 <xref:Microsoft.VisualStudio.Package.AuthoringScope>提供声明和方法签名的集合，还支持 "跳到高级" 编辑选项 ("跳到 **定义**"、"**开始到声明**"、"**引用**) "。
 
 ### <a name="the-iscanner-scanner"></a>IScanner 扫描仪
  还必须实现实现的扫描程序 <xref:Microsoft.VisualStudio.Package.IScanner> 。 但是，因为此扫描程序通过类逐行操作 <xref:Microsoft.VisualStudio.Package.Colorizer> ，所以通常更容易实现。 在每行的开头，MPF 为 <xref:Microsoft.VisualStudio.Package.Colorizer> 类提供了一个值，用作传递给扫描器的状态变量。 每行结束时，扫描程序返回更新的状态变量。 MPF 将缓存每行的此状态信息，以便扫描程序可以从任何行开始分析，而无需从源文件的开头开始进行分析。 此快速扫描一条线路允许编辑器向用户提供快速反馈。
@@ -127,11 +129,11 @@ namespace MyNamespace
  有关详细信息，请参阅 [旧版语言服务中的语法着色](../../extensibility/internals/syntax-colorizing-in-a-legacy-language-service.md)。
 
 ## <a name="parsing-for-functionality-and-scope"></a>分析功能和范围
- 分析功能和作用域需要更多的精力，而不只是标识所遇到的令牌类型。 分析器不仅需要标识标记的类型，还需要标识用于标记的功能。 例如，标识符只是一个名称，但在您的语言中，标识符可以是类、命名空间、方法或变量的名称，具体取决于上下文。 令牌的常规类型可能是标识符，但标识符也可能具有其他含义，具体取决于它的定义和定义的位置。 此标识要求分析器更全面地了解正在分析的语言。 这是类所在的位置 <xref:Microsoft.VisualStudio.Package.AuthoringSink> 。 <xref:Microsoft.VisualStudio.Package.AuthoringSink>类收集有关标识符、方法、匹配语言对 (（例如大括号和圆括号) ）和语言 (三元组的信息（如有三个部分，例如 "" "" `foreach()` `{` 和 "" ) ），这两个部分与语言对类似 `}` 。 此外，您还可以重写 <xref:Microsoft.VisualStudio.Package.AuthoringSink> 类以支持代码标识，此标识用于在早期的断点验证中使用，因此无需加载调试器，还可以使用 " **Autos**自动调试" 窗口（在调试程序时自动显示局部变量和参数，同时还要求分析器标识适当的局部变量和参数以及调试器提供的变量和参数）。
+ 分析功能和作用域需要更多的精力，而不只是标识所遇到的令牌类型。 分析器不仅需要标识标记的类型，还需要标识用于标记的功能。 例如，标识符只是一个名称，但在您的语言中，标识符可以是类、命名空间、方法或变量的名称，具体取决于上下文。 令牌的常规类型可能是标识符，但标识符也可能具有其他含义，具体取决于它的定义和定义的位置。 此标识要求分析器更全面地了解正在分析的语言。 这是类所在的位置 <xref:Microsoft.VisualStudio.Package.AuthoringSink> 。 <xref:Microsoft.VisualStudio.Package.AuthoringSink>类收集有关标识符、方法、匹配语言对 (（例如大括号和圆括号) ）和语言 (三元组的信息（如有三个部分，例如 "" "" `foreach()` `{` 和 "" ) ），这两个部分与语言对类似 `}` 。 此外，您还可以重写 <xref:Microsoft.VisualStudio.Package.AuthoringSink> 类以支持代码标识，此标识用于在早期的断点验证中使用，因此无需加载调试器，还可以使用 " 自动调试" 窗口（在调试程序时自动显示局部变量和参数，同时还要求分析器标识适当的局部变量和参数以及调试器提供的变量和参数）。
 
  <xref:Microsoft.VisualStudio.Package.AuthoringSink>对象作为对象的一部分传递到分析器 <xref:Microsoft.VisualStudio.Package.ParseRequest> ， <xref:Microsoft.VisualStudio.Package.AuthoringSink> 每次创建新对象时，都会创建一个新的对象 <xref:Microsoft.VisualStudio.Package.ParseRequest> 。 此外，该 <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> 方法必须返回一个 <xref:Microsoft.VisualStudio.Package.AuthoringScope> 用于处理各种 IntelliSense 操作的对象。 <xref:Microsoft.VisualStudio.Package.AuthoringScope>对象维护声明列表和方法列表，其中任何一个都是填充的，具体取决于分析的原因。 <xref:Microsoft.VisualStudio.Package.AuthoringScope>类必须实现。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [实现旧版语言服务](../../extensibility/internals/implementing-a-legacy-language-service1.md)
 - [旧版语言服务概述](../../extensibility/internals/legacy-language-service-overview.md)
 - [旧版语言服务中的语法着色](../../extensibility/internals/syntax-colorizing-in-a-legacy-language-service.md)
