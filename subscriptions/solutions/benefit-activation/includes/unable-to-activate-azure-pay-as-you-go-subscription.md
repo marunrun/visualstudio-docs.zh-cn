@@ -10,12 +10,12 @@ user.type: subscriber
 tags: benefit, azure, dev-test
 subscription.type: vl, cloud, retail, partner
 sap.id: 8dedd10e-cb1c-2eb1-bcda-fe00b07ac903
-ms.openlocfilehash: 25065465cee2239e9f4b5e7febafcf2a01eefc50
-ms.sourcegitcommit: 60e5a8a7ee91854356797d05f3b502572c4a4884
+ms.openlocfilehash: 2a6e02721512d9780cd94d2d9601fe7099eac956
+ms.sourcegitcommit: cd7f122c6850cf442a4ca42d51d05c7a8fe9038d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96915936"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98147463"
 ---
 ## <a name="im-unable-to-activate-my-azure-dev--test-pay-as-you-go-subscription"></a>我无法激活 Azure 开发/测试即用即付订阅。
 
@@ -27,5 +27,6 @@ Visual Studio 订阅者可享受针对开发/测试的专享优惠小时费率�
 1. 在 Microsoft Azure 注册页上，可以选择设置即用即付开发/测试服务 (PAYG)，也可升级到 Visual Studio Enterprise 服务。 如果不希望升级，请单击“继续使用当前服务(即用即付开发/测试)”。 
 1. 添加付款方式，然后接受订阅协议即可。 将来，可以在 [portal.azure.com](https://portal.azure.com/) 访问 Azure 订阅。 
 
-## <a name="more-information"></a>详细信息 
+## <a name="more-information-about-subscriptions"></a>有关订阅的详细信息
+ 
 [了解有关 Azure 开发/测试即用即付订阅的详细信息](https://docs.microsoft.com/visualstudio/subscriptions/vs-azure-payg)。
