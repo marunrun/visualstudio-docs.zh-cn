@@ -1,6 +1,6 @@
 ---
 title: 提取本地函数
-description: 通过选择代码并按 Ctrl+R、Ctrl+M，将代码片段转换为自己的方法。
+description: 通过选择代码并按 Ctrl+R、Ctrl+M，将代码片段转换为自己的函数。
 ms.date: 02/19/2020
 ms.topic: reference
 author: mikadumont
@@ -10,12 +10,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 031fbe22ec61837d489df7a6af923ef0cd2454c7
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: e007246b85671a0f4606bbdb3d1e9c4e0dc83541
+ms.sourcegitcommit: cd7f122c6850cf442a4ca42d51d05c7a8fe9038d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77519325"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98129453"
 ---
 # <a name="extract-local-function-refactoring"></a>提取本地函数重构
 
@@ -37,7 +37,7 @@ ms.locfileid: "77519325"
 
 3. 选择“提取本地函数”  。
 
-    ![提取本地函数](media/extract-local-function.png)
+    ![Visual Studio 代码窗口的屏幕截图，其中突出显示一个代码行。 “快速操作和重构”菜单处于打开状态，并且选中了“提取本地函数”。](media/extract-local-function.png)
 
 ## <a name="see-also"></a>请参阅
 

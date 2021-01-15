@@ -1,5 +1,7 @@
 ---
 title: 在调试器中查看 GPU 线程 |Microsoft Docs
+description: 使用“GPU 线程”窗口检查和使用在 Visual Studio 中进行调试的应用程序中的 GPU 上运行的线程。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cbbb49a1017fb0bc65300f3c16050db4954e1103
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5919ac657d828e87e48b8cfb3f4f643e1187f701
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85348712"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150582"
 ---
 # <a name="how-to-use-the-gpu-threads-window-c"></a>如何：使用 GPU 线程窗口 (C++)
 在“GPU 线程”窗口中，可以检查和使用在要调试的应用程序中的 GPU 上运行的线程。 有关在 GPU 上运行的应用程序的详细信息，请参阅 [C++ AMP 概述](/cpp/parallel/amp/cpp-amp-overview)。

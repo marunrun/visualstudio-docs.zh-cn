@@ -1,5 +1,7 @@
 ---
 title: 警告：脚本调试被禁用 | Microsoft Docs
+description: 尝试在未在 Internet Explorer 中启用脚本调试的情况下调试脚本时，出现“脚本调试被禁用”警告。 查看启用脚本调试的步骤。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 15de1a1e516cb3d84c24428ef04dd87baedaed9e
-ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
+ms.openlocfilehash: 7cc2e03a4efcf9a88675fd3c80f374ff78ba35bb
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81648505"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149555"
 ---
 # <a name="warning-script-debugging-disabled"></a>警告：脚本调试已禁用
 脚本调试当前在 Internet Explorer 中禁用

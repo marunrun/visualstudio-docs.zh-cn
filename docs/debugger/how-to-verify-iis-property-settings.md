@@ -1,5 +1,7 @@
 ---
 title: 验证 IIS 属性设置 | Microsoft Docs
+description: 了解如何验证使用 IIS 管理工具为 Web 应用程序设置的 IIS 属性设置。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -19,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4c883257abf48601f5131bdae239df61ea64ba77
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: b627fbd3d4875699faa28f551d68f5a99bd63340
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851042"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150543"
 ---
 # <a name="how-to-verify-iis-property-settings"></a>如何：验证 IIS 属性设置
 

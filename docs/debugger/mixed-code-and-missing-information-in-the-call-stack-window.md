@@ -1,5 +1,6 @@
 ---
 title: “调用堆栈”窗口中的混合代码和缺失信息
+description: 在混合模式程序（本机和托管）中，调试器无法始终显示完整的调用堆栈。 了解当本机代码调用托管代码时可能的差异。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: troubleshooting
@@ -24,12 +25,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b32fe52b31daa384718eae629d3051bade93959d
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: da8d3a469b957444935150f91567636aef0fb38a
+ms.sourcegitcommit: c67dece5ded82a5867148e1f94396954c1ec4398
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808150"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97975259"
 ---
 # <a name="mixed-code-and-missing-information-in-the-call-stack-window"></a>“调用堆栈”窗口中的混合代码与丢失信息
 由于托管代码和本机代码的调用堆栈之间存在差异，因此对于混合的代码类型，调试器不能始终显示完整的调用堆栈。 本机代码调用托管代码时，可能会注意到“调用堆栈”窗口中的内容与实际情况存在如下差异：

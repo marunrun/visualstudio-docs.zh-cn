@@ -1,5 +1,7 @@
 ---
 title: 不支持对 IA64 进程执行混合模式调试
+description: Visual Studio 不支持对 IA64 (Itanium) 进程中的托管代码和本机代码执行混合模式调试。 如需了解变通方法，请参阅此文。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 63a083bd9299570ba2b04a0879d5c9acde24ec4e
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 65969e354a5d1ed2dc1cf54ca31e6088cc19de7a
+ms.sourcegitcommit: c67dece5ded82a5867148e1f94396954c1ec4398
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810674"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97975246"
 ---
 # <a name="mixed-mode-debugging-for-ia64-processes-is-unsupported"></a>不支持对 IA64 进程执行混合模式调试。
 Visual Studio 不支持对 IA64 进程中的托管代码和本机代码执行混合模式调试。 这意味着，当您进行调试时，无法从托管代码单步执行到本机代码，也无法从本机代码单步执行到托管代码。

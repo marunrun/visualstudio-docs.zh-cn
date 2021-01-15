@@ -1,6 +1,7 @@
 ---
 title: 在调试器中使用断点 |Microsoft Docs
-ms.custom: ''
+description: 了解断点，它是最重要的调试技术之一。 本文介绍断点操作、跟踪点、条件以及其他内容。
+ms.custom: SEO-VS-2020
 ms.date: 06/30/2020
 ms.topic: how-to
 f1_keywords:
@@ -34,12 +35,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 52c95749d5d7e2909fbff6da0a3a45bc36cd73c6
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: c8487482b1d87ba87dfc3a8b1e07be1360227a2f
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97729322"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150439"
 ---
 # <a name="use-breakpoints-in-the-visual-studio-debugger"></a>在 Visual Studio 调试器中使用断点
 
@@ -196,7 +197,7 @@ ms.locfileid: "97729322"
 
 1. 在“语言”下拉列表中，选择函数的语言。
 
-1. 选择“确定”。
+1. 选择“确定”  。
 
 ### <a name="set-a-function-breakpoint-using-a-memory-address-native-c-only"></a>使用内存地址设置函数断点（仅限本机 C++）
  你还可以使用对象的地址在类的特定实例调用的方法上设置函数断点。  例如，给定一个类型为 `my_class` 的可寻址对象，可以在实例调用的 `my_method` 方法上设置函数断点。

@@ -1,5 +1,7 @@
 ---
 title: 从“查找窗口”打开消息视图 | Microsoft Docs
+description: 使用 Spy++ 中的“查找窗口”对话框选择目标窗口，然后打开该窗口的“消息”视图。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9b6240807eb82313182278251b353894545b957d
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 0e66e3e1200e1e08776853f2ac8308537e4b4a17
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852265"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148905"
 ---
 # <a name="how-to-open-messages-view-from-find-window"></a>如何：从“查找”窗口打开消息视图
 你可能会发现使用“查找窗口”对话框选择目标窗口，然后打开该窗口的消息视图会十分方便。

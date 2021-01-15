@@ -1,5 +1,7 @@
 ---
 title: Spy++ 简介 | Microsoft Docs
+description: 了解 Spy++ 调试工具。 显示系统对象关系的图形树。 获取所选窗口、线程、进程或消息的属性。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d04b2e9e04e1f2b952baadbdf0cca32cc3b301b
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: fb8debef874dd32f52994d0edd4a27d81b340834
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72731822"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148788"
 ---
 # <a name="introducing-spy"></a>Spy++ 简介
 可利用 Spy++ 执行以下任务：

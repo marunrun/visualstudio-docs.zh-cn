@@ -1,6 +1,7 @@
 ---
 title: 调试 Windows 窗体 | Microsoft Docs
-ms.custom: seodec18
+description: 按照演练进行操作，了解如何创建和调试 Windows 窗体，该窗体是一个常见的托管应用程序。 可以使用 C#、Visual Basic、C++ 或 F#。
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -23,12 +24,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6cec7b9bc2c56e16d1a5d59701d0953797ae00f4
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 31c1bc9e65eb63877d8f8a42902d8ec47a61fd22
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599466"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148086"
 ---
 # <a name="walkthrough-debugging-a-windows-form"></a>演练：调试 Windows 窗体
 Windows 窗体是最常见的托管应用程序之一。 Windows 窗体可创建标准的 Windows 应用程序。 可以使用 Visual Basic、C# 或 C++ 来完成本演练。

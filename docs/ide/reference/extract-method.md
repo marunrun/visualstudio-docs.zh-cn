@@ -13,12 +13,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 50f14cc2a7eafe5d65e0c6a6af54bafa2ebb5a1f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 21f6ac868268c40ea6df837596546f86fd9a3a44
+ms.sourcegitcommit: cd7f122c6850cf442a4ca42d51d05c7a8fe9038d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75569694"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98129466"
 ---
 # <a name="extract-a-method-refactoring"></a>“提取方法”重构
 
@@ -40,21 +40,21 @@ ms.locfileid: "75569694"
 
    - C#：
 
-       ![突出显示的代码- C#](media/extractmethod-highlight-cs.png)
+       !显示 Program 类的 C# 代码的屏幕截图。 在该类的 Main 函数中，突出显示了一个代码行。](media/extractmethod-highlight-cs.png)
 
    - Visual Basic：
 
-       ![突出显示的代码 - Visual Basic](media/extractmethod-highlight-vb.png)
+       ![显示 Main Sub 的 Visual Basic 代码的屏幕截图。 在该 Sub 中，突出显示了一个代码行。](media/extractmethod-highlight-vb.png)
 
 2. 接下来，执行以下操作之一：
 
    - **键盘**
-      - 按“Ctrl+R”  ，然后按“Ctrl+M”  。 （请注意，键盘快捷方式可能因所选的配置文件而有所不同。）
-      - 按“Ctrl”  + **。** 触发“快速操作和重构”  菜单，然后从“预览”弹出窗口选择“提取方法”  。
+      - 按“Ctrl+R”，然后按“Ctrl+M”。 （请注意，键盘快捷方式可能因所选的配置文件而有所不同。）
+      - 按“Ctrl”+ **。** 触发“快速操作和重构”菜单，然后从“预览”弹出窗口选择“提取方法”。
    - **鼠标**
-      - 选择“编辑 > 重构 > 提取方法”  。
-      - 右键单击代码，然后选择“重构 > 提取 > 提取方法”  。
-      - 右键单击代码，选择“快速操作和重构”  菜单，然后从“预览”弹出窗口选择“提取方法”  。
+      - 选择“编辑 > 重构 > 提取方法”。
+      - 右键单击代码，然后选择“重构 > 提取 > 提取方法”。
+      - 右键单击代码，选择“快速操作和重构”菜单，然后从“预览”弹出窗口选择“提取方法”。
 
    将立即创建方法。 现在可以在此处为方法重命名，只需键入新的名称即可。
 
@@ -63,13 +63,13 @@ ms.locfileid: "75569694"
 
    - C#：
 
-      ![重命名方法 - C#](media/extractmethod-rename-cs.png)
+      ![显示 Program 类的 C# 代码的屏幕截图。 突出显示了方法名，并且“重命名”弹出窗口处于打开状态。](media/extractmethod-rename-cs.png)
 
    - Visual Basic：
 
-      ![重命名方法 - Visual Basic](media/extractmethod-rename-vb.png)
+      ![显示 Main Sub 的 Visual Basic 代码的屏幕截图。 突出显示了方法名，并且“重命名”弹出窗口处于打开状态。](media/extractmethod-rename-vb.png)
 
-3. 对更改感到满意时，单击“应用”按钮或按 Enter 即可提交所做的更改   。
+3. 对更改感到满意时，单击“应用”按钮或按 Enter 即可提交所做的更改 。
 
 ## <a name="see-also"></a>请参阅
 

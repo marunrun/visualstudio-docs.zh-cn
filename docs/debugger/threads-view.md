@@ -1,5 +1,7 @@
 ---
 title: 线程视图 | Microsoft Docs
+description: 了解 Spy++ 调试工具中的“线程”视图。 线程视图是与系统上的窗口关联的所有线程的简单列表。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 82c8bb229a0781f299b5fa8c3a8c73670be8c4fc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 356db0f3ad8308edae2910e060b5b08731f9aabb
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62929947"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150205"
 ---
 # <a name="threads-view"></a>线程视图
 线程视图是与系统上的窗口关联的所有线程的简单列表。 会显示每个线程的线程 ID 和模块名称。 不包括进程，但是可以轻松查找拥有所选线程的进程。

@@ -1,5 +1,7 @@
 ---
 title: 可以在哪里查阅 Win32 错误代码？ | Microsoft Docs
+description: 若要查找 Win32 错误代码，请在“监视”或“快速监视”中输入错误代码。 例如，“0x80000004,hr”。 此错误代码定义位于 INCLUDE\WINERROR.H 中。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a8e3dda1b728cd631efe8a84913af3d5c475138d
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 44a006be3b6ecad3ef723c00154354cb35df0049
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72728036"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149282"
 ---
 # <a name="where-can-i-look-up-win32-error-codes"></a>可以在哪里查阅 Win32 错误代码？
 默认系统安装的 INCLUDE 目录中的 WINERROR.H 包含 Win32 API 函数的错误代码定义。

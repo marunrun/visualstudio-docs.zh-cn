@@ -1,5 +1,7 @@
 ---
 title: “消息选项”对话框 ->“输出”选项卡 | Microsoft Docs
+description: 使用“消息选项”的“输出”选项卡指定要在“消息视图”中显示的消息数据。 本文介绍可用的设置。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 63268fdbc320e78a697c181112dbeaaf8ad161ab
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c4d965b92a30d8d8a5b998a27bea9651f8669c8f
+ms.sourcegitcommit: c67dece5ded82a5867148e1f94396954c1ec4398
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62905070"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97975077"
 ---
 # <a name="output-tab-message-options-dialog-box"></a>“消息选项”对话框 ->“输出”选项卡
 使用“输出”选项卡指定每个消息中的哪些数据要在[消息视图](../debugger/messages-view.md)中列出。 若要显示[“消息选项”对话框](../debugger/message-options-dialog-box.md)，请从 Spy 菜单中选择“日志消息” 。

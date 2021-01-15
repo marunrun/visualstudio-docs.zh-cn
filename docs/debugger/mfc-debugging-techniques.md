@@ -1,5 +1,7 @@
 ---
 title: MFC 调试方法 | Microsoft Docs
+description: 了解用于调试 MFC 程序的方法，包括：编码的断点、跟踪、内存泄漏检测、对象内存转储和程序大小减少。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -25,12 +27,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 06b42dbf31a8b5f4cb66de047bc1e08a4f840353
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 5cf00191aff408b1133c281e10eea17e3a923215
+ms.sourcegitcommit: c67dece5ded82a5867148e1f94396954c1ec4398
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89600233"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97975116"
 ---
 # <a name="mfc-debugging-techniques"></a>MFC 调试方法
 如果要调试 MFC 程序，这些调试技术可能会有用。
@@ -138,7 +140,7 @@ MFC 框架的“Debug”版本自动使用 `DEBUG_NEW` ，但代码不自动使�
 
   **使用 afxMemDF 选择特定内存诊断功能**
 
-- 如果希望对内存诊断功能进行更精确的控制，可以通过设置 MFC 全局变量 [afxMemDF](/previous-versions/ahe4a83t(v=vs.140))的值，来有选择地打开和关闭单个内存诊断功能。 该变量可以具有下列值（由枚举类型 **afxMemDF**所指定）。
+- 如果希望对内存诊断功能进行更精确的控制，可以通过设置 MFC 全局变量 [afxMemDF](/previous-versions/ahe4a83t(v=vs.140))的值，来有选择地打开和关闭单个内存诊断功能。 该变量可以具有下列值（由枚举类型 **afxMemDF** 所指定）。
 
   |“值”|描述|
   |-----------|-----------------|

@@ -1,5 +1,7 @@
 ---
 title: “调用树”视图 - .NET 内存采样数据 | Microsoft Docs
+description: 了解“调用树”视图如何显示在分析应用程序中遍历的函数执行路径的 .NET 内存采样数据。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 76ea78f37cbc8c5e2b6df900aa0e3f320346300a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: c1a36f4661abb5535c71fcebcf9e486408a56b22
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74779761"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150803"
 ---
 # <a name="call-tree-view---net-memory-sampling-data"></a>“调用树”视图 - .NET 内存采样数据
 “调用关系树”视图显示在分析应用程序中遍历的函数执行路径。 树的根是应用程序或组件的入口点。 每个函数节点都会列出它调用的所有函数以及有关这些函数调用的 .NET 内存分配数据。
@@ -24,12 +26,12 @@ ms.locfileid: "74779761"
  “调用关系树”视图中的值对应于调用树中父函数所调用的函数实例。 通过将函数实例值与分析运行中的分配总数或大小进行对比计算出百分比值。
 
 ## <a name="highlight-the-execution-hot-path"></a>突出显示执行热路径
- “调用树”视图可以展开并突出显示创建最大或最多内存对象的进程或函数的执行路径。 若要显示最活跃的路径，请右键单击该进程或函数，然后单击“展开热路径”  。
+ “调用树”视图可以展开并突出显示创建最大或最多内存对象的进程或函数的执行路径。 若要显示最活跃的路径，请右键单击该进程或函数，然后单击“展开热路径”。
 
 ## <a name="set-the-call-tree-root-node"></a>设置调用树根节点
- 分析运行中的每个进程均显示为根节点。 若要将“调用树”视图的开始节点设置为其他节点，请右键单击要设置为开始节点的节点，然后选择“设置根”  。
+ 分析运行中的每个进程均显示为根节点。 若要将“调用树”视图的开始节点设置为其他节点，请右键单击要设置为开始节点的节点，然后选择“设置根”。
 
- 设置根节点后，将从视图中排除所选节点的子树之外的所有其他条目。 可将根节点重置为刚才查看的节点，在“调用树”视图窗口中右键单击并选择“重置根”  。
+ 设置根节点后，将从视图中排除所选节点的子树之外的所有其他条目。 可将根节点重置为刚才查看的节点，在“调用树”视图窗口中右键单击并选择“重置根”。
 
 |列|说明|
 |------------|-----------------|
@@ -51,7 +53,7 @@ ms.locfileid: "74779761"
 |**独占字节数**|调用树中父函数所调用的此函数的实例所分配的内存字节数。 此数目不包括子函数的分配数。|
 |**独占字节数百分比**|分析运行期间分配的属于此函数的独占分配的所有内存字节数的百分比。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [“调用树”视图 - 检测](../profiling/call-tree-view-dotnet-memory-instrumentation-data.md)
 - [“调用树”视图](../profiling/call-tree-view-sampling-data.md)
 - [“调用树”视图](../profiling/call-tree-view-instrumentation-data.md)

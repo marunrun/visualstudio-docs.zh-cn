@@ -1,5 +1,7 @@
 ---
 title: 无可用的源 | Microsoft Docs
+description: 了解当项目没有你要查看的代码的源代码时可以执行的操作。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f08ed499e61e54ffbc6508bc8353ea955d9a20c
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 8cf7bf067602586d90271eab1f9289a3b6b884ce
+ms.sourcegitcommit: c67dece5ded82a5867148e1f94396954c1ec4398
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72730864"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97975181"
 ---
 # <a name="no-source-available"></a>无可用的源
 你的项目不包含你尝试查看代码的源代码。 原因通常是双击了“调用堆栈”窗口或“线程”窗口中没有源代码的模块 。 可以继续调试，但不能使用源窗口设置断点并在此位置执行其他操作。 如果需要设置断点，请改用“反汇编”窗口。

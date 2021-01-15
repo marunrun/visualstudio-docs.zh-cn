@@ -1,6 +1,7 @@
 ---
 title: 调试 Web 窗体 | Microsoft Docs
-ms.custom: seodec18
+description: 按照演练进行操作，了解如何调试 ASP.NET Web 应用程序（Web 窗体），其中包括如何设置断点和检查变量。
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -23,12 +24,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fa2632e7d9b8103b5a89c49e5f44464a658fadc3
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 007a63ea16ab044292f451d8d9c427f4358e3f13
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599482"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148216"
 ---
 # <a name="walkthrough-debugging-a-web-form"></a>演练：调试 Web 窗体
 本演练中的步骤向你演示如何调试 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web 应用程序（也称为 Web 窗体）。 此外，还会演示如何启动和停止执行、设置断点以及在“监视”窗口中检查变量。

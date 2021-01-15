@@ -1,5 +1,7 @@
 ---
 title: IntelliTrace | Microsoft Docs
+description: 在 Visual Studio 中使用 IntelliTrace 记录和跟踪代码的执行历史记录。 记录特定事件、检查相关代码并调试错误。
+ms.custom: SEO-VS-2020
 ms.date: 09/19/2018
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 878c2481164bc87d4af5e79a0a978e822e7baafe
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 518043a38f3a0f6945840a36a1f7fcade5a313d7
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89600255"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148996"
 ---
 # <a name="intellitrace-for-visual-studio-enterprise-c-visual-basic-c"></a>用于 Visual Studio Enterprise 的 IntelliTrace（C#、Visual Basic、C++）
 

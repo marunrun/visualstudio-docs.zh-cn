@@ -1,5 +1,6 @@
 ---
 title: 多次调用函数时查找调用失败
+description: 查看在函数上设置断点的技术，该技术使中断仅发生在函数失败的调用上。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -28,12 +29,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: de3d186b7800efc3e807e3f775b48d91b44072b4
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 567450f11572cc998f952117c33992cdba33570d
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810479"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149295"
 ---
 # <a name="when-calling-a-function-hundreds-of-times-how-do-i-know-which-call-failed"></a>当一个函数被调用数百次时，如何确定哪次调用失败了？
 ## <a name="problem-description"></a>问题描述

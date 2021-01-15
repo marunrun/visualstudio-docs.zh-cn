@@ -1,5 +1,7 @@
 ---
 title: “进程属性”对话框 ->“空间”选项卡 | Microsoft Docs
+description: 了解如何在调试时在 Spy++ 中显示“进程属性”对话框。 查看“空间”选项卡中可用的设置。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 563d54c39b4d9ce3bb2d76a9e531161c2c4ee5b3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fe168f34baf65b00eab59e94afb30e07dfe89b50
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62929824"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149074"
 ---
 # <a name="space-tab-process-properties-dialog-box"></a>“进程属性”对话框 ->“空间”选项卡
 使用“空间”选项卡可检查进程的地址空间。 若要显示[“进程属性”对话框](../debugger/process-properties-dialog-box.md)，请将焦点移动到[进程视图](../debugger/processes-view.md)窗口。 在树中选择任意进程节点，然后从“视图”菜单选择“属性” 。

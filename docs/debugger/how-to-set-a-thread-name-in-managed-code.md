@@ -1,5 +1,7 @@
 ---
 title: 在托管代码中设置线程名称 | Microsoft Docs
+description: 在 Visual Studio 中的多线程应用调试期间，在托管代码中设置线程名称。 线程命名用于跟踪“线程”窗口中的线程。
+ms.custom: SEO-VS-2020
 ms.date: 04/27/2017
 ms.topic: how-to
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: dd8662bb437ef25627fb8e8bd2a33ff132e42d7b
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: c52d2ae3407833594049459a489641135bba172c
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851952"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148437"
 ---
 # <a name="how-to-set-a-thread-name-in-managed-code"></a>如何：在托管代码中设置线程名称
 在 Visual Studio 的任何版本中都可以使用线程命名功能。 线程命名功能对跟踪“线程”窗口中的线程非常有用。

@@ -1,5 +1,7 @@
 ---
 title: 还原隐藏的调试器命令 | Microsoft Docs
+description: 了解如何在 Visual Studio 中还原隐藏的调试器命令。 某些语言的默认 IDE 设置可能会隐藏某些调试器命令。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 295d04aa33f7f6602d536a69baafae9105a51fe5
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: e761a9bcbbf2f35555ae30065cd239f4d7587ff4
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852017"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148593"
 ---
 # <a name="how-to-restore-hidden-debugger-commands"></a>如何：还原隐藏的调试器命令
 安装 Visual Studio 时，系统会要求您为主要的编程语言选择一组默认的 IDE 设置。 某些语言的默认 IDE 设置可能会隐藏某些调试器命令。

@@ -1,5 +1,7 @@
 ---
 title: 本机运行时检查自定义 | Microsoft Docs
+description: 了解自定义运行时检查的方法，包括：指定消息目标、编写错误报告函数，以及查询错误信息。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -22,12 +24,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db7cc513c4c96a8b60cc6471280bb837a7b9a248
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 3b5f5aa55ac9d8c13da605a09986569c534a30bf
+ms.sourcegitcommit: c67dece5ded82a5867148e1f94396954c1ec4398
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72730893"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97975194"
 ---
 # <a name="native-run-time-checks-customization"></a>本机运行时检查自定义
 在使用 /RTC（运行时检查）进行编译或使用 `runtime_checks` 杂注时，C 运行时库会提供本机运行时检查。 某些情况下，可能需要自定义运行时检查：

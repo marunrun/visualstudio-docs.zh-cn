@@ -1,5 +1,7 @@
 ---
 title: 使用本机运行时检查 | Microsoft Docs
+description: 在 Visual Studio 中使用本机运行时检查来捕获常见的运行时错误，例如堆栈指针损坏、本地数组溢出和堆栈损坏。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -37,12 +39,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 586f43f14a8638ab9c3c67f8ffef52ef52a70c53
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 7e46e2253c5664fff9cf456250d375993a0a0c9a
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852662"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150634"
 ---
 # <a name="how-to-use-native-run-time-checks"></a>如何：使用本机运行时检查
 在 Visual Studio C++ 项目中，可以使用本机 [runtime_checks](/cpp/preprocessor/runtime-checks) 捕获常见的运行时错误，例如：

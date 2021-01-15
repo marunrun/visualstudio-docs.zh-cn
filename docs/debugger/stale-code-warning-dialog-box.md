@@ -1,5 +1,7 @@
 ---
 title: “陈旧代码警告”对话框 | Microsoft Docs
+description: 阅读“陈旧代码警告”对话框，当“编辑并继续”不能立即应用你对本机代码所做的更改时，系统会显示此对话框。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -20,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dba38e5b5d9f7a2be710cad58d6f2297dd03a412
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 5bb2666b3b57c8f84c81e181355f096674543445
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72729547"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150322"
 ---
 # <a name="stale-code-warning-dialog-box"></a>“陈旧代码警告”对话框
 

@@ -1,6 +1,7 @@
 ---
 title: 编写运行时错误报告函数 | Microsoft Docs
-ms.custom: seodec18
+description: 请参阅在 Visual Studio 中编写自定义运行时错误报告函数的示例。 它必须具有与 _CrtDbgReportW 相同的声明，并返回值 1。
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -18,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 22445868cca1533cad3d7e395452a6b19e102952
-ms.sourcegitcommit: 023f52f10fb91850824558478cbfd2ec965054f0
+ms.openlocfilehash: 046384e664ab4aa9c031b76a1ecd6285a9de5502
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94407635"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150465"
 ---
 # <a name="how-to-write-a-run-time-error-reporting-function-c"></a>如何：编写运行时错误报告函数 (C++)
 运行时错误的自定义报告函数必须具有与 `_CrtDbgReportW` 相同的声明。 它应当将值 1 返回给调试器。

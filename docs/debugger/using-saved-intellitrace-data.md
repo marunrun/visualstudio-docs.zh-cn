@@ -1,5 +1,7 @@
 ---
 title: 使用保存的 IntelliTrace 数据 | Microsoft Docs
+description: 使用 Intellitrace 文件 (.iTrace) 在特定的执行点开始调试。 此文件包含 Intellitrace 从应用运行记录的信息。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cb79e2f1a9ffd84f48910637deaff85329c3d91e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 42f355a0a8d04e48a2b9d14d0d62edf2cd949a87
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72911326"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150933"
 ---
 # <a name="using-saved-intellitrace-data-c-visual-basic-c"></a>使用保存的 IntelliTrace 数据（C#、Visual Basic、C++）
 

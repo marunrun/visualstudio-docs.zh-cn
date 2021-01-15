@@ -1,6 +1,7 @@
 ---
 title: 用 Visual Basic 编写可视化工具 | Microsoft Docs
-ms.custom: seodec18
+description: 按照演练进行操作，使用 Visual Basic 创建简单的可视化工具。 还可以创建测试工具来测试可视化工具。
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 05/27/2020
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 25720f31c721cae44ed5425631a86b3a41bf475e
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 4354a226503ef11b8e596cff609912afa7fd34f0
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84180527"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149620"
 ---
 # <a name="walkthrough-writing-a-visualizer-in-visual-basic"></a>演练：用 Visual Basic 编写可视化工具
 

@@ -1,5 +1,7 @@
 ---
 title: 无法设置数据断点 | Microsoft Docs
+description: 查找在使用“值发生更改时中断”时出现的“无法设置数据断点错误”的说明、解决方案和变通方法。
+ms.custom: SEO-VS-2020
 ms.date: 12/3/2019
 ms.topic: error-reference
 f1_keywords:
@@ -15,12 +17,12 @@ ms.author: waan
 manager: caslan
 ms.workload:
 - multiple
-ms.openlocfilehash: 4cded3bfdb6adc206f02ef54402964f4e7276f93
-ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
+ms.openlocfilehash: 4e90c3d4af8e568f1bb2e6987c66c7fbc0856c57
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97668776"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150452"
 ---
 # <a name="troubleshooting-data-breakpoint-errors"></a>数据断点错误疑难解答
 此页面将引导你解决在使用“值发生更改时中断”时出现的常见错误

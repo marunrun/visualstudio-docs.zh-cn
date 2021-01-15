@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b934c6cb7c2a6ba98113a5e68091ab53f54b1423
-ms.sourcegitcommit: d526af3642163180e0cc3e1e73b0a00f02542683
+ms.openlocfilehash: c992a1a4fca536f219a69b9ab629f6f602b4dfb0
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/31/2020
-ms.locfileid: "97833359"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150504"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>使用测试资源管理器运行单元测试
 
@@ -377,6 +377,16 @@ FilterName:"Criteria" -FilterName:"SubsetCriteria"
 > [!NOTE]
 > 无法运行抽象类中的测试，因为仅在抽象类中定义测试，但未实例化。 若要运行抽象类中的测试，请创建派生自该抽象类的类。
 
+::: moniker range=">=vs-2019"
+## <a name="test-audio-cue"></a>测试音频提示
+测试资源管理器可以在测试运行完成时播放声音。 有两种声音：一种声音表示测试运行成功，所有测试都通过；另一种声音表示测试运行已完成，但至少有一个测试失败。 可以在默认的 Windows 10 声音对话框中设置这些声音。 此功能从 Visual Studio 2019 更新 16.9 预览版 3 开始提供。
+
+1. 打开默认的 Windows 10 声音对话框。
+2. 导航到“声音”选项卡。
+3. 找到“Microsoft Visual Studio”类别。 选择“测试运行成功”或“测试运行失败”声音，以选择预设声音或浏览到自己的音频文件 。  
+![Windows 10 声音对话框](../test/media/default-windows-10-sound-dialog.png)
+
+::: moniker-end
 ## <a name="see-also"></a>请参阅
 
 - [单元测试代码](../test/unit-test-your-code.md)

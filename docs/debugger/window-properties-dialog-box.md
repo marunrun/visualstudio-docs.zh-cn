@@ -1,5 +1,7 @@
 ---
 title: “窗口属性”对话框 | Microsoft Docs
+description: 了解如何显示“窗口视图”中列出的窗口的属性。 本文提供指向记录属性的其他文章的链接。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c27f10298f3a5621bc68e31bc2b150663955d6c9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5bd6c8a7f3b07cdd0667ae8d2c33aeb96d6d7679
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62929215"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149217"
 ---
 # <a name="window-properties-dialog-box"></a>“窗口属性”对话框
 使用此对话框可详细了解特定窗口。 若要显示此对话框，请将焦点移动到[窗口视图](../debugger/windows-view.md)窗口。 在树中选择任意窗口节点，然后从“视图”菜单选择“属性” 。

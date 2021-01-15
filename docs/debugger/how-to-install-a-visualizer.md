@@ -1,5 +1,7 @@
 ---
 title: 安装可视化工具 | Microsoft Docs
+description: 了解如何安装可视化工具，以便可以在 Visual Studio 中用于调试。
+ms.custom: SEO-VS-2020
 ms.date: 06/10/2020
 ms.topic: how-to
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6410e9ba1250da5a0a247c786e4aada310186c4a
-ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
+ms.openlocfilehash: 37b2da9418361144c740bed633eb755f7057936c
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91211360"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148957"
 ---
 # <a name="how-to-install-a-visualizer"></a>如何：安装可视化工具
 创建了可视化工具后，您还必须安装该可视化工具，这样您才可在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中使用它。 安装可视化工具是个简单的过程。

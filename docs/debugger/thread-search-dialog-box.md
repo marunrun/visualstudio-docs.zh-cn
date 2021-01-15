@@ -1,5 +1,7 @@
 ---
 title: “线程搜索”对话框 | Microsoft Docs
+description: 了解 Spy++ 调试工具中的“线程搜索”对话框。 使用此对话框可在线程视图中查找并选择特定线程的节点。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2fddbb589a6978f72dc5926a78c9eb13f21b3a4b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 895241a99131c31e2fab73b9799f6203db7259e0
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62901857"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148749"
 ---
 # <a name="thread-search-dialog-box"></a>“线程搜索”对话框
 使用此对话框可在[线程视图](../debugger/threads-view.md)中查找并选择特定线程的节点。 若要显示此对话框，请将焦点移至线程视图窗口。 然后从“搜索”菜单中选择“查找线程”。
