@@ -1,6 +1,7 @@
 ---
 title: 对变量设置监视 | Microsoft Docs
-ms.custom: seodec18
+description: 调试时，查看“监视”和“快速监视”中的变量和表达式。 “监视”可以显示若干变量，“快速监视”仅显示一个变量，并且仅在中断时才显示。
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 10/11/2018
 ms.topic: how-to
 f1_keywords:
@@ -17,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d7e2a05fe84b023a60ef75f0cb262a08fc02587a
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: d13ee6163ebe8cf0f706cbe95e7451c2ebc7c411
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97727419"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149477"
 ---
 # <a name="watch-variables-with-watch-windows-and-quickwatch"></a>使用“监视”和“快速监视”窗口监视变量
 

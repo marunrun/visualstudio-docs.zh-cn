@@ -1,5 +1,7 @@
 ---
 title: 单步执行 WCF 服务 | Microsoft Docs
+description: 单步执行 Windows Communication Foundation (WCF) 服务。 如果该服务位于客户端所在的 Visual Studio 解决方案中，请命中 WCF 服务内的断点。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 25ca1e4d2b7e0349ea5a41c6fc66726226ecab4f
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 428f5576b595797605abff2ebc5f4669e2927389
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851887"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150725"
 ---
 # <a name="how-to-step-into-wcf-services"></a>如何：单步执行 WCF 服务
 在 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] 中，可以单步执行 WCF 服务。 如果 WCF 服务与客户端位于同一 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 解决方案中，则可以命中 WCF 服务内部的断点。

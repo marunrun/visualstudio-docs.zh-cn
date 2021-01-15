@@ -1,5 +1,6 @@
 ---
 title: 探查器命令行 - 获取 ASP.NET 并发数据
+description: 请参阅有关 Visual Studio 分析工具的并发方法的参考信息，该方法使你可以收集资源争用数据。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -13,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - aspnet
-ms.openlocfilehash: 7a28e9cea6db337cbe114c7e51c387315879ccd5
-ms.sourcegitcommit: 023f52f10fb91850824558478cbfd2ec965054f0
+ms.openlocfilehash: e12288471bed62014f9a307d609ef3d588e0026a
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94407700"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148314"
 ---
 # <a name="collect-concurrency-data-for-an-aspnet-web-application-using-the-profiler-command-line"></a>使用探查器命令行收集 ASP.NET Web 应用程序的并发数据
 可通过 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 分析工具的并发方法收集资源争用数据。
@@ -54,5 +55,5 @@ ms.locfileid: "94407700"
 
 - [并发可视化工具](../profiling/concurrency-visualizer.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [命令行分析工具参考](../profiling/command-line-profiling-tools-reference.md)

@@ -1,5 +1,7 @@
 ---
 title: 收集 ASP.NET Web 应用的统计信息
+description: 查看使用 VSPerfASPNETCmd 和 VSPerfCmd 工具以及采样分析方法收集 ASP.NET Web 应用的性能统计信息的过程和选项。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - aspnet
-ms.openlocfilehash: 017195cc86e958c70204a588de7678a5f15e6e09
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: ef1f4ef1c50db1234425ab164f377dab5ff12ea6
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808924"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149529"
 ---
 # <a name="collect-statistics-for-aspnet-web-apps"></a>收集 ASP.NET Web 应用的统计信息
 

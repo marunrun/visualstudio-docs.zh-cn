@@ -1,5 +1,6 @@
 ---
 title: 收集 Windows 服务的统计信息 - 探查器采样方法
+description: 查看从命令行使用分析采样方法收集 Windows 服务的性能统计信息的步骤和选项。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -10,12 +11,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 28b614868ad8080f9b4cbe5359a54c814022089c
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: f4c686de4128d655b5b8146925529e6a280bb754
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809958"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148333"
 ---
 # <a name="collect-application-statistics-for-services-by-using-the-profiler-sampling-method"></a>使用探查器采样方法收集服务的应用程序统计信息
 本部分介绍从命令行使用采样方法收集 Windows 服务的性能统计信息的步骤和选项。

@@ -1,5 +1,7 @@
 ---
 title: “停止正在进行的调试”对话框 | Microsoft Docs
+description: 浏览“停止正在进行的调试”对话框，当调试器尝试停止调试会话，但停止会话需要一段时间时，会出现此对话框。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3beefe16f8883eb64d7d0a2641cabf9eb1f702fa
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 3c3ff46a8cd9b8e5a4ab80b0af1296348ca788d9
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72729658"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150218"
 ---
 # <a name="stop-debugging-in-progress-dialog-box"></a>“停止正在进行的调试”对话框
 当调试器尝试停止调试会话，但停止会话需要一段时间时，会出现此对话框。 停止调试会话通常很快，而此对话框并不出现。 但是，有时从正在调试的所有进程中分离需要额外的时间。 如果停止会话需要的时间超过几秒钟（或者发生分离错误），则会出现此对话框。 如果此对话框经常出现，则可能是由于内部问题，您可能需要与产品支持服务联系。

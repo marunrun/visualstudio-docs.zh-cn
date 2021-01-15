@@ -1,5 +1,7 @@
 ---
 title: 使用查找程序工具 | Microsoft Docs
+description: 使用 Spy++ 工具的“查找窗口”对话框中的查找程序工具，在调试会话期间显示窗口属性或消息。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e92223359c6bc78b2a98c234c03ee139c052f86
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 41ca277962f81b3cd1c35ebcf8a940e8168a6803
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851835"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150595"
 ---
 # <a name="how-to-use-the-finder-tool"></a>如何：使用查找程序工具
 可以使用“查找窗口”对话框中的查找程序工具显示窗口属性或消息。 查找程序工具还可以查找禁用的子窗口，并在禁用的子窗口重叠时识别要突出显示的窗口。

@@ -1,5 +1,7 @@
 ---
 title: 在消息视图中搜索消息 | Microsoft Docs
+description: 在 Spy++ 工具的“消息”视图中搜索特定消息，方法是在 Visual Studio 中进行调试时，使用其句柄、类型或消息 ID 作为搜索条件。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7c4b597870d7a87b396b4c6e828da814c49f9bfb
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: c351eacc6fc3793065bcd11eb5456eebdc1864f3
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852004"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148580"
 ---
 # <a name="how-to-search-for-a-message-in-messages-view"></a>如何：在消息视图中搜索消息
 可以使用消息的句柄、类型或消息 ID 作为搜索条件，在消息视图中搜索特定消息。 其中的任何一项（或组合）都是有效的搜索条件。 还可以指定搜索的初始方向。 对话框中的字段预加载了当前所选消息的属性。

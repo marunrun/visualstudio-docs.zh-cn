@@ -1,5 +1,7 @@
 ---
 title: 使用 DebuggerTypeProxy 显示自定义类型 | Microsoft Docs
+description: 使用 DebuggerTypeProxyAttribute 的实例指定某个类型的代理（独立），以更改该类型在调试器窗口中的显示方式。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b98481cb1727ecad9289f63136291d500c0d577e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 94551605581890692f8a1366fa2235811ccdc5f2
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85347958"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150374"
 ---
 # <a name="tell-the-debugger-what-type-to-show-using-debuggertypeproxy-attribute-c-visual-basic-ccli"></a>使用 DebuggerTypeProxy 特性 (C#、Visual Basic、C++/CLI) 指示调试器要显示的类型
 

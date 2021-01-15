@@ -1,5 +1,7 @@
 ---
 title: 使用 IntelliTrace 独立收集器 | Microsoft Docs
+description: 使用 IntelliTrace 独立收集器来收集数据，无需安装 Visual Studio 且无需更改目标系统环境。
+ms.custom: SEO-VS-2020
 ms.date: 07/30/2019
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6f0e0ce657c1cc0ed79d56e3daa90480ed0c1381
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: cbdd7e948aaafff8e90aa8e67907c9a53471b05c
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85536488"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150075"
 ---
 # <a name="using-the-intellitrace-stand-alone-collector-c-visual-basic"></a>使用 IntelliTrace 独立收集器（C#、Visual Basic）
 
@@ -28,7 +30,7 @@ ms.locfileid: "85536488"
 > [!NOTE]
 > 通过在 **跟踪** 模式下使用 **Microsoft 监视代理** ，你还可以收集远程计算机上运行的 Web 及 SharePoint 应用的相同 IntelliTrace 数据。
 >
-> 可通过在 **监视** 模式下运行代理来收集 IntelliTrace 数据中与性能相关的事件。 与**跟踪** 模式或 **IntelliTrace 独立收集器** 相比， **IntelliIntelliTrace 独立收集器 stand-alone collector**模式对性能的影响更小。 安装时，Microsoft 监视代理确实会改变目标系统的环境。 请参阅[使用 Microsoft Monitoring Agent](../debugger/using-the-microsoft-monitoring-agent.md)。
+> 可通过在 **监视** 模式下运行代理来收集 IntelliTrace 数据中与性能相关的事件。 与 **跟踪** 模式或 **IntelliTrace 独立收集器** 相比， **IntelliIntelliTrace 独立收集器 stand-alone collector** 模式对性能的影响更小。 安装时，Microsoft 监视代理确实会改变目标系统的环境。 请参阅[使用 Microsoft Monitoring Agent](../debugger/using-the-microsoft-monitoring-agent.md)。
 > IntelliTrace 独立收集器不支持进程快照。
 
  **要求**
@@ -84,7 +86,7 @@ ms.locfileid: "85536488"
 
    - Microsoft 下载中心或 my.visualstudio.com ：
 
-     1. 选择 **IntelliTraceCollector.exe**旁的“下载” 。
+     1. 选择 **IntelliTraceCollector.exe** 旁的“下载” 。
 
      2. 将 IntelliTraceCollector.exe 保存到收集器目录，如：**C:\IntelliTraceCollector**
 
@@ -261,7 +263,7 @@ ms.locfileid: "85536488"
 
      *\<FullPathToIntelliTraceCollectorExecutable>* `\IntelliTraceSC.exe launch /cp:` *\<PathToCollectionPlan>* `/f:` *\<FullPathToITraceFileDirectoryAndFileName>* *\<PathToAppExecutableFileAndFileName>*
 
-     如，要收集名为 **MyApp**的应用中的数据，请：
+     如，要收集名为 **MyApp** 的应用中的数据，请：
 
      `C:IntelliTraceCollectorIntelliTraceSC.exe launch /cp:"C:IntelliTraceCollectorcollection_plan.ASP.NET.default.xml" /f:"C:IntelliTraceLogFilesMyApp.itrace" "C:MyAppMyApp.exe"`
 

@@ -1,6 +1,7 @@
 ---
 title: 使用 C# 编写可视化工具 | Microsoft Docs
-ms.custom: seodec18
+description: 按照演练进行操作，使用 C# 创建简单的可视化工具。 它显示使用和不使用可视化工具项模板所需的步骤。
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 05/27/2020
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: b3b8a67d1b01d7f3a3ada7b391423676b9294e8d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8caf1be3c10c0d89ce8780213c0914944ae87842
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85286297"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149711"
 ---
 # <a name="walkthrough-writing-a-visualizer-in-c"></a>演练：使用 C\# 编写可视化工具
 

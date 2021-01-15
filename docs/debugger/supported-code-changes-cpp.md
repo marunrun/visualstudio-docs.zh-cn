@@ -1,5 +1,7 @@
 ---
 title: 受支持的代码更改 (C++) | Microsoft Docs
+description: 了解在 VisualStudio 中调试 C++ 项目期间使用“编辑和继续”功能时所支持的代码更改。
+ms.custom: SEO-VS-2020
 ms.date: 02/18/2020
 ms.topic: conceptual
 dev_langs:
@@ -20,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af6c0d88dd230bee768641905e200f1f47749d77
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.openlocfilehash: d693753cbcc9844ff602ab4d20e90fdc6de7dae5
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77629581"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150491"
 ---
 # <a name="supported-code-changes-c"></a>受支持的代码更改 (C++)
 C++ 项目的“编辑并继续”可处理大多数类型的代码更改。 但是，在程序执行期间，某些更改无法应用。 若要应用这些更改，您必须停止执行并生成新版本的代码。
@@ -116,7 +118,7 @@ C++ 项目的“编辑并继续”可处理大多数类型的代码更改。 但
 ### <a name="linker-options-that-disable-edit-and-continue"></a><a name="BKMK_Linker_options_that_disable_Edit_and_Continue"></a> 禁用“编辑并继续”的链接器选项
  下列链接器选项可禁用“编辑并继续”：
 
-- 设置 **/OPT:REF**、 **/OPT:ICF**或 **/INCREMENTAL:NO** 将禁用“编辑并继续”并发出以下警告：  
+- 设置 **/OPT:REF**、 **/OPT:ICF** 或 **/INCREMENTAL:NO** 将禁用“编辑并继续”并发出以下警告：  
      `LINK : warning LNK4075: ignoring /EDITANDCONTINUE due to /OPT specification`
 
 - 设置“/ORDER”、“/RELEASE”或“/FORCE”将禁用“编辑并继续”并发出以下警告    ：  

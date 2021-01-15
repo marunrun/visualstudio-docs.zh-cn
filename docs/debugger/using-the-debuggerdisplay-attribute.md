@@ -1,5 +1,7 @@
 ---
 title: 使用 DebuggerDisplay 显示自定义信息 | Microsoft Docs
+description: 使用 DebuggerDisplayAttribute 的实例来控制对象、属性或字段在调试器变量窗口中的显示方式。
+ms.custom: SEO-VS-2020
 ms.date: 01/09/2019
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2387c5e9a920f0811a65ca400d8da48aa81dccd3
-ms.sourcegitcommit: 9e15138a34532b222e80f6b42b1a9de7b2fe0175
+ms.openlocfilehash: 1d846fd5e423ed17f7754260f169e32dbef5486b
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85418777"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150751"
 ---
 # <a name="tell-the-debugger-what-to-show-using-the-debuggerdisplay-attribute-c-visual-basic-f-ccli"></a>使用 DebuggerDisplay 特性（C#、Visual Basic、F#、C++/CLI）指示调试器要显示的内容
 
@@ -46,8 +48,8 @@ ms.locfileid: "85418777"
 
 |参数|目标|
 |----------------|-------------|
-|`Name`，`Type`|这些参数影响变量窗口的 **“名称”** 和 **“类型”** 列。 （可将它们设置为使用与构造函数相同的语法的字符串。）如果过度使用这些参数或使用这些参数不当，则会导致混乱的输出。|
-|`Target`，`TargetTypeName`|指定在程序集级别使用该特性时的目标类型。|
+|`Name`, `Type`|这些参数影响变量窗口的 **“名称”** 和 **“类型”** 列。 （可将它们设置为使用与构造函数相同的语法的字符串。）如果过度使用这些参数或使用这些参数不当，则会导致混乱的输出。|
+|`Target`, `TargetTypeName`|指定在程序集级别使用该特性时的目标类型。|
 
 autoexp.cs 文件在程序集级别使用 DebuggerDisplay 特性。 autoexp.cs 文件确定 Visual Studio 用于 .NET 对象的默认扩展。 可以检查 autoexp.cs 文件以获得如何使用 DebuggerDisplay 特性的示例，也可以修改和编译 autoexp.cs 文件以更改默认扩展。 在修改 autoexp.cs 文件之前，一定要对该文件进行备份。
 

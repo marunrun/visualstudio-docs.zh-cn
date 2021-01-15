@@ -1,5 +1,7 @@
 ---
 title: “调用方 - 被调用方”视图 - .NET 内存采样数据 | Microsoft Docs
+description: 了解“调用方/被调用方”视图如何在性能资源管理器中显示所选函数及其父函数和子函数的 .NET 内存采样数据。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,25 +13,25 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 50e278e858ea086c83b29ef4eebf6b48ee8e477e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: a5f0e3613dc9b122a6fac915f4683d9f7b859ee3
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74773304"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150894"
 ---
 # <a name="callercallee-view---net-memory-sampling-data"></a>“调用方/被调用方”视图 - .NET 内存采样数据
 “调用方/被调用方”视图显示所选函数及其父函数和子函数的 .NET 内存分析数据。 “调用方/被调用方”视图包含三个网格。
 
- **当前函数**在中间网格中显示，并且显示所选函数的内存分析信息。 这些值包括对函数的所有采样调用。
+ **当前函数** 在中间网格中显示，并且显示所选函数的内存分析信息。 这些值包括对函数的所有采样调用。
 
- **调用当前函数的函数**在顶部网格中显示，并且显示由调用方（父）函数的调用生成的所选（当前）函数的值的量。
+ **调用当前函数的函数** 在顶部网格中显示，并且显示由调用方（父）函数的调用生成的所选（当前）函数的值的量。
 
- **由当前函数调用的函数**在底部网格中显示，并且在当前函数调用子函数时，它显示所选函数的被调用方（子）函数的内存分析数据。
+ **由当前函数调用的函数** 在底部网格中显示，并且在当前函数调用子函数时，它显示所选函数的被调用方（子）函数的内存分析数据。
 
  双击调用方或被调用方函数行，以使该行成为当前函数。
 
-|列|描述|
+|列|说明|
 |------------|-----------------|
 |**进程 ID**|分析运行的进程 ID (PID)。|
 |**进程名**|进程的名称。|

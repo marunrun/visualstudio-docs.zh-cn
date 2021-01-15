@@ -1,5 +1,7 @@
 ---
 title: Unable to Connect to the Microsoft Visual Studio Remote Debugging Monitor
+description: 了解“无法连接到 Microsoft Visual Studio 远程调试监视器”的含义、可能的原因以及解决方案。
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 04/14/2020
 ms.topic: reference
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1863caeaa3d3b0457d89913186337fa74ad5d8de
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: dc34a5f58f8bc3c47526cc8ba8516311e94f0631
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852239"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150829"
 ---
 # <a name="unable-to-connect-to-the-microsoft-visual-studio-remote-debugging-monitor"></a>Unable to Connect to the Microsoft Visual Studio Remote Debugging Monitor
 出现此消息的原因可能是远程计算机上的远程调试监视器未正确设置，或者由于网络问题或存在防火墙而导致远程计算机不可访问。

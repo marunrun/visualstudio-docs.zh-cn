@@ -1,5 +1,7 @@
 ---
 title: 使用无 C 运行库的运行时检查 | Microsoft Docs
+description: 可以在不使用 C 运行时库的情况下使用 /NODEFAULTLIB 来链接程序。 如果要使用运行时检查，则必须与 RunTmChk.lib 链接。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -23,12 +25,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 029aafa634ba0e6837cdc7d4304d0419420dd912
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: bfa83533b1ae929bf443dd6c3eb7f7dc3e7db165
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72728661"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150855"
 ---
 # <a name="using-run-time-checks-without-the-c-run-time-library"></a>使用无 C 运行库的运行时检查
 如果链接程序而不链接 C 运行库（使用 /NODEFAULTLIB）并希望使用运行时检查，则必须链接 RunTmChk.lib。

@@ -1,5 +1,7 @@
 ---
 title: 通道（“线程”视图）| Microsoft Docs
+description: 了解使用 Visual Studio 并发可视化工具中的通道时的“线程”视图。 查看线程通道、磁盘通道、标记通道和 GPU 通道。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f18a636d83210b2329d103b1babdf47e697fd5c7
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: 5a4ed0a82ad7ddb67cacde2a09f595d0c9250710
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85537080"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148606"
 ---
 # <a name="channels-threads-view"></a>通道（线程视图）
 并发可视化工具显示四类通道：线程通道、磁盘通道、标记通道和 GPU 通道。

@@ -1,5 +1,7 @@
 ---
 title: 可视化工具安全注意事项 | Microsoft Docs
+description: Visual Studio 调试器的可视化工具必须以完全信任状态运行。 编写可视化工具时，请注意可能的安全威胁并采取适当的预防措施。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c1c18ec84a6a62da6cd564c69ef4b83ea76bcfd6
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 2db18a1443b0c4faaa288a887a22d935d243f678
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73187145"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149737"
 ---
 # <a name="visualizer-security-considerations"></a>可视化工具安全注意事项
 编写可视化工具伴有可能的安全威胁。 目前尚未发现利用这些潜在威胁的攻击，但是开发人员应该密切关注此类攻击并采取此处所描述的相应安全预防措施，以防止在将来受到攻击。

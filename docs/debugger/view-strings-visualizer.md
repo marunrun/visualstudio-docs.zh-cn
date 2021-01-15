@@ -1,5 +1,7 @@
 ---
 title: 在字符串可视化工具中查看字符串 | Microsoft Docs
+description: 在 Visual Studio 调试器中使用字符串可视化工具查看文本字符串、XML、HTML 和 JSON。 可以查看其他对象类型，包括数据集和数据表。
+ms.custom: SEO-VS-2020
 ms.date: 04/08/2019
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 33e1cbd4b1c754498d7e2bd6c354e874ae8cdad5
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: d13e5f5c3ee5a82a56dd8c98fa37e3e13e5169d5
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72450392"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149932"
 ---
 # <a name="view-strings-in-a-string-visualizer-in-visual-studio"></a>在 Visual Studio 中的字符串可视化工具中查看字符串
 

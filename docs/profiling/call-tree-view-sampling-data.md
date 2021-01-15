@@ -1,5 +1,7 @@
 ---
 title: “调用关系树”视图 - 采样数据 | Microsoft Docs
+description: 了解“调用树”视图如何显示在性能资源管理器的分析应用程序中遍历的函数执行路径的采样数据。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 558cef408ceca48a55563ae31f2399da0e951b8e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 1fc7493d20d09ebd606e3a6ec8e5271981fb6f62
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74779748"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150517"
 ---
 # <a name="call-tree-view---sampling-data"></a>“调用树”视图 - 采样数据
 “调用关系树”视图显示在分析应用程序中遍历的函数执行路径。
@@ -30,14 +32,14 @@ ms.locfileid: "74779748"
  “调用关系树”视图中的值对应于调用树中父函数所调用的函数实例。 通过将函数实例值与分析运行中的样本总数进行对比得出百分比值。
 
 ## <a name="highlight-the-execution-hot-path"></a>突出显示执行热路径
- “调用关系树”视图可以展开并突出显示进程的执行路径或采样频率最高的函数。 若要显示最活跃的路径，请右键单击该进程或函数，然后单击“展开热路径”  。
+ “调用关系树”视图可以展开并突出显示进程的执行路径或采样频率最高的函数。 若要显示最活跃的路径，请右键单击该进程或函数，然后单击“展开热路径”。
 
 ## <a name="set-the-call-tree-root-node"></a>设置调用树根节点
- 分析运行中的每个进程均显示为根节点。 若要设置“调用关系树”视图的开始节点，请右键单击要设置为开始节点的节点，然后选择“设置根节点”  。
+ 分析运行中的每个进程均显示为根节点。 若要设置“调用关系树”视图的开始节点，请右键单击要设置为开始节点的节点，然后选择“设置根节点”。
 
- 设置根节点后，将从视图中排除所选节点的子树之外的所有其他条目。 若要将根节点重置回原始节点，请在“调用树视图”窗口中右键单击并选择“重置根节点”  。
+ 设置根节点后，将从视图中排除所选节点的子树之外的所有其他条目。 若要将根节点重置回原始节点，请在“调用树视图”窗口中右键单击并选择“重置根节点”。
 
-|列|描述|
+|列|说明|
 |------------|-----------------|
 |**进程 ID**|分析运行的进程 ID (PID)。|
 |**进程名**|进程的名称。|

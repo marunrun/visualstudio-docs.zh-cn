@@ -1,5 +1,7 @@
 ---
 title: “调用方 - 被调用方”视图 - 检测数据 | Microsoft Docs
+description: 了解“调用方/被调用方”视图如何在性能资源管理器的调用树中显示检测信息。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,21 +13,21 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 551c183dd9c368b1af16c1fe52b36762f4e71504
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 3cd9f65fbce6f0326fab89acfef601652c9bc7b9
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74773291"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150881"
 ---
 # <a name="callercallee-view---instrumentation-data"></a>“调用方/被调用方”视图 - 检测数据
 “调用方/被调用方”视图显示调用树中所选函数及其父函数和子函数的分析信息。 “调用方/被调用方”视图包含三个网格。
 
- **当前函数**在中间网格中显示，并且显示所选函数的分析信息。 这些值包括对函数的所有调用。
+ **当前函数** 在中间网格中显示，并且显示所选函数的分析信息。 这些值包括对函数的所有调用。
 
- **调用当前函数的函数**在顶部网格中显示，并且显示所选函数的调用方（父）函数的分析信息。 这些值表示此调用方函数的调用生成的当前函数的值量。
+ **调用当前函数的函数** 在顶部网格中显示，并且显示所选函数的调用方（父）函数的分析信息。 这些值表示此调用方函数的调用生成的当前函数的值量。
 
- **由当前函数调用的函数**在底部网格中显示，并且显示所选函数的被调用方（子）函数实例的分析信息。 这些值仅表示当前函数调用此函数时子函数所用的时间。
+ **由当前函数调用的函数** 在底部网格中显示，并且显示所选函数的被调用方（子）函数实例的分析信息。 这些值仅表示当前函数调用此函数时子函数所用的时间。
 
 ## <a name="general"></a>常规
  常规列标识视图行中的函数。

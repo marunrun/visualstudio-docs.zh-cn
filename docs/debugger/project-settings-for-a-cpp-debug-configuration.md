@@ -1,6 +1,7 @@
 ---
 title: C++ 调试配置的项目设置
-ms.custom: seodec18
+description: 在属性页中配置 C 和 C++ 调试。 本文介绍了这些设置及其类别。
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/26/2018
 ms.topic: reference
 f1_keywords:
@@ -112,12 +113,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bca39b97f6363d8b8fefcfd691b69baf85c32170
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 6130b49beecb3411c275fc5d2005b7aabee262fd
+ms.sourcegitcommit: c67dece5ded82a5867148e1f94396954c1ec4398
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72450377"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97975285"
 ---
 # <a name="project-settings-for-a-c-debug-configuration"></a>C++ 调试配置的项目设置
 你可以在“属性页”对话框中更改 C 或 Visual C++ 调试配置的项目设置，相关讨论见[如何：设置调试和发布配置](../debugger/how-to-set-debug-and-release-configurations.md)。 下表显示“属性页”对话框中与调试器有关的设置的位置。
@@ -175,7 +176,7 @@ ms.locfileid: "72450377"
 |**生成映射文件** ([/MAP](/cpp/build/reference/map-generate-mapfile))|通知链接器在链接过程中生成映射文件。 默认设置为“否”。 有关详细信息，请参阅 [/MAP（生成映射文件）](/cpp/build/reference/map-generate-mapfile)。|
 |**映射文件名** ([/MAP:](/cpp/build/reference/map-generate-mapfile)name)|如果选择“生成映射文件”，则可在该框中指定映射文件。 有关详细信息，请参阅 [/MAP（生成映射文件）](/cpp/build/reference/map-generate-mapfile)。|
 |**映射导出** ([/MAPINFO:EXPORTS](/cpp/build/reference/mapinfo-include-information-in-mapfile))|在映射文件中包含导出函数。 默认设置为“否”。 有关详细信息，请参阅 [/MAPINFO（包含映射文件中的信息）](/cpp/build/reference/mapinfo-include-information-in-mapfile)。|
-|**可调试程序集** ([/ASSEMBLYDEBUG](/cpp/build/reference/mapinfo-include-information-in-mapfile))|为链接器 /ASSEMBLYDEBUG 选项指定设置。 可能的值有：<br /><br /> -   未发送可调试属性。<br />-   运行时跟踪和禁用优化 (/ASSEMBLYDEBUG)。 此设置为默认设置。<br />-   无运行时跟踪和启用优化 (/ASSEMBLYDEBUG:DISABLE)。<br />-   \<从父级或项目默认设置继承>。<br />有关详细信息，请参阅 [/ASSEMBLYDEBUG（添加 DebuggableAttribute）](/cpp/build/reference/assemblydebug-add-debuggableattribute)。|
+|**可调试程序集** ([/ASSEMBLYDEBUG](/cpp/build/reference/mapinfo-include-information-in-mapfile))|为链接器 /ASSEMBLYDEBUG 选项指定设置。 可能的值有：<br /><br /> -   未发送可调试属性。<br />-   运行时跟踪和禁用优化 (/ASSEMBLYDEBUG)。 此设置为默认设置。<br />-   无运行时跟踪和启用优化 (/ASSEMBLYDEBUG:DISABLE)。<br />-   **\<inherit from parent or project defaults>**.<br />有关详细信息，请参阅 [/ASSEMBLYDEBUG（添加 DebuggableAttribute）](/cpp/build/reference/assemblydebug-add-debuggableattribute)。|
 
  通过使用 Microsoft.VisualStudio.VCProjectEngine.VCDebugSettings 接口，可以在“配置属性”文件夹（“调试”类别）中以编程方式更改这些设置。 有关详细信息，请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCDebugSettings>。
 

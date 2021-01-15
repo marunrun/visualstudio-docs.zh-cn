@@ -1,6 +1,8 @@
 ---
 title: Visual Studio 2017 中调试器的新变化 | Microsoft Docs
 titleSuffix: ''
+description: 查看调试器版本 15.5 中的新增功能。 包括：生产中应用的所选代码的快照，以及 Intellitrace 逐步返回。
+ms.custom: SEO-VS-2020
 ms.date: 01/22/2018
 ms.topic: conceptual
 dev_langs:
@@ -20,12 +22,12 @@ manager: jillfra
 ms.workload:
 - multiple
 monikerRange: vs-2017
-ms.openlocfilehash: 523867a8f9aa074e9122c74deb8bcd91cddd8bee
-ms.sourcegitcommit: 9a66f1c31cc9eba0b5231af72da1d18761a9c56a
+ms.openlocfilehash: 986ebf20cd49569bfcaf471b9bef994dfe774437
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75944216"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149399"
 ---
 # <a name="whats-new-for-the-debugger-in-visual-studio-2017"></a>Visual Studio 2017 中调试器的新变化
 

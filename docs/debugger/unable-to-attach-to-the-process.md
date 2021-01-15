@@ -1,5 +1,7 @@
 ---
 title: 无法附加到进程 | Microsoft Docs
+description: 了解“无法附加到进程”的含义、导致此错误的两种情况以及解决方案。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -14,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 22d798d30d09cb509f53d093ae61bb1a02b414ec
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: e7a90d2e08d16ddfb7ac22baafe58cf76b4895d3
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72728877"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150842"
 ---
 # <a name="unable-to-attach-to-the-process"></a>无法附加到进程
 无法附加到进程。 在连接到此计算机期间服务器上的调试器组件接收了被拒绝的访问。

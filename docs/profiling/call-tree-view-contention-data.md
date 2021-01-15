@@ -1,5 +1,7 @@
 ---
 title: “调用树”视图 - 争用数据 | Microsoft Docs
+description: 查看“调用树”视图，该视图显示在分析应用程序中遍历的函数执行路径的争用数据。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: e91e231f72b006d2020c8b4d5d96c7e24fa1dd9c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 974eeccbb1f4691c00fafad65fadef7c909a7ed2
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74779774"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150413"
 ---
 # <a name="call-tree-view---contention-data"></a>“调用树”视图 - 争用数据
 “调用关系树”视图显示在分析应用程序中遍历的函数执行路径。 树的根是应用程序或组件的入口点。 每个函数节点都列出它所调用的所有函数、函数被阻止的次数，以及函数由于与其他线程或进程争用资源而被阻止的时间量。
@@ -26,12 +28,12 @@ ms.locfileid: "74779774"
 ## <a name="highlight-the-execution-hot-path"></a>突出显示执行热路径
  “调用树”视图可以展开并突出显示进程的执行路径或创建最多争用的函数。
 
-- 若要显示最活跃的路径，请右键单击该进程或函数，然后单击“展开热路径”  。
+- 若要显示最活跃的路径，请右键单击该进程或函数，然后单击“展开热路径”。
 
 ## <a name="set-the-call-tree-root-node"></a>设置调用树根节点
- 分析运行中的每个进程均显示为根节点。 若要设置“调用关系树”视图的开始节点，请右键单击要设置为开始节点的节点，然后单击“设置根节点”  。
+ 分析运行中的每个进程均显示为根节点。 若要设置“调用关系树”视图的开始节点，请右键单击要设置为开始节点的节点，然后单击“设置根节点”。
 
- 设置根节点后，将从视图中排除所选节点的子树之外的所有其他条目。 若要将根节点重置回原始节点，可在“调用树”视图中右键单击，然后单击“重置根节点”  。
+ 设置根节点后，将从视图中排除所选节点的子树之外的所有其他条目。 若要将根节点重置回原始节点，可在“调用树”视图中右键单击，然后单击“重置根节点”。
 
 |列|描述|
 |------------|-----------------|

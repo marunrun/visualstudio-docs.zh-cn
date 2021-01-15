@@ -1,5 +1,7 @@
 ---
 title: 在调试器中创建数据的自定义视图 | Microsoft Docs
+description: 了解在 Visual Studio 调试器中检查和修改程序状态的各种方法。 其中包括“自动”和“监视”窗口、数据提示和可视化工具。
+ms.custom: SEO-VS-2020
 ms.date: 01/09/2019
 ms.topic: conceptual
 f1_keywords:
@@ -19,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 63dc11736e92013719fcda2bae0ba9599a8835aa
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 5acac83a6d461f6b7301ff2bfe89d92dc78d00ee
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72569003"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149906"
 ---
 # <a name="create-custom-views-of-data-in-the-visual-studio-debugger-c-visual-basic-c"></a>在 Visual Studio 调试器中创建数据的自定义视图（C#、Visual Basic、C++）
 

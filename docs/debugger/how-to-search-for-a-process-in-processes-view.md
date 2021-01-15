@@ -1,5 +1,7 @@
 ---
 title: 在进程视图中搜索进程 | Microsoft Docs
+description: 在 Spy++ 工具的“进程”视图中搜索特定进程，方法是在 Visual Studio 中进行调试时，使用其进程 ID 或模块字符串作为搜索条件。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b94a052f7cb50df676140b45a43f49b92283903
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 2f6c51276bea76fe77455d13e011aa85efa8f6fd
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851991"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148554"
 ---
 # <a name="how-to-search-for-a-process-in-processes-view"></a>如何：在进程视图中搜索进程
 可以通过使用进程 ID 或模块字符串作为搜索条件，在进程视图中搜索特定进程。 还可以指定搜索的初始方向。 对话框中的字段将显示进程树中所选进程的属性。
@@ -40,4 +42,4 @@ ms.locfileid: "90851991"
 
 6. 单击 **“确定”** 。
 
-   如果找到了匹配的进程，它会在**进程视图**窗口中突出显示。
+   如果找到了匹配的进程，它会在 **进程视图** 窗口中突出显示。

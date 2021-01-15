@@ -1,5 +1,7 @@
 ---
 title: 源服务器安全警报 | Microsoft Docs
+description: 了解 Visual Studio 调试器中的源服务器安全警报警告。 使用源服务器时，请注意潜在的安全威胁。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 69511c2f83570abf37ef4bea8b71c8f59431a128
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: bf62abb91411048f46bfe7240074bd86c119bcd4
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72729562"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149113"
 ---
 # <a name="source-server-security-alert"></a>源服务器安全警报
 使用源服务器时，只能使用来自已知和受信任位置的符号文件。

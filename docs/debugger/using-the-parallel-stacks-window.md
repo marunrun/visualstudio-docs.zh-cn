@@ -1,5 +1,7 @@
 ---
 title: 在“并行堆栈”窗口中查看线程 | Microsoft Docs
+description: 使用并行堆栈帮助调试多线程应用程序。 可以查看所有线程的堆栈信息以及以任务为中心的调用堆栈信息。
+ms.custom: SEO-VS-2020
 ms.date: 11/20/2018
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e9728346bc4c6d805bb0febd3a0d5bef0ed809a5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 55a004e65a39f4a2b7bbf972cec36d689bf88d97
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62902262"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150166"
 ---
 # <a name="view-threads-and-tasks-in-the-parallel-stacks-window-c-visual-basic-c"></a>在“并行堆栈”窗口中查看线程和任务（C#、Visual Basic 和 C++）
 
@@ -98,7 +100,7 @@ ms.locfileid: "62902262"
 
 下表介绍“线程”视图的主要功能：
 
-|标注|元素名称|描述|
+|标注|元素名称|说明|
 |-|-|-|
 |1|调用堆栈段或节点|包含一个或多个线程的一系列方法。 如果该帧没有连接箭头线，则该帧显示线程的整个调用路径。|
 |2|蓝色突出显示|指示当前线程的调用路径。|

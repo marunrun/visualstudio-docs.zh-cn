@@ -1,5 +1,7 @@
 ---
 title: “调用方 - 被调用方”视图 - 争用数据 | Microsoft Docs
+description: 了解“调用方/被调用方”视图如何在性能资源管理器中显示所选函数及其父函数和子函数的争用信息。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,21 +13,21 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 083386a808f7b91a18b3ea685ae657118c723978
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 5b51504d029c1e723321c8c92df28a2ecad1fd1a
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74779735"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150907"
 ---
 # <a name="callercallee-view----contention-data"></a>“调用方/被调用方”视图 - 争用数据
 “调用方/被调用方”视图显示所选函数及其父函数和子函数的争用信息。 “调用方/被调用方”视图包含三个网格。
 
- **当前函数**在中间网格中显示，其显示所选函数的争用信息。 值包括该函数的所有阻塞争用。
+ **当前函数** 在中间网格中显示，其显示所选函数的争用信息。 值包括该函数的所有阻塞争用。
 
- **调用当前函数的函数**在顶部网格中显示，其显示调用方（父）函数对所选（当前）函数的值的各个调用。
+ **调用当前函数的函数** 在顶部网格中显示，其显示调用方（父）函数对所选（当前）函数的值的各个调用。
 
- **由当前函数调用的函数**在底部网格中显示，当前函数调用子函数时，它会显示所选函数的被调用方（子）函数的争用信息。
+ **由当前函数调用的函数** 在底部网格中显示，当前函数调用子函数时，它会显示所选函数的被调用方（子）函数的争用信息。
 
 |列|描述|
 |------------|-----------------|

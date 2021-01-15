@@ -1,5 +1,7 @@
 ---
 title: Spy++ 参考 | Microsoft Docs
+description: 查看参考链接列表，这些链接指向描述 Spy++ 调试工具中的每个菜单命令和对话框的文章。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b28c737f0a1c17d302cc2924b5d2c3ddc9c1dbb6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d1738b073c8f271e599c1e14bd852b4ebc654dee
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62902551"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98147969"
 ---
 # <a name="spy-reference"></a>Spy++ 参考
 有关每个 Spy++ 菜单和对话框的说明，请参阅下面列出的各节：

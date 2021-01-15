@@ -1,5 +1,7 @@
 ---
 title: 测试和调试可视化工具 | Microsoft Docs
+description: 测试和调试可视化工具，方法是从测试驱动程序（可视化工具开发主机）运行该工具，或是将它安装在 Visual Studio 中并从调试器窗口进行调用。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: df45b1f81430e733d6116768bf7c8823911ead59
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 1326fe9731a9d938678eb9397b106ab9e71b4fd5
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851861"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150660"
 ---
 # <a name="how-to-test-and-debug-a-visualizer"></a>如何：测试和调试可视化工具
 编写完可视化工具后，需要对其进行调试和测试。

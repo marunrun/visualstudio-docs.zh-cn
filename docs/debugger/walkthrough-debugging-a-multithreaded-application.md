@@ -1,5 +1,7 @@
 ---
 title: 在调试器中查看线程 | Microsoft Docs
+description: 使用“线程”检查和控制线程。 可以对线程进行分组、排序、标记、冻结、解冻和搜索，选择列以及显示调用堆栈。
+ms.custom: SEO-VS-2020
 ms.date: 10/29/2018
 ms.topic: conceptual
 f1_keywords:
@@ -23,12 +25,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f65bd7a904f30f132f654b6dd718532d9d0e66e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b02d980292eaed40c7c1598c772b52f695bf23e2
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "67821591"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149698"
 ---
 # <a name="view-threads-in-the-visual-studio-debugger-by-using-the-threads-window-c-visual-basic-c"></a>使用“线程”窗口在 Visual Studio 调试器中查看线程（C#、Visual Basic、C++）
 在“线程”窗口中，可以检查并处理正在调试的应用程序中的线程。 有关如何使用“线程”窗口的分步指南，请参阅[演练：使用“线程”窗口进行调试](../debugger/how-to-use-the-threads-window.md)。

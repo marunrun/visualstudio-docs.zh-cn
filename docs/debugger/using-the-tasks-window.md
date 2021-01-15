@@ -1,5 +1,7 @@
 ---
 title: 使用“任务”窗口 | Microsoft Docs
+description: 任务是可并发运行的异步操作。 多个任务可以在同一线程上运行。 使用“任务”查看任务和 WinJS.Promise 对象信息。
+ms.custom: SEO-VS-2020
 ms.date: 03/18/2018
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b32dc6372a6ce4983e9bd11e05a4a662d0ad44ba
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7df43a02dbda1fbcbe93decb58721032cd84d657
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62901568"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150062"
 ---
 # <a name="using-the-tasks-window-c-visual-basic-c"></a>使用“任务”窗口（C#、Visual Basic、C++）
 
