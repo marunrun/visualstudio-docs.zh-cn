@@ -180,8 +180,6 @@
                   href: native-run-time-checks-customization.md
                 - name: 编写运行时错误报告函数
                   href: how-to-write-a-run-time-error-reporting-function.md
-                - name: 使用运行时检查（不用 C 运行时库）
-                  href: using-run-time-checks-without-the-c-run-time-library.md
         - name: 在调试器中指定符号 (.pdb) 和源文件
           href: specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md
         - name: 调试用户代码
