@@ -27,7 +27,7 @@ ms.locfileid: "96479285"
 
 ## <a name="to-add-a-method-to-verify-whether-the-player-won"></a>添加方法以验证玩家是否获胜
 
-1. 在你的代码底部，`CheckForWinner()` 事件处理程序下方添加一个 `timer1_Tick()` 方法，如以下代码所示。
+1. 在你的代码底部，`timer1_Tick()` 事件处理程序下方添加一个 `CheckForWinner()` 方法，如以下代码所示。
 
      [!code-csharp[VbExpressTutorial4Step8#10](../ide/codesnippet/CSharp/step-8-add-a-method-to-verify-whether-the-player-won_1.cs)]
      [!code-vb[VbExpressTutorial4Step8#10](../ide/codesnippet/VisualBasic/step-8-add-a-method-to-verify-whether-the-player-won_1.vb)]
